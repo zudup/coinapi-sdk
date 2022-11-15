@@ -6,41 +6,25 @@ Feature | HTTP request | Description
 ------------- | ------------- | -------------
 [**curve_get_exchanges_current**](SUSHISWAP_API.md#curve_get_exchanges_current) | **Get** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
 [**dex_get_trades_current**](SUSHISWAP_API.md#dex_get_trades_current) | **Get** /dapps/sushiswap/trades/current | Trades (current) 🔥
-[**sushiswap_get_bundle_dt_os_historical**](SUSHISWAP_API.md#sushiswap_get_bundle_dt_os_historical) | **Get** /dapps/sushiswap/BundleDTOs/historical | BundleDTOs (historical) 🔥
-[**sushiswap_get_bundles_historical**](SUSHISWAP_API.md#sushiswap_get_bundles_historical) | **Get** /dapps/sushiswap/bundles/historical | Bundles (historical)
-[**sushiswap_get_burn_dt_os_historical**](SUSHISWAP_API.md#sushiswap_get_burn_dt_os_historical) | **Get** /dapps/sushiswap/BurnDTOs/historical | BurnDTOs (historical) 🔥
-[**sushiswap_get_burns_historical**](SUSHISWAP_API.md#sushiswap_get_burns_historical) | **Get** /dapps/sushiswap/burns/historical | Burns (historical)
-[**sushiswap_get_day_data_dt_os_historical**](SUSHISWAP_API.md#sushiswap_get_day_data_dt_os_historical) | **Get** /dapps/sushiswap/DayDataDTOs/historical | DayDataDTOs (historical) 🔥
-[**sushiswap_get_day_data_historical**](SUSHISWAP_API.md#sushiswap_get_day_data_historical) | **Get** /dapps/sushiswap/dayData/historical | DayData (historical)
-[**sushiswap_get_factory_dt_os_historical**](SUSHISWAP_API.md#sushiswap_get_factory_dt_os_historical) | **Get** /dapps/sushiswap/FactoryDTOs/historical | FactoryDTOs (historical) 🔥
-[**sushiswap_get_factory_historical**](SUSHISWAP_API.md#sushiswap_get_factory_historical) | **Get** /dapps/sushiswap/factory/historical | Factory (historical)
-[**sushiswap_get_hour_data_dt_os_historical**](SUSHISWAP_API.md#sushiswap_get_hour_data_dt_os_historical) | **Get** /dapps/sushiswap/HourDataDTOs/historical | HourDataDTOs (historical) 🔥
-[**sushiswap_get_hour_data_historical**](SUSHISWAP_API.md#sushiswap_get_hour_data_historical) | **Get** /dapps/sushiswap/hourData/historical | HourData (historical)
-[**sushiswap_get_liquidity_position_dt_os_historical**](SUSHISWAP_API.md#sushiswap_get_liquidity_position_dt_os_historical) | **Get** /dapps/sushiswap/LiquidityPositionDTOs/historical | LiquidityPositionDTOs (historical) 🔥
-[**sushiswap_get_liquidity_position_historical**](SUSHISWAP_API.md#sushiswap_get_liquidity_position_historical) | **Get** /dapps/sushiswap/liquidityPosition/historical | LiquidityPosition (historical)
-[**sushiswap_get_liquidity_position_snapshot_dt_os_historical**](SUSHISWAP_API.md#sushiswap_get_liquidity_position_snapshot_dt_os_historical) | **Get** /dapps/sushiswap/LiquidityPositionSnapshotDTOs/historical | LiquidityPositionSnapshotDTOs (historical) 🔥
-[**sushiswap_get_liquidity_position_snapshot_historical**](SUSHISWAP_API.md#sushiswap_get_liquidity_position_snapshot_historical) | **Get** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshot (historical)
-[**sushiswap_get_mint_dt_os_historical**](SUSHISWAP_API.md#sushiswap_get_mint_dt_os_historical) | **Get** /dapps/sushiswap/MintDTOs/historical | MintDTOs (historical) 🔥
-[**sushiswap_get_mints_historical**](SUSHISWAP_API.md#sushiswap_get_mints_historical) | **Get** /dapps/sushiswap/mints/historical | Mints (historical)
-[**sushiswap_get_pair_day_data_dt_os_historical**](SUSHISWAP_API.md#sushiswap_get_pair_day_data_dt_os_historical) | **Get** /dapps/sushiswap/PairDayDataDTOs/historical | PairDayDataDTOs (historical) 🔥
-[**sushiswap_get_pair_dt_os_historical**](SUSHISWAP_API.md#sushiswap_get_pair_dt_os_historical) | **Get** /dapps/sushiswap/PairDTOs/historical | PairDTOs (historical) 🔥
-[**sushiswap_get_pair_hour_data_dt_os_historical**](SUSHISWAP_API.md#sushiswap_get_pair_hour_data_dt_os_historical) | **Get** /dapps/sushiswap/PairHourDataDTOs/historical | PairHourDataDTOs (historical) 🔥
+[**sushiswap_get_bundles_historical**](SUSHISWAP_API.md#sushiswap_get_bundles_historical) | **Get** /dapps/sushiswap/bundles/historical-manual | Bundles (historical)
+[**sushiswap_get_burns_historical**](SUSHISWAP_API.md#sushiswap_get_burns_historical) | **Get** /dapps/sushiswap/burns/historical-manual | Burns (historical)
+[**sushiswap_get_day_data_historical**](SUSHISWAP_API.md#sushiswap_get_day_data_historical) | **Get** /dapps/sushiswap/dayData/historical-manual | DayData (historical)
+[**sushiswap_get_factory_historical**](SUSHISWAP_API.md#sushiswap_get_factory_historical) | **Get** /dapps/sushiswap/factory/historical-manual | Factory (historical)
+[**sushiswap_get_hour_data_historical**](SUSHISWAP_API.md#sushiswap_get_hour_data_historical) | **Get** /dapps/sushiswap/hourData/historical-manual | HourData (historical)
+[**sushiswap_get_liquidity_position_historical**](SUSHISWAP_API.md#sushiswap_get_liquidity_position_historical) | **Get** /dapps/sushiswap/liquidityPosition/historical-manual | LiquidityPosition (historical)
+[**sushiswap_get_liquidity_position_snapshot_historical**](SUSHISWAP_API.md#sushiswap_get_liquidity_position_snapshot_historical) | **Get** /dapps/sushiswap/liquidityPositionSnapshots/historical-manual | LiquidityPositionSnapshot (historical)
+[**sushiswap_get_mints_historical**](SUSHISWAP_API.md#sushiswap_get_mints_historical) | **Get** /dapps/sushiswap/mints/historical-manual | Mints (historical)
 [**sushiswap_get_pools_current**](SUSHISWAP_API.md#sushiswap_get_pools_current) | **Get** /dapps/sushiswap/pools/current | Pools (current) 🔥
-[**sushiswap_get_pools_day_data_historical**](SUSHISWAP_API.md#sushiswap_get_pools_day_data_historical) | **Get** /dapps/sushiswap/poolsDayData/historical | PoolsDayData (historical)
-[**sushiswap_get_pools_historical**](SUSHISWAP_API.md#sushiswap_get_pools_historical) | **Get** /dapps/sushiswap/pools/historical | Pools (historical) 🔥
-[**sushiswap_get_pools_hour_data_historical**](SUSHISWAP_API.md#sushiswap_get_pools_hour_data_historical) | **Get** /dapps/sushiswap/poolsHourData/historical | PoolsHourData (historical)
-[**sushiswap_get_swap_dt_os_historical**](SUSHISWAP_API.md#sushiswap_get_swap_dt_os_historical) | **Get** /dapps/sushiswap/SwapDTOs/historical | SwapDTOs (historical) 🔥
+[**sushiswap_get_pools_day_data_historical**](SUSHISWAP_API.md#sushiswap_get_pools_day_data_historical) | **Get** /dapps/sushiswap/poolsDayData/historical-manual | PoolsDayData (historical)
+[**sushiswap_get_pools_historical**](SUSHISWAP_API.md#sushiswap_get_pools_historical) | **Get** /dapps/sushiswap/pools/historical-manual | Pools (historical) 🔥
+[**sushiswap_get_pools_hour_data_historical**](SUSHISWAP_API.md#sushiswap_get_pools_hour_data_historical) | **Get** /dapps/sushiswap/poolsHourData/historical-manual | PoolsHourData (historical)
 [**sushiswap_get_swaps_current**](SUSHISWAP_API.md#sushiswap_get_swaps_current) | **Get** /dapps/sushiswap/swaps/current | Swaps (current) 🔥
-[**sushiswap_get_swaps_historical**](SUSHISWAP_API.md#sushiswap_get_swaps_historical) | **Get** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
-[**sushiswap_get_token_day_data_dt_os_historical**](SUSHISWAP_API.md#sushiswap_get_token_day_data_dt_os_historical) | **Get** /dapps/sushiswap/TokenDayDataDTOs/historical | TokenDayDataDTOs (historical) 🔥
-[**sushiswap_get_token_dt_os_historical**](SUSHISWAP_API.md#sushiswap_get_token_dt_os_historical) | **Get** /dapps/sushiswap/TokenDTOs/historical | TokenDTOs (historical) 🔥
+[**sushiswap_get_swaps_historical**](SUSHISWAP_API.md#sushiswap_get_swaps_historical) | **Get** /dapps/sushiswap/swaps/historical-manual | Swaps (historical) 🔥
 [**sushiswap_get_tokens_current**](SUSHISWAP_API.md#sushiswap_get_tokens_current) | **Get** /dapps/sushiswap/tokens/current | Tokens (current) 🔥
-[**sushiswap_get_tokens_day_data_historical**](SUSHISWAP_API.md#sushiswap_get_tokens_day_data_historical) | **Get** /dapps/sushiswap/tokensDayData/historical | TokensDayData (historical)
-[**sushiswap_get_tokens_historical**](SUSHISWAP_API.md#sushiswap_get_tokens_historical) | **Get** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
-[**sushiswap_get_transaction_dt_os_historical**](SUSHISWAP_API.md#sushiswap_get_transaction_dt_os_historical) | **Get** /dapps/sushiswap/TransactionDTOs/historical | TransactionDTOs (historical) 🔥
-[**sushiswap_get_transactions_historical**](SUSHISWAP_API.md#sushiswap_get_transactions_historical) | **Get** /dapps/sushiswap/transactions/historical | Transactions (historical)
-[**sushiswap_get_user_dt_os_historical**](SUSHISWAP_API.md#sushiswap_get_user_dt_os_historical) | **Get** /dapps/sushiswap/UserDTOs/historical | UserDTOs (historical) 🔥
-[**sushiswap_get_users_historical**](SUSHISWAP_API.md#sushiswap_get_users_historical) | **Get** /dapps/sushiswap/users/historical | Users (historical)
+[**sushiswap_get_tokens_day_data_historical**](SUSHISWAP_API.md#sushiswap_get_tokens_day_data_historical) | **Get** /dapps/sushiswap/tokensDayData/historical-manual | TokensDayData (historical)
+[**sushiswap_get_tokens_historical**](SUSHISWAP_API.md#sushiswap_get_tokens_historical) | **Get** /dapps/sushiswap/tokens/historical-manual | Tokens (historical) 🔥
+[**sushiswap_get_transactions_historical**](SUSHISWAP_API.md#sushiswap_get_transactions_historical) | **Get** /dapps/sushiswap/transactions/historical-manual | Transactions (historical)
+[**sushiswap_get_users_historical**](SUSHISWAP_API.md#sushiswap_get_users_historical) | **Get** /dapps/sushiswap/users/historical-manual | Users (historical)
 
 
 # **curve_get_exchanges_current**
@@ -97,40 +81,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_bundle_dt_os_historical**
-> sushiswap_get_bundle_dt_os_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_BUNDLE_DTO]
-
-
-BundleDTOs (historical) 🔥
-
-Gets BundleDTOs.
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **pool_id** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-[**LIST [SUSHISWAP_BUNDLE_DTO]**](Sushiswap.BundleDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **sushiswap_get_bundles_historical**
 > sushiswap_get_bundles_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ): detachable LIST [SUSHISWAP_BUNDLE_DTO]
 
@@ -152,40 +102,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LIST [SUSHISWAP_BUNDLE_DTO]**](Sushiswap.BundleDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_burn_dt_os_historical**
-> sushiswap_get_burn_dt_os_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_BURN_DTO]
-
-
-BurnDTOs (historical) 🔥
-
-Gets BurnDTOs.
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **pool_id** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-[**LIST [SUSHISWAP_BURN_DTO]**](Sushiswap.BurnDTO.md)
 
 ### Authorization
 
@@ -232,40 +148,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_day_data_dt_os_historical**
-> sushiswap_get_day_data_dt_os_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_DAY_DATA_DTO]
-
-
-DayDataDTOs (historical) 🔥
-
-Gets DayDataDTOs.
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **pool_id** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-[**LIST [SUSHISWAP_DAY_DATA_DTO]**](Sushiswap.DayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **sushiswap_get_day_data_historical**
 > sushiswap_get_day_data_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ): detachable LIST [SUSHISWAP_DAY_DATA_DTO]
 
@@ -287,40 +169,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LIST [SUSHISWAP_DAY_DATA_DTO]**](Sushiswap.DayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_factory_dt_os_historical**
-> sushiswap_get_factory_dt_os_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_FACTORY_DTO]
-
-
-FactoryDTOs (historical) 🔥
-
-Gets FactoryDTOs.
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **pool_id** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-[**LIST [SUSHISWAP_FACTORY_DTO]**](Sushiswap.FactoryDTO.md)
 
 ### Authorization
 
@@ -366,40 +214,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_hour_data_dt_os_historical**
-> sushiswap_get_hour_data_dt_os_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_HOUR_DATA_DTO]
-
-
-HourDataDTOs (historical) 🔥
-
-Gets HourDataDTOs.
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **pool_id** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-[**LIST [SUSHISWAP_HOUR_DATA_DTO]**](Sushiswap.HourDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **sushiswap_get_hour_data_historical**
 > sushiswap_get_hour_data_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ): detachable LIST [SUSHISWAP_HOUR_DATA_DTO]
 
@@ -421,40 +235,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LIST [SUSHISWAP_HOUR_DATA_DTO]**](Sushiswap.HourDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_liquidity_position_dt_os_historical**
-> sushiswap_get_liquidity_position_dt_os_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_LIQUIDITY_POSITION_DTO]
-
-
-LiquidityPositionDTOs (historical) 🔥
-
-Gets LiquidityPositionDTOs.
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **pool_id** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-[**LIST [SUSHISWAP_LIQUIDITY_POSITION_DTO]**](Sushiswap.LiquidityPositionDTO.md)
 
 ### Authorization
 
@@ -501,40 +281,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_liquidity_position_snapshot_dt_os_historical**
-> sushiswap_get_liquidity_position_snapshot_dt_os_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_LIQUIDITY_POSITION_SNAPSHOT_DTO]
-
-
-LiquidityPositionSnapshotDTOs (historical) 🔥
-
-Gets LiquidityPositionSnapshotDTOs.
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **pool_id** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-[**LIST [SUSHISWAP_LIQUIDITY_POSITION_SNAPSHOT_DTO]**](Sushiswap.LiquidityPositionSnapshotDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **sushiswap_get_liquidity_position_snapshot_historical**
 > sushiswap_get_liquidity_position_snapshot_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_LIQUIDITY_POSITION_SNAPSHOT_DTO]
 
@@ -569,40 +315,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_mint_dt_os_historical**
-> sushiswap_get_mint_dt_os_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_MINT_DTO]
-
-
-MintDTOs (historical) 🔥
-
-Gets MintDTOs.
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **pool_id** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-[**LIST [SUSHISWAP_MINT_DTO]**](Sushiswap.MintDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **sushiswap_get_mints_historical**
 > sushiswap_get_mints_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_MINT_DTO]
 
@@ -625,108 +337,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LIST [SUSHISWAP_MINT_DTO]**](Sushiswap.MintDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_pair_day_data_dt_os_historical**
-> sushiswap_get_pair_day_data_dt_os_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
-
-
-PairDayDataDTOs (historical) 🔥
-
-Gets PairDayDataDTOs.
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **pool_id** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-[**LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]**](Sushiswap.PairDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_pair_dt_os_historical**
-> sushiswap_get_pair_dt_os_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_PAIR_DTO]
-
-
-PairDTOs (historical) 🔥
-
-Gets PairDTOs.
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **pool_id** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-[**LIST [SUSHISWAP_PAIR_DTO]**](Sushiswap.PairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_pair_hour_data_dt_os_historical**
-> sushiswap_get_pair_hour_data_dt_os_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
-
-
-PairHourDataDTOs (historical) 🔥
-
-Gets PairHourDataDTOs.
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **pool_id** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-[**LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]**](Sushiswap.PairHourDataDTO.md)
 
 ### Authorization
 
@@ -868,40 +478,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_swap_dt_os_historical**
-> sushiswap_get_swap_dt_os_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_SWAP_DTO]
-
-
-SwapDTOs (historical) 🔥
-
-Gets SwapDTOs.
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **pool_id** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-[**LIST [SUSHISWAP_SWAP_DTO]**](Sushiswap.SwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **sushiswap_get_swaps_current**
 > sushiswap_get_swaps_current : detachable LIST [SUSHISWAP_SWAP_DTO]
 
@@ -951,74 +527,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LIST [SUSHISWAP_SWAP_DTO]**](Sushiswap.SwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_token_day_data_dt_os_historical**
-> sushiswap_get_token_day_data_dt_os_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]
-
-
-TokenDayDataDTOs (historical) 🔥
-
-Gets TokenDayDataDTOs.
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **pool_id** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-[**LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]**](Sushiswap.TokenDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_token_dt_os_historical**
-> sushiswap_get_token_dt_os_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_TOKEN_DTO]
-
-
-TokenDTOs (historical) 🔥
-
-Gets TokenDTOs.
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **pool_id** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-[**LIST [SUSHISWAP_TOKEN_DTO]**](Sushiswap.TokenDTO.md)
 
 ### Authorization
 
@@ -1126,40 +634,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_transaction_dt_os_historical**
-> sushiswap_get_transaction_dt_os_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_TRANSACTION_DTO]
-
-
-TransactionDTOs (historical) 🔥
-
-Gets TransactionDTOs.
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **pool_id** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-[**LIST [SUSHISWAP_TRANSACTION_DTO]**](Sushiswap.TransactionDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **sushiswap_get_transactions_historical**
 > sushiswap_get_transactions_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ): detachable LIST [SUSHISWAP_TRANSACTION_DTO]
 
@@ -1181,40 +655,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**LIST [SUSHISWAP_TRANSACTION_DTO]**](Sushiswap.TransactionDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_user_dt_os_historical**
-> sushiswap_get_user_dt_os_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; pool_id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_USER_DTO]
-
-
-UserDTOs (historical) 🔥
-
-Gets UserDTOs.
-
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **INTEGER_64**|  | [optional] [default to null]
- **end_block** | **INTEGER_64**|  | [optional] [default to null]
- **start_date** | **DATE_TIME**|  | [optional] [default to null]
- **end_date** | **DATE_TIME**|  | [optional] [default to null]
- **pool_id** | **STRING_32**|  | [optional] [default to null]
-
-### Return type
-
-[**LIST [SUSHISWAP_USER_DTO]**](Sushiswap.UserDTO.md)
 
 ### Authorization
 

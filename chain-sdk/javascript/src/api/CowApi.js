@@ -39,55 +39,6 @@ export default class CowApi {
 
 
     /**
-     * Callback function to receive the result of the cowGetOrderDTOsHistorical operation.
-     * @callback module:api/CowApi~cowGetOrderDTOsHistoricalCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CowOrderDTO>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * OrderDTOs (historical) 🔥
-     * Gets OrderDTOs.
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.poolId 
-     * @param {module:api/CowApi~cowGetOrderDTOsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CowOrderDTO>}
-     */
-    cowGetOrderDTOsHistorical(opts, callback) {
-      opts = opts || {};
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'startBlock': opts['startBlock'],
-        'endBlock': opts['endBlock'],
-        'startDate': opts['startDate'],
-        'endDate': opts['endDate'],
-        'poolId': opts['poolId']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [CowOrderDTO];
-      return this.apiClient.callApi(
-        '/dapps/cow/OrderDTOs/historical', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
      * Callback function to receive the result of the cowGetOrdersHistorical operation.
      * @callback module:api/CowApi~cowGetOrdersHistoricalCallback
      * @param {String} error Error message, if any.
@@ -128,56 +79,7 @@ export default class CowApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CowOrderDTO];
       return this.apiClient.callApi(
-        '/dapps/cow/orders/historical', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the cowGetSettlementDTOsHistorical operation.
-     * @callback module:api/CowApi~cowGetSettlementDTOsHistoricalCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CowSettlementDTO>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * SettlementDTOs (historical) 🔥
-     * Gets SettlementDTOs.
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.poolId 
-     * @param {module:api/CowApi~cowGetSettlementDTOsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CowSettlementDTO>}
-     */
-    cowGetSettlementDTOsHistorical(opts, callback) {
-      opts = opts || {};
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'startBlock': opts['startBlock'],
-        'endBlock': opts['endBlock'],
-        'startDate': opts['startDate'],
-        'endDate': opts['endDate'],
-        'poolId': opts['poolId']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [CowSettlementDTO];
-      return this.apiClient.callApi(
-        '/dapps/cow/SettlementDTOs/historical', 'GET',
+        '/dapps/cow/orders/historical-manual', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -224,56 +126,7 @@ export default class CowApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CowSettlementDTO];
       return this.apiClient.callApi(
-        '/dapps/cow/settlements/historical', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the cowGetTokenDTOsHistorical operation.
-     * @callback module:api/CowApi~cowGetTokenDTOsHistoricalCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CowTokenDTO>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * TokenDTOs (historical) 🔥
-     * Gets TokenDTOs.
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.poolId 
-     * @param {module:api/CowApi~cowGetTokenDTOsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CowTokenDTO>}
-     */
-    cowGetTokenDTOsHistorical(opts, callback) {
-      opts = opts || {};
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'startBlock': opts['startBlock'],
-        'endBlock': opts['endBlock'],
-        'startDate': opts['startDate'],
-        'endDate': opts['endDate'],
-        'poolId': opts['poolId']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [CowTokenDTO];
-      return this.apiClient.callApi(
-        '/dapps/cow/TokenDTOs/historical', 'GET',
+        '/dapps/cow/settlements/historical-manual', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -322,56 +175,7 @@ export default class CowApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CowTokenDTO];
       return this.apiClient.callApi(
-        '/dapps/cow/tokens/historical', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the cowGetTradeDTOsHistorical operation.
-     * @callback module:api/CowApi~cowGetTradeDTOsHistoricalCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CowTradeDTO>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * TradeDTOs (historical) 🔥
-     * Gets TradeDTOs.
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.poolId 
-     * @param {module:api/CowApi~cowGetTradeDTOsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CowTradeDTO>}
-     */
-    cowGetTradeDTOsHistorical(opts, callback) {
-      opts = opts || {};
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'startBlock': opts['startBlock'],
-        'endBlock': opts['endBlock'],
-        'startDate': opts['startDate'],
-        'endDate': opts['endDate'],
-        'poolId': opts['poolId']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [CowTradeDTO];
-      return this.apiClient.callApi(
-        '/dapps/cow/TradeDTOs/historical', 'GET',
+        '/dapps/cow/tokens/historical-manual', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -418,56 +222,7 @@ export default class CowApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CowTradeDTO];
       return this.apiClient.callApi(
-        '/dapps/cow/trades/historical', 'GET',
-        pathParams, queryParams, headerParams, formParams, postBody,
-        authNames, contentTypes, accepts, returnType, null, callback
-      );
-    }
-
-    /**
-     * Callback function to receive the result of the cowGetUserDTOsHistorical operation.
-     * @callback module:api/CowApi~cowGetUserDTOsHistoricalCallback
-     * @param {String} error Error message, if any.
-     * @param {Array.<module:model/CowUserDTO>} data The data returned by the service call.
-     * @param {String} response The complete HTTP response.
-     */
-
-    /**
-     * UserDTOs (historical) 🔥
-     * Gets UserDTOs.
-     * @param {Object} opts Optional parameters
-     * @param {Number} opts.startBlock 
-     * @param {Number} opts.endBlock 
-     * @param {Date} opts.startDate 
-     * @param {Date} opts.endDate 
-     * @param {String} opts.poolId 
-     * @param {module:api/CowApi~cowGetUserDTOsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
-     * data is of type: {@link Array.<module:model/CowUserDTO>}
-     */
-    cowGetUserDTOsHistorical(opts, callback) {
-      opts = opts || {};
-      let postBody = null;
-
-      let pathParams = {
-      };
-      let queryParams = {
-        'startBlock': opts['startBlock'],
-        'endBlock': opts['endBlock'],
-        'startDate': opts['startDate'],
-        'endDate': opts['endDate'],
-        'poolId': opts['poolId']
-      };
-      let headerParams = {
-      };
-      let formParams = {
-      };
-
-      let authNames = [];
-      let contentTypes = [];
-      let accepts = ['text/plain', 'application/json', 'text/json'];
-      let returnType = [CowUserDTO];
-      return this.apiClient.callApi(
-        '/dapps/cow/UserDTOs/historical', 'GET',
+        '/dapps/cow/trades/historical-manual', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -514,7 +269,7 @@ export default class CowApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CowUserDTO];
       return this.apiClient.callApi(
-        '/dapps/cow/users/historical', 'GET',
+        '/dapps/cow/users/historical-manual', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

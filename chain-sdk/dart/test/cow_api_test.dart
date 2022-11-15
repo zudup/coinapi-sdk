@@ -17,30 +17,12 @@ void main() {
   // final instance = CowApi();
 
   group('tests for CowApi', () {
-    // OrderDTOs (historical) 🔥
-    //
-    // Gets OrderDTOs.
-    //
-    //Future<List<CowOrderDTO>> cowGetOrderDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test cowGetOrderDTOsHistorical', () async {
-      // TODO
-    });
-
     // Orders (historical)
     //
     // Gets orders.
     //
     //Future<List<CowOrderDTO>> cowGetOrdersHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
     test('test cowGetOrdersHistorical', () async {
-      // TODO
-    });
-
-    // SettlementDTOs (historical) 🔥
-    //
-    // Gets SettlementDTOs.
-    //
-    //Future<List<CowSettlementDTO>> cowGetSettlementDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test cowGetSettlementDTOsHistorical', () async {
       // TODO
     });
 
@@ -53,15 +35,6 @@ void main() {
       // TODO
     });
 
-    // TokenDTOs (historical) 🔥
-    //
-    // Gets TokenDTOs.
-    //
-    //Future<List<CowTokenDTO>> cowGetTokenDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test cowGetTokenDTOsHistorical', () async {
-      // TODO
-    });
-
     // Tokens (historical) 🔥
     //
     // Gets tokens.
@@ -71,30 +44,12 @@ void main() {
       // TODO
     });
 
-    // TradeDTOs (historical) 🔥
-    //
-    // Gets TradeDTOs.
-    //
-    //Future<List<CowTradeDTO>> cowGetTradeDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test cowGetTradeDTOsHistorical', () async {
-      // TODO
-    });
-
     // Trades (historical) 🔥
     //
     // Gets trades.
     //
     //Future<List<CowTradeDTO>> cowGetTradesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
     test('test cowGetTradesHistorical', () async {
-      // TODO
-    });
-
-    // UserDTOs (historical) 🔥
-    //
-    // Gets UserDTOs.
-    //
-    //Future<List<CowUserDTO>> cowGetUserDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test cowGetUserDTOsHistorical', () async {
       // TODO
     });
 

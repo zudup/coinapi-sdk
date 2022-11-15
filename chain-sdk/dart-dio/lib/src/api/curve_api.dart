@@ -50,97 +50,6 @@ class CurveApi {
 
   const CurveApi(this._dio, this._serializers);
 
-  /// AccountDTOs (historical) 🔥
-  /// Gets AccountDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveAccountDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveAccountDTO>>> curveGetAccountDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/AccountDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveAccountDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveAccountDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveAccountDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveAccountDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// Accounts (historical)
   /// Gets accounts.
   ///
@@ -170,7 +79,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/accounts/historical';
+    final _path = r'/dapps/curve/accounts/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -218,97 +127,6 @@ class CurveApi {
     }
 
     return Response<BuiltList<CurveAccountDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// AddLiquidityEventDTOs (historical) 🔥
-  /// Gets AddLiquidityEventDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveAddLiquidityEventDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveAddLiquidityEventDTO>>> curveGetAddLiquidityEventDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/AddLiquidityEventDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveAddLiquidityEventDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveAddLiquidityEventDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveAddLiquidityEventDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveAddLiquidityEventDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -351,7 +169,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/addLiquidityEvents/historical';
+    final _path = r'/dapps/curve/addLiquidityEvents/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -411,97 +229,6 @@ class CurveApi {
     );
   }
 
-  /// AdminFeeChangeLogDTOs (historical) 🔥
-  /// Gets AdminFeeChangeLogDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveAdminFeeChangeLogDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveAdminFeeChangeLogDTO>>> curveGetAdminFeeChangeLogDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/AdminFeeChangeLogDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveAdminFeeChangeLogDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveAdminFeeChangeLogDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveAdminFeeChangeLogDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveAdminFeeChangeLogDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// AdminFeeChangeLogs (historical)
   /// Gets admin fee change logs.
   ///
@@ -533,7 +260,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/adminFeeChangeLogs/historical';
+    final _path = r'/dapps/curve/adminFeeChangeLogs/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -582,97 +309,6 @@ class CurveApi {
     }
 
     return Response<BuiltList<CurveAdminFeeChangeLogDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// AmplificationCoeffChangeLogDTOs (historical) 🔥
-  /// Gets AmplificationCoeffChangeLogDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveAmplificationCoeffChangeLogDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveAmplificationCoeffChangeLogDTO>>> curveGetAmplificationCoeffChangeLogDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/AmplificationCoeffChangeLogDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveAmplificationCoeffChangeLogDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveAmplificationCoeffChangeLogDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveAmplificationCoeffChangeLogDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveAmplificationCoeffChangeLogDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -715,7 +351,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/amplificationCoeffChangeLogs/historical';
+    final _path = r'/dapps/curve/amplificationCoeffChangeLogs/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -775,97 +411,6 @@ class CurveApi {
     );
   }
 
-  /// CoinDTOs (historical) 🔥
-  /// Gets CoinDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveCoinDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveCoinDTO>>> curveGetCoinDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/CoinDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveCoinDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveCoinDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveCoinDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveCoinDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// Coins (historical)
   /// Gets coins.
   ///
@@ -897,7 +442,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/coins/historical';
+    final _path = r'/dapps/curve/coins/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -946,188 +491,6 @@ class CurveApi {
     }
 
     return Response<BuiltList<CurveCoinDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// ContractDTOs (historical) 🔥
-  /// Gets ContractDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveContractDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveContractDTO>>> curveGetContractDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/ContractDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveContractDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveContractDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveContractDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveContractDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// ContractVersionDTOs (historical) 🔥
-  /// Gets ContractVersionDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveContractVersionDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveContractVersionDTO>>> curveGetContractVersionDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/ContractVersionDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveContractVersionDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveContractVersionDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveContractVersionDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveContractVersionDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1170,7 +533,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/contracts/historical';
+    final _path = r'/dapps/curve/contracts/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1261,7 +624,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/contractsVersions/historical';
+    final _path = r'/dapps/curve/contractsVersions/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1321,97 +684,6 @@ class CurveApi {
     );
   }
 
-  /// DailyVolumeDTOs (historical) 🔥
-  /// Gets DailyVolumeDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveDailyVolumeDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveDailyVolumeDTO>>> curveGetDailyVolumeDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/DailyVolumeDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveDailyVolumeDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveDailyVolumeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveDailyVolumeDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveDailyVolumeDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// DailyVolumes (historical)
   /// Gets daily volumes.
   ///
@@ -1443,7 +715,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/dailyVolumes/historical';
+    final _path = r'/dapps/curve/dailyVolumes/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1492,97 +764,6 @@ class CurveApi {
     }
 
     return Response<BuiltList<CurveDailyVolumeDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// ExchangeDTOs (historical) 🔥
-  /// Gets ExchangeDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveExchangeDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveExchangeDTO>>> curveGetExchangeDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/ExchangeDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveExchangeDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveExchangeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveExchangeDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveExchangeDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -1625,7 +806,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/exchanges/historical';
+    final _path = r'/dapps/curve/exchanges/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1685,97 +866,6 @@ class CurveApi {
     );
   }
 
-  /// FeeChangeLogDTOs (historical) 🔥
-  /// Gets FeeChangeLogDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveFeeChangeLogDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveFeeChangeLogDTO>>> curveGetFeeChangeLogDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/FeeChangeLogDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveFeeChangeLogDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveFeeChangeLogDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveFeeChangeLogDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveFeeChangeLogDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// FeeChangeLogs (historical)
   /// Gets fee change logs.
   ///
@@ -1807,7 +897,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/feeChangeLogs/historical';
+    final _path = r'/dapps/curve/feeChangeLogs/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1856,825 +946,6 @@ class CurveApi {
     }
 
     return Response<BuiltList<CurveFeeChangeLogDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// GaugeDTOs (historical) 🔥
-  /// Gets GaugeDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveGaugeDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveGaugeDTO>>> curveGetGaugeDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/GaugeDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveGaugeDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveGaugeDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveGaugeDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// GaugeDepositDTOs (historical) 🔥
-  /// Gets GaugeDepositDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveGaugeDepositDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveGaugeDepositDTO>>> curveGetGaugeDepositDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/GaugeDepositDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveGaugeDepositDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeDepositDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveGaugeDepositDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveGaugeDepositDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// GaugeLiquidityDTOs (historical) 🔥
-  /// Gets GaugeLiquidityDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveGaugeLiquidityDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveGaugeLiquidityDTO>>> curveGetGaugeLiquidityDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/GaugeLiquidityDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveGaugeLiquidityDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeLiquidityDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveGaugeLiquidityDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveGaugeLiquidityDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// GaugeTotalWeightDTOs (historical) 🔥
-  /// Gets GaugeTotalWeightDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveGaugeTotalWeightDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveGaugeTotalWeightDTO>>> curveGetGaugeTotalWeightDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/GaugeTotalWeightDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveGaugeTotalWeightDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeTotalWeightDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveGaugeTotalWeightDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveGaugeTotalWeightDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// GaugeTypeDTOs (historical) 🔥
-  /// Gets GaugeTypeDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveGaugeTypeDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveGaugeTypeDTO>>> curveGetGaugeTypeDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/GaugeTypeDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveGaugeTypeDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeTypeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveGaugeTypeDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveGaugeTypeDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// GaugeTypeWeightDTOs (historical) 🔥
-  /// Gets GaugeTypeWeightDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveGaugeTypeWeightDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveGaugeTypeWeightDTO>>> curveGetGaugeTypeWeightDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/GaugeTypeWeightDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveGaugeTypeWeightDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeTypeWeightDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveGaugeTypeWeightDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveGaugeTypeWeightDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// GaugeWeightDTOs (historical) 🔥
-  /// Gets GaugeWeightDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveGaugeWeightDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveGaugeWeightDTO>>> curveGetGaugeWeightDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/GaugeWeightDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveGaugeWeightDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeWeightDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveGaugeWeightDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveGaugeWeightDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// GaugeWeightVoteDTOs (historical) 🔥
-  /// Gets GaugeWeightVoteDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveGaugeWeightVoteDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveGaugeWeightVoteDTO>>> curveGetGaugeWeightVoteDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/GaugeWeightVoteDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveGaugeWeightVoteDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeWeightVoteDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveGaugeWeightVoteDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveGaugeWeightVoteDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// GaugeWithdrawDTOs (historical) 🔥
-  /// Gets GaugeWithdrawDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveGaugeWithdrawDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveGaugeWithdrawDTO>>> curveGetGaugeWithdrawDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/GaugeWithdrawDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveGaugeWithdrawDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveGaugeWithdrawDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveGaugeWithdrawDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveGaugeWithdrawDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -2715,7 +986,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/gaugesDeposits/historical';
+    final _path = r'/dapps/curve/gaugesDeposits/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -2805,7 +1076,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/gauges/historical';
+    final _path = r'/dapps/curve/gauges/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -2894,7 +1165,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/gaugesLiquidity/historical';
+    final _path = r'/dapps/curve/gaugesLiquidity/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -2982,7 +1253,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/gaugesTotalWeights/historical';
+    final _path = r'/dapps/curve/gaugesTotalWeights/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -3070,7 +1341,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/gaugesTypes/historical';
+    final _path = r'/dapps/curve/gaugesTypes/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -3158,7 +1429,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/gaugesTypesWeights/historical';
+    final _path = r'/dapps/curve/gaugesTypesWeights/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -3246,7 +1517,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/gaugesWeights/historical';
+    final _path = r'/dapps/curve/gaugesWeights/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -3334,7 +1605,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/gaugesWeightsVotes/historical';
+    final _path = r'/dapps/curve/gaugesWeightsVotes/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -3422,7 +1693,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/gaugesWithdraws/historical';
+    final _path = r'/dapps/curve/gaugesWithdraws/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -3481,97 +1752,6 @@ class CurveApi {
     );
   }
 
-  /// HourlyVolumeDTOs (historical) 🔥
-  /// Gets HourlyVolumeDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveHourlyVolumeDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveHourlyVolumeDTO>>> curveGetHourlyVolumeDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/HourlyVolumeDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveHourlyVolumeDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveHourlyVolumeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveHourlyVolumeDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveHourlyVolumeDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// HourlyVolumes (historical)
   /// Gets hourly volumes.
   ///
@@ -3603,7 +1783,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/hourlyVolumes/historical';
+    final _path = r'/dapps/curve/hourlyVolumes/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -3652,97 +1832,6 @@ class CurveApi {
     }
 
     return Response<BuiltList<CurveHourlyVolumeDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// LpTokenDTOs (historical) 🔥
-  /// Gets LpTokenDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveLpTokenDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveLpTokenDTO>>> curveGetLpTokenDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/LpTokenDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveLpTokenDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveLpTokenDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveLpTokenDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveLpTokenDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -3785,7 +1874,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/lpTokens/historical';
+    final _path = r'/dapps/curve/lpTokens/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -3845,97 +1934,6 @@ class CurveApi {
     );
   }
 
-  /// PoolDTOs (historical) 🔥
-  /// Gets PoolDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurvePoolDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurvePoolDTO>>> curveGetPoolDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/PoolDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurvePoolDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurvePoolDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurvePoolDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurvePoolDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// Pools (historical) 🔥
   /// Gets pools.
   ///
@@ -3967,7 +1965,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/pools/historical';
+    final _path = r'/dapps/curve/pools/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -4016,188 +2014,6 @@ class CurveApi {
     }
 
     return Response<BuiltList<CurvePoolDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// ProposalDTOs (historical) 🔥
-  /// Gets ProposalDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveProposalDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveProposalDTO>>> curveGetProposalDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/ProposalDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveProposalDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveProposalDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveProposalDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveProposalDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// ProposalVoteDTOs (historical) 🔥
-  /// Gets ProposalVoteDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveProposalVoteDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveProposalVoteDTO>>> curveGetProposalVoteDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/ProposalVoteDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveProposalVoteDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveProposalVoteDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveProposalVoteDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveProposalVoteDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -4238,7 +2054,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/proposals/historical';
+    final _path = r'/dapps/curve/proposals/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -4326,7 +2142,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/proposalsVotes/historical';
+    final _path = r'/dapps/curve/proposalsVotes/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -4385,97 +2201,6 @@ class CurveApi {
     );
   }
 
-  /// RemoveLiquidityEventDTOs (historical) 🔥
-  /// Gets RemoveLiquidityEventDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveRemoveLiquidityEventDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveRemoveLiquidityEventDTO>>> curveGetRemoveLiquidityEventDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/RemoveLiquidityEventDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveRemoveLiquidityEventDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveRemoveLiquidityEventDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveRemoveLiquidityEventDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveRemoveLiquidityEventDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// RemoveLiquidityEvents (historical)
   /// Gets remove liquidity events.
   ///
@@ -4507,7 +2232,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/removeLiquidityEvents/historical';
+    final _path = r'/dapps/curve/removeLiquidityEvents/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -4556,97 +2281,6 @@ class CurveApi {
     }
 
     return Response<BuiltList<CurveRemoveLiquidityEventDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// RemoveLiquidityOneEventDTOs (historical) 🔥
-  /// Gets RemoveLiquidityOneEventDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveRemoveLiquidityOneEventDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveRemoveLiquidityOneEventDTO>>> curveGetRemoveLiquidityOneEventDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/RemoveLiquidityOneEventDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveRemoveLiquidityOneEventDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveRemoveLiquidityOneEventDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveRemoveLiquidityOneEventDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveRemoveLiquidityOneEventDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -4689,7 +2323,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/removeLiquidityOneEvents/historical';
+    final _path = r'/dapps/curve/removeLiquidityOneEvents/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -4749,97 +2383,6 @@ class CurveApi {
     );
   }
 
-  /// SystemStateDTOs (historical) 🔥
-  /// Gets SystemStateDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveSystemStateDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveSystemStateDTO>>> curveGetSystemStateDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/SystemStateDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveSystemStateDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveSystemStateDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveSystemStateDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveSystemStateDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// SystemStates (historical)
   /// Gets system states.
   ///
@@ -4869,7 +2412,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/systemStates/historical';
+    final _path = r'/dapps/curve/systemStates/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -4917,97 +2460,6 @@ class CurveApi {
     }
 
     return Response<BuiltList<CurveSystemStateDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// TokenDTOs (historical) 🔥
-  /// Gets TokenDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveTokenDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveTokenDTO>>> curveGetTokenDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/TokenDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveTokenDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveTokenDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveTokenDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveTokenDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -5050,7 +2502,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/tokens/historical';
+    final _path = r'/dapps/curve/tokens/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -5110,97 +2562,6 @@ class CurveApi {
     );
   }
 
-  /// TransferOwnershipEventDTOs (historical) 🔥
-  /// Gets TransferOwnershipEventDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveTransferOwnershipEventDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveTransferOwnershipEventDTO>>> curveGetTransferOwnershipEventDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/TransferOwnershipEventDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveTransferOwnershipEventDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveTransferOwnershipEventDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveTransferOwnershipEventDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveTransferOwnershipEventDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// TransferOwnershipEvents (historical)
   /// Gets transfer ownership events.
   ///
@@ -5232,7 +2593,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/transferOwnershipEvents/historical';
+    final _path = r'/dapps/curve/transferOwnershipEvents/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -5281,97 +2642,6 @@ class CurveApi {
     }
 
     return Response<BuiltList<CurveTransferOwnershipEventDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// UnderlyingCoinDTOs (historical) 🔥
-  /// Gets UnderlyingCoinDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveUnderlyingCoinDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveUnderlyingCoinDTO>>> curveGetUnderlyingCoinDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/UnderlyingCoinDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveUnderlyingCoinDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveUnderlyingCoinDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveUnderlyingCoinDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveUnderlyingCoinDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -5414,7 +2684,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/underlyingCoins/historical';
+    final _path = r'/dapps/curve/underlyingCoins/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -5474,97 +2744,6 @@ class CurveApi {
     );
   }
 
-  /// VotingAppDTOs (historical) 🔥
-  /// Gets VotingAppDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveVotingAppDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveVotingAppDTO>>> curveGetVotingAppDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/VotingAppDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveVotingAppDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveVotingAppDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveVotingAppDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveVotingAppDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
   /// VotingApps (historical)
   /// Gets voting apps.
   ///
@@ -5594,7 +2773,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/votingApps/historical';
+    final _path = r'/dapps/curve/votingApps/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -5642,97 +2821,6 @@ class CurveApi {
     }
 
     return Response<BuiltList<CurveVotingAppDTO>>(
-      data: _responseData,
-      headers: _response.headers,
-      isRedirect: _response.isRedirect,
-      requestOptions: _response.requestOptions,
-      redirects: _response.redirects,
-      statusCode: _response.statusCode,
-      statusMessage: _response.statusMessage,
-      extra: _response.extra,
-    );
-  }
-
-  /// WeeklyVolumeDTOs (historical) 🔥
-  /// Gets WeeklyVolumeDTOs.
-  ///
-  /// Parameters:
-  /// * [startBlock] - 
-  /// * [endBlock] - 
-  /// * [startDate] - 
-  /// * [endDate] - 
-  /// * [poolId] - 
-  /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
-  /// * [headers] - Can be used to add additional headers to the request
-  /// * [extras] - Can be used to add flags to the request
-  /// * [validateStatus] - A [ValidateStatus] callback that can be used to determine request success based on the HTTP status of the response
-  /// * [onSendProgress] - A [ProgressCallback] that can be used to get the send progress
-  /// * [onReceiveProgress] - A [ProgressCallback] that can be used to get the receive progress
-  ///
-  /// Returns a [Future] containing a [Response] with a [BuiltList<CurveWeeklyVolumeDTO>] as data
-  /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveWeeklyVolumeDTO>>> curveGetWeeklyVolumeDTOsHistorical({ 
-    int? startBlock,
-    int? endBlock,
-    DateTime? startDate,
-    DateTime? endDate,
-    String? poolId,
-    CancelToken? cancelToken,
-    Map<String, dynamic>? headers,
-    Map<String, dynamic>? extra,
-    ValidateStatus? validateStatus,
-    ProgressCallback? onSendProgress,
-    ProgressCallback? onReceiveProgress,
-  }) async {
-    final _path = r'/dapps/curve/WeeklyVolumeDTOs/historical';
-    final _options = Options(
-      method: r'GET',
-      headers: <String, dynamic>{
-        ...?headers,
-      },
-      extra: <String, dynamic>{
-        'secure': <Map<String, String>>[],
-        ...?extra,
-      },
-      validateStatus: validateStatus,
-    );
-
-    final _queryParameters = <String, dynamic>{
-      if (startBlock != null) r'startBlock': encodeQueryParameter(_serializers, startBlock, const FullType(int)),
-      if (endBlock != null) r'endBlock': encodeQueryParameter(_serializers, endBlock, const FullType(int)),
-      if (startDate != null) r'startDate': encodeQueryParameter(_serializers, startDate, const FullType(DateTime)),
-      if (endDate != null) r'endDate': encodeQueryParameter(_serializers, endDate, const FullType(DateTime)),
-      if (poolId != null) r'poolId': encodeQueryParameter(_serializers, poolId, const FullType(String)),
-    };
-
-    final _response = await _dio.request<Object>(
-      _path,
-      options: _options,
-      queryParameters: _queryParameters,
-      cancelToken: cancelToken,
-      onSendProgress: onSendProgress,
-      onReceiveProgress: onReceiveProgress,
-    );
-
-    BuiltList<CurveWeeklyVolumeDTO> _responseData;
-
-    try {
-      const _responseType = FullType(BuiltList, [FullType(CurveWeeklyVolumeDTO)]);
-      _responseData = _serializers.deserialize(
-        _response.data!,
-        specifiedType: _responseType,
-      ) as BuiltList<CurveWeeklyVolumeDTO>;
-
-    } catch (error, stackTrace) {
-      throw DioError(
-        requestOptions: _response.requestOptions,
-        response: _response,
-        type: DioErrorType.other,
-        error: error,
-      )..stackTrace = stackTrace;
-    }
-
-    return Response<BuiltList<CurveWeeklyVolumeDTO>>(
       data: _responseData,
       headers: _response.headers,
       isRedirect: _response.isRedirect,
@@ -5775,7 +2863,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/weeklyVolumes/historical';
+    final _path = r'/dapps/curve/weeklyVolumes/historical-manual';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{

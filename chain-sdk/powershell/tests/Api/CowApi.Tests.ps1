@@ -7,25 +7,9 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'CowApi' {
-    Context 'Invoke-CowGetOrderDTOsHistorical' {
-        It 'Test Invoke-CowGetOrderDTOsHistorical' {
-            #$TestResult = Invoke-CowGetOrderDTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-CowGetOrdersHistorical' {
         It 'Test Invoke-CowGetOrdersHistorical' {
             #$TestResult = Invoke-CowGetOrdersHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-CowGetSettlementDTOsHistorical' {
-        It 'Test Invoke-CowGetSettlementDTOsHistorical' {
-            #$TestResult = Invoke-CowGetSettlementDTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -39,14 +23,6 @@ Describe -tag 'PSOpenAPITools' -name 'CowApi' {
         }
     }
 
-    Context 'Invoke-CowGetTokenDTOsHistorical' {
-        It 'Test Invoke-CowGetTokenDTOsHistorical' {
-            #$TestResult = Invoke-CowGetTokenDTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-CowGetTokensHistorical' {
         It 'Test Invoke-CowGetTokensHistorical' {
             #$TestResult = Invoke-CowGetTokensHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -TokenId "TEST_VALUE"
@@ -55,25 +31,9 @@ Describe -tag 'PSOpenAPITools' -name 'CowApi' {
         }
     }
 
-    Context 'Invoke-CowGetTradeDTOsHistorical' {
-        It 'Test Invoke-CowGetTradeDTOsHistorical' {
-            #$TestResult = Invoke-CowGetTradeDTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-CowGetTradesHistorical' {
         It 'Test Invoke-CowGetTradesHistorical' {
             #$TestResult = Invoke-CowGetTradesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-CowGetUserDTOsHistorical' {
-        It 'Test Invoke-CowGetUserDTOsHistorical' {
-            #$TestResult = Invoke-CowGetUserDTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

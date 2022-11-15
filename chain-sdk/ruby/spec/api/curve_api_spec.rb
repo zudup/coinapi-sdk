@@ -32,22 +32,6 @@ describe 'CurveApi' do
     end
   end
 
-  # unit tests for curve_get_account_dtos__historical
-  # AccountDTOs (historical) 🔥
-  # Gets AccountDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveAccountDTO>]
-  describe 'curve_get_account_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for curve_get_accounts__historical
   # Accounts (historical)
   # Gets accounts.
@@ -58,22 +42,6 @@ describe 'CurveApi' do
   # @option opts [Time] :end_date 
   # @return [Array<CurveAccountDTO>]
   describe 'curve_get_accounts__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_add_liquidity_event_dtos__historical
-  # AddLiquidityEventDTOs (historical) 🔥
-  # Gets AddLiquidityEventDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveAddLiquidityEventDTO>]
-  describe 'curve_get_add_liquidity_event_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -95,22 +63,6 @@ describe 'CurveApi' do
     end
   end
 
-  # unit tests for curve_get_admin_fee_change_log_dtos__historical
-  # AdminFeeChangeLogDTOs (historical) 🔥
-  # Gets AdminFeeChangeLogDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveAdminFeeChangeLogDTO>]
-  describe 'curve_get_admin_fee_change_log_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for curve_get_admin_fee_change_logs__historical
   # AdminFeeChangeLogs (historical)
   # Gets admin fee change logs.
@@ -122,22 +74,6 @@ describe 'CurveApi' do
   # @option opts [String] :pool_id 
   # @return [Array<CurveAdminFeeChangeLogDTO>]
   describe 'curve_get_admin_fee_change_logs__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_amplification_coeff_change_log_dtos__historical
-  # AmplificationCoeffChangeLogDTOs (historical) 🔥
-  # Gets AmplificationCoeffChangeLogDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveAmplificationCoeffChangeLogDTO>]
-  describe 'curve_get_amplification_coeff_change_log_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -159,22 +95,6 @@ describe 'CurveApi' do
     end
   end
 
-  # unit tests for curve_get_coin_dtos__historical
-  # CoinDTOs (historical) 🔥
-  # Gets CoinDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveCoinDTO>]
-  describe 'curve_get_coin_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for curve_get_coins__historical
   # Coins (historical)
   # Gets coins.
@@ -186,38 +106,6 @@ describe 'CurveApi' do
   # @option opts [String] :pool_id 
   # @return [Array<CurveCoinDTO>]
   describe 'curve_get_coins__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_contract_dtos__historical
-  # ContractDTOs (historical) 🔥
-  # Gets ContractDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveContractDTO>]
-  describe 'curve_get_contract_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_contract_version_dtos__historical
-  # ContractVersionDTOs (historical) 🔥
-  # Gets ContractVersionDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveContractVersionDTO>]
-  describe 'curve_get_contract_version_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -255,22 +143,6 @@ describe 'CurveApi' do
     end
   end
 
-  # unit tests for curve_get_daily_volume_dtos__historical
-  # DailyVolumeDTOs (historical) 🔥
-  # Gets DailyVolumeDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveDailyVolumeDTO>]
-  describe 'curve_get_daily_volume_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for curve_get_daily_volumes__historical
   # DailyVolumes (historical)
   # Gets daily volumes.
@@ -282,22 +154,6 @@ describe 'CurveApi' do
   # @option opts [String] :pool_id 
   # @return [Array<CurveDailyVolumeDTO>]
   describe 'curve_get_daily_volumes__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_exchange_dtos__historical
-  # ExchangeDTOs (historical) 🔥
-  # Gets ExchangeDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveExchangeDTO>]
-  describe 'curve_get_exchange_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -319,22 +175,6 @@ describe 'CurveApi' do
     end
   end
 
-  # unit tests for curve_get_fee_change_log_dtos__historical
-  # FeeChangeLogDTOs (historical) 🔥
-  # Gets FeeChangeLogDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveFeeChangeLogDTO>]
-  describe 'curve_get_fee_change_log_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for curve_get_fee_change_logs__historical
   # FeeChangeLogs (historical)
   # Gets fee change logs.
@@ -346,150 +186,6 @@ describe 'CurveApi' do
   # @option opts [String] :pool_id 
   # @return [Array<CurveFeeChangeLogDTO>]
   describe 'curve_get_fee_change_logs__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_gauge_deposit_dtos__historical
-  # GaugeDepositDTOs (historical) 🔥
-  # Gets GaugeDepositDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveGaugeDepositDTO>]
-  describe 'curve_get_gauge_deposit_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_gauge_dtos__historical
-  # GaugeDTOs (historical) 🔥
-  # Gets GaugeDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveGaugeDTO>]
-  describe 'curve_get_gauge_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_gauge_liquidity_dtos__historical
-  # GaugeLiquidityDTOs (historical) 🔥
-  # Gets GaugeLiquidityDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveGaugeLiquidityDTO>]
-  describe 'curve_get_gauge_liquidity_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_gauge_total_weight_dtos__historical
-  # GaugeTotalWeightDTOs (historical) 🔥
-  # Gets GaugeTotalWeightDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveGaugeTotalWeightDTO>]
-  describe 'curve_get_gauge_total_weight_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_gauge_type_dtos__historical
-  # GaugeTypeDTOs (historical) 🔥
-  # Gets GaugeTypeDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveGaugeTypeDTO>]
-  describe 'curve_get_gauge_type_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_gauge_type_weight_dtos__historical
-  # GaugeTypeWeightDTOs (historical) 🔥
-  # Gets GaugeTypeWeightDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveGaugeTypeWeightDTO>]
-  describe 'curve_get_gauge_type_weight_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_gauge_weight_dtos__historical
-  # GaugeWeightDTOs (historical) 🔥
-  # Gets GaugeWeightDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveGaugeWeightDTO>]
-  describe 'curve_get_gauge_weight_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_gauge_weight_vote_dtos__historical
-  # GaugeWeightVoteDTOs (historical) 🔥
-  # Gets GaugeWeightVoteDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveGaugeWeightVoteDTO>]
-  describe 'curve_get_gauge_weight_vote_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_gauge_withdraw_dtos__historical
-  # GaugeWithdrawDTOs (historical) 🔥
-  # Gets GaugeWithdrawDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveGaugeWithdrawDTO>]
-  describe 'curve_get_gauge_withdraw_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -631,22 +327,6 @@ describe 'CurveApi' do
     end
   end
 
-  # unit tests for curve_get_hourly_volume_dtos__historical
-  # HourlyVolumeDTOs (historical) 🔥
-  # Gets HourlyVolumeDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveHourlyVolumeDTO>]
-  describe 'curve_get_hourly_volume_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for curve_get_hourly_volumes__historical
   # HourlyVolumes (historical)
   # Gets hourly volumes.
@@ -658,22 +338,6 @@ describe 'CurveApi' do
   # @option opts [String] :pool_id 
   # @return [Array<CurveHourlyVolumeDTO>]
   describe 'curve_get_hourly_volumes__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_lp_token_dtos__historical
-  # LpTokenDTOs (historical) 🔥
-  # Gets LpTokenDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveLpTokenDTO>]
-  describe 'curve_get_lp_token_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -695,22 +359,6 @@ describe 'CurveApi' do
     end
   end
 
-  # unit tests for curve_get_pool_dtos__historical
-  # PoolDTOs (historical) 🔥
-  # Gets PoolDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurvePoolDTO>]
-  describe 'curve_get_pool_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for curve_get_pools__historical
   # Pools (historical) 🔥
   # Gets pools.
@@ -722,38 +370,6 @@ describe 'CurveApi' do
   # @option opts [String] :pool_id 
   # @return [Array<CurvePoolDTO>]
   describe 'curve_get_pools__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_proposal_dtos__historical
-  # ProposalDTOs (historical) 🔥
-  # Gets ProposalDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveProposalDTO>]
-  describe 'curve_get_proposal_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_proposal_vote_dtos__historical
-  # ProposalVoteDTOs (historical) 🔥
-  # Gets ProposalVoteDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveProposalVoteDTO>]
-  describe 'curve_get_proposal_vote_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -789,22 +405,6 @@ describe 'CurveApi' do
     end
   end
 
-  # unit tests for curve_get_remove_liquidity_event_dtos__historical
-  # RemoveLiquidityEventDTOs (historical) 🔥
-  # Gets RemoveLiquidityEventDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveRemoveLiquidityEventDTO>]
-  describe 'curve_get_remove_liquidity_event_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for curve_get_remove_liquidity_events__historical
   # RemoveLiquidityEvents (historical)
   # Gets remove liquidity events.
@@ -816,22 +416,6 @@ describe 'CurveApi' do
   # @option opts [String] :pool_id 
   # @return [Array<CurveRemoveLiquidityEventDTO>]
   describe 'curve_get_remove_liquidity_events__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_remove_liquidity_one_event_dtos__historical
-  # RemoveLiquidityOneEventDTOs (historical) 🔥
-  # Gets RemoveLiquidityOneEventDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveRemoveLiquidityOneEventDTO>]
-  describe 'curve_get_remove_liquidity_one_event_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -853,22 +437,6 @@ describe 'CurveApi' do
     end
   end
 
-  # unit tests for curve_get_system_state_dtos__historical
-  # SystemStateDTOs (historical) 🔥
-  # Gets SystemStateDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveSystemStateDTO>]
-  describe 'curve_get_system_state_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for curve_get_system_states__historical
   # SystemStates (historical)
   # Gets system states.
@@ -879,22 +447,6 @@ describe 'CurveApi' do
   # @option opts [Time] :end_date 
   # @return [Array<CurveSystemStateDTO>]
   describe 'curve_get_system_states__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_token_dtos__historical
-  # TokenDTOs (historical) 🔥
-  # Gets TokenDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveTokenDTO>]
-  describe 'curve_get_token_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -916,22 +468,6 @@ describe 'CurveApi' do
     end
   end
 
-  # unit tests for curve_get_transfer_ownership_event_dtos__historical
-  # TransferOwnershipEventDTOs (historical) 🔥
-  # Gets TransferOwnershipEventDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveTransferOwnershipEventDTO>]
-  describe 'curve_get_transfer_ownership_event_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for curve_get_transfer_ownership_events__historical
   # TransferOwnershipEvents (historical)
   # Gets transfer ownership events.
@@ -943,22 +479,6 @@ describe 'CurveApi' do
   # @option opts [String] :pool_id 
   # @return [Array<CurveTransferOwnershipEventDTO>]
   describe 'curve_get_transfer_ownership_events__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_underlying_coin_dtos__historical
-  # UnderlyingCoinDTOs (historical) 🔥
-  # Gets UnderlyingCoinDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveUnderlyingCoinDTO>]
-  describe 'curve_get_underlying_coin_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -980,22 +500,6 @@ describe 'CurveApi' do
     end
   end
 
-  # unit tests for curve_get_voting_app_dtos__historical
-  # VotingAppDTOs (historical) 🔥
-  # Gets VotingAppDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveVotingAppDTO>]
-  describe 'curve_get_voting_app_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for curve_get_voting_apps__historical
   # VotingApps (historical)
   # Gets voting apps.
@@ -1006,22 +510,6 @@ describe 'CurveApi' do
   # @option opts [Time] :end_date 
   # @return [Array<CurveVotingAppDTO>]
   describe 'curve_get_voting_apps__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for curve_get_weekly_volume_dtos__historical
-  # WeeklyVolumeDTOs (historical) 🔥
-  # Gets WeeklyVolumeDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<CurveWeeklyVolumeDTO>]
-  describe 'curve_get_weekly_volume_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

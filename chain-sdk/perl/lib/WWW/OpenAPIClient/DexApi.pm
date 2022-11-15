@@ -49,110 +49,6 @@ sub new {
 
 
 #
-# dex_get_batch_dtos__historical
-#
-# BatchDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'dex_get_batch_dtos__historical' } = {
-        summary => 'BatchDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[DexBatchDTO]',
-        };
-}
-# @return ARRAY[DexBatchDTO]
-#
-sub dex_get_batch_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/dex/BatchDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexBatchDTO]', $response);
-    return $_response_object;
-}
-
-#
 # dex_get_batches__historical
 #
 # Batches (historical)
@@ -196,7 +92,7 @@ sub dex_get_batches__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/batches/historical';
+    my $_resource_path = '/dapps/dex/batches/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -242,110 +138,6 @@ sub dex_get_batches__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[DexBatchDTO]', $response);
-    return $_response_object;
-}
-
-#
-# dex_get_deposit_dtos__historical
-#
-# DepositDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'dex_get_deposit_dtos__historical' } = {
-        summary => 'DepositDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[DexDepositDTO]',
-        };
-}
-# @return ARRAY[DexDepositDTO]
-#
-sub dex_get_deposit_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/dex/DepositDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexDepositDTO]', $response);
     return $_response_object;
 }
 
@@ -399,7 +191,7 @@ sub dex_get_deposits__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/deposits/historical';
+    my $_resource_path = '/dapps/dex/deposits/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -454,110 +246,6 @@ sub dex_get_deposits__historical {
 }
 
 #
-# dex_get_order_dtos__historical
-#
-# OrderDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'dex_get_order_dtos__historical' } = {
-        summary => 'OrderDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[DexOrderDTO]',
-        };
-}
-# @return ARRAY[DexOrderDTO]
-#
-sub dex_get_order_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/dex/OrderDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexOrderDTO]', $response);
-    return $_response_object;
-}
-
-#
 # dex_get_orders__historical
 #
 # Orders (historical)
@@ -607,7 +295,7 @@ sub dex_get_orders__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/orders/historical';
+    my $_resource_path = '/dapps/dex/orders/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -658,110 +346,6 @@ sub dex_get_orders__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[DexOrderDTO]', $response);
-    return $_response_object;
-}
-
-#
-# dex_get_price_dtos__historical
-#
-# PriceDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'dex_get_price_dtos__historical' } = {
-        summary => 'PriceDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[DexPriceDTO]',
-        };
-}
-# @return ARRAY[DexPriceDTO]
-#
-sub dex_get_price_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/dex/PriceDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexPriceDTO]', $response);
     return $_response_object;
 }
 
@@ -815,7 +399,7 @@ sub dex_get_prices__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/prices/historical';
+    my $_resource_path = '/dapps/dex/prices/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -870,110 +454,6 @@ sub dex_get_prices__historical {
 }
 
 #
-# dex_get_solution_dtos__historical
-#
-# SolutionDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'dex_get_solution_dtos__historical' } = {
-        summary => 'SolutionDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[DexSolutionDTO]',
-        };
-}
-# @return ARRAY[DexSolutionDTO]
-#
-sub dex_get_solution_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/dex/SolutionDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexSolutionDTO]', $response);
-    return $_response_object;
-}
-
-#
 # dex_get_solutions__historical
 #
 # Solutions (historical)
@@ -1023,7 +503,7 @@ sub dex_get_solutions__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/solutions/historical';
+    my $_resource_path = '/dapps/dex/solutions/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1121,7 +601,7 @@ sub dex_get_stats__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/stats/historical';
+    my $_resource_path = '/dapps/dex/stats/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1167,214 +647,6 @@ sub dex_get_stats__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[DexStatsDTO]', $response);
-    return $_response_object;
-}
-
-#
-# dex_get_stats_dtos__historical
-#
-# StatsDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'dex_get_stats_dtos__historical' } = {
-        summary => 'StatsDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[DexStatsDTO]',
-        };
-}
-# @return ARRAY[DexStatsDTO]
-#
-sub dex_get_stats_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/dex/StatsDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexStatsDTO]', $response);
-    return $_response_object;
-}
-
-#
-# dex_get_token_dtos__historical
-#
-# TokenDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'dex_get_token_dtos__historical' } = {
-        summary => 'TokenDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[DexTokenDTO]',
-        };
-}
-# @return ARRAY[DexTokenDTO]
-#
-sub dex_get_token_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/dex/TokenDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexTokenDTO]', $response);
     return $_response_object;
 }
 
@@ -1428,7 +700,7 @@ sub dex_get_tokens__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/tokens/historical';
+    my $_resource_path = '/dapps/dex/tokens/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1483,110 +755,6 @@ sub dex_get_tokens__historical {
 }
 
 #
-# dex_get_trade_dtos__historical
-#
-# TradeDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'dex_get_trade_dtos__historical' } = {
-        summary => 'TradeDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[DexTradeDTO]',
-        };
-}
-# @return ARRAY[DexTradeDTO]
-#
-sub dex_get_trade_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/dex/TradeDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexTradeDTO]', $response);
-    return $_response_object;
-}
-
-#
 # dex_get_trades__historical
 #
 # Trades (historical) 🔥
@@ -1630,7 +798,7 @@ sub dex_get_trades__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/trades/historical';
+    my $_resource_path = '/dapps/dex/trades/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1676,110 +844,6 @@ sub dex_get_trades__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[DexTradeDTO]', $response);
-    return $_response_object;
-}
-
-#
-# dex_get_user_dtos__historical
-#
-# UserDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'dex_get_user_dtos__historical' } = {
-        summary => 'UserDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[DexUserDTO]',
-        };
-}
-# @return ARRAY[DexUserDTO]
-#
-sub dex_get_user_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/dex/UserDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexUserDTO]', $response);
     return $_response_object;
 }
 
@@ -1827,7 +891,7 @@ sub dex_get_users__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/users/historical';
+    my $_resource_path = '/dapps/dex/users/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1873,214 +937,6 @@ sub dex_get_users__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[DexUserDTO]', $response);
-    return $_response_object;
-}
-
-#
-# dex_get_withdraw_dtos__historical
-#
-# WithdrawDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'dex_get_withdraw_dtos__historical' } = {
-        summary => 'WithdrawDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[DexWithdrawDTO]',
-        };
-}
-# @return ARRAY[DexWithdrawDTO]
-#
-sub dex_get_withdraw_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/dex/WithdrawDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexWithdrawDTO]', $response);
-    return $_response_object;
-}
-
-#
-# dex_get_withdraw_request_dtos__historical
-#
-# WithdrawRequestDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'dex_get_withdraw_request_dtos__historical' } = {
-        summary => 'WithdrawRequestDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[DexWithdrawRequestDTO]',
-        };
-}
-# @return ARRAY[DexWithdrawRequestDTO]
-#
-sub dex_get_withdraw_request_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/dex/WithdrawRequestDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[DexWithdrawRequestDTO]', $response);
     return $_response_object;
 }
 
@@ -2134,7 +990,7 @@ sub dex_get_withdraws__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/withdraws/historical';
+    my $_resource_path = '/dapps/dex/withdraws/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2238,7 +1094,7 @@ sub dex_get_withdraws_requests__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/withdrawsRequests/historical';
+    my $_resource_path = '/dapps/dex/withdrawsRequests/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};

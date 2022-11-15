@@ -5,22 +5,6 @@ context("Test CowApi")
 
 api_instance <- CowApi$new()
 
-test_that("CowGetOrderDTOsHistorical", {
-  # tests for CowGetOrderDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # OrderDTOs (historical) 🔥
-  # Gets OrderDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CowOrderDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("CowGetOrdersHistorical", {
   # tests for CowGetOrdersHistorical
   # base path: https://onchain.coinapi.io
@@ -36,22 +20,6 @@ test_that("CowGetOrdersHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("CowGetSettlementDTOsHistorical", {
-  # tests for CowGetSettlementDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # SettlementDTOs (historical) 🔥
-  # Gets SettlementDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CowSettlementDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("CowGetSettlementsHistorical", {
   # tests for CowGetSettlementsHistorical
   # base path: https://onchain.coinapi.io
@@ -62,22 +30,6 @@ test_that("CowGetSettlementsHistorical", {
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @return [array[CowSettlementDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CowGetTokenDTOsHistorical", {
-  # tests for CowGetTokenDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # TokenDTOs (historical) 🔥
-  # Gets TokenDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CowTokenDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -99,22 +51,6 @@ test_that("CowGetTokensHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("CowGetTradeDTOsHistorical", {
-  # tests for CowGetTradeDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # TradeDTOs (historical) 🔥
-  # Gets TradeDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CowTradeDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("CowGetTradesHistorical", {
   # tests for CowGetTradesHistorical
   # base path: https://onchain.coinapi.io
@@ -125,22 +61,6 @@ test_that("CowGetTradesHistorical", {
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @return [array[CowTradeDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CowGetUserDTOsHistorical", {
-  # tests for CowGetUserDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # UserDTOs (historical) 🔥
-  # Gets UserDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CowUserDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

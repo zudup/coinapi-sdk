@@ -48,30 +48,10 @@
   }
 
   describe('CurveApi', function() {
-    describe('curveGetAccountDTOsHistorical', function() {
-      it('should call curveGetAccountDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetAccountDTOsHistorical
-        //instance.curveGetAccountDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('curveGetAccountsHistorical', function() {
       it('should call curveGetAccountsHistorical successfully', function(done) {
         //uncomment below and update the code to test curveGetAccountsHistorical
         //instance.curveGetAccountsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetAddLiquidityEventDTOsHistorical', function() {
-      it('should call curveGetAddLiquidityEventDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetAddLiquidityEventDTOsHistorical
-        //instance.curveGetAddLiquidityEventDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -88,30 +68,10 @@
         done();
       });
     });
-    describe('curveGetAdminFeeChangeLogDTOsHistorical', function() {
-      it('should call curveGetAdminFeeChangeLogDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetAdminFeeChangeLogDTOsHistorical
-        //instance.curveGetAdminFeeChangeLogDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('curveGetAdminFeeChangeLogsHistorical', function() {
       it('should call curveGetAdminFeeChangeLogsHistorical successfully', function(done) {
         //uncomment below and update the code to test curveGetAdminFeeChangeLogsHistorical
         //instance.curveGetAdminFeeChangeLogsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetAmplificationCoeffChangeLogDTOsHistorical', function() {
-      it('should call curveGetAmplificationCoeffChangeLogDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetAmplificationCoeffChangeLogDTOsHistorical
-        //instance.curveGetAmplificationCoeffChangeLogDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -128,40 +88,10 @@
         done();
       });
     });
-    describe('curveGetCoinDTOsHistorical', function() {
-      it('should call curveGetCoinDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetCoinDTOsHistorical
-        //instance.curveGetCoinDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('curveGetCoinsHistorical', function() {
       it('should call curveGetCoinsHistorical successfully', function(done) {
         //uncomment below and update the code to test curveGetCoinsHistorical
         //instance.curveGetCoinsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetContractDTOsHistorical', function() {
-      it('should call curveGetContractDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetContractDTOsHistorical
-        //instance.curveGetContractDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetContractVersionDTOsHistorical', function() {
-      it('should call curveGetContractVersionDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetContractVersionDTOsHistorical
-        //instance.curveGetContractVersionDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -188,30 +118,10 @@
         done();
       });
     });
-    describe('curveGetDailyVolumeDTOsHistorical', function() {
-      it('should call curveGetDailyVolumeDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetDailyVolumeDTOsHistorical
-        //instance.curveGetDailyVolumeDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('curveGetDailyVolumesHistorical', function() {
       it('should call curveGetDailyVolumesHistorical successfully', function(done) {
         //uncomment below and update the code to test curveGetDailyVolumesHistorical
         //instance.curveGetDailyVolumesHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetExchangeDTOsHistorical', function() {
-      it('should call curveGetExchangeDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetExchangeDTOsHistorical
-        //instance.curveGetExchangeDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -228,110 +138,10 @@
         done();
       });
     });
-    describe('curveGetFeeChangeLogDTOsHistorical', function() {
-      it('should call curveGetFeeChangeLogDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetFeeChangeLogDTOsHistorical
-        //instance.curveGetFeeChangeLogDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('curveGetFeeChangeLogsHistorical', function() {
       it('should call curveGetFeeChangeLogsHistorical successfully', function(done) {
         //uncomment below and update the code to test curveGetFeeChangeLogsHistorical
         //instance.curveGetFeeChangeLogsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetGaugeDTOsHistorical', function() {
-      it('should call curveGetGaugeDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetGaugeDTOsHistorical
-        //instance.curveGetGaugeDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetGaugeDepositDTOsHistorical', function() {
-      it('should call curveGetGaugeDepositDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetGaugeDepositDTOsHistorical
-        //instance.curveGetGaugeDepositDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetGaugeLiquidityDTOsHistorical', function() {
-      it('should call curveGetGaugeLiquidityDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetGaugeLiquidityDTOsHistorical
-        //instance.curveGetGaugeLiquidityDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetGaugeTotalWeightDTOsHistorical', function() {
-      it('should call curveGetGaugeTotalWeightDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetGaugeTotalWeightDTOsHistorical
-        //instance.curveGetGaugeTotalWeightDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetGaugeTypeDTOsHistorical', function() {
-      it('should call curveGetGaugeTypeDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetGaugeTypeDTOsHistorical
-        //instance.curveGetGaugeTypeDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetGaugeTypeWeightDTOsHistorical', function() {
-      it('should call curveGetGaugeTypeWeightDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetGaugeTypeWeightDTOsHistorical
-        //instance.curveGetGaugeTypeWeightDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetGaugeWeightDTOsHistorical', function() {
-      it('should call curveGetGaugeWeightDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetGaugeWeightDTOsHistorical
-        //instance.curveGetGaugeWeightDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetGaugeWeightVoteDTOsHistorical', function() {
-      it('should call curveGetGaugeWeightVoteDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetGaugeWeightVoteDTOsHistorical
-        //instance.curveGetGaugeWeightVoteDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetGaugeWithdrawDTOsHistorical', function() {
-      it('should call curveGetGaugeWithdrawDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetGaugeWithdrawDTOsHistorical
-        //instance.curveGetGaugeWithdrawDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -428,30 +238,10 @@
         done();
       });
     });
-    describe('curveGetHourlyVolumeDTOsHistorical', function() {
-      it('should call curveGetHourlyVolumeDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetHourlyVolumeDTOsHistorical
-        //instance.curveGetHourlyVolumeDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('curveGetHourlyVolumesHistorical', function() {
       it('should call curveGetHourlyVolumesHistorical successfully', function(done) {
         //uncomment below and update the code to test curveGetHourlyVolumesHistorical
         //instance.curveGetHourlyVolumesHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetLpTokenDTOsHistorical', function() {
-      it('should call curveGetLpTokenDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetLpTokenDTOsHistorical
-        //instance.curveGetLpTokenDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -468,40 +258,10 @@
         done();
       });
     });
-    describe('curveGetPoolDTOsHistorical', function() {
-      it('should call curveGetPoolDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetPoolDTOsHistorical
-        //instance.curveGetPoolDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('curveGetPoolsHistorical', function() {
       it('should call curveGetPoolsHistorical successfully', function(done) {
         //uncomment below and update the code to test curveGetPoolsHistorical
         //instance.curveGetPoolsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetProposalDTOsHistorical', function() {
-      it('should call curveGetProposalDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetProposalDTOsHistorical
-        //instance.curveGetProposalDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetProposalVoteDTOsHistorical', function() {
-      it('should call curveGetProposalVoteDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetProposalVoteDTOsHistorical
-        //instance.curveGetProposalVoteDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -528,30 +288,10 @@
         done();
       });
     });
-    describe('curveGetRemoveLiquidityEventDTOsHistorical', function() {
-      it('should call curveGetRemoveLiquidityEventDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetRemoveLiquidityEventDTOsHistorical
-        //instance.curveGetRemoveLiquidityEventDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('curveGetRemoveLiquidityEventsHistorical', function() {
       it('should call curveGetRemoveLiquidityEventsHistorical successfully', function(done) {
         //uncomment below and update the code to test curveGetRemoveLiquidityEventsHistorical
         //instance.curveGetRemoveLiquidityEventsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetRemoveLiquidityOneEventDTOsHistorical', function() {
-      it('should call curveGetRemoveLiquidityOneEventDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetRemoveLiquidityOneEventDTOsHistorical
-        //instance.curveGetRemoveLiquidityOneEventDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -568,30 +308,10 @@
         done();
       });
     });
-    describe('curveGetSystemStateDTOsHistorical', function() {
-      it('should call curveGetSystemStateDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetSystemStateDTOsHistorical
-        //instance.curveGetSystemStateDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('curveGetSystemStatesHistorical', function() {
       it('should call curveGetSystemStatesHistorical successfully', function(done) {
         //uncomment below and update the code to test curveGetSystemStatesHistorical
         //instance.curveGetSystemStatesHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetTokenDTOsHistorical', function() {
-      it('should call curveGetTokenDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetTokenDTOsHistorical
-        //instance.curveGetTokenDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -608,30 +328,10 @@
         done();
       });
     });
-    describe('curveGetTransferOwnershipEventDTOsHistorical', function() {
-      it('should call curveGetTransferOwnershipEventDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetTransferOwnershipEventDTOsHistorical
-        //instance.curveGetTransferOwnershipEventDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('curveGetTransferOwnershipEventsHistorical', function() {
       it('should call curveGetTransferOwnershipEventsHistorical successfully', function(done) {
         //uncomment below and update the code to test curveGetTransferOwnershipEventsHistorical
         //instance.curveGetTransferOwnershipEventsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetUnderlyingCoinDTOsHistorical', function() {
-      it('should call curveGetUnderlyingCoinDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetUnderlyingCoinDTOsHistorical
-        //instance.curveGetUnderlyingCoinDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -648,30 +348,10 @@
         done();
       });
     });
-    describe('curveGetVotingAppDTOsHistorical', function() {
-      it('should call curveGetVotingAppDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetVotingAppDTOsHistorical
-        //instance.curveGetVotingAppDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('curveGetVotingAppsHistorical', function() {
       it('should call curveGetVotingAppsHistorical successfully', function(done) {
         //uncomment below and update the code to test curveGetVotingAppsHistorical
         //instance.curveGetVotingAppsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('curveGetWeeklyVolumeDTOsHistorical', function() {
-      it('should call curveGetWeeklyVolumeDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetWeeklyVolumeDTOsHistorical
-        //instance.curveGetWeeklyVolumeDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

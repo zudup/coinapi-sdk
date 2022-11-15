@@ -48,30 +48,10 @@
   }
 
   describe('DexApi', function() {
-    describe('dexGetBatchDTOsHistorical', function() {
-      it('should call dexGetBatchDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test dexGetBatchDTOsHistorical
-        //instance.dexGetBatchDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('dexGetBatchesHistorical', function() {
       it('should call dexGetBatchesHistorical successfully', function(done) {
         //uncomment below and update the code to test dexGetBatchesHistorical
         //instance.dexGetBatchesHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('dexGetDepositDTOsHistorical', function() {
-      it('should call dexGetDepositDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test dexGetDepositDTOsHistorical
-        //instance.dexGetDepositDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -88,30 +68,10 @@
         done();
       });
     });
-    describe('dexGetOrderDTOsHistorical', function() {
-      it('should call dexGetOrderDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test dexGetOrderDTOsHistorical
-        //instance.dexGetOrderDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('dexGetOrdersHistorical', function() {
       it('should call dexGetOrdersHistorical successfully', function(done) {
         //uncomment below and update the code to test dexGetOrdersHistorical
         //instance.dexGetOrdersHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('dexGetPriceDTOsHistorical', function() {
-      it('should call dexGetPriceDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test dexGetPriceDTOsHistorical
-        //instance.dexGetPriceDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -128,30 +88,10 @@
         done();
       });
     });
-    describe('dexGetSolutionDTOsHistorical', function() {
-      it('should call dexGetSolutionDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test dexGetSolutionDTOsHistorical
-        //instance.dexGetSolutionDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('dexGetSolutionsHistorical', function() {
       it('should call dexGetSolutionsHistorical successfully', function(done) {
         //uncomment below and update the code to test dexGetSolutionsHistorical
         //instance.dexGetSolutionsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('dexGetStatsDTOsHistorical', function() {
-      it('should call dexGetStatsDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test dexGetStatsDTOsHistorical
-        //instance.dexGetStatsDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -168,30 +108,10 @@
         done();
       });
     });
-    describe('dexGetTokenDTOsHistorical', function() {
-      it('should call dexGetTokenDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test dexGetTokenDTOsHistorical
-        //instance.dexGetTokenDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('dexGetTokensHistorical', function() {
       it('should call dexGetTokensHistorical successfully', function(done) {
         //uncomment below and update the code to test dexGetTokensHistorical
         //instance.dexGetTokensHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('dexGetTradeDTOsHistorical', function() {
-      it('should call dexGetTradeDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test dexGetTradeDTOsHistorical
-        //instance.dexGetTradeDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -208,40 +128,10 @@
         done();
       });
     });
-    describe('dexGetUserDTOsHistorical', function() {
-      it('should call dexGetUserDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test dexGetUserDTOsHistorical
-        //instance.dexGetUserDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('dexGetUsersHistorical', function() {
       it('should call dexGetUsersHistorical successfully', function(done) {
         //uncomment below and update the code to test dexGetUsersHistorical
         //instance.dexGetUsersHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('dexGetWithdrawDTOsHistorical', function() {
-      it('should call dexGetWithdrawDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test dexGetWithdrawDTOsHistorical
-        //instance.dexGetWithdrawDTOsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('dexGetWithdrawRequestDTOsHistorical', function() {
-      it('should call dexGetWithdrawRequestDTOsHistorical successfully', function(done) {
-        //uncomment below and update the code to test dexGetWithdrawRequestDTOsHistorical
-        //instance.dexGetWithdrawRequestDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

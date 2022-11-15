@@ -49,110 +49,6 @@ sub new {
 
 
 #
-# uniswap_v2_get_bundle_v2_dtos__historical
-#
-# BundleV2DTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_bundle_v2_dtos__historical' } = {
-        summary => 'BundleV2DTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2BundleV2DTO]',
-        };
-}
-# @return ARRAY[UniswapV2BundleV2DTO]
-#
-sub uniswap_v2_get_bundle_v2_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/BundleV2DTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2BundleV2DTO]', $response);
-    return $_response_object;
-}
-
-#
 # uniswap_v2_get_bundles__historical
 #
 # Bundles (historical)
@@ -196,7 +92,7 @@ sub uniswap_v2_get_bundles__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/bundles/historical';
+    my $_resource_path = '/dapps/uniswapv2/bundles/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -242,110 +138,6 @@ sub uniswap_v2_get_bundles__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2BundleV2DTO]', $response);
-    return $_response_object;
-}
-
-#
-# uniswap_v2_get_burn_v2_dtos__historical
-#
-# BurnV2DTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_burn_v2_dtos__historical' } = {
-        summary => 'BurnV2DTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2BurnV2DTO]',
-        };
-}
-# @return ARRAY[UniswapV2BurnV2DTO]
-#
-sub uniswap_v2_get_burn_v2_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/BurnV2DTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2BurnV2DTO]', $response);
     return $_response_object;
 }
 
@@ -399,7 +191,7 @@ sub uniswap_v2_get_burns__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/burns/historical';
+    my $_resource_path = '/dapps/uniswapv2/burns/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -497,7 +289,7 @@ sub uniswap_v2_get_day_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/dayData/historical';
+    my $_resource_path = '/dapps/uniswapv2/dayData/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -590,7 +382,7 @@ sub uniswap_v2_get_factory__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/factory/historical';
+    my $_resource_path = '/dapps/uniswapv2/factory/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -636,214 +428,6 @@ sub uniswap_v2_get_factory__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2UniswapFactoryV2DTO]', $response);
-    return $_response_object;
-}
-
-#
-# uniswap_v2_get_liquidity_position_snapshot_v2_dtos__historical
-#
-# LiquidityPositionSnapshotV2DTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_liquidity_position_snapshot_v2_dtos__historical' } = {
-        summary => 'LiquidityPositionSnapshotV2DTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2LiquidityPositionSnapshotV2DTO]',
-        };
-}
-# @return ARRAY[UniswapV2LiquidityPositionSnapshotV2DTO]
-#
-sub uniswap_v2_get_liquidity_position_snapshot_v2_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/LiquidityPositionSnapshotV2DTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2LiquidityPositionSnapshotV2DTO]', $response);
-    return $_response_object;
-}
-
-#
-# uniswap_v2_get_liquidity_position_v2_dtos__historical
-#
-# LiquidityPositionV2DTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_liquidity_position_v2_dtos__historical' } = {
-        summary => 'LiquidityPositionV2DTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2LiquidityPositionV2DTO]',
-        };
-}
-# @return ARRAY[UniswapV2LiquidityPositionV2DTO]
-#
-sub uniswap_v2_get_liquidity_position_v2_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/LiquidityPositionV2DTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2LiquidityPositionV2DTO]', $response);
     return $_response_object;
 }
 
@@ -897,7 +481,7 @@ sub uniswap_v2_get_liquidity_positions__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/liquidityPositions/historical';
+    my $_resource_path = '/dapps/uniswapv2/liquidityPositions/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1001,7 +585,7 @@ sub uniswap_v2_get_liquidity_positions_snapshots__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/liquidityPositionsSnapshots/historical';
+    my $_resource_path = '/dapps/uniswapv2/liquidityPositionsSnapshots/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1056,110 +640,6 @@ sub uniswap_v2_get_liquidity_positions_snapshots__historical {
 }
 
 #
-# uniswap_v2_get_mint_v2_dtos__historical
-#
-# MintV2DTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_mint_v2_dtos__historical' } = {
-        summary => 'MintV2DTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2MintV2DTO]',
-        };
-}
-# @return ARRAY[UniswapV2MintV2DTO]
-#
-sub uniswap_v2_get_mint_v2_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/MintV2DTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2MintV2DTO]', $response);
-    return $_response_object;
-}
-
-#
 # uniswap_v2_get_mints__historical
 #
 # Mints (historical)
@@ -1209,7 +689,7 @@ sub uniswap_v2_get_mints__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/mints/historical';
+    my $_resource_path = '/dapps/uniswapv2/mints/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1260,318 +740,6 @@ sub uniswap_v2_get_mints__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2MintV2DTO]', $response);
-    return $_response_object;
-}
-
-#
-# uniswap_v2_get_pair_day_data_v2_dtos__historical
-#
-# PairDayDataV2DTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pair_day_data_v2_dtos__historical' } = {
-        summary => 'PairDayDataV2DTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2PairDayDataV2DTO]',
-        };
-}
-# @return ARRAY[UniswapV2PairDayDataV2DTO]
-#
-sub uniswap_v2_get_pair_day_data_v2_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/PairDayDataV2DTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2PairDayDataV2DTO]', $response);
-    return $_response_object;
-}
-
-#
-# uniswap_v2_get_pair_hour_data_v2_dtos__historical
-#
-# PairHourDataV2DTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pair_hour_data_v2_dtos__historical' } = {
-        summary => 'PairHourDataV2DTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2PairHourDataV2DTO]',
-        };
-}
-# @return ARRAY[UniswapV2PairHourDataV2DTO]
-#
-sub uniswap_v2_get_pair_hour_data_v2_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/PairHourDataV2DTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2PairHourDataV2DTO]', $response);
-    return $_response_object;
-}
-
-#
-# uniswap_v2_get_pair_v2_dtos__historical
-#
-# PairV2DTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pair_v2_dtos__historical' } = {
-        summary => 'PairV2DTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2PairV2DTO]',
-        };
-}
-# @return ARRAY[UniswapV2PairV2DTO]
-#
-sub uniswap_v2_get_pair_v2_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/PairV2DTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2PairV2DTO]', $response);
     return $_response_object;
 }
 
@@ -1685,7 +853,7 @@ sub uniswap_v2_get_pools__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/pools/historical';
+    my $_resource_path = '/dapps/uniswapv2/pools/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1789,7 +957,7 @@ sub uniswap_v2_get_pools_day_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/poolsDayData/historical';
+    my $_resource_path = '/dapps/uniswapv2/poolsDayData/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1893,7 +1061,7 @@ sub uniswap_v2_get_pools_hour_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/poolsHourData/historical';
+    my $_resource_path = '/dapps/uniswapv2/poolsHourData/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1944,110 +1112,6 @@ sub uniswap_v2_get_pools_hour_data__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2PairHourDataV2DTO]', $response);
-    return $_response_object;
-}
-
-#
-# uniswap_v2_get_swap_v2_dtos__historical
-#
-# SwapV2DTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_swap_v2_dtos__historical' } = {
-        summary => 'SwapV2DTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2SwapV2DTO]',
-        };
-}
-# @return ARRAY[UniswapV2SwapV2DTO]
-#
-sub uniswap_v2_get_swap_v2_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/SwapV2DTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2SwapV2DTO]', $response);
     return $_response_object;
 }
 
@@ -2150,7 +1214,7 @@ sub uniswap_v2_get_swaps__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/swaps/historical';
+    my $_resource_path = '/dapps/uniswapv2/swaps/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2201,214 +1265,6 @@ sub uniswap_v2_get_swaps__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2SwapV2DTO]', $response);
-    return $_response_object;
-}
-
-#
-# uniswap_v2_get_token_day_data_v2_dtos__historical
-#
-# TokenDayDataV2DTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_token_day_data_v2_dtos__historical' } = {
-        summary => 'TokenDayDataV2DTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2TokenDayDataV2DTO]',
-        };
-}
-# @return ARRAY[UniswapV2TokenDayDataV2DTO]
-#
-sub uniswap_v2_get_token_day_data_v2_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/TokenDayDataV2DTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TokenDayDataV2DTO]', $response);
-    return $_response_object;
-}
-
-#
-# uniswap_v2_get_token_v2_dtos__historical
-#
-# TokenV2DTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_token_v2_dtos__historical' } = {
-        summary => 'TokenV2DTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2TokenV2DTO]',
-        };
-}
-# @return ARRAY[UniswapV2TokenV2DTO]
-#
-sub uniswap_v2_get_token_v2_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/TokenV2DTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TokenV2DTO]', $response);
     return $_response_object;
 }
 
@@ -2511,7 +1367,7 @@ sub uniswap_v2_get_tokens__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/tokens/historical';
+    my $_resource_path = '/dapps/uniswapv2/tokens/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2615,7 +1471,7 @@ sub uniswap_v2_get_tokens_day_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/tokensDayData/historical';
+    my $_resource_path = '/dapps/uniswapv2/tokensDayData/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2670,110 +1526,6 @@ sub uniswap_v2_get_tokens_day_data__historical {
 }
 
 #
-# uniswap_v2_get_transaction_v2_dtos__historical
-#
-# TransactionV2DTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_transaction_v2_dtos__historical' } = {
-        summary => 'TransactionV2DTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2TransactionV2DTO]',
-        };
-}
-# @return ARRAY[UniswapV2TransactionV2DTO]
-#
-sub uniswap_v2_get_transaction_v2_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/TransactionV2DTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TransactionV2DTO]', $response);
-    return $_response_object;
-}
-
-#
 # uniswap_v2_get_transactions__historical
 #
 # Transactions (historical)
@@ -2817,7 +1569,7 @@ sub uniswap_v2_get_transactions__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/transactions/historical';
+    my $_resource_path = '/dapps/uniswapv2/transactions/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2863,318 +1615,6 @@ sub uniswap_v2_get_transactions__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2TransactionV2DTO]', $response);
-    return $_response_object;
-}
-
-#
-# uniswap_v2_get_uniswap_day_data_v2_dtos__historical
-#
-# UniswapDayDataV2DTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_uniswap_day_data_v2_dtos__historical' } = {
-        summary => 'UniswapDayDataV2DTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2UniswapDayDataV2DTO]',
-        };
-}
-# @return ARRAY[UniswapV2UniswapDayDataV2DTO]
-#
-sub uniswap_v2_get_uniswap_day_data_v2_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/UniswapDayDataV2DTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2UniswapDayDataV2DTO]', $response);
-    return $_response_object;
-}
-
-#
-# uniswap_v2_get_uniswap_factory_v2_dtos__historical
-#
-# UniswapFactoryV2DTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_uniswap_factory_v2_dtos__historical' } = {
-        summary => 'UniswapFactoryV2DTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2UniswapFactoryV2DTO]',
-        };
-}
-# @return ARRAY[UniswapV2UniswapFactoryV2DTO]
-#
-sub uniswap_v2_get_uniswap_factory_v2_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/UniswapFactoryV2DTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2UniswapFactoryV2DTO]', $response);
-    return $_response_object;
-}
-
-#
-# uniswap_v2_get_user_v2_dtos__historical
-#
-# UserV2DTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_user_v2_dtos__historical' } = {
-        summary => 'UserV2DTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[UniswapV2UserV2DTO]',
-        };
-}
-# @return ARRAY[UniswapV2UserV2DTO]
-#
-sub uniswap_v2_get_user_v2_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/UserV2DTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV2UserV2DTO]', $response);
     return $_response_object;
 }
 
@@ -3222,7 +1662,7 @@ sub uniswap_v2_get_users__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/users/historical';
+    my $_resource_path = '/dapps/uniswapv2/users/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};

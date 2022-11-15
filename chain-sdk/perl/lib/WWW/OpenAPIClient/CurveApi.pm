@@ -49,110 +49,6 @@ sub new {
 
 
 #
-# curve_get_account_dtos__historical
-#
-# AccountDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_account_dtos__historical' } = {
-        summary => 'AccountDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveAccountDTO]',
-        };
-}
-# @return ARRAY[CurveAccountDTO]
-#
-sub curve_get_account_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/AccountDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveAccountDTO]', $response);
-    return $_response_object;
-}
-
-#
 # curve_get_accounts__historical
 #
 # Accounts (historical)
@@ -196,7 +92,7 @@ sub curve_get_accounts__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/accounts/historical';
+    my $_resource_path = '/dapps/curve/accounts/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -242,110 +138,6 @@ sub curve_get_accounts__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveAccountDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_add_liquidity_event_dtos__historical
-#
-# AddLiquidityEventDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_add_liquidity_event_dtos__historical' } = {
-        summary => 'AddLiquidityEventDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveAddLiquidityEventDTO]',
-        };
-}
-# @return ARRAY[CurveAddLiquidityEventDTO]
-#
-sub curve_get_add_liquidity_event_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/AddLiquidityEventDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveAddLiquidityEventDTO]', $response);
     return $_response_object;
 }
 
@@ -399,7 +191,7 @@ sub curve_get_add_liquidity_events__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/addLiquidityEvents/historical';
+    my $_resource_path = '/dapps/curve/addLiquidityEvents/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -454,110 +246,6 @@ sub curve_get_add_liquidity_events__historical {
 }
 
 #
-# curve_get_admin_fee_change_log_dtos__historical
-#
-# AdminFeeChangeLogDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_admin_fee_change_log_dtos__historical' } = {
-        summary => 'AdminFeeChangeLogDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveAdminFeeChangeLogDTO]',
-        };
-}
-# @return ARRAY[CurveAdminFeeChangeLogDTO]
-#
-sub curve_get_admin_fee_change_log_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/AdminFeeChangeLogDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveAdminFeeChangeLogDTO]', $response);
-    return $_response_object;
-}
-
-#
 # curve_get_admin_fee_change_logs__historical
 #
 # AdminFeeChangeLogs (historical)
@@ -607,7 +295,7 @@ sub curve_get_admin_fee_change_logs__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/adminFeeChangeLogs/historical';
+    my $_resource_path = '/dapps/curve/adminFeeChangeLogs/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -658,110 +346,6 @@ sub curve_get_admin_fee_change_logs__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveAdminFeeChangeLogDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_amplification_coeff_change_log_dtos__historical
-#
-# AmplificationCoeffChangeLogDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_amplification_coeff_change_log_dtos__historical' } = {
-        summary => 'AmplificationCoeffChangeLogDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveAmplificationCoeffChangeLogDTO]',
-        };
-}
-# @return ARRAY[CurveAmplificationCoeffChangeLogDTO]
-#
-sub curve_get_amplification_coeff_change_log_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/AmplificationCoeffChangeLogDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveAmplificationCoeffChangeLogDTO]', $response);
     return $_response_object;
 }
 
@@ -815,7 +399,7 @@ sub curve_get_amplification_coeff_change_logs__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/amplificationCoeffChangeLogs/historical';
+    my $_resource_path = '/dapps/curve/amplificationCoeffChangeLogs/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -870,110 +454,6 @@ sub curve_get_amplification_coeff_change_logs__historical {
 }
 
 #
-# curve_get_coin_dtos__historical
-#
-# CoinDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_coin_dtos__historical' } = {
-        summary => 'CoinDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveCoinDTO]',
-        };
-}
-# @return ARRAY[CurveCoinDTO]
-#
-sub curve_get_coin_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/CoinDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveCoinDTO]', $response);
-    return $_response_object;
-}
-
-#
 # curve_get_coins__historical
 #
 # Coins (historical)
@@ -1023,7 +503,7 @@ sub curve_get_coins__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/coins/historical';
+    my $_resource_path = '/dapps/curve/coins/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1074,214 +554,6 @@ sub curve_get_coins__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveCoinDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_contract_dtos__historical
-#
-# ContractDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_contract_dtos__historical' } = {
-        summary => 'ContractDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveContractDTO]',
-        };
-}
-# @return ARRAY[CurveContractDTO]
-#
-sub curve_get_contract_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/ContractDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveContractDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_contract_version_dtos__historical
-#
-# ContractVersionDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_contract_version_dtos__historical' } = {
-        summary => 'ContractVersionDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveContractVersionDTO]',
-        };
-}
-# @return ARRAY[CurveContractVersionDTO]
-#
-sub curve_get_contract_version_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/ContractVersionDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveContractVersionDTO]', $response);
     return $_response_object;
 }
 
@@ -1335,7 +607,7 @@ sub curve_get_contracts__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/contracts/historical';
+    my $_resource_path = '/dapps/curve/contracts/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1439,7 +711,7 @@ sub curve_get_contracts_versions__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/contractsVersions/historical';
+    my $_resource_path = '/dapps/curve/contractsVersions/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1494,110 +766,6 @@ sub curve_get_contracts_versions__historical {
 }
 
 #
-# curve_get_daily_volume_dtos__historical
-#
-# DailyVolumeDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_daily_volume_dtos__historical' } = {
-        summary => 'DailyVolumeDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveDailyVolumeDTO]',
-        };
-}
-# @return ARRAY[CurveDailyVolumeDTO]
-#
-sub curve_get_daily_volume_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/DailyVolumeDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveDailyVolumeDTO]', $response);
-    return $_response_object;
-}
-
-#
 # curve_get_daily_volumes__historical
 #
 # DailyVolumes (historical)
@@ -1647,7 +815,7 @@ sub curve_get_daily_volumes__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/dailyVolumes/historical';
+    my $_resource_path = '/dapps/curve/dailyVolumes/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1698,110 +866,6 @@ sub curve_get_daily_volumes__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveDailyVolumeDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_exchange_dtos__historical
-#
-# ExchangeDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_exchange_dtos__historical' } = {
-        summary => 'ExchangeDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveExchangeDTO]',
-        };
-}
-# @return ARRAY[CurveExchangeDTO]
-#
-sub curve_get_exchange_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/ExchangeDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveExchangeDTO]', $response);
     return $_response_object;
 }
 
@@ -1855,7 +919,7 @@ sub curve_get_exchanges__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/exchanges/historical';
+    my $_resource_path = '/dapps/curve/exchanges/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1910,110 +974,6 @@ sub curve_get_exchanges__historical {
 }
 
 #
-# curve_get_fee_change_log_dtos__historical
-#
-# FeeChangeLogDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_fee_change_log_dtos__historical' } = {
-        summary => 'FeeChangeLogDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveFeeChangeLogDTO]',
-        };
-}
-# @return ARRAY[CurveFeeChangeLogDTO]
-#
-sub curve_get_fee_change_log_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/FeeChangeLogDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveFeeChangeLogDTO]', $response);
-    return $_response_object;
-}
-
-#
 # curve_get_fee_change_logs__historical
 #
 # FeeChangeLogs (historical)
@@ -2063,7 +1023,7 @@ sub curve_get_fee_change_logs__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/feeChangeLogs/historical';
+    my $_resource_path = '/dapps/curve/feeChangeLogs/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2114,942 +1074,6 @@ sub curve_get_fee_change_logs__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveFeeChangeLogDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_gauge_deposit_dtos__historical
-#
-# GaugeDepositDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_gauge_deposit_dtos__historical' } = {
-        summary => 'GaugeDepositDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveGaugeDepositDTO]',
-        };
-}
-# @return ARRAY[CurveGaugeDepositDTO]
-#
-sub curve_get_gauge_deposit_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/GaugeDepositDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeDepositDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_gauge_dtos__historical
-#
-# GaugeDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_gauge_dtos__historical' } = {
-        summary => 'GaugeDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveGaugeDTO]',
-        };
-}
-# @return ARRAY[CurveGaugeDTO]
-#
-sub curve_get_gauge_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/GaugeDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_gauge_liquidity_dtos__historical
-#
-# GaugeLiquidityDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_gauge_liquidity_dtos__historical' } = {
-        summary => 'GaugeLiquidityDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveGaugeLiquidityDTO]',
-        };
-}
-# @return ARRAY[CurveGaugeLiquidityDTO]
-#
-sub curve_get_gauge_liquidity_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/GaugeLiquidityDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeLiquidityDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_gauge_total_weight_dtos__historical
-#
-# GaugeTotalWeightDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_gauge_total_weight_dtos__historical' } = {
-        summary => 'GaugeTotalWeightDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveGaugeTotalWeightDTO]',
-        };
-}
-# @return ARRAY[CurveGaugeTotalWeightDTO]
-#
-sub curve_get_gauge_total_weight_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/GaugeTotalWeightDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeTotalWeightDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_gauge_type_dtos__historical
-#
-# GaugeTypeDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_gauge_type_dtos__historical' } = {
-        summary => 'GaugeTypeDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveGaugeTypeDTO]',
-        };
-}
-# @return ARRAY[CurveGaugeTypeDTO]
-#
-sub curve_get_gauge_type_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/GaugeTypeDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeTypeDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_gauge_type_weight_dtos__historical
-#
-# GaugeTypeWeightDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_gauge_type_weight_dtos__historical' } = {
-        summary => 'GaugeTypeWeightDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveGaugeTypeWeightDTO]',
-        };
-}
-# @return ARRAY[CurveGaugeTypeWeightDTO]
-#
-sub curve_get_gauge_type_weight_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/GaugeTypeWeightDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeTypeWeightDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_gauge_weight_dtos__historical
-#
-# GaugeWeightDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_gauge_weight_dtos__historical' } = {
-        summary => 'GaugeWeightDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveGaugeWeightDTO]',
-        };
-}
-# @return ARRAY[CurveGaugeWeightDTO]
-#
-sub curve_get_gauge_weight_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/GaugeWeightDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeWeightDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_gauge_weight_vote_dtos__historical
-#
-# GaugeWeightVoteDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_gauge_weight_vote_dtos__historical' } = {
-        summary => 'GaugeWeightVoteDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveGaugeWeightVoteDTO]',
-        };
-}
-# @return ARRAY[CurveGaugeWeightVoteDTO]
-#
-sub curve_get_gauge_weight_vote_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/GaugeWeightVoteDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeWeightVoteDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_gauge_withdraw_dtos__historical
-#
-# GaugeWithdrawDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_gauge_withdraw_dtos__historical' } = {
-        summary => 'GaugeWithdrawDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveGaugeWithdrawDTO]',
-        };
-}
-# @return ARRAY[CurveGaugeWithdrawDTO]
-#
-sub curve_get_gauge_withdraw_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/GaugeWithdrawDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeWithdrawDTO]', $response);
     return $_response_object;
 }
 
@@ -3103,7 +1127,7 @@ sub curve_get_gauges__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gauges/historical';
+    my $_resource_path = '/dapps/curve/gauges/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -3201,7 +1225,7 @@ sub curve_get_gauges_deposits__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gaugesDeposits/historical';
+    my $_resource_path = '/dapps/curve/gaugesDeposits/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -3294,7 +1318,7 @@ sub curve_get_gauges_liquidity__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gaugesLiquidity/historical';
+    my $_resource_path = '/dapps/curve/gaugesLiquidity/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -3387,7 +1411,7 @@ sub curve_get_gauges_total_weights__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gaugesTotalWeights/historical';
+    my $_resource_path = '/dapps/curve/gaugesTotalWeights/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -3480,7 +1504,7 @@ sub curve_get_gauges_types__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gaugesTypes/historical';
+    my $_resource_path = '/dapps/curve/gaugesTypes/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -3573,7 +1597,7 @@ sub curve_get_gauges_types_weights__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gaugesTypesWeights/historical';
+    my $_resource_path = '/dapps/curve/gaugesTypesWeights/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -3666,7 +1690,7 @@ sub curve_get_gauges_weights__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gaugesWeights/historical';
+    my $_resource_path = '/dapps/curve/gaugesWeights/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -3759,7 +1783,7 @@ sub curve_get_gauges_weights_votes__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gaugesWeightsVotes/historical';
+    my $_resource_path = '/dapps/curve/gaugesWeightsVotes/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -3852,7 +1876,7 @@ sub curve_get_gauges_withdraw__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gaugesWithdraws/historical';
+    my $_resource_path = '/dapps/curve/gaugesWithdraws/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -3898,110 +1922,6 @@ sub curve_get_gauges_withdraw__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveGaugeWithdrawDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_hourly_volume_dtos__historical
-#
-# HourlyVolumeDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_hourly_volume_dtos__historical' } = {
-        summary => 'HourlyVolumeDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveHourlyVolumeDTO]',
-        };
-}
-# @return ARRAY[CurveHourlyVolumeDTO]
-#
-sub curve_get_hourly_volume_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/HourlyVolumeDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveHourlyVolumeDTO]', $response);
     return $_response_object;
 }
 
@@ -4055,7 +1975,7 @@ sub curve_get_hourly_volumes__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/hourlyVolumes/historical';
+    my $_resource_path = '/dapps/curve/hourlyVolumes/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -4110,110 +2030,6 @@ sub curve_get_hourly_volumes__historical {
 }
 
 #
-# curve_get_lp_token_dtos__historical
-#
-# LpTokenDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_lp_token_dtos__historical' } = {
-        summary => 'LpTokenDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveLpTokenDTO]',
-        };
-}
-# @return ARRAY[CurveLpTokenDTO]
-#
-sub curve_get_lp_token_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/LpTokenDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveLpTokenDTO]', $response);
-    return $_response_object;
-}
-
-#
 # curve_get_lp_tokens__historical
 #
 # LpTokens (historical)
@@ -4263,7 +2079,7 @@ sub curve_get_lp_tokens__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/lpTokens/historical';
+    my $_resource_path = '/dapps/curve/lpTokens/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -4314,110 +2130,6 @@ sub curve_get_lp_tokens__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveLpTokenDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_pool_dtos__historical
-#
-# PoolDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_pool_dtos__historical' } = {
-        summary => 'PoolDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurvePoolDTO]',
-        };
-}
-# @return ARRAY[CurvePoolDTO]
-#
-sub curve_get_pool_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/PoolDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurvePoolDTO]', $response);
     return $_response_object;
 }
 
@@ -4471,7 +2183,7 @@ sub curve_get_pools__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/pools/historical';
+    my $_resource_path = '/dapps/curve/pools/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -4526,214 +2238,6 @@ sub curve_get_pools__historical {
 }
 
 #
-# curve_get_proposal_dtos__historical
-#
-# ProposalDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_proposal_dtos__historical' } = {
-        summary => 'ProposalDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveProposalDTO]',
-        };
-}
-# @return ARRAY[CurveProposalDTO]
-#
-sub curve_get_proposal_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/ProposalDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveProposalDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_proposal_vote_dtos__historical
-#
-# ProposalVoteDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_proposal_vote_dtos__historical' } = {
-        summary => 'ProposalVoteDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveProposalVoteDTO]',
-        };
-}
-# @return ARRAY[CurveProposalVoteDTO]
-#
-sub curve_get_proposal_vote_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/ProposalVoteDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveProposalVoteDTO]', $response);
-    return $_response_object;
-}
-
-#
 # curve_get_proposals__historical
 #
 # Proposals (historical)
@@ -4777,7 +2281,7 @@ sub curve_get_proposals__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/proposals/historical';
+    my $_resource_path = '/dapps/curve/proposals/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -4870,7 +2374,7 @@ sub curve_get_proposals_votes__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/proposalsVotes/historical';
+    my $_resource_path = '/dapps/curve/proposalsVotes/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -4916,110 +2420,6 @@ sub curve_get_proposals_votes__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveProposalVoteDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_remove_liquidity_event_dtos__historical
-#
-# RemoveLiquidityEventDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_remove_liquidity_event_dtos__historical' } = {
-        summary => 'RemoveLiquidityEventDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveRemoveLiquidityEventDTO]',
-        };
-}
-# @return ARRAY[CurveRemoveLiquidityEventDTO]
-#
-sub curve_get_remove_liquidity_event_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/RemoveLiquidityEventDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveRemoveLiquidityEventDTO]', $response);
     return $_response_object;
 }
 
@@ -5073,7 +2473,7 @@ sub curve_get_remove_liquidity_events__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/removeLiquidityEvents/historical';
+    my $_resource_path = '/dapps/curve/removeLiquidityEvents/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -5128,110 +2528,6 @@ sub curve_get_remove_liquidity_events__historical {
 }
 
 #
-# curve_get_remove_liquidity_one_event_dtos__historical
-#
-# RemoveLiquidityOneEventDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_remove_liquidity_one_event_dtos__historical' } = {
-        summary => 'RemoveLiquidityOneEventDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveRemoveLiquidityOneEventDTO]',
-        };
-}
-# @return ARRAY[CurveRemoveLiquidityOneEventDTO]
-#
-sub curve_get_remove_liquidity_one_event_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/RemoveLiquidityOneEventDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveRemoveLiquidityOneEventDTO]', $response);
-    return $_response_object;
-}
-
-#
 # curve_get_remove_liquidity_one_events__historical
 #
 # RemoveLiquidityOneEvents (historical)
@@ -5281,7 +2577,7 @@ sub curve_get_remove_liquidity_one_events__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/removeLiquidityOneEvents/historical';
+    my $_resource_path = '/dapps/curve/removeLiquidityOneEvents/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -5336,110 +2632,6 @@ sub curve_get_remove_liquidity_one_events__historical {
 }
 
 #
-# curve_get_system_state_dtos__historical
-#
-# SystemStateDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_system_state_dtos__historical' } = {
-        summary => 'SystemStateDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveSystemStateDTO]',
-        };
-}
-# @return ARRAY[CurveSystemStateDTO]
-#
-sub curve_get_system_state_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/SystemStateDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveSystemStateDTO]', $response);
-    return $_response_object;
-}
-
-#
 # curve_get_system_states__historical
 #
 # SystemStates (historical)
@@ -5483,7 +2675,7 @@ sub curve_get_system_states__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/systemStates/historical';
+    my $_resource_path = '/dapps/curve/systemStates/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -5529,110 +2721,6 @@ sub curve_get_system_states__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveSystemStateDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_token_dtos__historical
-#
-# TokenDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_token_dtos__historical' } = {
-        summary => 'TokenDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveTokenDTO]',
-        };
-}
-# @return ARRAY[CurveTokenDTO]
-#
-sub curve_get_token_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/TokenDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveTokenDTO]', $response);
     return $_response_object;
 }
 
@@ -5686,7 +2774,7 @@ sub curve_get_tokens__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/tokens/historical';
+    my $_resource_path = '/dapps/curve/tokens/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -5741,110 +2829,6 @@ sub curve_get_tokens__historical {
 }
 
 #
-# curve_get_transfer_ownership_event_dtos__historical
-#
-# TransferOwnershipEventDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_transfer_ownership_event_dtos__historical' } = {
-        summary => 'TransferOwnershipEventDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveTransferOwnershipEventDTO]',
-        };
-}
-# @return ARRAY[CurveTransferOwnershipEventDTO]
-#
-sub curve_get_transfer_ownership_event_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/TransferOwnershipEventDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveTransferOwnershipEventDTO]', $response);
-    return $_response_object;
-}
-
-#
 # curve_get_transfer_ownership_events__historical
 #
 # TransferOwnershipEvents (historical)
@@ -5894,7 +2878,7 @@ sub curve_get_transfer_ownership_events__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/transferOwnershipEvents/historical';
+    my $_resource_path = '/dapps/curve/transferOwnershipEvents/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -5945,110 +2929,6 @@ sub curve_get_transfer_ownership_events__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveTransferOwnershipEventDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_underlying_coin_dtos__historical
-#
-# UnderlyingCoinDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_underlying_coin_dtos__historical' } = {
-        summary => 'UnderlyingCoinDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveUnderlyingCoinDTO]',
-        };
-}
-# @return ARRAY[CurveUnderlyingCoinDTO]
-#
-sub curve_get_underlying_coin_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/UnderlyingCoinDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveUnderlyingCoinDTO]', $response);
     return $_response_object;
 }
 
@@ -6102,7 +2982,7 @@ sub curve_get_underlying_coins__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/underlyingCoins/historical';
+    my $_resource_path = '/dapps/curve/underlyingCoins/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -6157,110 +3037,6 @@ sub curve_get_underlying_coins__historical {
 }
 
 #
-# curve_get_voting_app_dtos__historical
-#
-# VotingAppDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_voting_app_dtos__historical' } = {
-        summary => 'VotingAppDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveVotingAppDTO]',
-        };
-}
-# @return ARRAY[CurveVotingAppDTO]
-#
-sub curve_get_voting_app_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/VotingAppDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveVotingAppDTO]', $response);
-    return $_response_object;
-}
-
-#
 # curve_get_voting_apps__historical
 #
 # VotingApps (historical)
@@ -6304,7 +3080,7 @@ sub curve_get_voting_apps__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/votingApps/historical';
+    my $_resource_path = '/dapps/curve/votingApps/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -6350,110 +3126,6 @@ sub curve_get_voting_apps__historical {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveVotingAppDTO]', $response);
-    return $_response_object;
-}
-
-#
-# curve_get_weekly_volume_dtos__historical
-#
-# WeeklyVolumeDTOs (historical) 🔥
-#
-# @param int $start_block  (optional)
-# @param int $end_block  (optional)
-# @param DATE_TIME $start_date  (optional)
-# @param DATE_TIME $end_date  (optional)
-# @param string $pool_id  (optional)
-{
-    my $params = {
-    'start_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'end_block' => {
-        data_type => 'int',
-        description => '',
-        required => '0',
-    },
-    'start_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'end_date' => {
-        data_type => 'DATE_TIME',
-        description => '',
-        required => '0',
-    },
-    'pool_id' => {
-        data_type => 'string',
-        description => '',
-        required => '0',
-    },
-    };
-    __PACKAGE__->method_documentation->{ 'curve_get_weekly_volume_dtos__historical' } = {
-        summary => 'WeeklyVolumeDTOs (historical) 🔥',
-        params => $params,
-        returns => 'ARRAY[CurveWeeklyVolumeDTO]',
-        };
-}
-# @return ARRAY[CurveWeeklyVolumeDTO]
-#
-sub curve_get_weekly_volume_dtos__historical {
-    my ($self, %args) = @_;
-
-    # parse inputs
-    my $_resource_path = '/dapps/curve/WeeklyVolumeDTOs/historical';
-
-    my $_method = 'GET';
-    my $query_params = {};
-    my $header_params = {};
-    my $form_params = {};
-
-    # 'Accept' and 'Content-Type' header
-    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
-    if ($_header_accept) {
-        $header_params->{'Accept'} = $_header_accept;
-    }
-    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
-
-    # query params
-    if ( exists $args{'start_block'}) {
-        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
-    }
-
-    # query params
-    if ( exists $args{'end_block'}) {
-        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
-    }
-
-    # query params
-    if ( exists $args{'start_date'}) {
-        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
-    }
-
-    # query params
-    if ( exists $args{'end_date'}) {
-        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
-    }
-
-    # query params
-    if ( exists $args{'pool_id'}) {
-        $query_params->{'poolId'} = $self->{api_client}->to_query_value($args{'pool_id'});
-    }
-
-    my $_body_data;
-    # authentication setting, if any
-    my $auth_settings = [qw()];
-
-    # make the API Call
-    my $response = $self->{api_client}->call_api($_resource_path, $_method,
-                                           $query_params, $form_params,
-                                           $header_params, $_body_data, $auth_settings);
-    if (!$response) {
-        return;
-    }
-    my $_response_object = $self->{api_client}->deserialize('ARRAY[CurveWeeklyVolumeDTO]', $response);
     return $_response_object;
 }
 
@@ -6507,7 +3179,7 @@ sub curve_get_weekly_volumes__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/weeklyVolumes/historical';
+    my $_resource_path = '/dapps/curve/weeklyVolumes/historical-manual';
 
     my $_method = 'GET';
     my $query_params = {};

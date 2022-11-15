@@ -10,7 +10,7 @@ This Groovy package, using the [http-builder-ng library](https://http-builder-ng
 
 - API version: v1
 - Package version: v1
-- Build date: 2022-11-15T11:41:41.232554Z[Etc/UTC]
+- Build date: 2022-11-15T14:23:53.664836Z[Etc/UTC]
 - Build package: org.openapitools.codegen.languages.GroovyClientCodegen
 For more information, please visit [https://www.coinapi.io](https://www.coinapi.io)
 
@@ -42,9 +42,8 @@ def startBlock = 56L // Long |
 def endBlock = 56L // Long | 
 def startDate = new Date() // Date | 
 def endDate = new Date() // Date | 
-def poolId = "poolId_example" // String | 
 
-apiInstance.cowGetOrderDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId)
+apiInstance.cowGetOrdersHistorical(startBlock, endBlock, startDate, endDate)
     {
     // on success
     def result = (List&lt;CowOrderDTO&gt;)it

@@ -90,54 +90,6 @@ feature -- API Access
 			end
 		end
 
-	sushiswap_get_bundle_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_BUNDLE_DTO]
-			-- BundleDTOs (historical) 🔥
-			-- Gets BundleDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [SUSHISWAP_BUNDLE_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/BundleDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_BUNDLE_DTO] } l_response.data ({ LIST [SUSHISWAP_BUNDLE_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
 	sushiswap_get_bundles_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [SUSHISWAP_BUNDLE_DTO]
 			-- Bundles (historical)
 			-- Gets bundles.
@@ -161,7 +113,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/bundles/historical"
+			l_path := "/dapps/sushiswap/bundles/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -177,54 +129,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [SUSHISWAP_BUNDLE_DTO] } l_response.data ({ LIST [SUSHISWAP_BUNDLE_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	sushiswap_get_burn_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_BURN_DTO]
-			-- BurnDTOs (historical) 🔥
-			-- Gets BurnDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [SUSHISWAP_BURN_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/BurnDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_BURN_DTO] } l_response.data ({ LIST [SUSHISWAP_BURN_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -256,7 +160,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/burns/historical"
+			l_path := "/dapps/sushiswap/burns/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -273,54 +177,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [SUSHISWAP_BURN_DTO] } l_response.data ({ LIST [SUSHISWAP_BURN_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	sushiswap_get_day_data_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_DAY_DATA_DTO]
-			-- DayDataDTOs (historical) 🔥
-			-- Gets DayDataDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [SUSHISWAP_DAY_DATA_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/DayDataDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_DAY_DATA_DTO] } l_response.data ({ LIST [SUSHISWAP_DAY_DATA_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -350,7 +206,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/dayData/historical"
+			l_path := "/dapps/sushiswap/dayData/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -366,54 +222,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [SUSHISWAP_DAY_DATA_DTO] } l_response.data ({ LIST [SUSHISWAP_DAY_DATA_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	sushiswap_get_factory_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_FACTORY_DTO]
-			-- FactoryDTOs (historical) 🔥
-			-- Gets FactoryDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [SUSHISWAP_FACTORY_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/FactoryDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_FACTORY_DTO] } l_response.data ({ LIST [SUSHISWAP_FACTORY_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -443,7 +251,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/factory/historical"
+			l_path := "/dapps/sushiswap/factory/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -459,54 +267,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [SUSHISWAP_FACTORY_DTO] } l_response.data ({ LIST [SUSHISWAP_FACTORY_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	sushiswap_get_hour_data_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_HOUR_DATA_DTO]
-			-- HourDataDTOs (historical) 🔥
-			-- Gets HourDataDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [SUSHISWAP_HOUR_DATA_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/HourDataDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_HOUR_DATA_DTO] } l_response.data ({ LIST [SUSHISWAP_HOUR_DATA_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -536,7 +296,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/hourData/historical"
+			l_path := "/dapps/sushiswap/hourData/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -552,54 +312,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [SUSHISWAP_HOUR_DATA_DTO] } l_response.data ({ LIST [SUSHISWAP_HOUR_DATA_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	sushiswap_get_liquidity_position_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_LIQUIDITY_POSITION_DTO]
-			-- LiquidityPositionDTOs (historical) 🔥
-			-- Gets LiquidityPositionDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [SUSHISWAP_LIQUIDITY_POSITION_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/LiquidityPositionDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_LIQUIDITY_POSITION_DTO] } l_response.data ({ LIST [SUSHISWAP_LIQUIDITY_POSITION_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -631,7 +343,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/liquidityPosition/historical"
+			l_path := "/dapps/sushiswap/liquidityPosition/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -648,54 +360,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [SUSHISWAP_LIQUIDITY_POSITION_DTO] } l_response.data ({ LIST [SUSHISWAP_LIQUIDITY_POSITION_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	sushiswap_get_liquidity_position_snapshot_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_LIQUIDITY_POSITION_SNAPSHOT_DTO]
-			-- LiquidityPositionSnapshotDTOs (historical) 🔥
-			-- Gets LiquidityPositionSnapshotDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [SUSHISWAP_LIQUIDITY_POSITION_SNAPSHOT_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/LiquidityPositionSnapshotDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_LIQUIDITY_POSITION_SNAPSHOT_DTO] } l_response.data ({ LIST [SUSHISWAP_LIQUIDITY_POSITION_SNAPSHOT_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -727,7 +391,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/liquidityPositionSnapshots/historical"
+			l_path := "/dapps/sushiswap/liquidityPositionSnapshots/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -744,54 +408,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [SUSHISWAP_LIQUIDITY_POSITION_SNAPSHOT_DTO] } l_response.data ({ LIST [SUSHISWAP_LIQUIDITY_POSITION_SNAPSHOT_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	sushiswap_get_mint_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_MINT_DTO]
-			-- MintDTOs (historical) 🔥
-			-- Gets MintDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [SUSHISWAP_MINT_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/MintDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_MINT_DTO] } l_response.data ({ LIST [SUSHISWAP_MINT_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -823,7 +439,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/mints/historical"
+			l_path := "/dapps/sushiswap/mints/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -840,150 +456,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [SUSHISWAP_MINT_DTO] } l_response.data ({ LIST [SUSHISWAP_MINT_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	sushiswap_get_pair_day_data_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
-			-- PairDayDataDTOs (historical) 🔥
-			-- Gets PairDayDataDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/PairDayDataDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_PAIR_DAY_DATA_DTO] } l_response.data ({ LIST [SUSHISWAP_PAIR_DAY_DATA_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	sushiswap_get_pair_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_PAIR_DTO]
-			-- PairDTOs (historical) 🔥
-			-- Gets PairDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [SUSHISWAP_PAIR_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/PairDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_PAIR_DTO] } l_response.data ({ LIST [SUSHISWAP_PAIR_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	sushiswap_get_pair_hour_data_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
-			-- PairHourDataDTOs (historical) 🔥
-			-- Gets PairHourDataDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/PairHourDataDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO] } l_response.data ({ LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -1048,7 +520,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/poolsDayData/historical"
+			l_path := "/dapps/sushiswap/poolsDayData/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -1096,7 +568,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/pools/historical"
+			l_path := "/dapps/sushiswap/pools/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -1144,7 +616,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/poolsHourData/historical"
+			l_path := "/dapps/sushiswap/poolsHourData/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -1161,54 +633,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO] } l_response.data ({ LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	sushiswap_get_swap_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_SWAP_DTO]
-			-- SwapDTOs (historical) 🔥
-			-- Gets SwapDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [SUSHISWAP_SWAP_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/SwapDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_SWAP_DTO] } l_response.data ({ LIST [SUSHISWAP_SWAP_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -1273,7 +697,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/swaps/historical"
+			l_path := "/dapps/sushiswap/swaps/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -1290,102 +714,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [SUSHISWAP_SWAP_DTO] } l_response.data ({ LIST [SUSHISWAP_SWAP_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	sushiswap_get_token_day_data_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]
-			-- TokenDayDataDTOs (historical) 🔥
-			-- Gets TokenDayDataDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/TokenDayDataDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO] } l_response.data ({ LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	sushiswap_get_token_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_TOKEN_DTO]
-			-- TokenDTOs (historical) 🔥
-			-- Gets TokenDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [SUSHISWAP_TOKEN_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/TokenDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_TOKEN_DTO] } l_response.data ({ LIST [SUSHISWAP_TOKEN_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -1450,7 +778,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/tokensDayData/historical"
+			l_path := "/dapps/sushiswap/tokensDayData/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -1498,7 +826,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/tokens/historical"
+			l_path := "/dapps/sushiswap/tokens/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -1515,54 +843,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [SUSHISWAP_TOKEN_DTO] } l_response.data ({ LIST [SUSHISWAP_TOKEN_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	sushiswap_get_transaction_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_TRANSACTION_DTO]
-			-- TransactionDTOs (historical) 🔥
-			-- Gets TransactionDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [SUSHISWAP_TRANSACTION_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/TransactionDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_TRANSACTION_DTO] } l_response.data ({ LIST [SUSHISWAP_TRANSACTION_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -1592,7 +872,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/transactions/historical"
+			l_path := "/dapps/sushiswap/transactions/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -1608,54 +888,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [SUSHISWAP_TRANSACTION_DTO] } l_response.data ({ LIST [SUSHISWAP_TRANSACTION_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	sushiswap_get_user_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [SUSHISWAP_USER_DTO]
-			-- UserDTOs (historical) 🔥
-			-- Gets UserDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [SUSHISWAP_USER_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/sushiswap/UserDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [SUSHISWAP_USER_DTO] } l_response.data ({ LIST [SUSHISWAP_USER_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -1685,7 +917,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/users/historical"
+			l_path := "/dapps/sushiswap/users/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));

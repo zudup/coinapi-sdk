@@ -9,71 +9,12 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**cow_get_order_dtos__historical**](CowApi.md#cow_get_order_dtos__historical) | **GET** /dapps/cow/OrderDTOs/historical | OrderDTOs (historical) 🔥
-[**cow_get_orders__historical**](CowApi.md#cow_get_orders__historical) | **GET** /dapps/cow/orders/historical | Orders (historical)
-[**cow_get_settlement_dtos__historical**](CowApi.md#cow_get_settlement_dtos__historical) | **GET** /dapps/cow/SettlementDTOs/historical | SettlementDTOs (historical) 🔥
-[**cow_get_settlements__historical**](CowApi.md#cow_get_settlements__historical) | **GET** /dapps/cow/settlements/historical | Settlements (historical)
-[**cow_get_token_dtos__historical**](CowApi.md#cow_get_token_dtos__historical) | **GET** /dapps/cow/TokenDTOs/historical | TokenDTOs (historical) 🔥
-[**cow_get_tokens__historical**](CowApi.md#cow_get_tokens__historical) | **GET** /dapps/cow/tokens/historical | Tokens (historical) 🔥
-[**cow_get_trade_dtos__historical**](CowApi.md#cow_get_trade_dtos__historical) | **GET** /dapps/cow/TradeDTOs/historical | TradeDTOs (historical) 🔥
-[**cow_get_trades__historical**](CowApi.md#cow_get_trades__historical) | **GET** /dapps/cow/trades/historical | Trades (historical) 🔥
-[**cow_get_user_dtos__historical**](CowApi.md#cow_get_user_dtos__historical) | **GET** /dapps/cow/UserDTOs/historical | UserDTOs (historical) 🔥
-[**cow_get_users__historical**](CowApi.md#cow_get_users__historical) | **GET** /dapps/cow/users/historical | Users (historical)
+[**cow_get_orders__historical**](CowApi.md#cow_get_orders__historical) | **GET** /dapps/cow/orders/historical-manual | Orders (historical)
+[**cow_get_settlements__historical**](CowApi.md#cow_get_settlements__historical) | **GET** /dapps/cow/settlements/historical-manual | Settlements (historical)
+[**cow_get_tokens__historical**](CowApi.md#cow_get_tokens__historical) | **GET** /dapps/cow/tokens/historical-manual | Tokens (historical) 🔥
+[**cow_get_trades__historical**](CowApi.md#cow_get_trades__historical) | **GET** /dapps/cow/trades/historical-manual | Trades (historical) 🔥
+[**cow_get_users__historical**](CowApi.md#cow_get_users__historical) | **GET** /dapps/cow/users/historical-manual | Users (historical)
 
-
-# **cow_get_order_dtos__historical**
-> ARRAY[CowOrderDTO] cow_get_order_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-OrderDTOs (historical) 🔥
-
-Gets OrderDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::CowApi;
-my $api_instance = WWW::OpenAPIClient::CowApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->cow_get_order_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling CowApi->cow_get_order_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[CowOrderDTO]**](CowOrderDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **cow_get_orders__historical**
 > ARRAY[CowOrderDTO] cow_get_orders__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
@@ -127,60 +68,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **cow_get_settlement_dtos__historical**
-> ARRAY[CowSettlementDTO] cow_get_settlement_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-SettlementDTOs (historical) 🔥
-
-Gets SettlementDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::CowApi;
-my $api_instance = WWW::OpenAPIClient::CowApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->cow_get_settlement_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling CowApi->cow_get_settlement_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[CowSettlementDTO]**](CowSettlementDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **cow_get_settlements__historical**
 > ARRAY[CowSettlementDTO] cow_get_settlements__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
 
@@ -221,60 +108,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ARRAY[CowSettlementDTO]**](CowSettlementDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **cow_get_token_dtos__historical**
-> ARRAY[CowTokenDTO] cow_get_token_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-TokenDTOs (historical) 🔥
-
-Gets TokenDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::CowApi;
-my $api_instance = WWW::OpenAPIClient::CowApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->cow_get_token_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling CowApi->cow_get_token_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[CowTokenDTO]**](CowTokenDTO.md)
 
 ### Authorization
 
@@ -341,60 +174,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **cow_get_trade_dtos__historical**
-> ARRAY[CowTradeDTO] cow_get_trade_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-TradeDTOs (historical) 🔥
-
-Gets TradeDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::CowApi;
-my $api_instance = WWW::OpenAPIClient::CowApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->cow_get_trade_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling CowApi->cow_get_trade_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[CowTradeDTO]**](CowTradeDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **cow_get_trades__historical**
 > ARRAY[CowTradeDTO] cow_get_trades__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
 
@@ -435,60 +214,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ARRAY[CowTradeDTO]**](CowTradeDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **cow_get_user_dtos__historical**
-> ARRAY[CowUserDTO] cow_get_user_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-UserDTOs (historical) 🔥
-
-Gets UserDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::CowApi;
-my $api_instance = WWW::OpenAPIClient::CowApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->cow_get_user_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling CowApi->cow_get_user_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[CowUserDTO]**](CowUserDTO.md)
 
 ### Authorization
 

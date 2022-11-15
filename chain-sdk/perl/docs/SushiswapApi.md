@@ -11,41 +11,25 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**curve_get_exchanges__current**](SushiswapApi.md#curve_get_exchanges__current) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
 [**dex_get_trades__current**](SushiswapApi.md#dex_get_trades__current) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥
-[**sushiswap_get_bundle_dtos__historical**](SushiswapApi.md#sushiswap_get_bundle_dtos__historical) | **GET** /dapps/sushiswap/BundleDTOs/historical | BundleDTOs (historical) 🔥
-[**sushiswap_get_bundles__historical**](SushiswapApi.md#sushiswap_get_bundles__historical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical)
-[**sushiswap_get_burn_dtos__historical**](SushiswapApi.md#sushiswap_get_burn_dtos__historical) | **GET** /dapps/sushiswap/BurnDTOs/historical | BurnDTOs (historical) 🔥
-[**sushiswap_get_burns__historical**](SushiswapApi.md#sushiswap_get_burns__historical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical)
-[**sushiswap_get_day_data__historical**](SushiswapApi.md#sushiswap_get_day_data__historical) | **GET** /dapps/sushiswap/dayData/historical | DayData (historical)
-[**sushiswap_get_day_data_dtos__historical**](SushiswapApi.md#sushiswap_get_day_data_dtos__historical) | **GET** /dapps/sushiswap/DayDataDTOs/historical | DayDataDTOs (historical) 🔥
-[**sushiswap_get_factory__historical**](SushiswapApi.md#sushiswap_get_factory__historical) | **GET** /dapps/sushiswap/factory/historical | Factory (historical)
-[**sushiswap_get_factory_dtos__historical**](SushiswapApi.md#sushiswap_get_factory_dtos__historical) | **GET** /dapps/sushiswap/FactoryDTOs/historical | FactoryDTOs (historical) 🔥
-[**sushiswap_get_hour_data__historical**](SushiswapApi.md#sushiswap_get_hour_data__historical) | **GET** /dapps/sushiswap/hourData/historical | HourData (historical)
-[**sushiswap_get_hour_data_dtos__historical**](SushiswapApi.md#sushiswap_get_hour_data_dtos__historical) | **GET** /dapps/sushiswap/HourDataDTOs/historical | HourDataDTOs (historical) 🔥
-[**sushiswap_get_liquidity_position__historical**](SushiswapApi.md#sushiswap_get_liquidity_position__historical) | **GET** /dapps/sushiswap/liquidityPosition/historical | LiquidityPosition (historical)
-[**sushiswap_get_liquidity_position_dtos__historical**](SushiswapApi.md#sushiswap_get_liquidity_position_dtos__historical) | **GET** /dapps/sushiswap/LiquidityPositionDTOs/historical | LiquidityPositionDTOs (historical) 🔥
-[**sushiswap_get_liquidity_position_snapshot__historical**](SushiswapApi.md#sushiswap_get_liquidity_position_snapshot__historical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshot (historical)
-[**sushiswap_get_liquidity_position_snapshot_dtos__historical**](SushiswapApi.md#sushiswap_get_liquidity_position_snapshot_dtos__historical) | **GET** /dapps/sushiswap/LiquidityPositionSnapshotDTOs/historical | LiquidityPositionSnapshotDTOs (historical) 🔥
-[**sushiswap_get_mint_dtos__historical**](SushiswapApi.md#sushiswap_get_mint_dtos__historical) | **GET** /dapps/sushiswap/MintDTOs/historical | MintDTOs (historical) 🔥
-[**sushiswap_get_mints__historical**](SushiswapApi.md#sushiswap_get_mints__historical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical)
-[**sushiswap_get_pair_day_data_dtos__historical**](SushiswapApi.md#sushiswap_get_pair_day_data_dtos__historical) | **GET** /dapps/sushiswap/PairDayDataDTOs/historical | PairDayDataDTOs (historical) 🔥
-[**sushiswap_get_pair_dtos__historical**](SushiswapApi.md#sushiswap_get_pair_dtos__historical) | **GET** /dapps/sushiswap/PairDTOs/historical | PairDTOs (historical) 🔥
-[**sushiswap_get_pair_hour_data_dtos__historical**](SushiswapApi.md#sushiswap_get_pair_hour_data_dtos__historical) | **GET** /dapps/sushiswap/PairHourDataDTOs/historical | PairHourDataDTOs (historical) 🔥
+[**sushiswap_get_bundles__historical**](SushiswapApi.md#sushiswap_get_bundles__historical) | **GET** /dapps/sushiswap/bundles/historical-manual | Bundles (historical)
+[**sushiswap_get_burns__historical**](SushiswapApi.md#sushiswap_get_burns__historical) | **GET** /dapps/sushiswap/burns/historical-manual | Burns (historical)
+[**sushiswap_get_day_data__historical**](SushiswapApi.md#sushiswap_get_day_data__historical) | **GET** /dapps/sushiswap/dayData/historical-manual | DayData (historical)
+[**sushiswap_get_factory__historical**](SushiswapApi.md#sushiswap_get_factory__historical) | **GET** /dapps/sushiswap/factory/historical-manual | Factory (historical)
+[**sushiswap_get_hour_data__historical**](SushiswapApi.md#sushiswap_get_hour_data__historical) | **GET** /dapps/sushiswap/hourData/historical-manual | HourData (historical)
+[**sushiswap_get_liquidity_position__historical**](SushiswapApi.md#sushiswap_get_liquidity_position__historical) | **GET** /dapps/sushiswap/liquidityPosition/historical-manual | LiquidityPosition (historical)
+[**sushiswap_get_liquidity_position_snapshot__historical**](SushiswapApi.md#sushiswap_get_liquidity_position_snapshot__historical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical-manual | LiquidityPositionSnapshot (historical)
+[**sushiswap_get_mints__historical**](SushiswapApi.md#sushiswap_get_mints__historical) | **GET** /dapps/sushiswap/mints/historical-manual | Mints (historical)
 [**sushiswap_get_pools__current**](SushiswapApi.md#sushiswap_get_pools__current) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥
-[**sushiswap_get_pools__historical**](SushiswapApi.md#sushiswap_get_pools__historical) | **GET** /dapps/sushiswap/pools/historical | Pools (historical) 🔥
-[**sushiswap_get_pools_day_data__historical**](SushiswapApi.md#sushiswap_get_pools_day_data__historical) | **GET** /dapps/sushiswap/poolsDayData/historical | PoolsDayData (historical)
-[**sushiswap_get_pools_hour_data__historical**](SushiswapApi.md#sushiswap_get_pools_hour_data__historical) | **GET** /dapps/sushiswap/poolsHourData/historical | PoolsHourData (historical)
-[**sushiswap_get_swap_dtos__historical**](SushiswapApi.md#sushiswap_get_swap_dtos__historical) | **GET** /dapps/sushiswap/SwapDTOs/historical | SwapDTOs (historical) 🔥
+[**sushiswap_get_pools__historical**](SushiswapApi.md#sushiswap_get_pools__historical) | **GET** /dapps/sushiswap/pools/historical-manual | Pools (historical) 🔥
+[**sushiswap_get_pools_day_data__historical**](SushiswapApi.md#sushiswap_get_pools_day_data__historical) | **GET** /dapps/sushiswap/poolsDayData/historical-manual | PoolsDayData (historical)
+[**sushiswap_get_pools_hour_data__historical**](SushiswapApi.md#sushiswap_get_pools_hour_data__historical) | **GET** /dapps/sushiswap/poolsHourData/historical-manual | PoolsHourData (historical)
 [**sushiswap_get_swaps__current**](SushiswapApi.md#sushiswap_get_swaps__current) | **GET** /dapps/sushiswap/swaps/current | Swaps (current) 🔥
-[**sushiswap_get_swaps__historical**](SushiswapApi.md#sushiswap_get_swaps__historical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
-[**sushiswap_get_token_day_data_dtos__historical**](SushiswapApi.md#sushiswap_get_token_day_data_dtos__historical) | **GET** /dapps/sushiswap/TokenDayDataDTOs/historical | TokenDayDataDTOs (historical) 🔥
-[**sushiswap_get_token_dtos__historical**](SushiswapApi.md#sushiswap_get_token_dtos__historical) | **GET** /dapps/sushiswap/TokenDTOs/historical | TokenDTOs (historical) 🔥
+[**sushiswap_get_swaps__historical**](SushiswapApi.md#sushiswap_get_swaps__historical) | **GET** /dapps/sushiswap/swaps/historical-manual | Swaps (historical) 🔥
 [**sushiswap_get_tokens__current**](SushiswapApi.md#sushiswap_get_tokens__current) | **GET** /dapps/sushiswap/tokens/current | Tokens (current) 🔥
-[**sushiswap_get_tokens__historical**](SushiswapApi.md#sushiswap_get_tokens__historical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
-[**sushiswap_get_tokens_day_data__historical**](SushiswapApi.md#sushiswap_get_tokens_day_data__historical) | **GET** /dapps/sushiswap/tokensDayData/historical | TokensDayData (historical)
-[**sushiswap_get_transaction_dtos__historical**](SushiswapApi.md#sushiswap_get_transaction_dtos__historical) | **GET** /dapps/sushiswap/TransactionDTOs/historical | TransactionDTOs (historical) 🔥
-[**sushiswap_get_transactions__historical**](SushiswapApi.md#sushiswap_get_transactions__historical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical)
-[**sushiswap_get_user_dtos__historical**](SushiswapApi.md#sushiswap_get_user_dtos__historical) | **GET** /dapps/sushiswap/UserDTOs/historical | UserDTOs (historical) 🔥
-[**sushiswap_get_users__historical**](SushiswapApi.md#sushiswap_get_users__historical) | **GET** /dapps/sushiswap/users/historical | Users (historical)
+[**sushiswap_get_tokens__historical**](SushiswapApi.md#sushiswap_get_tokens__historical) | **GET** /dapps/sushiswap/tokens/historical-manual | Tokens (historical) 🔥
+[**sushiswap_get_tokens_day_data__historical**](SushiswapApi.md#sushiswap_get_tokens_day_data__historical) | **GET** /dapps/sushiswap/tokensDayData/historical-manual | TokensDayData (historical)
+[**sushiswap_get_transactions__historical**](SushiswapApi.md#sushiswap_get_transactions__historical) | **GET** /dapps/sushiswap/transactions/historical-manual | Transactions (historical)
+[**sushiswap_get_users__historical**](SushiswapApi.md#sushiswap_get_users__historical) | **GET** /dapps/sushiswap/users/historical-manual | Users (historical)
 
 
 # **curve_get_exchanges__current**
@@ -132,60 +116,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_bundle_dtos__historical**
-> ARRAY[SushiswapBundleDTO] sushiswap_get_bundle_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-BundleDTOs (historical) 🔥
-
-Gets BundleDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->sushiswap_get_bundle_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_bundle_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[SushiswapBundleDTO]**](SushiswapBundleDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **sushiswap_get_bundles__historical**
 > ARRAY[SushiswapBundleDTO] sushiswap_get_bundles__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
 
@@ -226,60 +156,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ARRAY[SushiswapBundleDTO]**](SushiswapBundleDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_burn_dtos__historical**
-> ARRAY[SushiswapBurnDTO] sushiswap_get_burn_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-BurnDTOs (historical) 🔥
-
-Gets BurnDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->sushiswap_get_burn_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_burn_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[SushiswapBurnDTO]**](SushiswapBurnDTO.md)
 
 ### Authorization
 
@@ -398,60 +274,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_day_data_dtos__historical**
-> ARRAY[SushiswapDayDataDTO] sushiswap_get_day_data_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-DayDataDTOs (historical) 🔥
-
-Gets DayDataDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->sushiswap_get_day_data_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_day_data_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[SushiswapDayDataDTO]**](SushiswapDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **sushiswap_get_factory__historical**
 > ARRAY[SushiswapFactoryDTO] sushiswap_get_factory__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
 
@@ -488,60 +310,6 @@ Name | Type | Description  | Notes
  **end_block** | **int**|  | [optional] 
  **start_date** | **DATE_TIME**|  | [optional] 
  **end_date** | **DATE_TIME**|  | [optional] 
-
-### Return type
-
-[**ARRAY[SushiswapFactoryDTO]**](SushiswapFactoryDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_factory_dtos__historical**
-> ARRAY[SushiswapFactoryDTO] sushiswap_get_factory_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-FactoryDTOs (historical) 🔥
-
-Gets FactoryDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->sushiswap_get_factory_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_factory_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
 
 ### Return type
 
@@ -610,60 +378,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_hour_data_dtos__historical**
-> ARRAY[SushiswapHourDataDTO] sushiswap_get_hour_data_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-HourDataDTOs (historical) 🔥
-
-Gets HourDataDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->sushiswap_get_hour_data_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_hour_data_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[SushiswapHourDataDTO]**](SushiswapHourDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **sushiswap_get_liquidity_position__historical**
 > ARRAY[SushiswapLiquidityPositionDTO] sushiswap_get_liquidity_position__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
@@ -690,60 +404,6 @@ eval {
 };
 if ($@) {
     warn "Exception when calling SushiswapApi->sushiswap_get_liquidity_position__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[SushiswapLiquidityPositionDTO]**](SushiswapLiquidityPositionDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_liquidity_position_dtos__historical**
-> ARRAY[SushiswapLiquidityPositionDTO] sushiswap_get_liquidity_position_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-LiquidityPositionDTOs (historical) 🔥
-
-Gets LiquidityPositionDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->sushiswap_get_liquidity_position_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_liquidity_position_dtos__historical: $@\n";
 }
 ```
 
@@ -826,114 +486,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_liquidity_position_snapshot_dtos__historical**
-> ARRAY[SushiswapLiquidityPositionSnapshotDTO] sushiswap_get_liquidity_position_snapshot_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-LiquidityPositionSnapshotDTOs (historical) 🔥
-
-Gets LiquidityPositionSnapshotDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->sushiswap_get_liquidity_position_snapshot_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_liquidity_position_snapshot_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[SushiswapLiquidityPositionSnapshotDTO]**](SushiswapLiquidityPositionSnapshotDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_mint_dtos__historical**
-> ARRAY[SushiswapMintDTO] sushiswap_get_mint_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-MintDTOs (historical) 🔥
-
-Gets MintDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->sushiswap_get_mint_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_mint_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[SushiswapMintDTO]**](SushiswapMintDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **sushiswap_get_mints__historical**
 > ARRAY[SushiswapMintDTO] sushiswap_get_mints__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
 
@@ -976,168 +528,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ARRAY[SushiswapMintDTO]**](SushiswapMintDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_pair_day_data_dtos__historical**
-> ARRAY[SushiswapPairDayDataDTO] sushiswap_get_pair_day_data_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-PairDayDataDTOs (historical) 🔥
-
-Gets PairDayDataDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->sushiswap_get_pair_day_data_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_pair_day_data_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[SushiswapPairDayDataDTO]**](SushiswapPairDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_pair_dtos__historical**
-> ARRAY[SushiswapPairDTO] sushiswap_get_pair_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-PairDTOs (historical) 🔥
-
-Gets PairDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->sushiswap_get_pair_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_pair_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[SushiswapPairDTO]**](SushiswapPairDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_pair_hour_data_dtos__historical**
-> ARRAY[SushiswapPairHourDataDTO] sushiswap_get_pair_hour_data_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-PairHourDataDTOs (historical) 🔥
-
-Gets PairHourDataDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->sushiswap_get_pair_hour_data_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_pair_hour_data_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[SushiswapPairHourDataDTO]**](SushiswapPairHourDataDTO.md)
 
 ### Authorization
 
@@ -1354,60 +744,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_swap_dtos__historical**
-> ARRAY[SushiswapSwapDTO] sushiswap_get_swap_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-SwapDTOs (historical) 🔥
-
-Gets SwapDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->sushiswap_get_swap_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_swap_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **sushiswap_get_swaps__current**
 > ARRAY[SushiswapSwapDTO] sushiswap_get_swaps__current()
 
@@ -1492,114 +828,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ARRAY[SushiswapSwapDTO]**](SushiswapSwapDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_token_day_data_dtos__historical**
-> ARRAY[SushiswapTokenDayDataDTO] sushiswap_get_token_day_data_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-TokenDayDataDTOs (historical) 🔥
-
-Gets TokenDayDataDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->sushiswap_get_token_day_data_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_token_day_data_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[SushiswapTokenDayDataDTO]**](SushiswapTokenDayDataDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_token_dtos__historical**
-> ARRAY[SushiswapTokenDTO] sushiswap_get_token_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-TokenDTOs (historical) 🔥
-
-Gets TokenDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->sushiswap_get_token_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_token_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[SushiswapTokenDTO]**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -1762,60 +990,6 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_transaction_dtos__historical**
-> ARRAY[SushiswapTransactionDTO] sushiswap_get_transaction_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-TransactionDTOs (historical) 🔥
-
-Gets TransactionDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->sushiswap_get_transaction_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_transaction_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[SushiswapTransactionDTO]**](SushiswapTransactionDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
 # **sushiswap_get_transactions__historical**
 > ARRAY[SushiswapTransactionDTO] sushiswap_get_transactions__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date)
 
@@ -1856,60 +1030,6 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ARRAY[SushiswapTransactionDTO]**](SushiswapTransactionDTO.md)
-
-### Authorization
-
-No authorization required
-
-### HTTP request headers
-
- - **Content-Type**: Not defined
- - **Accept**: text/plain, application/json, text/json
-
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
-
-# **sushiswap_get_user_dtos__historical**
-> ARRAY[SushiswapUserDTO] sushiswap_get_user_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id)
-
-UserDTOs (historical) 🔥
-
-Gets UserDTOs.
-
-### Example
-```perl
-use Data::Dumper;
-use WWW::OpenAPIClient::SushiswapApi;
-my $api_instance = WWW::OpenAPIClient::SushiswapApi->new(
-);
-
-my $start_block = 789; # int | 
-my $end_block = 789; # int | 
-my $start_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | 
-my $pool_id = "pool_id_example"; # string | 
-
-eval {
-    my $result = $api_instance->sushiswap_get_user_dtos__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, pool_id => $pool_id);
-    print Dumper($result);
-};
-if ($@) {
-    warn "Exception when calling SushiswapApi->sushiswap_get_user_dtos__historical: $@\n";
-}
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **start_block** | **int**|  | [optional] 
- **end_block** | **int**|  | [optional] 
- **start_date** | **DATE_TIME**|  | [optional] 
- **end_date** | **DATE_TIME**|  | [optional] 
- **pool_id** | **string**|  | [optional] 
-
-### Return type
-
-[**ARRAY[SushiswapUserDTO]**](SushiswapUserDTO.md)
 
 ### Authorization
 

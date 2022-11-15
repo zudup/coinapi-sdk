@@ -58,57 +58,9 @@ import qualified Prelude as P
 
 -- ** Dex
 
--- *** dexGetBatchDTOsHistorical
-
--- | @GET \/dapps\/dex\/BatchDTOs\/historical@
--- 
--- BatchDTOs (historical) 🔥
--- 
--- Gets BatchDTOs.
--- 
-dexGetBatchDTOsHistorical
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DexGetBatchDTOsHistorical MimeNoContent [DexBatchDTO] accept
-dexGetBatchDTOsHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/BatchDTOs/historical"]
-
-data DexGetBatchDTOsHistorical  
-
--- | /Optional Param/ "startBlock" - 
-instance HasOptionalParam DexGetBatchDTOsHistorical StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-
--- | /Optional Param/ "endBlock" - 
-instance HasOptionalParam DexGetBatchDTOsHistorical EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-
--- | /Optional Param/ "startDate" - 
-instance HasOptionalParam DexGetBatchDTOsHistorical StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-
--- | /Optional Param/ "endDate" - 
-instance HasOptionalParam DexGetBatchDTOsHistorical EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-
--- | /Optional Param/ "poolId" - 
-instance HasOptionalParam DexGetBatchDTOsHistorical PoolId where
-  applyOptionalParam req (PoolId xs) =
-    req `addQuery` toQuery ("poolId", Just xs)
--- | @application/json@
-instance Produces DexGetBatchDTOsHistorical MimeJSON
--- | @text/json@
-instance Produces DexGetBatchDTOsHistorical MimeTextJson
--- | @text/plain@
-instance Produces DexGetBatchDTOsHistorical MimePlainText
-
-
 -- *** dexGetBatchesHistorical
 
--- | @GET \/dapps\/dex\/batches\/historical@
+-- | @GET \/dapps\/dex\/batches\/historical-manual@
 -- 
 -- Batches (historical)
 -- 
@@ -118,7 +70,7 @@ dexGetBatchesHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest DexGetBatchesHistorical MimeNoContent [DexBatchDTO] accept
 dexGetBatchesHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/batches/historical"]
+  _mkRequest "GET" ["/dapps/dex/batches/historical-manual"]
 
 data DexGetBatchesHistorical  
 
@@ -149,57 +101,9 @@ instance Produces DexGetBatchesHistorical MimeTextJson
 instance Produces DexGetBatchesHistorical MimePlainText
 
 
--- *** dexGetDepositDTOsHistorical
-
--- | @GET \/dapps\/dex\/DepositDTOs\/historical@
--- 
--- DepositDTOs (historical) 🔥
--- 
--- Gets DepositDTOs.
--- 
-dexGetDepositDTOsHistorical
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DexGetDepositDTOsHistorical MimeNoContent [DexDepositDTO] accept
-dexGetDepositDTOsHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/DepositDTOs/historical"]
-
-data DexGetDepositDTOsHistorical  
-
--- | /Optional Param/ "startBlock" - 
-instance HasOptionalParam DexGetDepositDTOsHistorical StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-
--- | /Optional Param/ "endBlock" - 
-instance HasOptionalParam DexGetDepositDTOsHistorical EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-
--- | /Optional Param/ "startDate" - 
-instance HasOptionalParam DexGetDepositDTOsHistorical StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-
--- | /Optional Param/ "endDate" - 
-instance HasOptionalParam DexGetDepositDTOsHistorical EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-
--- | /Optional Param/ "poolId" - 
-instance HasOptionalParam DexGetDepositDTOsHistorical PoolId where
-  applyOptionalParam req (PoolId xs) =
-    req `addQuery` toQuery ("poolId", Just xs)
--- | @application/json@
-instance Produces DexGetDepositDTOsHistorical MimeJSON
--- | @text/json@
-instance Produces DexGetDepositDTOsHistorical MimeTextJson
--- | @text/plain@
-instance Produces DexGetDepositDTOsHistorical MimePlainText
-
-
 -- *** dexGetDepositsHistorical
 
--- | @GET \/dapps\/dex\/deposits\/historical@
+-- | @GET \/dapps\/dex\/deposits\/historical-manual@
 -- 
 -- Deposits (historical)
 -- 
@@ -209,7 +113,7 @@ dexGetDepositsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest DexGetDepositsHistorical MimeNoContent [DexDepositDTO] accept
 dexGetDepositsHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/deposits/historical"]
+  _mkRequest "GET" ["/dapps/dex/deposits/historical-manual"]
 
 data DexGetDepositsHistorical  
 
@@ -245,57 +149,9 @@ instance Produces DexGetDepositsHistorical MimeTextJson
 instance Produces DexGetDepositsHistorical MimePlainText
 
 
--- *** dexGetOrderDTOsHistorical
-
--- | @GET \/dapps\/dex\/OrderDTOs\/historical@
--- 
--- OrderDTOs (historical) 🔥
--- 
--- Gets OrderDTOs.
--- 
-dexGetOrderDTOsHistorical
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DexGetOrderDTOsHistorical MimeNoContent [DexOrderDTO] accept
-dexGetOrderDTOsHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/OrderDTOs/historical"]
-
-data DexGetOrderDTOsHistorical  
-
--- | /Optional Param/ "startBlock" - 
-instance HasOptionalParam DexGetOrderDTOsHistorical StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-
--- | /Optional Param/ "endBlock" - 
-instance HasOptionalParam DexGetOrderDTOsHistorical EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-
--- | /Optional Param/ "startDate" - 
-instance HasOptionalParam DexGetOrderDTOsHistorical StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-
--- | /Optional Param/ "endDate" - 
-instance HasOptionalParam DexGetOrderDTOsHistorical EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-
--- | /Optional Param/ "poolId" - 
-instance HasOptionalParam DexGetOrderDTOsHistorical PoolId where
-  applyOptionalParam req (PoolId xs) =
-    req `addQuery` toQuery ("poolId", Just xs)
--- | @application/json@
-instance Produces DexGetOrderDTOsHistorical MimeJSON
--- | @text/json@
-instance Produces DexGetOrderDTOsHistorical MimeTextJson
--- | @text/plain@
-instance Produces DexGetOrderDTOsHistorical MimePlainText
-
-
 -- *** dexGetOrdersHistorical
 
--- | @GET \/dapps\/dex\/orders\/historical@
+-- | @GET \/dapps\/dex\/orders\/historical-manual@
 -- 
 -- Orders (historical)
 -- 
@@ -305,7 +161,7 @@ dexGetOrdersHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest DexGetOrdersHistorical MimeNoContent [DexOrderDTO] accept
 dexGetOrdersHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/orders/historical"]
+  _mkRequest "GET" ["/dapps/dex/orders/historical-manual"]
 
 data DexGetOrdersHistorical  
 
@@ -341,57 +197,9 @@ instance Produces DexGetOrdersHistorical MimeTextJson
 instance Produces DexGetOrdersHistorical MimePlainText
 
 
--- *** dexGetPriceDTOsHistorical
-
--- | @GET \/dapps\/dex\/PriceDTOs\/historical@
--- 
--- PriceDTOs (historical) 🔥
--- 
--- Gets PriceDTOs.
--- 
-dexGetPriceDTOsHistorical
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DexGetPriceDTOsHistorical MimeNoContent [DexPriceDTO] accept
-dexGetPriceDTOsHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/PriceDTOs/historical"]
-
-data DexGetPriceDTOsHistorical  
-
--- | /Optional Param/ "startBlock" - 
-instance HasOptionalParam DexGetPriceDTOsHistorical StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-
--- | /Optional Param/ "endBlock" - 
-instance HasOptionalParam DexGetPriceDTOsHistorical EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-
--- | /Optional Param/ "startDate" - 
-instance HasOptionalParam DexGetPriceDTOsHistorical StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-
--- | /Optional Param/ "endDate" - 
-instance HasOptionalParam DexGetPriceDTOsHistorical EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-
--- | /Optional Param/ "poolId" - 
-instance HasOptionalParam DexGetPriceDTOsHistorical PoolId where
-  applyOptionalParam req (PoolId xs) =
-    req `addQuery` toQuery ("poolId", Just xs)
--- | @application/json@
-instance Produces DexGetPriceDTOsHistorical MimeJSON
--- | @text/json@
-instance Produces DexGetPriceDTOsHistorical MimeTextJson
--- | @text/plain@
-instance Produces DexGetPriceDTOsHistorical MimePlainText
-
-
 -- *** dexGetPricesHistorical
 
--- | @GET \/dapps\/dex\/prices\/historical@
+-- | @GET \/dapps\/dex\/prices\/historical-manual@
 -- 
 -- Prices (historical)
 -- 
@@ -401,7 +209,7 @@ dexGetPricesHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest DexGetPricesHistorical MimeNoContent [DexPriceDTO] accept
 dexGetPricesHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/prices/historical"]
+  _mkRequest "GET" ["/dapps/dex/prices/historical-manual"]
 
 data DexGetPricesHistorical  
 
@@ -437,57 +245,9 @@ instance Produces DexGetPricesHistorical MimeTextJson
 instance Produces DexGetPricesHistorical MimePlainText
 
 
--- *** dexGetSolutionDTOsHistorical
-
--- | @GET \/dapps\/dex\/SolutionDTOs\/historical@
--- 
--- SolutionDTOs (historical) 🔥
--- 
--- Gets SolutionDTOs.
--- 
-dexGetSolutionDTOsHistorical
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DexGetSolutionDTOsHistorical MimeNoContent [DexSolutionDTO] accept
-dexGetSolutionDTOsHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/SolutionDTOs/historical"]
-
-data DexGetSolutionDTOsHistorical  
-
--- | /Optional Param/ "startBlock" - 
-instance HasOptionalParam DexGetSolutionDTOsHistorical StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-
--- | /Optional Param/ "endBlock" - 
-instance HasOptionalParam DexGetSolutionDTOsHistorical EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-
--- | /Optional Param/ "startDate" - 
-instance HasOptionalParam DexGetSolutionDTOsHistorical StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-
--- | /Optional Param/ "endDate" - 
-instance HasOptionalParam DexGetSolutionDTOsHistorical EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-
--- | /Optional Param/ "poolId" - 
-instance HasOptionalParam DexGetSolutionDTOsHistorical PoolId where
-  applyOptionalParam req (PoolId xs) =
-    req `addQuery` toQuery ("poolId", Just xs)
--- | @application/json@
-instance Produces DexGetSolutionDTOsHistorical MimeJSON
--- | @text/json@
-instance Produces DexGetSolutionDTOsHistorical MimeTextJson
--- | @text/plain@
-instance Produces DexGetSolutionDTOsHistorical MimePlainText
-
-
 -- *** dexGetSolutionsHistorical
 
--- | @GET \/dapps\/dex\/solutions\/historical@
+-- | @GET \/dapps\/dex\/solutions\/historical-manual@
 -- 
 -- Solutions (historical)
 -- 
@@ -497,7 +257,7 @@ dexGetSolutionsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest DexGetSolutionsHistorical MimeNoContent [DexSolutionDTO] accept
 dexGetSolutionsHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/solutions/historical"]
+  _mkRequest "GET" ["/dapps/dex/solutions/historical-manual"]
 
 data DexGetSolutionsHistorical  
 
@@ -533,57 +293,9 @@ instance Produces DexGetSolutionsHistorical MimeTextJson
 instance Produces DexGetSolutionsHistorical MimePlainText
 
 
--- *** dexGetStatsDTOsHistorical
-
--- | @GET \/dapps\/dex\/StatsDTOs\/historical@
--- 
--- StatsDTOs (historical) 🔥
--- 
--- Gets StatsDTOs.
--- 
-dexGetStatsDTOsHistorical
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DexGetStatsDTOsHistorical MimeNoContent [DexStatsDTO] accept
-dexGetStatsDTOsHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/StatsDTOs/historical"]
-
-data DexGetStatsDTOsHistorical  
-
--- | /Optional Param/ "startBlock" - 
-instance HasOptionalParam DexGetStatsDTOsHistorical StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-
--- | /Optional Param/ "endBlock" - 
-instance HasOptionalParam DexGetStatsDTOsHistorical EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-
--- | /Optional Param/ "startDate" - 
-instance HasOptionalParam DexGetStatsDTOsHistorical StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-
--- | /Optional Param/ "endDate" - 
-instance HasOptionalParam DexGetStatsDTOsHistorical EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-
--- | /Optional Param/ "poolId" - 
-instance HasOptionalParam DexGetStatsDTOsHistorical PoolId where
-  applyOptionalParam req (PoolId xs) =
-    req `addQuery` toQuery ("poolId", Just xs)
--- | @application/json@
-instance Produces DexGetStatsDTOsHistorical MimeJSON
--- | @text/json@
-instance Produces DexGetStatsDTOsHistorical MimeTextJson
--- | @text/plain@
-instance Produces DexGetStatsDTOsHistorical MimePlainText
-
-
 -- *** dexGetStatsHistorical
 
--- | @GET \/dapps\/dex\/stats\/historical@
+-- | @GET \/dapps\/dex\/stats\/historical-manual@
 -- 
 -- Stats (historical)
 -- 
@@ -593,7 +305,7 @@ dexGetStatsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest DexGetStatsHistorical MimeNoContent [DexStatsDTO] accept
 dexGetStatsHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/stats/historical"]
+  _mkRequest "GET" ["/dapps/dex/stats/historical-manual"]
 
 data DexGetStatsHistorical  
 
@@ -624,57 +336,9 @@ instance Produces DexGetStatsHistorical MimeTextJson
 instance Produces DexGetStatsHistorical MimePlainText
 
 
--- *** dexGetTokenDTOsHistorical
-
--- | @GET \/dapps\/dex\/TokenDTOs\/historical@
--- 
--- TokenDTOs (historical) 🔥
--- 
--- Gets TokenDTOs.
--- 
-dexGetTokenDTOsHistorical
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DexGetTokenDTOsHistorical MimeNoContent [DexTokenDTO] accept
-dexGetTokenDTOsHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/TokenDTOs/historical"]
-
-data DexGetTokenDTOsHistorical  
-
--- | /Optional Param/ "startBlock" - 
-instance HasOptionalParam DexGetTokenDTOsHistorical StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-
--- | /Optional Param/ "endBlock" - 
-instance HasOptionalParam DexGetTokenDTOsHistorical EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-
--- | /Optional Param/ "startDate" - 
-instance HasOptionalParam DexGetTokenDTOsHistorical StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-
--- | /Optional Param/ "endDate" - 
-instance HasOptionalParam DexGetTokenDTOsHistorical EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-
--- | /Optional Param/ "poolId" - 
-instance HasOptionalParam DexGetTokenDTOsHistorical PoolId where
-  applyOptionalParam req (PoolId xs) =
-    req `addQuery` toQuery ("poolId", Just xs)
--- | @application/json@
-instance Produces DexGetTokenDTOsHistorical MimeJSON
--- | @text/json@
-instance Produces DexGetTokenDTOsHistorical MimeTextJson
--- | @text/plain@
-instance Produces DexGetTokenDTOsHistorical MimePlainText
-
-
 -- *** dexGetTokensHistorical
 
--- | @GET \/dapps\/dex\/tokens\/historical@
+-- | @GET \/dapps\/dex\/tokens\/historical-manual@
 -- 
 -- Tokens (historical) 🔥
 -- 
@@ -684,7 +348,7 @@ dexGetTokensHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest DexGetTokensHistorical MimeNoContent [DexTokenDTO] accept
 dexGetTokensHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/tokens/historical"]
+  _mkRequest "GET" ["/dapps/dex/tokens/historical-manual"]
 
 data DexGetTokensHistorical  
 
@@ -720,57 +384,9 @@ instance Produces DexGetTokensHistorical MimeTextJson
 instance Produces DexGetTokensHistorical MimePlainText
 
 
--- *** dexGetTradeDTOsHistorical
-
--- | @GET \/dapps\/dex\/TradeDTOs\/historical@
--- 
--- TradeDTOs (historical) 🔥
--- 
--- Gets TradeDTOs.
--- 
-dexGetTradeDTOsHistorical
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DexGetTradeDTOsHistorical MimeNoContent [DexTradeDTO] accept
-dexGetTradeDTOsHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/TradeDTOs/historical"]
-
-data DexGetTradeDTOsHistorical  
-
--- | /Optional Param/ "startBlock" - 
-instance HasOptionalParam DexGetTradeDTOsHistorical StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-
--- | /Optional Param/ "endBlock" - 
-instance HasOptionalParam DexGetTradeDTOsHistorical EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-
--- | /Optional Param/ "startDate" - 
-instance HasOptionalParam DexGetTradeDTOsHistorical StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-
--- | /Optional Param/ "endDate" - 
-instance HasOptionalParam DexGetTradeDTOsHistorical EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-
--- | /Optional Param/ "poolId" - 
-instance HasOptionalParam DexGetTradeDTOsHistorical PoolId where
-  applyOptionalParam req (PoolId xs) =
-    req `addQuery` toQuery ("poolId", Just xs)
--- | @application/json@
-instance Produces DexGetTradeDTOsHistorical MimeJSON
--- | @text/json@
-instance Produces DexGetTradeDTOsHistorical MimeTextJson
--- | @text/plain@
-instance Produces DexGetTradeDTOsHistorical MimePlainText
-
-
 -- *** dexGetTradesHistorical
 
--- | @GET \/dapps\/dex\/trades\/historical@
+-- | @GET \/dapps\/dex\/trades\/historical-manual@
 -- 
 -- Trades (historical) 🔥
 -- 
@@ -780,7 +396,7 @@ dexGetTradesHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest DexGetTradesHistorical MimeNoContent [DexTradeDTO] accept
 dexGetTradesHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/trades/historical"]
+  _mkRequest "GET" ["/dapps/dex/trades/historical-manual"]
 
 data DexGetTradesHistorical  
 
@@ -811,57 +427,9 @@ instance Produces DexGetTradesHistorical MimeTextJson
 instance Produces DexGetTradesHistorical MimePlainText
 
 
--- *** dexGetUserDTOsHistorical
-
--- | @GET \/dapps\/dex\/UserDTOs\/historical@
--- 
--- UserDTOs (historical) 🔥
--- 
--- Gets UserDTOs.
--- 
-dexGetUserDTOsHistorical
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DexGetUserDTOsHistorical MimeNoContent [DexUserDTO] accept
-dexGetUserDTOsHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/UserDTOs/historical"]
-
-data DexGetUserDTOsHistorical  
-
--- | /Optional Param/ "startBlock" - 
-instance HasOptionalParam DexGetUserDTOsHistorical StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-
--- | /Optional Param/ "endBlock" - 
-instance HasOptionalParam DexGetUserDTOsHistorical EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-
--- | /Optional Param/ "startDate" - 
-instance HasOptionalParam DexGetUserDTOsHistorical StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-
--- | /Optional Param/ "endDate" - 
-instance HasOptionalParam DexGetUserDTOsHistorical EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-
--- | /Optional Param/ "poolId" - 
-instance HasOptionalParam DexGetUserDTOsHistorical PoolId where
-  applyOptionalParam req (PoolId xs) =
-    req `addQuery` toQuery ("poolId", Just xs)
--- | @application/json@
-instance Produces DexGetUserDTOsHistorical MimeJSON
--- | @text/json@
-instance Produces DexGetUserDTOsHistorical MimeTextJson
--- | @text/plain@
-instance Produces DexGetUserDTOsHistorical MimePlainText
-
-
 -- *** dexGetUsersHistorical
 
--- | @GET \/dapps\/dex\/users\/historical@
+-- | @GET \/dapps\/dex\/users\/historical-manual@
 -- 
 -- Users (historical)
 -- 
@@ -871,7 +439,7 @@ dexGetUsersHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest DexGetUsersHistorical MimeNoContent [DexUserDTO] accept
 dexGetUsersHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/users/historical"]
+  _mkRequest "GET" ["/dapps/dex/users/historical-manual"]
 
 data DexGetUsersHistorical  
 
@@ -902,105 +470,9 @@ instance Produces DexGetUsersHistorical MimeTextJson
 instance Produces DexGetUsersHistorical MimePlainText
 
 
--- *** dexGetWithdrawDTOsHistorical
-
--- | @GET \/dapps\/dex\/WithdrawDTOs\/historical@
--- 
--- WithdrawDTOs (historical) 🔥
--- 
--- Gets WithdrawDTOs.
--- 
-dexGetWithdrawDTOsHistorical
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DexGetWithdrawDTOsHistorical MimeNoContent [DexWithdrawDTO] accept
-dexGetWithdrawDTOsHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/WithdrawDTOs/historical"]
-
-data DexGetWithdrawDTOsHistorical  
-
--- | /Optional Param/ "startBlock" - 
-instance HasOptionalParam DexGetWithdrawDTOsHistorical StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-
--- | /Optional Param/ "endBlock" - 
-instance HasOptionalParam DexGetWithdrawDTOsHistorical EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-
--- | /Optional Param/ "startDate" - 
-instance HasOptionalParam DexGetWithdrawDTOsHistorical StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-
--- | /Optional Param/ "endDate" - 
-instance HasOptionalParam DexGetWithdrawDTOsHistorical EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-
--- | /Optional Param/ "poolId" - 
-instance HasOptionalParam DexGetWithdrawDTOsHistorical PoolId where
-  applyOptionalParam req (PoolId xs) =
-    req `addQuery` toQuery ("poolId", Just xs)
--- | @application/json@
-instance Produces DexGetWithdrawDTOsHistorical MimeJSON
--- | @text/json@
-instance Produces DexGetWithdrawDTOsHistorical MimeTextJson
--- | @text/plain@
-instance Produces DexGetWithdrawDTOsHistorical MimePlainText
-
-
--- *** dexGetWithdrawRequestDTOsHistorical
-
--- | @GET \/dapps\/dex\/WithdrawRequestDTOs\/historical@
--- 
--- WithdrawRequestDTOs (historical) 🔥
--- 
--- Gets WithdrawRequestDTOs.
--- 
-dexGetWithdrawRequestDTOsHistorical
-  :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DexGetWithdrawRequestDTOsHistorical MimeNoContent [DexWithdrawRequestDTO] accept
-dexGetWithdrawRequestDTOsHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/WithdrawRequestDTOs/historical"]
-
-data DexGetWithdrawRequestDTOsHistorical  
-
--- | /Optional Param/ "startBlock" - 
-instance HasOptionalParam DexGetWithdrawRequestDTOsHistorical StartBlock where
-  applyOptionalParam req (StartBlock xs) =
-    req `addQuery` toQuery ("startBlock", Just xs)
-
--- | /Optional Param/ "endBlock" - 
-instance HasOptionalParam DexGetWithdrawRequestDTOsHistorical EndBlock where
-  applyOptionalParam req (EndBlock xs) =
-    req `addQuery` toQuery ("endBlock", Just xs)
-
--- | /Optional Param/ "startDate" - 
-instance HasOptionalParam DexGetWithdrawRequestDTOsHistorical StartDate where
-  applyOptionalParam req (StartDate xs) =
-    req `addQuery` toQuery ("startDate", Just xs)
-
--- | /Optional Param/ "endDate" - 
-instance HasOptionalParam DexGetWithdrawRequestDTOsHistorical EndDate where
-  applyOptionalParam req (EndDate xs) =
-    req `addQuery` toQuery ("endDate", Just xs)
-
--- | /Optional Param/ "poolId" - 
-instance HasOptionalParam DexGetWithdrawRequestDTOsHistorical PoolId where
-  applyOptionalParam req (PoolId xs) =
-    req `addQuery` toQuery ("poolId", Just xs)
--- | @application/json@
-instance Produces DexGetWithdrawRequestDTOsHistorical MimeJSON
--- | @text/json@
-instance Produces DexGetWithdrawRequestDTOsHistorical MimeTextJson
--- | @text/plain@
-instance Produces DexGetWithdrawRequestDTOsHistorical MimePlainText
-
-
 -- *** dexGetWithdrawsHistorical
 
--- | @GET \/dapps\/dex\/withdraws\/historical@
+-- | @GET \/dapps\/dex\/withdraws\/historical-manual@
 -- 
 -- Withdraws (historical)
 -- 
@@ -1010,7 +482,7 @@ dexGetWithdrawsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest DexGetWithdrawsHistorical MimeNoContent [DexWithdrawDTO] accept
 dexGetWithdrawsHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/withdraws/historical"]
+  _mkRequest "GET" ["/dapps/dex/withdraws/historical-manual"]
 
 data DexGetWithdrawsHistorical  
 
@@ -1048,7 +520,7 @@ instance Produces DexGetWithdrawsHistorical MimePlainText
 
 -- *** dexGetWithdrawsRequestsHistorical
 
--- | @GET \/dapps\/dex\/withdrawsRequests\/historical@
+-- | @GET \/dapps\/dex\/withdrawsRequests\/historical-manual@
 -- 
 -- WithdrawsRequests (historical)
 -- 
@@ -1058,7 +530,7 @@ dexGetWithdrawsRequestsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
   -> OnChainRequest DexGetWithdrawsRequestsHistorical MimeNoContent [DexWithdrawRequestDTO] accept
 dexGetWithdrawsRequestsHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/withdrawsRequests/historical"]
+  _mkRequest "GET" ["/dapps/dex/withdrawsRequests/historical-manual"]
 
 data DexGetWithdrawsRequestsHistorical  
 

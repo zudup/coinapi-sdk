@@ -123,62 +123,6 @@ API.Client.SushiswapApi.prototype.dexGetTradesCurrent = function(opt_extraHttpRe
 }
 
 /**
- * BundleDTOs (historical) 🔥
- * Gets BundleDTOs.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_poolId 
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.BundleDTO>>}
- */
-API.Client.SushiswapApi.prototype.sushiswapGetBundleDTOsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/BundleDTOs/historical';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_startBlock !== undefined) {
-    queryParameters['startBlock'] = opt_startBlock;
-  }
-
-  if (opt_endBlock !== undefined) {
-    queryParameters['endBlock'] = opt_endBlock;
-  }
-
-  if (opt_startDate !== undefined) {
-    queryParameters['startDate'] = opt_startDate;
-  }
-
-  if (opt_endDate !== undefined) {
-    queryParameters['endDate'] = opt_endDate;
-  }
-
-  if (opt_poolId !== undefined) {
-    queryParameters['poolId'] = opt_poolId;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
  * Bundles (historical)
  * Gets bundles.
  * @param {!number=} opt_startBlock AAAAAAAAAA
@@ -190,7 +134,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetBundleDTOsHistorical = function(op
  */
 API.Client.SushiswapApi.prototype.sushiswapGetBundlesHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/bundles/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/bundles/historical-manual';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -211,62 +155,6 @@ API.Client.SushiswapApi.prototype.sushiswapGetBundlesHistorical = function(opt_s
 
   if (opt_endDate !== undefined) {
     queryParameters['endDate'] = opt_endDate;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * BurnDTOs (historical) 🔥
- * Gets BurnDTOs.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_poolId 
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.BurnDTO>>}
- */
-API.Client.SushiswapApi.prototype.sushiswapGetBurnDTOsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/BurnDTOs/historical';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_startBlock !== undefined) {
-    queryParameters['startBlock'] = opt_startBlock;
-  }
-
-  if (opt_endBlock !== undefined) {
-    queryParameters['endBlock'] = opt_endBlock;
-  }
-
-  if (opt_startDate !== undefined) {
-    queryParameters['startDate'] = opt_startDate;
-  }
-
-  if (opt_endDate !== undefined) {
-    queryParameters['endDate'] = opt_endDate;
-  }
-
-  if (opt_poolId !== undefined) {
-    queryParameters['poolId'] = opt_poolId;
   }
 
   /** @type {!Object} */
@@ -298,63 +186,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetBurnDTOsHistorical = function(opt_
  */
 API.Client.SushiswapApi.prototype.sushiswapGetBurnsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/burns/historical';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_startBlock !== undefined) {
-    queryParameters['startBlock'] = opt_startBlock;
-  }
-
-  if (opt_endBlock !== undefined) {
-    queryParameters['endBlock'] = opt_endBlock;
-  }
-
-  if (opt_startDate !== undefined) {
-    queryParameters['startDate'] = opt_startDate;
-  }
-
-  if (opt_endDate !== undefined) {
-    queryParameters['endDate'] = opt_endDate;
-  }
-
-  if (opt_poolId !== undefined) {
-    queryParameters['poolId'] = opt_poolId;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * DayDataDTOs (historical) 🔥
- * Gets DayDataDTOs.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_poolId 
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.DayDataDTO>>}
- */
-API.Client.SushiswapApi.prototype.sushiswapGetDayDataDTOsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/DayDataDTOs/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/burns/historical-manual';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -409,7 +241,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetDayDataDTOsHistorical = function(o
  */
 API.Client.SushiswapApi.prototype.sushiswapGetDayDataHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/dayData/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/dayData/historical-manual';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -430,62 +262,6 @@ API.Client.SushiswapApi.prototype.sushiswapGetDayDataHistorical = function(opt_s
 
   if (opt_endDate !== undefined) {
     queryParameters['endDate'] = opt_endDate;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * FactoryDTOs (historical) 🔥
- * Gets FactoryDTOs.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_poolId 
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.FactoryDTO>>}
- */
-API.Client.SushiswapApi.prototype.sushiswapGetFactoryDTOsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/FactoryDTOs/historical';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_startBlock !== undefined) {
-    queryParameters['startBlock'] = opt_startBlock;
-  }
-
-  if (opt_endBlock !== undefined) {
-    queryParameters['endBlock'] = opt_endBlock;
-  }
-
-  if (opt_startDate !== undefined) {
-    queryParameters['startDate'] = opt_startDate;
-  }
-
-  if (opt_endDate !== undefined) {
-    queryParameters['endDate'] = opt_endDate;
-  }
-
-  if (opt_poolId !== undefined) {
-    queryParameters['poolId'] = opt_poolId;
   }
 
   /** @type {!Object} */
@@ -516,7 +292,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetFactoryDTOsHistorical = function(o
  */
 API.Client.SushiswapApi.prototype.sushiswapGetFactoryHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/factory/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/factory/historical-manual';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -537,62 +313,6 @@ API.Client.SushiswapApi.prototype.sushiswapGetFactoryHistorical = function(opt_s
 
   if (opt_endDate !== undefined) {
     queryParameters['endDate'] = opt_endDate;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * HourDataDTOs (historical) 🔥
- * Gets HourDataDTOs.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_poolId 
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.HourDataDTO>>}
- */
-API.Client.SushiswapApi.prototype.sushiswapGetHourDataDTOsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/HourDataDTOs/historical';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_startBlock !== undefined) {
-    queryParameters['startBlock'] = opt_startBlock;
-  }
-
-  if (opt_endBlock !== undefined) {
-    queryParameters['endBlock'] = opt_endBlock;
-  }
-
-  if (opt_startDate !== undefined) {
-    queryParameters['startDate'] = opt_startDate;
-  }
-
-  if (opt_endDate !== undefined) {
-    queryParameters['endDate'] = opt_endDate;
-  }
-
-  if (opt_poolId !== undefined) {
-    queryParameters['poolId'] = opt_poolId;
   }
 
   /** @type {!Object} */
@@ -623,7 +343,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetHourDataDTOsHistorical = function(
  */
 API.Client.SushiswapApi.prototype.sushiswapGetHourDataHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/hourData/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/hourData/historical-manual';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -644,62 +364,6 @@ API.Client.SushiswapApi.prototype.sushiswapGetHourDataHistorical = function(opt_
 
   if (opt_endDate !== undefined) {
     queryParameters['endDate'] = opt_endDate;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * LiquidityPositionDTOs (historical) 🔥
- * Gets LiquidityPositionDTOs.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_poolId 
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.LiquidityPositionDTO>>}
- */
-API.Client.SushiswapApi.prototype.sushiswapGetLiquidityPositionDTOsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/LiquidityPositionDTOs/historical';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_startBlock !== undefined) {
-    queryParameters['startBlock'] = opt_startBlock;
-  }
-
-  if (opt_endBlock !== undefined) {
-    queryParameters['endBlock'] = opt_endBlock;
-  }
-
-  if (opt_startDate !== undefined) {
-    queryParameters['startDate'] = opt_startDate;
-  }
-
-  if (opt_endDate !== undefined) {
-    queryParameters['endDate'] = opt_endDate;
-  }
-
-  if (opt_poolId !== undefined) {
-    queryParameters['poolId'] = opt_poolId;
   }
 
   /** @type {!Object} */
@@ -731,63 +395,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetLiquidityPositionDTOsHistorical = 
  */
 API.Client.SushiswapApi.prototype.sushiswapGetLiquidityPositionHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/liquidityPosition/historical';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_startBlock !== undefined) {
-    queryParameters['startBlock'] = opt_startBlock;
-  }
-
-  if (opt_endBlock !== undefined) {
-    queryParameters['endBlock'] = opt_endBlock;
-  }
-
-  if (opt_startDate !== undefined) {
-    queryParameters['startDate'] = opt_startDate;
-  }
-
-  if (opt_endDate !== undefined) {
-    queryParameters['endDate'] = opt_endDate;
-  }
-
-  if (opt_poolId !== undefined) {
-    queryParameters['poolId'] = opt_poolId;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * LiquidityPositionSnapshotDTOs (historical) 🔥
- * Gets LiquidityPositionSnapshotDTOs.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_poolId 
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.LiquidityPositionSnapshotDTO>>}
- */
-API.Client.SushiswapApi.prototype.sushiswapGetLiquidityPositionSnapshotDTOsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/LiquidityPositionSnapshotDTOs/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/liquidityPosition/historical-manual';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -843,63 +451,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetLiquidityPositionSnapshotDTOsHisto
  */
 API.Client.SushiswapApi.prototype.sushiswapGetLiquidityPositionSnapshotHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/liquidityPositionSnapshots/historical';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_startBlock !== undefined) {
-    queryParameters['startBlock'] = opt_startBlock;
-  }
-
-  if (opt_endBlock !== undefined) {
-    queryParameters['endBlock'] = opt_endBlock;
-  }
-
-  if (opt_startDate !== undefined) {
-    queryParameters['startDate'] = opt_startDate;
-  }
-
-  if (opt_endDate !== undefined) {
-    queryParameters['endDate'] = opt_endDate;
-  }
-
-  if (opt_poolId !== undefined) {
-    queryParameters['poolId'] = opt_poolId;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * MintDTOs (historical) 🔥
- * Gets MintDTOs.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_poolId 
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.MintDTO>>}
- */
-API.Client.SushiswapApi.prototype.sushiswapGetMintDTOsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/MintDTOs/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/liquidityPositionSnapshots/historical-manual';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -955,175 +507,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetMintDTOsHistorical = function(opt_
  */
 API.Client.SushiswapApi.prototype.sushiswapGetMintsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/mints/historical';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_startBlock !== undefined) {
-    queryParameters['startBlock'] = opt_startBlock;
-  }
-
-  if (opt_endBlock !== undefined) {
-    queryParameters['endBlock'] = opt_endBlock;
-  }
-
-  if (opt_startDate !== undefined) {
-    queryParameters['startDate'] = opt_startDate;
-  }
-
-  if (opt_endDate !== undefined) {
-    queryParameters['endDate'] = opt_endDate;
-  }
-
-  if (opt_poolId !== undefined) {
-    queryParameters['poolId'] = opt_poolId;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * PairDTOs (historical) 🔥
- * Gets PairDTOs.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_poolId 
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.PairDTO>>}
- */
-API.Client.SushiswapApi.prototype.sushiswapGetPairDTOsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/PairDTOs/historical';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_startBlock !== undefined) {
-    queryParameters['startBlock'] = opt_startBlock;
-  }
-
-  if (opt_endBlock !== undefined) {
-    queryParameters['endBlock'] = opt_endBlock;
-  }
-
-  if (opt_startDate !== undefined) {
-    queryParameters['startDate'] = opt_startDate;
-  }
-
-  if (opt_endDate !== undefined) {
-    queryParameters['endDate'] = opt_endDate;
-  }
-
-  if (opt_poolId !== undefined) {
-    queryParameters['poolId'] = opt_poolId;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * PairDayDataDTOs (historical) 🔥
- * Gets PairDayDataDTOs.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_poolId 
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.PairDayDataDTO>>}
- */
-API.Client.SushiswapApi.prototype.sushiswapGetPairDayDataDTOsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/PairDayDataDTOs/historical';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_startBlock !== undefined) {
-    queryParameters['startBlock'] = opt_startBlock;
-  }
-
-  if (opt_endBlock !== undefined) {
-    queryParameters['endBlock'] = opt_endBlock;
-  }
-
-  if (opt_startDate !== undefined) {
-    queryParameters['startDate'] = opt_startDate;
-  }
-
-  if (opt_endDate !== undefined) {
-    queryParameters['endDate'] = opt_endDate;
-  }
-
-  if (opt_poolId !== undefined) {
-    queryParameters['poolId'] = opt_poolId;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * PairHourDataDTOs (historical) 🔥
- * Gets PairHourDataDTOs.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_poolId 
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.PairHourDataDTO>>}
- */
-API.Client.SushiswapApi.prototype.sushiswapGetPairHourDataDTOsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/PairHourDataDTOs/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/mints/historical-manual';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1210,7 +594,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetPoolsCurrent = function(opt_extraH
  */
 API.Client.SushiswapApi.prototype.sushiswapGetPoolsDayDataHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/poolsDayData/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/poolsDayData/historical-manual';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1266,7 +650,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetPoolsDayDataHistorical = function(
  */
 API.Client.SushiswapApi.prototype.sushiswapGetPoolsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/pools/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/pools/historical-manual';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1322,63 +706,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetPoolsHistorical = function(opt_sta
  */
 API.Client.SushiswapApi.prototype.sushiswapGetPoolsHourDataHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/poolsHourData/historical';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_startBlock !== undefined) {
-    queryParameters['startBlock'] = opt_startBlock;
-  }
-
-  if (opt_endBlock !== undefined) {
-    queryParameters['endBlock'] = opt_endBlock;
-  }
-
-  if (opt_startDate !== undefined) {
-    queryParameters['startDate'] = opt_startDate;
-  }
-
-  if (opt_endDate !== undefined) {
-    queryParameters['endDate'] = opt_endDate;
-  }
-
-  if (opt_poolId !== undefined) {
-    queryParameters['poolId'] = opt_poolId;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * SwapDTOs (historical) 🔥
- * Gets SwapDTOs.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_poolId 
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.SwapDTO>>}
- */
-API.Client.SushiswapApi.prototype.sushiswapGetSwapDTOsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/SwapDTOs/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/poolsHourData/historical-manual';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1465,119 +793,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetSwapsCurrent = function(opt_extraH
  */
 API.Client.SushiswapApi.prototype.sushiswapGetSwapsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/swaps/historical';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_startBlock !== undefined) {
-    queryParameters['startBlock'] = opt_startBlock;
-  }
-
-  if (opt_endBlock !== undefined) {
-    queryParameters['endBlock'] = opt_endBlock;
-  }
-
-  if (opt_startDate !== undefined) {
-    queryParameters['startDate'] = opt_startDate;
-  }
-
-  if (opt_endDate !== undefined) {
-    queryParameters['endDate'] = opt_endDate;
-  }
-
-  if (opt_poolId !== undefined) {
-    queryParameters['poolId'] = opt_poolId;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * TokenDTOs (historical) 🔥
- * Gets TokenDTOs.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_poolId 
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.TokenDTO>>}
- */
-API.Client.SushiswapApi.prototype.sushiswapGetTokenDTOsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/TokenDTOs/historical';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_startBlock !== undefined) {
-    queryParameters['startBlock'] = opt_startBlock;
-  }
-
-  if (opt_endBlock !== undefined) {
-    queryParameters['endBlock'] = opt_endBlock;
-  }
-
-  if (opt_startDate !== undefined) {
-    queryParameters['startDate'] = opt_startDate;
-  }
-
-  if (opt_endDate !== undefined) {
-    queryParameters['endDate'] = opt_endDate;
-  }
-
-  if (opt_poolId !== undefined) {
-    queryParameters['poolId'] = opt_poolId;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * TokenDayDataDTOs (historical) 🔥
- * Gets TokenDayDataDTOs.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_poolId 
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.TokenDayDataDTO>>}
- */
-API.Client.SushiswapApi.prototype.sushiswapGetTokenDayDataDTOsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/TokenDayDataDTOs/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/swaps/historical-manual';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1664,7 +880,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetTokensCurrent = function(opt_extra
  */
 API.Client.SushiswapApi.prototype.sushiswapGetTokensDayDataHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/tokensDayData/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/tokensDayData/historical-manual';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1720,7 +936,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetTokensDayDataHistorical = function
  */
 API.Client.SushiswapApi.prototype.sushiswapGetTokensHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_tokenId, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/tokens/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/tokens/historical-manual';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1764,62 +980,6 @@ API.Client.SushiswapApi.prototype.sushiswapGetTokensHistorical = function(opt_st
 }
 
 /**
- * TransactionDTOs (historical) 🔥
- * Gets TransactionDTOs.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_poolId 
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.TransactionDTO>>}
- */
-API.Client.SushiswapApi.prototype.sushiswapGetTransactionDTOsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/TransactionDTOs/historical';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_startBlock !== undefined) {
-    queryParameters['startBlock'] = opt_startBlock;
-  }
-
-  if (opt_endBlock !== undefined) {
-    queryParameters['endBlock'] = opt_endBlock;
-  }
-
-  if (opt_startDate !== undefined) {
-    queryParameters['startDate'] = opt_startDate;
-  }
-
-  if (opt_endDate !== undefined) {
-    queryParameters['endDate'] = opt_endDate;
-  }
-
-  if (opt_poolId !== undefined) {
-    queryParameters['poolId'] = opt_poolId;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
  * Transactions (historical)
  * Gets transactions.
  * @param {!number=} opt_startBlock 
@@ -1831,7 +991,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetTransactionDTOsHistorical = functi
  */
 API.Client.SushiswapApi.prototype.sushiswapGetTransactionsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/transactions/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/transactions/historical-manual';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1852,62 +1012,6 @@ API.Client.SushiswapApi.prototype.sushiswapGetTransactionsHistorical = function(
 
   if (opt_endDate !== undefined) {
     queryParameters['endDate'] = opt_endDate;
-  }
-
-  /** @type {!Object} */
-  var httpRequestParams = {
-    method: 'GET',
-    url: path,
-    json: true,
-            params: queryParameters,
-    headers: headerParams
-  };
-
-  if (opt_extraHttpRequestParams) {
-    httpRequestParams = angular.extend(httpRequestParams, opt_extraHttpRequestParams);
-  }
-
-  return (/** @type {?} */ (this.http_))(httpRequestParams);
-}
-
-/**
- * UserDTOs (historical) 🔥
- * Gets UserDTOs.
- * @param {!number=} opt_startBlock 
- * @param {!number=} opt_endBlock 
- * @param {!Date=} opt_startDate 
- * @param {!Date=} opt_endDate 
- * @param {!string=} opt_poolId 
- * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
- * @return {!angular.$q.Promise<!Array<!API.Client.Sushiswap.UserDTO>>}
- */
-API.Client.SushiswapApi.prototype.sushiswapGetUserDTOsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_poolId, opt_extraHttpRequestParams) {
-  /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/UserDTOs/historical';
-
-  /** @type {!Object} */
-  var queryParameters = {};
-
-  /** @type {!Object} */
-  var headerParams = angular.extend({}, this.defaultHeaders_);
-  if (opt_startBlock !== undefined) {
-    queryParameters['startBlock'] = opt_startBlock;
-  }
-
-  if (opt_endBlock !== undefined) {
-    queryParameters['endBlock'] = opt_endBlock;
-  }
-
-  if (opt_startDate !== undefined) {
-    queryParameters['startDate'] = opt_startDate;
-  }
-
-  if (opt_endDate !== undefined) {
-    queryParameters['endDate'] = opt_endDate;
-  }
-
-  if (opt_poolId !== undefined) {
-    queryParameters['poolId'] = opt_poolId;
   }
 
   /** @type {!Object} */
@@ -1938,7 +1042,7 @@ API.Client.SushiswapApi.prototype.sushiswapGetUserDTOsHistorical = function(opt_
  */
 API.Client.SushiswapApi.prototype.sushiswapGetUsersHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/sushiswap/users/historical';
+  var path = this.basePath_ + '/dapps/sushiswap/users/historical-manual';
 
   /** @type {!Object} */
   var queryParameters = {};

@@ -15,26 +15,15 @@
 
 
 module Api.Request.Dex exposing
-    ( dexGetBatchDTOsHistorical
-    , dexGetBatchesHistorical
-    , dexGetDepositDTOsHistorical
+    ( dexGetBatchesHistorical
     , dexGetDepositsHistorical
-    , dexGetOrderDTOsHistorical
     , dexGetOrdersHistorical
-    , dexGetPriceDTOsHistorical
     , dexGetPricesHistorical
-    , dexGetSolutionDTOsHistorical
     , dexGetSolutionsHistorical
-    , dexGetStatsDTOsHistorical
     , dexGetStatsHistorical
-    , dexGetTokenDTOsHistorical
     , dexGetTokensHistorical
-    , dexGetTradeDTOsHistorical
     , dexGetTradesHistorical
-    , dexGetUserDTOsHistorical
     , dexGetUsersHistorical
-    , dexGetWithdrawDTOsHistorical
-    , dexGetWithdrawRequestDTOsHistorical
     , dexGetWithdrawsHistorical
     , dexGetWithdrawsRequestsHistorical
     )
@@ -49,48 +38,18 @@ import Json.Encode
 
 
 
-{-| Gets BatchDTOs.
--}
-dexGetBatchDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.DexBatchDTO)
-dexGetBatchDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/dex/BatchDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.dexBatchDTODecoder)
-
-
-
 {-| Gets batches.
 -}
 dexGetBatchesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.DexBatchDTO)
 dexGetBatchesHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/dapps/dex/batches/historical"
+        "/dapps/dex/batches/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.dexBatchDTODecoder)
-
-
-
-{-| Gets DepositDTOs.
--}
-dexGetDepositDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.DexDepositDTO)
-dexGetDepositDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/dex/DepositDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.dexDepositDTODecoder)
 
 
 
@@ -100,27 +59,12 @@ dexGetDepositsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix 
 dexGetDepositsHistorical startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
     Api.request
         "GET"
-        "/dapps/dex/deposits/historical"
+        "/dapps/dex/deposits/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "tokenId", Maybe.map identity tokenId_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.dexDepositDTODecoder)
-
-
-
-{-| Gets OrderDTOs.
--}
-dexGetOrderDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.DexOrderDTO)
-dexGetOrderDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/dex/OrderDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.dexOrderDTODecoder)
 
 
 
@@ -130,27 +74,12 @@ dexGetOrdersHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix ->
 dexGetOrdersHistorical startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
     Api.request
         "GET"
-        "/dapps/dex/orders/historical"
+        "/dapps/dex/orders/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "tokenId", Maybe.map identity tokenId_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.dexOrderDTODecoder)
-
-
-
-{-| Gets PriceDTOs.
--}
-dexGetPriceDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.DexPriceDTO)
-dexGetPriceDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/dex/PriceDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.dexPriceDTODecoder)
 
 
 
@@ -160,27 +89,12 @@ dexGetPricesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix ->
 dexGetPricesHistorical startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
     Api.request
         "GET"
-        "/dapps/dex/prices/historical"
+        "/dapps/dex/prices/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "tokenId", Maybe.map identity tokenId_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.dexPriceDTODecoder)
-
-
-
-{-| Gets SolutionDTOs.
--}
-dexGetSolutionDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.DexSolutionDTO)
-dexGetSolutionDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/dex/SolutionDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.dexSolutionDTODecoder)
 
 
 
@@ -190,27 +104,12 @@ dexGetSolutionsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix
 dexGetSolutionsHistorical startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
     Api.request
         "GET"
-        "/dapps/dex/solutions/historical"
+        "/dapps/dex/solutions/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "tokenId", Maybe.map identity tokenId_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.dexSolutionDTODecoder)
-
-
-
-{-| Gets StatsDTOs.
--}
-dexGetStatsDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.DexStatsDTO)
-dexGetStatsDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/dex/StatsDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.dexStatsDTODecoder)
 
 
 
@@ -220,27 +119,12 @@ dexGetStatsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> 
 dexGetStatsHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/dapps/dex/stats/historical"
+        "/dapps/dex/stats/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.dexStatsDTODecoder)
-
-
-
-{-| Gets TokenDTOs.
--}
-dexGetTokenDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.DexTokenDTO)
-dexGetTokenDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/dex/TokenDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.dexTokenDTODecoder)
 
 
 
@@ -250,27 +134,12 @@ dexGetTokensHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix ->
 dexGetTokensHistorical startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
     Api.request
         "GET"
-        "/dapps/dex/tokens/historical"
+        "/dapps/dex/tokens/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "tokenId", Maybe.map identity tokenId_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.dexTokenDTODecoder)
-
-
-
-{-| Gets TradeDTOs.
--}
-dexGetTradeDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.DexTradeDTO)
-dexGetTradeDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/dex/TradeDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.dexTradeDTODecoder)
 
 
 
@@ -280,27 +149,12 @@ dexGetTradesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix ->
 dexGetTradesHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/dapps/dex/trades/historical"
+        "/dapps/dex/trades/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.dexTradeDTODecoder)
-
-
-
-{-| Gets UserDTOs.
--}
-dexGetUserDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.DexUserDTO)
-dexGetUserDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/dex/UserDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.dexUserDTODecoder)
 
 
 
@@ -310,42 +164,12 @@ dexGetUsersHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> 
 dexGetUsersHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/dapps/dex/users/historical"
+        "/dapps/dex/users/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.dexUserDTODecoder)
-
-
-
-{-| Gets WithdrawDTOs.
--}
-dexGetWithdrawDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.DexWithdrawDTO)
-dexGetWithdrawDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/dex/WithdrawDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.dexWithdrawDTODecoder)
-
-
-
-{-| Gets WithdrawRequestDTOs.
--}
-dexGetWithdrawRequestDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.DexWithdrawRequestDTO)
-dexGetWithdrawRequestDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/dex/WithdrawRequestDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.dexWithdrawRequestDTODecoder)
 
 
 
@@ -355,7 +179,7 @@ dexGetWithdrawsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix
 dexGetWithdrawsHistorical startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
     Api.request
         "GET"
-        "/dapps/dex/withdraws/historical"
+        "/dapps/dex/withdraws/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "tokenId", Maybe.map identity tokenId_query ) ]
         []
@@ -370,7 +194,7 @@ dexGetWithdrawsRequestsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> May
 dexGetWithdrawsRequestsHistorical startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
     Api.request
         "GET"
-        "/dapps/dex/withdrawsRequests/historical"
+        "/dapps/dex/withdrawsRequests/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "tokenId", Maybe.map identity tokenId_query ) ]
         []

@@ -65,43 +65,8 @@ class SushiswapApi {
 
     }
 
-    def sushiswapGetBundleDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/BundleDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapBundleDTO.class )
-
-    }
-
     def sushiswapGetBundlesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/bundles/historical"
+        String resourcePath = "/dapps/sushiswap/bundles/historical-manual"
 
         // params
         def queryParams = [:]
@@ -129,46 +94,11 @@ class SushiswapApi {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     SushiswapBundleDTO.class )
-
-    }
-
-    def sushiswapGetBurnDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/BurnDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapBurnDTO.class )
 
     }
 
     def sushiswapGetBurnsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/burns/historical"
+        String resourcePath = "/dapps/sushiswap/burns/historical-manual"
 
         // params
         def queryParams = [:]
@@ -202,43 +132,8 @@ class SushiswapApi {
 
     }
 
-    def sushiswapGetDayDataDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/DayDataDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapDayDataDTO.class )
-
-    }
-
     def sushiswapGetDayDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/dayData/historical"
+        String resourcePath = "/dapps/sushiswap/dayData/historical-manual"
 
         // params
         def queryParams = [:]
@@ -266,46 +161,11 @@ class SushiswapApi {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     SushiswapDayDataDTO.class )
-
-    }
-
-    def sushiswapGetFactoryDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/FactoryDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapFactoryDTO.class )
 
     }
 
     def sushiswapGetFactoryHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/factory/historical"
+        String resourcePath = "/dapps/sushiswap/factory/historical-manual"
 
         // params
         def queryParams = [:]
@@ -336,43 +196,8 @@ class SushiswapApi {
 
     }
 
-    def sushiswapGetHourDataDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/HourDataDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapHourDataDTO.class )
-
-    }
-
     def sushiswapGetHourDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/hourData/historical"
+        String resourcePath = "/dapps/sushiswap/hourData/historical-manual"
 
         // params
         def queryParams = [:]
@@ -400,46 +225,11 @@ class SushiswapApi {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     SushiswapHourDataDTO.class )
-
-    }
-
-    def sushiswapGetLiquidityPositionDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/LiquidityPositionDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapLiquidityPositionDTO.class )
 
     }
 
     def sushiswapGetLiquidityPositionHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/liquidityPosition/historical"
+        String resourcePath = "/dapps/sushiswap/liquidityPosition/historical-manual"
 
         // params
         def queryParams = [:]
@@ -473,43 +263,8 @@ class SushiswapApi {
 
     }
 
-    def sushiswapGetLiquidityPositionSnapshotDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/LiquidityPositionSnapshotDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapLiquidityPositionSnapshotDTO.class )
-
-    }
-
     def sushiswapGetLiquidityPositionSnapshotHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/liquidityPositionSnapshots/historical"
+        String resourcePath = "/dapps/sushiswap/liquidityPositionSnapshots/historical-manual"
 
         // params
         def queryParams = [:]
@@ -540,46 +295,11 @@ class SushiswapApi {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     SushiswapLiquidityPositionSnapshotDTO.class )
-
-    }
-
-    def sushiswapGetMintDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/MintDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapMintDTO.class )
 
     }
 
     def sushiswapGetMintsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/mints/historical"
+        String resourcePath = "/dapps/sushiswap/mints/historical-manual"
 
         // params
         def queryParams = [:]
@@ -610,111 +330,6 @@ class SushiswapApi {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     SushiswapMintDTO.class )
-
-    }
-
-    def sushiswapGetPairDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/PairDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapPairDTO.class )
-
-    }
-
-    def sushiswapGetPairDayDataDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/PairDayDataDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapPairDayDataDTO.class )
-
-    }
-
-    def sushiswapGetPairHourDataDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/PairHourDataDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapPairHourDataDTO.class )
 
     }
 
@@ -739,7 +354,7 @@ class SushiswapApi {
     }
 
     def sushiswapGetPoolsDayDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/poolsDayData/historical"
+        String resourcePath = "/dapps/sushiswap/poolsDayData/historical-manual"
 
         // params
         def queryParams = [:]
@@ -774,7 +389,7 @@ class SushiswapApi {
     }
 
     def sushiswapGetPoolsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/pools/historical"
+        String resourcePath = "/dapps/sushiswap/pools/historical-manual"
 
         // params
         def queryParams = [:]
@@ -809,7 +424,7 @@ class SushiswapApi {
     }
 
     def sushiswapGetPoolsHourDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/poolsHourData/historical"
+        String resourcePath = "/dapps/sushiswap/poolsHourData/historical-manual"
 
         // params
         def queryParams = [:]
@@ -843,41 +458,6 @@ class SushiswapApi {
 
     }
 
-    def sushiswapGetSwapDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/SwapDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapSwapDTO.class )
-
-    }
-
     def sushiswapGetSwapsCurrent ( Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/sushiswap/swaps/current"
 
@@ -899,7 +479,7 @@ class SushiswapApi {
     }
 
     def sushiswapGetSwapsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/swaps/historical"
+        String resourcePath = "/dapps/sushiswap/swaps/historical-manual"
 
         // params
         def queryParams = [:]
@@ -930,76 +510,6 @@ class SushiswapApi {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     SushiswapSwapDTO.class )
-
-    }
-
-    def sushiswapGetTokenDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/TokenDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapTokenDTO.class )
-
-    }
-
-    def sushiswapGetTokenDayDataDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/TokenDayDataDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapTokenDayDataDTO.class )
 
     }
 
@@ -1024,7 +534,7 @@ class SushiswapApi {
     }
 
     def sushiswapGetTokensDayDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/tokensDayData/historical"
+        String resourcePath = "/dapps/sushiswap/tokensDayData/historical-manual"
 
         // params
         def queryParams = [:]
@@ -1059,7 +569,7 @@ class SushiswapApi {
     }
 
     def sushiswapGetTokensHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/tokens/historical"
+        String resourcePath = "/dapps/sushiswap/tokens/historical-manual"
 
         // params
         def queryParams = [:]
@@ -1093,43 +603,8 @@ class SushiswapApi {
 
     }
 
-    def sushiswapGetTransactionDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/TransactionDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapTransactionDTO.class )
-
-    }
-
     def sushiswapGetTransactionsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/transactions/historical"
+        String resourcePath = "/dapps/sushiswap/transactions/historical-manual"
 
         // params
         def queryParams = [:]
@@ -1157,46 +632,11 @@ class SushiswapApi {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     SushiswapTransactionDTO.class )
-
-    }
-
-    def sushiswapGetUserDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/UserDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    SushiswapUserDTO.class )
 
     }
 
     def sushiswapGetUsersHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/users/historical"
+        String resourcePath = "/dapps/sushiswap/users/historical-manual"
 
         // params
         def queryParams = [:]

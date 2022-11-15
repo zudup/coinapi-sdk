@@ -56,22 +56,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test DexGetBatchDTOsHistorical
-        /// </summary>
-        [Fact]
-        public void DexGetBatchDTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.DexGetBatchDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<DexBatchDTO>>(response);
-        }
-
-        /// <summary>
         /// Test DexGetBatchesHistorical
         /// </summary>
         [Fact]
@@ -84,22 +68,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? endDate = null;
             //var response = instance.DexGetBatchesHistorical(startBlock, endBlock, startDate, endDate);
             //Assert.IsType<List<DexBatchDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test DexGetDepositDTOsHistorical
-        /// </summary>
-        [Fact]
-        public void DexGetDepositDTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.DexGetDepositDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<DexDepositDTO>>(response);
         }
 
         /// <summary>
@@ -119,22 +87,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test DexGetOrderDTOsHistorical
-        /// </summary>
-        [Fact]
-        public void DexGetOrderDTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.DexGetOrderDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<DexOrderDTO>>(response);
-        }
-
-        /// <summary>
         /// Test DexGetOrdersHistorical
         /// </summary>
         [Fact]
@@ -148,22 +100,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //string tokenId = null;
             //var response = instance.DexGetOrdersHistorical(startBlock, endBlock, startDate, endDate, tokenId);
             //Assert.IsType<List<DexOrderDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test DexGetPriceDTOsHistorical
-        /// </summary>
-        [Fact]
-        public void DexGetPriceDTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.DexGetPriceDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<DexPriceDTO>>(response);
         }
 
         /// <summary>
@@ -183,22 +119,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test DexGetSolutionDTOsHistorical
-        /// </summary>
-        [Fact]
-        public void DexGetSolutionDTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.DexGetSolutionDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<DexSolutionDTO>>(response);
-        }
-
-        /// <summary>
         /// Test DexGetSolutionsHistorical
         /// </summary>
         [Fact]
@@ -215,22 +135,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test DexGetStatsDTOsHistorical
-        /// </summary>
-        [Fact]
-        public void DexGetStatsDTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.DexGetStatsDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<DexStatsDTO>>(response);
-        }
-
-        /// <summary>
         /// Test DexGetStatsHistorical
         /// </summary>
         [Fact]
@@ -243,22 +147,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? endDate = null;
             //var response = instance.DexGetStatsHistorical(startBlock, endBlock, startDate, endDate);
             //Assert.IsType<List<DexStatsDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test DexGetTokenDTOsHistorical
-        /// </summary>
-        [Fact]
-        public void DexGetTokenDTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.DexGetTokenDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<DexTokenDTO>>(response);
         }
 
         /// <summary>
@@ -278,22 +166,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test DexGetTradeDTOsHistorical
-        /// </summary>
-        [Fact]
-        public void DexGetTradeDTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.DexGetTradeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<DexTradeDTO>>(response);
-        }
-
-        /// <summary>
         /// Test DexGetTradesHistorical
         /// </summary>
         [Fact]
@@ -309,22 +181,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test DexGetUserDTOsHistorical
-        /// </summary>
-        [Fact]
-        public void DexGetUserDTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.DexGetUserDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<DexUserDTO>>(response);
-        }
-
-        /// <summary>
         /// Test DexGetUsersHistorical
         /// </summary>
         [Fact]
@@ -337,38 +193,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? endDate = null;
             //var response = instance.DexGetUsersHistorical(startBlock, endBlock, startDate, endDate);
             //Assert.IsType<List<DexUserDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test DexGetWithdrawDTOsHistorical
-        /// </summary>
-        [Fact]
-        public void DexGetWithdrawDTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.DexGetWithdrawDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<DexWithdrawDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test DexGetWithdrawRequestDTOsHistorical
-        /// </summary>
-        [Fact]
-        public void DexGetWithdrawRequestDTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.DexGetWithdrawRequestDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<DexWithdrawRequestDTO>>(response);
         }
 
         /// <summary>

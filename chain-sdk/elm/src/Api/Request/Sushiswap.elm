@@ -17,40 +17,24 @@
 module Api.Request.Sushiswap exposing
     ( curveGetExchangesCurrent
     , dexGetTradesCurrent
-    , sushiswapGetBundleDTOsHistorical
     , sushiswapGetBundlesHistorical
-    , sushiswapGetBurnDTOsHistorical
     , sushiswapGetBurnsHistorical
-    , sushiswapGetDayDataDTOsHistorical
     , sushiswapGetDayDataHistorical
-    , sushiswapGetFactoryDTOsHistorical
     , sushiswapGetFactoryHistorical
-    , sushiswapGetHourDataDTOsHistorical
     , sushiswapGetHourDataHistorical
-    , sushiswapGetLiquidityPositionDTOsHistorical
     , sushiswapGetLiquidityPositionHistorical
-    , sushiswapGetLiquidityPositionSnapshotDTOsHistorical
     , sushiswapGetLiquidityPositionSnapshotHistorical
-    , sushiswapGetMintDTOsHistorical
     , sushiswapGetMintsHistorical
-    , sushiswapGetPairDTOsHistorical
-    , sushiswapGetPairDayDataDTOsHistorical
-    , sushiswapGetPairHourDataDTOsHistorical
     , sushiswapGetPoolsCurrent
     , sushiswapGetPoolsDayDataHistorical
     , sushiswapGetPoolsHistorical
     , sushiswapGetPoolsHourDataHistorical
-    , sushiswapGetSwapDTOsHistorical
     , sushiswapGetSwapsCurrent
     , sushiswapGetSwapsHistorical
-    , sushiswapGetTokenDTOsHistorical
-    , sushiswapGetTokenDayDataDTOsHistorical
     , sushiswapGetTokensCurrent
     , sushiswapGetTokensDayDataHistorical
     , sushiswapGetTokensHistorical
-    , sushiswapGetTransactionDTOsHistorical
     , sushiswapGetTransactionsHistorical
-    , sushiswapGetUserDTOsHistorical
     , sushiswapGetUsersHistorical
     )
 
@@ -94,48 +78,18 @@ dexGetTradesCurrent =
 
 
 
-{-| Gets BundleDTOs.
--}
-sushiswapGetBundleDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapBundleDTO)
-sushiswapGetBundleDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/BundleDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapBundleDTODecoder)
-
-
-
 {-| Gets bundles.
 -}
 sushiswapGetBundlesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Api.Request (List Api.Data.SushiswapBundleDTO)
 sushiswapGetBundlesHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/dapps/sushiswap/bundles/historical"
+        "/dapps/sushiswap/bundles/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapBundleDTODecoder)
-
-
-
-{-| Gets BurnDTOs.
--}
-sushiswapGetBurnDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapBurnDTO)
-sushiswapGetBurnDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/BurnDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapBurnDTODecoder)
 
 
 
@@ -145,27 +99,12 @@ sushiswapGetBurnsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Pos
 sushiswapGetBurnsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/sushiswap/burns/historical"
+        "/dapps/sushiswap/burns/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapBurnDTODecoder)
-
-
-
-{-| Gets DayDataDTOs.
--}
-sushiswapGetDayDataDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapDayDataDTO)
-sushiswapGetDayDataDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/DayDataDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapDayDataDTODecoder)
 
 
 
@@ -175,27 +114,12 @@ sushiswapGetDayDataHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe P
 sushiswapGetDayDataHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/dapps/sushiswap/dayData/historical"
+        "/dapps/sushiswap/dayData/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapDayDataDTODecoder)
-
-
-
-{-| Gets FactoryDTOs.
--}
-sushiswapGetFactoryDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapFactoryDTO)
-sushiswapGetFactoryDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/FactoryDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapFactoryDTODecoder)
 
 
 
@@ -205,27 +129,12 @@ sushiswapGetFactoryHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe P
 sushiswapGetFactoryHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/dapps/sushiswap/factory/historical"
+        "/dapps/sushiswap/factory/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapFactoryDTODecoder)
-
-
-
-{-| Gets HourDataDTOs.
--}
-sushiswapGetHourDataDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapHourDataDTO)
-sushiswapGetHourDataDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/HourDataDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapHourDataDTODecoder)
 
 
 
@@ -235,27 +144,12 @@ sushiswapGetHourDataHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe 
 sushiswapGetHourDataHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/dapps/sushiswap/hourData/historical"
+        "/dapps/sushiswap/hourData/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapHourDataDTODecoder)
-
-
-
-{-| Gets LiquidityPositionDTOs.
--}
-sushiswapGetLiquidityPositionDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapLiquidityPositionDTO)
-sushiswapGetLiquidityPositionDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/LiquidityPositionDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapLiquidityPositionDTODecoder)
 
 
 
@@ -265,27 +159,12 @@ sushiswapGetLiquidityPositionHistorical : Maybe Int -> Maybe Int -> Maybe Posix 
 sushiswapGetLiquidityPositionHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/sushiswap/liquidityPosition/historical"
+        "/dapps/sushiswap/liquidityPosition/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapLiquidityPositionDTODecoder)
-
-
-
-{-| Gets LiquidityPositionSnapshotDTOs.
--}
-sushiswapGetLiquidityPositionSnapshotDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapLiquidityPositionSnapshotDTO)
-sushiswapGetLiquidityPositionSnapshotDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/LiquidityPositionSnapshotDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapLiquidityPositionSnapshotDTODecoder)
 
 
 
@@ -295,27 +174,12 @@ sushiswapGetLiquidityPositionSnapshotHistorical : Maybe Int -> Maybe Int -> Mayb
 sushiswapGetLiquidityPositionSnapshotHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/sushiswap/liquidityPositionSnapshots/historical"
+        "/dapps/sushiswap/liquidityPositionSnapshots/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapLiquidityPositionSnapshotDTODecoder)
-
-
-
-{-| Gets MintDTOs.
--}
-sushiswapGetMintDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapMintDTO)
-sushiswapGetMintDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/MintDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapMintDTODecoder)
 
 
 
@@ -325,57 +189,12 @@ sushiswapGetMintsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Pos
 sushiswapGetMintsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/sushiswap/mints/historical"
+        "/dapps/sushiswap/mints/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapMintDTODecoder)
-
-
-
-{-| Gets PairDTOs.
--}
-sushiswapGetPairDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapPairDTO)
-sushiswapGetPairDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/PairDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapPairDTODecoder)
-
-
-
-{-| Gets PairDayDataDTOs.
--}
-sushiswapGetPairDayDataDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapPairDayDataDTO)
-sushiswapGetPairDayDataDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/PairDayDataDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapPairDayDataDTODecoder)
-
-
-
-{-| Gets PairHourDataDTOs.
--}
-sushiswapGetPairHourDataDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapPairHourDataDTO)
-sushiswapGetPairHourDataDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/PairHourDataDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapPairHourDataDTODecoder)
 
 
 
@@ -400,7 +219,7 @@ sushiswapGetPoolsDayDataHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Ma
 sushiswapGetPoolsDayDataHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/sushiswap/poolsDayData/historical"
+        "/dapps/sushiswap/poolsDayData/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
@@ -415,7 +234,7 @@ sushiswapGetPoolsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Pos
 sushiswapGetPoolsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/sushiswap/pools/historical"
+        "/dapps/sushiswap/pools/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
@@ -430,27 +249,12 @@ sushiswapGetPoolsHourDataHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> M
 sushiswapGetPoolsHourDataHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/sushiswap/poolsHourData/historical"
+        "/dapps/sushiswap/poolsHourData/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapPairHourDataDTODecoder)
-
-
-
-{-| Gets SwapDTOs.
--}
-sushiswapGetSwapDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapSwapDTO)
-sushiswapGetSwapDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/SwapDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapSwapDTODecoder)
 
 
 
@@ -475,42 +279,12 @@ sushiswapGetSwapsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Pos
 sushiswapGetSwapsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
     Api.request
         "GET"
-        "/dapps/sushiswap/swaps/historical"
+        "/dapps/sushiswap/swaps/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapSwapDTODecoder)
-
-
-
-{-| Gets TokenDTOs.
--}
-sushiswapGetTokenDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapTokenDTO)
-sushiswapGetTokenDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/TokenDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapTokenDTODecoder)
-
-
-
-{-| Gets TokenDayDataDTOs.
--}
-sushiswapGetTokenDayDataDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapTokenDayDataDTO)
-sushiswapGetTokenDayDataDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/TokenDayDataDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapTokenDayDataDTODecoder)
 
 
 
@@ -535,7 +309,7 @@ sushiswapGetTokensDayDataHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> M
 sushiswapGetTokensDayDataHistorical startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
     Api.request
         "GET"
-        "/dapps/sushiswap/tokensDayData/historical"
+        "/dapps/sushiswap/tokensDayData/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "tokenId", Maybe.map identity tokenId_query ) ]
         []
@@ -550,27 +324,12 @@ sushiswapGetTokensHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Po
 sushiswapGetTokensHistorical startBlock_query endBlock_query startDate_query endDate_query tokenId_query =
     Api.request
         "GET"
-        "/dapps/sushiswap/tokens/historical"
+        "/dapps/sushiswap/tokens/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "tokenId", Maybe.map identity tokenId_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapTokenDTODecoder)
-
-
-
-{-| Gets TransactionDTOs.
--}
-sushiswapGetTransactionDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapTransactionDTO)
-sushiswapGetTransactionDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/TransactionDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapTransactionDTODecoder)
 
 
 
@@ -580,27 +339,12 @@ sushiswapGetTransactionsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Ma
 sushiswapGetTransactionsHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/dapps/sushiswap/transactions/historical"
+        "/dapps/sushiswap/transactions/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []
         Nothing
         (Json.Decode.list Api.Data.sushiswapTransactionDTODecoder)
-
-
-
-{-| Gets UserDTOs.
--}
-sushiswapGetUserDTOsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.SushiswapUserDTO)
-sushiswapGetUserDTOsHistorical startBlock_query endBlock_query startDate_query endDate_query poolId_query =
-    Api.request
-        "GET"
-        "/dapps/sushiswap/UserDTOs/historical"
-        []
-        [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "poolId", Maybe.map identity poolId_query ) ]
-        []
-        Nothing
-        (Json.Decode.list Api.Data.sushiswapUserDTODecoder)
 
 
 
@@ -610,7 +354,7 @@ sushiswapGetUsersHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Pos
 sushiswapGetUsersHistorical startBlock_query endBlock_query startDate_query endDate_query =
     Api.request
         "GET"
-        "/dapps/sushiswap/users/historical"
+        "/dapps/sushiswap/users/historical-manual"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ) ]
         []

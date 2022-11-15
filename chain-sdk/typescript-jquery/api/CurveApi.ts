@@ -47,84 +47,6 @@ export class CurveApi {
     }
 
     /**
-     * Gets AccountDTOs.
-     * @summary AccountDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetAccountDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveAccountDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/AccountDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveAccountDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveAccountDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
      * Gets accounts.
      * @summary Accounts (historical)
      * @param startBlock 
@@ -136,7 +58,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveAccountDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/accounts/historical';
+        let localVarPath = this.basePath + '/dapps/curve/accounts/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -191,84 +113,6 @@ export class CurveApi {
         >();
         $.ajax(requestOptions).then(
             (data: Array<models.CurveAccountDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets AddLiquidityEventDTOs.
-     * @summary AddLiquidityEventDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetAddLiquidityEventDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveAddLiquidityEventDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/AddLiquidityEventDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveAddLiquidityEventDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveAddLiquidityEventDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -289,7 +133,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveAddLiquidityEventDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/addLiquidityEvents/historical';
+        let localVarPath = this.basePath + '/dapps/curve/addLiquidityEvents/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -355,84 +199,6 @@ export class CurveApi {
     }
 
     /**
-     * Gets AdminFeeChangeLogDTOs.
-     * @summary AdminFeeChangeLogDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetAdminFeeChangeLogDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveAdminFeeChangeLogDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/AdminFeeChangeLogDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveAdminFeeChangeLogDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveAdminFeeChangeLogDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
      * Gets admin fee change logs.
      * @summary AdminFeeChangeLogs (historical)
      * @param startBlock 
@@ -445,7 +211,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveAdminFeeChangeLogDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/adminFeeChangeLogs/historical';
+        let localVarPath = this.basePath + '/dapps/curve/adminFeeChangeLogs/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -503,84 +269,6 @@ export class CurveApi {
         >();
         $.ajax(requestOptions).then(
             (data: Array<models.CurveAdminFeeChangeLogDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets AmplificationCoeffChangeLogDTOs.
-     * @summary AmplificationCoeffChangeLogDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetAmplificationCoeffChangeLogDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveAmplificationCoeffChangeLogDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/AmplificationCoeffChangeLogDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveAmplificationCoeffChangeLogDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveAmplificationCoeffChangeLogDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -601,7 +289,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveAmplificationCoeffChangeLogDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/amplificationCoeffChangeLogs/historical';
+        let localVarPath = this.basePath + '/dapps/curve/amplificationCoeffChangeLogs/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -667,84 +355,6 @@ export class CurveApi {
     }
 
     /**
-     * Gets CoinDTOs.
-     * @summary CoinDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetCoinDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveCoinDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/CoinDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveCoinDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveCoinDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
      * Gets coins.
      * @summary Coins (historical)
      * @param startBlock 
@@ -757,7 +367,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveCoinDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/coins/historical';
+        let localVarPath = this.basePath + '/dapps/curve/coins/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -815,162 +425,6 @@ export class CurveApi {
         >();
         $.ajax(requestOptions).then(
             (data: Array<models.CurveCoinDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets ContractDTOs.
-     * @summary ContractDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetContractDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveContractDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/ContractDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveContractDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveContractDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets ContractVersionDTOs.
-     * @summary ContractVersionDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetContractVersionDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveContractVersionDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/ContractVersionDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveContractVersionDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveContractVersionDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -991,7 +445,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveContractDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/contracts/historical';
+        let localVarPath = this.basePath + '/dapps/curve/contracts/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1069,7 +523,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveContractVersionDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/contractsVersions/historical';
+        let localVarPath = this.basePath + '/dapps/curve/contractsVersions/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1135,84 +589,6 @@ export class CurveApi {
     }
 
     /**
-     * Gets DailyVolumeDTOs.
-     * @summary DailyVolumeDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetDailyVolumeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveDailyVolumeDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/DailyVolumeDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveDailyVolumeDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveDailyVolumeDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
      * Gets daily volumes.
      * @summary DailyVolumes (historical)
      * @param startBlock 
@@ -1225,7 +601,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveDailyVolumeDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/dailyVolumes/historical';
+        let localVarPath = this.basePath + '/dapps/curve/dailyVolumes/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1283,84 +659,6 @@ export class CurveApi {
         >();
         $.ajax(requestOptions).then(
             (data: Array<models.CurveDailyVolumeDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets ExchangeDTOs.
-     * @summary ExchangeDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetExchangeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveExchangeDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/ExchangeDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveExchangeDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveExchangeDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -1381,7 +679,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveExchangeDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/exchanges/historical';
+        let localVarPath = this.basePath + '/dapps/curve/exchanges/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1447,84 +745,6 @@ export class CurveApi {
     }
 
     /**
-     * Gets FeeChangeLogDTOs.
-     * @summary FeeChangeLogDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetFeeChangeLogDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveFeeChangeLogDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/FeeChangeLogDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveFeeChangeLogDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveFeeChangeLogDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
      * Gets fee change logs.
      * @summary FeeChangeLogs (historical)
      * @param startBlock 
@@ -1537,7 +757,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveFeeChangeLogDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/feeChangeLogs/historical';
+        let localVarPath = this.basePath + '/dapps/curve/feeChangeLogs/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1595,708 +815,6 @@ export class CurveApi {
         >();
         $.ajax(requestOptions).then(
             (data: Array<models.CurveFeeChangeLogDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets GaugeDTOs.
-     * @summary GaugeDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetGaugeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveGaugeDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/GaugeDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveGaugeDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveGaugeDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets GaugeDepositDTOs.
-     * @summary GaugeDepositDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetGaugeDepositDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveGaugeDepositDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/GaugeDepositDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveGaugeDepositDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveGaugeDepositDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets GaugeLiquidityDTOs.
-     * @summary GaugeLiquidityDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetGaugeLiquidityDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveGaugeLiquidityDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/GaugeLiquidityDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveGaugeLiquidityDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveGaugeLiquidityDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets GaugeTotalWeightDTOs.
-     * @summary GaugeTotalWeightDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetGaugeTotalWeightDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveGaugeTotalWeightDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/GaugeTotalWeightDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveGaugeTotalWeightDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveGaugeTotalWeightDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets GaugeTypeDTOs.
-     * @summary GaugeTypeDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetGaugeTypeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveGaugeTypeDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/GaugeTypeDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveGaugeTypeDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveGaugeTypeDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets GaugeTypeWeightDTOs.
-     * @summary GaugeTypeWeightDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetGaugeTypeWeightDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveGaugeTypeWeightDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/GaugeTypeWeightDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveGaugeTypeWeightDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveGaugeTypeWeightDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets GaugeWeightDTOs.
-     * @summary GaugeWeightDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetGaugeWeightDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveGaugeWeightDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/GaugeWeightDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveGaugeWeightDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveGaugeWeightDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets GaugeWeightVoteDTOs.
-     * @summary GaugeWeightVoteDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetGaugeWeightVoteDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveGaugeWeightVoteDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/GaugeWeightVoteDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveGaugeWeightVoteDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveGaugeWeightVoteDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets GaugeWithdrawDTOs.
-     * @summary GaugeWithdrawDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetGaugeWithdrawDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveGaugeWithdrawDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/GaugeWithdrawDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveGaugeWithdrawDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveGaugeWithdrawDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -2316,7 +834,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveGaugeDepositDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/gaugesDeposits/historical';
+        let localVarPath = this.basePath + '/dapps/curve/gaugesDeposits/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -2391,7 +909,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveGaugeDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/gauges/historical';
+        let localVarPath = this.basePath + '/dapps/curve/gauges/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -2468,7 +986,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveGaugeLiquidityDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/gaugesLiquidity/historical';
+        let localVarPath = this.basePath + '/dapps/curve/gaugesLiquidity/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -2542,7 +1060,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveGaugeTotalWeightDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/gaugesTotalWeights/historical';
+        let localVarPath = this.basePath + '/dapps/curve/gaugesTotalWeights/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -2616,7 +1134,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveGaugeTypeDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/gaugesTypes/historical';
+        let localVarPath = this.basePath + '/dapps/curve/gaugesTypes/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -2690,7 +1208,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveGaugeTypeWeightDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/gaugesTypesWeights/historical';
+        let localVarPath = this.basePath + '/dapps/curve/gaugesTypesWeights/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -2764,7 +1282,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveGaugeWeightDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/gaugesWeights/historical';
+        let localVarPath = this.basePath + '/dapps/curve/gaugesWeights/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -2838,7 +1356,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveGaugeWeightVoteDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/gaugesWeightsVotes/historical';
+        let localVarPath = this.basePath + '/dapps/curve/gaugesWeightsVotes/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -2912,7 +1430,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveGaugeWithdrawDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/gaugesWithdraws/historical';
+        let localVarPath = this.basePath + '/dapps/curve/gaugesWithdraws/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -2975,84 +1493,6 @@ export class CurveApi {
     }
 
     /**
-     * Gets HourlyVolumeDTOs.
-     * @summary HourlyVolumeDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetHourlyVolumeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveHourlyVolumeDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/HourlyVolumeDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveHourlyVolumeDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveHourlyVolumeDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
      * Gets hourly volumes.
      * @summary HourlyVolumes (historical)
      * @param startBlock 
@@ -3065,7 +1505,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveHourlyVolumeDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/hourlyVolumes/historical';
+        let localVarPath = this.basePath + '/dapps/curve/hourlyVolumes/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -3123,84 +1563,6 @@ export class CurveApi {
         >();
         $.ajax(requestOptions).then(
             (data: Array<models.CurveHourlyVolumeDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets LpTokenDTOs.
-     * @summary LpTokenDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetLpTokenDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveLpTokenDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/LpTokenDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveLpTokenDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveLpTokenDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -3221,7 +1583,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveLpTokenDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/lpTokens/historical';
+        let localVarPath = this.basePath + '/dapps/curve/lpTokens/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -3287,84 +1649,6 @@ export class CurveApi {
     }
 
     /**
-     * Gets PoolDTOs.
-     * @summary PoolDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetPoolDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurvePoolDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/PoolDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurvePoolDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurvePoolDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
      * Gets pools.
      * @summary Pools (historical) 🔥
      * @param startBlock 
@@ -3377,7 +1661,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurvePoolDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/pools/historical';
+        let localVarPath = this.basePath + '/dapps/curve/pools/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -3435,162 +1719,6 @@ export class CurveApi {
         >();
         $.ajax(requestOptions).then(
             (data: Array<models.CurvePoolDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets ProposalDTOs.
-     * @summary ProposalDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetProposalDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveProposalDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/ProposalDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveProposalDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveProposalDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets ProposalVoteDTOs.
-     * @summary ProposalVoteDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetProposalVoteDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveProposalVoteDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/ProposalVoteDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveProposalVoteDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveProposalVoteDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -3610,7 +1738,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveProposalDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/proposals/historical';
+        let localVarPath = this.basePath + '/dapps/curve/proposals/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -3684,7 +1812,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveProposalVoteDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/proposalsVotes/historical';
+        let localVarPath = this.basePath + '/dapps/curve/proposalsVotes/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -3747,84 +1875,6 @@ export class CurveApi {
     }
 
     /**
-     * Gets RemoveLiquidityEventDTOs.
-     * @summary RemoveLiquidityEventDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetRemoveLiquidityEventDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveRemoveLiquidityEventDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/RemoveLiquidityEventDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveRemoveLiquidityEventDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveRemoveLiquidityEventDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
      * Gets remove liquidity events.
      * @summary RemoveLiquidityEvents (historical)
      * @param startBlock 
@@ -3837,7 +1887,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveRemoveLiquidityEventDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/removeLiquidityEvents/historical';
+        let localVarPath = this.basePath + '/dapps/curve/removeLiquidityEvents/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -3895,84 +1945,6 @@ export class CurveApi {
         >();
         $.ajax(requestOptions).then(
             (data: Array<models.CurveRemoveLiquidityEventDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets RemoveLiquidityOneEventDTOs.
-     * @summary RemoveLiquidityOneEventDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetRemoveLiquidityOneEventDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveRemoveLiquidityOneEventDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/RemoveLiquidityOneEventDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveRemoveLiquidityOneEventDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveRemoveLiquidityOneEventDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -3993,7 +1965,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveRemoveLiquidityOneEventDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/removeLiquidityOneEvents/historical';
+        let localVarPath = this.basePath + '/dapps/curve/removeLiquidityOneEvents/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -4059,84 +2031,6 @@ export class CurveApi {
     }
 
     /**
-     * Gets SystemStateDTOs.
-     * @summary SystemStateDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetSystemStateDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveSystemStateDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/SystemStateDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveSystemStateDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveSystemStateDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
      * Gets system states.
      * @summary SystemStates (historical)
      * @param startBlock 
@@ -4148,7 +2042,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveSystemStateDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/systemStates/historical';
+        let localVarPath = this.basePath + '/dapps/curve/systemStates/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -4203,84 +2097,6 @@ export class CurveApi {
         >();
         $.ajax(requestOptions).then(
             (data: Array<models.CurveSystemStateDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets TokenDTOs.
-     * @summary TokenDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetTokenDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveTokenDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/TokenDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveTokenDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveTokenDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -4301,7 +2117,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveTokenDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/tokens/historical';
+        let localVarPath = this.basePath + '/dapps/curve/tokens/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -4367,84 +2183,6 @@ export class CurveApi {
     }
 
     /**
-     * Gets TransferOwnershipEventDTOs.
-     * @summary TransferOwnershipEventDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetTransferOwnershipEventDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveTransferOwnershipEventDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/TransferOwnershipEventDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveTransferOwnershipEventDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveTransferOwnershipEventDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
      * Gets transfer ownership events.
      * @summary TransferOwnershipEvents (historical)
      * @param startBlock 
@@ -4457,7 +2195,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveTransferOwnershipEventDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/transferOwnershipEvents/historical';
+        let localVarPath = this.basePath + '/dapps/curve/transferOwnershipEvents/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -4515,84 +2253,6 @@ export class CurveApi {
         >();
         $.ajax(requestOptions).then(
             (data: Array<models.CurveTransferOwnershipEventDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets UnderlyingCoinDTOs.
-     * @summary UnderlyingCoinDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetUnderlyingCoinDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveUnderlyingCoinDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/UnderlyingCoinDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveUnderlyingCoinDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveUnderlyingCoinDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -4613,7 +2273,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveUnderlyingCoinDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/underlyingCoins/historical';
+        let localVarPath = this.basePath + '/dapps/curve/underlyingCoins/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -4679,84 +2339,6 @@ export class CurveApi {
     }
 
     /**
-     * Gets VotingAppDTOs.
-     * @summary VotingAppDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetVotingAppDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveVotingAppDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/VotingAppDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveVotingAppDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveVotingAppDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
      * Gets voting apps.
      * @summary VotingApps (historical)
      * @param startBlock 
@@ -4768,7 +2350,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveVotingAppDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/votingApps/historical';
+        let localVarPath = this.basePath + '/dapps/curve/votingApps/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -4823,84 +2405,6 @@ export class CurveApi {
         >();
         $.ajax(requestOptions).then(
             (data: Array<models.CurveVotingAppDTO>, textStatus: string, jqXHR: JQueryXHR) =>
-                dfd.resolve({response: jqXHR, body: data}),
-            (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
-                dfd.reject({response: xhr, errorThrown: errorThrown})
-        );
-        return dfd.promise();
-    }
-
-    /**
-     * Gets WeeklyVolumeDTOs.
-     * @summary WeeklyVolumeDTOs (historical) 🔥
-     * @param startBlock 
-     * @param endBlock 
-     * @param startDate 
-     * @param endDate 
-     * @param poolId 
-     */
-    public curveGetWeeklyVolumeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, poolId?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
-    { response: JQueryXHR; body: Array<models.CurveWeeklyVolumeDTO>;  },
-    { response: JQueryXHR; errorThrown: string }
-    > {
-        let localVarPath = this.basePath + '/dapps/curve/WeeklyVolumeDTOs/historical';
-
-        let queryParameters: any = {};
-        let headerParams: any = {};
-        if (startBlock !== null && startBlock !== undefined) {
-            queryParameters['startBlock'] = <string><any>startBlock;
-        }
-        if (endBlock !== null && endBlock !== undefined) {
-            queryParameters['endBlock'] = <string><any>endBlock;
-        }
-        if (startDate !== null && startDate !== undefined) {
-            queryParameters['startDate'] = startDate.toISOString();
-        }
-        if (endDate !== null && endDate !== undefined) {
-            queryParameters['endDate'] = endDate.toISOString();
-        }
-        if (poolId !== null && poolId !== undefined) {
-            queryParameters['poolId'] = <string><any>poolId;
-        }
-
-        localVarPath = localVarPath + "?" + $.param(queryParameters);
-        // to determine the Content-Type header
-        let consumes: string[] = [
-        ];
-
-        // to determine the Accept header
-        let produces: string[] = [
-            'text/plain', 
-            'application/json', 
-            'text/json'
-        ];
-
-
-        let requestOptions: JQueryAjaxSettings = {
-            url: localVarPath,
-            type: 'GET',
-            headers: headerParams,
-            processData: false
-        };
-
-        if (headerParams['Content-Type']) {
-            requestOptions.contentType = headerParams['Content-Type'];
-        }
-
-        if (extraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, extraJQueryAjaxSettings);
-        }
-
-        if (this.defaultExtraJQueryAjaxSettings) {
-            requestOptions = (<any>Object).assign(requestOptions, this.defaultExtraJQueryAjaxSettings);
-        }
-
-        let dfd = $.Deferred<
-            { response: JQueryXHR; body: Array<models.CurveWeeklyVolumeDTO>;  },
-            { response: JQueryXHR; errorThrown: string }
-        >();
-        $.ajax(requestOptions).then(
-            (data: Array<models.CurveWeeklyVolumeDTO>, textStatus: string, jqXHR: JQueryXHR) =>
                 dfd.resolve({response: jqXHR, body: data}),
             (xhr: JQueryXHR, textStatus: string, errorThrown: string) =>
                 dfd.reject({response: xhr, errorThrown: errorThrown})
@@ -4921,7 +2425,7 @@ export class CurveApi {
     { response: JQueryXHR; body: Array<models.CurveWeeklyVolumeDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/weeklyVolumes/historical';
+        let localVarPath = this.basePath + '/dapps/curve/weeklyVolumes/historical-manual';
 
         let queryParameters: any = {};
         let headerParams: any = {};

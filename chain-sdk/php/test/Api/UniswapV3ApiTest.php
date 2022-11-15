@@ -73,18 +73,6 @@ class UniswapV3ApiTest extends TestCase
     }
 
     /**
-     * Test case for uniswapV3GetBundleV3DTOsHistorical
-     *
-     * BundleV3DTOs (historical) 🔥.
-     *
-     */
-    public function testUniswapV3GetBundleV3DTOsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for uniswapV3GetBundlesCurrent
      *
      * Bundles (current).
@@ -103,18 +91,6 @@ class UniswapV3ApiTest extends TestCase
      *
      */
     public function testUniswapV3GetBundlesHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV3GetBurnV3DTOsHistorical
-     *
-     * BurnV3DTOs (historical) 🔥.
-     *
-     */
-    public function testUniswapV3GetBurnV3DTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -193,30 +169,6 @@ class UniswapV3ApiTest extends TestCase
     }
 
     /**
-     * Test case for uniswapV3GetFactoryV3DTOsHistorical
-     *
-     * FactoryV3DTOs (historical) 🔥.
-     *
-     */
-    public function testUniswapV3GetFactoryV3DTOsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV3GetMintV3DTOsHistorical
-     *
-     * MintV3DTOs (historical) 🔥.
-     *
-     */
-    public function testUniswapV3GetMintV3DTOsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for uniswapV3GetMintsCurrent
      *
      * Mints (current).
@@ -235,42 +187,6 @@ class UniswapV3ApiTest extends TestCase
      *
      */
     public function testUniswapV3GetMintsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV3GetPoolDayDataV3DTOsHistorical
-     *
-     * PoolDayDataV3DTOs (historical) 🔥.
-     *
-     */
-    public function testUniswapV3GetPoolDayDataV3DTOsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV3GetPoolHourDataV3DTOsHistorical
-     *
-     * PoolHourDataV3DTOs (historical) 🔥.
-     *
-     */
-    public function testUniswapV3GetPoolHourDataV3DTOsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV3GetPoolV3DTOsHistorical
-     *
-     * PoolV3DTOs (historical) 🔥.
-     *
-     */
-    public function testUniswapV3GetPoolV3DTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -349,30 +265,6 @@ class UniswapV3ApiTest extends TestCase
     }
 
     /**
-     * Test case for uniswapV3GetPositionSnapshotV3DTOsHistorical
-     *
-     * PositionSnapshotV3DTOs (historical) 🔥.
-     *
-     */
-    public function testUniswapV3GetPositionSnapshotV3DTOsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV3GetPositionV3DTOsHistorical
-     *
-     * PositionV3DTOs (historical) 🔥.
-     *
-     */
-    public function testUniswapV3GetPositionV3DTOsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for uniswapV3GetPositionsCurrent
      *
      * Positions (current).
@@ -421,18 +313,6 @@ class UniswapV3ApiTest extends TestCase
     }
 
     /**
-     * Test case for uniswapV3GetSwapV3DTOsHistorical
-     *
-     * SwapV3DTOs (historical) 🔥.
-     *
-     */
-    public function testUniswapV3GetSwapV3DTOsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for uniswapV3GetSwapsCurrent
      *
      * Swaps (current) 🔥.
@@ -451,30 +331,6 @@ class UniswapV3ApiTest extends TestCase
      *
      */
     public function testUniswapV3GetSwapsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV3GetTickDayDataV3DTOsHistorical
-     *
-     * TickDayDataV3DTOs (historical) 🔥.
-     *
-     */
-    public function testUniswapV3GetTickDayDataV3DTOsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV3GetTickV3DTOsHistorical
-     *
-     * TickV3DTOs (historical) 🔥.
-     *
-     */
-    public function testUniswapV3GetTickV3DTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -523,42 +379,6 @@ class UniswapV3ApiTest extends TestCase
      *
      */
     public function testUniswapV3GetTicksHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV3GetTokenHourDataV3DTOsHistorical
-     *
-     * TokenHourDataV3DTOs (historical) 🔥.
-     *
-     */
-    public function testUniswapV3GetTokenHourDataV3DTOsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV3GetTokenV3DTOsHistorical
-     *
-     * TokenV3DTOs (historical) 🔥.
-     *
-     */
-    public function testUniswapV3GetTokenV3DTOsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV3GetTokenV3DayDataDTOsHistorical
-     *
-     * TokenV3DayDataDTOs (historical) 🔥.
-     *
-     */
-    public function testUniswapV3GetTokenV3DayDataDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -637,36 +457,12 @@ class UniswapV3ApiTest extends TestCase
     }
 
     /**
-     * Test case for uniswapV3GetTransactionV3DTOsHistorical
-     *
-     * TransactionV3DTOs (historical) 🔥.
-     *
-     */
-    public function testUniswapV3GetTransactionV3DTOsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for uniswapV3GetTransactionsHistorical
      *
      * Transactions (historical).
      *
      */
     public function testUniswapV3GetTransactionsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV3GetUniswapDayDataV3DTOsHistorical
-     *
-     * UniswapDayDataV3DTOs (historical) 🔥.
-     *
-     */
-    public function testUniswapV3GetUniswapDayDataV3DTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

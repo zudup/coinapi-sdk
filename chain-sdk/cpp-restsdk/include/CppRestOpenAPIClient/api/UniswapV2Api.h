@@ -59,24 +59,6 @@ public:
     virtual ~UniswapV2Api();
 
     /// <summary>
-    /// BundleV2DTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets BundleV2DTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_BundleV2DTO>>> uniswapV2_GetBundleV2DTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
     /// Bundles (historical)
     /// </summary>
     /// <remarks>
@@ -91,24 +73,6 @@ public:
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate
-    ) const;
-    /// <summary>
-    /// BurnV2DTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets BurnV2DTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_BurnV2DTO>>> uniswapV2_GetBurnV2DTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
     /// Burns (historical)
@@ -161,42 +125,6 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// LiquidityPositionSnapshotV2DTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets LiquidityPositionSnapshotV2DTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_LiquidityPositionSnapshotV2DTO>>> uniswapV2_GetLiquidityPositionSnapshotV2DTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// LiquidityPositionV2DTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets LiquidityPositionV2DTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_LiquidityPositionV2DTO>>> uniswapV2_GetLiquidityPositionV2DTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
     /// LiquidityPositionsSnapshots (historical)
     /// </summary>
     /// <remarks>
@@ -233,24 +161,6 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// MintV2DTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets MintV2DTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_MintV2DTO>>> uniswapV2_GetMintV2DTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
     /// Mints (historical)
     /// </summary>
     /// <remarks>
@@ -262,60 +172,6 @@ public:
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<UniswapV2_MintV2DTO>>> uniswapV2_GetMints__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// PairDayDataV2DTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets PairDayDataV2DTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_PairDayDataV2DTO>>> uniswapV2_GetPairDayDataV2DTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// PairHourDataV2DTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets PairHourDataV2DTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_PairHourDataV2DTO>>> uniswapV2_GetPairHourDataV2DTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// PairV2DTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets PairV2DTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_PairV2DTO>>> uniswapV2_GetPairV2DTOs__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -387,24 +243,6 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// SwapV2DTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets SwapV2DTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapV2DTO>>> uniswapV2_GetSwapV2DTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
     /// Swaps (current) 🔥
     /// </summary>
     /// <remarks>
@@ -424,42 +262,6 @@ public:
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapV2DTO>>> uniswapV2_GetSwaps__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// TokenDayDataV2DTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets TokenDayDataV2DTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenDayDataV2DTO>>> uniswapV2_GetTokenDayDataV2DTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// TokenV2DTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets TokenV2DTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenV2DTO>>> uniswapV2_GetTokenV2DTOs__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -511,24 +313,6 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// TransactionV2DTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets TransactionV2DTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_TransactionV2DTO>>> uniswapV2_GetTransactionV2DTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
     /// Transactions (historical)
     /// </summary>
     /// <remarks>
@@ -543,60 +327,6 @@ public:
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate
-    ) const;
-    /// <summary>
-    /// UniswapDayDataV2DTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets UniswapDayDataV2DTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_UniswapDayDataV2DTO>>> uniswapV2_GetUniswapDayDataV2DTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// UniswapFactoryV2DTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets UniswapFactoryV2DTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_UniswapFactoryV2DTO>>> uniswapV2_GetUniswapFactoryV2DTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// UserV2DTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets UserV2DTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<UniswapV2_UserV2DTO>>> uniswapV2_GetUserV2DTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
     /// Users (historical)

@@ -24,54 +24,6 @@ inherit
 feature -- API Access
 
 
-	curve_get_account_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_ACCOUNT_DTO]
-			-- AccountDTOs (historical) 🔥
-			-- Gets AccountDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_ACCOUNT_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/AccountDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_ACCOUNT_DTO] } l_response.data ({ LIST [CURVE_ACCOUNT_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
 	curve_get_accounts_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME): detachable LIST [CURVE_ACCOUNT_DTO]
 			-- Accounts (historical)
 			-- Gets accounts.
@@ -95,7 +47,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/accounts/historical"
+			l_path := "/dapps/curve/accounts/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -111,54 +63,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_ACCOUNT_DTO] } l_response.data ({ LIST [CURVE_ACCOUNT_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_add_liquidity_event_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_ADD_LIQUIDITY_EVENT_DTO]
-			-- AddLiquidityEventDTOs (historical) 🔥
-			-- Gets AddLiquidityEventDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_ADD_LIQUIDITY_EVENT_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/AddLiquidityEventDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_ADD_LIQUIDITY_EVENT_DTO] } l_response.data ({ LIST [CURVE_ADD_LIQUIDITY_EVENT_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -190,7 +94,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/addLiquidityEvents/historical"
+			l_path := "/dapps/curve/addLiquidityEvents/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -207,54 +111,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_ADD_LIQUIDITY_EVENT_DTO] } l_response.data ({ LIST [CURVE_ADD_LIQUIDITY_EVENT_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_admin_fee_change_log_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_ADMIN_FEE_CHANGE_LOG_DTO]
-			-- AdminFeeChangeLogDTOs (historical) 🔥
-			-- Gets AdminFeeChangeLogDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_ADMIN_FEE_CHANGE_LOG_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/AdminFeeChangeLogDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_ADMIN_FEE_CHANGE_LOG_DTO] } l_response.data ({ LIST [CURVE_ADMIN_FEE_CHANGE_LOG_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -286,7 +142,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/adminFeeChangeLogs/historical"
+			l_path := "/dapps/curve/adminFeeChangeLogs/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -303,54 +159,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_ADMIN_FEE_CHANGE_LOG_DTO] } l_response.data ({ LIST [CURVE_ADMIN_FEE_CHANGE_LOG_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_amplification_coeff_change_log_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_AMPLIFICATION_COEFF_CHANGE_LOG_DTO]
-			-- AmplificationCoeffChangeLogDTOs (historical) 🔥
-			-- Gets AmplificationCoeffChangeLogDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_AMPLIFICATION_COEFF_CHANGE_LOG_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/AmplificationCoeffChangeLogDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_AMPLIFICATION_COEFF_CHANGE_LOG_DTO] } l_response.data ({ LIST [CURVE_AMPLIFICATION_COEFF_CHANGE_LOG_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -382,7 +190,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/amplificationCoeffChangeLogs/historical"
+			l_path := "/dapps/curve/amplificationCoeffChangeLogs/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -399,54 +207,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_AMPLIFICATION_COEFF_CHANGE_LOG_DTO] } l_response.data ({ LIST [CURVE_AMPLIFICATION_COEFF_CHANGE_LOG_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_coin_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_COIN_DTO]
-			-- CoinDTOs (historical) 🔥
-			-- Gets CoinDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_COIN_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/CoinDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_COIN_DTO] } l_response.data ({ LIST [CURVE_COIN_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -478,7 +238,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/coins/historical"
+			l_path := "/dapps/curve/coins/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -495,102 +255,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_COIN_DTO] } l_response.data ({ LIST [CURVE_COIN_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_contract_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_CONTRACT_DTO]
-			-- ContractDTOs (historical) 🔥
-			-- Gets ContractDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_CONTRACT_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/ContractDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_CONTRACT_DTO] } l_response.data ({ LIST [CURVE_CONTRACT_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_contract_version_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_CONTRACT_VERSION_DTO]
-			-- ContractVersionDTOs (historical) 🔥
-			-- Gets ContractVersionDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_CONTRACT_VERSION_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/ContractVersionDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_CONTRACT_VERSION_DTO] } l_response.data ({ LIST [CURVE_CONTRACT_VERSION_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -622,7 +286,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/contracts/historical"
+			l_path := "/dapps/curve/contracts/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -670,7 +334,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/contractsVersions/historical"
+			l_path := "/dapps/curve/contractsVersions/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -687,54 +351,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_CONTRACT_VERSION_DTO] } l_response.data ({ LIST [CURVE_CONTRACT_VERSION_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_daily_volume_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_DAILY_VOLUME_DTO]
-			-- DailyVolumeDTOs (historical) 🔥
-			-- Gets DailyVolumeDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_DAILY_VOLUME_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/DailyVolumeDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_DAILY_VOLUME_DTO] } l_response.data ({ LIST [CURVE_DAILY_VOLUME_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -766,7 +382,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/dailyVolumes/historical"
+			l_path := "/dapps/curve/dailyVolumes/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -783,54 +399,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_DAILY_VOLUME_DTO] } l_response.data ({ LIST [CURVE_DAILY_VOLUME_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_exchange_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_EXCHANGE_DTO]
-			-- ExchangeDTOs (historical) 🔥
-			-- Gets ExchangeDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_EXCHANGE_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/ExchangeDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_EXCHANGE_DTO] } l_response.data ({ LIST [CURVE_EXCHANGE_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -862,7 +430,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/exchanges/historical"
+			l_path := "/dapps/curve/exchanges/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -879,54 +447,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_EXCHANGE_DTO] } l_response.data ({ LIST [CURVE_EXCHANGE_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_fee_change_log_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_FEE_CHANGE_LOG_DTO]
-			-- FeeChangeLogDTOs (historical) 🔥
-			-- Gets FeeChangeLogDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_FEE_CHANGE_LOG_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/FeeChangeLogDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_FEE_CHANGE_LOG_DTO] } l_response.data ({ LIST [CURVE_FEE_CHANGE_LOG_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -958,7 +478,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/feeChangeLogs/historical"
+			l_path := "/dapps/curve/feeChangeLogs/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -975,438 +495,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_FEE_CHANGE_LOG_DTO] } l_response.data ({ LIST [CURVE_FEE_CHANGE_LOG_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_gauge_deposit_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_GAUGE_DEPOSIT_DTO]
-			-- GaugeDepositDTOs (historical) 🔥
-			-- Gets GaugeDepositDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_GAUGE_DEPOSIT_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/GaugeDepositDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_GAUGE_DEPOSIT_DTO] } l_response.data ({ LIST [CURVE_GAUGE_DEPOSIT_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_gauge_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_GAUGE_DTO]
-			-- GaugeDTOs (historical) 🔥
-			-- Gets GaugeDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_GAUGE_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/GaugeDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_GAUGE_DTO] } l_response.data ({ LIST [CURVE_GAUGE_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_gauge_liquidity_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_GAUGE_LIQUIDITY_DTO]
-			-- GaugeLiquidityDTOs (historical) 🔥
-			-- Gets GaugeLiquidityDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_GAUGE_LIQUIDITY_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/GaugeLiquidityDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_GAUGE_LIQUIDITY_DTO] } l_response.data ({ LIST [CURVE_GAUGE_LIQUIDITY_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_gauge_total_weight_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_GAUGE_TOTAL_WEIGHT_DTO]
-			-- GaugeTotalWeightDTOs (historical) 🔥
-			-- Gets GaugeTotalWeightDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_GAUGE_TOTAL_WEIGHT_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/GaugeTotalWeightDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_GAUGE_TOTAL_WEIGHT_DTO] } l_response.data ({ LIST [CURVE_GAUGE_TOTAL_WEIGHT_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_gauge_type_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_GAUGE_TYPE_DTO]
-			-- GaugeTypeDTOs (historical) 🔥
-			-- Gets GaugeTypeDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_GAUGE_TYPE_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/GaugeTypeDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_GAUGE_TYPE_DTO] } l_response.data ({ LIST [CURVE_GAUGE_TYPE_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_gauge_type_weight_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_GAUGE_TYPE_WEIGHT_DTO]
-			-- GaugeTypeWeightDTOs (historical) 🔥
-			-- Gets GaugeTypeWeightDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_GAUGE_TYPE_WEIGHT_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/GaugeTypeWeightDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_GAUGE_TYPE_WEIGHT_DTO] } l_response.data ({ LIST [CURVE_GAUGE_TYPE_WEIGHT_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_gauge_weight_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_GAUGE_WEIGHT_DTO]
-			-- GaugeWeightDTOs (historical) 🔥
-			-- Gets GaugeWeightDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_GAUGE_WEIGHT_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/GaugeWeightDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_GAUGE_WEIGHT_DTO] } l_response.data ({ LIST [CURVE_GAUGE_WEIGHT_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_gauge_weight_vote_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_GAUGE_WEIGHT_VOTE_DTO]
-			-- GaugeWeightVoteDTOs (historical) 🔥
-			-- Gets GaugeWeightVoteDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_GAUGE_WEIGHT_VOTE_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/GaugeWeightVoteDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_GAUGE_WEIGHT_VOTE_DTO] } l_response.data ({ LIST [CURVE_GAUGE_WEIGHT_VOTE_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_gauge_withdraw_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_GAUGE_WITHDRAW_DTO]
-			-- GaugeWithdrawDTOs (historical) 🔥
-			-- Gets GaugeWithdrawDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_GAUGE_WITHDRAW_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/GaugeWithdrawDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_GAUGE_WITHDRAW_DTO] } l_response.data ({ LIST [CURVE_GAUGE_WITHDRAW_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -1436,7 +524,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/gaugesDeposits/historical"
+			l_path := "/dapps/curve/gaugesDeposits/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -1483,7 +571,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/gauges/historical"
+			l_path := "/dapps/curve/gauges/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -1529,7 +617,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/gaugesLiquidity/historical"
+			l_path := "/dapps/curve/gaugesLiquidity/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -1574,7 +662,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/gaugesTotalWeights/historical"
+			l_path := "/dapps/curve/gaugesTotalWeights/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -1619,7 +707,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/gaugesTypes/historical"
+			l_path := "/dapps/curve/gaugesTypes/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -1664,7 +752,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/gaugesTypesWeights/historical"
+			l_path := "/dapps/curve/gaugesTypesWeights/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -1709,7 +797,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/gaugesWeights/historical"
+			l_path := "/dapps/curve/gaugesWeights/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -1754,7 +842,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/gaugesWeightsVotes/historical"
+			l_path := "/dapps/curve/gaugesWeightsVotes/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -1799,7 +887,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/gaugesWithdraws/historical"
+			l_path := "/dapps/curve/gaugesWithdraws/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -1815,54 +903,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_GAUGE_WITHDRAW_DTO] } l_response.data ({ LIST [CURVE_GAUGE_WITHDRAW_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_hourly_volume_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_HOURLY_VOLUME_DTO]
-			-- HourlyVolumeDTOs (historical) 🔥
-			-- Gets HourlyVolumeDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_HOURLY_VOLUME_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/HourlyVolumeDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_HOURLY_VOLUME_DTO] } l_response.data ({ LIST [CURVE_HOURLY_VOLUME_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -1894,7 +934,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/hourlyVolumes/historical"
+			l_path := "/dapps/curve/hourlyVolumes/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -1911,54 +951,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_HOURLY_VOLUME_DTO] } l_response.data ({ LIST [CURVE_HOURLY_VOLUME_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_lp_token_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_LP_TOKEN_DTO]
-			-- LpTokenDTOs (historical) 🔥
-			-- Gets LpTokenDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_LP_TOKEN_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/LpTokenDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_LP_TOKEN_DTO] } l_response.data ({ LIST [CURVE_LP_TOKEN_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -1990,7 +982,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/lpTokens/historical"
+			l_path := "/dapps/curve/lpTokens/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -2007,54 +999,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_LP_TOKEN_DTO] } l_response.data ({ LIST [CURVE_LP_TOKEN_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_pool_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_POOL_DTO]
-			-- PoolDTOs (historical) 🔥
-			-- Gets PoolDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_POOL_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/PoolDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_POOL_DTO] } l_response.data ({ LIST [CURVE_POOL_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -2086,7 +1030,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/pools/historical"
+			l_path := "/dapps/curve/pools/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -2103,102 +1047,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_POOL_DTO] } l_response.data ({ LIST [CURVE_POOL_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_proposal_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_PROPOSAL_DTO]
-			-- ProposalDTOs (historical) 🔥
-			-- Gets ProposalDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_PROPOSAL_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/ProposalDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_PROPOSAL_DTO] } l_response.data ({ LIST [CURVE_PROPOSAL_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_proposal_vote_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_PROPOSAL_VOTE_DTO]
-			-- ProposalVoteDTOs (historical) 🔥
-			-- Gets ProposalVoteDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_PROPOSAL_VOTE_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/ProposalVoteDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_PROPOSAL_VOTE_DTO] } l_response.data ({ LIST [CURVE_PROPOSAL_VOTE_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -2228,7 +1076,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/proposals/historical"
+			l_path := "/dapps/curve/proposals/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -2273,7 +1121,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/proposalsVotes/historical"
+			l_path := "/dapps/curve/proposalsVotes/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -2289,54 +1137,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_PROPOSAL_VOTE_DTO] } l_response.data ({ LIST [CURVE_PROPOSAL_VOTE_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_remove_liquidity_event_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_REMOVE_LIQUIDITY_EVENT_DTO]
-			-- RemoveLiquidityEventDTOs (historical) 🔥
-			-- Gets RemoveLiquidityEventDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_REMOVE_LIQUIDITY_EVENT_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/RemoveLiquidityEventDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_REMOVE_LIQUIDITY_EVENT_DTO] } l_response.data ({ LIST [CURVE_REMOVE_LIQUIDITY_EVENT_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -2368,7 +1168,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/removeLiquidityEvents/historical"
+			l_path := "/dapps/curve/removeLiquidityEvents/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -2385,54 +1185,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_REMOVE_LIQUIDITY_EVENT_DTO] } l_response.data ({ LIST [CURVE_REMOVE_LIQUIDITY_EVENT_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_remove_liquidity_one_event_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_REMOVE_LIQUIDITY_ONE_EVENT_DTO]
-			-- RemoveLiquidityOneEventDTOs (historical) 🔥
-			-- Gets RemoveLiquidityOneEventDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_REMOVE_LIQUIDITY_ONE_EVENT_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/RemoveLiquidityOneEventDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_REMOVE_LIQUIDITY_ONE_EVENT_DTO] } l_response.data ({ LIST [CURVE_REMOVE_LIQUIDITY_ONE_EVENT_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -2464,7 +1216,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/removeLiquidityOneEvents/historical"
+			l_path := "/dapps/curve/removeLiquidityOneEvents/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -2481,54 +1233,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_REMOVE_LIQUIDITY_ONE_EVENT_DTO] } l_response.data ({ LIST [CURVE_REMOVE_LIQUIDITY_ONE_EVENT_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_system_state_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_SYSTEM_STATE_DTO]
-			-- SystemStateDTOs (historical) 🔥
-			-- Gets SystemStateDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_SYSTEM_STATE_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/SystemStateDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_SYSTEM_STATE_DTO] } l_response.data ({ LIST [CURVE_SYSTEM_STATE_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -2558,7 +1262,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/systemStates/historical"
+			l_path := "/dapps/curve/systemStates/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -2574,54 +1278,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_SYSTEM_STATE_DTO] } l_response.data ({ LIST [CURVE_SYSTEM_STATE_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_token_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_TOKEN_DTO]
-			-- TokenDTOs (historical) 🔥
-			-- Gets TokenDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_TOKEN_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/TokenDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_TOKEN_DTO] } l_response.data ({ LIST [CURVE_TOKEN_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -2653,7 +1309,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/tokens/historical"
+			l_path := "/dapps/curve/tokens/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -2670,54 +1326,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_TOKEN_DTO] } l_response.data ({ LIST [CURVE_TOKEN_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_transfer_ownership_event_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_TRANSFER_OWNERSHIP_EVENT_DTO]
-			-- TransferOwnershipEventDTOs (historical) 🔥
-			-- Gets TransferOwnershipEventDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_TRANSFER_OWNERSHIP_EVENT_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/TransferOwnershipEventDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_TRANSFER_OWNERSHIP_EVENT_DTO] } l_response.data ({ LIST [CURVE_TRANSFER_OWNERSHIP_EVENT_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -2749,7 +1357,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/transferOwnershipEvents/historical"
+			l_path := "/dapps/curve/transferOwnershipEvents/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -2766,54 +1374,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_TRANSFER_OWNERSHIP_EVENT_DTO] } l_response.data ({ LIST [CURVE_TRANSFER_OWNERSHIP_EVENT_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_underlying_coin_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_UNDERLYING_COIN_DTO]
-			-- UnderlyingCoinDTOs (historical) 🔥
-			-- Gets UnderlyingCoinDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_UNDERLYING_COIN_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/UnderlyingCoinDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_UNDERLYING_COIN_DTO] } l_response.data ({ LIST [CURVE_UNDERLYING_COIN_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -2845,7 +1405,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/underlyingCoins/historical"
+			l_path := "/dapps/curve/underlyingCoins/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -2862,54 +1422,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_UNDERLYING_COIN_DTO] } l_response.data ({ LIST [CURVE_UNDERLYING_COIN_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_voting_app_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_VOTING_APP_DTO]
-			-- VotingAppDTOs (historical) 🔥
-			-- Gets VotingAppDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_VOTING_APP_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/VotingAppDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_VOTING_APP_DTO] } l_response.data ({ LIST [CURVE_VOTING_APP_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -2939,7 +1451,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/votingApps/historical"
+			l_path := "/dapps/curve/votingApps/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -2955,54 +1467,6 @@ feature -- API Access
 			if l_response.has_error then
 				last_error := l_response.error
 			elseif attached { LIST [CURVE_VOTING_APP_DTO] } l_response.data ({ LIST [CURVE_VOTING_APP_DTO] }) as l_data then
-				Result := l_data
-			else
-				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
-			end
-		end
-
-	curve_get_weekly_volume_dt_os_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; pool_id: STRING_32): detachable LIST [CURVE_WEEKLY_VOLUME_DTO]
-			-- WeeklyVolumeDTOs (historical) 🔥
-			-- Gets WeeklyVolumeDTOs.
-			-- 
-			-- argument: start_block  (optional, default to null)
-			-- 
-			-- argument: end_block  (optional, default to null)
-			-- 
-			-- argument: start_date  (optional, default to null)
-			-- 
-			-- argument: end_date  (optional, default to null)
-			-- 
-			-- argument: pool_id  (optional, default to null)
-			-- 
-			-- 
-			-- Result LIST [CURVE_WEEKLY_VOLUME_DTO]
-		require
-		local
-  			l_path: STRING
-  			l_request: API_CLIENT_REQUEST
-  			l_response: API_CLIENT_RESPONSE
-		do
-			reset_error
-			create l_request
-			
-			l_path := "/dapps/curve/WeeklyVolumeDTOs/historical"
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "endDate", end_date));
-			l_request.fill_query_params(api_client.parameter_to_tuple("", "poolId", pool_id));
-
-
-			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
-				l_request.add_header(l_accept,"Accept");
-			end
-			l_request.add_header(api_client.select_header_content_type ({ARRAY [STRING]}<<>>),"Content-Type")
-			l_request.set_auth_names ({ARRAY [STRING]}<<>>)
-			l_response := api_client.call_api (l_path, "Get", l_request, Void, agent deserializer)
-			if l_response.has_error then
-				last_error := l_response.error
-			elseif attached { LIST [CURVE_WEEKLY_VOLUME_DTO] } l_response.data ({ LIST [CURVE_WEEKLY_VOLUME_DTO] }) as l_data then
 				Result := l_data
 			else
 				create last_error.make ("Unknown error: Status response [ " + l_response.status.out + "]")
@@ -3034,7 +1498,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/weeklyVolumes/historical"
+			l_path := "/dapps/curve/weeklyVolumes/historical-manual"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));

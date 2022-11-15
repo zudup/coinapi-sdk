@@ -22,35 +22,11 @@ func Test_openapi_CowApiService(t *testing.T) {
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
 
-    t.Run("Test CowApiService CowGetOrderDTOsHistorical", func(t *testing.T) {
-
-        t.Skip("skip test")  // remove to run test
-
-        resp, httpRes, err := apiClient.CowApi.CowGetOrderDTOsHistorical(context.Background()).Execute()
-
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
-
-    })
-
     t.Run("Test CowApiService CowGetOrdersHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
         resp, httpRes, err := apiClient.CowApi.CowGetOrdersHistorical(context.Background()).Execute()
-
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
-
-    })
-
-    t.Run("Test CowApiService CowGetSettlementDTOsHistorical", func(t *testing.T) {
-
-        t.Skip("skip test")  // remove to run test
-
-        resp, httpRes, err := apiClient.CowApi.CowGetSettlementDTOsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -70,18 +46,6 @@ func Test_openapi_CowApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CowApiService CowGetTokenDTOsHistorical", func(t *testing.T) {
-
-        t.Skip("skip test")  // remove to run test
-
-        resp, httpRes, err := apiClient.CowApi.CowGetTokenDTOsHistorical(context.Background()).Execute()
-
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
-
-    })
-
     t.Run("Test CowApiService CowGetTokensHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
@@ -94,35 +58,11 @@ func Test_openapi_CowApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CowApiService CowGetTradeDTOsHistorical", func(t *testing.T) {
-
-        t.Skip("skip test")  // remove to run test
-
-        resp, httpRes, err := apiClient.CowApi.CowGetTradeDTOsHistorical(context.Background()).Execute()
-
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
-
-    })
-
     t.Run("Test CowApiService CowGetTradesHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
         resp, httpRes, err := apiClient.CowApi.CowGetTradesHistorical(context.Background()).Execute()
-
-        require.Nil(t, err)
-        require.NotNil(t, resp)
-        assert.Equal(t, 200, httpRes.StatusCode)
-
-    })
-
-    t.Run("Test CowApiService CowGetUserDTOsHistorical", func(t *testing.T) {
-
-        t.Skip("skip test")  // remove to run test
-
-        resp, httpRes, err := apiClient.CowApi.CowGetUserDTOsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)

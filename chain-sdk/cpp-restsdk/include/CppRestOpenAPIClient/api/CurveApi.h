@@ -76,24 +76,6 @@ public:
     virtual ~CurveApi();
 
     /// <summary>
-    /// AccountDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets AccountDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_AccountDTO>>> curve_GetAccountDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
     /// Accounts (historical)
     /// </summary>
     /// <remarks>
@@ -110,24 +92,6 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// AddLiquidityEventDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets AddLiquidityEventDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_AddLiquidityEventDTO>>> curve_GetAddLiquidityEventDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
     /// AddLiquidityEvents (historical)
     /// </summary>
     /// <remarks>
@@ -139,24 +103,6 @@ public:
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<Curve_AddLiquidityEventDTO>>> curve_GetAddLiquidityEvents__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// AdminFeeChangeLogDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets AdminFeeChangeLogDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_AdminFeeChangeLogDTO>>> curve_GetAdminFeeChangeLogDTOs__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -182,24 +128,6 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// AmplificationCoeffChangeLogDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets AmplificationCoeffChangeLogDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_AmplificationCoeffChangeLogDTO>>> curve_GetAmplificationCoeffChangeLogDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
     /// AmplificationCoeffChangeLogs (historical)
     /// </summary>
     /// <remarks>
@@ -218,24 +146,6 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// CoinDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets CoinDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_CoinDTO>>> curve_GetCoinDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
     /// Coins (historical)
     /// </summary>
     /// <remarks>
@@ -247,42 +157,6 @@ public:
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<Curve_CoinDTO>>> curve_GetCoins__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// ContractDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets ContractDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_ContractDTO>>> curve_GetContractDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// ContractVersionDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets ContractVersionDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_ContractVersionDTO>>> curve_GetContractVersionDTOs__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -326,24 +200,6 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// DailyVolumeDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets DailyVolumeDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_DailyVolumeDTO>>> curve_GetDailyVolumeDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
     /// DailyVolumes (historical)
     /// </summary>
     /// <remarks>
@@ -355,24 +211,6 @@ public:
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<Curve_DailyVolumeDTO>>> curve_GetDailyVolumes__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// ExchangeDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets ExchangeDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_ExchangeDTO>>> curve_GetExchangeDTOs__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -398,24 +236,6 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// FeeChangeLogDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets FeeChangeLogDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_FeeChangeLogDTO>>> curve_GetFeeChangeLogDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
     /// FeeChangeLogs (historical)
     /// </summary>
     /// <remarks>
@@ -427,168 +247,6 @@ public:
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<Curve_FeeChangeLogDTO>>> curve_GetFeeChangeLogs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// GaugeDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets GaugeDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_GaugeDTO>>> curve_GetGaugeDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// GaugeDepositDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets GaugeDepositDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_GaugeDepositDTO>>> curve_GetGaugeDepositDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// GaugeLiquidityDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets GaugeLiquidityDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> curve_GetGaugeLiquidityDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// GaugeTotalWeightDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets GaugeTotalWeightDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_GaugeTotalWeightDTO>>> curve_GetGaugeTotalWeightDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// GaugeTypeDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets GaugeTypeDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_GaugeTypeDTO>>> curve_GetGaugeTypeDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// GaugeTypeWeightDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets GaugeTypeWeightDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_GaugeTypeWeightDTO>>> curve_GetGaugeTypeWeightDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// GaugeWeightDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets GaugeWeightDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_GaugeWeightDTO>>> curve_GetGaugeWeightDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// GaugeWeightVoteDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets GaugeWeightVoteDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_GaugeWeightVoteDTO>>> curve_GetGaugeWeightVoteDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// GaugeWithdrawDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets GaugeWithdrawDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_GaugeWithdrawDTO>>> curve_GetGaugeWithdrawDTOs__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -742,24 +400,6 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// HourlyVolumeDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets HourlyVolumeDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_HourlyVolumeDTO>>> curve_GetHourlyVolumeDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
     /// HourlyVolumes (historical)
     /// </summary>
     /// <remarks>
@@ -771,24 +411,6 @@ public:
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<Curve_HourlyVolumeDTO>>> curve_GetHourlyVolumes__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// LpTokenDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets LpTokenDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_LpTokenDTO>>> curve_GetLpTokenDTOs__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -814,24 +436,6 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// PoolDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets PoolDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_PoolDTO>>> curve_GetPoolDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
     /// Pools (historical) 🔥
     /// </summary>
     /// <remarks>
@@ -843,42 +447,6 @@ public:
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<Curve_PoolDTO>>> curve_GetPools__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// ProposalDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets ProposalDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_ProposalDTO>>> curve_GetProposalDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// ProposalVoteDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets ProposalVoteDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_ProposalVoteDTO>>> curve_GetProposalVoteDTOs__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -918,24 +486,6 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
-    /// RemoveLiquidityEventDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets RemoveLiquidityEventDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_RemoveLiquidityEventDTO>>> curve_GetRemoveLiquidityEventDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
     /// RemoveLiquidityEvents (historical)
     /// </summary>
     /// <remarks>
@@ -947,24 +497,6 @@ public:
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<Curve_RemoveLiquidityEventDTO>>> curve_GetRemoveLiquidityEvents__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// RemoveLiquidityOneEventDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets RemoveLiquidityOneEventDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_RemoveLiquidityOneEventDTO>>> curve_GetRemoveLiquidityOneEventDTOs__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -990,24 +522,6 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// SystemStateDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets SystemStateDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_SystemStateDTO>>> curve_GetSystemStateDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
     /// SystemStates (historical)
     /// </summary>
     /// <remarks>
@@ -1022,24 +536,6 @@ public:
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate
-    ) const;
-    /// <summary>
-    /// TokenDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets TokenDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_TokenDTO>>> curve_GetTokenDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
     /// Tokens (historical) 🔥
@@ -1060,24 +556,6 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
-    /// TransferOwnershipEventDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets TransferOwnershipEventDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_TransferOwnershipEventDTO>>> curve_GetTransferOwnershipEventDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
     /// TransferOwnershipEvents (historical)
     /// </summary>
     /// <remarks>
@@ -1089,24 +567,6 @@ public:
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     pplx::task<std::vector<std::shared_ptr<Curve_TransferOwnershipEventDTO>>> curve_GetTransferOwnershipEvents__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// UnderlyingCoinDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets UnderlyingCoinDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_UnderlyingCoinDTO>>> curve_GetUnderlyingCoinDTOs__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -1132,24 +592,6 @@ public:
         boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
-    /// VotingAppDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets VotingAppDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_VotingAppDTO>>> curve_GetVotingAppDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
     /// VotingApps (historical)
     /// </summary>
     /// <remarks>
@@ -1164,24 +606,6 @@ public:
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate
-    ) const;
-    /// <summary>
-    /// WeeklyVolumeDTOs (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets WeeklyVolumeDTOs.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_WeeklyVolumeDTO>>> curve_GetWeeklyVolumeDTOs__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
     /// WeeklyVolumes (historical)

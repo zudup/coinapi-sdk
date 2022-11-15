@@ -5,22 +5,6 @@ context("Test CurveApi")
 
 api_instance <- CurveApi$new()
 
-test_that("CurveGetAccountDTOsHistorical", {
-  # tests for CurveGetAccountDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # AccountDTOs (historical) 🔥
-  # Gets AccountDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveAccountDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("CurveGetAccountsHistorical", {
   # tests for CurveGetAccountsHistorical
   # base path: https://onchain.coinapi.io
@@ -31,22 +15,6 @@ test_that("CurveGetAccountsHistorical", {
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @return [array[CurveAccountDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetAddLiquidityEventDTOsHistorical", {
-  # tests for CurveGetAddLiquidityEventDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # AddLiquidityEventDTOs (historical) 🔥
-  # Gets AddLiquidityEventDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveAddLiquidityEventDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -68,22 +36,6 @@ test_that("CurveGetAddLiquidityEventsHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("CurveGetAdminFeeChangeLogDTOsHistorical", {
-  # tests for CurveGetAdminFeeChangeLogDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # AdminFeeChangeLogDTOs (historical) 🔥
-  # Gets AdminFeeChangeLogDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveAdminFeeChangeLogDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("CurveGetAdminFeeChangeLogsHistorical", {
   # tests for CurveGetAdminFeeChangeLogsHistorical
   # base path: https://onchain.coinapi.io
@@ -95,22 +47,6 @@ test_that("CurveGetAdminFeeChangeLogsHistorical", {
   # @param end_date character  (optional)
   # @param pool_id character  (optional)
   # @return [array[CurveAdminFeeChangeLogDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetAmplificationCoeffChangeLogDTOsHistorical", {
-  # tests for CurveGetAmplificationCoeffChangeLogDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # AmplificationCoeffChangeLogDTOs (historical) 🔥
-  # Gets AmplificationCoeffChangeLogDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveAmplificationCoeffChangeLogDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -132,22 +68,6 @@ test_that("CurveGetAmplificationCoeffChangeLogsHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("CurveGetCoinDTOsHistorical", {
-  # tests for CurveGetCoinDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # CoinDTOs (historical) 🔥
-  # Gets CoinDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveCoinDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("CurveGetCoinsHistorical", {
   # tests for CurveGetCoinsHistorical
   # base path: https://onchain.coinapi.io
@@ -159,38 +79,6 @@ test_that("CurveGetCoinsHistorical", {
   # @param end_date character  (optional)
   # @param pool_id character  (optional)
   # @return [array[CurveCoinDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetContractDTOsHistorical", {
-  # tests for CurveGetContractDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # ContractDTOs (historical) 🔥
-  # Gets ContractDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveContractDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetContractVersionDTOsHistorical", {
-  # tests for CurveGetContractVersionDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # ContractVersionDTOs (historical) 🔥
-  # Gets ContractVersionDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveContractVersionDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -228,22 +116,6 @@ test_that("CurveGetContractsVersionsHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("CurveGetDailyVolumeDTOsHistorical", {
-  # tests for CurveGetDailyVolumeDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # DailyVolumeDTOs (historical) 🔥
-  # Gets DailyVolumeDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveDailyVolumeDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("CurveGetDailyVolumesHistorical", {
   # tests for CurveGetDailyVolumesHistorical
   # base path: https://onchain.coinapi.io
@@ -255,22 +127,6 @@ test_that("CurveGetDailyVolumesHistorical", {
   # @param end_date character  (optional)
   # @param pool_id character  (optional)
   # @return [array[CurveDailyVolumeDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetExchangeDTOsHistorical", {
-  # tests for CurveGetExchangeDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # ExchangeDTOs (historical) 🔥
-  # Gets ExchangeDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveExchangeDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -292,22 +148,6 @@ test_that("CurveGetExchangesHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("CurveGetFeeChangeLogDTOsHistorical", {
-  # tests for CurveGetFeeChangeLogDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # FeeChangeLogDTOs (historical) 🔥
-  # Gets FeeChangeLogDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveFeeChangeLogDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("CurveGetFeeChangeLogsHistorical", {
   # tests for CurveGetFeeChangeLogsHistorical
   # base path: https://onchain.coinapi.io
@@ -319,150 +159,6 @@ test_that("CurveGetFeeChangeLogsHistorical", {
   # @param end_date character  (optional)
   # @param pool_id character  (optional)
   # @return [array[CurveFeeChangeLogDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetGaugeDTOsHistorical", {
-  # tests for CurveGetGaugeDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # GaugeDTOs (historical) 🔥
-  # Gets GaugeDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveGaugeDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetGaugeDepositDTOsHistorical", {
-  # tests for CurveGetGaugeDepositDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # GaugeDepositDTOs (historical) 🔥
-  # Gets GaugeDepositDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveGaugeDepositDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetGaugeLiquidityDTOsHistorical", {
-  # tests for CurveGetGaugeLiquidityDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # GaugeLiquidityDTOs (historical) 🔥
-  # Gets GaugeLiquidityDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveGaugeLiquidityDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetGaugeTotalWeightDTOsHistorical", {
-  # tests for CurveGetGaugeTotalWeightDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # GaugeTotalWeightDTOs (historical) 🔥
-  # Gets GaugeTotalWeightDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveGaugeTotalWeightDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetGaugeTypeDTOsHistorical", {
-  # tests for CurveGetGaugeTypeDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # GaugeTypeDTOs (historical) 🔥
-  # Gets GaugeTypeDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveGaugeTypeDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetGaugeTypeWeightDTOsHistorical", {
-  # tests for CurveGetGaugeTypeWeightDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # GaugeTypeWeightDTOs (historical) 🔥
-  # Gets GaugeTypeWeightDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveGaugeTypeWeightDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetGaugeWeightDTOsHistorical", {
-  # tests for CurveGetGaugeWeightDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # GaugeWeightDTOs (historical) 🔥
-  # Gets GaugeWeightDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveGaugeWeightDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetGaugeWeightVoteDTOsHistorical", {
-  # tests for CurveGetGaugeWeightVoteDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # GaugeWeightVoteDTOs (historical) 🔥
-  # Gets GaugeWeightVoteDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveGaugeWeightVoteDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetGaugeWithdrawDTOsHistorical", {
-  # tests for CurveGetGaugeWithdrawDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # GaugeWithdrawDTOs (historical) 🔥
-  # Gets GaugeWithdrawDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveGaugeWithdrawDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -604,22 +300,6 @@ test_that("CurveGetGaugesWithdrawHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("CurveGetHourlyVolumeDTOsHistorical", {
-  # tests for CurveGetHourlyVolumeDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # HourlyVolumeDTOs (historical) 🔥
-  # Gets HourlyVolumeDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveHourlyVolumeDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("CurveGetHourlyVolumesHistorical", {
   # tests for CurveGetHourlyVolumesHistorical
   # base path: https://onchain.coinapi.io
@@ -631,22 +311,6 @@ test_that("CurveGetHourlyVolumesHistorical", {
   # @param end_date character  (optional)
   # @param pool_id character  (optional)
   # @return [array[CurveHourlyVolumeDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetLpTokenDTOsHistorical", {
-  # tests for CurveGetLpTokenDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # LpTokenDTOs (historical) 🔥
-  # Gets LpTokenDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveLpTokenDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -668,22 +332,6 @@ test_that("CurveGetLpTokensHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("CurveGetPoolDTOsHistorical", {
-  # tests for CurveGetPoolDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # PoolDTOs (historical) 🔥
-  # Gets PoolDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurvePoolDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("CurveGetPoolsHistorical", {
   # tests for CurveGetPoolsHistorical
   # base path: https://onchain.coinapi.io
@@ -695,38 +343,6 @@ test_that("CurveGetPoolsHistorical", {
   # @param end_date character  (optional)
   # @param pool_id character  (optional)
   # @return [array[CurvePoolDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetProposalDTOsHistorical", {
-  # tests for CurveGetProposalDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # ProposalDTOs (historical) 🔥
-  # Gets ProposalDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveProposalDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetProposalVoteDTOsHistorical", {
-  # tests for CurveGetProposalVoteDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # ProposalVoteDTOs (historical) 🔥
-  # Gets ProposalVoteDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveProposalVoteDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -762,22 +378,6 @@ test_that("CurveGetProposalsVotesHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("CurveGetRemoveLiquidityEventDTOsHistorical", {
-  # tests for CurveGetRemoveLiquidityEventDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # RemoveLiquidityEventDTOs (historical) 🔥
-  # Gets RemoveLiquidityEventDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveRemoveLiquidityEventDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("CurveGetRemoveLiquidityEventsHistorical", {
   # tests for CurveGetRemoveLiquidityEventsHistorical
   # base path: https://onchain.coinapi.io
@@ -789,22 +389,6 @@ test_that("CurveGetRemoveLiquidityEventsHistorical", {
   # @param end_date character  (optional)
   # @param pool_id character  (optional)
   # @return [array[CurveRemoveLiquidityEventDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetRemoveLiquidityOneEventDTOsHistorical", {
-  # tests for CurveGetRemoveLiquidityOneEventDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # RemoveLiquidityOneEventDTOs (historical) 🔥
-  # Gets RemoveLiquidityOneEventDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveRemoveLiquidityOneEventDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -826,22 +410,6 @@ test_that("CurveGetRemoveLiquidityOneEventsHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("CurveGetSystemStateDTOsHistorical", {
-  # tests for CurveGetSystemStateDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # SystemStateDTOs (historical) 🔥
-  # Gets SystemStateDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveSystemStateDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("CurveGetSystemStatesHistorical", {
   # tests for CurveGetSystemStatesHistorical
   # base path: https://onchain.coinapi.io
@@ -852,22 +420,6 @@ test_that("CurveGetSystemStatesHistorical", {
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @return [array[CurveSystemStateDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetTokenDTOsHistorical", {
-  # tests for CurveGetTokenDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # TokenDTOs (historical) 🔥
-  # Gets TokenDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveTokenDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -889,22 +441,6 @@ test_that("CurveGetTokensHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("CurveGetTransferOwnershipEventDTOsHistorical", {
-  # tests for CurveGetTransferOwnershipEventDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # TransferOwnershipEventDTOs (historical) 🔥
-  # Gets TransferOwnershipEventDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveTransferOwnershipEventDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("CurveGetTransferOwnershipEventsHistorical", {
   # tests for CurveGetTransferOwnershipEventsHistorical
   # base path: https://onchain.coinapi.io
@@ -916,22 +452,6 @@ test_that("CurveGetTransferOwnershipEventsHistorical", {
   # @param end_date character  (optional)
   # @param pool_id character  (optional)
   # @return [array[CurveTransferOwnershipEventDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetUnderlyingCoinDTOsHistorical", {
-  # tests for CurveGetUnderlyingCoinDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # UnderlyingCoinDTOs (historical) 🔥
-  # Gets UnderlyingCoinDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveUnderlyingCoinDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -953,22 +473,6 @@ test_that("CurveGetUnderlyingCoinsHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("CurveGetVotingAppDTOsHistorical", {
-  # tests for CurveGetVotingAppDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # VotingAppDTOs (historical) 🔥
-  # Gets VotingAppDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveVotingAppDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("CurveGetVotingAppsHistorical", {
   # tests for CurveGetVotingAppsHistorical
   # base path: https://onchain.coinapi.io
@@ -979,22 +483,6 @@ test_that("CurveGetVotingAppsHistorical", {
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @return [array[CurveVotingAppDTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("CurveGetWeeklyVolumeDTOsHistorical", {
-  # tests for CurveGetWeeklyVolumeDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # WeeklyVolumeDTOs (historical) 🔥
-  # Gets WeeklyVolumeDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[CurveWeeklyVolumeDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

@@ -151,37 +151,12 @@
        res)))
 
 
-(defn-spec sushiswap-get-bundle-dtos-historical-with-http-info any?
-  "BundleDTOs (historical) 🔥
-  Gets BundleDTOs."
-  ([] (sushiswap-get-bundle-dtos-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/BundleDTOs/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec sushiswap-get-bundle-dtos-historical (s/coll-of sushiswap/bundle-dto-spec)
-  "BundleDTOs (historical) 🔥
-  Gets BundleDTOs."
-  ([] (sushiswap-get-bundle-dtos-historical nil))
-  ([optional-params any?]
-   (let [res (:data (sushiswap-get-bundle-dtos-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap/bundle-dto-spec) res st/string-transformer)
-        res))))
-
-
 (defn-spec sushiswap-get-bundles-historical-with-http-info any?
   "Bundles (historical)
   Gets bundles."
   ([] (sushiswap-get-bundles-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/bundles/historical" :get
+   (call-api "/dapps/sushiswap/bundles/historical-manual" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
@@ -201,37 +176,12 @@
         res))))
 
 
-(defn-spec sushiswap-get-burn-dtos-historical-with-http-info any?
-  "BurnDTOs (historical) 🔥
-  Gets BurnDTOs."
-  ([] (sushiswap-get-burn-dtos-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/BurnDTOs/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec sushiswap-get-burn-dtos-historical (s/coll-of sushiswap/burn-dto-spec)
-  "BurnDTOs (historical) 🔥
-  Gets BurnDTOs."
-  ([] (sushiswap-get-burn-dtos-historical nil))
-  ([optional-params any?]
-   (let [res (:data (sushiswap-get-burn-dtos-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap/burn-dto-spec) res st/string-transformer)
-        res))))
-
-
 (defn-spec sushiswap-get-burns-historical-with-http-info any?
   "Burns (historical)
   Gets burns."
   ([] (sushiswap-get-burns-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/burns/historical" :get
+   (call-api "/dapps/sushiswap/burns/historical-manual" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
@@ -251,37 +201,12 @@
         res))))
 
 
-(defn-spec sushiswap-get-day-data-dtos-historical-with-http-info any?
-  "DayDataDTOs (historical) 🔥
-  Gets DayDataDTOs."
-  ([] (sushiswap-get-day-data-dtos-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/DayDataDTOs/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec sushiswap-get-day-data-dtos-historical (s/coll-of sushiswap/day-data-dto-spec)
-  "DayDataDTOs (historical) 🔥
-  Gets DayDataDTOs."
-  ([] (sushiswap-get-day-data-dtos-historical nil))
-  ([optional-params any?]
-   (let [res (:data (sushiswap-get-day-data-dtos-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap/day-data-dto-spec) res st/string-transformer)
-        res))))
-
-
 (defn-spec sushiswap-get-day-data-historical-with-http-info any?
   "DayData (historical)
   Gets day data."
   ([] (sushiswap-get-day-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/dayData/historical" :get
+   (call-api "/dapps/sushiswap/dayData/historical-manual" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
@@ -301,37 +226,12 @@
         res))))
 
 
-(defn-spec sushiswap-get-factory-dtos-historical-with-http-info any?
-  "FactoryDTOs (historical) 🔥
-  Gets FactoryDTOs."
-  ([] (sushiswap-get-factory-dtos-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/FactoryDTOs/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec sushiswap-get-factory-dtos-historical (s/coll-of sushiswap/factory-dto-spec)
-  "FactoryDTOs (historical) 🔥
-  Gets FactoryDTOs."
-  ([] (sushiswap-get-factory-dtos-historical nil))
-  ([optional-params any?]
-   (let [res (:data (sushiswap-get-factory-dtos-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap/factory-dto-spec) res st/string-transformer)
-        res))))
-
-
 (defn-spec sushiswap-get-factory-historical-with-http-info any?
   "Factory (historical)
   Gets factory."
   ([] (sushiswap-get-factory-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/factory/historical" :get
+   (call-api "/dapps/sushiswap/factory/historical-manual" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
@@ -351,37 +251,12 @@
         res))))
 
 
-(defn-spec sushiswap-get-hour-data-dtos-historical-with-http-info any?
-  "HourDataDTOs (historical) 🔥
-  Gets HourDataDTOs."
-  ([] (sushiswap-get-hour-data-dtos-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/HourDataDTOs/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec sushiswap-get-hour-data-dtos-historical (s/coll-of sushiswap/hour-data-dto-spec)
-  "HourDataDTOs (historical) 🔥
-  Gets HourDataDTOs."
-  ([] (sushiswap-get-hour-data-dtos-historical nil))
-  ([optional-params any?]
-   (let [res (:data (sushiswap-get-hour-data-dtos-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap/hour-data-dto-spec) res st/string-transformer)
-        res))))
-
-
 (defn-spec sushiswap-get-hour-data-historical-with-http-info any?
   "HourData (historical)
   Gets hour data."
   ([] (sushiswap-get-hour-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/hourData/historical" :get
+   (call-api "/dapps/sushiswap/hourData/historical-manual" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
@@ -401,37 +276,12 @@
         res))))
 
 
-(defn-spec sushiswap-get-liquidity-position-dtos-historical-with-http-info any?
-  "LiquidityPositionDTOs (historical) 🔥
-  Gets LiquidityPositionDTOs."
-  ([] (sushiswap-get-liquidity-position-dtos-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/LiquidityPositionDTOs/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec sushiswap-get-liquidity-position-dtos-historical (s/coll-of sushiswap/liquidity-position-dto-spec)
-  "LiquidityPositionDTOs (historical) 🔥
-  Gets LiquidityPositionDTOs."
-  ([] (sushiswap-get-liquidity-position-dtos-historical nil))
-  ([optional-params any?]
-   (let [res (:data (sushiswap-get-liquidity-position-dtos-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap/liquidity-position-dto-spec) res st/string-transformer)
-        res))))
-
-
 (defn-spec sushiswap-get-liquidity-position-historical-with-http-info any?
   "LiquidityPosition (historical)
   Gets liquidity position."
   ([] (sushiswap-get-liquidity-position-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/liquidityPosition/historical" :get
+   (call-api "/dapps/sushiswap/liquidityPosition/historical-manual" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
@@ -451,37 +301,12 @@
         res))))
 
 
-(defn-spec sushiswap-get-liquidity-position-snapshot-dtos-historical-with-http-info any?
-  "LiquidityPositionSnapshotDTOs (historical) 🔥
-  Gets LiquidityPositionSnapshotDTOs."
-  ([] (sushiswap-get-liquidity-position-snapshot-dtos-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/LiquidityPositionSnapshotDTOs/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec sushiswap-get-liquidity-position-snapshot-dtos-historical (s/coll-of sushiswap/liquidity-position-snapshot-dto-spec)
-  "LiquidityPositionSnapshotDTOs (historical) 🔥
-  Gets LiquidityPositionSnapshotDTOs."
-  ([] (sushiswap-get-liquidity-position-snapshot-dtos-historical nil))
-  ([optional-params any?]
-   (let [res (:data (sushiswap-get-liquidity-position-snapshot-dtos-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap/liquidity-position-snapshot-dto-spec) res st/string-transformer)
-        res))))
-
-
 (defn-spec sushiswap-get-liquidity-position-snapshot-historical-with-http-info any?
   "LiquidityPositionSnapshot (historical)
   Gets liquidity position snapshot."
   ([] (sushiswap-get-liquidity-position-snapshot-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/liquidityPositionSnapshots/historical" :get
+   (call-api "/dapps/sushiswap/liquidityPositionSnapshots/historical-manual" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
@@ -501,37 +326,12 @@
         res))))
 
 
-(defn-spec sushiswap-get-mint-dtos-historical-with-http-info any?
-  "MintDTOs (historical) 🔥
-  Gets MintDTOs."
-  ([] (sushiswap-get-mint-dtos-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/MintDTOs/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec sushiswap-get-mint-dtos-historical (s/coll-of sushiswap/mint-dto-spec)
-  "MintDTOs (historical) 🔥
-  Gets MintDTOs."
-  ([] (sushiswap-get-mint-dtos-historical nil))
-  ([optional-params any?]
-   (let [res (:data (sushiswap-get-mint-dtos-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap/mint-dto-spec) res st/string-transformer)
-        res))))
-
-
 (defn-spec sushiswap-get-mints-historical-with-http-info any?
   "Mints (historical)
   Gets mints."
   ([] (sushiswap-get-mints-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/mints/historical" :get
+   (call-api "/dapps/sushiswap/mints/historical-manual" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
@@ -548,81 +348,6 @@
    (let [res (:data (sushiswap-get-mints-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of sushiswap/mint-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec sushiswap-get-pair-day-data-dtos-historical-with-http-info any?
-  "PairDayDataDTOs (historical) 🔥
-  Gets PairDayDataDTOs."
-  ([] (sushiswap-get-pair-day-data-dtos-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/PairDayDataDTOs/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec sushiswap-get-pair-day-data-dtos-historical (s/coll-of sushiswap/pair-day-data-dto-spec)
-  "PairDayDataDTOs (historical) 🔥
-  Gets PairDayDataDTOs."
-  ([] (sushiswap-get-pair-day-data-dtos-historical nil))
-  ([optional-params any?]
-   (let [res (:data (sushiswap-get-pair-day-data-dtos-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap/pair-day-data-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec sushiswap-get-pair-dtos-historical-with-http-info any?
-  "PairDTOs (historical) 🔥
-  Gets PairDTOs."
-  ([] (sushiswap-get-pair-dtos-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/PairDTOs/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec sushiswap-get-pair-dtos-historical (s/coll-of sushiswap/pair-dto-spec)
-  "PairDTOs (historical) 🔥
-  Gets PairDTOs."
-  ([] (sushiswap-get-pair-dtos-historical nil))
-  ([optional-params any?]
-   (let [res (:data (sushiswap-get-pair-dtos-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap/pair-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec sushiswap-get-pair-hour-data-dtos-historical-with-http-info any?
-  "PairHourDataDTOs (historical) 🔥
-  Gets PairHourDataDTOs."
-  ([] (sushiswap-get-pair-hour-data-dtos-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/PairHourDataDTOs/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec sushiswap-get-pair-hour-data-dtos-historical (s/coll-of sushiswap/pair-hour-data-dto-spec)
-  "PairHourDataDTOs (historical) 🔥
-  Gets PairHourDataDTOs."
-  ([] (sushiswap-get-pair-hour-data-dtos-historical nil))
-  ([optional-params any?]
-   (let [res (:data (sushiswap-get-pair-hour-data-dtos-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap/pair-hour-data-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -654,7 +379,7 @@
   Gets pools day data."
   ([] (sushiswap-get-pools-day-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/poolsDayData/historical" :get
+   (call-api "/dapps/sushiswap/poolsDayData/historical-manual" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
@@ -679,7 +404,7 @@
   Gets list of pools for given filters."
   ([] (sushiswap-get-pools-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/pools/historical" :get
+   (call-api "/dapps/sushiswap/pools/historical-manual" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
@@ -704,7 +429,7 @@
   Gets pools tracked each our."
   ([] (sushiswap-get-pools-hour-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/poolsHourData/historical" :get
+   (call-api "/dapps/sushiswap/poolsHourData/historical-manual" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
@@ -721,31 +446,6 @@
    (let [res (:data (sushiswap-get-pools-hour-data-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of sushiswap/pair-hour-data-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec sushiswap-get-swap-dtos-historical-with-http-info any?
-  "SwapDTOs (historical) 🔥
-  Gets SwapDTOs."
-  ([] (sushiswap-get-swap-dtos-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/SwapDTOs/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec sushiswap-get-swap-dtos-historical (s/coll-of sushiswap/swap-dto-spec)
-  "SwapDTOs (historical) 🔥
-  Gets SwapDTOs."
-  ([] (sushiswap-get-swap-dtos-historical nil))
-  ([optional-params any?]
-   (let [res (:data (sushiswap-get-swap-dtos-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap/swap-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -777,7 +477,7 @@
   Gets list of swaps for given filters."
   ([] (sushiswap-get-swaps-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/swaps/historical" :get
+   (call-api "/dapps/sushiswap/swaps/historical-manual" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
@@ -794,56 +494,6 @@
    (let [res (:data (sushiswap-get-swaps-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of sushiswap/swap-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec sushiswap-get-token-day-data-dtos-historical-with-http-info any?
-  "TokenDayDataDTOs (historical) 🔥
-  Gets TokenDayDataDTOs."
-  ([] (sushiswap-get-token-day-data-dtos-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/TokenDayDataDTOs/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec sushiswap-get-token-day-data-dtos-historical (s/coll-of sushiswap/token-day-data-dto-spec)
-  "TokenDayDataDTOs (historical) 🔥
-  Gets TokenDayDataDTOs."
-  ([] (sushiswap-get-token-day-data-dtos-historical nil))
-  ([optional-params any?]
-   (let [res (:data (sushiswap-get-token-day-data-dtos-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap/token-day-data-dto-spec) res st/string-transformer)
-        res))))
-
-
-(defn-spec sushiswap-get-token-dtos-historical-with-http-info any?
-  "TokenDTOs (historical) 🔥
-  Gets TokenDTOs."
-  ([] (sushiswap-get-token-dtos-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/TokenDTOs/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec sushiswap-get-token-dtos-historical (s/coll-of sushiswap/token-dto-spec)
-  "TokenDTOs (historical) 🔥
-  Gets TokenDTOs."
-  ([] (sushiswap-get-token-dtos-historical nil))
-  ([optional-params any?]
-   (let [res (:data (sushiswap-get-token-dtos-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap/token-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -875,7 +525,7 @@
   Gets tokens day data."
   ([] (sushiswap-get-tokens-day-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate tokenId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/tokensDayData/historical" :get
+   (call-api "/dapps/sushiswap/tokensDayData/historical-manual" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "tokenId" tokenId }
@@ -900,7 +550,7 @@
   Gets list of tokens for given filters."
   ([] (sushiswap-get-tokens-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate tokenId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/tokens/historical" :get
+   (call-api "/dapps/sushiswap/tokens/historical-manual" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "tokenId" tokenId }
@@ -920,37 +570,12 @@
         res))))
 
 
-(defn-spec sushiswap-get-transaction-dtos-historical-with-http-info any?
-  "TransactionDTOs (historical) 🔥
-  Gets TransactionDTOs."
-  ([] (sushiswap-get-transaction-dtos-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/TransactionDTOs/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec sushiswap-get-transaction-dtos-historical (s/coll-of sushiswap/transaction-dto-spec)
-  "TransactionDTOs (historical) 🔥
-  Gets TransactionDTOs."
-  ([] (sushiswap-get-transaction-dtos-historical nil))
-  ([optional-params any?]
-   (let [res (:data (sushiswap-get-transaction-dtos-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap/transaction-dto-spec) res st/string-transformer)
-        res))))
-
-
 (defn-spec sushiswap-get-transactions-historical-with-http-info any?
   "Transactions (historical)
   Gets transactions."
   ([] (sushiswap-get-transactions-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/transactions/historical" :get
+   (call-api "/dapps/sushiswap/transactions/historical-manual" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }
@@ -970,37 +595,12 @@
         res))))
 
 
-(defn-spec sushiswap-get-user-dtos-historical-with-http-info any?
-  "UserDTOs (historical) 🔥
-  Gets UserDTOs."
-  ([] (sushiswap-get-user-dtos-historical-with-http-info nil))
-  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/UserDTOs/historical" :get
-             {:path-params   {}
-              :header-params {}
-              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
-              :form-params   {}
-              :content-types []
-              :accepts       ["text/plain" "application/json" "text/json"]
-              :auth-names    []})))
-
-(defn-spec sushiswap-get-user-dtos-historical (s/coll-of sushiswap/user-dto-spec)
-  "UserDTOs (historical) 🔥
-  Gets UserDTOs."
-  ([] (sushiswap-get-user-dtos-historical nil))
-  ([optional-params any?]
-   (let [res (:data (sushiswap-get-user-dtos-historical-with-http-info optional-params))]
-     (if (:decode-models *api-context*)
-        (st/decode (s/coll-of sushiswap/user-dto-spec) res st/string-transformer)
-        res))))
-
-
 (defn-spec sushiswap-get-users-historical-with-http-info any?
   "Users (historical)
   Gets users."
   ([] (sushiswap-get-users-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/users/historical" :get
+   (call-api "/dapps/sushiswap/users/historical-manual" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate }

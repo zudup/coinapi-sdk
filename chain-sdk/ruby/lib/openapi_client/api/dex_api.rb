@@ -19,78 +19,6 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # BatchDTOs (historical) 🔥
-    # Gets BatchDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<DexBatchDTO>]
-    def dex_get_batch_dtos__historical(opts = {})
-      data, _status_code, _headers = dex_get_batch_dtos__historical_with_http_info(opts)
-      data
-    end
-
-    # BatchDTOs (historical) 🔥
-    # Gets BatchDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<(Array<DexBatchDTO>, Integer, Hash)>] Array<DexBatchDTO> data, response status code and response headers
-    def dex_get_batch_dtos__historical_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_batch_dtos__historical ...'
-      end
-      # resource path
-      local_var_path = '/dapps/dex/BatchDTOs/historical'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
-      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
-      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
-      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
-      query_params[:'poolId'] = opts[:'pool_id'] if !opts[:'pool_id'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'Array<DexBatchDTO>'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || []
-
-      new_options = opts.merge(
-        :operation => :"DexApi.dex_get_batch_dtos__historical",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dex_get_batch_dtos__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
     # Batches (historical)
     # Gets batches.
     # @param [Hash] opts the optional parameters
@@ -117,7 +45,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: DexApi.dex_get_batches__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/batches/historical'
+      local_var_path = '/dapps/dex/batches/historical-manual'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -160,78 +88,6 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # DepositDTOs (historical) 🔥
-    # Gets DepositDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<DexDepositDTO>]
-    def dex_get_deposit_dtos__historical(opts = {})
-      data, _status_code, _headers = dex_get_deposit_dtos__historical_with_http_info(opts)
-      data
-    end
-
-    # DepositDTOs (historical) 🔥
-    # Gets DepositDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<(Array<DexDepositDTO>, Integer, Hash)>] Array<DexDepositDTO> data, response status code and response headers
-    def dex_get_deposit_dtos__historical_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_deposit_dtos__historical ...'
-      end
-      # resource path
-      local_var_path = '/dapps/dex/DepositDTOs/historical'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
-      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
-      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
-      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
-      query_params[:'poolId'] = opts[:'pool_id'] if !opts[:'pool_id'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'Array<DexDepositDTO>'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || []
-
-      new_options = opts.merge(
-        :operation => :"DexApi.dex_get_deposit_dtos__historical",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dex_get_deposit_dtos__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
     # Deposits (historical)
     # Gets deposits.
     # @param [Hash] opts the optional parameters
@@ -260,7 +116,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: DexApi.dex_get_deposits__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/deposits/historical'
+      local_var_path = '/dapps/dex/deposits/historical-manual'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -304,78 +160,6 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # OrderDTOs (historical) 🔥
-    # Gets OrderDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<DexOrderDTO>]
-    def dex_get_order_dtos__historical(opts = {})
-      data, _status_code, _headers = dex_get_order_dtos__historical_with_http_info(opts)
-      data
-    end
-
-    # OrderDTOs (historical) 🔥
-    # Gets OrderDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<(Array<DexOrderDTO>, Integer, Hash)>] Array<DexOrderDTO> data, response status code and response headers
-    def dex_get_order_dtos__historical_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_order_dtos__historical ...'
-      end
-      # resource path
-      local_var_path = '/dapps/dex/OrderDTOs/historical'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
-      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
-      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
-      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
-      query_params[:'poolId'] = opts[:'pool_id'] if !opts[:'pool_id'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'Array<DexOrderDTO>'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || []
-
-      new_options = opts.merge(
-        :operation => :"DexApi.dex_get_order_dtos__historical",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dex_get_order_dtos__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
     # Orders (historical)
     # Gets orders.
     # @param [Hash] opts the optional parameters
@@ -404,7 +188,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: DexApi.dex_get_orders__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/orders/historical'
+      local_var_path = '/dapps/dex/orders/historical-manual'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -448,78 +232,6 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # PriceDTOs (historical) 🔥
-    # Gets PriceDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<DexPriceDTO>]
-    def dex_get_price_dtos__historical(opts = {})
-      data, _status_code, _headers = dex_get_price_dtos__historical_with_http_info(opts)
-      data
-    end
-
-    # PriceDTOs (historical) 🔥
-    # Gets PriceDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<(Array<DexPriceDTO>, Integer, Hash)>] Array<DexPriceDTO> data, response status code and response headers
-    def dex_get_price_dtos__historical_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_price_dtos__historical ...'
-      end
-      # resource path
-      local_var_path = '/dapps/dex/PriceDTOs/historical'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
-      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
-      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
-      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
-      query_params[:'poolId'] = opts[:'pool_id'] if !opts[:'pool_id'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'Array<DexPriceDTO>'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || []
-
-      new_options = opts.merge(
-        :operation => :"DexApi.dex_get_price_dtos__historical",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dex_get_price_dtos__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
     # Prices (historical)
     # Gets prices.
     # @param [Hash] opts the optional parameters
@@ -548,7 +260,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: DexApi.dex_get_prices__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/prices/historical'
+      local_var_path = '/dapps/dex/prices/historical-manual'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -592,78 +304,6 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # SolutionDTOs (historical) 🔥
-    # Gets SolutionDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<DexSolutionDTO>]
-    def dex_get_solution_dtos__historical(opts = {})
-      data, _status_code, _headers = dex_get_solution_dtos__historical_with_http_info(opts)
-      data
-    end
-
-    # SolutionDTOs (historical) 🔥
-    # Gets SolutionDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<(Array<DexSolutionDTO>, Integer, Hash)>] Array<DexSolutionDTO> data, response status code and response headers
-    def dex_get_solution_dtos__historical_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_solution_dtos__historical ...'
-      end
-      # resource path
-      local_var_path = '/dapps/dex/SolutionDTOs/historical'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
-      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
-      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
-      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
-      query_params[:'poolId'] = opts[:'pool_id'] if !opts[:'pool_id'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'Array<DexSolutionDTO>'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || []
-
-      new_options = opts.merge(
-        :operation => :"DexApi.dex_get_solution_dtos__historical",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dex_get_solution_dtos__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
     # Solutions (historical)
     # Gets solutions.
     # @param [Hash] opts the optional parameters
@@ -692,7 +332,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: DexApi.dex_get_solutions__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/solutions/historical'
+      local_var_path = '/dapps/dex/solutions/historical-manual'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -762,7 +402,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: DexApi.dex_get_stats__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/stats/historical'
+      local_var_path = '/dapps/dex/stats/historical-manual'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -805,150 +445,6 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # StatsDTOs (historical) 🔥
-    # Gets StatsDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<DexStatsDTO>]
-    def dex_get_stats_dtos__historical(opts = {})
-      data, _status_code, _headers = dex_get_stats_dtos__historical_with_http_info(opts)
-      data
-    end
-
-    # StatsDTOs (historical) 🔥
-    # Gets StatsDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<(Array<DexStatsDTO>, Integer, Hash)>] Array<DexStatsDTO> data, response status code and response headers
-    def dex_get_stats_dtos__historical_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_stats_dtos__historical ...'
-      end
-      # resource path
-      local_var_path = '/dapps/dex/StatsDTOs/historical'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
-      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
-      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
-      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
-      query_params[:'poolId'] = opts[:'pool_id'] if !opts[:'pool_id'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'Array<DexStatsDTO>'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || []
-
-      new_options = opts.merge(
-        :operation => :"DexApi.dex_get_stats_dtos__historical",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dex_get_stats_dtos__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # TokenDTOs (historical) 🔥
-    # Gets TokenDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<DexTokenDTO>]
-    def dex_get_token_dtos__historical(opts = {})
-      data, _status_code, _headers = dex_get_token_dtos__historical_with_http_info(opts)
-      data
-    end
-
-    # TokenDTOs (historical) 🔥
-    # Gets TokenDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<(Array<DexTokenDTO>, Integer, Hash)>] Array<DexTokenDTO> data, response status code and response headers
-    def dex_get_token_dtos__historical_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_token_dtos__historical ...'
-      end
-      # resource path
-      local_var_path = '/dapps/dex/TokenDTOs/historical'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
-      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
-      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
-      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
-      query_params[:'poolId'] = opts[:'pool_id'] if !opts[:'pool_id'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'Array<DexTokenDTO>'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || []
-
-      new_options = opts.merge(
-        :operation => :"DexApi.dex_get_token_dtos__historical",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dex_get_token_dtos__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
     # Tokens (historical) 🔥
     # Gets tokens.
     # @param [Hash] opts the optional parameters
@@ -977,7 +473,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: DexApi.dex_get_tokens__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/tokens/historical'
+      local_var_path = '/dapps/dex/tokens/historical-manual'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1021,78 +517,6 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # TradeDTOs (historical) 🔥
-    # Gets TradeDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<DexTradeDTO>]
-    def dex_get_trade_dtos__historical(opts = {})
-      data, _status_code, _headers = dex_get_trade_dtos__historical_with_http_info(opts)
-      data
-    end
-
-    # TradeDTOs (historical) 🔥
-    # Gets TradeDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<(Array<DexTradeDTO>, Integer, Hash)>] Array<DexTradeDTO> data, response status code and response headers
-    def dex_get_trade_dtos__historical_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_trade_dtos__historical ...'
-      end
-      # resource path
-      local_var_path = '/dapps/dex/TradeDTOs/historical'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
-      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
-      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
-      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
-      query_params[:'poolId'] = opts[:'pool_id'] if !opts[:'pool_id'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'Array<DexTradeDTO>'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || []
-
-      new_options = opts.merge(
-        :operation => :"DexApi.dex_get_trade_dtos__historical",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dex_get_trade_dtos__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
     # Trades (historical) 🔥
     # Gets trades.
     # @param [Hash] opts the optional parameters
@@ -1119,7 +543,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: DexApi.dex_get_trades__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/trades/historical'
+      local_var_path = '/dapps/dex/trades/historical-manual'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1162,78 +586,6 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # UserDTOs (historical) 🔥
-    # Gets UserDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<DexUserDTO>]
-    def dex_get_user_dtos__historical(opts = {})
-      data, _status_code, _headers = dex_get_user_dtos__historical_with_http_info(opts)
-      data
-    end
-
-    # UserDTOs (historical) 🔥
-    # Gets UserDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<(Array<DexUserDTO>, Integer, Hash)>] Array<DexUserDTO> data, response status code and response headers
-    def dex_get_user_dtos__historical_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_user_dtos__historical ...'
-      end
-      # resource path
-      local_var_path = '/dapps/dex/UserDTOs/historical'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
-      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
-      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
-      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
-      query_params[:'poolId'] = opts[:'pool_id'] if !opts[:'pool_id'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'Array<DexUserDTO>'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || []
-
-      new_options = opts.merge(
-        :operation => :"DexApi.dex_get_user_dtos__historical",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dex_get_user_dtos__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
     # Users (historical)
     # Gets users.
     # @param [Hash] opts the optional parameters
@@ -1260,7 +612,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: DexApi.dex_get_users__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/users/historical'
+      local_var_path = '/dapps/dex/users/historical-manual'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1303,150 +655,6 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # WithdrawDTOs (historical) 🔥
-    # Gets WithdrawDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<DexWithdrawDTO>]
-    def dex_get_withdraw_dtos__historical(opts = {})
-      data, _status_code, _headers = dex_get_withdraw_dtos__historical_with_http_info(opts)
-      data
-    end
-
-    # WithdrawDTOs (historical) 🔥
-    # Gets WithdrawDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<(Array<DexWithdrawDTO>, Integer, Hash)>] Array<DexWithdrawDTO> data, response status code and response headers
-    def dex_get_withdraw_dtos__historical_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_withdraw_dtos__historical ...'
-      end
-      # resource path
-      local_var_path = '/dapps/dex/WithdrawDTOs/historical'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
-      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
-      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
-      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
-      query_params[:'poolId'] = opts[:'pool_id'] if !opts[:'pool_id'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'Array<DexWithdrawDTO>'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || []
-
-      new_options = opts.merge(
-        :operation => :"DexApi.dex_get_withdraw_dtos__historical",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dex_get_withdraw_dtos__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
-    # WithdrawRequestDTOs (historical) 🔥
-    # Gets WithdrawRequestDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<DexWithdrawRequestDTO>]
-    def dex_get_withdraw_request_dtos__historical(opts = {})
-      data, _status_code, _headers = dex_get_withdraw_request_dtos__historical_with_http_info(opts)
-      data
-    end
-
-    # WithdrawRequestDTOs (historical) 🔥
-    # Gets WithdrawRequestDTOs.
-    # @param [Hash] opts the optional parameters
-    # @option opts [Integer] :start_block 
-    # @option opts [Integer] :end_block 
-    # @option opts [Time] :start_date 
-    # @option opts [Time] :end_date 
-    # @option opts [String] :pool_id 
-    # @return [Array<(Array<DexWithdrawRequestDTO>, Integer, Hash)>] Array<DexWithdrawRequestDTO> data, response status code and response headers
-    def dex_get_withdraw_request_dtos__historical_with_http_info(opts = {})
-      if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_withdraw_request_dtos__historical ...'
-      end
-      # resource path
-      local_var_path = '/dapps/dex/WithdrawRequestDTOs/historical'
-
-      # query parameters
-      query_params = opts[:query_params] || {}
-      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
-      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
-      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
-      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
-      query_params[:'poolId'] = opts[:'pool_id'] if !opts[:'pool_id'].nil?
-
-      # header parameters
-      header_params = opts[:header_params] || {}
-      # HTTP header 'Accept' (if needed)
-      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
-
-      # form parameters
-      form_params = opts[:form_params] || {}
-
-      # http body (model)
-      post_body = opts[:debug_body]
-
-      # return_type
-      return_type = opts[:debug_return_type] || 'Array<DexWithdrawRequestDTO>'
-
-      # auth_names
-      auth_names = opts[:debug_auth_names] || []
-
-      new_options = opts.merge(
-        :operation => :"DexApi.dex_get_withdraw_request_dtos__historical",
-        :header_params => header_params,
-        :query_params => query_params,
-        :form_params => form_params,
-        :body => post_body,
-        :auth_names => auth_names,
-        :return_type => return_type
-      )
-
-      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
-      if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dex_get_withdraw_request_dtos__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
-      end
-      return data, status_code, headers
-    end
-
     # Withdraws (historical)
     # Gets withdraws.
     # @param [Hash] opts the optional parameters
@@ -1475,7 +683,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: DexApi.dex_get_withdraws__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/withdraws/historical'
+      local_var_path = '/dapps/dex/withdraws/historical-manual'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1547,7 +755,7 @@ module OpenapiClient
         @api_client.config.logger.debug 'Calling API: DexApi.dex_get_withdraws_requests__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/withdrawsRequests/historical'
+      local_var_path = '/dapps/dex/withdrawsRequests/historical-manual'
 
       # query parameters
       query_params = opts[:query_params] || {}

@@ -12,43 +12,8 @@ class CowApi {
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
-    def cowGetOrderDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cow/OrderDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    CowOrderDTO.class )
-
-    }
-
     def cowGetOrdersHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cow/orders/historical"
+        String resourcePath = "/dapps/cow/orders/historical-manual"
 
         // params
         def queryParams = [:]
@@ -76,46 +41,11 @@ class CowApi {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     CowOrderDTO.class )
-
-    }
-
-    def cowGetSettlementDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cow/SettlementDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    CowSettlementDTO.class )
 
     }
 
     def cowGetSettlementsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cow/settlements/historical"
+        String resourcePath = "/dapps/cow/settlements/historical-manual"
 
         // params
         def queryParams = [:]
@@ -146,43 +76,8 @@ class CowApi {
 
     }
 
-    def cowGetTokenDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cow/TokenDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    CowTokenDTO.class )
-
-    }
-
     def cowGetTokensHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cow/tokens/historical"
+        String resourcePath = "/dapps/cow/tokens/historical-manual"
 
         // params
         def queryParams = [:]
@@ -216,43 +111,8 @@ class CowApi {
 
     }
 
-    def cowGetTradeDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cow/TradeDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    CowTradeDTO.class )
-
-    }
-
     def cowGetTradesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cow/trades/historical"
+        String resourcePath = "/dapps/cow/trades/historical-manual"
 
         // params
         def queryParams = [:]
@@ -280,46 +140,11 @@ class CowApi {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     CowTradeDTO.class )
-
-    }
-
-    def cowGetUserDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cow/UserDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    CowUserDTO.class )
 
     }
 
     def cowGetUsersHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/cow/users/historical"
+        String resourcePath = "/dapps/cow/users/historical-manual"
 
         // params
         def queryParams = [:]

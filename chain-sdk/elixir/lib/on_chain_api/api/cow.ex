@@ -10,49 +10,6 @@ defmodule OnChainAPI.Api.Cow do
   import OnChainAPI.RequestBuilder
 
   @doc """
-  OrderDTOs (historical) 🔥
-  Gets OrderDTOs.
-
-  ### Parameters
-
-  - `connection` (OnChainAPI.Connection): Connection to server
-  - `opts` (keyword): Optional parameters
-    - `:startBlock` (integer()): 
-    - `:endBlock` (integer()): 
-    - `:startDate` (DateTime.t): 
-    - `:endDate` (DateTime.t): 
-    - `:poolId` (String.t): 
-
-  ### Returns
-
-  - `{:ok, [%CowOrderDto{}, ...]}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec cow_get_order_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CowOrderDto.t)} | {:error, Tesla.Env.t}
-  def cow_get_order_dtos__historical(connection, opts \\ []) do
-    optional_params = %{
-      :startBlock => :query,
-      :endBlock => :query,
-      :startDate => :query,
-      :endDate => :query,
-      :poolId => :query
-    }
-
-    request =
-      %{}
-      |> method(:get)
-      |> url("/dapps/cow/OrderDTOs/historical")
-      |> add_optional_params(optional_params, opts)
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, [%OnChainAPI.Model.CowOrderDto{}]}
-    ])
-  end
-
-  @doc """
   Orders (historical)
   Gets orders.
 
@@ -82,7 +39,7 @@ defmodule OnChainAPI.Api.Cow do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/cow/orders/historical")
+      |> url("/dapps/cow/orders/historical-manual")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -90,49 +47,6 @@ defmodule OnChainAPI.Api.Cow do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.CowOrderDto{}]}
-    ])
-  end
-
-  @doc """
-  SettlementDTOs (historical) 🔥
-  Gets SettlementDTOs.
-
-  ### Parameters
-
-  - `connection` (OnChainAPI.Connection): Connection to server
-  - `opts` (keyword): Optional parameters
-    - `:startBlock` (integer()): 
-    - `:endBlock` (integer()): 
-    - `:startDate` (DateTime.t): 
-    - `:endDate` (DateTime.t): 
-    - `:poolId` (String.t): 
-
-  ### Returns
-
-  - `{:ok, [%CowSettlementDto{}, ...]}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec cow_get_settlement_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CowSettlementDto.t)} | {:error, Tesla.Env.t}
-  def cow_get_settlement_dtos__historical(connection, opts \\ []) do
-    optional_params = %{
-      :startBlock => :query,
-      :endBlock => :query,
-      :startDate => :query,
-      :endDate => :query,
-      :poolId => :query
-    }
-
-    request =
-      %{}
-      |> method(:get)
-      |> url("/dapps/cow/SettlementDTOs/historical")
-      |> add_optional_params(optional_params, opts)
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, [%OnChainAPI.Model.CowSettlementDto{}]}
     ])
   end
 
@@ -166,7 +80,7 @@ defmodule OnChainAPI.Api.Cow do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/cow/settlements/historical")
+      |> url("/dapps/cow/settlements/historical-manual")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -174,49 +88,6 @@ defmodule OnChainAPI.Api.Cow do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.CowSettlementDto{}]}
-    ])
-  end
-
-  @doc """
-  TokenDTOs (historical) 🔥
-  Gets TokenDTOs.
-
-  ### Parameters
-
-  - `connection` (OnChainAPI.Connection): Connection to server
-  - `opts` (keyword): Optional parameters
-    - `:startBlock` (integer()): 
-    - `:endBlock` (integer()): 
-    - `:startDate` (DateTime.t): 
-    - `:endDate` (DateTime.t): 
-    - `:poolId` (String.t): 
-
-  ### Returns
-
-  - `{:ok, [%CowTokenDto{}, ...]}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec cow_get_token_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CowTokenDto.t)} | {:error, Tesla.Env.t}
-  def cow_get_token_dtos__historical(connection, opts \\ []) do
-    optional_params = %{
-      :startBlock => :query,
-      :endBlock => :query,
-      :startDate => :query,
-      :endDate => :query,
-      :poolId => :query
-    }
-
-    request =
-      %{}
-      |> method(:get)
-      |> url("/dapps/cow/TokenDTOs/historical")
-      |> add_optional_params(optional_params, opts)
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, [%OnChainAPI.Model.CowTokenDto{}]}
     ])
   end
 
@@ -252,7 +123,7 @@ defmodule OnChainAPI.Api.Cow do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/cow/tokens/historical")
+      |> url("/dapps/cow/tokens/historical-manual")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -260,49 +131,6 @@ defmodule OnChainAPI.Api.Cow do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.CowTokenDto{}]}
-    ])
-  end
-
-  @doc """
-  TradeDTOs (historical) 🔥
-  Gets TradeDTOs.
-
-  ### Parameters
-
-  - `connection` (OnChainAPI.Connection): Connection to server
-  - `opts` (keyword): Optional parameters
-    - `:startBlock` (integer()): 
-    - `:endBlock` (integer()): 
-    - `:startDate` (DateTime.t): 
-    - `:endDate` (DateTime.t): 
-    - `:poolId` (String.t): 
-
-  ### Returns
-
-  - `{:ok, [%CowTradeDto{}, ...]}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec cow_get_trade_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CowTradeDto.t)} | {:error, Tesla.Env.t}
-  def cow_get_trade_dtos__historical(connection, opts \\ []) do
-    optional_params = %{
-      :startBlock => :query,
-      :endBlock => :query,
-      :startDate => :query,
-      :endDate => :query,
-      :poolId => :query
-    }
-
-    request =
-      %{}
-      |> method(:get)
-      |> url("/dapps/cow/TradeDTOs/historical")
-      |> add_optional_params(optional_params, opts)
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, [%OnChainAPI.Model.CowTradeDto{}]}
     ])
   end
 
@@ -336,7 +164,7 @@ defmodule OnChainAPI.Api.Cow do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/cow/trades/historical")
+      |> url("/dapps/cow/trades/historical-manual")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -344,49 +172,6 @@ defmodule OnChainAPI.Api.Cow do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.CowTradeDto{}]}
-    ])
-  end
-
-  @doc """
-  UserDTOs (historical) 🔥
-  Gets UserDTOs.
-
-  ### Parameters
-
-  - `connection` (OnChainAPI.Connection): Connection to server
-  - `opts` (keyword): Optional parameters
-    - `:startBlock` (integer()): 
-    - `:endBlock` (integer()): 
-    - `:startDate` (DateTime.t): 
-    - `:endDate` (DateTime.t): 
-    - `:poolId` (String.t): 
-
-  ### Returns
-
-  - `{:ok, [%CowUserDto{}, ...]}` on success
-  - `{:error, Tesla.Env.t}` on failure
-  """
-  @spec cow_get_user_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CowUserDto.t)} | {:error, Tesla.Env.t}
-  def cow_get_user_dtos__historical(connection, opts \\ []) do
-    optional_params = %{
-      :startBlock => :query,
-      :endBlock => :query,
-      :startDate => :query,
-      :endDate => :query,
-      :poolId => :query
-    }
-
-    request =
-      %{}
-      |> method(:get)
-      |> url("/dapps/cow/UserDTOs/historical")
-      |> add_optional_params(optional_params, opts)
-      |> Enum.into([])
-
-    connection
-    |> Connection.request(request)
-    |> evaluate_response([
-      {200, [%OnChainAPI.Model.CowUserDto{}]}
     ])
   end
 
@@ -420,7 +205,7 @@ defmodule OnChainAPI.Api.Cow do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/cow/users/historical")
+      |> url("/dapps/cow/users/historical-manual")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

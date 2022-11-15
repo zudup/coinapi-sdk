@@ -64,24 +64,6 @@ public class CurveApiTest {
     private final CurveApi api = new CurveApi();
 
     /**
-     * AccountDTOs (historical) 🔥
-     *
-     * Gets AccountDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetAccountDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveAccountDTO> response = api.curveGetAccountDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
      * Accounts (historical)
      *
      * Gets accounts.
@@ -95,24 +77,6 @@ public class CurveApiTest {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         List<CurveAccountDTO> response = api.curveGetAccountsHistorical(startBlock, endBlock, startDate, endDate);
-        // TODO: test validations
-    }
-
-    /**
-     * AddLiquidityEventDTOs (historical) 🔥
-     *
-     * Gets AddLiquidityEventDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetAddLiquidityEventDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveAddLiquidityEventDTO> response = api.curveGetAddLiquidityEventDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 
@@ -135,24 +99,6 @@ public class CurveApiTest {
     }
 
     /**
-     * AdminFeeChangeLogDTOs (historical) 🔥
-     *
-     * Gets AdminFeeChangeLogDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetAdminFeeChangeLogDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveAdminFeeChangeLogDTO> response = api.curveGetAdminFeeChangeLogDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
      * AdminFeeChangeLogs (historical)
      *
      * Gets admin fee change logs.
@@ -167,24 +113,6 @@ public class CurveApiTest {
         OffsetDateTime endDate = null;
         String poolId = null;
         List<CurveAdminFeeChangeLogDTO> response = api.curveGetAdminFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * AmplificationCoeffChangeLogDTOs (historical) 🔥
-     *
-     * Gets AmplificationCoeffChangeLogDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetAmplificationCoeffChangeLogDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveAmplificationCoeffChangeLogDTO> response = api.curveGetAmplificationCoeffChangeLogDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 
@@ -207,24 +135,6 @@ public class CurveApiTest {
     }
 
     /**
-     * CoinDTOs (historical) 🔥
-     *
-     * Gets CoinDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetCoinDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveCoinDTO> response = api.curveGetCoinDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
      * Coins (historical)
      *
      * Gets coins.
@@ -239,42 +149,6 @@ public class CurveApiTest {
         OffsetDateTime endDate = null;
         String poolId = null;
         List<CurveCoinDTO> response = api.curveGetCoinsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * ContractDTOs (historical) 🔥
-     *
-     * Gets ContractDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetContractDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveContractDTO> response = api.curveGetContractDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * ContractVersionDTOs (historical) 🔥
-     *
-     * Gets ContractVersionDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetContractVersionDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveContractVersionDTO> response = api.curveGetContractVersionDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 
@@ -315,24 +189,6 @@ public class CurveApiTest {
     }
 
     /**
-     * DailyVolumeDTOs (historical) 🔥
-     *
-     * Gets DailyVolumeDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetDailyVolumeDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveDailyVolumeDTO> response = api.curveGetDailyVolumeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
      * DailyVolumes (historical)
      *
      * Gets daily volumes.
@@ -347,24 +203,6 @@ public class CurveApiTest {
         OffsetDateTime endDate = null;
         String poolId = null;
         List<CurveDailyVolumeDTO> response = api.curveGetDailyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * ExchangeDTOs (historical) 🔥
-     *
-     * Gets ExchangeDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetExchangeDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveExchangeDTO> response = api.curveGetExchangeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 
@@ -387,24 +225,6 @@ public class CurveApiTest {
     }
 
     /**
-     * FeeChangeLogDTOs (historical) 🔥
-     *
-     * Gets FeeChangeLogDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetFeeChangeLogDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveFeeChangeLogDTO> response = api.curveGetFeeChangeLogDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
      * FeeChangeLogs (historical)
      *
      * Gets fee change logs.
@@ -419,168 +239,6 @@ public class CurveApiTest {
         OffsetDateTime endDate = null;
         String poolId = null;
         List<CurveFeeChangeLogDTO> response = api.curveGetFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * GaugeDTOs (historical) 🔥
-     *
-     * Gets GaugeDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetGaugeDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveGaugeDTO> response = api.curveGetGaugeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * GaugeDepositDTOs (historical) 🔥
-     *
-     * Gets GaugeDepositDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetGaugeDepositDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveGaugeDepositDTO> response = api.curveGetGaugeDepositDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * GaugeLiquidityDTOs (historical) 🔥
-     *
-     * Gets GaugeLiquidityDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetGaugeLiquidityDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveGaugeLiquidityDTO> response = api.curveGetGaugeLiquidityDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * GaugeTotalWeightDTOs (historical) 🔥
-     *
-     * Gets GaugeTotalWeightDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetGaugeTotalWeightDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveGaugeTotalWeightDTO> response = api.curveGetGaugeTotalWeightDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * GaugeTypeDTOs (historical) 🔥
-     *
-     * Gets GaugeTypeDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetGaugeTypeDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveGaugeTypeDTO> response = api.curveGetGaugeTypeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * GaugeTypeWeightDTOs (historical) 🔥
-     *
-     * Gets GaugeTypeWeightDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetGaugeTypeWeightDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveGaugeTypeWeightDTO> response = api.curveGetGaugeTypeWeightDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * GaugeWeightDTOs (historical) 🔥
-     *
-     * Gets GaugeWeightDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetGaugeWeightDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveGaugeWeightDTO> response = api.curveGetGaugeWeightDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * GaugeWeightVoteDTOs (historical) 🔥
-     *
-     * Gets GaugeWeightVoteDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetGaugeWeightVoteDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveGaugeWeightVoteDTO> response = api.curveGetGaugeWeightVoteDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * GaugeWithdrawDTOs (historical) 🔥
-     *
-     * Gets GaugeWithdrawDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetGaugeWithdrawDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveGaugeWithdrawDTO> response = api.curveGetGaugeWithdrawDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 
@@ -739,24 +397,6 @@ public class CurveApiTest {
     }
 
     /**
-     * HourlyVolumeDTOs (historical) 🔥
-     *
-     * Gets HourlyVolumeDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetHourlyVolumeDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveHourlyVolumeDTO> response = api.curveGetHourlyVolumeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
      * HourlyVolumes (historical)
      *
      * Gets hourly volumes.
@@ -771,24 +411,6 @@ public class CurveApiTest {
         OffsetDateTime endDate = null;
         String poolId = null;
         List<CurveHourlyVolumeDTO> response = api.curveGetHourlyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * LpTokenDTOs (historical) 🔥
-     *
-     * Gets LpTokenDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetLpTokenDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveLpTokenDTO> response = api.curveGetLpTokenDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 
@@ -811,24 +433,6 @@ public class CurveApiTest {
     }
 
     /**
-     * PoolDTOs (historical) 🔥
-     *
-     * Gets PoolDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetPoolDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurvePoolDTO> response = api.curveGetPoolDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
      * Pools (historical) 🔥
      *
      * Gets pools.
@@ -843,42 +447,6 @@ public class CurveApiTest {
         OffsetDateTime endDate = null;
         String poolId = null;
         List<CurvePoolDTO> response = api.curveGetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * ProposalDTOs (historical) 🔥
-     *
-     * Gets ProposalDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetProposalDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveProposalDTO> response = api.curveGetProposalDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * ProposalVoteDTOs (historical) 🔥
-     *
-     * Gets ProposalVoteDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetProposalVoteDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveProposalVoteDTO> response = api.curveGetProposalVoteDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 
@@ -917,24 +485,6 @@ public class CurveApiTest {
     }
 
     /**
-     * RemoveLiquidityEventDTOs (historical) 🔥
-     *
-     * Gets RemoveLiquidityEventDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetRemoveLiquidityEventDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveRemoveLiquidityEventDTO> response = api.curveGetRemoveLiquidityEventDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
      * RemoveLiquidityEvents (historical)
      *
      * Gets remove liquidity events.
@@ -949,24 +499,6 @@ public class CurveApiTest {
         OffsetDateTime endDate = null;
         String poolId = null;
         List<CurveRemoveLiquidityEventDTO> response = api.curveGetRemoveLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * RemoveLiquidityOneEventDTOs (historical) 🔥
-     *
-     * Gets RemoveLiquidityOneEventDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetRemoveLiquidityOneEventDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveRemoveLiquidityOneEventDTO> response = api.curveGetRemoveLiquidityOneEventDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 
@@ -989,24 +521,6 @@ public class CurveApiTest {
     }
 
     /**
-     * SystemStateDTOs (historical) 🔥
-     *
-     * Gets SystemStateDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetSystemStateDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveSystemStateDTO> response = api.curveGetSystemStateDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
      * SystemStates (historical)
      *
      * Gets system states.
@@ -1020,24 +534,6 @@ public class CurveApiTest {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         List<CurveSystemStateDTO> response = api.curveGetSystemStatesHistorical(startBlock, endBlock, startDate, endDate);
-        // TODO: test validations
-    }
-
-    /**
-     * TokenDTOs (historical) 🔥
-     *
-     * Gets TokenDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetTokenDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveTokenDTO> response = api.curveGetTokenDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 
@@ -1060,24 +556,6 @@ public class CurveApiTest {
     }
 
     /**
-     * TransferOwnershipEventDTOs (historical) 🔥
-     *
-     * Gets TransferOwnershipEventDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetTransferOwnershipEventDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveTransferOwnershipEventDTO> response = api.curveGetTransferOwnershipEventDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
      * TransferOwnershipEvents (historical)
      *
      * Gets transfer ownership events.
@@ -1092,24 +570,6 @@ public class CurveApiTest {
         OffsetDateTime endDate = null;
         String poolId = null;
         List<CurveTransferOwnershipEventDTO> response = api.curveGetTransferOwnershipEventsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * UnderlyingCoinDTOs (historical) 🔥
-     *
-     * Gets UnderlyingCoinDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetUnderlyingCoinDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveUnderlyingCoinDTO> response = api.curveGetUnderlyingCoinDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 
@@ -1132,24 +592,6 @@ public class CurveApiTest {
     }
 
     /**
-     * VotingAppDTOs (historical) 🔥
-     *
-     * Gets VotingAppDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetVotingAppDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveVotingAppDTO> response = api.curveGetVotingAppDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
      * VotingApps (historical)
      *
      * Gets voting apps.
@@ -1163,24 +605,6 @@ public class CurveApiTest {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         List<CurveVotingAppDTO> response = api.curveGetVotingAppsHistorical(startBlock, endBlock, startDate, endDate);
-        // TODO: test validations
-    }
-
-    /**
-     * WeeklyVolumeDTOs (historical) 🔥
-     *
-     * Gets WeeklyVolumeDTOs.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void curveGetWeeklyVolumeDTOsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<CurveWeeklyVolumeDTO> response = api.curveGetWeeklyVolumeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 

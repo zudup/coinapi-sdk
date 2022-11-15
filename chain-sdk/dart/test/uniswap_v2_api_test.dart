@@ -17,30 +17,12 @@ void main() {
   // final instance = UniswapV2Api();
 
   group('tests for UniswapV2Api', () {
-    // BundleV2DTOs (historical) 🔥
-    //
-    // Gets BundleV2DTOs.
-    //
-    //Future<List<UniswapV2BundleV2DTO>> uniswapV2GetBundleV2DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test uniswapV2GetBundleV2DTOsHistorical', () async {
-      // TODO
-    });
-
     // Bundles (historical)
     //
     // Gets bundles.
     //
     //Future<List<UniswapV2BundleV2DTO>> uniswapV2GetBundlesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
     test('test uniswapV2GetBundlesHistorical', () async {
-      // TODO
-    });
-
-    // BurnV2DTOs (historical) 🔥
-    //
-    // Gets BurnV2DTOs.
-    //
-    //Future<List<UniswapV2BurnV2DTO>> uniswapV2GetBurnV2DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test uniswapV2GetBurnV2DTOsHistorical', () async {
       // TODO
     });
 
@@ -71,24 +53,6 @@ void main() {
       // TODO
     });
 
-    // LiquidityPositionSnapshotV2DTOs (historical) 🔥
-    //
-    // Gets LiquidityPositionSnapshotV2DTOs.
-    //
-    //Future<List<UniswapV2LiquidityPositionSnapshotV2DTO>> uniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test uniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical', () async {
-      // TODO
-    });
-
-    // LiquidityPositionV2DTOs (historical) 🔥
-    //
-    // Gets LiquidityPositionV2DTOs.
-    //
-    //Future<List<UniswapV2LiquidityPositionV2DTO>> uniswapV2GetLiquidityPositionV2DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test uniswapV2GetLiquidityPositionV2DTOsHistorical', () async {
-      // TODO
-    });
-
     // LiquidityPositions (historical)
     //
     // Gets liquidity positions.
@@ -107,48 +71,12 @@ void main() {
       // TODO
     });
 
-    // MintV2DTOs (historical) 🔥
-    //
-    // Gets MintV2DTOs.
-    //
-    //Future<List<UniswapV2MintV2DTO>> uniswapV2GetMintV2DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test uniswapV2GetMintV2DTOsHistorical', () async {
-      // TODO
-    });
-
     // Mints (historical)
     //
     // Gets mints.
     //
     //Future<List<UniswapV2MintV2DTO>> uniswapV2GetMintsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test uniswapV2GetMintsHistorical', () async {
-      // TODO
-    });
-
-    // PairDayDataV2DTOs (historical) 🔥
-    //
-    // Gets PairDayDataV2DTOs.
-    //
-    //Future<List<UniswapV2PairDayDataV2DTO>> uniswapV2GetPairDayDataV2DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test uniswapV2GetPairDayDataV2DTOsHistorical', () async {
-      // TODO
-    });
-
-    // PairHourDataV2DTOs (historical) 🔥
-    //
-    // Gets PairHourDataV2DTOs.
-    //
-    //Future<List<UniswapV2PairHourDataV2DTO>> uniswapV2GetPairHourDataV2DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test uniswapV2GetPairHourDataV2DTOsHistorical', () async {
-      // TODO
-    });
-
-    // PairV2DTOs (historical) 🔥
-    //
-    // Gets PairV2DTOs.
-    //
-    //Future<List<UniswapV2PairV2DTO>> uniswapV2GetPairV2DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test uniswapV2GetPairV2DTOsHistorical', () async {
       // TODO
     });
 
@@ -188,15 +116,6 @@ void main() {
       // TODO
     });
 
-    // SwapV2DTOs (historical) 🔥
-    //
-    // Gets SwapV2DTOs.
-    //
-    //Future<List<UniswapV2SwapV2DTO>> uniswapV2GetSwapV2DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test uniswapV2GetSwapV2DTOsHistorical', () async {
-      // TODO
-    });
-
     // Swaps (current) 🔥
     //
     // Gets swaps.
@@ -212,24 +131,6 @@ void main() {
     //
     //Future<List<UniswapV2SwapV2DTO>> uniswapV2GetSwapsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test uniswapV2GetSwapsHistorical', () async {
-      // TODO
-    });
-
-    // TokenDayDataV2DTOs (historical) 🔥
-    //
-    // Gets TokenDayDataV2DTOs.
-    //
-    //Future<List<UniswapV2TokenDayDataV2DTO>> uniswapV2GetTokenDayDataV2DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test uniswapV2GetTokenDayDataV2DTOsHistorical', () async {
-      // TODO
-    });
-
-    // TokenV2DTOs (historical) 🔥
-    //
-    // Gets TokenV2DTOs.
-    //
-    //Future<List<UniswapV2TokenV2DTO>> uniswapV2GetTokenV2DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test uniswapV2GetTokenV2DTOsHistorical', () async {
       // TODO
     });
 
@@ -260,48 +161,12 @@ void main() {
       // TODO
     });
 
-    // TransactionV2DTOs (historical) 🔥
-    //
-    // Gets TransactionV2DTOs.
-    //
-    //Future<List<UniswapV2TransactionV2DTO>> uniswapV2GetTransactionV2DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test uniswapV2GetTransactionV2DTOsHistorical', () async {
-      // TODO
-    });
-
     // Transactions (historical)
     //
     // Gets transactions.
     //
     //Future<List<UniswapV2TransactionV2DTO>> uniswapV2GetTransactionsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
     test('test uniswapV2GetTransactionsHistorical', () async {
-      // TODO
-    });
-
-    // UniswapDayDataV2DTOs (historical) 🔥
-    //
-    // Gets UniswapDayDataV2DTOs.
-    //
-    //Future<List<UniswapV2UniswapDayDataV2DTO>> uniswapV2GetUniswapDayDataV2DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test uniswapV2GetUniswapDayDataV2DTOsHistorical', () async {
-      // TODO
-    });
-
-    // UniswapFactoryV2DTOs (historical) 🔥
-    //
-    // Gets UniswapFactoryV2DTOs.
-    //
-    //Future<List<UniswapV2UniswapFactoryV2DTO>> uniswapV2GetUniswapFactoryV2DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test uniswapV2GetUniswapFactoryV2DTOsHistorical', () async {
-      // TODO
-    });
-
-    // UserV2DTOs (historical) 🔥
-    //
-    // Gets UserV2DTOs.
-    //
-    //Future<List<UniswapV2UserV2DTO>> uniswapV2GetUserV2DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
-    test('test uniswapV2GetUserV2DTOsHistorical', () async {
       // TODO
     });
 

@@ -15,22 +15,8 @@ Please update as you see appropriate
 ]]
 describe("dex_api", function()
   local openapiclient_dex_api = require "openapiclient.api.dex_api"
-  -- unit tests for dex_get_batch_dtos__historical
-  describe("dex_get_batch_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for dex_get_batches__historical
   describe("dex_get_batches__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for dex_get_deposit_dtos__historical
-  describe("dex_get_deposit_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -43,13 +29,6 @@ describe("dex_api", function()
     end)
   end)
 
-  -- unit tests for dex_get_order_dtos__historical
-  describe("dex_get_order_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for dex_get_orders__historical
   describe("dex_get_orders__historical test", function()
     it("should work", function()
@@ -57,22 +36,8 @@ describe("dex_api", function()
     end)
   end)
 
-  -- unit tests for dex_get_price_dtos__historical
-  describe("dex_get_price_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for dex_get_prices__historical
   describe("dex_get_prices__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for dex_get_solution_dtos__historical
-  describe("dex_get_solution_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -92,29 +57,8 @@ describe("dex_api", function()
     end)
   end)
 
-  -- unit tests for dex_get_stats_dtos__historical
-  describe("dex_get_stats_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for dex_get_token_dtos__historical
-  describe("dex_get_token_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for dex_get_tokens__historical
   describe("dex_get_tokens__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for dex_get_trade_dtos__historical
-  describe("dex_get_trade_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -127,29 +71,8 @@ describe("dex_api", function()
     end)
   end)
 
-  -- unit tests for dex_get_user_dtos__historical
-  describe("dex_get_user_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for dex_get_users__historical
   describe("dex_get_users__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for dex_get_withdraw_dtos__historical
-  describe("dex_get_withdraw_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for dex_get_withdraw_request_dtos__historical
-  describe("dex_get_withdraw_request_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

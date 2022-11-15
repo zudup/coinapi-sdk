@@ -64,22 +64,6 @@ namespace CoinAPI.EMS.REST.V1.Test
 
         
         /// <summary>
-        /// Test CowGetOrderDTOsHistorical
-        /// </summary>
-        [Test]
-        public void CowGetOrderDTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.CowGetOrderDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<CowOrderDTO>), response, "response is List<CowOrderDTO>");
-        }
-        
-        /// <summary>
         /// Test CowGetOrdersHistorical
         /// </summary>
         [Test]
@@ -95,22 +79,6 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test CowGetSettlementDTOsHistorical
-        /// </summary>
-        [Test]
-        public void CowGetSettlementDTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.CowGetSettlementDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<CowSettlementDTO>), response, "response is List<CowSettlementDTO>");
-        }
-        
-        /// <summary>
         /// Test CowGetSettlementsHistorical
         /// </summary>
         [Test]
@@ -123,22 +91,6 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? endDate = null;
             //var response = instance.CowGetSettlementsHistorical(startBlock, endBlock, startDate, endDate);
             //Assert.IsInstanceOf(typeof(List<CowSettlementDTO>), response, "response is List<CowSettlementDTO>");
-        }
-        
-        /// <summary>
-        /// Test CowGetTokenDTOsHistorical
-        /// </summary>
-        [Test]
-        public void CowGetTokenDTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.CowGetTokenDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<CowTokenDTO>), response, "response is List<CowTokenDTO>");
         }
         
         /// <summary>
@@ -158,22 +110,6 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test CowGetTradeDTOsHistorical
-        /// </summary>
-        [Test]
-        public void CowGetTradeDTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.CowGetTradeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<CowTradeDTO>), response, "response is List<CowTradeDTO>");
-        }
-        
-        /// <summary>
         /// Test CowGetTradesHistorical
         /// </summary>
         [Test]
@@ -186,22 +122,6 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? endDate = null;
             //var response = instance.CowGetTradesHistorical(startBlock, endBlock, startDate, endDate);
             //Assert.IsInstanceOf(typeof(List<CowTradeDTO>), response, "response is List<CowTradeDTO>");
-        }
-        
-        /// <summary>
-        /// Test CowGetUserDTOsHistorical
-        /// </summary>
-        [Test]
-        public void CowGetUserDTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.CowGetUserDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<CowUserDTO>), response, "response is List<CowUserDTO>");
         }
         
         /// <summary>

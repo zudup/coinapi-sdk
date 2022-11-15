@@ -24,41 +24,6 @@ class UniswapV3Api {
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
-    def uniswapV3GetBundleV3DTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/BundleV3DTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV3BundleV3DTO.class )
-
-    }
-
     def uniswapV3GetBundlesCurrent ( Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/uniswapv3/bundles/current"
 
@@ -80,7 +45,7 @@ class UniswapV3Api {
     }
 
     def uniswapV3GetBundlesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/bundles/historical"
+        String resourcePath = "/dapps/uniswapv3/bundles/historical-manual"
 
         // params
         def queryParams = [:]
@@ -108,41 +73,6 @@ class UniswapV3Api {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     UniswapV3BundleV3DTO.class )
-
-    }
-
-    def uniswapV3GetBurnV3DTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/BurnV3DTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV3BurnV3DTO.class )
 
     }
 
@@ -170,7 +100,7 @@ class UniswapV3Api {
     }
 
     def uniswapV3GetBurnsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/burns/historical"
+        String resourcePath = "/dapps/uniswapv3/burns/historical-manual"
 
         // params
         def queryParams = [:]
@@ -225,7 +155,7 @@ class UniswapV3Api {
     }
 
     def uniswapV3GetDayDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/dayData/historical"
+        String resourcePath = "/dapps/uniswapv3/dayData/historical-manual"
 
         // params
         def queryParams = [:]
@@ -277,7 +207,7 @@ class UniswapV3Api {
     }
 
     def uniswapV3GetFactoryHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/factory/historical"
+        String resourcePath = "/dapps/uniswapv3/factory/historical-manual"
 
         // params
         def queryParams = [:]
@@ -305,76 +235,6 @@ class UniswapV3Api {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     UniswapV3FactoryV3DTO.class )
-
-    }
-
-    def uniswapV3GetFactoryV3DTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/FactoryV3DTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV3FactoryV3DTO.class )
-
-    }
-
-    def uniswapV3GetMintV3DTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/MintV3DTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV3MintV3DTO.class )
 
     }
 
@@ -402,7 +262,7 @@ class UniswapV3Api {
     }
 
     def uniswapV3GetMintsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/mints/historical"
+        String resourcePath = "/dapps/uniswapv3/mints/historical-manual"
 
         // params
         def queryParams = [:]
@@ -433,111 +293,6 @@ class UniswapV3Api {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     UniswapV3MintV3DTO.class )
-
-    }
-
-    def uniswapV3GetPoolDayDataV3DTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/PoolDayDataV3DTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV3PoolDayDataV3DTO.class )
-
-    }
-
-    def uniswapV3GetPoolHourDataV3DTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/PoolHourDataV3DTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV3PoolHourDataV3DTO.class )
-
-    }
-
-    def uniswapV3GetPoolV3DTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/PoolV3DTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV3PoolV3DTO.class )
 
     }
 
@@ -588,7 +343,7 @@ class UniswapV3Api {
     }
 
     def uniswapV3GetPoolsDayDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/poolsDayData/historical"
+        String resourcePath = "/dapps/uniswapv3/poolsDayData/historical-manual"
 
         // params
         def queryParams = [:]
@@ -623,7 +378,7 @@ class UniswapV3Api {
     }
 
     def uniswapV3GetPoolsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/pools/historical"
+        String resourcePath = "/dapps/uniswapv3/pools/historical-manual"
 
         // params
         def queryParams = [:]
@@ -681,7 +436,7 @@ class UniswapV3Api {
     }
 
     def uniswapV3GetPoolsHourDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/poolsHourData/historical"
+        String resourcePath = "/dapps/uniswapv3/poolsHourData/historical-manual"
 
         // params
         def queryParams = [:]
@@ -715,76 +470,6 @@ class UniswapV3Api {
 
     }
 
-    def uniswapV3GetPositionSnapshotV3DTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/PositionSnapshotV3DTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV3PositionSnapshotV3DTO.class )
-
-    }
-
-    def uniswapV3GetPositionV3DTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/PositionV3DTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV3PositionV3DTO.class )
-
-    }
-
     def uniswapV3GetPositionsCurrent ( String filterPoolId, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/uniswapv3/positions/current"
 
@@ -809,7 +494,7 @@ class UniswapV3Api {
     }
 
     def uniswapV3GetPositionsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/positions/historical"
+        String resourcePath = "/dapps/uniswapv3/positions/historical-manual"
 
         // params
         def queryParams = [:]
@@ -844,7 +529,7 @@ class UniswapV3Api {
     }
 
     def uniswapV3GetPositionsSnaphotsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/positionsSnapshots/historical"
+        String resourcePath = "/dapps/uniswapv3/positionsSnapshots/historical-manual"
 
         // params
         def queryParams = [:]
@@ -901,41 +586,6 @@ class UniswapV3Api {
 
     }
 
-    def uniswapV3GetSwapV3DTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/SwapV3DTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV3SwapV3DTO.class )
-
-    }
-
     def uniswapV3GetSwapsCurrent ( String filterPoolId, Closure onSuccess, Closure onFailure)  {
         String resourcePath = "/dapps/uniswapv3/swaps/current"
 
@@ -960,7 +610,7 @@ class UniswapV3Api {
     }
 
     def uniswapV3GetSwapsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/swaps/historical"
+        String resourcePath = "/dapps/uniswapv3/swaps/historical-manual"
 
         // params
         def queryParams = [:]
@@ -991,76 +641,6 @@ class UniswapV3Api {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     UniswapV3SwapV3DTO.class )
-
-    }
-
-    def uniswapV3GetTickDayDataV3DTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/TickDayDataV3DTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV3TickDayDataV3DTO.class )
-
-    }
-
-    def uniswapV3GetTickV3DTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/TickV3DTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV3TickV3DTO.class )
 
     }
 
@@ -1111,7 +691,7 @@ class UniswapV3Api {
     }
 
     def uniswapV3GetTicksDayDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/ticksDayData/historical"
+        String resourcePath = "/dapps/uniswapv3/ticksDayData/historical-manual"
 
         // params
         def queryParams = [:]
@@ -1146,7 +726,7 @@ class UniswapV3Api {
     }
 
     def uniswapV3GetTicksHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/ticks/historical"
+        String resourcePath = "/dapps/uniswapv3/ticks/historical-manual"
 
         // params
         def queryParams = [:]
@@ -1177,111 +757,6 @@ class UniswapV3Api {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     UniswapV3TickV3DTO.class )
-
-    }
-
-    def uniswapV3GetTokenHourDataV3DTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/TokenHourDataV3DTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV3TokenHourDataV3DTO.class )
-
-    }
-
-    def uniswapV3GetTokenV3DTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/TokenV3DTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV3TokenV3DTO.class )
-
-    }
-
-    def uniswapV3GetTokenV3DayDataDTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/TokenV3DayDataDTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV3TokenV3DayDataDTO.class )
 
     }
 
@@ -1332,7 +807,7 @@ class UniswapV3Api {
     }
 
     def uniswapV3GetTokensDayDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/tokensDayData/historical"
+        String resourcePath = "/dapps/uniswapv3/tokensDayData/historical-manual"
 
         // params
         def queryParams = [:]
@@ -1367,7 +842,7 @@ class UniswapV3Api {
     }
 
     def uniswapV3GetTokensHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/tokens/historical"
+        String resourcePath = "/dapps/uniswapv3/tokens/historical-manual"
 
         // params
         def queryParams = [:]
@@ -1425,7 +900,7 @@ class UniswapV3Api {
     }
 
     def uniswapV3GetTokensHourDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String tokenId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/tokensHourData/historical"
+        String resourcePath = "/dapps/uniswapv3/tokensHourData/historical-manual"
 
         // params
         def queryParams = [:]
@@ -1459,43 +934,8 @@ class UniswapV3Api {
 
     }
 
-    def uniswapV3GetTransactionV3DTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/TransactionV3DTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV3TransactionV3DTO.class )
-
-    }
-
     def uniswapV3GetTransactionsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/transactions/historical"
+        String resourcePath = "/dapps/uniswapv3/transactions/historical-manual"
 
         // params
         def queryParams = [:]
@@ -1523,41 +963,6 @@ class UniswapV3Api {
         apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
                     "GET", "array",
                     UniswapV3TransactionV3DTO.class )
-
-    }
-
-    def uniswapV3GetUniswapDayDataV3DTOsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String poolId, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/UniswapDayDataV3DTOs/historical"
-
-        // params
-        def queryParams = [:]
-        def headerParams = [:]
-        def bodyParams
-        def contentType
-
-
-        if (startBlock != null) {
-            queryParams.put("startBlock", startBlock)
-        }
-        if (endBlock != null) {
-            queryParams.put("endBlock", endBlock)
-        }
-        if (startDate != null) {
-            queryParams.put("startDate", startDate)
-        }
-        if (endDate != null) {
-            queryParams.put("endDate", endDate)
-        }
-        if (poolId != null) {
-            queryParams.put("poolId", poolId)
-        }
-
-
-
-
-        apiUtils.invokeApi(onSuccess, onFailure, basePath, versionPath, resourcePath, queryParams, headerParams, bodyParams, contentType,
-                    "GET", "array",
-                    UniswapV3UniswapDayDataV3DTO.class )
 
     }
 

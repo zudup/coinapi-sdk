@@ -30,17 +30,6 @@ my $api = WWW::OpenAPIClient::DexApi->new();
 isa_ok($api, 'WWW::OpenAPIClient::DexApi');
 
 #
-# dex_get_batch_dtos__historical test
-#
-# uncomment below and update the test
-#my $dex_get_batch_dtos__historical_start_block = undef; # replace NULL with a proper value
-#my $dex_get_batch_dtos__historical_end_block = undef; # replace NULL with a proper value
-#my $dex_get_batch_dtos__historical_start_date = undef; # replace NULL with a proper value
-#my $dex_get_batch_dtos__historical_end_date = undef; # replace NULL with a proper value
-#my $dex_get_batch_dtos__historical_pool_id = undef; # replace NULL with a proper value
-#my $dex_get_batch_dtos__historical_result = $api->dex_get_batch_dtos__historical(start_block => $dex_get_batch_dtos__historical_start_block, end_block => $dex_get_batch_dtos__historical_end_block, start_date => $dex_get_batch_dtos__historical_start_date, end_date => $dex_get_batch_dtos__historical_end_date, pool_id => $dex_get_batch_dtos__historical_pool_id);
-
-#
 # dex_get_batches__historical test
 #
 # uncomment below and update the test
@@ -49,17 +38,6 @@ isa_ok($api, 'WWW::OpenAPIClient::DexApi');
 #my $dex_get_batches__historical_start_date = undef; # replace NULL with a proper value
 #my $dex_get_batches__historical_end_date = undef; # replace NULL with a proper value
 #my $dex_get_batches__historical_result = $api->dex_get_batches__historical(start_block => $dex_get_batches__historical_start_block, end_block => $dex_get_batches__historical_end_block, start_date => $dex_get_batches__historical_start_date, end_date => $dex_get_batches__historical_end_date);
-
-#
-# dex_get_deposit_dtos__historical test
-#
-# uncomment below and update the test
-#my $dex_get_deposit_dtos__historical_start_block = undef; # replace NULL with a proper value
-#my $dex_get_deposit_dtos__historical_end_block = undef; # replace NULL with a proper value
-#my $dex_get_deposit_dtos__historical_start_date = undef; # replace NULL with a proper value
-#my $dex_get_deposit_dtos__historical_end_date = undef; # replace NULL with a proper value
-#my $dex_get_deposit_dtos__historical_pool_id = undef; # replace NULL with a proper value
-#my $dex_get_deposit_dtos__historical_result = $api->dex_get_deposit_dtos__historical(start_block => $dex_get_deposit_dtos__historical_start_block, end_block => $dex_get_deposit_dtos__historical_end_block, start_date => $dex_get_deposit_dtos__historical_start_date, end_date => $dex_get_deposit_dtos__historical_end_date, pool_id => $dex_get_deposit_dtos__historical_pool_id);
 
 #
 # dex_get_deposits__historical test
@@ -73,17 +51,6 @@ isa_ok($api, 'WWW::OpenAPIClient::DexApi');
 #my $dex_get_deposits__historical_result = $api->dex_get_deposits__historical(start_block => $dex_get_deposits__historical_start_block, end_block => $dex_get_deposits__historical_end_block, start_date => $dex_get_deposits__historical_start_date, end_date => $dex_get_deposits__historical_end_date, token_id => $dex_get_deposits__historical_token_id);
 
 #
-# dex_get_order_dtos__historical test
-#
-# uncomment below and update the test
-#my $dex_get_order_dtos__historical_start_block = undef; # replace NULL with a proper value
-#my $dex_get_order_dtos__historical_end_block = undef; # replace NULL with a proper value
-#my $dex_get_order_dtos__historical_start_date = undef; # replace NULL with a proper value
-#my $dex_get_order_dtos__historical_end_date = undef; # replace NULL with a proper value
-#my $dex_get_order_dtos__historical_pool_id = undef; # replace NULL with a proper value
-#my $dex_get_order_dtos__historical_result = $api->dex_get_order_dtos__historical(start_block => $dex_get_order_dtos__historical_start_block, end_block => $dex_get_order_dtos__historical_end_block, start_date => $dex_get_order_dtos__historical_start_date, end_date => $dex_get_order_dtos__historical_end_date, pool_id => $dex_get_order_dtos__historical_pool_id);
-
-#
 # dex_get_orders__historical test
 #
 # uncomment below and update the test
@@ -95,17 +62,6 @@ isa_ok($api, 'WWW::OpenAPIClient::DexApi');
 #my $dex_get_orders__historical_result = $api->dex_get_orders__historical(start_block => $dex_get_orders__historical_start_block, end_block => $dex_get_orders__historical_end_block, start_date => $dex_get_orders__historical_start_date, end_date => $dex_get_orders__historical_end_date, token_id => $dex_get_orders__historical_token_id);
 
 #
-# dex_get_price_dtos__historical test
-#
-# uncomment below and update the test
-#my $dex_get_price_dtos__historical_start_block = undef; # replace NULL with a proper value
-#my $dex_get_price_dtos__historical_end_block = undef; # replace NULL with a proper value
-#my $dex_get_price_dtos__historical_start_date = undef; # replace NULL with a proper value
-#my $dex_get_price_dtos__historical_end_date = undef; # replace NULL with a proper value
-#my $dex_get_price_dtos__historical_pool_id = undef; # replace NULL with a proper value
-#my $dex_get_price_dtos__historical_result = $api->dex_get_price_dtos__historical(start_block => $dex_get_price_dtos__historical_start_block, end_block => $dex_get_price_dtos__historical_end_block, start_date => $dex_get_price_dtos__historical_start_date, end_date => $dex_get_price_dtos__historical_end_date, pool_id => $dex_get_price_dtos__historical_pool_id);
-
-#
 # dex_get_prices__historical test
 #
 # uncomment below and update the test
@@ -115,17 +71,6 @@ isa_ok($api, 'WWW::OpenAPIClient::DexApi');
 #my $dex_get_prices__historical_end_date = undef; # replace NULL with a proper value
 #my $dex_get_prices__historical_token_id = undef; # replace NULL with a proper value
 #my $dex_get_prices__historical_result = $api->dex_get_prices__historical(start_block => $dex_get_prices__historical_start_block, end_block => $dex_get_prices__historical_end_block, start_date => $dex_get_prices__historical_start_date, end_date => $dex_get_prices__historical_end_date, token_id => $dex_get_prices__historical_token_id);
-
-#
-# dex_get_solution_dtos__historical test
-#
-# uncomment below and update the test
-#my $dex_get_solution_dtos__historical_start_block = undef; # replace NULL with a proper value
-#my $dex_get_solution_dtos__historical_end_block = undef; # replace NULL with a proper value
-#my $dex_get_solution_dtos__historical_start_date = undef; # replace NULL with a proper value
-#my $dex_get_solution_dtos__historical_end_date = undef; # replace NULL with a proper value
-#my $dex_get_solution_dtos__historical_pool_id = undef; # replace NULL with a proper value
-#my $dex_get_solution_dtos__historical_result = $api->dex_get_solution_dtos__historical(start_block => $dex_get_solution_dtos__historical_start_block, end_block => $dex_get_solution_dtos__historical_end_block, start_date => $dex_get_solution_dtos__historical_start_date, end_date => $dex_get_solution_dtos__historical_end_date, pool_id => $dex_get_solution_dtos__historical_pool_id);
 
 #
 # dex_get_solutions__historical test
@@ -149,28 +94,6 @@ isa_ok($api, 'WWW::OpenAPIClient::DexApi');
 #my $dex_get_stats__historical_result = $api->dex_get_stats__historical(start_block => $dex_get_stats__historical_start_block, end_block => $dex_get_stats__historical_end_block, start_date => $dex_get_stats__historical_start_date, end_date => $dex_get_stats__historical_end_date);
 
 #
-# dex_get_stats_dtos__historical test
-#
-# uncomment below and update the test
-#my $dex_get_stats_dtos__historical_start_block = undef; # replace NULL with a proper value
-#my $dex_get_stats_dtos__historical_end_block = undef; # replace NULL with a proper value
-#my $dex_get_stats_dtos__historical_start_date = undef; # replace NULL with a proper value
-#my $dex_get_stats_dtos__historical_end_date = undef; # replace NULL with a proper value
-#my $dex_get_stats_dtos__historical_pool_id = undef; # replace NULL with a proper value
-#my $dex_get_stats_dtos__historical_result = $api->dex_get_stats_dtos__historical(start_block => $dex_get_stats_dtos__historical_start_block, end_block => $dex_get_stats_dtos__historical_end_block, start_date => $dex_get_stats_dtos__historical_start_date, end_date => $dex_get_stats_dtos__historical_end_date, pool_id => $dex_get_stats_dtos__historical_pool_id);
-
-#
-# dex_get_token_dtos__historical test
-#
-# uncomment below and update the test
-#my $dex_get_token_dtos__historical_start_block = undef; # replace NULL with a proper value
-#my $dex_get_token_dtos__historical_end_block = undef; # replace NULL with a proper value
-#my $dex_get_token_dtos__historical_start_date = undef; # replace NULL with a proper value
-#my $dex_get_token_dtos__historical_end_date = undef; # replace NULL with a proper value
-#my $dex_get_token_dtos__historical_pool_id = undef; # replace NULL with a proper value
-#my $dex_get_token_dtos__historical_result = $api->dex_get_token_dtos__historical(start_block => $dex_get_token_dtos__historical_start_block, end_block => $dex_get_token_dtos__historical_end_block, start_date => $dex_get_token_dtos__historical_start_date, end_date => $dex_get_token_dtos__historical_end_date, pool_id => $dex_get_token_dtos__historical_pool_id);
-
-#
 # dex_get_tokens__historical test
 #
 # uncomment below and update the test
@@ -180,17 +103,6 @@ isa_ok($api, 'WWW::OpenAPIClient::DexApi');
 #my $dex_get_tokens__historical_end_date = undef; # replace NULL with a proper value
 #my $dex_get_tokens__historical_token_id = undef; # replace NULL with a proper value
 #my $dex_get_tokens__historical_result = $api->dex_get_tokens__historical(start_block => $dex_get_tokens__historical_start_block, end_block => $dex_get_tokens__historical_end_block, start_date => $dex_get_tokens__historical_start_date, end_date => $dex_get_tokens__historical_end_date, token_id => $dex_get_tokens__historical_token_id);
-
-#
-# dex_get_trade_dtos__historical test
-#
-# uncomment below and update the test
-#my $dex_get_trade_dtos__historical_start_block = undef; # replace NULL with a proper value
-#my $dex_get_trade_dtos__historical_end_block = undef; # replace NULL with a proper value
-#my $dex_get_trade_dtos__historical_start_date = undef; # replace NULL with a proper value
-#my $dex_get_trade_dtos__historical_end_date = undef; # replace NULL with a proper value
-#my $dex_get_trade_dtos__historical_pool_id = undef; # replace NULL with a proper value
-#my $dex_get_trade_dtos__historical_result = $api->dex_get_trade_dtos__historical(start_block => $dex_get_trade_dtos__historical_start_block, end_block => $dex_get_trade_dtos__historical_end_block, start_date => $dex_get_trade_dtos__historical_start_date, end_date => $dex_get_trade_dtos__historical_end_date, pool_id => $dex_get_trade_dtos__historical_pool_id);
 
 #
 # dex_get_trades__historical test
@@ -203,17 +115,6 @@ isa_ok($api, 'WWW::OpenAPIClient::DexApi');
 #my $dex_get_trades__historical_result = $api->dex_get_trades__historical(start_block => $dex_get_trades__historical_start_block, end_block => $dex_get_trades__historical_end_block, start_date => $dex_get_trades__historical_start_date, end_date => $dex_get_trades__historical_end_date);
 
 #
-# dex_get_user_dtos__historical test
-#
-# uncomment below and update the test
-#my $dex_get_user_dtos__historical_start_block = undef; # replace NULL with a proper value
-#my $dex_get_user_dtos__historical_end_block = undef; # replace NULL with a proper value
-#my $dex_get_user_dtos__historical_start_date = undef; # replace NULL with a proper value
-#my $dex_get_user_dtos__historical_end_date = undef; # replace NULL with a proper value
-#my $dex_get_user_dtos__historical_pool_id = undef; # replace NULL with a proper value
-#my $dex_get_user_dtos__historical_result = $api->dex_get_user_dtos__historical(start_block => $dex_get_user_dtos__historical_start_block, end_block => $dex_get_user_dtos__historical_end_block, start_date => $dex_get_user_dtos__historical_start_date, end_date => $dex_get_user_dtos__historical_end_date, pool_id => $dex_get_user_dtos__historical_pool_id);
-
-#
 # dex_get_users__historical test
 #
 # uncomment below and update the test
@@ -222,28 +123,6 @@ isa_ok($api, 'WWW::OpenAPIClient::DexApi');
 #my $dex_get_users__historical_start_date = undef; # replace NULL with a proper value
 #my $dex_get_users__historical_end_date = undef; # replace NULL with a proper value
 #my $dex_get_users__historical_result = $api->dex_get_users__historical(start_block => $dex_get_users__historical_start_block, end_block => $dex_get_users__historical_end_block, start_date => $dex_get_users__historical_start_date, end_date => $dex_get_users__historical_end_date);
-
-#
-# dex_get_withdraw_dtos__historical test
-#
-# uncomment below and update the test
-#my $dex_get_withdraw_dtos__historical_start_block = undef; # replace NULL with a proper value
-#my $dex_get_withdraw_dtos__historical_end_block = undef; # replace NULL with a proper value
-#my $dex_get_withdraw_dtos__historical_start_date = undef; # replace NULL with a proper value
-#my $dex_get_withdraw_dtos__historical_end_date = undef; # replace NULL with a proper value
-#my $dex_get_withdraw_dtos__historical_pool_id = undef; # replace NULL with a proper value
-#my $dex_get_withdraw_dtos__historical_result = $api->dex_get_withdraw_dtos__historical(start_block => $dex_get_withdraw_dtos__historical_start_block, end_block => $dex_get_withdraw_dtos__historical_end_block, start_date => $dex_get_withdraw_dtos__historical_start_date, end_date => $dex_get_withdraw_dtos__historical_end_date, pool_id => $dex_get_withdraw_dtos__historical_pool_id);
-
-#
-# dex_get_withdraw_request_dtos__historical test
-#
-# uncomment below and update the test
-#my $dex_get_withdraw_request_dtos__historical_start_block = undef; # replace NULL with a proper value
-#my $dex_get_withdraw_request_dtos__historical_end_block = undef; # replace NULL with a proper value
-#my $dex_get_withdraw_request_dtos__historical_start_date = undef; # replace NULL with a proper value
-#my $dex_get_withdraw_request_dtos__historical_end_date = undef; # replace NULL with a proper value
-#my $dex_get_withdraw_request_dtos__historical_pool_id = undef; # replace NULL with a proper value
-#my $dex_get_withdraw_request_dtos__historical_result = $api->dex_get_withdraw_request_dtos__historical(start_block => $dex_get_withdraw_request_dtos__historical_start_block, end_block => $dex_get_withdraw_request_dtos__historical_end_block, start_date => $dex_get_withdraw_request_dtos__historical_start_date, end_date => $dex_get_withdraw_request_dtos__historical_end_date, pool_id => $dex_get_withdraw_request_dtos__historical_pool_id);
 
 #
 # dex_get_withdraws__historical test

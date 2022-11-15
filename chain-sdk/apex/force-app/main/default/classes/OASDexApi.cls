@@ -26,40 +26,6 @@ public class OASDexApi {
     }
 
     /**
-     * BatchDTOs (historical) 🔥
-     * Gets BatchDTOs.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
-     * @return List<OASDexBatchDTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASDexBatchDTO> dexGetBatchDTOsHistorical(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-        query.addAll(client.makeParam('poolId', (String) params.get('poolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASDexBatchDTO>) client.invoke(
-            'GET', '/dapps/dex/BatchDTOs/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASDexBatchDTO>.class
-        );
-    }
-    /**
      * Batches (historical)
      * Gets batches.
      * @param startBlock  (optional)
@@ -81,7 +47,7 @@ public class OASDexApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASDexBatchDTO>) client.invoke(
-            'GET', '/dapps/dex/batches/historical', '',
+            'GET', '/dapps/dex/batches/historical-manual', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -89,40 +55,6 @@ public class OASDexApi {
             new List<String>(),
             new List<String>(),
             List<OASDexBatchDTO>.class
-        );
-    }
-    /**
-     * DepositDTOs (historical) 🔥
-     * Gets DepositDTOs.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
-     * @return List<OASDexDepositDTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASDexDepositDTO> dexGetDepositDTOsHistorical(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-        query.addAll(client.makeParam('poolId', (String) params.get('poolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASDexDepositDTO>) client.invoke(
-            'GET', '/dapps/dex/DepositDTOs/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASDexDepositDTO>.class
         );
     }
     /**
@@ -149,7 +81,7 @@ public class OASDexApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASDexDepositDTO>) client.invoke(
-            'GET', '/dapps/dex/deposits/historical', '',
+            'GET', '/dapps/dex/deposits/historical-manual', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -157,40 +89,6 @@ public class OASDexApi {
             new List<String>(),
             new List<String>(),
             List<OASDexDepositDTO>.class
-        );
-    }
-    /**
-     * OrderDTOs (historical) 🔥
-     * Gets OrderDTOs.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
-     * @return List<OASDexOrderDTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASDexOrderDTO> dexGetOrderDTOsHistorical(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-        query.addAll(client.makeParam('poolId', (String) params.get('poolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASDexOrderDTO>) client.invoke(
-            'GET', '/dapps/dex/OrderDTOs/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASDexOrderDTO>.class
         );
     }
     /**
@@ -217,7 +115,7 @@ public class OASDexApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASDexOrderDTO>) client.invoke(
-            'GET', '/dapps/dex/orders/historical', '',
+            'GET', '/dapps/dex/orders/historical-manual', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -225,40 +123,6 @@ public class OASDexApi {
             new List<String>(),
             new List<String>(),
             List<OASDexOrderDTO>.class
-        );
-    }
-    /**
-     * PriceDTOs (historical) 🔥
-     * Gets PriceDTOs.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
-     * @return List<OASDexPriceDTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASDexPriceDTO> dexGetPriceDTOsHistorical(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-        query.addAll(client.makeParam('poolId', (String) params.get('poolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASDexPriceDTO>) client.invoke(
-            'GET', '/dapps/dex/PriceDTOs/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASDexPriceDTO>.class
         );
     }
     /**
@@ -285,7 +149,7 @@ public class OASDexApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASDexPriceDTO>) client.invoke(
-            'GET', '/dapps/dex/prices/historical', '',
+            'GET', '/dapps/dex/prices/historical-manual', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -293,40 +157,6 @@ public class OASDexApi {
             new List<String>(),
             new List<String>(),
             List<OASDexPriceDTO>.class
-        );
-    }
-    /**
-     * SolutionDTOs (historical) 🔥
-     * Gets SolutionDTOs.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
-     * @return List<OASDexSolutionDTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASDexSolutionDTO> dexGetSolutionDTOsHistorical(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-        query.addAll(client.makeParam('poolId', (String) params.get('poolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASDexSolutionDTO>) client.invoke(
-            'GET', '/dapps/dex/SolutionDTOs/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASDexSolutionDTO>.class
         );
     }
     /**
@@ -353,7 +183,7 @@ public class OASDexApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASDexSolutionDTO>) client.invoke(
-            'GET', '/dapps/dex/solutions/historical', '',
+            'GET', '/dapps/dex/solutions/historical-manual', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -361,40 +191,6 @@ public class OASDexApi {
             new List<String>(),
             new List<String>(),
             List<OASDexSolutionDTO>.class
-        );
-    }
-    /**
-     * StatsDTOs (historical) 🔥
-     * Gets StatsDTOs.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
-     * @return List<OASDexStatsDTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASDexStatsDTO> dexGetStatsDTOsHistorical(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-        query.addAll(client.makeParam('poolId', (String) params.get('poolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASDexStatsDTO>) client.invoke(
-            'GET', '/dapps/dex/StatsDTOs/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASDexStatsDTO>.class
         );
     }
     /**
@@ -419,7 +215,7 @@ public class OASDexApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASDexStatsDTO>) client.invoke(
-            'GET', '/dapps/dex/stats/historical', '',
+            'GET', '/dapps/dex/stats/historical-manual', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -427,40 +223,6 @@ public class OASDexApi {
             new List<String>(),
             new List<String>(),
             List<OASDexStatsDTO>.class
-        );
-    }
-    /**
-     * TokenDTOs (historical) 🔥
-     * Gets TokenDTOs.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
-     * @return List<OASDexTokenDTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASDexTokenDTO> dexGetTokenDTOsHistorical(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-        query.addAll(client.makeParam('poolId', (String) params.get('poolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASDexTokenDTO>) client.invoke(
-            'GET', '/dapps/dex/TokenDTOs/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASDexTokenDTO>.class
         );
     }
     /**
@@ -487,7 +249,7 @@ public class OASDexApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASDexTokenDTO>) client.invoke(
-            'GET', '/dapps/dex/tokens/historical', '',
+            'GET', '/dapps/dex/tokens/historical-manual', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -495,40 +257,6 @@ public class OASDexApi {
             new List<String>(),
             new List<String>(),
             List<OASDexTokenDTO>.class
-        );
-    }
-    /**
-     * TradeDTOs (historical) 🔥
-     * Gets TradeDTOs.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
-     * @return List<OASDexTradeDTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASDexTradeDTO> dexGetTradeDTOsHistorical(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-        query.addAll(client.makeParam('poolId', (String) params.get('poolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASDexTradeDTO>) client.invoke(
-            'GET', '/dapps/dex/TradeDTOs/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASDexTradeDTO>.class
         );
     }
     /**
@@ -553,7 +281,7 @@ public class OASDexApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASDexTradeDTO>) client.invoke(
-            'GET', '/dapps/dex/trades/historical', '',
+            'GET', '/dapps/dex/trades/historical-manual', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -561,40 +289,6 @@ public class OASDexApi {
             new List<String>(),
             new List<String>(),
             List<OASDexTradeDTO>.class
-        );
-    }
-    /**
-     * UserDTOs (historical) 🔥
-     * Gets UserDTOs.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
-     * @return List<OASDexUserDTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASDexUserDTO> dexGetUserDTOsHistorical(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-        query.addAll(client.makeParam('poolId', (String) params.get('poolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASDexUserDTO>) client.invoke(
-            'GET', '/dapps/dex/UserDTOs/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASDexUserDTO>.class
         );
     }
     /**
@@ -619,7 +313,7 @@ public class OASDexApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASDexUserDTO>) client.invoke(
-            'GET', '/dapps/dex/users/historical', '',
+            'GET', '/dapps/dex/users/historical-manual', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -627,74 +321,6 @@ public class OASDexApi {
             new List<String>(),
             new List<String>(),
             List<OASDexUserDTO>.class
-        );
-    }
-    /**
-     * WithdrawDTOs (historical) 🔥
-     * Gets WithdrawDTOs.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
-     * @return List<OASDexWithdrawDTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASDexWithdrawDTO> dexGetWithdrawDTOsHistorical(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-        query.addAll(client.makeParam('poolId', (String) params.get('poolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASDexWithdrawDTO>) client.invoke(
-            'GET', '/dapps/dex/WithdrawDTOs/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASDexWithdrawDTO>.class
-        );
-    }
-    /**
-     * WithdrawRequestDTOs (historical) 🔥
-     * Gets WithdrawRequestDTOs.
-     * @param startBlock  (optional)
-     * @param endBlock  (optional)
-     * @param startDate  (optional)
-     * @param endDate  (optional)
-     * @param poolId  (optional)
-     * @return List<OASDexWithdrawRequestDTO>
-     * @throws OAS.ApiException if fails to make API call
-     */
-    public List<OASDexWithdrawRequestDTO> dexGetWithdrawRequestDTOsHistorical(Map<String, Object> params) {
-        List<OAS.Param> query = new List<OAS.Param>();
-
-        // cast query params to verify their expected type
-        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
-        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
-        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
-        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
-        query.addAll(client.makeParam('poolId', (String) params.get('poolId')));
-
-        List<OAS.Param> form = new List<OAS.Param>();
-
-        return (List<OASDexWithdrawRequestDTO>) client.invoke(
-            'GET', '/dapps/dex/WithdrawRequestDTOs/historical', '',
-            query, form,
-            new Map<String, Object>(),
-            new Map<String, Object>(),
-            new List<String>{ 'text/plain', 'application/json', 'text/json' },
-            new List<String>(),
-            new List<String>(),
-            List<OASDexWithdrawRequestDTO>.class
         );
     }
     /**
@@ -721,7 +347,7 @@ public class OASDexApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASDexWithdrawDTO>) client.invoke(
-            'GET', '/dapps/dex/withdraws/historical', '',
+            'GET', '/dapps/dex/withdraws/historical-manual', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -755,7 +381,7 @@ public class OASDexApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASDexWithdrawRequestDTO>) client.invoke(
-            'GET', '/dapps/dex/withdrawsRequests/historical', '',
+            'GET', '/dapps/dex/withdrawsRequests/historical-manual', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),

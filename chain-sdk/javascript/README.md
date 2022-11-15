@@ -111,8 +111,7 @@ var opts = {
   'startBlock': 789, // {Number} 
   'endBlock': 789, // {Number} 
   'startDate': new Date("2013-10-20T19:20:30+01:00"), // {Date} 
-  'endDate': new Date("2013-10-20T19:20:30+01:00"), // {Date} 
-  'poolId': "poolId_example" // {String} 
+  'endDate': new Date("2013-10-20T19:20:30+01:00") // {Date} 
 };
 var callback = function(error, data, response) {
   if (error) {
@@ -121,7 +120,7 @@ var callback = function(error, data, response) {
     console.log('API called successfully. Returned data: ' + data);
   }
 };
-api.cowGetOrderDTOsHistorical(opts, callback);
+api.cowGetOrdersHistorical(opts, callback);
 
 ```
 
@@ -131,222 +130,126 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*OnChainApi.CowApi* | [**cowGetOrderDTOsHistorical**](docs/CowApi.md#cowGetOrderDTOsHistorical) | **GET** /dapps/cow/OrderDTOs/historical | OrderDTOs (historical) 🔥
-*OnChainApi.CowApi* | [**cowGetOrdersHistorical**](docs/CowApi.md#cowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical | Orders (historical)
-*OnChainApi.CowApi* | [**cowGetSettlementDTOsHistorical**](docs/CowApi.md#cowGetSettlementDTOsHistorical) | **GET** /dapps/cow/SettlementDTOs/historical | SettlementDTOs (historical) 🔥
-*OnChainApi.CowApi* | [**cowGetSettlementsHistorical**](docs/CowApi.md#cowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical | Settlements (historical)
-*OnChainApi.CowApi* | [**cowGetTokenDTOsHistorical**](docs/CowApi.md#cowGetTokenDTOsHistorical) | **GET** /dapps/cow/TokenDTOs/historical | TokenDTOs (historical) 🔥
-*OnChainApi.CowApi* | [**cowGetTokensHistorical**](docs/CowApi.md#cowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical | Tokens (historical) 🔥
-*OnChainApi.CowApi* | [**cowGetTradeDTOsHistorical**](docs/CowApi.md#cowGetTradeDTOsHistorical) | **GET** /dapps/cow/TradeDTOs/historical | TradeDTOs (historical) 🔥
-*OnChainApi.CowApi* | [**cowGetTradesHistorical**](docs/CowApi.md#cowGetTradesHistorical) | **GET** /dapps/cow/trades/historical | Trades (historical) 🔥
-*OnChainApi.CowApi* | [**cowGetUserDTOsHistorical**](docs/CowApi.md#cowGetUserDTOsHistorical) | **GET** /dapps/cow/UserDTOs/historical | UserDTOs (historical) 🔥
-*OnChainApi.CowApi* | [**cowGetUsersHistorical**](docs/CowApi.md#cowGetUsersHistorical) | **GET** /dapps/cow/users/historical | Users (historical)
-*OnChainApi.CurveApi* | [**curveGetAccountDTOsHistorical**](docs/CurveApi.md#curveGetAccountDTOsHistorical) | **GET** /dapps/curve/AccountDTOs/historical | AccountDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetAccountsHistorical**](docs/CurveApi.md#curveGetAccountsHistorical) | **GET** /dapps/curve/accounts/historical | Accounts (historical)
-*OnChainApi.CurveApi* | [**curveGetAddLiquidityEventDTOsHistorical**](docs/CurveApi.md#curveGetAddLiquidityEventDTOsHistorical) | **GET** /dapps/curve/AddLiquidityEventDTOs/historical | AddLiquidityEventDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetAddLiquidityEventsHistorical**](docs/CurveApi.md#curveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical)
-*OnChainApi.CurveApi* | [**curveGetAdminFeeChangeLogDTOsHistorical**](docs/CurveApi.md#curveGetAdminFeeChangeLogDTOsHistorical) | **GET** /dapps/curve/AdminFeeChangeLogDTOs/historical | AdminFeeChangeLogDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetAdminFeeChangeLogsHistorical**](docs/CurveApi.md#curveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical)
-*OnChainApi.CurveApi* | [**curveGetAmplificationCoeffChangeLogDTOsHistorical**](docs/CurveApi.md#curveGetAmplificationCoeffChangeLogDTOsHistorical) | **GET** /dapps/curve/AmplificationCoeffChangeLogDTOs/historical | AmplificationCoeffChangeLogDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetAmplificationCoeffChangeLogsHistorical**](docs/CurveApi.md#curveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical)
-*OnChainApi.CurveApi* | [**curveGetCoinDTOsHistorical**](docs/CurveApi.md#curveGetCoinDTOsHistorical) | **GET** /dapps/curve/CoinDTOs/historical | CoinDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetCoinsHistorical**](docs/CurveApi.md#curveGetCoinsHistorical) | **GET** /dapps/curve/coins/historical | Coins (historical)
-*OnChainApi.CurveApi* | [**curveGetContractDTOsHistorical**](docs/CurveApi.md#curveGetContractDTOsHistorical) | **GET** /dapps/curve/ContractDTOs/historical | ContractDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetContractVersionDTOsHistorical**](docs/CurveApi.md#curveGetContractVersionDTOsHistorical) | **GET** /dapps/curve/ContractVersionDTOs/historical | ContractVersionDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetContractsHistorical**](docs/CurveApi.md#curveGetContractsHistorical) | **GET** /dapps/curve/contracts/historical | Contracts (historical)
-*OnChainApi.CurveApi* | [**curveGetContractsVersionsHistorical**](docs/CurveApi.md#curveGetContractsVersionsHistorical) | **GET** /dapps/curve/contractsVersions/historical | ContractsVersions (historical)
-*OnChainApi.CurveApi* | [**curveGetDailyVolumeDTOsHistorical**](docs/CurveApi.md#curveGetDailyVolumeDTOsHistorical) | **GET** /dapps/curve/DailyVolumeDTOs/historical | DailyVolumeDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetDailyVolumesHistorical**](docs/CurveApi.md#curveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyVolumes/historical | DailyVolumes (historical)
-*OnChainApi.CurveApi* | [**curveGetExchangeDTOsHistorical**](docs/CurveApi.md#curveGetExchangeDTOsHistorical) | **GET** /dapps/curve/ExchangeDTOs/historical | ExchangeDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetExchangesHistorical**](docs/CurveApi.md#curveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetFeeChangeLogDTOsHistorical**](docs/CurveApi.md#curveGetFeeChangeLogDTOsHistorical) | **GET** /dapps/curve/FeeChangeLogDTOs/historical | FeeChangeLogDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetFeeChangeLogsHistorical**](docs/CurveApi.md#curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical)
-*OnChainApi.CurveApi* | [**curveGetGaugeDTOsHistorical**](docs/CurveApi.md#curveGetGaugeDTOsHistorical) | **GET** /dapps/curve/GaugeDTOs/historical | GaugeDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetGaugeDepositDTOsHistorical**](docs/CurveApi.md#curveGetGaugeDepositDTOsHistorical) | **GET** /dapps/curve/GaugeDepositDTOs/historical | GaugeDepositDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetGaugeLiquidityDTOsHistorical**](docs/CurveApi.md#curveGetGaugeLiquidityDTOsHistorical) | **GET** /dapps/curve/GaugeLiquidityDTOs/historical | GaugeLiquidityDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetGaugeTotalWeightDTOsHistorical**](docs/CurveApi.md#curveGetGaugeTotalWeightDTOsHistorical) | **GET** /dapps/curve/GaugeTotalWeightDTOs/historical | GaugeTotalWeightDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetGaugeTypeDTOsHistorical**](docs/CurveApi.md#curveGetGaugeTypeDTOsHistorical) | **GET** /dapps/curve/GaugeTypeDTOs/historical | GaugeTypeDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetGaugeTypeWeightDTOsHistorical**](docs/CurveApi.md#curveGetGaugeTypeWeightDTOsHistorical) | **GET** /dapps/curve/GaugeTypeWeightDTOs/historical | GaugeTypeWeightDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetGaugeWeightDTOsHistorical**](docs/CurveApi.md#curveGetGaugeWeightDTOsHistorical) | **GET** /dapps/curve/GaugeWeightDTOs/historical | GaugeWeightDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetGaugeWeightVoteDTOsHistorical**](docs/CurveApi.md#curveGetGaugeWeightVoteDTOsHistorical) | **GET** /dapps/curve/GaugeWeightVoteDTOs/historical | GaugeWeightVoteDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetGaugeWithdrawDTOsHistorical**](docs/CurveApi.md#curveGetGaugeWithdrawDTOsHistorical) | **GET** /dapps/curve/GaugeWithdrawDTOs/historical | GaugeWithdrawDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetGaugesDepositsHistorical**](docs/CurveApi.md#curveGetGaugesDepositsHistorical) | **GET** /dapps/curve/gaugesDeposits/historical | GaugesDeposits (historical)
-*OnChainApi.CurveApi* | [**curveGetGaugesHistorical**](docs/CurveApi.md#curveGetGaugesHistorical) | **GET** /dapps/curve/gauges/historical | Gauges (historical)
-*OnChainApi.CurveApi* | [**curveGetGaugesLiquidityHistorical**](docs/CurveApi.md#curveGetGaugesLiquidityHistorical) | **GET** /dapps/curve/gaugesLiquidity/historical | GaugesLiquidity (historical)
-*OnChainApi.CurveApi* | [**curveGetGaugesTotalWeightsHistorical**](docs/CurveApi.md#curveGetGaugesTotalWeightsHistorical) | **GET** /dapps/curve/gaugesTotalWeights/historical | GaugesTotalWeights (historical)
-*OnChainApi.CurveApi* | [**curveGetGaugesTypesHistorical**](docs/CurveApi.md#curveGetGaugesTypesHistorical) | **GET** /dapps/curve/gaugesTypes/historical | GaugesTypes (historical)
-*OnChainApi.CurveApi* | [**curveGetGaugesTypesWeightsHistorical**](docs/CurveApi.md#curveGetGaugesTypesWeightsHistorical) | **GET** /dapps/curve/gaugesTypesWeights/historical | GaugesTypesWeights (historical)
-*OnChainApi.CurveApi* | [**curveGetGaugesWeightsHistorical**](docs/CurveApi.md#curveGetGaugesWeightsHistorical) | **GET** /dapps/curve/gaugesWeights/historical | GaugesWeights (historical)
-*OnChainApi.CurveApi* | [**curveGetGaugesWeightsVotesHistorical**](docs/CurveApi.md#curveGetGaugesWeightsVotesHistorical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GaugesWeightsVotes (historical)
-*OnChainApi.CurveApi* | [**curveGetGaugesWithdrawHistorical**](docs/CurveApi.md#curveGetGaugesWithdrawHistorical) | **GET** /dapps/curve/gaugesWithdraws/historical | GaugesWithdraw (historical)
-*OnChainApi.CurveApi* | [**curveGetHourlyVolumeDTOsHistorical**](docs/CurveApi.md#curveGetHourlyVolumeDTOsHistorical) | **GET** /dapps/curve/HourlyVolumeDTOs/historical | HourlyVolumeDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetHourlyVolumesHistorical**](docs/CurveApi.md#curveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical)
-*OnChainApi.CurveApi* | [**curveGetLpTokenDTOsHistorical**](docs/CurveApi.md#curveGetLpTokenDTOsHistorical) | **GET** /dapps/curve/LpTokenDTOs/historical | LpTokenDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetLpTokensHistorical**](docs/CurveApi.md#curveGetLpTokensHistorical) | **GET** /dapps/curve/lpTokens/historical | LpTokens (historical)
-*OnChainApi.CurveApi* | [**curveGetPoolDTOsHistorical**](docs/CurveApi.md#curveGetPoolDTOsHistorical) | **GET** /dapps/curve/PoolDTOs/historical | PoolDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetPoolsHistorical**](docs/CurveApi.md#curveGetPoolsHistorical) | **GET** /dapps/curve/pools/historical | Pools (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetProposalDTOsHistorical**](docs/CurveApi.md#curveGetProposalDTOsHistorical) | **GET** /dapps/curve/ProposalDTOs/historical | ProposalDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetProposalVoteDTOsHistorical**](docs/CurveApi.md#curveGetProposalVoteDTOsHistorical) | **GET** /dapps/curve/ProposalVoteDTOs/historical | ProposalVoteDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetProposalsHistorical**](docs/CurveApi.md#curveGetProposalsHistorical) | **GET** /dapps/curve/proposals/historical | Proposals (historical)
-*OnChainApi.CurveApi* | [**curveGetProposalsVotesHistorical**](docs/CurveApi.md#curveGetProposalsVotesHistorical) | **GET** /dapps/curve/proposalsVotes/historical | ProposalsVotes (historical)
-*OnChainApi.CurveApi* | [**curveGetRemoveLiquidityEventDTOsHistorical**](docs/CurveApi.md#curveGetRemoveLiquidityEventDTOsHistorical) | **GET** /dapps/curve/RemoveLiquidityEventDTOs/historical | RemoveLiquidityEventDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetRemoveLiquidityEventsHistorical**](docs/CurveApi.md#curveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical)
-*OnChainApi.CurveApi* | [**curveGetRemoveLiquidityOneEventDTOsHistorical**](docs/CurveApi.md#curveGetRemoveLiquidityOneEventDTOsHistorical) | **GET** /dapps/curve/RemoveLiquidityOneEventDTOs/historical | RemoveLiquidityOneEventDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetRemoveLiquidityOneEventsHistorical**](docs/CurveApi.md#curveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical)
-*OnChainApi.CurveApi* | [**curveGetSystemStateDTOsHistorical**](docs/CurveApi.md#curveGetSystemStateDTOsHistorical) | **GET** /dapps/curve/SystemStateDTOs/historical | SystemStateDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetSystemStatesHistorical**](docs/CurveApi.md#curveGetSystemStatesHistorical) | **GET** /dapps/curve/systemStates/historical | SystemStates (historical)
-*OnChainApi.CurveApi* | [**curveGetTokenDTOsHistorical**](docs/CurveApi.md#curveGetTokenDTOsHistorical) | **GET** /dapps/curve/TokenDTOs/historical | TokenDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetTokensHistorical**](docs/CurveApi.md#curveGetTokensHistorical) | **GET** /dapps/curve/tokens/historical | Tokens (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetTransferOwnershipEventDTOsHistorical**](docs/CurveApi.md#curveGetTransferOwnershipEventDTOsHistorical) | **GET** /dapps/curve/TransferOwnershipEventDTOs/historical | TransferOwnershipEventDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetTransferOwnershipEventsHistorical**](docs/CurveApi.md#curveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical)
-*OnChainApi.CurveApi* | [**curveGetUnderlyingCoinDTOsHistorical**](docs/CurveApi.md#curveGetUnderlyingCoinDTOsHistorical) | **GET** /dapps/curve/UnderlyingCoinDTOs/historical | UnderlyingCoinDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetUnderlyingCoinsHistorical**](docs/CurveApi.md#curveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical)
-*OnChainApi.CurveApi* | [**curveGetVotingAppDTOsHistorical**](docs/CurveApi.md#curveGetVotingAppDTOsHistorical) | **GET** /dapps/curve/VotingAppDTOs/historical | VotingAppDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetVotingAppsHistorical**](docs/CurveApi.md#curveGetVotingAppsHistorical) | **GET** /dapps/curve/votingApps/historical | VotingApps (historical)
-*OnChainApi.CurveApi* | [**curveGetWeeklyVolumeDTOsHistorical**](docs/CurveApi.md#curveGetWeeklyVolumeDTOsHistorical) | **GET** /dapps/curve/WeeklyVolumeDTOs/historical | WeeklyVolumeDTOs (historical) 🔥
-*OnChainApi.CurveApi* | [**curveGetWeeklyVolumesHistorical**](docs/CurveApi.md#curveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical)
-*OnChainApi.DexApi* | [**dexGetBatchDTOsHistorical**](docs/DexApi.md#dexGetBatchDTOsHistorical) | **GET** /dapps/dex/BatchDTOs/historical | BatchDTOs (historical) 🔥
-*OnChainApi.DexApi* | [**dexGetBatchesHistorical**](docs/DexApi.md#dexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | Batches (historical)
-*OnChainApi.DexApi* | [**dexGetDepositDTOsHistorical**](docs/DexApi.md#dexGetDepositDTOsHistorical) | **GET** /dapps/dex/DepositDTOs/historical | DepositDTOs (historical) 🔥
-*OnChainApi.DexApi* | [**dexGetDepositsHistorical**](docs/DexApi.md#dexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical)
-*OnChainApi.DexApi* | [**dexGetOrderDTOsHistorical**](docs/DexApi.md#dexGetOrderDTOsHistorical) | **GET** /dapps/dex/OrderDTOs/historical | OrderDTOs (historical) 🔥
-*OnChainApi.DexApi* | [**dexGetOrdersHistorical**](docs/DexApi.md#dexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | Orders (historical)
-*OnChainApi.DexApi* | [**dexGetPriceDTOsHistorical**](docs/DexApi.md#dexGetPriceDTOsHistorical) | **GET** /dapps/dex/PriceDTOs/historical | PriceDTOs (historical) 🔥
-*OnChainApi.DexApi* | [**dexGetPricesHistorical**](docs/DexApi.md#dexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | Prices (historical)
-*OnChainApi.DexApi* | [**dexGetSolutionDTOsHistorical**](docs/DexApi.md#dexGetSolutionDTOsHistorical) | **GET** /dapps/dex/SolutionDTOs/historical | SolutionDTOs (historical) 🔥
-*OnChainApi.DexApi* | [**dexGetSolutionsHistorical**](docs/DexApi.md#dexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | Solutions (historical)
-*OnChainApi.DexApi* | [**dexGetStatsDTOsHistorical**](docs/DexApi.md#dexGetStatsDTOsHistorical) | **GET** /dapps/dex/StatsDTOs/historical | StatsDTOs (historical) 🔥
-*OnChainApi.DexApi* | [**dexGetStatsHistorical**](docs/DexApi.md#dexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | Stats (historical)
-*OnChainApi.DexApi* | [**dexGetTokenDTOsHistorical**](docs/DexApi.md#dexGetTokenDTOsHistorical) | **GET** /dapps/dex/TokenDTOs/historical | TokenDTOs (historical) 🔥
-*OnChainApi.DexApi* | [**dexGetTokensHistorical**](docs/DexApi.md#dexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical) 🔥
-*OnChainApi.DexApi* | [**dexGetTradeDTOsHistorical**](docs/DexApi.md#dexGetTradeDTOsHistorical) | **GET** /dapps/dex/TradeDTOs/historical | TradeDTOs (historical) 🔥
-*OnChainApi.DexApi* | [**dexGetTradesHistorical**](docs/DexApi.md#dexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | Trades (historical) 🔥
-*OnChainApi.DexApi* | [**dexGetUserDTOsHistorical**](docs/DexApi.md#dexGetUserDTOsHistorical) | **GET** /dapps/dex/UserDTOs/historical | UserDTOs (historical) 🔥
-*OnChainApi.DexApi* | [**dexGetUsersHistorical**](docs/DexApi.md#dexGetUsersHistorical) | **GET** /dapps/dex/users/historical | Users (historical)
-*OnChainApi.DexApi* | [**dexGetWithdrawDTOsHistorical**](docs/DexApi.md#dexGetWithdrawDTOsHistorical) | **GET** /dapps/dex/WithdrawDTOs/historical | WithdrawDTOs (historical) 🔥
-*OnChainApi.DexApi* | [**dexGetWithdrawRequestDTOsHistorical**](docs/DexApi.md#dexGetWithdrawRequestDTOsHistorical) | **GET** /dapps/dex/WithdrawRequestDTOs/historical | WithdrawRequestDTOs (historical) 🔥
-*OnChainApi.DexApi* | [**dexGetWithdrawsHistorical**](docs/DexApi.md#dexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical | Withdraws (historical)
-*OnChainApi.DexApi* | [**dexGetWithdrawsRequestsHistorical**](docs/DexApi.md#dexGetWithdrawsRequestsHistorical) | **GET** /dapps/dex/withdrawsRequests/historical | WithdrawsRequests (historical)
+*OnChainApi.CowApi* | [**cowGetOrdersHistorical**](docs/CowApi.md#cowGetOrdersHistorical) | **GET** /dapps/cow/orders/historical-manual | Orders (historical)
+*OnChainApi.CowApi* | [**cowGetSettlementsHistorical**](docs/CowApi.md#cowGetSettlementsHistorical) | **GET** /dapps/cow/settlements/historical-manual | Settlements (historical)
+*OnChainApi.CowApi* | [**cowGetTokensHistorical**](docs/CowApi.md#cowGetTokensHistorical) | **GET** /dapps/cow/tokens/historical-manual | Tokens (historical) 🔥
+*OnChainApi.CowApi* | [**cowGetTradesHistorical**](docs/CowApi.md#cowGetTradesHistorical) | **GET** /dapps/cow/trades/historical-manual | Trades (historical) 🔥
+*OnChainApi.CowApi* | [**cowGetUsersHistorical**](docs/CowApi.md#cowGetUsersHistorical) | **GET** /dapps/cow/users/historical-manual | Users (historical)
+*OnChainApi.CurveApi* | [**curveGetAccountsHistorical**](docs/CurveApi.md#curveGetAccountsHistorical) | **GET** /dapps/curve/accounts/historical-manual | Accounts (historical)
+*OnChainApi.CurveApi* | [**curveGetAddLiquidityEventsHistorical**](docs/CurveApi.md#curveGetAddLiquidityEventsHistorical) | **GET** /dapps/curve/addLiquidityEvents/historical-manual | AddLiquidityEvents (historical)
+*OnChainApi.CurveApi* | [**curveGetAdminFeeChangeLogsHistorical**](docs/CurveApi.md#curveGetAdminFeeChangeLogsHistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical-manual | AdminFeeChangeLogs (historical)
+*OnChainApi.CurveApi* | [**curveGetAmplificationCoeffChangeLogsHistorical**](docs/CurveApi.md#curveGetAmplificationCoeffChangeLogsHistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical-manual | AmplificationCoeffChangeLogs (historical)
+*OnChainApi.CurveApi* | [**curveGetCoinsHistorical**](docs/CurveApi.md#curveGetCoinsHistorical) | **GET** /dapps/curve/coins/historical-manual | Coins (historical)
+*OnChainApi.CurveApi* | [**curveGetContractsHistorical**](docs/CurveApi.md#curveGetContractsHistorical) | **GET** /dapps/curve/contracts/historical-manual | Contracts (historical)
+*OnChainApi.CurveApi* | [**curveGetContractsVersionsHistorical**](docs/CurveApi.md#curveGetContractsVersionsHistorical) | **GET** /dapps/curve/contractsVersions/historical-manual | ContractsVersions (historical)
+*OnChainApi.CurveApi* | [**curveGetDailyVolumesHistorical**](docs/CurveApi.md#curveGetDailyVolumesHistorical) | **GET** /dapps/curve/dailyVolumes/historical-manual | DailyVolumes (historical)
+*OnChainApi.CurveApi* | [**curveGetExchangesHistorical**](docs/CurveApi.md#curveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical-manual | Exchanges (historical) 🔥
+*OnChainApi.CurveApi* | [**curveGetFeeChangeLogsHistorical**](docs/CurveApi.md#curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical-manual | FeeChangeLogs (historical)
+*OnChainApi.CurveApi* | [**curveGetGaugesDepositsHistorical**](docs/CurveApi.md#curveGetGaugesDepositsHistorical) | **GET** /dapps/curve/gaugesDeposits/historical-manual | GaugesDeposits (historical)
+*OnChainApi.CurveApi* | [**curveGetGaugesHistorical**](docs/CurveApi.md#curveGetGaugesHistorical) | **GET** /dapps/curve/gauges/historical-manual | Gauges (historical)
+*OnChainApi.CurveApi* | [**curveGetGaugesLiquidityHistorical**](docs/CurveApi.md#curveGetGaugesLiquidityHistorical) | **GET** /dapps/curve/gaugesLiquidity/historical-manual | GaugesLiquidity (historical)
+*OnChainApi.CurveApi* | [**curveGetGaugesTotalWeightsHistorical**](docs/CurveApi.md#curveGetGaugesTotalWeightsHistorical) | **GET** /dapps/curve/gaugesTotalWeights/historical-manual | GaugesTotalWeights (historical)
+*OnChainApi.CurveApi* | [**curveGetGaugesTypesHistorical**](docs/CurveApi.md#curveGetGaugesTypesHistorical) | **GET** /dapps/curve/gaugesTypes/historical-manual | GaugesTypes (historical)
+*OnChainApi.CurveApi* | [**curveGetGaugesTypesWeightsHistorical**](docs/CurveApi.md#curveGetGaugesTypesWeightsHistorical) | **GET** /dapps/curve/gaugesTypesWeights/historical-manual | GaugesTypesWeights (historical)
+*OnChainApi.CurveApi* | [**curveGetGaugesWeightsHistorical**](docs/CurveApi.md#curveGetGaugesWeightsHistorical) | **GET** /dapps/curve/gaugesWeights/historical-manual | GaugesWeights (historical)
+*OnChainApi.CurveApi* | [**curveGetGaugesWeightsVotesHistorical**](docs/CurveApi.md#curveGetGaugesWeightsVotesHistorical) | **GET** /dapps/curve/gaugesWeightsVotes/historical-manual | GaugesWeightsVotes (historical)
+*OnChainApi.CurveApi* | [**curveGetGaugesWithdrawHistorical**](docs/CurveApi.md#curveGetGaugesWithdrawHistorical) | **GET** /dapps/curve/gaugesWithdraws/historical-manual | GaugesWithdraw (historical)
+*OnChainApi.CurveApi* | [**curveGetHourlyVolumesHistorical**](docs/CurveApi.md#curveGetHourlyVolumesHistorical) | **GET** /dapps/curve/hourlyVolumes/historical-manual | HourlyVolumes (historical)
+*OnChainApi.CurveApi* | [**curveGetLpTokensHistorical**](docs/CurveApi.md#curveGetLpTokensHistorical) | **GET** /dapps/curve/lpTokens/historical-manual | LpTokens (historical)
+*OnChainApi.CurveApi* | [**curveGetPoolsHistorical**](docs/CurveApi.md#curveGetPoolsHistorical) | **GET** /dapps/curve/pools/historical-manual | Pools (historical) 🔥
+*OnChainApi.CurveApi* | [**curveGetProposalsHistorical**](docs/CurveApi.md#curveGetProposalsHistorical) | **GET** /dapps/curve/proposals/historical-manual | Proposals (historical)
+*OnChainApi.CurveApi* | [**curveGetProposalsVotesHistorical**](docs/CurveApi.md#curveGetProposalsVotesHistorical) | **GET** /dapps/curve/proposalsVotes/historical-manual | ProposalsVotes (historical)
+*OnChainApi.CurveApi* | [**curveGetRemoveLiquidityEventsHistorical**](docs/CurveApi.md#curveGetRemoveLiquidityEventsHistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical-manual | RemoveLiquidityEvents (historical)
+*OnChainApi.CurveApi* | [**curveGetRemoveLiquidityOneEventsHistorical**](docs/CurveApi.md#curveGetRemoveLiquidityOneEventsHistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical-manual | RemoveLiquidityOneEvents (historical)
+*OnChainApi.CurveApi* | [**curveGetSystemStatesHistorical**](docs/CurveApi.md#curveGetSystemStatesHistorical) | **GET** /dapps/curve/systemStates/historical-manual | SystemStates (historical)
+*OnChainApi.CurveApi* | [**curveGetTokensHistorical**](docs/CurveApi.md#curveGetTokensHistorical) | **GET** /dapps/curve/tokens/historical-manual | Tokens (historical) 🔥
+*OnChainApi.CurveApi* | [**curveGetTransferOwnershipEventsHistorical**](docs/CurveApi.md#curveGetTransferOwnershipEventsHistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical-manual | TransferOwnershipEvents (historical)
+*OnChainApi.CurveApi* | [**curveGetUnderlyingCoinsHistorical**](docs/CurveApi.md#curveGetUnderlyingCoinsHistorical) | **GET** /dapps/curve/underlyingCoins/historical-manual | UnderlyingCoins (historical)
+*OnChainApi.CurveApi* | [**curveGetVotingAppsHistorical**](docs/CurveApi.md#curveGetVotingAppsHistorical) | **GET** /dapps/curve/votingApps/historical-manual | VotingApps (historical)
+*OnChainApi.CurveApi* | [**curveGetWeeklyVolumesHistorical**](docs/CurveApi.md#curveGetWeeklyVolumesHistorical) | **GET** /dapps/curve/weeklyVolumes/historical-manual | WeeklyVolumes (historical)
+*OnChainApi.DexApi* | [**dexGetBatchesHistorical**](docs/DexApi.md#dexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical-manual | Batches (historical)
+*OnChainApi.DexApi* | [**dexGetDepositsHistorical**](docs/DexApi.md#dexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical-manual | Deposits (historical)
+*OnChainApi.DexApi* | [**dexGetOrdersHistorical**](docs/DexApi.md#dexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical-manual | Orders (historical)
+*OnChainApi.DexApi* | [**dexGetPricesHistorical**](docs/DexApi.md#dexGetPricesHistorical) | **GET** /dapps/dex/prices/historical-manual | Prices (historical)
+*OnChainApi.DexApi* | [**dexGetSolutionsHistorical**](docs/DexApi.md#dexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical-manual | Solutions (historical)
+*OnChainApi.DexApi* | [**dexGetStatsHistorical**](docs/DexApi.md#dexGetStatsHistorical) | **GET** /dapps/dex/stats/historical-manual | Stats (historical)
+*OnChainApi.DexApi* | [**dexGetTokensHistorical**](docs/DexApi.md#dexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical-manual | Tokens (historical) 🔥
+*OnChainApi.DexApi* | [**dexGetTradesHistorical**](docs/DexApi.md#dexGetTradesHistorical) | **GET** /dapps/dex/trades/historical-manual | Trades (historical) 🔥
+*OnChainApi.DexApi* | [**dexGetUsersHistorical**](docs/DexApi.md#dexGetUsersHistorical) | **GET** /dapps/dex/users/historical-manual | Users (historical)
+*OnChainApi.DexApi* | [**dexGetWithdrawsHistorical**](docs/DexApi.md#dexGetWithdrawsHistorical) | **GET** /dapps/dex/withdraws/historical-manual | Withdraws (historical)
+*OnChainApi.DexApi* | [**dexGetWithdrawsRequestsHistorical**](docs/DexApi.md#dexGetWithdrawsRequestsHistorical) | **GET** /dapps/dex/withdrawsRequests/historical-manual | WithdrawsRequests (historical)
 *OnChainApi.SushiswapApi* | [**curveGetExchangesCurrent**](docs/SushiswapApi.md#curveGetExchangesCurrent) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
 *OnChainApi.SushiswapApi* | [**dexGetTradesCurrent**](docs/SushiswapApi.md#dexGetTradesCurrent) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetBundleDTOsHistorical**](docs/SushiswapApi.md#sushiswapGetBundleDTOsHistorical) | **GET** /dapps/sushiswap/BundleDTOs/historical | BundleDTOs (historical) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetBundlesHistorical**](docs/SushiswapApi.md#sushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical)
-*OnChainApi.SushiswapApi* | [**sushiswapGetBurnDTOsHistorical**](docs/SushiswapApi.md#sushiswapGetBurnDTOsHistorical) | **GET** /dapps/sushiswap/BurnDTOs/historical | BurnDTOs (historical) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetBurnsHistorical**](docs/SushiswapApi.md#sushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical)
-*OnChainApi.SushiswapApi* | [**sushiswapGetDayDataDTOsHistorical**](docs/SushiswapApi.md#sushiswapGetDayDataDTOsHistorical) | **GET** /dapps/sushiswap/DayDataDTOs/historical | DayDataDTOs (historical) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetDayDataHistorical**](docs/SushiswapApi.md#sushiswapGetDayDataHistorical) | **GET** /dapps/sushiswap/dayData/historical | DayData (historical)
-*OnChainApi.SushiswapApi* | [**sushiswapGetFactoryDTOsHistorical**](docs/SushiswapApi.md#sushiswapGetFactoryDTOsHistorical) | **GET** /dapps/sushiswap/FactoryDTOs/historical | FactoryDTOs (historical) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetFactoryHistorical**](docs/SushiswapApi.md#sushiswapGetFactoryHistorical) | **GET** /dapps/sushiswap/factory/historical | Factory (historical)
-*OnChainApi.SushiswapApi* | [**sushiswapGetHourDataDTOsHistorical**](docs/SushiswapApi.md#sushiswapGetHourDataDTOsHistorical) | **GET** /dapps/sushiswap/HourDataDTOs/historical | HourDataDTOs (historical) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetHourDataHistorical**](docs/SushiswapApi.md#sushiswapGetHourDataHistorical) | **GET** /dapps/sushiswap/hourData/historical | HourData (historical)
-*OnChainApi.SushiswapApi* | [**sushiswapGetLiquidityPositionDTOsHistorical**](docs/SushiswapApi.md#sushiswapGetLiquidityPositionDTOsHistorical) | **GET** /dapps/sushiswap/LiquidityPositionDTOs/historical | LiquidityPositionDTOs (historical) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetLiquidityPositionHistorical**](docs/SushiswapApi.md#sushiswapGetLiquidityPositionHistorical) | **GET** /dapps/sushiswap/liquidityPosition/historical | LiquidityPosition (historical)
-*OnChainApi.SushiswapApi* | [**sushiswapGetLiquidityPositionSnapshotDTOsHistorical**](docs/SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotDTOsHistorical) | **GET** /dapps/sushiswap/LiquidityPositionSnapshotDTOs/historical | LiquidityPositionSnapshotDTOs (historical) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetLiquidityPositionSnapshotHistorical**](docs/SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshot (historical)
-*OnChainApi.SushiswapApi* | [**sushiswapGetMintDTOsHistorical**](docs/SushiswapApi.md#sushiswapGetMintDTOsHistorical) | **GET** /dapps/sushiswap/MintDTOs/historical | MintDTOs (historical) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetMintsHistorical**](docs/SushiswapApi.md#sushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical)
-*OnChainApi.SushiswapApi* | [**sushiswapGetPairDTOsHistorical**](docs/SushiswapApi.md#sushiswapGetPairDTOsHistorical) | **GET** /dapps/sushiswap/PairDTOs/historical | PairDTOs (historical) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetPairDayDataDTOsHistorical**](docs/SushiswapApi.md#sushiswapGetPairDayDataDTOsHistorical) | **GET** /dapps/sushiswap/PairDayDataDTOs/historical | PairDayDataDTOs (historical) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetPairHourDataDTOsHistorical**](docs/SushiswapApi.md#sushiswapGetPairHourDataDTOsHistorical) | **GET** /dapps/sushiswap/PairHourDataDTOs/historical | PairHourDataDTOs (historical) 🔥
+*OnChainApi.SushiswapApi* | [**sushiswapGetBundlesHistorical**](docs/SushiswapApi.md#sushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical-manual | Bundles (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetBurnsHistorical**](docs/SushiswapApi.md#sushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical-manual | Burns (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetDayDataHistorical**](docs/SushiswapApi.md#sushiswapGetDayDataHistorical) | **GET** /dapps/sushiswap/dayData/historical-manual | DayData (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetFactoryHistorical**](docs/SushiswapApi.md#sushiswapGetFactoryHistorical) | **GET** /dapps/sushiswap/factory/historical-manual | Factory (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetHourDataHistorical**](docs/SushiswapApi.md#sushiswapGetHourDataHistorical) | **GET** /dapps/sushiswap/hourData/historical-manual | HourData (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetLiquidityPositionHistorical**](docs/SushiswapApi.md#sushiswapGetLiquidityPositionHistorical) | **GET** /dapps/sushiswap/liquidityPosition/historical-manual | LiquidityPosition (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetLiquidityPositionSnapshotHistorical**](docs/SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical-manual | LiquidityPositionSnapshot (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetMintsHistorical**](docs/SushiswapApi.md#sushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical-manual | Mints (historical)
 *OnChainApi.SushiswapApi* | [**sushiswapGetPoolsCurrent**](docs/SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetPoolsDayDataHistorical**](docs/SushiswapApi.md#sushiswapGetPoolsDayDataHistorical) | **GET** /dapps/sushiswap/poolsDayData/historical | PoolsDayData (historical)
-*OnChainApi.SushiswapApi* | [**sushiswapGetPoolsHistorical**](docs/SushiswapApi.md#sushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | Pools (historical) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetPoolsHourDataHistorical**](docs/SushiswapApi.md#sushiswapGetPoolsHourDataHistorical) | **GET** /dapps/sushiswap/poolsHourData/historical | PoolsHourData (historical)
-*OnChainApi.SushiswapApi* | [**sushiswapGetSwapDTOsHistorical**](docs/SushiswapApi.md#sushiswapGetSwapDTOsHistorical) | **GET** /dapps/sushiswap/SwapDTOs/historical | SwapDTOs (historical) 🔥
+*OnChainApi.SushiswapApi* | [**sushiswapGetPoolsDayDataHistorical**](docs/SushiswapApi.md#sushiswapGetPoolsDayDataHistorical) | **GET** /dapps/sushiswap/poolsDayData/historical-manual | PoolsDayData (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetPoolsHistorical**](docs/SushiswapApi.md#sushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical-manual | Pools (historical) 🔥
+*OnChainApi.SushiswapApi* | [**sushiswapGetPoolsHourDataHistorical**](docs/SushiswapApi.md#sushiswapGetPoolsHourDataHistorical) | **GET** /dapps/sushiswap/poolsHourData/historical-manual | PoolsHourData (historical)
 *OnChainApi.SushiswapApi* | [**sushiswapGetSwapsCurrent**](docs/SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetSwapsHistorical**](docs/SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetTokenDTOsHistorical**](docs/SushiswapApi.md#sushiswapGetTokenDTOsHistorical) | **GET** /dapps/sushiswap/TokenDTOs/historical | TokenDTOs (historical) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetTokenDayDataDTOsHistorical**](docs/SushiswapApi.md#sushiswapGetTokenDayDataDTOsHistorical) | **GET** /dapps/sushiswap/TokenDayDataDTOs/historical | TokenDayDataDTOs (historical) 🔥
+*OnChainApi.SushiswapApi* | [**sushiswapGetSwapsHistorical**](docs/SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical-manual | Swaps (historical) 🔥
 *OnChainApi.SushiswapApi* | [**sushiswapGetTokensCurrent**](docs/SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetTokensDayDataHistorical**](docs/SushiswapApi.md#sushiswapGetTokensDayDataHistorical) | **GET** /dapps/sushiswap/tokensDayData/historical | TokensDayData (historical)
-*OnChainApi.SushiswapApi* | [**sushiswapGetTokensHistorical**](docs/SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetTransactionDTOsHistorical**](docs/SushiswapApi.md#sushiswapGetTransactionDTOsHistorical) | **GET** /dapps/sushiswap/TransactionDTOs/historical | TransactionDTOs (historical) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetTransactionsHistorical**](docs/SushiswapApi.md#sushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical)
-*OnChainApi.SushiswapApi* | [**sushiswapGetUserDTOsHistorical**](docs/SushiswapApi.md#sushiswapGetUserDTOsHistorical) | **GET** /dapps/sushiswap/UserDTOs/historical | UserDTOs (historical) 🔥
-*OnChainApi.SushiswapApi* | [**sushiswapGetUsersHistorical**](docs/SushiswapApi.md#sushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical)
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetBundleV2DTOsHistorical**](docs/UniswapV2Api.md#uniswapV2GetBundleV2DTOsHistorical) | **GET** /dapps/uniswapv2/BundleV2DTOs/historical | BundleV2DTOs (historical) 🔥
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetBundlesHistorical**](docs/UniswapV2Api.md#uniswapV2GetBundlesHistorical) | **GET** /dapps/uniswapv2/bundles/historical | Bundles (historical)
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetBurnV2DTOsHistorical**](docs/UniswapV2Api.md#uniswapV2GetBurnV2DTOsHistorical) | **GET** /dapps/uniswapv2/BurnV2DTOs/historical | BurnV2DTOs (historical) 🔥
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetBurnsHistorical**](docs/UniswapV2Api.md#uniswapV2GetBurnsHistorical) | **GET** /dapps/uniswapv2/burns/historical | Burns (historical)
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetDayDataHistorical**](docs/UniswapV2Api.md#uniswapV2GetDayDataHistorical) | **GET** /dapps/uniswapv2/dayData/historical | DayData (historical)
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetFactoryHistorical**](docs/UniswapV2Api.md#uniswapV2GetFactoryHistorical) | **GET** /dapps/uniswapv2/factory/historical | Factory (historical)
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical**](docs/UniswapV2Api.md#uniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical) | **GET** /dapps/uniswapv2/LiquidityPositionSnapshotV2DTOs/historical | LiquidityPositionSnapshotV2DTOs (historical) 🔥
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetLiquidityPositionV2DTOsHistorical**](docs/UniswapV2Api.md#uniswapV2GetLiquidityPositionV2DTOsHistorical) | **GET** /dapps/uniswapv2/LiquidityPositionV2DTOs/historical | LiquidityPositionV2DTOs (historical) 🔥
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetLiquidityPositionsHistorical**](docs/UniswapV2Api.md#uniswapV2GetLiquidityPositionsHistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical)
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetLiquidityPositionsSnapshotsHistorical**](docs/UniswapV2Api.md#uniswapV2GetLiquidityPositionsSnapshotsHistorical) | **GET** /dapps/uniswapv2/liquidityPositionsSnapshots/historical | LiquidityPositionsSnapshots (historical)
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetMintV2DTOsHistorical**](docs/UniswapV2Api.md#uniswapV2GetMintV2DTOsHistorical) | **GET** /dapps/uniswapv2/MintV2DTOs/historical | MintV2DTOs (historical) 🔥
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetMintsHistorical**](docs/UniswapV2Api.md#uniswapV2GetMintsHistorical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical)
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetPairDayDataV2DTOsHistorical**](docs/UniswapV2Api.md#uniswapV2GetPairDayDataV2DTOsHistorical) | **GET** /dapps/uniswapv2/PairDayDataV2DTOs/historical | PairDayDataV2DTOs (historical) 🔥
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetPairHourDataV2DTOsHistorical**](docs/UniswapV2Api.md#uniswapV2GetPairHourDataV2DTOsHistorical) | **GET** /dapps/uniswapv2/PairHourDataV2DTOs/historical | PairHourDataV2DTOs (historical) 🔥
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetPairV2DTOsHistorical**](docs/UniswapV2Api.md#uniswapV2GetPairV2DTOsHistorical) | **GET** /dapps/uniswapv2/PairV2DTOs/historical | PairV2DTOs (historical) 🔥
+*OnChainApi.SushiswapApi* | [**sushiswapGetTokensDayDataHistorical**](docs/SushiswapApi.md#sushiswapGetTokensDayDataHistorical) | **GET** /dapps/sushiswap/tokensDayData/historical-manual | TokensDayData (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetTokensHistorical**](docs/SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical-manual | Tokens (historical) 🔥
+*OnChainApi.SushiswapApi* | [**sushiswapGetTransactionsHistorical**](docs/SushiswapApi.md#sushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical-manual | Transactions (historical)
+*OnChainApi.SushiswapApi* | [**sushiswapGetUsersHistorical**](docs/SushiswapApi.md#sushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical-manual | Users (historical)
+*OnChainApi.UniswapV2Api* | [**uniswapV2GetBundlesHistorical**](docs/UniswapV2Api.md#uniswapV2GetBundlesHistorical) | **GET** /dapps/uniswapv2/bundles/historical-manual | Bundles (historical)
+*OnChainApi.UniswapV2Api* | [**uniswapV2GetBurnsHistorical**](docs/UniswapV2Api.md#uniswapV2GetBurnsHistorical) | **GET** /dapps/uniswapv2/burns/historical-manual | Burns (historical)
+*OnChainApi.UniswapV2Api* | [**uniswapV2GetDayDataHistorical**](docs/UniswapV2Api.md#uniswapV2GetDayDataHistorical) | **GET** /dapps/uniswapv2/dayData/historical-manual | DayData (historical)
+*OnChainApi.UniswapV2Api* | [**uniswapV2GetFactoryHistorical**](docs/UniswapV2Api.md#uniswapV2GetFactoryHistorical) | **GET** /dapps/uniswapv2/factory/historical-manual | Factory (historical)
+*OnChainApi.UniswapV2Api* | [**uniswapV2GetLiquidityPositionsHistorical**](docs/UniswapV2Api.md#uniswapV2GetLiquidityPositionsHistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical-manual | LiquidityPositions (historical)
+*OnChainApi.UniswapV2Api* | [**uniswapV2GetLiquidityPositionsSnapshotsHistorical**](docs/UniswapV2Api.md#uniswapV2GetLiquidityPositionsSnapshotsHistorical) | **GET** /dapps/uniswapv2/liquidityPositionsSnapshots/historical-manual | LiquidityPositionsSnapshots (historical)
+*OnChainApi.UniswapV2Api* | [**uniswapV2GetMintsHistorical**](docs/UniswapV2Api.md#uniswapV2GetMintsHistorical) | **GET** /dapps/uniswapv2/mints/historical-manual | Mints (historical)
 *OnChainApi.UniswapV2Api* | [**uniswapV2GetPoolsCurrent**](docs/UniswapV2Api.md#uniswapV2GetPoolsCurrent) | **GET** /dapps/uniswapv2/pools/current | Pools (current) 🔥
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetPoolsDayDataHistorical**](docs/UniswapV2Api.md#uniswapV2GetPoolsDayDataHistorical) | **GET** /dapps/uniswapv2/poolsDayData/historical | PoolsDayData (historical)
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetPoolsHistorical**](docs/UniswapV2Api.md#uniswapV2GetPoolsHistorical) | **GET** /dapps/uniswapv2/pools/historical | Pools (historical) 🔥
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetPoolsHourDataHistorical**](docs/UniswapV2Api.md#uniswapV2GetPoolsHourDataHistorical) | **GET** /dapps/uniswapv2/poolsHourData/historical | PoolsHourData (historical)
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetSwapV2DTOsHistorical**](docs/UniswapV2Api.md#uniswapV2GetSwapV2DTOsHistorical) | **GET** /dapps/uniswapv2/SwapV2DTOs/historical | SwapV2DTOs (historical) 🔥
+*OnChainApi.UniswapV2Api* | [**uniswapV2GetPoolsDayDataHistorical**](docs/UniswapV2Api.md#uniswapV2GetPoolsDayDataHistorical) | **GET** /dapps/uniswapv2/poolsDayData/historical-manual | PoolsDayData (historical)
+*OnChainApi.UniswapV2Api* | [**uniswapV2GetPoolsHistorical**](docs/UniswapV2Api.md#uniswapV2GetPoolsHistorical) | **GET** /dapps/uniswapv2/pools/historical-manual | Pools (historical) 🔥
+*OnChainApi.UniswapV2Api* | [**uniswapV2GetPoolsHourDataHistorical**](docs/UniswapV2Api.md#uniswapV2GetPoolsHourDataHistorical) | **GET** /dapps/uniswapv2/poolsHourData/historical-manual | PoolsHourData (historical)
 *OnChainApi.UniswapV2Api* | [**uniswapV2GetSwapsCurrent**](docs/UniswapV2Api.md#uniswapV2GetSwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current) 🔥
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetSwapsHistorical**](docs/UniswapV2Api.md#uniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical) 🔥
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetTokenDayDataV2DTOsHistorical**](docs/UniswapV2Api.md#uniswapV2GetTokenDayDataV2DTOsHistorical) | **GET** /dapps/uniswapv2/TokenDayDataV2DTOs/historical | TokenDayDataV2DTOs (historical) 🔥
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetTokenV2DTOsHistorical**](docs/UniswapV2Api.md#uniswapV2GetTokenV2DTOsHistorical) | **GET** /dapps/uniswapv2/TokenV2DTOs/historical | TokenV2DTOs (historical) 🔥
+*OnChainApi.UniswapV2Api* | [**uniswapV2GetSwapsHistorical**](docs/UniswapV2Api.md#uniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical-manual | Swaps (historical) 🔥
 *OnChainApi.UniswapV2Api* | [**uniswapV2GetTokensCurrent**](docs/UniswapV2Api.md#uniswapV2GetTokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current) 🔥
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetTokensDayDataHistorical**](docs/UniswapV2Api.md#uniswapV2GetTokensDayDataHistorical) | **GET** /dapps/uniswapv2/tokensDayData/historical | TokensDayData (historical)
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetTokensHistorical**](docs/UniswapV2Api.md#uniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical) 🔥
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetTransactionV2DTOsHistorical**](docs/UniswapV2Api.md#uniswapV2GetTransactionV2DTOsHistorical) | **GET** /dapps/uniswapv2/TransactionV2DTOs/historical | TransactionV2DTOs (historical) 🔥
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetTransactionsHistorical**](docs/UniswapV2Api.md#uniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical)
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetUniswapDayDataV2DTOsHistorical**](docs/UniswapV2Api.md#uniswapV2GetUniswapDayDataV2DTOsHistorical) | **GET** /dapps/uniswapv2/UniswapDayDataV2DTOs/historical | UniswapDayDataV2DTOs (historical) 🔥
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetUniswapFactoryV2DTOsHistorical**](docs/UniswapV2Api.md#uniswapV2GetUniswapFactoryV2DTOsHistorical) | **GET** /dapps/uniswapv2/UniswapFactoryV2DTOs/historical | UniswapFactoryV2DTOs (historical) 🔥
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetUserV2DTOsHistorical**](docs/UniswapV2Api.md#uniswapV2GetUserV2DTOsHistorical) | **GET** /dapps/uniswapv2/UserV2DTOs/historical | UserV2DTOs (historical) 🔥
-*OnChainApi.UniswapV2Api* | [**uniswapV2GetUsersHistorical**](docs/UniswapV2Api.md#uniswapV2GetUsersHistorical) | **GET** /dapps/uniswapv2/users/historical | Users (historical)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetBundleV3DTOsHistorical**](docs/UniswapV3Api.md#uniswapV3GetBundleV3DTOsHistorical) | **GET** /dapps/uniswapv3/BundleV3DTOs/historical | BundleV3DTOs (historical) 🔥
+*OnChainApi.UniswapV2Api* | [**uniswapV2GetTokensDayDataHistorical**](docs/UniswapV2Api.md#uniswapV2GetTokensDayDataHistorical) | **GET** /dapps/uniswapv2/tokensDayData/historical-manual | TokensDayData (historical)
+*OnChainApi.UniswapV2Api* | [**uniswapV2GetTokensHistorical**](docs/UniswapV2Api.md#uniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical-manual | Tokens (historical) 🔥
+*OnChainApi.UniswapV2Api* | [**uniswapV2GetTransactionsHistorical**](docs/UniswapV2Api.md#uniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical-manual | Transactions (historical)
+*OnChainApi.UniswapV2Api* | [**uniswapV2GetUsersHistorical**](docs/UniswapV2Api.md#uniswapV2GetUsersHistorical) | **GET** /dapps/uniswapv2/users/historical-manual | Users (historical)
 *OnChainApi.UniswapV3Api* | [**uniswapV3GetBundlesCurrent**](docs/UniswapV3Api.md#uniswapV3GetBundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetBundlesHistorical**](docs/UniswapV3Api.md#uniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetBurnV3DTOsHistorical**](docs/UniswapV3Api.md#uniswapV3GetBurnV3DTOsHistorical) | **GET** /dapps/uniswapv3/BurnV3DTOs/historical | BurnV3DTOs (historical) 🔥
+*OnChainApi.UniswapV3Api* | [**uniswapV3GetBundlesHistorical**](docs/UniswapV3Api.md#uniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical-manual | Bundles (historical)
 *OnChainApi.UniswapV3Api* | [**uniswapV3GetBurnsCurrent**](docs/UniswapV3Api.md#uniswapV3GetBurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetBurnsHistorical**](docs/UniswapV3Api.md#uniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical)
+*OnChainApi.UniswapV3Api* | [**uniswapV3GetBurnsHistorical**](docs/UniswapV3Api.md#uniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical-manual | Burns (historical)
 *OnChainApi.UniswapV3Api* | [**uniswapV3GetDayDataCurrent**](docs/UniswapV3Api.md#uniswapV3GetDayDataCurrent) | **GET** /dapps/uniswapv3/dayData/current | DayData (current)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetDayDataHistorical**](docs/UniswapV3Api.md#uniswapV3GetDayDataHistorical) | **GET** /dapps/uniswapv3/dayData/historical | DayData (historical)
+*OnChainApi.UniswapV3Api* | [**uniswapV3GetDayDataHistorical**](docs/UniswapV3Api.md#uniswapV3GetDayDataHistorical) | **GET** /dapps/uniswapv3/dayData/historical-manual | DayData (historical)
 *OnChainApi.UniswapV3Api* | [**uniswapV3GetFactoryCurrent**](docs/UniswapV3Api.md#uniswapV3GetFactoryCurrent) | **GET** /dapps/uniswapv3/factory/current | Factory (current)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetFactoryHistorical**](docs/UniswapV3Api.md#uniswapV3GetFactoryHistorical) | **GET** /dapps/uniswapv3/factory/historical | Factory (historical)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetFactoryV3DTOsHistorical**](docs/UniswapV3Api.md#uniswapV3GetFactoryV3DTOsHistorical) | **GET** /dapps/uniswapv3/FactoryV3DTOs/historical | FactoryV3DTOs (historical) 🔥
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetMintV3DTOsHistorical**](docs/UniswapV3Api.md#uniswapV3GetMintV3DTOsHistorical) | **GET** /dapps/uniswapv3/MintV3DTOs/historical | MintV3DTOs (historical) 🔥
+*OnChainApi.UniswapV3Api* | [**uniswapV3GetFactoryHistorical**](docs/UniswapV3Api.md#uniswapV3GetFactoryHistorical) | **GET** /dapps/uniswapv3/factory/historical-manual | Factory (historical)
 *OnChainApi.UniswapV3Api* | [**uniswapV3GetMintsCurrent**](docs/UniswapV3Api.md#uniswapV3GetMintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetMintsHistorical**](docs/UniswapV3Api.md#uniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetPoolDayDataV3DTOsHistorical**](docs/UniswapV3Api.md#uniswapV3GetPoolDayDataV3DTOsHistorical) | **GET** /dapps/uniswapv3/PoolDayDataV3DTOs/historical | PoolDayDataV3DTOs (historical) 🔥
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetPoolHourDataV3DTOsHistorical**](docs/UniswapV3Api.md#uniswapV3GetPoolHourDataV3DTOsHistorical) | **GET** /dapps/uniswapv3/PoolHourDataV3DTOs/historical | PoolHourDataV3DTOs (historical) 🔥
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetPoolV3DTOsHistorical**](docs/UniswapV3Api.md#uniswapV3GetPoolV3DTOsHistorical) | **GET** /dapps/uniswapv3/PoolV3DTOs/historical | PoolV3DTOs (historical) 🔥
+*OnChainApi.UniswapV3Api* | [**uniswapV3GetMintsHistorical**](docs/UniswapV3Api.md#uniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical-manual | Mints (historical)
 *OnChainApi.UniswapV3Api* | [**uniswapV3GetPoolsCurrent**](docs/UniswapV3Api.md#uniswapV3GetPoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current) 🔥
 *OnChainApi.UniswapV3Api* | [**uniswapV3GetPoolsDayDataCurrent**](docs/UniswapV3Api.md#uniswapV3GetPoolsDayDataCurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | PoolsDayData (current)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetPoolsDayDataHistorical**](docs/UniswapV3Api.md#uniswapV3GetPoolsDayDataHistorical) | **GET** /dapps/uniswapv3/poolsDayData/historical | PoolsDayData (historical)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetPoolsHistorical**](docs/UniswapV3Api.md#uniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥
+*OnChainApi.UniswapV3Api* | [**uniswapV3GetPoolsDayDataHistorical**](docs/UniswapV3Api.md#uniswapV3GetPoolsDayDataHistorical) | **GET** /dapps/uniswapv3/poolsDayData/historical-manual | PoolsDayData (historical)
+*OnChainApi.UniswapV3Api* | [**uniswapV3GetPoolsHistorical**](docs/UniswapV3Api.md#uniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical-manual | Pools (historical) 🔥
 *OnChainApi.UniswapV3Api* | [**uniswapV3GetPoolsHourDataCurrent**](docs/UniswapV3Api.md#uniswapV3GetPoolsHourDataCurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | PoolsHourData (current)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetPoolsHourDataHistorical**](docs/UniswapV3Api.md#uniswapV3GetPoolsHourDataHistorical) | **GET** /dapps/uniswapv3/poolsHourData/historical | PoolsHourData (historical)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetPositionSnapshotV3DTOsHistorical**](docs/UniswapV3Api.md#uniswapV3GetPositionSnapshotV3DTOsHistorical) | **GET** /dapps/uniswapv3/PositionSnapshotV3DTOs/historical | PositionSnapshotV3DTOs (historical) 🔥
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetPositionV3DTOsHistorical**](docs/UniswapV3Api.md#uniswapV3GetPositionV3DTOsHistorical) | **GET** /dapps/uniswapv3/PositionV3DTOs/historical | PositionV3DTOs (historical) 🔥
+*OnChainApi.UniswapV3Api* | [**uniswapV3GetPoolsHourDataHistorical**](docs/UniswapV3Api.md#uniswapV3GetPoolsHourDataHistorical) | **GET** /dapps/uniswapv3/poolsHourData/historical-manual | PoolsHourData (historical)
 *OnChainApi.UniswapV3Api* | [**uniswapV3GetPositionsCurrent**](docs/UniswapV3Api.md#uniswapV3GetPositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetPositionsHistorical**](docs/UniswapV3Api.md#uniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetPositionsSnaphotsHistorical**](docs/UniswapV3Api.md#uniswapV3GetPositionsSnaphotsHistorical) | **GET** /dapps/uniswapv3/positionsSnapshots/historical | PositionsSnaphots (historical)
+*OnChainApi.UniswapV3Api* | [**uniswapV3GetPositionsHistorical**](docs/UniswapV3Api.md#uniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical-manual | Positions (historical)
+*OnChainApi.UniswapV3Api* | [**uniswapV3GetPositionsSnaphotsHistorical**](docs/UniswapV3Api.md#uniswapV3GetPositionsSnaphotsHistorical) | **GET** /dapps/uniswapv3/positionsSnapshots/historical-manual | PositionsSnaphots (historical)
 *OnChainApi.UniswapV3Api* | [**uniswapV3GetPositionsSnapshotsCurrent**](docs/UniswapV3Api.md#uniswapV3GetPositionsSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionsSnapshots (current)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetSwapV3DTOsHistorical**](docs/UniswapV3Api.md#uniswapV3GetSwapV3DTOsHistorical) | **GET** /dapps/uniswapv3/SwapV3DTOs/historical | SwapV3DTOs (historical) 🔥
 *OnChainApi.UniswapV3Api* | [**uniswapV3GetSwapsCurrent**](docs/UniswapV3Api.md#uniswapV3GetSwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) 🔥
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetSwapsHistorical**](docs/UniswapV3Api.md#uniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetTickDayDataV3DTOsHistorical**](docs/UniswapV3Api.md#uniswapV3GetTickDayDataV3DTOsHistorical) | **GET** /dapps/uniswapv3/TickDayDataV3DTOs/historical | TickDayDataV3DTOs (historical) 🔥
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetTickV3DTOsHistorical**](docs/UniswapV3Api.md#uniswapV3GetTickV3DTOsHistorical) | **GET** /dapps/uniswapv3/TickV3DTOs/historical | TickV3DTOs (historical) 🔥
+*OnChainApi.UniswapV3Api* | [**uniswapV3GetSwapsHistorical**](docs/UniswapV3Api.md#uniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical-manual | Swaps (historical) 🔥
 *OnChainApi.UniswapV3Api* | [**uniswapV3GetTicksCurrent**](docs/UniswapV3Api.md#uniswapV3GetTicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
 *OnChainApi.UniswapV3Api* | [**uniswapV3GetTicksDayDataCurrent**](docs/UniswapV3Api.md#uniswapV3GetTicksDayDataCurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | TicksDayData (current)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetTicksDayDataHistorical**](docs/UniswapV3Api.md#uniswapV3GetTicksDayDataHistorical) | **GET** /dapps/uniswapv3/ticksDayData/historical | TicksDayData (historical)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetTicksHistorical**](docs/UniswapV3Api.md#uniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetTokenHourDataV3DTOsHistorical**](docs/UniswapV3Api.md#uniswapV3GetTokenHourDataV3DTOsHistorical) | **GET** /dapps/uniswapv3/TokenHourDataV3DTOs/historical | TokenHourDataV3DTOs (historical) 🔥
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetTokenV3DTOsHistorical**](docs/UniswapV3Api.md#uniswapV3GetTokenV3DTOsHistorical) | **GET** /dapps/uniswapv3/TokenV3DTOs/historical | TokenV3DTOs (historical) 🔥
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetTokenV3DayDataDTOsHistorical**](docs/UniswapV3Api.md#uniswapV3GetTokenV3DayDataDTOsHistorical) | **GET** /dapps/uniswapv3/TokenV3DayDataDTOs/historical | TokenV3DayDataDTOs (historical) 🔥
+*OnChainApi.UniswapV3Api* | [**uniswapV3GetTicksDayDataHistorical**](docs/UniswapV3Api.md#uniswapV3GetTicksDayDataHistorical) | **GET** /dapps/uniswapv3/ticksDayData/historical-manual | TicksDayData (historical)
+*OnChainApi.UniswapV3Api* | [**uniswapV3GetTicksHistorical**](docs/UniswapV3Api.md#uniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical-manual | Ticks (historical)
 *OnChainApi.UniswapV3Api* | [**uniswapV3GetTokensCurrent**](docs/UniswapV3Api.md#uniswapV3GetTokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) 🔥
 *OnChainApi.UniswapV3Api* | [**uniswapV3GetTokensDayDataCurrent**](docs/UniswapV3Api.md#uniswapV3GetTokensDayDataCurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | TokensDayData (current)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetTokensDayDataHistorical**](docs/UniswapV3Api.md#uniswapV3GetTokensDayDataHistorical) | **GET** /dapps/uniswapv3/tokensDayData/historical | TokensDayData (historical)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetTokensHistorical**](docs/UniswapV3Api.md#uniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥
+*OnChainApi.UniswapV3Api* | [**uniswapV3GetTokensDayDataHistorical**](docs/UniswapV3Api.md#uniswapV3GetTokensDayDataHistorical) | **GET** /dapps/uniswapv3/tokensDayData/historical-manual | TokensDayData (historical)
+*OnChainApi.UniswapV3Api* | [**uniswapV3GetTokensHistorical**](docs/UniswapV3Api.md#uniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical-manual | Tokens (historical) 🔥
 *OnChainApi.UniswapV3Api* | [**uniswapV3GetTokensHourDataCurrent**](docs/UniswapV3Api.md#uniswapV3GetTokensHourDataCurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | TokensHourData (current)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetTokensHourDataHistorical**](docs/UniswapV3Api.md#uniswapV3GetTokensHourDataHistorical) | **GET** /dapps/uniswapv3/tokensHourData/historical | TokensHourData (historical)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetTransactionV3DTOsHistorical**](docs/UniswapV3Api.md#uniswapV3GetTransactionV3DTOsHistorical) | **GET** /dapps/uniswapv3/TransactionV3DTOs/historical | TransactionV3DTOs (historical) 🔥
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetTransactionsHistorical**](docs/UniswapV3Api.md#uniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical)
-*OnChainApi.UniswapV3Api* | [**uniswapV3GetUniswapDayDataV3DTOsHistorical**](docs/UniswapV3Api.md#uniswapV3GetUniswapDayDataV3DTOsHistorical) | **GET** /dapps/uniswapv3/UniswapDayDataV3DTOs/historical | UniswapDayDataV3DTOs (historical) 🔥
+*OnChainApi.UniswapV3Api* | [**uniswapV3GetTokensHourDataHistorical**](docs/UniswapV3Api.md#uniswapV3GetTokensHourDataHistorical) | **GET** /dapps/uniswapv3/tokensHourData/historical-manual | TokensHourData (historical)
+*OnChainApi.UniswapV3Api* | [**uniswapV3GetTransactionsHistorical**](docs/UniswapV3Api.md#uniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical-manual | Transactions (historical)
 
 
 ## Documentation for Models

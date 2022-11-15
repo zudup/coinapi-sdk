@@ -15,22 +15,8 @@ Please update as you see appropriate
 ]]
 describe("cow_api", function()
   local openapiclient_cow_api = require "openapiclient.api.cow_api"
-  -- unit tests for cow_get_order_dtos__historical
-  describe("cow_get_order_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for cow_get_orders__historical
   describe("cow_get_orders__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for cow_get_settlement_dtos__historical
-  describe("cow_get_settlement_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -43,13 +29,6 @@ describe("cow_api", function()
     end)
   end)
 
-  -- unit tests for cow_get_token_dtos__historical
-  describe("cow_get_token_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for cow_get_tokens__historical
   describe("cow_get_tokens__historical test", function()
     it("should work", function()
@@ -57,22 +36,8 @@ describe("cow_api", function()
     end)
   end)
 
-  -- unit tests for cow_get_trade_dtos__historical
-  describe("cow_get_trade_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for cow_get_trades__historical
   describe("cow_get_trades__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for cow_get_user_dtos__historical
-  describe("cow_get_user_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

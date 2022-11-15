@@ -32,22 +32,6 @@ describe 'DexApi' do
     end
   end
 
-  # unit tests for dex_get_batch_dtos__historical
-  # BatchDTOs (historical) 🔥
-  # Gets BatchDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<DexBatchDTO>]
-  describe 'dex_get_batch_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for dex_get_batches__historical
   # Batches (historical)
   # Gets batches.
@@ -58,22 +42,6 @@ describe 'DexApi' do
   # @option opts [Time] :end_date 
   # @return [Array<DexBatchDTO>]
   describe 'dex_get_batches__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for dex_get_deposit_dtos__historical
-  # DepositDTOs (historical) 🔥
-  # Gets DepositDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<DexDepositDTO>]
-  describe 'dex_get_deposit_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -95,22 +63,6 @@ describe 'DexApi' do
     end
   end
 
-  # unit tests for dex_get_order_dtos__historical
-  # OrderDTOs (historical) 🔥
-  # Gets OrderDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<DexOrderDTO>]
-  describe 'dex_get_order_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for dex_get_orders__historical
   # Orders (historical)
   # Gets orders.
@@ -127,22 +79,6 @@ describe 'DexApi' do
     end
   end
 
-  # unit tests for dex_get_price_dtos__historical
-  # PriceDTOs (historical) 🔥
-  # Gets PriceDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<DexPriceDTO>]
-  describe 'dex_get_price_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for dex_get_prices__historical
   # Prices (historical)
   # Gets prices.
@@ -154,22 +90,6 @@ describe 'DexApi' do
   # @option opts [String] :token_id 
   # @return [Array<DexPriceDTO>]
   describe 'dex_get_prices__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for dex_get_solution_dtos__historical
-  # SolutionDTOs (historical) 🔥
-  # Gets SolutionDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<DexSolutionDTO>]
-  describe 'dex_get_solution_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -206,38 +126,6 @@ describe 'DexApi' do
     end
   end
 
-  # unit tests for dex_get_stats_dtos__historical
-  # StatsDTOs (historical) 🔥
-  # Gets StatsDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<DexStatsDTO>]
-  describe 'dex_get_stats_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for dex_get_token_dtos__historical
-  # TokenDTOs (historical) 🔥
-  # Gets TokenDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<DexTokenDTO>]
-  describe 'dex_get_token_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for dex_get_tokens__historical
   # Tokens (historical) 🔥
   # Gets tokens.
@@ -249,22 +137,6 @@ describe 'DexApi' do
   # @option opts [String] :token_id 
   # @return [Array<DexTokenDTO>]
   describe 'dex_get_tokens__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for dex_get_trade_dtos__historical
-  # TradeDTOs (historical) 🔥
-  # Gets TradeDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<DexTradeDTO>]
-  describe 'dex_get_trade_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -285,22 +157,6 @@ describe 'DexApi' do
     end
   end
 
-  # unit tests for dex_get_user_dtos__historical
-  # UserDTOs (historical) 🔥
-  # Gets UserDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<DexUserDTO>]
-  describe 'dex_get_user_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for dex_get_users__historical
   # Users (historical)
   # Gets users.
@@ -311,38 +167,6 @@ describe 'DexApi' do
   # @option opts [Time] :end_date 
   # @return [Array<DexUserDTO>]
   describe 'dex_get_users__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for dex_get_withdraw_dtos__historical
-  # WithdrawDTOs (historical) 🔥
-  # Gets WithdrawDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<DexWithdrawDTO>]
-  describe 'dex_get_withdraw_dtos__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for dex_get_withdraw_request_dtos__historical
-  # WithdrawRequestDTOs (historical) 🔥
-  # Gets WithdrawRequestDTOs.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<DexWithdrawRequestDTO>]
-  describe 'dex_get_withdraw_request_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

@@ -15,22 +15,8 @@ Please update as you see appropriate
 ]]
 describe("curve_api", function()
   local openapiclient_curve_api = require "openapiclient.api.curve_api"
-  -- unit tests for curve_get_account_dtos__historical
-  describe("curve_get_account_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for curve_get_accounts__historical
   describe("curve_get_accounts__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_add_liquidity_event_dtos__historical
-  describe("curve_get_add_liquidity_event_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -43,22 +29,8 @@ describe("curve_api", function()
     end)
   end)
 
-  -- unit tests for curve_get_admin_fee_change_log_dtos__historical
-  describe("curve_get_admin_fee_change_log_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for curve_get_admin_fee_change_logs__historical
   describe("curve_get_admin_fee_change_logs__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_amplification_coeff_change_log_dtos__historical
-  describe("curve_get_amplification_coeff_change_log_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -71,29 +43,8 @@ describe("curve_api", function()
     end)
   end)
 
-  -- unit tests for curve_get_coin_dtos__historical
-  describe("curve_get_coin_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for curve_get_coins__historical
   describe("curve_get_coins__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_contract_dtos__historical
-  describe("curve_get_contract_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_contract_version_dtos__historical
-  describe("curve_get_contract_version_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -113,22 +64,8 @@ describe("curve_api", function()
     end)
   end)
 
-  -- unit tests for curve_get_daily_volume_dtos__historical
-  describe("curve_get_daily_volume_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for curve_get_daily_volumes__historical
   describe("curve_get_daily_volumes__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_exchange_dtos__historical
-  describe("curve_get_exchange_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -141,78 +78,8 @@ describe("curve_api", function()
     end)
   end)
 
-  -- unit tests for curve_get_fee_change_log_dtos__historical
-  describe("curve_get_fee_change_log_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for curve_get_fee_change_logs__historical
   describe("curve_get_fee_change_logs__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_gauge_deposit_dtos__historical
-  describe("curve_get_gauge_deposit_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_gauge_dtos__historical
-  describe("curve_get_gauge_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_gauge_liquidity_dtos__historical
-  describe("curve_get_gauge_liquidity_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_gauge_total_weight_dtos__historical
-  describe("curve_get_gauge_total_weight_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_gauge_type_dtos__historical
-  describe("curve_get_gauge_type_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_gauge_type_weight_dtos__historical
-  describe("curve_get_gauge_type_weight_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_gauge_weight_dtos__historical
-  describe("curve_get_gauge_weight_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_gauge_weight_vote_dtos__historical
-  describe("curve_get_gauge_weight_vote_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_gauge_withdraw_dtos__historical
-  describe("curve_get_gauge_withdraw_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -281,22 +148,8 @@ describe("curve_api", function()
     end)
   end)
 
-  -- unit tests for curve_get_hourly_volume_dtos__historical
-  describe("curve_get_hourly_volume_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for curve_get_hourly_volumes__historical
   describe("curve_get_hourly_volumes__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_lp_token_dtos__historical
-  describe("curve_get_lp_token_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -309,29 +162,8 @@ describe("curve_api", function()
     end)
   end)
 
-  -- unit tests for curve_get_pool_dtos__historical
-  describe("curve_get_pool_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for curve_get_pools__historical
   describe("curve_get_pools__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_proposal_dtos__historical
-  describe("curve_get_proposal_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_proposal_vote_dtos__historical
-  describe("curve_get_proposal_vote_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -351,22 +183,8 @@ describe("curve_api", function()
     end)
   end)
 
-  -- unit tests for curve_get_remove_liquidity_event_dtos__historical
-  describe("curve_get_remove_liquidity_event_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for curve_get_remove_liquidity_events__historical
   describe("curve_get_remove_liquidity_events__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_remove_liquidity_one_event_dtos__historical
-  describe("curve_get_remove_liquidity_one_event_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -379,22 +197,8 @@ describe("curve_api", function()
     end)
   end)
 
-  -- unit tests for curve_get_system_state_dtos__historical
-  describe("curve_get_system_state_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for curve_get_system_states__historical
   describe("curve_get_system_states__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_token_dtos__historical
-  describe("curve_get_token_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -407,22 +211,8 @@ describe("curve_api", function()
     end)
   end)
 
-  -- unit tests for curve_get_transfer_ownership_event_dtos__historical
-  describe("curve_get_transfer_ownership_event_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for curve_get_transfer_ownership_events__historical
   describe("curve_get_transfer_ownership_events__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_underlying_coin_dtos__historical
-  describe("curve_get_underlying_coin_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -435,22 +225,8 @@ describe("curve_api", function()
     end)
   end)
 
-  -- unit tests for curve_get_voting_app_dtos__historical
-  describe("curve_get_voting_app_dtos__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
   -- unit tests for curve_get_voting_apps__historical
   describe("curve_get_voting_apps__historical test", function()
-    it("should work", function()
-      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
-    end)
-  end)
-
-  -- unit tests for curve_get_weekly_volume_dtos__historical
-  describe("curve_get_weekly_volume_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

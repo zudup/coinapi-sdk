@@ -41,28 +41,6 @@ object UniswapV3Api {
 class UniswapV3Api(baseUrl: String) {
 
   /**
-   * Gets BundleV3DTOs.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[BundleV3DTO] (successful operation)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
-   */
-  def uniswapV3GetBundleV3DTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[BundleV3DTO]] =
-    ApiRequest[Seq[BundleV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/BundleV3DTOs/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withQueryParam("poolId", poolId)
-      .withSuccessResponse[Seq[BundleV3DTO]](200)
-      
-
-  /**
    * Gets bundles.
    * 
    * Expected answers:
@@ -85,34 +63,12 @@ class UniswapV3Api(baseUrl: String) {
    * @param endDate 
    */
   def uniswapV3GetBundlesHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Seq[BundleV3DTO]] =
-    ApiRequest[Seq[BundleV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/bundles/historical", "application/json")
+    ApiRequest[Seq[BundleV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/bundles/historical-manual", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
       .withSuccessResponse[Seq[BundleV3DTO]](200)
-      
-
-  /**
-   * Gets BurnV3DTOs.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[BurnV3DTO] (successful operation)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
-   */
-  def uniswapV3GetBurnV3DTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[BurnV3DTO]] =
-    ApiRequest[Seq[BurnV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/BurnV3DTOs/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withQueryParam("poolId", poolId)
-      .withSuccessResponse[Seq[BurnV3DTO]](200)
       
 
   /**
@@ -142,7 +98,7 @@ class UniswapV3Api(baseUrl: String) {
    * @param poolId 
    */
   def uniswapV3GetBurnsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[BurnV3DTO]] =
-    ApiRequest[Seq[BurnV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/burns/historical", "application/json")
+    ApiRequest[Seq[BurnV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/burns/historical-manual", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -174,7 +130,7 @@ class UniswapV3Api(baseUrl: String) {
    * @param endDate 
    */
   def uniswapV3GetDayDataHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Seq[UniswapDayDataV3DTO]] =
-    ApiRequest[Seq[UniswapDayDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/dayData/historical", "application/json")
+    ApiRequest[Seq[UniswapDayDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/dayData/historical-manual", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -205,56 +161,12 @@ class UniswapV3Api(baseUrl: String) {
    * @param endDate 
    */
   def uniswapV3GetFactoryHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Seq[FactoryV3DTO]] =
-    ApiRequest[Seq[FactoryV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/factory/historical", "application/json")
+    ApiRequest[Seq[FactoryV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/factory/historical-manual", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
       .withSuccessResponse[Seq[FactoryV3DTO]](200)
-      
-
-  /**
-   * Gets FactoryV3DTOs.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[FactoryV3DTO] (successful operation)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
-   */
-  def uniswapV3GetFactoryV3DTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[FactoryV3DTO]] =
-    ApiRequest[Seq[FactoryV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/FactoryV3DTOs/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withQueryParam("poolId", poolId)
-      .withSuccessResponse[Seq[FactoryV3DTO]](200)
-      
-
-  /**
-   * Gets MintV3DTOs.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[MintV3DTO] (successful operation)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
-   */
-  def uniswapV3GetMintV3DTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[MintV3DTO]] =
-    ApiRequest[Seq[MintV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/MintV3DTOs/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withQueryParam("poolId", poolId)
-      .withSuccessResponse[Seq[MintV3DTO]](200)
       
 
   /**
@@ -284,79 +196,13 @@ class UniswapV3Api(baseUrl: String) {
    * @param poolId 
    */
   def uniswapV3GetMintsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[MintV3DTO]] =
-    ApiRequest[Seq[MintV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/mints/historical", "application/json")
+    ApiRequest[Seq[MintV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/mints/historical-manual", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
       .withQueryParam("poolId", poolId)
       .withSuccessResponse[Seq[MintV3DTO]](200)
-      
-
-  /**
-   * Gets PoolDayDataV3DTOs.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[PoolDayDataV3DTO] (successful operation)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
-   */
-  def uniswapV3GetPoolDayDataV3DTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[PoolDayDataV3DTO]] =
-    ApiRequest[Seq[PoolDayDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/PoolDayDataV3DTOs/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withQueryParam("poolId", poolId)
-      .withSuccessResponse[Seq[PoolDayDataV3DTO]](200)
-      
-
-  /**
-   * Gets PoolHourDataV3DTOs.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[PoolHourDataV3DTO] (successful operation)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
-   */
-  def uniswapV3GetPoolHourDataV3DTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[PoolHourDataV3DTO]] =
-    ApiRequest[Seq[PoolHourDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/PoolHourDataV3DTOs/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withQueryParam("poolId", poolId)
-      .withSuccessResponse[Seq[PoolHourDataV3DTO]](200)
-      
-
-  /**
-   * Gets PoolV3DTOs.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[PoolV3DTO] (successful operation)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
-   */
-  def uniswapV3GetPoolV3DTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[PoolV3DTO]] =
-    ApiRequest[Seq[PoolV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/PoolV3DTOs/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withQueryParam("poolId", poolId)
-      .withSuccessResponse[Seq[PoolV3DTO]](200)
       
 
   /**
@@ -400,7 +246,7 @@ class UniswapV3Api(baseUrl: String) {
    * @param poolId 
    */
   def uniswapV3GetPoolsDayDataHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[PoolDayDataV3DTO]] =
-    ApiRequest[Seq[PoolDayDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/poolsDayData/historical", "application/json")
+    ApiRequest[Seq[PoolDayDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/poolsDayData/historical-manual", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -422,7 +268,7 @@ class UniswapV3Api(baseUrl: String) {
    * @param poolId 
    */
   def uniswapV3GetPoolsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[PoolV3DTO]] =
-    ApiRequest[Seq[PoolV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/pools/historical", "application/json")
+    ApiRequest[Seq[PoolV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/pools/historical-manual", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -458,57 +304,13 @@ class UniswapV3Api(baseUrl: String) {
    * @param poolId 
    */
   def uniswapV3GetPoolsHourDataHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[PoolHourDataV3DTO]] =
-    ApiRequest[Seq[PoolHourDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/poolsHourData/historical", "application/json")
+    ApiRequest[Seq[PoolHourDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/poolsHourData/historical-manual", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
       .withQueryParam("poolId", poolId)
       .withSuccessResponse[Seq[PoolHourDataV3DTO]](200)
-      
-
-  /**
-   * Gets PositionSnapshotV3DTOs.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[PositionSnapshotV3DTO] (successful operation)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
-   */
-  def uniswapV3GetPositionSnapshotV3DTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[PositionSnapshotV3DTO]] =
-    ApiRequest[Seq[PositionSnapshotV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/PositionSnapshotV3DTOs/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withQueryParam("poolId", poolId)
-      .withSuccessResponse[Seq[PositionSnapshotV3DTO]](200)
-      
-
-  /**
-   * Gets PositionV3DTOs.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[PositionV3DTO] (successful operation)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
-   */
-  def uniswapV3GetPositionV3DTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[PositionV3DTO]] =
-    ApiRequest[Seq[PositionV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/PositionV3DTOs/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withQueryParam("poolId", poolId)
-      .withSuccessResponse[Seq[PositionV3DTO]](200)
       
 
   /**
@@ -538,7 +340,7 @@ class UniswapV3Api(baseUrl: String) {
    * @param poolId 
    */
   def uniswapV3GetPositionsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[PositionV3DTO]] =
-    ApiRequest[Seq[PositionV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/positions/historical", "application/json")
+    ApiRequest[Seq[PositionV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/positions/historical-manual", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -560,7 +362,7 @@ class UniswapV3Api(baseUrl: String) {
    * @param poolId 
    */
   def uniswapV3GetPositionsSnaphotsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[PositionSnapshotV3DTO]] =
-    ApiRequest[Seq[PositionSnapshotV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/positionsSnapshots/historical", "application/json")
+    ApiRequest[Seq[PositionSnapshotV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/positionsSnapshots/historical-manual", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -581,28 +383,6 @@ class UniswapV3Api(baseUrl: String) {
     ApiRequest[Seq[PositionSnapshotV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/positionSnapshots/current", "application/json")
       .withQueryParam("filter_pool_id", filterPoolId)
       .withSuccessResponse[Seq[PositionSnapshotV3DTO]](200)
-      
-
-  /**
-   * Gets SwapV3DTOs.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[SwapV3DTO] (successful operation)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
-   */
-  def uniswapV3GetSwapV3DTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[SwapV3DTO]] =
-    ApiRequest[Seq[SwapV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/SwapV3DTOs/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withQueryParam("poolId", poolId)
-      .withSuccessResponse[Seq[SwapV3DTO]](200)
       
 
   /**
@@ -632,57 +412,13 @@ class UniswapV3Api(baseUrl: String) {
    * @param poolId 
    */
   def uniswapV3GetSwapsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[SwapV3DTO]] =
-    ApiRequest[Seq[SwapV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/swaps/historical", "application/json")
+    ApiRequest[Seq[SwapV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/swaps/historical-manual", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
       .withQueryParam("poolId", poolId)
       .withSuccessResponse[Seq[SwapV3DTO]](200)
-      
-
-  /**
-   * Gets TickDayDataV3DTOs.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[TickDayDataV3DTO] (successful operation)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
-   */
-  def uniswapV3GetTickDayDataV3DTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[TickDayDataV3DTO]] =
-    ApiRequest[Seq[TickDayDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/TickDayDataV3DTOs/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withQueryParam("poolId", poolId)
-      .withSuccessResponse[Seq[TickDayDataV3DTO]](200)
-      
-
-  /**
-   * Gets TickV3DTOs.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[TickV3DTO] (successful operation)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
-   */
-  def uniswapV3GetTickV3DTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[TickV3DTO]] =
-    ApiRequest[Seq[TickV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/TickV3DTOs/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withQueryParam("poolId", poolId)
-      .withSuccessResponse[Seq[TickV3DTO]](200)
       
 
   /**
@@ -726,7 +462,7 @@ class UniswapV3Api(baseUrl: String) {
    * @param poolId 
    */
   def uniswapV3GetTicksDayDataHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[TickDayDataV3DTO]] =
-    ApiRequest[Seq[TickDayDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/ticksDayData/historical", "application/json")
+    ApiRequest[Seq[TickDayDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/ticksDayData/historical-manual", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -748,79 +484,13 @@ class UniswapV3Api(baseUrl: String) {
    * @param poolId 
    */
   def uniswapV3GetTicksHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[TickV3DTO]] =
-    ApiRequest[Seq[TickV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/ticks/historical", "application/json")
+    ApiRequest[Seq[TickV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/ticks/historical-manual", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
       .withQueryParam("poolId", poolId)
       .withSuccessResponse[Seq[TickV3DTO]](200)
-      
-
-  /**
-   * Gets TokenHourDataV3DTOs.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[TokenHourDataV3DTO] (successful operation)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
-   */
-  def uniswapV3GetTokenHourDataV3DTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[TokenHourDataV3DTO]] =
-    ApiRequest[Seq[TokenHourDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/TokenHourDataV3DTOs/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withQueryParam("poolId", poolId)
-      .withSuccessResponse[Seq[TokenHourDataV3DTO]](200)
-      
-
-  /**
-   * Gets TokenV3DTOs.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[TokenV3DTO] (successful operation)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
-   */
-  def uniswapV3GetTokenV3DTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[TokenV3DTO]] =
-    ApiRequest[Seq[TokenV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/TokenV3DTOs/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withQueryParam("poolId", poolId)
-      .withSuccessResponse[Seq[TokenV3DTO]](200)
-      
-
-  /**
-   * Gets TokenV3DayDataDTOs.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[TokenV3DayDataDTO] (successful operation)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
-   */
-  def uniswapV3GetTokenV3DayDataDTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[TokenV3DayDataDTO]] =
-    ApiRequest[Seq[TokenV3DayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/TokenV3DayDataDTOs/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withQueryParam("poolId", poolId)
-      .withSuccessResponse[Seq[TokenV3DayDataDTO]](200)
       
 
   /**
@@ -864,7 +534,7 @@ class UniswapV3Api(baseUrl: String) {
    * @param tokenId 
    */
   def uniswapV3GetTokensDayDataHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, tokenId: Option[String] = None): ApiRequest[Seq[TokenV3DayDataDTO]] =
-    ApiRequest[Seq[TokenV3DayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/tokensDayData/historical", "application/json")
+    ApiRequest[Seq[TokenV3DayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/tokensDayData/historical-manual", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -886,7 +556,7 @@ class UniswapV3Api(baseUrl: String) {
    * @param tokenId 
    */
   def uniswapV3GetTokensHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, tokenId: Option[String] = None): ApiRequest[Seq[TokenV3DTO]] =
-    ApiRequest[Seq[TokenV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/tokens/historical", "application/json")
+    ApiRequest[Seq[TokenV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/tokens/historical-manual", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -922,35 +592,13 @@ class UniswapV3Api(baseUrl: String) {
    * @param tokenId 
    */
   def uniswapV3GetTokensHourDataHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, tokenId: Option[String] = None): ApiRequest[Seq[TokenHourDataV3DTO]] =
-    ApiRequest[Seq[TokenHourDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/tokensHourData/historical", "application/json")
+    ApiRequest[Seq[TokenHourDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/tokensHourData/historical-manual", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
       .withQueryParam("tokenId", tokenId)
       .withSuccessResponse[Seq[TokenHourDataV3DTO]](200)
-      
-
-  /**
-   * Gets TransactionV3DTOs.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[TransactionV3DTO] (successful operation)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
-   */
-  def uniswapV3GetTransactionV3DTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[TransactionV3DTO]] =
-    ApiRequest[Seq[TransactionV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/TransactionV3DTOs/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withQueryParam("poolId", poolId)
-      .withSuccessResponse[Seq[TransactionV3DTO]](200)
       
 
   /**
@@ -965,34 +613,12 @@ class UniswapV3Api(baseUrl: String) {
    * @param endDate 
    */
   def uniswapV3GetTransactionsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None): ApiRequest[Seq[TransactionV3DTO]] =
-    ApiRequest[Seq[TransactionV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/transactions/historical", "application/json")
+    ApiRequest[Seq[TransactionV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/transactions/historical-manual", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
       .withSuccessResponse[Seq[TransactionV3DTO]](200)
-      
-
-  /**
-   * Gets UniswapDayDataV3DTOs.
-   * 
-   * Expected answers:
-   *   code 200 : Seq[UniswapDayDataV3DTO] (successful operation)
-   * 
-   * @param startBlock 
-   * @param endBlock 
-   * @param startDate 
-   * @param endDate 
-   * @param poolId 
-   */
-  def uniswapV3GetUniswapDayDataV3DTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[UniswapDayDataV3DTO]] =
-    ApiRequest[Seq[UniswapDayDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/UniswapDayDataV3DTOs/historical", "application/json")
-      .withQueryParam("startBlock", startBlock)
-      .withQueryParam("endBlock", endBlock)
-      .withQueryParam("startDate", startDate)
-      .withQueryParam("endDate", endDate)
-      .withQueryParam("poolId", poolId)
-      .withSuccessResponse[Seq[UniswapDayDataV3DTO]](200)
       
 
 

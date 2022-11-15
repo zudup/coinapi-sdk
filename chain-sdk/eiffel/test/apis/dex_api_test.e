@@ -13,24 +13,6 @@ inherit
 feature -- Test routines
 
 
-    test_dex_get_batch_dt_os_historical
-            -- BatchDTOs (historical) 🔥
-            --
-            -- Gets BatchDTOs.
-        local
-            l_response: LIST [DEX_BATCH_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.dex_get_batch_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
-            assert ("not_implemented", False)
-        end
-
     test_dex_get_batches_historical
             -- Batches (historical)
             --
@@ -45,24 +27,6 @@ feature -- Test routines
             -- TODO: Initialize required params.
 
             -- l_response := api.dex_get_batches_historical(l_start_block, l_end_block, l_start_date, l_end_date)
-            assert ("not_implemented", False)
-        end
-
-    test_dex_get_deposit_dt_os_historical
-            -- DepositDTOs (historical) 🔥
-            --
-            -- Gets DepositDTOs.
-        local
-            l_response: LIST [DEX_DEPOSIT_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.dex_get_deposit_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
             assert ("not_implemented", False)
         end
 
@@ -84,24 +48,6 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_dex_get_order_dt_os_historical
-            -- OrderDTOs (historical) 🔥
-            --
-            -- Gets OrderDTOs.
-        local
-            l_response: LIST [DEX_ORDER_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.dex_get_order_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
-            assert ("not_implemented", False)
-        end
-
     test_dex_get_orders_historical
             -- Orders (historical)
             --
@@ -117,24 +63,6 @@ feature -- Test routines
             -- TODO: Initialize required params.
 
             -- l_response := api.dex_get_orders_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_token_id)
-            assert ("not_implemented", False)
-        end
-
-    test_dex_get_price_dt_os_historical
-            -- PriceDTOs (historical) 🔥
-            --
-            -- Gets PriceDTOs.
-        local
-            l_response: LIST [DEX_PRICE_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.dex_get_price_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
             assert ("not_implemented", False)
         end
 
@@ -156,24 +84,6 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_dex_get_solution_dt_os_historical
-            -- SolutionDTOs (historical) 🔥
-            --
-            -- Gets SolutionDTOs.
-        local
-            l_response: LIST [DEX_SOLUTION_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.dex_get_solution_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
-            assert ("not_implemented", False)
-        end
-
     test_dex_get_solutions_historical
             -- Solutions (historical)
             --
@@ -192,24 +102,6 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_dex_get_stats_dt_os_historical
-            -- StatsDTOs (historical) 🔥
-            --
-            -- Gets StatsDTOs.
-        local
-            l_response: LIST [DEX_STATS_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.dex_get_stats_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
-            assert ("not_implemented", False)
-        end
-
     test_dex_get_stats_historical
             -- Stats (historical)
             --
@@ -224,24 +116,6 @@ feature -- Test routines
             -- TODO: Initialize required params.
 
             -- l_response := api.dex_get_stats_historical(l_start_block, l_end_block, l_start_date, l_end_date)
-            assert ("not_implemented", False)
-        end
-
-    test_dex_get_token_dt_os_historical
-            -- TokenDTOs (historical) 🔥
-            --
-            -- Gets TokenDTOs.
-        local
-            l_response: LIST [DEX_TOKEN_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.dex_get_token_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
             assert ("not_implemented", False)
         end
 
@@ -263,24 +137,6 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_dex_get_trade_dt_os_historical
-            -- TradeDTOs (historical) 🔥
-            --
-            -- Gets TradeDTOs.
-        local
-            l_response: LIST [DEX_TRADE_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.dex_get_trade_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
-            assert ("not_implemented", False)
-        end
-
     test_dex_get_trades_historical
             -- Trades (historical) 🔥
             --
@@ -298,24 +154,6 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_dex_get_user_dt_os_historical
-            -- UserDTOs (historical) 🔥
-            --
-            -- Gets UserDTOs.
-        local
-            l_response: LIST [DEX_USER_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.dex_get_user_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
-            assert ("not_implemented", False)
-        end
-
     test_dex_get_users_historical
             -- Users (historical)
             --
@@ -330,42 +168,6 @@ feature -- Test routines
             -- TODO: Initialize required params.
 
             -- l_response := api.dex_get_users_historical(l_start_block, l_end_block, l_start_date, l_end_date)
-            assert ("not_implemented", False)
-        end
-
-    test_dex_get_withdraw_dt_os_historical
-            -- WithdrawDTOs (historical) 🔥
-            --
-            -- Gets WithdrawDTOs.
-        local
-            l_response: LIST [DEX_WITHDRAW_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.dex_get_withdraw_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
-            assert ("not_implemented", False)
-        end
-
-    test_dex_get_withdraw_request_dt_os_historical
-            -- WithdrawRequestDTOs (historical) 🔥
-            --
-            -- Gets WithdrawRequestDTOs.
-        local
-            l_response: LIST [DEX_WITHDRAW_REQUEST_DTO]
-            l_start_block: INTEGER_64
-            l_end_block: INTEGER_64
-            l_start_date: DATE_TIME
-            l_end_date: DATE_TIME
-            l_pool_id: STRING_32
-        do
-            -- TODO: Initialize required params.
-
-            -- l_response := api.dex_get_withdraw_request_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
             assert ("not_implemented", False)
         end
 

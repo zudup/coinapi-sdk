@@ -40,41 +40,6 @@ public:
 	UniswapV3Manager();
 	virtual ~UniswapV3Manager();
 
-/*! \brief BundleV3DTOs (historical) 🔥. *Synchronous*
- *
- * Gets BundleV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetBundleV3DTOs (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.BundleV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief BundleV3DTOs (historical) 🔥. *Asynchronous*
- *
- * Gets BundleV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetBundleV3DTOs (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.BundleV3DTO>, Error, void* )
-	, void* userData);
-
-
 /*! \brief Bundles (current). *Synchronous*
  *
  * Gets bundles.
@@ -130,41 +95,6 @@ bool uniswapV3GetBundles (historical)Sync(char * accessToken,
 bool uniswapV3GetBundles (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
 	void(* handler)(std::list<UniswapV3.BundleV3DTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief BurnV3DTOs (historical) 🔥. *Synchronous*
- *
- * Gets BurnV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetBurnV3DTOs (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.BurnV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief BurnV3DTOs (historical) 🔥. *Asynchronous*
- *
- * Gets BurnV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetBurnV3DTOs (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.BurnV3DTO>, Error, void* )
 	, void* userData);
 
 
@@ -346,76 +276,6 @@ bool uniswapV3GetFactory (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief FactoryV3DTOs (historical) 🔥. *Synchronous*
- *
- * Gets FactoryV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetFactoryV3DTOs (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.FactoryV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief FactoryV3DTOs (historical) 🔥. *Asynchronous*
- *
- * Gets FactoryV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetFactoryV3DTOs (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.FactoryV3DTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief MintV3DTOs (historical) 🔥. *Synchronous*
- *
- * Gets MintV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetMintV3DTOs (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.MintV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief MintV3DTOs (historical) 🔥. *Asynchronous*
- *
- * Gets MintV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetMintV3DTOs (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.MintV3DTO>, Error, void* )
-	, void* userData);
-
-
 /*! \brief Mints (current). *Synchronous*
  *
  * Gets mints.
@@ -475,111 +335,6 @@ bool uniswapV3GetMints (historical)Sync(char * accessToken,
 bool uniswapV3GetMints (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
 	void(* handler)(std::list<UniswapV3.MintV3DTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief PoolDayDataV3DTOs (historical) 🔥. *Synchronous*
- *
- * Gets PoolDayDataV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetPoolDayDataV3DTOs (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.PoolDayDataV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief PoolDayDataV3DTOs (historical) 🔥. *Asynchronous*
- *
- * Gets PoolDayDataV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetPoolDayDataV3DTOs (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.PoolDayDataV3DTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief PoolHourDataV3DTOs (historical) 🔥. *Synchronous*
- *
- * Gets PoolHourDataV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetPoolHourDataV3DTOs (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.PoolHourDataV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief PoolHourDataV3DTOs (historical) 🔥. *Asynchronous*
- *
- * Gets PoolHourDataV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetPoolHourDataV3DTOs (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.PoolHourDataV3DTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief PoolV3DTOs (historical) 🔥. *Synchronous*
- *
- * Gets PoolV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetPoolV3DTOs (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.PoolV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief PoolV3DTOs (historical) 🔥. *Asynchronous*
- *
- * Gets PoolV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetPoolV3DTOs (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.PoolV3DTO>, Error, void* )
 	, void* userData);
 
 
@@ -769,76 +524,6 @@ bool uniswapV3GetPoolsHourData (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief PositionSnapshotV3DTOs (historical) 🔥. *Synchronous*
- *
- * Gets PositionSnapshotV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetPositionSnapshotV3DTOs (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.PositionSnapshotV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief PositionSnapshotV3DTOs (historical) 🔥. *Asynchronous*
- *
- * Gets PositionSnapshotV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetPositionSnapshotV3DTOs (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.PositionSnapshotV3DTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief PositionV3DTOs (historical) 🔥. *Synchronous*
- *
- * Gets PositionV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetPositionV3DTOs (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.PositionV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief PositionV3DTOs (historical) 🔥. *Asynchronous*
- *
- * Gets PositionV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetPositionV3DTOs (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.PositionV3DTO>, Error, void* )
-	, void* userData);
-
-
 /*! \brief Positions (current). *Synchronous*
  *
  * Gets positions.
@@ -963,41 +648,6 @@ bool uniswapV3GetPositionsSnapshots (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief SwapV3DTOs (historical) 🔥. *Synchronous*
- *
- * Gets SwapV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetSwapV3DTOs (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.SwapV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief SwapV3DTOs (historical) 🔥. *Asynchronous*
- *
- * Gets SwapV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetSwapV3DTOs (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.SwapV3DTO>, Error, void* )
-	, void* userData);
-
-
 /*! \brief Swaps (current) 🔥. *Synchronous*
  *
  * Gets swaps.
@@ -1057,76 +707,6 @@ bool uniswapV3GetSwaps (historical)Sync(char * accessToken,
 bool uniswapV3GetSwaps (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
 	void(* handler)(std::list<UniswapV3.SwapV3DTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief TickDayDataV3DTOs (historical) 🔥. *Synchronous*
- *
- * Gets TickDayDataV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetTickDayDataV3DTOs (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.TickDayDataV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief TickDayDataV3DTOs (historical) 🔥. *Asynchronous*
- *
- * Gets TickDayDataV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetTickDayDataV3DTOs (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.TickDayDataV3DTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief TickV3DTOs (historical) 🔥. *Synchronous*
- *
- * Gets TickV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetTickV3DTOs (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.TickV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief TickV3DTOs (historical) 🔥. *Asynchronous*
- *
- * Gets TickV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetTickV3DTOs (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.TickV3DTO>, Error, void* )
 	, void* userData);
 
 
@@ -1251,111 +831,6 @@ bool uniswapV3GetTicksDayData (historical)Sync(char * accessToken,
 bool uniswapV3GetTicksDayData (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
 	void(* handler)(std::list<UniswapV3.TickDayDataV3DTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief TokenHourDataV3DTOs (historical) 🔥. *Synchronous*
- *
- * Gets TokenHourDataV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetTokenHourDataV3DTOs (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.TokenHourDataV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief TokenHourDataV3DTOs (historical) 🔥. *Asynchronous*
- *
- * Gets TokenHourDataV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetTokenHourDataV3DTOs (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.TokenHourDataV3DTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief TokenV3DTOs (historical) 🔥. *Synchronous*
- *
- * Gets TokenV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetTokenV3DTOs (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.TokenV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief TokenV3DTOs (historical) 🔥. *Asynchronous*
- *
- * Gets TokenV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetTokenV3DTOs (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.TokenV3DTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief TokenV3DayDataDTOs (historical) 🔥. *Synchronous*
- *
- * Gets TokenV3DayDataDTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetTokenV3DayDataDTOs (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.TokenV3DayDataDTO>, Error, void* )
-	, void* userData);
-
-/*! \brief TokenV3DayDataDTOs (historical) 🔥. *Asynchronous*
- *
- * Gets TokenV3DayDataDTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetTokenV3DayDataDTOs (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.TokenV3DayDataDTO>, Error, void* )
 	, void* userData);
 
 
@@ -1545,41 +1020,6 @@ bool uniswapV3GetTokensHourData (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief TransactionV3DTOs (historical) 🔥. *Synchronous*
- *
- * Gets TransactionV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetTransactionV3DTOs (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.TransactionV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief TransactionV3DTOs (historical) 🔥. *Asynchronous*
- *
- * Gets TransactionV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetTransactionV3DTOs (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.TransactionV3DTO>, Error, void* )
-	, void* userData);
-
-
 /*! \brief Transactions (historical). *Synchronous*
  *
  * Gets transactions.
@@ -1610,41 +1050,6 @@ bool uniswapV3GetTransactions (historical)Sync(char * accessToken,
 bool uniswapV3GetTransactions (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
 	void(* handler)(std::list<UniswapV3.TransactionV3DTO>, Error, void* )
-	, void* userData);
-
-
-/*! \brief UniswapDayDataV3DTOs (historical) 🔥. *Synchronous*
- *
- * Gets UniswapDayDataV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetUniswapDayDataV3DTOs (historical)Sync(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.UniswapDayDataV3DTO>, Error, void* )
-	, void* userData);
-
-/*! \brief UniswapDayDataV3DTOs (historical) 🔥. *Asynchronous*
- *
- * Gets UniswapDayDataV3DTOs.
- * \param startBlock 
- * \param endBlock 
- * \param startDate 
- * \param endDate 
- * \param poolId 
- * \param handler The callback function to be invoked on completion. *Required*
- * \param accessToken The Authorization token. *Required*
- * \param userData The user data to be passed to the callback function.
- */
-bool uniswapV3GetUniswapDayDataV3DTOs (historical)Async(char * accessToken,
-	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
-	void(* handler)(std::list<UniswapV3.UniswapDayDataV3DTO>, Error, void* )
 	, void* userData);
 
 

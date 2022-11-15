@@ -7,14 +7,6 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'UniswapV3Api' {
-    Context 'Invoke-UniswapV3GetBundleV3DTOsHistorical' {
-        It 'Test Invoke-UniswapV3GetBundleV3DTOsHistorical' {
-            #$TestResult = Invoke-UniswapV3GetBundleV3DTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-UniswapV3GetBundlesCurrent' {
         It 'Test Invoke-UniswapV3GetBundlesCurrent' {
             #$TestResult = Invoke-UniswapV3GetBundlesCurrent
@@ -26,14 +18,6 @@ Describe -tag 'PSOpenAPITools' -name 'UniswapV3Api' {
     Context 'Invoke-UniswapV3GetBundlesHistorical' {
         It 'Test Invoke-UniswapV3GetBundlesHistorical' {
             #$TestResult = Invoke-UniswapV3GetBundlesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-UniswapV3GetBurnV3DTOsHistorical' {
-        It 'Test Invoke-UniswapV3GetBurnV3DTOsHistorical' {
-            #$TestResult = Invoke-UniswapV3GetBurnV3DTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -71,14 +55,6 @@ Describe -tag 'PSOpenAPITools' -name 'UniswapV3Api' {
         }
     }
 
-    Context 'Invoke-UniswapV3GetFactoryV3DTOsHistorical' {
-        It 'Test Invoke-UniswapV3GetFactoryV3DTOsHistorical' {
-            #$TestResult = Invoke-UniswapV3GetFactoryV3DTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-UniswapV3GetFactoryCurrent' {
         It 'Test Invoke-UniswapV3GetFactoryCurrent' {
             #$TestResult = Invoke-UniswapV3GetFactoryCurrent
@@ -95,14 +71,6 @@ Describe -tag 'PSOpenAPITools' -name 'UniswapV3Api' {
         }
     }
 
-    Context 'Invoke-UniswapV3GetMintV3DTOsHistorical' {
-        It 'Test Invoke-UniswapV3GetMintV3DTOsHistorical' {
-            #$TestResult = Invoke-UniswapV3GetMintV3DTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-UniswapV3GetMintsCurrent' {
         It 'Test Invoke-UniswapV3GetMintsCurrent' {
             #$TestResult = Invoke-UniswapV3GetMintsCurrent -FilterPoolId "TEST_VALUE"
@@ -114,30 +82,6 @@ Describe -tag 'PSOpenAPITools' -name 'UniswapV3Api' {
     Context 'Invoke-UniswapV3GetMintsHistorical' {
         It 'Test Invoke-UniswapV3GetMintsHistorical' {
             #$TestResult = Invoke-UniswapV3GetMintsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-UniswapV3GetPoolDayDataV3DTOsHistorical' {
-        It 'Test Invoke-UniswapV3GetPoolDayDataV3DTOsHistorical' {
-            #$TestResult = Invoke-UniswapV3GetPoolDayDataV3DTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-UniswapV3GetPoolHourDataV3DTOsHistorical' {
-        It 'Test Invoke-UniswapV3GetPoolHourDataV3DTOsHistorical' {
-            #$TestResult = Invoke-UniswapV3GetPoolHourDataV3DTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-UniswapV3GetPoolV3DTOsHistorical' {
-        It 'Test Invoke-UniswapV3GetPoolV3DTOsHistorical' {
-            #$TestResult = Invoke-UniswapV3GetPoolV3DTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -191,22 +135,6 @@ Describe -tag 'PSOpenAPITools' -name 'UniswapV3Api' {
         }
     }
 
-    Context 'Invoke-UniswapV3GetPositionSnapshotV3DTOsHistorical' {
-        It 'Test Invoke-UniswapV3GetPositionSnapshotV3DTOsHistorical' {
-            #$TestResult = Invoke-UniswapV3GetPositionSnapshotV3DTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-UniswapV3GetPositionV3DTOsHistorical' {
-        It 'Test Invoke-UniswapV3GetPositionV3DTOsHistorical' {
-            #$TestResult = Invoke-UniswapV3GetPositionV3DTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-UniswapV3GetPositionsSnaphotsHistorical' {
         It 'Test Invoke-UniswapV3GetPositionsSnaphotsHistorical' {
             #$TestResult = Invoke-UniswapV3GetPositionsSnaphotsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
@@ -239,14 +167,6 @@ Describe -tag 'PSOpenAPITools' -name 'UniswapV3Api' {
         }
     }
 
-    Context 'Invoke-UniswapV3GetSwapV3DTOsHistorical' {
-        It 'Test Invoke-UniswapV3GetSwapV3DTOsHistorical' {
-            #$TestResult = Invoke-UniswapV3GetSwapV3DTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-UniswapV3GetSwapsCurrent' {
         It 'Test Invoke-UniswapV3GetSwapsCurrent' {
             #$TestResult = Invoke-UniswapV3GetSwapsCurrent -FilterPoolId "TEST_VALUE"
@@ -258,22 +178,6 @@ Describe -tag 'PSOpenAPITools' -name 'UniswapV3Api' {
     Context 'Invoke-UniswapV3GetSwapsHistorical' {
         It 'Test Invoke-UniswapV3GetSwapsHistorical' {
             #$TestResult = Invoke-UniswapV3GetSwapsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-UniswapV3GetTickDayDataV3DTOsHistorical' {
-        It 'Test Invoke-UniswapV3GetTickDayDataV3DTOsHistorical' {
-            #$TestResult = Invoke-UniswapV3GetTickDayDataV3DTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-UniswapV3GetTickV3DTOsHistorical' {
-        It 'Test Invoke-UniswapV3GetTickV3DTOsHistorical' {
-            #$TestResult = Invoke-UniswapV3GetTickV3DTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -306,30 +210,6 @@ Describe -tag 'PSOpenAPITools' -name 'UniswapV3Api' {
     Context 'Invoke-UniswapV3GetTicksHistorical' {
         It 'Test Invoke-UniswapV3GetTicksHistorical' {
             #$TestResult = Invoke-UniswapV3GetTicksHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-UniswapV3GetTokenHourDataV3DTOsHistorical' {
-        It 'Test Invoke-UniswapV3GetTokenHourDataV3DTOsHistorical' {
-            #$TestResult = Invoke-UniswapV3GetTokenHourDataV3DTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-UniswapV3GetTokenV3DTOsHistorical' {
-        It 'Test Invoke-UniswapV3GetTokenV3DTOsHistorical' {
-            #$TestResult = Invoke-UniswapV3GetTokenV3DTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-UniswapV3GetTokenV3DayDataDTOsHistorical' {
-        It 'Test Invoke-UniswapV3GetTokenV3DayDataDTOsHistorical' {
-            #$TestResult = Invoke-UniswapV3GetTokenV3DayDataDTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -383,25 +263,9 @@ Describe -tag 'PSOpenAPITools' -name 'UniswapV3Api' {
         }
     }
 
-    Context 'Invoke-UniswapV3GetTransactionV3DTOsHistorical' {
-        It 'Test Invoke-UniswapV3GetTransactionV3DTOsHistorical' {
-            #$TestResult = Invoke-UniswapV3GetTransactionV3DTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
     Context 'Invoke-UniswapV3GetTransactionsHistorical' {
         It 'Test Invoke-UniswapV3GetTransactionsHistorical' {
             #$TestResult = Invoke-UniswapV3GetTransactionsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE"
-            #$TestResult | Should -BeOfType TODO
-            #$TestResult.property | Should -Be 0
-        }
-    }
-
-    Context 'Invoke-UniswapV3GetUniswapDayDataV3DTOsHistorical' {
-        It 'Test Invoke-UniswapV3GetUniswapDayDataV3DTOsHistorical' {
-            #$TestResult = Invoke-UniswapV3GetUniswapDayDataV3DTOsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -PoolId "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

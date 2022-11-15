@@ -30,17 +30,6 @@ my $api = WWW::OpenAPIClient::CowApi->new();
 isa_ok($api, 'WWW::OpenAPIClient::CowApi');
 
 #
-# cow_get_order_dtos__historical test
-#
-# uncomment below and update the test
-#my $cow_get_order_dtos__historical_start_block = undef; # replace NULL with a proper value
-#my $cow_get_order_dtos__historical_end_block = undef; # replace NULL with a proper value
-#my $cow_get_order_dtos__historical_start_date = undef; # replace NULL with a proper value
-#my $cow_get_order_dtos__historical_end_date = undef; # replace NULL with a proper value
-#my $cow_get_order_dtos__historical_pool_id = undef; # replace NULL with a proper value
-#my $cow_get_order_dtos__historical_result = $api->cow_get_order_dtos__historical(start_block => $cow_get_order_dtos__historical_start_block, end_block => $cow_get_order_dtos__historical_end_block, start_date => $cow_get_order_dtos__historical_start_date, end_date => $cow_get_order_dtos__historical_end_date, pool_id => $cow_get_order_dtos__historical_pool_id);
-
-#
 # cow_get_orders__historical test
 #
 # uncomment below and update the test
@@ -51,17 +40,6 @@ isa_ok($api, 'WWW::OpenAPIClient::CowApi');
 #my $cow_get_orders__historical_result = $api->cow_get_orders__historical(start_block => $cow_get_orders__historical_start_block, end_block => $cow_get_orders__historical_end_block, start_date => $cow_get_orders__historical_start_date, end_date => $cow_get_orders__historical_end_date);
 
 #
-# cow_get_settlement_dtos__historical test
-#
-# uncomment below and update the test
-#my $cow_get_settlement_dtos__historical_start_block = undef; # replace NULL with a proper value
-#my $cow_get_settlement_dtos__historical_end_block = undef; # replace NULL with a proper value
-#my $cow_get_settlement_dtos__historical_start_date = undef; # replace NULL with a proper value
-#my $cow_get_settlement_dtos__historical_end_date = undef; # replace NULL with a proper value
-#my $cow_get_settlement_dtos__historical_pool_id = undef; # replace NULL with a proper value
-#my $cow_get_settlement_dtos__historical_result = $api->cow_get_settlement_dtos__historical(start_block => $cow_get_settlement_dtos__historical_start_block, end_block => $cow_get_settlement_dtos__historical_end_block, start_date => $cow_get_settlement_dtos__historical_start_date, end_date => $cow_get_settlement_dtos__historical_end_date, pool_id => $cow_get_settlement_dtos__historical_pool_id);
-
-#
 # cow_get_settlements__historical test
 #
 # uncomment below and update the test
@@ -70,17 +48,6 @@ isa_ok($api, 'WWW::OpenAPIClient::CowApi');
 #my $cow_get_settlements__historical_start_date = undef; # replace NULL with a proper value
 #my $cow_get_settlements__historical_end_date = undef; # replace NULL with a proper value
 #my $cow_get_settlements__historical_result = $api->cow_get_settlements__historical(start_block => $cow_get_settlements__historical_start_block, end_block => $cow_get_settlements__historical_end_block, start_date => $cow_get_settlements__historical_start_date, end_date => $cow_get_settlements__historical_end_date);
-
-#
-# cow_get_token_dtos__historical test
-#
-# uncomment below and update the test
-#my $cow_get_token_dtos__historical_start_block = undef; # replace NULL with a proper value
-#my $cow_get_token_dtos__historical_end_block = undef; # replace NULL with a proper value
-#my $cow_get_token_dtos__historical_start_date = undef; # replace NULL with a proper value
-#my $cow_get_token_dtos__historical_end_date = undef; # replace NULL with a proper value
-#my $cow_get_token_dtos__historical_pool_id = undef; # replace NULL with a proper value
-#my $cow_get_token_dtos__historical_result = $api->cow_get_token_dtos__historical(start_block => $cow_get_token_dtos__historical_start_block, end_block => $cow_get_token_dtos__historical_end_block, start_date => $cow_get_token_dtos__historical_start_date, end_date => $cow_get_token_dtos__historical_end_date, pool_id => $cow_get_token_dtos__historical_pool_id);
 
 #
 # cow_get_tokens__historical test
@@ -94,17 +61,6 @@ isa_ok($api, 'WWW::OpenAPIClient::CowApi');
 #my $cow_get_tokens__historical_result = $api->cow_get_tokens__historical(start_block => $cow_get_tokens__historical_start_block, end_block => $cow_get_tokens__historical_end_block, start_date => $cow_get_tokens__historical_start_date, end_date => $cow_get_tokens__historical_end_date, token_id => $cow_get_tokens__historical_token_id);
 
 #
-# cow_get_trade_dtos__historical test
-#
-# uncomment below and update the test
-#my $cow_get_trade_dtos__historical_start_block = undef; # replace NULL with a proper value
-#my $cow_get_trade_dtos__historical_end_block = undef; # replace NULL with a proper value
-#my $cow_get_trade_dtos__historical_start_date = undef; # replace NULL with a proper value
-#my $cow_get_trade_dtos__historical_end_date = undef; # replace NULL with a proper value
-#my $cow_get_trade_dtos__historical_pool_id = undef; # replace NULL with a proper value
-#my $cow_get_trade_dtos__historical_result = $api->cow_get_trade_dtos__historical(start_block => $cow_get_trade_dtos__historical_start_block, end_block => $cow_get_trade_dtos__historical_end_block, start_date => $cow_get_trade_dtos__historical_start_date, end_date => $cow_get_trade_dtos__historical_end_date, pool_id => $cow_get_trade_dtos__historical_pool_id);
-
-#
 # cow_get_trades__historical test
 #
 # uncomment below and update the test
@@ -113,17 +69,6 @@ isa_ok($api, 'WWW::OpenAPIClient::CowApi');
 #my $cow_get_trades__historical_start_date = undef; # replace NULL with a proper value
 #my $cow_get_trades__historical_end_date = undef; # replace NULL with a proper value
 #my $cow_get_trades__historical_result = $api->cow_get_trades__historical(start_block => $cow_get_trades__historical_start_block, end_block => $cow_get_trades__historical_end_block, start_date => $cow_get_trades__historical_start_date, end_date => $cow_get_trades__historical_end_date);
-
-#
-# cow_get_user_dtos__historical test
-#
-# uncomment below and update the test
-#my $cow_get_user_dtos__historical_start_block = undef; # replace NULL with a proper value
-#my $cow_get_user_dtos__historical_end_block = undef; # replace NULL with a proper value
-#my $cow_get_user_dtos__historical_start_date = undef; # replace NULL with a proper value
-#my $cow_get_user_dtos__historical_end_date = undef; # replace NULL with a proper value
-#my $cow_get_user_dtos__historical_pool_id = undef; # replace NULL with a proper value
-#my $cow_get_user_dtos__historical_result = $api->cow_get_user_dtos__historical(start_block => $cow_get_user_dtos__historical_start_block, end_block => $cow_get_user_dtos__historical_end_block, start_date => $cow_get_user_dtos__historical_start_date, end_date => $cow_get_user_dtos__historical_end_date, pool_id => $cow_get_user_dtos__historical_pool_id);
 
 #
 # cow_get_users__historical test

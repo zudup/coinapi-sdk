@@ -5,22 +5,6 @@ context("Test UniswapV3Api")
 
 api_instance <- UniswapV3Api$new()
 
-test_that("UniswapV3GetBundleV3DTOsHistorical", {
-  # tests for UniswapV3GetBundleV3DTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # BundleV3DTOs (historical) 🔥
-  # Gets BundleV3DTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[UniswapV3BundleV3DTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("UniswapV3GetBundlesCurrent", {
   # tests for UniswapV3GetBundlesCurrent
   # base path: https://onchain.coinapi.io
@@ -42,22 +26,6 @@ test_that("UniswapV3GetBundlesHistorical", {
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @return [array[UniswapV3BundleV3DTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("UniswapV3GetBurnV3DTOsHistorical", {
-  # tests for UniswapV3GetBurnV3DTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # BurnV3DTOs (historical) 🔥
-  # Gets BurnV3DTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[UniswapV3BurnV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -143,38 +111,6 @@ test_that("UniswapV3GetFactoryHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV3GetFactoryV3DTOsHistorical", {
-  # tests for UniswapV3GetFactoryV3DTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # FactoryV3DTOs (historical) 🔥
-  # Gets FactoryV3DTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[UniswapV3FactoryV3DTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("UniswapV3GetMintV3DTOsHistorical", {
-  # tests for UniswapV3GetMintV3DTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # MintV3DTOs (historical) 🔥
-  # Gets MintV3DTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[UniswapV3MintV3DTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("UniswapV3GetMintsCurrent", {
   # tests for UniswapV3GetMintsCurrent
   # base path: https://onchain.coinapi.io
@@ -198,54 +134,6 @@ test_that("UniswapV3GetMintsHistorical", {
   # @param end_date character  (optional)
   # @param pool_id character  (optional)
   # @return [array[UniswapV3MintV3DTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("UniswapV3GetPoolDayDataV3DTOsHistorical", {
-  # tests for UniswapV3GetPoolDayDataV3DTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # PoolDayDataV3DTOs (historical) 🔥
-  # Gets PoolDayDataV3DTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[UniswapV3PoolDayDataV3DTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("UniswapV3GetPoolHourDataV3DTOsHistorical", {
-  # tests for UniswapV3GetPoolHourDataV3DTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # PoolHourDataV3DTOs (historical) 🔥
-  # Gets PoolHourDataV3DTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[UniswapV3PoolHourDataV3DTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("UniswapV3GetPoolV3DTOsHistorical", {
-  # tests for UniswapV3GetPoolV3DTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # PoolV3DTOs (historical) 🔥
-  # Gets PoolV3DTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[UniswapV3PoolV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -335,38 +223,6 @@ test_that("UniswapV3GetPoolsHourDataHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV3GetPositionSnapshotV3DTOsHistorical", {
-  # tests for UniswapV3GetPositionSnapshotV3DTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # PositionSnapshotV3DTOs (historical) 🔥
-  # Gets PositionSnapshotV3DTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[UniswapV3PositionSnapshotV3DTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("UniswapV3GetPositionV3DTOsHistorical", {
-  # tests for UniswapV3GetPositionV3DTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # PositionV3DTOs (historical) 🔥
-  # Gets PositionV3DTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[UniswapV3PositionV3DTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("UniswapV3GetPositionsCurrent", {
   # tests for UniswapV3GetPositionsCurrent
   # base path: https://onchain.coinapi.io
@@ -423,22 +279,6 @@ test_that("UniswapV3GetPositionsSnapshotsCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV3GetSwapV3DTOsHistorical", {
-  # tests for UniswapV3GetSwapV3DTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # SwapV3DTOs (historical) 🔥
-  # Gets SwapV3DTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[UniswapV3SwapV3DTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("UniswapV3GetSwapsCurrent", {
   # tests for UniswapV3GetSwapsCurrent
   # base path: https://onchain.coinapi.io
@@ -462,38 +302,6 @@ test_that("UniswapV3GetSwapsHistorical", {
   # @param end_date character  (optional)
   # @param pool_id character  (optional)
   # @return [array[UniswapV3SwapV3DTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("UniswapV3GetTickDayDataV3DTOsHistorical", {
-  # tests for UniswapV3GetTickDayDataV3DTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # TickDayDataV3DTOs (historical) 🔥
-  # Gets TickDayDataV3DTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[UniswapV3TickDayDataV3DTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("UniswapV3GetTickV3DTOsHistorical", {
-  # tests for UniswapV3GetTickV3DTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # TickV3DTOs (historical) 🔥
-  # Gets TickV3DTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[UniswapV3TickV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -550,54 +358,6 @@ test_that("UniswapV3GetTicksHistorical", {
   # @param end_date character  (optional)
   # @param pool_id character  (optional)
   # @return [array[UniswapV3TickV3DTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("UniswapV3GetTokenHourDataV3DTOsHistorical", {
-  # tests for UniswapV3GetTokenHourDataV3DTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # TokenHourDataV3DTOs (historical) 🔥
-  # Gets TokenHourDataV3DTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[UniswapV3TokenHourDataV3DTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("UniswapV3GetTokenV3DTOsHistorical", {
-  # tests for UniswapV3GetTokenV3DTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # TokenV3DTOs (historical) 🔥
-  # Gets TokenV3DTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[UniswapV3TokenV3DTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("UniswapV3GetTokenV3DayDataDTOsHistorical", {
-  # tests for UniswapV3GetTokenV3DayDataDTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # TokenV3DayDataDTOs (historical) 🔥
-  # Gets TokenV3DayDataDTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[UniswapV3TokenV3DayDataDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -687,22 +447,6 @@ test_that("UniswapV3GetTokensHourDataHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV3GetTransactionV3DTOsHistorical", {
-  # tests for UniswapV3GetTransactionV3DTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # TransactionV3DTOs (historical) 🔥
-  # Gets TransactionV3DTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[UniswapV3TransactionV3DTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
 test_that("UniswapV3GetTransactionsHistorical", {
   # tests for UniswapV3GetTransactionsHistorical
   # base path: https://onchain.coinapi.io
@@ -713,22 +457,6 @@ test_that("UniswapV3GetTransactionsHistorical", {
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @return [array[UniswapV3TransactionV3DTO]]
-
-  # uncomment below to test the operation
-  #expect_equal(result, "EXPECTED_RESULT")
-})
-
-test_that("UniswapV3GetUniswapDayDataV3DTOsHistorical", {
-  # tests for UniswapV3GetUniswapDayDataV3DTOsHistorical
-  # base path: https://onchain.coinapi.io
-  # UniswapDayDataV3DTOs (historical) 🔥
-  # Gets UniswapDayDataV3DTOs.
-  # @param start_block integer  (optional)
-  # @param end_block integer  (optional)
-  # @param start_date character  (optional)
-  # @param end_date character  (optional)
-  # @param pool_id character  (optional)
-  # @return [array[UniswapV3UniswapDayDataV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

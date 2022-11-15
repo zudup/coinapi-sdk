@@ -9026,54 +9026,12 @@ export type UniswapV3UniswapDayDataV3DTO = {
 export const CowApiFetchParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Gets OrderDTOs.
-         * @summary OrderDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        cowGetOrderDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cow/OrderDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets orders.
          * @summary Orders (historical)
          * @throws {RequiredError}
          */
         cowGetOrdersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cow/orders/historical`;
+            const localVarPath = `/dapps/cow/orders/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9093,48 +9051,6 @@ export const CowApiFetchParamCreator = function (configuration?: Configuration) 
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets SettlementDTOs.
-         * @summary SettlementDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        cowGetSettlementDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cow/SettlementDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -9153,7 +9069,7 @@ export const CowApiFetchParamCreator = function (configuration?: Configuration) 
          * @throws {RequiredError}
          */
         cowGetSettlementsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cow/settlements/historical`;
+            const localVarPath = `/dapps/cow/settlements/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9173,48 +9089,6 @@ export const CowApiFetchParamCreator = function (configuration?: Configuration) 
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets TokenDTOs.
-         * @summary TokenDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        cowGetTokenDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cow/TokenDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -9233,7 +9107,7 @@ export const CowApiFetchParamCreator = function (configuration?: Configuration) 
          * @throws {RequiredError}
          */
         cowGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cow/tokens/historical`;
+            const localVarPath = `/dapps/cow/tokens/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9270,54 +9144,12 @@ export const CowApiFetchParamCreator = function (configuration?: Configuration) 
             };
         },
         /**
-         * Gets TradeDTOs.
-         * @summary TradeDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        cowGetTradeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cow/TradeDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets trades.
          * @summary Trades (historical) 🔥
          * @throws {RequiredError}
          */
         cowGetTradesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cow/trades/historical`;
+            const localVarPath = `/dapps/cow/trades/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9337,48 +9169,6 @@ export const CowApiFetchParamCreator = function (configuration?: Configuration) 
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets UserDTOs.
-         * @summary UserDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        cowGetUserDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cow/UserDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -9397,7 +9187,7 @@ export const CowApiFetchParamCreator = function (configuration?: Configuration) 
          * @throws {RequiredError}
          */
         cowGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/cow/users/historical`;
+            const localVarPath = `/dapps/cow/users/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9433,23 +9223,13 @@ export const CowApiFetchParamCreator = function (configuration?: Configuration) 
 };
 
 export type CowApiType = { 
-    cowGetOrderDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CowOrderDTO>>,
-
     cowGetOrdersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<CowOrderDTO>>,
-
-    cowGetSettlementDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CowSettlementDTO>>,
 
     cowGetSettlementsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<CowSettlementDTO>>,
 
-    cowGetTokenDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CowTokenDTO>>,
-
     cowGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Array<CowTokenDTO>>,
 
-    cowGetTradeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CowTradeDTO>>,
-
     cowGetTradesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<CowTradeDTO>>,
-
-    cowGetUserDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CowUserDTO>>,
 
     cowGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<CowUserDTO>>,
 }
@@ -9462,42 +9242,12 @@ export const CowApi = function(configuration?: Configuration, fetch: FetchAPI = 
     const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
     return {
         /**
-         * Gets OrderDTOs.
-         * @summary OrderDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        cowGetOrderDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CowOrderDTO>> {
-            const localVarFetchArgs = CowApiFetchParamCreator(configuration).cowGetOrderDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets orders.
          * @summary Orders (historical)
          * @throws {RequiredError}
          */
         cowGetOrdersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CowOrderDTO>> {
             const localVarFetchArgs = CowApiFetchParamCreator(configuration).cowGetOrdersHistorical(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets SettlementDTOs.
-         * @summary SettlementDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        cowGetSettlementDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CowSettlementDTO>> {
-            const localVarFetchArgs = CowApiFetchParamCreator(configuration).cowGetSettlementDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -9522,21 +9272,6 @@ export const CowApi = function(configuration?: Configuration, fetch: FetchAPI = 
             });
         },
         /**
-         * Gets TokenDTOs.
-         * @summary TokenDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        cowGetTokenDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CowTokenDTO>> {
-            const localVarFetchArgs = CowApiFetchParamCreator(configuration).cowGetTokenDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets tokens.
          * @summary Tokens (historical) 🔥
          * @throws {RequiredError}
@@ -9552,42 +9287,12 @@ export const CowApi = function(configuration?: Configuration, fetch: FetchAPI = 
             });
         },
         /**
-         * Gets TradeDTOs.
-         * @summary TradeDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        cowGetTradeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CowTradeDTO>> {
-            const localVarFetchArgs = CowApiFetchParamCreator(configuration).cowGetTradeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets trades.
          * @summary Trades (historical) 🔥
          * @throws {RequiredError}
          */
         cowGetTradesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CowTradeDTO>> {
             const localVarFetchArgs = CowApiFetchParamCreator(configuration).cowGetTradesHistorical(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets UserDTOs.
-         * @summary UserDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        cowGetUserDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CowUserDTO>> {
-            const localVarFetchArgs = CowApiFetchParamCreator(configuration).cowGetUserDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -9622,54 +9327,12 @@ export const CowApi = function(configuration?: Configuration, fetch: FetchAPI = 
 export const CurveApiFetchParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Gets AccountDTOs.
-         * @summary AccountDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetAccountDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/AccountDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets accounts.
          * @summary Accounts (historical)
          * @throws {RequiredError}
          */
         curveGetAccountsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/accounts/historical`;
+            const localVarPath = `/dapps/curve/accounts/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9689,48 +9352,6 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets AddLiquidityEventDTOs.
-         * @summary AddLiquidityEventDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetAddLiquidityEventDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/AddLiquidityEventDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -9749,49 +9370,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetAddLiquidityEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/addLiquidityEvents/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets AdminFeeChangeLogDTOs.
-         * @summary AdminFeeChangeLogDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetAdminFeeChangeLogDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/AdminFeeChangeLogDTOs/historical`;
+            const localVarPath = `/dapps/curve/addLiquidityEvents/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9833,49 +9412,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetAdminFeeChangeLogsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/adminFeeChangeLogs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets AmplificationCoeffChangeLogDTOs.
-         * @summary AmplificationCoeffChangeLogDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetAmplificationCoeffChangeLogDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/AmplificationCoeffChangeLogDTOs/historical`;
+            const localVarPath = `/dapps/curve/adminFeeChangeLogs/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -9917,49 +9454,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetAmplificationCoeffChangeLogsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/amplificationCoeffChangeLogs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets CoinDTOs.
-         * @summary CoinDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetCoinDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/CoinDTOs/historical`;
+            const localVarPath = `/dapps/curve/amplificationCoeffChangeLogs/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10001,91 +9496,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetCoinsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/coins/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets ContractDTOs.
-         * @summary ContractDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetContractDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/ContractDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets ContractVersionDTOs.
-         * @summary ContractVersionDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetContractVersionDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/ContractVersionDTOs/historical`;
+            const localVarPath = `/dapps/curve/coins/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10127,7 +9538,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetContractsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/contracts/historical`;
+            const localVarPath = `/dapps/curve/contracts/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10169,49 +9580,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetContractsVersionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/contractsVersions/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets DailyVolumeDTOs.
-         * @summary DailyVolumeDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetDailyVolumeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/DailyVolumeDTOs/historical`;
+            const localVarPath = `/dapps/curve/contractsVersions/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10253,49 +9622,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetDailyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/dailyVolumes/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets ExchangeDTOs.
-         * @summary ExchangeDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetExchangeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/ExchangeDTOs/historical`;
+            const localVarPath = `/dapps/curve/dailyVolumes/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10337,49 +9664,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetExchangesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/exchanges/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets FeeChangeLogDTOs.
-         * @summary FeeChangeLogDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetFeeChangeLogDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/FeeChangeLogDTOs/historical`;
+            const localVarPath = `/dapps/curve/exchanges/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10421,385 +9706,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetFeeChangeLogsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/feeChangeLogs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets GaugeDTOs.
-         * @summary GaugeDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetGaugeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/GaugeDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets GaugeDepositDTOs.
-         * @summary GaugeDepositDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetGaugeDepositDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/GaugeDepositDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets GaugeLiquidityDTOs.
-         * @summary GaugeLiquidityDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetGaugeLiquidityDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/GaugeLiquidityDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets GaugeTotalWeightDTOs.
-         * @summary GaugeTotalWeightDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetGaugeTotalWeightDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/GaugeTotalWeightDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets GaugeTypeDTOs.
-         * @summary GaugeTypeDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetGaugeTypeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/GaugeTypeDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets GaugeTypeWeightDTOs.
-         * @summary GaugeTypeWeightDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetGaugeTypeWeightDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/GaugeTypeWeightDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets GaugeWeightDTOs.
-         * @summary GaugeWeightDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetGaugeWeightDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/GaugeWeightDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets GaugeWeightVoteDTOs.
-         * @summary GaugeWeightVoteDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetGaugeWeightVoteDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/GaugeWeightVoteDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets GaugeWithdrawDTOs.
-         * @summary GaugeWithdrawDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetGaugeWithdrawDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/GaugeWithdrawDTOs/historical`;
+            const localVarPath = `/dapps/curve/feeChangeLogs/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10841,7 +9748,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetGaugesDepositsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gaugesDeposits/historical`;
+            const localVarPath = `/dapps/curve/gaugesDeposits/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10879,7 +9786,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetGaugesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gauges/historical`;
+            const localVarPath = `/dapps/curve/gauges/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10921,7 +9828,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetGaugesLiquidityHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gaugesLiquidity/historical`;
+            const localVarPath = `/dapps/curve/gaugesLiquidity/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10959,7 +9866,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetGaugesTotalWeightsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gaugesTotalWeights/historical`;
+            const localVarPath = `/dapps/curve/gaugesTotalWeights/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10997,7 +9904,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetGaugesTypesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gaugesTypes/historical`;
+            const localVarPath = `/dapps/curve/gaugesTypes/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -11035,7 +9942,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetGaugesTypesWeightsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gaugesTypesWeights/historical`;
+            const localVarPath = `/dapps/curve/gaugesTypesWeights/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -11073,7 +9980,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetGaugesWeightsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gaugesWeights/historical`;
+            const localVarPath = `/dapps/curve/gaugesWeights/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -11111,7 +10018,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetGaugesWeightsVotesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gaugesWeightsVotes/historical`;
+            const localVarPath = `/dapps/curve/gaugesWeightsVotes/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -11149,7 +10056,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetGaugesWithdrawHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gaugesWithdraws/historical`;
+            const localVarPath = `/dapps/curve/gaugesWithdraws/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -11169,48 +10076,6 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets HourlyVolumeDTOs.
-         * @summary HourlyVolumeDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetHourlyVolumeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/HourlyVolumeDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -11229,49 +10094,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetHourlyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/hourlyVolumes/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets LpTokenDTOs.
-         * @summary LpTokenDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetLpTokenDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/LpTokenDTOs/historical`;
+            const localVarPath = `/dapps/curve/hourlyVolumes/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -11313,49 +10136,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetLpTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/lpTokens/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets PoolDTOs.
-         * @summary PoolDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetPoolDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/PoolDTOs/historical`;
+            const localVarPath = `/dapps/curve/lpTokens/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -11397,91 +10178,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/pools/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets ProposalDTOs.
-         * @summary ProposalDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetProposalDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/ProposalDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets ProposalVoteDTOs.
-         * @summary ProposalVoteDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetProposalVoteDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/ProposalVoteDTOs/historical`;
+            const localVarPath = `/dapps/curve/pools/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -11523,7 +10220,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetProposalsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/proposals/historical`;
+            const localVarPath = `/dapps/curve/proposals/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -11561,7 +10258,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetProposalsVotesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/proposalsVotes/historical`;
+            const localVarPath = `/dapps/curve/proposalsVotes/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -11581,48 +10278,6 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets RemoveLiquidityEventDTOs.
-         * @summary RemoveLiquidityEventDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetRemoveLiquidityEventDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/RemoveLiquidityEventDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -11641,49 +10296,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetRemoveLiquidityEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/removeLiquidityEvents/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets RemoveLiquidityOneEventDTOs.
-         * @summary RemoveLiquidityOneEventDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetRemoveLiquidityOneEventDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/RemoveLiquidityOneEventDTOs/historical`;
+            const localVarPath = `/dapps/curve/removeLiquidityEvents/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -11725,49 +10338,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetRemoveLiquidityOneEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/removeLiquidityOneEvents/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets SystemStateDTOs.
-         * @summary SystemStateDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetSystemStateDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/SystemStateDTOs/historical`;
+            const localVarPath = `/dapps/curve/removeLiquidityOneEvents/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -11809,7 +10380,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetSystemStatesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/systemStates/historical`;
+            const localVarPath = `/dapps/curve/systemStates/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -11829,48 +10400,6 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets TokenDTOs.
-         * @summary TokenDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetTokenDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/TokenDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -11889,7 +10418,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/tokens/historical`;
+            const localVarPath = `/dapps/curve/tokens/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -11926,96 +10455,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets TransferOwnershipEventDTOs.
-         * @summary TransferOwnershipEventDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetTransferOwnershipEventDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/TransferOwnershipEventDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets transfer ownership events.
          * @summary TransferOwnershipEvents (historical)
          * @throws {RequiredError}
          */
         curveGetTransferOwnershipEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/transferOwnershipEvents/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets UnderlyingCoinDTOs.
-         * @summary UnderlyingCoinDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetUnderlyingCoinDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/UnderlyingCoinDTOs/historical`;
+            const localVarPath = `/dapps/curve/transferOwnershipEvents/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -12057,49 +10502,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetUnderlyingCoinsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/underlyingCoins/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets VotingAppDTOs.
-         * @summary VotingAppDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetVotingAppDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/VotingAppDTOs/historical`;
+            const localVarPath = `/dapps/curve/underlyingCoins/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -12141,7 +10544,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetVotingAppsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/votingApps/historical`;
+            const localVarPath = `/dapps/curve/votingApps/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -12161,48 +10564,6 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets WeeklyVolumeDTOs.
-         * @summary WeeklyVolumeDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetWeeklyVolumeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/WeeklyVolumeDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -12221,7 +10582,7 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
          * @throws {RequiredError}
          */
         curveGetWeeklyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/weeklyVolumes/historical`;
+            const localVarPath = `/dapps/curve/weeklyVolumes/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -12261,63 +10622,25 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
 };
 
 export type CurveApiType = { 
-    curveGetAccountDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveAccountDTO>>,
-
     curveGetAccountsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<CurveAccountDTO>>,
-
-    curveGetAddLiquidityEventDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveAddLiquidityEventDTO>>,
 
     curveGetAddLiquidityEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveAddLiquidityEventDTO>>,
 
-    curveGetAdminFeeChangeLogDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveAdminFeeChangeLogDTO>>,
-
     curveGetAdminFeeChangeLogsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveAdminFeeChangeLogDTO>>,
-
-    curveGetAmplificationCoeffChangeLogDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveAmplificationCoeffChangeLogDTO>>,
 
     curveGetAmplificationCoeffChangeLogsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveAmplificationCoeffChangeLogDTO>>,
 
-    curveGetCoinDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveCoinDTO>>,
-
     curveGetCoinsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveCoinDTO>>,
-
-    curveGetContractDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveContractDTO>>,
-
-    curveGetContractVersionDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveContractVersionDTO>>,
 
     curveGetContractsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveContractDTO>>,
 
     curveGetContractsVersionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveContractVersionDTO>>,
 
-    curveGetDailyVolumeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveDailyVolumeDTO>>,
-
     curveGetDailyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveDailyVolumeDTO>>,
-
-    curveGetExchangeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveExchangeDTO>>,
 
     curveGetExchangesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveExchangeDTO>>,
 
-    curveGetFeeChangeLogDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveFeeChangeLogDTO>>,
-
     curveGetFeeChangeLogsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveFeeChangeLogDTO>>,
-
-    curveGetGaugeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveGaugeDTO>>,
-
-    curveGetGaugeDepositDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveGaugeDepositDTO>>,
-
-    curveGetGaugeLiquidityDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveGaugeLiquidityDTO>>,
-
-    curveGetGaugeTotalWeightDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveGaugeTotalWeightDTO>>,
-
-    curveGetGaugeTypeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveGaugeTypeDTO>>,
-
-    curveGetGaugeTypeWeightDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveGaugeTypeWeightDTO>>,
-
-    curveGetGaugeWeightDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveGaugeWeightDTO>>,
-
-    curveGetGaugeWeightVoteDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveGaugeWeightVoteDTO>>,
-
-    curveGetGaugeWithdrawDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveGaugeWithdrawDTO>>,
 
     curveGetGaugesDepositsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<CurveGaugeDepositDTO>>,
 
@@ -12337,55 +10660,29 @@ export type CurveApiType = {
 
     curveGetGaugesWithdrawHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<CurveGaugeWithdrawDTO>>,
 
-    curveGetHourlyVolumeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveHourlyVolumeDTO>>,
-
     curveGetHourlyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveHourlyVolumeDTO>>,
-
-    curveGetLpTokenDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveLpTokenDTO>>,
 
     curveGetLpTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveLpTokenDTO>>,
 
-    curveGetPoolDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurvePoolDTO>>,
-
     curveGetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurvePoolDTO>>,
-
-    curveGetProposalDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveProposalDTO>>,
-
-    curveGetProposalVoteDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveProposalVoteDTO>>,
 
     curveGetProposalsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<CurveProposalDTO>>,
 
     curveGetProposalsVotesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<CurveProposalVoteDTO>>,
 
-    curveGetRemoveLiquidityEventDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveRemoveLiquidityEventDTO>>,
-
     curveGetRemoveLiquidityEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveRemoveLiquidityEventDTO>>,
-
-    curveGetRemoveLiquidityOneEventDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveRemoveLiquidityOneEventDTO>>,
 
     curveGetRemoveLiquidityOneEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveRemoveLiquidityOneEventDTO>>,
 
-    curveGetSystemStateDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveSystemStateDTO>>,
-
     curveGetSystemStatesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<CurveSystemStateDTO>>,
-
-    curveGetTokenDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveTokenDTO>>,
 
     curveGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Array<CurveTokenDTO>>,
 
-    curveGetTransferOwnershipEventDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveTransferOwnershipEventDTO>>,
-
     curveGetTransferOwnershipEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveTransferOwnershipEventDTO>>,
-
-    curveGetUnderlyingCoinDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveUnderlyingCoinDTO>>,
 
     curveGetUnderlyingCoinsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveUnderlyingCoinDTO>>,
 
-    curveGetVotingAppDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveVotingAppDTO>>,
-
     curveGetVotingAppsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<CurveVotingAppDTO>>,
-
-    curveGetWeeklyVolumeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveWeeklyVolumeDTO>>,
 
     curveGetWeeklyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<CurveWeeklyVolumeDTO>>,
 }
@@ -12398,42 +10695,12 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
     const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
     return {
         /**
-         * Gets AccountDTOs.
-         * @summary AccountDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetAccountDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveAccountDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetAccountDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets accounts.
          * @summary Accounts (historical)
          * @throws {RequiredError}
          */
         curveGetAccountsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CurveAccountDTO>> {
             const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetAccountsHistorical(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets AddLiquidityEventDTOs.
-         * @summary AddLiquidityEventDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetAddLiquidityEventDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveAddLiquidityEventDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetAddLiquidityEventDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -12458,42 +10725,12 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets AdminFeeChangeLogDTOs.
-         * @summary AdminFeeChangeLogDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetAdminFeeChangeLogDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveAdminFeeChangeLogDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetAdminFeeChangeLogDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets admin fee change logs.
          * @summary AdminFeeChangeLogs (historical)
          * @throws {RequiredError}
          */
         curveGetAdminFeeChangeLogsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveAdminFeeChangeLogDTO>> {
             const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetAdminFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets AmplificationCoeffChangeLogDTOs.
-         * @summary AmplificationCoeffChangeLogDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetAmplificationCoeffChangeLogDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveAmplificationCoeffChangeLogDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetAmplificationCoeffChangeLogDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -12518,57 +10755,12 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets CoinDTOs.
-         * @summary CoinDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetCoinDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveCoinDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetCoinDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets coins.
          * @summary Coins (historical)
          * @throws {RequiredError}
          */
         curveGetCoinsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveCoinDTO>> {
             const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetCoinsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets ContractDTOs.
-         * @summary ContractDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetContractDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveContractDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetContractDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets ContractVersionDTOs.
-         * @summary ContractVersionDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetContractVersionDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveContractVersionDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetContractVersionDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -12608,42 +10800,12 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets DailyVolumeDTOs.
-         * @summary DailyVolumeDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetDailyVolumeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveDailyVolumeDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetDailyVolumeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets daily volumes.
          * @summary DailyVolumes (historical)
          * @throws {RequiredError}
          */
         curveGetDailyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveDailyVolumeDTO>> {
             const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetDailyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets ExchangeDTOs.
-         * @summary ExchangeDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetExchangeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveExchangeDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetExchangeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -12668,162 +10830,12 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets FeeChangeLogDTOs.
-         * @summary FeeChangeLogDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetFeeChangeLogDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveFeeChangeLogDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetFeeChangeLogDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets fee change logs.
          * @summary FeeChangeLogs (historical)
          * @throws {RequiredError}
          */
         curveGetFeeChangeLogsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveFeeChangeLogDTO>> {
             const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetFeeChangeLogsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets GaugeDTOs.
-         * @summary GaugeDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetGaugeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveGaugeDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetGaugeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets GaugeDepositDTOs.
-         * @summary GaugeDepositDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetGaugeDepositDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveGaugeDepositDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetGaugeDepositDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets GaugeLiquidityDTOs.
-         * @summary GaugeLiquidityDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetGaugeLiquidityDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveGaugeLiquidityDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetGaugeLiquidityDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets GaugeTotalWeightDTOs.
-         * @summary GaugeTotalWeightDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetGaugeTotalWeightDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveGaugeTotalWeightDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetGaugeTotalWeightDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets GaugeTypeDTOs.
-         * @summary GaugeTypeDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetGaugeTypeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveGaugeTypeDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetGaugeTypeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets GaugeTypeWeightDTOs.
-         * @summary GaugeTypeWeightDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetGaugeTypeWeightDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveGaugeTypeWeightDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetGaugeTypeWeightDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets GaugeWeightDTOs.
-         * @summary GaugeWeightDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetGaugeWeightDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveGaugeWeightDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetGaugeWeightDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets GaugeWeightVoteDTOs.
-         * @summary GaugeWeightVoteDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetGaugeWeightVoteDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveGaugeWeightVoteDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetGaugeWeightVoteDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets GaugeWithdrawDTOs.
-         * @summary GaugeWithdrawDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetGaugeWithdrawDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveGaugeWithdrawDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetGaugeWithdrawDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -12968,42 +10980,12 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets HourlyVolumeDTOs.
-         * @summary HourlyVolumeDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetHourlyVolumeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveHourlyVolumeDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetHourlyVolumeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets hourly volumes.
          * @summary HourlyVolumes (historical)
          * @throws {RequiredError}
          */
         curveGetHourlyVolumesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveHourlyVolumeDTO>> {
             const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetHourlyVolumesHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets LpTokenDTOs.
-         * @summary LpTokenDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetLpTokenDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveLpTokenDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetLpTokenDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -13028,57 +11010,12 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets PoolDTOs.
-         * @summary PoolDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetPoolDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurvePoolDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetPoolDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets pools.
          * @summary Pools (historical) 🔥
          * @throws {RequiredError}
          */
         curveGetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurvePoolDTO>> {
             const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets ProposalDTOs.
-         * @summary ProposalDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetProposalDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveProposalDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetProposalDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets ProposalVoteDTOs.
-         * @summary ProposalVoteDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetProposalVoteDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveProposalVoteDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetProposalVoteDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -13118,42 +11055,12 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets RemoveLiquidityEventDTOs.
-         * @summary RemoveLiquidityEventDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetRemoveLiquidityEventDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveRemoveLiquidityEventDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetRemoveLiquidityEventDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets remove liquidity events.
          * @summary RemoveLiquidityEvents (historical)
          * @throws {RequiredError}
          */
         curveGetRemoveLiquidityEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveRemoveLiquidityEventDTO>> {
             const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetRemoveLiquidityEventsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets RemoveLiquidityOneEventDTOs.
-         * @summary RemoveLiquidityOneEventDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetRemoveLiquidityOneEventDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveRemoveLiquidityOneEventDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetRemoveLiquidityOneEventDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -13178,42 +11085,12 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets SystemStateDTOs.
-         * @summary SystemStateDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetSystemStateDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveSystemStateDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetSystemStateDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets system states.
          * @summary SystemStates (historical)
          * @throws {RequiredError}
          */
         curveGetSystemStatesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CurveSystemStateDTO>> {
             const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetSystemStatesHistorical(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets TokenDTOs.
-         * @summary TokenDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetTokenDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveTokenDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetTokenDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -13238,42 +11115,12 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets TransferOwnershipEventDTOs.
-         * @summary TransferOwnershipEventDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetTransferOwnershipEventDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveTransferOwnershipEventDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetTransferOwnershipEventDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets transfer ownership events.
          * @summary TransferOwnershipEvents (historical)
          * @throws {RequiredError}
          */
         curveGetTransferOwnershipEventsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveTransferOwnershipEventDTO>> {
             const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetTransferOwnershipEventsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets UnderlyingCoinDTOs.
-         * @summary UnderlyingCoinDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetUnderlyingCoinDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveUnderlyingCoinDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetUnderlyingCoinDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -13298,42 +11145,12 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets VotingAppDTOs.
-         * @summary VotingAppDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetVotingAppDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveVotingAppDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetVotingAppDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets voting apps.
          * @summary VotingApps (historical)
          * @throws {RequiredError}
          */
         curveGetVotingAppsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<CurveVotingAppDTO>> {
             const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetVotingAppsHistorical(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets WeeklyVolumeDTOs.
-         * @summary WeeklyVolumeDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        curveGetWeeklyVolumeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<CurveWeeklyVolumeDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetWeeklyVolumeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -13368,54 +11185,12 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
 export const DexApiFetchParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Gets BatchDTOs.
-         * @summary BatchDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetBatchDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/BatchDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets batches.
          * @summary Batches (historical)
          * @throws {RequiredError}
          */
         dexGetBatchesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/batches/historical`;
+            const localVarPath = `/dapps/dex/batches/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13435,48 +11210,6 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets DepositDTOs.
-         * @summary DepositDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetDepositDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/DepositDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -13495,7 +11228,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
          * @throws {RequiredError}
          */
         dexGetDepositsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/deposits/historical`;
+            const localVarPath = `/dapps/dex/deposits/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13519,48 +11252,6 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
 
             if (tokenId !== undefined) {
                 localVarQueryParameter['tokenId'] = ((tokenId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets OrderDTOs.
-         * @summary OrderDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetOrderDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/OrderDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -13579,7 +11270,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
          * @throws {RequiredError}
          */
         dexGetOrdersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/orders/historical`;
+            const localVarPath = `/dapps/dex/orders/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13603,48 +11294,6 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
 
             if (tokenId !== undefined) {
                 localVarQueryParameter['tokenId'] = ((tokenId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets PriceDTOs.
-         * @summary PriceDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetPriceDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/PriceDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -13663,7 +11312,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
          * @throws {RequiredError}
          */
         dexGetPricesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/prices/historical`;
+            const localVarPath = `/dapps/dex/prices/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13687,48 +11336,6 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
 
             if (tokenId !== undefined) {
                 localVarQueryParameter['tokenId'] = ((tokenId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets SolutionDTOs.
-         * @summary SolutionDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetSolutionDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/SolutionDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -13747,7 +11354,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
          * @throws {RequiredError}
          */
         dexGetSolutionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/solutions/historical`;
+            const localVarPath = `/dapps/dex/solutions/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13771,48 +11378,6 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
 
             if (tokenId !== undefined) {
                 localVarQueryParameter['tokenId'] = ((tokenId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets StatsDTOs.
-         * @summary StatsDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetStatsDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/StatsDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -13831,7 +11396,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
          * @throws {RequiredError}
          */
         dexGetStatsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/stats/historical`;
+            const localVarPath = `/dapps/dex/stats/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13851,48 +11416,6 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets TokenDTOs.
-         * @summary TokenDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetTokenDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/TokenDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -13911,7 +11434,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
          * @throws {RequiredError}
          */
         dexGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/tokens/historical`;
+            const localVarPath = `/dapps/dex/tokens/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13948,54 +11471,12 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
             };
         },
         /**
-         * Gets TradeDTOs.
-         * @summary TradeDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetTradeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/TradeDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets trades.
          * @summary Trades (historical) 🔥
          * @throws {RequiredError}
          */
         dexGetTradesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/trades/historical`;
+            const localVarPath = `/dapps/dex/trades/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -14015,48 +11496,6 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets UserDTOs.
-         * @summary UserDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetUserDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/UserDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -14075,7 +11514,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
          * @throws {RequiredError}
          */
         dexGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/users/historical`;
+            const localVarPath = `/dapps/dex/users/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -14095,90 +11534,6 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets WithdrawDTOs.
-         * @summary WithdrawDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetWithdrawDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/WithdrawDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets WithdrawRequestDTOs.
-         * @summary WithdrawRequestDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetWithdrawRequestDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/WithdrawRequestDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -14197,7 +11552,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
          * @throws {RequiredError}
          */
         dexGetWithdrawsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/withdraws/historical`;
+            const localVarPath = `/dapps/dex/withdraws/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -14239,7 +11594,7 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
          * @throws {RequiredError}
          */
         dexGetWithdrawsRequestsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/withdrawsRequests/historical`;
+            const localVarPath = `/dapps/dex/withdrawsRequests/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -14279,45 +11634,23 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
 };
 
 export type DexApiType = { 
-    dexGetBatchDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<DexBatchDTO>>,
-
     dexGetBatchesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<DexBatchDTO>>,
-
-    dexGetDepositDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<DexDepositDTO>>,
 
     dexGetDepositsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Array<DexDepositDTO>>,
 
-    dexGetOrderDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<DexOrderDTO>>,
-
     dexGetOrdersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Array<DexOrderDTO>>,
-
-    dexGetPriceDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<DexPriceDTO>>,
 
     dexGetPricesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Array<DexPriceDTO>>,
 
-    dexGetSolutionDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<DexSolutionDTO>>,
-
     dexGetSolutionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Array<DexSolutionDTO>>,
-
-    dexGetStatsDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<DexStatsDTO>>,
 
     dexGetStatsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<DexStatsDTO>>,
 
-    dexGetTokenDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<DexTokenDTO>>,
-
     dexGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Array<DexTokenDTO>>,
-
-    dexGetTradeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<DexTradeDTO>>,
 
     dexGetTradesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<DexTradeDTO>>,
 
-    dexGetUserDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<DexUserDTO>>,
-
     dexGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<DexUserDTO>>,
-
-    dexGetWithdrawDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<DexWithdrawDTO>>,
-
-    dexGetWithdrawRequestDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<DexWithdrawRequestDTO>>,
 
     dexGetWithdrawsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Array<DexWithdrawDTO>>,
 
@@ -14332,42 +11665,12 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
     const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
     return {
         /**
-         * Gets BatchDTOs.
-         * @summary BatchDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetBatchDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<DexBatchDTO>> {
-            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetBatchDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets batches.
          * @summary Batches (historical)
          * @throws {RequiredError}
          */
         dexGetBatchesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<DexBatchDTO>> {
             const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetBatchesHistorical(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets DepositDTOs.
-         * @summary DepositDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetDepositDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<DexDepositDTO>> {
-            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetDepositDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -14392,42 +11695,12 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
             });
         },
         /**
-         * Gets OrderDTOs.
-         * @summary OrderDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetOrderDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<DexOrderDTO>> {
-            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetOrderDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets orders.
          * @summary Orders (historical)
          * @throws {RequiredError}
          */
         dexGetOrdersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<DexOrderDTO>> {
             const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetOrdersHistorical(startBlock, endBlock, startDate, endDate, tokenId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets PriceDTOs.
-         * @summary PriceDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetPriceDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<DexPriceDTO>> {
-            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetPriceDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -14452,42 +11725,12 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
             });
         },
         /**
-         * Gets SolutionDTOs.
-         * @summary SolutionDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetSolutionDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<DexSolutionDTO>> {
-            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetSolutionDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets solutions.
          * @summary Solutions (historical)
          * @throws {RequiredError}
          */
         dexGetSolutionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<DexSolutionDTO>> {
             const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetSolutionsHistorical(startBlock, endBlock, startDate, endDate, tokenId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets StatsDTOs.
-         * @summary StatsDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetStatsDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<DexStatsDTO>> {
-            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetStatsDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -14512,42 +11755,12 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
             });
         },
         /**
-         * Gets TokenDTOs.
-         * @summary TokenDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetTokenDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<DexTokenDTO>> {
-            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetTokenDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets tokens.
          * @summary Tokens (historical) 🔥
          * @throws {RequiredError}
          */
         dexGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions = {}): Promise<Array<DexTokenDTO>> {
             const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets TradeDTOs.
-         * @summary TradeDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetTradeDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<DexTradeDTO>> {
-            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetTradeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -14572,57 +11785,12 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
             });
         },
         /**
-         * Gets UserDTOs.
-         * @summary UserDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetUserDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<DexUserDTO>> {
-            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetUserDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets users.
          * @summary Users (historical)
          * @throws {RequiredError}
          */
         dexGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<DexUserDTO>> {
             const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetUsersHistorical(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets WithdrawDTOs.
-         * @summary WithdrawDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetWithdrawDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<DexWithdrawDTO>> {
-            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetWithdrawDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets WithdrawRequestDTOs.
-         * @summary WithdrawRequestDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        dexGetWithdrawRequestDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<DexWithdrawRequestDTO>> {
-            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetWithdrawRequestDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -14716,54 +11884,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets BundleDTOs.
-         * @summary BundleDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetBundleDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/BundleDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets bundles.
          * @summary Bundles (historical)
          * @throws {RequiredError}
          */
         sushiswapGetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/bundles/historical`;
+            const localVarPath = `/dapps/sushiswap/bundles/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -14783,48 +11909,6 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets BurnDTOs.
-         * @summary BurnDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetBurnDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/BurnDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -14843,49 +11927,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         sushiswapGetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/burns/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets DayDataDTOs.
-         * @summary DayDataDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetDayDataDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/DayDataDTOs/historical`;
+            const localVarPath = `/dapps/sushiswap/burns/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -14927,7 +11969,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         sushiswapGetDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/dayData/historical`;
+            const localVarPath = `/dapps/sushiswap/dayData/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -14947,48 +11989,6 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets FactoryDTOs.
-         * @summary FactoryDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetFactoryDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/FactoryDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -15007,7 +12007,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         sushiswapGetFactoryHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/factory/historical`;
+            const localVarPath = `/dapps/sushiswap/factory/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -15027,48 +12027,6 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets HourDataDTOs.
-         * @summary HourDataDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetHourDataDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/HourDataDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -15087,7 +12045,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         sushiswapGetHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/hourData/historical`;
+            const localVarPath = `/dapps/sushiswap/hourData/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -15107,48 +12065,6 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets LiquidityPositionDTOs.
-         * @summary LiquidityPositionDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetLiquidityPositionDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/LiquidityPositionDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -15167,49 +12083,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         sushiswapGetLiquidityPositionHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/liquidityPosition/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets LiquidityPositionSnapshotDTOs.
-         * @summary LiquidityPositionSnapshotDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetLiquidityPositionSnapshotDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/LiquidityPositionSnapshotDTOs/historical`;
+            const localVarPath = `/dapps/sushiswap/liquidityPosition/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -15251,49 +12125,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         sushiswapGetLiquidityPositionSnapshotHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/liquidityPositionSnapshots/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets MintDTOs.
-         * @summary MintDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetMintDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/MintDTOs/historical`;
+            const localVarPath = `/dapps/sushiswap/liquidityPositionSnapshots/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -15335,133 +12167,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         sushiswapGetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/mints/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets PairDTOs.
-         * @summary PairDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetPairDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/PairDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets PairDayDataDTOs.
-         * @summary PairDayDataDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetPairDayDataDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/PairDayDataDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets PairHourDataDTOs.
-         * @summary PairHourDataDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetPairHourDataDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/PairHourDataDTOs/historical`;
+            const localVarPath = `/dapps/sushiswap/mints/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -15525,7 +12231,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         sushiswapGetPoolsDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/poolsDayData/historical`;
+            const localVarPath = `/dapps/sushiswap/poolsDayData/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -15567,7 +12273,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         sushiswapGetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/pools/historical`;
+            const localVarPath = `/dapps/sushiswap/pools/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -15609,49 +12315,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         sushiswapGetPoolsHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/poolsHourData/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets SwapDTOs.
-         * @summary SwapDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetSwapDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/SwapDTOs/historical`;
+            const localVarPath = `/dapps/sushiswap/poolsHourData/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -15715,91 +12379,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         sushiswapGetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/swaps/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets TokenDTOs.
-         * @summary TokenDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetTokenDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/TokenDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets TokenDayDataDTOs.
-         * @summary TokenDayDataDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetTokenDayDataDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/TokenDayDataDTOs/historical`;
+            const localVarPath = `/dapps/sushiswap/swaps/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -15863,7 +12443,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         sushiswapGetTokensDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/tokensDayData/historical`;
+            const localVarPath = `/dapps/sushiswap/tokensDayData/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -15905,7 +12485,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         sushiswapGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/tokens/historical`;
+            const localVarPath = `/dapps/sushiswap/tokens/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -15942,54 +12522,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets TransactionDTOs.
-         * @summary TransactionDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetTransactionDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/TransactionDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets transactions.
          * @summary Transactions (historical)
          * @throws {RequiredError}
          */
         sushiswapGetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/transactions/historical`;
+            const localVarPath = `/dapps/sushiswap/transactions/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -16009,48 +12547,6 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets UserDTOs.
-         * @summary UserDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetUserDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/UserDTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -16069,7 +12565,7 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         sushiswapGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/users/historical`;
+            const localVarPath = `/dapps/sushiswap/users/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -16109,43 +12605,21 @@ export type SushiswapApiType = {
 
     dexGetTradesCurrent(options?: RequestOptions): Promise<Array<DexTradeDTO>>,
 
-    sushiswapGetBundleDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapBundleDTO>>,
-
     sushiswapGetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<SushiswapBundleDTO>>,
-
-    sushiswapGetBurnDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapBurnDTO>>,
 
     sushiswapGetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapBurnDTO>>,
 
-    sushiswapGetDayDataDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapDayDataDTO>>,
-
     sushiswapGetDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<SushiswapDayDataDTO>>,
-
-    sushiswapGetFactoryDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapFactoryDTO>>,
 
     sushiswapGetFactoryHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<SushiswapFactoryDTO>>,
 
-    sushiswapGetHourDataDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapHourDataDTO>>,
-
     sushiswapGetHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<SushiswapHourDataDTO>>,
-
-    sushiswapGetLiquidityPositionDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapLiquidityPositionDTO>>,
 
     sushiswapGetLiquidityPositionHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapLiquidityPositionDTO>>,
 
-    sushiswapGetLiquidityPositionSnapshotDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapLiquidityPositionSnapshotDTO>>,
-
     sushiswapGetLiquidityPositionSnapshotHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapLiquidityPositionSnapshotDTO>>,
 
-    sushiswapGetMintDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapMintDTO>>,
-
     sushiswapGetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapMintDTO>>,
-
-    sushiswapGetPairDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapPairDTO>>,
-
-    sushiswapGetPairDayDataDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapPairDayDataDTO>>,
-
-    sushiswapGetPairHourDataDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapPairHourDataDTO>>,
 
     sushiswapGetPoolsCurrent(options?: RequestOptions): Promise<Array<SushiswapPairDTO>>,
 
@@ -16155,15 +12629,9 @@ export type SushiswapApiType = {
 
     sushiswapGetPoolsHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapPairHourDataDTO>>,
 
-    sushiswapGetSwapDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapSwapDTO>>,
-
     sushiswapGetSwapsCurrent(options?: RequestOptions): Promise<Array<SushiswapSwapDTO>>,
 
     sushiswapGetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapSwapDTO>>,
-
-    sushiswapGetTokenDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapTokenDTO>>,
-
-    sushiswapGetTokenDayDataDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapTokenDayDataDTO>>,
 
     sushiswapGetTokensCurrent(options?: RequestOptions): Promise<Array<SushiswapTokenDTO>>,
 
@@ -16171,11 +12639,7 @@ export type SushiswapApiType = {
 
     sushiswapGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Array<SushiswapTokenDTO>>,
 
-    sushiswapGetTransactionDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapTransactionDTO>>,
-
     sushiswapGetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<SushiswapTransactionDTO>>,
-
-    sushiswapGetUserDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<SushiswapUserDTO>>,
 
     sushiswapGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<SushiswapUserDTO>>,
 }
@@ -16218,42 +12682,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets BundleDTOs.
-         * @summary BundleDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetBundleDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapBundleDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetBundleDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets bundles.
          * @summary Bundles (historical)
          * @throws {RequiredError}
          */
         sushiswapGetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<SushiswapBundleDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetBundlesHistorical(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets BurnDTOs.
-         * @summary BurnDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetBurnDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapBurnDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetBurnDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -16278,42 +12712,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets DayDataDTOs.
-         * @summary DayDataDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetDayDataDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapDayDataDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetDayDataDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets day data.
          * @summary DayData (historical)
          * @throws {RequiredError}
          */
         sushiswapGetDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<SushiswapDayDataDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets FactoryDTOs.
-         * @summary FactoryDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetFactoryDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapFactoryDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetFactoryDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -16338,42 +12742,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets HourDataDTOs.
-         * @summary HourDataDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetHourDataDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapHourDataDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetHourDataDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets hour data.
          * @summary HourData (historical)
          * @throws {RequiredError}
          */
         sushiswapGetHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<SushiswapHourDataDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets LiquidityPositionDTOs.
-         * @summary LiquidityPositionDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetLiquidityPositionDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapLiquidityPositionDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetLiquidityPositionDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -16398,21 +12772,6 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets LiquidityPositionSnapshotDTOs.
-         * @summary LiquidityPositionSnapshotDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetLiquidityPositionSnapshotDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapLiquidityPositionSnapshotDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetLiquidityPositionSnapshotDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets liquidity position snapshot.
          * @summary LiquidityPositionSnapshot (historical)
          * @throws {RequiredError}
@@ -16428,72 +12787,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets MintDTOs.
-         * @summary MintDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetMintDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapMintDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetMintDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets mints.
          * @summary Mints (historical)
          * @throws {RequiredError}
          */
         sushiswapGetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapMintDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetMintsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets PairDTOs.
-         * @summary PairDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetPairDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetPairDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets PairDayDataDTOs.
-         * @summary PairDayDataDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetPairDayDataDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairDayDataDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetPairDayDataDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets PairHourDataDTOs.
-         * @summary PairHourDataDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetPairHourDataDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairHourDataDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetPairHourDataDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -16563,21 +12862,6 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets SwapDTOs.
-         * @summary SwapDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetSwapDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapSwapDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetSwapDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets swaps.
          * @summary Swaps (current) 🔥
          * @throws {RequiredError}
@@ -16599,36 +12883,6 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
          */
         sushiswapGetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapSwapDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetSwapsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets TokenDTOs.
-         * @summary TokenDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetTokenDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapTokenDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetTokenDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets TokenDayDataDTOs.
-         * @summary TokenDayDataDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetTokenDayDataDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapTokenDayDataDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetTokenDayDataDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -16683,42 +12937,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets TransactionDTOs.
-         * @summary TransactionDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetTransactionDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapTransactionDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetTransactionDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets transactions.
          * @summary Transactions (historical)
          * @throws {RequiredError}
          */
         sushiswapGetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<SushiswapTransactionDTO>> {
             const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetTransactionsHistorical(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets UserDTOs.
-         * @summary UserDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        sushiswapGetUserDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<SushiswapUserDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetUserDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -16753,54 +12977,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
 export const UniswapV2ApiFetchParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Gets BundleV2DTOs.
-         * @summary BundleV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetBundleV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/BundleV2DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets bundles.
          * @summary Bundles (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/bundles/historical`;
+            const localVarPath = `/dapps/uniswapv2/bundles/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -16820,48 +13002,6 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets BurnV2DTOs.
-         * @summary BurnV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetBurnV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/BurnV2DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -16880,7 +13020,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV2GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/burns/historical`;
+            const localVarPath = `/dapps/uniswapv2/burns/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -16922,7 +13062,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV2GetDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/dayData/historical`;
+            const localVarPath = `/dapps/uniswapv2/dayData/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -16960,7 +13100,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV2GetFactoryHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/factory/historical`;
+            const localVarPath = `/dapps/uniswapv2/factory/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -16980,90 +13120,6 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets LiquidityPositionSnapshotV2DTOs.
-         * @summary LiquidityPositionSnapshotV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/LiquidityPositionSnapshotV2DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets LiquidityPositionV2DTOs.
-         * @summary LiquidityPositionV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetLiquidityPositionV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/LiquidityPositionV2DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -17082,7 +13138,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV2GetLiquidityPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/liquidityPositions/historical`;
+            const localVarPath = `/dapps/uniswapv2/liquidityPositions/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -17124,49 +13180,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV2GetLiquidityPositionsSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/liquidityPositionsSnapshots/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets MintV2DTOs.
-         * @summary MintV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetMintV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/MintV2DTOs/historical`;
+            const localVarPath = `/dapps/uniswapv2/liquidityPositionsSnapshots/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -17208,133 +13222,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV2GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/mints/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets PairDayDataV2DTOs.
-         * @summary PairDayDataV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetPairDayDataV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/PairDayDataV2DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets PairHourDataV2DTOs.
-         * @summary PairHourDataV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetPairHourDataV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/PairHourDataV2DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets PairV2DTOs.
-         * @summary PairV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetPairV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/PairV2DTOs/historical`;
+            const localVarPath = `/dapps/uniswapv2/mints/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -17402,7 +13290,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV2GetPoolsDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/poolsDayData/historical`;
+            const localVarPath = `/dapps/uniswapv2/poolsDayData/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -17444,7 +13332,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV2GetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/pools/historical`;
+            const localVarPath = `/dapps/uniswapv2/pools/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -17486,49 +13374,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV2GetPoolsHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/poolsHourData/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets SwapV2DTOs.
-         * @summary SwapV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetSwapV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/SwapV2DTOs/historical`;
+            const localVarPath = `/dapps/uniswapv2/poolsHourData/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -17592,91 +13438,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV2GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/swaps/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets TokenDayDataV2DTOs.
-         * @summary TokenDayDataV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetTokenDayDataV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/TokenDayDataV2DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets TokenV2DTOs.
-         * @summary TokenV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetTokenV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/TokenV2DTOs/historical`;
+            const localVarPath = `/dapps/uniswapv2/swaps/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -17740,7 +13502,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV2GetTokensDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/tokensDayData/historical`;
+            const localVarPath = `/dapps/uniswapv2/tokensDayData/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -17782,7 +13544,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV2GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/tokens/historical`;
+            const localVarPath = `/dapps/uniswapv2/tokens/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -17819,54 +13581,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets TransactionV2DTOs.
-         * @summary TransactionV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetTransactionV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/TransactionV2DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets transactions.
          * @summary Transactions (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/transactions/historical`;
+            const localVarPath = `/dapps/uniswapv2/transactions/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -17886,132 +13606,6 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets UniswapDayDataV2DTOs.
-         * @summary UniswapDayDataV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetUniswapDayDataV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/UniswapDayDataV2DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets UniswapFactoryV2DTOs.
-         * @summary UniswapFactoryV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetUniswapFactoryV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/UniswapFactoryV2DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets UserV2DTOs.
-         * @summary UserV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetUserV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/UserV2DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -18030,7 +13624,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV2GetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/users/historical`;
+            const localVarPath = `/dapps/uniswapv2/users/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -18066,11 +13660,7 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
 };
 
 export type UniswapV2ApiType = { 
-    uniswapV2GetBundleV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2BundleV2DTO>>,
-
     uniswapV2GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<UniswapV2BundleV2DTO>>,
-
-    uniswapV2GetBurnV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2BurnV2DTO>>,
 
     uniswapV2GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2BurnV2DTO>>,
 
@@ -18078,23 +13668,11 @@ export type UniswapV2ApiType = {
 
     uniswapV2GetFactoryHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<UniswapV2UniswapFactoryV2DTO>>,
 
-    uniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2LiquidityPositionSnapshotV2DTO>>,
-
-    uniswapV2GetLiquidityPositionV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2LiquidityPositionV2DTO>>,
-
     uniswapV2GetLiquidityPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2LiquidityPositionV2DTO>>,
 
     uniswapV2GetLiquidityPositionsSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2LiquidityPositionSnapshotV2DTO>>,
 
-    uniswapV2GetMintV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2MintV2DTO>>,
-
     uniswapV2GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2MintV2DTO>>,
-
-    uniswapV2GetPairDayDataV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2PairDayDataV2DTO>>,
-
-    uniswapV2GetPairHourDataV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2PairHourDataV2DTO>>,
-
-    uniswapV2GetPairV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2PairV2DTO>>,
 
     uniswapV2GetPoolsCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV2PairV2DTO>>,
 
@@ -18104,15 +13682,9 @@ export type UniswapV2ApiType = {
 
     uniswapV2GetPoolsHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2PairHourDataV2DTO>>,
 
-    uniswapV2GetSwapV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2SwapV2DTO>>,
-
     uniswapV2GetSwapsCurrent(options?: RequestOptions): Promise<Array<UniswapV2SwapV2DTO>>,
 
     uniswapV2GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2SwapV2DTO>>,
-
-    uniswapV2GetTokenDayDataV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2TokenDayDataV2DTO>>,
-
-    uniswapV2GetTokenV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2TokenV2DTO>>,
 
     uniswapV2GetTokensCurrent(options?: RequestOptions): Promise<Array<UniswapV2TokenV2DTO>>,
 
@@ -18120,15 +13692,7 @@ export type UniswapV2ApiType = {
 
     uniswapV2GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Array<UniswapV2TokenV2DTO>>,
 
-    uniswapV2GetTransactionV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2TransactionV2DTO>>,
-
     uniswapV2GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<UniswapV2TransactionV2DTO>>,
-
-    uniswapV2GetUniswapDayDataV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2UniswapDayDataV2DTO>>,
-
-    uniswapV2GetUniswapFactoryV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2UniswapFactoryV2DTO>>,
-
-    uniswapV2GetUserV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV2UserV2DTO>>,
 
     uniswapV2GetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<UniswapV2UserV2DTO>>,
 }
@@ -18141,42 +13705,12 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
     const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
     return {
         /**
-         * Gets BundleV2DTOs.
-         * @summary BundleV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetBundleV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2BundleV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetBundleV2DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets bundles.
          * @summary Bundles (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<UniswapV2BundleV2DTO>> {
             const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetBundlesHistorical(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets BurnV2DTOs.
-         * @summary BurnV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetBurnV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2BurnV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetBurnV2DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -18231,36 +13765,6 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets LiquidityPositionSnapshotV2DTOs.
-         * @summary LiquidityPositionSnapshotV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2LiquidityPositionSnapshotV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets LiquidityPositionV2DTOs.
-         * @summary LiquidityPositionV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetLiquidityPositionV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2LiquidityPositionV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetLiquidityPositionV2DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets liquidity positions.
          * @summary LiquidityPositions (historical)
          * @throws {RequiredError}
@@ -18291,72 +13795,12 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets MintV2DTOs.
-         * @summary MintV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetMintV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2MintV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetMintV2DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets mints.
          * @summary Mints (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2MintV2DTO>> {
             const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetMintsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets PairDayDataV2DTOs.
-         * @summary PairDayDataV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetPairDayDataV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairDayDataV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetPairDayDataV2DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets PairHourDataV2DTOs.
-         * @summary PairHourDataV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetPairHourDataV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairHourDataV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetPairHourDataV2DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets PairV2DTOs.
-         * @summary PairV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetPairV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetPairV2DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -18426,21 +13870,6 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets SwapV2DTOs.
-         * @summary SwapV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetSwapV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2SwapV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetSwapV2DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets swaps.
          * @summary Swaps (current) 🔥
          * @throws {RequiredError}
@@ -18462,36 +13891,6 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
          */
         uniswapV2GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2SwapV2DTO>> {
             const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetSwapsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets TokenDayDataV2DTOs.
-         * @summary TokenDayDataV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetTokenDayDataV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2TokenDayDataV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetTokenDayDataV2DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets TokenV2DTOs.
-         * @summary TokenV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetTokenV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2TokenV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetTokenV2DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -18546,72 +13945,12 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets TransactionV2DTOs.
-         * @summary TransactionV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetTransactionV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2TransactionV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetTransactionV2DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets transactions.
          * @summary Transactions (historical)
          * @throws {RequiredError}
          */
         uniswapV2GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<UniswapV2TransactionV2DTO>> {
             const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetTransactionsHistorical(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets UniswapDayDataV2DTOs.
-         * @summary UniswapDayDataV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetUniswapDayDataV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2UniswapDayDataV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetUniswapDayDataV2DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets UniswapFactoryV2DTOs.
-         * @summary UniswapFactoryV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetUniswapFactoryV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2UniswapFactoryV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetUniswapFactoryV2DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets UserV2DTOs.
-         * @summary UserV2DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV2GetUserV2DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2UserV2DTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetUserV2DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -18646,48 +13985,6 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
 export const UniswapV3ApiFetchParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Gets BundleV3DTOs.
-         * @summary BundleV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetBundleV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/BundleV3DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets bundles.
          * @summary Bundles (current)
          * @throws {RequiredError}
@@ -18715,7 +14012,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV3GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/bundles/historical`;
+            const localVarPath = `/dapps/uniswapv3/bundles/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -18735,48 +14032,6 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets BurnV3DTOs.
-         * @summary BurnV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetBurnV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/BurnV3DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -18821,7 +14076,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV3GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/burns/historical`;
+            const localVarPath = `/dapps/uniswapv3/burns/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -18885,7 +14140,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV3GetDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/dayData/historical`;
+            const localVarPath = `/dapps/uniswapv3/dayData/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -18945,7 +14200,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV3GetFactoryHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/factory/historical`;
+            const localVarPath = `/dapps/uniswapv3/factory/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -18965,90 +14220,6 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets FactoryV3DTOs.
-         * @summary FactoryV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetFactoryV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/FactoryV3DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets MintV3DTOs.
-         * @summary MintV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetMintV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/MintV3DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -19093,133 +14264,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV3GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/mints/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets PoolDayDataV3DTOs.
-         * @summary PoolDayDataV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPoolDayDataV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/PoolDayDataV3DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets PoolHourDataV3DTOs.
-         * @summary PoolHourDataV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPoolHourDataV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/PoolHourDataV3DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets PoolV3DTOs.
-         * @summary PoolV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPoolV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/PoolV3DTOs/historical`;
+            const localVarPath = `/dapps/uniswapv3/mints/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -19313,7 +14358,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV3GetPoolsDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/poolsDayData/historical`;
+            const localVarPath = `/dapps/uniswapv3/poolsDayData/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -19355,7 +14400,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV3GetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/pools/historical`;
+            const localVarPath = `/dapps/uniswapv3/pools/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -19423,91 +14468,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV3GetPoolsHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/poolsHourData/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets PositionSnapshotV3DTOs.
-         * @summary PositionSnapshotV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPositionSnapshotV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/PositionSnapshotV3DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets PositionV3DTOs.
-         * @summary PositionV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPositionV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/PositionV3DTOs/historical`;
+            const localVarPath = `/dapps/uniswapv3/poolsHourData/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -19575,7 +14536,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV3GetPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/positions/historical`;
+            const localVarPath = `/dapps/uniswapv3/positions/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -19617,7 +14578,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV3GetPositionsSnaphotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/positionsSnapshots/historical`;
+            const localVarPath = `/dapps/uniswapv3/positionsSnapshots/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -19680,48 +14641,6 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets SwapV3DTOs.
-         * @summary SwapV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetSwapV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/SwapV3DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets swaps.
          * @summary Swaps (current) 🔥
          * @throws {RequiredError}
@@ -19753,91 +14672,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV3GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/swaps/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets TickDayDataV3DTOs.
-         * @summary TickDayDataV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTickDayDataV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/TickDayDataV3DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets TickV3DTOs.
-         * @summary TickV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTickV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/TickV3DTOs/historical`;
+            const localVarPath = `/dapps/uniswapv3/swaps/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -19931,7 +14766,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV3GetTicksDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/ticksDayData/historical`;
+            const localVarPath = `/dapps/uniswapv3/ticksDayData/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -19973,133 +14808,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV3GetTicksHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/ticks/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets TokenHourDataV3DTOs.
-         * @summary TokenHourDataV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTokenHourDataV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/TokenHourDataV3DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets TokenV3DTOs.
-         * @summary TokenV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTokenV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/TokenV3DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets TokenV3DayDataDTOs.
-         * @summary TokenV3DayDataDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTokenV3DayDataDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/TokenV3DayDataDTOs/historical`;
+            const localVarPath = `/dapps/uniswapv3/ticks/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -20193,7 +14902,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV3GetTokensDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/tokensDayData/historical`;
+            const localVarPath = `/dapps/uniswapv3/tokensDayData/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -20235,7 +14944,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV3GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/tokens/historical`;
+            const localVarPath = `/dapps/uniswapv3/tokens/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -20303,7 +15012,7 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
          * @throws {RequiredError}
          */
         uniswapV3GetTokensHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/tokensHourData/historical`;
+            const localVarPath = `/dapps/uniswapv3/tokensHourData/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -20340,54 +15049,12 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets TransactionV3DTOs.
-         * @summary TransactionV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTransactionV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/TransactionV3DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
          * Gets transactions.
          * @summary Transactions (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/transactions/historical`;
+            const localVarPath = `/dapps/uniswapv3/transactions/historical-manual`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -20407,48 +15074,6 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
 
             if (endDate !== undefined) {
                 localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
-            // fix override query string Detail: https://stackoverflow.com/a/7517673/1077943
-            localVarUrlObj.search = null;
-            localVarRequestOptions.headers = Object.assign({}, localVarHeaderParameter, options.headers);
-
-            return {
-                url: url.format(localVarUrlObj),
-                options: localVarRequestOptions,
-            };
-        },
-        /**
-         * Gets UniswapDayDataV3DTOs.
-         * @summary UniswapDayDataV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetUniswapDayDataV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/UniswapDayDataV3DTOs/historical`;
-            const localVarUrlObj = url.parse(localVarPath, true);
-            const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
-            const localVarHeaderParameter = {};
-            const localVarQueryParameter = {};
-
-            if (startBlock !== undefined) {
-                localVarQueryParameter['startBlock'] = ((startBlock:any):string);
-            }
-
-            if (endBlock !== undefined) {
-                localVarQueryParameter['endBlock'] = ((endBlock:any):string);
-            }
-
-            if (startDate !== undefined) {
-                localVarQueryParameter['startDate'] = ((startDate:any):Date).toISOString();
-            }
-
-            if (endDate !== undefined) {
-                localVarQueryParameter['endDate'] = ((endDate:any):Date).toISOString();
-            }
-
-            if (poolId !== undefined) {
-                localVarQueryParameter['poolId'] = ((poolId:any):string);
             }
 
             localVarUrlObj.query = Object.assign({}, localVarUrlObj.query, localVarQueryParameter, options.query);
@@ -20465,13 +15090,9 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
 };
 
 export type UniswapV3ApiType = { 
-    uniswapV3GetBundleV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3BundleV3DTO>>,
-
     uniswapV3GetBundlesCurrent(options?: RequestOptions): Promise<Array<UniswapV3BundleV3DTO>>,
 
     uniswapV3GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<UniswapV3BundleV3DTO>>,
-
-    uniswapV3GetBurnV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3BurnV3DTO>>,
 
     uniswapV3GetBurnsCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3BurnV3DTO>>,
 
@@ -20485,19 +15106,9 @@ export type UniswapV3ApiType = {
 
     uniswapV3GetFactoryHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<UniswapV3FactoryV3DTO>>,
 
-    uniswapV3GetFactoryV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3FactoryV3DTO>>,
-
-    uniswapV3GetMintV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3MintV3DTO>>,
-
     uniswapV3GetMintsCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3MintV3DTO>>,
 
     uniswapV3GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3MintV3DTO>>,
-
-    uniswapV3GetPoolDayDataV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolDayDataV3DTO>>,
-
-    uniswapV3GetPoolHourDataV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolHourDataV3DTO>>,
-
-    uniswapV3GetPoolV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolV3DTO>>,
 
     uniswapV3GetPoolsCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolV3DTO>>,
 
@@ -20511,10 +15122,6 @@ export type UniswapV3ApiType = {
 
     uniswapV3GetPoolsHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolHourDataV3DTO>>,
 
-    uniswapV3GetPositionSnapshotV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PositionSnapshotV3DTO>>,
-
-    uniswapV3GetPositionV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PositionV3DTO>>,
-
     uniswapV3GetPositionsCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PositionV3DTO>>,
 
     uniswapV3GetPositionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PositionV3DTO>>,
@@ -20523,15 +15130,9 @@ export type UniswapV3ApiType = {
 
     uniswapV3GetPositionsSnapshotsCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3PositionSnapshotV3DTO>>,
 
-    uniswapV3GetSwapV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3SwapV3DTO>>,
-
     uniswapV3GetSwapsCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3SwapV3DTO>>,
 
     uniswapV3GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3SwapV3DTO>>,
-
-    uniswapV3GetTickDayDataV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3TickDayDataV3DTO>>,
-
-    uniswapV3GetTickV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3TickV3DTO>>,
 
     uniswapV3GetTicksCurrent(filterPoolId?: string, options?: RequestOptions): Promise<Array<UniswapV3TickV3DTO>>,
 
@@ -20540,12 +15141,6 @@ export type UniswapV3ApiType = {
     uniswapV3GetTicksDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3TickDayDataV3DTO>>,
 
     uniswapV3GetTicksHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3TickV3DTO>>,
-
-    uniswapV3GetTokenHourDataV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenHourDataV3DTO>>,
-
-    uniswapV3GetTokenV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenV3DTO>>,
-
-    uniswapV3GetTokenV3DayDataDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenV3DayDataDTO>>,
 
     uniswapV3GetTokensCurrent(filterTokenId?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenV3DTO>>,
 
@@ -20559,11 +15154,7 @@ export type UniswapV3ApiType = {
 
     uniswapV3GetTokensHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, tokenId?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenHourDataV3DTO>>,
 
-    uniswapV3GetTransactionV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3TransactionV3DTO>>,
-
     uniswapV3GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions): Promise<Array<UniswapV3TransactionV3DTO>>,
-
-    uniswapV3GetUniswapDayDataV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions): Promise<Array<UniswapV3UniswapDayDataV3DTO>>,
 }
 
 /**
@@ -20573,21 +15164,6 @@ export type UniswapV3ApiType = {
 export const UniswapV3Api = function(configuration?: Configuration, fetch: FetchAPI = portableFetch): UniswapV3ApiType {
     const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
     return {
-        /**
-         * Gets BundleV3DTOs.
-         * @summary BundleV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetBundleV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3BundleV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetBundleV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
         /**
          * Gets bundles.
          * @summary Bundles (current)
@@ -20610,21 +15186,6 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          */
         uniswapV3GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<UniswapV3BundleV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetBundlesHistorical(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets BurnV3DTOs.
-         * @summary BurnV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetBurnV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3BurnV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetBurnV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -20724,36 +15285,6 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets FactoryV3DTOs.
-         * @summary FactoryV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetFactoryV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3FactoryV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetFactoryV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets MintV3DTOs.
-         * @summary MintV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetMintV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3MintV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetMintV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets mints.
          * @summary Mints (current)
          * @throws {RequiredError}
@@ -20775,51 +15306,6 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          */
         uniswapV3GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3MintV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetMintsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets PoolDayDataV3DTOs.
-         * @summary PoolDayDataV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPoolDayDataV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolDayDataV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPoolDayDataV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets PoolHourDataV3DTOs.
-         * @summary PoolHourDataV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPoolHourDataV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolHourDataV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPoolHourDataV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets PoolV3DTOs.
-         * @summary PoolV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPoolV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPoolV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -20919,36 +15405,6 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets PositionSnapshotV3DTOs.
-         * @summary PositionSnapshotV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPositionSnapshotV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PositionSnapshotV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPositionSnapshotV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets PositionV3DTOs.
-         * @summary PositionV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetPositionV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PositionV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPositionV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets positions.
          * @summary Positions (current)
          * @throws {RequiredError}
@@ -21009,21 +15465,6 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets SwapV3DTOs.
-         * @summary SwapV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetSwapV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3SwapV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetSwapV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets swaps.
          * @summary Swaps (current) 🔥
          * @throws {RequiredError}
@@ -21045,36 +15486,6 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          */
         uniswapV3GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3SwapV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetSwapsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets TickDayDataV3DTOs.
-         * @summary TickDayDataV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTickDayDataV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TickDayDataV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTickDayDataV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets TickV3DTOs.
-         * @summary TickV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTickV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TickV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTickV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -21135,51 +15546,6 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
          */
         uniswapV3GetTicksHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TickV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTicksHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets TokenHourDataV3DTOs.
-         * @summary TokenHourDataV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTokenHourDataV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenHourDataV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTokenHourDataV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets TokenV3DTOs.
-         * @summary TokenV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTokenV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTokenV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets TokenV3DayDataDTOs.
-         * @summary TokenV3DayDataDTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTokenV3DayDataDTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenV3DayDataDTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTokenV3DayDataDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -21279,42 +15645,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets TransactionV3DTOs.
-         * @summary TransactionV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetTransactionV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TransactionV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTransactionV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
          * Gets transactions.
          * @summary Transactions (historical)
          * @throws {RequiredError}
          */
         uniswapV3GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, options?: RequestOptions = {}): Promise<Array<UniswapV3TransactionV3DTO>> {
             const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTransactionsHistorical(startBlock, endBlock, startDate, endDate, options);
-            return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
-                if (response.status >= 200 && response.status < 300) {
-                    return response.json();
-                } else {
-                    throw response;
-                }
-            });
-        },
-        /**
-         * Gets UniswapDayDataV3DTOs.
-         * @summary UniswapDayDataV3DTOs (historical) 🔥
-         * @throws {RequiredError}
-         */
-        uniswapV3GetUniswapDayDataV3DTOsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, poolId?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3UniswapDayDataV3DTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetUniswapDayDataV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();

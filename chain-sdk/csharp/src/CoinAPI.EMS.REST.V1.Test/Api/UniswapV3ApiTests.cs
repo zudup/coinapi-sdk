@@ -64,22 +64,6 @@ namespace CoinAPI.EMS.REST.V1.Test
 
         
         /// <summary>
-        /// Test UniswapV3GetBundleV3DTOsHistorical
-        /// </summary>
-        [Test]
-        public void UniswapV3GetBundleV3DTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.UniswapV3GetBundleV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<UniswapV3BundleV3DTO>), response, "response is List<UniswapV3BundleV3DTO>");
-        }
-        
-        /// <summary>
         /// Test UniswapV3GetBundlesCurrent
         /// </summary>
         [Test]
@@ -103,22 +87,6 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? endDate = null;
             //var response = instance.UniswapV3GetBundlesHistorical(startBlock, endBlock, startDate, endDate);
             //Assert.IsInstanceOf(typeof(List<UniswapV3BundleV3DTO>), response, "response is List<UniswapV3BundleV3DTO>");
-        }
-        
-        /// <summary>
-        /// Test UniswapV3GetBurnV3DTOsHistorical
-        /// </summary>
-        [Test]
-        public void UniswapV3GetBurnV3DTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.UniswapV3GetBurnV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<UniswapV3BurnV3DTO>), response, "response is List<UniswapV3BurnV3DTO>");
         }
         
         /// <summary>
@@ -202,38 +170,6 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test UniswapV3GetFactoryV3DTOsHistorical
-        /// </summary>
-        [Test]
-        public void UniswapV3GetFactoryV3DTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.UniswapV3GetFactoryV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<UniswapV3FactoryV3DTO>), response, "response is List<UniswapV3FactoryV3DTO>");
-        }
-        
-        /// <summary>
-        /// Test UniswapV3GetMintV3DTOsHistorical
-        /// </summary>
-        [Test]
-        public void UniswapV3GetMintV3DTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.UniswapV3GetMintV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<UniswapV3MintV3DTO>), response, "response is List<UniswapV3MintV3DTO>");
-        }
-        
-        /// <summary>
         /// Test UniswapV3GetMintsCurrent
         /// </summary>
         [Test]
@@ -259,54 +195,6 @@ namespace CoinAPI.EMS.REST.V1.Test
             //string poolId = null;
             //var response = instance.UniswapV3GetMintsHistorical(startBlock, endBlock, startDate, endDate, poolId);
             //Assert.IsInstanceOf(typeof(List<UniswapV3MintV3DTO>), response, "response is List<UniswapV3MintV3DTO>");
-        }
-        
-        /// <summary>
-        /// Test UniswapV3GetPoolDayDataV3DTOsHistorical
-        /// </summary>
-        [Test]
-        public void UniswapV3GetPoolDayDataV3DTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.UniswapV3GetPoolDayDataV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<UniswapV3PoolDayDataV3DTO>), response, "response is List<UniswapV3PoolDayDataV3DTO>");
-        }
-        
-        /// <summary>
-        /// Test UniswapV3GetPoolHourDataV3DTOsHistorical
-        /// </summary>
-        [Test]
-        public void UniswapV3GetPoolHourDataV3DTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.UniswapV3GetPoolHourDataV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<UniswapV3PoolHourDataV3DTO>), response, "response is List<UniswapV3PoolHourDataV3DTO>");
-        }
-        
-        /// <summary>
-        /// Test UniswapV3GetPoolV3DTOsHistorical
-        /// </summary>
-        [Test]
-        public void UniswapV3GetPoolV3DTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.UniswapV3GetPoolV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<UniswapV3PoolV3DTO>), response, "response is List<UniswapV3PoolV3DTO>");
         }
         
         /// <summary>
@@ -394,38 +282,6 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test UniswapV3GetPositionSnapshotV3DTOsHistorical
-        /// </summary>
-        [Test]
-        public void UniswapV3GetPositionSnapshotV3DTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.UniswapV3GetPositionSnapshotV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<UniswapV3PositionSnapshotV3DTO>), response, "response is List<UniswapV3PositionSnapshotV3DTO>");
-        }
-        
-        /// <summary>
-        /// Test UniswapV3GetPositionV3DTOsHistorical
-        /// </summary>
-        [Test]
-        public void UniswapV3GetPositionV3DTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.UniswapV3GetPositionV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<UniswapV3PositionV3DTO>), response, "response is List<UniswapV3PositionV3DTO>");
-        }
-        
-        /// <summary>
         /// Test UniswapV3GetPositionsCurrent
         /// </summary>
         [Test]
@@ -482,22 +338,6 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test UniswapV3GetSwapV3DTOsHistorical
-        /// </summary>
-        [Test]
-        public void UniswapV3GetSwapV3DTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.UniswapV3GetSwapV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<UniswapV3SwapV3DTO>), response, "response is List<UniswapV3SwapV3DTO>");
-        }
-        
-        /// <summary>
         /// Test UniswapV3GetSwapsCurrent
         /// </summary>
         [Test]
@@ -523,38 +363,6 @@ namespace CoinAPI.EMS.REST.V1.Test
             //string poolId = null;
             //var response = instance.UniswapV3GetSwapsHistorical(startBlock, endBlock, startDate, endDate, poolId);
             //Assert.IsInstanceOf(typeof(List<UniswapV3SwapV3DTO>), response, "response is List<UniswapV3SwapV3DTO>");
-        }
-        
-        /// <summary>
-        /// Test UniswapV3GetTickDayDataV3DTOsHistorical
-        /// </summary>
-        [Test]
-        public void UniswapV3GetTickDayDataV3DTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.UniswapV3GetTickDayDataV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<UniswapV3TickDayDataV3DTO>), response, "response is List<UniswapV3TickDayDataV3DTO>");
-        }
-        
-        /// <summary>
-        /// Test UniswapV3GetTickV3DTOsHistorical
-        /// </summary>
-        [Test]
-        public void UniswapV3GetTickV3DTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.UniswapV3GetTickV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<UniswapV3TickV3DTO>), response, "response is List<UniswapV3TickV3DTO>");
         }
         
         /// <summary>
@@ -611,54 +419,6 @@ namespace CoinAPI.EMS.REST.V1.Test
             //string poolId = null;
             //var response = instance.UniswapV3GetTicksHistorical(startBlock, endBlock, startDate, endDate, poolId);
             //Assert.IsInstanceOf(typeof(List<UniswapV3TickV3DTO>), response, "response is List<UniswapV3TickV3DTO>");
-        }
-        
-        /// <summary>
-        /// Test UniswapV3GetTokenHourDataV3DTOsHistorical
-        /// </summary>
-        [Test]
-        public void UniswapV3GetTokenHourDataV3DTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.UniswapV3GetTokenHourDataV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<UniswapV3TokenHourDataV3DTO>), response, "response is List<UniswapV3TokenHourDataV3DTO>");
-        }
-        
-        /// <summary>
-        /// Test UniswapV3GetTokenV3DTOsHistorical
-        /// </summary>
-        [Test]
-        public void UniswapV3GetTokenV3DTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.UniswapV3GetTokenV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<UniswapV3TokenV3DTO>), response, "response is List<UniswapV3TokenV3DTO>");
-        }
-        
-        /// <summary>
-        /// Test UniswapV3GetTokenV3DayDataDTOsHistorical
-        /// </summary>
-        [Test]
-        public void UniswapV3GetTokenV3DayDataDTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.UniswapV3GetTokenV3DayDataDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<UniswapV3TokenV3DayDataDTO>), response, "response is List<UniswapV3TokenV3DayDataDTO>");
         }
         
         /// <summary>
@@ -746,22 +506,6 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test UniswapV3GetTransactionV3DTOsHistorical
-        /// </summary>
-        [Test]
-        public void UniswapV3GetTransactionV3DTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.UniswapV3GetTransactionV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<UniswapV3TransactionV3DTO>), response, "response is List<UniswapV3TransactionV3DTO>");
-        }
-        
-        /// <summary>
         /// Test UniswapV3GetTransactionsHistorical
         /// </summary>
         [Test]
@@ -774,22 +518,6 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? endDate = null;
             //var response = instance.UniswapV3GetTransactionsHistorical(startBlock, endBlock, startDate, endDate);
             //Assert.IsInstanceOf(typeof(List<UniswapV3TransactionV3DTO>), response, "response is List<UniswapV3TransactionV3DTO>");
-        }
-        
-        /// <summary>
-        /// Test UniswapV3GetUniswapDayDataV3DTOsHistorical
-        /// </summary>
-        [Test]
-        public void UniswapV3GetUniswapDayDataV3DTOsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.UniswapV3GetUniswapDayDataV3DTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsInstanceOf(typeof(List<UniswapV3UniswapDayDataV3DTO>), response, "response is List<UniswapV3UniswapDayDataV3DTO>");
         }
         
     }
