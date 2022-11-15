@@ -58,6 +58,54 @@ import qualified Prelude as P
 
 -- ** UniswapV2
 
+-- *** uniswapV2GetBundleV2DTOsHistorical
+
+-- | @GET \/dapps\/uniswapv2\/BundleV2DTOs\/historical@
+-- 
+-- BundleV2DTOs (historical) 🔥
+-- 
+-- Gets BundleV2DTOs.
+-- 
+uniswapV2GetBundleV2DTOsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest UniswapV2GetBundleV2DTOsHistorical MimeNoContent [UniswapV2BundleV2DTO] accept
+uniswapV2GetBundleV2DTOsHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv2/BundleV2DTOs/historical"]
+
+data UniswapV2GetBundleV2DTOsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam UniswapV2GetBundleV2DTOsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam UniswapV2GetBundleV2DTOsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam UniswapV2GetBundleV2DTOsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam UniswapV2GetBundleV2DTOsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam UniswapV2GetBundleV2DTOsHistorical PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+-- | @application/json@
+instance Produces UniswapV2GetBundleV2DTOsHistorical MimeJSON
+-- | @text/json@
+instance Produces UniswapV2GetBundleV2DTOsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces UniswapV2GetBundleV2DTOsHistorical MimePlainText
+
+
 -- *** uniswapV2GetBundlesHistorical
 
 -- | @GET \/dapps\/uniswapv2\/bundles\/historical@
@@ -99,6 +147,54 @@ instance Produces UniswapV2GetBundlesHistorical MimeJSON
 instance Produces UniswapV2GetBundlesHistorical MimeTextJson
 -- | @text/plain@
 instance Produces UniswapV2GetBundlesHistorical MimePlainText
+
+
+-- *** uniswapV2GetBurnV2DTOsHistorical
+
+-- | @GET \/dapps\/uniswapv2\/BurnV2DTOs\/historical@
+-- 
+-- BurnV2DTOs (historical) 🔥
+-- 
+-- Gets BurnV2DTOs.
+-- 
+uniswapV2GetBurnV2DTOsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest UniswapV2GetBurnV2DTOsHistorical MimeNoContent [UniswapV2BurnV2DTO] accept
+uniswapV2GetBurnV2DTOsHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv2/BurnV2DTOs/historical"]
+
+data UniswapV2GetBurnV2DTOsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam UniswapV2GetBurnV2DTOsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam UniswapV2GetBurnV2DTOsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam UniswapV2GetBurnV2DTOsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam UniswapV2GetBurnV2DTOsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam UniswapV2GetBurnV2DTOsHistorical PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+-- | @application/json@
+instance Produces UniswapV2GetBurnV2DTOsHistorical MimeJSON
+-- | @text/json@
+instance Produces UniswapV2GetBurnV2DTOsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces UniswapV2GetBurnV2DTOsHistorical MimePlainText
 
 
 -- *** uniswapV2GetBurnsHistorical
@@ -235,6 +331,102 @@ instance Produces UniswapV2GetFactoryHistorical MimeTextJson
 instance Produces UniswapV2GetFactoryHistorical MimePlainText
 
 
+-- *** uniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical
+
+-- | @GET \/dapps\/uniswapv2\/LiquidityPositionSnapshotV2DTOs\/historical@
+-- 
+-- LiquidityPositionSnapshotV2DTOs (historical) 🔥
+-- 
+-- Gets LiquidityPositionSnapshotV2DTOs.
+-- 
+uniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest UniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical MimeNoContent [UniswapV2LiquidityPositionSnapshotV2DTO] accept
+uniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv2/LiquidityPositionSnapshotV2DTOs/historical"]
+
+data UniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam UniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam UniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam UniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam UniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam UniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+-- | @application/json@
+instance Produces UniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical MimeJSON
+-- | @text/json@
+instance Produces UniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces UniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical MimePlainText
+
+
+-- *** uniswapV2GetLiquidityPositionV2DTOsHistorical
+
+-- | @GET \/dapps\/uniswapv2\/LiquidityPositionV2DTOs\/historical@
+-- 
+-- LiquidityPositionV2DTOs (historical) 🔥
+-- 
+-- Gets LiquidityPositionV2DTOs.
+-- 
+uniswapV2GetLiquidityPositionV2DTOsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest UniswapV2GetLiquidityPositionV2DTOsHistorical MimeNoContent [UniswapV2LiquidityPositionV2DTO] accept
+uniswapV2GetLiquidityPositionV2DTOsHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv2/LiquidityPositionV2DTOs/historical"]
+
+data UniswapV2GetLiquidityPositionV2DTOsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam UniswapV2GetLiquidityPositionV2DTOsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam UniswapV2GetLiquidityPositionV2DTOsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam UniswapV2GetLiquidityPositionV2DTOsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam UniswapV2GetLiquidityPositionV2DTOsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam UniswapV2GetLiquidityPositionV2DTOsHistorical PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+-- | @application/json@
+instance Produces UniswapV2GetLiquidityPositionV2DTOsHistorical MimeJSON
+-- | @text/json@
+instance Produces UniswapV2GetLiquidityPositionV2DTOsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces UniswapV2GetLiquidityPositionV2DTOsHistorical MimePlainText
+
+
 -- *** uniswapV2GetLiquidityPositionsHistorical
 
 -- | @GET \/dapps\/uniswapv2\/liquidityPositions\/historical@
@@ -331,6 +523,54 @@ instance Produces UniswapV2GetLiquidityPositionsSnapshotsHistorical MimeTextJson
 instance Produces UniswapV2GetLiquidityPositionsSnapshotsHistorical MimePlainText
 
 
+-- *** uniswapV2GetMintV2DTOsHistorical
+
+-- | @GET \/dapps\/uniswapv2\/MintV2DTOs\/historical@
+-- 
+-- MintV2DTOs (historical) 🔥
+-- 
+-- Gets MintV2DTOs.
+-- 
+uniswapV2GetMintV2DTOsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest UniswapV2GetMintV2DTOsHistorical MimeNoContent [UniswapV2MintV2DTO] accept
+uniswapV2GetMintV2DTOsHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv2/MintV2DTOs/historical"]
+
+data UniswapV2GetMintV2DTOsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam UniswapV2GetMintV2DTOsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam UniswapV2GetMintV2DTOsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam UniswapV2GetMintV2DTOsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam UniswapV2GetMintV2DTOsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam UniswapV2GetMintV2DTOsHistorical PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+-- | @application/json@
+instance Produces UniswapV2GetMintV2DTOsHistorical MimeJSON
+-- | @text/json@
+instance Produces UniswapV2GetMintV2DTOsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces UniswapV2GetMintV2DTOsHistorical MimePlainText
+
+
 -- *** uniswapV2GetMintsHistorical
 
 -- | @GET \/dapps\/uniswapv2\/mints\/historical@
@@ -377,6 +617,150 @@ instance Produces UniswapV2GetMintsHistorical MimeJSON
 instance Produces UniswapV2GetMintsHistorical MimeTextJson
 -- | @text/plain@
 instance Produces UniswapV2GetMintsHistorical MimePlainText
+
+
+-- *** uniswapV2GetPairDayDataV2DTOsHistorical
+
+-- | @GET \/dapps\/uniswapv2\/PairDayDataV2DTOs\/historical@
+-- 
+-- PairDayDataV2DTOs (historical) 🔥
+-- 
+-- Gets PairDayDataV2DTOs.
+-- 
+uniswapV2GetPairDayDataV2DTOsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest UniswapV2GetPairDayDataV2DTOsHistorical MimeNoContent [UniswapV2PairDayDataV2DTO] accept
+uniswapV2GetPairDayDataV2DTOsHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv2/PairDayDataV2DTOs/historical"]
+
+data UniswapV2GetPairDayDataV2DTOsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam UniswapV2GetPairDayDataV2DTOsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam UniswapV2GetPairDayDataV2DTOsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam UniswapV2GetPairDayDataV2DTOsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam UniswapV2GetPairDayDataV2DTOsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam UniswapV2GetPairDayDataV2DTOsHistorical PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+-- | @application/json@
+instance Produces UniswapV2GetPairDayDataV2DTOsHistorical MimeJSON
+-- | @text/json@
+instance Produces UniswapV2GetPairDayDataV2DTOsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces UniswapV2GetPairDayDataV2DTOsHistorical MimePlainText
+
+
+-- *** uniswapV2GetPairHourDataV2DTOsHistorical
+
+-- | @GET \/dapps\/uniswapv2\/PairHourDataV2DTOs\/historical@
+-- 
+-- PairHourDataV2DTOs (historical) 🔥
+-- 
+-- Gets PairHourDataV2DTOs.
+-- 
+uniswapV2GetPairHourDataV2DTOsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest UniswapV2GetPairHourDataV2DTOsHistorical MimeNoContent [UniswapV2PairHourDataV2DTO] accept
+uniswapV2GetPairHourDataV2DTOsHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv2/PairHourDataV2DTOs/historical"]
+
+data UniswapV2GetPairHourDataV2DTOsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam UniswapV2GetPairHourDataV2DTOsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam UniswapV2GetPairHourDataV2DTOsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam UniswapV2GetPairHourDataV2DTOsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam UniswapV2GetPairHourDataV2DTOsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam UniswapV2GetPairHourDataV2DTOsHistorical PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+-- | @application/json@
+instance Produces UniswapV2GetPairHourDataV2DTOsHistorical MimeJSON
+-- | @text/json@
+instance Produces UniswapV2GetPairHourDataV2DTOsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces UniswapV2GetPairHourDataV2DTOsHistorical MimePlainText
+
+
+-- *** uniswapV2GetPairV2DTOsHistorical
+
+-- | @GET \/dapps\/uniswapv2\/PairV2DTOs\/historical@
+-- 
+-- PairV2DTOs (historical) 🔥
+-- 
+-- Gets PairV2DTOs.
+-- 
+uniswapV2GetPairV2DTOsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest UniswapV2GetPairV2DTOsHistorical MimeNoContent [UniswapV2PairV2DTO] accept
+uniswapV2GetPairV2DTOsHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv2/PairV2DTOs/historical"]
+
+data UniswapV2GetPairV2DTOsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam UniswapV2GetPairV2DTOsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam UniswapV2GetPairV2DTOsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam UniswapV2GetPairV2DTOsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam UniswapV2GetPairV2DTOsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam UniswapV2GetPairV2DTOsHistorical PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+-- | @application/json@
+instance Produces UniswapV2GetPairV2DTOsHistorical MimeJSON
+-- | @text/json@
+instance Produces UniswapV2GetPairV2DTOsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces UniswapV2GetPairV2DTOsHistorical MimePlainText
 
 
 -- *** uniswapV2GetPoolsCurrent
@@ -549,6 +933,54 @@ instance Produces UniswapV2GetPoolsHourDataHistorical MimeTextJson
 instance Produces UniswapV2GetPoolsHourDataHistorical MimePlainText
 
 
+-- *** uniswapV2GetSwapV2DTOsHistorical
+
+-- | @GET \/dapps\/uniswapv2\/SwapV2DTOs\/historical@
+-- 
+-- SwapV2DTOs (historical) 🔥
+-- 
+-- Gets SwapV2DTOs.
+-- 
+uniswapV2GetSwapV2DTOsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest UniswapV2GetSwapV2DTOsHistorical MimeNoContent [UniswapV2SwapV2DTO] accept
+uniswapV2GetSwapV2DTOsHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv2/SwapV2DTOs/historical"]
+
+data UniswapV2GetSwapV2DTOsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam UniswapV2GetSwapV2DTOsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam UniswapV2GetSwapV2DTOsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam UniswapV2GetSwapV2DTOsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam UniswapV2GetSwapV2DTOsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam UniswapV2GetSwapV2DTOsHistorical PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+-- | @application/json@
+instance Produces UniswapV2GetSwapV2DTOsHistorical MimeJSON
+-- | @text/json@
+instance Produces UniswapV2GetSwapV2DTOsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces UniswapV2GetSwapV2DTOsHistorical MimePlainText
+
+
 -- *** uniswapV2GetSwapsCurrent
 
 -- | @GET \/dapps\/uniswapv2\/swaps\/current@
@@ -618,6 +1050,102 @@ instance Produces UniswapV2GetSwapsHistorical MimeJSON
 instance Produces UniswapV2GetSwapsHistorical MimeTextJson
 -- | @text/plain@
 instance Produces UniswapV2GetSwapsHistorical MimePlainText
+
+
+-- *** uniswapV2GetTokenDayDataV2DTOsHistorical
+
+-- | @GET \/dapps\/uniswapv2\/TokenDayDataV2DTOs\/historical@
+-- 
+-- TokenDayDataV2DTOs (historical) 🔥
+-- 
+-- Gets TokenDayDataV2DTOs.
+-- 
+uniswapV2GetTokenDayDataV2DTOsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest UniswapV2GetTokenDayDataV2DTOsHistorical MimeNoContent [UniswapV2TokenDayDataV2DTO] accept
+uniswapV2GetTokenDayDataV2DTOsHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv2/TokenDayDataV2DTOs/historical"]
+
+data UniswapV2GetTokenDayDataV2DTOsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam UniswapV2GetTokenDayDataV2DTOsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam UniswapV2GetTokenDayDataV2DTOsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam UniswapV2GetTokenDayDataV2DTOsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam UniswapV2GetTokenDayDataV2DTOsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam UniswapV2GetTokenDayDataV2DTOsHistorical PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+-- | @application/json@
+instance Produces UniswapV2GetTokenDayDataV2DTOsHistorical MimeJSON
+-- | @text/json@
+instance Produces UniswapV2GetTokenDayDataV2DTOsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces UniswapV2GetTokenDayDataV2DTOsHistorical MimePlainText
+
+
+-- *** uniswapV2GetTokenV2DTOsHistorical
+
+-- | @GET \/dapps\/uniswapv2\/TokenV2DTOs\/historical@
+-- 
+-- TokenV2DTOs (historical) 🔥
+-- 
+-- Gets TokenV2DTOs.
+-- 
+uniswapV2GetTokenV2DTOsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest UniswapV2GetTokenV2DTOsHistorical MimeNoContent [UniswapV2TokenV2DTO] accept
+uniswapV2GetTokenV2DTOsHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv2/TokenV2DTOs/historical"]
+
+data UniswapV2GetTokenV2DTOsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam UniswapV2GetTokenV2DTOsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam UniswapV2GetTokenV2DTOsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam UniswapV2GetTokenV2DTOsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam UniswapV2GetTokenV2DTOsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam UniswapV2GetTokenV2DTOsHistorical PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+-- | @application/json@
+instance Produces UniswapV2GetTokenV2DTOsHistorical MimeJSON
+-- | @text/json@
+instance Produces UniswapV2GetTokenV2DTOsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces UniswapV2GetTokenV2DTOsHistorical MimePlainText
 
 
 -- *** uniswapV2GetTokensCurrent
@@ -739,6 +1267,54 @@ instance Produces UniswapV2GetTokensHistorical MimeTextJson
 instance Produces UniswapV2GetTokensHistorical MimePlainText
 
 
+-- *** uniswapV2GetTransactionV2DTOsHistorical
+
+-- | @GET \/dapps\/uniswapv2\/TransactionV2DTOs\/historical@
+-- 
+-- TransactionV2DTOs (historical) 🔥
+-- 
+-- Gets TransactionV2DTOs.
+-- 
+uniswapV2GetTransactionV2DTOsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest UniswapV2GetTransactionV2DTOsHistorical MimeNoContent [UniswapV2TransactionV2DTO] accept
+uniswapV2GetTransactionV2DTOsHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv2/TransactionV2DTOs/historical"]
+
+data UniswapV2GetTransactionV2DTOsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam UniswapV2GetTransactionV2DTOsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam UniswapV2GetTransactionV2DTOsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam UniswapV2GetTransactionV2DTOsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam UniswapV2GetTransactionV2DTOsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam UniswapV2GetTransactionV2DTOsHistorical PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+-- | @application/json@
+instance Produces UniswapV2GetTransactionV2DTOsHistorical MimeJSON
+-- | @text/json@
+instance Produces UniswapV2GetTransactionV2DTOsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces UniswapV2GetTransactionV2DTOsHistorical MimePlainText
+
+
 -- *** uniswapV2GetTransactionsHistorical
 
 -- | @GET \/dapps\/uniswapv2\/transactions\/historical@
@@ -780,6 +1356,150 @@ instance Produces UniswapV2GetTransactionsHistorical MimeJSON
 instance Produces UniswapV2GetTransactionsHistorical MimeTextJson
 -- | @text/plain@
 instance Produces UniswapV2GetTransactionsHistorical MimePlainText
+
+
+-- *** uniswapV2GetUniswapDayDataV2DTOsHistorical
+
+-- | @GET \/dapps\/uniswapv2\/UniswapDayDataV2DTOs\/historical@
+-- 
+-- UniswapDayDataV2DTOs (historical) 🔥
+-- 
+-- Gets UniswapDayDataV2DTOs.
+-- 
+uniswapV2GetUniswapDayDataV2DTOsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest UniswapV2GetUniswapDayDataV2DTOsHistorical MimeNoContent [UniswapV2UniswapDayDataV2DTO] accept
+uniswapV2GetUniswapDayDataV2DTOsHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv2/UniswapDayDataV2DTOs/historical"]
+
+data UniswapV2GetUniswapDayDataV2DTOsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam UniswapV2GetUniswapDayDataV2DTOsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam UniswapV2GetUniswapDayDataV2DTOsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam UniswapV2GetUniswapDayDataV2DTOsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam UniswapV2GetUniswapDayDataV2DTOsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam UniswapV2GetUniswapDayDataV2DTOsHistorical PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+-- | @application/json@
+instance Produces UniswapV2GetUniswapDayDataV2DTOsHistorical MimeJSON
+-- | @text/json@
+instance Produces UniswapV2GetUniswapDayDataV2DTOsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces UniswapV2GetUniswapDayDataV2DTOsHistorical MimePlainText
+
+
+-- *** uniswapV2GetUniswapFactoryV2DTOsHistorical
+
+-- | @GET \/dapps\/uniswapv2\/UniswapFactoryV2DTOs\/historical@
+-- 
+-- UniswapFactoryV2DTOs (historical) 🔥
+-- 
+-- Gets UniswapFactoryV2DTOs.
+-- 
+uniswapV2GetUniswapFactoryV2DTOsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest UniswapV2GetUniswapFactoryV2DTOsHistorical MimeNoContent [UniswapV2UniswapFactoryV2DTO] accept
+uniswapV2GetUniswapFactoryV2DTOsHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv2/UniswapFactoryV2DTOs/historical"]
+
+data UniswapV2GetUniswapFactoryV2DTOsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam UniswapV2GetUniswapFactoryV2DTOsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam UniswapV2GetUniswapFactoryV2DTOsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam UniswapV2GetUniswapFactoryV2DTOsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam UniswapV2GetUniswapFactoryV2DTOsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam UniswapV2GetUniswapFactoryV2DTOsHistorical PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+-- | @application/json@
+instance Produces UniswapV2GetUniswapFactoryV2DTOsHistorical MimeJSON
+-- | @text/json@
+instance Produces UniswapV2GetUniswapFactoryV2DTOsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces UniswapV2GetUniswapFactoryV2DTOsHistorical MimePlainText
+
+
+-- *** uniswapV2GetUserV2DTOsHistorical
+
+-- | @GET \/dapps\/uniswapv2\/UserV2DTOs\/historical@
+-- 
+-- UserV2DTOs (historical) 🔥
+-- 
+-- Gets UserV2DTOs.
+-- 
+uniswapV2GetUserV2DTOsHistorical
+  :: Accept accept -- ^ request accept ('MimeType')
+  -> OnChainRequest UniswapV2GetUserV2DTOsHistorical MimeNoContent [UniswapV2UserV2DTO] accept
+uniswapV2GetUserV2DTOsHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv2/UserV2DTOs/historical"]
+
+data UniswapV2GetUserV2DTOsHistorical  
+
+-- | /Optional Param/ "startBlock" - 
+instance HasOptionalParam UniswapV2GetUserV2DTOsHistorical StartBlock where
+  applyOptionalParam req (StartBlock xs) =
+    req `addQuery` toQuery ("startBlock", Just xs)
+
+-- | /Optional Param/ "endBlock" - 
+instance HasOptionalParam UniswapV2GetUserV2DTOsHistorical EndBlock where
+  applyOptionalParam req (EndBlock xs) =
+    req `addQuery` toQuery ("endBlock", Just xs)
+
+-- | /Optional Param/ "startDate" - 
+instance HasOptionalParam UniswapV2GetUserV2DTOsHistorical StartDate where
+  applyOptionalParam req (StartDate xs) =
+    req `addQuery` toQuery ("startDate", Just xs)
+
+-- | /Optional Param/ "endDate" - 
+instance HasOptionalParam UniswapV2GetUserV2DTOsHistorical EndDate where
+  applyOptionalParam req (EndDate xs) =
+    req `addQuery` toQuery ("endDate", Just xs)
+
+-- | /Optional Param/ "poolId" - 
+instance HasOptionalParam UniswapV2GetUserV2DTOsHistorical PoolId where
+  applyOptionalParam req (PoolId xs) =
+    req `addQuery` toQuery ("poolId", Just xs)
+-- | @application/json@
+instance Produces UniswapV2GetUserV2DTOsHistorical MimeJSON
+-- | @text/json@
+instance Produces UniswapV2GetUserV2DTOsHistorical MimeTextJson
+-- | @text/plain@
+instance Produces UniswapV2GetUserV2DTOsHistorical MimePlainText
 
 
 -- *** uniswapV2GetUsersHistorical

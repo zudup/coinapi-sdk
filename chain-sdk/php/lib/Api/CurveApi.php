@@ -72,19 +72,40 @@ class CurveApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
+        'curveGetAccountDTOsHistorical' => [
+            'application/json',
+        ],
         'curveGetAccountsHistorical' => [
+            'application/json',
+        ],
+        'curveGetAddLiquidityEventDTOsHistorical' => [
             'application/json',
         ],
         'curveGetAddLiquidityEventsHistorical' => [
             'application/json',
         ],
+        'curveGetAdminFeeChangeLogDTOsHistorical' => [
+            'application/json',
+        ],
         'curveGetAdminFeeChangeLogsHistorical' => [
+            'application/json',
+        ],
+        'curveGetAmplificationCoeffChangeLogDTOsHistorical' => [
             'application/json',
         ],
         'curveGetAmplificationCoeffChangeLogsHistorical' => [
             'application/json',
         ],
+        'curveGetCoinDTOsHistorical' => [
+            'application/json',
+        ],
         'curveGetCoinsHistorical' => [
+            'application/json',
+        ],
+        'curveGetContractDTOsHistorical' => [
+            'application/json',
+        ],
+        'curveGetContractVersionDTOsHistorical' => [
             'application/json',
         ],
         'curveGetContractsHistorical' => [
@@ -93,13 +114,49 @@ class CurveApi
         'curveGetContractsVersionsHistorical' => [
             'application/json',
         ],
+        'curveGetDailyVolumeDTOsHistorical' => [
+            'application/json',
+        ],
         'curveGetDailyVolumesHistorical' => [
+            'application/json',
+        ],
+        'curveGetExchangeDTOsHistorical' => [
             'application/json',
         ],
         'curveGetExchangesHistorical' => [
             'application/json',
         ],
+        'curveGetFeeChangeLogDTOsHistorical' => [
+            'application/json',
+        ],
         'curveGetFeeChangeLogsHistorical' => [
+            'application/json',
+        ],
+        'curveGetGaugeDTOsHistorical' => [
+            'application/json',
+        ],
+        'curveGetGaugeDepositDTOsHistorical' => [
+            'application/json',
+        ],
+        'curveGetGaugeLiquidityDTOsHistorical' => [
+            'application/json',
+        ],
+        'curveGetGaugeTotalWeightDTOsHistorical' => [
+            'application/json',
+        ],
+        'curveGetGaugeTypeDTOsHistorical' => [
+            'application/json',
+        ],
+        'curveGetGaugeTypeWeightDTOsHistorical' => [
+            'application/json',
+        ],
+        'curveGetGaugeWeightDTOsHistorical' => [
+            'application/json',
+        ],
+        'curveGetGaugeWeightVoteDTOsHistorical' => [
+            'application/json',
+        ],
+        'curveGetGaugeWithdrawDTOsHistorical' => [
             'application/json',
         ],
         'curveGetGaugesDepositsHistorical' => [
@@ -129,13 +186,28 @@ class CurveApi
         'curveGetGaugesWithdrawHistorical' => [
             'application/json',
         ],
+        'curveGetHourlyVolumeDTOsHistorical' => [
+            'application/json',
+        ],
         'curveGetHourlyVolumesHistorical' => [
+            'application/json',
+        ],
+        'curveGetLpTokenDTOsHistorical' => [
             'application/json',
         ],
         'curveGetLpTokensHistorical' => [
             'application/json',
         ],
+        'curveGetPoolDTOsHistorical' => [
+            'application/json',
+        ],
         'curveGetPoolsHistorical' => [
+            'application/json',
+        ],
+        'curveGetProposalDTOsHistorical' => [
+            'application/json',
+        ],
+        'curveGetProposalVoteDTOsHistorical' => [
             'application/json',
         ],
         'curveGetProposalsHistorical' => [
@@ -144,25 +216,49 @@ class CurveApi
         'curveGetProposalsVotesHistorical' => [
             'application/json',
         ],
+        'curveGetRemoveLiquidityEventDTOsHistorical' => [
+            'application/json',
+        ],
         'curveGetRemoveLiquidityEventsHistorical' => [
+            'application/json',
+        ],
+        'curveGetRemoveLiquidityOneEventDTOsHistorical' => [
             'application/json',
         ],
         'curveGetRemoveLiquidityOneEventsHistorical' => [
             'application/json',
         ],
+        'curveGetSystemStateDTOsHistorical' => [
+            'application/json',
+        ],
         'curveGetSystemStatesHistorical' => [
+            'application/json',
+        ],
+        'curveGetTokenDTOsHistorical' => [
             'application/json',
         ],
         'curveGetTokensHistorical' => [
             'application/json',
         ],
+        'curveGetTransferOwnershipEventDTOsHistorical' => [
+            'application/json',
+        ],
         'curveGetTransferOwnershipEventsHistorical' => [
+            'application/json',
+        ],
+        'curveGetUnderlyingCoinDTOsHistorical' => [
             'application/json',
         ],
         'curveGetUnderlyingCoinsHistorical' => [
             'application/json',
         ],
+        'curveGetVotingAppDTOsHistorical' => [
+            'application/json',
+        ],
         'curveGetVotingAppsHistorical' => [
+            'application/json',
+        ],
+        'curveGetWeeklyVolumeDTOsHistorical' => [
             'application/json',
         ],
         'curveGetWeeklyVolumesHistorical' => [
@@ -214,6 +310,344 @@ class CurveApi
     public function getConfig()
     {
         return $this->config;
+    }
+
+    /**
+     * Operation curveGetAccountDTOsHistorical
+     *
+     * AccountDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAccountDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveAccountDTO[]
+     */
+    public function curveGetAccountDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAccountDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetAccountDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetAccountDTOsHistoricalWithHttpInfo
+     *
+     * AccountDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAccountDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveAccountDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetAccountDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAccountDTOsHistorical'][0])
+    {
+        $request = $this->curveGetAccountDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveAccountDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveAccountDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveAccountDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveAccountDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveAccountDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetAccountDTOsHistoricalAsync
+     *
+     * AccountDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAccountDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetAccountDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAccountDTOsHistorical'][0])
+    {
+        return $this->curveGetAccountDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetAccountDTOsHistoricalAsyncWithHttpInfo
+     *
+     * AccountDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAccountDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetAccountDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAccountDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveAccountDTO[]';
+        $request = $this->curveGetAccountDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetAccountDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAccountDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetAccountDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAccountDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/AccountDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
     }
 
     /**
@@ -540,6 +974,344 @@ class CurveApi
     }
 
     /**
+     * Operation curveGetAddLiquidityEventDTOsHistorical
+     *
+     * AddLiquidityEventDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAddLiquidityEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveAddLiquidityEventDTO[]
+     */
+    public function curveGetAddLiquidityEventDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAddLiquidityEventDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetAddLiquidityEventDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetAddLiquidityEventDTOsHistoricalWithHttpInfo
+     *
+     * AddLiquidityEventDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAddLiquidityEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveAddLiquidityEventDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetAddLiquidityEventDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAddLiquidityEventDTOsHistorical'][0])
+    {
+        $request = $this->curveGetAddLiquidityEventDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveAddLiquidityEventDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveAddLiquidityEventDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveAddLiquidityEventDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveAddLiquidityEventDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveAddLiquidityEventDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetAddLiquidityEventDTOsHistoricalAsync
+     *
+     * AddLiquidityEventDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAddLiquidityEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetAddLiquidityEventDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAddLiquidityEventDTOsHistorical'][0])
+    {
+        return $this->curveGetAddLiquidityEventDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetAddLiquidityEventDTOsHistoricalAsyncWithHttpInfo
+     *
+     * AddLiquidityEventDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAddLiquidityEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetAddLiquidityEventDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAddLiquidityEventDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveAddLiquidityEventDTO[]';
+        $request = $this->curveGetAddLiquidityEventDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetAddLiquidityEventDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAddLiquidityEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetAddLiquidityEventDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAddLiquidityEventDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/AddLiquidityEventDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation curveGetAddLiquidityEventsHistorical
      *
      * AddLiquidityEvents (historical)
@@ -769,6 +1541,344 @@ class CurveApi
 
 
         $resourcePath = '/dapps/curve/addLiquidityEvents/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetAdminFeeChangeLogDTOsHistorical
+     *
+     * AdminFeeChangeLogDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAdminFeeChangeLogDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveAdminFeeChangeLogDTO[]
+     */
+    public function curveGetAdminFeeChangeLogDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAdminFeeChangeLogDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetAdminFeeChangeLogDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetAdminFeeChangeLogDTOsHistoricalWithHttpInfo
+     *
+     * AdminFeeChangeLogDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAdminFeeChangeLogDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveAdminFeeChangeLogDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetAdminFeeChangeLogDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAdminFeeChangeLogDTOsHistorical'][0])
+    {
+        $request = $this->curveGetAdminFeeChangeLogDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveAdminFeeChangeLogDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveAdminFeeChangeLogDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveAdminFeeChangeLogDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveAdminFeeChangeLogDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveAdminFeeChangeLogDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetAdminFeeChangeLogDTOsHistoricalAsync
+     *
+     * AdminFeeChangeLogDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAdminFeeChangeLogDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetAdminFeeChangeLogDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAdminFeeChangeLogDTOsHistorical'][0])
+    {
+        return $this->curveGetAdminFeeChangeLogDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetAdminFeeChangeLogDTOsHistoricalAsyncWithHttpInfo
+     *
+     * AdminFeeChangeLogDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAdminFeeChangeLogDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetAdminFeeChangeLogDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAdminFeeChangeLogDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveAdminFeeChangeLogDTO[]';
+        $request = $this->curveGetAdminFeeChangeLogDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetAdminFeeChangeLogDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAdminFeeChangeLogDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetAdminFeeChangeLogDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAdminFeeChangeLogDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/AdminFeeChangeLogDTOs/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1216,6 +2326,344 @@ class CurveApi
     }
 
     /**
+     * Operation curveGetAmplificationCoeffChangeLogDTOsHistorical
+     *
+     * AmplificationCoeffChangeLogDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAmplificationCoeffChangeLogDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveAmplificationCoeffChangeLogDTO[]
+     */
+    public function curveGetAmplificationCoeffChangeLogDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAmplificationCoeffChangeLogDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetAmplificationCoeffChangeLogDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetAmplificationCoeffChangeLogDTOsHistoricalWithHttpInfo
+     *
+     * AmplificationCoeffChangeLogDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAmplificationCoeffChangeLogDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveAmplificationCoeffChangeLogDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetAmplificationCoeffChangeLogDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAmplificationCoeffChangeLogDTOsHistorical'][0])
+    {
+        $request = $this->curveGetAmplificationCoeffChangeLogDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveAmplificationCoeffChangeLogDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveAmplificationCoeffChangeLogDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveAmplificationCoeffChangeLogDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveAmplificationCoeffChangeLogDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveAmplificationCoeffChangeLogDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetAmplificationCoeffChangeLogDTOsHistoricalAsync
+     *
+     * AmplificationCoeffChangeLogDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAmplificationCoeffChangeLogDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetAmplificationCoeffChangeLogDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAmplificationCoeffChangeLogDTOsHistorical'][0])
+    {
+        return $this->curveGetAmplificationCoeffChangeLogDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetAmplificationCoeffChangeLogDTOsHistoricalAsyncWithHttpInfo
+     *
+     * AmplificationCoeffChangeLogDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAmplificationCoeffChangeLogDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetAmplificationCoeffChangeLogDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAmplificationCoeffChangeLogDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveAmplificationCoeffChangeLogDTO[]';
+        $request = $this->curveGetAmplificationCoeffChangeLogDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetAmplificationCoeffChangeLogDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetAmplificationCoeffChangeLogDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetAmplificationCoeffChangeLogDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetAmplificationCoeffChangeLogDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/AmplificationCoeffChangeLogDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation curveGetAmplificationCoeffChangeLogsHistorical
      *
      * AmplificationCoeffChangeLogs (historical)
@@ -1554,6 +3002,344 @@ class CurveApi
     }
 
     /**
+     * Operation curveGetCoinDTOsHistorical
+     *
+     * CoinDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetCoinDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveCoinDTO[]
+     */
+    public function curveGetCoinDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetCoinDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetCoinDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetCoinDTOsHistoricalWithHttpInfo
+     *
+     * CoinDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetCoinDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveCoinDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetCoinDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetCoinDTOsHistorical'][0])
+    {
+        $request = $this->curveGetCoinDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveCoinDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveCoinDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveCoinDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveCoinDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveCoinDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetCoinDTOsHistoricalAsync
+     *
+     * CoinDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetCoinDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetCoinDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetCoinDTOsHistorical'][0])
+    {
+        return $this->curveGetCoinDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetCoinDTOsHistoricalAsyncWithHttpInfo
+     *
+     * CoinDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetCoinDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetCoinDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetCoinDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveCoinDTO[]';
+        $request = $this->curveGetCoinDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetCoinDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetCoinDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetCoinDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetCoinDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/CoinDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation curveGetCoinsHistorical
      *
      * Coins (historical)
@@ -1783,6 +3569,682 @@ class CurveApi
 
 
         $resourcePath = '/dapps/curve/coins/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetContractDTOsHistorical
+     *
+     * ContractDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetContractDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveContractDTO[]
+     */
+    public function curveGetContractDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetContractDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetContractDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetContractDTOsHistoricalWithHttpInfo
+     *
+     * ContractDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetContractDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveContractDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetContractDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetContractDTOsHistorical'][0])
+    {
+        $request = $this->curveGetContractDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveContractDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveContractDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveContractDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveContractDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveContractDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetContractDTOsHistoricalAsync
+     *
+     * ContractDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetContractDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetContractDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetContractDTOsHistorical'][0])
+    {
+        return $this->curveGetContractDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetContractDTOsHistoricalAsyncWithHttpInfo
+     *
+     * ContractDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetContractDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetContractDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetContractDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveContractDTO[]';
+        $request = $this->curveGetContractDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetContractDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetContractDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetContractDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetContractDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/ContractDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetContractVersionDTOsHistorical
+     *
+     * ContractVersionDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetContractVersionDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveContractVersionDTO[]
+     */
+    public function curveGetContractVersionDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetContractVersionDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetContractVersionDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetContractVersionDTOsHistoricalWithHttpInfo
+     *
+     * ContractVersionDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetContractVersionDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveContractVersionDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetContractVersionDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetContractVersionDTOsHistorical'][0])
+    {
+        $request = $this->curveGetContractVersionDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveContractVersionDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveContractVersionDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveContractVersionDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveContractVersionDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveContractVersionDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetContractVersionDTOsHistoricalAsync
+     *
+     * ContractVersionDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetContractVersionDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetContractVersionDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetContractVersionDTOsHistorical'][0])
+    {
+        return $this->curveGetContractVersionDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetContractVersionDTOsHistoricalAsyncWithHttpInfo
+     *
+     * ContractVersionDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetContractVersionDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetContractVersionDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetContractVersionDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveContractVersionDTO[]';
+        $request = $this->curveGetContractVersionDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetContractVersionDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetContractVersionDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetContractVersionDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetContractVersionDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/ContractVersionDTOs/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2568,6 +5030,344 @@ class CurveApi
     }
 
     /**
+     * Operation curveGetDailyVolumeDTOsHistorical
+     *
+     * DailyVolumeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetDailyVolumeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveDailyVolumeDTO[]
+     */
+    public function curveGetDailyVolumeDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetDailyVolumeDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetDailyVolumeDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetDailyVolumeDTOsHistoricalWithHttpInfo
+     *
+     * DailyVolumeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetDailyVolumeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveDailyVolumeDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetDailyVolumeDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetDailyVolumeDTOsHistorical'][0])
+    {
+        $request = $this->curveGetDailyVolumeDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveDailyVolumeDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveDailyVolumeDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveDailyVolumeDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveDailyVolumeDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveDailyVolumeDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetDailyVolumeDTOsHistoricalAsync
+     *
+     * DailyVolumeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetDailyVolumeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetDailyVolumeDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetDailyVolumeDTOsHistorical'][0])
+    {
+        return $this->curveGetDailyVolumeDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetDailyVolumeDTOsHistoricalAsyncWithHttpInfo
+     *
+     * DailyVolumeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetDailyVolumeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetDailyVolumeDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetDailyVolumeDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveDailyVolumeDTO[]';
+        $request = $this->curveGetDailyVolumeDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetDailyVolumeDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetDailyVolumeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetDailyVolumeDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetDailyVolumeDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/DailyVolumeDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation curveGetDailyVolumesHistorical
      *
      * DailyVolumes (historical)
@@ -2797,6 +5597,344 @@ class CurveApi
 
 
         $resourcePath = '/dapps/curve/dailyVolumes/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetExchangeDTOsHistorical
+     *
+     * ExchangeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetExchangeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveExchangeDTO[]
+     */
+    public function curveGetExchangeDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetExchangeDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetExchangeDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetExchangeDTOsHistoricalWithHttpInfo
+     *
+     * ExchangeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetExchangeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveExchangeDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetExchangeDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetExchangeDTOsHistorical'][0])
+    {
+        $request = $this->curveGetExchangeDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveExchangeDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveExchangeDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveExchangeDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveExchangeDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveExchangeDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetExchangeDTOsHistoricalAsync
+     *
+     * ExchangeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetExchangeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetExchangeDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetExchangeDTOsHistorical'][0])
+    {
+        return $this->curveGetExchangeDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetExchangeDTOsHistoricalAsyncWithHttpInfo
+     *
+     * ExchangeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetExchangeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetExchangeDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetExchangeDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveExchangeDTO[]';
+        $request = $this->curveGetExchangeDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetExchangeDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetExchangeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetExchangeDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetExchangeDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/ExchangeDTOs/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -3244,6 +6382,344 @@ class CurveApi
     }
 
     /**
+     * Operation curveGetFeeChangeLogDTOsHistorical
+     *
+     * FeeChangeLogDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetFeeChangeLogDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveFeeChangeLogDTO[]
+     */
+    public function curveGetFeeChangeLogDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetFeeChangeLogDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetFeeChangeLogDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetFeeChangeLogDTOsHistoricalWithHttpInfo
+     *
+     * FeeChangeLogDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetFeeChangeLogDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveFeeChangeLogDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetFeeChangeLogDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetFeeChangeLogDTOsHistorical'][0])
+    {
+        $request = $this->curveGetFeeChangeLogDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveFeeChangeLogDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveFeeChangeLogDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveFeeChangeLogDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveFeeChangeLogDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveFeeChangeLogDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetFeeChangeLogDTOsHistoricalAsync
+     *
+     * FeeChangeLogDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetFeeChangeLogDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetFeeChangeLogDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetFeeChangeLogDTOsHistorical'][0])
+    {
+        return $this->curveGetFeeChangeLogDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetFeeChangeLogDTOsHistoricalAsyncWithHttpInfo
+     *
+     * FeeChangeLogDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetFeeChangeLogDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetFeeChangeLogDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetFeeChangeLogDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveFeeChangeLogDTO[]';
+        $request = $this->curveGetFeeChangeLogDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetFeeChangeLogDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetFeeChangeLogDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetFeeChangeLogDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetFeeChangeLogDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/FeeChangeLogDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation curveGetFeeChangeLogsHistorical
      *
      * FeeChangeLogs (historical)
@@ -3473,6 +6949,3048 @@ class CurveApi
 
 
         $resourcePath = '/dapps/curve/feeChangeLogs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetGaugeDTOsHistorical
+     *
+     * GaugeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveGaugeDTO[]
+     */
+    public function curveGetGaugeDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetGaugeDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetGaugeDTOsHistoricalWithHttpInfo
+     *
+     * GaugeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveGaugeDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetGaugeDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeDTOsHistorical'][0])
+    {
+        $request = $this->curveGetGaugeDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveGaugeDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveGaugeDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveGaugeDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveGaugeDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveGaugeDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetGaugeDTOsHistoricalAsync
+     *
+     * GaugeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetGaugeDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeDTOsHistorical'][0])
+    {
+        return $this->curveGetGaugeDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetGaugeDTOsHistoricalAsyncWithHttpInfo
+     *
+     * GaugeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetGaugeDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveGaugeDTO[]';
+        $request = $this->curveGetGaugeDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetGaugeDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetGaugeDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/GaugeDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetGaugeDepositDTOsHistorical
+     *
+     * GaugeDepositDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeDepositDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveGaugeDepositDTO[]
+     */
+    public function curveGetGaugeDepositDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeDepositDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetGaugeDepositDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetGaugeDepositDTOsHistoricalWithHttpInfo
+     *
+     * GaugeDepositDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeDepositDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveGaugeDepositDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetGaugeDepositDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeDepositDTOsHistorical'][0])
+    {
+        $request = $this->curveGetGaugeDepositDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveGaugeDepositDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveGaugeDepositDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveGaugeDepositDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveGaugeDepositDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveGaugeDepositDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetGaugeDepositDTOsHistoricalAsync
+     *
+     * GaugeDepositDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeDepositDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetGaugeDepositDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeDepositDTOsHistorical'][0])
+    {
+        return $this->curveGetGaugeDepositDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetGaugeDepositDTOsHistoricalAsyncWithHttpInfo
+     *
+     * GaugeDepositDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeDepositDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetGaugeDepositDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeDepositDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveGaugeDepositDTO[]';
+        $request = $this->curveGetGaugeDepositDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetGaugeDepositDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeDepositDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetGaugeDepositDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeDepositDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/GaugeDepositDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetGaugeLiquidityDTOsHistorical
+     *
+     * GaugeLiquidityDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeLiquidityDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveGaugeLiquidityDTO[]
+     */
+    public function curveGetGaugeLiquidityDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeLiquidityDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetGaugeLiquidityDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetGaugeLiquidityDTOsHistoricalWithHttpInfo
+     *
+     * GaugeLiquidityDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeLiquidityDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveGaugeLiquidityDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetGaugeLiquidityDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeLiquidityDTOsHistorical'][0])
+    {
+        $request = $this->curveGetGaugeLiquidityDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveGaugeLiquidityDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveGaugeLiquidityDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveGaugeLiquidityDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveGaugeLiquidityDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveGaugeLiquidityDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetGaugeLiquidityDTOsHistoricalAsync
+     *
+     * GaugeLiquidityDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeLiquidityDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetGaugeLiquidityDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeLiquidityDTOsHistorical'][0])
+    {
+        return $this->curveGetGaugeLiquidityDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetGaugeLiquidityDTOsHistoricalAsyncWithHttpInfo
+     *
+     * GaugeLiquidityDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeLiquidityDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetGaugeLiquidityDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeLiquidityDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveGaugeLiquidityDTO[]';
+        $request = $this->curveGetGaugeLiquidityDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetGaugeLiquidityDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeLiquidityDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetGaugeLiquidityDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeLiquidityDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/GaugeLiquidityDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetGaugeTotalWeightDTOsHistorical
+     *
+     * GaugeTotalWeightDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeTotalWeightDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveGaugeTotalWeightDTO[]
+     */
+    public function curveGetGaugeTotalWeightDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeTotalWeightDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetGaugeTotalWeightDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetGaugeTotalWeightDTOsHistoricalWithHttpInfo
+     *
+     * GaugeTotalWeightDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeTotalWeightDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveGaugeTotalWeightDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetGaugeTotalWeightDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeTotalWeightDTOsHistorical'][0])
+    {
+        $request = $this->curveGetGaugeTotalWeightDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveGaugeTotalWeightDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveGaugeTotalWeightDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveGaugeTotalWeightDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveGaugeTotalWeightDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveGaugeTotalWeightDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetGaugeTotalWeightDTOsHistoricalAsync
+     *
+     * GaugeTotalWeightDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeTotalWeightDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetGaugeTotalWeightDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeTotalWeightDTOsHistorical'][0])
+    {
+        return $this->curveGetGaugeTotalWeightDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetGaugeTotalWeightDTOsHistoricalAsyncWithHttpInfo
+     *
+     * GaugeTotalWeightDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeTotalWeightDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetGaugeTotalWeightDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeTotalWeightDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveGaugeTotalWeightDTO[]';
+        $request = $this->curveGetGaugeTotalWeightDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetGaugeTotalWeightDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeTotalWeightDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetGaugeTotalWeightDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeTotalWeightDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/GaugeTotalWeightDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetGaugeTypeDTOsHistorical
+     *
+     * GaugeTypeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeTypeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveGaugeTypeDTO[]
+     */
+    public function curveGetGaugeTypeDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeTypeDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetGaugeTypeDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetGaugeTypeDTOsHistoricalWithHttpInfo
+     *
+     * GaugeTypeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeTypeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveGaugeTypeDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetGaugeTypeDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeTypeDTOsHistorical'][0])
+    {
+        $request = $this->curveGetGaugeTypeDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveGaugeTypeDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveGaugeTypeDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveGaugeTypeDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveGaugeTypeDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveGaugeTypeDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetGaugeTypeDTOsHistoricalAsync
+     *
+     * GaugeTypeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeTypeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetGaugeTypeDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeTypeDTOsHistorical'][0])
+    {
+        return $this->curveGetGaugeTypeDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetGaugeTypeDTOsHistoricalAsyncWithHttpInfo
+     *
+     * GaugeTypeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeTypeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetGaugeTypeDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeTypeDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveGaugeTypeDTO[]';
+        $request = $this->curveGetGaugeTypeDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetGaugeTypeDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeTypeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetGaugeTypeDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeTypeDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/GaugeTypeDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetGaugeTypeWeightDTOsHistorical
+     *
+     * GaugeTypeWeightDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeTypeWeightDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveGaugeTypeWeightDTO[]
+     */
+    public function curveGetGaugeTypeWeightDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeTypeWeightDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetGaugeTypeWeightDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetGaugeTypeWeightDTOsHistoricalWithHttpInfo
+     *
+     * GaugeTypeWeightDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeTypeWeightDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveGaugeTypeWeightDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetGaugeTypeWeightDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeTypeWeightDTOsHistorical'][0])
+    {
+        $request = $this->curveGetGaugeTypeWeightDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveGaugeTypeWeightDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveGaugeTypeWeightDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveGaugeTypeWeightDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveGaugeTypeWeightDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveGaugeTypeWeightDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetGaugeTypeWeightDTOsHistoricalAsync
+     *
+     * GaugeTypeWeightDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeTypeWeightDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetGaugeTypeWeightDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeTypeWeightDTOsHistorical'][0])
+    {
+        return $this->curveGetGaugeTypeWeightDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetGaugeTypeWeightDTOsHistoricalAsyncWithHttpInfo
+     *
+     * GaugeTypeWeightDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeTypeWeightDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetGaugeTypeWeightDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeTypeWeightDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveGaugeTypeWeightDTO[]';
+        $request = $this->curveGetGaugeTypeWeightDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetGaugeTypeWeightDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeTypeWeightDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetGaugeTypeWeightDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeTypeWeightDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/GaugeTypeWeightDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetGaugeWeightDTOsHistorical
+     *
+     * GaugeWeightDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeWeightDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveGaugeWeightDTO[]
+     */
+    public function curveGetGaugeWeightDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeWeightDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetGaugeWeightDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetGaugeWeightDTOsHistoricalWithHttpInfo
+     *
+     * GaugeWeightDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeWeightDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveGaugeWeightDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetGaugeWeightDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeWeightDTOsHistorical'][0])
+    {
+        $request = $this->curveGetGaugeWeightDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveGaugeWeightDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveGaugeWeightDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveGaugeWeightDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveGaugeWeightDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveGaugeWeightDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetGaugeWeightDTOsHistoricalAsync
+     *
+     * GaugeWeightDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeWeightDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetGaugeWeightDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeWeightDTOsHistorical'][0])
+    {
+        return $this->curveGetGaugeWeightDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetGaugeWeightDTOsHistoricalAsyncWithHttpInfo
+     *
+     * GaugeWeightDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeWeightDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetGaugeWeightDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeWeightDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveGaugeWeightDTO[]';
+        $request = $this->curveGetGaugeWeightDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetGaugeWeightDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeWeightDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetGaugeWeightDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeWeightDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/GaugeWeightDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetGaugeWeightVoteDTOsHistorical
+     *
+     * GaugeWeightVoteDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeWeightVoteDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveGaugeWeightVoteDTO[]
+     */
+    public function curveGetGaugeWeightVoteDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeWeightVoteDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetGaugeWeightVoteDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetGaugeWeightVoteDTOsHistoricalWithHttpInfo
+     *
+     * GaugeWeightVoteDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeWeightVoteDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveGaugeWeightVoteDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetGaugeWeightVoteDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeWeightVoteDTOsHistorical'][0])
+    {
+        $request = $this->curveGetGaugeWeightVoteDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveGaugeWeightVoteDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveGaugeWeightVoteDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveGaugeWeightVoteDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveGaugeWeightVoteDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveGaugeWeightVoteDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetGaugeWeightVoteDTOsHistoricalAsync
+     *
+     * GaugeWeightVoteDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeWeightVoteDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetGaugeWeightVoteDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeWeightVoteDTOsHistorical'][0])
+    {
+        return $this->curveGetGaugeWeightVoteDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetGaugeWeightVoteDTOsHistoricalAsyncWithHttpInfo
+     *
+     * GaugeWeightVoteDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeWeightVoteDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetGaugeWeightVoteDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeWeightVoteDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveGaugeWeightVoteDTO[]';
+        $request = $this->curveGetGaugeWeightVoteDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetGaugeWeightVoteDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeWeightVoteDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetGaugeWeightVoteDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeWeightVoteDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/GaugeWeightVoteDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetGaugeWithdrawDTOsHistorical
+     *
+     * GaugeWithdrawDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeWithdrawDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveGaugeWithdrawDTO[]
+     */
+    public function curveGetGaugeWithdrawDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeWithdrawDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetGaugeWithdrawDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetGaugeWithdrawDTOsHistoricalWithHttpInfo
+     *
+     * GaugeWithdrawDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeWithdrawDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveGaugeWithdrawDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetGaugeWithdrawDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeWithdrawDTOsHistorical'][0])
+    {
+        $request = $this->curveGetGaugeWithdrawDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveGaugeWithdrawDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveGaugeWithdrawDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveGaugeWithdrawDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveGaugeWithdrawDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveGaugeWithdrawDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetGaugeWithdrawDTOsHistoricalAsync
+     *
+     * GaugeWithdrawDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeWithdrawDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetGaugeWithdrawDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeWithdrawDTOsHistorical'][0])
+    {
+        return $this->curveGetGaugeWithdrawDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetGaugeWithdrawDTOsHistoricalAsyncWithHttpInfo
+     *
+     * GaugeWithdrawDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeWithdrawDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetGaugeWithdrawDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeWithdrawDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveGaugeWithdrawDTO[]';
+        $request = $this->curveGetGaugeWithdrawDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetGaugeWithdrawDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeWithdrawDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetGaugeWithdrawDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetGaugeWithdrawDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/GaugeWithdrawDTOs/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6504,6 +13022,344 @@ class CurveApi
     }
 
     /**
+     * Operation curveGetHourlyVolumeDTOsHistorical
+     *
+     * HourlyVolumeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetHourlyVolumeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveHourlyVolumeDTO[]
+     */
+    public function curveGetHourlyVolumeDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetHourlyVolumeDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetHourlyVolumeDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetHourlyVolumeDTOsHistoricalWithHttpInfo
+     *
+     * HourlyVolumeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetHourlyVolumeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveHourlyVolumeDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetHourlyVolumeDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetHourlyVolumeDTOsHistorical'][0])
+    {
+        $request = $this->curveGetHourlyVolumeDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveHourlyVolumeDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveHourlyVolumeDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveHourlyVolumeDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveHourlyVolumeDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveHourlyVolumeDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetHourlyVolumeDTOsHistoricalAsync
+     *
+     * HourlyVolumeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetHourlyVolumeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetHourlyVolumeDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetHourlyVolumeDTOsHistorical'][0])
+    {
+        return $this->curveGetHourlyVolumeDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetHourlyVolumeDTOsHistoricalAsyncWithHttpInfo
+     *
+     * HourlyVolumeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetHourlyVolumeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetHourlyVolumeDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetHourlyVolumeDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveHourlyVolumeDTO[]';
+        $request = $this->curveGetHourlyVolumeDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetHourlyVolumeDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetHourlyVolumeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetHourlyVolumeDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetHourlyVolumeDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/HourlyVolumeDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation curveGetHourlyVolumesHistorical
      *
      * HourlyVolumes (historical)
@@ -6733,6 +13589,344 @@ class CurveApi
 
 
         $resourcePath = '/dapps/curve/hourlyVolumes/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetLpTokenDTOsHistorical
+     *
+     * LpTokenDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetLpTokenDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveLpTokenDTO[]
+     */
+    public function curveGetLpTokenDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetLpTokenDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetLpTokenDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetLpTokenDTOsHistoricalWithHttpInfo
+     *
+     * LpTokenDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetLpTokenDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveLpTokenDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetLpTokenDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetLpTokenDTOsHistorical'][0])
+    {
+        $request = $this->curveGetLpTokenDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveLpTokenDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveLpTokenDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveLpTokenDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveLpTokenDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveLpTokenDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetLpTokenDTOsHistoricalAsync
+     *
+     * LpTokenDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetLpTokenDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetLpTokenDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetLpTokenDTOsHistorical'][0])
+    {
+        return $this->curveGetLpTokenDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetLpTokenDTOsHistoricalAsyncWithHttpInfo
+     *
+     * LpTokenDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetLpTokenDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetLpTokenDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetLpTokenDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveLpTokenDTO[]';
+        $request = $this->curveGetLpTokenDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetLpTokenDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetLpTokenDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetLpTokenDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetLpTokenDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/LpTokenDTOs/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -7180,6 +14374,344 @@ class CurveApi
     }
 
     /**
+     * Operation curveGetPoolDTOsHistorical
+     *
+     * PoolDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetPoolDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurvePoolDTO[]
+     */
+    public function curveGetPoolDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetPoolDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetPoolDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetPoolDTOsHistoricalWithHttpInfo
+     *
+     * PoolDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetPoolDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurvePoolDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetPoolDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetPoolDTOsHistorical'][0])
+    {
+        $request = $this->curveGetPoolDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurvePoolDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurvePoolDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurvePoolDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurvePoolDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurvePoolDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetPoolDTOsHistoricalAsync
+     *
+     * PoolDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetPoolDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetPoolDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetPoolDTOsHistorical'][0])
+    {
+        return $this->curveGetPoolDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetPoolDTOsHistoricalAsyncWithHttpInfo
+     *
+     * PoolDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetPoolDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetPoolDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetPoolDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurvePoolDTO[]';
+        $request = $this->curveGetPoolDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetPoolDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetPoolDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetPoolDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetPoolDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/PoolDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation curveGetPoolsHistorical
      *
      * Pools (historical) 🔥
@@ -7409,6 +14941,682 @@ class CurveApi
 
 
         $resourcePath = '/dapps/curve/pools/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetProposalDTOsHistorical
+     *
+     * ProposalDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetProposalDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveProposalDTO[]
+     */
+    public function curveGetProposalDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetProposalDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetProposalDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetProposalDTOsHistoricalWithHttpInfo
+     *
+     * ProposalDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetProposalDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveProposalDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetProposalDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetProposalDTOsHistorical'][0])
+    {
+        $request = $this->curveGetProposalDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveProposalDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveProposalDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveProposalDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveProposalDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveProposalDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetProposalDTOsHistoricalAsync
+     *
+     * ProposalDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetProposalDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetProposalDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetProposalDTOsHistorical'][0])
+    {
+        return $this->curveGetProposalDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetProposalDTOsHistoricalAsyncWithHttpInfo
+     *
+     * ProposalDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetProposalDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetProposalDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetProposalDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveProposalDTO[]';
+        $request = $this->curveGetProposalDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetProposalDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetProposalDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetProposalDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetProposalDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/ProposalDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetProposalVoteDTOsHistorical
+     *
+     * ProposalVoteDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetProposalVoteDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveProposalVoteDTO[]
+     */
+    public function curveGetProposalVoteDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetProposalVoteDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetProposalVoteDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetProposalVoteDTOsHistoricalWithHttpInfo
+     *
+     * ProposalVoteDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetProposalVoteDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveProposalVoteDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetProposalVoteDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetProposalVoteDTOsHistorical'][0])
+    {
+        $request = $this->curveGetProposalVoteDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveProposalVoteDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveProposalVoteDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveProposalVoteDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveProposalVoteDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveProposalVoteDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetProposalVoteDTOsHistoricalAsync
+     *
+     * ProposalVoteDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetProposalVoteDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetProposalVoteDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetProposalVoteDTOsHistorical'][0])
+    {
+        return $this->curveGetProposalVoteDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetProposalVoteDTOsHistoricalAsyncWithHttpInfo
+     *
+     * ProposalVoteDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetProposalVoteDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetProposalVoteDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetProposalVoteDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveProposalVoteDTO[]';
+        $request = $this->curveGetProposalVoteDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetProposalVoteDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetProposalVoteDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetProposalVoteDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetProposalVoteDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/ProposalVoteDTOs/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -8164,6 +16372,344 @@ class CurveApi
     }
 
     /**
+     * Operation curveGetRemoveLiquidityEventDTOsHistorical
+     *
+     * RemoveLiquidityEventDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetRemoveLiquidityEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveRemoveLiquidityEventDTO[]
+     */
+    public function curveGetRemoveLiquidityEventDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetRemoveLiquidityEventDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetRemoveLiquidityEventDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetRemoveLiquidityEventDTOsHistoricalWithHttpInfo
+     *
+     * RemoveLiquidityEventDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetRemoveLiquidityEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveRemoveLiquidityEventDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetRemoveLiquidityEventDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetRemoveLiquidityEventDTOsHistorical'][0])
+    {
+        $request = $this->curveGetRemoveLiquidityEventDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveRemoveLiquidityEventDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveRemoveLiquidityEventDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveRemoveLiquidityEventDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveRemoveLiquidityEventDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveRemoveLiquidityEventDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetRemoveLiquidityEventDTOsHistoricalAsync
+     *
+     * RemoveLiquidityEventDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetRemoveLiquidityEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetRemoveLiquidityEventDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetRemoveLiquidityEventDTOsHistorical'][0])
+    {
+        return $this->curveGetRemoveLiquidityEventDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetRemoveLiquidityEventDTOsHistoricalAsyncWithHttpInfo
+     *
+     * RemoveLiquidityEventDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetRemoveLiquidityEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetRemoveLiquidityEventDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetRemoveLiquidityEventDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveRemoveLiquidityEventDTO[]';
+        $request = $this->curveGetRemoveLiquidityEventDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetRemoveLiquidityEventDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetRemoveLiquidityEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetRemoveLiquidityEventDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetRemoveLiquidityEventDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/RemoveLiquidityEventDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation curveGetRemoveLiquidityEventsHistorical
      *
      * RemoveLiquidityEvents (historical)
@@ -8393,6 +16939,344 @@ class CurveApi
 
 
         $resourcePath = '/dapps/curve/removeLiquidityEvents/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetRemoveLiquidityOneEventDTOsHistorical
+     *
+     * RemoveLiquidityOneEventDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetRemoveLiquidityOneEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveRemoveLiquidityOneEventDTO[]
+     */
+    public function curveGetRemoveLiquidityOneEventDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetRemoveLiquidityOneEventDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetRemoveLiquidityOneEventDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetRemoveLiquidityOneEventDTOsHistoricalWithHttpInfo
+     *
+     * RemoveLiquidityOneEventDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetRemoveLiquidityOneEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveRemoveLiquidityOneEventDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetRemoveLiquidityOneEventDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetRemoveLiquidityOneEventDTOsHistorical'][0])
+    {
+        $request = $this->curveGetRemoveLiquidityOneEventDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveRemoveLiquidityOneEventDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveRemoveLiquidityOneEventDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveRemoveLiquidityOneEventDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveRemoveLiquidityOneEventDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveRemoveLiquidityOneEventDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetRemoveLiquidityOneEventDTOsHistoricalAsync
+     *
+     * RemoveLiquidityOneEventDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetRemoveLiquidityOneEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetRemoveLiquidityOneEventDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetRemoveLiquidityOneEventDTOsHistorical'][0])
+    {
+        return $this->curveGetRemoveLiquidityOneEventDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetRemoveLiquidityOneEventDTOsHistoricalAsyncWithHttpInfo
+     *
+     * RemoveLiquidityOneEventDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetRemoveLiquidityOneEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetRemoveLiquidityOneEventDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetRemoveLiquidityOneEventDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveRemoveLiquidityOneEventDTO[]';
+        $request = $this->curveGetRemoveLiquidityOneEventDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetRemoveLiquidityOneEventDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetRemoveLiquidityOneEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetRemoveLiquidityOneEventDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetRemoveLiquidityOneEventDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/RemoveLiquidityOneEventDTOs/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -8840,6 +17724,344 @@ class CurveApi
     }
 
     /**
+     * Operation curveGetSystemStateDTOsHistorical
+     *
+     * SystemStateDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetSystemStateDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveSystemStateDTO[]
+     */
+    public function curveGetSystemStateDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetSystemStateDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetSystemStateDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetSystemStateDTOsHistoricalWithHttpInfo
+     *
+     * SystemStateDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetSystemStateDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveSystemStateDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetSystemStateDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetSystemStateDTOsHistorical'][0])
+    {
+        $request = $this->curveGetSystemStateDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveSystemStateDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveSystemStateDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveSystemStateDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveSystemStateDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveSystemStateDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetSystemStateDTOsHistoricalAsync
+     *
+     * SystemStateDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetSystemStateDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetSystemStateDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetSystemStateDTOsHistorical'][0])
+    {
+        return $this->curveGetSystemStateDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetSystemStateDTOsHistoricalAsyncWithHttpInfo
+     *
+     * SystemStateDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetSystemStateDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetSystemStateDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetSystemStateDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveSystemStateDTO[]';
+        $request = $this->curveGetSystemStateDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetSystemStateDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetSystemStateDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetSystemStateDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetSystemStateDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/SystemStateDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation curveGetSystemStatesHistorical
      *
      * SystemStates (historical)
@@ -9100,6 +18322,344 @@ class CurveApi
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $end_date,
             'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetTokenDTOsHistorical
+     *
+     * TokenDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetTokenDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveTokenDTO[]
+     */
+    public function curveGetTokenDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetTokenDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetTokenDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetTokenDTOsHistoricalWithHttpInfo
+     *
+     * TokenDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetTokenDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveTokenDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetTokenDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetTokenDTOsHistorical'][0])
+    {
+        $request = $this->curveGetTokenDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveTokenDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveTokenDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveTokenDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveTokenDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveTokenDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetTokenDTOsHistoricalAsync
+     *
+     * TokenDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetTokenDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetTokenDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetTokenDTOsHistorical'][0])
+    {
+        return $this->curveGetTokenDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetTokenDTOsHistoricalAsyncWithHttpInfo
+     *
+     * TokenDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetTokenDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetTokenDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetTokenDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveTokenDTO[]';
+        $request = $this->curveGetTokenDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetTokenDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetTokenDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetTokenDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetTokenDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/TokenDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
             'string', // openApiType
             'form', // style
             true, // explode
@@ -9501,6 +19061,344 @@ class CurveApi
     }
 
     /**
+     * Operation curveGetTransferOwnershipEventDTOsHistorical
+     *
+     * TransferOwnershipEventDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetTransferOwnershipEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveTransferOwnershipEventDTO[]
+     */
+    public function curveGetTransferOwnershipEventDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetTransferOwnershipEventDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetTransferOwnershipEventDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetTransferOwnershipEventDTOsHistoricalWithHttpInfo
+     *
+     * TransferOwnershipEventDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetTransferOwnershipEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveTransferOwnershipEventDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetTransferOwnershipEventDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetTransferOwnershipEventDTOsHistorical'][0])
+    {
+        $request = $this->curveGetTransferOwnershipEventDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveTransferOwnershipEventDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveTransferOwnershipEventDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveTransferOwnershipEventDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveTransferOwnershipEventDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveTransferOwnershipEventDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetTransferOwnershipEventDTOsHistoricalAsync
+     *
+     * TransferOwnershipEventDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetTransferOwnershipEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetTransferOwnershipEventDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetTransferOwnershipEventDTOsHistorical'][0])
+    {
+        return $this->curveGetTransferOwnershipEventDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetTransferOwnershipEventDTOsHistoricalAsyncWithHttpInfo
+     *
+     * TransferOwnershipEventDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetTransferOwnershipEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetTransferOwnershipEventDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetTransferOwnershipEventDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveTransferOwnershipEventDTO[]';
+        $request = $this->curveGetTransferOwnershipEventDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetTransferOwnershipEventDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetTransferOwnershipEventDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetTransferOwnershipEventDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetTransferOwnershipEventDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/TransferOwnershipEventDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation curveGetTransferOwnershipEventsHistorical
      *
      * TransferOwnershipEvents (historical)
@@ -9730,6 +19628,344 @@ class CurveApi
 
 
         $resourcePath = '/dapps/curve/transferOwnershipEvents/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetUnderlyingCoinDTOsHistorical
+     *
+     * UnderlyingCoinDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetUnderlyingCoinDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveUnderlyingCoinDTO[]
+     */
+    public function curveGetUnderlyingCoinDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetUnderlyingCoinDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetUnderlyingCoinDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetUnderlyingCoinDTOsHistoricalWithHttpInfo
+     *
+     * UnderlyingCoinDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetUnderlyingCoinDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveUnderlyingCoinDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetUnderlyingCoinDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetUnderlyingCoinDTOsHistorical'][0])
+    {
+        $request = $this->curveGetUnderlyingCoinDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveUnderlyingCoinDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveUnderlyingCoinDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveUnderlyingCoinDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveUnderlyingCoinDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveUnderlyingCoinDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetUnderlyingCoinDTOsHistoricalAsync
+     *
+     * UnderlyingCoinDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetUnderlyingCoinDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetUnderlyingCoinDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetUnderlyingCoinDTOsHistorical'][0])
+    {
+        return $this->curveGetUnderlyingCoinDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetUnderlyingCoinDTOsHistoricalAsyncWithHttpInfo
+     *
+     * UnderlyingCoinDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetUnderlyingCoinDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetUnderlyingCoinDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetUnderlyingCoinDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveUnderlyingCoinDTO[]';
+        $request = $this->curveGetUnderlyingCoinDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetUnderlyingCoinDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetUnderlyingCoinDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetUnderlyingCoinDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetUnderlyingCoinDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/UnderlyingCoinDTOs/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -10177,6 +20413,344 @@ class CurveApi
     }
 
     /**
+     * Operation curveGetVotingAppDTOsHistorical
+     *
+     * VotingAppDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetVotingAppDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveVotingAppDTO[]
+     */
+    public function curveGetVotingAppDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetVotingAppDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetVotingAppDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetVotingAppDTOsHistoricalWithHttpInfo
+     *
+     * VotingAppDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetVotingAppDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveVotingAppDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetVotingAppDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetVotingAppDTOsHistorical'][0])
+    {
+        $request = $this->curveGetVotingAppDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveVotingAppDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveVotingAppDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveVotingAppDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveVotingAppDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveVotingAppDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetVotingAppDTOsHistoricalAsync
+     *
+     * VotingAppDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetVotingAppDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetVotingAppDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetVotingAppDTOsHistorical'][0])
+    {
+        return $this->curveGetVotingAppDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetVotingAppDTOsHistoricalAsyncWithHttpInfo
+     *
+     * VotingAppDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetVotingAppDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetVotingAppDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetVotingAppDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveVotingAppDTO[]';
+        $request = $this->curveGetVotingAppDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetVotingAppDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetVotingAppDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetVotingAppDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetVotingAppDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/VotingAppDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation curveGetVotingAppsHistorical
      *
      * VotingApps (historical)
@@ -10437,6 +21011,344 @@ class CurveApi
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $end_date,
             'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation curveGetWeeklyVolumeDTOsHistorical
+     *
+     * WeeklyVolumeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetWeeklyVolumeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\CurveWeeklyVolumeDTO[]
+     */
+    public function curveGetWeeklyVolumeDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetWeeklyVolumeDTOsHistorical'][0])
+    {
+        list($response) = $this->curveGetWeeklyVolumeDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation curveGetWeeklyVolumeDTOsHistoricalWithHttpInfo
+     *
+     * WeeklyVolumeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetWeeklyVolumeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\CurveWeeklyVolumeDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function curveGetWeeklyVolumeDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetWeeklyVolumeDTOsHistorical'][0])
+    {
+        $request = $this->curveGetWeeklyVolumeDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\CurveWeeklyVolumeDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\CurveWeeklyVolumeDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\CurveWeeklyVolumeDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\CurveWeeklyVolumeDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\CurveWeeklyVolumeDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation curveGetWeeklyVolumeDTOsHistoricalAsync
+     *
+     * WeeklyVolumeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetWeeklyVolumeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetWeeklyVolumeDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetWeeklyVolumeDTOsHistorical'][0])
+    {
+        return $this->curveGetWeeklyVolumeDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation curveGetWeeklyVolumeDTOsHistoricalAsyncWithHttpInfo
+     *
+     * WeeklyVolumeDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetWeeklyVolumeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function curveGetWeeklyVolumeDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetWeeklyVolumeDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\CurveWeeklyVolumeDTO[]';
+        $request = $this->curveGetWeeklyVolumeDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'curveGetWeeklyVolumeDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetWeeklyVolumeDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function curveGetWeeklyVolumeDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['curveGetWeeklyVolumeDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/curve/WeeklyVolumeDTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
             'string', // openApiType
             'form', // style
             true, // explode

@@ -72,10 +72,16 @@ class UniswapV3Api
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
+        'uniswapV3GetBundleV3DTOsHistorical' => [
+            'application/json',
+        ],
         'uniswapV3GetBundlesCurrent' => [
             'application/json',
         ],
         'uniswapV3GetBundlesHistorical' => [
+            'application/json',
+        ],
+        'uniswapV3GetBurnV3DTOsHistorical' => [
             'application/json',
         ],
         'uniswapV3GetBurnsCurrent' => [
@@ -96,10 +102,25 @@ class UniswapV3Api
         'uniswapV3GetFactoryHistorical' => [
             'application/json',
         ],
+        'uniswapV3GetFactoryV3DTOsHistorical' => [
+            'application/json',
+        ],
+        'uniswapV3GetMintV3DTOsHistorical' => [
+            'application/json',
+        ],
         'uniswapV3GetMintsCurrent' => [
             'application/json',
         ],
         'uniswapV3GetMintsHistorical' => [
+            'application/json',
+        ],
+        'uniswapV3GetPoolDayDataV3DTOsHistorical' => [
+            'application/json',
+        ],
+        'uniswapV3GetPoolHourDataV3DTOsHistorical' => [
+            'application/json',
+        ],
+        'uniswapV3GetPoolV3DTOsHistorical' => [
             'application/json',
         ],
         'uniswapV3GetPoolsCurrent' => [
@@ -120,6 +141,12 @@ class UniswapV3Api
         'uniswapV3GetPoolsHourDataHistorical' => [
             'application/json',
         ],
+        'uniswapV3GetPositionSnapshotV3DTOsHistorical' => [
+            'application/json',
+        ],
+        'uniswapV3GetPositionV3DTOsHistorical' => [
+            'application/json',
+        ],
         'uniswapV3GetPositionsCurrent' => [
             'application/json',
         ],
@@ -132,10 +159,19 @@ class UniswapV3Api
         'uniswapV3GetPositionsSnapshotsCurrent' => [
             'application/json',
         ],
+        'uniswapV3GetSwapV3DTOsHistorical' => [
+            'application/json',
+        ],
         'uniswapV3GetSwapsCurrent' => [
             'application/json',
         ],
         'uniswapV3GetSwapsHistorical' => [
+            'application/json',
+        ],
+        'uniswapV3GetTickDayDataV3DTOsHistorical' => [
+            'application/json',
+        ],
+        'uniswapV3GetTickV3DTOsHistorical' => [
             'application/json',
         ],
         'uniswapV3GetTicksCurrent' => [
@@ -148,6 +184,15 @@ class UniswapV3Api
             'application/json',
         ],
         'uniswapV3GetTicksHistorical' => [
+            'application/json',
+        ],
+        'uniswapV3GetTokenHourDataV3DTOsHistorical' => [
+            'application/json',
+        ],
+        'uniswapV3GetTokenV3DTOsHistorical' => [
+            'application/json',
+        ],
+        'uniswapV3GetTokenV3DayDataDTOsHistorical' => [
             'application/json',
         ],
         'uniswapV3GetTokensCurrent' => [
@@ -168,7 +213,13 @@ class UniswapV3Api
         'uniswapV3GetTokensHourDataHistorical' => [
             'application/json',
         ],
+        'uniswapV3GetTransactionV3DTOsHistorical' => [
+            'application/json',
+        ],
         'uniswapV3GetTransactionsHistorical' => [
+            'application/json',
+        ],
+        'uniswapV3GetUniswapDayDataV3DTOsHistorical' => [
             'application/json',
         ],
     ];
@@ -217,6 +268,344 @@ class UniswapV3Api
     public function getConfig()
     {
         return $this->config;
+    }
+
+    /**
+     * Operation uniswapV3GetBundleV3DTOsHistorical
+     *
+     * BundleV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetBundleV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV3BundleV3DTO[]
+     */
+    public function uniswapV3GetBundleV3DTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetBundleV3DTOsHistorical'][0])
+    {
+        list($response) = $this->uniswapV3GetBundleV3DTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV3GetBundleV3DTOsHistoricalWithHttpInfo
+     *
+     * BundleV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetBundleV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV3BundleV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV3GetBundleV3DTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetBundleV3DTOsHistorical'][0])
+    {
+        $request = $this->uniswapV3GetBundleV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV3BundleV3DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV3BundleV3DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3BundleV3DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV3BundleV3DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV3BundleV3DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV3GetBundleV3DTOsHistoricalAsync
+     *
+     * BundleV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetBundleV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetBundleV3DTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetBundleV3DTOsHistorical'][0])
+    {
+        return $this->uniswapV3GetBundleV3DTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV3GetBundleV3DTOsHistoricalAsyncWithHttpInfo
+     *
+     * BundleV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetBundleV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetBundleV3DTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetBundleV3DTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV3BundleV3DTO[]';
+        $request = $this->uniswapV3GetBundleV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV3GetBundleV3DTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetBundleV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV3GetBundleV3DTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetBundleV3DTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/BundleV3DTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
     }
 
     /**
@@ -743,6 +1132,344 @@ class UniswapV3Api
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $end_date,
             'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV3GetBurnV3DTOsHistorical
+     *
+     * BurnV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetBurnV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV3BurnV3DTO[]
+     */
+    public function uniswapV3GetBurnV3DTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetBurnV3DTOsHistorical'][0])
+    {
+        list($response) = $this->uniswapV3GetBurnV3DTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV3GetBurnV3DTOsHistoricalWithHttpInfo
+     *
+     * BurnV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetBurnV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV3BurnV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV3GetBurnV3DTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetBurnV3DTOsHistorical'][0])
+    {
+        $request = $this->uniswapV3GetBurnV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV3BurnV3DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV3BurnV3DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3BurnV3DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV3BurnV3DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV3BurnV3DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV3GetBurnV3DTOsHistoricalAsync
+     *
+     * BurnV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetBurnV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetBurnV3DTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetBurnV3DTOsHistorical'][0])
+    {
+        return $this->uniswapV3GetBurnV3DTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV3GetBurnV3DTOsHistoricalAsyncWithHttpInfo
+     *
+     * BurnV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetBurnV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetBurnV3DTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetBurnV3DTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV3BurnV3DTO[]';
+        $request = $this->uniswapV3GetBurnV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV3GetBurnV3DTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetBurnV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV3GetBurnV3DTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetBurnV3DTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/BurnV3DTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
             'string', // openApiType
             'form', // style
             true, // explode
@@ -2594,6 +3321,682 @@ class UniswapV3Api
     }
 
     /**
+     * Operation uniswapV3GetFactoryV3DTOsHistorical
+     *
+     * FactoryV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactoryV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]
+     */
+    public function uniswapV3GetFactoryV3DTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetFactoryV3DTOsHistorical'][0])
+    {
+        list($response) = $this->uniswapV3GetFactoryV3DTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV3GetFactoryV3DTOsHistoricalWithHttpInfo
+     *
+     * FactoryV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactoryV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV3FactoryV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV3GetFactoryV3DTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetFactoryV3DTOsHistorical'][0])
+    {
+        $request = $this->uniswapV3GetFactoryV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV3GetFactoryV3DTOsHistoricalAsync
+     *
+     * FactoryV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactoryV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetFactoryV3DTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetFactoryV3DTOsHistorical'][0])
+    {
+        return $this->uniswapV3GetFactoryV3DTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV3GetFactoryV3DTOsHistoricalAsyncWithHttpInfo
+     *
+     * FactoryV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactoryV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetFactoryV3DTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetFactoryV3DTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV3FactoryV3DTO[]';
+        $request = $this->uniswapV3GetFactoryV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV3GetFactoryV3DTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactoryV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV3GetFactoryV3DTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetFactoryV3DTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/FactoryV3DTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV3GetMintV3DTOsHistorical
+     *
+     * MintV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetMintV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV3MintV3DTO[]
+     */
+    public function uniswapV3GetMintV3DTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetMintV3DTOsHistorical'][0])
+    {
+        list($response) = $this->uniswapV3GetMintV3DTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV3GetMintV3DTOsHistoricalWithHttpInfo
+     *
+     * MintV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetMintV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV3MintV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV3GetMintV3DTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetMintV3DTOsHistorical'][0])
+    {
+        $request = $this->uniswapV3GetMintV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV3MintV3DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV3MintV3DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3MintV3DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV3MintV3DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV3MintV3DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV3GetMintV3DTOsHistoricalAsync
+     *
+     * MintV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetMintV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetMintV3DTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetMintV3DTOsHistorical'][0])
+    {
+        return $this->uniswapV3GetMintV3DTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV3GetMintV3DTOsHistoricalAsyncWithHttpInfo
+     *
+     * MintV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetMintV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetMintV3DTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetMintV3DTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV3MintV3DTO[]';
+        $request = $this->uniswapV3GetMintV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV3GetMintV3DTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetMintV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV3GetMintV3DTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetMintV3DTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/MintV3DTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation uniswapV3GetMintsCurrent
      *
      * Mints (current)
@@ -3101,6 +4504,1020 @@ class UniswapV3Api
 
 
         $resourcePath = '/dapps/uniswapv3/mints/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV3GetPoolDayDataV3DTOsHistorical
+     *
+     * PoolDayDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolDayDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]
+     */
+    public function uniswapV3GetPoolDayDataV3DTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPoolDayDataV3DTOsHistorical'][0])
+    {
+        list($response) = $this->uniswapV3GetPoolDayDataV3DTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV3GetPoolDayDataV3DTOsHistoricalWithHttpInfo
+     *
+     * PoolDayDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolDayDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV3GetPoolDayDataV3DTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPoolDayDataV3DTOsHistorical'][0])
+    {
+        $request = $this->uniswapV3GetPoolDayDataV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV3GetPoolDayDataV3DTOsHistoricalAsync
+     *
+     * PoolDayDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolDayDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetPoolDayDataV3DTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPoolDayDataV3DTOsHistorical'][0])
+    {
+        return $this->uniswapV3GetPoolDayDataV3DTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV3GetPoolDayDataV3DTOsHistoricalAsyncWithHttpInfo
+     *
+     * PoolDayDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolDayDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetPoolDayDataV3DTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPoolDayDataV3DTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV3PoolDayDataV3DTO[]';
+        $request = $this->uniswapV3GetPoolDayDataV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV3GetPoolDayDataV3DTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolDayDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV3GetPoolDayDataV3DTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPoolDayDataV3DTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/PoolDayDataV3DTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV3GetPoolHourDataV3DTOsHistorical
+     *
+     * PoolHourDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolHourDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]
+     */
+    public function uniswapV3GetPoolHourDataV3DTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPoolHourDataV3DTOsHistorical'][0])
+    {
+        list($response) = $this->uniswapV3GetPoolHourDataV3DTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV3GetPoolHourDataV3DTOsHistoricalWithHttpInfo
+     *
+     * PoolHourDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolHourDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV3GetPoolHourDataV3DTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPoolHourDataV3DTOsHistorical'][0])
+    {
+        $request = $this->uniswapV3GetPoolHourDataV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV3GetPoolHourDataV3DTOsHistoricalAsync
+     *
+     * PoolHourDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolHourDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetPoolHourDataV3DTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPoolHourDataV3DTOsHistorical'][0])
+    {
+        return $this->uniswapV3GetPoolHourDataV3DTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV3GetPoolHourDataV3DTOsHistoricalAsyncWithHttpInfo
+     *
+     * PoolHourDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolHourDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetPoolHourDataV3DTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPoolHourDataV3DTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV3PoolHourDataV3DTO[]';
+        $request = $this->uniswapV3GetPoolHourDataV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV3GetPoolHourDataV3DTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolHourDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV3GetPoolHourDataV3DTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPoolHourDataV3DTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/PoolHourDataV3DTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV3GetPoolV3DTOsHistorical
+     *
+     * PoolV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV3PoolV3DTO[]
+     */
+    public function uniswapV3GetPoolV3DTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPoolV3DTOsHistorical'][0])
+    {
+        list($response) = $this->uniswapV3GetPoolV3DTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV3GetPoolV3DTOsHistoricalWithHttpInfo
+     *
+     * PoolV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV3PoolV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV3GetPoolV3DTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPoolV3DTOsHistorical'][0])
+    {
+        $request = $this->uniswapV3GetPoolV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV3PoolV3DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV3PoolV3DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3PoolV3DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV3PoolV3DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV3PoolV3DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV3GetPoolV3DTOsHistoricalAsync
+     *
+     * PoolV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetPoolV3DTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPoolV3DTOsHistorical'][0])
+    {
+        return $this->uniswapV3GetPoolV3DTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV3GetPoolV3DTOsHistoricalAsyncWithHttpInfo
+     *
+     * PoolV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetPoolV3DTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPoolV3DTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV3PoolV3DTO[]';
+        $request = $this->uniswapV3GetPoolV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV3GetPoolV3DTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV3GetPoolV3DTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPoolV3DTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/PoolV3DTOs/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5058,6 +7475,682 @@ class UniswapV3Api
     }
 
     /**
+     * Operation uniswapV3GetPositionSnapshotV3DTOsHistorical
+     *
+     * PositionSnapshotV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPositionSnapshotV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]
+     */
+    public function uniswapV3GetPositionSnapshotV3DTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPositionSnapshotV3DTOsHistorical'][0])
+    {
+        list($response) = $this->uniswapV3GetPositionSnapshotV3DTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV3GetPositionSnapshotV3DTOsHistoricalWithHttpInfo
+     *
+     * PositionSnapshotV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPositionSnapshotV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV3GetPositionSnapshotV3DTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPositionSnapshotV3DTOsHistorical'][0])
+    {
+        $request = $this->uniswapV3GetPositionSnapshotV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV3GetPositionSnapshotV3DTOsHistoricalAsync
+     *
+     * PositionSnapshotV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPositionSnapshotV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetPositionSnapshotV3DTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPositionSnapshotV3DTOsHistorical'][0])
+    {
+        return $this->uniswapV3GetPositionSnapshotV3DTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV3GetPositionSnapshotV3DTOsHistoricalAsyncWithHttpInfo
+     *
+     * PositionSnapshotV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPositionSnapshotV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetPositionSnapshotV3DTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPositionSnapshotV3DTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV3PositionSnapshotV3DTO[]';
+        $request = $this->uniswapV3GetPositionSnapshotV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV3GetPositionSnapshotV3DTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPositionSnapshotV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV3GetPositionSnapshotV3DTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPositionSnapshotV3DTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/PositionSnapshotV3DTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV3GetPositionV3DTOsHistorical
+     *
+     * PositionV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPositionV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV3PositionV3DTO[]
+     */
+    public function uniswapV3GetPositionV3DTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPositionV3DTOsHistorical'][0])
+    {
+        list($response) = $this->uniswapV3GetPositionV3DTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV3GetPositionV3DTOsHistoricalWithHttpInfo
+     *
+     * PositionV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPositionV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV3PositionV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV3GetPositionV3DTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPositionV3DTOsHistorical'][0])
+    {
+        $request = $this->uniswapV3GetPositionV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV3PositionV3DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV3PositionV3DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3PositionV3DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV3PositionV3DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV3PositionV3DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV3GetPositionV3DTOsHistoricalAsync
+     *
+     * PositionV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPositionV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetPositionV3DTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPositionV3DTOsHistorical'][0])
+    {
+        return $this->uniswapV3GetPositionV3DTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV3GetPositionV3DTOsHistoricalAsyncWithHttpInfo
+     *
+     * PositionV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPositionV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetPositionV3DTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPositionV3DTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV3PositionV3DTO[]';
+        $request = $this->uniswapV3GetPositionV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV3GetPositionV3DTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPositionV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV3GetPositionV3DTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetPositionV3DTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/PositionV3DTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation uniswapV3GetPositionsCurrent
      *
      * Positions (current)
@@ -6290,6 +9383,344 @@ class UniswapV3Api
     }
 
     /**
+     * Operation uniswapV3GetSwapV3DTOsHistorical
+     *
+     * SwapV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetSwapV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV3SwapV3DTO[]
+     */
+    public function uniswapV3GetSwapV3DTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetSwapV3DTOsHistorical'][0])
+    {
+        list($response) = $this->uniswapV3GetSwapV3DTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV3GetSwapV3DTOsHistoricalWithHttpInfo
+     *
+     * SwapV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetSwapV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV3SwapV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV3GetSwapV3DTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetSwapV3DTOsHistorical'][0])
+    {
+        $request = $this->uniswapV3GetSwapV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV3SwapV3DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV3SwapV3DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3SwapV3DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV3SwapV3DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV3SwapV3DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV3GetSwapV3DTOsHistoricalAsync
+     *
+     * SwapV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetSwapV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetSwapV3DTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetSwapV3DTOsHistorical'][0])
+    {
+        return $this->uniswapV3GetSwapV3DTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV3GetSwapV3DTOsHistoricalAsyncWithHttpInfo
+     *
+     * SwapV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetSwapV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetSwapV3DTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetSwapV3DTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV3SwapV3DTO[]';
+        $request = $this->uniswapV3GetSwapV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV3GetSwapV3DTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetSwapV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV3GetSwapV3DTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetSwapV3DTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/SwapV3DTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation uniswapV3GetSwapsCurrent
      *
      * Swaps (current) 🔥
@@ -6797,6 +10228,682 @@ class UniswapV3Api
 
 
         $resourcePath = '/dapps/uniswapv3/swaps/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV3GetTickDayDataV3DTOsHistorical
+     *
+     * TickDayDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickDayDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]
+     */
+    public function uniswapV3GetTickDayDataV3DTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTickDayDataV3DTOsHistorical'][0])
+    {
+        list($response) = $this->uniswapV3GetTickDayDataV3DTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV3GetTickDayDataV3DTOsHistoricalWithHttpInfo
+     *
+     * TickDayDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickDayDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV3GetTickDayDataV3DTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTickDayDataV3DTOsHistorical'][0])
+    {
+        $request = $this->uniswapV3GetTickDayDataV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV3GetTickDayDataV3DTOsHistoricalAsync
+     *
+     * TickDayDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickDayDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetTickDayDataV3DTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTickDayDataV3DTOsHistorical'][0])
+    {
+        return $this->uniswapV3GetTickDayDataV3DTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV3GetTickDayDataV3DTOsHistoricalAsyncWithHttpInfo
+     *
+     * TickDayDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickDayDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetTickDayDataV3DTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTickDayDataV3DTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV3TickDayDataV3DTO[]';
+        $request = $this->uniswapV3GetTickDayDataV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV3GetTickDayDataV3DTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickDayDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV3GetTickDayDataV3DTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTickDayDataV3DTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/TickDayDataV3DTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV3GetTickV3DTOsHistorical
+     *
+     * TickV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV3TickV3DTO[]
+     */
+    public function uniswapV3GetTickV3DTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTickV3DTOsHistorical'][0])
+    {
+        list($response) = $this->uniswapV3GetTickV3DTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV3GetTickV3DTOsHistoricalWithHttpInfo
+     *
+     * TickV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV3TickV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV3GetTickV3DTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTickV3DTOsHistorical'][0])
+    {
+        $request = $this->uniswapV3GetTickV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV3TickV3DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV3TickV3DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3TickV3DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV3TickV3DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV3TickV3DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV3GetTickV3DTOsHistoricalAsync
+     *
+     * TickV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetTickV3DTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTickV3DTOsHistorical'][0])
+    {
+        return $this->uniswapV3GetTickV3DTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV3GetTickV3DTOsHistoricalAsyncWithHttpInfo
+     *
+     * TickV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetTickV3DTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTickV3DTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV3TickV3DTO[]';
+        $request = $this->uniswapV3GetTickV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV3GetTickV3DTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV3GetTickV3DTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTickV3DTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/TickV3DTOs/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -8029,6 +12136,1020 @@ class UniswapV3Api
 
 
         $resourcePath = '/dapps/uniswapv3/ticks/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV3GetTokenHourDataV3DTOsHistorical
+     *
+     * TokenHourDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenHourDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]
+     */
+    public function uniswapV3GetTokenHourDataV3DTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTokenHourDataV3DTOsHistorical'][0])
+    {
+        list($response) = $this->uniswapV3GetTokenHourDataV3DTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV3GetTokenHourDataV3DTOsHistoricalWithHttpInfo
+     *
+     * TokenHourDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenHourDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV3GetTokenHourDataV3DTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTokenHourDataV3DTOsHistorical'][0])
+    {
+        $request = $this->uniswapV3GetTokenHourDataV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV3GetTokenHourDataV3DTOsHistoricalAsync
+     *
+     * TokenHourDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenHourDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetTokenHourDataV3DTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTokenHourDataV3DTOsHistorical'][0])
+    {
+        return $this->uniswapV3GetTokenHourDataV3DTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV3GetTokenHourDataV3DTOsHistoricalAsyncWithHttpInfo
+     *
+     * TokenHourDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenHourDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetTokenHourDataV3DTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTokenHourDataV3DTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV3TokenHourDataV3DTO[]';
+        $request = $this->uniswapV3GetTokenHourDataV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV3GetTokenHourDataV3DTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenHourDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV3GetTokenHourDataV3DTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTokenHourDataV3DTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/TokenHourDataV3DTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV3GetTokenV3DTOsHistorical
+     *
+     * TokenV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV3TokenV3DTO[]
+     */
+    public function uniswapV3GetTokenV3DTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DTOsHistorical'][0])
+    {
+        list($response) = $this->uniswapV3GetTokenV3DTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV3GetTokenV3DTOsHistoricalWithHttpInfo
+     *
+     * TokenV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV3TokenV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV3GetTokenV3DTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DTOsHistorical'][0])
+    {
+        $request = $this->uniswapV3GetTokenV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV3TokenV3DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV3TokenV3DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3TokenV3DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV3TokenV3DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV3TokenV3DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV3GetTokenV3DTOsHistoricalAsync
+     *
+     * TokenV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetTokenV3DTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DTOsHistorical'][0])
+    {
+        return $this->uniswapV3GetTokenV3DTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV3GetTokenV3DTOsHistoricalAsyncWithHttpInfo
+     *
+     * TokenV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetTokenV3DTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV3TokenV3DTO[]';
+        $request = $this->uniswapV3GetTokenV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV3GetTokenV3DTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV3GetTokenV3DTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/TokenV3DTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV3GetTokenV3DayDataDTOsHistorical
+     *
+     * TokenV3DayDataDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DayDataDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]
+     */
+    public function uniswapV3GetTokenV3DayDataDTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DayDataDTOsHistorical'][0])
+    {
+        list($response) = $this->uniswapV3GetTokenV3DayDataDTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV3GetTokenV3DayDataDTOsHistoricalWithHttpInfo
+     *
+     * TokenV3DayDataDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DayDataDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV3GetTokenV3DayDataDTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DayDataDTOsHistorical'][0])
+    {
+        $request = $this->uniswapV3GetTokenV3DayDataDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV3GetTokenV3DayDataDTOsHistoricalAsync
+     *
+     * TokenV3DayDataDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DayDataDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetTokenV3DayDataDTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DayDataDTOsHistorical'][0])
+    {
+        return $this->uniswapV3GetTokenV3DayDataDTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV3GetTokenV3DayDataDTOsHistoricalAsyncWithHttpInfo
+     *
+     * TokenV3DayDataDTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DayDataDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetTokenV3DayDataDTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DayDataDTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]';
+        $request = $this->uniswapV3GetTokenV3DayDataDTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV3GetTokenV3DayDataDTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DayDataDTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV3GetTokenV3DayDataDTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DayDataDTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/TokenV3DayDataDTOs/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -9986,6 +15107,344 @@ class UniswapV3Api
     }
 
     /**
+     * Operation uniswapV3GetTransactionV3DTOsHistorical
+     *
+     * TransactionV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTransactionV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV3TransactionV3DTO[]
+     */
+    public function uniswapV3GetTransactionV3DTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTransactionV3DTOsHistorical'][0])
+    {
+        list($response) = $this->uniswapV3GetTransactionV3DTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV3GetTransactionV3DTOsHistoricalWithHttpInfo
+     *
+     * TransactionV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTransactionV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV3TransactionV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV3GetTransactionV3DTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTransactionV3DTOsHistorical'][0])
+    {
+        $request = $this->uniswapV3GetTransactionV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV3TransactionV3DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV3TransactionV3DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3TransactionV3DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV3TransactionV3DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV3TransactionV3DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV3GetTransactionV3DTOsHistoricalAsync
+     *
+     * TransactionV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTransactionV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetTransactionV3DTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTransactionV3DTOsHistorical'][0])
+    {
+        return $this->uniswapV3GetTransactionV3DTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV3GetTransactionV3DTOsHistoricalAsyncWithHttpInfo
+     *
+     * TransactionV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTransactionV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetTransactionV3DTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTransactionV3DTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV3TransactionV3DTO[]';
+        $request = $this->uniswapV3GetTransactionV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV3GetTransactionV3DTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTransactionV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV3GetTransactionV3DTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetTransactionV3DTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/TransactionV3DTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation uniswapV3GetTransactionsHistorical
      *
      * Transactions (historical)
@@ -10246,6 +15705,344 @@ class UniswapV3Api
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $end_date,
             'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV3GetUniswapDayDataV3DTOsHistorical
+     *
+     * UniswapDayDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetUniswapDayDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]
+     */
+    public function uniswapV3GetUniswapDayDataV3DTOsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetUniswapDayDataV3DTOsHistorical'][0])
+    {
+        list($response) = $this->uniswapV3GetUniswapDayDataV3DTOsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV3GetUniswapDayDataV3DTOsHistoricalWithHttpInfo
+     *
+     * UniswapDayDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetUniswapDayDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV3GetUniswapDayDataV3DTOsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetUniswapDayDataV3DTOsHistorical'][0])
+    {
+        $request = $this->uniswapV3GetUniswapDayDataV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV3GetUniswapDayDataV3DTOsHistoricalAsync
+     *
+     * UniswapDayDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetUniswapDayDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetUniswapDayDataV3DTOsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetUniswapDayDataV3DTOsHistorical'][0])
+    {
+        return $this->uniswapV3GetUniswapDayDataV3DTOsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV3GetUniswapDayDataV3DTOsHistoricalAsyncWithHttpInfo
+     *
+     * UniswapDayDataV3DTOs (historical) 🔥
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetUniswapDayDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV3GetUniswapDayDataV3DTOsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetUniswapDayDataV3DTOsHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV3UniswapDayDataV3DTO[]';
+        $request = $this->uniswapV3GetUniswapDayDataV3DTOsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $pool_id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV3GetUniswapDayDataV3DTOsHistorical'
+     *
+     * @param  int $start_block  (optional)
+     * @param  int $end_block  (optional)
+     * @param  \DateTime $start_date  (optional)
+     * @param  \DateTime $end_date  (optional)
+     * @param  string $pool_id  (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetUniswapDayDataV3DTOsHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV3GetUniswapDayDataV3DTOsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $pool_id = null, string $contentType = self::contentTypes['uniswapV3GetUniswapDayDataV3DTOsHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv3/UniswapDayDataV3DTOs/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pool_id,
+            'poolId', // param base name
             'string', // openApiType
             'form', // style
             true, // explode

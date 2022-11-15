@@ -105,6 +105,31 @@
   (:import (java.io File)))
 
 
+(defn-spec uniswap-v2-get-bundle-v2-dtos-historical-with-http-info any?
+  "BundleV2DTOs (historical) 🔥
+  Gets BundleV2DTOs."
+  ([] (uniswap-v2-get-bundle-v2-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/BundleV2DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v2-get-bundle-v2-dtos-historical (s/coll-of uniswap-v2/bundle-v2-dto-spec)
+  "BundleV2DTOs (historical) 🔥
+  Gets BundleV2DTOs."
+  ([] (uniswap-v2-get-bundle-v2-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v2-get-bundle-v2-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v2/bundle-v2-dto-spec) res st/string-transformer)
+        res))))
+
+
 (defn-spec uniswap-v2-get-bundles-historical-with-http-info any?
   "Bundles (historical)
   Gets bundles."
@@ -127,6 +152,31 @@
    (let [res (:data (uniswap-v2-get-bundles-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v2/bundle-v2-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v2-get-burn-v2-dtos-historical-with-http-info any?
+  "BurnV2DTOs (historical) 🔥
+  Gets BurnV2DTOs."
+  ([] (uniswap-v2-get-burn-v2-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/BurnV2DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v2-get-burn-v2-dtos-historical (s/coll-of uniswap-v2/burn-v2-dto-spec)
+  "BurnV2DTOs (historical) 🔥
+  Gets BurnV2DTOs."
+  ([] (uniswap-v2-get-burn-v2-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v2-get-burn-v2-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v2/burn-v2-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -205,6 +255,56 @@
         res))))
 
 
+(defn-spec uniswap-v2-get-liquidity-position-snapshot-v2-dtos-historical-with-http-info any?
+  "LiquidityPositionSnapshotV2DTOs (historical) 🔥
+  Gets LiquidityPositionSnapshotV2DTOs."
+  ([] (uniswap-v2-get-liquidity-position-snapshot-v2-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/LiquidityPositionSnapshotV2DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v2-get-liquidity-position-snapshot-v2-dtos-historical (s/coll-of uniswap-v2/liquidity-position-snapshot-v2-dto-spec)
+  "LiquidityPositionSnapshotV2DTOs (historical) 🔥
+  Gets LiquidityPositionSnapshotV2DTOs."
+  ([] (uniswap-v2-get-liquidity-position-snapshot-v2-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v2-get-liquidity-position-snapshot-v2-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v2/liquidity-position-snapshot-v2-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v2-get-liquidity-position-v2-dtos-historical-with-http-info any?
+  "LiquidityPositionV2DTOs (historical) 🔥
+  Gets LiquidityPositionV2DTOs."
+  ([] (uniswap-v2-get-liquidity-position-v2-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/LiquidityPositionV2DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v2-get-liquidity-position-v2-dtos-historical (s/coll-of uniswap-v2/liquidity-position-v2-dto-spec)
+  "LiquidityPositionV2DTOs (historical) 🔥
+  Gets LiquidityPositionV2DTOs."
+  ([] (uniswap-v2-get-liquidity-position-v2-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v2-get-liquidity-position-v2-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v2/liquidity-position-v2-dto-spec) res st/string-transformer)
+        res))))
+
+
 (defn-spec uniswap-v2-get-liquidity-positions-historical-with-http-info any?
   "LiquidityPositions (historical)
   Gets liquidity positions."
@@ -255,6 +355,31 @@
         res))))
 
 
+(defn-spec uniswap-v2-get-mint-v2-dtos-historical-with-http-info any?
+  "MintV2DTOs (historical) 🔥
+  Gets MintV2DTOs."
+  ([] (uniswap-v2-get-mint-v2-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/MintV2DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v2-get-mint-v2-dtos-historical (s/coll-of uniswap-v2/mint-v2-dto-spec)
+  "MintV2DTOs (historical) 🔥
+  Gets MintV2DTOs."
+  ([] (uniswap-v2-get-mint-v2-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v2-get-mint-v2-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v2/mint-v2-dto-spec) res st/string-transformer)
+        res))))
+
+
 (defn-spec uniswap-v2-get-mints-historical-with-http-info any?
   "Mints (historical)
   Gets mints."
@@ -277,6 +402,81 @@
    (let [res (:data (uniswap-v2-get-mints-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v2/mint-v2-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v2-get-pair-day-data-v2-dtos-historical-with-http-info any?
+  "PairDayDataV2DTOs (historical) 🔥
+  Gets PairDayDataV2DTOs."
+  ([] (uniswap-v2-get-pair-day-data-v2-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/PairDayDataV2DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v2-get-pair-day-data-v2-dtos-historical (s/coll-of uniswap-v2/pair-day-data-v2-dto-spec)
+  "PairDayDataV2DTOs (historical) 🔥
+  Gets PairDayDataV2DTOs."
+  ([] (uniswap-v2-get-pair-day-data-v2-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v2-get-pair-day-data-v2-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v2/pair-day-data-v2-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v2-get-pair-hour-data-v2-dtos-historical-with-http-info any?
+  "PairHourDataV2DTOs (historical) 🔥
+  Gets PairHourDataV2DTOs."
+  ([] (uniswap-v2-get-pair-hour-data-v2-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/PairHourDataV2DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v2-get-pair-hour-data-v2-dtos-historical (s/coll-of uniswap-v2/pair-hour-data-v2-dto-spec)
+  "PairHourDataV2DTOs (historical) 🔥
+  Gets PairHourDataV2DTOs."
+  ([] (uniswap-v2-get-pair-hour-data-v2-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v2-get-pair-hour-data-v2-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v2/pair-hour-data-v2-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v2-get-pair-v2-dtos-historical-with-http-info any?
+  "PairV2DTOs (historical) 🔥
+  Gets PairV2DTOs."
+  ([] (uniswap-v2-get-pair-v2-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/PairV2DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v2-get-pair-v2-dtos-historical (s/coll-of uniswap-v2/pair-v2-dto-spec)
+  "PairV2DTOs (historical) 🔥
+  Gets PairV2DTOs."
+  ([] (uniswap-v2-get-pair-v2-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v2-get-pair-v2-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v2/pair-v2-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -380,6 +580,31 @@
         res))))
 
 
+(defn-spec uniswap-v2-get-swap-v2-dtos-historical-with-http-info any?
+  "SwapV2DTOs (historical) 🔥
+  Gets SwapV2DTOs."
+  ([] (uniswap-v2-get-swap-v2-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/SwapV2DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v2-get-swap-v2-dtos-historical (s/coll-of uniswap-v2/swap-v2-dto-spec)
+  "SwapV2DTOs (historical) 🔥
+  Gets SwapV2DTOs."
+  ([] (uniswap-v2-get-swap-v2-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v2-get-swap-v2-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v2/swap-v2-dto-spec) res st/string-transformer)
+        res))))
+
+
 (defn-spec uniswap-v2-get-swaps-current-with-http-info any?
   "Swaps (current) 🔥
   Gets swaps."
@@ -425,6 +650,56 @@
    (let [res (:data (uniswap-v2-get-swaps-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v2/swap-v2-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v2-get-token-day-data-v2-dtos-historical-with-http-info any?
+  "TokenDayDataV2DTOs (historical) 🔥
+  Gets TokenDayDataV2DTOs."
+  ([] (uniswap-v2-get-token-day-data-v2-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/TokenDayDataV2DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v2-get-token-day-data-v2-dtos-historical (s/coll-of uniswap-v2/token-day-data-v2-dto-spec)
+  "TokenDayDataV2DTOs (historical) 🔥
+  Gets TokenDayDataV2DTOs."
+  ([] (uniswap-v2-get-token-day-data-v2-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v2-get-token-day-data-v2-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v2/token-day-data-v2-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v2-get-token-v2-dtos-historical-with-http-info any?
+  "TokenV2DTOs (historical) 🔥
+  Gets TokenV2DTOs."
+  ([] (uniswap-v2-get-token-v2-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/TokenV2DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v2-get-token-v2-dtos-historical (s/coll-of uniswap-v2/token-v2-dto-spec)
+  "TokenV2DTOs (historical) 🔥
+  Gets TokenV2DTOs."
+  ([] (uniswap-v2-get-token-v2-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v2-get-token-v2-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v2/token-v2-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -501,6 +776,31 @@
         res))))
 
 
+(defn-spec uniswap-v2-get-transaction-v2-dtos-historical-with-http-info any?
+  "TransactionV2DTOs (historical) 🔥
+  Gets TransactionV2DTOs."
+  ([] (uniswap-v2-get-transaction-v2-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/TransactionV2DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v2-get-transaction-v2-dtos-historical (s/coll-of uniswap-v2/transaction-v2-dto-spec)
+  "TransactionV2DTOs (historical) 🔥
+  Gets TransactionV2DTOs."
+  ([] (uniswap-v2-get-transaction-v2-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v2-get-transaction-v2-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v2/transaction-v2-dto-spec) res st/string-transformer)
+        res))))
+
+
 (defn-spec uniswap-v2-get-transactions-historical-with-http-info any?
   "Transactions (historical)
   Gets transactions."
@@ -526,6 +826,81 @@
         res))))
 
 
+(defn-spec uniswap-v2-get-uniswap-day-data-v2-dtos-historical-with-http-info any?
+  "UniswapDayDataV2DTOs (historical) 🔥
+  Gets UniswapDayDataV2DTOs."
+  ([] (uniswap-v2-get-uniswap-day-data-v2-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/UniswapDayDataV2DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v2-get-uniswap-day-data-v2-dtos-historical (s/coll-of uniswap-v2/uniswap-day-data-v2-dto-spec)
+  "UniswapDayDataV2DTOs (historical) 🔥
+  Gets UniswapDayDataV2DTOs."
+  ([] (uniswap-v2-get-uniswap-day-data-v2-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v2-get-uniswap-day-data-v2-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v2/uniswap-day-data-v2-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v2-get-uniswap-factory-v2-dtos-historical-with-http-info any?
+  "UniswapFactoryV2DTOs (historical) 🔥
+  Gets UniswapFactoryV2DTOs."
+  ([] (uniswap-v2-get-uniswap-factory-v2-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/UniswapFactoryV2DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v2-get-uniswap-factory-v2-dtos-historical (s/coll-of uniswap-v2/uniswap-factory-v2-dto-spec)
+  "UniswapFactoryV2DTOs (historical) 🔥
+  Gets UniswapFactoryV2DTOs."
+  ([] (uniswap-v2-get-uniswap-factory-v2-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v2-get-uniswap-factory-v2-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v2/uniswap-factory-v2-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v2-get-user-v2-dtos-historical-with-http-info any?
+  "UserV2DTOs (historical) 🔥
+  Gets UserV2DTOs."
+  ([] (uniswap-v2-get-user-v2-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv2/UserV2DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v2-get-user-v2-dtos-historical (s/coll-of uniswap-v2/user-v2-dto-spec)
+  "UserV2DTOs (historical) 🔥
+  Gets UserV2DTOs."
+  ([] (uniswap-v2-get-user-v2-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v2-get-user-v2-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v2/user-v2-dto-spec) res st/string-transformer)
+        res))))
+
+
 (defn-spec uniswap-v2-get-users-historical-with-http-info any?
   "Users (historical)
   Gets users."
@@ -548,6 +923,31 @@
    (let [res (:data (uniswap-v2-get-users-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v2/user-v2-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v3-get-bundle-v3-dtos-historical-with-http-info any?
+  "BundleV3DTOs (historical) 🔥
+  Gets BundleV3DTOs."
+  ([] (uniswap-v3-get-bundle-v3-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/BundleV3DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v3-get-bundle-v3-dtos-historical (s/coll-of uniswap-v3/bundle-v3-dto-spec)
+  "BundleV3DTOs (historical) 🔥
+  Gets BundleV3DTOs."
+  ([] (uniswap-v3-get-bundle-v3-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v3-get-bundle-v3-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3/bundle-v3-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -596,6 +996,31 @@
    (let [res (:data (uniswap-v3-get-bundles-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v3/bundle-v3-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v3-get-burn-v3-dtos-historical-with-http-info any?
+  "BurnV3DTOs (historical) 🔥
+  Gets BurnV3DTOs."
+  ([] (uniswap-v3-get-burn-v3-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/BurnV3DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v3-get-burn-v3-dtos-historical (s/coll-of uniswap-v3/burn-v3-dto-spec)
+  "BurnV3DTOs (historical) 🔥
+  Gets BurnV3DTOs."
+  ([] (uniswap-v3-get-burn-v3-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v3-get-burn-v3-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3/burn-v3-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -745,6 +1170,56 @@
         res))))
 
 
+(defn-spec uniswap-v3-get-factory-v3-dtos-historical-with-http-info any?
+  "FactoryV3DTOs (historical) 🔥
+  Gets FactoryV3DTOs."
+  ([] (uniswap-v3-get-factory-v3-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/FactoryV3DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v3-get-factory-v3-dtos-historical (s/coll-of uniswap-v3/factory-v3-dto-spec)
+  "FactoryV3DTOs (historical) 🔥
+  Gets FactoryV3DTOs."
+  ([] (uniswap-v3-get-factory-v3-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v3-get-factory-v3-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3/factory-v3-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v3-get-mint-v3-dtos-historical-with-http-info any?
+  "MintV3DTOs (historical) 🔥
+  Gets MintV3DTOs."
+  ([] (uniswap-v3-get-mint-v3-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/MintV3DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v3-get-mint-v3-dtos-historical (s/coll-of uniswap-v3/mint-v3-dto-spec)
+  "MintV3DTOs (historical) 🔥
+  Gets MintV3DTOs."
+  ([] (uniswap-v3-get-mint-v3-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v3-get-mint-v3-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3/mint-v3-dto-spec) res st/string-transformer)
+        res))))
+
+
 (defn-spec uniswap-v3-get-mints-current-with-http-info any?
   "Mints (current)
   Gets mints."
@@ -792,6 +1267,81 @@
    (let [res (:data (uniswap-v3-get-mints-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v3/mint-v3-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v3-get-pool-day-data-v3-dtos-historical-with-http-info any?
+  "PoolDayDataV3DTOs (historical) 🔥
+  Gets PoolDayDataV3DTOs."
+  ([] (uniswap-v3-get-pool-day-data-v3-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/PoolDayDataV3DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v3-get-pool-day-data-v3-dtos-historical (s/coll-of uniswap-v3/pool-day-data-v3-dto-spec)
+  "PoolDayDataV3DTOs (historical) 🔥
+  Gets PoolDayDataV3DTOs."
+  ([] (uniswap-v3-get-pool-day-data-v3-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v3-get-pool-day-data-v3-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3/pool-day-data-v3-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v3-get-pool-hour-data-v3-dtos-historical-with-http-info any?
+  "PoolHourDataV3DTOs (historical) 🔥
+  Gets PoolHourDataV3DTOs."
+  ([] (uniswap-v3-get-pool-hour-data-v3-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/PoolHourDataV3DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v3-get-pool-hour-data-v3-dtos-historical (s/coll-of uniswap-v3/pool-hour-data-v3-dto-spec)
+  "PoolHourDataV3DTOs (historical) 🔥
+  Gets PoolHourDataV3DTOs."
+  ([] (uniswap-v3-get-pool-hour-data-v3-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v3-get-pool-hour-data-v3-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3/pool-hour-data-v3-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v3-get-pool-v3-dtos-historical-with-http-info any?
+  "PoolV3DTOs (historical) 🔥
+  Gets PoolV3DTOs."
+  ([] (uniswap-v3-get-pool-v3-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/PoolV3DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v3-get-pool-v3-dtos-historical (s/coll-of uniswap-v3/pool-v3-dto-spec)
+  "PoolV3DTOs (historical) 🔥
+  Gets PoolV3DTOs."
+  ([] (uniswap-v3-get-pool-v3-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v3-get-pool-v3-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3/pool-v3-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -945,6 +1495,56 @@
         res))))
 
 
+(defn-spec uniswap-v3-get-position-snapshot-v3-dtos-historical-with-http-info any?
+  "PositionSnapshotV3DTOs (historical) 🔥
+  Gets PositionSnapshotV3DTOs."
+  ([] (uniswap-v3-get-position-snapshot-v3-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/PositionSnapshotV3DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v3-get-position-snapshot-v3-dtos-historical (s/coll-of uniswap-v3/position-snapshot-v3-dto-spec)
+  "PositionSnapshotV3DTOs (historical) 🔥
+  Gets PositionSnapshotV3DTOs."
+  ([] (uniswap-v3-get-position-snapshot-v3-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v3-get-position-snapshot-v3-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3/position-snapshot-v3-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v3-get-position-v3-dtos-historical-with-http-info any?
+  "PositionV3DTOs (historical) 🔥
+  Gets PositionV3DTOs."
+  ([] (uniswap-v3-get-position-v3-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/PositionV3DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v3-get-position-v3-dtos-historical (s/coll-of uniswap-v3/position-v3-dto-spec)
+  "PositionV3DTOs (historical) 🔥
+  Gets PositionV3DTOs."
+  ([] (uniswap-v3-get-position-v3-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v3-get-position-v3-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3/position-v3-dto-spec) res st/string-transformer)
+        res))))
+
+
 (defn-spec uniswap-v3-get-positions-current-with-http-info any?
   "Positions (current)
   Gets positions."
@@ -1045,6 +1645,31 @@
         res))))
 
 
+(defn-spec uniswap-v3-get-swap-v3-dtos-historical-with-http-info any?
+  "SwapV3DTOs (historical) 🔥
+  Gets SwapV3DTOs."
+  ([] (uniswap-v3-get-swap-v3-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/SwapV3DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v3-get-swap-v3-dtos-historical (s/coll-of uniswap-v3/swap-v3-dto-spec)
+  "SwapV3DTOs (historical) 🔥
+  Gets SwapV3DTOs."
+  ([] (uniswap-v3-get-swap-v3-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v3-get-swap-v3-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3/swap-v3-dto-spec) res st/string-transformer)
+        res))))
+
+
 (defn-spec uniswap-v3-get-swaps-current-with-http-info any?
   "Swaps (current) 🔥
   Gets swaps."
@@ -1092,6 +1717,56 @@
    (let [res (:data (uniswap-v3-get-swaps-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v3/swap-v3-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v3-get-tick-day-data-v3-dtos-historical-with-http-info any?
+  "TickDayDataV3DTOs (historical) 🔥
+  Gets TickDayDataV3DTOs."
+  ([] (uniswap-v3-get-tick-day-data-v3-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/TickDayDataV3DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v3-get-tick-day-data-v3-dtos-historical (s/coll-of uniswap-v3/tick-day-data-v3-dto-spec)
+  "TickDayDataV3DTOs (historical) 🔥
+  Gets TickDayDataV3DTOs."
+  ([] (uniswap-v3-get-tick-day-data-v3-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v3-get-tick-day-data-v3-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3/tick-day-data-v3-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v3-get-tick-v3-dtos-historical-with-http-info any?
+  "TickV3DTOs (historical) 🔥
+  Gets TickV3DTOs."
+  ([] (uniswap-v3-get-tick-v3-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/TickV3DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v3-get-tick-v3-dtos-historical (s/coll-of uniswap-v3/tick-v3-dto-spec)
+  "TickV3DTOs (historical) 🔥
+  Gets TickV3DTOs."
+  ([] (uniswap-v3-get-tick-v3-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v3-get-tick-v3-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3/tick-v3-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -1192,6 +1867,81 @@
    (let [res (:data (uniswap-v3-get-ticks-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v3/tick-v3-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v3-get-token-hour-data-v3-dtos-historical-with-http-info any?
+  "TokenHourDataV3DTOs (historical) 🔥
+  Gets TokenHourDataV3DTOs."
+  ([] (uniswap-v3-get-token-hour-data-v3-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/TokenHourDataV3DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v3-get-token-hour-data-v3-dtos-historical (s/coll-of uniswap-v3/token-hour-data-v3-dto-spec)
+  "TokenHourDataV3DTOs (historical) 🔥
+  Gets TokenHourDataV3DTOs."
+  ([] (uniswap-v3-get-token-hour-data-v3-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v3-get-token-hour-data-v3-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3/token-hour-data-v3-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v3-get-token-v3-day-data-dtos-historical-with-http-info any?
+  "TokenV3DayDataDTOs (historical) 🔥
+  Gets TokenV3DayDataDTOs."
+  ([] (uniswap-v3-get-token-v3-day-data-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/TokenV3DayDataDTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v3-get-token-v3-day-data-dtos-historical (s/coll-of uniswap-v3/token-v3-day-data-dto-spec)
+  "TokenV3DayDataDTOs (historical) 🔥
+  Gets TokenV3DayDataDTOs."
+  ([] (uniswap-v3-get-token-v3-day-data-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v3-get-token-v3-day-data-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3/token-v3-day-data-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v3-get-token-v3-dtos-historical-with-http-info any?
+  "TokenV3DTOs (historical) 🔥
+  Gets TokenV3DTOs."
+  ([] (uniswap-v3-get-token-v3-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/TokenV3DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v3-get-token-v3-dtos-historical (s/coll-of uniswap-v3/token-v3-dto-spec)
+  "TokenV3DTOs (historical) 🔥
+  Gets TokenV3DTOs."
+  ([] (uniswap-v3-get-token-v3-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v3-get-token-v3-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3/token-v3-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -1345,6 +2095,31 @@
         res))))
 
 
+(defn-spec uniswap-v3-get-transaction-v3-dtos-historical-with-http-info any?
+  "TransactionV3DTOs (historical) 🔥
+  Gets TransactionV3DTOs."
+  ([] (uniswap-v3-get-transaction-v3-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/TransactionV3DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v3-get-transaction-v3-dtos-historical (s/coll-of uniswap-v3/transaction-v3-dto-spec)
+  "TransactionV3DTOs (historical) 🔥
+  Gets TransactionV3DTOs."
+  ([] (uniswap-v3-get-transaction-v3-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v3-get-transaction-v3-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3/transaction-v3-dto-spec) res st/string-transformer)
+        res))))
+
+
 (defn-spec uniswap-v3-get-transactions-historical-with-http-info any?
   "Transactions (historical)
   Gets transactions."
@@ -1367,6 +2142,31 @@
    (let [res (:data (uniswap-v3-get-transactions-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v3/transaction-v3-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec uniswap-v3-get-uniswap-day-data-v3-dtos-historical-with-http-info any?
+  "UniswapDayDataV3DTOs (historical) 🔥
+  Gets UniswapDayDataV3DTOs."
+  ([] (uniswap-v3-get-uniswap-day-data-v3-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/uniswapv3/UniswapDayDataV3DTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec uniswap-v3-get-uniswap-day-data-v3-dtos-historical (s/coll-of uniswap-v3/uniswap-day-data-v3-dto-spec)
+  "UniswapDayDataV3DTOs (historical) 🔥
+  Gets UniswapDayDataV3DTOs."
+  ([] (uniswap-v3-get-uniswap-day-data-v3-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (uniswap-v3-get-uniswap-day-data-v3-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of uniswap-v3/uniswap-day-data-v3-dto-spec) res st/string-transformer)
         res))))
 
 

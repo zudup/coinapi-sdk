@@ -105,6 +105,31 @@
   (:import (java.io File)))
 
 
+(defn-spec cow-get-order-dtos-historical-with-http-info any?
+  "OrderDTOs (historical) 🔥
+  Gets OrderDTOs."
+  ([] (cow-get-order-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/cow/OrderDTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec cow-get-order-dtos-historical (s/coll-of cow/order-dto-spec)
+  "OrderDTOs (historical) 🔥
+  Gets OrderDTOs."
+  ([] (cow-get-order-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (cow-get-order-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of cow/order-dto-spec) res st/string-transformer)
+        res))))
+
+
 (defn-spec cow-get-orders-historical-with-http-info any?
   "Orders (historical)
   Gets orders."
@@ -127,6 +152,31 @@
    (let [res (:data (cow-get-orders-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of cow/order-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec cow-get-settlement-dtos-historical-with-http-info any?
+  "SettlementDTOs (historical) 🔥
+  Gets SettlementDTOs."
+  ([] (cow-get-settlement-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/cow/SettlementDTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec cow-get-settlement-dtos-historical (s/coll-of cow/settlement-dto-spec)
+  "SettlementDTOs (historical) 🔥
+  Gets SettlementDTOs."
+  ([] (cow-get-settlement-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (cow-get-settlement-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of cow/settlement-dto-spec) res st/string-transformer)
         res))))
 
 
@@ -155,6 +205,31 @@
         res))))
 
 
+(defn-spec cow-get-token-dtos-historical-with-http-info any?
+  "TokenDTOs (historical) 🔥
+  Gets TokenDTOs."
+  ([] (cow-get-token-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/cow/TokenDTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec cow-get-token-dtos-historical (s/coll-of cow/token-dto-spec)
+  "TokenDTOs (historical) 🔥
+  Gets TokenDTOs."
+  ([] (cow-get-token-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (cow-get-token-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of cow/token-dto-spec) res st/string-transformer)
+        res))))
+
+
 (defn-spec cow-get-tokens-historical-with-http-info any?
   "Tokens (historical) 🔥
   Gets tokens."
@@ -180,6 +255,31 @@
         res))))
 
 
+(defn-spec cow-get-trade-dtos-historical-with-http-info any?
+  "TradeDTOs (historical) 🔥
+  Gets TradeDTOs."
+  ([] (cow-get-trade-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/cow/TradeDTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec cow-get-trade-dtos-historical (s/coll-of cow/trade-dto-spec)
+  "TradeDTOs (historical) 🔥
+  Gets TradeDTOs."
+  ([] (cow-get-trade-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (cow-get-trade-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of cow/trade-dto-spec) res st/string-transformer)
+        res))))
+
+
 (defn-spec cow-get-trades-historical-with-http-info any?
   "Trades (historical) 🔥
   Gets trades."
@@ -202,6 +302,31 @@
    (let [res (:data (cow-get-trades-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of cow/trade-dto-spec) res st/string-transformer)
+        res))))
+
+
+(defn-spec cow-get-user-dtos-historical-with-http-info any?
+  "UserDTOs (historical) 🔥
+  Gets UserDTOs."
+  ([] (cow-get-user-dtos-historical-with-http-info nil))
+  ([{:keys [startBlock endBlock startDate endDate poolId]} (s/map-of keyword? any?)]
+   (call-api "/dapps/cow/UserDTOs/historical" :get
+             {:path-params   {}
+              :header-params {}
+              :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "poolId" poolId }
+              :form-params   {}
+              :content-types []
+              :accepts       ["text/plain" "application/json" "text/json"]
+              :auth-names    []})))
+
+(defn-spec cow-get-user-dtos-historical (s/coll-of cow/user-dto-spec)
+  "UserDTOs (historical) 🔥
+  Gets UserDTOs."
+  ([] (cow-get-user-dtos-historical nil))
+  ([optional-params any?]
+   (let [res (:data (cow-get-user-dtos-historical-with-http-info optional-params))]
+     (if (:decode-models *api-context*)
+        (st/decode (s/coll-of cow/user-dto-spec) res st/string-transformer)
         res))))
 
 

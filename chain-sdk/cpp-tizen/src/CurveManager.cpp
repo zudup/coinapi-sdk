@@ -48,6 +48,179 @@ static gpointer __CurveManagerthreadFunc(gpointer data)
 }
 
 
+static bool curveGetAccountDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.AccountDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.AccountDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.AccountDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.AccountDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetAccountDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.AccountDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/AccountDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetAccountDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetAccountDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetAccountDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.AccountDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetAccountDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetAccountDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.AccountDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetAccountDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
 static bool curveGetAccounts (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
@@ -211,6 +384,179 @@ bool CurveManager::curveGetAccounts (historical)Sync(char * accessToken,
 {
 	return curveGetAccounts (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
+	handler, userData, false);
+}
+
+static bool curveGetAddLiquidityEventDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.AddLiquidityEventDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.AddLiquidityEventDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.AddLiquidityEventDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.AddLiquidityEventDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetAddLiquidityEventDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.AddLiquidityEventDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/AddLiquidityEventDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetAddLiquidityEventDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetAddLiquidityEventDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetAddLiquidityEventDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.AddLiquidityEventDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetAddLiquidityEventDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetAddLiquidityEventDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.AddLiquidityEventDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetAddLiquidityEventDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
 	handler, userData, false);
 }
 
@@ -383,6 +729,179 @@ bool CurveManager::curveGetAddLiquidityEvents (historical)Sync(char * accessToke
 	, void* userData)
 {
 	return curveGetAddLiquidityEvents (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool curveGetAdminFeeChangeLogDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.AdminFeeChangeLogDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.AdminFeeChangeLogDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.AdminFeeChangeLogDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.AdminFeeChangeLogDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetAdminFeeChangeLogDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.AdminFeeChangeLogDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/AdminFeeChangeLogDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetAdminFeeChangeLogDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetAdminFeeChangeLogDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetAdminFeeChangeLogDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.AdminFeeChangeLogDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetAdminFeeChangeLogDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetAdminFeeChangeLogDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.AdminFeeChangeLogDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetAdminFeeChangeLogDTOs (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, poolId, 
 	handler, userData, false);
 }
@@ -560,6 +1079,179 @@ bool CurveManager::curveGetAdminFeeChangeLogs (historical)Sync(char * accessToke
 	handler, userData, false);
 }
 
+static bool curveGetAmplificationCoeffChangeLogDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.AmplificationCoeffChangeLogDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.AmplificationCoeffChangeLogDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.AmplificationCoeffChangeLogDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.AmplificationCoeffChangeLogDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetAmplificationCoeffChangeLogDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.AmplificationCoeffChangeLogDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/AmplificationCoeffChangeLogDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetAmplificationCoeffChangeLogDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetAmplificationCoeffChangeLogDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetAmplificationCoeffChangeLogDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.AmplificationCoeffChangeLogDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetAmplificationCoeffChangeLogDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetAmplificationCoeffChangeLogDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.AmplificationCoeffChangeLogDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetAmplificationCoeffChangeLogDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
 static bool curveGetAmplificationCoeffChangeLogs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
@@ -733,6 +1425,179 @@ bool CurveManager::curveGetAmplificationCoeffChangeLogs (historical)Sync(char * 
 	handler, userData, false);
 }
 
+static bool curveGetCoinDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.CoinDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.CoinDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.CoinDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.CoinDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetCoinDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.CoinDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/CoinDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetCoinDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetCoinDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetCoinDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.CoinDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetCoinDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetCoinDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.CoinDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetCoinDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
 static bool curveGetCoins (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
@@ -902,6 +1767,352 @@ bool CurveManager::curveGetCoins (historical)Sync(char * accessToken,
 	, void* userData)
 {
 	return curveGetCoins (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool curveGetContractDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.ContractDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.ContractDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.ContractDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.ContractDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetContractDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.ContractDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/ContractDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetContractDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetContractDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetContractDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.ContractDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetContractDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetContractDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.ContractDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetContractDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool curveGetContractVersionDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.ContractVersionDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.ContractVersionDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.ContractVersionDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.ContractVersionDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetContractVersionDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.ContractVersionDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/ContractVersionDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetContractVersionDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetContractVersionDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetContractVersionDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.ContractVersionDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetContractVersionDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetContractVersionDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.ContractVersionDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetContractVersionDTOs (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, poolId, 
 	handler, userData, false);
 }
@@ -1252,6 +2463,179 @@ bool CurveManager::curveGetContractsVersions (historical)Sync(char * accessToken
 	handler, userData, false);
 }
 
+static bool curveGetDailyVolumeDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.DailyVolumeDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.DailyVolumeDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.DailyVolumeDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.DailyVolumeDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetDailyVolumeDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.DailyVolumeDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/DailyVolumeDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetDailyVolumeDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetDailyVolumeDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetDailyVolumeDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.DailyVolumeDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetDailyVolumeDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetDailyVolumeDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.DailyVolumeDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetDailyVolumeDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
 static bool curveGetDailyVolumes (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
@@ -1421,6 +2805,179 @@ bool CurveManager::curveGetDailyVolumes (historical)Sync(char * accessToken,
 	, void* userData)
 {
 	return curveGetDailyVolumes (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool curveGetExchangeDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.ExchangeDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.ExchangeDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.ExchangeDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.ExchangeDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetExchangeDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.ExchangeDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/ExchangeDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetExchangeDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetExchangeDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetExchangeDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.ExchangeDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetExchangeDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetExchangeDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.ExchangeDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetExchangeDTOs (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, poolId, 
 	handler, userData, false);
 }
@@ -1598,6 +3155,179 @@ bool CurveManager::curveGetExchanges (historical)Sync(char * accessToken,
 	handler, userData, false);
 }
 
+static bool curveGetFeeChangeLogDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.FeeChangeLogDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.FeeChangeLogDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.FeeChangeLogDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.FeeChangeLogDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetFeeChangeLogDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.FeeChangeLogDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/FeeChangeLogDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetFeeChangeLogDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetFeeChangeLogDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetFeeChangeLogDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.FeeChangeLogDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetFeeChangeLogDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetFeeChangeLogDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.FeeChangeLogDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetFeeChangeLogDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
 static bool curveGetFeeChangeLogs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
@@ -1767,6 +3497,1563 @@ bool CurveManager::curveGetFeeChangeLogs (historical)Sync(char * accessToken,
 	, void* userData)
 {
 	return curveGetFeeChangeLogs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool curveGetGaugeDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.GaugeDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.GaugeDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.GaugeDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.GaugeDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetGaugeDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/GaugeDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetGaugeDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetGaugeDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetGaugeDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetGaugeDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetGaugeDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetGaugeDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool curveGetGaugeDepositDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.GaugeDepositDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.GaugeDepositDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.GaugeDepositDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.GaugeDepositDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetGaugeDepositDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeDepositDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/GaugeDepositDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetGaugeDepositDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetGaugeDepositDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetGaugeDepositDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeDepositDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetGaugeDepositDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetGaugeDepositDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeDepositDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetGaugeDepositDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool curveGetGaugeLiquidityDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.GaugeLiquidityDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.GaugeLiquidityDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetGaugeLiquidityDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/GaugeLiquidityDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetGaugeLiquidityDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetGaugeLiquidityDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetGaugeLiquidityDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetGaugeLiquidityDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetGaugeLiquidityDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetGaugeLiquidityDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool curveGetGaugeTotalWeightDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.GaugeTotalWeightDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.GaugeTotalWeightDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.GaugeTotalWeightDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.GaugeTotalWeightDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetGaugeTotalWeightDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeTotalWeightDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/GaugeTotalWeightDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetGaugeTotalWeightDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetGaugeTotalWeightDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetGaugeTotalWeightDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeTotalWeightDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetGaugeTotalWeightDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetGaugeTotalWeightDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeTotalWeightDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetGaugeTotalWeightDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool curveGetGaugeTypeDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.GaugeTypeDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.GaugeTypeDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.GaugeTypeDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.GaugeTypeDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetGaugeTypeDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeTypeDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/GaugeTypeDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetGaugeTypeDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetGaugeTypeDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetGaugeTypeDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeTypeDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetGaugeTypeDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetGaugeTypeDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeTypeDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetGaugeTypeDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool curveGetGaugeTypeWeightDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.GaugeTypeWeightDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.GaugeTypeWeightDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.GaugeTypeWeightDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.GaugeTypeWeightDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetGaugeTypeWeightDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeTypeWeightDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/GaugeTypeWeightDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetGaugeTypeWeightDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetGaugeTypeWeightDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetGaugeTypeWeightDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeTypeWeightDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetGaugeTypeWeightDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetGaugeTypeWeightDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeTypeWeightDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetGaugeTypeWeightDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool curveGetGaugeWeightDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.GaugeWeightDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.GaugeWeightDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.GaugeWeightDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.GaugeWeightDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetGaugeWeightDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeWeightDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/GaugeWeightDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetGaugeWeightDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetGaugeWeightDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetGaugeWeightDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeWeightDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetGaugeWeightDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetGaugeWeightDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeWeightDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetGaugeWeightDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool curveGetGaugeWeightVoteDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.GaugeWeightVoteDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.GaugeWeightVoteDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.GaugeWeightVoteDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.GaugeWeightVoteDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetGaugeWeightVoteDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeWeightVoteDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/GaugeWeightVoteDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetGaugeWeightVoteDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetGaugeWeightVoteDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetGaugeWeightVoteDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeWeightVoteDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetGaugeWeightVoteDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetGaugeWeightVoteDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeWeightVoteDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetGaugeWeightVoteDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool curveGetGaugeWithdrawDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.GaugeWithdrawDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.GaugeWithdrawDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.GaugeWithdrawDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.GaugeWithdrawDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetGaugeWithdrawDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeWithdrawDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/GaugeWithdrawDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetGaugeWithdrawDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetGaugeWithdrawDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetGaugeWithdrawDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeWithdrawDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetGaugeWithdrawDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetGaugeWithdrawDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.GaugeWithdrawDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetGaugeWithdrawDTOs (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, poolId, 
 	handler, userData, false);
 }
@@ -3272,6 +6559,179 @@ bool CurveManager::curveGetGaugesWithdraw (historical)Sync(char * accessToken,
 	handler, userData, false);
 }
 
+static bool curveGetHourlyVolumeDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.HourlyVolumeDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.HourlyVolumeDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.HourlyVolumeDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.HourlyVolumeDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetHourlyVolumeDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.HourlyVolumeDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/HourlyVolumeDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetHourlyVolumeDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetHourlyVolumeDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetHourlyVolumeDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.HourlyVolumeDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetHourlyVolumeDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetHourlyVolumeDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.HourlyVolumeDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetHourlyVolumeDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
 static bool curveGetHourlyVolumes (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
@@ -3441,6 +6901,179 @@ bool CurveManager::curveGetHourlyVolumes (historical)Sync(char * accessToken,
 	, void* userData)
 {
 	return curveGetHourlyVolumes (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool curveGetLpTokenDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.LpTokenDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.LpTokenDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.LpTokenDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.LpTokenDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetLpTokenDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.LpTokenDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/LpTokenDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetLpTokenDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetLpTokenDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetLpTokenDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.LpTokenDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetLpTokenDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetLpTokenDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.LpTokenDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetLpTokenDTOs (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, poolId, 
 	handler, userData, false);
 }
@@ -3618,6 +7251,179 @@ bool CurveManager::curveGetLpTokens (historical)Sync(char * accessToken,
 	handler, userData, false);
 }
 
+static bool curveGetPoolDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.PoolDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.PoolDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.PoolDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.PoolDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetPoolDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.PoolDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/PoolDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetPoolDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetPoolDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetPoolDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.PoolDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetPoolDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetPoolDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.PoolDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetPoolDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
 static bool curveGetPools (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
@@ -3787,6 +7593,352 @@ bool CurveManager::curveGetPools (historical)Sync(char * accessToken,
 	, void* userData)
 {
 	return curveGetPools (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool curveGetProposalDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.ProposalDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.ProposalDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.ProposalDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.ProposalDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetProposalDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.ProposalDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/ProposalDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetProposalDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetProposalDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetProposalDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.ProposalDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetProposalDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetProposalDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.ProposalDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetProposalDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool curveGetProposalVoteDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.ProposalVoteDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.ProposalVoteDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.ProposalVoteDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.ProposalVoteDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetProposalVoteDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.ProposalVoteDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/ProposalVoteDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetProposalVoteDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetProposalVoteDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetProposalVoteDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.ProposalVoteDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetProposalVoteDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetProposalVoteDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.ProposalVoteDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetProposalVoteDTOs (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, poolId, 
 	handler, userData, false);
 }
@@ -4123,6 +8275,179 @@ bool CurveManager::curveGetProposalsVotes (historical)Sync(char * accessToken,
 	handler, userData, false);
 }
 
+static bool curveGetRemoveLiquidityEventDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.RemoveLiquidityEventDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.RemoveLiquidityEventDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.RemoveLiquidityEventDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.RemoveLiquidityEventDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetRemoveLiquidityEventDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.RemoveLiquidityEventDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/RemoveLiquidityEventDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetRemoveLiquidityEventDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetRemoveLiquidityEventDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetRemoveLiquidityEventDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.RemoveLiquidityEventDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetRemoveLiquidityEventDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetRemoveLiquidityEventDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.RemoveLiquidityEventDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetRemoveLiquidityEventDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
 static bool curveGetRemoveLiquidityEvents (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
@@ -4292,6 +8617,179 @@ bool CurveManager::curveGetRemoveLiquidityEvents (historical)Sync(char * accessT
 	, void* userData)
 {
 	return curveGetRemoveLiquidityEvents (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool curveGetRemoveLiquidityOneEventDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.RemoveLiquidityOneEventDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.RemoveLiquidityOneEventDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.RemoveLiquidityOneEventDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.RemoveLiquidityOneEventDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetRemoveLiquidityOneEventDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.RemoveLiquidityOneEventDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/RemoveLiquidityOneEventDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetRemoveLiquidityOneEventDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetRemoveLiquidityOneEventDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetRemoveLiquidityOneEventDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.RemoveLiquidityOneEventDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetRemoveLiquidityOneEventDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetRemoveLiquidityOneEventDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.RemoveLiquidityOneEventDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetRemoveLiquidityOneEventDTOs (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, poolId, 
 	handler, userData, false);
 }
@@ -4469,6 +8967,179 @@ bool CurveManager::curveGetRemoveLiquidityOneEvents (historical)Sync(char * acce
 	handler, userData, false);
 }
 
+static bool curveGetSystemStateDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.SystemStateDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.SystemStateDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.SystemStateDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.SystemStateDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetSystemStateDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.SystemStateDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/SystemStateDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetSystemStateDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetSystemStateDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetSystemStateDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.SystemStateDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetSystemStateDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetSystemStateDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.SystemStateDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetSystemStateDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
 static bool curveGetSystemStates (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
@@ -4632,6 +9303,179 @@ bool CurveManager::curveGetSystemStates (historical)Sync(char * accessToken,
 {
 	return curveGetSystemStates (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
+	handler, userData, false);
+}
+
+static bool curveGetTokenDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.TokenDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.TokenDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.TokenDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.TokenDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetTokenDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.TokenDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/TokenDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetTokenDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetTokenDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetTokenDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.TokenDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetTokenDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetTokenDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.TokenDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetTokenDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
 	handler, userData, false);
 }
 
@@ -4808,6 +9652,179 @@ bool CurveManager::curveGetTokens (historical)Sync(char * accessToken,
 	handler, userData, false);
 }
 
+static bool curveGetTransferOwnershipEventDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.TransferOwnershipEventDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.TransferOwnershipEventDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.TransferOwnershipEventDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.TransferOwnershipEventDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetTransferOwnershipEventDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.TransferOwnershipEventDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/TransferOwnershipEventDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetTransferOwnershipEventDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetTransferOwnershipEventDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetTransferOwnershipEventDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.TransferOwnershipEventDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetTransferOwnershipEventDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetTransferOwnershipEventDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.TransferOwnershipEventDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetTransferOwnershipEventDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
 static bool curveGetTransferOwnershipEvents (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
@@ -4977,6 +9994,179 @@ bool CurveManager::curveGetTransferOwnershipEvents (historical)Sync(char * acces
 	, void* userData)
 {
 	return curveGetTransferOwnershipEvents (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
+static bool curveGetUnderlyingCoinDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.UnderlyingCoinDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.UnderlyingCoinDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.UnderlyingCoinDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.UnderlyingCoinDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetUnderlyingCoinDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.UnderlyingCoinDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/UnderlyingCoinDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetUnderlyingCoinDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetUnderlyingCoinDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetUnderlyingCoinDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.UnderlyingCoinDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetUnderlyingCoinDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetUnderlyingCoinDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.UnderlyingCoinDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetUnderlyingCoinDTOs (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, poolId, 
 	handler, userData, false);
 }
@@ -5154,6 +10344,179 @@ bool CurveManager::curveGetUnderlyingCoins (historical)Sync(char * accessToken,
 	handler, userData, false);
 }
 
+static bool curveGetVotingAppDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.VotingAppDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.VotingAppDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.VotingAppDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.VotingAppDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetVotingAppDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.VotingAppDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/VotingAppDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetVotingAppDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetVotingAppDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetVotingAppDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.VotingAppDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetVotingAppDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetVotingAppDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.VotingAppDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetVotingAppDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, false);
+}
+
 static bool curveGetVotingApps (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
@@ -5317,6 +10680,179 @@ bool CurveManager::curveGetVotingApps (historical)Sync(char * accessToken,
 {
 	return curveGetVotingApps (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, 
+	handler, userData, false);
+}
+
+static bool curveGetWeeklyVolumeDTOs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+	void(* voidHandler)())
+{
+	void(* handler)(std::list<Curve.WeeklyVolumeDTO>, Error, void* )
+	= reinterpret_cast<void(*)(std::list<Curve.WeeklyVolumeDTO>, Error, void* )> (voidHandler);
+	
+	JsonNode* pJson;
+	char * data = p_chunk.memory;
+
+	std::list<Curve.WeeklyVolumeDTO> out;
+	
+
+	if (code >= 200 && code < 300) {
+		Error error(code, string("No Error"));
+
+
+
+		pJson = json_from_string(data, NULL);
+		JsonArray * jsonarray = json_node_get_array (pJson);
+		guint length = json_array_get_length (jsonarray);
+		for(guint i = 0; i < length; i++){
+			JsonNode* myJson = json_array_get_element (jsonarray, i);
+			char * singlenodestr = json_to_string(myJson, false);
+			Curve.WeeklyVolumeDTO singlemodel;
+			singlemodel.fromJson(singlenodestr);
+			out.push_front(singlemodel);
+			g_free(static_cast<gpointer>(singlenodestr));
+			json_node_free(myJson);
+		}
+		json_array_unref (jsonarray);
+		json_node_free(pJson);
+
+
+	} else {
+		Error error;
+		if (errormsg != NULL) {
+			error = Error(code, string(errormsg));
+		} else if (p_chunk.memory != NULL) {
+			error = Error(code, string(p_chunk.memory));
+		} else {
+			error = Error(code, string("Unknown Error"));
+		}
+		 handler(out, error, userData);
+		return false;
+			}
+}
+
+static bool curveGetWeeklyVolumeDTOs (historical)Helper(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.WeeklyVolumeDTO>, Error, void* )
+	, void* userData, bool isAsync)
+{
+
+	//TODO: maybe delete headerList after its used to free up space?
+	struct curl_slist *headerList = NULL;
+
+	
+	string accessHeader = "Authorization: Bearer ";
+	accessHeader.append(accessToken);
+	headerList = curl_slist_append(headerList, accessHeader.c_str());
+	headerList = curl_slist_append(headerList, "Content-Type: application/json");
+
+	map <string, string> queryParams;
+	string itemAtq;
+	
+
+	itemAtq = stringify(&startBlock, "long long");
+	queryParams.insert(pair<string, string>("startBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startBlock");
+	}
+
+
+	itemAtq = stringify(&endBlock, "long long");
+	queryParams.insert(pair<string, string>("endBlock", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endBlock");
+	}
+
+
+	itemAtq = stringify(&startDate, "std::string");
+	queryParams.insert(pair<string, string>("startDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("startDate");
+	}
+
+
+	itemAtq = stringify(&endDate, "std::string");
+	queryParams.insert(pair<string, string>("endDate", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("endDate");
+	}
+
+
+	itemAtq = stringify(&poolId, "std::string");
+	queryParams.insert(pair<string, string>("poolId", itemAtq));
+	if( itemAtq.empty()==true){
+		queryParams.erase("poolId");
+	}
+
+	string mBody = "";
+	JsonNode* node;
+	JsonArray* json_array;
+
+	string url("/dapps/curve/WeeklyVolumeDTOs/historical");
+	int pos;
+
+
+	//TODO: free memory of errormsg, memorystruct
+	MemoryStruct_s* p_chunk = new MemoryStruct_s();
+	long code;
+	char* errormsg = NULL;
+	string myhttpmethod("GET");
+
+	if(strcmp("PUT", "GET") == 0){
+		if(strcmp("", mBody.c_str()) == 0){
+			mBody.append("{}");
+		}
+	}
+
+	if(!isAsync){
+		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg);
+		bool retval = curveGetWeeklyVolumeDTOs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+
+		curl_slist_free_all(headerList);
+		if (p_chunk) {
+			if(p_chunk->memory) {
+				free(p_chunk->memory);
+			}
+			delete (p_chunk);
+		}
+		if (errormsg) {
+			free(errormsg);
+		}
+		return retval;
+	} else{
+		GThread *thread = NULL;
+		RequestInfo *requestInfo = NULL;
+
+		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetWeeklyVolumeDTOs (historical)Processor);;
+		if(requestInfo == NULL)
+			return false;
+
+		thread = g_thread_new(NULL, __CurveManagerthreadFunc, static_cast<gpointer>(requestInfo));
+		return true;
+	}
+}
+
+
+
+
+bool CurveManager::curveGetWeeklyVolumeDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.WeeklyVolumeDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetWeeklyVolumeDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
+	handler, userData, true);
+}
+
+bool CurveManager::curveGetWeeklyVolumeDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Curve.WeeklyVolumeDTO>, Error, void* )
+	, void* userData)
+{
+	return curveGetWeeklyVolumeDTOs (historical)Helper(accessToken,
+	startBlock, endBlock, startDate, endDate, poolId, 
 	handler, userData, false);
 }
 

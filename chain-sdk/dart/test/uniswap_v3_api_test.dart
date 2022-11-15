@@ -17,6 +17,15 @@ void main() {
   // final instance = UniswapV3Api();
 
   group('tests for UniswapV3Api', () {
+    // BundleV3DTOs (historical) 🔥
+    //
+    // Gets BundleV3DTOs.
+    //
+    //Future<List<UniswapV3BundleV3DTO>> uniswapV3GetBundleV3DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test uniswapV3GetBundleV3DTOsHistorical', () async {
+      // TODO
+    });
+
     // Bundles (current)
     //
     // Gets bundles.
@@ -32,6 +41,15 @@ void main() {
     //
     //Future<List<UniswapV3BundleV3DTO>> uniswapV3GetBundlesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
     test('test uniswapV3GetBundlesHistorical', () async {
+      // TODO
+    });
+
+    // BurnV3DTOs (historical) 🔥
+    //
+    // Gets BurnV3DTOs.
+    //
+    //Future<List<UniswapV3BurnV3DTO>> uniswapV3GetBurnV3DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test uniswapV3GetBurnV3DTOsHistorical', () async {
       // TODO
     });
 
@@ -89,6 +107,24 @@ void main() {
       // TODO
     });
 
+    // FactoryV3DTOs (historical) 🔥
+    //
+    // Gets FactoryV3DTOs.
+    //
+    //Future<List<UniswapV3FactoryV3DTO>> uniswapV3GetFactoryV3DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test uniswapV3GetFactoryV3DTOsHistorical', () async {
+      // TODO
+    });
+
+    // MintV3DTOs (historical) 🔥
+    //
+    // Gets MintV3DTOs.
+    //
+    //Future<List<UniswapV3MintV3DTO>> uniswapV3GetMintV3DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test uniswapV3GetMintV3DTOsHistorical', () async {
+      // TODO
+    });
+
     // Mints (current)
     //
     // Gets mints.
@@ -104,6 +140,33 @@ void main() {
     //
     //Future<List<UniswapV3MintV3DTO>> uniswapV3GetMintsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test uniswapV3GetMintsHistorical', () async {
+      // TODO
+    });
+
+    // PoolDayDataV3DTOs (historical) 🔥
+    //
+    // Gets PoolDayDataV3DTOs.
+    //
+    //Future<List<UniswapV3PoolDayDataV3DTO>> uniswapV3GetPoolDayDataV3DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test uniswapV3GetPoolDayDataV3DTOsHistorical', () async {
+      // TODO
+    });
+
+    // PoolHourDataV3DTOs (historical) 🔥
+    //
+    // Gets PoolHourDataV3DTOs.
+    //
+    //Future<List<UniswapV3PoolHourDataV3DTO>> uniswapV3GetPoolHourDataV3DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test uniswapV3GetPoolHourDataV3DTOsHistorical', () async {
+      // TODO
+    });
+
+    // PoolV3DTOs (historical) 🔥
+    //
+    // Gets PoolV3DTOs.
+    //
+    //Future<List<UniswapV3PoolV3DTO>> uniswapV3GetPoolV3DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test uniswapV3GetPoolV3DTOsHistorical', () async {
       // TODO
     });
 
@@ -161,6 +224,24 @@ void main() {
       // TODO
     });
 
+    // PositionSnapshotV3DTOs (historical) 🔥
+    //
+    // Gets PositionSnapshotV3DTOs.
+    //
+    //Future<List<UniswapV3PositionSnapshotV3DTO>> uniswapV3GetPositionSnapshotV3DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test uniswapV3GetPositionSnapshotV3DTOsHistorical', () async {
+      // TODO
+    });
+
+    // PositionV3DTOs (historical) 🔥
+    //
+    // Gets PositionV3DTOs.
+    //
+    //Future<List<UniswapV3PositionV3DTO>> uniswapV3GetPositionV3DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test uniswapV3GetPositionV3DTOsHistorical', () async {
+      // TODO
+    });
+
     // Positions (current)
     //
     // Gets positions.
@@ -197,6 +278,15 @@ void main() {
       // TODO
     });
 
+    // SwapV3DTOs (historical) 🔥
+    //
+    // Gets SwapV3DTOs.
+    //
+    //Future<List<UniswapV3SwapV3DTO>> uniswapV3GetSwapV3DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test uniswapV3GetSwapV3DTOsHistorical', () async {
+      // TODO
+    });
+
     // Swaps (current) 🔥
     //
     // Gets swaps.
@@ -212,6 +302,24 @@ void main() {
     //
     //Future<List<UniswapV3SwapV3DTO>> uniswapV3GetSwapsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test uniswapV3GetSwapsHistorical', () async {
+      // TODO
+    });
+
+    // TickDayDataV3DTOs (historical) 🔥
+    //
+    // Gets TickDayDataV3DTOs.
+    //
+    //Future<List<UniswapV3TickDayDataV3DTO>> uniswapV3GetTickDayDataV3DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test uniswapV3GetTickDayDataV3DTOsHistorical', () async {
+      // TODO
+    });
+
+    // TickV3DTOs (historical) 🔥
+    //
+    // Gets TickV3DTOs.
+    //
+    //Future<List<UniswapV3TickV3DTO>> uniswapV3GetTickV3DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test uniswapV3GetTickV3DTOsHistorical', () async {
       // TODO
     });
 
@@ -248,6 +356,33 @@ void main() {
     //
     //Future<List<UniswapV3TickV3DTO>> uniswapV3GetTicksHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test uniswapV3GetTicksHistorical', () async {
+      // TODO
+    });
+
+    // TokenHourDataV3DTOs (historical) 🔥
+    //
+    // Gets TokenHourDataV3DTOs.
+    //
+    //Future<List<UniswapV3TokenHourDataV3DTO>> uniswapV3GetTokenHourDataV3DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test uniswapV3GetTokenHourDataV3DTOsHistorical', () async {
+      // TODO
+    });
+
+    // TokenV3DTOs (historical) 🔥
+    //
+    // Gets TokenV3DTOs.
+    //
+    //Future<List<UniswapV3TokenV3DTO>> uniswapV3GetTokenV3DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test uniswapV3GetTokenV3DTOsHistorical', () async {
+      // TODO
+    });
+
+    // TokenV3DayDataDTOs (historical) 🔥
+    //
+    // Gets TokenV3DayDataDTOs.
+    //
+    //Future<List<UniswapV3TokenV3DayDataDTO>> uniswapV3GetTokenV3DayDataDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test uniswapV3GetTokenV3DayDataDTOsHistorical', () async {
       // TODO
     });
 
@@ -305,12 +440,30 @@ void main() {
       // TODO
     });
 
+    // TransactionV3DTOs (historical) 🔥
+    //
+    // Gets TransactionV3DTOs.
+    //
+    //Future<List<UniswapV3TransactionV3DTO>> uniswapV3GetTransactionV3DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test uniswapV3GetTransactionV3DTOsHistorical', () async {
+      // TODO
+    });
+
     // Transactions (historical)
     //
     // Gets transactions.
     //
     //Future<List<UniswapV3TransactionV3DTO>> uniswapV3GetTransactionsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
     test('test uniswapV3GetTransactionsHistorical', () async {
+      // TODO
+    });
+
+    // UniswapDayDataV3DTOs (historical) 🔥
+    //
+    // Gets UniswapDayDataV3DTOs.
+    //
+    //Future<List<UniswapV3UniswapDayDataV3DTO>> uniswapV3GetUniswapDayDataV3DTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test uniswapV3GetUniswapDayDataV3DTOsHistorical', () async {
       // TODO
     });
 

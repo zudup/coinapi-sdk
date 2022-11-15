@@ -34,6 +34,41 @@ public:
 	DexManager();
 	virtual ~DexManager();
 
+/*! \brief BatchDTOs (historical) 🔥. *Synchronous*
+ *
+ * Gets BatchDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetBatchDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief BatchDTOs (historical) 🔥. *Asynchronous*
+ *
+ * Gets BatchDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetBatchDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
+	, void* userData);
+
+
 /*! \brief Batches (historical). *Synchronous*
  *
  * Gets batches.
@@ -64,6 +99,41 @@ bool dexGetBatches (historical)Sync(char * accessToken,
 bool dexGetBatches (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
 	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief DepositDTOs (historical) 🔥. *Synchronous*
+ *
+ * Gets DepositDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetDepositDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.DepositDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief DepositDTOs (historical) 🔥. *Asynchronous*
+ *
+ * Gets DepositDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetDepositDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.DepositDTO>, Error, void* )
 	, void* userData);
 
 
@@ -102,6 +172,41 @@ bool dexGetDeposits (historical)Async(char * accessToken,
 	, void* userData);
 
 
+/*! \brief OrderDTOs (historical) 🔥. *Synchronous*
+ *
+ * Gets OrderDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetOrderDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.OrderDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief OrderDTOs (historical) 🔥. *Asynchronous*
+ *
+ * Gets OrderDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetOrderDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.OrderDTO>, Error, void* )
+	, void* userData);
+
+
 /*! \brief Orders (historical). *Synchronous*
  *
  * Gets orders.
@@ -137,6 +242,41 @@ bool dexGetOrders (historical)Async(char * accessToken,
 	, void* userData);
 
 
+/*! \brief PriceDTOs (historical) 🔥. *Synchronous*
+ *
+ * Gets PriceDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetPriceDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.PriceDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief PriceDTOs (historical) 🔥. *Asynchronous*
+ *
+ * Gets PriceDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetPriceDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.PriceDTO>, Error, void* )
+	, void* userData);
+
+
 /*! \brief Prices (historical). *Synchronous*
  *
  * Gets prices.
@@ -169,6 +309,41 @@ bool dexGetPrices (historical)Sync(char * accessToken,
 bool dexGetPrices (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
 	void(* handler)(std::list<Dex.PriceDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief SolutionDTOs (historical) 🔥. *Synchronous*
+ *
+ * Gets SolutionDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetSolutionDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.SolutionDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief SolutionDTOs (historical) 🔥. *Asynchronous*
+ *
+ * Gets SolutionDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetSolutionDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.SolutionDTO>, Error, void* )
 	, void* userData);
 
 
@@ -240,6 +415,76 @@ bool dexGetStats (historical)Async(char * accessToken,
 	, void* userData);
 
 
+/*! \brief StatsDTOs (historical) 🔥. *Synchronous*
+ *
+ * Gets StatsDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetStatsDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief StatsDTOs (historical) 🔥. *Asynchronous*
+ *
+ * Gets StatsDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetStatsDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief TokenDTOs (historical) 🔥. *Synchronous*
+ *
+ * Gets TokenDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetTokenDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.TokenDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief TokenDTOs (historical) 🔥. *Asynchronous*
+ *
+ * Gets TokenDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetTokenDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.TokenDTO>, Error, void* )
+	, void* userData);
+
+
 /*! \brief Tokens (historical) 🔥. *Synchronous*
  *
  * Gets tokens.
@@ -272,6 +517,41 @@ bool dexGetTokens (historical)Sync(char * accessToken,
 bool dexGetTokens (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string tokenId, 
 	void(* handler)(std::list<Dex.TokenDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief TradeDTOs (historical) 🔥. *Synchronous*
+ *
+ * Gets TradeDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetTradeDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.TradeDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief TradeDTOs (historical) 🔥. *Asynchronous*
+ *
+ * Gets TradeDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetTradeDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.TradeDTO>, Error, void* )
 	, void* userData);
 
 
@@ -308,6 +588,41 @@ bool dexGetTrades (historical)Async(char * accessToken,
 	, void* userData);
 
 
+/*! \brief UserDTOs (historical) 🔥. *Synchronous*
+ *
+ * Gets UserDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetUserDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.UserDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief UserDTOs (historical) 🔥. *Asynchronous*
+ *
+ * Gets UserDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetUserDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.UserDTO>, Error, void* )
+	, void* userData);
+
+
 /*! \brief Users (historical). *Synchronous*
  *
  * Gets users.
@@ -338,6 +653,76 @@ bool dexGetUsers (historical)Sync(char * accessToken,
 bool dexGetUsers (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, 
 	void(* handler)(std::list<Dex.UserDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief WithdrawDTOs (historical) 🔥. *Synchronous*
+ *
+ * Gets WithdrawDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetWithdrawDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.WithdrawDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief WithdrawDTOs (historical) 🔥. *Asynchronous*
+ *
+ * Gets WithdrawDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetWithdrawDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.WithdrawDTO>, Error, void* )
+	, void* userData);
+
+
+/*! \brief WithdrawRequestDTOs (historical) 🔥. *Synchronous*
+ *
+ * Gets WithdrawRequestDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetWithdrawRequestDTOs (historical)Sync(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.WithdrawRequestDTO>, Error, void* )
+	, void* userData);
+
+/*! \brief WithdrawRequestDTOs (historical) 🔥. *Asynchronous*
+ *
+ * Gets WithdrawRequestDTOs.
+ * \param startBlock 
+ * \param endBlock 
+ * \param startDate 
+ * \param endDate 
+ * \param poolId 
+ * \param handler The callback function to be invoked on completion. *Required*
+ * \param accessToken The Authorization token. *Required*
+ * \param userData The user data to be passed to the callback function.
+ */
+bool dexGetWithdrawRequestDTOs (historical)Async(char * accessToken,
+	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string poolId, 
+	void(* handler)(std::list<Dex.WithdrawRequestDTO>, Error, void* )
 	, void* userData);
 
 

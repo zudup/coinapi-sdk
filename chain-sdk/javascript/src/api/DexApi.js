@@ -45,6 +45,55 @@ export default class DexApi {
 
 
     /**
+     * Callback function to receive the result of the dexGetBatchDTOsHistorical operation.
+     * @callback module:api/DexApi~dexGetBatchDTOsHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexBatchDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * BatchDTOs (historical) 🔥
+     * Gets BatchDTOs.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/DexApi~dexGetBatchDTOsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexBatchDTO>}
+     */
+    dexGetBatchDTOsHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexBatchDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/BatchDTOs/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the dexGetBatchesHistorical operation.
      * @callback module:api/DexApi~dexGetBatchesHistoricalCallback
      * @param {String} error Error message, if any.
@@ -86,6 +135,55 @@ export default class DexApi {
       let returnType = [DexBatchDTO];
       return this.apiClient.callApi(
         '/dapps/dex/batches/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dexGetDepositDTOsHistorical operation.
+     * @callback module:api/DexApi~dexGetDepositDTOsHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexDepositDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * DepositDTOs (historical) 🔥
+     * Gets DepositDTOs.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/DexApi~dexGetDepositDTOsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexDepositDTO>}
+     */
+    dexGetDepositDTOsHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexDepositDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/DepositDTOs/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -141,6 +239,55 @@ export default class DexApi {
     }
 
     /**
+     * Callback function to receive the result of the dexGetOrderDTOsHistorical operation.
+     * @callback module:api/DexApi~dexGetOrderDTOsHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexOrderDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * OrderDTOs (historical) 🔥
+     * Gets OrderDTOs.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/DexApi~dexGetOrderDTOsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexOrderDTO>}
+     */
+    dexGetOrderDTOsHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexOrderDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/OrderDTOs/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the dexGetOrdersHistorical operation.
      * @callback module:api/DexApi~dexGetOrdersHistoricalCallback
      * @param {String} error Error message, if any.
@@ -184,6 +331,55 @@ export default class DexApi {
       let returnType = [DexOrderDTO];
       return this.apiClient.callApi(
         '/dapps/dex/orders/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dexGetPriceDTOsHistorical operation.
+     * @callback module:api/DexApi~dexGetPriceDTOsHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexPriceDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PriceDTOs (historical) 🔥
+     * Gets PriceDTOs.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/DexApi~dexGetPriceDTOsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexPriceDTO>}
+     */
+    dexGetPriceDTOsHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexPriceDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/PriceDTOs/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -239,6 +435,55 @@ export default class DexApi {
     }
 
     /**
+     * Callback function to receive the result of the dexGetSolutionDTOsHistorical operation.
+     * @callback module:api/DexApi~dexGetSolutionDTOsHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexSolutionDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * SolutionDTOs (historical) 🔥
+     * Gets SolutionDTOs.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/DexApi~dexGetSolutionDTOsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexSolutionDTO>}
+     */
+    dexGetSolutionDTOsHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexSolutionDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/SolutionDTOs/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the dexGetSolutionsHistorical operation.
      * @callback module:api/DexApi~dexGetSolutionsHistoricalCallback
      * @param {String} error Error message, if any.
@@ -288,6 +533,55 @@ export default class DexApi {
     }
 
     /**
+     * Callback function to receive the result of the dexGetStatsDTOsHistorical operation.
+     * @callback module:api/DexApi~dexGetStatsDTOsHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexStatsDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * StatsDTOs (historical) 🔥
+     * Gets StatsDTOs.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/DexApi~dexGetStatsDTOsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexStatsDTO>}
+     */
+    dexGetStatsDTOsHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexStatsDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/StatsDTOs/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the dexGetStatsHistorical operation.
      * @callback module:api/DexApi~dexGetStatsHistoricalCallback
      * @param {String} error Error message, if any.
@@ -329,6 +623,55 @@ export default class DexApi {
       let returnType = [DexStatsDTO];
       return this.apiClient.callApi(
         '/dapps/dex/stats/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dexGetTokenDTOsHistorical operation.
+     * @callback module:api/DexApi~dexGetTokenDTOsHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexTokenDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TokenDTOs (historical) 🔥
+     * Gets TokenDTOs.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/DexApi~dexGetTokenDTOsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexTokenDTO>}
+     */
+    dexGetTokenDTOsHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexTokenDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/TokenDTOs/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -384,6 +727,55 @@ export default class DexApi {
     }
 
     /**
+     * Callback function to receive the result of the dexGetTradeDTOsHistorical operation.
+     * @callback module:api/DexApi~dexGetTradeDTOsHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexTradeDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TradeDTOs (historical) 🔥
+     * Gets TradeDTOs.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/DexApi~dexGetTradeDTOsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexTradeDTO>}
+     */
+    dexGetTradeDTOsHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexTradeDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/TradeDTOs/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the dexGetTradesHistorical operation.
      * @callback module:api/DexApi~dexGetTradesHistoricalCallback
      * @param {String} error Error message, if any.
@@ -431,6 +823,55 @@ export default class DexApi {
     }
 
     /**
+     * Callback function to receive the result of the dexGetUserDTOsHistorical operation.
+     * @callback module:api/DexApi~dexGetUserDTOsHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexUserDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * UserDTOs (historical) 🔥
+     * Gets UserDTOs.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/DexApi~dexGetUserDTOsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexUserDTO>}
+     */
+    dexGetUserDTOsHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexUserDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/UserDTOs/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the dexGetUsersHistorical operation.
      * @callback module:api/DexApi~dexGetUsersHistoricalCallback
      * @param {String} error Error message, if any.
@@ -472,6 +913,104 @@ export default class DexApi {
       let returnType = [DexUserDTO];
       return this.apiClient.callApi(
         '/dapps/dex/users/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dexGetWithdrawDTOsHistorical operation.
+     * @callback module:api/DexApi~dexGetWithdrawDTOsHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexWithdrawDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * WithdrawDTOs (historical) 🔥
+     * Gets WithdrawDTOs.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/DexApi~dexGetWithdrawDTOsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexWithdrawDTO>}
+     */
+    dexGetWithdrawDTOsHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexWithdrawDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/WithdrawDTOs/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the dexGetWithdrawRequestDTOsHistorical operation.
+     * @callback module:api/DexApi~dexGetWithdrawRequestDTOsHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/DexWithdrawRequestDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * WithdrawRequestDTOs (historical) 🔥
+     * Gets WithdrawRequestDTOs.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.poolId 
+     * @param {module:api/DexApi~dexGetWithdrawRequestDTOsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/DexWithdrawRequestDTO>}
+     */
+    dexGetWithdrawRequestDTOsHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'poolId': opts['poolId']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [DexWithdrawRequestDTO];
+      return this.apiClient.callApi(
+        '/dapps/dex/WithdrawRequestDTOs/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

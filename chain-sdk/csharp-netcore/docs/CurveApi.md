@@ -4,16 +4,35 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 |--------|--------------|-------------|
+| [**CurveGetAccountDTOsHistorical**](CurveApi.md#curvegetaccountdtoshistorical) | **GET** /dapps/curve/AccountDTOs/historical | AccountDTOs (historical) 🔥 |
 | [**CurveGetAccountsHistorical**](CurveApi.md#curvegetaccountshistorical) | **GET** /dapps/curve/accounts/historical | Accounts (historical) |
+| [**CurveGetAddLiquidityEventDTOsHistorical**](CurveApi.md#curvegetaddliquidityeventdtoshistorical) | **GET** /dapps/curve/AddLiquidityEventDTOs/historical | AddLiquidityEventDTOs (historical) 🔥 |
 | [**CurveGetAddLiquidityEventsHistorical**](CurveApi.md#curvegetaddliquidityeventshistorical) | **GET** /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical) |
+| [**CurveGetAdminFeeChangeLogDTOsHistorical**](CurveApi.md#curvegetadminfeechangelogdtoshistorical) | **GET** /dapps/curve/AdminFeeChangeLogDTOs/historical | AdminFeeChangeLogDTOs (historical) 🔥 |
 | [**CurveGetAdminFeeChangeLogsHistorical**](CurveApi.md#curvegetadminfeechangelogshistorical) | **GET** /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical) |
+| [**CurveGetAmplificationCoeffChangeLogDTOsHistorical**](CurveApi.md#curvegetamplificationcoeffchangelogdtoshistorical) | **GET** /dapps/curve/AmplificationCoeffChangeLogDTOs/historical | AmplificationCoeffChangeLogDTOs (historical) 🔥 |
 | [**CurveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#curvegetamplificationcoeffchangelogshistorical) | **GET** /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical) |
+| [**CurveGetCoinDTOsHistorical**](CurveApi.md#curvegetcoindtoshistorical) | **GET** /dapps/curve/CoinDTOs/historical | CoinDTOs (historical) 🔥 |
 | [**CurveGetCoinsHistorical**](CurveApi.md#curvegetcoinshistorical) | **GET** /dapps/curve/coins/historical | Coins (historical) |
+| [**CurveGetContractDTOsHistorical**](CurveApi.md#curvegetcontractdtoshistorical) | **GET** /dapps/curve/ContractDTOs/historical | ContractDTOs (historical) 🔥 |
+| [**CurveGetContractVersionDTOsHistorical**](CurveApi.md#curvegetcontractversiondtoshistorical) | **GET** /dapps/curve/ContractVersionDTOs/historical | ContractVersionDTOs (historical) 🔥 |
 | [**CurveGetContractsHistorical**](CurveApi.md#curvegetcontractshistorical) | **GET** /dapps/curve/contracts/historical | Contracts (historical) |
 | [**CurveGetContractsVersionsHistorical**](CurveApi.md#curvegetcontractsversionshistorical) | **GET** /dapps/curve/contractsVersions/historical | ContractsVersions (historical) |
+| [**CurveGetDailyVolumeDTOsHistorical**](CurveApi.md#curvegetdailyvolumedtoshistorical) | **GET** /dapps/curve/DailyVolumeDTOs/historical | DailyVolumeDTOs (historical) 🔥 |
 | [**CurveGetDailyVolumesHistorical**](CurveApi.md#curvegetdailyvolumeshistorical) | **GET** /dapps/curve/dailyVolumes/historical | DailyVolumes (historical) |
+| [**CurveGetExchangeDTOsHistorical**](CurveApi.md#curvegetexchangedtoshistorical) | **GET** /dapps/curve/ExchangeDTOs/historical | ExchangeDTOs (historical) 🔥 |
 | [**CurveGetExchangesHistorical**](CurveApi.md#curvegetexchangeshistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical) 🔥 |
+| [**CurveGetFeeChangeLogDTOsHistorical**](CurveApi.md#curvegetfeechangelogdtoshistorical) | **GET** /dapps/curve/FeeChangeLogDTOs/historical | FeeChangeLogDTOs (historical) 🔥 |
 | [**CurveGetFeeChangeLogsHistorical**](CurveApi.md#curvegetfeechangelogshistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical) |
+| [**CurveGetGaugeDTOsHistorical**](CurveApi.md#curvegetgaugedtoshistorical) | **GET** /dapps/curve/GaugeDTOs/historical | GaugeDTOs (historical) 🔥 |
+| [**CurveGetGaugeDepositDTOsHistorical**](CurveApi.md#curvegetgaugedepositdtoshistorical) | **GET** /dapps/curve/GaugeDepositDTOs/historical | GaugeDepositDTOs (historical) 🔥 |
+| [**CurveGetGaugeLiquidityDTOsHistorical**](CurveApi.md#curvegetgaugeliquiditydtoshistorical) | **GET** /dapps/curve/GaugeLiquidityDTOs/historical | GaugeLiquidityDTOs (historical) 🔥 |
+| [**CurveGetGaugeTotalWeightDTOsHistorical**](CurveApi.md#curvegetgaugetotalweightdtoshistorical) | **GET** /dapps/curve/GaugeTotalWeightDTOs/historical | GaugeTotalWeightDTOs (historical) 🔥 |
+| [**CurveGetGaugeTypeDTOsHistorical**](CurveApi.md#curvegetgaugetypedtoshistorical) | **GET** /dapps/curve/GaugeTypeDTOs/historical | GaugeTypeDTOs (historical) 🔥 |
+| [**CurveGetGaugeTypeWeightDTOsHistorical**](CurveApi.md#curvegetgaugetypeweightdtoshistorical) | **GET** /dapps/curve/GaugeTypeWeightDTOs/historical | GaugeTypeWeightDTOs (historical) 🔥 |
+| [**CurveGetGaugeWeightDTOsHistorical**](CurveApi.md#curvegetgaugeweightdtoshistorical) | **GET** /dapps/curve/GaugeWeightDTOs/historical | GaugeWeightDTOs (historical) 🔥 |
+| [**CurveGetGaugeWeightVoteDTOsHistorical**](CurveApi.md#curvegetgaugeweightvotedtoshistorical) | **GET** /dapps/curve/GaugeWeightVoteDTOs/historical | GaugeWeightVoteDTOs (historical) 🔥 |
+| [**CurveGetGaugeWithdrawDTOsHistorical**](CurveApi.md#curvegetgaugewithdrawdtoshistorical) | **GET** /dapps/curve/GaugeWithdrawDTOs/historical | GaugeWithdrawDTOs (historical) 🔥 |
 | [**CurveGetGaugesDepositsHistorical**](CurveApi.md#curvegetgaugesdepositshistorical) | **GET** /dapps/curve/gaugesDeposits/historical | GaugesDeposits (historical) |
 | [**CurveGetGaugesHistorical**](CurveApi.md#curvegetgaugeshistorical) | **GET** /dapps/curve/gauges/historical | Gauges (historical) |
 | [**CurveGetGaugesLiquidityHistorical**](CurveApi.md#curvegetgaugesliquidityhistorical) | **GET** /dapps/curve/gaugesLiquidity/historical | GaugesLiquidity (historical) |
@@ -23,19 +42,131 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**CurveGetGaugesWeightsHistorical**](CurveApi.md#curvegetgaugesweightshistorical) | **GET** /dapps/curve/gaugesWeights/historical | GaugesWeights (historical) |
 | [**CurveGetGaugesWeightsVotesHistorical**](CurveApi.md#curvegetgaugesweightsvoteshistorical) | **GET** /dapps/curve/gaugesWeightsVotes/historical | GaugesWeightsVotes (historical) |
 | [**CurveGetGaugesWithdrawHistorical**](CurveApi.md#curvegetgaugeswithdrawhistorical) | **GET** /dapps/curve/gaugesWithdraws/historical | GaugesWithdraw (historical) |
+| [**CurveGetHourlyVolumeDTOsHistorical**](CurveApi.md#curvegethourlyvolumedtoshistorical) | **GET** /dapps/curve/HourlyVolumeDTOs/historical | HourlyVolumeDTOs (historical) 🔥 |
 | [**CurveGetHourlyVolumesHistorical**](CurveApi.md#curvegethourlyvolumeshistorical) | **GET** /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical) |
+| [**CurveGetLpTokenDTOsHistorical**](CurveApi.md#curvegetlptokendtoshistorical) | **GET** /dapps/curve/LpTokenDTOs/historical | LpTokenDTOs (historical) 🔥 |
 | [**CurveGetLpTokensHistorical**](CurveApi.md#curvegetlptokenshistorical) | **GET** /dapps/curve/lpTokens/historical | LpTokens (historical) |
+| [**CurveGetPoolDTOsHistorical**](CurveApi.md#curvegetpooldtoshistorical) | **GET** /dapps/curve/PoolDTOs/historical | PoolDTOs (historical) 🔥 |
 | [**CurveGetPoolsHistorical**](CurveApi.md#curvegetpoolshistorical) | **GET** /dapps/curve/pools/historical | Pools (historical) 🔥 |
+| [**CurveGetProposalDTOsHistorical**](CurveApi.md#curvegetproposaldtoshistorical) | **GET** /dapps/curve/ProposalDTOs/historical | ProposalDTOs (historical) 🔥 |
+| [**CurveGetProposalVoteDTOsHistorical**](CurveApi.md#curvegetproposalvotedtoshistorical) | **GET** /dapps/curve/ProposalVoteDTOs/historical | ProposalVoteDTOs (historical) 🔥 |
 | [**CurveGetProposalsHistorical**](CurveApi.md#curvegetproposalshistorical) | **GET** /dapps/curve/proposals/historical | Proposals (historical) |
 | [**CurveGetProposalsVotesHistorical**](CurveApi.md#curvegetproposalsvoteshistorical) | **GET** /dapps/curve/proposalsVotes/historical | ProposalsVotes (historical) |
+| [**CurveGetRemoveLiquidityEventDTOsHistorical**](CurveApi.md#curvegetremoveliquidityeventdtoshistorical) | **GET** /dapps/curve/RemoveLiquidityEventDTOs/historical | RemoveLiquidityEventDTOs (historical) 🔥 |
 | [**CurveGetRemoveLiquidityEventsHistorical**](CurveApi.md#curvegetremoveliquidityeventshistorical) | **GET** /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical) |
+| [**CurveGetRemoveLiquidityOneEventDTOsHistorical**](CurveApi.md#curvegetremoveliquidityoneeventdtoshistorical) | **GET** /dapps/curve/RemoveLiquidityOneEventDTOs/historical | RemoveLiquidityOneEventDTOs (historical) 🔥 |
 | [**CurveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#curvegetremoveliquidityoneeventshistorical) | **GET** /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical) |
+| [**CurveGetSystemStateDTOsHistorical**](CurveApi.md#curvegetsystemstatedtoshistorical) | **GET** /dapps/curve/SystemStateDTOs/historical | SystemStateDTOs (historical) 🔥 |
 | [**CurveGetSystemStatesHistorical**](CurveApi.md#curvegetsystemstateshistorical) | **GET** /dapps/curve/systemStates/historical | SystemStates (historical) |
+| [**CurveGetTokenDTOsHistorical**](CurveApi.md#curvegettokendtoshistorical) | **GET** /dapps/curve/TokenDTOs/historical | TokenDTOs (historical) 🔥 |
 | [**CurveGetTokensHistorical**](CurveApi.md#curvegettokenshistorical) | **GET** /dapps/curve/tokens/historical | Tokens (historical) 🔥 |
+| [**CurveGetTransferOwnershipEventDTOsHistorical**](CurveApi.md#curvegettransferownershipeventdtoshistorical) | **GET** /dapps/curve/TransferOwnershipEventDTOs/historical | TransferOwnershipEventDTOs (historical) 🔥 |
 | [**CurveGetTransferOwnershipEventsHistorical**](CurveApi.md#curvegettransferownershipeventshistorical) | **GET** /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical) |
+| [**CurveGetUnderlyingCoinDTOsHistorical**](CurveApi.md#curvegetunderlyingcoindtoshistorical) | **GET** /dapps/curve/UnderlyingCoinDTOs/historical | UnderlyingCoinDTOs (historical) 🔥 |
 | [**CurveGetUnderlyingCoinsHistorical**](CurveApi.md#curvegetunderlyingcoinshistorical) | **GET** /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical) |
+| [**CurveGetVotingAppDTOsHistorical**](CurveApi.md#curvegetvotingappdtoshistorical) | **GET** /dapps/curve/VotingAppDTOs/historical | VotingAppDTOs (historical) 🔥 |
 | [**CurveGetVotingAppsHistorical**](CurveApi.md#curvegetvotingappshistorical) | **GET** /dapps/curve/votingApps/historical | VotingApps (historical) |
+| [**CurveGetWeeklyVolumeDTOsHistorical**](CurveApi.md#curvegetweeklyvolumedtoshistorical) | **GET** /dapps/curve/WeeklyVolumeDTOs/historical | WeeklyVolumeDTOs (historical) 🔥 |
 | [**CurveGetWeeklyVolumesHistorical**](CurveApi.md#curvegetweeklyvolumeshistorical) | **GET** /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical) |
+
+<a name="curvegetaccountdtoshistorical"></a>
+# **CurveGetAccountDTOsHistorical**
+> List&lt;CurveAccountDTO&gt; CurveGetAccountDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+AccountDTOs (historical) 🔥
+
+Gets AccountDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetAccountDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // AccountDTOs (historical) 🔥
+                List<CurveAccountDTO> result = apiInstance.CurveGetAccountDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetAccountDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetAccountDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // AccountDTOs (historical) 🔥
+    ApiResponse<List<CurveAccountDTO>> response = apiInstance.CurveGetAccountDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetAccountDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveAccountDTO&gt;**](CurveAccountDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="curvegetaccountshistorical"></a>
 # **CurveGetAccountsHistorical**
@@ -116,6 +247,105 @@ catch (ApiException e)
 ### Return type
 
 [**List&lt;CurveAccountDTO&gt;**](CurveAccountDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetaddliquidityeventdtoshistorical"></a>
+# **CurveGetAddLiquidityEventDTOsHistorical**
+> List&lt;CurveAddLiquidityEventDTO&gt; CurveGetAddLiquidityEventDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+AddLiquidityEventDTOs (historical) 🔥
+
+Gets AddLiquidityEventDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetAddLiquidityEventDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // AddLiquidityEventDTOs (historical) 🔥
+                List<CurveAddLiquidityEventDTO> result = apiInstance.CurveGetAddLiquidityEventDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetAddLiquidityEventDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetAddLiquidityEventDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // AddLiquidityEventDTOs (historical) 🔥
+    ApiResponse<List<CurveAddLiquidityEventDTO>> response = apiInstance.CurveGetAddLiquidityEventDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetAddLiquidityEventDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveAddLiquidityEventDTO&gt;**](CurveAddLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -233,6 +463,105 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="curvegetadminfeechangelogdtoshistorical"></a>
+# **CurveGetAdminFeeChangeLogDTOsHistorical**
+> List&lt;CurveAdminFeeChangeLogDTO&gt; CurveGetAdminFeeChangeLogDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+AdminFeeChangeLogDTOs (historical) 🔥
+
+Gets AdminFeeChangeLogDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetAdminFeeChangeLogDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // AdminFeeChangeLogDTOs (historical) 🔥
+                List<CurveAdminFeeChangeLogDTO> result = apiInstance.CurveGetAdminFeeChangeLogDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetAdminFeeChangeLogDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetAdminFeeChangeLogDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // AdminFeeChangeLogDTOs (historical) 🔥
+    ApiResponse<List<CurveAdminFeeChangeLogDTO>> response = apiInstance.CurveGetAdminFeeChangeLogDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetAdminFeeChangeLogDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveAdminFeeChangeLogDTO&gt;**](CurveAdminFeeChangeLogDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="curvegetadminfeechangelogshistorical"></a>
 # **CurveGetAdminFeeChangeLogsHistorical**
 > List&lt;CurveAdminFeeChangeLogDTO&gt; CurveGetAdminFeeChangeLogsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
@@ -314,6 +643,105 @@ catch (ApiException e)
 ### Return type
 
 [**List&lt;CurveAdminFeeChangeLogDTO&gt;**](CurveAdminFeeChangeLogDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetamplificationcoeffchangelogdtoshistorical"></a>
+# **CurveGetAmplificationCoeffChangeLogDTOsHistorical**
+> List&lt;CurveAmplificationCoeffChangeLogDTO&gt; CurveGetAmplificationCoeffChangeLogDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+AmplificationCoeffChangeLogDTOs (historical) 🔥
+
+Gets AmplificationCoeffChangeLogDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetAmplificationCoeffChangeLogDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // AmplificationCoeffChangeLogDTOs (historical) 🔥
+                List<CurveAmplificationCoeffChangeLogDTO> result = apiInstance.CurveGetAmplificationCoeffChangeLogDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetAmplificationCoeffChangeLogDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetAmplificationCoeffChangeLogDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // AmplificationCoeffChangeLogDTOs (historical) 🔥
+    ApiResponse<List<CurveAmplificationCoeffChangeLogDTO>> response = apiInstance.CurveGetAmplificationCoeffChangeLogDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetAmplificationCoeffChangeLogDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveAmplificationCoeffChangeLogDTO&gt;**](CurveAmplificationCoeffChangeLogDTO.md)
 
 ### Authorization
 
@@ -431,6 +859,105 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="curvegetcoindtoshistorical"></a>
+# **CurveGetCoinDTOsHistorical**
+> List&lt;CurveCoinDTO&gt; CurveGetCoinDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+CoinDTOs (historical) 🔥
+
+Gets CoinDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetCoinDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // CoinDTOs (historical) 🔥
+                List<CurveCoinDTO> result = apiInstance.CurveGetCoinDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetCoinDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetCoinDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // CoinDTOs (historical) 🔥
+    ApiResponse<List<CurveCoinDTO>> response = apiInstance.CurveGetCoinDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetCoinDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveCoinDTO&gt;**](CurveCoinDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="curvegetcoinshistorical"></a>
 # **CurveGetCoinsHistorical**
 > List&lt;CurveCoinDTO&gt; CurveGetCoinsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
@@ -512,6 +1039,204 @@ catch (ApiException e)
 ### Return type
 
 [**List&lt;CurveCoinDTO&gt;**](CurveCoinDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetcontractdtoshistorical"></a>
+# **CurveGetContractDTOsHistorical**
+> List&lt;CurveContractDTO&gt; CurveGetContractDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+ContractDTOs (historical) 🔥
+
+Gets ContractDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetContractDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // ContractDTOs (historical) 🔥
+                List<CurveContractDTO> result = apiInstance.CurveGetContractDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetContractDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetContractDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // ContractDTOs (historical) 🔥
+    ApiResponse<List<CurveContractDTO>> response = apiInstance.CurveGetContractDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetContractDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveContractDTO&gt;**](CurveContractDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetcontractversiondtoshistorical"></a>
+# **CurveGetContractVersionDTOsHistorical**
+> List&lt;CurveContractVersionDTO&gt; CurveGetContractVersionDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+ContractVersionDTOs (historical) 🔥
+
+Gets ContractVersionDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetContractVersionDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // ContractVersionDTOs (historical) 🔥
+                List<CurveContractVersionDTO> result = apiInstance.CurveGetContractVersionDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetContractVersionDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetContractVersionDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // ContractVersionDTOs (historical) 🔥
+    ApiResponse<List<CurveContractVersionDTO>> response = apiInstance.CurveGetContractVersionDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetContractVersionDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveContractVersionDTO&gt;**](CurveContractVersionDTO.md)
 
 ### Authorization
 
@@ -728,6 +1453,105 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="curvegetdailyvolumedtoshistorical"></a>
+# **CurveGetDailyVolumeDTOsHistorical**
+> List&lt;CurveDailyVolumeDTO&gt; CurveGetDailyVolumeDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+DailyVolumeDTOs (historical) 🔥
+
+Gets DailyVolumeDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetDailyVolumeDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // DailyVolumeDTOs (historical) 🔥
+                List<CurveDailyVolumeDTO> result = apiInstance.CurveGetDailyVolumeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetDailyVolumeDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetDailyVolumeDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // DailyVolumeDTOs (historical) 🔥
+    ApiResponse<List<CurveDailyVolumeDTO>> response = apiInstance.CurveGetDailyVolumeDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetDailyVolumeDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveDailyVolumeDTO&gt;**](CurveDailyVolumeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="curvegetdailyvolumeshistorical"></a>
 # **CurveGetDailyVolumesHistorical**
 > List&lt;CurveDailyVolumeDTO&gt; CurveGetDailyVolumesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
@@ -809,6 +1633,105 @@ catch (ApiException e)
 ### Return type
 
 [**List&lt;CurveDailyVolumeDTO&gt;**](CurveDailyVolumeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetexchangedtoshistorical"></a>
+# **CurveGetExchangeDTOsHistorical**
+> List&lt;CurveExchangeDTO&gt; CurveGetExchangeDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+ExchangeDTOs (historical) 🔥
+
+Gets ExchangeDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetExchangeDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // ExchangeDTOs (historical) 🔥
+                List<CurveExchangeDTO> result = apiInstance.CurveGetExchangeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetExchangeDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetExchangeDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // ExchangeDTOs (historical) 🔥
+    ApiResponse<List<CurveExchangeDTO>> response = apiInstance.CurveGetExchangeDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetExchangeDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveExchangeDTO&gt;**](CurveExchangeDTO.md)
 
 ### Authorization
 
@@ -926,6 +1849,105 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="curvegetfeechangelogdtoshistorical"></a>
+# **CurveGetFeeChangeLogDTOsHistorical**
+> List&lt;CurveFeeChangeLogDTO&gt; CurveGetFeeChangeLogDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+FeeChangeLogDTOs (historical) 🔥
+
+Gets FeeChangeLogDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetFeeChangeLogDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // FeeChangeLogDTOs (historical) 🔥
+                List<CurveFeeChangeLogDTO> result = apiInstance.CurveGetFeeChangeLogDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetFeeChangeLogDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetFeeChangeLogDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // FeeChangeLogDTOs (historical) 🔥
+    ApiResponse<List<CurveFeeChangeLogDTO>> response = apiInstance.CurveGetFeeChangeLogDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetFeeChangeLogDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveFeeChangeLogDTO&gt;**](CurveFeeChangeLogDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="curvegetfeechangelogshistorical"></a>
 # **CurveGetFeeChangeLogsHistorical**
 > List&lt;CurveFeeChangeLogDTO&gt; CurveGetFeeChangeLogsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
@@ -1007,6 +2029,897 @@ catch (ApiException e)
 ### Return type
 
 [**List&lt;CurveFeeChangeLogDTO&gt;**](CurveFeeChangeLogDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetgaugedtoshistorical"></a>
+# **CurveGetGaugeDTOsHistorical**
+> List&lt;CurveGaugeDTO&gt; CurveGetGaugeDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+GaugeDTOs (historical) 🔥
+
+Gets GaugeDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetGaugeDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // GaugeDTOs (historical) 🔥
+                List<CurveGaugeDTO> result = apiInstance.CurveGetGaugeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugeDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetGaugeDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GaugeDTOs (historical) 🔥
+    ApiResponse<List<CurveGaugeDTO>> response = apiInstance.CurveGetGaugeDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugeDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveGaugeDTO&gt;**](CurveGaugeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetgaugedepositdtoshistorical"></a>
+# **CurveGetGaugeDepositDTOsHistorical**
+> List&lt;CurveGaugeDepositDTO&gt; CurveGetGaugeDepositDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+GaugeDepositDTOs (historical) 🔥
+
+Gets GaugeDepositDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetGaugeDepositDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // GaugeDepositDTOs (historical) 🔥
+                List<CurveGaugeDepositDTO> result = apiInstance.CurveGetGaugeDepositDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugeDepositDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetGaugeDepositDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GaugeDepositDTOs (historical) 🔥
+    ApiResponse<List<CurveGaugeDepositDTO>> response = apiInstance.CurveGetGaugeDepositDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugeDepositDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveGaugeDepositDTO&gt;**](CurveGaugeDepositDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetgaugeliquiditydtoshistorical"></a>
+# **CurveGetGaugeLiquidityDTOsHistorical**
+> List&lt;CurveGaugeLiquidityDTO&gt; CurveGetGaugeLiquidityDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+GaugeLiquidityDTOs (historical) 🔥
+
+Gets GaugeLiquidityDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetGaugeLiquidityDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // GaugeLiquidityDTOs (historical) 🔥
+                List<CurveGaugeLiquidityDTO> result = apiInstance.CurveGetGaugeLiquidityDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugeLiquidityDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetGaugeLiquidityDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GaugeLiquidityDTOs (historical) 🔥
+    ApiResponse<List<CurveGaugeLiquidityDTO>> response = apiInstance.CurveGetGaugeLiquidityDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugeLiquidityDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveGaugeLiquidityDTO&gt;**](CurveGaugeLiquidityDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetgaugetotalweightdtoshistorical"></a>
+# **CurveGetGaugeTotalWeightDTOsHistorical**
+> List&lt;CurveGaugeTotalWeightDTO&gt; CurveGetGaugeTotalWeightDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+GaugeTotalWeightDTOs (historical) 🔥
+
+Gets GaugeTotalWeightDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetGaugeTotalWeightDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // GaugeTotalWeightDTOs (historical) 🔥
+                List<CurveGaugeTotalWeightDTO> result = apiInstance.CurveGetGaugeTotalWeightDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugeTotalWeightDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetGaugeTotalWeightDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GaugeTotalWeightDTOs (historical) 🔥
+    ApiResponse<List<CurveGaugeTotalWeightDTO>> response = apiInstance.CurveGetGaugeTotalWeightDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugeTotalWeightDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveGaugeTotalWeightDTO&gt;**](CurveGaugeTotalWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetgaugetypedtoshistorical"></a>
+# **CurveGetGaugeTypeDTOsHistorical**
+> List&lt;CurveGaugeTypeDTO&gt; CurveGetGaugeTypeDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+GaugeTypeDTOs (historical) 🔥
+
+Gets GaugeTypeDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetGaugeTypeDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // GaugeTypeDTOs (historical) 🔥
+                List<CurveGaugeTypeDTO> result = apiInstance.CurveGetGaugeTypeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugeTypeDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetGaugeTypeDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GaugeTypeDTOs (historical) 🔥
+    ApiResponse<List<CurveGaugeTypeDTO>> response = apiInstance.CurveGetGaugeTypeDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugeTypeDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveGaugeTypeDTO&gt;**](CurveGaugeTypeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetgaugetypeweightdtoshistorical"></a>
+# **CurveGetGaugeTypeWeightDTOsHistorical**
+> List&lt;CurveGaugeTypeWeightDTO&gt; CurveGetGaugeTypeWeightDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+GaugeTypeWeightDTOs (historical) 🔥
+
+Gets GaugeTypeWeightDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetGaugeTypeWeightDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // GaugeTypeWeightDTOs (historical) 🔥
+                List<CurveGaugeTypeWeightDTO> result = apiInstance.CurveGetGaugeTypeWeightDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugeTypeWeightDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetGaugeTypeWeightDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GaugeTypeWeightDTOs (historical) 🔥
+    ApiResponse<List<CurveGaugeTypeWeightDTO>> response = apiInstance.CurveGetGaugeTypeWeightDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugeTypeWeightDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveGaugeTypeWeightDTO&gt;**](CurveGaugeTypeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetgaugeweightdtoshistorical"></a>
+# **CurveGetGaugeWeightDTOsHistorical**
+> List&lt;CurveGaugeWeightDTO&gt; CurveGetGaugeWeightDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+GaugeWeightDTOs (historical) 🔥
+
+Gets GaugeWeightDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetGaugeWeightDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // GaugeWeightDTOs (historical) 🔥
+                List<CurveGaugeWeightDTO> result = apiInstance.CurveGetGaugeWeightDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugeWeightDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetGaugeWeightDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GaugeWeightDTOs (historical) 🔥
+    ApiResponse<List<CurveGaugeWeightDTO>> response = apiInstance.CurveGetGaugeWeightDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugeWeightDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveGaugeWeightDTO&gt;**](CurveGaugeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetgaugeweightvotedtoshistorical"></a>
+# **CurveGetGaugeWeightVoteDTOsHistorical**
+> List&lt;CurveGaugeWeightVoteDTO&gt; CurveGetGaugeWeightVoteDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+GaugeWeightVoteDTOs (historical) 🔥
+
+Gets GaugeWeightVoteDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetGaugeWeightVoteDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // GaugeWeightVoteDTOs (historical) 🔥
+                List<CurveGaugeWeightVoteDTO> result = apiInstance.CurveGetGaugeWeightVoteDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugeWeightVoteDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetGaugeWeightVoteDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GaugeWeightVoteDTOs (historical) 🔥
+    ApiResponse<List<CurveGaugeWeightVoteDTO>> response = apiInstance.CurveGetGaugeWeightVoteDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugeWeightVoteDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveGaugeWeightVoteDTO&gt;**](CurveGaugeWeightVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetgaugewithdrawdtoshistorical"></a>
+# **CurveGetGaugeWithdrawDTOsHistorical**
+> List&lt;CurveGaugeWithdrawDTO&gt; CurveGetGaugeWithdrawDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+GaugeWithdrawDTOs (historical) 🔥
+
+Gets GaugeWithdrawDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetGaugeWithdrawDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // GaugeWithdrawDTOs (historical) 🔥
+                List<CurveGaugeWithdrawDTO> result = apiInstance.CurveGetGaugeWithdrawDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugeWithdrawDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetGaugeWithdrawDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // GaugeWithdrawDTOs (historical) 🔥
+    ApiResponse<List<CurveGaugeWithdrawDTO>> response = apiInstance.CurveGetGaugeWithdrawDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugeWithdrawDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveGaugeWithdrawDTO&gt;**](CurveGaugeWithdrawDTO.md)
 
 ### Authorization
 
@@ -1900,6 +3813,105 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="curvegethourlyvolumedtoshistorical"></a>
+# **CurveGetHourlyVolumeDTOsHistorical**
+> List&lt;CurveHourlyVolumeDTO&gt; CurveGetHourlyVolumeDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+HourlyVolumeDTOs (historical) 🔥
+
+Gets HourlyVolumeDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetHourlyVolumeDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // HourlyVolumeDTOs (historical) 🔥
+                List<CurveHourlyVolumeDTO> result = apiInstance.CurveGetHourlyVolumeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetHourlyVolumeDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetHourlyVolumeDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // HourlyVolumeDTOs (historical) 🔥
+    ApiResponse<List<CurveHourlyVolumeDTO>> response = apiInstance.CurveGetHourlyVolumeDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetHourlyVolumeDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveHourlyVolumeDTO&gt;**](CurveHourlyVolumeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="curvegethourlyvolumeshistorical"></a>
 # **CurveGetHourlyVolumesHistorical**
 > List&lt;CurveHourlyVolumeDTO&gt; CurveGetHourlyVolumesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
@@ -1981,6 +3993,105 @@ catch (ApiException e)
 ### Return type
 
 [**List&lt;CurveHourlyVolumeDTO&gt;**](CurveHourlyVolumeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetlptokendtoshistorical"></a>
+# **CurveGetLpTokenDTOsHistorical**
+> List&lt;CurveLpTokenDTO&gt; CurveGetLpTokenDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+LpTokenDTOs (historical) 🔥
+
+Gets LpTokenDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetLpTokenDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // LpTokenDTOs (historical) 🔥
+                List<CurveLpTokenDTO> result = apiInstance.CurveGetLpTokenDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetLpTokenDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetLpTokenDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // LpTokenDTOs (historical) 🔥
+    ApiResponse<List<CurveLpTokenDTO>> response = apiInstance.CurveGetLpTokenDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetLpTokenDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveLpTokenDTO&gt;**](CurveLpTokenDTO.md)
 
 ### Authorization
 
@@ -2098,6 +4209,105 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="curvegetpooldtoshistorical"></a>
+# **CurveGetPoolDTOsHistorical**
+> List&lt;CurvePoolDTO&gt; CurveGetPoolDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+PoolDTOs (historical) 🔥
+
+Gets PoolDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetPoolDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // PoolDTOs (historical) 🔥
+                List<CurvePoolDTO> result = apiInstance.CurveGetPoolDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetPoolDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetPoolDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // PoolDTOs (historical) 🔥
+    ApiResponse<List<CurvePoolDTO>> response = apiInstance.CurveGetPoolDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetPoolDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurvePoolDTO&gt;**](CurvePoolDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="curvegetpoolshistorical"></a>
 # **CurveGetPoolsHistorical**
 > List&lt;CurvePoolDTO&gt; CurveGetPoolsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
@@ -2179,6 +4389,204 @@ catch (ApiException e)
 ### Return type
 
 [**List&lt;CurvePoolDTO&gt;**](CurvePoolDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetproposaldtoshistorical"></a>
+# **CurveGetProposalDTOsHistorical**
+> List&lt;CurveProposalDTO&gt; CurveGetProposalDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+ProposalDTOs (historical) 🔥
+
+Gets ProposalDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetProposalDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // ProposalDTOs (historical) 🔥
+                List<CurveProposalDTO> result = apiInstance.CurveGetProposalDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetProposalDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetProposalDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // ProposalDTOs (historical) 🔥
+    ApiResponse<List<CurveProposalDTO>> response = apiInstance.CurveGetProposalDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetProposalDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveProposalDTO&gt;**](CurveProposalDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetproposalvotedtoshistorical"></a>
+# **CurveGetProposalVoteDTOsHistorical**
+> List&lt;CurveProposalVoteDTO&gt; CurveGetProposalVoteDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+ProposalVoteDTOs (historical) 🔥
+
+Gets ProposalVoteDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetProposalVoteDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // ProposalVoteDTOs (historical) 🔥
+                List<CurveProposalVoteDTO> result = apiInstance.CurveGetProposalVoteDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetProposalVoteDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetProposalVoteDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // ProposalVoteDTOs (historical) 🔥
+    ApiResponse<List<CurveProposalVoteDTO>> response = apiInstance.CurveGetProposalVoteDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetProposalVoteDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveProposalVoteDTO&gt;**](CurveProposalVoteDTO.md)
 
 ### Authorization
 
@@ -2391,6 +4799,105 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="curvegetremoveliquidityeventdtoshistorical"></a>
+# **CurveGetRemoveLiquidityEventDTOsHistorical**
+> List&lt;CurveRemoveLiquidityEventDTO&gt; CurveGetRemoveLiquidityEventDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+RemoveLiquidityEventDTOs (historical) 🔥
+
+Gets RemoveLiquidityEventDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetRemoveLiquidityEventDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // RemoveLiquidityEventDTOs (historical) 🔥
+                List<CurveRemoveLiquidityEventDTO> result = apiInstance.CurveGetRemoveLiquidityEventDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetRemoveLiquidityEventDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetRemoveLiquidityEventDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // RemoveLiquidityEventDTOs (historical) 🔥
+    ApiResponse<List<CurveRemoveLiquidityEventDTO>> response = apiInstance.CurveGetRemoveLiquidityEventDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetRemoveLiquidityEventDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveRemoveLiquidityEventDTO&gt;**](CurveRemoveLiquidityEventDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="curvegetremoveliquidityeventshistorical"></a>
 # **CurveGetRemoveLiquidityEventsHistorical**
 > List&lt;CurveRemoveLiquidityEventDTO&gt; CurveGetRemoveLiquidityEventsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
@@ -2472,6 +4979,105 @@ catch (ApiException e)
 ### Return type
 
 [**List&lt;CurveRemoveLiquidityEventDTO&gt;**](CurveRemoveLiquidityEventDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetremoveliquidityoneeventdtoshistorical"></a>
+# **CurveGetRemoveLiquidityOneEventDTOsHistorical**
+> List&lt;CurveRemoveLiquidityOneEventDTO&gt; CurveGetRemoveLiquidityOneEventDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+RemoveLiquidityOneEventDTOs (historical) 🔥
+
+Gets RemoveLiquidityOneEventDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetRemoveLiquidityOneEventDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // RemoveLiquidityOneEventDTOs (historical) 🔥
+                List<CurveRemoveLiquidityOneEventDTO> result = apiInstance.CurveGetRemoveLiquidityOneEventDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetRemoveLiquidityOneEventDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetRemoveLiquidityOneEventDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // RemoveLiquidityOneEventDTOs (historical) 🔥
+    ApiResponse<List<CurveRemoveLiquidityOneEventDTO>> response = apiInstance.CurveGetRemoveLiquidityOneEventDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetRemoveLiquidityOneEventDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveRemoveLiquidityOneEventDTO&gt;**](CurveRemoveLiquidityOneEventDTO.md)
 
 ### Authorization
 
@@ -2589,6 +5195,105 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="curvegetsystemstatedtoshistorical"></a>
+# **CurveGetSystemStateDTOsHistorical**
+> List&lt;CurveSystemStateDTO&gt; CurveGetSystemStateDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+SystemStateDTOs (historical) 🔥
+
+Gets SystemStateDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetSystemStateDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // SystemStateDTOs (historical) 🔥
+                List<CurveSystemStateDTO> result = apiInstance.CurveGetSystemStateDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetSystemStateDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetSystemStateDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // SystemStateDTOs (historical) 🔥
+    ApiResponse<List<CurveSystemStateDTO>> response = apiInstance.CurveGetSystemStateDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetSystemStateDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveSystemStateDTO&gt;**](CurveSystemStateDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="curvegetsystemstateshistorical"></a>
 # **CurveGetSystemStatesHistorical**
 > List&lt;CurveSystemStateDTO&gt; CurveGetSystemStatesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
@@ -2668,6 +5373,105 @@ catch (ApiException e)
 ### Return type
 
 [**List&lt;CurveSystemStateDTO&gt;**](CurveSystemStateDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegettokendtoshistorical"></a>
+# **CurveGetTokenDTOsHistorical**
+> List&lt;CurveTokenDTO&gt; CurveGetTokenDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+TokenDTOs (historical) 🔥
+
+Gets TokenDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetTokenDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // TokenDTOs (historical) 🔥
+                List<CurveTokenDTO> result = apiInstance.CurveGetTokenDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetTokenDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetTokenDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // TokenDTOs (historical) 🔥
+    ApiResponse<List<CurveTokenDTO>> response = apiInstance.CurveGetTokenDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetTokenDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveTokenDTO&gt;**](CurveTokenDTO.md)
 
 ### Authorization
 
@@ -2785,6 +5589,105 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="curvegettransferownershipeventdtoshistorical"></a>
+# **CurveGetTransferOwnershipEventDTOsHistorical**
+> List&lt;CurveTransferOwnershipEventDTO&gt; CurveGetTransferOwnershipEventDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+TransferOwnershipEventDTOs (historical) 🔥
+
+Gets TransferOwnershipEventDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetTransferOwnershipEventDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // TransferOwnershipEventDTOs (historical) 🔥
+                List<CurveTransferOwnershipEventDTO> result = apiInstance.CurveGetTransferOwnershipEventDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetTransferOwnershipEventDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetTransferOwnershipEventDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // TransferOwnershipEventDTOs (historical) 🔥
+    ApiResponse<List<CurveTransferOwnershipEventDTO>> response = apiInstance.CurveGetTransferOwnershipEventDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetTransferOwnershipEventDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveTransferOwnershipEventDTO&gt;**](CurveTransferOwnershipEventDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="curvegettransferownershipeventshistorical"></a>
 # **CurveGetTransferOwnershipEventsHistorical**
 > List&lt;CurveTransferOwnershipEventDTO&gt; CurveGetTransferOwnershipEventsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
@@ -2866,6 +5769,105 @@ catch (ApiException e)
 ### Return type
 
 [**List&lt;CurveTransferOwnershipEventDTO&gt;**](CurveTransferOwnershipEventDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetunderlyingcoindtoshistorical"></a>
+# **CurveGetUnderlyingCoinDTOsHistorical**
+> List&lt;CurveUnderlyingCoinDTO&gt; CurveGetUnderlyingCoinDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+UnderlyingCoinDTOs (historical) 🔥
+
+Gets UnderlyingCoinDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetUnderlyingCoinDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // UnderlyingCoinDTOs (historical) 🔥
+                List<CurveUnderlyingCoinDTO> result = apiInstance.CurveGetUnderlyingCoinDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetUnderlyingCoinDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetUnderlyingCoinDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // UnderlyingCoinDTOs (historical) 🔥
+    ApiResponse<List<CurveUnderlyingCoinDTO>> response = apiInstance.CurveGetUnderlyingCoinDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetUnderlyingCoinDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveUnderlyingCoinDTO&gt;**](CurveUnderlyingCoinDTO.md)
 
 ### Authorization
 
@@ -2983,6 +5985,105 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="curvegetvotingappdtoshistorical"></a>
+# **CurveGetVotingAppDTOsHistorical**
+> List&lt;CurveVotingAppDTO&gt; CurveGetVotingAppDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+VotingAppDTOs (historical) 🔥
+
+Gets VotingAppDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetVotingAppDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // VotingAppDTOs (historical) 🔥
+                List<CurveVotingAppDTO> result = apiInstance.CurveGetVotingAppDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetVotingAppDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetVotingAppDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // VotingAppDTOs (historical) 🔥
+    ApiResponse<List<CurveVotingAppDTO>> response = apiInstance.CurveGetVotingAppDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetVotingAppDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveVotingAppDTO&gt;**](CurveVotingAppDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="curvegetvotingappshistorical"></a>
 # **CurveGetVotingAppsHistorical**
 > List&lt;CurveVotingAppDTO&gt; CurveGetVotingAppsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null)
@@ -3062,6 +6163,105 @@ catch (ApiException e)
 ### Return type
 
 [**List&lt;CurveVotingAppDTO&gt;**](CurveVotingAppDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="curvegetweeklyvolumedtoshistorical"></a>
+# **CurveGetWeeklyVolumeDTOsHistorical**
+> List&lt;CurveWeeklyVolumeDTO&gt; CurveGetWeeklyVolumeDTOsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string poolId = null)
+
+WeeklyVolumeDTOs (historical) 🔥
+
+Gets WeeklyVolumeDTOs.
+
+### Example
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using CoinAPI.EMS.REST.V1.Api;
+using CoinAPI.EMS.REST.V1.Client;
+using CoinAPI.EMS.REST.V1.Model;
+
+namespace Example
+{
+    public class CurveGetWeeklyVolumeDTOsHistoricalExample
+    {
+        public static void Main()
+        {
+            Configuration config = new Configuration();
+            config.BasePath = "https://onchain.coinapi.io";
+            var apiInstance = new CurveApi(config);
+            var startBlock = 789L;  // long? |  (optional) 
+            var endBlock = 789L;  // long? |  (optional) 
+            var startDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var endDate = DateTime.Parse("2013-10-20T19:20:30+01:00");  // DateTime? |  (optional) 
+            var poolId = "poolId_example";  // string |  (optional) 
+
+            try
+            {
+                // WeeklyVolumeDTOs (historical) 🔥
+                List<CurveWeeklyVolumeDTO> result = apiInstance.CurveGetWeeklyVolumeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException  e)
+            {
+                Debug.Print("Exception when calling CurveApi.CurveGetWeeklyVolumeDTOsHistorical: " + e.Message);
+                Debug.Print("Status Code: " + e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+#### Using the CurveGetWeeklyVolumeDTOsHistoricalWithHttpInfo variant
+This returns an ApiResponse object which contains the response data, status code and headers.
+
+```csharp
+try
+{
+    // WeeklyVolumeDTOs (historical) 🔥
+    ApiResponse<List<CurveWeeklyVolumeDTO>> response = apiInstance.CurveGetWeeklyVolumeDTOsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, poolId);
+    Debug.Write("Status Code: " + response.StatusCode);
+    Debug.Write("Response Headers: " + response.Headers);
+    Debug.Write("Response Body: " + response.Data);
+}
+catch (ApiException e)
+{
+    Debug.Print("Exception when calling CurveApi.CurveGetWeeklyVolumeDTOsHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Status Code: " + e.ErrorCode);
+    Debug.Print(e.StackTrace);
+}
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+|------|------|-------------|-------|
+| **startBlock** | **long?** |  | [optional]  |
+| **endBlock** | **long?** |  | [optional]  |
+| **startDate** | **DateTime?** |  | [optional]  |
+| **endDate** | **DateTime?** |  | [optional]  |
+| **poolId** | **string** |  | [optional]  |
+
+### Return type
+
+[**List&lt;CurveWeeklyVolumeDTO&gt;**](CurveWeeklyVolumeDTO.md)
 
 ### Authorization
 

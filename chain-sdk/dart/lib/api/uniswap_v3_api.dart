@@ -16,6 +16,107 @@ class UniswapV3Api {
 
   final ApiClient apiClient;
 
+  /// BundleV3DTOs (historical) 🔥
+  ///
+  /// Gets BundleV3DTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV3GetBundleV3DTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/BundleV3DTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// BundleV3DTOs (historical) 🔥
+  ///
+  /// Gets BundleV3DTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV3BundleV3DTO>?> uniswapV3GetBundleV3DTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV3GetBundleV3DTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3BundleV3DTO>') as List)
+        .cast<UniswapV3BundleV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// Bundles (current)
   ///
   /// Gets bundles.
@@ -153,6 +254,107 @@ class UniswapV3Api {
       final responseBody = await _decodeBodyBytes(response);
       return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3BundleV3DTO>') as List)
         .cast<UniswapV3BundleV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// BurnV3DTOs (historical) 🔥
+  ///
+  /// Gets BurnV3DTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV3GetBurnV3DTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/BurnV3DTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// BurnV3DTOs (historical) 🔥
+  ///
+  /// Gets BurnV3DTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV3BurnV3DTO>?> uniswapV3GetBurnV3DTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV3GetBurnV3DTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3BurnV3DTO>') as List)
+        .cast<UniswapV3BurnV3DTO>()
         .toList();
 
     }
@@ -609,6 +811,208 @@ class UniswapV3Api {
     return null;
   }
 
+  /// FactoryV3DTOs (historical) 🔥
+  ///
+  /// Gets FactoryV3DTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV3GetFactoryV3DTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/FactoryV3DTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// FactoryV3DTOs (historical) 🔥
+  ///
+  /// Gets FactoryV3DTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV3FactoryV3DTO>?> uniswapV3GetFactoryV3DTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV3GetFactoryV3DTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3FactoryV3DTO>') as List)
+        .cast<UniswapV3FactoryV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// MintV3DTOs (historical) 🔥
+  ///
+  /// Gets MintV3DTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV3GetMintV3DTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/MintV3DTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// MintV3DTOs (historical) 🔥
+  ///
+  /// Gets MintV3DTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV3MintV3DTO>?> uniswapV3GetMintV3DTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV3GetMintV3DTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3MintV3DTO>') as List)
+        .cast<UniswapV3MintV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// Mints (current)
   ///
   /// Gets mints.
@@ -767,6 +1171,309 @@ class UniswapV3Api {
       final responseBody = await _decodeBodyBytes(response);
       return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3MintV3DTO>') as List)
         .cast<UniswapV3MintV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// PoolDayDataV3DTOs (historical) 🔥
+  ///
+  /// Gets PoolDayDataV3DTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV3GetPoolDayDataV3DTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/PoolDayDataV3DTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// PoolDayDataV3DTOs (historical) 🔥
+  ///
+  /// Gets PoolDayDataV3DTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV3PoolDayDataV3DTO>?> uniswapV3GetPoolDayDataV3DTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV3GetPoolDayDataV3DTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3PoolDayDataV3DTO>') as List)
+        .cast<UniswapV3PoolDayDataV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// PoolHourDataV3DTOs (historical) 🔥
+  ///
+  /// Gets PoolHourDataV3DTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV3GetPoolHourDataV3DTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/PoolHourDataV3DTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// PoolHourDataV3DTOs (historical) 🔥
+  ///
+  /// Gets PoolHourDataV3DTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV3PoolHourDataV3DTO>?> uniswapV3GetPoolHourDataV3DTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV3GetPoolHourDataV3DTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3PoolHourDataV3DTO>') as List)
+        .cast<UniswapV3PoolHourDataV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// PoolV3DTOs (historical) 🔥
+  ///
+  /// Gets PoolV3DTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV3GetPoolV3DTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/PoolV3DTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// PoolV3DTOs (historical) 🔥
+  ///
+  /// Gets PoolV3DTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV3PoolV3DTO>?> uniswapV3GetPoolV3DTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV3GetPoolV3DTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3PoolV3DTO>') as List)
+        .cast<UniswapV3PoolV3DTO>()
         .toList();
 
     }
@@ -1265,6 +1972,208 @@ class UniswapV3Api {
     return null;
   }
 
+  /// PositionSnapshotV3DTOs (historical) 🔥
+  ///
+  /// Gets PositionSnapshotV3DTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV3GetPositionSnapshotV3DTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/PositionSnapshotV3DTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// PositionSnapshotV3DTOs (historical) 🔥
+  ///
+  /// Gets PositionSnapshotV3DTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV3PositionSnapshotV3DTO>?> uniswapV3GetPositionSnapshotV3DTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV3GetPositionSnapshotV3DTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3PositionSnapshotV3DTO>') as List)
+        .cast<UniswapV3PositionSnapshotV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// PositionV3DTOs (historical) 🔥
+  ///
+  /// Gets PositionV3DTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV3GetPositionV3DTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/PositionV3DTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// PositionV3DTOs (historical) 🔥
+  ///
+  /// Gets PositionV3DTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV3PositionV3DTO>?> uniswapV3GetPositionV3DTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV3GetPositionV3DTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3PositionV3DTO>') as List)
+        .cast<UniswapV3PositionV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// Positions (current)
   ///
   /// Gets positions.
@@ -1593,6 +2502,107 @@ class UniswapV3Api {
     return null;
   }
 
+  /// SwapV3DTOs (historical) 🔥
+  ///
+  /// Gets SwapV3DTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV3GetSwapV3DTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/SwapV3DTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// SwapV3DTOs (historical) 🔥
+  ///
+  /// Gets SwapV3DTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV3SwapV3DTO>?> uniswapV3GetSwapV3DTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV3GetSwapV3DTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3SwapV3DTO>') as List)
+        .cast<UniswapV3SwapV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// Swaps (current) 🔥
   ///
   /// Gets swaps.
@@ -1751,6 +2761,208 @@ class UniswapV3Api {
       final responseBody = await _decodeBodyBytes(response);
       return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3SwapV3DTO>') as List)
         .cast<UniswapV3SwapV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// TickDayDataV3DTOs (historical) 🔥
+  ///
+  /// Gets TickDayDataV3DTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV3GetTickDayDataV3DTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/TickDayDataV3DTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// TickDayDataV3DTOs (historical) 🔥
+  ///
+  /// Gets TickDayDataV3DTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV3TickDayDataV3DTO>?> uniswapV3GetTickDayDataV3DTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV3GetTickDayDataV3DTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TickDayDataV3DTO>') as List)
+        .cast<UniswapV3TickDayDataV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// TickV3DTOs (historical) 🔥
+  ///
+  /// Gets TickV3DTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV3GetTickV3DTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/TickV3DTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// TickV3DTOs (historical) 🔥
+  ///
+  /// Gets TickV3DTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV3TickV3DTO>?> uniswapV3GetTickV3DTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV3GetTickV3DTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TickV3DTO>') as List)
+        .cast<UniswapV3TickV3DTO>()
         .toList();
 
     }
@@ -2079,6 +3291,309 @@ class UniswapV3Api {
       final responseBody = await _decodeBodyBytes(response);
       return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TickV3DTO>') as List)
         .cast<UniswapV3TickV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// TokenHourDataV3DTOs (historical) 🔥
+  ///
+  /// Gets TokenHourDataV3DTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV3GetTokenHourDataV3DTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/TokenHourDataV3DTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// TokenHourDataV3DTOs (historical) 🔥
+  ///
+  /// Gets TokenHourDataV3DTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV3TokenHourDataV3DTO>?> uniswapV3GetTokenHourDataV3DTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV3GetTokenHourDataV3DTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TokenHourDataV3DTO>') as List)
+        .cast<UniswapV3TokenHourDataV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// TokenV3DTOs (historical) 🔥
+  ///
+  /// Gets TokenV3DTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV3GetTokenV3DTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/TokenV3DTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// TokenV3DTOs (historical) 🔥
+  ///
+  /// Gets TokenV3DTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV3TokenV3DTO>?> uniswapV3GetTokenV3DTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV3GetTokenV3DTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TokenV3DTO>') as List)
+        .cast<UniswapV3TokenV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// TokenV3DayDataDTOs (historical) 🔥
+  ///
+  /// Gets TokenV3DayDataDTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV3GetTokenV3DayDataDTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/TokenV3DayDataDTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// TokenV3DayDataDTOs (historical) 🔥
+  ///
+  /// Gets TokenV3DayDataDTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV3TokenV3DayDataDTO>?> uniswapV3GetTokenV3DayDataDTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV3GetTokenV3DayDataDTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TokenV3DayDataDTO>') as List)
+        .cast<UniswapV3TokenV3DayDataDTO>()
         .toList();
 
     }
@@ -2577,6 +4092,107 @@ class UniswapV3Api {
     return null;
   }
 
+  /// TransactionV3DTOs (historical) 🔥
+  ///
+  /// Gets TransactionV3DTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV3GetTransactionV3DTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/TransactionV3DTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// TransactionV3DTOs (historical) 🔥
+  ///
+  /// Gets TransactionV3DTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV3TransactionV3DTO>?> uniswapV3GetTransactionV3DTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV3GetTransactionV3DTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TransactionV3DTO>') as List)
+        .cast<UniswapV3TransactionV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// Transactions (historical)
   ///
   /// Gets transactions.
@@ -2663,6 +4279,107 @@ class UniswapV3Api {
       final responseBody = await _decodeBodyBytes(response);
       return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TransactionV3DTO>') as List)
         .cast<UniswapV3TransactionV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// UniswapDayDataV3DTOs (historical) 🔥
+  ///
+  /// Gets UniswapDayDataV3DTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> uniswapV3GetUniswapDayDataV3DTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/UniswapDayDataV3DTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// UniswapDayDataV3DTOs (historical) 🔥
+  ///
+  /// Gets UniswapDayDataV3DTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<UniswapV3UniswapDayDataV3DTO>?> uniswapV3GetUniswapDayDataV3DTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await uniswapV3GetUniswapDayDataV3DTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3UniswapDayDataV3DTO>') as List)
+        .cast<UniswapV3UniswapDayDataV3DTO>()
         .toList();
 
     }

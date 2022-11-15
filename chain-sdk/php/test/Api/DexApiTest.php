@@ -73,12 +73,36 @@ class DexApiTest extends TestCase
     }
 
     /**
+     * Test case for dexGetBatchDTOsHistorical
+     *
+     * BatchDTOs (historical) 🔥.
+     *
+     */
+    public function testDexGetBatchDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for dexGetBatchesHistorical
      *
      * Batches (historical).
      *
      */
     public function testDexGetBatchesHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dexGetDepositDTOsHistorical
+     *
+     * DepositDTOs (historical) 🔥.
+     *
+     */
+    public function testDexGetDepositDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -97,12 +121,36 @@ class DexApiTest extends TestCase
     }
 
     /**
+     * Test case for dexGetOrderDTOsHistorical
+     *
+     * OrderDTOs (historical) 🔥.
+     *
+     */
+    public function testDexGetOrderDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for dexGetOrdersHistorical
      *
      * Orders (historical).
      *
      */
     public function testDexGetOrdersHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dexGetPriceDTOsHistorical
+     *
+     * PriceDTOs (historical) 🔥.
+     *
+     */
+    public function testDexGetPriceDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -121,12 +169,36 @@ class DexApiTest extends TestCase
     }
 
     /**
+     * Test case for dexGetSolutionDTOsHistorical
+     *
+     * SolutionDTOs (historical) 🔥.
+     *
+     */
+    public function testDexGetSolutionDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for dexGetSolutionsHistorical
      *
      * Solutions (historical).
      *
      */
     public function testDexGetSolutionsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dexGetStatsDTOsHistorical
+     *
+     * StatsDTOs (historical) 🔥.
+     *
+     */
+    public function testDexGetStatsDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -145,12 +217,36 @@ class DexApiTest extends TestCase
     }
 
     /**
+     * Test case for dexGetTokenDTOsHistorical
+     *
+     * TokenDTOs (historical) 🔥.
+     *
+     */
+    public function testDexGetTokenDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for dexGetTokensHistorical
      *
      * Tokens (historical) 🔥.
      *
      */
     public function testDexGetTokensHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dexGetTradeDTOsHistorical
+     *
+     * TradeDTOs (historical) 🔥.
+     *
+     */
+    public function testDexGetTradeDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -169,12 +265,48 @@ class DexApiTest extends TestCase
     }
 
     /**
+     * Test case for dexGetUserDTOsHistorical
+     *
+     * UserDTOs (historical) 🔥.
+     *
+     */
+    public function testDexGetUserDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for dexGetUsersHistorical
      *
      * Users (historical).
      *
      */
     public function testDexGetUsersHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dexGetWithdrawDTOsHistorical
+     *
+     * WithdrawDTOs (historical) 🔥.
+     *
+     */
+    public function testDexGetWithdrawDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for dexGetWithdrawRequestDTOsHistorical
+     *
+     * WithdrawRequestDTOs (historical) 🔥.
+     *
+     */
+    public function testDexGetWithdrawRequestDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

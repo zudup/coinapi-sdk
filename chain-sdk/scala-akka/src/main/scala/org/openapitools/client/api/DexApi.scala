@@ -35,6 +35,28 @@ object DexApi {
 class DexApi(baseUrl: String) {
 
   /**
+   * Gets BatchDTOs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[BatchDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   */
+  def dexGetBatchDTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[BatchDTO]] =
+    ApiRequest[Seq[BatchDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/BatchDTOs/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("poolId", poolId)
+      .withSuccessResponse[Seq[BatchDTO]](200)
+      
+
+  /**
    * Gets batches.
    * 
    * Expected answers:
@@ -52,6 +74,28 @@ class DexApi(baseUrl: String) {
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
       .withSuccessResponse[Seq[BatchDTO]](200)
+      
+
+  /**
+   * Gets DepositDTOs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[DepositDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   */
+  def dexGetDepositDTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[DepositDTO]] =
+    ApiRequest[Seq[DepositDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/DepositDTOs/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("poolId", poolId)
+      .withSuccessResponse[Seq[DepositDTO]](200)
       
 
   /**
@@ -77,6 +121,28 @@ class DexApi(baseUrl: String) {
       
 
   /**
+   * Gets OrderDTOs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[OrderDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   */
+  def dexGetOrderDTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[OrderDTO]] =
+    ApiRequest[Seq[OrderDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/OrderDTOs/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("poolId", poolId)
+      .withSuccessResponse[Seq[OrderDTO]](200)
+      
+
+  /**
    * Gets orders.
    * 
    * Expected answers:
@@ -96,6 +162,28 @@ class DexApi(baseUrl: String) {
       .withQueryParam("endDate", endDate)
       .withQueryParam("tokenId", tokenId)
       .withSuccessResponse[Seq[OrderDTO]](200)
+      
+
+  /**
+   * Gets PriceDTOs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[PriceDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   */
+  def dexGetPriceDTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[PriceDTO]] =
+    ApiRequest[Seq[PriceDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/PriceDTOs/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("poolId", poolId)
+      .withSuccessResponse[Seq[PriceDTO]](200)
       
 
   /**
@@ -121,6 +209,28 @@ class DexApi(baseUrl: String) {
       
 
   /**
+   * Gets SolutionDTOs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[SolutionDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   */
+  def dexGetSolutionDTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[SolutionDTO]] =
+    ApiRequest[Seq[SolutionDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/SolutionDTOs/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("poolId", poolId)
+      .withSuccessResponse[Seq[SolutionDTO]](200)
+      
+
+  /**
    * Gets solutions.
    * 
    * Expected answers:
@@ -143,6 +253,28 @@ class DexApi(baseUrl: String) {
       
 
   /**
+   * Gets StatsDTOs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[StatsDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   */
+  def dexGetStatsDTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[StatsDTO]] =
+    ApiRequest[Seq[StatsDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/StatsDTOs/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("poolId", poolId)
+      .withSuccessResponse[Seq[StatsDTO]](200)
+      
+
+  /**
    * Gets stats.
    * 
    * Expected answers:
@@ -160,6 +292,28 @@ class DexApi(baseUrl: String) {
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
       .withSuccessResponse[Seq[StatsDTO]](200)
+      
+
+  /**
+   * Gets TokenDTOs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TokenDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   */
+  def dexGetTokenDTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[TokenDTO]] =
+    ApiRequest[Seq[TokenDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/TokenDTOs/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("poolId", poolId)
+      .withSuccessResponse[Seq[TokenDTO]](200)
       
 
   /**
@@ -185,6 +339,28 @@ class DexApi(baseUrl: String) {
       
 
   /**
+   * Gets TradeDTOs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TradeDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   */
+  def dexGetTradeDTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[TradeDTO]] =
+    ApiRequest[Seq[TradeDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/TradeDTOs/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("poolId", poolId)
+      .withSuccessResponse[Seq[TradeDTO]](200)
+      
+
+  /**
    * Gets trades.
    * 
    * Expected answers:
@@ -205,6 +381,28 @@ class DexApi(baseUrl: String) {
       
 
   /**
+   * Gets UserDTOs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[UserDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   */
+  def dexGetUserDTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[UserDTO]] =
+    ApiRequest[Seq[UserDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/UserDTOs/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("poolId", poolId)
+      .withSuccessResponse[Seq[UserDTO]](200)
+      
+
+  /**
    * Gets users.
    * 
    * Expected answers:
@@ -222,6 +420,50 @@ class DexApi(baseUrl: String) {
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
       .withSuccessResponse[Seq[UserDTO]](200)
+      
+
+  /**
+   * Gets WithdrawDTOs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[WithdrawDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   */
+  def dexGetWithdrawDTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[WithdrawDTO]] =
+    ApiRequest[Seq[WithdrawDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/WithdrawDTOs/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("poolId", poolId)
+      .withSuccessResponse[Seq[WithdrawDTO]](200)
+      
+
+  /**
+   * Gets WithdrawRequestDTOs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[WithdrawRequestDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   */
+  def dexGetWithdrawRequestDTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[WithdrawRequestDTO]] =
+    ApiRequest[Seq[WithdrawRequestDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/WithdrawRequestDTOs/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("poolId", poolId)
+      .withSuccessResponse[Seq[WithdrawRequestDTO]](200)
       
 
   /**

@@ -24,6 +24,155 @@ import (
 // CowApiService CowApi service
 type CowApiService service
 
+type ApiCowGetOrderDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CowApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCowGetOrderDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCowGetOrderDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCowGetOrderDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCowGetOrderDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCowGetOrderDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCowGetOrderDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCowGetOrderDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCowGetOrderDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCowGetOrderDTOsHistoricalRequest) PoolId(poolId string) ApiCowGetOrderDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCowGetOrderDTOsHistoricalRequest) Execute() ([]CowOrderDTO, *http.Response, error) {
+	return r.ApiService.CowGetOrderDTOsHistoricalExecute(r)
+}
+
+/*
+CowGetOrderDTOsHistorical OrderDTOs (historical) 🔥
+
+Gets OrderDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCowGetOrderDTOsHistoricalRequest
+*/
+func (a *CowApiService) CowGetOrderDTOsHistorical(ctx context.Context) ApiCowGetOrderDTOsHistoricalRequest {
+	return ApiCowGetOrderDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CowOrderDTO
+func (a *CowApiService) CowGetOrderDTOsHistoricalExecute(r ApiCowGetOrderDTOsHistoricalRequest) ([]CowOrderDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CowOrderDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CowApiService.CowGetOrderDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/cow/OrderDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiCowGetOrdersHistoricalRequest struct {
 	ctx context.Context
 	ApiService *CowApiService
@@ -162,6 +311,155 @@ func (a *CowApiService) CowGetOrdersHistoricalExecute(r ApiCowGetOrdersHistorica
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiCowGetSettlementDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CowApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCowGetSettlementDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCowGetSettlementDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCowGetSettlementDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCowGetSettlementDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCowGetSettlementDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCowGetSettlementDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCowGetSettlementDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCowGetSettlementDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCowGetSettlementDTOsHistoricalRequest) PoolId(poolId string) ApiCowGetSettlementDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCowGetSettlementDTOsHistoricalRequest) Execute() ([]CowSettlementDTO, *http.Response, error) {
+	return r.ApiService.CowGetSettlementDTOsHistoricalExecute(r)
+}
+
+/*
+CowGetSettlementDTOsHistorical SettlementDTOs (historical) 🔥
+
+Gets SettlementDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCowGetSettlementDTOsHistoricalRequest
+*/
+func (a *CowApiService) CowGetSettlementDTOsHistorical(ctx context.Context) ApiCowGetSettlementDTOsHistoricalRequest {
+	return ApiCowGetSettlementDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CowSettlementDTO
+func (a *CowApiService) CowGetSettlementDTOsHistoricalExecute(r ApiCowGetSettlementDTOsHistoricalRequest) ([]CowSettlementDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CowSettlementDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CowApiService.CowGetSettlementDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/cow/SettlementDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiCowGetSettlementsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *CowApiService
@@ -245,6 +543,155 @@ func (a *CowApiService) CowGetSettlementsHistoricalExecute(r ApiCowGetSettlement
 	}
 	if r.endDate != nil {
 		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCowGetTokenDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CowApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCowGetTokenDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCowGetTokenDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCowGetTokenDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCowGetTokenDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCowGetTokenDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCowGetTokenDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCowGetTokenDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCowGetTokenDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCowGetTokenDTOsHistoricalRequest) PoolId(poolId string) ApiCowGetTokenDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCowGetTokenDTOsHistoricalRequest) Execute() ([]CowTokenDTO, *http.Response, error) {
+	return r.ApiService.CowGetTokenDTOsHistoricalExecute(r)
+}
+
+/*
+CowGetTokenDTOsHistorical TokenDTOs (historical) 🔥
+
+Gets TokenDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCowGetTokenDTOsHistoricalRequest
+*/
+func (a *CowApiService) CowGetTokenDTOsHistorical(ctx context.Context) ApiCowGetTokenDTOsHistoricalRequest {
+	return ApiCowGetTokenDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CowTokenDTO
+func (a *CowApiService) CowGetTokenDTOsHistoricalExecute(r ApiCowGetTokenDTOsHistoricalRequest) ([]CowTokenDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CowTokenDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CowApiService.CowGetTokenDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/cow/TokenDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -449,6 +896,155 @@ func (a *CowApiService) CowGetTokensHistoricalExecute(r ApiCowGetTokensHistorica
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiCowGetTradeDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CowApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCowGetTradeDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCowGetTradeDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCowGetTradeDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCowGetTradeDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCowGetTradeDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCowGetTradeDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCowGetTradeDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCowGetTradeDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCowGetTradeDTOsHistoricalRequest) PoolId(poolId string) ApiCowGetTradeDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCowGetTradeDTOsHistoricalRequest) Execute() ([]CowTradeDTO, *http.Response, error) {
+	return r.ApiService.CowGetTradeDTOsHistoricalExecute(r)
+}
+
+/*
+CowGetTradeDTOsHistorical TradeDTOs (historical) 🔥
+
+Gets TradeDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCowGetTradeDTOsHistoricalRequest
+*/
+func (a *CowApiService) CowGetTradeDTOsHistorical(ctx context.Context) ApiCowGetTradeDTOsHistoricalRequest {
+	return ApiCowGetTradeDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CowTradeDTO
+func (a *CowApiService) CowGetTradeDTOsHistoricalExecute(r ApiCowGetTradeDTOsHistoricalRequest) ([]CowTradeDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CowTradeDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CowApiService.CowGetTradeDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/cow/TradeDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiCowGetTradesHistoricalRequest struct {
 	ctx context.Context
 	ApiService *CowApiService
@@ -533,6 +1129,155 @@ func (a *CowApiService) CowGetTradesHistoricalExecute(r ApiCowGetTradesHistorica
 	}
 	if r.endDate != nil {
 		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCowGetUserDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CowApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCowGetUserDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCowGetUserDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCowGetUserDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCowGetUserDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCowGetUserDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCowGetUserDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCowGetUserDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCowGetUserDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCowGetUserDTOsHistoricalRequest) PoolId(poolId string) ApiCowGetUserDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCowGetUserDTOsHistoricalRequest) Execute() ([]CowUserDTO, *http.Response, error) {
+	return r.ApiService.CowGetUserDTOsHistoricalExecute(r)
+}
+
+/*
+CowGetUserDTOsHistorical UserDTOs (historical) 🔥
+
+Gets UserDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCowGetUserDTOsHistoricalRequest
+*/
+func (a *CowApiService) CowGetUserDTOsHistorical(ctx context.Context) ApiCowGetUserDTOsHistoricalRequest {
+	return ApiCowGetUserDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CowUserDTO
+func (a *CowApiService) CowGetUserDTOsHistoricalExecute(r ApiCowGetUserDTOsHistoricalRequest) ([]CowUserDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CowUserDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CowApiService.CowGetUserDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/cow/UserDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

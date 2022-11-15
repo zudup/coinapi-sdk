@@ -10,6 +10,49 @@ defmodule OnChainAPI.Api.Curve do
   import OnChainAPI.RequestBuilder
 
   @doc """
+  AccountDTOs (historical) 🔥
+  Gets AccountDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveAccountDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_account_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveAccountDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_account_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/AccountDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveAccountDto{}]}
+    ])
+  end
+
+  @doc """
   Accounts (historical)
   Gets accounts.
 
@@ -47,6 +90,49 @@ defmodule OnChainAPI.Api.Curve do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.CurveAccountDto{}]}
+    ])
+  end
+
+  @doc """
+  AddLiquidityEventDTOs (historical) 🔥
+  Gets AddLiquidityEventDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveAddLiquidityEventDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_add_liquidity_event_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveAddLiquidityEventDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_add_liquidity_event_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/AddLiquidityEventDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveAddLiquidityEventDto{}]}
     ])
   end
 
@@ -94,6 +180,49 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
+  AdminFeeChangeLogDTOs (historical) 🔥
+  Gets AdminFeeChangeLogDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveAdminFeeChangeLogDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_admin_fee_change_log_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveAdminFeeChangeLogDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_admin_fee_change_log_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/AdminFeeChangeLogDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveAdminFeeChangeLogDto{}]}
+    ])
+  end
+
+  @doc """
   AdminFeeChangeLogs (historical)
   Gets admin fee change logs.
 
@@ -133,6 +262,49 @@ defmodule OnChainAPI.Api.Curve do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.CurveAdminFeeChangeLogDto{}]}
+    ])
+  end
+
+  @doc """
+  AmplificationCoeffChangeLogDTOs (historical) 🔥
+  Gets AmplificationCoeffChangeLogDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveAmplificationCoeffChangeLogDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_amplification_coeff_change_log_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveAmplificationCoeffChangeLogDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_amplification_coeff_change_log_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/AmplificationCoeffChangeLogDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveAmplificationCoeffChangeLogDto{}]}
     ])
   end
 
@@ -180,6 +352,49 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
+  CoinDTOs (historical) 🔥
+  Gets CoinDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveCoinDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_coin_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveCoinDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_coin_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/CoinDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveCoinDto{}]}
+    ])
+  end
+
+  @doc """
   Coins (historical)
   Gets coins.
 
@@ -219,6 +434,92 @@ defmodule OnChainAPI.Api.Curve do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.CurveCoinDto{}]}
+    ])
+  end
+
+  @doc """
+  ContractDTOs (historical) 🔥
+  Gets ContractDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveContractDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_contract_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveContractDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_contract_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/ContractDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveContractDto{}]}
+    ])
+  end
+
+  @doc """
+  ContractVersionDTOs (historical) 🔥
+  Gets ContractVersionDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveContractVersionDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_contract_version_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveContractVersionDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_contract_version_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/ContractVersionDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveContractVersionDto{}]}
     ])
   end
 
@@ -309,6 +610,49 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
+  DailyVolumeDTOs (historical) 🔥
+  Gets DailyVolumeDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveDailyVolumeDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_daily_volume_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveDailyVolumeDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_daily_volume_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/DailyVolumeDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveDailyVolumeDto{}]}
+    ])
+  end
+
+  @doc """
   DailyVolumes (historical)
   Gets daily volumes.
 
@@ -348,6 +692,49 @@ defmodule OnChainAPI.Api.Curve do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.CurveDailyVolumeDto{}]}
+    ])
+  end
+
+  @doc """
+  ExchangeDTOs (historical) 🔥
+  Gets ExchangeDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveExchangeDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_exchange_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveExchangeDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_exchange_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/ExchangeDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveExchangeDto{}]}
     ])
   end
 
@@ -395,6 +782,49 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
+  FeeChangeLogDTOs (historical) 🔥
+  Gets FeeChangeLogDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveFeeChangeLogDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_fee_change_log_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveFeeChangeLogDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_fee_change_log_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/FeeChangeLogDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveFeeChangeLogDto{}]}
+    ])
+  end
+
+  @doc """
   FeeChangeLogs (historical)
   Gets fee change logs.
 
@@ -434,6 +864,393 @@ defmodule OnChainAPI.Api.Curve do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.CurveFeeChangeLogDto{}]}
+    ])
+  end
+
+  @doc """
+  GaugeDepositDTOs (historical) 🔥
+  Gets GaugeDepositDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveGaugeDepositDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_gauge_deposit_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveGaugeDepositDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_gauge_deposit_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/GaugeDepositDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveGaugeDepositDto{}]}
+    ])
+  end
+
+  @doc """
+  GaugeDTOs (historical) 🔥
+  Gets GaugeDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveGaugeDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_gauge_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveGaugeDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_gauge_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/GaugeDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveGaugeDto{}]}
+    ])
+  end
+
+  @doc """
+  GaugeLiquidityDTOs (historical) 🔥
+  Gets GaugeLiquidityDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveGaugeLiquidityDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_gauge_liquidity_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveGaugeLiquidityDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_gauge_liquidity_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/GaugeLiquidityDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveGaugeLiquidityDto{}]}
+    ])
+  end
+
+  @doc """
+  GaugeTotalWeightDTOs (historical) 🔥
+  Gets GaugeTotalWeightDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveGaugeTotalWeightDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_gauge_total_weight_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveGaugeTotalWeightDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_gauge_total_weight_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/GaugeTotalWeightDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveGaugeTotalWeightDto{}]}
+    ])
+  end
+
+  @doc """
+  GaugeTypeDTOs (historical) 🔥
+  Gets GaugeTypeDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveGaugeTypeDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_gauge_type_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveGaugeTypeDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_gauge_type_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/GaugeTypeDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveGaugeTypeDto{}]}
+    ])
+  end
+
+  @doc """
+  GaugeTypeWeightDTOs (historical) 🔥
+  Gets GaugeTypeWeightDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveGaugeTypeWeightDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_gauge_type_weight_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveGaugeTypeWeightDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_gauge_type_weight_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/GaugeTypeWeightDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveGaugeTypeWeightDto{}]}
+    ])
+  end
+
+  @doc """
+  GaugeWeightDTOs (historical) 🔥
+  Gets GaugeWeightDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveGaugeWeightDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_gauge_weight_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveGaugeWeightDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_gauge_weight_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/GaugeWeightDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveGaugeWeightDto{}]}
+    ])
+  end
+
+  @doc """
+  GaugeWeightVoteDTOs (historical) 🔥
+  Gets GaugeWeightVoteDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveGaugeWeightVoteDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_gauge_weight_vote_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveGaugeWeightVoteDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_gauge_weight_vote_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/GaugeWeightVoteDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveGaugeWeightVoteDto{}]}
+    ])
+  end
+
+  @doc """
+  GaugeWithdrawDTOs (historical) 🔥
+  Gets GaugeWithdrawDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveGaugeWithdrawDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_gauge_withdraw_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveGaugeWithdrawDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_gauge_withdraw_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/GaugeWithdrawDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveGaugeWithdrawDto{}]}
     ])
   end
 
@@ -809,6 +1626,49 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
+  HourlyVolumeDTOs (historical) 🔥
+  Gets HourlyVolumeDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveHourlyVolumeDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_hourly_volume_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveHourlyVolumeDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_hourly_volume_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/HourlyVolumeDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveHourlyVolumeDto{}]}
+    ])
+  end
+
+  @doc """
   HourlyVolumes (historical)
   Gets hourly volumes.
 
@@ -848,6 +1708,49 @@ defmodule OnChainAPI.Api.Curve do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.CurveHourlyVolumeDto{}]}
+    ])
+  end
+
+  @doc """
+  LpTokenDTOs (historical) 🔥
+  Gets LpTokenDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveLpTokenDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_lp_token_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveLpTokenDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_lp_token_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/LpTokenDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveLpTokenDto{}]}
     ])
   end
 
@@ -895,6 +1798,49 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
+  PoolDTOs (historical) 🔥
+  Gets PoolDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurvePoolDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_pool_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurvePoolDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_pool_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/PoolDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurvePoolDto{}]}
+    ])
+  end
+
+  @doc """
   Pools (historical) 🔥
   Gets pools.
 
@@ -934,6 +1880,92 @@ defmodule OnChainAPI.Api.Curve do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.CurvePoolDto{}]}
+    ])
+  end
+
+  @doc """
+  ProposalDTOs (historical) 🔥
+  Gets ProposalDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveProposalDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_proposal_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveProposalDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_proposal_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/ProposalDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveProposalDto{}]}
+    ])
+  end
+
+  @doc """
+  ProposalVoteDTOs (historical) 🔥
+  Gets ProposalVoteDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveProposalVoteDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_proposal_vote_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveProposalVoteDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_proposal_vote_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/ProposalVoteDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveProposalVoteDto{}]}
     ])
   end
 
@@ -1020,6 +2052,49 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
+  RemoveLiquidityEventDTOs (historical) 🔥
+  Gets RemoveLiquidityEventDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveRemoveLiquidityEventDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_remove_liquidity_event_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveRemoveLiquidityEventDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_remove_liquidity_event_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/RemoveLiquidityEventDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveRemoveLiquidityEventDto{}]}
+    ])
+  end
+
+  @doc """
   RemoveLiquidityEvents (historical)
   Gets remove liquidity events.
 
@@ -1059,6 +2134,49 @@ defmodule OnChainAPI.Api.Curve do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.CurveRemoveLiquidityEventDto{}]}
+    ])
+  end
+
+  @doc """
+  RemoveLiquidityOneEventDTOs (historical) 🔥
+  Gets RemoveLiquidityOneEventDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveRemoveLiquidityOneEventDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_remove_liquidity_one_event_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveRemoveLiquidityOneEventDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_remove_liquidity_one_event_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/RemoveLiquidityOneEventDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveRemoveLiquidityOneEventDto{}]}
     ])
   end
 
@@ -1106,6 +2224,49 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
+  SystemStateDTOs (historical) 🔥
+  Gets SystemStateDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveSystemStateDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_system_state_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveSystemStateDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_system_state_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/SystemStateDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveSystemStateDto{}]}
+    ])
+  end
+
+  @doc """
   SystemStates (historical)
   Gets system states.
 
@@ -1143,6 +2304,49 @@ defmodule OnChainAPI.Api.Curve do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.CurveSystemStateDto{}]}
+    ])
+  end
+
+  @doc """
+  TokenDTOs (historical) 🔥
+  Gets TokenDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveTokenDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_token_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveTokenDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_token_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/TokenDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveTokenDto{}]}
     ])
   end
 
@@ -1190,6 +2394,49 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
+  TransferOwnershipEventDTOs (historical) 🔥
+  Gets TransferOwnershipEventDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveTransferOwnershipEventDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_transfer_ownership_event_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveTransferOwnershipEventDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_transfer_ownership_event_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/TransferOwnershipEventDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveTransferOwnershipEventDto{}]}
+    ])
+  end
+
+  @doc """
   TransferOwnershipEvents (historical)
   Gets transfer ownership events.
 
@@ -1229,6 +2476,49 @@ defmodule OnChainAPI.Api.Curve do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.CurveTransferOwnershipEventDto{}]}
+    ])
+  end
+
+  @doc """
+  UnderlyingCoinDTOs (historical) 🔥
+  Gets UnderlyingCoinDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveUnderlyingCoinDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_underlying_coin_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveUnderlyingCoinDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_underlying_coin_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/UnderlyingCoinDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveUnderlyingCoinDto{}]}
     ])
   end
 
@@ -1276,6 +2566,49 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
+  VotingAppDTOs (historical) 🔥
+  Gets VotingAppDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveVotingAppDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_voting_app_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveVotingAppDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_voting_app_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/VotingAppDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveVotingAppDto{}]}
+    ])
+  end
+
+  @doc """
   VotingApps (historical)
   Gets voting apps.
 
@@ -1313,6 +2646,49 @@ defmodule OnChainAPI.Api.Curve do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.CurveVotingAppDto{}]}
+    ])
+  end
+
+  @doc """
+  WeeklyVolumeDTOs (historical) 🔥
+  Gets WeeklyVolumeDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%CurveWeeklyVolumeDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec curve_get_weekly_volume_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveWeeklyVolumeDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_weekly_volume_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/curve/WeeklyVolumeDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.CurveWeeklyVolumeDto{}]}
     ])
   end
 

@@ -49,6 +49,24 @@ public:
     virtual ~CowApi();
 
     /// <summary>
+    /// OrderDTOs (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets OrderDTOs.
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<Cow_OrderDTO>>> cow_GetOrderDTOs__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> poolId
+    ) const;
+    /// <summary>
     /// Orders (historical)
     /// </summary>
     /// <remarks>
@@ -65,6 +83,24 @@ public:
         boost::optional<utility::datetime> endDate
     ) const;
     /// <summary>
+    /// SettlementDTOs (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets SettlementDTOs.
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<Cow_SettlementDTO>>> cow_GetSettlementDTOs__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> poolId
+    ) const;
+    /// <summary>
     /// Settlements (historical)
     /// </summary>
     /// <remarks>
@@ -79,6 +115,24 @@ public:
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate
+    ) const;
+    /// <summary>
+    /// TokenDTOs (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets TokenDTOs.
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<Cow_TokenDTO>>> cow_GetTokenDTOs__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
     /// Tokens (historical) 🔥
@@ -99,6 +153,24 @@ public:
         boost::optional<utility::string_t> tokenId
     ) const;
     /// <summary>
+    /// TradeDTOs (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets TradeDTOs.
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<Cow_TradeDTO>>> cow_GetTradeDTOs__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> poolId
+    ) const;
+    /// <summary>
     /// Trades (historical) 🔥
     /// </summary>
     /// <remarks>
@@ -113,6 +185,24 @@ public:
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
         boost::optional<utility::datetime> endDate
+    ) const;
+    /// <summary>
+    /// UserDTOs (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets UserDTOs.
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<Cow_UserDTO>>> cow_GetUserDTOs__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
     /// Users (historical)

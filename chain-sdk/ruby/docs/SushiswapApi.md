@@ -6,24 +6,40 @@ All URIs are relative to *https://onchain.coinapi.io*
 | ------ | ------------ | ----------- |
 | [**curve_get_exchanges__current**](SushiswapApi.md#curve_get_exchanges__current) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥 |
 | [**dex_get_trades__current**](SushiswapApi.md#dex_get_trades__current) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥 |
+| [**sushiswap_get_bundle_dtos__historical**](SushiswapApi.md#sushiswap_get_bundle_dtos__historical) | **GET** /dapps/sushiswap/BundleDTOs/historical | BundleDTOs (historical) 🔥 |
 | [**sushiswap_get_bundles__historical**](SushiswapApi.md#sushiswap_get_bundles__historical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical) |
+| [**sushiswap_get_burn_dtos__historical**](SushiswapApi.md#sushiswap_get_burn_dtos__historical) | **GET** /dapps/sushiswap/BurnDTOs/historical | BurnDTOs (historical) 🔥 |
 | [**sushiswap_get_burns__historical**](SushiswapApi.md#sushiswap_get_burns__historical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical) |
 | [**sushiswap_get_day_data__historical**](SushiswapApi.md#sushiswap_get_day_data__historical) | **GET** /dapps/sushiswap/dayData/historical | DayData (historical) |
+| [**sushiswap_get_day_data_dtos__historical**](SushiswapApi.md#sushiswap_get_day_data_dtos__historical) | **GET** /dapps/sushiswap/DayDataDTOs/historical | DayDataDTOs (historical) 🔥 |
 | [**sushiswap_get_factory__historical**](SushiswapApi.md#sushiswap_get_factory__historical) | **GET** /dapps/sushiswap/factory/historical | Factory (historical) |
+| [**sushiswap_get_factory_dtos__historical**](SushiswapApi.md#sushiswap_get_factory_dtos__historical) | **GET** /dapps/sushiswap/FactoryDTOs/historical | FactoryDTOs (historical) 🔥 |
 | [**sushiswap_get_hour_data__historical**](SushiswapApi.md#sushiswap_get_hour_data__historical) | **GET** /dapps/sushiswap/hourData/historical | HourData (historical) |
+| [**sushiswap_get_hour_data_dtos__historical**](SushiswapApi.md#sushiswap_get_hour_data_dtos__historical) | **GET** /dapps/sushiswap/HourDataDTOs/historical | HourDataDTOs (historical) 🔥 |
 | [**sushiswap_get_liquidity_position__historical**](SushiswapApi.md#sushiswap_get_liquidity_position__historical) | **GET** /dapps/sushiswap/liquidityPosition/historical | LiquidityPosition (historical) |
+| [**sushiswap_get_liquidity_position_dtos__historical**](SushiswapApi.md#sushiswap_get_liquidity_position_dtos__historical) | **GET** /dapps/sushiswap/LiquidityPositionDTOs/historical | LiquidityPositionDTOs (historical) 🔥 |
 | [**sushiswap_get_liquidity_position_snapshot__historical**](SushiswapApi.md#sushiswap_get_liquidity_position_snapshot__historical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshot (historical) |
+| [**sushiswap_get_liquidity_position_snapshot_dtos__historical**](SushiswapApi.md#sushiswap_get_liquidity_position_snapshot_dtos__historical) | **GET** /dapps/sushiswap/LiquidityPositionSnapshotDTOs/historical | LiquidityPositionSnapshotDTOs (historical) 🔥 |
+| [**sushiswap_get_mint_dtos__historical**](SushiswapApi.md#sushiswap_get_mint_dtos__historical) | **GET** /dapps/sushiswap/MintDTOs/historical | MintDTOs (historical) 🔥 |
 | [**sushiswap_get_mints__historical**](SushiswapApi.md#sushiswap_get_mints__historical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical) |
+| [**sushiswap_get_pair_day_data_dtos__historical**](SushiswapApi.md#sushiswap_get_pair_day_data_dtos__historical) | **GET** /dapps/sushiswap/PairDayDataDTOs/historical | PairDayDataDTOs (historical) 🔥 |
+| [**sushiswap_get_pair_dtos__historical**](SushiswapApi.md#sushiswap_get_pair_dtos__historical) | **GET** /dapps/sushiswap/PairDTOs/historical | PairDTOs (historical) 🔥 |
+| [**sushiswap_get_pair_hour_data_dtos__historical**](SushiswapApi.md#sushiswap_get_pair_hour_data_dtos__historical) | **GET** /dapps/sushiswap/PairHourDataDTOs/historical | PairHourDataDTOs (historical) 🔥 |
 | [**sushiswap_get_pools__current**](SushiswapApi.md#sushiswap_get_pools__current) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥 |
 | [**sushiswap_get_pools__historical**](SushiswapApi.md#sushiswap_get_pools__historical) | **GET** /dapps/sushiswap/pools/historical | Pools (historical) 🔥 |
 | [**sushiswap_get_pools_day_data__historical**](SushiswapApi.md#sushiswap_get_pools_day_data__historical) | **GET** /dapps/sushiswap/poolsDayData/historical | PoolsDayData (historical) |
 | [**sushiswap_get_pools_hour_data__historical**](SushiswapApi.md#sushiswap_get_pools_hour_data__historical) | **GET** /dapps/sushiswap/poolsHourData/historical | PoolsHourData (historical) |
+| [**sushiswap_get_swap_dtos__historical**](SushiswapApi.md#sushiswap_get_swap_dtos__historical) | **GET** /dapps/sushiswap/SwapDTOs/historical | SwapDTOs (historical) 🔥 |
 | [**sushiswap_get_swaps__current**](SushiswapApi.md#sushiswap_get_swaps__current) | **GET** /dapps/sushiswap/swaps/current | Swaps (current) 🔥 |
 | [**sushiswap_get_swaps__historical**](SushiswapApi.md#sushiswap_get_swaps__historical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥 |
+| [**sushiswap_get_token_day_data_dtos__historical**](SushiswapApi.md#sushiswap_get_token_day_data_dtos__historical) | **GET** /dapps/sushiswap/TokenDayDataDTOs/historical | TokenDayDataDTOs (historical) 🔥 |
+| [**sushiswap_get_token_dtos__historical**](SushiswapApi.md#sushiswap_get_token_dtos__historical) | **GET** /dapps/sushiswap/TokenDTOs/historical | TokenDTOs (historical) 🔥 |
 | [**sushiswap_get_tokens__current**](SushiswapApi.md#sushiswap_get_tokens__current) | **GET** /dapps/sushiswap/tokens/current | Tokens (current) 🔥 |
 | [**sushiswap_get_tokens__historical**](SushiswapApi.md#sushiswap_get_tokens__historical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥 |
 | [**sushiswap_get_tokens_day_data__historical**](SushiswapApi.md#sushiswap_get_tokens_day_data__historical) | **GET** /dapps/sushiswap/tokensDayData/historical | TokensDayData (historical) |
+| [**sushiswap_get_transaction_dtos__historical**](SushiswapApi.md#sushiswap_get_transaction_dtos__historical) | **GET** /dapps/sushiswap/TransactionDTOs/historical | TransactionDTOs (historical) 🔥 |
 | [**sushiswap_get_transactions__historical**](SushiswapApi.md#sushiswap_get_transactions__historical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical) |
+| [**sushiswap_get_user_dtos__historical**](SushiswapApi.md#sushiswap_get_user_dtos__historical) | **GET** /dapps/sushiswap/UserDTOs/historical | UserDTOs (historical) 🔥 |
 | [**sushiswap_get_users__historical**](SushiswapApi.md#sushiswap_get_users__historical) | **GET** /dapps/sushiswap/users/historical | Users (historical) |
 
 
@@ -149,6 +165,80 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
+## sushiswap_get_bundle_dtos__historical
+
+> <Array<SushiswapBundleDTO>> sushiswap_get_bundle_dtos__historical(opts)
+
+BundleDTOs (historical) 🔥
+
+Gets BundleDTOs.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  # BundleDTOs (historical) 🔥
+  result = api_instance.sushiswap_get_bundle_dtos__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_bundle_dtos__historical: #{e}"
+end
+```
+
+#### Using the sushiswap_get_bundle_dtos__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<SushiswapBundleDTO>>, Integer, Hash)> sushiswap_get_bundle_dtos__historical_with_http_info(opts)
+
+```ruby
+begin
+  # BundleDTOs (historical) 🔥
+  data, status_code, headers = api_instance.sushiswap_get_bundle_dtos__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<SushiswapBundleDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_bundle_dtos__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+[**Array&lt;SushiswapBundleDTO&gt;**](SushiswapBundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
 ## sushiswap_get_bundles__historical
 
 > <Array<SushiswapBundleDTO>> sushiswap_get_bundles__historical(opts)
@@ -210,6 +300,80 @@ end
 ### Return type
 
 [**Array&lt;SushiswapBundleDTO&gt;**](SushiswapBundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswap_get_burn_dtos__historical
+
+> <Array<SushiswapBurnDTO>> sushiswap_get_burn_dtos__historical(opts)
+
+BurnDTOs (historical) 🔥
+
+Gets BurnDTOs.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  # BurnDTOs (historical) 🔥
+  result = api_instance.sushiswap_get_burn_dtos__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_burn_dtos__historical: #{e}"
+end
+```
+
+#### Using the sushiswap_get_burn_dtos__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<SushiswapBurnDTO>>, Integer, Hash)> sushiswap_get_burn_dtos__historical_with_http_info(opts)
+
+```ruby
+begin
+  # BurnDTOs (historical) 🔥
+  data, status_code, headers = api_instance.sushiswap_get_burn_dtos__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<SushiswapBurnDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_burn_dtos__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+[**Array&lt;SushiswapBurnDTO&gt;**](SushiswapBurnDTO.md)
 
 ### Authorization
 
@@ -367,6 +531,80 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
+## sushiswap_get_day_data_dtos__historical
+
+> <Array<SushiswapDayDataDTO>> sushiswap_get_day_data_dtos__historical(opts)
+
+DayDataDTOs (historical) 🔥
+
+Gets DayDataDTOs.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  # DayDataDTOs (historical) 🔥
+  result = api_instance.sushiswap_get_day_data_dtos__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_day_data_dtos__historical: #{e}"
+end
+```
+
+#### Using the sushiswap_get_day_data_dtos__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<SushiswapDayDataDTO>>, Integer, Hash)> sushiswap_get_day_data_dtos__historical_with_http_info(opts)
+
+```ruby
+begin
+  # DayDataDTOs (historical) 🔥
+  data, status_code, headers = api_instance.sushiswap_get_day_data_dtos__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<SushiswapDayDataDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_day_data_dtos__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+[**Array&lt;SushiswapDayDataDTO&gt;**](SushiswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
 ## sushiswap_get_factory__historical
 
 > <Array<SushiswapFactoryDTO>> sushiswap_get_factory__historical(opts)
@@ -424,6 +662,80 @@ end
 | **end_block** | **Integer** |  | [optional] |
 | **start_date** | **Time** |  | [optional] |
 | **end_date** | **Time** |  | [optional] |
+
+### Return type
+
+[**Array&lt;SushiswapFactoryDTO&gt;**](SushiswapFactoryDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswap_get_factory_dtos__historical
+
+> <Array<SushiswapFactoryDTO>> sushiswap_get_factory_dtos__historical(opts)
+
+FactoryDTOs (historical) 🔥
+
+Gets FactoryDTOs.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  # FactoryDTOs (historical) 🔥
+  result = api_instance.sushiswap_get_factory_dtos__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_factory_dtos__historical: #{e}"
+end
+```
+
+#### Using the sushiswap_get_factory_dtos__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<SushiswapFactoryDTO>>, Integer, Hash)> sushiswap_get_factory_dtos__historical_with_http_info(opts)
+
+```ruby
+begin
+  # FactoryDTOs (historical) 🔥
+  data, status_code, headers = api_instance.sushiswap_get_factory_dtos__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<SushiswapFactoryDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_factory_dtos__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
 
 ### Return type
 
@@ -511,6 +823,80 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
+## sushiswap_get_hour_data_dtos__historical
+
+> <Array<SushiswapHourDataDTO>> sushiswap_get_hour_data_dtos__historical(opts)
+
+HourDataDTOs (historical) 🔥
+
+Gets HourDataDTOs.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  # HourDataDTOs (historical) 🔥
+  result = api_instance.sushiswap_get_hour_data_dtos__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_hour_data_dtos__historical: #{e}"
+end
+```
+
+#### Using the sushiswap_get_hour_data_dtos__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<SushiswapHourDataDTO>>, Integer, Hash)> sushiswap_get_hour_data_dtos__historical_with_http_info(opts)
+
+```ruby
+begin
+  # HourDataDTOs (historical) 🔥
+  data, status_code, headers = api_instance.sushiswap_get_hour_data_dtos__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<SushiswapHourDataDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_hour_data_dtos__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+[**Array&lt;SushiswapHourDataDTO&gt;**](SushiswapHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
 ## sushiswap_get_liquidity_position__historical
 
 > <Array<SushiswapLiquidityPositionDTO>> sushiswap_get_liquidity_position__historical(opts)
@@ -558,6 +944,80 @@ begin
   p data # => <Array<SushiswapLiquidityPositionDTO>>
 rescue OpenapiClient::ApiError => e
   puts "Error when calling SushiswapApi->sushiswap_get_liquidity_position__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+[**Array&lt;SushiswapLiquidityPositionDTO&gt;**](SushiswapLiquidityPositionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswap_get_liquidity_position_dtos__historical
+
+> <Array<SushiswapLiquidityPositionDTO>> sushiswap_get_liquidity_position_dtos__historical(opts)
+
+LiquidityPositionDTOs (historical) 🔥
+
+Gets LiquidityPositionDTOs.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  # LiquidityPositionDTOs (historical) 🔥
+  result = api_instance.sushiswap_get_liquidity_position_dtos__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_liquidity_position_dtos__historical: #{e}"
+end
+```
+
+#### Using the sushiswap_get_liquidity_position_dtos__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<SushiswapLiquidityPositionDTO>>, Integer, Hash)> sushiswap_get_liquidity_position_dtos__historical_with_http_info(opts)
+
+```ruby
+begin
+  # LiquidityPositionDTOs (historical) 🔥
+  data, status_code, headers = api_instance.sushiswap_get_liquidity_position_dtos__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<SushiswapLiquidityPositionDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_liquidity_position_dtos__historical_with_http_info: #{e}"
 end
 ```
 
@@ -659,6 +1119,154 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
+## sushiswap_get_liquidity_position_snapshot_dtos__historical
+
+> <Array<SushiswapLiquidityPositionSnapshotDTO>> sushiswap_get_liquidity_position_snapshot_dtos__historical(opts)
+
+LiquidityPositionSnapshotDTOs (historical) 🔥
+
+Gets LiquidityPositionSnapshotDTOs.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  # LiquidityPositionSnapshotDTOs (historical) 🔥
+  result = api_instance.sushiswap_get_liquidity_position_snapshot_dtos__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_liquidity_position_snapshot_dtos__historical: #{e}"
+end
+```
+
+#### Using the sushiswap_get_liquidity_position_snapshot_dtos__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<SushiswapLiquidityPositionSnapshotDTO>>, Integer, Hash)> sushiswap_get_liquidity_position_snapshot_dtos__historical_with_http_info(opts)
+
+```ruby
+begin
+  # LiquidityPositionSnapshotDTOs (historical) 🔥
+  data, status_code, headers = api_instance.sushiswap_get_liquidity_position_snapshot_dtos__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<SushiswapLiquidityPositionSnapshotDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_liquidity_position_snapshot_dtos__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+[**Array&lt;SushiswapLiquidityPositionSnapshotDTO&gt;**](SushiswapLiquidityPositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswap_get_mint_dtos__historical
+
+> <Array<SushiswapMintDTO>> sushiswap_get_mint_dtos__historical(opts)
+
+MintDTOs (historical) 🔥
+
+Gets MintDTOs.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  # MintDTOs (historical) 🔥
+  result = api_instance.sushiswap_get_mint_dtos__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_mint_dtos__historical: #{e}"
+end
+```
+
+#### Using the sushiswap_get_mint_dtos__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<SushiswapMintDTO>>, Integer, Hash)> sushiswap_get_mint_dtos__historical_with_http_info(opts)
+
+```ruby
+begin
+  # MintDTOs (historical) 🔥
+  data, status_code, headers = api_instance.sushiswap_get_mint_dtos__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<SushiswapMintDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_mint_dtos__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+[**Array&lt;SushiswapMintDTO&gt;**](SushiswapMintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
 ## sushiswap_get_mints__historical
 
 > <Array<SushiswapMintDTO>> sushiswap_get_mints__historical(opts)
@@ -722,6 +1330,228 @@ end
 ### Return type
 
 [**Array&lt;SushiswapMintDTO&gt;**](SushiswapMintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswap_get_pair_day_data_dtos__historical
+
+> <Array<SushiswapPairDayDataDTO>> sushiswap_get_pair_day_data_dtos__historical(opts)
+
+PairDayDataDTOs (historical) 🔥
+
+Gets PairDayDataDTOs.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  # PairDayDataDTOs (historical) 🔥
+  result = api_instance.sushiswap_get_pair_day_data_dtos__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_pair_day_data_dtos__historical: #{e}"
+end
+```
+
+#### Using the sushiswap_get_pair_day_data_dtos__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<SushiswapPairDayDataDTO>>, Integer, Hash)> sushiswap_get_pair_day_data_dtos__historical_with_http_info(opts)
+
+```ruby
+begin
+  # PairDayDataDTOs (historical) 🔥
+  data, status_code, headers = api_instance.sushiswap_get_pair_day_data_dtos__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<SushiswapPairDayDataDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_pair_day_data_dtos__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+[**Array&lt;SushiswapPairDayDataDTO&gt;**](SushiswapPairDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswap_get_pair_dtos__historical
+
+> <Array<SushiswapPairDTO>> sushiswap_get_pair_dtos__historical(opts)
+
+PairDTOs (historical) 🔥
+
+Gets PairDTOs.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  # PairDTOs (historical) 🔥
+  result = api_instance.sushiswap_get_pair_dtos__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_pair_dtos__historical: #{e}"
+end
+```
+
+#### Using the sushiswap_get_pair_dtos__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<SushiswapPairDTO>>, Integer, Hash)> sushiswap_get_pair_dtos__historical_with_http_info(opts)
+
+```ruby
+begin
+  # PairDTOs (historical) 🔥
+  data, status_code, headers = api_instance.sushiswap_get_pair_dtos__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<SushiswapPairDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_pair_dtos__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+[**Array&lt;SushiswapPairDTO&gt;**](SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswap_get_pair_hour_data_dtos__historical
+
+> <Array<SushiswapPairHourDataDTO>> sushiswap_get_pair_hour_data_dtos__historical(opts)
+
+PairHourDataDTOs (historical) 🔥
+
+Gets PairHourDataDTOs.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  # PairHourDataDTOs (historical) 🔥
+  result = api_instance.sushiswap_get_pair_hour_data_dtos__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_pair_hour_data_dtos__historical: #{e}"
+end
+```
+
+#### Using the sushiswap_get_pair_hour_data_dtos__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<SushiswapPairHourDataDTO>>, Integer, Hash)> sushiswap_get_pair_hour_data_dtos__historical_with_http_info(opts)
+
+```ruby
+begin
+  # PairHourDataDTOs (historical) 🔥
+  data, status_code, headers = api_instance.sushiswap_get_pair_hour_data_dtos__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<SushiswapPairHourDataDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_pair_hour_data_dtos__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+[**Array&lt;SushiswapPairHourDataDTO&gt;**](SushiswapPairHourDataDTO.md)
 
 ### Authorization
 
@@ -1016,6 +1846,80 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
+## sushiswap_get_swap_dtos__historical
+
+> <Array<SushiswapSwapDTO>> sushiswap_get_swap_dtos__historical(opts)
+
+SwapDTOs (historical) 🔥
+
+Gets SwapDTOs.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  # SwapDTOs (historical) 🔥
+  result = api_instance.sushiswap_get_swap_dtos__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_swap_dtos__historical: #{e}"
+end
+```
+
+#### Using the sushiswap_get_swap_dtos__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<SushiswapSwapDTO>>, Integer, Hash)> sushiswap_get_swap_dtos__historical_with_http_info(opts)
+
+```ruby
+begin
+  # SwapDTOs (historical) 🔥
+  data, status_code, headers = api_instance.sushiswap_get_swap_dtos__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<SushiswapSwapDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_swap_dtos__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+[**Array&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
 ## sushiswap_get_swaps__current
 
 > <Array<SushiswapSwapDTO>> sushiswap_get_swaps__current
@@ -1140,6 +2044,154 @@ end
 ### Return type
 
 [**Array&lt;SushiswapSwapDTO&gt;**](SushiswapSwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswap_get_token_day_data_dtos__historical
+
+> <Array<SushiswapTokenDayDataDTO>> sushiswap_get_token_day_data_dtos__historical(opts)
+
+TokenDayDataDTOs (historical) 🔥
+
+Gets TokenDayDataDTOs.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  # TokenDayDataDTOs (historical) 🔥
+  result = api_instance.sushiswap_get_token_day_data_dtos__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_token_day_data_dtos__historical: #{e}"
+end
+```
+
+#### Using the sushiswap_get_token_day_data_dtos__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<SushiswapTokenDayDataDTO>>, Integer, Hash)> sushiswap_get_token_day_data_dtos__historical_with_http_info(opts)
+
+```ruby
+begin
+  # TokenDayDataDTOs (historical) 🔥
+  data, status_code, headers = api_instance.sushiswap_get_token_day_data_dtos__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<SushiswapTokenDayDataDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_token_day_data_dtos__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+[**Array&lt;SushiswapTokenDayDataDTO&gt;**](SushiswapTokenDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswap_get_token_dtos__historical
+
+> <Array<SushiswapTokenDTO>> sushiswap_get_token_dtos__historical(opts)
+
+TokenDTOs (historical) 🔥
+
+Gets TokenDTOs.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  # TokenDTOs (historical) 🔥
+  result = api_instance.sushiswap_get_token_dtos__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_token_dtos__historical: #{e}"
+end
+```
+
+#### Using the sushiswap_get_token_dtos__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<SushiswapTokenDTO>>, Integer, Hash)> sushiswap_get_token_dtos__historical_with_http_info(opts)
+
+```ruby
+begin
+  # TokenDTOs (historical) 🔥
+  data, status_code, headers = api_instance.sushiswap_get_token_dtos__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<SushiswapTokenDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_token_dtos__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+[**Array&lt;SushiswapTokenDTO&gt;**](SushiswapTokenDTO.md)
 
 ### Authorization
 
@@ -1360,6 +2412,80 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
+## sushiswap_get_transaction_dtos__historical
+
+> <Array<SushiswapTransactionDTO>> sushiswap_get_transaction_dtos__historical(opts)
+
+TransactionDTOs (historical) 🔥
+
+Gets TransactionDTOs.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  # TransactionDTOs (historical) 🔥
+  result = api_instance.sushiswap_get_transaction_dtos__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_transaction_dtos__historical: #{e}"
+end
+```
+
+#### Using the sushiswap_get_transaction_dtos__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<SushiswapTransactionDTO>>, Integer, Hash)> sushiswap_get_transaction_dtos__historical_with_http_info(opts)
+
+```ruby
+begin
+  # TransactionDTOs (historical) 🔥
+  data, status_code, headers = api_instance.sushiswap_get_transaction_dtos__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<SushiswapTransactionDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_transaction_dtos__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+[**Array&lt;SushiswapTransactionDTO&gt;**](SushiswapTransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
 ## sushiswap_get_transactions__historical
 
 > <Array<SushiswapTransactionDTO>> sushiswap_get_transactions__historical(opts)
@@ -1421,6 +2547,80 @@ end
 ### Return type
 
 [**Array&lt;SushiswapTransactionDTO&gt;**](SushiswapTransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## sushiswap_get_user_dtos__historical
+
+> <Array<SushiswapUserDTO>> sushiswap_get_user_dtos__historical(opts)
+
+UserDTOs (historical) 🔥
+
+Gets UserDTOs.
+
+### Examples
+
+```ruby
+require 'time'
+require 'openapi_client'
+
+api_instance = OpenapiClient::SushiswapApi.new
+opts = {
+  start_block: 789, # Integer | 
+  end_block: 789, # Integer | 
+  start_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  end_date: Time.parse('2013-10-20T19:20:30+01:00'), # Time | 
+  pool_id: 'pool_id_example' # String | 
+}
+
+begin
+  # UserDTOs (historical) 🔥
+  result = api_instance.sushiswap_get_user_dtos__historical(opts)
+  p result
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_user_dtos__historical: #{e}"
+end
+```
+
+#### Using the sushiswap_get_user_dtos__historical_with_http_info variant
+
+This returns an Array which contains the response data, status code and headers.
+
+> <Array(<Array<SushiswapUserDTO>>, Integer, Hash)> sushiswap_get_user_dtos__historical_with_http_info(opts)
+
+```ruby
+begin
+  # UserDTOs (historical) 🔥
+  data, status_code, headers = api_instance.sushiswap_get_user_dtos__historical_with_http_info(opts)
+  p status_code # => 2xx
+  p headers # => { ... }
+  p data # => <Array<SushiswapUserDTO>>
+rescue OpenapiClient::ApiError => e
+  puts "Error when calling SushiswapApi->sushiswap_get_user_dtos__historical_with_http_info: #{e}"
+end
+```
+
+### Parameters
+
+| Name | Type | Description | Notes |
+| ---- | ---- | ----------- | ----- |
+| **start_block** | **Integer** |  | [optional] |
+| **end_block** | **Integer** |  | [optional] |
+| **start_date** | **Time** |  | [optional] |
+| **end_date** | **Time** |  | [optional] |
+| **pool_id** | **String** |  | [optional] |
+
+### Return type
+
+[**Array&lt;SushiswapUserDTO&gt;**](SushiswapUserDTO.md)
 
 ### Authorization
 

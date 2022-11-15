@@ -12,48 +12,80 @@
 
 from openapi_client.paths.dapps_sushiswap_exchanges_current.get import CurveGetExchangesCurrent
 from openapi_client.paths.dapps_sushiswap_trades_current.get import DexGetTradesCurrent
+from openapi_client.paths.dapps_sushiswap_bundle_dtos_historical.get import SushiswapGetBundleDtosHistorical
 from openapi_client.paths.dapps_sushiswap_bundles_historical.get import SushiswapGetBundlesHistorical
+from openapi_client.paths.dapps_sushiswap_burn_dtos_historical.get import SushiswapGetBurnDtosHistorical
 from openapi_client.paths.dapps_sushiswap_burns_historical.get import SushiswapGetBurnsHistorical
 from openapi_client.paths.dapps_sushiswap_day_data_historical.get import SushiswapGetDayDataHistorical
+from openapi_client.paths.dapps_sushiswap_day_data_dtos_historical.get import SushiswapGetDayDataDtosHistorical
 from openapi_client.paths.dapps_sushiswap_factory_historical.get import SushiswapGetFactoryHistorical
+from openapi_client.paths.dapps_sushiswap_factory_dtos_historical.get import SushiswapGetFactoryDtosHistorical
 from openapi_client.paths.dapps_sushiswap_hour_data_historical.get import SushiswapGetHourDataHistorical
+from openapi_client.paths.dapps_sushiswap_hour_data_dtos_historical.get import SushiswapGetHourDataDtosHistorical
 from openapi_client.paths.dapps_sushiswap_liquidity_position_historical.get import SushiswapGetLiquidityPositionHistorical
+from openapi_client.paths.dapps_sushiswap_liquidity_position_dtos_historical.get import SushiswapGetLiquidityPositionDtosHistorical
 from openapi_client.paths.dapps_sushiswap_liquidity_position_snapshots_historical.get import SushiswapGetLiquidityPositionSnapshotHistorical
+from openapi_client.paths.dapps_sushiswap_liquidity_position_snapshot_dtos_historical.get import SushiswapGetLiquidityPositionSnapshotDtosHistorical
+from openapi_client.paths.dapps_sushiswap_mint_dtos_historical.get import SushiswapGetMintDtosHistorical
 from openapi_client.paths.dapps_sushiswap_mints_historical.get import SushiswapGetMintsHistorical
+from openapi_client.paths.dapps_sushiswap_pair_day_data_dtos_historical.get import SushiswapGetPairDayDataDtosHistorical
+from openapi_client.paths.dapps_sushiswap_pair_dtos_historical.get import SushiswapGetPairDtosHistorical
+from openapi_client.paths.dapps_sushiswap_pair_hour_data_dtos_historical.get import SushiswapGetPairHourDataDtosHistorical
 from openapi_client.paths.dapps_sushiswap_pools_current.get import SushiswapGetPoolsCurrent
 from openapi_client.paths.dapps_sushiswap_pools_historical.get import SushiswapGetPoolsHistorical
 from openapi_client.paths.dapps_sushiswap_pools_day_data_historical.get import SushiswapGetPoolsDayDataHistorical
 from openapi_client.paths.dapps_sushiswap_pools_hour_data_historical.get import SushiswapGetPoolsHourDataHistorical
+from openapi_client.paths.dapps_sushiswap_swap_dtos_historical.get import SushiswapGetSwapDtosHistorical
 from openapi_client.paths.dapps_sushiswap_swaps_current.get import SushiswapGetSwapsCurrent
 from openapi_client.paths.dapps_sushiswap_swaps_historical.get import SushiswapGetSwapsHistorical
+from openapi_client.paths.dapps_sushiswap_token_day_data_dtos_historical.get import SushiswapGetTokenDayDataDtosHistorical
+from openapi_client.paths.dapps_sushiswap_token_dtos_historical.get import SushiswapGetTokenDtosHistorical
 from openapi_client.paths.dapps_sushiswap_tokens_current.get import SushiswapGetTokensCurrent
 from openapi_client.paths.dapps_sushiswap_tokens_historical.get import SushiswapGetTokensHistorical
 from openapi_client.paths.dapps_sushiswap_tokens_day_data_historical.get import SushiswapGetTokensDayDataHistorical
+from openapi_client.paths.dapps_sushiswap_transaction_dtos_historical.get import SushiswapGetTransactionDtosHistorical
 from openapi_client.paths.dapps_sushiswap_transactions_historical.get import SushiswapGetTransactionsHistorical
+from openapi_client.paths.dapps_sushiswap_user_dtos_historical.get import SushiswapGetUserDtosHistorical
 from openapi_client.paths.dapps_sushiswap_users_historical.get import SushiswapGetUsersHistorical
 
 
 class SushiswapApi(
     CurveGetExchangesCurrent,
     DexGetTradesCurrent,
+    SushiswapGetBundleDtosHistorical,
     SushiswapGetBundlesHistorical,
+    SushiswapGetBurnDtosHistorical,
     SushiswapGetBurnsHistorical,
     SushiswapGetDayDataHistorical,
+    SushiswapGetDayDataDtosHistorical,
     SushiswapGetFactoryHistorical,
+    SushiswapGetFactoryDtosHistorical,
     SushiswapGetHourDataHistorical,
+    SushiswapGetHourDataDtosHistorical,
     SushiswapGetLiquidityPositionHistorical,
+    SushiswapGetLiquidityPositionDtosHistorical,
     SushiswapGetLiquidityPositionSnapshotHistorical,
+    SushiswapGetLiquidityPositionSnapshotDtosHistorical,
+    SushiswapGetMintDtosHistorical,
     SushiswapGetMintsHistorical,
+    SushiswapGetPairDayDataDtosHistorical,
+    SushiswapGetPairDtosHistorical,
+    SushiswapGetPairHourDataDtosHistorical,
     SushiswapGetPoolsCurrent,
     SushiswapGetPoolsHistorical,
     SushiswapGetPoolsDayDataHistorical,
     SushiswapGetPoolsHourDataHistorical,
+    SushiswapGetSwapDtosHistorical,
     SushiswapGetSwapsCurrent,
     SushiswapGetSwapsHistorical,
+    SushiswapGetTokenDayDataDtosHistorical,
+    SushiswapGetTokenDtosHistorical,
     SushiswapGetTokensCurrent,
     SushiswapGetTokensHistorical,
     SushiswapGetTokensDayDataHistorical,
+    SushiswapGetTransactionDtosHistorical,
     SushiswapGetTransactionsHistorical,
+    SushiswapGetUserDtosHistorical,
     SushiswapGetUsersHistorical,
 ):
     """NOTE: This class is auto generated by OpenAPI Generator

@@ -16,6 +16,107 @@ class CowApi {
 
   final ApiClient apiClient;
 
+  /// OrderDTOs (historical) 🔥
+  ///
+  /// Gets OrderDTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> cowGetOrderDTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/cow/OrderDTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// OrderDTOs (historical) 🔥
+  ///
+  /// Gets OrderDTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<CowOrderDTO>?> cowGetOrderDTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await cowGetOrderDTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<CowOrderDTO>') as List)
+        .cast<CowOrderDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// Orders (historical)
   ///
   /// Gets orders.
@@ -106,6 +207,107 @@ class CowApi {
     return null;
   }
 
+  /// SettlementDTOs (historical) 🔥
+  ///
+  /// Gets SettlementDTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> cowGetSettlementDTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/cow/SettlementDTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// SettlementDTOs (historical) 🔥
+  ///
+  /// Gets SettlementDTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<CowSettlementDTO>?> cowGetSettlementDTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await cowGetSettlementDTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<CowSettlementDTO>') as List)
+        .cast<CowSettlementDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// Settlements (historical)
   ///
   /// Gets settlements.
@@ -190,6 +392,107 @@ class CowApi {
       final responseBody = await _decodeBodyBytes(response);
       return (await apiClient.deserializeAsync(responseBody, 'List<CowSettlementDTO>') as List)
         .cast<CowSettlementDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// TokenDTOs (historical) 🔥
+  ///
+  /// Gets TokenDTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> cowGetTokenDTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/cow/TokenDTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// TokenDTOs (historical) 🔥
+  ///
+  /// Gets TokenDTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<CowTokenDTO>?> cowGetTokenDTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await cowGetTokenDTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<CowTokenDTO>') as List)
+        .cast<CowTokenDTO>()
         .toList();
 
     }
@@ -297,6 +600,107 @@ class CowApi {
     return null;
   }
 
+  /// TradeDTOs (historical) 🔥
+  ///
+  /// Gets TradeDTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> cowGetTradeDTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/cow/TradeDTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// TradeDTOs (historical) 🔥
+  ///
+  /// Gets TradeDTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<CowTradeDTO>?> cowGetTradeDTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await cowGetTradeDTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<CowTradeDTO>') as List)
+        .cast<CowTradeDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// Trades (historical) 🔥
   ///
   /// Gets trades.
@@ -383,6 +787,107 @@ class CowApi {
       final responseBody = await _decodeBodyBytes(response);
       return (await apiClient.deserializeAsync(responseBody, 'List<CowTradeDTO>') as List)
         .cast<CowTradeDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// UserDTOs (historical) 🔥
+  ///
+  /// Gets UserDTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> cowGetUserDTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/cow/UserDTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// UserDTOs (historical) 🔥
+  ///
+  /// Gets UserDTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<CowUserDTO>?> cowGetUserDTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await cowGetUserDTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<CowUserDTO>') as List)
+        .cast<CowUserDTO>()
         .toList();
 
     }

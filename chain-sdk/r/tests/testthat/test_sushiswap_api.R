@@ -27,6 +27,22 @@ test_that("DexGetTradesCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
+test_that("SushiswapGetBundleDTOsHistorical", {
+  # tests for SushiswapGetBundleDTOsHistorical
+  # base path: https://onchain.coinapi.io
+  # BundleDTOs (historical) 🔥
+  # Gets BundleDTOs.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param pool_id character  (optional)
+  # @return [array[SushiswapBundleDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("SushiswapGetBundlesHistorical", {
   # tests for SushiswapGetBundlesHistorical
   # base path: https://onchain.coinapi.io
@@ -37,6 +53,22 @@ test_that("SushiswapGetBundlesHistorical", {
   # @param start_date character CCCCCCCCC (optional)
   # @param end_date character DDDDDDDDDDD (optional)
   # @return [array[SushiswapBundleDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapGetBurnDTOsHistorical", {
+  # tests for SushiswapGetBurnDTOsHistorical
+  # base path: https://onchain.coinapi.io
+  # BurnDTOs (historical) 🔥
+  # Gets BurnDTOs.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param pool_id character  (optional)
+  # @return [array[SushiswapBurnDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -58,6 +90,22 @@ test_that("SushiswapGetBurnsHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
+test_that("SushiswapGetDayDataDTOsHistorical", {
+  # tests for SushiswapGetDayDataDTOsHistorical
+  # base path: https://onchain.coinapi.io
+  # DayDataDTOs (historical) 🔥
+  # Gets DayDataDTOs.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param pool_id character  (optional)
+  # @return [array[SushiswapDayDataDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("SushiswapGetDayDataHistorical", {
   # tests for SushiswapGetDayDataHistorical
   # base path: https://onchain.coinapi.io
@@ -68,6 +116,22 @@ test_that("SushiswapGetDayDataHistorical", {
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @return [array[SushiswapDayDataDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapGetFactoryDTOsHistorical", {
+  # tests for SushiswapGetFactoryDTOsHistorical
+  # base path: https://onchain.coinapi.io
+  # FactoryDTOs (historical) 🔥
+  # Gets FactoryDTOs.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param pool_id character  (optional)
+  # @return [array[SushiswapFactoryDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -88,6 +152,22 @@ test_that("SushiswapGetFactoryHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
+test_that("SushiswapGetHourDataDTOsHistorical", {
+  # tests for SushiswapGetHourDataDTOsHistorical
+  # base path: https://onchain.coinapi.io
+  # HourDataDTOs (historical) 🔥
+  # Gets HourDataDTOs.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param pool_id character  (optional)
+  # @return [array[SushiswapHourDataDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("SushiswapGetHourDataHistorical", {
   # tests for SushiswapGetHourDataHistorical
   # base path: https://onchain.coinapi.io
@@ -98,6 +178,22 @@ test_that("SushiswapGetHourDataHistorical", {
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @return [array[SushiswapHourDataDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapGetLiquidityPositionDTOsHistorical", {
+  # tests for SushiswapGetLiquidityPositionDTOsHistorical
+  # base path: https://onchain.coinapi.io
+  # LiquidityPositionDTOs (historical) 🔥
+  # Gets LiquidityPositionDTOs.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param pool_id character  (optional)
+  # @return [array[SushiswapLiquidityPositionDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -119,6 +215,22 @@ test_that("SushiswapGetLiquidityPositionHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
+test_that("SushiswapGetLiquidityPositionSnapshotDTOsHistorical", {
+  # tests for SushiswapGetLiquidityPositionSnapshotDTOsHistorical
+  # base path: https://onchain.coinapi.io
+  # LiquidityPositionSnapshotDTOs (historical) 🔥
+  # Gets LiquidityPositionSnapshotDTOs.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param pool_id character  (optional)
+  # @return [array[SushiswapLiquidityPositionSnapshotDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("SushiswapGetLiquidityPositionSnapshotHistorical", {
   # tests for SushiswapGetLiquidityPositionSnapshotHistorical
   # base path: https://onchain.coinapi.io
@@ -135,6 +247,22 @@ test_that("SushiswapGetLiquidityPositionSnapshotHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
+test_that("SushiswapGetMintDTOsHistorical", {
+  # tests for SushiswapGetMintDTOsHistorical
+  # base path: https://onchain.coinapi.io
+  # MintDTOs (historical) 🔥
+  # Gets MintDTOs.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param pool_id character  (optional)
+  # @return [array[SushiswapMintDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("SushiswapGetMintsHistorical", {
   # tests for SushiswapGetMintsHistorical
   # base path: https://onchain.coinapi.io
@@ -146,6 +274,54 @@ test_that("SushiswapGetMintsHistorical", {
   # @param end_date character  (optional)
   # @param pool_id character  (optional)
   # @return [array[SushiswapMintDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapGetPairDTOsHistorical", {
+  # tests for SushiswapGetPairDTOsHistorical
+  # base path: https://onchain.coinapi.io
+  # PairDTOs (historical) 🔥
+  # Gets PairDTOs.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param pool_id character  (optional)
+  # @return [array[SushiswapPairDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapGetPairDayDataDTOsHistorical", {
+  # tests for SushiswapGetPairDayDataDTOsHistorical
+  # base path: https://onchain.coinapi.io
+  # PairDayDataDTOs (historical) 🔥
+  # Gets PairDayDataDTOs.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param pool_id character  (optional)
+  # @return [array[SushiswapPairDayDataDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapGetPairHourDataDTOsHistorical", {
+  # tests for SushiswapGetPairHourDataDTOsHistorical
+  # base path: https://onchain.coinapi.io
+  # PairHourDataDTOs (historical) 🔥
+  # Gets PairHourDataDTOs.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param pool_id character  (optional)
+  # @return [array[SushiswapPairHourDataDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -210,6 +386,22 @@ test_that("SushiswapGetPoolsHourDataHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
+test_that("SushiswapGetSwapDTOsHistorical", {
+  # tests for SushiswapGetSwapDTOsHistorical
+  # base path: https://onchain.coinapi.io
+  # SwapDTOs (historical) 🔥
+  # Gets SwapDTOs.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param pool_id character  (optional)
+  # @return [array[SushiswapSwapDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("SushiswapGetSwapsCurrent", {
   # tests for SushiswapGetSwapsCurrent
   # base path: https://onchain.coinapi.io
@@ -232,6 +424,38 @@ test_that("SushiswapGetSwapsHistorical", {
   # @param end_date character The end date of timeframe (optional)
   # @param pool_id character The pool address. (optional)
   # @return [array[SushiswapSwapDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapGetTokenDTOsHistorical", {
+  # tests for SushiswapGetTokenDTOsHistorical
+  # base path: https://onchain.coinapi.io
+  # TokenDTOs (historical) 🔥
+  # Gets TokenDTOs.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param pool_id character  (optional)
+  # @return [array[SushiswapTokenDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapGetTokenDayDataDTOsHistorical", {
+  # tests for SushiswapGetTokenDayDataDTOsHistorical
+  # base path: https://onchain.coinapi.io
+  # TokenDayDataDTOs (historical) 🔥
+  # Gets TokenDayDataDTOs.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param pool_id character  (optional)
+  # @return [array[SushiswapTokenDayDataDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -280,6 +504,22 @@ test_that("SushiswapGetTokensHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
+test_that("SushiswapGetTransactionDTOsHistorical", {
+  # tests for SushiswapGetTransactionDTOsHistorical
+  # base path: https://onchain.coinapi.io
+  # TransactionDTOs (historical) 🔥
+  # Gets TransactionDTOs.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param pool_id character  (optional)
+  # @return [array[SushiswapTransactionDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("SushiswapGetTransactionsHistorical", {
   # tests for SushiswapGetTransactionsHistorical
   # base path: https://onchain.coinapi.io
@@ -290,6 +530,22 @@ test_that("SushiswapGetTransactionsHistorical", {
   # @param start_date character  (optional)
   # @param end_date character  (optional)
   # @return [array[SushiswapTransactionDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("SushiswapGetUserDTOsHistorical", {
+  # tests for SushiswapGetUserDTOsHistorical
+  # base path: https://onchain.coinapi.io
+  # UserDTOs (historical) 🔥
+  # Gets UserDTOs.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param pool_id character  (optional)
+  # @return [array[SushiswapUserDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

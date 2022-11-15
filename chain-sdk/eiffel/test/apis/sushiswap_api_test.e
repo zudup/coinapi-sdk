@@ -39,6 +39,24 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
+    test_sushiswap_get_bundle_dt_os_historical
+            -- BundleDTOs (historical) 🔥
+            --
+            -- Gets BundleDTOs.
+        local
+            l_response: LIST [SUSHISWAP_BUNDLE_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_pool_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_bundle_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
+            assert ("not_implemented", False)
+        end
+
     test_sushiswap_get_bundles_historical
             -- Bundles (historical)
             --
@@ -53,6 +71,24 @@ feature -- Test routines
             -- TODO: Initialize required params.
 
             -- l_response := api.sushiswap_get_bundles_historical(l_start_block, l_end_block, l_start_date, l_end_date)
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_get_burn_dt_os_historical
+            -- BurnDTOs (historical) 🔥
+            --
+            -- Gets BurnDTOs.
+        local
+            l_response: LIST [SUSHISWAP_BURN_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_pool_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_burn_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
             assert ("not_implemented", False)
         end
 
@@ -74,6 +110,24 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
+    test_sushiswap_get_day_data_dt_os_historical
+            -- DayDataDTOs (historical) 🔥
+            --
+            -- Gets DayDataDTOs.
+        local
+            l_response: LIST [SUSHISWAP_DAY_DATA_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_pool_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_day_data_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
+            assert ("not_implemented", False)
+        end
+
     test_sushiswap_get_day_data_historical
             -- DayData (historical)
             --
@@ -88,6 +142,24 @@ feature -- Test routines
             -- TODO: Initialize required params.
 
             -- l_response := api.sushiswap_get_day_data_historical(l_start_block, l_end_block, l_start_date, l_end_date)
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_get_factory_dt_os_historical
+            -- FactoryDTOs (historical) 🔥
+            --
+            -- Gets FactoryDTOs.
+        local
+            l_response: LIST [SUSHISWAP_FACTORY_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_pool_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_factory_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
             assert ("not_implemented", False)
         end
 
@@ -108,6 +180,24 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
+    test_sushiswap_get_hour_data_dt_os_historical
+            -- HourDataDTOs (historical) 🔥
+            --
+            -- Gets HourDataDTOs.
+        local
+            l_response: LIST [SUSHISWAP_HOUR_DATA_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_pool_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_hour_data_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
+            assert ("not_implemented", False)
+        end
+
     test_sushiswap_get_hour_data_historical
             -- HourData (historical)
             --
@@ -122,6 +212,24 @@ feature -- Test routines
             -- TODO: Initialize required params.
 
             -- l_response := api.sushiswap_get_hour_data_historical(l_start_block, l_end_block, l_start_date, l_end_date)
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_get_liquidity_position_dt_os_historical
+            -- LiquidityPositionDTOs (historical) 🔥
+            --
+            -- Gets LiquidityPositionDTOs.
+        local
+            l_response: LIST [SUSHISWAP_LIQUIDITY_POSITION_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_pool_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_liquidity_position_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
             assert ("not_implemented", False)
         end
 
@@ -143,6 +251,24 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
+    test_sushiswap_get_liquidity_position_snapshot_dt_os_historical
+            -- LiquidityPositionSnapshotDTOs (historical) 🔥
+            --
+            -- Gets LiquidityPositionSnapshotDTOs.
+        local
+            l_response: LIST [SUSHISWAP_LIQUIDITY_POSITION_SNAPSHOT_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_pool_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_liquidity_position_snapshot_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
+            assert ("not_implemented", False)
+        end
+
     test_sushiswap_get_liquidity_position_snapshot_historical
             -- LiquidityPositionSnapshot (historical)
             --
@@ -161,6 +287,24 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
+    test_sushiswap_get_mint_dt_os_historical
+            -- MintDTOs (historical) 🔥
+            --
+            -- Gets MintDTOs.
+        local
+            l_response: LIST [SUSHISWAP_MINT_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_pool_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_mint_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
+            assert ("not_implemented", False)
+        end
+
     test_sushiswap_get_mints_historical
             -- Mints (historical)
             --
@@ -176,6 +320,60 @@ feature -- Test routines
             -- TODO: Initialize required params.
 
             -- l_response := api.sushiswap_get_mints_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_get_pair_day_data_dt_os_historical
+            -- PairDayDataDTOs (historical) 🔥
+            --
+            -- Gets PairDayDataDTOs.
+        local
+            l_response: LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_pool_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_pair_day_data_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_get_pair_dt_os_historical
+            -- PairDTOs (historical) 🔥
+            --
+            -- Gets PairDTOs.
+        local
+            l_response: LIST [SUSHISWAP_PAIR_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_pool_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_pair_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_get_pair_hour_data_dt_os_historical
+            -- PairHourDataDTOs (historical) 🔥
+            --
+            -- Gets PairHourDataDTOs.
+        local
+            l_response: LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_pool_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_pair_hour_data_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
             assert ("not_implemented", False)
         end
 
@@ -246,6 +444,24 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
+    test_sushiswap_get_swap_dt_os_historical
+            -- SwapDTOs (historical) 🔥
+            --
+            -- Gets SwapDTOs.
+        local
+            l_response: LIST [SUSHISWAP_SWAP_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_pool_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_swap_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
+            assert ("not_implemented", False)
+        end
+
     test_sushiswap_get_swaps_current
             -- Swaps (current) 🔥
             --
@@ -274,6 +490,42 @@ feature -- Test routines
             -- TODO: Initialize required params.
 
             -- l_response := api.sushiswap_get_swaps_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_get_token_day_data_dt_os_historical
+            -- TokenDayDataDTOs (historical) 🔥
+            --
+            -- Gets TokenDayDataDTOs.
+        local
+            l_response: LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_pool_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_token_day_data_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_get_token_dt_os_historical
+            -- TokenDTOs (historical) 🔥
+            --
+            -- Gets TokenDTOs.
+        local
+            l_response: LIST [SUSHISWAP_TOKEN_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_pool_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_token_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
             assert ("not_implemented", False)
         end
 
@@ -326,6 +578,24 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
+    test_sushiswap_get_transaction_dt_os_historical
+            -- TransactionDTOs (historical) 🔥
+            --
+            -- Gets TransactionDTOs.
+        local
+            l_response: LIST [SUSHISWAP_TRANSACTION_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_pool_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_transaction_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
+            assert ("not_implemented", False)
+        end
+
     test_sushiswap_get_transactions_historical
             -- Transactions (historical)
             --
@@ -340,6 +610,24 @@ feature -- Test routines
             -- TODO: Initialize required params.
 
             -- l_response := api.sushiswap_get_transactions_historical(l_start_block, l_end_block, l_start_date, l_end_date)
+            assert ("not_implemented", False)
+        end
+
+    test_sushiswap_get_user_dt_os_historical
+            -- UserDTOs (historical) 🔥
+            --
+            -- Gets UserDTOs.
+        local
+            l_response: LIST [SUSHISWAP_USER_DTO]
+            l_start_block: INTEGER_64
+            l_end_block: INTEGER_64
+            l_start_date: DATE_TIME
+            l_end_date: DATE_TIME
+            l_pool_id: STRING_32
+        do
+            -- TODO: Initialize required params.
+
+            -- l_response := api.sushiswap_get_user_dt_os_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_pool_id)
             assert ("not_implemented", False)
         end
 

@@ -19,9 +19,57 @@ from openapi_client.apis.paths.dapps_uniswapv3_burns_current import DappsUniswap
 from openapi_client.apis.paths.dapps_curve_coins_historical import DappsCurveCoinsHistorical
 from openapi_client.apis.paths.dapps_curve_contracts_historical import DappsCurveContractsHistorical
 from openapi_client.apis.paths.dapps_curve_contracts_versions_historical import DappsCurveContractsVersionsHistorical
+from openapi_client.apis.paths.dapps_cow_order_dtos_historical import DappsCowOrderDTOsHistorical
+from openapi_client.apis.paths.dapps_cow_settlement_dtos_historical import DappsCowSettlementDTOsHistorical
+from openapi_client.apis.paths.dapps_cow_token_dtos_historical import DappsCowTokenDTOsHistorical
+from openapi_client.apis.paths.dapps_cow_trade_dtos_historical import DappsCowTradeDTOsHistorical
+from openapi_client.apis.paths.dapps_cow_user_dtos_historical import DappsCowUserDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_account_dtos_historical import DappsCurveAccountDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_add_liquidity_event_dtos_historical import DappsCurveAddLiquidityEventDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_admin_fee_change_log_dtos_historical import DappsCurveAdminFeeChangeLogDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_amplification_coeff_change_log_dtos_historical import DappsCurveAmplificationCoeffChangeLogDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_coin_dtos_historical import DappsCurveCoinDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_contract_dtos_historical import DappsCurveContractDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_contract_version_dtos_historical import DappsCurveContractVersionDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_daily_volume_dtos_historical import DappsCurveDailyVolumeDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_exchange_dtos_historical import DappsCurveExchangeDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_fee_change_log_dtos_historical import DappsCurveFeeChangeLogDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_gauge_deposit_dtos_historical import DappsCurveGaugeDepositDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_gauge_dtos_historical import DappsCurveGaugeDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_gauge_liquidity_dtos_historical import DappsCurveGaugeLiquidityDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_gauge_total_weight_dtos_historical import DappsCurveGaugeTotalWeightDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_gauge_type_dtos_historical import DappsCurveGaugeTypeDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_gauge_type_weight_dtos_historical import DappsCurveGaugeTypeWeightDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_gauge_weight_dtos_historical import DappsCurveGaugeWeightDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_gauge_weight_vote_dtos_historical import DappsCurveGaugeWeightVoteDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_gauge_withdraw_dtos_historical import DappsCurveGaugeWithdrawDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_hourly_volume_dtos_historical import DappsCurveHourlyVolumeDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_lp_token_dtos_historical import DappsCurveLpTokenDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_pool_dtos_historical import DappsCurvePoolDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_proposal_dtos_historical import DappsCurveProposalDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_proposal_vote_dtos_historical import DappsCurveProposalVoteDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_remove_liquidity_event_dtos_historical import DappsCurveRemoveLiquidityEventDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_remove_liquidity_one_event_dtos_historical import DappsCurveRemoveLiquidityOneEventDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_system_state_dtos_historical import DappsCurveSystemStateDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_token_dtos_historical import DappsCurveTokenDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_transfer_ownership_event_dtos_historical import DappsCurveTransferOwnershipEventDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_underlying_coin_dtos_historical import DappsCurveUnderlyingCoinDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_voting_app_dtos_historical import DappsCurveVotingAppDTOsHistorical
+from openapi_client.apis.paths.dapps_curve_weekly_volume_dtos_historical import DappsCurveWeeklyVolumeDTOsHistorical
 from openapi_client.apis.paths.dapps_curve_daily_volumes_historical import DappsCurveDailyVolumesHistorical
 from openapi_client.apis.paths.dapps_sushiswap_day_data_historical import DappsSushiswapDayDataHistorical
 from openapi_client.apis.paths.dapps_dex_deposits_historical import DappsDexDepositsHistorical
+from openapi_client.apis.paths.dapps_dex_batch_dtos_historical import DappsDexBatchDTOsHistorical
+from openapi_client.apis.paths.dapps_dex_deposit_dtos_historical import DappsDexDepositDTOsHistorical
+from openapi_client.apis.paths.dapps_dex_order_dtos_historical import DappsDexOrderDTOsHistorical
+from openapi_client.apis.paths.dapps_dex_price_dtos_historical import DappsDexPriceDTOsHistorical
+from openapi_client.apis.paths.dapps_dex_solution_dtos_historical import DappsDexSolutionDTOsHistorical
+from openapi_client.apis.paths.dapps_dex_stats_dtos_historical import DappsDexStatsDTOsHistorical
+from openapi_client.apis.paths.dapps_dex_token_dtos_historical import DappsDexTokenDTOsHistorical
+from openapi_client.apis.paths.dapps_dex_trade_dtos_historical import DappsDexTradeDTOsHistorical
+from openapi_client.apis.paths.dapps_dex_user_dtos_historical import DappsDexUserDTOsHistorical
+from openapi_client.apis.paths.dapps_dex_withdraw_dtos_historical import DappsDexWithdrawDTOsHistorical
+from openapi_client.apis.paths.dapps_dex_withdraw_request_dtos_historical import DappsDexWithdrawRequestDTOsHistorical
 from openapi_client.apis.paths.dapps_curve_exchanges_historical import DappsCurveExchangesHistorical
 from openapi_client.apis.paths.dapps_sushiswap_exchanges_current import DappsSushiswapExchangesCurrent
 from openapi_client.apis.paths.dapps_uniswapv3_factory_historical import DappsUniswapv3FactoryHistorical
@@ -78,6 +126,22 @@ from openapi_client.apis.paths.dapps_curve_remove_liquidity_one_events_historica
 from openapi_client.apis.paths.dapps_cow_settlements_historical import DappsCowSettlementsHistorical
 from openapi_client.apis.paths.dapps_dex_solutions_historical import DappsDexSolutionsHistorical
 from openapi_client.apis.paths.dapps_dex_stats_historical import DappsDexStatsHistorical
+from openapi_client.apis.paths.dapps_sushiswap_bundle_dtos_historical import DappsSushiswapBundleDTOsHistorical
+from openapi_client.apis.paths.dapps_sushiswap_burn_dtos_historical import DappsSushiswapBurnDTOsHistorical
+from openapi_client.apis.paths.dapps_sushiswap_day_data_dtos_historical import DappsSushiswapDayDataDTOsHistorical
+from openapi_client.apis.paths.dapps_sushiswap_factory_dtos_historical import DappsSushiswapFactoryDTOsHistorical
+from openapi_client.apis.paths.dapps_sushiswap_hour_data_dtos_historical import DappsSushiswapHourDataDTOsHistorical
+from openapi_client.apis.paths.dapps_sushiswap_liquidity_position_dtos_historical import DappsSushiswapLiquidityPositionDTOsHistorical
+from openapi_client.apis.paths.dapps_sushiswap_liquidity_position_snapshot_dtos_historical import DappsSushiswapLiquidityPositionSnapshotDTOsHistorical
+from openapi_client.apis.paths.dapps_sushiswap_mint_dtos_historical import DappsSushiswapMintDTOsHistorical
+from openapi_client.apis.paths.dapps_sushiswap_pair_day_data_dtos_historical import DappsSushiswapPairDayDataDTOsHistorical
+from openapi_client.apis.paths.dapps_sushiswap_pair_dtos_historical import DappsSushiswapPairDTOsHistorical
+from openapi_client.apis.paths.dapps_sushiswap_pair_hour_data_dtos_historical import DappsSushiswapPairHourDataDTOsHistorical
+from openapi_client.apis.paths.dapps_sushiswap_swap_dtos_historical import DappsSushiswapSwapDTOsHistorical
+from openapi_client.apis.paths.dapps_sushiswap_token_day_data_dtos_historical import DappsSushiswapTokenDayDataDTOsHistorical
+from openapi_client.apis.paths.dapps_sushiswap_token_dtos_historical import DappsSushiswapTokenDTOsHistorical
+from openapi_client.apis.paths.dapps_sushiswap_transaction_dtos_historical import DappsSushiswapTransactionDTOsHistorical
+from openapi_client.apis.paths.dapps_sushiswap_user_dtos_historical import DappsSushiswapUserDTOsHistorical
 from openapi_client.apis.paths.dapps_uniswapv3_swaps_historical import DappsUniswapv3SwapsHistorical
 from openapi_client.apis.paths.dapps_uniswapv2_swaps_historical import DappsUniswapv2SwapsHistorical
 from openapi_client.apis.paths.dapps_sushiswap_swaps_historical import DappsSushiswapSwapsHistorical
@@ -113,6 +177,38 @@ from openapi_client.apis.paths.dapps_curve_underlying_coins_historical import Da
 from openapi_client.apis.paths.dapps_uniswapv3_day_data_historical import DappsUniswapv3DayDataHistorical
 from openapi_client.apis.paths.dapps_uniswapv2_day_data_historical import DappsUniswapv2DayDataHistorical
 from openapi_client.apis.paths.dapps_uniswapv3_day_data_current import DappsUniswapv3DayDataCurrent
+from openapi_client.apis.paths.dapps_uniswapv2_bundle_v2_dtos_historical import DappsUniswapv2BundleV2DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv2_burn_v2_dtos_historical import DappsUniswapv2BurnV2DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv2_liquidity_position_snapshot_v2_dtos_historical import DappsUniswapv2LiquidityPositionSnapshotV2DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv2_liquidity_position_v2_dtos_historical import DappsUniswapv2LiquidityPositionV2DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv2_mint_v2_dtos_historical import DappsUniswapv2MintV2DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv2_pair_day_data_v2_dtos_historical import DappsUniswapv2PairDayDataV2DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv2_pair_hour_data_v2_dtos_historical import DappsUniswapv2PairHourDataV2DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv2_pair_v2_dtos_historical import DappsUniswapv2PairV2DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv2_swap_v2_dtos_historical import DappsUniswapv2SwapV2DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv2_token_day_data_v2_dtos_historical import DappsUniswapv2TokenDayDataV2DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv2_token_v2_dtos_historical import DappsUniswapv2TokenV2DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv2_transaction_v2_dtos_historical import DappsUniswapv2TransactionV2DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv2_uniswap_day_data_v2_dtos_historical import DappsUniswapv2UniswapDayDataV2DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv2_uniswap_factory_v2_dtos_historical import DappsUniswapv2UniswapFactoryV2DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv2_user_v2_dtos_historical import DappsUniswapv2UserV2DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv3_bundle_v3_dtos_historical import DappsUniswapv3BundleV3DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv3_burn_v3_dtos_historical import DappsUniswapv3BurnV3DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv3_factory_v3_dtos_historical import DappsUniswapv3FactoryV3DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv3_mint_v3_dtos_historical import DappsUniswapv3MintV3DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv3_pool_day_data_v3_dtos_historical import DappsUniswapv3PoolDayDataV3DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv3_pool_hour_data_v3_dtos_historical import DappsUniswapv3PoolHourDataV3DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv3_pool_v3_dtos_historical import DappsUniswapv3PoolV3DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv3_position_snapshot_v3_dtos_historical import DappsUniswapv3PositionSnapshotV3DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv3_position_v3_dtos_historical import DappsUniswapv3PositionV3DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv3_swap_v3_dtos_historical import DappsUniswapv3SwapV3DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv3_tick_day_data_v3_dtos_historical import DappsUniswapv3TickDayDataV3DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv3_tick_v3_dtos_historical import DappsUniswapv3TickV3DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv3_token_hour_data_v3_dtos_historical import DappsUniswapv3TokenHourDataV3DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv3_token_v3_day_data_dtos_historical import DappsUniswapv3TokenV3DayDataDTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv3_token_v3_dtos_historical import DappsUniswapv3TokenV3DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv3_transaction_v3_dtos_historical import DappsUniswapv3TransactionV3DTOsHistorical
+from openapi_client.apis.paths.dapps_uniswapv3_uniswap_day_data_v3_dtos_historical import DappsUniswapv3UniswapDayDataV3DTOsHistorical
 from openapi_client.apis.paths.dapps_uniswapv2_users_historical import DappsUniswapv2UsersHistorical
 from openapi_client.apis.paths.dapps_sushiswap_users_historical import DappsSushiswapUsersHistorical
 from openapi_client.apis.paths.dapps_dex_users_historical import DappsDexUsersHistorical
@@ -143,9 +239,57 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.DAPPS_CURVE_COINS_HISTORICAL: DappsCurveCoinsHistorical,
         PathValues.DAPPS_CURVE_CONTRACTS_HISTORICAL: DappsCurveContractsHistorical,
         PathValues.DAPPS_CURVE_CONTRACTS_VERSIONS_HISTORICAL: DappsCurveContractsVersionsHistorical,
+        PathValues.DAPPS_COW_ORDER_DTOS_HISTORICAL: DappsCowOrderDTOsHistorical,
+        PathValues.DAPPS_COW_SETTLEMENT_DTOS_HISTORICAL: DappsCowSettlementDTOsHistorical,
+        PathValues.DAPPS_COW_TOKEN_DTOS_HISTORICAL: DappsCowTokenDTOsHistorical,
+        PathValues.DAPPS_COW_TRADE_DTOS_HISTORICAL: DappsCowTradeDTOsHistorical,
+        PathValues.DAPPS_COW_USER_DTOS_HISTORICAL: DappsCowUserDTOsHistorical,
+        PathValues.DAPPS_CURVE_ACCOUNT_DTOS_HISTORICAL: DappsCurveAccountDTOsHistorical,
+        PathValues.DAPPS_CURVE_ADD_LIQUIDITY_EVENT_DTOS_HISTORICAL: DappsCurveAddLiquidityEventDTOsHistorical,
+        PathValues.DAPPS_CURVE_ADMIN_FEE_CHANGE_LOG_DTOS_HISTORICAL: DappsCurveAdminFeeChangeLogDTOsHistorical,
+        PathValues.DAPPS_CURVE_AMPLIFICATION_COEFF_CHANGE_LOG_DTOS_HISTORICAL: DappsCurveAmplificationCoeffChangeLogDTOsHistorical,
+        PathValues.DAPPS_CURVE_COIN_DTOS_HISTORICAL: DappsCurveCoinDTOsHistorical,
+        PathValues.DAPPS_CURVE_CONTRACT_DTOS_HISTORICAL: DappsCurveContractDTOsHistorical,
+        PathValues.DAPPS_CURVE_CONTRACT_VERSION_DTOS_HISTORICAL: DappsCurveContractVersionDTOsHistorical,
+        PathValues.DAPPS_CURVE_DAILY_VOLUME_DTOS_HISTORICAL: DappsCurveDailyVolumeDTOsHistorical,
+        PathValues.DAPPS_CURVE_EXCHANGE_DTOS_HISTORICAL: DappsCurveExchangeDTOsHistorical,
+        PathValues.DAPPS_CURVE_FEE_CHANGE_LOG_DTOS_HISTORICAL: DappsCurveFeeChangeLogDTOsHistorical,
+        PathValues.DAPPS_CURVE_GAUGE_DEPOSIT_DTOS_HISTORICAL: DappsCurveGaugeDepositDTOsHistorical,
+        PathValues.DAPPS_CURVE_GAUGE_DTOS_HISTORICAL: DappsCurveGaugeDTOsHistorical,
+        PathValues.DAPPS_CURVE_GAUGE_LIQUIDITY_DTOS_HISTORICAL: DappsCurveGaugeLiquidityDTOsHistorical,
+        PathValues.DAPPS_CURVE_GAUGE_TOTAL_WEIGHT_DTOS_HISTORICAL: DappsCurveGaugeTotalWeightDTOsHistorical,
+        PathValues.DAPPS_CURVE_GAUGE_TYPE_DTOS_HISTORICAL: DappsCurveGaugeTypeDTOsHistorical,
+        PathValues.DAPPS_CURVE_GAUGE_TYPE_WEIGHT_DTOS_HISTORICAL: DappsCurveGaugeTypeWeightDTOsHistorical,
+        PathValues.DAPPS_CURVE_GAUGE_WEIGHT_DTOS_HISTORICAL: DappsCurveGaugeWeightDTOsHistorical,
+        PathValues.DAPPS_CURVE_GAUGE_WEIGHT_VOTE_DTOS_HISTORICAL: DappsCurveGaugeWeightVoteDTOsHistorical,
+        PathValues.DAPPS_CURVE_GAUGE_WITHDRAW_DTOS_HISTORICAL: DappsCurveGaugeWithdrawDTOsHistorical,
+        PathValues.DAPPS_CURVE_HOURLY_VOLUME_DTOS_HISTORICAL: DappsCurveHourlyVolumeDTOsHistorical,
+        PathValues.DAPPS_CURVE_LP_TOKEN_DTOS_HISTORICAL: DappsCurveLpTokenDTOsHistorical,
+        PathValues.DAPPS_CURVE_POOL_DTOS_HISTORICAL: DappsCurvePoolDTOsHistorical,
+        PathValues.DAPPS_CURVE_PROPOSAL_DTOS_HISTORICAL: DappsCurveProposalDTOsHistorical,
+        PathValues.DAPPS_CURVE_PROPOSAL_VOTE_DTOS_HISTORICAL: DappsCurveProposalVoteDTOsHistorical,
+        PathValues.DAPPS_CURVE_REMOVE_LIQUIDITY_EVENT_DTOS_HISTORICAL: DappsCurveRemoveLiquidityEventDTOsHistorical,
+        PathValues.DAPPS_CURVE_REMOVE_LIQUIDITY_ONE_EVENT_DTOS_HISTORICAL: DappsCurveRemoveLiquidityOneEventDTOsHistorical,
+        PathValues.DAPPS_CURVE_SYSTEM_STATE_DTOS_HISTORICAL: DappsCurveSystemStateDTOsHistorical,
+        PathValues.DAPPS_CURVE_TOKEN_DTOS_HISTORICAL: DappsCurveTokenDTOsHistorical,
+        PathValues.DAPPS_CURVE_TRANSFER_OWNERSHIP_EVENT_DTOS_HISTORICAL: DappsCurveTransferOwnershipEventDTOsHistorical,
+        PathValues.DAPPS_CURVE_UNDERLYING_COIN_DTOS_HISTORICAL: DappsCurveUnderlyingCoinDTOsHistorical,
+        PathValues.DAPPS_CURVE_VOTING_APP_DTOS_HISTORICAL: DappsCurveVotingAppDTOsHistorical,
+        PathValues.DAPPS_CURVE_WEEKLY_VOLUME_DTOS_HISTORICAL: DappsCurveWeeklyVolumeDTOsHistorical,
         PathValues.DAPPS_CURVE_DAILY_VOLUMES_HISTORICAL: DappsCurveDailyVolumesHistorical,
         PathValues.DAPPS_SUSHISWAP_DAY_DATA_HISTORICAL: DappsSushiswapDayDataHistorical,
         PathValues.DAPPS_DEX_DEPOSITS_HISTORICAL: DappsDexDepositsHistorical,
+        PathValues.DAPPS_DEX_BATCH_DTOS_HISTORICAL: DappsDexBatchDTOsHistorical,
+        PathValues.DAPPS_DEX_DEPOSIT_DTOS_HISTORICAL: DappsDexDepositDTOsHistorical,
+        PathValues.DAPPS_DEX_ORDER_DTOS_HISTORICAL: DappsDexOrderDTOsHistorical,
+        PathValues.DAPPS_DEX_PRICE_DTOS_HISTORICAL: DappsDexPriceDTOsHistorical,
+        PathValues.DAPPS_DEX_SOLUTION_DTOS_HISTORICAL: DappsDexSolutionDTOsHistorical,
+        PathValues.DAPPS_DEX_STATS_DTOS_HISTORICAL: DappsDexStatsDTOsHistorical,
+        PathValues.DAPPS_DEX_TOKEN_DTOS_HISTORICAL: DappsDexTokenDTOsHistorical,
+        PathValues.DAPPS_DEX_TRADE_DTOS_HISTORICAL: DappsDexTradeDTOsHistorical,
+        PathValues.DAPPS_DEX_USER_DTOS_HISTORICAL: DappsDexUserDTOsHistorical,
+        PathValues.DAPPS_DEX_WITHDRAW_DTOS_HISTORICAL: DappsDexWithdrawDTOsHistorical,
+        PathValues.DAPPS_DEX_WITHDRAW_REQUEST_DTOS_HISTORICAL: DappsDexWithdrawRequestDTOsHistorical,
         PathValues.DAPPS_CURVE_EXCHANGES_HISTORICAL: DappsCurveExchangesHistorical,
         PathValues.DAPPS_SUSHISWAP_EXCHANGES_CURRENT: DappsSushiswapExchangesCurrent,
         PathValues.DAPPS_UNISWAPV3_FACTORY_HISTORICAL: DappsUniswapv3FactoryHistorical,
@@ -202,6 +346,22 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.DAPPS_COW_SETTLEMENTS_HISTORICAL: DappsCowSettlementsHistorical,
         PathValues.DAPPS_DEX_SOLUTIONS_HISTORICAL: DappsDexSolutionsHistorical,
         PathValues.DAPPS_DEX_STATS_HISTORICAL: DappsDexStatsHistorical,
+        PathValues.DAPPS_SUSHISWAP_BUNDLE_DTOS_HISTORICAL: DappsSushiswapBundleDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_BURN_DTOS_HISTORICAL: DappsSushiswapBurnDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_DAY_DATA_DTOS_HISTORICAL: DappsSushiswapDayDataDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_FACTORY_DTOS_HISTORICAL: DappsSushiswapFactoryDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_HOUR_DATA_DTOS_HISTORICAL: DappsSushiswapHourDataDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_LIQUIDITY_POSITION_DTOS_HISTORICAL: DappsSushiswapLiquidityPositionDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_LIQUIDITY_POSITION_SNAPSHOT_DTOS_HISTORICAL: DappsSushiswapLiquidityPositionSnapshotDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_MINT_DTOS_HISTORICAL: DappsSushiswapMintDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_PAIR_DAY_DATA_DTOS_HISTORICAL: DappsSushiswapPairDayDataDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_PAIR_DTOS_HISTORICAL: DappsSushiswapPairDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_PAIR_HOUR_DATA_DTOS_HISTORICAL: DappsSushiswapPairHourDataDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_SWAP_DTOS_HISTORICAL: DappsSushiswapSwapDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_TOKEN_DAY_DATA_DTOS_HISTORICAL: DappsSushiswapTokenDayDataDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_TOKEN_DTOS_HISTORICAL: DappsSushiswapTokenDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_TRANSACTION_DTOS_HISTORICAL: DappsSushiswapTransactionDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_USER_DTOS_HISTORICAL: DappsSushiswapUserDTOsHistorical,
         PathValues.DAPPS_UNISWAPV3_SWAPS_HISTORICAL: DappsUniswapv3SwapsHistorical,
         PathValues.DAPPS_UNISWAPV2_SWAPS_HISTORICAL: DappsUniswapv2SwapsHistorical,
         PathValues.DAPPS_SUSHISWAP_SWAPS_HISTORICAL: DappsSushiswapSwapsHistorical,
@@ -237,6 +397,38 @@ PathToApi = typing_extensions.TypedDict(
         PathValues.DAPPS_UNISWAPV3_DAY_DATA_HISTORICAL: DappsUniswapv3DayDataHistorical,
         PathValues.DAPPS_UNISWAPV2_DAY_DATA_HISTORICAL: DappsUniswapv2DayDataHistorical,
         PathValues.DAPPS_UNISWAPV3_DAY_DATA_CURRENT: DappsUniswapv3DayDataCurrent,
+        PathValues.DAPPS_UNISWAPV2_BUNDLE_V2DTOS_HISTORICAL: DappsUniswapv2BundleV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_BURN_V2DTOS_HISTORICAL: DappsUniswapv2BurnV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_LIQUIDITY_POSITION_SNAPSHOT_V2DTOS_HISTORICAL: DappsUniswapv2LiquidityPositionSnapshotV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_LIQUIDITY_POSITION_V2DTOS_HISTORICAL: DappsUniswapv2LiquidityPositionV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_MINT_V2DTOS_HISTORICAL: DappsUniswapv2MintV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_PAIR_DAY_DATA_V2DTOS_HISTORICAL: DappsUniswapv2PairDayDataV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_PAIR_HOUR_DATA_V2DTOS_HISTORICAL: DappsUniswapv2PairHourDataV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_PAIR_V2DTOS_HISTORICAL: DappsUniswapv2PairV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_SWAP_V2DTOS_HISTORICAL: DappsUniswapv2SwapV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_TOKEN_DAY_DATA_V2DTOS_HISTORICAL: DappsUniswapv2TokenDayDataV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_TOKEN_V2DTOS_HISTORICAL: DappsUniswapv2TokenV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_TRANSACTION_V2DTOS_HISTORICAL: DappsUniswapv2TransactionV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_UNISWAP_DAY_DATA_V2DTOS_HISTORICAL: DappsUniswapv2UniswapDayDataV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_UNISWAP_FACTORY_V2DTOS_HISTORICAL: DappsUniswapv2UniswapFactoryV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_USER_V2DTOS_HISTORICAL: DappsUniswapv2UserV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_BUNDLE_V3DTOS_HISTORICAL: DappsUniswapv3BundleV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_BURN_V3DTOS_HISTORICAL: DappsUniswapv3BurnV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_FACTORY_V3DTOS_HISTORICAL: DappsUniswapv3FactoryV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_MINT_V3DTOS_HISTORICAL: DappsUniswapv3MintV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_POOL_DAY_DATA_V3DTOS_HISTORICAL: DappsUniswapv3PoolDayDataV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_POOL_HOUR_DATA_V3DTOS_HISTORICAL: DappsUniswapv3PoolHourDataV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_POOL_V3DTOS_HISTORICAL: DappsUniswapv3PoolV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_POSITION_SNAPSHOT_V3DTOS_HISTORICAL: DappsUniswapv3PositionSnapshotV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_POSITION_V3DTOS_HISTORICAL: DappsUniswapv3PositionV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_SWAP_V3DTOS_HISTORICAL: DappsUniswapv3SwapV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_TICK_DAY_DATA_V3DTOS_HISTORICAL: DappsUniswapv3TickDayDataV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_TICK_V3DTOS_HISTORICAL: DappsUniswapv3TickV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_TOKEN_HOUR_DATA_V3DTOS_HISTORICAL: DappsUniswapv3TokenHourDataV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_TOKEN_V3DAY_DATA_DTOS_HISTORICAL: DappsUniswapv3TokenV3DayDataDTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_TOKEN_V3DTOS_HISTORICAL: DappsUniswapv3TokenV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_TRANSACTION_V3DTOS_HISTORICAL: DappsUniswapv3TransactionV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_UNISWAP_DAY_DATA_V3DTOS_HISTORICAL: DappsUniswapv3UniswapDayDataV3DTOsHistorical,
         PathValues.DAPPS_UNISWAPV2_USERS_HISTORICAL: DappsUniswapv2UsersHistorical,
         PathValues.DAPPS_SUSHISWAP_USERS_HISTORICAL: DappsSushiswapUsersHistorical,
         PathValues.DAPPS_DEX_USERS_HISTORICAL: DappsDexUsersHistorical,
@@ -268,9 +460,57 @@ path_to_api = PathToApi(
         PathValues.DAPPS_CURVE_COINS_HISTORICAL: DappsCurveCoinsHistorical,
         PathValues.DAPPS_CURVE_CONTRACTS_HISTORICAL: DappsCurveContractsHistorical,
         PathValues.DAPPS_CURVE_CONTRACTS_VERSIONS_HISTORICAL: DappsCurveContractsVersionsHistorical,
+        PathValues.DAPPS_COW_ORDER_DTOS_HISTORICAL: DappsCowOrderDTOsHistorical,
+        PathValues.DAPPS_COW_SETTLEMENT_DTOS_HISTORICAL: DappsCowSettlementDTOsHistorical,
+        PathValues.DAPPS_COW_TOKEN_DTOS_HISTORICAL: DappsCowTokenDTOsHistorical,
+        PathValues.DAPPS_COW_TRADE_DTOS_HISTORICAL: DappsCowTradeDTOsHistorical,
+        PathValues.DAPPS_COW_USER_DTOS_HISTORICAL: DappsCowUserDTOsHistorical,
+        PathValues.DAPPS_CURVE_ACCOUNT_DTOS_HISTORICAL: DappsCurveAccountDTOsHistorical,
+        PathValues.DAPPS_CURVE_ADD_LIQUIDITY_EVENT_DTOS_HISTORICAL: DappsCurveAddLiquidityEventDTOsHistorical,
+        PathValues.DAPPS_CURVE_ADMIN_FEE_CHANGE_LOG_DTOS_HISTORICAL: DappsCurveAdminFeeChangeLogDTOsHistorical,
+        PathValues.DAPPS_CURVE_AMPLIFICATION_COEFF_CHANGE_LOG_DTOS_HISTORICAL: DappsCurveAmplificationCoeffChangeLogDTOsHistorical,
+        PathValues.DAPPS_CURVE_COIN_DTOS_HISTORICAL: DappsCurveCoinDTOsHistorical,
+        PathValues.DAPPS_CURVE_CONTRACT_DTOS_HISTORICAL: DappsCurveContractDTOsHistorical,
+        PathValues.DAPPS_CURVE_CONTRACT_VERSION_DTOS_HISTORICAL: DappsCurveContractVersionDTOsHistorical,
+        PathValues.DAPPS_CURVE_DAILY_VOLUME_DTOS_HISTORICAL: DappsCurveDailyVolumeDTOsHistorical,
+        PathValues.DAPPS_CURVE_EXCHANGE_DTOS_HISTORICAL: DappsCurveExchangeDTOsHistorical,
+        PathValues.DAPPS_CURVE_FEE_CHANGE_LOG_DTOS_HISTORICAL: DappsCurveFeeChangeLogDTOsHistorical,
+        PathValues.DAPPS_CURVE_GAUGE_DEPOSIT_DTOS_HISTORICAL: DappsCurveGaugeDepositDTOsHistorical,
+        PathValues.DAPPS_CURVE_GAUGE_DTOS_HISTORICAL: DappsCurveGaugeDTOsHistorical,
+        PathValues.DAPPS_CURVE_GAUGE_LIQUIDITY_DTOS_HISTORICAL: DappsCurveGaugeLiquidityDTOsHistorical,
+        PathValues.DAPPS_CURVE_GAUGE_TOTAL_WEIGHT_DTOS_HISTORICAL: DappsCurveGaugeTotalWeightDTOsHistorical,
+        PathValues.DAPPS_CURVE_GAUGE_TYPE_DTOS_HISTORICAL: DappsCurveGaugeTypeDTOsHistorical,
+        PathValues.DAPPS_CURVE_GAUGE_TYPE_WEIGHT_DTOS_HISTORICAL: DappsCurveGaugeTypeWeightDTOsHistorical,
+        PathValues.DAPPS_CURVE_GAUGE_WEIGHT_DTOS_HISTORICAL: DappsCurveGaugeWeightDTOsHistorical,
+        PathValues.DAPPS_CURVE_GAUGE_WEIGHT_VOTE_DTOS_HISTORICAL: DappsCurveGaugeWeightVoteDTOsHistorical,
+        PathValues.DAPPS_CURVE_GAUGE_WITHDRAW_DTOS_HISTORICAL: DappsCurveGaugeWithdrawDTOsHistorical,
+        PathValues.DAPPS_CURVE_HOURLY_VOLUME_DTOS_HISTORICAL: DappsCurveHourlyVolumeDTOsHistorical,
+        PathValues.DAPPS_CURVE_LP_TOKEN_DTOS_HISTORICAL: DappsCurveLpTokenDTOsHistorical,
+        PathValues.DAPPS_CURVE_POOL_DTOS_HISTORICAL: DappsCurvePoolDTOsHistorical,
+        PathValues.DAPPS_CURVE_PROPOSAL_DTOS_HISTORICAL: DappsCurveProposalDTOsHistorical,
+        PathValues.DAPPS_CURVE_PROPOSAL_VOTE_DTOS_HISTORICAL: DappsCurveProposalVoteDTOsHistorical,
+        PathValues.DAPPS_CURVE_REMOVE_LIQUIDITY_EVENT_DTOS_HISTORICAL: DappsCurveRemoveLiquidityEventDTOsHistorical,
+        PathValues.DAPPS_CURVE_REMOVE_LIQUIDITY_ONE_EVENT_DTOS_HISTORICAL: DappsCurveRemoveLiquidityOneEventDTOsHistorical,
+        PathValues.DAPPS_CURVE_SYSTEM_STATE_DTOS_HISTORICAL: DappsCurveSystemStateDTOsHistorical,
+        PathValues.DAPPS_CURVE_TOKEN_DTOS_HISTORICAL: DappsCurveTokenDTOsHistorical,
+        PathValues.DAPPS_CURVE_TRANSFER_OWNERSHIP_EVENT_DTOS_HISTORICAL: DappsCurveTransferOwnershipEventDTOsHistorical,
+        PathValues.DAPPS_CURVE_UNDERLYING_COIN_DTOS_HISTORICAL: DappsCurveUnderlyingCoinDTOsHistorical,
+        PathValues.DAPPS_CURVE_VOTING_APP_DTOS_HISTORICAL: DappsCurveVotingAppDTOsHistorical,
+        PathValues.DAPPS_CURVE_WEEKLY_VOLUME_DTOS_HISTORICAL: DappsCurveWeeklyVolumeDTOsHistorical,
         PathValues.DAPPS_CURVE_DAILY_VOLUMES_HISTORICAL: DappsCurveDailyVolumesHistorical,
         PathValues.DAPPS_SUSHISWAP_DAY_DATA_HISTORICAL: DappsSushiswapDayDataHistorical,
         PathValues.DAPPS_DEX_DEPOSITS_HISTORICAL: DappsDexDepositsHistorical,
+        PathValues.DAPPS_DEX_BATCH_DTOS_HISTORICAL: DappsDexBatchDTOsHistorical,
+        PathValues.DAPPS_DEX_DEPOSIT_DTOS_HISTORICAL: DappsDexDepositDTOsHistorical,
+        PathValues.DAPPS_DEX_ORDER_DTOS_HISTORICAL: DappsDexOrderDTOsHistorical,
+        PathValues.DAPPS_DEX_PRICE_DTOS_HISTORICAL: DappsDexPriceDTOsHistorical,
+        PathValues.DAPPS_DEX_SOLUTION_DTOS_HISTORICAL: DappsDexSolutionDTOsHistorical,
+        PathValues.DAPPS_DEX_STATS_DTOS_HISTORICAL: DappsDexStatsDTOsHistorical,
+        PathValues.DAPPS_DEX_TOKEN_DTOS_HISTORICAL: DappsDexTokenDTOsHistorical,
+        PathValues.DAPPS_DEX_TRADE_DTOS_HISTORICAL: DappsDexTradeDTOsHistorical,
+        PathValues.DAPPS_DEX_USER_DTOS_HISTORICAL: DappsDexUserDTOsHistorical,
+        PathValues.DAPPS_DEX_WITHDRAW_DTOS_HISTORICAL: DappsDexWithdrawDTOsHistorical,
+        PathValues.DAPPS_DEX_WITHDRAW_REQUEST_DTOS_HISTORICAL: DappsDexWithdrawRequestDTOsHistorical,
         PathValues.DAPPS_CURVE_EXCHANGES_HISTORICAL: DappsCurveExchangesHistorical,
         PathValues.DAPPS_SUSHISWAP_EXCHANGES_CURRENT: DappsSushiswapExchangesCurrent,
         PathValues.DAPPS_UNISWAPV3_FACTORY_HISTORICAL: DappsUniswapv3FactoryHistorical,
@@ -327,6 +567,22 @@ path_to_api = PathToApi(
         PathValues.DAPPS_COW_SETTLEMENTS_HISTORICAL: DappsCowSettlementsHistorical,
         PathValues.DAPPS_DEX_SOLUTIONS_HISTORICAL: DappsDexSolutionsHistorical,
         PathValues.DAPPS_DEX_STATS_HISTORICAL: DappsDexStatsHistorical,
+        PathValues.DAPPS_SUSHISWAP_BUNDLE_DTOS_HISTORICAL: DappsSushiswapBundleDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_BURN_DTOS_HISTORICAL: DappsSushiswapBurnDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_DAY_DATA_DTOS_HISTORICAL: DappsSushiswapDayDataDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_FACTORY_DTOS_HISTORICAL: DappsSushiswapFactoryDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_HOUR_DATA_DTOS_HISTORICAL: DappsSushiswapHourDataDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_LIQUIDITY_POSITION_DTOS_HISTORICAL: DappsSushiswapLiquidityPositionDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_LIQUIDITY_POSITION_SNAPSHOT_DTOS_HISTORICAL: DappsSushiswapLiquidityPositionSnapshotDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_MINT_DTOS_HISTORICAL: DappsSushiswapMintDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_PAIR_DAY_DATA_DTOS_HISTORICAL: DappsSushiswapPairDayDataDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_PAIR_DTOS_HISTORICAL: DappsSushiswapPairDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_PAIR_HOUR_DATA_DTOS_HISTORICAL: DappsSushiswapPairHourDataDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_SWAP_DTOS_HISTORICAL: DappsSushiswapSwapDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_TOKEN_DAY_DATA_DTOS_HISTORICAL: DappsSushiswapTokenDayDataDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_TOKEN_DTOS_HISTORICAL: DappsSushiswapTokenDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_TRANSACTION_DTOS_HISTORICAL: DappsSushiswapTransactionDTOsHistorical,
+        PathValues.DAPPS_SUSHISWAP_USER_DTOS_HISTORICAL: DappsSushiswapUserDTOsHistorical,
         PathValues.DAPPS_UNISWAPV3_SWAPS_HISTORICAL: DappsUniswapv3SwapsHistorical,
         PathValues.DAPPS_UNISWAPV2_SWAPS_HISTORICAL: DappsUniswapv2SwapsHistorical,
         PathValues.DAPPS_SUSHISWAP_SWAPS_HISTORICAL: DappsSushiswapSwapsHistorical,
@@ -362,6 +618,38 @@ path_to_api = PathToApi(
         PathValues.DAPPS_UNISWAPV3_DAY_DATA_HISTORICAL: DappsUniswapv3DayDataHistorical,
         PathValues.DAPPS_UNISWAPV2_DAY_DATA_HISTORICAL: DappsUniswapv2DayDataHistorical,
         PathValues.DAPPS_UNISWAPV3_DAY_DATA_CURRENT: DappsUniswapv3DayDataCurrent,
+        PathValues.DAPPS_UNISWAPV2_BUNDLE_V2DTOS_HISTORICAL: DappsUniswapv2BundleV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_BURN_V2DTOS_HISTORICAL: DappsUniswapv2BurnV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_LIQUIDITY_POSITION_SNAPSHOT_V2DTOS_HISTORICAL: DappsUniswapv2LiquidityPositionSnapshotV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_LIQUIDITY_POSITION_V2DTOS_HISTORICAL: DappsUniswapv2LiquidityPositionV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_MINT_V2DTOS_HISTORICAL: DappsUniswapv2MintV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_PAIR_DAY_DATA_V2DTOS_HISTORICAL: DappsUniswapv2PairDayDataV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_PAIR_HOUR_DATA_V2DTOS_HISTORICAL: DappsUniswapv2PairHourDataV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_PAIR_V2DTOS_HISTORICAL: DappsUniswapv2PairV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_SWAP_V2DTOS_HISTORICAL: DappsUniswapv2SwapV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_TOKEN_DAY_DATA_V2DTOS_HISTORICAL: DappsUniswapv2TokenDayDataV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_TOKEN_V2DTOS_HISTORICAL: DappsUniswapv2TokenV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_TRANSACTION_V2DTOS_HISTORICAL: DappsUniswapv2TransactionV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_UNISWAP_DAY_DATA_V2DTOS_HISTORICAL: DappsUniswapv2UniswapDayDataV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_UNISWAP_FACTORY_V2DTOS_HISTORICAL: DappsUniswapv2UniswapFactoryV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV2_USER_V2DTOS_HISTORICAL: DappsUniswapv2UserV2DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_BUNDLE_V3DTOS_HISTORICAL: DappsUniswapv3BundleV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_BURN_V3DTOS_HISTORICAL: DappsUniswapv3BurnV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_FACTORY_V3DTOS_HISTORICAL: DappsUniswapv3FactoryV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_MINT_V3DTOS_HISTORICAL: DappsUniswapv3MintV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_POOL_DAY_DATA_V3DTOS_HISTORICAL: DappsUniswapv3PoolDayDataV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_POOL_HOUR_DATA_V3DTOS_HISTORICAL: DappsUniswapv3PoolHourDataV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_POOL_V3DTOS_HISTORICAL: DappsUniswapv3PoolV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_POSITION_SNAPSHOT_V3DTOS_HISTORICAL: DappsUniswapv3PositionSnapshotV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_POSITION_V3DTOS_HISTORICAL: DappsUniswapv3PositionV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_SWAP_V3DTOS_HISTORICAL: DappsUniswapv3SwapV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_TICK_DAY_DATA_V3DTOS_HISTORICAL: DappsUniswapv3TickDayDataV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_TICK_V3DTOS_HISTORICAL: DappsUniswapv3TickV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_TOKEN_HOUR_DATA_V3DTOS_HISTORICAL: DappsUniswapv3TokenHourDataV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_TOKEN_V3DAY_DATA_DTOS_HISTORICAL: DappsUniswapv3TokenV3DayDataDTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_TOKEN_V3DTOS_HISTORICAL: DappsUniswapv3TokenV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_TRANSACTION_V3DTOS_HISTORICAL: DappsUniswapv3TransactionV3DTOsHistorical,
+        PathValues.DAPPS_UNISWAPV3_UNISWAP_DAY_DATA_V3DTOS_HISTORICAL: DappsUniswapv3UniswapDayDataV3DTOsHistorical,
         PathValues.DAPPS_UNISWAPV2_USERS_HISTORICAL: DappsUniswapv2UsersHistorical,
         PathValues.DAPPS_SUSHISWAP_USERS_HISTORICAL: DappsSushiswapUsersHistorical,
         PathValues.DAPPS_DEX_USERS_HISTORICAL: DappsDexUsersHistorical,

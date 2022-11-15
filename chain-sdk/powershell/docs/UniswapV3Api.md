@@ -4,40 +4,112 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**Invoke-UniswapV3GetBundleV3DTOsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetBundleV3DTOsHistorical) | **GET** /dapps/uniswapv3/BundleV3DTOs/historical | BundleV3DTOs (historical) 🔥
 [**Invoke-UniswapV3GetBundlesCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetBundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
 [**Invoke-UniswapV3GetBundlesHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical)
+[**Invoke-UniswapV3GetBurnV3DTOsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetBurnV3DTOsHistorical) | **GET** /dapps/uniswapv3/BurnV3DTOs/historical | BurnV3DTOs (historical) 🔥
 [**Invoke-UniswapV3GetBurnsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetBurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
 [**Invoke-UniswapV3GetBurnsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical)
 [**Invoke-UniswapV3GetDayDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetDayDataCurrent) | **GET** /dapps/uniswapv3/dayData/current | DayData (current)
 [**Invoke-UniswapV3GetDayDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetDayDataHistorical) | **GET** /dapps/uniswapv3/dayData/historical | DayData (historical)
+[**Invoke-UniswapV3GetFactoryV3DTOsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetFactoryV3DTOsHistorical) | **GET** /dapps/uniswapv3/FactoryV3DTOs/historical | FactoryV3DTOs (historical) 🔥
 [**Invoke-UniswapV3GetFactoryCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetFactoryCurrent) | **GET** /dapps/uniswapv3/factory/current | Factory (current)
 [**Invoke-UniswapV3GetFactoryHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetFactoryHistorical) | **GET** /dapps/uniswapv3/factory/historical | Factory (historical)
+[**Invoke-UniswapV3GetMintV3DTOsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetMintV3DTOsHistorical) | **GET** /dapps/uniswapv3/MintV3DTOs/historical | MintV3DTOs (historical) 🔥
 [**Invoke-UniswapV3GetMintsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetMintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
 [**Invoke-UniswapV3GetMintsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical)
+[**Invoke-UniswapV3GetPoolDayDataV3DTOsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolDayDataV3DTOsHistorical) | **GET** /dapps/uniswapv3/PoolDayDataV3DTOs/historical | PoolDayDataV3DTOs (historical) 🔥
+[**Invoke-UniswapV3GetPoolHourDataV3DTOsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolHourDataV3DTOsHistorical) | **GET** /dapps/uniswapv3/PoolHourDataV3DTOs/historical | PoolHourDataV3DTOs (historical) 🔥
+[**Invoke-UniswapV3GetPoolV3DTOsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolV3DTOsHistorical) | **GET** /dapps/uniswapv3/PoolV3DTOs/historical | PoolV3DTOs (historical) 🔥
 [**Invoke-UniswapV3GetPoolsDayDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsDayDataCurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | PoolsDayData (current)
 [**Invoke-UniswapV3GetPoolsDayDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsDayDataHistorical) | **GET** /dapps/uniswapv3/poolsDayData/historical | PoolsDayData (historical)
 [**Invoke-UniswapV3GetPoolsHourDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsHourDataCurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | PoolsHourData (current)
 [**Invoke-UniswapV3GetPoolsHourDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsHourDataHistorical) | **GET** /dapps/uniswapv3/poolsHourData/historical | PoolsHourData (historical)
 [**Invoke-UniswapV3GetPoolsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current) 🔥
 [**Invoke-UniswapV3GetPoolsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥
+[**Invoke-UniswapV3GetPositionSnapshotV3DTOsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPositionSnapshotV3DTOsHistorical) | **GET** /dapps/uniswapv3/PositionSnapshotV3DTOs/historical | PositionSnapshotV3DTOs (historical) 🔥
+[**Invoke-UniswapV3GetPositionV3DTOsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPositionV3DTOsHistorical) | **GET** /dapps/uniswapv3/PositionV3DTOs/historical | PositionV3DTOs (historical) 🔥
 [**Invoke-UniswapV3GetPositionsSnaphotsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPositionsSnaphotsHistorical) | **GET** /dapps/uniswapv3/positionsSnapshots/historical | PositionsSnaphots (historical)
 [**Invoke-UniswapV3GetPositionsSnapshotsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPositionsSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionsSnapshots (current)
 [**Invoke-UniswapV3GetPositionsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetPositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
 [**Invoke-UniswapV3GetPositionsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical)
+[**Invoke-UniswapV3GetSwapV3DTOsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetSwapV3DTOsHistorical) | **GET** /dapps/uniswapv3/SwapV3DTOs/historical | SwapV3DTOs (historical) 🔥
 [**Invoke-UniswapV3GetSwapsCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetSwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) 🔥
 [**Invoke-UniswapV3GetSwapsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥
+[**Invoke-UniswapV3GetTickDayDataV3DTOsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTickDayDataV3DTOsHistorical) | **GET** /dapps/uniswapv3/TickDayDataV3DTOs/historical | TickDayDataV3DTOs (historical) 🔥
+[**Invoke-UniswapV3GetTickV3DTOsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTickV3DTOsHistorical) | **GET** /dapps/uniswapv3/TickV3DTOs/historical | TickV3DTOs (historical) 🔥
 [**Invoke-UniswapV3GetTicksDayDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTicksDayDataCurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | TicksDayData (current)
 [**Invoke-UniswapV3GetTicksDayDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTicksDayDataHistorical) | **GET** /dapps/uniswapv3/ticksDayData/historical | TicksDayData (historical)
 [**Invoke-UniswapV3GetTicksCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
 [**Invoke-UniswapV3GetTicksHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical)
+[**Invoke-UniswapV3GetTokenHourDataV3DTOsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokenHourDataV3DTOsHistorical) | **GET** /dapps/uniswapv3/TokenHourDataV3DTOs/historical | TokenHourDataV3DTOs (historical) 🔥
+[**Invoke-UniswapV3GetTokenV3DTOsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokenV3DTOsHistorical) | **GET** /dapps/uniswapv3/TokenV3DTOs/historical | TokenV3DTOs (historical) 🔥
+[**Invoke-UniswapV3GetTokenV3DayDataDTOsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokenV3DayDataDTOsHistorical) | **GET** /dapps/uniswapv3/TokenV3DayDataDTOs/historical | TokenV3DayDataDTOs (historical) 🔥
 [**Invoke-UniswapV3GetTokensDayDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTokensDayDataCurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | TokensDayData (current)
 [**Invoke-UniswapV3GetTokensDayDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokensDayDataHistorical) | **GET** /dapps/uniswapv3/tokensDayData/historical | TokensDayData (historical)
 [**Invoke-UniswapV3GetTokensHourDataCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTokensHourDataCurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | TokensHourData (current)
 [**Invoke-UniswapV3GetTokensHourDataHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokensHourDataHistorical) | **GET** /dapps/uniswapv3/tokensHourData/historical | TokensHourData (historical)
 [**Invoke-UniswapV3GetTokensCurrent**](UniswapV3Api.md#Invoke-UniswapV3GetTokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) 🔥
 [**Invoke-UniswapV3GetTokensHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥
+[**Invoke-UniswapV3GetTransactionV3DTOsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTransactionV3DTOsHistorical) | **GET** /dapps/uniswapv3/TransactionV3DTOs/historical | TransactionV3DTOs (historical) 🔥
 [**Invoke-UniswapV3GetTransactionsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical)
+[**Invoke-UniswapV3GetUniswapDayDataV3DTOsHistorical**](UniswapV3Api.md#Invoke-UniswapV3GetUniswapDayDataV3DTOsHistorical) | **GET** /dapps/uniswapv3/UniswapDayDataV3DTOs/historical | UniswapDayDataV3DTOs (historical) 🔥
 
+
+<a name="Invoke-UniswapV3GetBundleV3DTOsHistorical"></a>
+# **Invoke-UniswapV3GetBundleV3DTOsHistorical**
+> UniswapV3BundleV3DTO[] Invoke-UniswapV3GetBundleV3DTOsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+BundleV3DTOs (historical) 🔥
+
+Gets BundleV3DTOs.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# BundleV3DTOs (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetBundleV3DTOsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetBundleV3DTOsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3BundleV3DTO[]**](UniswapV3BundleV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="Invoke-UniswapV3GetBundlesCurrent"></a>
 # **Invoke-UniswapV3GetBundlesCurrent**
@@ -117,6 +189,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UniswapV3BundleV3DTO[]**](UniswapV3BundleV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetBurnV3DTOsHistorical"></a>
+# **Invoke-UniswapV3GetBurnV3DTOsHistorical**
+> UniswapV3BurnV3DTO[] Invoke-UniswapV3GetBurnV3DTOsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+BurnV3DTOs (historical) 🔥
+
+Gets BurnV3DTOs.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# BurnV3DTOs (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetBurnV3DTOsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetBurnV3DTOsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3BurnV3DTO[]**](UniswapV3BurnV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -317,6 +444,61 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="Invoke-UniswapV3GetFactoryV3DTOsHistorical"></a>
+# **Invoke-UniswapV3GetFactoryV3DTOsHistorical**
+> UniswapV3FactoryV3DTO[] Invoke-UniswapV3GetFactoryV3DTOsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+FactoryV3DTOs (historical) 🔥
+
+Gets FactoryV3DTOs.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# FactoryV3DTOs (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetFactoryV3DTOsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetFactoryV3DTOsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3FactoryV3DTO[]**](UniswapV3FactoryV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="Invoke-UniswapV3GetFactoryCurrent"></a>
 # **Invoke-UniswapV3GetFactoryCurrent**
 > UniswapV3FactoryV3DTO[] Invoke-UniswapV3GetFactoryCurrent<br>
@@ -395,6 +577,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UniswapV3FactoryV3DTO[]**](UniswapV3FactoryV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetMintV3DTOsHistorical"></a>
+# **Invoke-UniswapV3GetMintV3DTOsHistorical**
+> UniswapV3MintV3DTO[] Invoke-UniswapV3GetMintV3DTOsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+MintV3DTOs (historical) 🔥
+
+Gets MintV3DTOs.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# MintV3DTOs (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetMintV3DTOsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetMintV3DTOsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3MintV3DTO[]**](UniswapV3MintV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -493,6 +730,171 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UniswapV3MintV3DTO[]**](UniswapV3MintV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetPoolDayDataV3DTOsHistorical"></a>
+# **Invoke-UniswapV3GetPoolDayDataV3DTOsHistorical**
+> UniswapV3PoolDayDataV3DTO[] Invoke-UniswapV3GetPoolDayDataV3DTOsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+PoolDayDataV3DTOs (historical) 🔥
+
+Gets PoolDayDataV3DTOs.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# PoolDayDataV3DTOs (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetPoolDayDataV3DTOsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetPoolDayDataV3DTOsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3PoolDayDataV3DTO[]**](UniswapV3PoolDayDataV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetPoolHourDataV3DTOsHistorical"></a>
+# **Invoke-UniswapV3GetPoolHourDataV3DTOsHistorical**
+> UniswapV3PoolHourDataV3DTO[] Invoke-UniswapV3GetPoolHourDataV3DTOsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+PoolHourDataV3DTOs (historical) 🔥
+
+Gets PoolHourDataV3DTOs.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# PoolHourDataV3DTOs (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetPoolHourDataV3DTOsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetPoolHourDataV3DTOsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3PoolHourDataV3DTO[]**](UniswapV3PoolHourDataV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetPoolV3DTOsHistorical"></a>
+# **Invoke-UniswapV3GetPoolV3DTOsHistorical**
+> UniswapV3PoolV3DTO[] Invoke-UniswapV3GetPoolV3DTOsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+PoolV3DTOs (historical) 🔥
+
+Gets PoolV3DTOs.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# PoolV3DTOs (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetPoolV3DTOsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetPoolV3DTOsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3PoolV3DTO[]**](UniswapV3PoolV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -799,6 +1201,116 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="Invoke-UniswapV3GetPositionSnapshotV3DTOsHistorical"></a>
+# **Invoke-UniswapV3GetPositionSnapshotV3DTOsHistorical**
+> UniswapV3PositionSnapshotV3DTO[] Invoke-UniswapV3GetPositionSnapshotV3DTOsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+PositionSnapshotV3DTOs (historical) 🔥
+
+Gets PositionSnapshotV3DTOs.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# PositionSnapshotV3DTOs (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetPositionSnapshotV3DTOsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetPositionSnapshotV3DTOsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3PositionSnapshotV3DTO[]**](UniswapV3PositionSnapshotV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetPositionV3DTOsHistorical"></a>
+# **Invoke-UniswapV3GetPositionV3DTOsHistorical**
+> UniswapV3PositionV3DTO[] Invoke-UniswapV3GetPositionV3DTOsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+PositionV3DTOs (historical) 🔥
+
+Gets PositionV3DTOs.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# PositionV3DTOs (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetPositionV3DTOsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetPositionV3DTOsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3PositionV3DTO[]**](UniswapV3PositionV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="Invoke-UniswapV3GetPositionsSnaphotsHistorical"></a>
 # **Invoke-UniswapV3GetPositionsSnaphotsHistorical**
 > UniswapV3PositionSnapshotV3DTO[] Invoke-UniswapV3GetPositionsSnaphotsHistorical<br>
@@ -995,6 +1507,61 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="Invoke-UniswapV3GetSwapV3DTOsHistorical"></a>
+# **Invoke-UniswapV3GetSwapV3DTOsHistorical**
+> UniswapV3SwapV3DTO[] Invoke-UniswapV3GetSwapV3DTOsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+SwapV3DTOs (historical) 🔥
+
+Gets SwapV3DTOs.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# SwapV3DTOs (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetSwapV3DTOsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetSwapV3DTOsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3SwapV3DTO[]**](UniswapV3SwapV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="Invoke-UniswapV3GetSwapsCurrent"></a>
 # **Invoke-UniswapV3GetSwapsCurrent**
 > UniswapV3SwapV3DTO[] Invoke-UniswapV3GetSwapsCurrent<br>
@@ -1081,6 +1648,116 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UniswapV3SwapV3DTO[]**](UniswapV3SwapV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetTickDayDataV3DTOsHistorical"></a>
+# **Invoke-UniswapV3GetTickDayDataV3DTOsHistorical**
+> UniswapV3TickDayDataV3DTO[] Invoke-UniswapV3GetTickDayDataV3DTOsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+TickDayDataV3DTOs (historical) 🔥
+
+Gets TickDayDataV3DTOs.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# TickDayDataV3DTOs (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetTickDayDataV3DTOsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetTickDayDataV3DTOsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3TickDayDataV3DTO[]**](UniswapV3TickDayDataV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetTickV3DTOsHistorical"></a>
+# **Invoke-UniswapV3GetTickV3DTOsHistorical**
+> UniswapV3TickV3DTO[] Invoke-UniswapV3GetTickV3DTOsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+TickV3DTOs (historical) 🔥
+
+Gets TickV3DTOs.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# TickV3DTOs (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetTickV3DTOsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetTickV3DTOsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3TickV3DTO[]**](UniswapV3TickV3DTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1277,6 +1954,171 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UniswapV3TickV3DTO[]**](UniswapV3TickV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetTokenHourDataV3DTOsHistorical"></a>
+# **Invoke-UniswapV3GetTokenHourDataV3DTOsHistorical**
+> UniswapV3TokenHourDataV3DTO[] Invoke-UniswapV3GetTokenHourDataV3DTOsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+TokenHourDataV3DTOs (historical) 🔥
+
+Gets TokenHourDataV3DTOs.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# TokenHourDataV3DTOs (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetTokenHourDataV3DTOsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetTokenHourDataV3DTOsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3TokenHourDataV3DTO[]**](UniswapV3TokenHourDataV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetTokenV3DTOsHistorical"></a>
+# **Invoke-UniswapV3GetTokenV3DTOsHistorical**
+> UniswapV3TokenV3DTO[] Invoke-UniswapV3GetTokenV3DTOsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+TokenV3DTOs (historical) 🔥
+
+Gets TokenV3DTOs.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# TokenV3DTOs (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetTokenV3DTOsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetTokenV3DTOsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3TokenV3DTO[]**](UniswapV3TokenV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetTokenV3DayDataDTOsHistorical"></a>
+# **Invoke-UniswapV3GetTokenV3DayDataDTOsHistorical**
+> UniswapV3TokenV3DayDataDTO[] Invoke-UniswapV3GetTokenV3DayDataDTOsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+TokenV3DayDataDTOs (historical) 🔥
+
+Gets TokenV3DayDataDTOs.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# TokenV3DayDataDTOs (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetTokenV3DayDataDTOsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetTokenV3DayDataDTOsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3TokenV3DayDataDTO[]**](UniswapV3TokenV3DayDataDTO.md) (PSCustomObject)
 
 ### Authorization
 
@@ -1583,6 +2425,61 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
+<a name="Invoke-UniswapV3GetTransactionV3DTOsHistorical"></a>
+# **Invoke-UniswapV3GetTransactionV3DTOsHistorical**
+> UniswapV3TransactionV3DTO[] Invoke-UniswapV3GetTransactionV3DTOsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+TransactionV3DTOs (historical) 🔥
+
+Gets TransactionV3DTOs.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# TransactionV3DTOs (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetTransactionV3DTOsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetTransactionV3DTOsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3TransactionV3DTO[]**](UniswapV3TransactionV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
 <a name="Invoke-UniswapV3GetTransactionsHistorical"></a>
 # **Invoke-UniswapV3GetTransactionsHistorical**
 > UniswapV3TransactionV3DTO[] Invoke-UniswapV3GetTransactionsHistorical<br>
@@ -1623,6 +2520,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UniswapV3TransactionV3DTO[]**](UniswapV3TransactionV3DTO.md) (PSCustomObject)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="Invoke-UniswapV3GetUniswapDayDataV3DTOsHistorical"></a>
+# **Invoke-UniswapV3GetUniswapDayDataV3DTOsHistorical**
+> UniswapV3UniswapDayDataV3DTO[] Invoke-UniswapV3GetUniswapDayDataV3DTOsHistorical<br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-PoolId] <String><br>
+
+UniswapDayDataV3DTOs (historical) 🔥
+
+Gets UniswapDayDataV3DTOs.
+
+### Example
+```powershell
+$StartBlock = 789 # Int64 |  (optional)
+$EndBlock = 789 # Int64 |  (optional)
+$StartDate = (Get-Date) # System.DateTime |  (optional)
+$EndDate = (Get-Date) # System.DateTime |  (optional)
+$PoolId = "MyPoolId" # String |  (optional)
+
+# UniswapDayDataV3DTOs (historical) 🔥
+try {
+    $Result = Invoke-UniswapV3GetUniswapDayDataV3DTOsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -PoolId $PoolId
+} catch {
+    Write-Host ("Exception occurred when calling Invoke-UniswapV3GetUniswapDayDataV3DTOsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **StartBlock** | **Int64**|  | [optional] 
+ **EndBlock** | **Int64**|  | [optional] 
+ **StartDate** | **System.DateTime**|  | [optional] 
+ **EndDate** | **System.DateTime**|  | [optional] 
+ **PoolId** | **String**|  | [optional] 
+
+### Return type
+
+[**UniswapV3UniswapDayDataV3DTO[]**](UniswapV3UniswapDayDataV3DTO.md) (PSCustomObject)
 
 ### Authorization
 

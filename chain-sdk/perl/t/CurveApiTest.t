@@ -30,6 +30,17 @@ my $api = WWW::OpenAPIClient::CurveApi->new();
 isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 
 #
+# curve_get_account_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_account_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_account_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_account_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_account_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_account_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_account_dtos__historical_result = $api->curve_get_account_dtos__historical(start_block => $curve_get_account_dtos__historical_start_block, end_block => $curve_get_account_dtos__historical_end_block, start_date => $curve_get_account_dtos__historical_start_date, end_date => $curve_get_account_dtos__historical_end_date, pool_id => $curve_get_account_dtos__historical_pool_id);
+
+#
 # curve_get_accounts__historical test
 #
 # uncomment below and update the test
@@ -38,6 +49,17 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_accounts__historical_start_date = undef; # replace NULL with a proper value
 #my $curve_get_accounts__historical_end_date = undef; # replace NULL with a proper value
 #my $curve_get_accounts__historical_result = $api->curve_get_accounts__historical(start_block => $curve_get_accounts__historical_start_block, end_block => $curve_get_accounts__historical_end_block, start_date => $curve_get_accounts__historical_start_date, end_date => $curve_get_accounts__historical_end_date);
+
+#
+# curve_get_add_liquidity_event_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_add_liquidity_event_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_add_liquidity_event_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_add_liquidity_event_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_add_liquidity_event_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_add_liquidity_event_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_add_liquidity_event_dtos__historical_result = $api->curve_get_add_liquidity_event_dtos__historical(start_block => $curve_get_add_liquidity_event_dtos__historical_start_block, end_block => $curve_get_add_liquidity_event_dtos__historical_end_block, start_date => $curve_get_add_liquidity_event_dtos__historical_start_date, end_date => $curve_get_add_liquidity_event_dtos__historical_end_date, pool_id => $curve_get_add_liquidity_event_dtos__historical_pool_id);
 
 #
 # curve_get_add_liquidity_events__historical test
@@ -51,6 +73,17 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_add_liquidity_events__historical_result = $api->curve_get_add_liquidity_events__historical(start_block => $curve_get_add_liquidity_events__historical_start_block, end_block => $curve_get_add_liquidity_events__historical_end_block, start_date => $curve_get_add_liquidity_events__historical_start_date, end_date => $curve_get_add_liquidity_events__historical_end_date, pool_id => $curve_get_add_liquidity_events__historical_pool_id);
 
 #
+# curve_get_admin_fee_change_log_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_admin_fee_change_log_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_admin_fee_change_log_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_admin_fee_change_log_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_admin_fee_change_log_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_admin_fee_change_log_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_admin_fee_change_log_dtos__historical_result = $api->curve_get_admin_fee_change_log_dtos__historical(start_block => $curve_get_admin_fee_change_log_dtos__historical_start_block, end_block => $curve_get_admin_fee_change_log_dtos__historical_end_block, start_date => $curve_get_admin_fee_change_log_dtos__historical_start_date, end_date => $curve_get_admin_fee_change_log_dtos__historical_end_date, pool_id => $curve_get_admin_fee_change_log_dtos__historical_pool_id);
+
+#
 # curve_get_admin_fee_change_logs__historical test
 #
 # uncomment below and update the test
@@ -60,6 +93,17 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_admin_fee_change_logs__historical_end_date = undef; # replace NULL with a proper value
 #my $curve_get_admin_fee_change_logs__historical_pool_id = undef; # replace NULL with a proper value
 #my $curve_get_admin_fee_change_logs__historical_result = $api->curve_get_admin_fee_change_logs__historical(start_block => $curve_get_admin_fee_change_logs__historical_start_block, end_block => $curve_get_admin_fee_change_logs__historical_end_block, start_date => $curve_get_admin_fee_change_logs__historical_start_date, end_date => $curve_get_admin_fee_change_logs__historical_end_date, pool_id => $curve_get_admin_fee_change_logs__historical_pool_id);
+
+#
+# curve_get_amplification_coeff_change_log_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_amplification_coeff_change_log_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_amplification_coeff_change_log_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_amplification_coeff_change_log_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_amplification_coeff_change_log_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_amplification_coeff_change_log_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_amplification_coeff_change_log_dtos__historical_result = $api->curve_get_amplification_coeff_change_log_dtos__historical(start_block => $curve_get_amplification_coeff_change_log_dtos__historical_start_block, end_block => $curve_get_amplification_coeff_change_log_dtos__historical_end_block, start_date => $curve_get_amplification_coeff_change_log_dtos__historical_start_date, end_date => $curve_get_amplification_coeff_change_log_dtos__historical_end_date, pool_id => $curve_get_amplification_coeff_change_log_dtos__historical_pool_id);
 
 #
 # curve_get_amplification_coeff_change_logs__historical test
@@ -73,6 +117,17 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_amplification_coeff_change_logs__historical_result = $api->curve_get_amplification_coeff_change_logs__historical(start_block => $curve_get_amplification_coeff_change_logs__historical_start_block, end_block => $curve_get_amplification_coeff_change_logs__historical_end_block, start_date => $curve_get_amplification_coeff_change_logs__historical_start_date, end_date => $curve_get_amplification_coeff_change_logs__historical_end_date, pool_id => $curve_get_amplification_coeff_change_logs__historical_pool_id);
 
 #
+# curve_get_coin_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_coin_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_coin_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_coin_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_coin_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_coin_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_coin_dtos__historical_result = $api->curve_get_coin_dtos__historical(start_block => $curve_get_coin_dtos__historical_start_block, end_block => $curve_get_coin_dtos__historical_end_block, start_date => $curve_get_coin_dtos__historical_start_date, end_date => $curve_get_coin_dtos__historical_end_date, pool_id => $curve_get_coin_dtos__historical_pool_id);
+
+#
 # curve_get_coins__historical test
 #
 # uncomment below and update the test
@@ -82,6 +137,28 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_coins__historical_end_date = undef; # replace NULL with a proper value
 #my $curve_get_coins__historical_pool_id = undef; # replace NULL with a proper value
 #my $curve_get_coins__historical_result = $api->curve_get_coins__historical(start_block => $curve_get_coins__historical_start_block, end_block => $curve_get_coins__historical_end_block, start_date => $curve_get_coins__historical_start_date, end_date => $curve_get_coins__historical_end_date, pool_id => $curve_get_coins__historical_pool_id);
+
+#
+# curve_get_contract_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_contract_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_contract_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_contract_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_contract_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_contract_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_contract_dtos__historical_result = $api->curve_get_contract_dtos__historical(start_block => $curve_get_contract_dtos__historical_start_block, end_block => $curve_get_contract_dtos__historical_end_block, start_date => $curve_get_contract_dtos__historical_start_date, end_date => $curve_get_contract_dtos__historical_end_date, pool_id => $curve_get_contract_dtos__historical_pool_id);
+
+#
+# curve_get_contract_version_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_contract_version_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_contract_version_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_contract_version_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_contract_version_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_contract_version_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_contract_version_dtos__historical_result = $api->curve_get_contract_version_dtos__historical(start_block => $curve_get_contract_version_dtos__historical_start_block, end_block => $curve_get_contract_version_dtos__historical_end_block, start_date => $curve_get_contract_version_dtos__historical_start_date, end_date => $curve_get_contract_version_dtos__historical_end_date, pool_id => $curve_get_contract_version_dtos__historical_pool_id);
 
 #
 # curve_get_contracts__historical test
@@ -106,6 +183,17 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_contracts_versions__historical_result = $api->curve_get_contracts_versions__historical(start_block => $curve_get_contracts_versions__historical_start_block, end_block => $curve_get_contracts_versions__historical_end_block, start_date => $curve_get_contracts_versions__historical_start_date, end_date => $curve_get_contracts_versions__historical_end_date, pool_id => $curve_get_contracts_versions__historical_pool_id);
 
 #
+# curve_get_daily_volume_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_daily_volume_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_daily_volume_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_daily_volume_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_daily_volume_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_daily_volume_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_daily_volume_dtos__historical_result = $api->curve_get_daily_volume_dtos__historical(start_block => $curve_get_daily_volume_dtos__historical_start_block, end_block => $curve_get_daily_volume_dtos__historical_end_block, start_date => $curve_get_daily_volume_dtos__historical_start_date, end_date => $curve_get_daily_volume_dtos__historical_end_date, pool_id => $curve_get_daily_volume_dtos__historical_pool_id);
+
+#
 # curve_get_daily_volumes__historical test
 #
 # uncomment below and update the test
@@ -115,6 +203,17 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_daily_volumes__historical_end_date = undef; # replace NULL with a proper value
 #my $curve_get_daily_volumes__historical_pool_id = undef; # replace NULL with a proper value
 #my $curve_get_daily_volumes__historical_result = $api->curve_get_daily_volumes__historical(start_block => $curve_get_daily_volumes__historical_start_block, end_block => $curve_get_daily_volumes__historical_end_block, start_date => $curve_get_daily_volumes__historical_start_date, end_date => $curve_get_daily_volumes__historical_end_date, pool_id => $curve_get_daily_volumes__historical_pool_id);
+
+#
+# curve_get_exchange_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_exchange_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_exchange_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_exchange_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_exchange_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_exchange_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_exchange_dtos__historical_result = $api->curve_get_exchange_dtos__historical(start_block => $curve_get_exchange_dtos__historical_start_block, end_block => $curve_get_exchange_dtos__historical_end_block, start_date => $curve_get_exchange_dtos__historical_start_date, end_date => $curve_get_exchange_dtos__historical_end_date, pool_id => $curve_get_exchange_dtos__historical_pool_id);
 
 #
 # curve_get_exchanges__historical test
@@ -128,6 +227,17 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_exchanges__historical_result = $api->curve_get_exchanges__historical(start_block => $curve_get_exchanges__historical_start_block, end_block => $curve_get_exchanges__historical_end_block, start_date => $curve_get_exchanges__historical_start_date, end_date => $curve_get_exchanges__historical_end_date, pool_id => $curve_get_exchanges__historical_pool_id);
 
 #
+# curve_get_fee_change_log_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_fee_change_log_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_fee_change_log_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_fee_change_log_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_fee_change_log_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_fee_change_log_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_fee_change_log_dtos__historical_result = $api->curve_get_fee_change_log_dtos__historical(start_block => $curve_get_fee_change_log_dtos__historical_start_block, end_block => $curve_get_fee_change_log_dtos__historical_end_block, start_date => $curve_get_fee_change_log_dtos__historical_start_date, end_date => $curve_get_fee_change_log_dtos__historical_end_date, pool_id => $curve_get_fee_change_log_dtos__historical_pool_id);
+
+#
 # curve_get_fee_change_logs__historical test
 #
 # uncomment below and update the test
@@ -137,6 +247,105 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_fee_change_logs__historical_end_date = undef; # replace NULL with a proper value
 #my $curve_get_fee_change_logs__historical_pool_id = undef; # replace NULL with a proper value
 #my $curve_get_fee_change_logs__historical_result = $api->curve_get_fee_change_logs__historical(start_block => $curve_get_fee_change_logs__historical_start_block, end_block => $curve_get_fee_change_logs__historical_end_block, start_date => $curve_get_fee_change_logs__historical_start_date, end_date => $curve_get_fee_change_logs__historical_end_date, pool_id => $curve_get_fee_change_logs__historical_pool_id);
+
+#
+# curve_get_gauge_deposit_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_gauge_deposit_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_deposit_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_deposit_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_deposit_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_deposit_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_gauge_deposit_dtos__historical_result = $api->curve_get_gauge_deposit_dtos__historical(start_block => $curve_get_gauge_deposit_dtos__historical_start_block, end_block => $curve_get_gauge_deposit_dtos__historical_end_block, start_date => $curve_get_gauge_deposit_dtos__historical_start_date, end_date => $curve_get_gauge_deposit_dtos__historical_end_date, pool_id => $curve_get_gauge_deposit_dtos__historical_pool_id);
+
+#
+# curve_get_gauge_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_gauge_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_gauge_dtos__historical_result = $api->curve_get_gauge_dtos__historical(start_block => $curve_get_gauge_dtos__historical_start_block, end_block => $curve_get_gauge_dtos__historical_end_block, start_date => $curve_get_gauge_dtos__historical_start_date, end_date => $curve_get_gauge_dtos__historical_end_date, pool_id => $curve_get_gauge_dtos__historical_pool_id);
+
+#
+# curve_get_gauge_liquidity_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_gauge_liquidity_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_liquidity_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_liquidity_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_liquidity_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_liquidity_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_gauge_liquidity_dtos__historical_result = $api->curve_get_gauge_liquidity_dtos__historical(start_block => $curve_get_gauge_liquidity_dtos__historical_start_block, end_block => $curve_get_gauge_liquidity_dtos__historical_end_block, start_date => $curve_get_gauge_liquidity_dtos__historical_start_date, end_date => $curve_get_gauge_liquidity_dtos__historical_end_date, pool_id => $curve_get_gauge_liquidity_dtos__historical_pool_id);
+
+#
+# curve_get_gauge_total_weight_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_gauge_total_weight_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_total_weight_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_total_weight_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_total_weight_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_total_weight_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_gauge_total_weight_dtos__historical_result = $api->curve_get_gauge_total_weight_dtos__historical(start_block => $curve_get_gauge_total_weight_dtos__historical_start_block, end_block => $curve_get_gauge_total_weight_dtos__historical_end_block, start_date => $curve_get_gauge_total_weight_dtos__historical_start_date, end_date => $curve_get_gauge_total_weight_dtos__historical_end_date, pool_id => $curve_get_gauge_total_weight_dtos__historical_pool_id);
+
+#
+# curve_get_gauge_type_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_gauge_type_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_type_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_type_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_type_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_type_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_gauge_type_dtos__historical_result = $api->curve_get_gauge_type_dtos__historical(start_block => $curve_get_gauge_type_dtos__historical_start_block, end_block => $curve_get_gauge_type_dtos__historical_end_block, start_date => $curve_get_gauge_type_dtos__historical_start_date, end_date => $curve_get_gauge_type_dtos__historical_end_date, pool_id => $curve_get_gauge_type_dtos__historical_pool_id);
+
+#
+# curve_get_gauge_type_weight_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_gauge_type_weight_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_type_weight_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_type_weight_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_type_weight_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_type_weight_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_gauge_type_weight_dtos__historical_result = $api->curve_get_gauge_type_weight_dtos__historical(start_block => $curve_get_gauge_type_weight_dtos__historical_start_block, end_block => $curve_get_gauge_type_weight_dtos__historical_end_block, start_date => $curve_get_gauge_type_weight_dtos__historical_start_date, end_date => $curve_get_gauge_type_weight_dtos__historical_end_date, pool_id => $curve_get_gauge_type_weight_dtos__historical_pool_id);
+
+#
+# curve_get_gauge_weight_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_gauge_weight_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_weight_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_weight_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_weight_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_weight_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_gauge_weight_dtos__historical_result = $api->curve_get_gauge_weight_dtos__historical(start_block => $curve_get_gauge_weight_dtos__historical_start_block, end_block => $curve_get_gauge_weight_dtos__historical_end_block, start_date => $curve_get_gauge_weight_dtos__historical_start_date, end_date => $curve_get_gauge_weight_dtos__historical_end_date, pool_id => $curve_get_gauge_weight_dtos__historical_pool_id);
+
+#
+# curve_get_gauge_weight_vote_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_gauge_weight_vote_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_weight_vote_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_weight_vote_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_weight_vote_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_weight_vote_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_gauge_weight_vote_dtos__historical_result = $api->curve_get_gauge_weight_vote_dtos__historical(start_block => $curve_get_gauge_weight_vote_dtos__historical_start_block, end_block => $curve_get_gauge_weight_vote_dtos__historical_end_block, start_date => $curve_get_gauge_weight_vote_dtos__historical_start_date, end_date => $curve_get_gauge_weight_vote_dtos__historical_end_date, pool_id => $curve_get_gauge_weight_vote_dtos__historical_pool_id);
+
+#
+# curve_get_gauge_withdraw_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_gauge_withdraw_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_withdraw_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_withdraw_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_withdraw_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_withdraw_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_gauge_withdraw_dtos__historical_result = $api->curve_get_gauge_withdraw_dtos__historical(start_block => $curve_get_gauge_withdraw_dtos__historical_start_block, end_block => $curve_get_gauge_withdraw_dtos__historical_end_block, start_date => $curve_get_gauge_withdraw_dtos__historical_start_date, end_date => $curve_get_gauge_withdraw_dtos__historical_end_date, pool_id => $curve_get_gauge_withdraw_dtos__historical_pool_id);
 
 #
 # curve_get_gauges__historical test
@@ -230,6 +439,17 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_gauges_withdraw__historical_result = $api->curve_get_gauges_withdraw__historical(start_block => $curve_get_gauges_withdraw__historical_start_block, end_block => $curve_get_gauges_withdraw__historical_end_block, start_date => $curve_get_gauges_withdraw__historical_start_date, end_date => $curve_get_gauges_withdraw__historical_end_date);
 
 #
+# curve_get_hourly_volume_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_hourly_volume_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_hourly_volume_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_hourly_volume_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_hourly_volume_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_hourly_volume_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_hourly_volume_dtos__historical_result = $api->curve_get_hourly_volume_dtos__historical(start_block => $curve_get_hourly_volume_dtos__historical_start_block, end_block => $curve_get_hourly_volume_dtos__historical_end_block, start_date => $curve_get_hourly_volume_dtos__historical_start_date, end_date => $curve_get_hourly_volume_dtos__historical_end_date, pool_id => $curve_get_hourly_volume_dtos__historical_pool_id);
+
+#
 # curve_get_hourly_volumes__historical test
 #
 # uncomment below and update the test
@@ -239,6 +459,17 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_hourly_volumes__historical_end_date = undef; # replace NULL with a proper value
 #my $curve_get_hourly_volumes__historical_pool_id = undef; # replace NULL with a proper value
 #my $curve_get_hourly_volumes__historical_result = $api->curve_get_hourly_volumes__historical(start_block => $curve_get_hourly_volumes__historical_start_block, end_block => $curve_get_hourly_volumes__historical_end_block, start_date => $curve_get_hourly_volumes__historical_start_date, end_date => $curve_get_hourly_volumes__historical_end_date, pool_id => $curve_get_hourly_volumes__historical_pool_id);
+
+#
+# curve_get_lp_token_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_lp_token_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_lp_token_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_lp_token_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_lp_token_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_lp_token_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_lp_token_dtos__historical_result = $api->curve_get_lp_token_dtos__historical(start_block => $curve_get_lp_token_dtos__historical_start_block, end_block => $curve_get_lp_token_dtos__historical_end_block, start_date => $curve_get_lp_token_dtos__historical_start_date, end_date => $curve_get_lp_token_dtos__historical_end_date, pool_id => $curve_get_lp_token_dtos__historical_pool_id);
 
 #
 # curve_get_lp_tokens__historical test
@@ -252,6 +483,17 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_lp_tokens__historical_result = $api->curve_get_lp_tokens__historical(start_block => $curve_get_lp_tokens__historical_start_block, end_block => $curve_get_lp_tokens__historical_end_block, start_date => $curve_get_lp_tokens__historical_start_date, end_date => $curve_get_lp_tokens__historical_end_date, pool_id => $curve_get_lp_tokens__historical_pool_id);
 
 #
+# curve_get_pool_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_pool_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_pool_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_pool_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_pool_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_pool_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_pool_dtos__historical_result = $api->curve_get_pool_dtos__historical(start_block => $curve_get_pool_dtos__historical_start_block, end_block => $curve_get_pool_dtos__historical_end_block, start_date => $curve_get_pool_dtos__historical_start_date, end_date => $curve_get_pool_dtos__historical_end_date, pool_id => $curve_get_pool_dtos__historical_pool_id);
+
+#
 # curve_get_pools__historical test
 #
 # uncomment below and update the test
@@ -261,6 +503,28 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_pools__historical_end_date = undef; # replace NULL with a proper value
 #my $curve_get_pools__historical_pool_id = undef; # replace NULL with a proper value
 #my $curve_get_pools__historical_result = $api->curve_get_pools__historical(start_block => $curve_get_pools__historical_start_block, end_block => $curve_get_pools__historical_end_block, start_date => $curve_get_pools__historical_start_date, end_date => $curve_get_pools__historical_end_date, pool_id => $curve_get_pools__historical_pool_id);
+
+#
+# curve_get_proposal_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_proposal_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_proposal_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_proposal_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_proposal_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_proposal_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_proposal_dtos__historical_result = $api->curve_get_proposal_dtos__historical(start_block => $curve_get_proposal_dtos__historical_start_block, end_block => $curve_get_proposal_dtos__historical_end_block, start_date => $curve_get_proposal_dtos__historical_start_date, end_date => $curve_get_proposal_dtos__historical_end_date, pool_id => $curve_get_proposal_dtos__historical_pool_id);
+
+#
+# curve_get_proposal_vote_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_proposal_vote_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_proposal_vote_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_proposal_vote_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_proposal_vote_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_proposal_vote_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_proposal_vote_dtos__historical_result = $api->curve_get_proposal_vote_dtos__historical(start_block => $curve_get_proposal_vote_dtos__historical_start_block, end_block => $curve_get_proposal_vote_dtos__historical_end_block, start_date => $curve_get_proposal_vote_dtos__historical_start_date, end_date => $curve_get_proposal_vote_dtos__historical_end_date, pool_id => $curve_get_proposal_vote_dtos__historical_pool_id);
 
 #
 # curve_get_proposals__historical test
@@ -283,6 +547,17 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_proposals_votes__historical_result = $api->curve_get_proposals_votes__historical(start_block => $curve_get_proposals_votes__historical_start_block, end_block => $curve_get_proposals_votes__historical_end_block, start_date => $curve_get_proposals_votes__historical_start_date, end_date => $curve_get_proposals_votes__historical_end_date);
 
 #
+# curve_get_remove_liquidity_event_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_remove_liquidity_event_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_event_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_event_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_event_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_event_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_event_dtos__historical_result = $api->curve_get_remove_liquidity_event_dtos__historical(start_block => $curve_get_remove_liquidity_event_dtos__historical_start_block, end_block => $curve_get_remove_liquidity_event_dtos__historical_end_block, start_date => $curve_get_remove_liquidity_event_dtos__historical_start_date, end_date => $curve_get_remove_liquidity_event_dtos__historical_end_date, pool_id => $curve_get_remove_liquidity_event_dtos__historical_pool_id);
+
+#
 # curve_get_remove_liquidity_events__historical test
 #
 # uncomment below and update the test
@@ -292,6 +567,17 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_remove_liquidity_events__historical_end_date = undef; # replace NULL with a proper value
 #my $curve_get_remove_liquidity_events__historical_pool_id = undef; # replace NULL with a proper value
 #my $curve_get_remove_liquidity_events__historical_result = $api->curve_get_remove_liquidity_events__historical(start_block => $curve_get_remove_liquidity_events__historical_start_block, end_block => $curve_get_remove_liquidity_events__historical_end_block, start_date => $curve_get_remove_liquidity_events__historical_start_date, end_date => $curve_get_remove_liquidity_events__historical_end_date, pool_id => $curve_get_remove_liquidity_events__historical_pool_id);
+
+#
+# curve_get_remove_liquidity_one_event_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_remove_liquidity_one_event_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_one_event_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_one_event_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_one_event_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_one_event_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_remove_liquidity_one_event_dtos__historical_result = $api->curve_get_remove_liquidity_one_event_dtos__historical(start_block => $curve_get_remove_liquidity_one_event_dtos__historical_start_block, end_block => $curve_get_remove_liquidity_one_event_dtos__historical_end_block, start_date => $curve_get_remove_liquidity_one_event_dtos__historical_start_date, end_date => $curve_get_remove_liquidity_one_event_dtos__historical_end_date, pool_id => $curve_get_remove_liquidity_one_event_dtos__historical_pool_id);
 
 #
 # curve_get_remove_liquidity_one_events__historical test
@@ -305,6 +591,17 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_remove_liquidity_one_events__historical_result = $api->curve_get_remove_liquidity_one_events__historical(start_block => $curve_get_remove_liquidity_one_events__historical_start_block, end_block => $curve_get_remove_liquidity_one_events__historical_end_block, start_date => $curve_get_remove_liquidity_one_events__historical_start_date, end_date => $curve_get_remove_liquidity_one_events__historical_end_date, pool_id => $curve_get_remove_liquidity_one_events__historical_pool_id);
 
 #
+# curve_get_system_state_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_system_state_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_system_state_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_system_state_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_system_state_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_system_state_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_system_state_dtos__historical_result = $api->curve_get_system_state_dtos__historical(start_block => $curve_get_system_state_dtos__historical_start_block, end_block => $curve_get_system_state_dtos__historical_end_block, start_date => $curve_get_system_state_dtos__historical_start_date, end_date => $curve_get_system_state_dtos__historical_end_date, pool_id => $curve_get_system_state_dtos__historical_pool_id);
+
+#
 # curve_get_system_states__historical test
 #
 # uncomment below and update the test
@@ -313,6 +610,17 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_system_states__historical_start_date = undef; # replace NULL with a proper value
 #my $curve_get_system_states__historical_end_date = undef; # replace NULL with a proper value
 #my $curve_get_system_states__historical_result = $api->curve_get_system_states__historical(start_block => $curve_get_system_states__historical_start_block, end_block => $curve_get_system_states__historical_end_block, start_date => $curve_get_system_states__historical_start_date, end_date => $curve_get_system_states__historical_end_date);
+
+#
+# curve_get_token_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_token_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_token_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_token_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_token_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_token_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_token_dtos__historical_result = $api->curve_get_token_dtos__historical(start_block => $curve_get_token_dtos__historical_start_block, end_block => $curve_get_token_dtos__historical_end_block, start_date => $curve_get_token_dtos__historical_start_date, end_date => $curve_get_token_dtos__historical_end_date, pool_id => $curve_get_token_dtos__historical_pool_id);
 
 #
 # curve_get_tokens__historical test
@@ -326,6 +634,17 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_tokens__historical_result = $api->curve_get_tokens__historical(start_block => $curve_get_tokens__historical_start_block, end_block => $curve_get_tokens__historical_end_block, start_date => $curve_get_tokens__historical_start_date, end_date => $curve_get_tokens__historical_end_date, token_id => $curve_get_tokens__historical_token_id);
 
 #
+# curve_get_transfer_ownership_event_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_transfer_ownership_event_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_transfer_ownership_event_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_transfer_ownership_event_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_transfer_ownership_event_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_transfer_ownership_event_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_transfer_ownership_event_dtos__historical_result = $api->curve_get_transfer_ownership_event_dtos__historical(start_block => $curve_get_transfer_ownership_event_dtos__historical_start_block, end_block => $curve_get_transfer_ownership_event_dtos__historical_end_block, start_date => $curve_get_transfer_ownership_event_dtos__historical_start_date, end_date => $curve_get_transfer_ownership_event_dtos__historical_end_date, pool_id => $curve_get_transfer_ownership_event_dtos__historical_pool_id);
+
+#
 # curve_get_transfer_ownership_events__historical test
 #
 # uncomment below and update the test
@@ -335,6 +654,17 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_transfer_ownership_events__historical_end_date = undef; # replace NULL with a proper value
 #my $curve_get_transfer_ownership_events__historical_pool_id = undef; # replace NULL with a proper value
 #my $curve_get_transfer_ownership_events__historical_result = $api->curve_get_transfer_ownership_events__historical(start_block => $curve_get_transfer_ownership_events__historical_start_block, end_block => $curve_get_transfer_ownership_events__historical_end_block, start_date => $curve_get_transfer_ownership_events__historical_start_date, end_date => $curve_get_transfer_ownership_events__historical_end_date, pool_id => $curve_get_transfer_ownership_events__historical_pool_id);
+
+#
+# curve_get_underlying_coin_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_underlying_coin_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_underlying_coin_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_underlying_coin_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_underlying_coin_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_underlying_coin_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_underlying_coin_dtos__historical_result = $api->curve_get_underlying_coin_dtos__historical(start_block => $curve_get_underlying_coin_dtos__historical_start_block, end_block => $curve_get_underlying_coin_dtos__historical_end_block, start_date => $curve_get_underlying_coin_dtos__historical_start_date, end_date => $curve_get_underlying_coin_dtos__historical_end_date, pool_id => $curve_get_underlying_coin_dtos__historical_pool_id);
 
 #
 # curve_get_underlying_coins__historical test
@@ -348,6 +678,17 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_underlying_coins__historical_result = $api->curve_get_underlying_coins__historical(start_block => $curve_get_underlying_coins__historical_start_block, end_block => $curve_get_underlying_coins__historical_end_block, start_date => $curve_get_underlying_coins__historical_start_date, end_date => $curve_get_underlying_coins__historical_end_date, pool_id => $curve_get_underlying_coins__historical_pool_id);
 
 #
+# curve_get_voting_app_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_voting_app_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_voting_app_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_voting_app_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_voting_app_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_voting_app_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_voting_app_dtos__historical_result = $api->curve_get_voting_app_dtos__historical(start_block => $curve_get_voting_app_dtos__historical_start_block, end_block => $curve_get_voting_app_dtos__historical_end_block, start_date => $curve_get_voting_app_dtos__historical_start_date, end_date => $curve_get_voting_app_dtos__historical_end_date, pool_id => $curve_get_voting_app_dtos__historical_pool_id);
+
+#
 # curve_get_voting_apps__historical test
 #
 # uncomment below and update the test
@@ -356,6 +697,17 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_voting_apps__historical_start_date = undef; # replace NULL with a proper value
 #my $curve_get_voting_apps__historical_end_date = undef; # replace NULL with a proper value
 #my $curve_get_voting_apps__historical_result = $api->curve_get_voting_apps__historical(start_block => $curve_get_voting_apps__historical_start_block, end_block => $curve_get_voting_apps__historical_end_block, start_date => $curve_get_voting_apps__historical_start_date, end_date => $curve_get_voting_apps__historical_end_date);
+
+#
+# curve_get_weekly_volume_dtos__historical test
+#
+# uncomment below and update the test
+#my $curve_get_weekly_volume_dtos__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_weekly_volume_dtos__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_weekly_volume_dtos__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_weekly_volume_dtos__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_weekly_volume_dtos__historical_pool_id = undef; # replace NULL with a proper value
+#my $curve_get_weekly_volume_dtos__historical_result = $api->curve_get_weekly_volume_dtos__historical(start_block => $curve_get_weekly_volume_dtos__historical_start_block, end_block => $curve_get_weekly_volume_dtos__historical_end_block, start_date => $curve_get_weekly_volume_dtos__historical_start_date, end_date => $curve_get_weekly_volume_dtos__historical_end_date, pool_id => $curve_get_weekly_volume_dtos__historical_pool_id);
 
 #
 # curve_get_weekly_volumes__historical test

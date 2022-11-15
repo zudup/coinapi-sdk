@@ -29,11 +29,27 @@ import type {
     DexWithdrawRequestDTO,
 } from '../models';
 
+export interface DexGetBatchDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface DexGetBatchesHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
     endDate?: string;
+}
+
+export interface DexGetDepositDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
 }
 
 export interface DexGetDepositsHistoricalRequest {
@@ -44,12 +60,28 @@ export interface DexGetDepositsHistoricalRequest {
     tokenId?: string;
 }
 
+export interface DexGetOrderDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface DexGetOrdersHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
     endDate?: string;
     tokenId?: string;
+}
+
+export interface DexGetPriceDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
 }
 
 export interface DexGetPricesHistoricalRequest {
@@ -60,6 +92,14 @@ export interface DexGetPricesHistoricalRequest {
     tokenId?: string;
 }
 
+export interface DexGetSolutionDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface DexGetSolutionsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
@@ -68,11 +108,27 @@ export interface DexGetSolutionsHistoricalRequest {
     tokenId?: string;
 }
 
+export interface DexGetStatsDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface DexGetStatsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
     endDate?: string;
+}
+
+export interface DexGetTokenDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
 }
 
 export interface DexGetTokensHistoricalRequest {
@@ -83,6 +139,14 @@ export interface DexGetTokensHistoricalRequest {
     tokenId?: string;
 }
 
+export interface DexGetTradeDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface DexGetTradesHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
@@ -90,11 +154,35 @@ export interface DexGetTradesHistoricalRequest {
     endDate?: string;
 }
 
+export interface DexGetUserDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface DexGetUsersHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
     endDate?: string;
+}
+
+export interface DexGetWithdrawDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface DexGetWithdrawRequestDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
 }
 
 export interface DexGetWithdrawsHistoricalRequest {
@@ -119,6 +207,29 @@ export interface DexGetWithdrawsRequestsHistoricalRequest {
 export class DexApi extends BaseAPI {
 
     /**
+     * Gets BatchDTOs.
+     * BatchDTOs (historical) 🔥
+     */
+    dexGetBatchDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetBatchDTOsHistoricalRequest): Observable<Array<DexBatchDTO>>
+    dexGetBatchDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetBatchDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexBatchDTO>>>
+    dexGetBatchDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetBatchDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<DexBatchDTO> | AjaxResponse<Array<DexBatchDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<DexBatchDTO>>({
+            url: '/dapps/dex/BatchDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets batches.
      * Batches (historical)
      */
@@ -135,6 +246,29 @@ export class DexApi extends BaseAPI {
 
         return this.request<Array<DexBatchDTO>>({
             url: '/dapps/dex/batches/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets DepositDTOs.
+     * DepositDTOs (historical) 🔥
+     */
+    dexGetDepositDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetDepositDTOsHistoricalRequest): Observable<Array<DexDepositDTO>>
+    dexGetDepositDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetDepositDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexDepositDTO>>>
+    dexGetDepositDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetDepositDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<DexDepositDTO> | AjaxResponse<Array<DexDepositDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<DexDepositDTO>>({
+            url: '/dapps/dex/DepositDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -164,6 +298,29 @@ export class DexApi extends BaseAPI {
     };
 
     /**
+     * Gets OrderDTOs.
+     * OrderDTOs (historical) 🔥
+     */
+    dexGetOrderDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetOrderDTOsHistoricalRequest): Observable<Array<DexOrderDTO>>
+    dexGetOrderDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetOrderDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexOrderDTO>>>
+    dexGetOrderDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetOrderDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<DexOrderDTO> | AjaxResponse<Array<DexOrderDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<DexOrderDTO>>({
+            url: '/dapps/dex/OrderDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets orders.
      * Orders (historical)
      */
@@ -181,6 +338,29 @@ export class DexApi extends BaseAPI {
 
         return this.request<Array<DexOrderDTO>>({
             url: '/dapps/dex/orders/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets PriceDTOs.
+     * PriceDTOs (historical) 🔥
+     */
+    dexGetPriceDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetPriceDTOsHistoricalRequest): Observable<Array<DexPriceDTO>>
+    dexGetPriceDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetPriceDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexPriceDTO>>>
+    dexGetPriceDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetPriceDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<DexPriceDTO> | AjaxResponse<Array<DexPriceDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<DexPriceDTO>>({
+            url: '/dapps/dex/PriceDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -210,6 +390,29 @@ export class DexApi extends BaseAPI {
     };
 
     /**
+     * Gets SolutionDTOs.
+     * SolutionDTOs (historical) 🔥
+     */
+    dexGetSolutionDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetSolutionDTOsHistoricalRequest): Observable<Array<DexSolutionDTO>>
+    dexGetSolutionDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetSolutionDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexSolutionDTO>>>
+    dexGetSolutionDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetSolutionDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<DexSolutionDTO> | AjaxResponse<Array<DexSolutionDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<DexSolutionDTO>>({
+            url: '/dapps/dex/SolutionDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets solutions.
      * Solutions (historical)
      */
@@ -233,6 +436,29 @@ export class DexApi extends BaseAPI {
     };
 
     /**
+     * Gets StatsDTOs.
+     * StatsDTOs (historical) 🔥
+     */
+    dexGetStatsDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetStatsDTOsHistoricalRequest): Observable<Array<DexStatsDTO>>
+    dexGetStatsDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetStatsDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexStatsDTO>>>
+    dexGetStatsDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetStatsDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<DexStatsDTO> | AjaxResponse<Array<DexStatsDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<DexStatsDTO>>({
+            url: '/dapps/dex/StatsDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets stats.
      * Stats (historical)
      */
@@ -249,6 +475,29 @@ export class DexApi extends BaseAPI {
 
         return this.request<Array<DexStatsDTO>>({
             url: '/dapps/dex/stats/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets TokenDTOs.
+     * TokenDTOs (historical) 🔥
+     */
+    dexGetTokenDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetTokenDTOsHistoricalRequest): Observable<Array<DexTokenDTO>>
+    dexGetTokenDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetTokenDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexTokenDTO>>>
+    dexGetTokenDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetTokenDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<DexTokenDTO> | AjaxResponse<Array<DexTokenDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<DexTokenDTO>>({
+            url: '/dapps/dex/TokenDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -278,6 +527,29 @@ export class DexApi extends BaseAPI {
     };
 
     /**
+     * Gets TradeDTOs.
+     * TradeDTOs (historical) 🔥
+     */
+    dexGetTradeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetTradeDTOsHistoricalRequest): Observable<Array<DexTradeDTO>>
+    dexGetTradeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetTradeDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexTradeDTO>>>
+    dexGetTradeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetTradeDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<DexTradeDTO> | AjaxResponse<Array<DexTradeDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<DexTradeDTO>>({
+            url: '/dapps/dex/TradeDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets trades.
      * Trades (historical) 🔥
      */
@@ -300,6 +572,29 @@ export class DexApi extends BaseAPI {
     };
 
     /**
+     * Gets UserDTOs.
+     * UserDTOs (historical) 🔥
+     */
+    dexGetUserDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetUserDTOsHistoricalRequest): Observable<Array<DexUserDTO>>
+    dexGetUserDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetUserDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexUserDTO>>>
+    dexGetUserDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetUserDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<DexUserDTO> | AjaxResponse<Array<DexUserDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<DexUserDTO>>({
+            url: '/dapps/dex/UserDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets users.
      * Users (historical)
      */
@@ -316,6 +611,52 @@ export class DexApi extends BaseAPI {
 
         return this.request<Array<DexUserDTO>>({
             url: '/dapps/dex/users/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets WithdrawDTOs.
+     * WithdrawDTOs (historical) 🔥
+     */
+    dexGetWithdrawDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetWithdrawDTOsHistoricalRequest): Observable<Array<DexWithdrawDTO>>
+    dexGetWithdrawDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetWithdrawDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexWithdrawDTO>>>
+    dexGetWithdrawDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetWithdrawDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<DexWithdrawDTO> | AjaxResponse<Array<DexWithdrawDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<DexWithdrawDTO>>({
+            url: '/dapps/dex/WithdrawDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets WithdrawRequestDTOs.
+     * WithdrawRequestDTOs (historical) 🔥
+     */
+    dexGetWithdrawRequestDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetWithdrawRequestDTOsHistoricalRequest): Observable<Array<DexWithdrawRequestDTO>>
+    dexGetWithdrawRequestDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetWithdrawRequestDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<DexWithdrawRequestDTO>>>
+    dexGetWithdrawRequestDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: DexGetWithdrawRequestDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<DexWithdrawRequestDTO> | AjaxResponse<Array<DexWithdrawRequestDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<DexWithdrawRequestDTO>>({
+            url: '/dapps/dex/WithdrawRequestDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);

@@ -24,6 +24,155 @@ import (
 // CurveApiService CurveApi service
 type CurveApiService service
 
+type ApiCurveGetAccountDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetAccountDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetAccountDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetAccountDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetAccountDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetAccountDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetAccountDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetAccountDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetAccountDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetAccountDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetAccountDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetAccountDTOsHistoricalRequest) Execute() ([]CurveAccountDTO, *http.Response, error) {
+	return r.ApiService.CurveGetAccountDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetAccountDTOsHistorical AccountDTOs (historical) 🔥
+
+Gets AccountDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetAccountDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetAccountDTOsHistorical(ctx context.Context) ApiCurveGetAccountDTOsHistoricalRequest {
+	return ApiCurveGetAccountDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveAccountDTO
+func (a *CurveApiService) CurveGetAccountDTOsHistoricalExecute(r ApiCurveGetAccountDTOsHistoricalRequest) ([]CurveAccountDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveAccountDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetAccountDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/AccountDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiCurveGetAccountsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *CurveApiService
@@ -163,6 +312,155 @@ func (a *CurveApiService) CurveGetAccountsHistoricalExecute(r ApiCurveGetAccount
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiCurveGetAddLiquidityEventDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetAddLiquidityEventDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetAddLiquidityEventDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetAddLiquidityEventDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetAddLiquidityEventDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetAddLiquidityEventDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetAddLiquidityEventDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetAddLiquidityEventDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetAddLiquidityEventDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetAddLiquidityEventDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetAddLiquidityEventDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetAddLiquidityEventDTOsHistoricalRequest) Execute() ([]CurveAddLiquidityEventDTO, *http.Response, error) {
+	return r.ApiService.CurveGetAddLiquidityEventDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetAddLiquidityEventDTOsHistorical AddLiquidityEventDTOs (historical) 🔥
+
+Gets AddLiquidityEventDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetAddLiquidityEventDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetAddLiquidityEventDTOsHistorical(ctx context.Context) ApiCurveGetAddLiquidityEventDTOsHistoricalRequest {
+	return ApiCurveGetAddLiquidityEventDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveAddLiquidityEventDTO
+func (a *CurveApiService) CurveGetAddLiquidityEventDTOsHistoricalExecute(r ApiCurveGetAddLiquidityEventDTOsHistoricalRequest) ([]CurveAddLiquidityEventDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveAddLiquidityEventDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetAddLiquidityEventDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/AddLiquidityEventDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiCurveGetAddLiquidityEventsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *CurveApiService
@@ -237,6 +535,155 @@ func (a *CurveApiService) CurveGetAddLiquidityEventsHistoricalExecute(r ApiCurve
 	}
 
 	localVarPath := localBasePath + "/dapps/curve/addLiquidityEvents/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetAdminFeeChangeLogDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetAdminFeeChangeLogDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetAdminFeeChangeLogDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetAdminFeeChangeLogDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetAdminFeeChangeLogDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetAdminFeeChangeLogDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetAdminFeeChangeLogDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetAdminFeeChangeLogDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetAdminFeeChangeLogDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetAdminFeeChangeLogDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetAdminFeeChangeLogDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetAdminFeeChangeLogDTOsHistoricalRequest) Execute() ([]CurveAdminFeeChangeLogDTO, *http.Response, error) {
+	return r.ApiService.CurveGetAdminFeeChangeLogDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetAdminFeeChangeLogDTOsHistorical AdminFeeChangeLogDTOs (historical) 🔥
+
+Gets AdminFeeChangeLogDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetAdminFeeChangeLogDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetAdminFeeChangeLogDTOsHistorical(ctx context.Context) ApiCurveGetAdminFeeChangeLogDTOsHistoricalRequest {
+	return ApiCurveGetAdminFeeChangeLogDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveAdminFeeChangeLogDTO
+func (a *CurveApiService) CurveGetAdminFeeChangeLogDTOsHistoricalExecute(r ApiCurveGetAdminFeeChangeLogDTOsHistoricalRequest) ([]CurveAdminFeeChangeLogDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveAdminFeeChangeLogDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetAdminFeeChangeLogDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/AdminFeeChangeLogDTOs/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -460,6 +907,155 @@ func (a *CurveApiService) CurveGetAdminFeeChangeLogsHistoricalExecute(r ApiCurve
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiCurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest) Execute() ([]CurveAmplificationCoeffChangeLogDTO, *http.Response, error) {
+	return r.ApiService.CurveGetAmplificationCoeffChangeLogDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetAmplificationCoeffChangeLogDTOsHistorical AmplificationCoeffChangeLogDTOs (historical) 🔥
+
+Gets AmplificationCoeffChangeLogDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetAmplificationCoeffChangeLogDTOsHistorical(ctx context.Context) ApiCurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest {
+	return ApiCurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveAmplificationCoeffChangeLogDTO
+func (a *CurveApiService) CurveGetAmplificationCoeffChangeLogDTOsHistoricalExecute(r ApiCurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest) ([]CurveAmplificationCoeffChangeLogDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveAmplificationCoeffChangeLogDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetAmplificationCoeffChangeLogDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/AmplificationCoeffChangeLogDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiCurveGetAmplificationCoeffChangeLogsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *CurveApiService
@@ -609,6 +1205,155 @@ func (a *CurveApiService) CurveGetAmplificationCoeffChangeLogsHistoricalExecute(
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiCurveGetCoinDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetCoinDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetCoinDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetCoinDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetCoinDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetCoinDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetCoinDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetCoinDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetCoinDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetCoinDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetCoinDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetCoinDTOsHistoricalRequest) Execute() ([]CurveCoinDTO, *http.Response, error) {
+	return r.ApiService.CurveGetCoinDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetCoinDTOsHistorical CoinDTOs (historical) 🔥
+
+Gets CoinDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetCoinDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetCoinDTOsHistorical(ctx context.Context) ApiCurveGetCoinDTOsHistoricalRequest {
+	return ApiCurveGetCoinDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveCoinDTO
+func (a *CurveApiService) CurveGetCoinDTOsHistoricalExecute(r ApiCurveGetCoinDTOsHistoricalRequest) ([]CurveCoinDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveCoinDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetCoinDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/CoinDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiCurveGetCoinsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *CurveApiService
@@ -684,6 +1429,304 @@ func (a *CurveApiService) CurveGetCoinsHistoricalExecute(r ApiCurveGetCoinsHisto
 	}
 
 	localVarPath := localBasePath + "/dapps/curve/coins/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetContractDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetContractDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetContractDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetContractDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetContractDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetContractDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetContractDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetContractDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetContractDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetContractDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetContractDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetContractDTOsHistoricalRequest) Execute() ([]CurveContractDTO, *http.Response, error) {
+	return r.ApiService.CurveGetContractDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetContractDTOsHistorical ContractDTOs (historical) 🔥
+
+Gets ContractDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetContractDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetContractDTOsHistorical(ctx context.Context) ApiCurveGetContractDTOsHistoricalRequest {
+	return ApiCurveGetContractDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveContractDTO
+func (a *CurveApiService) CurveGetContractDTOsHistoricalExecute(r ApiCurveGetContractDTOsHistoricalRequest) ([]CurveContractDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveContractDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetContractDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/ContractDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetContractVersionDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetContractVersionDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetContractVersionDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetContractVersionDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetContractVersionDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetContractVersionDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetContractVersionDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetContractVersionDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetContractVersionDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetContractVersionDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetContractVersionDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetContractVersionDTOsHistoricalRequest) Execute() ([]CurveContractVersionDTO, *http.Response, error) {
+	return r.ApiService.CurveGetContractVersionDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetContractVersionDTOsHistorical ContractVersionDTOs (historical) 🔥
+
+Gets ContractVersionDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetContractVersionDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetContractVersionDTOsHistorical(ctx context.Context) ApiCurveGetContractVersionDTOsHistoricalRequest {
+	return ApiCurveGetContractVersionDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveContractVersionDTO
+func (a *CurveApiService) CurveGetContractVersionDTOsHistoricalExecute(r ApiCurveGetContractVersionDTOsHistoricalRequest) ([]CurveContractVersionDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveContractVersionDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetContractVersionDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/ContractVersionDTOs/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1056,6 +2099,155 @@ func (a *CurveApiService) CurveGetContractsVersionsHistoricalExecute(r ApiCurveG
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiCurveGetDailyVolumeDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetDailyVolumeDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetDailyVolumeDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetDailyVolumeDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetDailyVolumeDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetDailyVolumeDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetDailyVolumeDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetDailyVolumeDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetDailyVolumeDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetDailyVolumeDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetDailyVolumeDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetDailyVolumeDTOsHistoricalRequest) Execute() ([]CurveDailyVolumeDTO, *http.Response, error) {
+	return r.ApiService.CurveGetDailyVolumeDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetDailyVolumeDTOsHistorical DailyVolumeDTOs (historical) 🔥
+
+Gets DailyVolumeDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetDailyVolumeDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetDailyVolumeDTOsHistorical(ctx context.Context) ApiCurveGetDailyVolumeDTOsHistoricalRequest {
+	return ApiCurveGetDailyVolumeDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveDailyVolumeDTO
+func (a *CurveApiService) CurveGetDailyVolumeDTOsHistoricalExecute(r ApiCurveGetDailyVolumeDTOsHistoricalRequest) ([]CurveDailyVolumeDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveDailyVolumeDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetDailyVolumeDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/DailyVolumeDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiCurveGetDailyVolumesHistoricalRequest struct {
 	ctx context.Context
 	ApiService *CurveApiService
@@ -1131,6 +2323,155 @@ func (a *CurveApiService) CurveGetDailyVolumesHistoricalExecute(r ApiCurveGetDai
 	}
 
 	localVarPath := localBasePath + "/dapps/curve/dailyVolumes/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetExchangeDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetExchangeDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetExchangeDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetExchangeDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetExchangeDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetExchangeDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetExchangeDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetExchangeDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetExchangeDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetExchangeDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetExchangeDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetExchangeDTOsHistoricalRequest) Execute() ([]CurveExchangeDTO, *http.Response, error) {
+	return r.ApiService.CurveGetExchangeDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetExchangeDTOsHistorical ExchangeDTOs (historical) 🔥
+
+Gets ExchangeDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetExchangeDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetExchangeDTOsHistorical(ctx context.Context) ApiCurveGetExchangeDTOsHistoricalRequest {
+	return ApiCurveGetExchangeDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveExchangeDTO
+func (a *CurveApiService) CurveGetExchangeDTOsHistoricalExecute(r ApiCurveGetExchangeDTOsHistoricalRequest) ([]CurveExchangeDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveExchangeDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetExchangeDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/ExchangeDTOs/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1354,6 +2695,155 @@ func (a *CurveApiService) CurveGetExchangesHistoricalExecute(r ApiCurveGetExchan
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiCurveGetFeeChangeLogDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetFeeChangeLogDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetFeeChangeLogDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetFeeChangeLogDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetFeeChangeLogDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetFeeChangeLogDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetFeeChangeLogDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetFeeChangeLogDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetFeeChangeLogDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetFeeChangeLogDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetFeeChangeLogDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetFeeChangeLogDTOsHistoricalRequest) Execute() ([]CurveFeeChangeLogDTO, *http.Response, error) {
+	return r.ApiService.CurveGetFeeChangeLogDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetFeeChangeLogDTOsHistorical FeeChangeLogDTOs (historical) 🔥
+
+Gets FeeChangeLogDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetFeeChangeLogDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetFeeChangeLogDTOsHistorical(ctx context.Context) ApiCurveGetFeeChangeLogDTOsHistoricalRequest {
+	return ApiCurveGetFeeChangeLogDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveFeeChangeLogDTO
+func (a *CurveApiService) CurveGetFeeChangeLogDTOsHistoricalExecute(r ApiCurveGetFeeChangeLogDTOsHistoricalRequest) ([]CurveFeeChangeLogDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveFeeChangeLogDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetFeeChangeLogDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/FeeChangeLogDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiCurveGetFeeChangeLogsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *CurveApiService
@@ -1429,6 +2919,1347 @@ func (a *CurveApiService) CurveGetFeeChangeLogsHistoricalExecute(r ApiCurveGetFe
 	}
 
 	localVarPath := localBasePath + "/dapps/curve/feeChangeLogs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetGaugeDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetGaugeDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetGaugeDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetGaugeDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetGaugeDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetGaugeDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetGaugeDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetGaugeDTOsHistoricalRequest) Execute() ([]CurveGaugeDTO, *http.Response, error) {
+	return r.ApiService.CurveGetGaugeDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetGaugeDTOsHistorical GaugeDTOs (historical) 🔥
+
+Gets GaugeDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetGaugeDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetGaugeDTOsHistorical(ctx context.Context) ApiCurveGetGaugeDTOsHistoricalRequest {
+	return ApiCurveGetGaugeDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveGaugeDTO
+func (a *CurveApiService) CurveGetGaugeDTOsHistoricalExecute(r ApiCurveGetGaugeDTOsHistoricalRequest) ([]CurveGaugeDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveGaugeDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetGaugeDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/GaugeDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetGaugeDepositDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetGaugeDepositDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetGaugeDepositDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeDepositDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetGaugeDepositDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeDepositDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetGaugeDepositDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeDepositDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetGaugeDepositDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeDepositDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetGaugeDepositDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetGaugeDepositDTOsHistoricalRequest) Execute() ([]CurveGaugeDepositDTO, *http.Response, error) {
+	return r.ApiService.CurveGetGaugeDepositDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetGaugeDepositDTOsHistorical GaugeDepositDTOs (historical) 🔥
+
+Gets GaugeDepositDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetGaugeDepositDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetGaugeDepositDTOsHistorical(ctx context.Context) ApiCurveGetGaugeDepositDTOsHistoricalRequest {
+	return ApiCurveGetGaugeDepositDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveGaugeDepositDTO
+func (a *CurveApiService) CurveGetGaugeDepositDTOsHistoricalExecute(r ApiCurveGetGaugeDepositDTOsHistoricalRequest) ([]CurveGaugeDepositDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveGaugeDepositDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetGaugeDepositDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/GaugeDepositDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetGaugeLiquidityDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetGaugeLiquidityDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetGaugeLiquidityDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeLiquidityDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetGaugeLiquidityDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeLiquidityDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetGaugeLiquidityDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeLiquidityDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetGaugeLiquidityDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeLiquidityDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetGaugeLiquidityDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetGaugeLiquidityDTOsHistoricalRequest) Execute() ([]CurveGaugeLiquidityDTO, *http.Response, error) {
+	return r.ApiService.CurveGetGaugeLiquidityDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetGaugeLiquidityDTOsHistorical GaugeLiquidityDTOs (historical) 🔥
+
+Gets GaugeLiquidityDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetGaugeLiquidityDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetGaugeLiquidityDTOsHistorical(ctx context.Context) ApiCurveGetGaugeLiquidityDTOsHistoricalRequest {
+	return ApiCurveGetGaugeLiquidityDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveGaugeLiquidityDTO
+func (a *CurveApiService) CurveGetGaugeLiquidityDTOsHistoricalExecute(r ApiCurveGetGaugeLiquidityDTOsHistoricalRequest) ([]CurveGaugeLiquidityDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveGaugeLiquidityDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetGaugeLiquidityDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/GaugeLiquidityDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetGaugeTotalWeightDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetGaugeTotalWeightDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetGaugeTotalWeightDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeTotalWeightDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetGaugeTotalWeightDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeTotalWeightDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetGaugeTotalWeightDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeTotalWeightDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetGaugeTotalWeightDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeTotalWeightDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetGaugeTotalWeightDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetGaugeTotalWeightDTOsHistoricalRequest) Execute() ([]CurveGaugeTotalWeightDTO, *http.Response, error) {
+	return r.ApiService.CurveGetGaugeTotalWeightDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetGaugeTotalWeightDTOsHistorical GaugeTotalWeightDTOs (historical) 🔥
+
+Gets GaugeTotalWeightDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetGaugeTotalWeightDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetGaugeTotalWeightDTOsHistorical(ctx context.Context) ApiCurveGetGaugeTotalWeightDTOsHistoricalRequest {
+	return ApiCurveGetGaugeTotalWeightDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveGaugeTotalWeightDTO
+func (a *CurveApiService) CurveGetGaugeTotalWeightDTOsHistoricalExecute(r ApiCurveGetGaugeTotalWeightDTOsHistoricalRequest) ([]CurveGaugeTotalWeightDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveGaugeTotalWeightDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetGaugeTotalWeightDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/GaugeTotalWeightDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetGaugeTypeDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetGaugeTypeDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetGaugeTypeDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeTypeDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetGaugeTypeDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeTypeDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetGaugeTypeDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeTypeDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetGaugeTypeDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeTypeDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetGaugeTypeDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetGaugeTypeDTOsHistoricalRequest) Execute() ([]CurveGaugeTypeDTO, *http.Response, error) {
+	return r.ApiService.CurveGetGaugeTypeDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetGaugeTypeDTOsHistorical GaugeTypeDTOs (historical) 🔥
+
+Gets GaugeTypeDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetGaugeTypeDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetGaugeTypeDTOsHistorical(ctx context.Context) ApiCurveGetGaugeTypeDTOsHistoricalRequest {
+	return ApiCurveGetGaugeTypeDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveGaugeTypeDTO
+func (a *CurveApiService) CurveGetGaugeTypeDTOsHistoricalExecute(r ApiCurveGetGaugeTypeDTOsHistoricalRequest) ([]CurveGaugeTypeDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveGaugeTypeDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetGaugeTypeDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/GaugeTypeDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetGaugeTypeWeightDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetGaugeTypeWeightDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetGaugeTypeWeightDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeTypeWeightDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetGaugeTypeWeightDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeTypeWeightDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetGaugeTypeWeightDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeTypeWeightDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetGaugeTypeWeightDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeTypeWeightDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetGaugeTypeWeightDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetGaugeTypeWeightDTOsHistoricalRequest) Execute() ([]CurveGaugeTypeWeightDTO, *http.Response, error) {
+	return r.ApiService.CurveGetGaugeTypeWeightDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetGaugeTypeWeightDTOsHistorical GaugeTypeWeightDTOs (historical) 🔥
+
+Gets GaugeTypeWeightDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetGaugeTypeWeightDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetGaugeTypeWeightDTOsHistorical(ctx context.Context) ApiCurveGetGaugeTypeWeightDTOsHistoricalRequest {
+	return ApiCurveGetGaugeTypeWeightDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveGaugeTypeWeightDTO
+func (a *CurveApiService) CurveGetGaugeTypeWeightDTOsHistoricalExecute(r ApiCurveGetGaugeTypeWeightDTOsHistoricalRequest) ([]CurveGaugeTypeWeightDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveGaugeTypeWeightDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetGaugeTypeWeightDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/GaugeTypeWeightDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetGaugeWeightDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetGaugeWeightDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetGaugeWeightDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeWeightDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetGaugeWeightDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeWeightDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetGaugeWeightDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeWeightDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetGaugeWeightDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeWeightDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetGaugeWeightDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetGaugeWeightDTOsHistoricalRequest) Execute() ([]CurveGaugeWeightDTO, *http.Response, error) {
+	return r.ApiService.CurveGetGaugeWeightDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetGaugeWeightDTOsHistorical GaugeWeightDTOs (historical) 🔥
+
+Gets GaugeWeightDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetGaugeWeightDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetGaugeWeightDTOsHistorical(ctx context.Context) ApiCurveGetGaugeWeightDTOsHistoricalRequest {
+	return ApiCurveGetGaugeWeightDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveGaugeWeightDTO
+func (a *CurveApiService) CurveGetGaugeWeightDTOsHistoricalExecute(r ApiCurveGetGaugeWeightDTOsHistoricalRequest) ([]CurveGaugeWeightDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveGaugeWeightDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetGaugeWeightDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/GaugeWeightDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetGaugeWeightVoteDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetGaugeWeightVoteDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetGaugeWeightVoteDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeWeightVoteDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetGaugeWeightVoteDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeWeightVoteDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetGaugeWeightVoteDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeWeightVoteDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetGaugeWeightVoteDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeWeightVoteDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetGaugeWeightVoteDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetGaugeWeightVoteDTOsHistoricalRequest) Execute() ([]CurveGaugeWeightVoteDTO, *http.Response, error) {
+	return r.ApiService.CurveGetGaugeWeightVoteDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetGaugeWeightVoteDTOsHistorical GaugeWeightVoteDTOs (historical) 🔥
+
+Gets GaugeWeightVoteDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetGaugeWeightVoteDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetGaugeWeightVoteDTOsHistorical(ctx context.Context) ApiCurveGetGaugeWeightVoteDTOsHistoricalRequest {
+	return ApiCurveGetGaugeWeightVoteDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveGaugeWeightVoteDTO
+func (a *CurveApiService) CurveGetGaugeWeightVoteDTOsHistoricalExecute(r ApiCurveGetGaugeWeightVoteDTOsHistoricalRequest) ([]CurveGaugeWeightVoteDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveGaugeWeightVoteDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetGaugeWeightVoteDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/GaugeWeightVoteDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetGaugeWithdrawDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetGaugeWithdrawDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetGaugeWithdrawDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeWithdrawDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetGaugeWithdrawDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeWithdrawDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetGaugeWithdrawDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeWithdrawDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetGaugeWithdrawDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetGaugeWithdrawDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetGaugeWithdrawDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetGaugeWithdrawDTOsHistoricalRequest) Execute() ([]CurveGaugeWithdrawDTO, *http.Response, error) {
+	return r.ApiService.CurveGetGaugeWithdrawDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetGaugeWithdrawDTOsHistorical GaugeWithdrawDTOs (historical) 🔥
+
+Gets GaugeWithdrawDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetGaugeWithdrawDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetGaugeWithdrawDTOsHistorical(ctx context.Context) ApiCurveGetGaugeWithdrawDTOsHistoricalRequest {
+	return ApiCurveGetGaugeWithdrawDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveGaugeWithdrawDTO
+func (a *CurveApiService) CurveGetGaugeWithdrawDTOsHistoricalExecute(r ApiCurveGetGaugeWithdrawDTOsHistoricalRequest) ([]CurveGaugeWithdrawDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveGaugeWithdrawDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetGaugeWithdrawDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/GaugeWithdrawDTOs/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2764,6 +5595,155 @@ func (a *CurveApiService) CurveGetGaugesWithdrawHistoricalExecute(r ApiCurveGetG
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiCurveGetHourlyVolumeDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetHourlyVolumeDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetHourlyVolumeDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetHourlyVolumeDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetHourlyVolumeDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetHourlyVolumeDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetHourlyVolumeDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetHourlyVolumeDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetHourlyVolumeDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetHourlyVolumeDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetHourlyVolumeDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetHourlyVolumeDTOsHistoricalRequest) Execute() ([]CurveHourlyVolumeDTO, *http.Response, error) {
+	return r.ApiService.CurveGetHourlyVolumeDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetHourlyVolumeDTOsHistorical HourlyVolumeDTOs (historical) 🔥
+
+Gets HourlyVolumeDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetHourlyVolumeDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetHourlyVolumeDTOsHistorical(ctx context.Context) ApiCurveGetHourlyVolumeDTOsHistoricalRequest {
+	return ApiCurveGetHourlyVolumeDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveHourlyVolumeDTO
+func (a *CurveApiService) CurveGetHourlyVolumeDTOsHistoricalExecute(r ApiCurveGetHourlyVolumeDTOsHistoricalRequest) ([]CurveHourlyVolumeDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveHourlyVolumeDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetHourlyVolumeDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/HourlyVolumeDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiCurveGetHourlyVolumesHistoricalRequest struct {
 	ctx context.Context
 	ApiService *CurveApiService
@@ -2839,6 +5819,155 @@ func (a *CurveApiService) CurveGetHourlyVolumesHistoricalExecute(r ApiCurveGetHo
 	}
 
 	localVarPath := localBasePath + "/dapps/curve/hourlyVolumes/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetLpTokenDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetLpTokenDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetLpTokenDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetLpTokenDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetLpTokenDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetLpTokenDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetLpTokenDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetLpTokenDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetLpTokenDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetLpTokenDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetLpTokenDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetLpTokenDTOsHistoricalRequest) Execute() ([]CurveLpTokenDTO, *http.Response, error) {
+	return r.ApiService.CurveGetLpTokenDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetLpTokenDTOsHistorical LpTokenDTOs (historical) 🔥
+
+Gets LpTokenDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetLpTokenDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetLpTokenDTOsHistorical(ctx context.Context) ApiCurveGetLpTokenDTOsHistoricalRequest {
+	return ApiCurveGetLpTokenDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveLpTokenDTO
+func (a *CurveApiService) CurveGetLpTokenDTOsHistoricalExecute(r ApiCurveGetLpTokenDTOsHistoricalRequest) ([]CurveLpTokenDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveLpTokenDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetLpTokenDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/LpTokenDTOs/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -3062,6 +6191,155 @@ func (a *CurveApiService) CurveGetLpTokensHistoricalExecute(r ApiCurveGetLpToken
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiCurveGetPoolDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetPoolDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetPoolDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetPoolDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetPoolDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetPoolDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetPoolDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetPoolDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetPoolDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetPoolDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetPoolDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetPoolDTOsHistoricalRequest) Execute() ([]CurvePoolDTO, *http.Response, error) {
+	return r.ApiService.CurveGetPoolDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetPoolDTOsHistorical PoolDTOs (historical) 🔥
+
+Gets PoolDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetPoolDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetPoolDTOsHistorical(ctx context.Context) ApiCurveGetPoolDTOsHistoricalRequest {
+	return ApiCurveGetPoolDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurvePoolDTO
+func (a *CurveApiService) CurveGetPoolDTOsHistoricalExecute(r ApiCurveGetPoolDTOsHistoricalRequest) ([]CurvePoolDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurvePoolDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetPoolDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/PoolDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiCurveGetPoolsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *CurveApiService
@@ -3137,6 +6415,304 @@ func (a *CurveApiService) CurveGetPoolsHistoricalExecute(r ApiCurveGetPoolsHisto
 	}
 
 	localVarPath := localBasePath + "/dapps/curve/pools/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetProposalDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetProposalDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetProposalDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetProposalDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetProposalDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetProposalDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetProposalDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetProposalDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetProposalDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetProposalDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetProposalDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetProposalDTOsHistoricalRequest) Execute() ([]CurveProposalDTO, *http.Response, error) {
+	return r.ApiService.CurveGetProposalDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetProposalDTOsHistorical ProposalDTOs (historical) 🔥
+
+Gets ProposalDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetProposalDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetProposalDTOsHistorical(ctx context.Context) ApiCurveGetProposalDTOsHistoricalRequest {
+	return ApiCurveGetProposalDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveProposalDTO
+func (a *CurveApiService) CurveGetProposalDTOsHistoricalExecute(r ApiCurveGetProposalDTOsHistoricalRequest) ([]CurveProposalDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveProposalDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetProposalDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/ProposalDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetProposalVoteDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetProposalVoteDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetProposalVoteDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetProposalVoteDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetProposalVoteDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetProposalVoteDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetProposalVoteDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetProposalVoteDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetProposalVoteDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetProposalVoteDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetProposalVoteDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetProposalVoteDTOsHistoricalRequest) Execute() ([]CurveProposalVoteDTO, *http.Response, error) {
+	return r.ApiService.CurveGetProposalVoteDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetProposalVoteDTOsHistorical ProposalVoteDTOs (historical) 🔥
+
+Gets ProposalVoteDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetProposalVoteDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetProposalVoteDTOsHistorical(ctx context.Context) ApiCurveGetProposalVoteDTOsHistoricalRequest {
+	return ApiCurveGetProposalVoteDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveProposalVoteDTO
+func (a *CurveApiService) CurveGetProposalVoteDTOsHistoricalExecute(r ApiCurveGetProposalVoteDTOsHistoricalRequest) ([]CurveProposalVoteDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveProposalVoteDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetProposalVoteDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/ProposalVoteDTOs/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -3489,6 +7065,155 @@ func (a *CurveApiService) CurveGetProposalsVotesHistoricalExecute(r ApiCurveGetP
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiCurveGetRemoveLiquidityEventDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetRemoveLiquidityEventDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetRemoveLiquidityEventDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetRemoveLiquidityEventDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetRemoveLiquidityEventDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetRemoveLiquidityEventDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetRemoveLiquidityEventDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetRemoveLiquidityEventDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetRemoveLiquidityEventDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetRemoveLiquidityEventDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetRemoveLiquidityEventDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetRemoveLiquidityEventDTOsHistoricalRequest) Execute() ([]CurveRemoveLiquidityEventDTO, *http.Response, error) {
+	return r.ApiService.CurveGetRemoveLiquidityEventDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetRemoveLiquidityEventDTOsHistorical RemoveLiquidityEventDTOs (historical) 🔥
+
+Gets RemoveLiquidityEventDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetRemoveLiquidityEventDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetRemoveLiquidityEventDTOsHistorical(ctx context.Context) ApiCurveGetRemoveLiquidityEventDTOsHistoricalRequest {
+	return ApiCurveGetRemoveLiquidityEventDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveRemoveLiquidityEventDTO
+func (a *CurveApiService) CurveGetRemoveLiquidityEventDTOsHistoricalExecute(r ApiCurveGetRemoveLiquidityEventDTOsHistoricalRequest) ([]CurveRemoveLiquidityEventDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveRemoveLiquidityEventDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetRemoveLiquidityEventDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/RemoveLiquidityEventDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiCurveGetRemoveLiquidityEventsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *CurveApiService
@@ -3564,6 +7289,155 @@ func (a *CurveApiService) CurveGetRemoveLiquidityEventsHistoricalExecute(r ApiCu
 	}
 
 	localVarPath := localBasePath + "/dapps/curve/removeLiquidityEvents/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetRemoveLiquidityOneEventDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetRemoveLiquidityOneEventDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetRemoveLiquidityOneEventDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetRemoveLiquidityOneEventDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetRemoveLiquidityOneEventDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetRemoveLiquidityOneEventDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetRemoveLiquidityOneEventDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetRemoveLiquidityOneEventDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetRemoveLiquidityOneEventDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetRemoveLiquidityOneEventDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetRemoveLiquidityOneEventDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetRemoveLiquidityOneEventDTOsHistoricalRequest) Execute() ([]CurveRemoveLiquidityOneEventDTO, *http.Response, error) {
+	return r.ApiService.CurveGetRemoveLiquidityOneEventDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetRemoveLiquidityOneEventDTOsHistorical RemoveLiquidityOneEventDTOs (historical) 🔥
+
+Gets RemoveLiquidityOneEventDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetRemoveLiquidityOneEventDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetRemoveLiquidityOneEventDTOsHistorical(ctx context.Context) ApiCurveGetRemoveLiquidityOneEventDTOsHistoricalRequest {
+	return ApiCurveGetRemoveLiquidityOneEventDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveRemoveLiquidityOneEventDTO
+func (a *CurveApiService) CurveGetRemoveLiquidityOneEventDTOsHistoricalExecute(r ApiCurveGetRemoveLiquidityOneEventDTOsHistoricalRequest) ([]CurveRemoveLiquidityOneEventDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveRemoveLiquidityOneEventDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetRemoveLiquidityOneEventDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/RemoveLiquidityOneEventDTOs/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -3787,6 +7661,155 @@ func (a *CurveApiService) CurveGetRemoveLiquidityOneEventsHistoricalExecute(r Ap
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiCurveGetSystemStateDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetSystemStateDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetSystemStateDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetSystemStateDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetSystemStateDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetSystemStateDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetSystemStateDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetSystemStateDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetSystemStateDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetSystemStateDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetSystemStateDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetSystemStateDTOsHistoricalRequest) Execute() ([]CurveSystemStateDTO, *http.Response, error) {
+	return r.ApiService.CurveGetSystemStateDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetSystemStateDTOsHistorical SystemStateDTOs (historical) 🔥
+
+Gets SystemStateDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetSystemStateDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetSystemStateDTOsHistorical(ctx context.Context) ApiCurveGetSystemStateDTOsHistoricalRequest {
+	return ApiCurveGetSystemStateDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveSystemStateDTO
+func (a *CurveApiService) CurveGetSystemStateDTOsHistoricalExecute(r ApiCurveGetSystemStateDTOsHistoricalRequest) ([]CurveSystemStateDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveSystemStateDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetSystemStateDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/SystemStateDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiCurveGetSystemStatesHistoricalRequest struct {
 	ctx context.Context
 	ApiService *CurveApiService
@@ -3871,6 +7894,155 @@ func (a *CurveApiService) CurveGetSystemStatesHistoricalExecute(r ApiCurveGetSys
 	}
 	if r.endDate != nil {
 		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetTokenDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetTokenDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetTokenDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetTokenDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetTokenDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetTokenDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetTokenDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetTokenDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetTokenDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetTokenDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetTokenDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetTokenDTOsHistoricalRequest) Execute() ([]CurveTokenDTO, *http.Response, error) {
+	return r.ApiService.CurveGetTokenDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetTokenDTOsHistorical TokenDTOs (historical) 🔥
+
+Gets TokenDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetTokenDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetTokenDTOsHistorical(ctx context.Context) ApiCurveGetTokenDTOsHistoricalRequest {
+	return ApiCurveGetTokenDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveTokenDTO
+func (a *CurveApiService) CurveGetTokenDTOsHistoricalExecute(r ApiCurveGetTokenDTOsHistoricalRequest) ([]CurveTokenDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveTokenDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetTokenDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/TokenDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -4075,6 +8247,155 @@ func (a *CurveApiService) CurveGetTokensHistoricalExecute(r ApiCurveGetTokensHis
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiCurveGetTransferOwnershipEventDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetTransferOwnershipEventDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetTransferOwnershipEventDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetTransferOwnershipEventDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetTransferOwnershipEventDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetTransferOwnershipEventDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetTransferOwnershipEventDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetTransferOwnershipEventDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetTransferOwnershipEventDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetTransferOwnershipEventDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetTransferOwnershipEventDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetTransferOwnershipEventDTOsHistoricalRequest) Execute() ([]CurveTransferOwnershipEventDTO, *http.Response, error) {
+	return r.ApiService.CurveGetTransferOwnershipEventDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetTransferOwnershipEventDTOsHistorical TransferOwnershipEventDTOs (historical) 🔥
+
+Gets TransferOwnershipEventDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetTransferOwnershipEventDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetTransferOwnershipEventDTOsHistorical(ctx context.Context) ApiCurveGetTransferOwnershipEventDTOsHistoricalRequest {
+	return ApiCurveGetTransferOwnershipEventDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveTransferOwnershipEventDTO
+func (a *CurveApiService) CurveGetTransferOwnershipEventDTOsHistoricalExecute(r ApiCurveGetTransferOwnershipEventDTOsHistoricalRequest) ([]CurveTransferOwnershipEventDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveTransferOwnershipEventDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetTransferOwnershipEventDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/TransferOwnershipEventDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiCurveGetTransferOwnershipEventsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *CurveApiService
@@ -4150,6 +8471,155 @@ func (a *CurveApiService) CurveGetTransferOwnershipEventsHistoricalExecute(r Api
 	}
 
 	localVarPath := localBasePath + "/dapps/curve/transferOwnershipEvents/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetUnderlyingCoinDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetUnderlyingCoinDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetUnderlyingCoinDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetUnderlyingCoinDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetUnderlyingCoinDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetUnderlyingCoinDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetUnderlyingCoinDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetUnderlyingCoinDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetUnderlyingCoinDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetUnderlyingCoinDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetUnderlyingCoinDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetUnderlyingCoinDTOsHistoricalRequest) Execute() ([]CurveUnderlyingCoinDTO, *http.Response, error) {
+	return r.ApiService.CurveGetUnderlyingCoinDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetUnderlyingCoinDTOsHistorical UnderlyingCoinDTOs (historical) 🔥
+
+Gets UnderlyingCoinDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetUnderlyingCoinDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetUnderlyingCoinDTOsHistorical(ctx context.Context) ApiCurveGetUnderlyingCoinDTOsHistoricalRequest {
+	return ApiCurveGetUnderlyingCoinDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveUnderlyingCoinDTO
+func (a *CurveApiService) CurveGetUnderlyingCoinDTOsHistoricalExecute(r ApiCurveGetUnderlyingCoinDTOsHistoricalRequest) ([]CurveUnderlyingCoinDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveUnderlyingCoinDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetUnderlyingCoinDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/UnderlyingCoinDTOs/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -4373,6 +8843,155 @@ func (a *CurveApiService) CurveGetUnderlyingCoinsHistoricalExecute(r ApiCurveGet
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiCurveGetVotingAppDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetVotingAppDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetVotingAppDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetVotingAppDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetVotingAppDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetVotingAppDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetVotingAppDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetVotingAppDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetVotingAppDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetVotingAppDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetVotingAppDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetVotingAppDTOsHistoricalRequest) Execute() ([]CurveVotingAppDTO, *http.Response, error) {
+	return r.ApiService.CurveGetVotingAppDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetVotingAppDTOsHistorical VotingAppDTOs (historical) 🔥
+
+Gets VotingAppDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetVotingAppDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetVotingAppDTOsHistorical(ctx context.Context) ApiCurveGetVotingAppDTOsHistoricalRequest {
+	return ApiCurveGetVotingAppDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveVotingAppDTO
+func (a *CurveApiService) CurveGetVotingAppDTOsHistoricalExecute(r ApiCurveGetVotingAppDTOsHistoricalRequest) ([]CurveVotingAppDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveVotingAppDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetVotingAppDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/VotingAppDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiCurveGetVotingAppsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *CurveApiService
@@ -4457,6 +9076,155 @@ func (a *CurveApiService) CurveGetVotingAppsHistoricalExecute(r ApiCurveGetVotin
 	}
 	if r.endDate != nil {
 		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiCurveGetWeeklyVolumeDTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *CurveApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiCurveGetWeeklyVolumeDTOsHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetWeeklyVolumeDTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetWeeklyVolumeDTOsHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetWeeklyVolumeDTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiCurveGetWeeklyVolumeDTOsHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetWeeklyVolumeDTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiCurveGetWeeklyVolumeDTOsHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetWeeklyVolumeDTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiCurveGetWeeklyVolumeDTOsHistoricalRequest) PoolId(poolId string) ApiCurveGetWeeklyVolumeDTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiCurveGetWeeklyVolumeDTOsHistoricalRequest) Execute() ([]CurveWeeklyVolumeDTO, *http.Response, error) {
+	return r.ApiService.CurveGetWeeklyVolumeDTOsHistoricalExecute(r)
+}
+
+/*
+CurveGetWeeklyVolumeDTOsHistorical WeeklyVolumeDTOs (historical) 🔥
+
+Gets WeeklyVolumeDTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiCurveGetWeeklyVolumeDTOsHistoricalRequest
+*/
+func (a *CurveApiService) CurveGetWeeklyVolumeDTOsHistorical(ctx context.Context) ApiCurveGetWeeklyVolumeDTOsHistoricalRequest {
+	return ApiCurveGetWeeklyVolumeDTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []CurveWeeklyVolumeDTO
+func (a *CurveApiService) CurveGetWeeklyVolumeDTOsHistoricalExecute(r ApiCurveGetWeeklyVolumeDTOsHistoricalRequest) ([]CurveWeeklyVolumeDTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []CurveWeeklyVolumeDTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetWeeklyVolumeDTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/curve/WeeklyVolumeDTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -1182,6 +1182,2633 @@ paths:
       summary: ContractsVersions (historical)
       tags:
       - Curve
+  /dapps/cow/OrderDTOs/historical:
+    get:
+      description: Gets OrderDTOs.
+      operationId: Cow.GetOrderDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Cow.OrderDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Cow.OrderDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Cow.OrderDTO'
+                type: array
+          description: successful operation
+      summary: OrderDTOs (historical) 🔥
+      tags:
+      - Cow
+  /dapps/cow/SettlementDTOs/historical:
+    get:
+      description: Gets SettlementDTOs.
+      operationId: Cow.GetSettlementDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Cow.SettlementDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Cow.SettlementDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Cow.SettlementDTO'
+                type: array
+          description: successful operation
+      summary: SettlementDTOs (historical) 🔥
+      tags:
+      - Cow
+  /dapps/cow/TokenDTOs/historical:
+    get:
+      description: Gets TokenDTOs.
+      operationId: Cow.GetTokenDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Cow.TokenDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Cow.TokenDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Cow.TokenDTO'
+                type: array
+          description: successful operation
+      summary: TokenDTOs (historical) 🔥
+      tags:
+      - Cow
+  /dapps/cow/TradeDTOs/historical:
+    get:
+      description: Gets TradeDTOs.
+      operationId: Cow.GetTradeDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Cow.TradeDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Cow.TradeDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Cow.TradeDTO'
+                type: array
+          description: successful operation
+      summary: TradeDTOs (historical) 🔥
+      tags:
+      - Cow
+  /dapps/cow/UserDTOs/historical:
+    get:
+      description: Gets UserDTOs.
+      operationId: Cow.GetUserDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Cow.UserDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Cow.UserDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Cow.UserDTO'
+                type: array
+          description: successful operation
+      summary: UserDTOs (historical) 🔥
+      tags:
+      - Cow
+  /dapps/curve/AccountDTOs/historical:
+    get:
+      description: Gets AccountDTOs.
+      operationId: Curve.GetAccountDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.AccountDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.AccountDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.AccountDTO'
+                type: array
+          description: successful operation
+      summary: AccountDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/AddLiquidityEventDTOs/historical:
+    get:
+      description: Gets AddLiquidityEventDTOs.
+      operationId: Curve.GetAddLiquidityEventDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.AddLiquidityEventDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.AddLiquidityEventDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.AddLiquidityEventDTO'
+                type: array
+          description: successful operation
+      summary: AddLiquidityEventDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/AdminFeeChangeLogDTOs/historical:
+    get:
+      description: Gets AdminFeeChangeLogDTOs.
+      operationId: Curve.GetAdminFeeChangeLogDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.AdminFeeChangeLogDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.AdminFeeChangeLogDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.AdminFeeChangeLogDTO'
+                type: array
+          description: successful operation
+      summary: AdminFeeChangeLogDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/AmplificationCoeffChangeLogDTOs/historical:
+    get:
+      description: Gets AmplificationCoeffChangeLogDTOs.
+      operationId: Curve.GetAmplificationCoeffChangeLogDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.AmplificationCoeffChangeLogDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.AmplificationCoeffChangeLogDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.AmplificationCoeffChangeLogDTO'
+                type: array
+          description: successful operation
+      summary: AmplificationCoeffChangeLogDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/CoinDTOs/historical:
+    get:
+      description: Gets CoinDTOs.
+      operationId: Curve.GetCoinDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.CoinDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.CoinDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.CoinDTO'
+                type: array
+          description: successful operation
+      summary: CoinDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/ContractDTOs/historical:
+    get:
+      description: Gets ContractDTOs.
+      operationId: Curve.GetContractDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.ContractDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.ContractDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.ContractDTO'
+                type: array
+          description: successful operation
+      summary: ContractDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/ContractVersionDTOs/historical:
+    get:
+      description: Gets ContractVersionDTOs.
+      operationId: Curve.GetContractVersionDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.ContractVersionDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.ContractVersionDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.ContractVersionDTO'
+                type: array
+          description: successful operation
+      summary: ContractVersionDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/DailyVolumeDTOs/historical:
+    get:
+      description: Gets DailyVolumeDTOs.
+      operationId: Curve.GetDailyVolumeDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.DailyVolumeDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.DailyVolumeDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.DailyVolumeDTO'
+                type: array
+          description: successful operation
+      summary: DailyVolumeDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/ExchangeDTOs/historical:
+    get:
+      description: Gets ExchangeDTOs.
+      operationId: Curve.GetExchangeDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.ExchangeDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.ExchangeDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.ExchangeDTO'
+                type: array
+          description: successful operation
+      summary: ExchangeDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/FeeChangeLogDTOs/historical:
+    get:
+      description: Gets FeeChangeLogDTOs.
+      operationId: Curve.GetFeeChangeLogDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.FeeChangeLogDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.FeeChangeLogDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.FeeChangeLogDTO'
+                type: array
+          description: successful operation
+      summary: FeeChangeLogDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/GaugeDepositDTOs/historical:
+    get:
+      description: Gets GaugeDepositDTOs.
+      operationId: Curve.GetGaugeDepositDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeDepositDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeDepositDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeDepositDTO'
+                type: array
+          description: successful operation
+      summary: GaugeDepositDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/GaugeDTOs/historical:
+    get:
+      description: Gets GaugeDTOs.
+      operationId: Curve.GetGaugeDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeDTO'
+                type: array
+          description: successful operation
+      summary: GaugeDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/GaugeLiquidityDTOs/historical:
+    get:
+      description: Gets GaugeLiquidityDTOs.
+      operationId: Curve.GetGaugeLiquidityDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeLiquidityDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeLiquidityDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeLiquidityDTO'
+                type: array
+          description: successful operation
+      summary: GaugeLiquidityDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/GaugeTotalWeightDTOs/historical:
+    get:
+      description: Gets GaugeTotalWeightDTOs.
+      operationId: Curve.GetGaugeTotalWeightDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeTotalWeightDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeTotalWeightDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeTotalWeightDTO'
+                type: array
+          description: successful operation
+      summary: GaugeTotalWeightDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/GaugeTypeDTOs/historical:
+    get:
+      description: Gets GaugeTypeDTOs.
+      operationId: Curve.GetGaugeTypeDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeTypeDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeTypeDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeTypeDTO'
+                type: array
+          description: successful operation
+      summary: GaugeTypeDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/GaugeTypeWeightDTOs/historical:
+    get:
+      description: Gets GaugeTypeWeightDTOs.
+      operationId: Curve.GetGaugeTypeWeightDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeTypeWeightDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeTypeWeightDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeTypeWeightDTO'
+                type: array
+          description: successful operation
+      summary: GaugeTypeWeightDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/GaugeWeightDTOs/historical:
+    get:
+      description: Gets GaugeWeightDTOs.
+      operationId: Curve.GetGaugeWeightDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeWeightDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeWeightDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeWeightDTO'
+                type: array
+          description: successful operation
+      summary: GaugeWeightDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/GaugeWeightVoteDTOs/historical:
+    get:
+      description: Gets GaugeWeightVoteDTOs.
+      operationId: Curve.GetGaugeWeightVoteDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeWeightVoteDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeWeightVoteDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeWeightVoteDTO'
+                type: array
+          description: successful operation
+      summary: GaugeWeightVoteDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/GaugeWithdrawDTOs/historical:
+    get:
+      description: Gets GaugeWithdrawDTOs.
+      operationId: Curve.GetGaugeWithdrawDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeWithdrawDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeWithdrawDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.GaugeWithdrawDTO'
+                type: array
+          description: successful operation
+      summary: GaugeWithdrawDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/HourlyVolumeDTOs/historical:
+    get:
+      description: Gets HourlyVolumeDTOs.
+      operationId: Curve.GetHourlyVolumeDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.HourlyVolumeDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.HourlyVolumeDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.HourlyVolumeDTO'
+                type: array
+          description: successful operation
+      summary: HourlyVolumeDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/LpTokenDTOs/historical:
+    get:
+      description: Gets LpTokenDTOs.
+      operationId: Curve.GetLpTokenDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.LpTokenDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.LpTokenDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.LpTokenDTO'
+                type: array
+          description: successful operation
+      summary: LpTokenDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/PoolDTOs/historical:
+    get:
+      description: Gets PoolDTOs.
+      operationId: Curve.GetPoolDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.PoolDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.PoolDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.PoolDTO'
+                type: array
+          description: successful operation
+      summary: PoolDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/ProposalDTOs/historical:
+    get:
+      description: Gets ProposalDTOs.
+      operationId: Curve.GetProposalDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.ProposalDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.ProposalDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.ProposalDTO'
+                type: array
+          description: successful operation
+      summary: ProposalDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/ProposalVoteDTOs/historical:
+    get:
+      description: Gets ProposalVoteDTOs.
+      operationId: Curve.GetProposalVoteDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.ProposalVoteDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.ProposalVoteDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.ProposalVoteDTO'
+                type: array
+          description: successful operation
+      summary: ProposalVoteDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/RemoveLiquidityEventDTOs/historical:
+    get:
+      description: Gets RemoveLiquidityEventDTOs.
+      operationId: Curve.GetRemoveLiquidityEventDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.RemoveLiquidityEventDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.RemoveLiquidityEventDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.RemoveLiquidityEventDTO'
+                type: array
+          description: successful operation
+      summary: RemoveLiquidityEventDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/RemoveLiquidityOneEventDTOs/historical:
+    get:
+      description: Gets RemoveLiquidityOneEventDTOs.
+      operationId: Curve.GetRemoveLiquidityOneEventDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.RemoveLiquidityOneEventDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.RemoveLiquidityOneEventDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.RemoveLiquidityOneEventDTO'
+                type: array
+          description: successful operation
+      summary: RemoveLiquidityOneEventDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/SystemStateDTOs/historical:
+    get:
+      description: Gets SystemStateDTOs.
+      operationId: Curve.GetSystemStateDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.SystemStateDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.SystemStateDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.SystemStateDTO'
+                type: array
+          description: successful operation
+      summary: SystemStateDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/TokenDTOs/historical:
+    get:
+      description: Gets TokenDTOs.
+      operationId: Curve.GetTokenDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.TokenDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.TokenDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.TokenDTO'
+                type: array
+          description: successful operation
+      summary: TokenDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/TransferOwnershipEventDTOs/historical:
+    get:
+      description: Gets TransferOwnershipEventDTOs.
+      operationId: Curve.GetTransferOwnershipEventDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.TransferOwnershipEventDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.TransferOwnershipEventDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.TransferOwnershipEventDTO'
+                type: array
+          description: successful operation
+      summary: TransferOwnershipEventDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/UnderlyingCoinDTOs/historical:
+    get:
+      description: Gets UnderlyingCoinDTOs.
+      operationId: Curve.GetUnderlyingCoinDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.UnderlyingCoinDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.UnderlyingCoinDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.UnderlyingCoinDTO'
+                type: array
+          description: successful operation
+      summary: UnderlyingCoinDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/VotingAppDTOs/historical:
+    get:
+      description: Gets VotingAppDTOs.
+      operationId: Curve.GetVotingAppDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.VotingAppDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.VotingAppDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.VotingAppDTO'
+                type: array
+          description: successful operation
+      summary: VotingAppDTOs (historical) 🔥
+      tags:
+      - Curve
+  /dapps/curve/WeeklyVolumeDTOs/historical:
+    get:
+      description: Gets WeeklyVolumeDTOs.
+      operationId: Curve.GetWeeklyVolumeDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.WeeklyVolumeDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.WeeklyVolumeDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Curve.WeeklyVolumeDTO'
+                type: array
+          description: successful operation
+      summary: WeeklyVolumeDTOs (historical) 🔥
+      tags:
+      - Curve
   /dapps/curve/dailyVolumes/historical:
     get:
       description: Gets daily volumes.
@@ -1385,6 +4012,787 @@ paths:
                 type: array
           description: successful operation
       summary: Deposits (historical)
+      tags:
+      - Dex
+  /dapps/dex/BatchDTOs/historical:
+    get:
+      description: Gets BatchDTOs.
+      operationId: Dex.GetBatchDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.BatchDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.BatchDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.BatchDTO'
+                type: array
+          description: successful operation
+      summary: BatchDTOs (historical) 🔥
+      tags:
+      - Dex
+  /dapps/dex/DepositDTOs/historical:
+    get:
+      description: Gets DepositDTOs.
+      operationId: Dex.GetDepositDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.DepositDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.DepositDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.DepositDTO'
+                type: array
+          description: successful operation
+      summary: DepositDTOs (historical) 🔥
+      tags:
+      - Dex
+  /dapps/dex/OrderDTOs/historical:
+    get:
+      description: Gets OrderDTOs.
+      operationId: Dex.GetOrderDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.OrderDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.OrderDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.OrderDTO'
+                type: array
+          description: successful operation
+      summary: OrderDTOs (historical) 🔥
+      tags:
+      - Dex
+  /dapps/dex/PriceDTOs/historical:
+    get:
+      description: Gets PriceDTOs.
+      operationId: Dex.GetPriceDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.PriceDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.PriceDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.PriceDTO'
+                type: array
+          description: successful operation
+      summary: PriceDTOs (historical) 🔥
+      tags:
+      - Dex
+  /dapps/dex/SolutionDTOs/historical:
+    get:
+      description: Gets SolutionDTOs.
+      operationId: Dex.GetSolutionDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.SolutionDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.SolutionDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.SolutionDTO'
+                type: array
+          description: successful operation
+      summary: SolutionDTOs (historical) 🔥
+      tags:
+      - Dex
+  /dapps/dex/StatsDTOs/historical:
+    get:
+      description: Gets StatsDTOs.
+      operationId: Dex.GetStatsDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.StatsDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.StatsDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.StatsDTO'
+                type: array
+          description: successful operation
+      summary: StatsDTOs (historical) 🔥
+      tags:
+      - Dex
+  /dapps/dex/TokenDTOs/historical:
+    get:
+      description: Gets TokenDTOs.
+      operationId: Dex.GetTokenDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.TokenDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.TokenDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.TokenDTO'
+                type: array
+          description: successful operation
+      summary: TokenDTOs (historical) 🔥
+      tags:
+      - Dex
+  /dapps/dex/TradeDTOs/historical:
+    get:
+      description: Gets TradeDTOs.
+      operationId: Dex.GetTradeDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.TradeDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.TradeDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.TradeDTO'
+                type: array
+          description: successful operation
+      summary: TradeDTOs (historical) 🔥
+      tags:
+      - Dex
+  /dapps/dex/UserDTOs/historical:
+    get:
+      description: Gets UserDTOs.
+      operationId: Dex.GetUserDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.UserDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.UserDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.UserDTO'
+                type: array
+          description: successful operation
+      summary: UserDTOs (historical) 🔥
+      tags:
+      - Dex
+  /dapps/dex/WithdrawDTOs/historical:
+    get:
+      description: Gets WithdrawDTOs.
+      operationId: Dex.GetWithdrawDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.WithdrawDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.WithdrawDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.WithdrawDTO'
+                type: array
+          description: successful operation
+      summary: WithdrawDTOs (historical) 🔥
+      tags:
+      - Dex
+  /dapps/dex/WithdrawRequestDTOs/historical:
+    get:
+      description: Gets WithdrawRequestDTOs.
+      operationId: Dex.GetWithdrawRequestDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.WithdrawRequestDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.WithdrawRequestDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Dex.WithdrawRequestDTO'
+                type: array
+          description: successful operation
+      summary: WithdrawRequestDTOs (historical) 🔥
       tags:
       - Dex
   /dapps/curve/exchanges/historical:
@@ -4834,6 +8242,1142 @@ paths:
       summary: Stats (historical)
       tags:
       - Dex
+  /dapps/sushiswap/BundleDTOs/historical:
+    get:
+      description: Gets BundleDTOs.
+      operationId: Sushiswap.GetBundleDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.BundleDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.BundleDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.BundleDTO'
+                type: array
+          description: successful operation
+      summary: BundleDTOs (historical) 🔥
+      tags:
+      - Sushiswap
+  /dapps/sushiswap/BurnDTOs/historical:
+    get:
+      description: Gets BurnDTOs.
+      operationId: Sushiswap.GetBurnDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.BurnDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.BurnDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.BurnDTO'
+                type: array
+          description: successful operation
+      summary: BurnDTOs (historical) 🔥
+      tags:
+      - Sushiswap
+  /dapps/sushiswap/DayDataDTOs/historical:
+    get:
+      description: Gets DayDataDTOs.
+      operationId: Sushiswap.GetDayDataDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.DayDataDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.DayDataDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.DayDataDTO'
+                type: array
+          description: successful operation
+      summary: DayDataDTOs (historical) 🔥
+      tags:
+      - Sushiswap
+  /dapps/sushiswap/FactoryDTOs/historical:
+    get:
+      description: Gets FactoryDTOs.
+      operationId: Sushiswap.GetFactoryDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.FactoryDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.FactoryDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.FactoryDTO'
+                type: array
+          description: successful operation
+      summary: FactoryDTOs (historical) 🔥
+      tags:
+      - Sushiswap
+  /dapps/sushiswap/HourDataDTOs/historical:
+    get:
+      description: Gets HourDataDTOs.
+      operationId: Sushiswap.GetHourDataDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.HourDataDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.HourDataDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.HourDataDTO'
+                type: array
+          description: successful operation
+      summary: HourDataDTOs (historical) 🔥
+      tags:
+      - Sushiswap
+  /dapps/sushiswap/LiquidityPositionDTOs/historical:
+    get:
+      description: Gets LiquidityPositionDTOs.
+      operationId: Sushiswap.GetLiquidityPositionDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.LiquidityPositionDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.LiquidityPositionDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.LiquidityPositionDTO'
+                type: array
+          description: successful operation
+      summary: LiquidityPositionDTOs (historical) 🔥
+      tags:
+      - Sushiswap
+  /dapps/sushiswap/LiquidityPositionSnapshotDTOs/historical:
+    get:
+      description: Gets LiquidityPositionSnapshotDTOs.
+      operationId: Sushiswap.GetLiquidityPositionSnapshotDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.LiquidityPositionSnapshotDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.LiquidityPositionSnapshotDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.LiquidityPositionSnapshotDTO'
+                type: array
+          description: successful operation
+      summary: LiquidityPositionSnapshotDTOs (historical) 🔥
+      tags:
+      - Sushiswap
+  /dapps/sushiswap/MintDTOs/historical:
+    get:
+      description: Gets MintDTOs.
+      operationId: Sushiswap.GetMintDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.MintDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.MintDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.MintDTO'
+                type: array
+          description: successful operation
+      summary: MintDTOs (historical) 🔥
+      tags:
+      - Sushiswap
+  /dapps/sushiswap/PairDayDataDTOs/historical:
+    get:
+      description: Gets PairDayDataDTOs.
+      operationId: Sushiswap.GetPairDayDataDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.PairDayDataDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.PairDayDataDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.PairDayDataDTO'
+                type: array
+          description: successful operation
+      summary: PairDayDataDTOs (historical) 🔥
+      tags:
+      - Sushiswap
+  /dapps/sushiswap/PairDTOs/historical:
+    get:
+      description: Gets PairDTOs.
+      operationId: Sushiswap.GetPairDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.PairDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.PairDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.PairDTO'
+                type: array
+          description: successful operation
+      summary: PairDTOs (historical) 🔥
+      tags:
+      - Sushiswap
+  /dapps/sushiswap/PairHourDataDTOs/historical:
+    get:
+      description: Gets PairHourDataDTOs.
+      operationId: Sushiswap.GetPairHourDataDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.PairHourDataDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.PairHourDataDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.PairHourDataDTO'
+                type: array
+          description: successful operation
+      summary: PairHourDataDTOs (historical) 🔥
+      tags:
+      - Sushiswap
+  /dapps/sushiswap/SwapDTOs/historical:
+    get:
+      description: Gets SwapDTOs.
+      operationId: Sushiswap.GetSwapDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.SwapDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.SwapDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.SwapDTO'
+                type: array
+          description: successful operation
+      summary: SwapDTOs (historical) 🔥
+      tags:
+      - Sushiswap
+  /dapps/sushiswap/TokenDayDataDTOs/historical:
+    get:
+      description: Gets TokenDayDataDTOs.
+      operationId: Sushiswap.GetTokenDayDataDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.TokenDayDataDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.TokenDayDataDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.TokenDayDataDTO'
+                type: array
+          description: successful operation
+      summary: TokenDayDataDTOs (historical) 🔥
+      tags:
+      - Sushiswap
+  /dapps/sushiswap/TokenDTOs/historical:
+    get:
+      description: Gets TokenDTOs.
+      operationId: Sushiswap.GetTokenDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.TokenDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.TokenDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.TokenDTO'
+                type: array
+          description: successful operation
+      summary: TokenDTOs (historical) 🔥
+      tags:
+      - Sushiswap
+  /dapps/sushiswap/TransactionDTOs/historical:
+    get:
+      description: Gets TransactionDTOs.
+      operationId: Sushiswap.GetTransactionDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.TransactionDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.TransactionDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.TransactionDTO'
+                type: array
+          description: successful operation
+      summary: TransactionDTOs (historical) 🔥
+      tags:
+      - Sushiswap
+  /dapps/sushiswap/UserDTOs/historical:
+    get:
+      description: Gets UserDTOs.
+      operationId: Sushiswap.GetUserDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.UserDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.UserDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/Sushiswap.UserDTO'
+                type: array
+          description: successful operation
+      summary: UserDTOs (historical) 🔥
+      tags:
+      - Sushiswap
   /dapps/uniswapv3/swaps/historical:
     get:
       description: Gets swaps.
@@ -6775,6 +11319,2278 @@ paths:
                 type: array
           description: successful operation
       summary: DayData (current)
+      tags:
+      - UniswapV3
+  /dapps/uniswapv2/BundleV2DTOs/historical:
+    get:
+      description: Gets BundleV2DTOs.
+      operationId: UniswapV2.GetBundleV2DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.BundleV2DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.BundleV2DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.BundleV2DTO'
+                type: array
+          description: successful operation
+      summary: BundleV2DTOs (historical) 🔥
+      tags:
+      - UniswapV2
+  /dapps/uniswapv2/BurnV2DTOs/historical:
+    get:
+      description: Gets BurnV2DTOs.
+      operationId: UniswapV2.GetBurnV2DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.BurnV2DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.BurnV2DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.BurnV2DTO'
+                type: array
+          description: successful operation
+      summary: BurnV2DTOs (historical) 🔥
+      tags:
+      - UniswapV2
+  /dapps/uniswapv2/LiquidityPositionSnapshotV2DTOs/historical:
+    get:
+      description: Gets LiquidityPositionSnapshotV2DTOs.
+      operationId: UniswapV2.GetLiquidityPositionSnapshotV2DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.LiquidityPositionSnapshotV2DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.LiquidityPositionSnapshotV2DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.LiquidityPositionSnapshotV2DTO'
+                type: array
+          description: successful operation
+      summary: LiquidityPositionSnapshotV2DTOs (historical) 🔥
+      tags:
+      - UniswapV2
+  /dapps/uniswapv2/LiquidityPositionV2DTOs/historical:
+    get:
+      description: Gets LiquidityPositionV2DTOs.
+      operationId: UniswapV2.GetLiquidityPositionV2DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.LiquidityPositionV2DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.LiquidityPositionV2DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.LiquidityPositionV2DTO'
+                type: array
+          description: successful operation
+      summary: LiquidityPositionV2DTOs (historical) 🔥
+      tags:
+      - UniswapV2
+  /dapps/uniswapv2/MintV2DTOs/historical:
+    get:
+      description: Gets MintV2DTOs.
+      operationId: UniswapV2.GetMintV2DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.MintV2DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.MintV2DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.MintV2DTO'
+                type: array
+          description: successful operation
+      summary: MintV2DTOs (historical) 🔥
+      tags:
+      - UniswapV2
+  /dapps/uniswapv2/PairDayDataV2DTOs/historical:
+    get:
+      description: Gets PairDayDataV2DTOs.
+      operationId: UniswapV2.GetPairDayDataV2DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.PairDayDataV2DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.PairDayDataV2DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.PairDayDataV2DTO'
+                type: array
+          description: successful operation
+      summary: PairDayDataV2DTOs (historical) 🔥
+      tags:
+      - UniswapV2
+  /dapps/uniswapv2/PairHourDataV2DTOs/historical:
+    get:
+      description: Gets PairHourDataV2DTOs.
+      operationId: UniswapV2.GetPairHourDataV2DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.PairHourDataV2DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.PairHourDataV2DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.PairHourDataV2DTO'
+                type: array
+          description: successful operation
+      summary: PairHourDataV2DTOs (historical) 🔥
+      tags:
+      - UniswapV2
+  /dapps/uniswapv2/PairV2DTOs/historical:
+    get:
+      description: Gets PairV2DTOs.
+      operationId: UniswapV2.GetPairV2DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.PairV2DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.PairV2DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.PairV2DTO'
+                type: array
+          description: successful operation
+      summary: PairV2DTOs (historical) 🔥
+      tags:
+      - UniswapV2
+  /dapps/uniswapv2/SwapV2DTOs/historical:
+    get:
+      description: Gets SwapV2DTOs.
+      operationId: UniswapV2.GetSwapV2DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.SwapV2DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.SwapV2DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.SwapV2DTO'
+                type: array
+          description: successful operation
+      summary: SwapV2DTOs (historical) 🔥
+      tags:
+      - UniswapV2
+  /dapps/uniswapv2/TokenDayDataV2DTOs/historical:
+    get:
+      description: Gets TokenDayDataV2DTOs.
+      operationId: UniswapV2.GetTokenDayDataV2DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.TokenDayDataV2DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.TokenDayDataV2DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.TokenDayDataV2DTO'
+                type: array
+          description: successful operation
+      summary: TokenDayDataV2DTOs (historical) 🔥
+      tags:
+      - UniswapV2
+  /dapps/uniswapv2/TokenV2DTOs/historical:
+    get:
+      description: Gets TokenV2DTOs.
+      operationId: UniswapV2.GetTokenV2DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.TokenV2DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.TokenV2DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.TokenV2DTO'
+                type: array
+          description: successful operation
+      summary: TokenV2DTOs (historical) 🔥
+      tags:
+      - UniswapV2
+  /dapps/uniswapv2/TransactionV2DTOs/historical:
+    get:
+      description: Gets TransactionV2DTOs.
+      operationId: UniswapV2.GetTransactionV2DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.TransactionV2DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.TransactionV2DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.TransactionV2DTO'
+                type: array
+          description: successful operation
+      summary: TransactionV2DTOs (historical) 🔥
+      tags:
+      - UniswapV2
+  /dapps/uniswapv2/UniswapDayDataV2DTOs/historical:
+    get:
+      description: Gets UniswapDayDataV2DTOs.
+      operationId: UniswapV2.GetUniswapDayDataV2DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.UniswapDayDataV2DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.UniswapDayDataV2DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.UniswapDayDataV2DTO'
+                type: array
+          description: successful operation
+      summary: UniswapDayDataV2DTOs (historical) 🔥
+      tags:
+      - UniswapV2
+  /dapps/uniswapv2/UniswapFactoryV2DTOs/historical:
+    get:
+      description: Gets UniswapFactoryV2DTOs.
+      operationId: UniswapV2.GetUniswapFactoryV2DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.UniswapFactoryV2DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.UniswapFactoryV2DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.UniswapFactoryV2DTO'
+                type: array
+          description: successful operation
+      summary: UniswapFactoryV2DTOs (historical) 🔥
+      tags:
+      - UniswapV2
+  /dapps/uniswapv2/UserV2DTOs/historical:
+    get:
+      description: Gets UserV2DTOs.
+      operationId: UniswapV2.GetUserV2DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.UserV2DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.UserV2DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV2.UserV2DTO'
+                type: array
+          description: successful operation
+      summary: UserV2DTOs (historical) 🔥
+      tags:
+      - UniswapV2
+  /dapps/uniswapv3/BundleV3DTOs/historical:
+    get:
+      description: Gets BundleV3DTOs.
+      operationId: UniswapV3.GetBundleV3DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.BundleV3DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.BundleV3DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.BundleV3DTO'
+                type: array
+          description: successful operation
+      summary: BundleV3DTOs (historical) 🔥
+      tags:
+      - UniswapV3
+  /dapps/uniswapv3/BurnV3DTOs/historical:
+    get:
+      description: Gets BurnV3DTOs.
+      operationId: UniswapV3.GetBurnV3DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.BurnV3DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.BurnV3DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.BurnV3DTO'
+                type: array
+          description: successful operation
+      summary: BurnV3DTOs (historical) 🔥
+      tags:
+      - UniswapV3
+  /dapps/uniswapv3/FactoryV3DTOs/historical:
+    get:
+      description: Gets FactoryV3DTOs.
+      operationId: UniswapV3.GetFactoryV3DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.FactoryV3DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.FactoryV3DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.FactoryV3DTO'
+                type: array
+          description: successful operation
+      summary: FactoryV3DTOs (historical) 🔥
+      tags:
+      - UniswapV3
+  /dapps/uniswapv3/MintV3DTOs/historical:
+    get:
+      description: Gets MintV3DTOs.
+      operationId: UniswapV3.GetMintV3DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.MintV3DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.MintV3DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.MintV3DTO'
+                type: array
+          description: successful operation
+      summary: MintV3DTOs (historical) 🔥
+      tags:
+      - UniswapV3
+  /dapps/uniswapv3/PoolDayDataV3DTOs/historical:
+    get:
+      description: Gets PoolDayDataV3DTOs.
+      operationId: UniswapV3.GetPoolDayDataV3DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.PoolDayDataV3DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.PoolDayDataV3DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.PoolDayDataV3DTO'
+                type: array
+          description: successful operation
+      summary: PoolDayDataV3DTOs (historical) 🔥
+      tags:
+      - UniswapV3
+  /dapps/uniswapv3/PoolHourDataV3DTOs/historical:
+    get:
+      description: Gets PoolHourDataV3DTOs.
+      operationId: UniswapV3.GetPoolHourDataV3DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.PoolHourDataV3DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.PoolHourDataV3DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.PoolHourDataV3DTO'
+                type: array
+          description: successful operation
+      summary: PoolHourDataV3DTOs (historical) 🔥
+      tags:
+      - UniswapV3
+  /dapps/uniswapv3/PoolV3DTOs/historical:
+    get:
+      description: Gets PoolV3DTOs.
+      operationId: UniswapV3.GetPoolV3DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.PoolV3DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.PoolV3DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.PoolV3DTO'
+                type: array
+          description: successful operation
+      summary: PoolV3DTOs (historical) 🔥
+      tags:
+      - UniswapV3
+  /dapps/uniswapv3/PositionSnapshotV3DTOs/historical:
+    get:
+      description: Gets PositionSnapshotV3DTOs.
+      operationId: UniswapV3.GetPositionSnapshotV3DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.PositionSnapshotV3DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.PositionSnapshotV3DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.PositionSnapshotV3DTO'
+                type: array
+          description: successful operation
+      summary: PositionSnapshotV3DTOs (historical) 🔥
+      tags:
+      - UniswapV3
+  /dapps/uniswapv3/PositionV3DTOs/historical:
+    get:
+      description: Gets PositionV3DTOs.
+      operationId: UniswapV3.GetPositionV3DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.PositionV3DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.PositionV3DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.PositionV3DTO'
+                type: array
+          description: successful operation
+      summary: PositionV3DTOs (historical) 🔥
+      tags:
+      - UniswapV3
+  /dapps/uniswapv3/SwapV3DTOs/historical:
+    get:
+      description: Gets SwapV3DTOs.
+      operationId: UniswapV3.GetSwapV3DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.SwapV3DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.SwapV3DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.SwapV3DTO'
+                type: array
+          description: successful operation
+      summary: SwapV3DTOs (historical) 🔥
+      tags:
+      - UniswapV3
+  /dapps/uniswapv3/TickDayDataV3DTOs/historical:
+    get:
+      description: Gets TickDayDataV3DTOs.
+      operationId: UniswapV3.GetTickDayDataV3DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.TickDayDataV3DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.TickDayDataV3DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.TickDayDataV3DTO'
+                type: array
+          description: successful operation
+      summary: TickDayDataV3DTOs (historical) 🔥
+      tags:
+      - UniswapV3
+  /dapps/uniswapv3/TickV3DTOs/historical:
+    get:
+      description: Gets TickV3DTOs.
+      operationId: UniswapV3.GetTickV3DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.TickV3DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.TickV3DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.TickV3DTO'
+                type: array
+          description: successful operation
+      summary: TickV3DTOs (historical) 🔥
+      tags:
+      - UniswapV3
+  /dapps/uniswapv3/TokenHourDataV3DTOs/historical:
+    get:
+      description: Gets TokenHourDataV3DTOs.
+      operationId: UniswapV3.GetTokenHourDataV3DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.TokenHourDataV3DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.TokenHourDataV3DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.TokenHourDataV3DTO'
+                type: array
+          description: successful operation
+      summary: TokenHourDataV3DTOs (historical) 🔥
+      tags:
+      - UniswapV3
+  /dapps/uniswapv3/TokenV3DayDataDTOs/historical:
+    get:
+      description: Gets TokenV3DayDataDTOs.
+      operationId: UniswapV3.GetTokenV3DayDataDTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.TokenV3DayDataDTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.TokenV3DayDataDTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.TokenV3DayDataDTO'
+                type: array
+          description: successful operation
+      summary: TokenV3DayDataDTOs (historical) 🔥
+      tags:
+      - UniswapV3
+  /dapps/uniswapv3/TokenV3DTOs/historical:
+    get:
+      description: Gets TokenV3DTOs.
+      operationId: UniswapV3.GetTokenV3DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.TokenV3DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.TokenV3DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.TokenV3DTO'
+                type: array
+          description: successful operation
+      summary: TokenV3DTOs (historical) 🔥
+      tags:
+      - UniswapV3
+  /dapps/uniswapv3/TransactionV3DTOs/historical:
+    get:
+      description: Gets TransactionV3DTOs.
+      operationId: UniswapV3.GetTransactionV3DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.TransactionV3DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.TransactionV3DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.TransactionV3DTO'
+                type: array
+          description: successful operation
+      summary: TransactionV3DTOs (historical) 🔥
+      tags:
+      - UniswapV3
+  /dapps/uniswapv3/UniswapDayDataV3DTOs/historical:
+    get:
+      description: Gets UniswapDayDataV3DTOs.
+      operationId: UniswapV3.GetUniswapDayDataV3DTOs (historical)
+      parameters:
+      - description: ""
+        explode: true
+        in: query
+        name: startBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endBlock
+        required: false
+        schema:
+          format: int64
+          type: integer
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: startDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: endDate
+        required: false
+        schema:
+          format: date-time
+          type: string
+        style: form
+      - description: ""
+        explode: true
+        in: query
+        name: poolId
+        required: false
+        schema:
+          type: string
+        style: form
+      responses:
+        "200":
+          content:
+            text/plain:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.UniswapDayDataV3DTO'
+                type: array
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.UniswapDayDataV3DTO'
+                type: array
+            text/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/UniswapV3.UniswapDayDataV3DTO'
+                type: array
+          description: successful operation
+      summary: UniswapDayDataV3DTOs (historical) 🔥
       tags:
       - UniswapV3
   /dapps/uniswapv2/users/historical:

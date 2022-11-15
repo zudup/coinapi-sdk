@@ -26,6 +26,40 @@ public class OASCowApi {
     }
 
     /**
+     * OrderDTOs (historical) 🔥
+     * Gets OrderDTOs.
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return List<OASCowOrderDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCowOrderDTO> cowGetOrderDTOsHistorical(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
+        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
+        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
+        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
+        query.addAll(client.makeParam('poolId', (String) params.get('poolId')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCowOrderDTO>) client.invoke(
+            'GET', '/dapps/cow/OrderDTOs/historical', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCowOrderDTO>.class
+        );
+    }
+    /**
      * Orders (historical)
      * Gets orders.
      * @param startBlock  (optional)
@@ -58,6 +92,40 @@ public class OASCowApi {
         );
     }
     /**
+     * SettlementDTOs (historical) 🔥
+     * Gets SettlementDTOs.
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return List<OASCowSettlementDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCowSettlementDTO> cowGetSettlementDTOsHistorical(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
+        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
+        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
+        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
+        query.addAll(client.makeParam('poolId', (String) params.get('poolId')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCowSettlementDTO>) client.invoke(
+            'GET', '/dapps/cow/SettlementDTOs/historical', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCowSettlementDTO>.class
+        );
+    }
+    /**
      * Settlements (historical)
      * Gets settlements.
      * @param startBlock  (optional)
@@ -87,6 +155,40 @@ public class OASCowApi {
             new List<String>(),
             new List<String>(),
             List<OASCowSettlementDTO>.class
+        );
+    }
+    /**
+     * TokenDTOs (historical) 🔥
+     * Gets TokenDTOs.
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return List<OASCowTokenDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCowTokenDTO> cowGetTokenDTOsHistorical(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
+        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
+        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
+        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
+        query.addAll(client.makeParam('poolId', (String) params.get('poolId')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCowTokenDTO>) client.invoke(
+            'GET', '/dapps/cow/TokenDTOs/historical', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCowTokenDTO>.class
         );
     }
     /**
@@ -124,6 +226,40 @@ public class OASCowApi {
         );
     }
     /**
+     * TradeDTOs (historical) 🔥
+     * Gets TradeDTOs.
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return List<OASCowTradeDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCowTradeDTO> cowGetTradeDTOsHistorical(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
+        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
+        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
+        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
+        query.addAll(client.makeParam('poolId', (String) params.get('poolId')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCowTradeDTO>) client.invoke(
+            'GET', '/dapps/cow/TradeDTOs/historical', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCowTradeDTO>.class
+        );
+    }
+    /**
      * Trades (historical) 🔥
      * Gets trades.
      * @param startBlock  (optional)
@@ -153,6 +289,40 @@ public class OASCowApi {
             new List<String>(),
             new List<String>(),
             List<OASCowTradeDTO>.class
+        );
+    }
+    /**
+     * UserDTOs (historical) 🔥
+     * Gets UserDTOs.
+     * @param startBlock  (optional)
+     * @param endBlock  (optional)
+     * @param startDate  (optional)
+     * @param endDate  (optional)
+     * @param poolId  (optional)
+     * @return List<OASCowUserDTO>
+     * @throws OAS.ApiException if fails to make API call
+     */
+    public List<OASCowUserDTO> cowGetUserDTOsHistorical(Map<String, Object> params) {
+        List<OAS.Param> query = new List<OAS.Param>();
+
+        // cast query params to verify their expected type
+        query.addAll(client.makeParam('startBlock', (Long) params.get('startBlock')));
+        query.addAll(client.makeParam('endBlock', (Long) params.get('endBlock')));
+        query.addAll(client.makeParam('startDate', (Datetime) params.get('startDate')));
+        query.addAll(client.makeParam('endDate', (Datetime) params.get('endDate')));
+        query.addAll(client.makeParam('poolId', (String) params.get('poolId')));
+
+        List<OAS.Param> form = new List<OAS.Param>();
+
+        return (List<OASCowUserDTO>) client.invoke(
+            'GET', '/dapps/cow/UserDTOs/historical', '',
+            query, form,
+            new Map<String, Object>(),
+            new Map<String, Object>(),
+            new List<String>{ 'text/plain', 'application/json', 'text/json' },
+            new List<String>(),
+            new List<String>(),
+            List<OASCowUserDTO>.class
         );
     }
     /**

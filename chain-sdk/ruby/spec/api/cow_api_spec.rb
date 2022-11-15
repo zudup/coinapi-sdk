@@ -32,6 +32,22 @@ describe 'CowApi' do
     end
   end
 
+  # unit tests for cow_get_order_dtos__historical
+  # OrderDTOs (historical) 🔥
+  # Gets OrderDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<CowOrderDTO>]
+  describe 'cow_get_order_dtos__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for cow_get_orders__historical
   # Orders (historical)
   # Gets orders.
@@ -47,6 +63,22 @@ describe 'CowApi' do
     end
   end
 
+  # unit tests for cow_get_settlement_dtos__historical
+  # SettlementDTOs (historical) 🔥
+  # Gets SettlementDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<CowSettlementDTO>]
+  describe 'cow_get_settlement_dtos__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for cow_get_settlements__historical
   # Settlements (historical)
   # Gets settlements.
@@ -57,6 +89,22 @@ describe 'CowApi' do
   # @option opts [Time] :end_date 
   # @return [Array<CowSettlementDTO>]
   describe 'cow_get_settlements__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for cow_get_token_dtos__historical
+  # TokenDTOs (historical) 🔥
+  # Gets TokenDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<CowTokenDTO>]
+  describe 'cow_get_token_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -78,6 +126,22 @@ describe 'CowApi' do
     end
   end
 
+  # unit tests for cow_get_trade_dtos__historical
+  # TradeDTOs (historical) 🔥
+  # Gets TradeDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<CowTradeDTO>]
+  describe 'cow_get_trade_dtos__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for cow_get_trades__historical
   # Trades (historical) 🔥
   # Gets trades.
@@ -88,6 +152,22 @@ describe 'CowApi' do
   # @option opts [Time] :end_date 
   # @return [Array<CowTradeDTO>]
   describe 'cow_get_trades__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for cow_get_user_dtos__historical
+  # UserDTOs (historical) 🔥
+  # Gets UserDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<CowUserDTO>]
+  describe 'cow_get_user_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

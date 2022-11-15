@@ -5,39 +5,212 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**uniswap_v3_get_bundle_v3_dtos__historical**](#uniswap_v3_get_bundle_v3_dtos__historical) | **get** /dapps/uniswapv3/BundleV3DTOs/historical | BundleV3DTOs (historical) 🔥
 [**uniswap_v3_get_bundles__current**](#uniswap_v3_get_bundles__current) | **get** /dapps/uniswapv3/bundles/current | Bundles (current)
 [**uniswap_v3_get_bundles__historical**](#uniswap_v3_get_bundles__historical) | **get** /dapps/uniswapv3/bundles/historical | Bundles (historical)
+[**uniswap_v3_get_burn_v3_dtos__historical**](#uniswap_v3_get_burn_v3_dtos__historical) | **get** /dapps/uniswapv3/BurnV3DTOs/historical | BurnV3DTOs (historical) 🔥
 [**uniswap_v3_get_burns__current**](#uniswap_v3_get_burns__current) | **get** /dapps/uniswapv3/burns/current | Burns (current)
 [**uniswap_v3_get_burns__historical**](#uniswap_v3_get_burns__historical) | **get** /dapps/uniswapv3/burns/historical | Burns (historical)
 [**uniswap_v3_get_day_data__current**](#uniswap_v3_get_day_data__current) | **get** /dapps/uniswapv3/dayData/current | DayData (current)
 [**uniswap_v3_get_day_data__historical**](#uniswap_v3_get_day_data__historical) | **get** /dapps/uniswapv3/dayData/historical | DayData (historical)
 [**uniswap_v3_get_factory__current**](#uniswap_v3_get_factory__current) | **get** /dapps/uniswapv3/factory/current | Factory (current)
 [**uniswap_v3_get_factory__historical**](#uniswap_v3_get_factory__historical) | **get** /dapps/uniswapv3/factory/historical | Factory (historical)
+[**uniswap_v3_get_factory_v3_dtos__historical**](#uniswap_v3_get_factory_v3_dtos__historical) | **get** /dapps/uniswapv3/FactoryV3DTOs/historical | FactoryV3DTOs (historical) 🔥
+[**uniswap_v3_get_mint_v3_dtos__historical**](#uniswap_v3_get_mint_v3_dtos__historical) | **get** /dapps/uniswapv3/MintV3DTOs/historical | MintV3DTOs (historical) 🔥
 [**uniswap_v3_get_mints__current**](#uniswap_v3_get_mints__current) | **get** /dapps/uniswapv3/mints/current | Mints (current)
 [**uniswap_v3_get_mints__historical**](#uniswap_v3_get_mints__historical) | **get** /dapps/uniswapv3/mints/historical | Mints (historical)
+[**uniswap_v3_get_pool_day_data_v3_dtos__historical**](#uniswap_v3_get_pool_day_data_v3_dtos__historical) | **get** /dapps/uniswapv3/PoolDayDataV3DTOs/historical | PoolDayDataV3DTOs (historical) 🔥
+[**uniswap_v3_get_pool_hour_data_v3_dtos__historical**](#uniswap_v3_get_pool_hour_data_v3_dtos__historical) | **get** /dapps/uniswapv3/PoolHourDataV3DTOs/historical | PoolHourDataV3DTOs (historical) 🔥
+[**uniswap_v3_get_pool_v3_dtos__historical**](#uniswap_v3_get_pool_v3_dtos__historical) | **get** /dapps/uniswapv3/PoolV3DTOs/historical | PoolV3DTOs (historical) 🔥
 [**uniswap_v3_get_pools__current**](#uniswap_v3_get_pools__current) | **get** /dapps/uniswapv3/pools/current | Pools (current) 🔥
 [**uniswap_v3_get_pools__historical**](#uniswap_v3_get_pools__historical) | **get** /dapps/uniswapv3/pools/historical | Pools (historical) 🔥
 [**uniswap_v3_get_pools_day_data__current**](#uniswap_v3_get_pools_day_data__current) | **get** /dapps/uniswapv3/poolsDayData/current | PoolsDayData (current)
 [**uniswap_v3_get_pools_day_data__historical**](#uniswap_v3_get_pools_day_data__historical) | **get** /dapps/uniswapv3/poolsDayData/historical | PoolsDayData (historical)
 [**uniswap_v3_get_pools_hour_data__current**](#uniswap_v3_get_pools_hour_data__current) | **get** /dapps/uniswapv3/poolsHourData/current | PoolsHourData (current)
 [**uniswap_v3_get_pools_hour_data__historical**](#uniswap_v3_get_pools_hour_data__historical) | **get** /dapps/uniswapv3/poolsHourData/historical | PoolsHourData (historical)
+[**uniswap_v3_get_position_snapshot_v3_dtos__historical**](#uniswap_v3_get_position_snapshot_v3_dtos__historical) | **get** /dapps/uniswapv3/PositionSnapshotV3DTOs/historical | PositionSnapshotV3DTOs (historical) 🔥
+[**uniswap_v3_get_position_v3_dtos__historical**](#uniswap_v3_get_position_v3_dtos__historical) | **get** /dapps/uniswapv3/PositionV3DTOs/historical | PositionV3DTOs (historical) 🔥
 [**uniswap_v3_get_positions__current**](#uniswap_v3_get_positions__current) | **get** /dapps/uniswapv3/positions/current | Positions (current)
 [**uniswap_v3_get_positions__historical**](#uniswap_v3_get_positions__historical) | **get** /dapps/uniswapv3/positions/historical | Positions (historical)
 [**uniswap_v3_get_positions_snaphots__historical**](#uniswap_v3_get_positions_snaphots__historical) | **get** /dapps/uniswapv3/positionsSnapshots/historical | PositionsSnaphots (historical)
 [**uniswap_v3_get_positions_snapshots__current**](#uniswap_v3_get_positions_snapshots__current) | **get** /dapps/uniswapv3/positionSnapshots/current | PositionsSnapshots (current)
+[**uniswap_v3_get_swap_v3_dtos__historical**](#uniswap_v3_get_swap_v3_dtos__historical) | **get** /dapps/uniswapv3/SwapV3DTOs/historical | SwapV3DTOs (historical) 🔥
 [**uniswap_v3_get_swaps__current**](#uniswap_v3_get_swaps__current) | **get** /dapps/uniswapv3/swaps/current | Swaps (current) 🔥
 [**uniswap_v3_get_swaps__historical**](#uniswap_v3_get_swaps__historical) | **get** /dapps/uniswapv3/swaps/historical | Swaps (historical) 🔥
+[**uniswap_v3_get_tick_day_data_v3_dtos__historical**](#uniswap_v3_get_tick_day_data_v3_dtos__historical) | **get** /dapps/uniswapv3/TickDayDataV3DTOs/historical | TickDayDataV3DTOs (historical) 🔥
+[**uniswap_v3_get_tick_v3_dtos__historical**](#uniswap_v3_get_tick_v3_dtos__historical) | **get** /dapps/uniswapv3/TickV3DTOs/historical | TickV3DTOs (historical) 🔥
 [**uniswap_v3_get_ticks__current**](#uniswap_v3_get_ticks__current) | **get** /dapps/uniswapv3/ticks/current | Ticks (current)
 [**uniswap_v3_get_ticks__historical**](#uniswap_v3_get_ticks__historical) | **get** /dapps/uniswapv3/ticks/historical | Ticks (historical)
 [**uniswap_v3_get_ticks_day_data__current**](#uniswap_v3_get_ticks_day_data__current) | **get** /dapps/uniswapv3/ticksDayData/current | TicksDayData (current)
 [**uniswap_v3_get_ticks_day_data__historical**](#uniswap_v3_get_ticks_day_data__historical) | **get** /dapps/uniswapv3/ticksDayData/historical | TicksDayData (historical)
+[**uniswap_v3_get_token_hour_data_v3_dtos__historical**](#uniswap_v3_get_token_hour_data_v3_dtos__historical) | **get** /dapps/uniswapv3/TokenHourDataV3DTOs/historical | TokenHourDataV3DTOs (historical) 🔥
+[**uniswap_v3_get_token_v3_day_data_dtos__historical**](#uniswap_v3_get_token_v3_day_data_dtos__historical) | **get** /dapps/uniswapv3/TokenV3DayDataDTOs/historical | TokenV3DayDataDTOs (historical) 🔥
+[**uniswap_v3_get_token_v3_dtos__historical**](#uniswap_v3_get_token_v3_dtos__historical) | **get** /dapps/uniswapv3/TokenV3DTOs/historical | TokenV3DTOs (historical) 🔥
 [**uniswap_v3_get_tokens__current**](#uniswap_v3_get_tokens__current) | **get** /dapps/uniswapv3/tokens/current | Tokens (current) 🔥
 [**uniswap_v3_get_tokens__historical**](#uniswap_v3_get_tokens__historical) | **get** /dapps/uniswapv3/tokens/historical | Tokens (historical) 🔥
 [**uniswap_v3_get_tokens_day_data__current**](#uniswap_v3_get_tokens_day_data__current) | **get** /dapps/uniswapv3/tokensDayData/current | TokensDayData (current)
 [**uniswap_v3_get_tokens_day_data__historical**](#uniswap_v3_get_tokens_day_data__historical) | **get** /dapps/uniswapv3/tokensDayData/historical | TokensDayData (historical)
 [**uniswap_v3_get_tokens_hour_data__current**](#uniswap_v3_get_tokens_hour_data__current) | **get** /dapps/uniswapv3/tokensHourData/current | TokensHourData (current)
 [**uniswap_v3_get_tokens_hour_data__historical**](#uniswap_v3_get_tokens_hour_data__historical) | **get** /dapps/uniswapv3/tokensHourData/historical | TokensHourData (historical)
+[**uniswap_v3_get_transaction_v3_dtos__historical**](#uniswap_v3_get_transaction_v3_dtos__historical) | **get** /dapps/uniswapv3/TransactionV3DTOs/historical | TransactionV3DTOs (historical) 🔥
 [**uniswap_v3_get_transactions__historical**](#uniswap_v3_get_transactions__historical) | **get** /dapps/uniswapv3/transactions/historical | Transactions (historical)
+[**uniswap_v3_get_uniswap_day_data_v3_dtos__historical**](#uniswap_v3_get_uniswap_day_data_v3_dtos__historical) | **get** /dapps/uniswapv3/UniswapDayDataV3DTOs/historical | UniswapDayDataV3DTOs (historical) 🔥
+
+# **uniswap_v3_get_bundle_v3_dtos__historical**
+<a name="uniswap_v3_get_bundle_v3_dtos__historical"></a>
+> [UniswapV3BundleV3DTO] uniswap_v3_get_bundle_v3_dtos__historical()
+
+BundleV3DTOs (historical) 🔥
+
+Gets BundleV3DTOs.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v3_api
+from openapi_client.model.uniswap_v3_bundle_v3_dto import UniswapV3BundleV3DTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v3_api.UniswapV3Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'poolId': "poolId_example",
+    }
+    try:
+        # BundleV3DTOs (historical) 🔥
+        api_response = api_instance.uniswap_v3_get_bundle_v3_dtos__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV3Api->uniswap_v3_get_bundle_v3_dtos__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+poolId | PoolIdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# PoolIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v3_get_bundle_v3_dtos__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v3_get_bundle_v3_dtos__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) | [**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) | [**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) | [**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) | [**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) | [**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) | [**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
 # **uniswap_v3_get_bundles__current**
 <a name="uniswap_v3_get_bundles__current"></a>
@@ -272,6 +445,162 @@ list, tuple,  | tuple,  |  |
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 [**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) | [**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) | [**UniswapV3BundleV3DTO**]({{complexTypePrefix}}UniswapV3BundleV3DTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v3_get_burn_v3_dtos__historical**
+<a name="uniswap_v3_get_burn_v3_dtos__historical"></a>
+> [UniswapV3BurnV3DTO] uniswap_v3_get_burn_v3_dtos__historical()
+
+BurnV3DTOs (historical) 🔥
+
+Gets BurnV3DTOs.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v3_api
+from openapi_client.model.uniswap_v3_burn_v3_dto import UniswapV3BurnV3DTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v3_api.UniswapV3Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'poolId': "poolId_example",
+    }
+    try:
+        # BurnV3DTOs (historical) 🔥
+        api_response = api_instance.uniswap_v3_get_burn_v3_dtos__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV3Api->uniswap_v3_get_burn_v3_dtos__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+poolId | PoolIdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# PoolIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v3_get_burn_v3_dtos__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v3_get_burn_v3_dtos__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3BurnV3DTO**]({{complexTypePrefix}}UniswapV3BurnV3DTO.md) | [**UniswapV3BurnV3DTO**]({{complexTypePrefix}}UniswapV3BurnV3DTO.md) | [**UniswapV3BurnV3DTO**]({{complexTypePrefix}}UniswapV3BurnV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3BurnV3DTO**]({{complexTypePrefix}}UniswapV3BurnV3DTO.md) | [**UniswapV3BurnV3DTO**]({{complexTypePrefix}}UniswapV3BurnV3DTO.md) | [**UniswapV3BurnV3DTO**]({{complexTypePrefix}}UniswapV3BurnV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3BurnV3DTO**]({{complexTypePrefix}}UniswapV3BurnV3DTO.md) | [**UniswapV3BurnV3DTO**]({{complexTypePrefix}}UniswapV3BurnV3DTO.md) | [**UniswapV3BurnV3DTO**]({{complexTypePrefix}}UniswapV3BurnV3DTO.md) |  | 
 
 ### Authorization
 
@@ -1035,6 +1364,318 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
+# **uniswap_v3_get_factory_v3_dtos__historical**
+<a name="uniswap_v3_get_factory_v3_dtos__historical"></a>
+> [UniswapV3FactoryV3DTO] uniswap_v3_get_factory_v3_dtos__historical()
+
+FactoryV3DTOs (historical) 🔥
+
+Gets FactoryV3DTOs.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v3_api
+from openapi_client.model.uniswap_v3_factory_v3_dto import UniswapV3FactoryV3DTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v3_api.UniswapV3Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'poolId': "poolId_example",
+    }
+    try:
+        # FactoryV3DTOs (historical) 🔥
+        api_response = api_instance.uniswap_v3_get_factory_v3_dtos__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV3Api->uniswap_v3_get_factory_v3_dtos__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+poolId | PoolIdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# PoolIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v3_get_factory_v3_dtos__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v3_get_factory_v3_dtos__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3FactoryV3DTO**]({{complexTypePrefix}}UniswapV3FactoryV3DTO.md) | [**UniswapV3FactoryV3DTO**]({{complexTypePrefix}}UniswapV3FactoryV3DTO.md) | [**UniswapV3FactoryV3DTO**]({{complexTypePrefix}}UniswapV3FactoryV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3FactoryV3DTO**]({{complexTypePrefix}}UniswapV3FactoryV3DTO.md) | [**UniswapV3FactoryV3DTO**]({{complexTypePrefix}}UniswapV3FactoryV3DTO.md) | [**UniswapV3FactoryV3DTO**]({{complexTypePrefix}}UniswapV3FactoryV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3FactoryV3DTO**]({{complexTypePrefix}}UniswapV3FactoryV3DTO.md) | [**UniswapV3FactoryV3DTO**]({{complexTypePrefix}}UniswapV3FactoryV3DTO.md) | [**UniswapV3FactoryV3DTO**]({{complexTypePrefix}}UniswapV3FactoryV3DTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v3_get_mint_v3_dtos__historical**
+<a name="uniswap_v3_get_mint_v3_dtos__historical"></a>
+> [UniswapV3MintV3DTO] uniswap_v3_get_mint_v3_dtos__historical()
+
+MintV3DTOs (historical) 🔥
+
+Gets MintV3DTOs.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v3_api
+from openapi_client.model.uniswap_v3_mint_v3_dto import UniswapV3MintV3DTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v3_api.UniswapV3Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'poolId': "poolId_example",
+    }
+    try:
+        # MintV3DTOs (historical) 🔥
+        api_response = api_instance.uniswap_v3_get_mint_v3_dtos__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV3Api->uniswap_v3_get_mint_v3_dtos__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+poolId | PoolIdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# PoolIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v3_get_mint_v3_dtos__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v3_get_mint_v3_dtos__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) | [**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) | [**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) | [**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) | [**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) | [**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) | [**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
 # **uniswap_v3_get_mints__current**
 <a name="uniswap_v3_get_mints__current"></a>
 > [UniswapV3MintV3DTO] uniswap_v3_get_mints__current()
@@ -1304,6 +1945,474 @@ list, tuple,  | tuple,  |  |
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 [**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) | [**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) | [**UniswapV3MintV3DTO**]({{complexTypePrefix}}UniswapV3MintV3DTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v3_get_pool_day_data_v3_dtos__historical**
+<a name="uniswap_v3_get_pool_day_data_v3_dtos__historical"></a>
+> [UniswapV3PoolDayDataV3DTO] uniswap_v3_get_pool_day_data_v3_dtos__historical()
+
+PoolDayDataV3DTOs (historical) 🔥
+
+Gets PoolDayDataV3DTOs.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v3_api
+from openapi_client.model.uniswap_v3_pool_day_data_v3_dto import UniswapV3PoolDayDataV3DTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v3_api.UniswapV3Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'poolId': "poolId_example",
+    }
+    try:
+        # PoolDayDataV3DTOs (historical) 🔥
+        api_response = api_instance.uniswap_v3_get_pool_day_data_v3_dtos__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV3Api->uniswap_v3_get_pool_day_data_v3_dtos__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+poolId | PoolIdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# PoolIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v3_get_pool_day_data_v3_dtos__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v3_get_pool_day_data_v3_dtos__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3PoolDayDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolDayDataV3DTO.md) | [**UniswapV3PoolDayDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolDayDataV3DTO.md) | [**UniswapV3PoolDayDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolDayDataV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3PoolDayDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolDayDataV3DTO.md) | [**UniswapV3PoolDayDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolDayDataV3DTO.md) | [**UniswapV3PoolDayDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolDayDataV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3PoolDayDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolDayDataV3DTO.md) | [**UniswapV3PoolDayDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolDayDataV3DTO.md) | [**UniswapV3PoolDayDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolDayDataV3DTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v3_get_pool_hour_data_v3_dtos__historical**
+<a name="uniswap_v3_get_pool_hour_data_v3_dtos__historical"></a>
+> [UniswapV3PoolHourDataV3DTO] uniswap_v3_get_pool_hour_data_v3_dtos__historical()
+
+PoolHourDataV3DTOs (historical) 🔥
+
+Gets PoolHourDataV3DTOs.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v3_api
+from openapi_client.model.uniswap_v3_pool_hour_data_v3_dto import UniswapV3PoolHourDataV3DTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v3_api.UniswapV3Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'poolId': "poolId_example",
+    }
+    try:
+        # PoolHourDataV3DTOs (historical) 🔥
+        api_response = api_instance.uniswap_v3_get_pool_hour_data_v3_dtos__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV3Api->uniswap_v3_get_pool_hour_data_v3_dtos__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+poolId | PoolIdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# PoolIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v3_get_pool_hour_data_v3_dtos__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v3_get_pool_hour_data_v3_dtos__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3PoolHourDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolHourDataV3DTO.md) | [**UniswapV3PoolHourDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolHourDataV3DTO.md) | [**UniswapV3PoolHourDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolHourDataV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3PoolHourDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolHourDataV3DTO.md) | [**UniswapV3PoolHourDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolHourDataV3DTO.md) | [**UniswapV3PoolHourDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolHourDataV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3PoolHourDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolHourDataV3DTO.md) | [**UniswapV3PoolHourDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolHourDataV3DTO.md) | [**UniswapV3PoolHourDataV3DTO**]({{complexTypePrefix}}UniswapV3PoolHourDataV3DTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v3_get_pool_v3_dtos__historical**
+<a name="uniswap_v3_get_pool_v3_dtos__historical"></a>
+> [UniswapV3PoolV3DTO] uniswap_v3_get_pool_v3_dtos__historical()
+
+PoolV3DTOs (historical) 🔥
+
+Gets PoolV3DTOs.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v3_api
+from openapi_client.model.uniswap_v3_pool_v3_dto import UniswapV3PoolV3DTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v3_api.UniswapV3Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'poolId': "poolId_example",
+    }
+    try:
+        # PoolV3DTOs (historical) 🔥
+        api_response = api_instance.uniswap_v3_get_pool_v3_dtos__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV3Api->uniswap_v3_get_pool_v3_dtos__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+poolId | PoolIdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# PoolIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v3_get_pool_v3_dtos__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v3_get_pool_v3_dtos__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3PoolV3DTO**]({{complexTypePrefix}}UniswapV3PoolV3DTO.md) | [**UniswapV3PoolV3DTO**]({{complexTypePrefix}}UniswapV3PoolV3DTO.md) | [**UniswapV3PoolV3DTO**]({{complexTypePrefix}}UniswapV3PoolV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3PoolV3DTO**]({{complexTypePrefix}}UniswapV3PoolV3DTO.md) | [**UniswapV3PoolV3DTO**]({{complexTypePrefix}}UniswapV3PoolV3DTO.md) | [**UniswapV3PoolV3DTO**]({{complexTypePrefix}}UniswapV3PoolV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3PoolV3DTO**]({{complexTypePrefix}}UniswapV3PoolV3DTO.md) | [**UniswapV3PoolV3DTO**]({{complexTypePrefix}}UniswapV3PoolV3DTO.md) | [**UniswapV3PoolV3DTO**]({{complexTypePrefix}}UniswapV3PoolV3DTO.md) |  | 
 
 ### Authorization
 
@@ -2139,6 +3248,318 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
+# **uniswap_v3_get_position_snapshot_v3_dtos__historical**
+<a name="uniswap_v3_get_position_snapshot_v3_dtos__historical"></a>
+> [UniswapV3PositionSnapshotV3DTO] uniswap_v3_get_position_snapshot_v3_dtos__historical()
+
+PositionSnapshotV3DTOs (historical) 🔥
+
+Gets PositionSnapshotV3DTOs.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v3_api
+from openapi_client.model.uniswap_v3_position_snapshot_v3_dto import UniswapV3PositionSnapshotV3DTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v3_api.UniswapV3Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'poolId': "poolId_example",
+    }
+    try:
+        # PositionSnapshotV3DTOs (historical) 🔥
+        api_response = api_instance.uniswap_v3_get_position_snapshot_v3_dtos__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV3Api->uniswap_v3_get_position_snapshot_v3_dtos__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+poolId | PoolIdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# PoolIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v3_get_position_snapshot_v3_dtos__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v3_get_position_snapshot_v3_dtos__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3PositionSnapshotV3DTO**]({{complexTypePrefix}}UniswapV3PositionSnapshotV3DTO.md) | [**UniswapV3PositionSnapshotV3DTO**]({{complexTypePrefix}}UniswapV3PositionSnapshotV3DTO.md) | [**UniswapV3PositionSnapshotV3DTO**]({{complexTypePrefix}}UniswapV3PositionSnapshotV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3PositionSnapshotV3DTO**]({{complexTypePrefix}}UniswapV3PositionSnapshotV3DTO.md) | [**UniswapV3PositionSnapshotV3DTO**]({{complexTypePrefix}}UniswapV3PositionSnapshotV3DTO.md) | [**UniswapV3PositionSnapshotV3DTO**]({{complexTypePrefix}}UniswapV3PositionSnapshotV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3PositionSnapshotV3DTO**]({{complexTypePrefix}}UniswapV3PositionSnapshotV3DTO.md) | [**UniswapV3PositionSnapshotV3DTO**]({{complexTypePrefix}}UniswapV3PositionSnapshotV3DTO.md) | [**UniswapV3PositionSnapshotV3DTO**]({{complexTypePrefix}}UniswapV3PositionSnapshotV3DTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v3_get_position_v3_dtos__historical**
+<a name="uniswap_v3_get_position_v3_dtos__historical"></a>
+> [UniswapV3PositionV3DTO] uniswap_v3_get_position_v3_dtos__historical()
+
+PositionV3DTOs (historical) 🔥
+
+Gets PositionV3DTOs.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v3_api
+from openapi_client.model.uniswap_v3_position_v3_dto import UniswapV3PositionV3DTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v3_api.UniswapV3Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'poolId': "poolId_example",
+    }
+    try:
+        # PositionV3DTOs (historical) 🔥
+        api_response = api_instance.uniswap_v3_get_position_v3_dtos__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV3Api->uniswap_v3_get_position_v3_dtos__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+poolId | PoolIdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# PoolIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v3_get_position_v3_dtos__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v3_get_position_v3_dtos__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3PositionV3DTO**]({{complexTypePrefix}}UniswapV3PositionV3DTO.md) | [**UniswapV3PositionV3DTO**]({{complexTypePrefix}}UniswapV3PositionV3DTO.md) | [**UniswapV3PositionV3DTO**]({{complexTypePrefix}}UniswapV3PositionV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3PositionV3DTO**]({{complexTypePrefix}}UniswapV3PositionV3DTO.md) | [**UniswapV3PositionV3DTO**]({{complexTypePrefix}}UniswapV3PositionV3DTO.md) | [**UniswapV3PositionV3DTO**]({{complexTypePrefix}}UniswapV3PositionV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3PositionV3DTO**]({{complexTypePrefix}}UniswapV3PositionV3DTO.md) | [**UniswapV3PositionV3DTO**]({{complexTypePrefix}}UniswapV3PositionV3DTO.md) | [**UniswapV3PositionV3DTO**]({{complexTypePrefix}}UniswapV3PositionV3DTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
 # **uniswap_v3_get_positions__current**
 <a name="uniswap_v3_get_positions__current"></a>
 > [UniswapV3PositionV3DTO] uniswap_v3_get_positions__current()
@@ -2691,6 +4112,162 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
+# **uniswap_v3_get_swap_v3_dtos__historical**
+<a name="uniswap_v3_get_swap_v3_dtos__historical"></a>
+> [UniswapV3SwapV3DTO] uniswap_v3_get_swap_v3_dtos__historical()
+
+SwapV3DTOs (historical) 🔥
+
+Gets SwapV3DTOs.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v3_api
+from openapi_client.model.uniswap_v3_swap_v3_dto import UniswapV3SwapV3DTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v3_api.UniswapV3Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'poolId': "poolId_example",
+    }
+    try:
+        # SwapV3DTOs (historical) 🔥
+        api_response = api_instance.uniswap_v3_get_swap_v3_dtos__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV3Api->uniswap_v3_get_swap_v3_dtos__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+poolId | PoolIdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# PoolIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v3_get_swap_v3_dtos__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v3_get_swap_v3_dtos__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) | [**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) | [**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) | [**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) | [**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) | [**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) | [**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
 # **uniswap_v3_get_swaps__current**
 <a name="uniswap_v3_get_swaps__current"></a>
 > [UniswapV3SwapV3DTO] uniswap_v3_get_swaps__current()
@@ -2960,6 +4537,318 @@ list, tuple,  | tuple,  |  |
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 [**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) | [**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) | [**UniswapV3SwapV3DTO**]({{complexTypePrefix}}UniswapV3SwapV3DTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v3_get_tick_day_data_v3_dtos__historical**
+<a name="uniswap_v3_get_tick_day_data_v3_dtos__historical"></a>
+> [UniswapV3TickDayDataV3DTO] uniswap_v3_get_tick_day_data_v3_dtos__historical()
+
+TickDayDataV3DTOs (historical) 🔥
+
+Gets TickDayDataV3DTOs.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v3_api
+from openapi_client.model.uniswap_v3_tick_day_data_v3_dto import UniswapV3TickDayDataV3DTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v3_api.UniswapV3Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'poolId': "poolId_example",
+    }
+    try:
+        # TickDayDataV3DTOs (historical) 🔥
+        api_response = api_instance.uniswap_v3_get_tick_day_data_v3_dtos__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV3Api->uniswap_v3_get_tick_day_data_v3_dtos__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+poolId | PoolIdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# PoolIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v3_get_tick_day_data_v3_dtos__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v3_get_tick_day_data_v3_dtos__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) | [**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) | [**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) | [**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) | [**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) | [**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) | [**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v3_get_tick_v3_dtos__historical**
+<a name="uniswap_v3_get_tick_v3_dtos__historical"></a>
+> [UniswapV3TickV3DTO] uniswap_v3_get_tick_v3_dtos__historical()
+
+TickV3DTOs (historical) 🔥
+
+Gets TickV3DTOs.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v3_api
+from openapi_client.model.uniswap_v3_tick_v3_dto import UniswapV3TickV3DTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v3_api.UniswapV3Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'poolId': "poolId_example",
+    }
+    try:
+        # TickV3DTOs (historical) 🔥
+        api_response = api_instance.uniswap_v3_get_tick_v3_dtos__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV3Api->uniswap_v3_get_tick_v3_dtos__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+poolId | PoolIdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# PoolIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v3_get_tick_v3_dtos__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v3_get_tick_v3_dtos__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3TickV3DTO**]({{complexTypePrefix}}UniswapV3TickV3DTO.md) | [**UniswapV3TickV3DTO**]({{complexTypePrefix}}UniswapV3TickV3DTO.md) | [**UniswapV3TickV3DTO**]({{complexTypePrefix}}UniswapV3TickV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3TickV3DTO**]({{complexTypePrefix}}UniswapV3TickV3DTO.md) | [**UniswapV3TickV3DTO**]({{complexTypePrefix}}UniswapV3TickV3DTO.md) | [**UniswapV3TickV3DTO**]({{complexTypePrefix}}UniswapV3TickV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3TickV3DTO**]({{complexTypePrefix}}UniswapV3TickV3DTO.md) | [**UniswapV3TickV3DTO**]({{complexTypePrefix}}UniswapV3TickV3DTO.md) | [**UniswapV3TickV3DTO**]({{complexTypePrefix}}UniswapV3TickV3DTO.md) |  | 
 
 ### Authorization
 
@@ -3512,6 +5401,474 @@ list, tuple,  | tuple,  |  |
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 [**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) | [**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) | [**UniswapV3TickDayDataV3DTO**]({{complexTypePrefix}}UniswapV3TickDayDataV3DTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v3_get_token_hour_data_v3_dtos__historical**
+<a name="uniswap_v3_get_token_hour_data_v3_dtos__historical"></a>
+> [UniswapV3TokenHourDataV3DTO] uniswap_v3_get_token_hour_data_v3_dtos__historical()
+
+TokenHourDataV3DTOs (historical) 🔥
+
+Gets TokenHourDataV3DTOs.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v3_api
+from openapi_client.model.uniswap_v3_token_hour_data_v3_dto import UniswapV3TokenHourDataV3DTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v3_api.UniswapV3Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'poolId': "poolId_example",
+    }
+    try:
+        # TokenHourDataV3DTOs (historical) 🔥
+        api_response = api_instance.uniswap_v3_get_token_hour_data_v3_dtos__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV3Api->uniswap_v3_get_token_hour_data_v3_dtos__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+poolId | PoolIdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# PoolIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v3_get_token_hour_data_v3_dtos__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v3_get_token_hour_data_v3_dtos__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3TokenHourDataV3DTO**]({{complexTypePrefix}}UniswapV3TokenHourDataV3DTO.md) | [**UniswapV3TokenHourDataV3DTO**]({{complexTypePrefix}}UniswapV3TokenHourDataV3DTO.md) | [**UniswapV3TokenHourDataV3DTO**]({{complexTypePrefix}}UniswapV3TokenHourDataV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3TokenHourDataV3DTO**]({{complexTypePrefix}}UniswapV3TokenHourDataV3DTO.md) | [**UniswapV3TokenHourDataV3DTO**]({{complexTypePrefix}}UniswapV3TokenHourDataV3DTO.md) | [**UniswapV3TokenHourDataV3DTO**]({{complexTypePrefix}}UniswapV3TokenHourDataV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3TokenHourDataV3DTO**]({{complexTypePrefix}}UniswapV3TokenHourDataV3DTO.md) | [**UniswapV3TokenHourDataV3DTO**]({{complexTypePrefix}}UniswapV3TokenHourDataV3DTO.md) | [**UniswapV3TokenHourDataV3DTO**]({{complexTypePrefix}}UniswapV3TokenHourDataV3DTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v3_get_token_v3_day_data_dtos__historical**
+<a name="uniswap_v3_get_token_v3_day_data_dtos__historical"></a>
+> [UniswapV3TokenV3DayDataDTO] uniswap_v3_get_token_v3_day_data_dtos__historical()
+
+TokenV3DayDataDTOs (historical) 🔥
+
+Gets TokenV3DayDataDTOs.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v3_api
+from openapi_client.model.uniswap_v3_token_v3_day_data_dto import UniswapV3TokenV3DayDataDTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v3_api.UniswapV3Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'poolId': "poolId_example",
+    }
+    try:
+        # TokenV3DayDataDTOs (historical) 🔥
+        api_response = api_instance.uniswap_v3_get_token_v3_day_data_dtos__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV3Api->uniswap_v3_get_token_v3_day_data_dtos__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+poolId | PoolIdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# PoolIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v3_get_token_v3_day_data_dtos__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v3_get_token_v3_day_data_dtos__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3TokenV3DayDataDTO**]({{complexTypePrefix}}UniswapV3TokenV3DayDataDTO.md) | [**UniswapV3TokenV3DayDataDTO**]({{complexTypePrefix}}UniswapV3TokenV3DayDataDTO.md) | [**UniswapV3TokenV3DayDataDTO**]({{complexTypePrefix}}UniswapV3TokenV3DayDataDTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3TokenV3DayDataDTO**]({{complexTypePrefix}}UniswapV3TokenV3DayDataDTO.md) | [**UniswapV3TokenV3DayDataDTO**]({{complexTypePrefix}}UniswapV3TokenV3DayDataDTO.md) | [**UniswapV3TokenV3DayDataDTO**]({{complexTypePrefix}}UniswapV3TokenV3DayDataDTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3TokenV3DayDataDTO**]({{complexTypePrefix}}UniswapV3TokenV3DayDataDTO.md) | [**UniswapV3TokenV3DayDataDTO**]({{complexTypePrefix}}UniswapV3TokenV3DayDataDTO.md) | [**UniswapV3TokenV3DayDataDTO**]({{complexTypePrefix}}UniswapV3TokenV3DayDataDTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v3_get_token_v3_dtos__historical**
+<a name="uniswap_v3_get_token_v3_dtos__historical"></a>
+> [UniswapV3TokenV3DTO] uniswap_v3_get_token_v3_dtos__historical()
+
+TokenV3DTOs (historical) 🔥
+
+Gets TokenV3DTOs.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v3_api
+from openapi_client.model.uniswap_v3_token_v3_dto import UniswapV3TokenV3DTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v3_api.UniswapV3Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'poolId': "poolId_example",
+    }
+    try:
+        # TokenV3DTOs (historical) 🔥
+        api_response = api_instance.uniswap_v3_get_token_v3_dtos__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV3Api->uniswap_v3_get_token_v3_dtos__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+poolId | PoolIdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# PoolIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v3_get_token_v3_dtos__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v3_get_token_v3_dtos__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3TokenV3DTO**]({{complexTypePrefix}}UniswapV3TokenV3DTO.md) | [**UniswapV3TokenV3DTO**]({{complexTypePrefix}}UniswapV3TokenV3DTO.md) | [**UniswapV3TokenV3DTO**]({{complexTypePrefix}}UniswapV3TokenV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3TokenV3DTO**]({{complexTypePrefix}}UniswapV3TokenV3DTO.md) | [**UniswapV3TokenV3DTO**]({{complexTypePrefix}}UniswapV3TokenV3DTO.md) | [**UniswapV3TokenV3DTO**]({{complexTypePrefix}}UniswapV3TokenV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3TokenV3DTO**]({{complexTypePrefix}}UniswapV3TokenV3DTO.md) | [**UniswapV3TokenV3DTO**]({{complexTypePrefix}}UniswapV3TokenV3DTO.md) | [**UniswapV3TokenV3DTO**]({{complexTypePrefix}}UniswapV3TokenV3DTO.md) |  | 
 
 ### Authorization
 
@@ -4347,6 +6704,162 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
+# **uniswap_v3_get_transaction_v3_dtos__historical**
+<a name="uniswap_v3_get_transaction_v3_dtos__historical"></a>
+> [UniswapV3TransactionV3DTO] uniswap_v3_get_transaction_v3_dtos__historical()
+
+TransactionV3DTOs (historical) 🔥
+
+Gets TransactionV3DTOs.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v3_api
+from openapi_client.model.uniswap_v3_transaction_v3_dto import UniswapV3TransactionV3DTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v3_api.UniswapV3Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'poolId': "poolId_example",
+    }
+    try:
+        # TransactionV3DTOs (historical) 🔥
+        api_response = api_instance.uniswap_v3_get_transaction_v3_dtos__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV3Api->uniswap_v3_get_transaction_v3_dtos__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+poolId | PoolIdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# PoolIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v3_get_transaction_v3_dtos__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v3_get_transaction_v3_dtos__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3TransactionV3DTO**]({{complexTypePrefix}}UniswapV3TransactionV3DTO.md) | [**UniswapV3TransactionV3DTO**]({{complexTypePrefix}}UniswapV3TransactionV3DTO.md) | [**UniswapV3TransactionV3DTO**]({{complexTypePrefix}}UniswapV3TransactionV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3TransactionV3DTO**]({{complexTypePrefix}}UniswapV3TransactionV3DTO.md) | [**UniswapV3TransactionV3DTO**]({{complexTypePrefix}}UniswapV3TransactionV3DTO.md) | [**UniswapV3TransactionV3DTO**]({{complexTypePrefix}}UniswapV3TransactionV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3TransactionV3DTO**]({{complexTypePrefix}}UniswapV3TransactionV3DTO.md) | [**UniswapV3TransactionV3DTO**]({{complexTypePrefix}}UniswapV3TransactionV3DTO.md) | [**UniswapV3TransactionV3DTO**]({{complexTypePrefix}}UniswapV3TransactionV3DTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
 # **uniswap_v3_get_transactions__historical**
 <a name="uniswap_v3_get_transactions__historical"></a>
 > [UniswapV3TransactionV3DTO] uniswap_v3_get_transactions__historical()
@@ -4487,6 +7000,162 @@ list, tuple,  | tuple,  |  |
 Class Name | Input Type | Accessed Type | Description | Notes
 ------------- | ------------- | ------------- | ------------- | -------------
 [**UniswapV3TransactionV3DTO**]({{complexTypePrefix}}UniswapV3TransactionV3DTO.md) | [**UniswapV3TransactionV3DTO**]({{complexTypePrefix}}UniswapV3TransactionV3DTO.md) | [**UniswapV3TransactionV3DTO**]({{complexTypePrefix}}UniswapV3TransactionV3DTO.md) |  | 
+
+### Authorization
+
+No authorization required
+
+[[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
+
+# **uniswap_v3_get_uniswap_day_data_v3_dtos__historical**
+<a name="uniswap_v3_get_uniswap_day_data_v3_dtos__historical"></a>
+> [UniswapV3UniswapDayDataV3DTO] uniswap_v3_get_uniswap_day_data_v3_dtos__historical()
+
+UniswapDayDataV3DTOs (historical) 🔥
+
+Gets UniswapDayDataV3DTOs.
+
+### Example
+
+```python
+import openapi_client
+from openapi_client.apis.tags import uniswap_v3_api
+from openapi_client.model.uniswap_v3_uniswap_day_data_v3_dto import UniswapV3UniswapDayDataV3DTO
+from pprint import pprint
+# Defining the host is optional and defaults to https://onchain.coinapi.io
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "https://onchain.coinapi.io"
+)
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = uniswap_v3_api.UniswapV3Api(api_client)
+
+    # example passing only optional values
+    query_params = {
+        'startBlock': 1,
+        'endBlock': 1,
+        'startDate': "1970-01-01T00:00:00.00Z",
+        'endDate': "1970-01-01T00:00:00.00Z",
+        'poolId': "poolId_example",
+    }
+    try:
+        # UniswapDayDataV3DTOs (historical) 🔥
+        api_response = api_instance.uniswap_v3_get_uniswap_day_data_v3_dtos__historical(
+            query_params=query_params,
+        )
+        pprint(api_response)
+    except openapi_client.ApiException as e:
+        print("Exception when calling UniswapV3Api->uniswap_v3_get_uniswap_day_data_v3_dtos__historical: %s\n" % e)
+```
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+query_params | RequestQueryParams | |
+accept_content_types | typing.Tuple[str] | default is ('text/plain', 'application/json', 'text/json', ) | Tells the server the content type(s) that are accepted by the client
+stream | bool | default is False | if True then the response.content will be streamed and loaded from a file like object. When downloading a file, set this to True to force the code to deserialize the content to a FileSchema file
+timeout | typing.Optional[typing.Union[int, typing.Tuple]] | default is None | the timeout used by the rest client
+skip_deserialization | bool | default is False | when True, headers and body will be unset and an instance of api_client.ApiResponseWithoutDeserialization will be returned
+
+### query_params
+#### RequestQueryParams
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+startBlock | StartBlockSchema | | optional
+endBlock | EndBlockSchema | | optional
+startDate | StartDateSchema | | optional
+endDate | EndDateSchema | | optional
+poolId | PoolIdSchema | | optional
+
+
+# StartBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# EndBlockSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+decimal.Decimal, int,  | decimal.Decimal,  |  | value must be a 64 bit integer
+
+# StartDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# EndDateSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str, datetime,  | str,  |  | value must conform to RFC-3339 date-time
+
+# PoolIdSchema
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+str,  | str,  |  | 
+
+### Return Types, Responses
+
+Code | Class | Description
+------------- | ------------- | -------------
+n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
+200 | [ApiResponseFor200](#uniswap_v3_get_uniswap_day_data_v3_dtos__historical.ApiResponseFor200) | successful operation
+
+#### uniswap_v3_get_uniswap_day_data_v3_dtos__historical.ApiResponseFor200
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+response | urllib3.HTTPResponse | Raw response |
+body | typing.Union[SchemaFor200ResponseBodyTextPlain, SchemaFor200ResponseBodyApplicationJson, SchemaFor200ResponseBodyTextJson, ] |  |
+headers | Unset | headers were not defined |
+
+# SchemaFor200ResponseBodyTextPlain
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapV3UniswapDayDataV3DTO.md) | [**UniswapV3UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapV3UniswapDayDataV3DTO.md) | [**UniswapV3UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapV3UniswapDayDataV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyApplicationJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapV3UniswapDayDataV3DTO.md) | [**UniswapV3UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapV3UniswapDayDataV3DTO.md) | [**UniswapV3UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapV3UniswapDayDataV3DTO.md) |  | 
+
+# SchemaFor200ResponseBodyTextJson
+
+## Model Type Info
+Input Type | Accessed Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+list, tuple,  | tuple,  |  | 
+
+### Tuple Items
+Class Name | Input Type | Accessed Type | Description | Notes
+------------- | ------------- | ------------- | ------------- | -------------
+[**UniswapV3UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapV3UniswapDayDataV3DTO.md) | [**UniswapV3UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapV3UniswapDayDataV3DTO.md) | [**UniswapV3UniswapDayDataV3DTO**]({{complexTypePrefix}}UniswapV3UniswapDayDataV3DTO.md) |  | 
 
 ### Authorization
 

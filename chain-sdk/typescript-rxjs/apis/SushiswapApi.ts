@@ -36,6 +36,14 @@ import type {
     SushiswapUserDTO,
 } from '../models';
 
+export interface SushiswapGetBundleDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface SushiswapGetBundlesHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
@@ -43,7 +51,23 @@ export interface SushiswapGetBundlesHistoricalRequest {
     endDate?: string;
 }
 
+export interface SushiswapGetBurnDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface SushiswapGetBurnsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface SushiswapGetDayDataDTOsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -58,11 +82,27 @@ export interface SushiswapGetDayDataHistoricalRequest {
     endDate?: string;
 }
 
+export interface SushiswapGetFactoryDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface SushiswapGetFactoryHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
     endDate?: string;
+}
+
+export interface SushiswapGetHourDataDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
 }
 
 export interface SushiswapGetHourDataHistoricalRequest {
@@ -72,7 +112,23 @@ export interface SushiswapGetHourDataHistoricalRequest {
     endDate?: string;
 }
 
+export interface SushiswapGetLiquidityPositionDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface SushiswapGetLiquidityPositionHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface SushiswapGetLiquidityPositionSnapshotDTOsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -88,7 +144,39 @@ export interface SushiswapGetLiquidityPositionSnapshotHistoricalRequest {
     poolId?: string;
 }
 
+export interface SushiswapGetMintDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface SushiswapGetMintsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface SushiswapGetPairDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface SushiswapGetPairDayDataDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface SushiswapGetPairHourDataDTOsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -120,7 +208,31 @@ export interface SushiswapGetPoolsHourDataHistoricalRequest {
     poolId?: string;
 }
 
+export interface SushiswapGetSwapDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface SushiswapGetSwapsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface SushiswapGetTokenDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface SushiswapGetTokenDayDataDTOsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -144,11 +256,27 @@ export interface SushiswapGetTokensHistoricalRequest {
     tokenId?: string;
 }
 
+export interface SushiswapGetTransactionDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface SushiswapGetTransactionsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
     endDate?: string;
+}
+
+export interface SushiswapGetUserDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
 }
 
 export interface SushiswapGetUsersHistoricalRequest {
@@ -190,6 +318,29 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
+     * Gets BundleDTOs.
+     * BundleDTOs (historical) 🔥
+     */
+    sushiswapGetBundleDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetBundleDTOsHistoricalRequest): Observable<Array<SushiswapBundleDTO>>
+    sushiswapGetBundleDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetBundleDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapBundleDTO>>>
+    sushiswapGetBundleDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetBundleDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<SushiswapBundleDTO> | AjaxResponse<Array<SushiswapBundleDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<SushiswapBundleDTO>>({
+            url: '/dapps/sushiswap/BundleDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets bundles.
      * Bundles (historical)
      */
@@ -206,6 +357,29 @@ export class SushiswapApi extends BaseAPI {
 
         return this.request<Array<SushiswapBundleDTO>>({
             url: '/dapps/sushiswap/bundles/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets BurnDTOs.
+     * BurnDTOs (historical) 🔥
+     */
+    sushiswapGetBurnDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetBurnDTOsHistoricalRequest): Observable<Array<SushiswapBurnDTO>>
+    sushiswapGetBurnDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetBurnDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapBurnDTO>>>
+    sushiswapGetBurnDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetBurnDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<SushiswapBurnDTO> | AjaxResponse<Array<SushiswapBurnDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<SushiswapBurnDTO>>({
+            url: '/dapps/sushiswap/BurnDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -235,6 +409,29 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
+     * Gets DayDataDTOs.
+     * DayDataDTOs (historical) 🔥
+     */
+    sushiswapGetDayDataDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetDayDataDTOsHistoricalRequest): Observable<Array<SushiswapDayDataDTO>>
+    sushiswapGetDayDataDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetDayDataDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapDayDataDTO>>>
+    sushiswapGetDayDataDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetDayDataDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<SushiswapDayDataDTO> | AjaxResponse<Array<SushiswapDayDataDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<SushiswapDayDataDTO>>({
+            url: '/dapps/sushiswap/DayDataDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets day data.
      * DayData (historical)
      */
@@ -251,6 +448,29 @@ export class SushiswapApi extends BaseAPI {
 
         return this.request<Array<SushiswapDayDataDTO>>({
             url: '/dapps/sushiswap/dayData/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets FactoryDTOs.
+     * FactoryDTOs (historical) 🔥
+     */
+    sushiswapGetFactoryDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetFactoryDTOsHistoricalRequest): Observable<Array<SushiswapFactoryDTO>>
+    sushiswapGetFactoryDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetFactoryDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapFactoryDTO>>>
+    sushiswapGetFactoryDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetFactoryDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<SushiswapFactoryDTO> | AjaxResponse<Array<SushiswapFactoryDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<SushiswapFactoryDTO>>({
+            url: '/dapps/sushiswap/FactoryDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -279,6 +499,29 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
+     * Gets HourDataDTOs.
+     * HourDataDTOs (historical) 🔥
+     */
+    sushiswapGetHourDataDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetHourDataDTOsHistoricalRequest): Observable<Array<SushiswapHourDataDTO>>
+    sushiswapGetHourDataDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetHourDataDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapHourDataDTO>>>
+    sushiswapGetHourDataDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetHourDataDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<SushiswapHourDataDTO> | AjaxResponse<Array<SushiswapHourDataDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<SushiswapHourDataDTO>>({
+            url: '/dapps/sushiswap/HourDataDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets hour data.
      * HourData (historical)
      */
@@ -295,6 +538,29 @@ export class SushiswapApi extends BaseAPI {
 
         return this.request<Array<SushiswapHourDataDTO>>({
             url: '/dapps/sushiswap/hourData/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets LiquidityPositionDTOs.
+     * LiquidityPositionDTOs (historical) 🔥
+     */
+    sushiswapGetLiquidityPositionDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetLiquidityPositionDTOsHistoricalRequest): Observable<Array<SushiswapLiquidityPositionDTO>>
+    sushiswapGetLiquidityPositionDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetLiquidityPositionDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapLiquidityPositionDTO>>>
+    sushiswapGetLiquidityPositionDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetLiquidityPositionDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<SushiswapLiquidityPositionDTO> | AjaxResponse<Array<SushiswapLiquidityPositionDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<SushiswapLiquidityPositionDTO>>({
+            url: '/dapps/sushiswap/LiquidityPositionDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -324,6 +590,29 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
+     * Gets LiquidityPositionSnapshotDTOs.
+     * LiquidityPositionSnapshotDTOs (historical) 🔥
+     */
+    sushiswapGetLiquidityPositionSnapshotDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetLiquidityPositionSnapshotDTOsHistoricalRequest): Observable<Array<SushiswapLiquidityPositionSnapshotDTO>>
+    sushiswapGetLiquidityPositionSnapshotDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetLiquidityPositionSnapshotDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapLiquidityPositionSnapshotDTO>>>
+    sushiswapGetLiquidityPositionSnapshotDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetLiquidityPositionSnapshotDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<SushiswapLiquidityPositionSnapshotDTO> | AjaxResponse<Array<SushiswapLiquidityPositionSnapshotDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<SushiswapLiquidityPositionSnapshotDTO>>({
+            url: '/dapps/sushiswap/LiquidityPositionSnapshotDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets liquidity position snapshot.
      * LiquidityPositionSnapshot (historical)
      */
@@ -347,6 +636,29 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
+     * Gets MintDTOs.
+     * MintDTOs (historical) 🔥
+     */
+    sushiswapGetMintDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetMintDTOsHistoricalRequest): Observable<Array<SushiswapMintDTO>>
+    sushiswapGetMintDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetMintDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapMintDTO>>>
+    sushiswapGetMintDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetMintDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<SushiswapMintDTO> | AjaxResponse<Array<SushiswapMintDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<SushiswapMintDTO>>({
+            url: '/dapps/sushiswap/MintDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets mints.
      * Mints (historical)
      */
@@ -364,6 +676,75 @@ export class SushiswapApi extends BaseAPI {
 
         return this.request<Array<SushiswapMintDTO>>({
             url: '/dapps/sushiswap/mints/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets PairDTOs.
+     * PairDTOs (historical) 🔥
+     */
+    sushiswapGetPairDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetPairDTOsHistoricalRequest): Observable<Array<SushiswapPairDTO>>
+    sushiswapGetPairDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetPairDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapPairDTO>>>
+    sushiswapGetPairDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetPairDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<SushiswapPairDTO> | AjaxResponse<Array<SushiswapPairDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<SushiswapPairDTO>>({
+            url: '/dapps/sushiswap/PairDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets PairDayDataDTOs.
+     * PairDayDataDTOs (historical) 🔥
+     */
+    sushiswapGetPairDayDataDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetPairDayDataDTOsHistoricalRequest): Observable<Array<SushiswapPairDayDataDTO>>
+    sushiswapGetPairDayDataDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetPairDayDataDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapPairDayDataDTO>>>
+    sushiswapGetPairDayDataDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetPairDayDataDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<SushiswapPairDayDataDTO> | AjaxResponse<Array<SushiswapPairDayDataDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<SushiswapPairDayDataDTO>>({
+            url: '/dapps/sushiswap/PairDayDataDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets PairHourDataDTOs.
+     * PairHourDataDTOs (historical) 🔥
+     */
+    sushiswapGetPairHourDataDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetPairHourDataDTOsHistoricalRequest): Observable<Array<SushiswapPairHourDataDTO>>
+    sushiswapGetPairHourDataDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetPairHourDataDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapPairHourDataDTO>>>
+    sushiswapGetPairHourDataDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetPairHourDataDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<SushiswapPairHourDataDTO> | AjaxResponse<Array<SushiswapPairHourDataDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<SushiswapPairHourDataDTO>>({
+            url: '/dapps/sushiswap/PairHourDataDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -452,6 +833,29 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
+     * Gets SwapDTOs.
+     * SwapDTOs (historical) 🔥
+     */
+    sushiswapGetSwapDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetSwapDTOsHistoricalRequest): Observable<Array<SushiswapSwapDTO>>
+    sushiswapGetSwapDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetSwapDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapSwapDTO>>>
+    sushiswapGetSwapDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetSwapDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<SushiswapSwapDTO> | AjaxResponse<Array<SushiswapSwapDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<SushiswapSwapDTO>>({
+            url: '/dapps/sushiswap/SwapDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets swaps.
      * Swaps (current) 🔥
      */
@@ -482,6 +886,52 @@ export class SushiswapApi extends BaseAPI {
 
         return this.request<Array<SushiswapSwapDTO>>({
             url: '/dapps/sushiswap/swaps/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets TokenDTOs.
+     * TokenDTOs (historical) 🔥
+     */
+    sushiswapGetTokenDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetTokenDTOsHistoricalRequest): Observable<Array<SushiswapTokenDTO>>
+    sushiswapGetTokenDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetTokenDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapTokenDTO>>>
+    sushiswapGetTokenDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetTokenDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<SushiswapTokenDTO> | AjaxResponse<Array<SushiswapTokenDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<SushiswapTokenDTO>>({
+            url: '/dapps/sushiswap/TokenDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets TokenDayDataDTOs.
+     * TokenDayDataDTOs (historical) 🔥
+     */
+    sushiswapGetTokenDayDataDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetTokenDayDataDTOsHistoricalRequest): Observable<Array<SushiswapTokenDayDataDTO>>
+    sushiswapGetTokenDayDataDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetTokenDayDataDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapTokenDayDataDTO>>>
+    sushiswapGetTokenDayDataDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetTokenDayDataDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<SushiswapTokenDayDataDTO> | AjaxResponse<Array<SushiswapTokenDayDataDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<SushiswapTokenDayDataDTO>>({
+            url: '/dapps/sushiswap/TokenDayDataDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -547,6 +997,29 @@ export class SushiswapApi extends BaseAPI {
     };
 
     /**
+     * Gets TransactionDTOs.
+     * TransactionDTOs (historical) 🔥
+     */
+    sushiswapGetTransactionDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetTransactionDTOsHistoricalRequest): Observable<Array<SushiswapTransactionDTO>>
+    sushiswapGetTransactionDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetTransactionDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapTransactionDTO>>>
+    sushiswapGetTransactionDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetTransactionDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<SushiswapTransactionDTO> | AjaxResponse<Array<SushiswapTransactionDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<SushiswapTransactionDTO>>({
+            url: '/dapps/sushiswap/TransactionDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets transactions.
      * Transactions (historical)
      */
@@ -563,6 +1036,29 @@ export class SushiswapApi extends BaseAPI {
 
         return this.request<Array<SushiswapTransactionDTO>>({
             url: '/dapps/sushiswap/transactions/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets UserDTOs.
+     * UserDTOs (historical) 🔥
+     */
+    sushiswapGetUserDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetUserDTOsHistoricalRequest): Observable<Array<SushiswapUserDTO>>
+    sushiswapGetUserDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetUserDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<SushiswapUserDTO>>>
+    sushiswapGetUserDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: SushiswapGetUserDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<SushiswapUserDTO> | AjaxResponse<Array<SushiswapUserDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<SushiswapUserDTO>>({
+            url: '/dapps/sushiswap/UserDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);

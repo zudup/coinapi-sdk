@@ -73,12 +73,36 @@ class CowApiTest extends TestCase
     }
 
     /**
+     * Test case for cowGetOrderDTOsHistorical
+     *
+     * OrderDTOs (historical) 🔥.
+     *
+     */
+    public function testCowGetOrderDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for cowGetOrdersHistorical
      *
      * Orders (historical).
      *
      */
     public function testCowGetOrdersHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cowGetSettlementDTOsHistorical
+     *
+     * SettlementDTOs (historical) 🔥.
+     *
+     */
+    public function testCowGetSettlementDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -97,6 +121,18 @@ class CowApiTest extends TestCase
     }
 
     /**
+     * Test case for cowGetTokenDTOsHistorical
+     *
+     * TokenDTOs (historical) 🔥.
+     *
+     */
+    public function testCowGetTokenDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for cowGetTokensHistorical
      *
      * Tokens (historical) 🔥.
@@ -109,12 +145,36 @@ class CowApiTest extends TestCase
     }
 
     /**
+     * Test case for cowGetTradeDTOsHistorical
+     *
+     * TradeDTOs (historical) 🔥.
+     *
+     */
+    public function testCowGetTradeDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for cowGetTradesHistorical
      *
      * Trades (historical) 🔥.
      *
      */
     public function testCowGetTradesHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for cowGetUserDTOsHistorical
+     *
+     * UserDTOs (historical) 🔥.
+     *
+     */
+    public function testCowGetUserDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

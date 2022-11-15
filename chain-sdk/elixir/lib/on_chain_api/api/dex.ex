@@ -10,6 +10,49 @@ defmodule OnChainAPI.Api.Dex do
   import OnChainAPI.RequestBuilder
 
   @doc """
+  BatchDTOs (historical) 🔥
+  Gets BatchDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%DexBatchDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_get_batch_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexBatchDto.t)} | {:error, Tesla.Env.t}
+  def dex_get_batch_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/BatchDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexBatchDto{}]}
+    ])
+  end
+
+  @doc """
   Batches (historical)
   Gets batches.
 
@@ -47,6 +90,49 @@ defmodule OnChainAPI.Api.Dex do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.DexBatchDto{}]}
+    ])
+  end
+
+  @doc """
+  DepositDTOs (historical) 🔥
+  Gets DepositDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%DexDepositDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_get_deposit_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexDepositDto.t)} | {:error, Tesla.Env.t}
+  def dex_get_deposit_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/DepositDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexDepositDto{}]}
     ])
   end
 
@@ -94,6 +180,49 @@ defmodule OnChainAPI.Api.Dex do
   end
 
   @doc """
+  OrderDTOs (historical) 🔥
+  Gets OrderDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%DexOrderDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_get_order_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexOrderDto.t)} | {:error, Tesla.Env.t}
+  def dex_get_order_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/OrderDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexOrderDto{}]}
+    ])
+  end
+
+  @doc """
   Orders (historical)
   Gets orders.
 
@@ -137,6 +266,49 @@ defmodule OnChainAPI.Api.Dex do
   end
 
   @doc """
+  PriceDTOs (historical) 🔥
+  Gets PriceDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%DexPriceDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_get_price_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexPriceDto.t)} | {:error, Tesla.Env.t}
+  def dex_get_price_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/PriceDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexPriceDto{}]}
+    ])
+  end
+
+  @doc """
   Prices (historical)
   Gets prices.
 
@@ -176,6 +348,49 @@ defmodule OnChainAPI.Api.Dex do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.DexPriceDto{}]}
+    ])
+  end
+
+  @doc """
+  SolutionDTOs (historical) 🔥
+  Gets SolutionDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%DexSolutionDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_get_solution_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexSolutionDto.t)} | {:error, Tesla.Env.t}
+  def dex_get_solution_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/SolutionDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexSolutionDto{}]}
     ])
   end
 
@@ -264,6 +479,92 @@ defmodule OnChainAPI.Api.Dex do
   end
 
   @doc """
+  StatsDTOs (historical) 🔥
+  Gets StatsDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%DexStatsDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_get_stats_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexStatsDto.t)} | {:error, Tesla.Env.t}
+  def dex_get_stats_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/StatsDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexStatsDto{}]}
+    ])
+  end
+
+  @doc """
+  TokenDTOs (historical) 🔥
+  Gets TokenDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%DexTokenDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_get_token_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexTokenDto.t)} | {:error, Tesla.Env.t}
+  def dex_get_token_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/TokenDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexTokenDto{}]}
+    ])
+  end
+
+  @doc """
   Tokens (historical) 🔥
   Gets tokens.
 
@@ -303,6 +604,49 @@ defmodule OnChainAPI.Api.Dex do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.DexTokenDto{}]}
+    ])
+  end
+
+  @doc """
+  TradeDTOs (historical) 🔥
+  Gets TradeDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%DexTradeDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_get_trade_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexTradeDto.t)} | {:error, Tesla.Env.t}
+  def dex_get_trade_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/TradeDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexTradeDto{}]}
     ])
   end
 
@@ -348,6 +692,49 @@ defmodule OnChainAPI.Api.Dex do
   end
 
   @doc """
+  UserDTOs (historical) 🔥
+  Gets UserDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%DexUserDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_get_user_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexUserDto.t)} | {:error, Tesla.Env.t}
+  def dex_get_user_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/UserDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexUserDto{}]}
+    ])
+  end
+
+  @doc """
   Users (historical)
   Gets users.
 
@@ -385,6 +772,92 @@ defmodule OnChainAPI.Api.Dex do
     |> Connection.request(request)
     |> evaluate_response([
       {200, [%OnChainAPI.Model.DexUserDto{}]}
+    ])
+  end
+
+  @doc """
+  WithdrawDTOs (historical) 🔥
+  Gets WithdrawDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%DexWithdrawDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_get_withdraw_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexWithdrawDto.t)} | {:error, Tesla.Env.t}
+  def dex_get_withdraw_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/WithdrawDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexWithdrawDto{}]}
+    ])
+  end
+
+  @doc """
+  WithdrawRequestDTOs (historical) 🔥
+  Gets WithdrawRequestDTOs.
+
+  ### Parameters
+
+  - `connection` (OnChainAPI.Connection): Connection to server
+  - `opts` (keyword): Optional parameters
+    - `:startBlock` (integer()): 
+    - `:endBlock` (integer()): 
+    - `:startDate` (DateTime.t): 
+    - `:endDate` (DateTime.t): 
+    - `:poolId` (String.t): 
+
+  ### Returns
+
+  - `{:ok, [%DexWithdrawRequestDto{}, ...]}` on success
+  - `{:error, Tesla.Env.t}` on failure
+  """
+  @spec dex_get_withdraw_request_dtos__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexWithdrawRequestDto.t)} | {:error, Tesla.Env.t}
+  def dex_get_withdraw_request_dtos__historical(connection, opts \\ []) do
+    optional_params = %{
+      :startBlock => :query,
+      :endBlock => :query,
+      :startDate => :query,
+      :endDate => :query,
+      :poolId => :query
+    }
+
+    request =
+      %{}
+      |> method(:get)
+      |> url("/dapps/dex/WithdrawRequestDTOs/historical")
+      |> add_optional_params(optional_params, opts)
+      |> Enum.into([])
+
+    connection
+    |> Connection.request(request)
+    |> evaluate_response([
+      {200, [%OnChainAPI.Model.DexWithdrawRequestDto{}]}
     ])
   end
 

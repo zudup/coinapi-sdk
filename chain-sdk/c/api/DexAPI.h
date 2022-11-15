@@ -18,12 +18,28 @@
 #include "../model/dex_withdraw_request_dto.h"
 
 
+// BatchDTOs (historical) 🔥
+//
+// Gets BatchDTOs.
+//
+list_t*
+DexAPI_dexGetBatchDTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
 // Batches (historical)
 //
 // Gets batches.
 //
 list_t*
 DexAPI_dexGetBatchesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
+
+
+// DepositDTOs (historical) 🔥
+//
+// Gets DepositDTOs.
+//
+list_t*
+DexAPI_dexGetDepositDTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
 // Deposits (historical)
@@ -34,12 +50,28 @@ list_t*
 DexAPI_dexGetDepositsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 
+// OrderDTOs (historical) 🔥
+//
+// Gets OrderDTOs.
+//
+list_t*
+DexAPI_dexGetOrderDTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
 // Orders (historical)
 //
 // Gets orders.
 //
 list_t*
 DexAPI_dexGetOrdersHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
+
+
+// PriceDTOs (historical) 🔥
+//
+// Gets PriceDTOs.
+//
+list_t*
+DexAPI_dexGetPriceDTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
 // Prices (historical)
@@ -50,12 +82,28 @@ list_t*
 DexAPI_dexGetPricesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 
+// SolutionDTOs (historical) 🔥
+//
+// Gets SolutionDTOs.
+//
+list_t*
+DexAPI_dexGetSolutionDTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
 // Solutions (historical)
 //
 // Gets solutions.
 //
 list_t*
 DexAPI_dexGetSolutionsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
+
+
+// StatsDTOs (historical) 🔥
+//
+// Gets StatsDTOs.
+//
+list_t*
+DexAPI_dexGetStatsDTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
 // Stats (historical)
@@ -66,12 +114,28 @@ list_t*
 DexAPI_dexGetStatsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
+// TokenDTOs (historical) 🔥
+//
+// Gets TokenDTOs.
+//
+list_t*
+DexAPI_dexGetTokenDTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
 // Tokens (historical) 🔥
 //
 // Gets tokens.
 //
 list_t*
 DexAPI_dexGetTokensHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
+
+
+// TradeDTOs (historical) 🔥
+//
+// Gets TradeDTOs.
+//
+list_t*
+DexAPI_dexGetTradeDTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
 // Trades (historical) 🔥
@@ -82,12 +146,36 @@ list_t*
 DexAPI_dexGetTradesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
+// UserDTOs (historical) 🔥
+//
+// Gets UserDTOs.
+//
+list_t*
+DexAPI_dexGetUserDTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
 // Users (historical)
 //
 // Gets users.
 //
 list_t*
 DexAPI_dexGetUsersHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
+
+
+// WithdrawDTOs (historical) 🔥
+//
+// Gets WithdrawDTOs.
+//
+list_t*
+DexAPI_dexGetWithdrawDTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+// WithdrawRequestDTOs (historical) 🔥
+//
+// Gets WithdrawRequestDTOs.
+//
+list_t*
+DexAPI_dexGetWithdrawRequestDTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
 // Withdraws (historical)

@@ -29,6 +29,28 @@ object CowApi {
 class CowApi(baseUrl: String) {
 
   /**
+   * Gets OrderDTOs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[OrderDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   */
+  def cowGetOrderDTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[OrderDTO]] =
+    ApiRequest[Seq[OrderDTO]](ApiMethods.GET, baseUrl, "/dapps/cow/OrderDTOs/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("poolId", poolId)
+      .withSuccessResponse[Seq[OrderDTO]](200)
+      
+
+  /**
    * Gets orders.
    * 
    * Expected answers:
@@ -49,6 +71,28 @@ class CowApi(baseUrl: String) {
       
 
   /**
+   * Gets SettlementDTOs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[SettlementDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   */
+  def cowGetSettlementDTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[SettlementDTO]] =
+    ApiRequest[Seq[SettlementDTO]](ApiMethods.GET, baseUrl, "/dapps/cow/SettlementDTOs/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("poolId", poolId)
+      .withSuccessResponse[Seq[SettlementDTO]](200)
+      
+
+  /**
    * Gets settlements.
    * 
    * Expected answers:
@@ -66,6 +110,28 @@ class CowApi(baseUrl: String) {
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
       .withSuccessResponse[Seq[SettlementDTO]](200)
+      
+
+  /**
+   * Gets TokenDTOs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TokenDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   */
+  def cowGetTokenDTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[TokenDTO]] =
+    ApiRequest[Seq[TokenDTO]](ApiMethods.GET, baseUrl, "/dapps/cow/TokenDTOs/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("poolId", poolId)
+      .withSuccessResponse[Seq[TokenDTO]](200)
       
 
   /**
@@ -91,6 +157,28 @@ class CowApi(baseUrl: String) {
       
 
   /**
+   * Gets TradeDTOs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TradeDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   */
+  def cowGetTradeDTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[TradeDTO]] =
+    ApiRequest[Seq[TradeDTO]](ApiMethods.GET, baseUrl, "/dapps/cow/TradeDTOs/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("poolId", poolId)
+      .withSuccessResponse[Seq[TradeDTO]](200)
+      
+
+  /**
    * Gets trades.
    * 
    * Expected answers:
@@ -108,6 +196,28 @@ class CowApi(baseUrl: String) {
       .withQueryParam("startDate", startDate)
       .withQueryParam("endDate", endDate)
       .withSuccessResponse[Seq[TradeDTO]](200)
+      
+
+  /**
+   * Gets UserDTOs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[UserDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param poolId 
+   */
+  def cowGetUserDTOsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, poolId: Option[String] = None): ApiRequest[Seq[UserDTO]] =
+    ApiRequest[Seq[UserDTO]](ApiMethods.GET, baseUrl, "/dapps/cow/UserDTOs/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("poolId", poolId)
+      .withSuccessResponse[Seq[UserDTO]](200)
       
 
   /**

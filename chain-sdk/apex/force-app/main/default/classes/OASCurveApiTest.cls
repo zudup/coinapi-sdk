@@ -1,6 +1,56 @@
 @isTest
 private class OASCurveApiTest {
     /**
+     * AccountDTOs (historical) 🔥
+     *
+     * Gets AccountDTOs.
+     */
+    @isTest
+    private static void curveGetAccountDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveAccountDTO> response;
+        List<OASCurveAccountDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveAccountDTO>{OASCurveAccountDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveAccountDTO>{OASCurveAccountDTO.getExample()};
+        response = (List<OASCurveAccountDTO>) api.curveGetAccountDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveAccountDTO>{OASCurveAccountDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveAccountDTO>{OASCurveAccountDTO.getExample()};
+        response = (List<OASCurveAccountDTO>) api.curveGetAccountDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveAccountDTO>{OASCurveAccountDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveAccountDTO>{OASCurveAccountDTO.getExample()};
+        response = (List<OASCurveAccountDTO>) api.curveGetAccountDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Accounts (historical)
      *
      * Gets accounts.
@@ -46,6 +96,56 @@ private class OASCurveApiTest {
         res.setBody(js);
         expectedResponse = new List<OASCurveAccountDTO>{OASCurveAccountDTO.getExample()};
         response = (List<OASCurveAccountDTO>) api.curveGetAccountsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * AddLiquidityEventDTOs (historical) 🔥
+     *
+     * Gets AddLiquidityEventDTOs.
+     */
+    @isTest
+    private static void curveGetAddLiquidityEventDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveAddLiquidityEventDTO> response;
+        List<OASCurveAddLiquidityEventDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveAddLiquidityEventDTO>{OASCurveAddLiquidityEventDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveAddLiquidityEventDTO>{OASCurveAddLiquidityEventDTO.getExample()};
+        response = (List<OASCurveAddLiquidityEventDTO>) api.curveGetAddLiquidityEventDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveAddLiquidityEventDTO>{OASCurveAddLiquidityEventDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveAddLiquidityEventDTO>{OASCurveAddLiquidityEventDTO.getExample()};
+        response = (List<OASCurveAddLiquidityEventDTO>) api.curveGetAddLiquidityEventDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveAddLiquidityEventDTO>{OASCurveAddLiquidityEventDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveAddLiquidityEventDTO>{OASCurveAddLiquidityEventDTO.getExample()};
+        response = (List<OASCurveAddLiquidityEventDTO>) api.curveGetAddLiquidityEventDTOsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -100,6 +200,56 @@ private class OASCurveApiTest {
     }
 
     /**
+     * AdminFeeChangeLogDTOs (historical) 🔥
+     *
+     * Gets AdminFeeChangeLogDTOs.
+     */
+    @isTest
+    private static void curveGetAdminFeeChangeLogDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveAdminFeeChangeLogDTO> response;
+        List<OASCurveAdminFeeChangeLogDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveAdminFeeChangeLogDTO>{OASCurveAdminFeeChangeLogDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveAdminFeeChangeLogDTO>{OASCurveAdminFeeChangeLogDTO.getExample()};
+        response = (List<OASCurveAdminFeeChangeLogDTO>) api.curveGetAdminFeeChangeLogDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveAdminFeeChangeLogDTO>{OASCurveAdminFeeChangeLogDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveAdminFeeChangeLogDTO>{OASCurveAdminFeeChangeLogDTO.getExample()};
+        response = (List<OASCurveAdminFeeChangeLogDTO>) api.curveGetAdminFeeChangeLogDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveAdminFeeChangeLogDTO>{OASCurveAdminFeeChangeLogDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveAdminFeeChangeLogDTO>{OASCurveAdminFeeChangeLogDTO.getExample()};
+        response = (List<OASCurveAdminFeeChangeLogDTO>) api.curveGetAdminFeeChangeLogDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * AdminFeeChangeLogs (historical)
      *
      * Gets admin fee change logs.
@@ -146,6 +296,56 @@ private class OASCurveApiTest {
         res.setBody(js);
         expectedResponse = new List<OASCurveAdminFeeChangeLogDTO>{OASCurveAdminFeeChangeLogDTO.getExample()};
         response = (List<OASCurveAdminFeeChangeLogDTO>) api.curveGetAdminFeeChangeLogsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * AmplificationCoeffChangeLogDTOs (historical) 🔥
+     *
+     * Gets AmplificationCoeffChangeLogDTOs.
+     */
+    @isTest
+    private static void curveGetAmplificationCoeffChangeLogDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveAmplificationCoeffChangeLogD> response;
+        List<OASCurveAmplificationCoeffChangeLogD> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveAmplificationCoeffChangeLogD>{OASCurveAmplificationCoeffChangeLogD.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveAmplificationCoeffChangeLogD>{OASCurveAmplificationCoeffChangeLogD.getExample()};
+        response = (List<OASCurveAmplificationCoeffChangeLogD>) api.curveGetAmplificationCoeffChangeLogDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveAmplificationCoeffChangeLogD>{OASCurveAmplificationCoeffChangeLogD.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveAmplificationCoeffChangeLogD>{OASCurveAmplificationCoeffChangeLogD.getExample()};
+        response = (List<OASCurveAmplificationCoeffChangeLogD>) api.curveGetAmplificationCoeffChangeLogDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveAmplificationCoeffChangeLogD>{OASCurveAmplificationCoeffChangeLogD.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveAmplificationCoeffChangeLogD>{OASCurveAmplificationCoeffChangeLogD.getExample()};
+        response = (List<OASCurveAmplificationCoeffChangeLogD>) api.curveGetAmplificationCoeffChangeLogDTOsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -200,6 +400,56 @@ private class OASCurveApiTest {
     }
 
     /**
+     * CoinDTOs (historical) 🔥
+     *
+     * Gets CoinDTOs.
+     */
+    @isTest
+    private static void curveGetCoinDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveCoinDTO> response;
+        List<OASCurveCoinDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveCoinDTO>{OASCurveCoinDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveCoinDTO>{OASCurveCoinDTO.getExample()};
+        response = (List<OASCurveCoinDTO>) api.curveGetCoinDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveCoinDTO>{OASCurveCoinDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveCoinDTO>{OASCurveCoinDTO.getExample()};
+        response = (List<OASCurveCoinDTO>) api.curveGetCoinDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveCoinDTO>{OASCurveCoinDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveCoinDTO>{OASCurveCoinDTO.getExample()};
+        response = (List<OASCurveCoinDTO>) api.curveGetCoinDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Coins (historical)
      *
      * Gets coins.
@@ -246,6 +496,106 @@ private class OASCurveApiTest {
         res.setBody(js);
         expectedResponse = new List<OASCurveCoinDTO>{OASCurveCoinDTO.getExample()};
         response = (List<OASCurveCoinDTO>) api.curveGetCoinsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * ContractDTOs (historical) 🔥
+     *
+     * Gets ContractDTOs.
+     */
+    @isTest
+    private static void curveGetContractDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveContractDTO> response;
+        List<OASCurveContractDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveContractDTO>{OASCurveContractDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveContractDTO>{OASCurveContractDTO.getExample()};
+        response = (List<OASCurveContractDTO>) api.curveGetContractDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveContractDTO>{OASCurveContractDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveContractDTO>{OASCurveContractDTO.getExample()};
+        response = (List<OASCurveContractDTO>) api.curveGetContractDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveContractDTO>{OASCurveContractDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveContractDTO>{OASCurveContractDTO.getExample()};
+        response = (List<OASCurveContractDTO>) api.curveGetContractDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * ContractVersionDTOs (historical) 🔥
+     *
+     * Gets ContractVersionDTOs.
+     */
+    @isTest
+    private static void curveGetContractVersionDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveContractVersionDTO> response;
+        List<OASCurveContractVersionDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveContractVersionDTO>{OASCurveContractVersionDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveContractVersionDTO>{OASCurveContractVersionDTO.getExample()};
+        response = (List<OASCurveContractVersionDTO>) api.curveGetContractVersionDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveContractVersionDTO>{OASCurveContractVersionDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveContractVersionDTO>{OASCurveContractVersionDTO.getExample()};
+        response = (List<OASCurveContractVersionDTO>) api.curveGetContractVersionDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveContractVersionDTO>{OASCurveContractVersionDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveContractVersionDTO>{OASCurveContractVersionDTO.getExample()};
+        response = (List<OASCurveContractVersionDTO>) api.curveGetContractVersionDTOsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -350,6 +700,56 @@ private class OASCurveApiTest {
     }
 
     /**
+     * DailyVolumeDTOs (historical) 🔥
+     *
+     * Gets DailyVolumeDTOs.
+     */
+    @isTest
+    private static void curveGetDailyVolumeDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveDailyVolumeDTO> response;
+        List<OASCurveDailyVolumeDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveDailyVolumeDTO>{OASCurveDailyVolumeDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveDailyVolumeDTO>{OASCurveDailyVolumeDTO.getExample()};
+        response = (List<OASCurveDailyVolumeDTO>) api.curveGetDailyVolumeDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveDailyVolumeDTO>{OASCurveDailyVolumeDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveDailyVolumeDTO>{OASCurveDailyVolumeDTO.getExample()};
+        response = (List<OASCurveDailyVolumeDTO>) api.curveGetDailyVolumeDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveDailyVolumeDTO>{OASCurveDailyVolumeDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveDailyVolumeDTO>{OASCurveDailyVolumeDTO.getExample()};
+        response = (List<OASCurveDailyVolumeDTO>) api.curveGetDailyVolumeDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * DailyVolumes (historical)
      *
      * Gets daily volumes.
@@ -396,6 +796,56 @@ private class OASCurveApiTest {
         res.setBody(js);
         expectedResponse = new List<OASCurveDailyVolumeDTO>{OASCurveDailyVolumeDTO.getExample()};
         response = (List<OASCurveDailyVolumeDTO>) api.curveGetDailyVolumesHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * ExchangeDTOs (historical) 🔥
+     *
+     * Gets ExchangeDTOs.
+     */
+    @isTest
+    private static void curveGetExchangeDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveExchangeDTO> response;
+        List<OASCurveExchangeDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveExchangeDTO>{OASCurveExchangeDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveExchangeDTO>{OASCurveExchangeDTO.getExample()};
+        response = (List<OASCurveExchangeDTO>) api.curveGetExchangeDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveExchangeDTO>{OASCurveExchangeDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveExchangeDTO>{OASCurveExchangeDTO.getExample()};
+        response = (List<OASCurveExchangeDTO>) api.curveGetExchangeDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveExchangeDTO>{OASCurveExchangeDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveExchangeDTO>{OASCurveExchangeDTO.getExample()};
+        response = (List<OASCurveExchangeDTO>) api.curveGetExchangeDTOsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -450,6 +900,56 @@ private class OASCurveApiTest {
     }
 
     /**
+     * FeeChangeLogDTOs (historical) 🔥
+     *
+     * Gets FeeChangeLogDTOs.
+     */
+    @isTest
+    private static void curveGetFeeChangeLogDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveFeeChangeLogDTO> response;
+        List<OASCurveFeeChangeLogDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveFeeChangeLogDTO>{OASCurveFeeChangeLogDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveFeeChangeLogDTO>{OASCurveFeeChangeLogDTO.getExample()};
+        response = (List<OASCurveFeeChangeLogDTO>) api.curveGetFeeChangeLogDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveFeeChangeLogDTO>{OASCurveFeeChangeLogDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveFeeChangeLogDTO>{OASCurveFeeChangeLogDTO.getExample()};
+        response = (List<OASCurveFeeChangeLogDTO>) api.curveGetFeeChangeLogDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveFeeChangeLogDTO>{OASCurveFeeChangeLogDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveFeeChangeLogDTO>{OASCurveFeeChangeLogDTO.getExample()};
+        response = (List<OASCurveFeeChangeLogDTO>) api.curveGetFeeChangeLogDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * FeeChangeLogs (historical)
      *
      * Gets fee change logs.
@@ -496,6 +996,456 @@ private class OASCurveApiTest {
         res.setBody(js);
         expectedResponse = new List<OASCurveFeeChangeLogDTO>{OASCurveFeeChangeLogDTO.getExample()};
         response = (List<OASCurveFeeChangeLogDTO>) api.curveGetFeeChangeLogsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * GaugeDTOs (historical) 🔥
+     *
+     * Gets GaugeDTOs.
+     */
+    @isTest
+    private static void curveGetGaugeDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveGaugeDTO> response;
+        List<OASCurveGaugeDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveGaugeDTO>{OASCurveGaugeDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeDTO>{OASCurveGaugeDTO.getExample()};
+        response = (List<OASCurveGaugeDTO>) api.curveGetGaugeDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveGaugeDTO>{OASCurveGaugeDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeDTO>{OASCurveGaugeDTO.getExample()};
+        response = (List<OASCurveGaugeDTO>) api.curveGetGaugeDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveGaugeDTO>{OASCurveGaugeDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeDTO>{OASCurveGaugeDTO.getExample()};
+        response = (List<OASCurveGaugeDTO>) api.curveGetGaugeDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * GaugeDepositDTOs (historical) 🔥
+     *
+     * Gets GaugeDepositDTOs.
+     */
+    @isTest
+    private static void curveGetGaugeDepositDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveGaugeDepositDTO> response;
+        List<OASCurveGaugeDepositDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveGaugeDepositDTO>{OASCurveGaugeDepositDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeDepositDTO>{OASCurveGaugeDepositDTO.getExample()};
+        response = (List<OASCurveGaugeDepositDTO>) api.curveGetGaugeDepositDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveGaugeDepositDTO>{OASCurveGaugeDepositDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeDepositDTO>{OASCurveGaugeDepositDTO.getExample()};
+        response = (List<OASCurveGaugeDepositDTO>) api.curveGetGaugeDepositDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveGaugeDepositDTO>{OASCurveGaugeDepositDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeDepositDTO>{OASCurveGaugeDepositDTO.getExample()};
+        response = (List<OASCurveGaugeDepositDTO>) api.curveGetGaugeDepositDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * GaugeLiquidityDTOs (historical) 🔥
+     *
+     * Gets GaugeLiquidityDTOs.
+     */
+    @isTest
+    private static void curveGetGaugeLiquidityDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveGaugeLiquidityDTO> response;
+        List<OASCurveGaugeLiquidityDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveGaugeLiquidityDTO>{OASCurveGaugeLiquidityDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeLiquidityDTO>{OASCurveGaugeLiquidityDTO.getExample()};
+        response = (List<OASCurveGaugeLiquidityDTO>) api.curveGetGaugeLiquidityDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveGaugeLiquidityDTO>{OASCurveGaugeLiquidityDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeLiquidityDTO>{OASCurveGaugeLiquidityDTO.getExample()};
+        response = (List<OASCurveGaugeLiquidityDTO>) api.curveGetGaugeLiquidityDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveGaugeLiquidityDTO>{OASCurveGaugeLiquidityDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeLiquidityDTO>{OASCurveGaugeLiquidityDTO.getExample()};
+        response = (List<OASCurveGaugeLiquidityDTO>) api.curveGetGaugeLiquidityDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * GaugeTotalWeightDTOs (historical) 🔥
+     *
+     * Gets GaugeTotalWeightDTOs.
+     */
+    @isTest
+    private static void curveGetGaugeTotalWeightDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveGaugeTotalWeightDTO> response;
+        List<OASCurveGaugeTotalWeightDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveGaugeTotalWeightDTO>{OASCurveGaugeTotalWeightDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeTotalWeightDTO>{OASCurveGaugeTotalWeightDTO.getExample()};
+        response = (List<OASCurveGaugeTotalWeightDTO>) api.curveGetGaugeTotalWeightDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveGaugeTotalWeightDTO>{OASCurveGaugeTotalWeightDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeTotalWeightDTO>{OASCurveGaugeTotalWeightDTO.getExample()};
+        response = (List<OASCurveGaugeTotalWeightDTO>) api.curveGetGaugeTotalWeightDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveGaugeTotalWeightDTO>{OASCurveGaugeTotalWeightDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeTotalWeightDTO>{OASCurveGaugeTotalWeightDTO.getExample()};
+        response = (List<OASCurveGaugeTotalWeightDTO>) api.curveGetGaugeTotalWeightDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * GaugeTypeDTOs (historical) 🔥
+     *
+     * Gets GaugeTypeDTOs.
+     */
+    @isTest
+    private static void curveGetGaugeTypeDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveGaugeTypeDTO> response;
+        List<OASCurveGaugeTypeDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveGaugeTypeDTO>{OASCurveGaugeTypeDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeTypeDTO>{OASCurveGaugeTypeDTO.getExample()};
+        response = (List<OASCurveGaugeTypeDTO>) api.curveGetGaugeTypeDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveGaugeTypeDTO>{OASCurveGaugeTypeDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeTypeDTO>{OASCurveGaugeTypeDTO.getExample()};
+        response = (List<OASCurveGaugeTypeDTO>) api.curveGetGaugeTypeDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveGaugeTypeDTO>{OASCurveGaugeTypeDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeTypeDTO>{OASCurveGaugeTypeDTO.getExample()};
+        response = (List<OASCurveGaugeTypeDTO>) api.curveGetGaugeTypeDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * GaugeTypeWeightDTOs (historical) 🔥
+     *
+     * Gets GaugeTypeWeightDTOs.
+     */
+    @isTest
+    private static void curveGetGaugeTypeWeightDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveGaugeTypeWeightDTO> response;
+        List<OASCurveGaugeTypeWeightDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveGaugeTypeWeightDTO>{OASCurveGaugeTypeWeightDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeTypeWeightDTO>{OASCurveGaugeTypeWeightDTO.getExample()};
+        response = (List<OASCurveGaugeTypeWeightDTO>) api.curveGetGaugeTypeWeightDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveGaugeTypeWeightDTO>{OASCurveGaugeTypeWeightDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeTypeWeightDTO>{OASCurveGaugeTypeWeightDTO.getExample()};
+        response = (List<OASCurveGaugeTypeWeightDTO>) api.curveGetGaugeTypeWeightDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveGaugeTypeWeightDTO>{OASCurveGaugeTypeWeightDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeTypeWeightDTO>{OASCurveGaugeTypeWeightDTO.getExample()};
+        response = (List<OASCurveGaugeTypeWeightDTO>) api.curveGetGaugeTypeWeightDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * GaugeWeightDTOs (historical) 🔥
+     *
+     * Gets GaugeWeightDTOs.
+     */
+    @isTest
+    private static void curveGetGaugeWeightDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveGaugeWeightDTO> response;
+        List<OASCurveGaugeWeightDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveGaugeWeightDTO>{OASCurveGaugeWeightDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeWeightDTO>{OASCurveGaugeWeightDTO.getExample()};
+        response = (List<OASCurveGaugeWeightDTO>) api.curveGetGaugeWeightDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveGaugeWeightDTO>{OASCurveGaugeWeightDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeWeightDTO>{OASCurveGaugeWeightDTO.getExample()};
+        response = (List<OASCurveGaugeWeightDTO>) api.curveGetGaugeWeightDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveGaugeWeightDTO>{OASCurveGaugeWeightDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeWeightDTO>{OASCurveGaugeWeightDTO.getExample()};
+        response = (List<OASCurveGaugeWeightDTO>) api.curveGetGaugeWeightDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * GaugeWeightVoteDTOs (historical) 🔥
+     *
+     * Gets GaugeWeightVoteDTOs.
+     */
+    @isTest
+    private static void curveGetGaugeWeightVoteDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveGaugeWeightVoteDTO> response;
+        List<OASCurveGaugeWeightVoteDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveGaugeWeightVoteDTO>{OASCurveGaugeWeightVoteDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeWeightVoteDTO>{OASCurveGaugeWeightVoteDTO.getExample()};
+        response = (List<OASCurveGaugeWeightVoteDTO>) api.curveGetGaugeWeightVoteDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveGaugeWeightVoteDTO>{OASCurveGaugeWeightVoteDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeWeightVoteDTO>{OASCurveGaugeWeightVoteDTO.getExample()};
+        response = (List<OASCurveGaugeWeightVoteDTO>) api.curveGetGaugeWeightVoteDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveGaugeWeightVoteDTO>{OASCurveGaugeWeightVoteDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeWeightVoteDTO>{OASCurveGaugeWeightVoteDTO.getExample()};
+        response = (List<OASCurveGaugeWeightVoteDTO>) api.curveGetGaugeWeightVoteDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * GaugeWithdrawDTOs (historical) 🔥
+     *
+     * Gets GaugeWithdrawDTOs.
+     */
+    @isTest
+    private static void curveGetGaugeWithdrawDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveGaugeWithdrawDTO> response;
+        List<OASCurveGaugeWithdrawDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveGaugeWithdrawDTO>{OASCurveGaugeWithdrawDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeWithdrawDTO>{OASCurveGaugeWithdrawDTO.getExample()};
+        response = (List<OASCurveGaugeWithdrawDTO>) api.curveGetGaugeWithdrawDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveGaugeWithdrawDTO>{OASCurveGaugeWithdrawDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeWithdrawDTO>{OASCurveGaugeWithdrawDTO.getExample()};
+        response = (List<OASCurveGaugeWithdrawDTO>) api.curveGetGaugeWithdrawDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveGaugeWithdrawDTO>{OASCurveGaugeWithdrawDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveGaugeWithdrawDTO>{OASCurveGaugeWithdrawDTO.getExample()};
+        response = (List<OASCurveGaugeWithdrawDTO>) api.curveGetGaugeWithdrawDTOsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -942,6 +1892,56 @@ private class OASCurveApiTest {
     }
 
     /**
+     * HourlyVolumeDTOs (historical) 🔥
+     *
+     * Gets HourlyVolumeDTOs.
+     */
+    @isTest
+    private static void curveGetHourlyVolumeDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveHourlyVolumeDTO> response;
+        List<OASCurveHourlyVolumeDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveHourlyVolumeDTO>{OASCurveHourlyVolumeDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveHourlyVolumeDTO>{OASCurveHourlyVolumeDTO.getExample()};
+        response = (List<OASCurveHourlyVolumeDTO>) api.curveGetHourlyVolumeDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveHourlyVolumeDTO>{OASCurveHourlyVolumeDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveHourlyVolumeDTO>{OASCurveHourlyVolumeDTO.getExample()};
+        response = (List<OASCurveHourlyVolumeDTO>) api.curveGetHourlyVolumeDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveHourlyVolumeDTO>{OASCurveHourlyVolumeDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveHourlyVolumeDTO>{OASCurveHourlyVolumeDTO.getExample()};
+        response = (List<OASCurveHourlyVolumeDTO>) api.curveGetHourlyVolumeDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * HourlyVolumes (historical)
      *
      * Gets hourly volumes.
@@ -988,6 +1988,56 @@ private class OASCurveApiTest {
         res.setBody(js);
         expectedResponse = new List<OASCurveHourlyVolumeDTO>{OASCurveHourlyVolumeDTO.getExample()};
         response = (List<OASCurveHourlyVolumeDTO>) api.curveGetHourlyVolumesHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * LpTokenDTOs (historical) 🔥
+     *
+     * Gets LpTokenDTOs.
+     */
+    @isTest
+    private static void curveGetLpTokenDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveLpTokenDTO> response;
+        List<OASCurveLpTokenDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveLpTokenDTO>{OASCurveLpTokenDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveLpTokenDTO>{OASCurveLpTokenDTO.getExample()};
+        response = (List<OASCurveLpTokenDTO>) api.curveGetLpTokenDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveLpTokenDTO>{OASCurveLpTokenDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveLpTokenDTO>{OASCurveLpTokenDTO.getExample()};
+        response = (List<OASCurveLpTokenDTO>) api.curveGetLpTokenDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveLpTokenDTO>{OASCurveLpTokenDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveLpTokenDTO>{OASCurveLpTokenDTO.getExample()};
+        response = (List<OASCurveLpTokenDTO>) api.curveGetLpTokenDTOsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -1042,6 +2092,56 @@ private class OASCurveApiTest {
     }
 
     /**
+     * PoolDTOs (historical) 🔥
+     *
+     * Gets PoolDTOs.
+     */
+    @isTest
+    private static void curveGetPoolDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurvePoolDTO> response;
+        List<OASCurvePoolDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurvePoolDTO>{OASCurvePoolDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurvePoolDTO>{OASCurvePoolDTO.getExample()};
+        response = (List<OASCurvePoolDTO>) api.curveGetPoolDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurvePoolDTO>{OASCurvePoolDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurvePoolDTO>{OASCurvePoolDTO.getExample()};
+        response = (List<OASCurvePoolDTO>) api.curveGetPoolDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurvePoolDTO>{OASCurvePoolDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurvePoolDTO>{OASCurvePoolDTO.getExample()};
+        response = (List<OASCurvePoolDTO>) api.curveGetPoolDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Pools (historical) 🔥
      *
      * Gets pools.
@@ -1088,6 +2188,106 @@ private class OASCurveApiTest {
         res.setBody(js);
         expectedResponse = new List<OASCurvePoolDTO>{OASCurvePoolDTO.getExample()};
         response = (List<OASCurvePoolDTO>) api.curveGetPoolsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * ProposalDTOs (historical) 🔥
+     *
+     * Gets ProposalDTOs.
+     */
+    @isTest
+    private static void curveGetProposalDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveProposalDTO> response;
+        List<OASCurveProposalDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveProposalDTO>{OASCurveProposalDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveProposalDTO>{OASCurveProposalDTO.getExample()};
+        response = (List<OASCurveProposalDTO>) api.curveGetProposalDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveProposalDTO>{OASCurveProposalDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveProposalDTO>{OASCurveProposalDTO.getExample()};
+        response = (List<OASCurveProposalDTO>) api.curveGetProposalDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveProposalDTO>{OASCurveProposalDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveProposalDTO>{OASCurveProposalDTO.getExample()};
+        response = (List<OASCurveProposalDTO>) api.curveGetProposalDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * ProposalVoteDTOs (historical) 🔥
+     *
+     * Gets ProposalVoteDTOs.
+     */
+    @isTest
+    private static void curveGetProposalVoteDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveProposalVoteDTO> response;
+        List<OASCurveProposalVoteDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveProposalVoteDTO>{OASCurveProposalVoteDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveProposalVoteDTO>{OASCurveProposalVoteDTO.getExample()};
+        response = (List<OASCurveProposalVoteDTO>) api.curveGetProposalVoteDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveProposalVoteDTO>{OASCurveProposalVoteDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveProposalVoteDTO>{OASCurveProposalVoteDTO.getExample()};
+        response = (List<OASCurveProposalVoteDTO>) api.curveGetProposalVoteDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveProposalVoteDTO>{OASCurveProposalVoteDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveProposalVoteDTO>{OASCurveProposalVoteDTO.getExample()};
+        response = (List<OASCurveProposalVoteDTO>) api.curveGetProposalVoteDTOsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -1190,6 +2390,56 @@ private class OASCurveApiTest {
     }
 
     /**
+     * RemoveLiquidityEventDTOs (historical) 🔥
+     *
+     * Gets RemoveLiquidityEventDTOs.
+     */
+    @isTest
+    private static void curveGetRemoveLiquidityEventDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveRemoveLiquidityEventDTO> response;
+        List<OASCurveRemoveLiquidityEventDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveRemoveLiquidityEventDTO>{OASCurveRemoveLiquidityEventDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveRemoveLiquidityEventDTO>{OASCurveRemoveLiquidityEventDTO.getExample()};
+        response = (List<OASCurveRemoveLiquidityEventDTO>) api.curveGetRemoveLiquidityEventDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveRemoveLiquidityEventDTO>{OASCurveRemoveLiquidityEventDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveRemoveLiquidityEventDTO>{OASCurveRemoveLiquidityEventDTO.getExample()};
+        response = (List<OASCurveRemoveLiquidityEventDTO>) api.curveGetRemoveLiquidityEventDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveRemoveLiquidityEventDTO>{OASCurveRemoveLiquidityEventDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveRemoveLiquidityEventDTO>{OASCurveRemoveLiquidityEventDTO.getExample()};
+        response = (List<OASCurveRemoveLiquidityEventDTO>) api.curveGetRemoveLiquidityEventDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * RemoveLiquidityEvents (historical)
      *
      * Gets remove liquidity events.
@@ -1236,6 +2486,56 @@ private class OASCurveApiTest {
         res.setBody(js);
         expectedResponse = new List<OASCurveRemoveLiquidityEventDTO>{OASCurveRemoveLiquidityEventDTO.getExample()};
         response = (List<OASCurveRemoveLiquidityEventDTO>) api.curveGetRemoveLiquidityEventsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * RemoveLiquidityOneEventDTOs (historical) 🔥
+     *
+     * Gets RemoveLiquidityOneEventDTOs.
+     */
+    @isTest
+    private static void curveGetRemoveLiquidityOneEventDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveRemoveLiquidityOneEventDTO> response;
+        List<OASCurveRemoveLiquidityOneEventDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveRemoveLiquidityOneEventDTO>{OASCurveRemoveLiquidityOneEventDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveRemoveLiquidityOneEventDTO>{OASCurveRemoveLiquidityOneEventDTO.getExample()};
+        response = (List<OASCurveRemoveLiquidityOneEventDTO>) api.curveGetRemoveLiquidityOneEventDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveRemoveLiquidityOneEventDTO>{OASCurveRemoveLiquidityOneEventDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveRemoveLiquidityOneEventDTO>{OASCurveRemoveLiquidityOneEventDTO.getExample()};
+        response = (List<OASCurveRemoveLiquidityOneEventDTO>) api.curveGetRemoveLiquidityOneEventDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveRemoveLiquidityOneEventDTO>{OASCurveRemoveLiquidityOneEventDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveRemoveLiquidityOneEventDTO>{OASCurveRemoveLiquidityOneEventDTO.getExample()};
+        response = (List<OASCurveRemoveLiquidityOneEventDTO>) api.curveGetRemoveLiquidityOneEventDTOsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -1290,6 +2590,56 @@ private class OASCurveApiTest {
     }
 
     /**
+     * SystemStateDTOs (historical) 🔥
+     *
+     * Gets SystemStateDTOs.
+     */
+    @isTest
+    private static void curveGetSystemStateDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveSystemStateDTO> response;
+        List<OASCurveSystemStateDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveSystemStateDTO>{OASCurveSystemStateDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveSystemStateDTO>{OASCurveSystemStateDTO.getExample()};
+        response = (List<OASCurveSystemStateDTO>) api.curveGetSystemStateDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveSystemStateDTO>{OASCurveSystemStateDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveSystemStateDTO>{OASCurveSystemStateDTO.getExample()};
+        response = (List<OASCurveSystemStateDTO>) api.curveGetSystemStateDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveSystemStateDTO>{OASCurveSystemStateDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveSystemStateDTO>{OASCurveSystemStateDTO.getExample()};
+        response = (List<OASCurveSystemStateDTO>) api.curveGetSystemStateDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * SystemStates (historical)
      *
      * Gets system states.
@@ -1335,6 +2685,56 @@ private class OASCurveApiTest {
         res.setBody(js);
         expectedResponse = new List<OASCurveSystemStateDTO>{OASCurveSystemStateDTO.getExample()};
         response = (List<OASCurveSystemStateDTO>) api.curveGetSystemStatesHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * TokenDTOs (historical) 🔥
+     *
+     * Gets TokenDTOs.
+     */
+    @isTest
+    private static void curveGetTokenDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveTokenDTO> response;
+        List<OASCurveTokenDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveTokenDTO>{OASCurveTokenDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveTokenDTO>{OASCurveTokenDTO.getExample()};
+        response = (List<OASCurveTokenDTO>) api.curveGetTokenDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveTokenDTO>{OASCurveTokenDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveTokenDTO>{OASCurveTokenDTO.getExample()};
+        response = (List<OASCurveTokenDTO>) api.curveGetTokenDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveTokenDTO>{OASCurveTokenDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveTokenDTO>{OASCurveTokenDTO.getExample()};
+        response = (List<OASCurveTokenDTO>) api.curveGetTokenDTOsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -1389,6 +2789,56 @@ private class OASCurveApiTest {
     }
 
     /**
+     * TransferOwnershipEventDTOs (historical) 🔥
+     *
+     * Gets TransferOwnershipEventDTOs.
+     */
+    @isTest
+    private static void curveGetTransferOwnershipEventDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveTransferOwnershipEventDTO> response;
+        List<OASCurveTransferOwnershipEventDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveTransferOwnershipEventDTO>{OASCurveTransferOwnershipEventDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveTransferOwnershipEventDTO>{OASCurveTransferOwnershipEventDTO.getExample()};
+        response = (List<OASCurveTransferOwnershipEventDTO>) api.curveGetTransferOwnershipEventDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveTransferOwnershipEventDTO>{OASCurveTransferOwnershipEventDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveTransferOwnershipEventDTO>{OASCurveTransferOwnershipEventDTO.getExample()};
+        response = (List<OASCurveTransferOwnershipEventDTO>) api.curveGetTransferOwnershipEventDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveTransferOwnershipEventDTO>{OASCurveTransferOwnershipEventDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveTransferOwnershipEventDTO>{OASCurveTransferOwnershipEventDTO.getExample()};
+        response = (List<OASCurveTransferOwnershipEventDTO>) api.curveGetTransferOwnershipEventDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * TransferOwnershipEvents (historical)
      *
      * Gets transfer ownership events.
@@ -1435,6 +2885,56 @@ private class OASCurveApiTest {
         res.setBody(js);
         expectedResponse = new List<OASCurveTransferOwnershipEventDTO>{OASCurveTransferOwnershipEventDTO.getExample()};
         response = (List<OASCurveTransferOwnershipEventDTO>) api.curveGetTransferOwnershipEventsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * UnderlyingCoinDTOs (historical) 🔥
+     *
+     * Gets UnderlyingCoinDTOs.
+     */
+    @isTest
+    private static void curveGetUnderlyingCoinDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveUnderlyingCoinDTO> response;
+        List<OASCurveUnderlyingCoinDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveUnderlyingCoinDTO>{OASCurveUnderlyingCoinDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveUnderlyingCoinDTO>{OASCurveUnderlyingCoinDTO.getExample()};
+        response = (List<OASCurveUnderlyingCoinDTO>) api.curveGetUnderlyingCoinDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveUnderlyingCoinDTO>{OASCurveUnderlyingCoinDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveUnderlyingCoinDTO>{OASCurveUnderlyingCoinDTO.getExample()};
+        response = (List<OASCurveUnderlyingCoinDTO>) api.curveGetUnderlyingCoinDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveUnderlyingCoinDTO>{OASCurveUnderlyingCoinDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveUnderlyingCoinDTO>{OASCurveUnderlyingCoinDTO.getExample()};
+        response = (List<OASCurveUnderlyingCoinDTO>) api.curveGetUnderlyingCoinDTOsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -1489,6 +2989,56 @@ private class OASCurveApiTest {
     }
 
     /**
+     * VotingAppDTOs (historical) 🔥
+     *
+     * Gets VotingAppDTOs.
+     */
+    @isTest
+    private static void curveGetVotingAppDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveVotingAppDTO> response;
+        List<OASCurveVotingAppDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveVotingAppDTO>{OASCurveVotingAppDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveVotingAppDTO>{OASCurveVotingAppDTO.getExample()};
+        response = (List<OASCurveVotingAppDTO>) api.curveGetVotingAppDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveVotingAppDTO>{OASCurveVotingAppDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveVotingAppDTO>{OASCurveVotingAppDTO.getExample()};
+        response = (List<OASCurveVotingAppDTO>) api.curveGetVotingAppDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveVotingAppDTO>{OASCurveVotingAppDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveVotingAppDTO>{OASCurveVotingAppDTO.getExample()};
+        response = (List<OASCurveVotingAppDTO>) api.curveGetVotingAppDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * VotingApps (historical)
      *
      * Gets voting apps.
@@ -1534,6 +3084,56 @@ private class OASCurveApiTest {
         res.setBody(js);
         expectedResponse = new List<OASCurveVotingAppDTO>{OASCurveVotingAppDTO.getExample()};
         response = (List<OASCurveVotingAppDTO>) api.curveGetVotingAppsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * WeeklyVolumeDTOs (historical) 🔥
+     *
+     * Gets WeeklyVolumeDTOs.
+     */
+    @isTest
+    private static void curveGetWeeklyVolumeDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASCurveApi api;
+        List<OASCurveWeeklyVolumeDTO> response;
+        List<OASCurveWeeklyVolumeDTO> expectedResponse;
+        String js = '';
+
+        api = new OASCurveApi(new OASClient());
+
+        js = JSON.serialize(new List<OASCurveWeeklyVolumeDTO>{OASCurveWeeklyVolumeDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveWeeklyVolumeDTO>{OASCurveWeeklyVolumeDTO.getExample()};
+        response = (List<OASCurveWeeklyVolumeDTO>) api.curveGetWeeklyVolumeDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveWeeklyVolumeDTO>{OASCurveWeeklyVolumeDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveWeeklyVolumeDTO>{OASCurveWeeklyVolumeDTO.getExample()};
+        response = (List<OASCurveWeeklyVolumeDTO>) api.curveGetWeeklyVolumeDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASCurveWeeklyVolumeDTO>{OASCurveWeeklyVolumeDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASCurveWeeklyVolumeDTO>{OASCurveWeeklyVolumeDTO.getExample()};
+        response = (List<OASCurveWeeklyVolumeDTO>) api.curveGetWeeklyVolumeDTOsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 

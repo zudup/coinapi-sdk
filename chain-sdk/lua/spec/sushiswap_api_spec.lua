@@ -29,8 +29,22 @@ describe("sushiswap_api", function()
     end)
   end)
 
+  -- unit tests for sushiswap_get_bundle_dtos__historical
+  describe("sushiswap_get_bundle_dtos__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for sushiswap_get_bundles__historical
   describe("sushiswap_get_bundles__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for sushiswap_get_burn_dtos__historical
+  describe("sushiswap_get_burn_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -50,8 +64,22 @@ describe("sushiswap_api", function()
     end)
   end)
 
+  -- unit tests for sushiswap_get_day_data_dtos__historical
+  describe("sushiswap_get_day_data_dtos__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for sushiswap_get_factory__historical
   describe("sushiswap_get_factory__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for sushiswap_get_factory_dtos__historical
+  describe("sushiswap_get_factory_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -64,8 +92,22 @@ describe("sushiswap_api", function()
     end)
   end)
 
+  -- unit tests for sushiswap_get_hour_data_dtos__historical
+  describe("sushiswap_get_hour_data_dtos__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for sushiswap_get_liquidity_position__historical
   describe("sushiswap_get_liquidity_position__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for sushiswap_get_liquidity_position_dtos__historical
+  describe("sushiswap_get_liquidity_position_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -78,8 +120,43 @@ describe("sushiswap_api", function()
     end)
   end)
 
+  -- unit tests for sushiswap_get_liquidity_position_snapshot_dtos__historical
+  describe("sushiswap_get_liquidity_position_snapshot_dtos__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for sushiswap_get_mint_dtos__historical
+  describe("sushiswap_get_mint_dtos__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for sushiswap_get_mints__historical
   describe("sushiswap_get_mints__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for sushiswap_get_pair_day_data_dtos__historical
+  describe("sushiswap_get_pair_day_data_dtos__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for sushiswap_get_pair_dtos__historical
+  describe("sushiswap_get_pair_dtos__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for sushiswap_get_pair_hour_data_dtos__historical
+  describe("sushiswap_get_pair_hour_data_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -113,6 +190,13 @@ describe("sushiswap_api", function()
     end)
   end)
 
+  -- unit tests for sushiswap_get_swap_dtos__historical
+  describe("sushiswap_get_swap_dtos__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for sushiswap_get_swaps__current
   describe("sushiswap_get_swaps__current test", function()
     it("should work", function()
@@ -122,6 +206,20 @@ describe("sushiswap_api", function()
 
   -- unit tests for sushiswap_get_swaps__historical
   describe("sushiswap_get_swaps__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for sushiswap_get_token_day_data_dtos__historical
+  describe("sushiswap_get_token_day_data_dtos__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for sushiswap_get_token_dtos__historical
+  describe("sushiswap_get_token_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -148,8 +246,22 @@ describe("sushiswap_api", function()
     end)
   end)
 
+  -- unit tests for sushiswap_get_transaction_dtos__historical
+  describe("sushiswap_get_transaction_dtos__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
   -- unit tests for sushiswap_get_transactions__historical
   describe("sushiswap_get_transactions__historical test", function()
+    it("should work", function()
+      -- TODO assertion here: http://olivinelabs.com/busted/#asserts
+    end)
+  end)
+
+  -- unit tests for sushiswap_get_user_dtos__historical
+  describe("sushiswap_get_user_dtos__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

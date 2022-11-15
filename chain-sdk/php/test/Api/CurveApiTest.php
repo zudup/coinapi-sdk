@@ -73,12 +73,36 @@ class CurveApiTest extends TestCase
     }
 
     /**
+     * Test case for curveGetAccountDTOsHistorical
+     *
+     * AccountDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetAccountDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for curveGetAccountsHistorical
      *
      * Accounts (historical).
      *
      */
     public function testCurveGetAccountsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetAddLiquidityEventDTOsHistorical
+     *
+     * AddLiquidityEventDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetAddLiquidityEventDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -97,12 +121,36 @@ class CurveApiTest extends TestCase
     }
 
     /**
+     * Test case for curveGetAdminFeeChangeLogDTOsHistorical
+     *
+     * AdminFeeChangeLogDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetAdminFeeChangeLogDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for curveGetAdminFeeChangeLogsHistorical
      *
      * AdminFeeChangeLogs (historical).
      *
      */
     public function testCurveGetAdminFeeChangeLogsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetAmplificationCoeffChangeLogDTOsHistorical
+     *
+     * AmplificationCoeffChangeLogDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetAmplificationCoeffChangeLogDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -121,12 +169,48 @@ class CurveApiTest extends TestCase
     }
 
     /**
+     * Test case for curveGetCoinDTOsHistorical
+     *
+     * CoinDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetCoinDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for curveGetCoinsHistorical
      *
      * Coins (historical).
      *
      */
     public function testCurveGetCoinsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetContractDTOsHistorical
+     *
+     * ContractDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetContractDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetContractVersionDTOsHistorical
+     *
+     * ContractVersionDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetContractVersionDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -157,12 +241,36 @@ class CurveApiTest extends TestCase
     }
 
     /**
+     * Test case for curveGetDailyVolumeDTOsHistorical
+     *
+     * DailyVolumeDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetDailyVolumeDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for curveGetDailyVolumesHistorical
      *
      * DailyVolumes (historical).
      *
      */
     public function testCurveGetDailyVolumesHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetExchangeDTOsHistorical
+     *
+     * ExchangeDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetExchangeDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -181,12 +289,132 @@ class CurveApiTest extends TestCase
     }
 
     /**
+     * Test case for curveGetFeeChangeLogDTOsHistorical
+     *
+     * FeeChangeLogDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetFeeChangeLogDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for curveGetFeeChangeLogsHistorical
      *
      * FeeChangeLogs (historical).
      *
      */
     public function testCurveGetFeeChangeLogsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetGaugeDTOsHistorical
+     *
+     * GaugeDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetGaugeDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetGaugeDepositDTOsHistorical
+     *
+     * GaugeDepositDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetGaugeDepositDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetGaugeLiquidityDTOsHistorical
+     *
+     * GaugeLiquidityDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetGaugeLiquidityDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetGaugeTotalWeightDTOsHistorical
+     *
+     * GaugeTotalWeightDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetGaugeTotalWeightDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetGaugeTypeDTOsHistorical
+     *
+     * GaugeTypeDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetGaugeTypeDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetGaugeTypeWeightDTOsHistorical
+     *
+     * GaugeTypeWeightDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetGaugeTypeWeightDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetGaugeWeightDTOsHistorical
+     *
+     * GaugeWeightDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetGaugeWeightDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetGaugeWeightVoteDTOsHistorical
+     *
+     * GaugeWeightVoteDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetGaugeWeightVoteDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetGaugeWithdrawDTOsHistorical
+     *
+     * GaugeWithdrawDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetGaugeWithdrawDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -301,12 +529,36 @@ class CurveApiTest extends TestCase
     }
 
     /**
+     * Test case for curveGetHourlyVolumeDTOsHistorical
+     *
+     * HourlyVolumeDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetHourlyVolumeDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for curveGetHourlyVolumesHistorical
      *
      * HourlyVolumes (historical).
      *
      */
     public function testCurveGetHourlyVolumesHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetLpTokenDTOsHistorical
+     *
+     * LpTokenDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetLpTokenDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -325,12 +577,48 @@ class CurveApiTest extends TestCase
     }
 
     /**
+     * Test case for curveGetPoolDTOsHistorical
+     *
+     * PoolDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetPoolDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for curveGetPoolsHistorical
      *
      * Pools (historical) 🔥.
      *
      */
     public function testCurveGetPoolsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetProposalDTOsHistorical
+     *
+     * ProposalDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetProposalDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetProposalVoteDTOsHistorical
+     *
+     * ProposalVoteDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetProposalVoteDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -361,12 +649,36 @@ class CurveApiTest extends TestCase
     }
 
     /**
+     * Test case for curveGetRemoveLiquidityEventDTOsHistorical
+     *
+     * RemoveLiquidityEventDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetRemoveLiquidityEventDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for curveGetRemoveLiquidityEventsHistorical
      *
      * RemoveLiquidityEvents (historical).
      *
      */
     public function testCurveGetRemoveLiquidityEventsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetRemoveLiquidityOneEventDTOsHistorical
+     *
+     * RemoveLiquidityOneEventDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetRemoveLiquidityOneEventDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -385,12 +697,36 @@ class CurveApiTest extends TestCase
     }
 
     /**
+     * Test case for curveGetSystemStateDTOsHistorical
+     *
+     * SystemStateDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetSystemStateDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for curveGetSystemStatesHistorical
      *
      * SystemStates (historical).
      *
      */
     public function testCurveGetSystemStatesHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetTokenDTOsHistorical
+     *
+     * TokenDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetTokenDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -409,12 +745,36 @@ class CurveApiTest extends TestCase
     }
 
     /**
+     * Test case for curveGetTransferOwnershipEventDTOsHistorical
+     *
+     * TransferOwnershipEventDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetTransferOwnershipEventDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for curveGetTransferOwnershipEventsHistorical
      *
      * TransferOwnershipEvents (historical).
      *
      */
     public function testCurveGetTransferOwnershipEventsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetUnderlyingCoinDTOsHistorical
+     *
+     * UnderlyingCoinDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetUnderlyingCoinDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -433,12 +793,36 @@ class CurveApiTest extends TestCase
     }
 
     /**
+     * Test case for curveGetVotingAppDTOsHistorical
+     *
+     * VotingAppDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetVotingAppDTOsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
      * Test case for curveGetVotingAppsHistorical
      *
      * VotingApps (historical).
      *
      */
     public function testCurveGetVotingAppsHistorical()
+    {
+        // TODO: implement
+        $this->markTestIncomplete('Not implemented');
+    }
+
+    /**
+     * Test case for curveGetWeeklyVolumeDTOsHistorical
+     *
+     * WeeklyVolumeDTOs (historical) 🔥.
+     *
+     */
+    public function testCurveGetWeeklyVolumeDTOsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

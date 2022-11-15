@@ -24,6 +24,14 @@
 #include "../model/uniswap_v3_uniswap_day_data_v3_dto.h"
 
 
+// BundleV3DTOs (historical) 🔥
+//
+// Gets BundleV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetBundleV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
 // Bundles (current)
 //
 // Gets bundles.
@@ -38,6 +46,14 @@ UniswapV3API_uniswapV3GetBundlesCurrent(apiClient_t *apiClient);
 //
 list_t*
 UniswapV3API_uniswapV3GetBundlesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
+
+
+// BurnV3DTOs (historical) 🔥
+//
+// Gets BurnV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetBurnV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
 // Burns (current)
@@ -88,6 +104,22 @@ list_t*
 UniswapV3API_uniswapV3GetFactoryHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
 
 
+// FactoryV3DTOs (historical) 🔥
+//
+// Gets FactoryV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetFactoryV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+// MintV3DTOs (historical) 🔥
+//
+// Gets MintV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetMintV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
 // Mints (current)
 //
 // Gets mints.
@@ -102,6 +134,30 @@ UniswapV3API_uniswapV3GetMintsCurrent(apiClient_t *apiClient, char * filter_pool
 //
 list_t*
 UniswapV3API_uniswapV3GetMintsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+// PoolDayDataV3DTOs (historical) 🔥
+//
+// Gets PoolDayDataV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetPoolDayDataV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+// PoolHourDataV3DTOs (historical) 🔥
+//
+// Gets PoolHourDataV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetPoolHourDataV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+// PoolV3DTOs (historical) 🔥
+//
+// Gets PoolV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetPoolV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
 // Pools (current) 🔥
@@ -152,6 +208,22 @@ list_t*
 UniswapV3API_uniswapV3GetPoolsHourDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
+// PositionSnapshotV3DTOs (historical) 🔥
+//
+// Gets PositionSnapshotV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetPositionSnapshotV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+// PositionV3DTOs (historical) 🔥
+//
+// Gets PositionV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetPositionV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
 // Positions (current)
 //
 // Gets positions.
@@ -184,6 +256,14 @@ list_t*
 UniswapV3API_uniswapV3GetPositionsSnapshotsCurrent(apiClient_t *apiClient, char * filter_pool_id );
 
 
+// SwapV3DTOs (historical) 🔥
+//
+// Gets SwapV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetSwapV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
 // Swaps (current) 🔥
 //
 // Gets swaps.
@@ -198,6 +278,22 @@ UniswapV3API_uniswapV3GetSwapsCurrent(apiClient_t *apiClient, char * filter_pool
 //
 list_t*
 UniswapV3API_uniswapV3GetSwapsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+// TickDayDataV3DTOs (historical) 🔥
+//
+// Gets TickDayDataV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetTickDayDataV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+// TickV3DTOs (historical) 🔥
+//
+// Gets TickV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetTickV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
 // Ticks (current)
@@ -230,6 +326,30 @@ UniswapV3API_uniswapV3GetTicksDayDataHistorical(apiClient_t *apiClient, long sta
 //
 list_t*
 UniswapV3API_uniswapV3GetTicksHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+// TokenHourDataV3DTOs (historical) 🔥
+//
+// Gets TokenHourDataV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetTokenHourDataV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+// TokenV3DTOs (historical) 🔥
+//
+// Gets TokenV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetTokenV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
+// TokenV3DayDataDTOs (historical) 🔥
+//
+// Gets TokenV3DayDataDTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetTokenV3DayDataDTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 
 // Tokens (current) 🔥
@@ -280,11 +400,27 @@ list_t*
 UniswapV3API_uniswapV3GetTokensHourDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * tokenId );
 
 
+// TransactionV3DTOs (historical) 🔥
+//
+// Gets TransactionV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetTransactionV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
+
+
 // Transactions (historical)
 //
 // Gets transactions.
 //
 list_t*
 UniswapV3API_uniswapV3GetTransactionsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate );
+
+
+// UniswapDayDataV3DTOs (historical) 🔥
+//
+// Gets UniswapDayDataV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetUniswapDayDataV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId );
 
 

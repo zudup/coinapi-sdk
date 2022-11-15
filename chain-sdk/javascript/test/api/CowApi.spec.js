@@ -48,10 +48,30 @@
   }
 
   describe('CowApi', function() {
+    describe('cowGetOrderDTOsHistorical', function() {
+      it('should call cowGetOrderDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test cowGetOrderDTOsHistorical
+        //instance.cowGetOrderDTOsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('cowGetOrdersHistorical', function() {
       it('should call cowGetOrdersHistorical successfully', function(done) {
         //uncomment below and update the code to test cowGetOrdersHistorical
         //instance.cowGetOrdersHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cowGetSettlementDTOsHistorical', function() {
+      it('should call cowGetSettlementDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test cowGetSettlementDTOsHistorical
+        //instance.cowGetSettlementDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -68,6 +88,16 @@
         done();
       });
     });
+    describe('cowGetTokenDTOsHistorical', function() {
+      it('should call cowGetTokenDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test cowGetTokenDTOsHistorical
+        //instance.cowGetTokenDTOsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('cowGetTokensHistorical', function() {
       it('should call cowGetTokensHistorical successfully', function(done) {
         //uncomment below and update the code to test cowGetTokensHistorical
@@ -78,10 +108,30 @@
         done();
       });
     });
+    describe('cowGetTradeDTOsHistorical', function() {
+      it('should call cowGetTradeDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test cowGetTradeDTOsHistorical
+        //instance.cowGetTradeDTOsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('cowGetTradesHistorical', function() {
       it('should call cowGetTradesHistorical successfully', function(done) {
         //uncomment below and update the code to test cowGetTradesHistorical
         //instance.cowGetTradesHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('cowGetUserDTOsHistorical', function() {
+      it('should call cowGetUserDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test cowGetUserDTOsHistorical
+        //instance.cowGetUserDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

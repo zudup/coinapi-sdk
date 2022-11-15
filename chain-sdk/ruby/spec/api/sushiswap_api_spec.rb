@@ -54,6 +54,22 @@ describe 'SushiswapApi' do
     end
   end
 
+  # unit tests for sushiswap_get_bundle_dtos__historical
+  # BundleDTOs (historical) 🔥
+  # Gets BundleDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<SushiswapBundleDTO>]
+  describe 'sushiswap_get_bundle_dtos__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for sushiswap_get_bundles__historical
   # Bundles (historical)
   # Gets bundles.
@@ -64,6 +80,22 @@ describe 'SushiswapApi' do
   # @option opts [Time] :end_date DDDDDDDDDDD
   # @return [Array<SushiswapBundleDTO>]
   describe 'sushiswap_get_bundles__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_burn_dtos__historical
+  # BurnDTOs (historical) 🔥
+  # Gets BurnDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<SushiswapBurnDTO>]
+  describe 'sushiswap_get_burn_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -100,6 +132,22 @@ describe 'SushiswapApi' do
     end
   end
 
+  # unit tests for sushiswap_get_day_data_dtos__historical
+  # DayDataDTOs (historical) 🔥
+  # Gets DayDataDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<SushiswapDayDataDTO>]
+  describe 'sushiswap_get_day_data_dtos__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for sushiswap_get_factory__historical
   # Factory (historical)
   # Gets factory.
@@ -115,6 +163,22 @@ describe 'SushiswapApi' do
     end
   end
 
+  # unit tests for sushiswap_get_factory_dtos__historical
+  # FactoryDTOs (historical) 🔥
+  # Gets FactoryDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<SushiswapFactoryDTO>]
+  describe 'sushiswap_get_factory_dtos__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for sushiswap_get_hour_data__historical
   # HourData (historical)
   # Gets hour data.
@@ -125,6 +189,22 @@ describe 'SushiswapApi' do
   # @option opts [Time] :end_date 
   # @return [Array<SushiswapHourDataDTO>]
   describe 'sushiswap_get_hour_data__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_hour_data_dtos__historical
+  # HourDataDTOs (historical) 🔥
+  # Gets HourDataDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<SushiswapHourDataDTO>]
+  describe 'sushiswap_get_hour_data_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -146,6 +226,22 @@ describe 'SushiswapApi' do
     end
   end
 
+  # unit tests for sushiswap_get_liquidity_position_dtos__historical
+  # LiquidityPositionDTOs (historical) 🔥
+  # Gets LiquidityPositionDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<SushiswapLiquidityPositionDTO>]
+  describe 'sushiswap_get_liquidity_position_dtos__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for sushiswap_get_liquidity_position_snapshot__historical
   # LiquidityPositionSnapshot (historical)
   # Gets liquidity position snapshot.
@@ -162,6 +258,38 @@ describe 'SushiswapApi' do
     end
   end
 
+  # unit tests for sushiswap_get_liquidity_position_snapshot_dtos__historical
+  # LiquidityPositionSnapshotDTOs (historical) 🔥
+  # Gets LiquidityPositionSnapshotDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<SushiswapLiquidityPositionSnapshotDTO>]
+  describe 'sushiswap_get_liquidity_position_snapshot_dtos__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_mint_dtos__historical
+  # MintDTOs (historical) 🔥
+  # Gets MintDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<SushiswapMintDTO>]
+  describe 'sushiswap_get_mint_dtos__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for sushiswap_get_mints__historical
   # Mints (historical)
   # Gets mints.
@@ -173,6 +301,54 @@ describe 'SushiswapApi' do
   # @option opts [String] :pool_id 
   # @return [Array<SushiswapMintDTO>]
   describe 'sushiswap_get_mints__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_pair_day_data_dtos__historical
+  # PairDayDataDTOs (historical) 🔥
+  # Gets PairDayDataDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<SushiswapPairDayDataDTO>]
+  describe 'sushiswap_get_pair_day_data_dtos__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_pair_dtos__historical
+  # PairDTOs (historical) 🔥
+  # Gets PairDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<SushiswapPairDTO>]
+  describe 'sushiswap_get_pair_dtos__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_pair_hour_data_dtos__historical
+  # PairHourDataDTOs (historical) 🔥
+  # Gets PairHourDataDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<SushiswapPairHourDataDTO>]
+  describe 'sushiswap_get_pair_hour_data_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -237,6 +413,22 @@ describe 'SushiswapApi' do
     end
   end
 
+  # unit tests for sushiswap_get_swap_dtos__historical
+  # SwapDTOs (historical) 🔥
+  # Gets SwapDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<SushiswapSwapDTO>]
+  describe 'sushiswap_get_swap_dtos__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for sushiswap_get_swaps__current
   # Swaps (current) 🔥
   # Gets swaps.
@@ -259,6 +451,38 @@ describe 'SushiswapApi' do
   # @option opts [String] :pool_id The pool address.
   # @return [Array<SushiswapSwapDTO>]
   describe 'sushiswap_get_swaps__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_token_day_data_dtos__historical
+  # TokenDayDataDTOs (historical) 🔥
+  # Gets TokenDayDataDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<SushiswapTokenDayDataDTO>]
+  describe 'sushiswap_get_token_day_data_dtos__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_token_dtos__historical
+  # TokenDTOs (historical) 🔥
+  # Gets TokenDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<SushiswapTokenDTO>]
+  describe 'sushiswap_get_token_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -307,6 +531,22 @@ describe 'SushiswapApi' do
     end
   end
 
+  # unit tests for sushiswap_get_transaction_dtos__historical
+  # TransactionDTOs (historical) 🔥
+  # Gets TransactionDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<SushiswapTransactionDTO>]
+  describe 'sushiswap_get_transaction_dtos__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for sushiswap_get_transactions__historical
   # Transactions (historical)
   # Gets transactions.
@@ -317,6 +557,22 @@ describe 'SushiswapApi' do
   # @option opts [Time] :end_date 
   # @return [Array<SushiswapTransactionDTO>]
   describe 'sushiswap_get_transactions__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_user_dtos__historical
+  # UserDTOs (historical) 🔥
+  # Gets UserDTOs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :pool_id 
+  # @return [Array<SushiswapUserDTO>]
+  describe 'sushiswap_get_user_dtos__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

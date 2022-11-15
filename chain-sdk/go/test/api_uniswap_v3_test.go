@@ -22,6 +22,18 @@ func Test_openapi_UniswapV3ApiService(t *testing.T) {
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
 
+    t.Run("Test UniswapV3ApiService UniswapV3GetBundleV3DTOsHistorical", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetBundleV3DTOsHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
     t.Run("Test UniswapV3ApiService UniswapV3GetBundlesCurrent", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
@@ -39,6 +51,18 @@ func Test_openapi_UniswapV3ApiService(t *testing.T) {
         t.Skip("skip test")  // remove to run test
 
         resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetBundlesHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test UniswapV3ApiService UniswapV3GetBurnV3DTOsHistorical", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetBurnV3DTOsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -118,6 +142,30 @@ func Test_openapi_UniswapV3ApiService(t *testing.T) {
 
     })
 
+    t.Run("Test UniswapV3ApiService UniswapV3GetFactoryV3DTOsHistorical", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetFactoryV3DTOsHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test UniswapV3ApiService UniswapV3GetMintV3DTOsHistorical", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetMintV3DTOsHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
     t.Run("Test UniswapV3ApiService UniswapV3GetMintsCurrent", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
@@ -135,6 +183,42 @@ func Test_openapi_UniswapV3ApiService(t *testing.T) {
         t.Skip("skip test")  // remove to run test
 
         resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetMintsHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test UniswapV3ApiService UniswapV3GetPoolDayDataV3DTOsHistorical", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetPoolDayDataV3DTOsHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test UniswapV3ApiService UniswapV3GetPoolHourDataV3DTOsHistorical", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetPoolHourDataV3DTOsHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test UniswapV3ApiService UniswapV3GetPoolV3DTOsHistorical", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetPoolV3DTOsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -214,6 +298,30 @@ func Test_openapi_UniswapV3ApiService(t *testing.T) {
 
     })
 
+    t.Run("Test UniswapV3ApiService UniswapV3GetPositionSnapshotV3DTOsHistorical", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetPositionSnapshotV3DTOsHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test UniswapV3ApiService UniswapV3GetPositionV3DTOsHistorical", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetPositionV3DTOsHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
     t.Run("Test UniswapV3ApiService UniswapV3GetPositionsCurrent", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
@@ -262,6 +370,18 @@ func Test_openapi_UniswapV3ApiService(t *testing.T) {
 
     })
 
+    t.Run("Test UniswapV3ApiService UniswapV3GetSwapV3DTOsHistorical", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetSwapV3DTOsHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
     t.Run("Test UniswapV3ApiService UniswapV3GetSwapsCurrent", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
@@ -279,6 +399,30 @@ func Test_openapi_UniswapV3ApiService(t *testing.T) {
         t.Skip("skip test")  // remove to run test
 
         resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetSwapsHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test UniswapV3ApiService UniswapV3GetTickDayDataV3DTOsHistorical", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetTickDayDataV3DTOsHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test UniswapV3ApiService UniswapV3GetTickV3DTOsHistorical", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetTickV3DTOsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -327,6 +471,42 @@ func Test_openapi_UniswapV3ApiService(t *testing.T) {
         t.Skip("skip test")  // remove to run test
 
         resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetTicksHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test UniswapV3ApiService UniswapV3GetTokenHourDataV3DTOsHistorical", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetTokenHourDataV3DTOsHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test UniswapV3ApiService UniswapV3GetTokenV3DTOsHistorical", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetTokenV3DTOsHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test UniswapV3ApiService UniswapV3GetTokenV3DayDataDTOsHistorical", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetTokenV3DayDataDTOsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -406,11 +586,35 @@ func Test_openapi_UniswapV3ApiService(t *testing.T) {
 
     })
 
+    t.Run("Test UniswapV3ApiService UniswapV3GetTransactionV3DTOsHistorical", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetTransactionV3DTOsHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
     t.Run("Test UniswapV3ApiService UniswapV3GetTransactionsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
         resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetTransactionsHistorical(context.Background()).Execute()
+
+        require.Nil(t, err)
+        require.NotNil(t, resp)
+        assert.Equal(t, 200, httpRes.StatusCode)
+
+    })
+
+    t.Run("Test UniswapV3ApiService UniswapV3GetUniswapDayDataV3DTOsHistorical", func(t *testing.T) {
+
+        t.Skip("skip test")  // remove to run test
+
+        resp, httpRes, err := apiClient.UniswapV3Api.UniswapV3GetUniswapDayDataV3DTOsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)

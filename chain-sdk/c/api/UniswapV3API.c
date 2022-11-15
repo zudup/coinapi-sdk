@@ -12,6 +12,185 @@
 }while(0)
 
 
+// BundleV3DTOs (historical) 🔥
+//
+// Gets BundleV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetBundleV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/BundleV3DTOs/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/BundleV3DTOs/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
 // Bundles (current)
 //
 // Gets bundles.
@@ -234,6 +413,185 @@ UniswapV3API_uniswapV3GetBundlesHistorical(apiClient_t *apiClient, long startBlo
     if(keyPairQuery_endDate){
         keyValuePair_free(keyPairQuery_endDate);
         keyPairQuery_endDate = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// BurnV3DTOs (historical) 🔥
+//
+// Gets BurnV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetBurnV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/BurnV3DTOs/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/BurnV3DTOs/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
     }
     return elementToReturn;
 end:
@@ -980,6 +1338,364 @@ end:
 
 }
 
+// FactoryV3DTOs (historical) 🔥
+//
+// Gets FactoryV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetFactoryV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/FactoryV3DTOs/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/FactoryV3DTOs/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// MintV3DTOs (historical) 🔥
+//
+// Gets MintV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetMintV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/MintV3DTOs/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/MintV3DTOs/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
 // Mints (current)
 //
 // Gets mints.
@@ -1097,6 +1813,543 @@ UniswapV3API_uniswapV3GetMintsHistorical(apiClient_t *apiClient, long startBlock
     long sizeOfPath = strlen("/dapps/uniswapv3/mints/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
     snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/mints/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// PoolDayDataV3DTOs (historical) 🔥
+//
+// Gets PoolDayDataV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetPoolDayDataV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/PoolDayDataV3DTOs/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/PoolDayDataV3DTOs/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// PoolHourDataV3DTOs (historical) 🔥
+//
+// Gets PoolHourDataV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetPoolHourDataV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/PoolHourDataV3DTOs/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/PoolHourDataV3DTOs/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// PoolV3DTOs (historical) 🔥
+//
+// Gets PoolV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetPoolV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/PoolV3DTOs/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/PoolV3DTOs/historical");
 
 
 
@@ -2092,6 +3345,364 @@ end:
 
 }
 
+// PositionSnapshotV3DTOs (historical) 🔥
+//
+// Gets PositionSnapshotV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetPositionSnapshotV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/PositionSnapshotV3DTOs/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/PositionSnapshotV3DTOs/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// PositionV3DTOs (historical) 🔥
+//
+// Gets PositionV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetPositionV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/PositionV3DTOs/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/PositionV3DTOs/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
 // Positions (current)
 //
 // Gets positions.
@@ -2648,6 +4259,185 @@ end:
 
 }
 
+// SwapV3DTOs (historical) 🔥
+//
+// Gets SwapV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetSwapV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/SwapV3DTOs/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/SwapV3DTOs/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
 // Swaps (current) 🔥
 //
 // Gets swaps.
@@ -2765,6 +4555,364 @@ UniswapV3API_uniswapV3GetSwapsHistorical(apiClient_t *apiClient, long startBlock
     long sizeOfPath = strlen("/dapps/uniswapv3/swaps/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
     snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/swaps/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// TickDayDataV3DTOs (historical) 🔥
+//
+// Gets TickDayDataV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetTickDayDataV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/TickDayDataV3DTOs/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/TickDayDataV3DTOs/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// TickV3DTOs (historical) 🔥
+//
+// Gets TickV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetTickV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/TickV3DTOs/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/TickV3DTOs/historical");
 
 
 
@@ -3321,6 +5469,543 @@ UniswapV3API_uniswapV3GetTicksHistorical(apiClient_t *apiClient, long startBlock
     long sizeOfPath = strlen("/dapps/uniswapv3/ticks/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
     snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/ticks/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// TokenHourDataV3DTOs (historical) 🔥
+//
+// Gets TokenHourDataV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetTokenHourDataV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/TokenHourDataV3DTOs/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/TokenHourDataV3DTOs/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// TokenV3DTOs (historical) 🔥
+//
+// Gets TokenV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetTokenV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/TokenV3DTOs/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/TokenV3DTOs/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// TokenV3DayDataDTOs (historical) 🔥
+//
+// Gets TokenV3DayDataDTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetTokenV3DayDataDTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/TokenV3DayDataDTOs/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/TokenV3DayDataDTOs/historical");
 
 
 
@@ -4316,6 +7001,185 @@ end:
 
 }
 
+// TransactionV3DTOs (historical) 🔥
+//
+// Gets TransactionV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetTransactionV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/TransactionV3DTOs/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/TransactionV3DTOs/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
 // Transactions (historical)
 //
 // Gets transactions.
@@ -4463,6 +7327,185 @@ UniswapV3API_uniswapV3GetTransactionsHistorical(apiClient_t *apiClient, long sta
     if(keyPairQuery_endDate){
         keyValuePair_free(keyPairQuery_endDate);
         keyPairQuery_endDate = NULL;
+    }
+    return elementToReturn;
+end:
+    free(localVarPath);
+    return NULL;
+
+}
+
+// UniswapDayDataV3DTOs (historical) 🔥
+//
+// Gets UniswapDayDataV3DTOs.
+//
+list_t*
+UniswapV3API_uniswapV3GetUniswapDayDataV3DTOsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * poolId )
+{
+    list_t    *localVarQueryParameters = list_createList();
+    list_t    *localVarHeaderParameters = NULL;
+    list_t    *localVarFormParameters = NULL;
+    list_t *localVarHeaderType = list_createList();
+    list_t *localVarContentType = NULL;
+    char      *localVarBodyParameters = NULL;
+
+    // create the path
+    long sizeOfPath = strlen("/dapps/uniswapv3/UniswapDayDataV3DTOs/historical")+1;
+    char *localVarPath = malloc(sizeOfPath);
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv3/UniswapDayDataV3DTOs/historical");
+
+
+
+
+    // query parameters
+    char *keyQuery_startBlock = NULL;
+    long valueQuery_startBlock ;
+    keyValuePair_t *keyPairQuery_startBlock = 0;
+    if (startBlock)
+    {
+        keyQuery_startBlock = strdup("startBlock");
+        valueQuery_startBlock = (startBlock);
+        keyPairQuery_startBlock = keyValuePair_create(keyQuery_startBlock, &valueQuery_startBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_startBlock);
+    }
+
+    // query parameters
+    char *keyQuery_endBlock = NULL;
+    long valueQuery_endBlock ;
+    keyValuePair_t *keyPairQuery_endBlock = 0;
+    if (endBlock)
+    {
+        keyQuery_endBlock = strdup("endBlock");
+        valueQuery_endBlock = (endBlock);
+        keyPairQuery_endBlock = keyValuePair_create(keyQuery_endBlock, &valueQuery_endBlock);
+        list_addElement(localVarQueryParameters,keyPairQuery_endBlock);
+    }
+
+    // query parameters
+    char *keyQuery_startDate = NULL;
+    char valueQuery_startDate ;
+    keyValuePair_t *keyPairQuery_startDate = 0;
+    if (startDate)
+    {
+        keyQuery_startDate = strdup("startDate");
+        valueQuery_startDate = (startDate);
+        keyPairQuery_startDate = keyValuePair_create(keyQuery_startDate, &valueQuery_startDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_startDate);
+    }
+
+    // query parameters
+    char *keyQuery_endDate = NULL;
+    char valueQuery_endDate ;
+    keyValuePair_t *keyPairQuery_endDate = 0;
+    if (endDate)
+    {
+        keyQuery_endDate = strdup("endDate");
+        valueQuery_endDate = (endDate);
+        keyPairQuery_endDate = keyValuePair_create(keyQuery_endDate, &valueQuery_endDate);
+        list_addElement(localVarQueryParameters,keyPairQuery_endDate);
+    }
+
+    // query parameters
+    char *keyQuery_poolId = NULL;
+    char * valueQuery_poolId = NULL;
+    keyValuePair_t *keyPairQuery_poolId = 0;
+    if (poolId)
+    {
+        keyQuery_poolId = strdup("poolId");
+        valueQuery_poolId = strdup((poolId));
+        keyPairQuery_poolId = keyValuePair_create(keyQuery_poolId, valueQuery_poolId);
+        list_addElement(localVarQueryParameters,keyPairQuery_poolId);
+    }
+    list_addElement(localVarHeaderType,"text/plain"); //produces
+    list_addElement(localVarHeaderType,"application/json"); //produces
+    list_addElement(localVarHeaderType,"text/json"); //produces
+    apiClient_invoke(apiClient,
+                    localVarPath,
+                    localVarQueryParameters,
+                    localVarHeaderParameters,
+                    localVarFormParameters,
+                    localVarHeaderType,
+                    localVarContentType,
+                    localVarBodyParameters,
+                    "GET");
+
+    // uncomment below to debug the error response
+    //if (apiClient->response_code == 200) {
+    //    printf("%s\n","successful operation");
+    //}
+    cJSON *UniswapV3APIlocalVarJSON = cJSON_Parse(apiClient->dataReceived);
+    if(!cJSON_IsArray(UniswapV3APIlocalVarJSON)) {
+        return 0;//nonprimitive container
+    }
+    list_t *elementToReturn = list_createList();
+    cJSON *VarJSON;
+    cJSON_ArrayForEach(VarJSON, UniswapV3APIlocalVarJSON)
+    {
+        if(!cJSON_IsObject(VarJSON))
+        {
+           // return 0;
+        }
+        char *localVarJSONToChar = cJSON_Print(VarJSON);
+        list_addElement(elementToReturn , localVarJSONToChar);
+    }
+
+    cJSON_Delete( UniswapV3APIlocalVarJSON);
+    cJSON_Delete( VarJSON);
+    //return type
+    if (apiClient->dataReceived) {
+        free(apiClient->dataReceived);
+        apiClient->dataReceived = NULL;
+        apiClient->dataReceivedLen = 0;
+    }
+    list_freeList(localVarQueryParameters);
+    
+    
+    list_freeList(localVarHeaderType);
+    
+    free(localVarPath);
+    if(keyQuery_startBlock){
+        free(keyQuery_startBlock);
+        keyQuery_startBlock = NULL;
+    }
+    if(keyPairQuery_startBlock){
+        keyValuePair_free(keyPairQuery_startBlock);
+        keyPairQuery_startBlock = NULL;
+    }
+    if(keyQuery_endBlock){
+        free(keyQuery_endBlock);
+        keyQuery_endBlock = NULL;
+    }
+    if(keyPairQuery_endBlock){
+        keyValuePair_free(keyPairQuery_endBlock);
+        keyPairQuery_endBlock = NULL;
+    }
+    if(keyQuery_startDate){
+        free(keyQuery_startDate);
+        keyQuery_startDate = NULL;
+    }
+    if(keyPairQuery_startDate){
+        keyValuePair_free(keyPairQuery_startDate);
+        keyPairQuery_startDate = NULL;
+    }
+    if(keyQuery_endDate){
+        free(keyQuery_endDate);
+        keyQuery_endDate = NULL;
+    }
+    if(keyPairQuery_endDate){
+        keyValuePair_free(keyPairQuery_endDate);
+        keyPairQuery_endDate = NULL;
+    }
+    if(keyQuery_poolId){
+        free(keyQuery_poolId);
+        keyQuery_poolId = NULL;
+    }
+    if(valueQuery_poolId){
+        free(valueQuery_poolId);
+        valueQuery_poolId = NULL;
+    }
+    if(keyPairQuery_poolId){
+        keyValuePair_free(keyPairQuery_poolId);
+        keyPairQuery_poolId = NULL;
     }
     return elementToReturn;
 end:

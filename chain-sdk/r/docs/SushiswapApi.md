@@ -6,24 +6,40 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**CurveGetExchangesCurrent**](SushiswapApi.md#CurveGetExchangesCurrent) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥
 [**DexGetTradesCurrent**](SushiswapApi.md#DexGetTradesCurrent) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥
+[**SushiswapGetBundleDTOsHistorical**](SushiswapApi.md#SushiswapGetBundleDTOsHistorical) | **GET** /dapps/sushiswap/BundleDTOs/historical | BundleDTOs (historical) 🔥
 [**SushiswapGetBundlesHistorical**](SushiswapApi.md#SushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical)
+[**SushiswapGetBurnDTOsHistorical**](SushiswapApi.md#SushiswapGetBurnDTOsHistorical) | **GET** /dapps/sushiswap/BurnDTOs/historical | BurnDTOs (historical) 🔥
 [**SushiswapGetBurnsHistorical**](SushiswapApi.md#SushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical)
+[**SushiswapGetDayDataDTOsHistorical**](SushiswapApi.md#SushiswapGetDayDataDTOsHistorical) | **GET** /dapps/sushiswap/DayDataDTOs/historical | DayDataDTOs (historical) 🔥
 [**SushiswapGetDayDataHistorical**](SushiswapApi.md#SushiswapGetDayDataHistorical) | **GET** /dapps/sushiswap/dayData/historical | DayData (historical)
+[**SushiswapGetFactoryDTOsHistorical**](SushiswapApi.md#SushiswapGetFactoryDTOsHistorical) | **GET** /dapps/sushiswap/FactoryDTOs/historical | FactoryDTOs (historical) 🔥
 [**SushiswapGetFactoryHistorical**](SushiswapApi.md#SushiswapGetFactoryHistorical) | **GET** /dapps/sushiswap/factory/historical | Factory (historical)
+[**SushiswapGetHourDataDTOsHistorical**](SushiswapApi.md#SushiswapGetHourDataDTOsHistorical) | **GET** /dapps/sushiswap/HourDataDTOs/historical | HourDataDTOs (historical) 🔥
 [**SushiswapGetHourDataHistorical**](SushiswapApi.md#SushiswapGetHourDataHistorical) | **GET** /dapps/sushiswap/hourData/historical | HourData (historical)
+[**SushiswapGetLiquidityPositionDTOsHistorical**](SushiswapApi.md#SushiswapGetLiquidityPositionDTOsHistorical) | **GET** /dapps/sushiswap/LiquidityPositionDTOs/historical | LiquidityPositionDTOs (historical) 🔥
 [**SushiswapGetLiquidityPositionHistorical**](SushiswapApi.md#SushiswapGetLiquidityPositionHistorical) | **GET** /dapps/sushiswap/liquidityPosition/historical | LiquidityPosition (historical)
+[**SushiswapGetLiquidityPositionSnapshotDTOsHistorical**](SushiswapApi.md#SushiswapGetLiquidityPositionSnapshotDTOsHistorical) | **GET** /dapps/sushiswap/LiquidityPositionSnapshotDTOs/historical | LiquidityPositionSnapshotDTOs (historical) 🔥
 [**SushiswapGetLiquidityPositionSnapshotHistorical**](SushiswapApi.md#SushiswapGetLiquidityPositionSnapshotHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshot (historical)
+[**SushiswapGetMintDTOsHistorical**](SushiswapApi.md#SushiswapGetMintDTOsHistorical) | **GET** /dapps/sushiswap/MintDTOs/historical | MintDTOs (historical) 🔥
 [**SushiswapGetMintsHistorical**](SushiswapApi.md#SushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical)
+[**SushiswapGetPairDTOsHistorical**](SushiswapApi.md#SushiswapGetPairDTOsHistorical) | **GET** /dapps/sushiswap/PairDTOs/historical | PairDTOs (historical) 🔥
+[**SushiswapGetPairDayDataDTOsHistorical**](SushiswapApi.md#SushiswapGetPairDayDataDTOsHistorical) | **GET** /dapps/sushiswap/PairDayDataDTOs/historical | PairDayDataDTOs (historical) 🔥
+[**SushiswapGetPairHourDataDTOsHistorical**](SushiswapApi.md#SushiswapGetPairHourDataDTOsHistorical) | **GET** /dapps/sushiswap/PairHourDataDTOs/historical | PairHourDataDTOs (historical) 🔥
 [**SushiswapGetPoolsCurrent**](SushiswapApi.md#SushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥
 [**SushiswapGetPoolsDayDataHistorical**](SushiswapApi.md#SushiswapGetPoolsDayDataHistorical) | **GET** /dapps/sushiswap/poolsDayData/historical | PoolsDayData (historical)
 [**SushiswapGetPoolsHistorical**](SushiswapApi.md#SushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | Pools (historical) 🔥
 [**SushiswapGetPoolsHourDataHistorical**](SushiswapApi.md#SushiswapGetPoolsHourDataHistorical) | **GET** /dapps/sushiswap/poolsHourData/historical | PoolsHourData (historical)
+[**SushiswapGetSwapDTOsHistorical**](SushiswapApi.md#SushiswapGetSwapDTOsHistorical) | **GET** /dapps/sushiswap/SwapDTOs/historical | SwapDTOs (historical) 🔥
 [**SushiswapGetSwapsCurrent**](SushiswapApi.md#SushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current) 🔥
 [**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥
+[**SushiswapGetTokenDTOsHistorical**](SushiswapApi.md#SushiswapGetTokenDTOsHistorical) | **GET** /dapps/sushiswap/TokenDTOs/historical | TokenDTOs (historical) 🔥
+[**SushiswapGetTokenDayDataDTOsHistorical**](SushiswapApi.md#SushiswapGetTokenDayDataDTOsHistorical) | **GET** /dapps/sushiswap/TokenDayDataDTOs/historical | TokenDayDataDTOs (historical) 🔥
 [**SushiswapGetTokensCurrent**](SushiswapApi.md#SushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current) 🔥
 [**SushiswapGetTokensDayDataHistorical**](SushiswapApi.md#SushiswapGetTokensDayDataHistorical) | **GET** /dapps/sushiswap/tokensDayData/historical | TokensDayData (historical)
 [**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥
+[**SushiswapGetTransactionDTOsHistorical**](SushiswapApi.md#SushiswapGetTransactionDTOsHistorical) | **GET** /dapps/sushiswap/TransactionDTOs/historical | TransactionDTOs (historical) 🔥
 [**SushiswapGetTransactionsHistorical**](SushiswapApi.md#SushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical)
+[**SushiswapGetUserDTOsHistorical**](SushiswapApi.md#SushiswapGetUserDTOsHistorical) | **GET** /dapps/sushiswap/UserDTOs/historical | UserDTOs (historical) 🔥
 [**SushiswapGetUsersHistorical**](SushiswapApi.md#SushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical)
 
 
@@ -111,6 +127,61 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
+# **SushiswapGetBundleDTOsHistorical**
+> array[SushiswapBundleDTO] SushiswapGetBundleDTOsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+
+BundleDTOs (historical) 🔥
+
+Gets BundleDTOs.
+
+### Example
+```R
+library(openapi)
+
+# BundleDTOs (historical) 🔥
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+var_pool_id <- "pool_id_example" # character |  (Optional)
+
+api_instance <- SushiswapApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$SushiswapGetBundleDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetBundleDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+ **pool_id** | **character**|  | [optional] 
+
+### Return type
+
+[**array[SushiswapBundleDTO]**](Sushiswap.BundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
 # **SushiswapGetBundlesHistorical**
 > array[SushiswapBundleDTO] SushiswapGetBundlesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
@@ -149,6 +220,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**array[SushiswapBundleDTO]**](Sushiswap.BundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **SushiswapGetBurnDTOsHistorical**
+> array[SushiswapBurnDTO] SushiswapGetBurnDTOsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+
+BurnDTOs (historical) 🔥
+
+Gets BurnDTOs.
+
+### Example
+```R
+library(openapi)
+
+# BurnDTOs (historical) 🔥
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+var_pool_id <- "pool_id_example" # character |  (Optional)
+
+api_instance <- SushiswapApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$SushiswapGetBurnDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetBurnDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+ **pool_id** | **character**|  | [optional] 
+
+### Return type
+
+[**array[SushiswapBurnDTO]**](Sushiswap.BurnDTO.md)
 
 ### Authorization
 
@@ -219,6 +345,61 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
+# **SushiswapGetDayDataDTOsHistorical**
+> array[SushiswapDayDataDTO] SushiswapGetDayDataDTOsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+
+DayDataDTOs (historical) 🔥
+
+Gets DayDataDTOs.
+
+### Example
+```R
+library(openapi)
+
+# DayDataDTOs (historical) 🔥
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+var_pool_id <- "pool_id_example" # character |  (Optional)
+
+api_instance <- SushiswapApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$SushiswapGetDayDataDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetDayDataDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+ **pool_id** | **character**|  | [optional] 
+
+### Return type
+
+[**array[SushiswapDayDataDTO]**](Sushiswap.DayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
 # **SushiswapGetDayDataHistorical**
 > array[SushiswapDayDataDTO] SushiswapGetDayDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
@@ -257,6 +438,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**array[SushiswapDayDataDTO]**](Sushiswap.DayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **SushiswapGetFactoryDTOsHistorical**
+> array[SushiswapFactoryDTO] SushiswapGetFactoryDTOsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+
+FactoryDTOs (historical) 🔥
+
+Gets FactoryDTOs.
+
+### Example
+```R
+library(openapi)
+
+# FactoryDTOs (historical) 🔥
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+var_pool_id <- "pool_id_example" # character |  (Optional)
+
+api_instance <- SushiswapApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$SushiswapGetFactoryDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetFactoryDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+ **pool_id** | **character**|  | [optional] 
+
+### Return type
+
+[**array[SushiswapFactoryDTO]**](Sushiswap.FactoryDTO.md)
 
 ### Authorization
 
@@ -325,6 +561,61 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
+# **SushiswapGetHourDataDTOsHistorical**
+> array[SushiswapHourDataDTO] SushiswapGetHourDataDTOsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+
+HourDataDTOs (historical) 🔥
+
+Gets HourDataDTOs.
+
+### Example
+```R
+library(openapi)
+
+# HourDataDTOs (historical) 🔥
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+var_pool_id <- "pool_id_example" # character |  (Optional)
+
+api_instance <- SushiswapApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$SushiswapGetHourDataDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetHourDataDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+ **pool_id** | **character**|  | [optional] 
+
+### Return type
+
+[**array[SushiswapHourDataDTO]**](Sushiswap.HourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
 # **SushiswapGetHourDataHistorical**
 > array[SushiswapHourDataDTO] SushiswapGetHourDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
@@ -363,6 +654,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**array[SushiswapHourDataDTO]**](Sushiswap.HourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **SushiswapGetLiquidityPositionDTOsHistorical**
+> array[SushiswapLiquidityPositionDTO] SushiswapGetLiquidityPositionDTOsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+
+LiquidityPositionDTOs (historical) 🔥
+
+Gets LiquidityPositionDTOs.
+
+### Example
+```R
+library(openapi)
+
+# LiquidityPositionDTOs (historical) 🔥
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+var_pool_id <- "pool_id_example" # character |  (Optional)
+
+api_instance <- SushiswapApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$SushiswapGetLiquidityPositionDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetLiquidityPositionDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+ **pool_id** | **character**|  | [optional] 
+
+### Return type
+
+[**array[SushiswapLiquidityPositionDTO]**](Sushiswap.LiquidityPositionDTO.md)
 
 ### Authorization
 
@@ -433,6 +779,61 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
+# **SushiswapGetLiquidityPositionSnapshotDTOsHistorical**
+> array[SushiswapLiquidityPositionSnapshotDTO] SushiswapGetLiquidityPositionSnapshotDTOsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+
+LiquidityPositionSnapshotDTOs (historical) 🔥
+
+Gets LiquidityPositionSnapshotDTOs.
+
+### Example
+```R
+library(openapi)
+
+# LiquidityPositionSnapshotDTOs (historical) 🔥
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+var_pool_id <- "pool_id_example" # character |  (Optional)
+
+api_instance <- SushiswapApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$SushiswapGetLiquidityPositionSnapshotDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetLiquidityPositionSnapshotDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+ **pool_id** | **character**|  | [optional] 
+
+### Return type
+
+[**array[SushiswapLiquidityPositionSnapshotDTO]**](Sushiswap.LiquidityPositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
 # **SushiswapGetLiquidityPositionSnapshotHistorical**
 > array[SushiswapLiquidityPositionSnapshotDTO] SushiswapGetLiquidityPositionSnapshotHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
@@ -488,6 +889,61 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
+# **SushiswapGetMintDTOsHistorical**
+> array[SushiswapMintDTO] SushiswapGetMintDTOsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+
+MintDTOs (historical) 🔥
+
+Gets MintDTOs.
+
+### Example
+```R
+library(openapi)
+
+# MintDTOs (historical) 🔥
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+var_pool_id <- "pool_id_example" # character |  (Optional)
+
+api_instance <- SushiswapApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$SushiswapGetMintDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetMintDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+ **pool_id** | **character**|  | [optional] 
+
+### Return type
+
+[**array[SushiswapMintDTO]**](Sushiswap.MintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
 # **SushiswapGetMintsHistorical**
 > array[SushiswapMintDTO] SushiswapGetMintsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
 
@@ -528,6 +984,171 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**array[SushiswapMintDTO]**](Sushiswap.MintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **SushiswapGetPairDTOsHistorical**
+> array[SushiswapPairDTO] SushiswapGetPairDTOsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+
+PairDTOs (historical) 🔥
+
+Gets PairDTOs.
+
+### Example
+```R
+library(openapi)
+
+# PairDTOs (historical) 🔥
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+var_pool_id <- "pool_id_example" # character |  (Optional)
+
+api_instance <- SushiswapApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$SushiswapGetPairDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetPairDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+ **pool_id** | **character**|  | [optional] 
+
+### Return type
+
+[**array[SushiswapPairDTO]**](Sushiswap.PairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **SushiswapGetPairDayDataDTOsHistorical**
+> array[SushiswapPairDayDataDTO] SushiswapGetPairDayDataDTOsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+
+PairDayDataDTOs (historical) 🔥
+
+Gets PairDayDataDTOs.
+
+### Example
+```R
+library(openapi)
+
+# PairDayDataDTOs (historical) 🔥
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+var_pool_id <- "pool_id_example" # character |  (Optional)
+
+api_instance <- SushiswapApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$SushiswapGetPairDayDataDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetPairDayDataDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+ **pool_id** | **character**|  | [optional] 
+
+### Return type
+
+[**array[SushiswapPairDayDataDTO]**](Sushiswap.PairDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **SushiswapGetPairHourDataDTOsHistorical**
+> array[SushiswapPairHourDataDTO] SushiswapGetPairHourDataDTOsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+
+PairHourDataDTOs (historical) 🔥
+
+Gets PairHourDataDTOs.
+
+### Example
+```R
+library(openapi)
+
+# PairHourDataDTOs (historical) 🔥
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+var_pool_id <- "pool_id_example" # character |  (Optional)
+
+api_instance <- SushiswapApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$SushiswapGetPairHourDataDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetPairHourDataDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+ **pool_id** | **character**|  | [optional] 
+
+### Return type
+
+[**array[SushiswapPairHourDataDTO]**](Sushiswap.PairHourDataDTO.md)
 
 ### Authorization
 
@@ -750,6 +1371,61 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
+# **SushiswapGetSwapDTOsHistorical**
+> array[SushiswapSwapDTO] SushiswapGetSwapDTOsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+
+SwapDTOs (historical) 🔥
+
+Gets SwapDTOs.
+
+### Example
+```R
+library(openapi)
+
+# SwapDTOs (historical) 🔥
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+var_pool_id <- "pool_id_example" # character |  (Optional)
+
+api_instance <- SushiswapApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$SushiswapGetSwapDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetSwapDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+ **pool_id** | **character**|  | [optional] 
+
+### Return type
+
+[**array[SushiswapSwapDTO]**](Sushiswap.SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
 # **SushiswapGetSwapsCurrent**
 > array[SushiswapSwapDTO] SushiswapGetSwapsCurrent()
 
@@ -832,6 +1508,116 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**array[SushiswapSwapDTO]**](Sushiswap.SwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **SushiswapGetTokenDTOsHistorical**
+> array[SushiswapTokenDTO] SushiswapGetTokenDTOsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+
+TokenDTOs (historical) 🔥
+
+Gets TokenDTOs.
+
+### Example
+```R
+library(openapi)
+
+# TokenDTOs (historical) 🔥
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+var_pool_id <- "pool_id_example" # character |  (Optional)
+
+api_instance <- SushiswapApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$SushiswapGetTokenDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetTokenDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+ **pool_id** | **character**|  | [optional] 
+
+### Return type
+
+[**array[SushiswapTokenDTO]**](Sushiswap.TokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **SushiswapGetTokenDayDataDTOsHistorical**
+> array[SushiswapTokenDayDataDTO] SushiswapGetTokenDayDataDTOsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+
+TokenDayDataDTOs (historical) 🔥
+
+Gets TokenDayDataDTOs.
+
+### Example
+```R
+library(openapi)
+
+# TokenDayDataDTOs (historical) 🔥
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+var_pool_id <- "pool_id_example" # character |  (Optional)
+
+api_instance <- SushiswapApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$SushiswapGetTokenDayDataDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetTokenDayDataDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+ **pool_id** | **character**|  | [optional] 
+
+### Return type
+
+[**array[SushiswapTokenDayDataDTO]**](Sushiswap.TokenDayDataDTO.md)
 
 ### Authorization
 
@@ -999,6 +1785,61 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
+# **SushiswapGetTransactionDTOsHistorical**
+> array[SushiswapTransactionDTO] SushiswapGetTransactionDTOsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+
+TransactionDTOs (historical) 🔥
+
+Gets TransactionDTOs.
+
+### Example
+```R
+library(openapi)
+
+# TransactionDTOs (historical) 🔥
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+var_pool_id <- "pool_id_example" # character |  (Optional)
+
+api_instance <- SushiswapApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$SushiswapGetTransactionDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetTransactionDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+ **pool_id** | **character**|  | [optional] 
+
+### Return type
+
+[**array[SushiswapTransactionDTO]**](Sushiswap.TransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
 # **SushiswapGetTransactionsHistorical**
 > array[SushiswapTransactionDTO] SushiswapGetTransactionsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date)
 
@@ -1037,6 +1878,61 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**array[SushiswapTransactionDTO]**](Sushiswap.TransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | successful operation |  -  |
+
+# **SushiswapGetUserDTOsHistorical**
+> array[SushiswapUserDTO] SushiswapGetUserDTOsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, pool_id = var.pool_id)
+
+UserDTOs (historical) 🔥
+
+Gets UserDTOs.
+
+### Example
+```R
+library(openapi)
+
+# UserDTOs (historical) 🔥
+#
+# prepare function argument(s)
+var_start_block <- 56 # integer |  (Optional)
+var_end_block <- 56 # integer |  (Optional)
+var_start_date <- "start_date_example" # character |  (Optional)
+var_end_date <- "end_date_example" # character |  (Optional)
+var_pool_id <- "pool_id_example" # character |  (Optional)
+
+api_instance <- SushiswapApi$new()
+# to save the result into a file, simply add the optional `data_file` parameter, e.g.
+# result <- api_instance$SushiswapGetUserDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetUserDTOsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, pool_id = var_pool_id)
+dput(result)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **start_block** | **integer**|  | [optional] 
+ **end_block** | **integer**|  | [optional] 
+ **start_date** | **character**|  | [optional] 
+ **end_date** | **character**|  | [optional] 
+ **pool_id** | **character**|  | [optional] 
+
+### Return type
+
+[**array[SushiswapUserDTO]**](Sushiswap.UserDTO.md)
 
 ### Authorization
 

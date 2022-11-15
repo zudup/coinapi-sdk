@@ -37,6 +37,24 @@ public class CowApiTest {
     private final CowApi api = new CowApi();
 
     /**
+     * OrderDTOs (historical) 🔥
+     *
+     * Gets OrderDTOs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cowGetOrderDTOsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        List<CowOrderDTO> response = api.cowGetOrderDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+        // TODO: test validations
+    }
+
+    /**
      * Orders (historical)
      *
      * Gets orders.
@@ -54,6 +72,24 @@ public class CowApiTest {
     }
 
     /**
+     * SettlementDTOs (historical) 🔥
+     *
+     * Gets SettlementDTOs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cowGetSettlementDTOsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        List<CowSettlementDTO> response = api.cowGetSettlementDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+        // TODO: test validations
+    }
+
+    /**
      * Settlements (historical)
      *
      * Gets settlements.
@@ -67,6 +103,24 @@ public class CowApiTest {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         List<CowSettlementDTO> response = api.cowGetSettlementsHistorical(startBlock, endBlock, startDate, endDate);
+        // TODO: test validations
+    }
+
+    /**
+     * TokenDTOs (historical) 🔥
+     *
+     * Gets TokenDTOs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cowGetTokenDTOsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        List<CowTokenDTO> response = api.cowGetTokenDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 
@@ -89,6 +143,24 @@ public class CowApiTest {
     }
 
     /**
+     * TradeDTOs (historical) 🔥
+     *
+     * Gets TradeDTOs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cowGetTradeDTOsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        List<CowTradeDTO> response = api.cowGetTradeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+        // TODO: test validations
+    }
+
+    /**
      * Trades (historical) 🔥
      *
      * Gets trades.
@@ -102,6 +174,24 @@ public class CowApiTest {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         List<CowTradeDTO> response = api.cowGetTradesHistorical(startBlock, endBlock, startDate, endDate);
+        // TODO: test validations
+    }
+
+    /**
+     * UserDTOs (historical) 🔥
+     *
+     * Gets UserDTOs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void cowGetUserDTOsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        List<CowUserDTO> response = api.cowGetUserDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 

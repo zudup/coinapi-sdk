@@ -16,6 +16,107 @@ class DexApi {
 
   final ApiClient apiClient;
 
+  /// BatchDTOs (historical) 🔥
+  ///
+  /// Gets BatchDTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> dexGetBatchDTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/dex/BatchDTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// BatchDTOs (historical) 🔥
+  ///
+  /// Gets BatchDTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<DexBatchDTO>?> dexGetBatchDTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dexGetBatchDTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexBatchDTO>') as List)
+        .cast<DexBatchDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// Batches (historical)
   ///
   /// Gets batches.
@@ -102,6 +203,107 @@ class DexApi {
       final responseBody = await _decodeBodyBytes(response);
       return (await apiClient.deserializeAsync(responseBody, 'List<DexBatchDTO>') as List)
         .cast<DexBatchDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// DepositDTOs (historical) 🔥
+  ///
+  /// Gets DepositDTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> dexGetDepositDTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/dex/DepositDTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// DepositDTOs (historical) 🔥
+  ///
+  /// Gets DepositDTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<DexDepositDTO>?> dexGetDepositDTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dexGetDepositDTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexDepositDTO>') as List)
+        .cast<DexDepositDTO>()
         .toList();
 
     }
@@ -209,6 +411,107 @@ class DexApi {
     return null;
   }
 
+  /// OrderDTOs (historical) 🔥
+  ///
+  /// Gets OrderDTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> dexGetOrderDTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/dex/OrderDTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// OrderDTOs (historical) 🔥
+  ///
+  /// Gets OrderDTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<DexOrderDTO>?> dexGetOrderDTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dexGetOrderDTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexOrderDTO>') as List)
+        .cast<DexOrderDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// Orders (historical)
   ///
   /// Gets orders.
@@ -304,6 +607,107 @@ class DexApi {
       final responseBody = await _decodeBodyBytes(response);
       return (await apiClient.deserializeAsync(responseBody, 'List<DexOrderDTO>') as List)
         .cast<DexOrderDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// PriceDTOs (historical) 🔥
+  ///
+  /// Gets PriceDTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> dexGetPriceDTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/dex/PriceDTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// PriceDTOs (historical) 🔥
+  ///
+  /// Gets PriceDTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<DexPriceDTO>?> dexGetPriceDTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dexGetPriceDTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexPriceDTO>') as List)
+        .cast<DexPriceDTO>()
         .toList();
 
     }
@@ -411,6 +815,107 @@ class DexApi {
     return null;
   }
 
+  /// SolutionDTOs (historical) 🔥
+  ///
+  /// Gets SolutionDTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> dexGetSolutionDTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/dex/SolutionDTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// SolutionDTOs (historical) 🔥
+  ///
+  /// Gets SolutionDTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<DexSolutionDTO>?> dexGetSolutionDTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dexGetSolutionDTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexSolutionDTO>') as List)
+        .cast<DexSolutionDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// Solutions (historical)
   ///
   /// Gets solutions.
@@ -512,6 +1017,107 @@ class DexApi {
     return null;
   }
 
+  /// StatsDTOs (historical) 🔥
+  ///
+  /// Gets StatsDTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> dexGetStatsDTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/dex/StatsDTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// StatsDTOs (historical) 🔥
+  ///
+  /// Gets StatsDTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<DexStatsDTO>?> dexGetStatsDTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dexGetStatsDTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexStatsDTO>') as List)
+        .cast<DexStatsDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// Stats (historical)
   ///
   /// Gets stats.
@@ -598,6 +1204,107 @@ class DexApi {
       final responseBody = await _decodeBodyBytes(response);
       return (await apiClient.deserializeAsync(responseBody, 'List<DexStatsDTO>') as List)
         .cast<DexStatsDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// TokenDTOs (historical) 🔥
+  ///
+  /// Gets TokenDTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> dexGetTokenDTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/dex/TokenDTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// TokenDTOs (historical) 🔥
+  ///
+  /// Gets TokenDTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<DexTokenDTO>?> dexGetTokenDTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dexGetTokenDTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexTokenDTO>') as List)
+        .cast<DexTokenDTO>()
         .toList();
 
     }
@@ -705,6 +1412,107 @@ class DexApi {
     return null;
   }
 
+  /// TradeDTOs (historical) 🔥
+  ///
+  /// Gets TradeDTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> dexGetTradeDTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/dex/TradeDTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// TradeDTOs (historical) 🔥
+  ///
+  /// Gets TradeDTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<DexTradeDTO>?> dexGetTradeDTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dexGetTradeDTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexTradeDTO>') as List)
+        .cast<DexTradeDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// Trades (historical) 🔥
   ///
   /// Gets trades.
@@ -797,6 +1605,107 @@ class DexApi {
     return null;
   }
 
+  /// UserDTOs (historical) 🔥
+  ///
+  /// Gets UserDTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> dexGetUserDTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/dex/UserDTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// UserDTOs (historical) 🔥
+  ///
+  /// Gets UserDTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<DexUserDTO>?> dexGetUserDTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dexGetUserDTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexUserDTO>') as List)
+        .cast<DexUserDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// Users (historical)
   ///
   /// Gets users.
@@ -883,6 +1792,208 @@ class DexApi {
       final responseBody = await _decodeBodyBytes(response);
       return (await apiClient.deserializeAsync(responseBody, 'List<DexUserDTO>') as List)
         .cast<DexUserDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// WithdrawDTOs (historical) 🔥
+  ///
+  /// Gets WithdrawDTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> dexGetWithdrawDTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/dex/WithdrawDTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// WithdrawDTOs (historical) 🔥
+  ///
+  /// Gets WithdrawDTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<DexWithdrawDTO>?> dexGetWithdrawDTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dexGetWithdrawDTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexWithdrawDTO>') as List)
+        .cast<DexWithdrawDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// WithdrawRequestDTOs (historical) 🔥
+  ///
+  /// Gets WithdrawRequestDTOs.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<Response> dexGetWithdrawRequestDTOsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/dex/WithdrawRequestDTOs/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (poolId != null) {
+      queryParams.addAll(_queryParams('', 'poolId', poolId));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// WithdrawRequestDTOs (historical) 🔥
+  ///
+  /// Gets WithdrawRequestDTOs.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   
+  ///
+  /// * [int] endBlock:
+  ///   
+  ///
+  /// * [DateTime] startDate:
+  ///   
+  ///
+  /// * [DateTime] endDate:
+  ///   
+  ///
+  /// * [String] poolId:
+  ///   
+  Future<List<DexWithdrawRequestDTO>?> dexGetWithdrawRequestDTOsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? poolId, }) async {
+    final response = await dexGetWithdrawRequestDTOsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, poolId: poolId, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<DexWithdrawRequestDTO>') as List)
+        .cast<DexWithdrawRequestDTO>()
         .toList();
 
     }

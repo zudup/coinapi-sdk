@@ -85,6 +85,56 @@ private class OASSushiswapApiTest {
     }
 
     /**
+     * BundleDTOs (historical) 🔥
+     *
+     * Gets BundleDTOs.
+     */
+    @isTest
+    private static void sushiswapGetBundleDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASSushiswapApi api;
+        List<OASSushiswapBundleDTO> response;
+        List<OASSushiswapBundleDTO> expectedResponse;
+        String js = '';
+
+        api = new OASSushiswapApi(new OASClient());
+
+        js = JSON.serialize(new List<OASSushiswapBundleDTO>{OASSushiswapBundleDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapBundleDTO>{OASSushiswapBundleDTO.getExample()};
+        response = (List<OASSushiswapBundleDTO>) api.sushiswapGetBundleDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapBundleDTO>{OASSushiswapBundleDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapBundleDTO>{OASSushiswapBundleDTO.getExample()};
+        response = (List<OASSushiswapBundleDTO>) api.sushiswapGetBundleDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapBundleDTO>{OASSushiswapBundleDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapBundleDTO>{OASSushiswapBundleDTO.getExample()};
+        response = (List<OASSushiswapBundleDTO>) api.sushiswapGetBundleDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Bundles (historical)
      *
      * Gets bundles.
@@ -130,6 +180,56 @@ private class OASSushiswapApiTest {
         res.setBody(js);
         expectedResponse = new List<OASSushiswapBundleDTO>{OASSushiswapBundleDTO.getExample()};
         response = (List<OASSushiswapBundleDTO>) api.sushiswapGetBundlesHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * BurnDTOs (historical) 🔥
+     *
+     * Gets BurnDTOs.
+     */
+    @isTest
+    private static void sushiswapGetBurnDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASSushiswapApi api;
+        List<OASSushiswapBurnDTO> response;
+        List<OASSushiswapBurnDTO> expectedResponse;
+        String js = '';
+
+        api = new OASSushiswapApi(new OASClient());
+
+        js = JSON.serialize(new List<OASSushiswapBurnDTO>{OASSushiswapBurnDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapBurnDTO>{OASSushiswapBurnDTO.getExample()};
+        response = (List<OASSushiswapBurnDTO>) api.sushiswapGetBurnDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapBurnDTO>{OASSushiswapBurnDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapBurnDTO>{OASSushiswapBurnDTO.getExample()};
+        response = (List<OASSushiswapBurnDTO>) api.sushiswapGetBurnDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapBurnDTO>{OASSushiswapBurnDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapBurnDTO>{OASSushiswapBurnDTO.getExample()};
+        response = (List<OASSushiswapBurnDTO>) api.sushiswapGetBurnDTOsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -184,6 +284,56 @@ private class OASSushiswapApiTest {
     }
 
     /**
+     * DayDataDTOs (historical) 🔥
+     *
+     * Gets DayDataDTOs.
+     */
+    @isTest
+    private static void sushiswapGetDayDataDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASSushiswapApi api;
+        List<OASSushiswapDayDataDTO> response;
+        List<OASSushiswapDayDataDTO> expectedResponse;
+        String js = '';
+
+        api = new OASSushiswapApi(new OASClient());
+
+        js = JSON.serialize(new List<OASSushiswapDayDataDTO>{OASSushiswapDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapDayDataDTO>{OASSushiswapDayDataDTO.getExample()};
+        response = (List<OASSushiswapDayDataDTO>) api.sushiswapGetDayDataDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapDayDataDTO>{OASSushiswapDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapDayDataDTO>{OASSushiswapDayDataDTO.getExample()};
+        response = (List<OASSushiswapDayDataDTO>) api.sushiswapGetDayDataDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapDayDataDTO>{OASSushiswapDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapDayDataDTO>{OASSushiswapDayDataDTO.getExample()};
+        response = (List<OASSushiswapDayDataDTO>) api.sushiswapGetDayDataDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * DayData (historical)
      *
      * Gets day data.
@@ -229,6 +379,56 @@ private class OASSushiswapApiTest {
         res.setBody(js);
         expectedResponse = new List<OASSushiswapDayDataDTO>{OASSushiswapDayDataDTO.getExample()};
         response = (List<OASSushiswapDayDataDTO>) api.sushiswapGetDayDataHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * FactoryDTOs (historical) 🔥
+     *
+     * Gets FactoryDTOs.
+     */
+    @isTest
+    private static void sushiswapGetFactoryDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASSushiswapApi api;
+        List<OASSushiswapFactoryDTO> response;
+        List<OASSushiswapFactoryDTO> expectedResponse;
+        String js = '';
+
+        api = new OASSushiswapApi(new OASClient());
+
+        js = JSON.serialize(new List<OASSushiswapFactoryDTO>{OASSushiswapFactoryDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapFactoryDTO>{OASSushiswapFactoryDTO.getExample()};
+        response = (List<OASSushiswapFactoryDTO>) api.sushiswapGetFactoryDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapFactoryDTO>{OASSushiswapFactoryDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapFactoryDTO>{OASSushiswapFactoryDTO.getExample()};
+        response = (List<OASSushiswapFactoryDTO>) api.sushiswapGetFactoryDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapFactoryDTO>{OASSushiswapFactoryDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapFactoryDTO>{OASSushiswapFactoryDTO.getExample()};
+        response = (List<OASSushiswapFactoryDTO>) api.sushiswapGetFactoryDTOsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -282,6 +482,56 @@ private class OASSushiswapApiTest {
     }
 
     /**
+     * HourDataDTOs (historical) 🔥
+     *
+     * Gets HourDataDTOs.
+     */
+    @isTest
+    private static void sushiswapGetHourDataDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASSushiswapApi api;
+        List<OASSushiswapHourDataDTO> response;
+        List<OASSushiswapHourDataDTO> expectedResponse;
+        String js = '';
+
+        api = new OASSushiswapApi(new OASClient());
+
+        js = JSON.serialize(new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()};
+        response = (List<OASSushiswapHourDataDTO>) api.sushiswapGetHourDataDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()};
+        response = (List<OASSushiswapHourDataDTO>) api.sushiswapGetHourDataDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()};
+        response = (List<OASSushiswapHourDataDTO>) api.sushiswapGetHourDataDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * HourData (historical)
      *
      * Gets hour data.
@@ -327,6 +577,56 @@ private class OASSushiswapApiTest {
         res.setBody(js);
         expectedResponse = new List<OASSushiswapHourDataDTO>{OASSushiswapHourDataDTO.getExample()};
         response = (List<OASSushiswapHourDataDTO>) api.sushiswapGetHourDataHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * LiquidityPositionDTOs (historical) 🔥
+     *
+     * Gets LiquidityPositionDTOs.
+     */
+    @isTest
+    private static void sushiswapGetLiquidityPositionDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASSushiswapApi api;
+        List<OASSushiswapLiquidityPositionDTO> response;
+        List<OASSushiswapLiquidityPositionDTO> expectedResponse;
+        String js = '';
+
+        api = new OASSushiswapApi(new OASClient());
+
+        js = JSON.serialize(new List<OASSushiswapLiquidityPositionDTO>{OASSushiswapLiquidityPositionDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapLiquidityPositionDTO>{OASSushiswapLiquidityPositionDTO.getExample()};
+        response = (List<OASSushiswapLiquidityPositionDTO>) api.sushiswapGetLiquidityPositionDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapLiquidityPositionDTO>{OASSushiswapLiquidityPositionDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapLiquidityPositionDTO>{OASSushiswapLiquidityPositionDTO.getExample()};
+        response = (List<OASSushiswapLiquidityPositionDTO>) api.sushiswapGetLiquidityPositionDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapLiquidityPositionDTO>{OASSushiswapLiquidityPositionDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapLiquidityPositionDTO>{OASSushiswapLiquidityPositionDTO.getExample()};
+        response = (List<OASSushiswapLiquidityPositionDTO>) api.sushiswapGetLiquidityPositionDTOsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -381,6 +681,56 @@ private class OASSushiswapApiTest {
     }
 
     /**
+     * LiquidityPositionSnapshotDTOs (historical) 🔥
+     *
+     * Gets LiquidityPositionSnapshotDTOs.
+     */
+    @isTest
+    private static void sushiswapGetLiquidityPositionSnapshotDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASSushiswapApi api;
+        List<OASSushiswapLiquidityPositionSnapsho> response;
+        List<OASSushiswapLiquidityPositionSnapsho> expectedResponse;
+        String js = '';
+
+        api = new OASSushiswapApi(new OASClient());
+
+        js = JSON.serialize(new List<OASSushiswapLiquidityPositionSnapsho>{OASSushiswapLiquidityPositionSnapsho.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapLiquidityPositionSnapsho>{OASSushiswapLiquidityPositionSnapsho.getExample()};
+        response = (List<OASSushiswapLiquidityPositionSnapsho>) api.sushiswapGetLiquidityPositionSnapshotDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapLiquidityPositionSnapsho>{OASSushiswapLiquidityPositionSnapsho.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapLiquidityPositionSnapsho>{OASSushiswapLiquidityPositionSnapsho.getExample()};
+        response = (List<OASSushiswapLiquidityPositionSnapsho>) api.sushiswapGetLiquidityPositionSnapshotDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapLiquidityPositionSnapsho>{OASSushiswapLiquidityPositionSnapsho.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapLiquidityPositionSnapsho>{OASSushiswapLiquidityPositionSnapsho.getExample()};
+        response = (List<OASSushiswapLiquidityPositionSnapsho>) api.sushiswapGetLiquidityPositionSnapshotDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * LiquidityPositionSnapshot (historical)
      *
      * Gets liquidity position snapshot.
@@ -431,6 +781,56 @@ private class OASSushiswapApiTest {
     }
 
     /**
+     * MintDTOs (historical) 🔥
+     *
+     * Gets MintDTOs.
+     */
+    @isTest
+    private static void sushiswapGetMintDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASSushiswapApi api;
+        List<OASSushiswapMintDTO> response;
+        List<OASSushiswapMintDTO> expectedResponse;
+        String js = '';
+
+        api = new OASSushiswapApi(new OASClient());
+
+        js = JSON.serialize(new List<OASSushiswapMintDTO>{OASSushiswapMintDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapMintDTO>{OASSushiswapMintDTO.getExample()};
+        response = (List<OASSushiswapMintDTO>) api.sushiswapGetMintDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapMintDTO>{OASSushiswapMintDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapMintDTO>{OASSushiswapMintDTO.getExample()};
+        response = (List<OASSushiswapMintDTO>) api.sushiswapGetMintDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapMintDTO>{OASSushiswapMintDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapMintDTO>{OASSushiswapMintDTO.getExample()};
+        response = (List<OASSushiswapMintDTO>) api.sushiswapGetMintDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Mints (historical)
      *
      * Gets mints.
@@ -477,6 +877,156 @@ private class OASSushiswapApiTest {
         res.setBody(js);
         expectedResponse = new List<OASSushiswapMintDTO>{OASSushiswapMintDTO.getExample()};
         response = (List<OASSushiswapMintDTO>) api.sushiswapGetMintsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * PairDTOs (historical) 🔥
+     *
+     * Gets PairDTOs.
+     */
+    @isTest
+    private static void sushiswapGetPairDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASSushiswapApi api;
+        List<OASSushiswapPairDTO> response;
+        List<OASSushiswapPairDTO> expectedResponse;
+        String js = '';
+
+        api = new OASSushiswapApi(new OASClient());
+
+        js = JSON.serialize(new List<OASSushiswapPairDTO>{OASSushiswapPairDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapPairDTO>{OASSushiswapPairDTO.getExample()};
+        response = (List<OASSushiswapPairDTO>) api.sushiswapGetPairDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapPairDTO>{OASSushiswapPairDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapPairDTO>{OASSushiswapPairDTO.getExample()};
+        response = (List<OASSushiswapPairDTO>) api.sushiswapGetPairDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapPairDTO>{OASSushiswapPairDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapPairDTO>{OASSushiswapPairDTO.getExample()};
+        response = (List<OASSushiswapPairDTO>) api.sushiswapGetPairDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * PairDayDataDTOs (historical) 🔥
+     *
+     * Gets PairDayDataDTOs.
+     */
+    @isTest
+    private static void sushiswapGetPairDayDataDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASSushiswapApi api;
+        List<OASSushiswapPairDayDataDTO> response;
+        List<OASSushiswapPairDayDataDTO> expectedResponse;
+        String js = '';
+
+        api = new OASSushiswapApi(new OASClient());
+
+        js = JSON.serialize(new List<OASSushiswapPairDayDataDTO>{OASSushiswapPairDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapPairDayDataDTO>{OASSushiswapPairDayDataDTO.getExample()};
+        response = (List<OASSushiswapPairDayDataDTO>) api.sushiswapGetPairDayDataDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapPairDayDataDTO>{OASSushiswapPairDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapPairDayDataDTO>{OASSushiswapPairDayDataDTO.getExample()};
+        response = (List<OASSushiswapPairDayDataDTO>) api.sushiswapGetPairDayDataDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapPairDayDataDTO>{OASSushiswapPairDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapPairDayDataDTO>{OASSushiswapPairDayDataDTO.getExample()};
+        response = (List<OASSushiswapPairDayDataDTO>) api.sushiswapGetPairDayDataDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * PairHourDataDTOs (historical) 🔥
+     *
+     * Gets PairHourDataDTOs.
+     */
+    @isTest
+    private static void sushiswapGetPairHourDataDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASSushiswapApi api;
+        List<OASSushiswapPairHourDataDTO> response;
+        List<OASSushiswapPairHourDataDTO> expectedResponse;
+        String js = '';
+
+        api = new OASSushiswapApi(new OASClient());
+
+        js = JSON.serialize(new List<OASSushiswapPairHourDataDTO>{OASSushiswapPairHourDataDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapPairHourDataDTO>{OASSushiswapPairHourDataDTO.getExample()};
+        response = (List<OASSushiswapPairHourDataDTO>) api.sushiswapGetPairHourDataDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapPairHourDataDTO>{OASSushiswapPairHourDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapPairHourDataDTO>{OASSushiswapPairHourDataDTO.getExample()};
+        response = (List<OASSushiswapPairHourDataDTO>) api.sushiswapGetPairHourDataDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapPairHourDataDTO>{OASSushiswapPairHourDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapPairHourDataDTO>{OASSushiswapPairHourDataDTO.getExample()};
+        response = (List<OASSushiswapPairHourDataDTO>) api.sushiswapGetPairHourDataDTOsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -673,6 +1223,56 @@ private class OASSushiswapApiTest {
     }
 
     /**
+     * SwapDTOs (historical) 🔥
+     *
+     * Gets SwapDTOs.
+     */
+    @isTest
+    private static void sushiswapGetSwapDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASSushiswapApi api;
+        List<OASSushiswapSwapDTO> response;
+        List<OASSushiswapSwapDTO> expectedResponse;
+        String js = '';
+
+        api = new OASSushiswapApi(new OASClient());
+
+        js = JSON.serialize(new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()};
+        response = (List<OASSushiswapSwapDTO>) api.sushiswapGetSwapDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()};
+        response = (List<OASSushiswapSwapDTO>) api.sushiswapGetSwapDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()};
+        response = (List<OASSushiswapSwapDTO>) api.sushiswapGetSwapDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Swaps (current) 🔥
      *
      * Gets swaps.
@@ -761,6 +1361,106 @@ private class OASSushiswapApiTest {
         res.setBody(js);
         expectedResponse = new List<OASSushiswapSwapDTO>{OASSushiswapSwapDTO.getExample()};
         response = (List<OASSushiswapSwapDTO>) api.sushiswapGetSwapsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * TokenDTOs (historical) 🔥
+     *
+     * Gets TokenDTOs.
+     */
+    @isTest
+    private static void sushiswapGetTokenDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASSushiswapApi api;
+        List<OASSushiswapTokenDTO> response;
+        List<OASSushiswapTokenDTO> expectedResponse;
+        String js = '';
+
+        api = new OASSushiswapApi(new OASClient());
+
+        js = JSON.serialize(new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()};
+        response = (List<OASSushiswapTokenDTO>) api.sushiswapGetTokenDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()};
+        response = (List<OASSushiswapTokenDTO>) api.sushiswapGetTokenDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapTokenDTO>{OASSushiswapTokenDTO.getExample()};
+        response = (List<OASSushiswapTokenDTO>) api.sushiswapGetTokenDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * TokenDayDataDTOs (historical) 🔥
+     *
+     * Gets TokenDayDataDTOs.
+     */
+    @isTest
+    private static void sushiswapGetTokenDayDataDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASSushiswapApi api;
+        List<OASSushiswapTokenDayDataDTO> response;
+        List<OASSushiswapTokenDayDataDTO> expectedResponse;
+        String js = '';
+
+        api = new OASSushiswapApi(new OASClient());
+
+        js = JSON.serialize(new List<OASSushiswapTokenDayDataDTO>{OASSushiswapTokenDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapTokenDayDataDTO>{OASSushiswapTokenDayDataDTO.getExample()};
+        response = (List<OASSushiswapTokenDayDataDTO>) api.sushiswapGetTokenDayDataDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapTokenDayDataDTO>{OASSushiswapTokenDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapTokenDayDataDTO>{OASSushiswapTokenDayDataDTO.getExample()};
+        response = (List<OASSushiswapTokenDayDataDTO>) api.sushiswapGetTokenDayDataDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapTokenDayDataDTO>{OASSushiswapTokenDayDataDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapTokenDayDataDTO>{OASSushiswapTokenDayDataDTO.getExample()};
+        response = (List<OASSushiswapTokenDayDataDTO>) api.sushiswapGetTokenDayDataDTOsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -907,6 +1607,56 @@ private class OASSushiswapApiTest {
     }
 
     /**
+     * TransactionDTOs (historical) 🔥
+     *
+     * Gets TransactionDTOs.
+     */
+    @isTest
+    private static void sushiswapGetTransactionDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASSushiswapApi api;
+        List<OASSushiswapTransactionDTO> response;
+        List<OASSushiswapTransactionDTO> expectedResponse;
+        String js = '';
+
+        api = new OASSushiswapApi(new OASClient());
+
+        js = JSON.serialize(new List<OASSushiswapTransactionDTO>{OASSushiswapTransactionDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapTransactionDTO>{OASSushiswapTransactionDTO.getExample()};
+        response = (List<OASSushiswapTransactionDTO>) api.sushiswapGetTransactionDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapTransactionDTO>{OASSushiswapTransactionDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapTransactionDTO>{OASSushiswapTransactionDTO.getExample()};
+        response = (List<OASSushiswapTransactionDTO>) api.sushiswapGetTransactionDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapTransactionDTO>{OASSushiswapTransactionDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapTransactionDTO>{OASSushiswapTransactionDTO.getExample()};
+        response = (List<OASSushiswapTransactionDTO>) api.sushiswapGetTransactionDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
      * Transactions (historical)
      *
      * Gets transactions.
@@ -952,6 +1702,56 @@ private class OASSushiswapApiTest {
         res.setBody(js);
         expectedResponse = new List<OASSushiswapTransactionDTO>{OASSushiswapTransactionDTO.getExample()};
         response = (List<OASSushiswapTransactionDTO>) api.sushiswapGetTransactionsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+    }
+
+    /**
+     * UserDTOs (historical) 🔥
+     *
+     * Gets UserDTOs.
+     */
+    @isTest
+    private static void sushiswapGetUserDTOsHistoricalTest() {
+        HttpResponse res = new HttpResponse();
+        res.setStatusCode(200);
+        res.setStatus('OK');
+        Test.setMock(HttpCalloutMock.class, new OASResponseMock(res));
+
+        Map<String, Object> params = new Map<String, Object>{
+            'startBlock' => 2147483648L,
+            'endBlock' => 2147483648L,
+            'startDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'endDate' => Datetime.newInstanceGmt(2013, 11, 12, 3, 3, 3),
+            'poolId' => 'null'
+        };
+
+        OASClient client;
+        OASSushiswapApi api;
+        List<OASSushiswapUserDTO> response;
+        List<OASSushiswapUserDTO> expectedResponse;
+        String js = '';
+
+        api = new OASSushiswapApi(new OASClient());
+
+        js = JSON.serialize(new List<OASSushiswapUserDTO>{OASSushiswapUserDTO.getExample()});
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapUserDTO>{OASSushiswapUserDTO.getExample()};
+        response = (List<OASSushiswapUserDTO>) api.sushiswapGetUserDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapUserDTO>{OASSushiswapUserDTO.getExample()});
+        res.setHeader('Content-Type', 'text/json');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapUserDTO>{OASSushiswapUserDTO.getExample()};
+        response = (List<OASSushiswapUserDTO>) api.sushiswapGetUserDTOsHistorical(params);
+        System.assertEquals(expectedResponse, response);
+
+        js = JSON.serialize(new List<OASSushiswapUserDTO>{OASSushiswapUserDTO.getExample()});
+        res.setHeader('Content-Type', 'text/plain');
+        res.setBody(js);
+        expectedResponse = new List<OASSushiswapUserDTO>{OASSushiswapUserDTO.getExample()};
+        response = (List<OASSushiswapUserDTO>) api.sushiswapGetUserDTOsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 

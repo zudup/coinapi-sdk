@@ -35,12 +35,30 @@ void main() {
       // TODO
     });
 
+    // BundleDTOs (historical) 🔥
+    //
+    // Gets BundleDTOs.
+    //
+    //Future<List<SushiswapBundleDTO>> sushiswapGetBundleDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test sushiswapGetBundleDTOsHistorical', () async {
+      // TODO
+    });
+
     // Bundles (historical)
     //
     // Gets bundles.
     //
     //Future<List<SushiswapBundleDTO>> sushiswapGetBundlesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
     test('test sushiswapGetBundlesHistorical', () async {
+      // TODO
+    });
+
+    // BurnDTOs (historical) 🔥
+    //
+    // Gets BurnDTOs.
+    //
+    //Future<List<SushiswapBurnDTO>> sushiswapGetBurnDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test sushiswapGetBurnDTOsHistorical', () async {
       // TODO
     });
 
@@ -53,12 +71,30 @@ void main() {
       // TODO
     });
 
+    // DayDataDTOs (historical) 🔥
+    //
+    // Gets DayDataDTOs.
+    //
+    //Future<List<SushiswapDayDataDTO>> sushiswapGetDayDataDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test sushiswapGetDayDataDTOsHistorical', () async {
+      // TODO
+    });
+
     // DayData (historical)
     //
     // Gets day data.
     //
     //Future<List<SushiswapDayDataDTO>> sushiswapGetDayDataHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
     test('test sushiswapGetDayDataHistorical', () async {
+      // TODO
+    });
+
+    // FactoryDTOs (historical) 🔥
+    //
+    // Gets FactoryDTOs.
+    //
+    //Future<List<SushiswapFactoryDTO>> sushiswapGetFactoryDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test sushiswapGetFactoryDTOsHistorical', () async {
       // TODO
     });
 
@@ -71,12 +107,30 @@ void main() {
       // TODO
     });
 
+    // HourDataDTOs (historical) 🔥
+    //
+    // Gets HourDataDTOs.
+    //
+    //Future<List<SushiswapHourDataDTO>> sushiswapGetHourDataDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test sushiswapGetHourDataDTOsHistorical', () async {
+      // TODO
+    });
+
     // HourData (historical)
     //
     // Gets hour data.
     //
     //Future<List<SushiswapHourDataDTO>> sushiswapGetHourDataHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
     test('test sushiswapGetHourDataHistorical', () async {
+      // TODO
+    });
+
+    // LiquidityPositionDTOs (historical) 🔥
+    //
+    // Gets LiquidityPositionDTOs.
+    //
+    //Future<List<SushiswapLiquidityPositionDTO>> sushiswapGetLiquidityPositionDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test sushiswapGetLiquidityPositionDTOsHistorical', () async {
       // TODO
     });
 
@@ -89,6 +143,15 @@ void main() {
       // TODO
     });
 
+    // LiquidityPositionSnapshotDTOs (historical) 🔥
+    //
+    // Gets LiquidityPositionSnapshotDTOs.
+    //
+    //Future<List<SushiswapLiquidityPositionSnapshotDTO>> sushiswapGetLiquidityPositionSnapshotDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test sushiswapGetLiquidityPositionSnapshotDTOsHistorical', () async {
+      // TODO
+    });
+
     // LiquidityPositionSnapshot (historical)
     //
     // Gets liquidity position snapshot.
@@ -98,12 +161,48 @@ void main() {
       // TODO
     });
 
+    // MintDTOs (historical) 🔥
+    //
+    // Gets MintDTOs.
+    //
+    //Future<List<SushiswapMintDTO>> sushiswapGetMintDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test sushiswapGetMintDTOsHistorical', () async {
+      // TODO
+    });
+
     // Mints (historical)
     //
     // Gets mints.
     //
     //Future<List<SushiswapMintDTO>> sushiswapGetMintsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test sushiswapGetMintsHistorical', () async {
+      // TODO
+    });
+
+    // PairDTOs (historical) 🔥
+    //
+    // Gets PairDTOs.
+    //
+    //Future<List<SushiswapPairDTO>> sushiswapGetPairDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test sushiswapGetPairDTOsHistorical', () async {
+      // TODO
+    });
+
+    // PairDayDataDTOs (historical) 🔥
+    //
+    // Gets PairDayDataDTOs.
+    //
+    //Future<List<SushiswapPairDayDataDTO>> sushiswapGetPairDayDataDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test sushiswapGetPairDayDataDTOsHistorical', () async {
+      // TODO
+    });
+
+    // PairHourDataDTOs (historical) 🔥
+    //
+    // Gets PairHourDataDTOs.
+    //
+    //Future<List<SushiswapPairHourDataDTO>> sushiswapGetPairHourDataDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test sushiswapGetPairHourDataDTOsHistorical', () async {
       // TODO
     });
 
@@ -143,6 +242,15 @@ void main() {
       // TODO
     });
 
+    // SwapDTOs (historical) 🔥
+    //
+    // Gets SwapDTOs.
+    //
+    //Future<List<SushiswapSwapDTO>> sushiswapGetSwapDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test sushiswapGetSwapDTOsHistorical', () async {
+      // TODO
+    });
+
     // Swaps (current) 🔥
     //
     // Gets swaps.
@@ -158,6 +266,24 @@ void main() {
     //
     //Future<List<SushiswapSwapDTO>> sushiswapGetSwapsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
     test('test sushiswapGetSwapsHistorical', () async {
+      // TODO
+    });
+
+    // TokenDTOs (historical) 🔥
+    //
+    // Gets TokenDTOs.
+    //
+    //Future<List<SushiswapTokenDTO>> sushiswapGetTokenDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test sushiswapGetTokenDTOsHistorical', () async {
+      // TODO
+    });
+
+    // TokenDayDataDTOs (historical) 🔥
+    //
+    // Gets TokenDayDataDTOs.
+    //
+    //Future<List<SushiswapTokenDayDataDTO>> sushiswapGetTokenDayDataDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test sushiswapGetTokenDayDataDTOsHistorical', () async {
       // TODO
     });
 
@@ -188,12 +314,30 @@ void main() {
       // TODO
     });
 
+    // TransactionDTOs (historical) 🔥
+    //
+    // Gets TransactionDTOs.
+    //
+    //Future<List<SushiswapTransactionDTO>> sushiswapGetTransactionDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test sushiswapGetTransactionDTOsHistorical', () async {
+      // TODO
+    });
+
     // Transactions (historical)
     //
     // Gets transactions.
     //
     //Future<List<SushiswapTransactionDTO>> sushiswapGetTransactionsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate }) async
     test('test sushiswapGetTransactionsHistorical', () async {
+      // TODO
+    });
+
+    // UserDTOs (historical) 🔥
+    //
+    // Gets UserDTOs.
+    //
+    //Future<List<SushiswapUserDTO>> sushiswapGetUserDTOsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String poolId }) async
+    test('test sushiswapGetUserDTOsHistorical', () async {
       // TODO
     });
 

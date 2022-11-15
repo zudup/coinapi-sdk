@@ -4,16 +4,35 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**CurveGetAccountDTOsHistorical**](CurveApi.md#CurveGetAccountDTOsHistorical) | **Get** /dapps/curve/AccountDTOs/historical | AccountDTOs (historical) 🔥
 [**CurveGetAccountsHistorical**](CurveApi.md#CurveGetAccountsHistorical) | **Get** /dapps/curve/accounts/historical | Accounts (historical)
+[**CurveGetAddLiquidityEventDTOsHistorical**](CurveApi.md#CurveGetAddLiquidityEventDTOsHistorical) | **Get** /dapps/curve/AddLiquidityEventDTOs/historical | AddLiquidityEventDTOs (historical) 🔥
 [**CurveGetAddLiquidityEventsHistorical**](CurveApi.md#CurveGetAddLiquidityEventsHistorical) | **Get** /dapps/curve/addLiquidityEvents/historical | AddLiquidityEvents (historical)
+[**CurveGetAdminFeeChangeLogDTOsHistorical**](CurveApi.md#CurveGetAdminFeeChangeLogDTOsHistorical) | **Get** /dapps/curve/AdminFeeChangeLogDTOs/historical | AdminFeeChangeLogDTOs (historical) 🔥
 [**CurveGetAdminFeeChangeLogsHistorical**](CurveApi.md#CurveGetAdminFeeChangeLogsHistorical) | **Get** /dapps/curve/adminFeeChangeLogs/historical | AdminFeeChangeLogs (historical)
+[**CurveGetAmplificationCoeffChangeLogDTOsHistorical**](CurveApi.md#CurveGetAmplificationCoeffChangeLogDTOsHistorical) | **Get** /dapps/curve/AmplificationCoeffChangeLogDTOs/historical | AmplificationCoeffChangeLogDTOs (historical) 🔥
 [**CurveGetAmplificationCoeffChangeLogsHistorical**](CurveApi.md#CurveGetAmplificationCoeffChangeLogsHistorical) | **Get** /dapps/curve/amplificationCoeffChangeLogs/historical | AmplificationCoeffChangeLogs (historical)
+[**CurveGetCoinDTOsHistorical**](CurveApi.md#CurveGetCoinDTOsHistorical) | **Get** /dapps/curve/CoinDTOs/historical | CoinDTOs (historical) 🔥
 [**CurveGetCoinsHistorical**](CurveApi.md#CurveGetCoinsHistorical) | **Get** /dapps/curve/coins/historical | Coins (historical)
+[**CurveGetContractDTOsHistorical**](CurveApi.md#CurveGetContractDTOsHistorical) | **Get** /dapps/curve/ContractDTOs/historical | ContractDTOs (historical) 🔥
+[**CurveGetContractVersionDTOsHistorical**](CurveApi.md#CurveGetContractVersionDTOsHistorical) | **Get** /dapps/curve/ContractVersionDTOs/historical | ContractVersionDTOs (historical) 🔥
 [**CurveGetContractsHistorical**](CurveApi.md#CurveGetContractsHistorical) | **Get** /dapps/curve/contracts/historical | Contracts (historical)
 [**CurveGetContractsVersionsHistorical**](CurveApi.md#CurveGetContractsVersionsHistorical) | **Get** /dapps/curve/contractsVersions/historical | ContractsVersions (historical)
+[**CurveGetDailyVolumeDTOsHistorical**](CurveApi.md#CurveGetDailyVolumeDTOsHistorical) | **Get** /dapps/curve/DailyVolumeDTOs/historical | DailyVolumeDTOs (historical) 🔥
 [**CurveGetDailyVolumesHistorical**](CurveApi.md#CurveGetDailyVolumesHistorical) | **Get** /dapps/curve/dailyVolumes/historical | DailyVolumes (historical)
+[**CurveGetExchangeDTOsHistorical**](CurveApi.md#CurveGetExchangeDTOsHistorical) | **Get** /dapps/curve/ExchangeDTOs/historical | ExchangeDTOs (historical) 🔥
 [**CurveGetExchangesHistorical**](CurveApi.md#CurveGetExchangesHistorical) | **Get** /dapps/curve/exchanges/historical | Exchanges (historical) 🔥
+[**CurveGetFeeChangeLogDTOsHistorical**](CurveApi.md#CurveGetFeeChangeLogDTOsHistorical) | **Get** /dapps/curve/FeeChangeLogDTOs/historical | FeeChangeLogDTOs (historical) 🔥
 [**CurveGetFeeChangeLogsHistorical**](CurveApi.md#CurveGetFeeChangeLogsHistorical) | **Get** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical)
+[**CurveGetGaugeDTOsHistorical**](CurveApi.md#CurveGetGaugeDTOsHistorical) | **Get** /dapps/curve/GaugeDTOs/historical | GaugeDTOs (historical) 🔥
+[**CurveGetGaugeDepositDTOsHistorical**](CurveApi.md#CurveGetGaugeDepositDTOsHistorical) | **Get** /dapps/curve/GaugeDepositDTOs/historical | GaugeDepositDTOs (historical) 🔥
+[**CurveGetGaugeLiquidityDTOsHistorical**](CurveApi.md#CurveGetGaugeLiquidityDTOsHistorical) | **Get** /dapps/curve/GaugeLiquidityDTOs/historical | GaugeLiquidityDTOs (historical) 🔥
+[**CurveGetGaugeTotalWeightDTOsHistorical**](CurveApi.md#CurveGetGaugeTotalWeightDTOsHistorical) | **Get** /dapps/curve/GaugeTotalWeightDTOs/historical | GaugeTotalWeightDTOs (historical) 🔥
+[**CurveGetGaugeTypeDTOsHistorical**](CurveApi.md#CurveGetGaugeTypeDTOsHistorical) | **Get** /dapps/curve/GaugeTypeDTOs/historical | GaugeTypeDTOs (historical) 🔥
+[**CurveGetGaugeTypeWeightDTOsHistorical**](CurveApi.md#CurveGetGaugeTypeWeightDTOsHistorical) | **Get** /dapps/curve/GaugeTypeWeightDTOs/historical | GaugeTypeWeightDTOs (historical) 🔥
+[**CurveGetGaugeWeightDTOsHistorical**](CurveApi.md#CurveGetGaugeWeightDTOsHistorical) | **Get** /dapps/curve/GaugeWeightDTOs/historical | GaugeWeightDTOs (historical) 🔥
+[**CurveGetGaugeWeightVoteDTOsHistorical**](CurveApi.md#CurveGetGaugeWeightVoteDTOsHistorical) | **Get** /dapps/curve/GaugeWeightVoteDTOs/historical | GaugeWeightVoteDTOs (historical) 🔥
+[**CurveGetGaugeWithdrawDTOsHistorical**](CurveApi.md#CurveGetGaugeWithdrawDTOsHistorical) | **Get** /dapps/curve/GaugeWithdrawDTOs/historical | GaugeWithdrawDTOs (historical) 🔥
 [**CurveGetGaugesDepositsHistorical**](CurveApi.md#CurveGetGaugesDepositsHistorical) | **Get** /dapps/curve/gaugesDeposits/historical | GaugesDeposits (historical)
 [**CurveGetGaugesHistorical**](CurveApi.md#CurveGetGaugesHistorical) | **Get** /dapps/curve/gauges/historical | Gauges (historical)
 [**CurveGetGaugesLiquidityHistorical**](CurveApi.md#CurveGetGaugesLiquidityHistorical) | **Get** /dapps/curve/gaugesLiquidity/historical | GaugesLiquidity (historical)
@@ -23,20 +42,108 @@ Method | HTTP request | Description
 [**CurveGetGaugesWeightsHistorical**](CurveApi.md#CurveGetGaugesWeightsHistorical) | **Get** /dapps/curve/gaugesWeights/historical | GaugesWeights (historical)
 [**CurveGetGaugesWeightsVotesHistorical**](CurveApi.md#CurveGetGaugesWeightsVotesHistorical) | **Get** /dapps/curve/gaugesWeightsVotes/historical | GaugesWeightsVotes (historical)
 [**CurveGetGaugesWithdrawHistorical**](CurveApi.md#CurveGetGaugesWithdrawHistorical) | **Get** /dapps/curve/gaugesWithdraws/historical | GaugesWithdraw (historical)
+[**CurveGetHourlyVolumeDTOsHistorical**](CurveApi.md#CurveGetHourlyVolumeDTOsHistorical) | **Get** /dapps/curve/HourlyVolumeDTOs/historical | HourlyVolumeDTOs (historical) 🔥
 [**CurveGetHourlyVolumesHistorical**](CurveApi.md#CurveGetHourlyVolumesHistorical) | **Get** /dapps/curve/hourlyVolumes/historical | HourlyVolumes (historical)
+[**CurveGetLpTokenDTOsHistorical**](CurveApi.md#CurveGetLpTokenDTOsHistorical) | **Get** /dapps/curve/LpTokenDTOs/historical | LpTokenDTOs (historical) 🔥
 [**CurveGetLpTokensHistorical**](CurveApi.md#CurveGetLpTokensHistorical) | **Get** /dapps/curve/lpTokens/historical | LpTokens (historical)
+[**CurveGetPoolDTOsHistorical**](CurveApi.md#CurveGetPoolDTOsHistorical) | **Get** /dapps/curve/PoolDTOs/historical | PoolDTOs (historical) 🔥
 [**CurveGetPoolsHistorical**](CurveApi.md#CurveGetPoolsHistorical) | **Get** /dapps/curve/pools/historical | Pools (historical) 🔥
+[**CurveGetProposalDTOsHistorical**](CurveApi.md#CurveGetProposalDTOsHistorical) | **Get** /dapps/curve/ProposalDTOs/historical | ProposalDTOs (historical) 🔥
+[**CurveGetProposalVoteDTOsHistorical**](CurveApi.md#CurveGetProposalVoteDTOsHistorical) | **Get** /dapps/curve/ProposalVoteDTOs/historical | ProposalVoteDTOs (historical) 🔥
 [**CurveGetProposalsHistorical**](CurveApi.md#CurveGetProposalsHistorical) | **Get** /dapps/curve/proposals/historical | Proposals (historical)
 [**CurveGetProposalsVotesHistorical**](CurveApi.md#CurveGetProposalsVotesHistorical) | **Get** /dapps/curve/proposalsVotes/historical | ProposalsVotes (historical)
+[**CurveGetRemoveLiquidityEventDTOsHistorical**](CurveApi.md#CurveGetRemoveLiquidityEventDTOsHistorical) | **Get** /dapps/curve/RemoveLiquidityEventDTOs/historical | RemoveLiquidityEventDTOs (historical) 🔥
 [**CurveGetRemoveLiquidityEventsHistorical**](CurveApi.md#CurveGetRemoveLiquidityEventsHistorical) | **Get** /dapps/curve/removeLiquidityEvents/historical | RemoveLiquidityEvents (historical)
+[**CurveGetRemoveLiquidityOneEventDTOsHistorical**](CurveApi.md#CurveGetRemoveLiquidityOneEventDTOsHistorical) | **Get** /dapps/curve/RemoveLiquidityOneEventDTOs/historical | RemoveLiquidityOneEventDTOs (historical) 🔥
 [**CurveGetRemoveLiquidityOneEventsHistorical**](CurveApi.md#CurveGetRemoveLiquidityOneEventsHistorical) | **Get** /dapps/curve/removeLiquidityOneEvents/historical | RemoveLiquidityOneEvents (historical)
+[**CurveGetSystemStateDTOsHistorical**](CurveApi.md#CurveGetSystemStateDTOsHistorical) | **Get** /dapps/curve/SystemStateDTOs/historical | SystemStateDTOs (historical) 🔥
 [**CurveGetSystemStatesHistorical**](CurveApi.md#CurveGetSystemStatesHistorical) | **Get** /dapps/curve/systemStates/historical | SystemStates (historical)
+[**CurveGetTokenDTOsHistorical**](CurveApi.md#CurveGetTokenDTOsHistorical) | **Get** /dapps/curve/TokenDTOs/historical | TokenDTOs (historical) 🔥
 [**CurveGetTokensHistorical**](CurveApi.md#CurveGetTokensHistorical) | **Get** /dapps/curve/tokens/historical | Tokens (historical) 🔥
+[**CurveGetTransferOwnershipEventDTOsHistorical**](CurveApi.md#CurveGetTransferOwnershipEventDTOsHistorical) | **Get** /dapps/curve/TransferOwnershipEventDTOs/historical | TransferOwnershipEventDTOs (historical) 🔥
 [**CurveGetTransferOwnershipEventsHistorical**](CurveApi.md#CurveGetTransferOwnershipEventsHistorical) | **Get** /dapps/curve/transferOwnershipEvents/historical | TransferOwnershipEvents (historical)
+[**CurveGetUnderlyingCoinDTOsHistorical**](CurveApi.md#CurveGetUnderlyingCoinDTOsHistorical) | **Get** /dapps/curve/UnderlyingCoinDTOs/historical | UnderlyingCoinDTOs (historical) 🔥
 [**CurveGetUnderlyingCoinsHistorical**](CurveApi.md#CurveGetUnderlyingCoinsHistorical) | **Get** /dapps/curve/underlyingCoins/historical | UnderlyingCoins (historical)
+[**CurveGetVotingAppDTOsHistorical**](CurveApi.md#CurveGetVotingAppDTOsHistorical) | **Get** /dapps/curve/VotingAppDTOs/historical | VotingAppDTOs (historical) 🔥
 [**CurveGetVotingAppsHistorical**](CurveApi.md#CurveGetVotingAppsHistorical) | **Get** /dapps/curve/votingApps/historical | VotingApps (historical)
+[**CurveGetWeeklyVolumeDTOsHistorical**](CurveApi.md#CurveGetWeeklyVolumeDTOsHistorical) | **Get** /dapps/curve/WeeklyVolumeDTOs/historical | WeeklyVolumeDTOs (historical) 🔥
 [**CurveGetWeeklyVolumesHistorical**](CurveApi.md#CurveGetWeeklyVolumesHistorical) | **Get** /dapps/curve/weeklyVolumes/historical | WeeklyVolumes (historical)
 
+
+
+## CurveGetAccountDTOsHistorical
+
+> []CurveAccountDTO CurveGetAccountDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+AccountDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetAccountDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetAccountDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetAccountDTOsHistorical`: []CurveAccountDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetAccountDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetAccountDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveAccountDTO**](CurveAccountDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
 
 ## CurveGetAccountsHistorical
@@ -97,6 +204,81 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[]CurveAccountDTO**](CurveAccountDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetAddLiquidityEventDTOsHistorical
+
+> []CurveAddLiquidityEventDTO CurveGetAddLiquidityEventDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+AddLiquidityEventDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetAddLiquidityEventDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetAddLiquidityEventDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetAddLiquidityEventDTOsHistorical`: []CurveAddLiquidityEventDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetAddLiquidityEventDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetAddLiquidityEventDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveAddLiquidityEventDTO**](CurveAddLiquidityEventDTO.md)
 
 ### Authorization
 
@@ -187,6 +369,81 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## CurveGetAdminFeeChangeLogDTOsHistorical
+
+> []CurveAdminFeeChangeLogDTO CurveGetAdminFeeChangeLogDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+AdminFeeChangeLogDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetAdminFeeChangeLogDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetAdminFeeChangeLogDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetAdminFeeChangeLogDTOsHistorical`: []CurveAdminFeeChangeLogDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetAdminFeeChangeLogDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetAdminFeeChangeLogDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveAdminFeeChangeLogDTO**](CurveAdminFeeChangeLogDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CurveGetAdminFeeChangeLogsHistorical
 
 > []CurveAdminFeeChangeLogDTO CurveGetAdminFeeChangeLogsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
@@ -247,6 +504,81 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[]CurveAdminFeeChangeLogDTO**](CurveAdminFeeChangeLogDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetAmplificationCoeffChangeLogDTOsHistorical
+
+> []CurveAmplificationCoeffChangeLogDTO CurveGetAmplificationCoeffChangeLogDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+AmplificationCoeffChangeLogDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetAmplificationCoeffChangeLogDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetAmplificationCoeffChangeLogDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetAmplificationCoeffChangeLogDTOsHistorical`: []CurveAmplificationCoeffChangeLogDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetAmplificationCoeffChangeLogDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveAmplificationCoeffChangeLogDTO**](CurveAmplificationCoeffChangeLogDTO.md)
 
 ### Authorization
 
@@ -337,6 +669,81 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## CurveGetCoinDTOsHistorical
+
+> []CurveCoinDTO CurveGetCoinDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+CoinDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetCoinDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetCoinDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetCoinDTOsHistorical`: []CurveCoinDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetCoinDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetCoinDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveCoinDTO**](CurveCoinDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CurveGetCoinsHistorical
 
 > []CurveCoinDTO CurveGetCoinsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
@@ -397,6 +804,156 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[]CurveCoinDTO**](CurveCoinDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetContractDTOsHistorical
+
+> []CurveContractDTO CurveGetContractDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+ContractDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetContractDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetContractDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetContractDTOsHistorical`: []CurveContractDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetContractDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetContractDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveContractDTO**](CurveContractDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetContractVersionDTOsHistorical
+
+> []CurveContractVersionDTO CurveGetContractVersionDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+ContractVersionDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetContractVersionDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetContractVersionDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetContractVersionDTOsHistorical`: []CurveContractVersionDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetContractVersionDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetContractVersionDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveContractVersionDTO**](CurveContractVersionDTO.md)
 
 ### Authorization
 
@@ -562,6 +1119,81 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## CurveGetDailyVolumeDTOsHistorical
+
+> []CurveDailyVolumeDTO CurveGetDailyVolumeDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+DailyVolumeDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetDailyVolumeDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetDailyVolumeDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetDailyVolumeDTOsHistorical`: []CurveDailyVolumeDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetDailyVolumeDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetDailyVolumeDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveDailyVolumeDTO**](CurveDailyVolumeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CurveGetDailyVolumesHistorical
 
 > []CurveDailyVolumeDTO CurveGetDailyVolumesHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
@@ -622,6 +1254,81 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[]CurveDailyVolumeDTO**](CurveDailyVolumeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetExchangeDTOsHistorical
+
+> []CurveExchangeDTO CurveGetExchangeDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+ExchangeDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetExchangeDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetExchangeDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetExchangeDTOsHistorical`: []CurveExchangeDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetExchangeDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetExchangeDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveExchangeDTO**](CurveExchangeDTO.md)
 
 ### Authorization
 
@@ -712,6 +1419,81 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## CurveGetFeeChangeLogDTOsHistorical
+
+> []CurveFeeChangeLogDTO CurveGetFeeChangeLogDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+FeeChangeLogDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetFeeChangeLogDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetFeeChangeLogDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetFeeChangeLogDTOsHistorical`: []CurveFeeChangeLogDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetFeeChangeLogDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetFeeChangeLogDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveFeeChangeLogDTO**](CurveFeeChangeLogDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CurveGetFeeChangeLogsHistorical
 
 > []CurveFeeChangeLogDTO CurveGetFeeChangeLogsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
@@ -772,6 +1554,681 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[]CurveFeeChangeLogDTO**](CurveFeeChangeLogDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetGaugeDTOsHistorical
+
+> []CurveGaugeDTO CurveGetGaugeDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+GaugeDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetGaugeDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetGaugeDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetGaugeDTOsHistorical`: []CurveGaugeDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetGaugeDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetGaugeDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveGaugeDTO**](CurveGaugeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetGaugeDepositDTOsHistorical
+
+> []CurveGaugeDepositDTO CurveGetGaugeDepositDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+GaugeDepositDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetGaugeDepositDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetGaugeDepositDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetGaugeDepositDTOsHistorical`: []CurveGaugeDepositDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetGaugeDepositDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetGaugeDepositDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveGaugeDepositDTO**](CurveGaugeDepositDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetGaugeLiquidityDTOsHistorical
+
+> []CurveGaugeLiquidityDTO CurveGetGaugeLiquidityDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+GaugeLiquidityDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetGaugeLiquidityDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetGaugeLiquidityDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetGaugeLiquidityDTOsHistorical`: []CurveGaugeLiquidityDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetGaugeLiquidityDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetGaugeLiquidityDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveGaugeLiquidityDTO**](CurveGaugeLiquidityDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetGaugeTotalWeightDTOsHistorical
+
+> []CurveGaugeTotalWeightDTO CurveGetGaugeTotalWeightDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+GaugeTotalWeightDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetGaugeTotalWeightDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetGaugeTotalWeightDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetGaugeTotalWeightDTOsHistorical`: []CurveGaugeTotalWeightDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetGaugeTotalWeightDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetGaugeTotalWeightDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveGaugeTotalWeightDTO**](CurveGaugeTotalWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetGaugeTypeDTOsHistorical
+
+> []CurveGaugeTypeDTO CurveGetGaugeTypeDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+GaugeTypeDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetGaugeTypeDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetGaugeTypeDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetGaugeTypeDTOsHistorical`: []CurveGaugeTypeDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetGaugeTypeDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetGaugeTypeDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveGaugeTypeDTO**](CurveGaugeTypeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetGaugeTypeWeightDTOsHistorical
+
+> []CurveGaugeTypeWeightDTO CurveGetGaugeTypeWeightDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+GaugeTypeWeightDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetGaugeTypeWeightDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetGaugeTypeWeightDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetGaugeTypeWeightDTOsHistorical`: []CurveGaugeTypeWeightDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetGaugeTypeWeightDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetGaugeTypeWeightDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveGaugeTypeWeightDTO**](CurveGaugeTypeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetGaugeWeightDTOsHistorical
+
+> []CurveGaugeWeightDTO CurveGetGaugeWeightDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+GaugeWeightDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetGaugeWeightDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetGaugeWeightDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetGaugeWeightDTOsHistorical`: []CurveGaugeWeightDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetGaugeWeightDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetGaugeWeightDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveGaugeWeightDTO**](CurveGaugeWeightDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetGaugeWeightVoteDTOsHistorical
+
+> []CurveGaugeWeightVoteDTO CurveGetGaugeWeightVoteDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+GaugeWeightVoteDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetGaugeWeightVoteDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetGaugeWeightVoteDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetGaugeWeightVoteDTOsHistorical`: []CurveGaugeWeightVoteDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetGaugeWeightVoteDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetGaugeWeightVoteDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveGaugeWeightVoteDTO**](CurveGaugeWeightVoteDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetGaugeWithdrawDTOsHistorical
+
+> []CurveGaugeWithdrawDTO CurveGetGaugeWithdrawDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+GaugeWithdrawDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetGaugeWithdrawDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetGaugeWithdrawDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetGaugeWithdrawDTOsHistorical`: []CurveGaugeWithdrawDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetGaugeWithdrawDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetGaugeWithdrawDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveGaugeWithdrawDTO**](CurveGaugeWithdrawDTO.md)
 
 ### Authorization
 
@@ -1446,6 +2903,81 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## CurveGetHourlyVolumeDTOsHistorical
+
+> []CurveHourlyVolumeDTO CurveGetHourlyVolumeDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+HourlyVolumeDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetHourlyVolumeDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetHourlyVolumeDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetHourlyVolumeDTOsHistorical`: []CurveHourlyVolumeDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetHourlyVolumeDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetHourlyVolumeDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveHourlyVolumeDTO**](CurveHourlyVolumeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CurveGetHourlyVolumesHistorical
 
 > []CurveHourlyVolumeDTO CurveGetHourlyVolumesHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
@@ -1506,6 +3038,81 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[]CurveHourlyVolumeDTO**](CurveHourlyVolumeDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetLpTokenDTOsHistorical
+
+> []CurveLpTokenDTO CurveGetLpTokenDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+LpTokenDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetLpTokenDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetLpTokenDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetLpTokenDTOsHistorical`: []CurveLpTokenDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetLpTokenDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetLpTokenDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveLpTokenDTO**](CurveLpTokenDTO.md)
 
 ### Authorization
 
@@ -1596,6 +3203,81 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## CurveGetPoolDTOsHistorical
+
+> []CurvePoolDTO CurveGetPoolDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+PoolDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetPoolDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetPoolDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetPoolDTOsHistorical`: []CurvePoolDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetPoolDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetPoolDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurvePoolDTO**](CurvePoolDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CurveGetPoolsHistorical
 
 > []CurvePoolDTO CurveGetPoolsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
@@ -1656,6 +3338,156 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[]CurvePoolDTO**](CurvePoolDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetProposalDTOsHistorical
+
+> []CurveProposalDTO CurveGetProposalDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+ProposalDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetProposalDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetProposalDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetProposalDTOsHistorical`: []CurveProposalDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetProposalDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetProposalDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveProposalDTO**](CurveProposalDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetProposalVoteDTOsHistorical
+
+> []CurveProposalVoteDTO CurveGetProposalVoteDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+ProposalVoteDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetProposalVoteDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetProposalVoteDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetProposalVoteDTOsHistorical`: []CurveProposalVoteDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetProposalVoteDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetProposalVoteDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveProposalVoteDTO**](CurveProposalVoteDTO.md)
 
 ### Authorization
 
@@ -1817,6 +3649,81 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## CurveGetRemoveLiquidityEventDTOsHistorical
+
+> []CurveRemoveLiquidityEventDTO CurveGetRemoveLiquidityEventDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+RemoveLiquidityEventDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetRemoveLiquidityEventDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetRemoveLiquidityEventDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetRemoveLiquidityEventDTOsHistorical`: []CurveRemoveLiquidityEventDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetRemoveLiquidityEventDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetRemoveLiquidityEventDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveRemoveLiquidityEventDTO**](CurveRemoveLiquidityEventDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CurveGetRemoveLiquidityEventsHistorical
 
 > []CurveRemoveLiquidityEventDTO CurveGetRemoveLiquidityEventsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
@@ -1877,6 +3784,81 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[]CurveRemoveLiquidityEventDTO**](CurveRemoveLiquidityEventDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetRemoveLiquidityOneEventDTOsHistorical
+
+> []CurveRemoveLiquidityOneEventDTO CurveGetRemoveLiquidityOneEventDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+RemoveLiquidityOneEventDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetRemoveLiquidityOneEventDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetRemoveLiquidityOneEventDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetRemoveLiquidityOneEventDTOsHistorical`: []CurveRemoveLiquidityOneEventDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetRemoveLiquidityOneEventDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetRemoveLiquidityOneEventDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveRemoveLiquidityOneEventDTO**](CurveRemoveLiquidityOneEventDTO.md)
 
 ### Authorization
 
@@ -1967,6 +3949,81 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## CurveGetSystemStateDTOsHistorical
+
+> []CurveSystemStateDTO CurveGetSystemStateDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+SystemStateDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetSystemStateDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetSystemStateDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetSystemStateDTOsHistorical`: []CurveSystemStateDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetSystemStateDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetSystemStateDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveSystemStateDTO**](CurveSystemStateDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CurveGetSystemStatesHistorical
 
 > []CurveSystemStateDTO CurveGetSystemStatesHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
@@ -2025,6 +4082,81 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[]CurveSystemStateDTO**](CurveSystemStateDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetTokenDTOsHistorical
+
+> []CurveTokenDTO CurveGetTokenDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+TokenDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetTokenDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetTokenDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetTokenDTOsHistorical`: []CurveTokenDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetTokenDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetTokenDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveTokenDTO**](CurveTokenDTO.md)
 
 ### Authorization
 
@@ -2115,6 +4247,81 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## CurveGetTransferOwnershipEventDTOsHistorical
+
+> []CurveTransferOwnershipEventDTO CurveGetTransferOwnershipEventDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+TransferOwnershipEventDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetTransferOwnershipEventDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetTransferOwnershipEventDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetTransferOwnershipEventDTOsHistorical`: []CurveTransferOwnershipEventDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetTransferOwnershipEventDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetTransferOwnershipEventDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveTransferOwnershipEventDTO**](CurveTransferOwnershipEventDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CurveGetTransferOwnershipEventsHistorical
 
 > []CurveTransferOwnershipEventDTO CurveGetTransferOwnershipEventsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
@@ -2175,6 +4382,81 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[]CurveTransferOwnershipEventDTO**](CurveTransferOwnershipEventDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetUnderlyingCoinDTOsHistorical
+
+> []CurveUnderlyingCoinDTO CurveGetUnderlyingCoinDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+UnderlyingCoinDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetUnderlyingCoinDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetUnderlyingCoinDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetUnderlyingCoinDTOsHistorical`: []CurveUnderlyingCoinDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetUnderlyingCoinDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetUnderlyingCoinDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveUnderlyingCoinDTO**](CurveUnderlyingCoinDTO.md)
 
 ### Authorization
 
@@ -2265,6 +4547,81 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## CurveGetVotingAppDTOsHistorical
+
+> []CurveVotingAppDTO CurveGetVotingAppDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+VotingAppDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetVotingAppDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetVotingAppDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetVotingAppDTOsHistorical`: []CurveVotingAppDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetVotingAppDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetVotingAppDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveVotingAppDTO**](CurveVotingAppDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## CurveGetVotingAppsHistorical
 
 > []CurveVotingAppDTO CurveGetVotingAppsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Execute()
@@ -2323,6 +4680,81 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**[]CurveVotingAppDTO**](CurveVotingAppDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## CurveGetWeeklyVolumeDTOsHistorical
+
+> []CurveWeeklyVolumeDTO CurveGetWeeklyVolumeDTOsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+
+WeeklyVolumeDTOs (historical) 🔥
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+    "time"
+    openapiclient "./openapi"
+)
+
+func main() {
+    startBlock := int64(789) // int64 |  (optional)
+    endBlock := int64(789) // int64 |  (optional)
+    startDate := time.Now() // time.Time |  (optional)
+    endDate := time.Now() // time.Time |  (optional)
+    poolId := "poolId_example" // string |  (optional)
+
+    configuration := openapiclient.NewConfiguration()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.CurveApi.CurveGetWeeklyVolumeDTOsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).PoolId(poolId).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetWeeklyVolumeDTOsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `CurveGetWeeklyVolumeDTOsHistorical`: []CurveWeeklyVolumeDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetWeeklyVolumeDTOsHistorical`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiCurveGetWeeklyVolumeDTOsHistoricalRequest struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **int64** |  | 
+ **endBlock** | **int64** |  | 
+ **startDate** | **time.Time** |  | 
+ **endDate** | **time.Time** |  | 
+ **poolId** | **string** |  | 
+
+### Return type
+
+[**[]CurveWeeklyVolumeDTO**](CurveWeeklyVolumeDTO.md)
 
 ### Authorization
 

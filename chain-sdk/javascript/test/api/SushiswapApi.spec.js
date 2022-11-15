@@ -68,10 +68,30 @@
         done();
       });
     });
+    describe('sushiswapGetBundleDTOsHistorical', function() {
+      it('should call sushiswapGetBundleDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetBundleDTOsHistorical
+        //instance.sushiswapGetBundleDTOsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('sushiswapGetBundlesHistorical', function() {
       it('should call sushiswapGetBundlesHistorical successfully', function(done) {
         //uncomment below and update the code to test sushiswapGetBundlesHistorical
         //instance.sushiswapGetBundlesHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sushiswapGetBurnDTOsHistorical', function() {
+      it('should call sushiswapGetBurnDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetBurnDTOsHistorical
+        //instance.sushiswapGetBurnDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -88,10 +108,30 @@
         done();
       });
     });
+    describe('sushiswapGetDayDataDTOsHistorical', function() {
+      it('should call sushiswapGetDayDataDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetDayDataDTOsHistorical
+        //instance.sushiswapGetDayDataDTOsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('sushiswapGetDayDataHistorical', function() {
       it('should call sushiswapGetDayDataHistorical successfully', function(done) {
         //uncomment below and update the code to test sushiswapGetDayDataHistorical
         //instance.sushiswapGetDayDataHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sushiswapGetFactoryDTOsHistorical', function() {
+      it('should call sushiswapGetFactoryDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetFactoryDTOsHistorical
+        //instance.sushiswapGetFactoryDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -108,10 +148,30 @@
         done();
       });
     });
+    describe('sushiswapGetHourDataDTOsHistorical', function() {
+      it('should call sushiswapGetHourDataDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetHourDataDTOsHistorical
+        //instance.sushiswapGetHourDataDTOsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('sushiswapGetHourDataHistorical', function() {
       it('should call sushiswapGetHourDataHistorical successfully', function(done) {
         //uncomment below and update the code to test sushiswapGetHourDataHistorical
         //instance.sushiswapGetHourDataHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sushiswapGetLiquidityPositionDTOsHistorical', function() {
+      it('should call sushiswapGetLiquidityPositionDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetLiquidityPositionDTOsHistorical
+        //instance.sushiswapGetLiquidityPositionDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -128,6 +188,16 @@
         done();
       });
     });
+    describe('sushiswapGetLiquidityPositionSnapshotDTOsHistorical', function() {
+      it('should call sushiswapGetLiquidityPositionSnapshotDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetLiquidityPositionSnapshotDTOsHistorical
+        //instance.sushiswapGetLiquidityPositionSnapshotDTOsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('sushiswapGetLiquidityPositionSnapshotHistorical', function() {
       it('should call sushiswapGetLiquidityPositionSnapshotHistorical successfully', function(done) {
         //uncomment below and update the code to test sushiswapGetLiquidityPositionSnapshotHistorical
@@ -138,10 +208,50 @@
         done();
       });
     });
+    describe('sushiswapGetMintDTOsHistorical', function() {
+      it('should call sushiswapGetMintDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetMintDTOsHistorical
+        //instance.sushiswapGetMintDTOsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('sushiswapGetMintsHistorical', function() {
       it('should call sushiswapGetMintsHistorical successfully', function(done) {
         //uncomment below and update the code to test sushiswapGetMintsHistorical
         //instance.sushiswapGetMintsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sushiswapGetPairDTOsHistorical', function() {
+      it('should call sushiswapGetPairDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetPairDTOsHistorical
+        //instance.sushiswapGetPairDTOsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sushiswapGetPairDayDataDTOsHistorical', function() {
+      it('should call sushiswapGetPairDayDataDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetPairDayDataDTOsHistorical
+        //instance.sushiswapGetPairDayDataDTOsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sushiswapGetPairHourDataDTOsHistorical', function() {
+      it('should call sushiswapGetPairHourDataDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetPairHourDataDTOsHistorical
+        //instance.sushiswapGetPairHourDataDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -188,6 +298,16 @@
         done();
       });
     });
+    describe('sushiswapGetSwapDTOsHistorical', function() {
+      it('should call sushiswapGetSwapDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetSwapDTOsHistorical
+        //instance.sushiswapGetSwapDTOsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('sushiswapGetSwapsCurrent', function() {
       it('should call sushiswapGetSwapsCurrent successfully', function(done) {
         //uncomment below and update the code to test sushiswapGetSwapsCurrent
@@ -202,6 +322,26 @@
       it('should call sushiswapGetSwapsHistorical successfully', function(done) {
         //uncomment below and update the code to test sushiswapGetSwapsHistorical
         //instance.sushiswapGetSwapsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sushiswapGetTokenDTOsHistorical', function() {
+      it('should call sushiswapGetTokenDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetTokenDTOsHistorical
+        //instance.sushiswapGetTokenDTOsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sushiswapGetTokenDayDataDTOsHistorical', function() {
+      it('should call sushiswapGetTokenDayDataDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetTokenDayDataDTOsHistorical
+        //instance.sushiswapGetTokenDayDataDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -238,10 +378,30 @@
         done();
       });
     });
+    describe('sushiswapGetTransactionDTOsHistorical', function() {
+      it('should call sushiswapGetTransactionDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetTransactionDTOsHistorical
+        //instance.sushiswapGetTransactionDTOsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
     describe('sushiswapGetTransactionsHistorical', function() {
       it('should call sushiswapGetTransactionsHistorical successfully', function(done) {
         //uncomment below and update the code to test sushiswapGetTransactionsHistorical
         //instance.sushiswapGetTransactionsHistorical(function(error) {
+        //  if (error) throw error;
+        //expect().to.be();
+        //});
+        done();
+      });
+    });
+    describe('sushiswapGetUserDTOsHistorical', function() {
+      it('should call sushiswapGetUserDTOsHistorical successfully', function(done) {
+        //uncomment below and update the code to test sushiswapGetUserDTOsHistorical
+        //instance.sushiswapGetUserDTOsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -43,6 +43,24 @@ public class DexApiTest {
     private final DexApi api = new DexApi();
 
     /**
+     * BatchDTOs (historical) 🔥
+     *
+     * Gets BatchDTOs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexGetBatchDTOsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        List<DexBatchDTO> response = api.dexGetBatchDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+        // TODO: test validations
+    }
+
+    /**
      * Batches (historical)
      *
      * Gets batches.
@@ -56,6 +74,24 @@ public class DexApiTest {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         List<DexBatchDTO> response = api.dexGetBatchesHistorical(startBlock, endBlock, startDate, endDate);
+        // TODO: test validations
+    }
+
+    /**
+     * DepositDTOs (historical) 🔥
+     *
+     * Gets DepositDTOs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexGetDepositDTOsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        List<DexDepositDTO> response = api.dexGetDepositDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 
@@ -78,6 +114,24 @@ public class DexApiTest {
     }
 
     /**
+     * OrderDTOs (historical) 🔥
+     *
+     * Gets OrderDTOs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexGetOrderDTOsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        List<DexOrderDTO> response = api.dexGetOrderDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+        // TODO: test validations
+    }
+
+    /**
      * Orders (historical)
      *
      * Gets orders.
@@ -92,6 +146,24 @@ public class DexApiTest {
         OffsetDateTime endDate = null;
         String tokenId = null;
         List<DexOrderDTO> response = api.dexGetOrdersHistorical(startBlock, endBlock, startDate, endDate, tokenId);
+        // TODO: test validations
+    }
+
+    /**
+     * PriceDTOs (historical) 🔥
+     *
+     * Gets PriceDTOs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexGetPriceDTOsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        List<DexPriceDTO> response = api.dexGetPriceDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 
@@ -114,6 +186,24 @@ public class DexApiTest {
     }
 
     /**
+     * SolutionDTOs (historical) 🔥
+     *
+     * Gets SolutionDTOs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexGetSolutionDTOsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        List<DexSolutionDTO> response = api.dexGetSolutionDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+        // TODO: test validations
+    }
+
+    /**
      * Solutions (historical)
      *
      * Gets solutions.
@@ -132,6 +222,24 @@ public class DexApiTest {
     }
 
     /**
+     * StatsDTOs (historical) 🔥
+     *
+     * Gets StatsDTOs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexGetStatsDTOsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        List<DexStatsDTO> response = api.dexGetStatsDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+        // TODO: test validations
+    }
+
+    /**
      * Stats (historical)
      *
      * Gets stats.
@@ -145,6 +253,24 @@ public class DexApiTest {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         List<DexStatsDTO> response = api.dexGetStatsHistorical(startBlock, endBlock, startDate, endDate);
+        // TODO: test validations
+    }
+
+    /**
+     * TokenDTOs (historical) 🔥
+     *
+     * Gets TokenDTOs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexGetTokenDTOsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        List<DexTokenDTO> response = api.dexGetTokenDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 
@@ -167,6 +293,24 @@ public class DexApiTest {
     }
 
     /**
+     * TradeDTOs (historical) 🔥
+     *
+     * Gets TradeDTOs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexGetTradeDTOsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        List<DexTradeDTO> response = api.dexGetTradeDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+        // TODO: test validations
+    }
+
+    /**
      * Trades (historical) 🔥
      *
      * Gets trades.
@@ -184,6 +328,24 @@ public class DexApiTest {
     }
 
     /**
+     * UserDTOs (historical) 🔥
+     *
+     * Gets UserDTOs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexGetUserDTOsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        List<DexUserDTO> response = api.dexGetUserDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+        // TODO: test validations
+    }
+
+    /**
      * Users (historical)
      *
      * Gets users.
@@ -197,6 +359,42 @@ public class DexApiTest {
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         List<DexUserDTO> response = api.dexGetUsersHistorical(startBlock, endBlock, startDate, endDate);
+        // TODO: test validations
+    }
+
+    /**
+     * WithdrawDTOs (historical) 🔥
+     *
+     * Gets WithdrawDTOs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexGetWithdrawDTOsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        List<DexWithdrawDTO> response = api.dexGetWithdrawDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
+        // TODO: test validations
+    }
+
+    /**
+     * WithdrawRequestDTOs (historical) 🔥
+     *
+     * Gets WithdrawRequestDTOs.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void dexGetWithdrawRequestDTOsHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String poolId = null;
+        List<DexWithdrawRequestDTO> response = api.dexGetWithdrawRequestDTOsHistorical(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 

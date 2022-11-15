@@ -24,6 +24,155 @@ import (
 // UniswapV2ApiService UniswapV2Api service
 type UniswapV2ApiService service
 
+type ApiUniswapV2GetBundleV2DTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *UniswapV2ApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiUniswapV2GetBundleV2DTOsHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV2GetBundleV2DTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetBundleV2DTOsHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV2GetBundleV2DTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetBundleV2DTOsHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV2GetBundleV2DTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetBundleV2DTOsHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV2GetBundleV2DTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetBundleV2DTOsHistoricalRequest) PoolId(poolId string) ApiUniswapV2GetBundleV2DTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiUniswapV2GetBundleV2DTOsHistoricalRequest) Execute() ([]UniswapV2BundleV2DTO, *http.Response, error) {
+	return r.ApiService.UniswapV2GetBundleV2DTOsHistoricalExecute(r)
+}
+
+/*
+UniswapV2GetBundleV2DTOsHistorical BundleV2DTOs (historical) 🔥
+
+Gets BundleV2DTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUniswapV2GetBundleV2DTOsHistoricalRequest
+*/
+func (a *UniswapV2ApiService) UniswapV2GetBundleV2DTOsHistorical(ctx context.Context) ApiUniswapV2GetBundleV2DTOsHistoricalRequest {
+	return ApiUniswapV2GetBundleV2DTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UniswapV2BundleV2DTO
+func (a *UniswapV2ApiService) UniswapV2GetBundleV2DTOsHistoricalExecute(r ApiUniswapV2GetBundleV2DTOsHistoricalRequest) ([]UniswapV2BundleV2DTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UniswapV2BundleV2DTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV2ApiService.UniswapV2GetBundleV2DTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswapv2/BundleV2DTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiUniswapV2GetBundlesHistoricalRequest struct {
 	ctx context.Context
 	ApiService *UniswapV2ApiService
@@ -108,6 +257,155 @@ func (a *UniswapV2ApiService) UniswapV2GetBundlesHistoricalExecute(r ApiUniswapV
 	}
 	if r.endDate != nil {
 		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUniswapV2GetBurnV2DTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *UniswapV2ApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiUniswapV2GetBurnV2DTOsHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV2GetBurnV2DTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetBurnV2DTOsHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV2GetBurnV2DTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetBurnV2DTOsHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV2GetBurnV2DTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetBurnV2DTOsHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV2GetBurnV2DTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetBurnV2DTOsHistoricalRequest) PoolId(poolId string) ApiUniswapV2GetBurnV2DTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiUniswapV2GetBurnV2DTOsHistoricalRequest) Execute() ([]UniswapV2BurnV2DTO, *http.Response, error) {
+	return r.ApiService.UniswapV2GetBurnV2DTOsHistoricalExecute(r)
+}
+
+/*
+UniswapV2GetBurnV2DTOsHistorical BurnV2DTOs (historical) 🔥
+
+Gets BurnV2DTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUniswapV2GetBurnV2DTOsHistoricalRequest
+*/
+func (a *UniswapV2ApiService) UniswapV2GetBurnV2DTOsHistorical(ctx context.Context) ApiUniswapV2GetBurnV2DTOsHistoricalRequest {
+	return ApiUniswapV2GetBurnV2DTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UniswapV2BurnV2DTO
+func (a *UniswapV2ApiService) UniswapV2GetBurnV2DTOsHistoricalExecute(r ApiUniswapV2GetBurnV2DTOsHistoricalRequest) ([]UniswapV2BurnV2DTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UniswapV2BurnV2DTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV2ApiService.UniswapV2GetBurnV2DTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswapv2/BurnV2DTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -590,6 +888,304 @@ func (a *UniswapV2ApiService) UniswapV2GetFactoryHistoricalExecute(r ApiUniswapV
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiUniswapV2GetLiquidityPositionSnapshotV2DTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *UniswapV2ApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiUniswapV2GetLiquidityPositionSnapshotV2DTOsHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV2GetLiquidityPositionSnapshotV2DTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetLiquidityPositionSnapshotV2DTOsHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV2GetLiquidityPositionSnapshotV2DTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetLiquidityPositionSnapshotV2DTOsHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV2GetLiquidityPositionSnapshotV2DTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetLiquidityPositionSnapshotV2DTOsHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV2GetLiquidityPositionSnapshotV2DTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetLiquidityPositionSnapshotV2DTOsHistoricalRequest) PoolId(poolId string) ApiUniswapV2GetLiquidityPositionSnapshotV2DTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiUniswapV2GetLiquidityPositionSnapshotV2DTOsHistoricalRequest) Execute() ([]UniswapV2LiquidityPositionSnapshotV2DTO, *http.Response, error) {
+	return r.ApiService.UniswapV2GetLiquidityPositionSnapshotV2DTOsHistoricalExecute(r)
+}
+
+/*
+UniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical LiquidityPositionSnapshotV2DTOs (historical) 🔥
+
+Gets LiquidityPositionSnapshotV2DTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUniswapV2GetLiquidityPositionSnapshotV2DTOsHistoricalRequest
+*/
+func (a *UniswapV2ApiService) UniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical(ctx context.Context) ApiUniswapV2GetLiquidityPositionSnapshotV2DTOsHistoricalRequest {
+	return ApiUniswapV2GetLiquidityPositionSnapshotV2DTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UniswapV2LiquidityPositionSnapshotV2DTO
+func (a *UniswapV2ApiService) UniswapV2GetLiquidityPositionSnapshotV2DTOsHistoricalExecute(r ApiUniswapV2GetLiquidityPositionSnapshotV2DTOsHistoricalRequest) ([]UniswapV2LiquidityPositionSnapshotV2DTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UniswapV2LiquidityPositionSnapshotV2DTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV2ApiService.UniswapV2GetLiquidityPositionSnapshotV2DTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswapv2/LiquidityPositionSnapshotV2DTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUniswapV2GetLiquidityPositionV2DTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *UniswapV2ApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiUniswapV2GetLiquidityPositionV2DTOsHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV2GetLiquidityPositionV2DTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetLiquidityPositionV2DTOsHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV2GetLiquidityPositionV2DTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetLiquidityPositionV2DTOsHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV2GetLiquidityPositionV2DTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetLiquidityPositionV2DTOsHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV2GetLiquidityPositionV2DTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetLiquidityPositionV2DTOsHistoricalRequest) PoolId(poolId string) ApiUniswapV2GetLiquidityPositionV2DTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiUniswapV2GetLiquidityPositionV2DTOsHistoricalRequest) Execute() ([]UniswapV2LiquidityPositionV2DTO, *http.Response, error) {
+	return r.ApiService.UniswapV2GetLiquidityPositionV2DTOsHistoricalExecute(r)
+}
+
+/*
+UniswapV2GetLiquidityPositionV2DTOsHistorical LiquidityPositionV2DTOs (historical) 🔥
+
+Gets LiquidityPositionV2DTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUniswapV2GetLiquidityPositionV2DTOsHistoricalRequest
+*/
+func (a *UniswapV2ApiService) UniswapV2GetLiquidityPositionV2DTOsHistorical(ctx context.Context) ApiUniswapV2GetLiquidityPositionV2DTOsHistoricalRequest {
+	return ApiUniswapV2GetLiquidityPositionV2DTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UniswapV2LiquidityPositionV2DTO
+func (a *UniswapV2ApiService) UniswapV2GetLiquidityPositionV2DTOsHistoricalExecute(r ApiUniswapV2GetLiquidityPositionV2DTOsHistoricalRequest) ([]UniswapV2LiquidityPositionV2DTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UniswapV2LiquidityPositionV2DTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV2ApiService.UniswapV2GetLiquidityPositionV2DTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswapv2/LiquidityPositionV2DTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiUniswapV2GetLiquidityPositionsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *UniswapV2ApiService
@@ -888,6 +1484,155 @@ func (a *UniswapV2ApiService) UniswapV2GetLiquidityPositionsSnapshotsHistoricalE
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiUniswapV2GetMintV2DTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *UniswapV2ApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiUniswapV2GetMintV2DTOsHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV2GetMintV2DTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetMintV2DTOsHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV2GetMintV2DTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetMintV2DTOsHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV2GetMintV2DTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetMintV2DTOsHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV2GetMintV2DTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetMintV2DTOsHistoricalRequest) PoolId(poolId string) ApiUniswapV2GetMintV2DTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiUniswapV2GetMintV2DTOsHistoricalRequest) Execute() ([]UniswapV2MintV2DTO, *http.Response, error) {
+	return r.ApiService.UniswapV2GetMintV2DTOsHistoricalExecute(r)
+}
+
+/*
+UniswapV2GetMintV2DTOsHistorical MintV2DTOs (historical) 🔥
+
+Gets MintV2DTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUniswapV2GetMintV2DTOsHistoricalRequest
+*/
+func (a *UniswapV2ApiService) UniswapV2GetMintV2DTOsHistorical(ctx context.Context) ApiUniswapV2GetMintV2DTOsHistoricalRequest {
+	return ApiUniswapV2GetMintV2DTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UniswapV2MintV2DTO
+func (a *UniswapV2ApiService) UniswapV2GetMintV2DTOsHistoricalExecute(r ApiUniswapV2GetMintV2DTOsHistoricalRequest) ([]UniswapV2MintV2DTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UniswapV2MintV2DTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV2ApiService.UniswapV2GetMintV2DTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswapv2/MintV2DTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiUniswapV2GetMintsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *UniswapV2ApiService
@@ -963,6 +1708,453 @@ func (a *UniswapV2ApiService) UniswapV2GetMintsHistoricalExecute(r ApiUniswapV2G
 	}
 
 	localVarPath := localBasePath + "/dapps/uniswapv2/mints/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUniswapV2GetPairDayDataV2DTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *UniswapV2ApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiUniswapV2GetPairDayDataV2DTOsHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV2GetPairDayDataV2DTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetPairDayDataV2DTOsHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV2GetPairDayDataV2DTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetPairDayDataV2DTOsHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV2GetPairDayDataV2DTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetPairDayDataV2DTOsHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV2GetPairDayDataV2DTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetPairDayDataV2DTOsHistoricalRequest) PoolId(poolId string) ApiUniswapV2GetPairDayDataV2DTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiUniswapV2GetPairDayDataV2DTOsHistoricalRequest) Execute() ([]UniswapV2PairDayDataV2DTO, *http.Response, error) {
+	return r.ApiService.UniswapV2GetPairDayDataV2DTOsHistoricalExecute(r)
+}
+
+/*
+UniswapV2GetPairDayDataV2DTOsHistorical PairDayDataV2DTOs (historical) 🔥
+
+Gets PairDayDataV2DTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUniswapV2GetPairDayDataV2DTOsHistoricalRequest
+*/
+func (a *UniswapV2ApiService) UniswapV2GetPairDayDataV2DTOsHistorical(ctx context.Context) ApiUniswapV2GetPairDayDataV2DTOsHistoricalRequest {
+	return ApiUniswapV2GetPairDayDataV2DTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UniswapV2PairDayDataV2DTO
+func (a *UniswapV2ApiService) UniswapV2GetPairDayDataV2DTOsHistoricalExecute(r ApiUniswapV2GetPairDayDataV2DTOsHistoricalRequest) ([]UniswapV2PairDayDataV2DTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UniswapV2PairDayDataV2DTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV2ApiService.UniswapV2GetPairDayDataV2DTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswapv2/PairDayDataV2DTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUniswapV2GetPairHourDataV2DTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *UniswapV2ApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiUniswapV2GetPairHourDataV2DTOsHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV2GetPairHourDataV2DTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetPairHourDataV2DTOsHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV2GetPairHourDataV2DTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetPairHourDataV2DTOsHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV2GetPairHourDataV2DTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetPairHourDataV2DTOsHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV2GetPairHourDataV2DTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetPairHourDataV2DTOsHistoricalRequest) PoolId(poolId string) ApiUniswapV2GetPairHourDataV2DTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiUniswapV2GetPairHourDataV2DTOsHistoricalRequest) Execute() ([]UniswapV2PairHourDataV2DTO, *http.Response, error) {
+	return r.ApiService.UniswapV2GetPairHourDataV2DTOsHistoricalExecute(r)
+}
+
+/*
+UniswapV2GetPairHourDataV2DTOsHistorical PairHourDataV2DTOs (historical) 🔥
+
+Gets PairHourDataV2DTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUniswapV2GetPairHourDataV2DTOsHistoricalRequest
+*/
+func (a *UniswapV2ApiService) UniswapV2GetPairHourDataV2DTOsHistorical(ctx context.Context) ApiUniswapV2GetPairHourDataV2DTOsHistoricalRequest {
+	return ApiUniswapV2GetPairHourDataV2DTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UniswapV2PairHourDataV2DTO
+func (a *UniswapV2ApiService) UniswapV2GetPairHourDataV2DTOsHistoricalExecute(r ApiUniswapV2GetPairHourDataV2DTOsHistoricalRequest) ([]UniswapV2PairHourDataV2DTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UniswapV2PairHourDataV2DTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV2ApiService.UniswapV2GetPairHourDataV2DTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswapv2/PairHourDataV2DTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUniswapV2GetPairV2DTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *UniswapV2ApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiUniswapV2GetPairV2DTOsHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV2GetPairV2DTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetPairV2DTOsHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV2GetPairV2DTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetPairV2DTOsHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV2GetPairV2DTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetPairV2DTOsHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV2GetPairV2DTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetPairV2DTOsHistoricalRequest) PoolId(poolId string) ApiUniswapV2GetPairV2DTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiUniswapV2GetPairV2DTOsHistoricalRequest) Execute() ([]UniswapV2PairV2DTO, *http.Response, error) {
+	return r.ApiService.UniswapV2GetPairV2DTOsHistoricalExecute(r)
+}
+
+/*
+UniswapV2GetPairV2DTOsHistorical PairV2DTOs (historical) 🔥
+
+Gets PairV2DTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUniswapV2GetPairV2DTOsHistoricalRequest
+*/
+func (a *UniswapV2ApiService) UniswapV2GetPairV2DTOsHistorical(ctx context.Context) ApiUniswapV2GetPairV2DTOsHistoricalRequest {
+	return ApiUniswapV2GetPairV2DTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UniswapV2PairV2DTO
+func (a *UniswapV2ApiService) UniswapV2GetPairV2DTOsHistoricalExecute(r ApiUniswapV2GetPairV2DTOsHistoricalRequest) ([]UniswapV2PairV2DTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UniswapV2PairV2DTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV2ApiService.UniswapV2GetPairV2DTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswapv2/PairV2DTOs/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1592,6 +2784,155 @@ func (a *UniswapV2ApiService) UniswapV2GetPoolsHourDataHistoricalExecute(r ApiUn
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiUniswapV2GetSwapV2DTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *UniswapV2ApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiUniswapV2GetSwapV2DTOsHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV2GetSwapV2DTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetSwapV2DTOsHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV2GetSwapV2DTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetSwapV2DTOsHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV2GetSwapV2DTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetSwapV2DTOsHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV2GetSwapV2DTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetSwapV2DTOsHistoricalRequest) PoolId(poolId string) ApiUniswapV2GetSwapV2DTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiUniswapV2GetSwapV2DTOsHistoricalRequest) Execute() ([]UniswapV2SwapV2DTO, *http.Response, error) {
+	return r.ApiService.UniswapV2GetSwapV2DTOsHistoricalExecute(r)
+}
+
+/*
+UniswapV2GetSwapV2DTOsHistorical SwapV2DTOs (historical) 🔥
+
+Gets SwapV2DTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUniswapV2GetSwapV2DTOsHistoricalRequest
+*/
+func (a *UniswapV2ApiService) UniswapV2GetSwapV2DTOsHistorical(ctx context.Context) ApiUniswapV2GetSwapV2DTOsHistoricalRequest {
+	return ApiUniswapV2GetSwapV2DTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UniswapV2SwapV2DTO
+func (a *UniswapV2ApiService) UniswapV2GetSwapV2DTOsHistoricalExecute(r ApiUniswapV2GetSwapV2DTOsHistoricalRequest) ([]UniswapV2SwapV2DTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UniswapV2SwapV2DTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV2ApiService.UniswapV2GetSwapV2DTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswapv2/SwapV2DTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiUniswapV2GetSwapsCurrentRequest struct {
 	ctx context.Context
 	ApiService *UniswapV2ApiService
@@ -1766,6 +3107,304 @@ func (a *UniswapV2ApiService) UniswapV2GetSwapsHistoricalExecute(r ApiUniswapV2G
 	}
 
 	localVarPath := localBasePath + "/dapps/uniswapv2/swaps/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUniswapV2GetTokenDayDataV2DTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *UniswapV2ApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiUniswapV2GetTokenDayDataV2DTOsHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV2GetTokenDayDataV2DTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetTokenDayDataV2DTOsHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV2GetTokenDayDataV2DTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetTokenDayDataV2DTOsHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV2GetTokenDayDataV2DTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetTokenDayDataV2DTOsHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV2GetTokenDayDataV2DTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetTokenDayDataV2DTOsHistoricalRequest) PoolId(poolId string) ApiUniswapV2GetTokenDayDataV2DTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiUniswapV2GetTokenDayDataV2DTOsHistoricalRequest) Execute() ([]UniswapV2TokenDayDataV2DTO, *http.Response, error) {
+	return r.ApiService.UniswapV2GetTokenDayDataV2DTOsHistoricalExecute(r)
+}
+
+/*
+UniswapV2GetTokenDayDataV2DTOsHistorical TokenDayDataV2DTOs (historical) 🔥
+
+Gets TokenDayDataV2DTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUniswapV2GetTokenDayDataV2DTOsHistoricalRequest
+*/
+func (a *UniswapV2ApiService) UniswapV2GetTokenDayDataV2DTOsHistorical(ctx context.Context) ApiUniswapV2GetTokenDayDataV2DTOsHistoricalRequest {
+	return ApiUniswapV2GetTokenDayDataV2DTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UniswapV2TokenDayDataV2DTO
+func (a *UniswapV2ApiService) UniswapV2GetTokenDayDataV2DTOsHistoricalExecute(r ApiUniswapV2GetTokenDayDataV2DTOsHistoricalRequest) ([]UniswapV2TokenDayDataV2DTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UniswapV2TokenDayDataV2DTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV2ApiService.UniswapV2GetTokenDayDataV2DTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswapv2/TokenDayDataV2DTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUniswapV2GetTokenV2DTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *UniswapV2ApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiUniswapV2GetTokenV2DTOsHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV2GetTokenV2DTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetTokenV2DTOsHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV2GetTokenV2DTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetTokenV2DTOsHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV2GetTokenV2DTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetTokenV2DTOsHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV2GetTokenV2DTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetTokenV2DTOsHistoricalRequest) PoolId(poolId string) ApiUniswapV2GetTokenV2DTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiUniswapV2GetTokenV2DTOsHistoricalRequest) Execute() ([]UniswapV2TokenV2DTO, *http.Response, error) {
+	return r.ApiService.UniswapV2GetTokenV2DTOsHistoricalExecute(r)
+}
+
+/*
+UniswapV2GetTokenV2DTOsHistorical TokenV2DTOs (historical) 🔥
+
+Gets TokenV2DTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUniswapV2GetTokenV2DTOsHistoricalRequest
+*/
+func (a *UniswapV2ApiService) UniswapV2GetTokenV2DTOsHistorical(ctx context.Context) ApiUniswapV2GetTokenV2DTOsHistoricalRequest {
+	return ApiUniswapV2GetTokenV2DTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UniswapV2TokenV2DTO
+func (a *UniswapV2ApiService) UniswapV2GetTokenV2DTOsHistoricalExecute(r ApiUniswapV2GetTokenV2DTOsHistoricalRequest) ([]UniswapV2TokenV2DTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UniswapV2TokenV2DTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV2ApiService.UniswapV2GetTokenV2DTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswapv2/TokenV2DTOs/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2237,6 +3876,155 @@ func (a *UniswapV2ApiService) UniswapV2GetTokensHistoricalExecute(r ApiUniswapV2
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
+type ApiUniswapV2GetTransactionV2DTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *UniswapV2ApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiUniswapV2GetTransactionV2DTOsHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV2GetTransactionV2DTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetTransactionV2DTOsHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV2GetTransactionV2DTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetTransactionV2DTOsHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV2GetTransactionV2DTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetTransactionV2DTOsHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV2GetTransactionV2DTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetTransactionV2DTOsHistoricalRequest) PoolId(poolId string) ApiUniswapV2GetTransactionV2DTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiUniswapV2GetTransactionV2DTOsHistoricalRequest) Execute() ([]UniswapV2TransactionV2DTO, *http.Response, error) {
+	return r.ApiService.UniswapV2GetTransactionV2DTOsHistoricalExecute(r)
+}
+
+/*
+UniswapV2GetTransactionV2DTOsHistorical TransactionV2DTOs (historical) 🔥
+
+Gets TransactionV2DTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUniswapV2GetTransactionV2DTOsHistoricalRequest
+*/
+func (a *UniswapV2ApiService) UniswapV2GetTransactionV2DTOsHistorical(ctx context.Context) ApiUniswapV2GetTransactionV2DTOsHistoricalRequest {
+	return ApiUniswapV2GetTransactionV2DTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UniswapV2TransactionV2DTO
+func (a *UniswapV2ApiService) UniswapV2GetTransactionV2DTOsHistoricalExecute(r ApiUniswapV2GetTransactionV2DTOsHistoricalRequest) ([]UniswapV2TransactionV2DTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UniswapV2TransactionV2DTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV2ApiService.UniswapV2GetTransactionV2DTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswapv2/TransactionV2DTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
 type ApiUniswapV2GetTransactionsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *UniswapV2ApiService
@@ -2321,6 +4109,453 @@ func (a *UniswapV2ApiService) UniswapV2GetTransactionsHistoricalExecute(r ApiUni
 	}
 	if r.endDate != nil {
 		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUniswapV2GetUniswapDayDataV2DTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *UniswapV2ApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiUniswapV2GetUniswapDayDataV2DTOsHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV2GetUniswapDayDataV2DTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetUniswapDayDataV2DTOsHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV2GetUniswapDayDataV2DTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetUniswapDayDataV2DTOsHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV2GetUniswapDayDataV2DTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetUniswapDayDataV2DTOsHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV2GetUniswapDayDataV2DTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetUniswapDayDataV2DTOsHistoricalRequest) PoolId(poolId string) ApiUniswapV2GetUniswapDayDataV2DTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiUniswapV2GetUniswapDayDataV2DTOsHistoricalRequest) Execute() ([]UniswapV2UniswapDayDataV2DTO, *http.Response, error) {
+	return r.ApiService.UniswapV2GetUniswapDayDataV2DTOsHistoricalExecute(r)
+}
+
+/*
+UniswapV2GetUniswapDayDataV2DTOsHistorical UniswapDayDataV2DTOs (historical) 🔥
+
+Gets UniswapDayDataV2DTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUniswapV2GetUniswapDayDataV2DTOsHistoricalRequest
+*/
+func (a *UniswapV2ApiService) UniswapV2GetUniswapDayDataV2DTOsHistorical(ctx context.Context) ApiUniswapV2GetUniswapDayDataV2DTOsHistoricalRequest {
+	return ApiUniswapV2GetUniswapDayDataV2DTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UniswapV2UniswapDayDataV2DTO
+func (a *UniswapV2ApiService) UniswapV2GetUniswapDayDataV2DTOsHistoricalExecute(r ApiUniswapV2GetUniswapDayDataV2DTOsHistoricalRequest) ([]UniswapV2UniswapDayDataV2DTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UniswapV2UniswapDayDataV2DTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV2ApiService.UniswapV2GetUniswapDayDataV2DTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswapv2/UniswapDayDataV2DTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUniswapV2GetUniswapFactoryV2DTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *UniswapV2ApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiUniswapV2GetUniswapFactoryV2DTOsHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV2GetUniswapFactoryV2DTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetUniswapFactoryV2DTOsHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV2GetUniswapFactoryV2DTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetUniswapFactoryV2DTOsHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV2GetUniswapFactoryV2DTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetUniswapFactoryV2DTOsHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV2GetUniswapFactoryV2DTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetUniswapFactoryV2DTOsHistoricalRequest) PoolId(poolId string) ApiUniswapV2GetUniswapFactoryV2DTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiUniswapV2GetUniswapFactoryV2DTOsHistoricalRequest) Execute() ([]UniswapV2UniswapFactoryV2DTO, *http.Response, error) {
+	return r.ApiService.UniswapV2GetUniswapFactoryV2DTOsHistoricalExecute(r)
+}
+
+/*
+UniswapV2GetUniswapFactoryV2DTOsHistorical UniswapFactoryV2DTOs (historical) 🔥
+
+Gets UniswapFactoryV2DTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUniswapV2GetUniswapFactoryV2DTOsHistoricalRequest
+*/
+func (a *UniswapV2ApiService) UniswapV2GetUniswapFactoryV2DTOsHistorical(ctx context.Context) ApiUniswapV2GetUniswapFactoryV2DTOsHistoricalRequest {
+	return ApiUniswapV2GetUniswapFactoryV2DTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UniswapV2UniswapFactoryV2DTO
+func (a *UniswapV2ApiService) UniswapV2GetUniswapFactoryV2DTOsHistoricalExecute(r ApiUniswapV2GetUniswapFactoryV2DTOsHistoricalRequest) ([]UniswapV2UniswapFactoryV2DTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UniswapV2UniswapFactoryV2DTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV2ApiService.UniswapV2GetUniswapFactoryV2DTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswapv2/UniswapFactoryV2DTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"text/plain", "application/json", "text/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := ioutil.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = ioutil.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiUniswapV2GetUserV2DTOsHistoricalRequest struct {
+	ctx context.Context
+	ApiService *UniswapV2ApiService
+	startBlock *int64
+	endBlock *int64
+	startDate *time.Time
+	endDate *time.Time
+	poolId *string
+}
+
+// 
+func (r ApiUniswapV2GetUserV2DTOsHistoricalRequest) StartBlock(startBlock int64) ApiUniswapV2GetUserV2DTOsHistoricalRequest {
+	r.startBlock = &startBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetUserV2DTOsHistoricalRequest) EndBlock(endBlock int64) ApiUniswapV2GetUserV2DTOsHistoricalRequest {
+	r.endBlock = &endBlock
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetUserV2DTOsHistoricalRequest) StartDate(startDate time.Time) ApiUniswapV2GetUserV2DTOsHistoricalRequest {
+	r.startDate = &startDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetUserV2DTOsHistoricalRequest) EndDate(endDate time.Time) ApiUniswapV2GetUserV2DTOsHistoricalRequest {
+	r.endDate = &endDate
+	return r
+}
+
+// 
+func (r ApiUniswapV2GetUserV2DTOsHistoricalRequest) PoolId(poolId string) ApiUniswapV2GetUserV2DTOsHistoricalRequest {
+	r.poolId = &poolId
+	return r
+}
+
+func (r ApiUniswapV2GetUserV2DTOsHistoricalRequest) Execute() ([]UniswapV2UserV2DTO, *http.Response, error) {
+	return r.ApiService.UniswapV2GetUserV2DTOsHistoricalExecute(r)
+}
+
+/*
+UniswapV2GetUserV2DTOsHistorical UserV2DTOs (historical) 🔥
+
+Gets UserV2DTOs.
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiUniswapV2GetUserV2DTOsHistoricalRequest
+*/
+func (a *UniswapV2ApiService) UniswapV2GetUserV2DTOsHistorical(ctx context.Context) ApiUniswapV2GetUserV2DTOsHistoricalRequest {
+	return ApiUniswapV2GetUserV2DTOsHistoricalRequest{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return []UniswapV2UserV2DTO
+func (a *UniswapV2ApiService) UniswapV2GetUserV2DTOsHistoricalExecute(r ApiUniswapV2GetUserV2DTOsHistoricalRequest) ([]UniswapV2UserV2DTO, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  []UniswapV2UserV2DTO
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UniswapV2ApiService.UniswapV2GetUserV2DTOsHistorical")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/dapps/uniswapv2/UserV2DTOs/historical"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+
+	if r.startBlock != nil {
+		localVarQueryParams.Add("startBlock", parameterToString(*r.startBlock, ""))
+	}
+	if r.endBlock != nil {
+		localVarQueryParams.Add("endBlock", parameterToString(*r.endBlock, ""))
+	}
+	if r.startDate != nil {
+		localVarQueryParams.Add("startDate", parameterToString(*r.startDate, ""))
+	}
+	if r.endDate != nil {
+		localVarQueryParams.Add("endDate", parameterToString(*r.endDate, ""))
+	}
+	if r.poolId != nil {
+		localVarQueryParams.Add("poolId", parameterToString(*r.poolId, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

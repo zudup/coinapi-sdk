@@ -6,24 +6,40 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 | ------------- | ------------- | ------------- |
 | [**curveGetExchangesCurrent()**](SushiswapApi.md#curveGetExchangesCurrent) | **GET** /dapps/sushiswap/exchanges/current | Exchanges (current) 🔥 |
 | [**dexGetTradesCurrent()**](SushiswapApi.md#dexGetTradesCurrent) | **GET** /dapps/sushiswap/trades/current | Trades (current) 🔥 |
+| [**sushiswapGetBundleDTOsHistorical()**](SushiswapApi.md#sushiswapGetBundleDTOsHistorical) | **GET** /dapps/sushiswap/BundleDTOs/historical | BundleDTOs (historical) 🔥 |
 | [**sushiswapGetBundlesHistorical()**](SushiswapApi.md#sushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical) |
+| [**sushiswapGetBurnDTOsHistorical()**](SushiswapApi.md#sushiswapGetBurnDTOsHistorical) | **GET** /dapps/sushiswap/BurnDTOs/historical | BurnDTOs (historical) 🔥 |
 | [**sushiswapGetBurnsHistorical()**](SushiswapApi.md#sushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical) |
+| [**sushiswapGetDayDataDTOsHistorical()**](SushiswapApi.md#sushiswapGetDayDataDTOsHistorical) | **GET** /dapps/sushiswap/DayDataDTOs/historical | DayDataDTOs (historical) 🔥 |
 | [**sushiswapGetDayDataHistorical()**](SushiswapApi.md#sushiswapGetDayDataHistorical) | **GET** /dapps/sushiswap/dayData/historical | DayData (historical) |
+| [**sushiswapGetFactoryDTOsHistorical()**](SushiswapApi.md#sushiswapGetFactoryDTOsHistorical) | **GET** /dapps/sushiswap/FactoryDTOs/historical | FactoryDTOs (historical) 🔥 |
 | [**sushiswapGetFactoryHistorical()**](SushiswapApi.md#sushiswapGetFactoryHistorical) | **GET** /dapps/sushiswap/factory/historical | Factory (historical) |
+| [**sushiswapGetHourDataDTOsHistorical()**](SushiswapApi.md#sushiswapGetHourDataDTOsHistorical) | **GET** /dapps/sushiswap/HourDataDTOs/historical | HourDataDTOs (historical) 🔥 |
 | [**sushiswapGetHourDataHistorical()**](SushiswapApi.md#sushiswapGetHourDataHistorical) | **GET** /dapps/sushiswap/hourData/historical | HourData (historical) |
+| [**sushiswapGetLiquidityPositionDTOsHistorical()**](SushiswapApi.md#sushiswapGetLiquidityPositionDTOsHistorical) | **GET** /dapps/sushiswap/LiquidityPositionDTOs/historical | LiquidityPositionDTOs (historical) 🔥 |
 | [**sushiswapGetLiquidityPositionHistorical()**](SushiswapApi.md#sushiswapGetLiquidityPositionHistorical) | **GET** /dapps/sushiswap/liquidityPosition/historical | LiquidityPosition (historical) |
+| [**sushiswapGetLiquidityPositionSnapshotDTOsHistorical()**](SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotDTOsHistorical) | **GET** /dapps/sushiswap/LiquidityPositionSnapshotDTOs/historical | LiquidityPositionSnapshotDTOs (historical) 🔥 |
 | [**sushiswapGetLiquidityPositionSnapshotHistorical()**](SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshot (historical) |
+| [**sushiswapGetMintDTOsHistorical()**](SushiswapApi.md#sushiswapGetMintDTOsHistorical) | **GET** /dapps/sushiswap/MintDTOs/historical | MintDTOs (historical) 🔥 |
 | [**sushiswapGetMintsHistorical()**](SushiswapApi.md#sushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical) |
+| [**sushiswapGetPairDTOsHistorical()**](SushiswapApi.md#sushiswapGetPairDTOsHistorical) | **GET** /dapps/sushiswap/PairDTOs/historical | PairDTOs (historical) 🔥 |
+| [**sushiswapGetPairDayDataDTOsHistorical()**](SushiswapApi.md#sushiswapGetPairDayDataDTOsHistorical) | **GET** /dapps/sushiswap/PairDayDataDTOs/historical | PairDayDataDTOs (historical) 🔥 |
+| [**sushiswapGetPairHourDataDTOsHistorical()**](SushiswapApi.md#sushiswapGetPairHourDataDTOsHistorical) | **GET** /dapps/sushiswap/PairHourDataDTOs/historical | PairHourDataDTOs (historical) 🔥 |
 | [**sushiswapGetPoolsCurrent()**](SushiswapApi.md#sushiswapGetPoolsCurrent) | **GET** /dapps/sushiswap/pools/current | Pools (current) 🔥 |
 | [**sushiswapGetPoolsDayDataHistorical()**](SushiswapApi.md#sushiswapGetPoolsDayDataHistorical) | **GET** /dapps/sushiswap/poolsDayData/historical | PoolsDayData (historical) |
 | [**sushiswapGetPoolsHistorical()**](SushiswapApi.md#sushiswapGetPoolsHistorical) | **GET** /dapps/sushiswap/pools/historical | Pools (historical) 🔥 |
 | [**sushiswapGetPoolsHourDataHistorical()**](SushiswapApi.md#sushiswapGetPoolsHourDataHistorical) | **GET** /dapps/sushiswap/poolsHourData/historical | PoolsHourData (historical) |
+| [**sushiswapGetSwapDTOsHistorical()**](SushiswapApi.md#sushiswapGetSwapDTOsHistorical) | **GET** /dapps/sushiswap/SwapDTOs/historical | SwapDTOs (historical) 🔥 |
 | [**sushiswapGetSwapsCurrent()**](SushiswapApi.md#sushiswapGetSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current) 🔥 |
 | [**sushiswapGetSwapsHistorical()**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) 🔥 |
+| [**sushiswapGetTokenDTOsHistorical()**](SushiswapApi.md#sushiswapGetTokenDTOsHistorical) | **GET** /dapps/sushiswap/TokenDTOs/historical | TokenDTOs (historical) 🔥 |
+| [**sushiswapGetTokenDayDataDTOsHistorical()**](SushiswapApi.md#sushiswapGetTokenDayDataDTOsHistorical) | **GET** /dapps/sushiswap/TokenDayDataDTOs/historical | TokenDayDataDTOs (historical) 🔥 |
 | [**sushiswapGetTokensCurrent()**](SushiswapApi.md#sushiswapGetTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current) 🔥 |
 | [**sushiswapGetTokensDayDataHistorical()**](SushiswapApi.md#sushiswapGetTokensDayDataHistorical) | **GET** /dapps/sushiswap/tokensDayData/historical | TokensDayData (historical) |
 | [**sushiswapGetTokensHistorical()**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) 🔥 |
+| [**sushiswapGetTransactionDTOsHistorical()**](SushiswapApi.md#sushiswapGetTransactionDTOsHistorical) | **GET** /dapps/sushiswap/TransactionDTOs/historical | TransactionDTOs (historical) 🔥 |
 | [**sushiswapGetTransactionsHistorical()**](SushiswapApi.md#sushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical) |
+| [**sushiswapGetUserDTOsHistorical()**](SushiswapApi.md#sushiswapGetUserDTOsHistorical) | **GET** /dapps/sushiswap/UserDTOs/historical | UserDTOs (historical) 🔥 |
 | [**sushiswapGetUsersHistorical()**](SushiswapApi.md#sushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical) |
 
 
@@ -133,6 +149,70 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `sushiswapGetBundleDTOsHistorical()`
+
+```php
+sushiswapGetBundleDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapBundleDTO[]
+```
+
+BundleDTOs (historical) 🔥
+
+Gets BundleDTOs.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
+
+try {
+    $result = $apiInstance->sushiswapGetBundleDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SushiswapApi->sushiswapGetBundleDTOsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\SushiswapBundleDTO[]**](../Model/SushiswapBundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `sushiswapGetBundlesHistorical()`
 
 ```php
@@ -181,6 +261,70 @@ try {
 ### Return type
 
 [**\OpenAPI\Client\Model\SushiswapBundleDTO[]**](../Model/SushiswapBundleDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `sushiswapGetBurnDTOsHistorical()`
+
+```php
+sushiswapGetBurnDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapBurnDTO[]
+```
+
+BurnDTOs (historical) 🔥
+
+Gets BurnDTOs.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
+
+try {
+    $result = $apiInstance->sushiswapGetBurnDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SushiswapApi->sushiswapGetBurnDTOsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\SushiswapBurnDTO[]**](../Model/SushiswapBurnDTO.md)
 
 ### Authorization
 
@@ -259,6 +403,70 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `sushiswapGetDayDataDTOsHistorical()`
+
+```php
+sushiswapGetDayDataDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapDayDataDTO[]
+```
+
+DayDataDTOs (historical) 🔥
+
+Gets DayDataDTOs.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
+
+try {
+    $result = $apiInstance->sushiswapGetDayDataDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SushiswapApi->sushiswapGetDayDataDTOsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\SushiswapDayDataDTO[]**](../Model/SushiswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `sushiswapGetDayDataHistorical()`
 
 ```php
@@ -307,6 +515,70 @@ try {
 ### Return type
 
 [**\OpenAPI\Client\Model\SushiswapDayDataDTO[]**](../Model/SushiswapDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `sushiswapGetFactoryDTOsHistorical()`
+
+```php
+sushiswapGetFactoryDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapFactoryDTO[]
+```
+
+FactoryDTOs (historical) 🔥
+
+Gets FactoryDTOs.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
+
+try {
+    $result = $apiInstance->sushiswapGetFactoryDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SushiswapApi->sushiswapGetFactoryDTOsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\SushiswapFactoryDTO[]**](../Model/SushiswapFactoryDTO.md)
 
 ### Authorization
 
@@ -383,6 +655,70 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `sushiswapGetHourDataDTOsHistorical()`
+
+```php
+sushiswapGetHourDataDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapHourDataDTO[]
+```
+
+HourDataDTOs (historical) 🔥
+
+Gets HourDataDTOs.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
+
+try {
+    $result = $apiInstance->sushiswapGetHourDataDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SushiswapApi->sushiswapGetHourDataDTOsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\SushiswapHourDataDTO[]**](../Model/SushiswapHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `sushiswapGetHourDataHistorical()`
 
 ```php
@@ -431,6 +767,70 @@ try {
 ### Return type
 
 [**\OpenAPI\Client\Model\SushiswapHourDataDTO[]**](../Model/SushiswapHourDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `sushiswapGetLiquidityPositionDTOsHistorical()`
+
+```php
+sushiswapGetLiquidityPositionDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapLiquidityPositionDTO[]
+```
+
+LiquidityPositionDTOs (historical) 🔥
+
+Gets LiquidityPositionDTOs.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
+
+try {
+    $result = $apiInstance->sushiswapGetLiquidityPositionDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SushiswapApi->sushiswapGetLiquidityPositionDTOsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\SushiswapLiquidityPositionDTO[]**](../Model/SushiswapLiquidityPositionDTO.md)
 
 ### Authorization
 
@@ -509,6 +909,70 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `sushiswapGetLiquidityPositionSnapshotDTOsHistorical()`
+
+```php
+sushiswapGetLiquidityPositionSnapshotDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapLiquidityPositionSnapshotDTO[]
+```
+
+LiquidityPositionSnapshotDTOs (historical) 🔥
+
+Gets LiquidityPositionSnapshotDTOs.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
+
+try {
+    $result = $apiInstance->sushiswapGetLiquidityPositionSnapshotDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SushiswapApi->sushiswapGetLiquidityPositionSnapshotDTOsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\SushiswapLiquidityPositionSnapshotDTO[]**](../Model/SushiswapLiquidityPositionSnapshotDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `sushiswapGetLiquidityPositionSnapshotHistorical()`
 
 ```php
@@ -573,6 +1037,70 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `sushiswapGetMintDTOsHistorical()`
+
+```php
+sushiswapGetMintDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapMintDTO[]
+```
+
+MintDTOs (historical) 🔥
+
+Gets MintDTOs.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
+
+try {
+    $result = $apiInstance->sushiswapGetMintDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SushiswapApi->sushiswapGetMintDTOsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\SushiswapMintDTO[]**](../Model/SushiswapMintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `sushiswapGetMintsHistorical()`
 
 ```php
@@ -623,6 +1151,198 @@ try {
 ### Return type
 
 [**\OpenAPI\Client\Model\SushiswapMintDTO[]**](../Model/SushiswapMintDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `sushiswapGetPairDTOsHistorical()`
+
+```php
+sushiswapGetPairDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapPairDTO[]
+```
+
+PairDTOs (historical) 🔥
+
+Gets PairDTOs.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
+
+try {
+    $result = $apiInstance->sushiswapGetPairDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SushiswapApi->sushiswapGetPairDTOsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\SushiswapPairDTO[]**](../Model/SushiswapPairDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `sushiswapGetPairDayDataDTOsHistorical()`
+
+```php
+sushiswapGetPairDayDataDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapPairDayDataDTO[]
+```
+
+PairDayDataDTOs (historical) 🔥
+
+Gets PairDayDataDTOs.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
+
+try {
+    $result = $apiInstance->sushiswapGetPairDayDataDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SushiswapApi->sushiswapGetPairDayDataDTOsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\SushiswapPairDayDataDTO[]**](../Model/SushiswapPairDayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `sushiswapGetPairHourDataDTOsHistorical()`
+
+```php
+sushiswapGetPairHourDataDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapPairHourDataDTO[]
+```
+
+PairHourDataDTOs (historical) 🔥
+
+Gets PairHourDataDTOs.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
+
+try {
+    $result = $apiInstance->sushiswapGetPairHourDataDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SushiswapApi->sushiswapGetPairHourDataDTOsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\SushiswapPairHourDataDTO[]**](../Model/SushiswapPairHourDataDTO.md)
 
 ### Authorization
 
@@ -882,6 +1602,70 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `sushiswapGetSwapDTOsHistorical()`
+
+```php
+sushiswapGetSwapDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapSwapDTO[]
+```
+
+SwapDTOs (historical) 🔥
+
+Gets SwapDTOs.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
+
+try {
+    $result = $apiInstance->sushiswapGetSwapDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SushiswapApi->sushiswapGetSwapDTOsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\SushiswapSwapDTO[]**](../Model/SushiswapSwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `sushiswapGetSwapsCurrent()`
 
 ```php
@@ -985,6 +1769,134 @@ try {
 ### Return type
 
 [**\OpenAPI\Client\Model\SushiswapSwapDTO[]**](../Model/SushiswapSwapDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `sushiswapGetTokenDTOsHistorical()`
+
+```php
+sushiswapGetTokenDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapTokenDTO[]
+```
+
+TokenDTOs (historical) 🔥
+
+Gets TokenDTOs.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
+
+try {
+    $result = $apiInstance->sushiswapGetTokenDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SushiswapApi->sushiswapGetTokenDTOsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\SushiswapTokenDTO[]**](../Model/SushiswapTokenDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `sushiswapGetTokenDayDataDTOsHistorical()`
+
+```php
+sushiswapGetTokenDayDataDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapTokenDayDataDTO[]
+```
+
+TokenDayDataDTOs (historical) 🔥
+
+Gets TokenDayDataDTOs.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
+
+try {
+    $result = $apiInstance->sushiswapGetTokenDayDataDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SushiswapApi->sushiswapGetTokenDayDataDTOsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\SushiswapTokenDayDataDTO[]**](../Model/SushiswapTokenDayDataDTO.md)
 
 ### Authorization
 
@@ -1180,6 +2092,70 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
+## `sushiswapGetTransactionDTOsHistorical()`
+
+```php
+sushiswapGetTransactionDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapTransactionDTO[]
+```
+
+TransactionDTOs (historical) 🔥
+
+Gets TransactionDTOs.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
+
+try {
+    $result = $apiInstance->sushiswapGetTransactionDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SushiswapApi->sushiswapGetTransactionDTOsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\SushiswapTransactionDTO[]**](../Model/SushiswapTransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
 ## `sushiswapGetTransactionsHistorical()`
 
 ```php
@@ -1228,6 +2204,70 @@ try {
 ### Return type
 
 [**\OpenAPI\Client\Model\SushiswapTransactionDTO[]**](../Model/SushiswapTransactionDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: `text/plain`, `application/json`, `text/json`
+
+[[Back to top]](#) [[Back to API list]](../../README.md#endpoints)
+[[Back to Model list]](../../README.md#models)
+[[Back to README]](../../README.md)
+
+## `sushiswapGetUserDTOsHistorical()`
+
+```php
+sushiswapGetUserDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id): \OpenAPI\Client\Model\SushiswapUserDTO[]
+```
+
+UserDTOs (historical) 🔥
+
+Gets UserDTOs.
+
+### Example
+
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+
+
+$apiInstance = new OpenAPI\Client\Api\SushiswapApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$start_block = 56; // int | 
+$end_block = 56; // int | 
+$start_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | 
+$pool_id = 'pool_id_example'; // string | 
+
+try {
+    $result = $apiInstance->sushiswapGetUserDTOsHistorical($start_block, $end_block, $start_date, $end_date, $pool_id);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling SushiswapApi->sushiswapGetUserDTOsHistorical: ', $e->getMessage(), PHP_EOL;
+}
+```
+
+### Parameters
+
+| Name | Type | Description  | Notes |
+| ------------- | ------------- | ------------- | ------------- |
+| **start_block** | **int**|  | [optional] |
+| **end_block** | **int**|  | [optional] |
+| **start_date** | **\DateTime**|  | [optional] |
+| **end_date** | **\DateTime**|  | [optional] |
+| **pool_id** | **string**|  | [optional] |
+
+### Return type
+
+[**\OpenAPI\Client\Model\SushiswapUserDTO[]**](../Model/SushiswapUserDTO.md)
 
 ### Authorization
 

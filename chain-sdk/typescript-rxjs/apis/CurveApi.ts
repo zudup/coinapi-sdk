@@ -50,6 +50,14 @@ import type {
     CurveWeeklyVolumeDTO,
 } from '../models';
 
+export interface CurveGetAccountDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface CurveGetAccountsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
@@ -57,7 +65,23 @@ export interface CurveGetAccountsHistoricalRequest {
     endDate?: string;
 }
 
+export interface CurveGetAddLiquidityEventDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface CurveGetAddLiquidityEventsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface CurveGetAdminFeeChangeLogDTOsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -73,6 +97,14 @@ export interface CurveGetAdminFeeChangeLogsHistoricalRequest {
     poolId?: string;
 }
 
+export interface CurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface CurveGetAmplificationCoeffChangeLogsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
@@ -81,7 +113,31 @@ export interface CurveGetAmplificationCoeffChangeLogsHistoricalRequest {
     poolId?: string;
 }
 
+export interface CurveGetCoinDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface CurveGetCoinsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface CurveGetContractDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface CurveGetContractVersionDTOsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -105,7 +161,23 @@ export interface CurveGetContractsVersionsHistoricalRequest {
     poolId?: string;
 }
 
+export interface CurveGetDailyVolumeDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface CurveGetDailyVolumesHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface CurveGetExchangeDTOsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -121,7 +193,87 @@ export interface CurveGetExchangesHistoricalRequest {
     poolId?: string;
 }
 
+export interface CurveGetFeeChangeLogDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface CurveGetFeeChangeLogsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface CurveGetGaugeDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface CurveGetGaugeDepositDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface CurveGetGaugeLiquidityDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface CurveGetGaugeTotalWeightDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface CurveGetGaugeTypeDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface CurveGetGaugeTypeWeightDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface CurveGetGaugeWeightDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface CurveGetGaugeWeightVoteDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface CurveGetGaugeWithdrawDTOsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -193,7 +345,23 @@ export interface CurveGetGaugesWithdrawHistoricalRequest {
     endDate?: string;
 }
 
+export interface CurveGetHourlyVolumeDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface CurveGetHourlyVolumesHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface CurveGetLpTokenDTOsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -209,7 +377,31 @@ export interface CurveGetLpTokensHistoricalRequest {
     poolId?: string;
 }
 
+export interface CurveGetPoolDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface CurveGetPoolsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface CurveGetProposalDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface CurveGetProposalVoteDTOsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -231,7 +423,23 @@ export interface CurveGetProposalsVotesHistoricalRequest {
     endDate?: string;
 }
 
+export interface CurveGetRemoveLiquidityEventDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface CurveGetRemoveLiquidityEventsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface CurveGetRemoveLiquidityOneEventDTOsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -247,11 +455,27 @@ export interface CurveGetRemoveLiquidityOneEventsHistoricalRequest {
     poolId?: string;
 }
 
+export interface CurveGetSystemStateDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface CurveGetSystemStatesHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
     endDate?: string;
+}
+
+export interface CurveGetTokenDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
 }
 
 export interface CurveGetTokensHistoricalRequest {
@@ -262,7 +486,23 @@ export interface CurveGetTokensHistoricalRequest {
     tokenId?: string;
 }
 
+export interface CurveGetTransferOwnershipEventDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface CurveGetTransferOwnershipEventsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
+export interface CurveGetUnderlyingCoinDTOsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -278,11 +518,27 @@ export interface CurveGetUnderlyingCoinsHistoricalRequest {
     poolId?: string;
 }
 
+export interface CurveGetVotingAppDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
+}
+
 export interface CurveGetVotingAppsHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
     endDate?: string;
+}
+
+export interface CurveGetWeeklyVolumeDTOsHistoricalRequest {
+    startBlock?: number;
+    endBlock?: number;
+    startDate?: string;
+    endDate?: string;
+    poolId?: string;
 }
 
 export interface CurveGetWeeklyVolumesHistoricalRequest {
@@ -297,6 +553,29 @@ export interface CurveGetWeeklyVolumesHistoricalRequest {
  * no description
  */
 export class CurveApi extends BaseAPI {
+
+    /**
+     * Gets AccountDTOs.
+     * AccountDTOs (historical) 🔥
+     */
+    curveGetAccountDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetAccountDTOsHistoricalRequest): Observable<Array<CurveAccountDTO>>
+    curveGetAccountDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetAccountDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveAccountDTO>>>
+    curveGetAccountDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetAccountDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveAccountDTO> | AjaxResponse<Array<CurveAccountDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveAccountDTO>>({
+            url: '/dapps/curve/AccountDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
 
     /**
      * Gets accounts.
@@ -315,6 +594,29 @@ export class CurveApi extends BaseAPI {
 
         return this.request<Array<CurveAccountDTO>>({
             url: '/dapps/curve/accounts/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets AddLiquidityEventDTOs.
+     * AddLiquidityEventDTOs (historical) 🔥
+     */
+    curveGetAddLiquidityEventDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetAddLiquidityEventDTOsHistoricalRequest): Observable<Array<CurveAddLiquidityEventDTO>>
+    curveGetAddLiquidityEventDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetAddLiquidityEventDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveAddLiquidityEventDTO>>>
+    curveGetAddLiquidityEventDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetAddLiquidityEventDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveAddLiquidityEventDTO> | AjaxResponse<Array<CurveAddLiquidityEventDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveAddLiquidityEventDTO>>({
+            url: '/dapps/curve/AddLiquidityEventDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -344,6 +646,29 @@ export class CurveApi extends BaseAPI {
     };
 
     /**
+     * Gets AdminFeeChangeLogDTOs.
+     * AdminFeeChangeLogDTOs (historical) 🔥
+     */
+    curveGetAdminFeeChangeLogDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetAdminFeeChangeLogDTOsHistoricalRequest): Observable<Array<CurveAdminFeeChangeLogDTO>>
+    curveGetAdminFeeChangeLogDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetAdminFeeChangeLogDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveAdminFeeChangeLogDTO>>>
+    curveGetAdminFeeChangeLogDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetAdminFeeChangeLogDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveAdminFeeChangeLogDTO> | AjaxResponse<Array<CurveAdminFeeChangeLogDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveAdminFeeChangeLogDTO>>({
+            url: '/dapps/curve/AdminFeeChangeLogDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets admin fee change logs.
      * AdminFeeChangeLogs (historical)
      */
@@ -361,6 +686,29 @@ export class CurveApi extends BaseAPI {
 
         return this.request<Array<CurveAdminFeeChangeLogDTO>>({
             url: '/dapps/curve/adminFeeChangeLogs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets AmplificationCoeffChangeLogDTOs.
+     * AmplificationCoeffChangeLogDTOs (historical) 🔥
+     */
+    curveGetAmplificationCoeffChangeLogDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest): Observable<Array<CurveAmplificationCoeffChangeLogDTO>>
+    curveGetAmplificationCoeffChangeLogDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveAmplificationCoeffChangeLogDTO>>>
+    curveGetAmplificationCoeffChangeLogDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetAmplificationCoeffChangeLogDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveAmplificationCoeffChangeLogDTO> | AjaxResponse<Array<CurveAmplificationCoeffChangeLogDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveAmplificationCoeffChangeLogDTO>>({
+            url: '/dapps/curve/AmplificationCoeffChangeLogDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -390,6 +738,29 @@ export class CurveApi extends BaseAPI {
     };
 
     /**
+     * Gets CoinDTOs.
+     * CoinDTOs (historical) 🔥
+     */
+    curveGetCoinDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetCoinDTOsHistoricalRequest): Observable<Array<CurveCoinDTO>>
+    curveGetCoinDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetCoinDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveCoinDTO>>>
+    curveGetCoinDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetCoinDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveCoinDTO> | AjaxResponse<Array<CurveCoinDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveCoinDTO>>({
+            url: '/dapps/curve/CoinDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets coins.
      * Coins (historical)
      */
@@ -407,6 +778,52 @@ export class CurveApi extends BaseAPI {
 
         return this.request<Array<CurveCoinDTO>>({
             url: '/dapps/curve/coins/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets ContractDTOs.
+     * ContractDTOs (historical) 🔥
+     */
+    curveGetContractDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetContractDTOsHistoricalRequest): Observable<Array<CurveContractDTO>>
+    curveGetContractDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetContractDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveContractDTO>>>
+    curveGetContractDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetContractDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveContractDTO> | AjaxResponse<Array<CurveContractDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveContractDTO>>({
+            url: '/dapps/curve/ContractDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets ContractVersionDTOs.
+     * ContractVersionDTOs (historical) 🔥
+     */
+    curveGetContractVersionDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetContractVersionDTOsHistoricalRequest): Observable<Array<CurveContractVersionDTO>>
+    curveGetContractVersionDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetContractVersionDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveContractVersionDTO>>>
+    curveGetContractVersionDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetContractVersionDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveContractVersionDTO> | AjaxResponse<Array<CurveContractVersionDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveContractVersionDTO>>({
+            url: '/dapps/curve/ContractVersionDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -459,6 +876,29 @@ export class CurveApi extends BaseAPI {
     };
 
     /**
+     * Gets DailyVolumeDTOs.
+     * DailyVolumeDTOs (historical) 🔥
+     */
+    curveGetDailyVolumeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetDailyVolumeDTOsHistoricalRequest): Observable<Array<CurveDailyVolumeDTO>>
+    curveGetDailyVolumeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetDailyVolumeDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveDailyVolumeDTO>>>
+    curveGetDailyVolumeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetDailyVolumeDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveDailyVolumeDTO> | AjaxResponse<Array<CurveDailyVolumeDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveDailyVolumeDTO>>({
+            url: '/dapps/curve/DailyVolumeDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets daily volumes.
      * DailyVolumes (historical)
      */
@@ -476,6 +916,29 @@ export class CurveApi extends BaseAPI {
 
         return this.request<Array<CurveDailyVolumeDTO>>({
             url: '/dapps/curve/dailyVolumes/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets ExchangeDTOs.
+     * ExchangeDTOs (historical) 🔥
+     */
+    curveGetExchangeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetExchangeDTOsHistoricalRequest): Observable<Array<CurveExchangeDTO>>
+    curveGetExchangeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetExchangeDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveExchangeDTO>>>
+    curveGetExchangeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetExchangeDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveExchangeDTO> | AjaxResponse<Array<CurveExchangeDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveExchangeDTO>>({
+            url: '/dapps/curve/ExchangeDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -505,6 +968,29 @@ export class CurveApi extends BaseAPI {
     };
 
     /**
+     * Gets FeeChangeLogDTOs.
+     * FeeChangeLogDTOs (historical) 🔥
+     */
+    curveGetFeeChangeLogDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetFeeChangeLogDTOsHistoricalRequest): Observable<Array<CurveFeeChangeLogDTO>>
+    curveGetFeeChangeLogDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetFeeChangeLogDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveFeeChangeLogDTO>>>
+    curveGetFeeChangeLogDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetFeeChangeLogDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveFeeChangeLogDTO> | AjaxResponse<Array<CurveFeeChangeLogDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveFeeChangeLogDTO>>({
+            url: '/dapps/curve/FeeChangeLogDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets fee change logs.
      * FeeChangeLogs (historical)
      */
@@ -522,6 +1008,213 @@ export class CurveApi extends BaseAPI {
 
         return this.request<Array<CurveFeeChangeLogDTO>>({
             url: '/dapps/curve/feeChangeLogs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets GaugeDTOs.
+     * GaugeDTOs (historical) 🔥
+     */
+    curveGetGaugeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeDTOsHistoricalRequest): Observable<Array<CurveGaugeDTO>>
+    curveGetGaugeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeDTO>>>
+    curveGetGaugeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveGaugeDTO> | AjaxResponse<Array<CurveGaugeDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveGaugeDTO>>({
+            url: '/dapps/curve/GaugeDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets GaugeDepositDTOs.
+     * GaugeDepositDTOs (historical) 🔥
+     */
+    curveGetGaugeDepositDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeDepositDTOsHistoricalRequest): Observable<Array<CurveGaugeDepositDTO>>
+    curveGetGaugeDepositDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeDepositDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeDepositDTO>>>
+    curveGetGaugeDepositDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeDepositDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveGaugeDepositDTO> | AjaxResponse<Array<CurveGaugeDepositDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveGaugeDepositDTO>>({
+            url: '/dapps/curve/GaugeDepositDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets GaugeLiquidityDTOs.
+     * GaugeLiquidityDTOs (historical) 🔥
+     */
+    curveGetGaugeLiquidityDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeLiquidityDTOsHistoricalRequest): Observable<Array<CurveGaugeLiquidityDTO>>
+    curveGetGaugeLiquidityDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeLiquidityDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeLiquidityDTO>>>
+    curveGetGaugeLiquidityDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeLiquidityDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveGaugeLiquidityDTO> | AjaxResponse<Array<CurveGaugeLiquidityDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveGaugeLiquidityDTO>>({
+            url: '/dapps/curve/GaugeLiquidityDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets GaugeTotalWeightDTOs.
+     * GaugeTotalWeightDTOs (historical) 🔥
+     */
+    curveGetGaugeTotalWeightDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeTotalWeightDTOsHistoricalRequest): Observable<Array<CurveGaugeTotalWeightDTO>>
+    curveGetGaugeTotalWeightDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeTotalWeightDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeTotalWeightDTO>>>
+    curveGetGaugeTotalWeightDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeTotalWeightDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveGaugeTotalWeightDTO> | AjaxResponse<Array<CurveGaugeTotalWeightDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveGaugeTotalWeightDTO>>({
+            url: '/dapps/curve/GaugeTotalWeightDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets GaugeTypeDTOs.
+     * GaugeTypeDTOs (historical) 🔥
+     */
+    curveGetGaugeTypeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeTypeDTOsHistoricalRequest): Observable<Array<CurveGaugeTypeDTO>>
+    curveGetGaugeTypeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeTypeDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeTypeDTO>>>
+    curveGetGaugeTypeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeTypeDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveGaugeTypeDTO> | AjaxResponse<Array<CurveGaugeTypeDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveGaugeTypeDTO>>({
+            url: '/dapps/curve/GaugeTypeDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets GaugeTypeWeightDTOs.
+     * GaugeTypeWeightDTOs (historical) 🔥
+     */
+    curveGetGaugeTypeWeightDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeTypeWeightDTOsHistoricalRequest): Observable<Array<CurveGaugeTypeWeightDTO>>
+    curveGetGaugeTypeWeightDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeTypeWeightDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeTypeWeightDTO>>>
+    curveGetGaugeTypeWeightDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeTypeWeightDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveGaugeTypeWeightDTO> | AjaxResponse<Array<CurveGaugeTypeWeightDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveGaugeTypeWeightDTO>>({
+            url: '/dapps/curve/GaugeTypeWeightDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets GaugeWeightDTOs.
+     * GaugeWeightDTOs (historical) 🔥
+     */
+    curveGetGaugeWeightDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeWeightDTOsHistoricalRequest): Observable<Array<CurveGaugeWeightDTO>>
+    curveGetGaugeWeightDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeWeightDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeWeightDTO>>>
+    curveGetGaugeWeightDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeWeightDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveGaugeWeightDTO> | AjaxResponse<Array<CurveGaugeWeightDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveGaugeWeightDTO>>({
+            url: '/dapps/curve/GaugeWeightDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets GaugeWeightVoteDTOs.
+     * GaugeWeightVoteDTOs (historical) 🔥
+     */
+    curveGetGaugeWeightVoteDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeWeightVoteDTOsHistoricalRequest): Observable<Array<CurveGaugeWeightVoteDTO>>
+    curveGetGaugeWeightVoteDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeWeightVoteDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeWeightVoteDTO>>>
+    curveGetGaugeWeightVoteDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeWeightVoteDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveGaugeWeightVoteDTO> | AjaxResponse<Array<CurveGaugeWeightVoteDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveGaugeWeightVoteDTO>>({
+            url: '/dapps/curve/GaugeWeightVoteDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets GaugeWithdrawDTOs.
+     * GaugeWithdrawDTOs (historical) 🔥
+     */
+    curveGetGaugeWithdrawDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeWithdrawDTOsHistoricalRequest): Observable<Array<CurveGaugeWithdrawDTO>>
+    curveGetGaugeWithdrawDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeWithdrawDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeWithdrawDTO>>>
+    curveGetGaugeWithdrawDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetGaugeWithdrawDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveGaugeWithdrawDTO> | AjaxResponse<Array<CurveGaugeWithdrawDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveGaugeWithdrawDTO>>({
+            url: '/dapps/curve/GaugeWithdrawDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -727,6 +1420,29 @@ export class CurveApi extends BaseAPI {
     };
 
     /**
+     * Gets HourlyVolumeDTOs.
+     * HourlyVolumeDTOs (historical) 🔥
+     */
+    curveGetHourlyVolumeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetHourlyVolumeDTOsHistoricalRequest): Observable<Array<CurveHourlyVolumeDTO>>
+    curveGetHourlyVolumeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetHourlyVolumeDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveHourlyVolumeDTO>>>
+    curveGetHourlyVolumeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetHourlyVolumeDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveHourlyVolumeDTO> | AjaxResponse<Array<CurveHourlyVolumeDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveHourlyVolumeDTO>>({
+            url: '/dapps/curve/HourlyVolumeDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets hourly volumes.
      * HourlyVolumes (historical)
      */
@@ -744,6 +1460,29 @@ export class CurveApi extends BaseAPI {
 
         return this.request<Array<CurveHourlyVolumeDTO>>({
             url: '/dapps/curve/hourlyVolumes/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets LpTokenDTOs.
+     * LpTokenDTOs (historical) 🔥
+     */
+    curveGetLpTokenDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetLpTokenDTOsHistoricalRequest): Observable<Array<CurveLpTokenDTO>>
+    curveGetLpTokenDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetLpTokenDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveLpTokenDTO>>>
+    curveGetLpTokenDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetLpTokenDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveLpTokenDTO> | AjaxResponse<Array<CurveLpTokenDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveLpTokenDTO>>({
+            url: '/dapps/curve/LpTokenDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -773,6 +1512,29 @@ export class CurveApi extends BaseAPI {
     };
 
     /**
+     * Gets PoolDTOs.
+     * PoolDTOs (historical) 🔥
+     */
+    curveGetPoolDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetPoolDTOsHistoricalRequest): Observable<Array<CurvePoolDTO>>
+    curveGetPoolDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetPoolDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurvePoolDTO>>>
+    curveGetPoolDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetPoolDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurvePoolDTO> | AjaxResponse<Array<CurvePoolDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurvePoolDTO>>({
+            url: '/dapps/curve/PoolDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets pools.
      * Pools (historical) 🔥
      */
@@ -790,6 +1552,52 @@ export class CurveApi extends BaseAPI {
 
         return this.request<Array<CurvePoolDTO>>({
             url: '/dapps/curve/pools/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets ProposalDTOs.
+     * ProposalDTOs (historical) 🔥
+     */
+    curveGetProposalDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetProposalDTOsHistoricalRequest): Observable<Array<CurveProposalDTO>>
+    curveGetProposalDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetProposalDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveProposalDTO>>>
+    curveGetProposalDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetProposalDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveProposalDTO> | AjaxResponse<Array<CurveProposalDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveProposalDTO>>({
+            url: '/dapps/curve/ProposalDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets ProposalVoteDTOs.
+     * ProposalVoteDTOs (historical) 🔥
+     */
+    curveGetProposalVoteDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetProposalVoteDTOsHistoricalRequest): Observable<Array<CurveProposalVoteDTO>>
+    curveGetProposalVoteDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetProposalVoteDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveProposalVoteDTO>>>
+    curveGetProposalVoteDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetProposalVoteDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveProposalVoteDTO> | AjaxResponse<Array<CurveProposalVoteDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveProposalVoteDTO>>({
+            url: '/dapps/curve/ProposalVoteDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -840,6 +1648,29 @@ export class CurveApi extends BaseAPI {
     };
 
     /**
+     * Gets RemoveLiquidityEventDTOs.
+     * RemoveLiquidityEventDTOs (historical) 🔥
+     */
+    curveGetRemoveLiquidityEventDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetRemoveLiquidityEventDTOsHistoricalRequest): Observable<Array<CurveRemoveLiquidityEventDTO>>
+    curveGetRemoveLiquidityEventDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetRemoveLiquidityEventDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveRemoveLiquidityEventDTO>>>
+    curveGetRemoveLiquidityEventDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetRemoveLiquidityEventDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveRemoveLiquidityEventDTO> | AjaxResponse<Array<CurveRemoveLiquidityEventDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveRemoveLiquidityEventDTO>>({
+            url: '/dapps/curve/RemoveLiquidityEventDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets remove liquidity events.
      * RemoveLiquidityEvents (historical)
      */
@@ -857,6 +1688,29 @@ export class CurveApi extends BaseAPI {
 
         return this.request<Array<CurveRemoveLiquidityEventDTO>>({
             url: '/dapps/curve/removeLiquidityEvents/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets RemoveLiquidityOneEventDTOs.
+     * RemoveLiquidityOneEventDTOs (historical) 🔥
+     */
+    curveGetRemoveLiquidityOneEventDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetRemoveLiquidityOneEventDTOsHistoricalRequest): Observable<Array<CurveRemoveLiquidityOneEventDTO>>
+    curveGetRemoveLiquidityOneEventDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetRemoveLiquidityOneEventDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveRemoveLiquidityOneEventDTO>>>
+    curveGetRemoveLiquidityOneEventDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetRemoveLiquidityOneEventDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveRemoveLiquidityOneEventDTO> | AjaxResponse<Array<CurveRemoveLiquidityOneEventDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveRemoveLiquidityOneEventDTO>>({
+            url: '/dapps/curve/RemoveLiquidityOneEventDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -886,6 +1740,29 @@ export class CurveApi extends BaseAPI {
     };
 
     /**
+     * Gets SystemStateDTOs.
+     * SystemStateDTOs (historical) 🔥
+     */
+    curveGetSystemStateDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetSystemStateDTOsHistoricalRequest): Observable<Array<CurveSystemStateDTO>>
+    curveGetSystemStateDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetSystemStateDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveSystemStateDTO>>>
+    curveGetSystemStateDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetSystemStateDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveSystemStateDTO> | AjaxResponse<Array<CurveSystemStateDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveSystemStateDTO>>({
+            url: '/dapps/curve/SystemStateDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets system states.
      * SystemStates (historical)
      */
@@ -902,6 +1779,29 @@ export class CurveApi extends BaseAPI {
 
         return this.request<Array<CurveSystemStateDTO>>({
             url: '/dapps/curve/systemStates/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets TokenDTOs.
+     * TokenDTOs (historical) 🔥
+     */
+    curveGetTokenDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetTokenDTOsHistoricalRequest): Observable<Array<CurveTokenDTO>>
+    curveGetTokenDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetTokenDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveTokenDTO>>>
+    curveGetTokenDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetTokenDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveTokenDTO> | AjaxResponse<Array<CurveTokenDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveTokenDTO>>({
+            url: '/dapps/curve/TokenDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -931,6 +1831,29 @@ export class CurveApi extends BaseAPI {
     };
 
     /**
+     * Gets TransferOwnershipEventDTOs.
+     * TransferOwnershipEventDTOs (historical) 🔥
+     */
+    curveGetTransferOwnershipEventDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetTransferOwnershipEventDTOsHistoricalRequest): Observable<Array<CurveTransferOwnershipEventDTO>>
+    curveGetTransferOwnershipEventDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetTransferOwnershipEventDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveTransferOwnershipEventDTO>>>
+    curveGetTransferOwnershipEventDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetTransferOwnershipEventDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveTransferOwnershipEventDTO> | AjaxResponse<Array<CurveTransferOwnershipEventDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveTransferOwnershipEventDTO>>({
+            url: '/dapps/curve/TransferOwnershipEventDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets transfer ownership events.
      * TransferOwnershipEvents (historical)
      */
@@ -948,6 +1871,29 @@ export class CurveApi extends BaseAPI {
 
         return this.request<Array<CurveTransferOwnershipEventDTO>>({
             url: '/dapps/curve/transferOwnershipEvents/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets UnderlyingCoinDTOs.
+     * UnderlyingCoinDTOs (historical) 🔥
+     */
+    curveGetUnderlyingCoinDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetUnderlyingCoinDTOsHistoricalRequest): Observable<Array<CurveUnderlyingCoinDTO>>
+    curveGetUnderlyingCoinDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetUnderlyingCoinDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveUnderlyingCoinDTO>>>
+    curveGetUnderlyingCoinDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetUnderlyingCoinDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveUnderlyingCoinDTO> | AjaxResponse<Array<CurveUnderlyingCoinDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveUnderlyingCoinDTO>>({
+            url: '/dapps/curve/UnderlyingCoinDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
@@ -977,6 +1923,29 @@ export class CurveApi extends BaseAPI {
     };
 
     /**
+     * Gets VotingAppDTOs.
+     * VotingAppDTOs (historical) 🔥
+     */
+    curveGetVotingAppDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetVotingAppDTOsHistoricalRequest): Observable<Array<CurveVotingAppDTO>>
+    curveGetVotingAppDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetVotingAppDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveVotingAppDTO>>>
+    curveGetVotingAppDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetVotingAppDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveVotingAppDTO> | AjaxResponse<Array<CurveVotingAppDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveVotingAppDTO>>({
+            url: '/dapps/curve/VotingAppDTOs/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
      * Gets voting apps.
      * VotingApps (historical)
      */
@@ -993,6 +1962,29 @@ export class CurveApi extends BaseAPI {
 
         return this.request<Array<CurveVotingAppDTO>>({
             url: '/dapps/curve/votingApps/historical',
+            method: 'GET',
+            query,
+        }, opts?.responseOpts);
+    };
+
+    /**
+     * Gets WeeklyVolumeDTOs.
+     * WeeklyVolumeDTOs (historical) 🔥
+     */
+    curveGetWeeklyVolumeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetWeeklyVolumeDTOsHistoricalRequest): Observable<Array<CurveWeeklyVolumeDTO>>
+    curveGetWeeklyVolumeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetWeeklyVolumeDTOsHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveWeeklyVolumeDTO>>>
+    curveGetWeeklyVolumeDTOsHistorical({ startBlock, endBlock, startDate, endDate, poolId }: CurveGetWeeklyVolumeDTOsHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveWeeklyVolumeDTO> | AjaxResponse<Array<CurveWeeklyVolumeDTO>>> {
+
+        const query: HttpQuery = {};
+
+        if (startBlock != null) { query['startBlock'] = startBlock; }
+        if (endBlock != null) { query['endBlock'] = endBlock; }
+        if (startDate != null) { query['startDate'] = (startDate as any).toISOString(); }
+        if (endDate != null) { query['endDate'] = (endDate as any).toISOString(); }
+        if (poolId != null) { query['poolId'] = poolId; }
+
+        return this.request<Array<CurveWeeklyVolumeDTO>>({
+            url: '/dapps/curve/WeeklyVolumeDTOs/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);
