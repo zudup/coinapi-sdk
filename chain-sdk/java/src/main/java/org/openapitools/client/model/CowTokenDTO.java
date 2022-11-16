@@ -51,7 +51,7 @@ import org.openapitools.client.JSON;
  * Stores information for a specific token across all pairs that token is included in.
  */
 @ApiModel(description = "Stores information for a specific token across all pairs that token is included in.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-16T19:22:44.780047Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-16T19:45:04.011918Z[Etc/UTC]")
 public class CowTokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
