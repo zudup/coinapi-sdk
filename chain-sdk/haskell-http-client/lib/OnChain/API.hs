@@ -14,11 +14,17 @@ Module : OnChain.API
 -}
 
 module OnChain.API
-  ( module OnChain.API.Sushiswap
+  ( module OnChain.API.Cow
+  , module OnChain.API.Curve
+  , module OnChain.API.Dex
+  , module OnChain.API.Sushiswap
   , module OnChain.API.UniswapV2
   , module OnChain.API.UniswapV3
   ) where
 
+import OnChain.API.Cow
+import OnChain.API.Curve
+import OnChain.API.Dex
 import OnChain.API.Sushiswap
 import OnChain.API.UniswapV2
 import OnChain.API.UniswapV3

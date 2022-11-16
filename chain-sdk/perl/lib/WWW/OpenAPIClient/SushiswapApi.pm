@@ -147,6 +147,1293 @@ sub dex_get_trades__current {
 }
 
 #
+# sushiswap_get_bundles__historical
+#
+# Bundles (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Hardcoded to &#39;1&#39;. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'Hardcoded to &#39;1&#39;.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_bundles__historical' } = {
+        summary => 'Bundles (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[SushiswapBundleDTO]',
+        };
+}
+# @return ARRAY[SushiswapBundleDTO]
+#
+sub sushiswap_get_bundles__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/bundles/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapBundleDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_burns__historical
+#
+# Burns (historical) 🔥
+#
+# @param int $start_block  (optional)
+# @param int $end_block  (optional)
+# @param DATE_TIME $start_date  (optional)
+# @param DATE_TIME $end_date  (optional)
+# @param string $id  (optional)
+# @param string $pair  (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    'pair' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_burns__historical' } = {
+        summary => 'Burns (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[SushiswapBurnDTO]',
+        };
+}
+# @return ARRAY[SushiswapBurnDTO]
+#
+sub sushiswap_get_burns__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/burns/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'pair'}) {
+        $query_params->{'pair'} = $self->{api_client}->to_query_value($args{'pair'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapBurnDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_day_datas__historical
+#
+# DayDatas (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Unix timestamp for start of day / 86400 giving a unique day index. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'Unix timestamp for start of day / 86400 giving a unique day index.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_day_datas__historical' } = {
+        summary => 'DayDatas (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[SushiswapDayDataDTO]',
+        };
+}
+# @return ARRAY[SushiswapDayDataDTO]
+#
+sub sushiswap_get_day_datas__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/daydatas/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapDayDataDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_factorys__historical
+#
+# Factorys (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Factory address. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'Factory address.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_factorys__historical' } = {
+        summary => 'Factorys (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[SushiswapFactoryDTO]',
+        };
+}
+# @return ARRAY[SushiswapFactoryDTO]
+#
+sub sushiswap_get_factorys__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/factorys/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapFactoryDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_hour_datas__historical
+#
+# HourDatas (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Start of hour timestamp. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'Start of hour timestamp.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_hour_datas__historical' } = {
+        summary => 'HourDatas (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[SushiswapHourDataDTO]',
+        };
+}
+# @return ARRAY[SushiswapHourDataDTO]
+#
+sub sushiswap_get_hour_datas__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/hourdatas/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapHourDataDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_liquidity_position_snapshots__historical
+#
+# LiquidityPositionSnapshots (historical) 🔥
+#
+# @param int $start_block  (optional)
+# @param int $end_block  (optional)
+# @param DATE_TIME $start_date  (optional)
+# @param DATE_TIME $end_date  (optional)
+# @param string $id  (optional)
+# @param string $user  (optional)
+# @param string $pair  (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    'user' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    'pair' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_liquidity_position_snapshots__historical' } = {
+        summary => 'LiquidityPositionSnapshots (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[SushiswapLiquidityPositionSnapshotDTO]',
+        };
+}
+# @return ARRAY[SushiswapLiquidityPositionSnapshotDTO]
+#
+sub sushiswap_get_liquidity_position_snapshots__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/liquiditypositionsnapshots/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'user'}) {
+        $query_params->{'user'} = $self->{api_client}->to_query_value($args{'user'});
+    }
+
+    # query params
+    if ( exists $args{'pair'}) {
+        $query_params->{'pair'} = $self->{api_client}->to_query_value($args{'pair'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapLiquidityPositionSnapshotDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_liquidity_positions__historical
+#
+# LiquidityPositions (historical) 🔥
+#
+# @param int $start_block  (optional)
+# @param int $end_block  (optional)
+# @param DATE_TIME $start_date  (optional)
+# @param DATE_TIME $end_date  (optional)
+# @param string $id  (optional)
+# @param string $user  (optional)
+# @param string $pair  (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    'user' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    'pair' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_liquidity_positions__historical' } = {
+        summary => 'LiquidityPositions (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[SushiswapLiquidityPositionDTO]',
+        };
+}
+# @return ARRAY[SushiswapLiquidityPositionDTO]
+#
+sub sushiswap_get_liquidity_positions__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/liquiditypositions/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'user'}) {
+        $query_params->{'user'} = $self->{api_client}->to_query_value($args{'user'});
+    }
+
+    # query params
+    if ( exists $args{'pair'}) {
+        $query_params->{'pair'} = $self->{api_client}->to_query_value($args{'pair'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapLiquidityPositionDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_mints__historical
+#
+# Mints (historical) 🔥
+#
+# @param int $start_block  (optional)
+# @param int $end_block  (optional)
+# @param DATE_TIME $start_date  (optional)
+# @param DATE_TIME $end_date  (optional)
+# @param string $id  (optional)
+# @param string $pair  (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    'pair' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_mints__historical' } = {
+        summary => 'Mints (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[SushiswapMintDTO]',
+        };
+}
+# @return ARRAY[SushiswapMintDTO]
+#
+sub sushiswap_get_mints__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/mints/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'pair'}) {
+        $query_params->{'pair'} = $self->{api_client}->to_query_value($args{'pair'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapMintDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_pair_day_datas__historical
+#
+# PairDayDatas (historical) 🔥
+#
+# @param int $start_block  (optional)
+# @param int $end_block  (optional)
+# @param DATE_TIME $start_date  (optional)
+# @param DATE_TIME $end_date  (optional)
+# @param string $id  (optional)
+# @param string $pair  (optional)
+# @param string $token_0  (optional)
+# @param string $token_1  (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    'pair' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    'token_0' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    'token_1' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_pair_day_datas__historical' } = {
+        summary => 'PairDayDatas (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[SushiswapPairDayDataDTO]',
+        };
+}
+# @return ARRAY[SushiswapPairDayDataDTO]
+#
+sub sushiswap_get_pair_day_datas__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/pairdaydatas/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'pair'}) {
+        $query_params->{'pair'} = $self->{api_client}->to_query_value($args{'pair'});
+    }
+
+    # query params
+    if ( exists $args{'token_0'}) {
+        $query_params->{'token_0'} = $self->{api_client}->to_query_value($args{'token_0'});
+    }
+
+    # query params
+    if ( exists $args{'token_1'}) {
+        $query_params->{'token_1'} = $self->{api_client}->to_query_value($args{'token_1'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapPairDayDataDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_pair_hour_datas__historical
+#
+# PairHourDatas (historical) 🔥
+#
+# @param int $start_block  (optional)
+# @param int $end_block  (optional)
+# @param DATE_TIME $start_date  (optional)
+# @param DATE_TIME $end_date  (optional)
+# @param string $id  (optional)
+# @param string $pair  (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    'pair' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_pair_hour_datas__historical' } = {
+        summary => 'PairHourDatas (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[SushiswapPairHourDataDTO]',
+        };
+}
+# @return ARRAY[SushiswapPairHourDataDTO]
+#
+sub sushiswap_get_pair_hour_datas__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/pairhourdatas/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'pair'}) {
+        $query_params->{'pair'} = $self->{api_client}->to_query_value($args{'pair'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapPairHourDataDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_pairs__historical
+#
+# Pairs (historical) 🔥
+#
+# @param int $start_block  (optional)
+# @param int $end_block  (optional)
+# @param DATE_TIME $start_date  (optional)
+# @param DATE_TIME $end_date  (optional)
+# @param string $id  (optional)
+# @param string $name  (optional)
+# @param string $token_0  (optional)
+# @param string $token_1  (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    'name' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    'token_0' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    'token_1' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_pairs__historical' } = {
+        summary => 'Pairs (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[SushiswapPairDTO]',
+        };
+}
+# @return ARRAY[SushiswapPairDTO]
+#
+sub sushiswap_get_pairs__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/pairs/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'name'}) {
+        $query_params->{'name'} = $self->{api_client}->to_query_value($args{'name'});
+    }
+
+    # query params
+    if ( exists $args{'token_0'}) {
+        $query_params->{'token_0'} = $self->{api_client}->to_query_value($args{'token_0'});
+    }
+
+    # query params
+    if ( exists $args{'token_1'}) {
+        $query_params->{'token_1'} = $self->{api_client}->to_query_value($args{'token_1'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapPairDTO]', $response);
+    return $_response_object;
+}
+
+#
 # sushiswap_get_pools__current
 #
 # Pools (current) 🔥
@@ -245,6 +1532,225 @@ sub sushiswap_get_swaps__current {
 }
 
 #
+# sushiswap_get_swaps__historical
+#
+# Swaps (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Transaction hash plus index in Transaction swap array. (optional)
+# @param string $pair Reference to pair. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'Transaction hash plus index in Transaction swap array.',
+        required => '0',
+    },
+    'pair' => {
+        data_type => 'string',
+        description => 'Reference to pair.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_swaps__historical' } = {
+        summary => 'Swaps (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[SushiswapSwapDTO]',
+        };
+}
+# @return ARRAY[SushiswapSwapDTO]
+#
+sub sushiswap_get_swaps__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/swaps/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'pair'}) {
+        $query_params->{'pair'} = $self->{api_client}->to_query_value($args{'pair'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapSwapDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_token_day_datas__historical
+#
+# TokenDayDatas (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Identifier, day start timestamp in unix / 86400. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'Identifier, day start timestamp in unix / 86400.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_token_day_datas__historical' } = {
+        summary => 'TokenDayDatas (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[SushiswapTokenDayDataDTO]',
+        };
+}
+# @return ARRAY[SushiswapTokenDayDataDTO]
+#
+sub sushiswap_get_token_day_datas__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/tokendaydatas/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapTokenDayDataDTO]', $response);
+    return $_response_object;
+}
+
+#
 # sushiswap_get_tokens__current
 #
 # Tokens (current) 🔥
@@ -290,6 +1796,340 @@ sub sushiswap_get_tokens__current {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapTokenDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_tokens__historical
+#
+# Tokens (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Token address. (optional)
+# @param string $symbol Token symbol. (optional)
+# @param string $name Token name. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'Token address.',
+        required => '0',
+    },
+    'symbol' => {
+        data_type => 'string',
+        description => 'Token symbol.',
+        required => '0',
+    },
+    'name' => {
+        data_type => 'string',
+        description => 'Token name.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_tokens__historical' } = {
+        summary => 'Tokens (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[SushiswapTokenDTO]',
+        };
+}
+# @return ARRAY[SushiswapTokenDTO]
+#
+sub sushiswap_get_tokens__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/tokens/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'symbol'}) {
+        $query_params->{'symbol'} = $self->{api_client}->to_query_value($args{'symbol'});
+    }
+
+    # query params
+    if ( exists $args{'name'}) {
+        $query_params->{'name'} = $self->{api_client}->to_query_value($args{'name'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapTokenDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_transactions__historical
+#
+# Transactions (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Ethereum transaction hash. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'Ethereum transaction hash.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_transactions__historical' } = {
+        summary => 'Transactions (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[SushiswapTransactionDTO]',
+        };
+}
+# @return ARRAY[SushiswapTransactionDTO]
+#
+sub sushiswap_get_transactions__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/transactions/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapTransactionDTO]', $response);
+    return $_response_object;
+}
+
+#
+# sushiswap_get_users__historical
+#
+# Users (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id User address. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'User address.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_users__historical' } = {
+        summary => 'Users (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[SushiswapUserDTO]',
+        };
+}
+# @return ARRAY[SushiswapUserDTO]
+#
+sub sushiswap_get_users__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/sushiswap/users/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[SushiswapUserDTO]', $response);
     return $_response_object;
 }
 

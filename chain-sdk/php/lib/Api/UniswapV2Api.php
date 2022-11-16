@@ -72,13 +72,58 @@ class UniswapV2Api
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
+        'uniswapV2GetBundleV2sHistorical' => [
+            'application/json',
+        ],
+        'uniswapV2GetBurnV2sHistorical' => [
+            'application/json',
+        ],
+        'uniswapV2GetLiquidityPositionSnapshotV2sHistorical' => [
+            'application/json',
+        ],
+        'uniswapV2GetLiquidityPositionV2sHistorical' => [
+            'application/json',
+        ],
+        'uniswapV2GetMintV2sHistorical' => [
+            'application/json',
+        ],
+        'uniswapV2GetPairDayDataV2sHistorical' => [
+            'application/json',
+        ],
+        'uniswapV2GetPairHourDataV2sHistorical' => [
+            'application/json',
+        ],
+        'uniswapV2GetPairV2sHistorical' => [
+            'application/json',
+        ],
         'uniswapV2GetPoolsCurrent' => [
+            'application/json',
+        ],
+        'uniswapV2GetSwapV2sHistorical' => [
             'application/json',
         ],
         'uniswapV2GetSwapsCurrent' => [
             'application/json',
         ],
+        'uniswapV2GetTokenDayDataV2sHistorical' => [
+            'application/json',
+        ],
+        'uniswapV2GetTokenV2sHistorical' => [
+            'application/json',
+        ],
         'uniswapV2GetTokensCurrent' => [
+            'application/json',
+        ],
+        'uniswapV2GetTransactionV2sHistorical' => [
+            'application/json',
+        ],
+        'uniswapV2GetUniswapDayDataV2sHistorical' => [
+            'application/json',
+        ],
+        'uniswapV2GetUniswapFactoryV2sHistorical' => [
+            'application/json',
+        ],
+        'uniswapV2GetUserV2sHistorical' => [
             'application/json',
         ],
     ];
@@ -127,6 +172,2875 @@ class UniswapV2Api
     public function getConfig()
     {
         return $this->config;
+    }
+
+    /**
+     * Operation uniswapV2GetBundleV2sHistorical
+     *
+     * BundleV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Constant 1. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetBundleV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV2BundleV2DTO[]
+     */
+    public function uniswapV2GetBundleV2sHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetBundleV2sHistorical'][0])
+    {
+        list($response) = $this->uniswapV2GetBundleV2sHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV2GetBundleV2sHistoricalWithHttpInfo
+     *
+     * BundleV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Constant 1. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetBundleV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV2BundleV2DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV2GetBundleV2sHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetBundleV2sHistorical'][0])
+    {
+        $request = $this->uniswapV2GetBundleV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV2BundleV2DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV2BundleV2DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV2BundleV2DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV2BundleV2DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV2BundleV2DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV2GetBundleV2sHistoricalAsync
+     *
+     * BundleV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Constant 1. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetBundleV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetBundleV2sHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetBundleV2sHistorical'][0])
+    {
+        return $this->uniswapV2GetBundleV2sHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV2GetBundleV2sHistoricalAsyncWithHttpInfo
+     *
+     * BundleV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Constant 1. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetBundleV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetBundleV2sHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetBundleV2sHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV2BundleV2DTO[]';
+        $request = $this->uniswapV2GetBundleV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV2GetBundleV2sHistorical'
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Constant 1. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetBundleV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV2GetBundleV2sHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetBundleV2sHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv2/bundlev2s/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV2GetBurnV2sHistorical
+     *
+     * BurnV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Transaction hash plus index in the transaction burn array (optional)
+     * @param  string $pair Reference to pair. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetBurnV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV2BurnV2DTO[]
+     */
+    public function uniswapV2GetBurnV2sHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetBurnV2sHistorical'][0])
+    {
+        list($response) = $this->uniswapV2GetBurnV2sHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pair, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV2GetBurnV2sHistoricalWithHttpInfo
+     *
+     * BurnV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Transaction hash plus index in the transaction burn array (optional)
+     * @param  string $pair Reference to pair. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetBurnV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV2BurnV2DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV2GetBurnV2sHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetBurnV2sHistorical'][0])
+    {
+        $request = $this->uniswapV2GetBurnV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pair, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV2BurnV2DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV2BurnV2DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV2BurnV2DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV2BurnV2DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV2BurnV2DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV2GetBurnV2sHistoricalAsync
+     *
+     * BurnV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Transaction hash plus index in the transaction burn array (optional)
+     * @param  string $pair Reference to pair. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetBurnV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetBurnV2sHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetBurnV2sHistorical'][0])
+    {
+        return $this->uniswapV2GetBurnV2sHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pair, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV2GetBurnV2sHistoricalAsyncWithHttpInfo
+     *
+     * BurnV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Transaction hash plus index in the transaction burn array (optional)
+     * @param  string $pair Reference to pair. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetBurnV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetBurnV2sHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetBurnV2sHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV2BurnV2DTO[]';
+        $request = $this->uniswapV2GetBurnV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pair, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV2GetBurnV2sHistorical'
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Transaction hash plus index in the transaction burn array (optional)
+     * @param  string $pair Reference to pair. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetBurnV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV2GetBurnV2sHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetBurnV2sHistorical'][0])
+    {
+
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv2/burnv2s/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pair,
+            'pair', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV2GetLiquidityPositionSnapshotV2sHistorical
+     *
+     * LiquidityPositionSnapshotV2s (historical) 🔥
+     *
+     * @param  int $start_block start_block (optional)
+     * @param  int $end_block end_block (optional)
+     * @param  \DateTime $start_date start_date (optional)
+     * @param  \DateTime $end_date end_date (optional)
+     * @param  string $id id (optional)
+     * @param  string $user user (optional)
+     * @param  string $pair pair (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetLiquidityPositionSnapshotV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV2LiquidityPositionSnapshotV2DTO[]
+     */
+    public function uniswapV2GetLiquidityPositionSnapshotV2sHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetLiquidityPositionSnapshotV2sHistorical'][0])
+    {
+        list($response) = $this->uniswapV2GetLiquidityPositionSnapshotV2sHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $user, $pair, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV2GetLiquidityPositionSnapshotV2sHistoricalWithHttpInfo
+     *
+     * LiquidityPositionSnapshotV2s (historical) 🔥
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $id (optional)
+     * @param  string $user (optional)
+     * @param  string $pair (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetLiquidityPositionSnapshotV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV2LiquidityPositionSnapshotV2DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV2GetLiquidityPositionSnapshotV2sHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetLiquidityPositionSnapshotV2sHistorical'][0])
+    {
+        $request = $this->uniswapV2GetLiquidityPositionSnapshotV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $user, $pair, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV2LiquidityPositionSnapshotV2DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV2LiquidityPositionSnapshotV2DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV2LiquidityPositionSnapshotV2DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV2LiquidityPositionSnapshotV2DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV2LiquidityPositionSnapshotV2DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV2GetLiquidityPositionSnapshotV2sHistoricalAsync
+     *
+     * LiquidityPositionSnapshotV2s (historical) 🔥
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $id (optional)
+     * @param  string $user (optional)
+     * @param  string $pair (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetLiquidityPositionSnapshotV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetLiquidityPositionSnapshotV2sHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetLiquidityPositionSnapshotV2sHistorical'][0])
+    {
+        return $this->uniswapV2GetLiquidityPositionSnapshotV2sHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $user, $pair, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV2GetLiquidityPositionSnapshotV2sHistoricalAsyncWithHttpInfo
+     *
+     * LiquidityPositionSnapshotV2s (historical) 🔥
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $id (optional)
+     * @param  string $user (optional)
+     * @param  string $pair (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetLiquidityPositionSnapshotV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetLiquidityPositionSnapshotV2sHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetLiquidityPositionSnapshotV2sHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV2LiquidityPositionSnapshotV2DTO[]';
+        $request = $this->uniswapV2GetLiquidityPositionSnapshotV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $user, $pair, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV2GetLiquidityPositionSnapshotV2sHistorical'
+     *
+     * @param  int $start_block (optional)
+     * @param  int $end_block (optional)
+     * @param  \DateTime $start_date (optional)
+     * @param  \DateTime $end_date (optional)
+     * @param  string $id (optional)
+     * @param  string $user (optional)
+     * @param  string $pair (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetLiquidityPositionSnapshotV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV2GetLiquidityPositionSnapshotV2sHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetLiquidityPositionSnapshotV2sHistorical'][0])
+    {
+
+
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv2/liquiditypositionsnapshotv2s/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $user,
+            'user', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pair,
+            'pair', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV2GetLiquidityPositionV2sHistorical
+     *
+     * LiquidityPositionV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id User address and pair address concatenated with a dash. (optional)
+     * @param  string $user Reference to user. (optional)
+     * @param  string $pair Reference to the pair liquidity is being provided on. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetLiquidityPositionV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV2LiquidityPositionV2DTO[]
+     */
+    public function uniswapV2GetLiquidityPositionV2sHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetLiquidityPositionV2sHistorical'][0])
+    {
+        list($response) = $this->uniswapV2GetLiquidityPositionV2sHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $user, $pair, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV2GetLiquidityPositionV2sHistoricalWithHttpInfo
+     *
+     * LiquidityPositionV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id User address and pair address concatenated with a dash. (optional)
+     * @param  string $user Reference to user. (optional)
+     * @param  string $pair Reference to the pair liquidity is being provided on. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetLiquidityPositionV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV2LiquidityPositionV2DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV2GetLiquidityPositionV2sHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetLiquidityPositionV2sHistorical'][0])
+    {
+        $request = $this->uniswapV2GetLiquidityPositionV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $user, $pair, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV2LiquidityPositionV2DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV2LiquidityPositionV2DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV2LiquidityPositionV2DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV2LiquidityPositionV2DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV2LiquidityPositionV2DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV2GetLiquidityPositionV2sHistoricalAsync
+     *
+     * LiquidityPositionV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id User address and pair address concatenated with a dash. (optional)
+     * @param  string $user Reference to user. (optional)
+     * @param  string $pair Reference to the pair liquidity is being provided on. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetLiquidityPositionV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetLiquidityPositionV2sHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetLiquidityPositionV2sHistorical'][0])
+    {
+        return $this->uniswapV2GetLiquidityPositionV2sHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $user, $pair, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV2GetLiquidityPositionV2sHistoricalAsyncWithHttpInfo
+     *
+     * LiquidityPositionV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id User address and pair address concatenated with a dash. (optional)
+     * @param  string $user Reference to user. (optional)
+     * @param  string $pair Reference to the pair liquidity is being provided on. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetLiquidityPositionV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetLiquidityPositionV2sHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetLiquidityPositionV2sHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV2LiquidityPositionV2DTO[]';
+        $request = $this->uniswapV2GetLiquidityPositionV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $user, $pair, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV2GetLiquidityPositionV2sHistorical'
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id User address and pair address concatenated with a dash. (optional)
+     * @param  string $user Reference to user. (optional)
+     * @param  string $pair Reference to the pair liquidity is being provided on. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetLiquidityPositionV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV2GetLiquidityPositionV2sHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetLiquidityPositionV2sHistorical'][0])
+    {
+
+
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv2/liquiditypositionv2s/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $user,
+            'user', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pair,
+            'pair', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV2GetMintV2sHistorical
+     *
+     * MintV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Transaction hash plus index in the transaction mint array. (optional)
+     * @param  string $pair Reference to pair. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetMintV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV2MintV2DTO[]
+     */
+    public function uniswapV2GetMintV2sHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetMintV2sHistorical'][0])
+    {
+        list($response) = $this->uniswapV2GetMintV2sHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pair, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV2GetMintV2sHistoricalWithHttpInfo
+     *
+     * MintV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Transaction hash plus index in the transaction mint array. (optional)
+     * @param  string $pair Reference to pair. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetMintV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV2MintV2DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV2GetMintV2sHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetMintV2sHistorical'][0])
+    {
+        $request = $this->uniswapV2GetMintV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pair, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV2MintV2DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV2MintV2DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV2MintV2DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV2MintV2DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV2MintV2DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV2GetMintV2sHistoricalAsync
+     *
+     * MintV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Transaction hash plus index in the transaction mint array. (optional)
+     * @param  string $pair Reference to pair. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetMintV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetMintV2sHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetMintV2sHistorical'][0])
+    {
+        return $this->uniswapV2GetMintV2sHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pair, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV2GetMintV2sHistoricalAsyncWithHttpInfo
+     *
+     * MintV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Transaction hash plus index in the transaction mint array. (optional)
+     * @param  string $pair Reference to pair. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetMintV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetMintV2sHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetMintV2sHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV2MintV2DTO[]';
+        $request = $this->uniswapV2GetMintV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pair, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV2GetMintV2sHistorical'
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Transaction hash plus index in the transaction mint array. (optional)
+     * @param  string $pair Reference to pair. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetMintV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV2GetMintV2sHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetMintV2sHistorical'][0])
+    {
+
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv2/mintv2s/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pair,
+            'pair', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV2GetPairDayDataV2sHistorical
+     *
+     * PairDayDataV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id  (optional)
+     * @param  string $token_0 Reference to token0. (optional)
+     * @param  string $token_1 Reference to token1. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPairDayDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV2PairDayDataV2DTO[]
+     */
+    public function uniswapV2GetPairDayDataV2sHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $token_0 = null, $token_1 = null, string $contentType = self::contentTypes['uniswapV2GetPairDayDataV2sHistorical'][0])
+    {
+        list($response) = $this->uniswapV2GetPairDayDataV2sHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $token_0, $token_1, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV2GetPairDayDataV2sHistoricalWithHttpInfo
+     *
+     * PairDayDataV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id  (optional)
+     * @param  string $token_0 Reference to token0. (optional)
+     * @param  string $token_1 Reference to token1. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPairDayDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV2PairDayDataV2DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV2GetPairDayDataV2sHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $token_0 = null, $token_1 = null, string $contentType = self::contentTypes['uniswapV2GetPairDayDataV2sHistorical'][0])
+    {
+        $request = $this->uniswapV2GetPairDayDataV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $token_0, $token_1, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV2PairDayDataV2DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV2PairDayDataV2DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV2PairDayDataV2DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV2PairDayDataV2DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV2PairDayDataV2DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV2GetPairDayDataV2sHistoricalAsync
+     *
+     * PairDayDataV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id  (optional)
+     * @param  string $token_0 Reference to token0. (optional)
+     * @param  string $token_1 Reference to token1. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPairDayDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetPairDayDataV2sHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $token_0 = null, $token_1 = null, string $contentType = self::contentTypes['uniswapV2GetPairDayDataV2sHistorical'][0])
+    {
+        return $this->uniswapV2GetPairDayDataV2sHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $token_0, $token_1, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV2GetPairDayDataV2sHistoricalAsyncWithHttpInfo
+     *
+     * PairDayDataV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id  (optional)
+     * @param  string $token_0 Reference to token0. (optional)
+     * @param  string $token_1 Reference to token1. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPairDayDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetPairDayDataV2sHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $token_0 = null, $token_1 = null, string $contentType = self::contentTypes['uniswapV2GetPairDayDataV2sHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV2PairDayDataV2DTO[]';
+        $request = $this->uniswapV2GetPairDayDataV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $token_0, $token_1, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV2GetPairDayDataV2sHistorical'
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id  (optional)
+     * @param  string $token_0 Reference to token0. (optional)
+     * @param  string $token_1 Reference to token1. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPairDayDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV2GetPairDayDataV2sHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $token_0 = null, $token_1 = null, string $contentType = self::contentTypes['uniswapV2GetPairDayDataV2sHistorical'][0])
+    {
+
+
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv2/pairdaydatav2s/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $token_0,
+            'token_0', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $token_1,
+            'token_1', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV2GetPairHourDataV2sHistorical
+     *
+     * PairHourDataV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id  (optional)
+     * @param  string $pair Address for pair contract. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPairHourDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV2PairHourDataV2DTO[]
+     */
+    public function uniswapV2GetPairHourDataV2sHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetPairHourDataV2sHistorical'][0])
+    {
+        list($response) = $this->uniswapV2GetPairHourDataV2sHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pair, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV2GetPairHourDataV2sHistoricalWithHttpInfo
+     *
+     * PairHourDataV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id  (optional)
+     * @param  string $pair Address for pair contract. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPairHourDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV2PairHourDataV2DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV2GetPairHourDataV2sHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetPairHourDataV2sHistorical'][0])
+    {
+        $request = $this->uniswapV2GetPairHourDataV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pair, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV2PairHourDataV2DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV2PairHourDataV2DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV2PairHourDataV2DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV2PairHourDataV2DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV2PairHourDataV2DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV2GetPairHourDataV2sHistoricalAsync
+     *
+     * PairHourDataV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id  (optional)
+     * @param  string $pair Address for pair contract. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPairHourDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetPairHourDataV2sHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetPairHourDataV2sHistorical'][0])
+    {
+        return $this->uniswapV2GetPairHourDataV2sHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pair, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV2GetPairHourDataV2sHistoricalAsyncWithHttpInfo
+     *
+     * PairHourDataV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id  (optional)
+     * @param  string $pair Address for pair contract. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPairHourDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetPairHourDataV2sHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetPairHourDataV2sHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV2PairHourDataV2DTO[]';
+        $request = $this->uniswapV2GetPairHourDataV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pair, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV2GetPairHourDataV2sHistorical'
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id  (optional)
+     * @param  string $pair Address for pair contract. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPairHourDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV2GetPairHourDataV2sHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetPairHourDataV2sHistorical'][0])
+    {
+
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv2/pairhourdatav2s/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pair,
+            'pair', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV2GetPairV2sHistorical
+     *
+     * PairV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Pair contract address. (optional)
+     * @param  string $token_0 Reference to token0 as stored in pair contract. (optional)
+     * @param  string $token_1 Reference to token1 as stored in pair contract. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPairV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV2PairV2DTO[]
+     */
+    public function uniswapV2GetPairV2sHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $token_0 = null, $token_1 = null, string $contentType = self::contentTypes['uniswapV2GetPairV2sHistorical'][0])
+    {
+        list($response) = $this->uniswapV2GetPairV2sHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $token_0, $token_1, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV2GetPairV2sHistoricalWithHttpInfo
+     *
+     * PairV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Pair contract address. (optional)
+     * @param  string $token_0 Reference to token0 as stored in pair contract. (optional)
+     * @param  string $token_1 Reference to token1 as stored in pair contract. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPairV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV2PairV2DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV2GetPairV2sHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $token_0 = null, $token_1 = null, string $contentType = self::contentTypes['uniswapV2GetPairV2sHistorical'][0])
+    {
+        $request = $this->uniswapV2GetPairV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $token_0, $token_1, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV2PairV2DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV2PairV2DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV2PairV2DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV2PairV2DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV2PairV2DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV2GetPairV2sHistoricalAsync
+     *
+     * PairV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Pair contract address. (optional)
+     * @param  string $token_0 Reference to token0 as stored in pair contract. (optional)
+     * @param  string $token_1 Reference to token1 as stored in pair contract. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPairV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetPairV2sHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $token_0 = null, $token_1 = null, string $contentType = self::contentTypes['uniswapV2GetPairV2sHistorical'][0])
+    {
+        return $this->uniswapV2GetPairV2sHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $token_0, $token_1, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV2GetPairV2sHistoricalAsyncWithHttpInfo
+     *
+     * PairV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Pair contract address. (optional)
+     * @param  string $token_0 Reference to token0 as stored in pair contract. (optional)
+     * @param  string $token_1 Reference to token1 as stored in pair contract. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPairV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetPairV2sHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $token_0 = null, $token_1 = null, string $contentType = self::contentTypes['uniswapV2GetPairV2sHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV2PairV2DTO[]';
+        $request = $this->uniswapV2GetPairV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $token_0, $token_1, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV2GetPairV2sHistorical'
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Pair contract address. (optional)
+     * @param  string $token_0 Reference to token0 as stored in pair contract. (optional)
+     * @param  string $token_1 Reference to token1 as stored in pair contract. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetPairV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV2GetPairV2sHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $token_0 = null, $token_1 = null, string $contentType = self::contentTypes['uniswapV2GetPairV2sHistorical'][0])
+    {
+
+
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv2/pairv2s/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $token_0,
+            'token_0', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $token_1,
+            'token_1', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
     }
 
     /**
@@ -345,6 +3259,359 @@ class UniswapV2Api
         $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
             $filter_pool_id,
             'filter_pool_id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV2GetSwapV2sHistorical
+     *
+     * SwapV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Transaction hash plus index in Transaction swap array. (optional)
+     * @param  string $pair Reference to pair. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetSwapV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV2SwapV2DTO[]
+     */
+    public function uniswapV2GetSwapV2sHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetSwapV2sHistorical'][0])
+    {
+        list($response) = $this->uniswapV2GetSwapV2sHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pair, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV2GetSwapV2sHistoricalWithHttpInfo
+     *
+     * SwapV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Transaction hash plus index in Transaction swap array. (optional)
+     * @param  string $pair Reference to pair. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetSwapV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV2SwapV2DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV2GetSwapV2sHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetSwapV2sHistorical'][0])
+    {
+        $request = $this->uniswapV2GetSwapV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pair, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV2SwapV2DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV2SwapV2DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV2SwapV2DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV2SwapV2DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV2SwapV2DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV2GetSwapV2sHistoricalAsync
+     *
+     * SwapV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Transaction hash plus index in Transaction swap array. (optional)
+     * @param  string $pair Reference to pair. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetSwapV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetSwapV2sHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetSwapV2sHistorical'][0])
+    {
+        return $this->uniswapV2GetSwapV2sHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pair, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV2GetSwapV2sHistoricalAsyncWithHttpInfo
+     *
+     * SwapV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Transaction hash plus index in Transaction swap array. (optional)
+     * @param  string $pair Reference to pair. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetSwapV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetSwapV2sHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetSwapV2sHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV2SwapV2DTO[]';
+        $request = $this->uniswapV2GetSwapV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pair, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV2GetSwapV2sHistorical'
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Transaction hash plus index in Transaction swap array. (optional)
+     * @param  string $pair Reference to pair. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetSwapV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV2GetSwapV2sHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pair = null, string $contentType = self::contentTypes['uniswapV2GetSwapV2sHistorical'][0])
+    {
+
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv2/swapv2s/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $pair,
+            'pair', // param base name
             'string', // openApiType
             'form', // style
             true, // explode
@@ -671,6 +3938,712 @@ class UniswapV2Api
     }
 
     /**
+     * Operation uniswapV2GetTokenDayDataV2sHistorical
+     *
+     * TokenDayDataV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTokenDayDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV2TokenDayDataV2DTO[]
+     */
+    public function uniswapV2GetTokenDayDataV2sHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetTokenDayDataV2sHistorical'][0])
+    {
+        list($response) = $this->uniswapV2GetTokenDayDataV2sHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV2GetTokenDayDataV2sHistoricalWithHttpInfo
+     *
+     * TokenDayDataV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTokenDayDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV2TokenDayDataV2DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV2GetTokenDayDataV2sHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetTokenDayDataV2sHistorical'][0])
+    {
+        $request = $this->uniswapV2GetTokenDayDataV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV2TokenDayDataV2DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV2TokenDayDataV2DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV2TokenDayDataV2DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV2TokenDayDataV2DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV2TokenDayDataV2DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV2GetTokenDayDataV2sHistoricalAsync
+     *
+     * TokenDayDataV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTokenDayDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetTokenDayDataV2sHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetTokenDayDataV2sHistorical'][0])
+    {
+        return $this->uniswapV2GetTokenDayDataV2sHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV2GetTokenDayDataV2sHistoricalAsyncWithHttpInfo
+     *
+     * TokenDayDataV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTokenDayDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetTokenDayDataV2sHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetTokenDayDataV2sHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV2TokenDayDataV2DTO[]';
+        $request = $this->uniswapV2GetTokenDayDataV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV2GetTokenDayDataV2sHistorical'
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTokenDayDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV2GetTokenDayDataV2sHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetTokenDayDataV2sHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv2/tokendaydatav2s/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV2GetTokenV2sHistorical
+     *
+     * TokenV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Token address. (optional)
+     * @param  string $symbol Token symbol. (optional)
+     * @param  string $name Token name. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTokenV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV2TokenV2DTO[]
+     */
+    public function uniswapV2GetTokenV2sHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $symbol = null, $name = null, string $contentType = self::contentTypes['uniswapV2GetTokenV2sHistorical'][0])
+    {
+        list($response) = $this->uniswapV2GetTokenV2sHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $symbol, $name, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV2GetTokenV2sHistoricalWithHttpInfo
+     *
+     * TokenV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Token address. (optional)
+     * @param  string $symbol Token symbol. (optional)
+     * @param  string $name Token name. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTokenV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV2TokenV2DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV2GetTokenV2sHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $symbol = null, $name = null, string $contentType = self::contentTypes['uniswapV2GetTokenV2sHistorical'][0])
+    {
+        $request = $this->uniswapV2GetTokenV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $symbol, $name, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV2TokenV2DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV2TokenV2DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV2TokenV2DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV2TokenV2DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV2TokenV2DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV2GetTokenV2sHistoricalAsync
+     *
+     * TokenV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Token address. (optional)
+     * @param  string $symbol Token symbol. (optional)
+     * @param  string $name Token name. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTokenV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetTokenV2sHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $symbol = null, $name = null, string $contentType = self::contentTypes['uniswapV2GetTokenV2sHistorical'][0])
+    {
+        return $this->uniswapV2GetTokenV2sHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $symbol, $name, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV2GetTokenV2sHistoricalAsyncWithHttpInfo
+     *
+     * TokenV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Token address. (optional)
+     * @param  string $symbol Token symbol. (optional)
+     * @param  string $name Token name. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTokenV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetTokenV2sHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $symbol = null, $name = null, string $contentType = self::contentTypes['uniswapV2GetTokenV2sHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV2TokenV2DTO[]';
+        $request = $this->uniswapV2GetTokenV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $symbol, $name, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV2GetTokenV2sHistorical'
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Token address. (optional)
+     * @param  string $symbol Token symbol. (optional)
+     * @param  string $name Token name. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTokenV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV2GetTokenV2sHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $symbol = null, $name = null, string $contentType = self::contentTypes['uniswapV2GetTokenV2sHistorical'][0])
+    {
+
+
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv2/tokenv2s/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $symbol,
+            'symbol', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $name,
+            'name', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
      * Operation uniswapV2GetTokensCurrent
      *
      * Tokens (current) 🔥
@@ -876,6 +4849,1358 @@ class UniswapV2Api
         $httpBody = '';
         $multipart = false;
 
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV2GetTransactionV2sHistorical
+     *
+     * TransactionV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Ethereum transaction hash. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTransactionV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV2TransactionV2DTO[]
+     */
+    public function uniswapV2GetTransactionV2sHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetTransactionV2sHistorical'][0])
+    {
+        list($response) = $this->uniswapV2GetTransactionV2sHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV2GetTransactionV2sHistoricalWithHttpInfo
+     *
+     * TransactionV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Ethereum transaction hash. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTransactionV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV2TransactionV2DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV2GetTransactionV2sHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetTransactionV2sHistorical'][0])
+    {
+        $request = $this->uniswapV2GetTransactionV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV2TransactionV2DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV2TransactionV2DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV2TransactionV2DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV2TransactionV2DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV2TransactionV2DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV2GetTransactionV2sHistoricalAsync
+     *
+     * TransactionV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Ethereum transaction hash. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTransactionV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetTransactionV2sHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetTransactionV2sHistorical'][0])
+    {
+        return $this->uniswapV2GetTransactionV2sHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV2GetTransactionV2sHistoricalAsyncWithHttpInfo
+     *
+     * TransactionV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Ethereum transaction hash. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTransactionV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetTransactionV2sHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetTransactionV2sHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV2TransactionV2DTO[]';
+        $request = $this->uniswapV2GetTransactionV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV2GetTransactionV2sHistorical'
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Ethereum transaction hash. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetTransactionV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV2GetTransactionV2sHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetTransactionV2sHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv2/transactionv2s/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV2GetUniswapDayDataV2sHistorical
+     *
+     * UniswapDayDataV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Unix timestamp for start of day / 86400 giving a unique day index. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetUniswapDayDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV2UniswapDayDataV2DTO[]
+     */
+    public function uniswapV2GetUniswapDayDataV2sHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetUniswapDayDataV2sHistorical'][0])
+    {
+        list($response) = $this->uniswapV2GetUniswapDayDataV2sHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV2GetUniswapDayDataV2sHistoricalWithHttpInfo
+     *
+     * UniswapDayDataV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Unix timestamp for start of day / 86400 giving a unique day index. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetUniswapDayDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV2UniswapDayDataV2DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV2GetUniswapDayDataV2sHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetUniswapDayDataV2sHistorical'][0])
+    {
+        $request = $this->uniswapV2GetUniswapDayDataV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV2UniswapDayDataV2DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV2UniswapDayDataV2DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV2UniswapDayDataV2DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV2UniswapDayDataV2DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV2UniswapDayDataV2DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV2GetUniswapDayDataV2sHistoricalAsync
+     *
+     * UniswapDayDataV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Unix timestamp for start of day / 86400 giving a unique day index. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetUniswapDayDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetUniswapDayDataV2sHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetUniswapDayDataV2sHistorical'][0])
+    {
+        return $this->uniswapV2GetUniswapDayDataV2sHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV2GetUniswapDayDataV2sHistoricalAsyncWithHttpInfo
+     *
+     * UniswapDayDataV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Unix timestamp for start of day / 86400 giving a unique day index. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetUniswapDayDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetUniswapDayDataV2sHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetUniswapDayDataV2sHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV2UniswapDayDataV2DTO[]';
+        $request = $this->uniswapV2GetUniswapDayDataV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV2GetUniswapDayDataV2sHistorical'
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Unix timestamp for start of day / 86400 giving a unique day index. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetUniswapDayDataV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV2GetUniswapDayDataV2sHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetUniswapDayDataV2sHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv2/uniswapdaydatav2s/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV2GetUniswapFactoryV2sHistorical
+     *
+     * UniswapFactoryV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Factory address. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetUniswapFactoryV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV2UniswapFactoryV2DTO[]
+     */
+    public function uniswapV2GetUniswapFactoryV2sHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetUniswapFactoryV2sHistorical'][0])
+    {
+        list($response) = $this->uniswapV2GetUniswapFactoryV2sHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV2GetUniswapFactoryV2sHistoricalWithHttpInfo
+     *
+     * UniswapFactoryV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Factory address. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetUniswapFactoryV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV2UniswapFactoryV2DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV2GetUniswapFactoryV2sHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetUniswapFactoryV2sHistorical'][0])
+    {
+        $request = $this->uniswapV2GetUniswapFactoryV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV2UniswapFactoryV2DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV2UniswapFactoryV2DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV2UniswapFactoryV2DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV2UniswapFactoryV2DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV2UniswapFactoryV2DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV2GetUniswapFactoryV2sHistoricalAsync
+     *
+     * UniswapFactoryV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Factory address. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetUniswapFactoryV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetUniswapFactoryV2sHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetUniswapFactoryV2sHistorical'][0])
+    {
+        return $this->uniswapV2GetUniswapFactoryV2sHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV2GetUniswapFactoryV2sHistoricalAsyncWithHttpInfo
+     *
+     * UniswapFactoryV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Factory address. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetUniswapFactoryV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetUniswapFactoryV2sHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetUniswapFactoryV2sHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV2UniswapFactoryV2DTO[]';
+        $request = $this->uniswapV2GetUniswapFactoryV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV2GetUniswapFactoryV2sHistorical'
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id Factory address. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetUniswapFactoryV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV2GetUniswapFactoryV2sHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetUniswapFactoryV2sHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv2/uniswapfactoryv2s/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['text/plain', 'application/json', 'text/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'GET',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation uniswapV2GetUserV2sHistorical
+     *
+     * UserV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id User address. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetUserV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \OpenAPI\Client\Model\UniswapV2UserV2DTO[]
+     */
+    public function uniswapV2GetUserV2sHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetUserV2sHistorical'][0])
+    {
+        list($response) = $this->uniswapV2GetUserV2sHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation uniswapV2GetUserV2sHistoricalWithHttpInfo
+     *
+     * UserV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id User address. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetUserV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \OpenAPI\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \OpenAPI\Client\Model\UniswapV2UserV2DTO[], HTTP status code, HTTP response headers (array of strings)
+     */
+    public function uniswapV2GetUserV2sHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetUserV2sHistorical'][0])
+    {
+        $request = $this->uniswapV2GetUserV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\OpenAPI\Client\Model\UniswapV2UserV2DTO[]' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\OpenAPI\Client\Model\UniswapV2UserV2DTO[]' !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\OpenAPI\Client\Model\UniswapV2UserV2DTO[]', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\OpenAPI\Client\Model\UniswapV2UserV2DTO[]';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\OpenAPI\Client\Model\UniswapV2UserV2DTO[]',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation uniswapV2GetUserV2sHistoricalAsync
+     *
+     * UserV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id User address. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetUserV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetUserV2sHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetUserV2sHistorical'][0])
+    {
+        return $this->uniswapV2GetUserV2sHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation uniswapV2GetUserV2sHistoricalAsyncWithHttpInfo
+     *
+     * UserV2s (historical) 🔥
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id User address. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetUserV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function uniswapV2GetUserV2sHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetUserV2sHistorical'][0])
+    {
+        $returnType = '\OpenAPI\Client\Model\UniswapV2UserV2DTO[]';
+        $request = $this->uniswapV2GetUserV2sHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'uniswapV2GetUserV2sHistorical'
+     *
+     * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+     * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+     * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+     * @param  \DateTime $end_date The end date of timeframe. (optional)
+     * @param  string $id User address. (optional)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV2GetUserV2sHistorical'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function uniswapV2GetUserV2sHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV2GetUserV2sHistorical'][0])
+    {
+
+
+
+
+
+
+
+        $resourcePath = '/dapps/uniswapv2/userv2s/historical';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_block,
+            'startBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_block,
+            'endBlock', // param base name
+            'integer', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $start_date,
+            'startDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $end_date,
+            'endDate', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
+        // query params
+        $queryParams = array_merge($queryParams, ObjectSerializer::toQueryValue(
+            $id,
+            'id', // param base name
+            'string', // openApiType
+            'form', // style
+            true, // explode
+            false // required
+        ) ?? []);
 
 
 

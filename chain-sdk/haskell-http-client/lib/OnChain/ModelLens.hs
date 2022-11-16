@@ -37,6 +37,793 @@ import OnChain.Model
 import OnChain.Core
 
 
+-- * CowOrderDTO
+
+-- | 'cowOrderDTOEntryTime' Lens
+cowOrderDTOEntryTimeL :: Lens_' CowOrderDTO (Maybe DateTime)
+cowOrderDTOEntryTimeL f CowOrderDTO{..} = (\cowOrderDTOEntryTime -> CowOrderDTO { cowOrderDTOEntryTime, ..} ) <$> f cowOrderDTOEntryTime
+{-# INLINE cowOrderDTOEntryTimeL #-}
+
+-- | 'cowOrderDTORecvTime' Lens
+cowOrderDTORecvTimeL :: Lens_' CowOrderDTO (Maybe DateTime)
+cowOrderDTORecvTimeL f CowOrderDTO{..} = (\cowOrderDTORecvTime -> CowOrderDTO { cowOrderDTORecvTime, ..} ) <$> f cowOrderDTORecvTime
+{-# INLINE cowOrderDTORecvTimeL #-}
+
+-- | 'cowOrderDTOBlockNumber' Lens
+cowOrderDTOBlockNumberL :: Lens_' CowOrderDTO (Maybe Integer)
+cowOrderDTOBlockNumberL f CowOrderDTO{..} = (\cowOrderDTOBlockNumber -> CowOrderDTO { cowOrderDTOBlockNumber, ..} ) <$> f cowOrderDTOBlockNumber
+{-# INLINE cowOrderDTOBlockNumberL #-}
+
+-- | 'cowOrderDTOId' Lens
+cowOrderDTOIdL :: Lens_' CowOrderDTO (Maybe Text)
+cowOrderDTOIdL f CowOrderDTO{..} = (\cowOrderDTOId -> CowOrderDTO { cowOrderDTOId, ..} ) <$> f cowOrderDTOId
+{-# INLINE cowOrderDTOIdL #-}
+
+-- | 'cowOrderDTOOwner' Lens
+cowOrderDTOOwnerL :: Lens_' CowOrderDTO (Maybe Text)
+cowOrderDTOOwnerL f CowOrderDTO{..} = (\cowOrderDTOOwner -> CowOrderDTO { cowOrderDTOOwner, ..} ) <$> f cowOrderDTOOwner
+{-# INLINE cowOrderDTOOwnerL #-}
+
+-- | 'cowOrderDTOTradesTimestamp' Lens
+cowOrderDTOTradesTimestampL :: Lens_' CowOrderDTO (Maybe Text)
+cowOrderDTOTradesTimestampL f CowOrderDTO{..} = (\cowOrderDTOTradesTimestamp -> CowOrderDTO { cowOrderDTOTradesTimestamp, ..} ) <$> f cowOrderDTOTradesTimestamp
+{-# INLINE cowOrderDTOTradesTimestampL #-}
+
+-- | 'cowOrderDTOInvalidateTimestamp' Lens
+cowOrderDTOInvalidateTimestampL :: Lens_' CowOrderDTO (Maybe Text)
+cowOrderDTOInvalidateTimestampL f CowOrderDTO{..} = (\cowOrderDTOInvalidateTimestamp -> CowOrderDTO { cowOrderDTOInvalidateTimestamp, ..} ) <$> f cowOrderDTOInvalidateTimestamp
+{-# INLINE cowOrderDTOInvalidateTimestampL #-}
+
+-- | 'cowOrderDTOPresignTimestamp' Lens
+cowOrderDTOPresignTimestampL :: Lens_' CowOrderDTO (Maybe Text)
+cowOrderDTOPresignTimestampL f CowOrderDTO{..} = (\cowOrderDTOPresignTimestamp -> CowOrderDTO { cowOrderDTOPresignTimestamp, ..} ) <$> f cowOrderDTOPresignTimestamp
+{-# INLINE cowOrderDTOPresignTimestampL #-}
+
+-- | 'cowOrderDTOIsSigned' Lens
+cowOrderDTOIsSignedL :: Lens_' CowOrderDTO (Maybe Bool)
+cowOrderDTOIsSignedL f CowOrderDTO{..} = (\cowOrderDTOIsSigned -> CowOrderDTO { cowOrderDTOIsSigned, ..} ) <$> f cowOrderDTOIsSigned
+{-# INLINE cowOrderDTOIsSignedL #-}
+
+-- | 'cowOrderDTOIsValid' Lens
+cowOrderDTOIsValidL :: Lens_' CowOrderDTO (Maybe Bool)
+cowOrderDTOIsValidL f CowOrderDTO{..} = (\cowOrderDTOIsValid -> CowOrderDTO { cowOrderDTOIsValid, ..} ) <$> f cowOrderDTOIsValid
+{-# INLINE cowOrderDTOIsValidL #-}
+
+-- | 'cowOrderDTOVid' Lens
+cowOrderDTOVidL :: Lens_' CowOrderDTO (Maybe Integer)
+cowOrderDTOVidL f CowOrderDTO{..} = (\cowOrderDTOVid -> CowOrderDTO { cowOrderDTOVid, ..} ) <$> f cowOrderDTOVid
+{-# INLINE cowOrderDTOVidL #-}
+
+
+
+-- * CowSettlementDTO
+
+-- | 'cowSettlementDTOEntryTime' Lens
+cowSettlementDTOEntryTimeL :: Lens_' CowSettlementDTO (Maybe DateTime)
+cowSettlementDTOEntryTimeL f CowSettlementDTO{..} = (\cowSettlementDTOEntryTime -> CowSettlementDTO { cowSettlementDTOEntryTime, ..} ) <$> f cowSettlementDTOEntryTime
+{-# INLINE cowSettlementDTOEntryTimeL #-}
+
+-- | 'cowSettlementDTORecvTime' Lens
+cowSettlementDTORecvTimeL :: Lens_' CowSettlementDTO (Maybe DateTime)
+cowSettlementDTORecvTimeL f CowSettlementDTO{..} = (\cowSettlementDTORecvTime -> CowSettlementDTO { cowSettlementDTORecvTime, ..} ) <$> f cowSettlementDTORecvTime
+{-# INLINE cowSettlementDTORecvTimeL #-}
+
+-- | 'cowSettlementDTOBlockNumber' Lens
+cowSettlementDTOBlockNumberL :: Lens_' CowSettlementDTO (Maybe Integer)
+cowSettlementDTOBlockNumberL f CowSettlementDTO{..} = (\cowSettlementDTOBlockNumber -> CowSettlementDTO { cowSettlementDTOBlockNumber, ..} ) <$> f cowSettlementDTOBlockNumber
+{-# INLINE cowSettlementDTOBlockNumberL #-}
+
+-- | 'cowSettlementDTOId' Lens
+cowSettlementDTOIdL :: Lens_' CowSettlementDTO (Maybe Text)
+cowSettlementDTOIdL f CowSettlementDTO{..} = (\cowSettlementDTOId -> CowSettlementDTO { cowSettlementDTOId, ..} ) <$> f cowSettlementDTOId
+{-# INLINE cowSettlementDTOIdL #-}
+
+-- | 'cowSettlementDTOSolver' Lens
+cowSettlementDTOSolverL :: Lens_' CowSettlementDTO (Maybe Text)
+cowSettlementDTOSolverL f CowSettlementDTO{..} = (\cowSettlementDTOSolver -> CowSettlementDTO { cowSettlementDTOSolver, ..} ) <$> f cowSettlementDTOSolver
+{-# INLINE cowSettlementDTOSolverL #-}
+
+-- | 'cowSettlementDTOTxHash' Lens
+cowSettlementDTOTxHashL :: Lens_' CowSettlementDTO (Maybe Text)
+cowSettlementDTOTxHashL f CowSettlementDTO{..} = (\cowSettlementDTOTxHash -> CowSettlementDTO { cowSettlementDTOTxHash, ..} ) <$> f cowSettlementDTOTxHash
+{-# INLINE cowSettlementDTOTxHashL #-}
+
+-- | 'cowSettlementDTOFirstTradeTimestamp' Lens
+cowSettlementDTOFirstTradeTimestampL :: Lens_' CowSettlementDTO (Maybe Text)
+cowSettlementDTOFirstTradeTimestampL f CowSettlementDTO{..} = (\cowSettlementDTOFirstTradeTimestamp -> CowSettlementDTO { cowSettlementDTOFirstTradeTimestamp, ..} ) <$> f cowSettlementDTOFirstTradeTimestamp
+{-# INLINE cowSettlementDTOFirstTradeTimestampL #-}
+
+-- | 'cowSettlementDTOVid' Lens
+cowSettlementDTOVidL :: Lens_' CowSettlementDTO (Maybe Integer)
+cowSettlementDTOVidL f CowSettlementDTO{..} = (\cowSettlementDTOVid -> CowSettlementDTO { cowSettlementDTOVid, ..} ) <$> f cowSettlementDTOVid
+{-# INLINE cowSettlementDTOVidL #-}
+
+
+
+-- * CowTokenDTO
+
+-- | 'cowTokenDTOEntryTime' Lens
+cowTokenDTOEntryTimeL :: Lens_' CowTokenDTO (Maybe DateTime)
+cowTokenDTOEntryTimeL f CowTokenDTO{..} = (\cowTokenDTOEntryTime -> CowTokenDTO { cowTokenDTOEntryTime, ..} ) <$> f cowTokenDTOEntryTime
+{-# INLINE cowTokenDTOEntryTimeL #-}
+
+-- | 'cowTokenDTORecvTime' Lens
+cowTokenDTORecvTimeL :: Lens_' CowTokenDTO (Maybe DateTime)
+cowTokenDTORecvTimeL f CowTokenDTO{..} = (\cowTokenDTORecvTime -> CowTokenDTO { cowTokenDTORecvTime, ..} ) <$> f cowTokenDTORecvTime
+{-# INLINE cowTokenDTORecvTimeL #-}
+
+-- | 'cowTokenDTOBlockNumber' Lens
+cowTokenDTOBlockNumberL :: Lens_' CowTokenDTO (Maybe Integer)
+cowTokenDTOBlockNumberL f CowTokenDTO{..} = (\cowTokenDTOBlockNumber -> CowTokenDTO { cowTokenDTOBlockNumber, ..} ) <$> f cowTokenDTOBlockNumber
+{-# INLINE cowTokenDTOBlockNumberL #-}
+
+-- | 'cowTokenDTOId' Lens
+cowTokenDTOIdL :: Lens_' CowTokenDTO (Maybe Text)
+cowTokenDTOIdL f CowTokenDTO{..} = (\cowTokenDTOId -> CowTokenDTO { cowTokenDTOId, ..} ) <$> f cowTokenDTOId
+{-# INLINE cowTokenDTOIdL #-}
+
+-- | 'cowTokenDTOAddress' Lens
+cowTokenDTOAddressL :: Lens_' CowTokenDTO (Maybe Text)
+cowTokenDTOAddressL f CowTokenDTO{..} = (\cowTokenDTOAddress -> CowTokenDTO { cowTokenDTOAddress, ..} ) <$> f cowTokenDTOAddress
+{-# INLINE cowTokenDTOAddressL #-}
+
+-- | 'cowTokenDTOFirstTradeTimestamp' Lens
+cowTokenDTOFirstTradeTimestampL :: Lens_' CowTokenDTO (Maybe Text)
+cowTokenDTOFirstTradeTimestampL f CowTokenDTO{..} = (\cowTokenDTOFirstTradeTimestamp -> CowTokenDTO { cowTokenDTOFirstTradeTimestamp, ..} ) <$> f cowTokenDTOFirstTradeTimestamp
+{-# INLINE cowTokenDTOFirstTradeTimestampL #-}
+
+-- | 'cowTokenDTOName' Lens
+cowTokenDTONameL :: Lens_' CowTokenDTO (Maybe Text)
+cowTokenDTONameL f CowTokenDTO{..} = (\cowTokenDTOName -> CowTokenDTO { cowTokenDTOName, ..} ) <$> f cowTokenDTOName
+{-# INLINE cowTokenDTONameL #-}
+
+-- | 'cowTokenDTOSymbol' Lens
+cowTokenDTOSymbolL :: Lens_' CowTokenDTO (Maybe Text)
+cowTokenDTOSymbolL f CowTokenDTO{..} = (\cowTokenDTOSymbol -> CowTokenDTO { cowTokenDTOSymbol, ..} ) <$> f cowTokenDTOSymbol
+{-# INLINE cowTokenDTOSymbolL #-}
+
+-- | 'cowTokenDTODecimals' Lens
+cowTokenDTODecimalsL :: Lens_' CowTokenDTO (Maybe Int)
+cowTokenDTODecimalsL f CowTokenDTO{..} = (\cowTokenDTODecimals -> CowTokenDTO { cowTokenDTODecimals, ..} ) <$> f cowTokenDTODecimals
+{-# INLINE cowTokenDTODecimalsL #-}
+
+-- | 'cowTokenDTOTotalVolume' Lens
+cowTokenDTOTotalVolumeL :: Lens_' CowTokenDTO (Maybe Text)
+cowTokenDTOTotalVolumeL f CowTokenDTO{..} = (\cowTokenDTOTotalVolume -> CowTokenDTO { cowTokenDTOTotalVolume, ..} ) <$> f cowTokenDTOTotalVolume
+{-# INLINE cowTokenDTOTotalVolumeL #-}
+
+-- | 'cowTokenDTOVid' Lens
+cowTokenDTOVidL :: Lens_' CowTokenDTO (Maybe Integer)
+cowTokenDTOVidL f CowTokenDTO{..} = (\cowTokenDTOVid -> CowTokenDTO { cowTokenDTOVid, ..} ) <$> f cowTokenDTOVid
+{-# INLINE cowTokenDTOVidL #-}
+
+-- | 'cowTokenDTOTokenSymbol' Lens
+cowTokenDTOTokenSymbolL :: Lens_' CowTokenDTO (Maybe Text)
+cowTokenDTOTokenSymbolL f CowTokenDTO{..} = (\cowTokenDTOTokenSymbol -> CowTokenDTO { cowTokenDTOTokenSymbol, ..} ) <$> f cowTokenDTOTokenSymbol
+{-# INLINE cowTokenDTOTokenSymbolL #-}
+
+
+
+-- * CowTradeDTO
+
+-- | 'cowTradeDTOEntryTime' Lens
+cowTradeDTOEntryTimeL :: Lens_' CowTradeDTO (Maybe DateTime)
+cowTradeDTOEntryTimeL f CowTradeDTO{..} = (\cowTradeDTOEntryTime -> CowTradeDTO { cowTradeDTOEntryTime, ..} ) <$> f cowTradeDTOEntryTime
+{-# INLINE cowTradeDTOEntryTimeL #-}
+
+-- | 'cowTradeDTORecvTime' Lens
+cowTradeDTORecvTimeL :: Lens_' CowTradeDTO (Maybe DateTime)
+cowTradeDTORecvTimeL f CowTradeDTO{..} = (\cowTradeDTORecvTime -> CowTradeDTO { cowTradeDTORecvTime, ..} ) <$> f cowTradeDTORecvTime
+{-# INLINE cowTradeDTORecvTimeL #-}
+
+-- | 'cowTradeDTOBlockNumber' Lens
+cowTradeDTOBlockNumberL :: Lens_' CowTradeDTO (Maybe Integer)
+cowTradeDTOBlockNumberL f CowTradeDTO{..} = (\cowTradeDTOBlockNumber -> CowTradeDTO { cowTradeDTOBlockNumber, ..} ) <$> f cowTradeDTOBlockNumber
+{-# INLINE cowTradeDTOBlockNumberL #-}
+
+-- | 'cowTradeDTOId' Lens
+cowTradeDTOIdL :: Lens_' CowTradeDTO (Maybe Text)
+cowTradeDTOIdL f CowTradeDTO{..} = (\cowTradeDTOId -> CowTradeDTO { cowTradeDTOId, ..} ) <$> f cowTradeDTOId
+{-# INLINE cowTradeDTOIdL #-}
+
+-- | 'cowTradeDTOTimestamp' Lens
+cowTradeDTOTimestampL :: Lens_' CowTradeDTO (Maybe Text)
+cowTradeDTOTimestampL f CowTradeDTO{..} = (\cowTradeDTOTimestamp -> CowTradeDTO { cowTradeDTOTimestamp, ..} ) <$> f cowTradeDTOTimestamp
+{-# INLINE cowTradeDTOTimestampL #-}
+
+-- | 'cowTradeDTOGasPrice' Lens
+cowTradeDTOGasPriceL :: Lens_' CowTradeDTO (Maybe Text)
+cowTradeDTOGasPriceL f CowTradeDTO{..} = (\cowTradeDTOGasPrice -> CowTradeDTO { cowTradeDTOGasPrice, ..} ) <$> f cowTradeDTOGasPrice
+{-# INLINE cowTradeDTOGasPriceL #-}
+
+-- | 'cowTradeDTOGasLimit' Lens
+cowTradeDTOGasLimitL :: Lens_' CowTradeDTO (Maybe Text)
+cowTradeDTOGasLimitL f CowTradeDTO{..} = (\cowTradeDTOGasLimit -> CowTradeDTO { cowTradeDTOGasLimit, ..} ) <$> f cowTradeDTOGasLimit
+{-# INLINE cowTradeDTOGasLimitL #-}
+
+-- | 'cowTradeDTOFeeAmount' Lens
+cowTradeDTOFeeAmountL :: Lens_' CowTradeDTO (Maybe Text)
+cowTradeDTOFeeAmountL f CowTradeDTO{..} = (\cowTradeDTOFeeAmount -> CowTradeDTO { cowTradeDTOFeeAmount, ..} ) <$> f cowTradeDTOFeeAmount
+{-# INLINE cowTradeDTOFeeAmountL #-}
+
+-- | 'cowTradeDTOTxHash' Lens
+cowTradeDTOTxHashL :: Lens_' CowTradeDTO (Maybe Text)
+cowTradeDTOTxHashL f CowTradeDTO{..} = (\cowTradeDTOTxHash -> CowTradeDTO { cowTradeDTOTxHash, ..} ) <$> f cowTradeDTOTxHash
+{-# INLINE cowTradeDTOTxHashL #-}
+
+-- | 'cowTradeDTOSettlement' Lens
+cowTradeDTOSettlementL :: Lens_' CowTradeDTO (Maybe Text)
+cowTradeDTOSettlementL f CowTradeDTO{..} = (\cowTradeDTOSettlement -> CowTradeDTO { cowTradeDTOSettlement, ..} ) <$> f cowTradeDTOSettlement
+{-# INLINE cowTradeDTOSettlementL #-}
+
+-- | 'cowTradeDTOBuyAmount' Lens
+cowTradeDTOBuyAmountL :: Lens_' CowTradeDTO (Maybe Text)
+cowTradeDTOBuyAmountL f CowTradeDTO{..} = (\cowTradeDTOBuyAmount -> CowTradeDTO { cowTradeDTOBuyAmount, ..} ) <$> f cowTradeDTOBuyAmount
+{-# INLINE cowTradeDTOBuyAmountL #-}
+
+-- | 'cowTradeDTOSellAmount' Lens
+cowTradeDTOSellAmountL :: Lens_' CowTradeDTO (Maybe Text)
+cowTradeDTOSellAmountL f CowTradeDTO{..} = (\cowTradeDTOSellAmount -> CowTradeDTO { cowTradeDTOSellAmount, ..} ) <$> f cowTradeDTOSellAmount
+{-# INLINE cowTradeDTOSellAmountL #-}
+
+-- | 'cowTradeDTOSellToken' Lens
+cowTradeDTOSellTokenL :: Lens_' CowTradeDTO (Maybe Text)
+cowTradeDTOSellTokenL f CowTradeDTO{..} = (\cowTradeDTOSellToken -> CowTradeDTO { cowTradeDTOSellToken, ..} ) <$> f cowTradeDTOSellToken
+{-# INLINE cowTradeDTOSellTokenL #-}
+
+-- | 'cowTradeDTOBuyToken' Lens
+cowTradeDTOBuyTokenL :: Lens_' CowTradeDTO (Maybe Text)
+cowTradeDTOBuyTokenL f CowTradeDTO{..} = (\cowTradeDTOBuyToken -> CowTradeDTO { cowTradeDTOBuyToken, ..} ) <$> f cowTradeDTOBuyToken
+{-# INLINE cowTradeDTOBuyTokenL #-}
+
+-- | 'cowTradeDTOOrder' Lens
+cowTradeDTOOrderL :: Lens_' CowTradeDTO (Maybe Text)
+cowTradeDTOOrderL f CowTradeDTO{..} = (\cowTradeDTOOrder -> CowTradeDTO { cowTradeDTOOrder, ..} ) <$> f cowTradeDTOOrder
+{-# INLINE cowTradeDTOOrderL #-}
+
+-- | 'cowTradeDTOVid' Lens
+cowTradeDTOVidL :: Lens_' CowTradeDTO (Maybe Integer)
+cowTradeDTOVidL f CowTradeDTO{..} = (\cowTradeDTOVid -> CowTradeDTO { cowTradeDTOVid, ..} ) <$> f cowTradeDTOVid
+{-# INLINE cowTradeDTOVidL #-}
+
+-- | 'cowTradeDTOPoolId' Lens
+cowTradeDTOPoolIdL :: Lens_' CowTradeDTO (Maybe Text)
+cowTradeDTOPoolIdL f CowTradeDTO{..} = (\cowTradeDTOPoolId -> CowTradeDTO { cowTradeDTOPoolId, ..} ) <$> f cowTradeDTOPoolId
+{-# INLINE cowTradeDTOPoolIdL #-}
+
+-- | 'cowTradeDTOTransactionId' Lens
+cowTradeDTOTransactionIdL :: Lens_' CowTradeDTO (Maybe Text)
+cowTradeDTOTransactionIdL f CowTradeDTO{..} = (\cowTradeDTOTransactionId -> CowTradeDTO { cowTradeDTOTransactionId, ..} ) <$> f cowTradeDTOTransactionId
+{-# INLINE cowTradeDTOTransactionIdL #-}
+
+-- | 'cowTradeDTOEvaluatedPrice' Lens
+cowTradeDTOEvaluatedPriceL :: Lens_' CowTradeDTO (Maybe Double)
+cowTradeDTOEvaluatedPriceL f CowTradeDTO{..} = (\cowTradeDTOEvaluatedPrice -> CowTradeDTO { cowTradeDTOEvaluatedPrice, ..} ) <$> f cowTradeDTOEvaluatedPrice
+{-# INLINE cowTradeDTOEvaluatedPriceL #-}
+
+-- | 'cowTradeDTOEvaluatedAmount' Lens
+cowTradeDTOEvaluatedAmountL :: Lens_' CowTradeDTO (Maybe Double)
+cowTradeDTOEvaluatedAmountL f CowTradeDTO{..} = (\cowTradeDTOEvaluatedAmount -> CowTradeDTO { cowTradeDTOEvaluatedAmount, ..} ) <$> f cowTradeDTOEvaluatedAmount
+{-# INLINE cowTradeDTOEvaluatedAmountL #-}
+
+-- | 'cowTradeDTOEvaluatedAggressor' Lens
+cowTradeDTOEvaluatedAggressorL :: Lens_' CowTradeDTO (Maybe TransactionsETradeAggressiveSide)
+cowTradeDTOEvaluatedAggressorL f CowTradeDTO{..} = (\cowTradeDTOEvaluatedAggressor -> CowTradeDTO { cowTradeDTOEvaluatedAggressor, ..} ) <$> f cowTradeDTOEvaluatedAggressor
+{-# INLINE cowTradeDTOEvaluatedAggressorL #-}
+
+
+
+-- * CowUserDTO
+
+-- | 'cowUserDTOEntryTime' Lens
+cowUserDTOEntryTimeL :: Lens_' CowUserDTO (Maybe DateTime)
+cowUserDTOEntryTimeL f CowUserDTO{..} = (\cowUserDTOEntryTime -> CowUserDTO { cowUserDTOEntryTime, ..} ) <$> f cowUserDTOEntryTime
+{-# INLINE cowUserDTOEntryTimeL #-}
+
+-- | 'cowUserDTORecvTime' Lens
+cowUserDTORecvTimeL :: Lens_' CowUserDTO (Maybe DateTime)
+cowUserDTORecvTimeL f CowUserDTO{..} = (\cowUserDTORecvTime -> CowUserDTO { cowUserDTORecvTime, ..} ) <$> f cowUserDTORecvTime
+{-# INLINE cowUserDTORecvTimeL #-}
+
+-- | 'cowUserDTOBlockNumber' Lens
+cowUserDTOBlockNumberL :: Lens_' CowUserDTO (Maybe Integer)
+cowUserDTOBlockNumberL f CowUserDTO{..} = (\cowUserDTOBlockNumber -> CowUserDTO { cowUserDTOBlockNumber, ..} ) <$> f cowUserDTOBlockNumber
+{-# INLINE cowUserDTOBlockNumberL #-}
+
+-- | 'cowUserDTOId' Lens
+cowUserDTOIdL :: Lens_' CowUserDTO (Maybe Text)
+cowUserDTOIdL f CowUserDTO{..} = (\cowUserDTOId -> CowUserDTO { cowUserDTOId, ..} ) <$> f cowUserDTOId
+{-# INLINE cowUserDTOIdL #-}
+
+-- | 'cowUserDTOAddress' Lens
+cowUserDTOAddressL :: Lens_' CowUserDTO (Maybe Text)
+cowUserDTOAddressL f CowUserDTO{..} = (\cowUserDTOAddress -> CowUserDTO { cowUserDTOAddress, ..} ) <$> f cowUserDTOAddress
+{-# INLINE cowUserDTOAddressL #-}
+
+-- | 'cowUserDTOFirstTradeTimestamp' Lens
+cowUserDTOFirstTradeTimestampL :: Lens_' CowUserDTO (Maybe Text)
+cowUserDTOFirstTradeTimestampL f CowUserDTO{..} = (\cowUserDTOFirstTradeTimestamp -> CowUserDTO { cowUserDTOFirstTradeTimestamp, ..} ) <$> f cowUserDTOFirstTradeTimestamp
+{-# INLINE cowUserDTOFirstTradeTimestampL #-}
+
+-- | 'cowUserDTOIsSolver' Lens
+cowUserDTOIsSolverL :: Lens_' CowUserDTO (Maybe Bool)
+cowUserDTOIsSolverL f CowUserDTO{..} = (\cowUserDTOIsSolver -> CowUserDTO { cowUserDTOIsSolver, ..} ) <$> f cowUserDTOIsSolver
+{-# INLINE cowUserDTOIsSolverL #-}
+
+-- | 'cowUserDTOVid' Lens
+cowUserDTOVidL :: Lens_' CowUserDTO (Maybe Integer)
+cowUserDTOVidL f CowUserDTO{..} = (\cowUserDTOVid -> CowUserDTO { cowUserDTOVid, ..} ) <$> f cowUserDTOVid
+{-# INLINE cowUserDTOVidL #-}
+
+
+
+-- * CurveAccountDTO
+
+-- | 'curveAccountDTOEntryTime' Lens
+curveAccountDTOEntryTimeL :: Lens_' CurveAccountDTO (Maybe DateTime)
+curveAccountDTOEntryTimeL f CurveAccountDTO{..} = (\curveAccountDTOEntryTime -> CurveAccountDTO { curveAccountDTOEntryTime, ..} ) <$> f curveAccountDTOEntryTime
+{-# INLINE curveAccountDTOEntryTimeL #-}
+
+-- | 'curveAccountDTORecvTime' Lens
+curveAccountDTORecvTimeL :: Lens_' CurveAccountDTO (Maybe DateTime)
+curveAccountDTORecvTimeL f CurveAccountDTO{..} = (\curveAccountDTORecvTime -> CurveAccountDTO { curveAccountDTORecvTime, ..} ) <$> f curveAccountDTORecvTime
+{-# INLINE curveAccountDTORecvTimeL #-}
+
+-- | 'curveAccountDTOBlockNumber' Lens
+curveAccountDTOBlockNumberL :: Lens_' CurveAccountDTO (Maybe Integer)
+curveAccountDTOBlockNumberL f CurveAccountDTO{..} = (\curveAccountDTOBlockNumber -> CurveAccountDTO { curveAccountDTOBlockNumber, ..} ) <$> f curveAccountDTOBlockNumber
+{-# INLINE curveAccountDTOBlockNumberL #-}
+
+-- | 'curveAccountDTOId' Lens
+curveAccountDTOIdL :: Lens_' CurveAccountDTO (Maybe Text)
+curveAccountDTOIdL f CurveAccountDTO{..} = (\curveAccountDTOId -> CurveAccountDTO { curveAccountDTOId, ..} ) <$> f curveAccountDTOId
+{-# INLINE curveAccountDTOIdL #-}
+
+-- | 'curveAccountDTOAddress' Lens
+curveAccountDTOAddressL :: Lens_' CurveAccountDTO (Maybe Text)
+curveAccountDTOAddressL f CurveAccountDTO{..} = (\curveAccountDTOAddress -> CurveAccountDTO { curveAccountDTOAddress, ..} ) <$> f curveAccountDTOAddress
+{-# INLINE curveAccountDTOAddressL #-}
+
+-- | 'curveAccountDTOVid' Lens
+curveAccountDTOVidL :: Lens_' CurveAccountDTO (Maybe Integer)
+curveAccountDTOVidL f CurveAccountDTO{..} = (\curveAccountDTOVid -> CurveAccountDTO { curveAccountDTOVid, ..} ) <$> f curveAccountDTOVid
+{-# INLINE curveAccountDTOVidL #-}
+
+
+
+-- * CurveAddLiquidityEventDTO
+
+-- | 'curveAddLiquidityEventDTOEntryTime' Lens
+curveAddLiquidityEventDTOEntryTimeL :: Lens_' CurveAddLiquidityEventDTO (Maybe DateTime)
+curveAddLiquidityEventDTOEntryTimeL f CurveAddLiquidityEventDTO{..} = (\curveAddLiquidityEventDTOEntryTime -> CurveAddLiquidityEventDTO { curveAddLiquidityEventDTOEntryTime, ..} ) <$> f curveAddLiquidityEventDTOEntryTime
+{-# INLINE curveAddLiquidityEventDTOEntryTimeL #-}
+
+-- | 'curveAddLiquidityEventDTORecvTime' Lens
+curveAddLiquidityEventDTORecvTimeL :: Lens_' CurveAddLiquidityEventDTO (Maybe DateTime)
+curveAddLiquidityEventDTORecvTimeL f CurveAddLiquidityEventDTO{..} = (\curveAddLiquidityEventDTORecvTime -> CurveAddLiquidityEventDTO { curveAddLiquidityEventDTORecvTime, ..} ) <$> f curveAddLiquidityEventDTORecvTime
+{-# INLINE curveAddLiquidityEventDTORecvTimeL #-}
+
+-- | 'curveAddLiquidityEventDTOBlockNumber' Lens
+curveAddLiquidityEventDTOBlockNumberL :: Lens_' CurveAddLiquidityEventDTO (Maybe Integer)
+curveAddLiquidityEventDTOBlockNumberL f CurveAddLiquidityEventDTO{..} = (\curveAddLiquidityEventDTOBlockNumber -> CurveAddLiquidityEventDTO { curveAddLiquidityEventDTOBlockNumber, ..} ) <$> f curveAddLiquidityEventDTOBlockNumber
+{-# INLINE curveAddLiquidityEventDTOBlockNumberL #-}
+
+-- | 'curveAddLiquidityEventDTOId' Lens
+curveAddLiquidityEventDTOIdL :: Lens_' CurveAddLiquidityEventDTO (Maybe Text)
+curveAddLiquidityEventDTOIdL f CurveAddLiquidityEventDTO{..} = (\curveAddLiquidityEventDTOId -> CurveAddLiquidityEventDTO { curveAddLiquidityEventDTOId, ..} ) <$> f curveAddLiquidityEventDTOId
+{-# INLINE curveAddLiquidityEventDTOIdL #-}
+
+-- | 'curveAddLiquidityEventDTOPool' Lens
+curveAddLiquidityEventDTOPoolL :: Lens_' CurveAddLiquidityEventDTO (Maybe Text)
+curveAddLiquidityEventDTOPoolL f CurveAddLiquidityEventDTO{..} = (\curveAddLiquidityEventDTOPool -> CurveAddLiquidityEventDTO { curveAddLiquidityEventDTOPool, ..} ) <$> f curveAddLiquidityEventDTOPool
+{-# INLINE curveAddLiquidityEventDTOPoolL #-}
+
+-- | 'curveAddLiquidityEventDTOProvider' Lens
+curveAddLiquidityEventDTOProviderL :: Lens_' CurveAddLiquidityEventDTO (Maybe Text)
+curveAddLiquidityEventDTOProviderL f CurveAddLiquidityEventDTO{..} = (\curveAddLiquidityEventDTOProvider -> CurveAddLiquidityEventDTO { curveAddLiquidityEventDTOProvider, ..} ) <$> f curveAddLiquidityEventDTOProvider
+{-# INLINE curveAddLiquidityEventDTOProviderL #-}
+
+-- | 'curveAddLiquidityEventDTOTokenAmounts' Lens
+curveAddLiquidityEventDTOTokenAmountsL :: Lens_' CurveAddLiquidityEventDTO (Maybe [Text])
+curveAddLiquidityEventDTOTokenAmountsL f CurveAddLiquidityEventDTO{..} = (\curveAddLiquidityEventDTOTokenAmounts -> CurveAddLiquidityEventDTO { curveAddLiquidityEventDTOTokenAmounts, ..} ) <$> f curveAddLiquidityEventDTOTokenAmounts
+{-# INLINE curveAddLiquidityEventDTOTokenAmountsL #-}
+
+-- | 'curveAddLiquidityEventDTOFees' Lens
+curveAddLiquidityEventDTOFeesL :: Lens_' CurveAddLiquidityEventDTO (Maybe [Text])
+curveAddLiquidityEventDTOFeesL f CurveAddLiquidityEventDTO{..} = (\curveAddLiquidityEventDTOFees -> CurveAddLiquidityEventDTO { curveAddLiquidityEventDTOFees, ..} ) <$> f curveAddLiquidityEventDTOFees
+{-# INLINE curveAddLiquidityEventDTOFeesL #-}
+
+-- | 'curveAddLiquidityEventDTOInvariant' Lens
+curveAddLiquidityEventDTOInvariantL :: Lens_' CurveAddLiquidityEventDTO (Maybe Text)
+curveAddLiquidityEventDTOInvariantL f CurveAddLiquidityEventDTO{..} = (\curveAddLiquidityEventDTOInvariant -> CurveAddLiquidityEventDTO { curveAddLiquidityEventDTOInvariant, ..} ) <$> f curveAddLiquidityEventDTOInvariant
+{-# INLINE curveAddLiquidityEventDTOInvariantL #-}
+
+-- | 'curveAddLiquidityEventDTOTokenSupply' Lens
+curveAddLiquidityEventDTOTokenSupplyL :: Lens_' CurveAddLiquidityEventDTO (Maybe Text)
+curveAddLiquidityEventDTOTokenSupplyL f CurveAddLiquidityEventDTO{..} = (\curveAddLiquidityEventDTOTokenSupply -> CurveAddLiquidityEventDTO { curveAddLiquidityEventDTOTokenSupply, ..} ) <$> f curveAddLiquidityEventDTOTokenSupply
+{-# INLINE curveAddLiquidityEventDTOTokenSupplyL #-}
+
+-- | 'curveAddLiquidityEventDTOBlock' Lens
+curveAddLiquidityEventDTOBlockL :: Lens_' CurveAddLiquidityEventDTO (Maybe Text)
+curveAddLiquidityEventDTOBlockL f CurveAddLiquidityEventDTO{..} = (\curveAddLiquidityEventDTOBlock -> CurveAddLiquidityEventDTO { curveAddLiquidityEventDTOBlock, ..} ) <$> f curveAddLiquidityEventDTOBlock
+{-# INLINE curveAddLiquidityEventDTOBlockL #-}
+
+-- | 'curveAddLiquidityEventDTOTimestamp' Lens
+curveAddLiquidityEventDTOTimestampL :: Lens_' CurveAddLiquidityEventDTO (Maybe Text)
+curveAddLiquidityEventDTOTimestampL f CurveAddLiquidityEventDTO{..} = (\curveAddLiquidityEventDTOTimestamp -> CurveAddLiquidityEventDTO { curveAddLiquidityEventDTOTimestamp, ..} ) <$> f curveAddLiquidityEventDTOTimestamp
+{-# INLINE curveAddLiquidityEventDTOTimestampL #-}
+
+-- | 'curveAddLiquidityEventDTOTransaction' Lens
+curveAddLiquidityEventDTOTransactionL :: Lens_' CurveAddLiquidityEventDTO (Maybe Text)
+curveAddLiquidityEventDTOTransactionL f CurveAddLiquidityEventDTO{..} = (\curveAddLiquidityEventDTOTransaction -> CurveAddLiquidityEventDTO { curveAddLiquidityEventDTOTransaction, ..} ) <$> f curveAddLiquidityEventDTOTransaction
+{-# INLINE curveAddLiquidityEventDTOTransactionL #-}
+
+-- | 'curveAddLiquidityEventDTOVid' Lens
+curveAddLiquidityEventDTOVidL :: Lens_' CurveAddLiquidityEventDTO (Maybe Integer)
+curveAddLiquidityEventDTOVidL f CurveAddLiquidityEventDTO{..} = (\curveAddLiquidityEventDTOVid -> CurveAddLiquidityEventDTO { curveAddLiquidityEventDTOVid, ..} ) <$> f curveAddLiquidityEventDTOVid
+{-# INLINE curveAddLiquidityEventDTOVidL #-}
+
+
+
+-- * CurveAdminFeeChangeLogDTO
+
+-- | 'curveAdminFeeChangeLogDTOEntryTime' Lens
+curveAdminFeeChangeLogDTOEntryTimeL :: Lens_' CurveAdminFeeChangeLogDTO (Maybe DateTime)
+curveAdminFeeChangeLogDTOEntryTimeL f CurveAdminFeeChangeLogDTO{..} = (\curveAdminFeeChangeLogDTOEntryTime -> CurveAdminFeeChangeLogDTO { curveAdminFeeChangeLogDTOEntryTime, ..} ) <$> f curveAdminFeeChangeLogDTOEntryTime
+{-# INLINE curveAdminFeeChangeLogDTOEntryTimeL #-}
+
+-- | 'curveAdminFeeChangeLogDTORecvTime' Lens
+curveAdminFeeChangeLogDTORecvTimeL :: Lens_' CurveAdminFeeChangeLogDTO (Maybe DateTime)
+curveAdminFeeChangeLogDTORecvTimeL f CurveAdminFeeChangeLogDTO{..} = (\curveAdminFeeChangeLogDTORecvTime -> CurveAdminFeeChangeLogDTO { curveAdminFeeChangeLogDTORecvTime, ..} ) <$> f curveAdminFeeChangeLogDTORecvTime
+{-# INLINE curveAdminFeeChangeLogDTORecvTimeL #-}
+
+-- | 'curveAdminFeeChangeLogDTOBlockNumber' Lens
+curveAdminFeeChangeLogDTOBlockNumberL :: Lens_' CurveAdminFeeChangeLogDTO (Maybe Integer)
+curveAdminFeeChangeLogDTOBlockNumberL f CurveAdminFeeChangeLogDTO{..} = (\curveAdminFeeChangeLogDTOBlockNumber -> CurveAdminFeeChangeLogDTO { curveAdminFeeChangeLogDTOBlockNumber, ..} ) <$> f curveAdminFeeChangeLogDTOBlockNumber
+{-# INLINE curveAdminFeeChangeLogDTOBlockNumberL #-}
+
+-- | 'curveAdminFeeChangeLogDTOId' Lens
+curveAdminFeeChangeLogDTOIdL :: Lens_' CurveAdminFeeChangeLogDTO (Maybe Text)
+curveAdminFeeChangeLogDTOIdL f CurveAdminFeeChangeLogDTO{..} = (\curveAdminFeeChangeLogDTOId -> CurveAdminFeeChangeLogDTO { curveAdminFeeChangeLogDTOId, ..} ) <$> f curveAdminFeeChangeLogDTOId
+{-# INLINE curveAdminFeeChangeLogDTOIdL #-}
+
+-- | 'curveAdminFeeChangeLogDTOPool' Lens
+curveAdminFeeChangeLogDTOPoolL :: Lens_' CurveAdminFeeChangeLogDTO (Maybe Text)
+curveAdminFeeChangeLogDTOPoolL f CurveAdminFeeChangeLogDTO{..} = (\curveAdminFeeChangeLogDTOPool -> CurveAdminFeeChangeLogDTO { curveAdminFeeChangeLogDTOPool, ..} ) <$> f curveAdminFeeChangeLogDTOPool
+{-# INLINE curveAdminFeeChangeLogDTOPoolL #-}
+
+-- | 'curveAdminFeeChangeLogDTOValue' Lens
+curveAdminFeeChangeLogDTOValueL :: Lens_' CurveAdminFeeChangeLogDTO (Maybe Text)
+curveAdminFeeChangeLogDTOValueL f CurveAdminFeeChangeLogDTO{..} = (\curveAdminFeeChangeLogDTOValue -> CurveAdminFeeChangeLogDTO { curveAdminFeeChangeLogDTOValue, ..} ) <$> f curveAdminFeeChangeLogDTOValue
+{-# INLINE curveAdminFeeChangeLogDTOValueL #-}
+
+-- | 'curveAdminFeeChangeLogDTOBlock' Lens
+curveAdminFeeChangeLogDTOBlockL :: Lens_' CurveAdminFeeChangeLogDTO (Maybe Text)
+curveAdminFeeChangeLogDTOBlockL f CurveAdminFeeChangeLogDTO{..} = (\curveAdminFeeChangeLogDTOBlock -> CurveAdminFeeChangeLogDTO { curveAdminFeeChangeLogDTOBlock, ..} ) <$> f curveAdminFeeChangeLogDTOBlock
+{-# INLINE curveAdminFeeChangeLogDTOBlockL #-}
+
+-- | 'curveAdminFeeChangeLogDTOTimestamp' Lens
+curveAdminFeeChangeLogDTOTimestampL :: Lens_' CurveAdminFeeChangeLogDTO (Maybe Text)
+curveAdminFeeChangeLogDTOTimestampL f CurveAdminFeeChangeLogDTO{..} = (\curveAdminFeeChangeLogDTOTimestamp -> CurveAdminFeeChangeLogDTO { curveAdminFeeChangeLogDTOTimestamp, ..} ) <$> f curveAdminFeeChangeLogDTOTimestamp
+{-# INLINE curveAdminFeeChangeLogDTOTimestampL #-}
+
+-- | 'curveAdminFeeChangeLogDTOTransaction' Lens
+curveAdminFeeChangeLogDTOTransactionL :: Lens_' CurveAdminFeeChangeLogDTO (Maybe Text)
+curveAdminFeeChangeLogDTOTransactionL f CurveAdminFeeChangeLogDTO{..} = (\curveAdminFeeChangeLogDTOTransaction -> CurveAdminFeeChangeLogDTO { curveAdminFeeChangeLogDTOTransaction, ..} ) <$> f curveAdminFeeChangeLogDTOTransaction
+{-# INLINE curveAdminFeeChangeLogDTOTransactionL #-}
+
+-- | 'curveAdminFeeChangeLogDTOVid' Lens
+curveAdminFeeChangeLogDTOVidL :: Lens_' CurveAdminFeeChangeLogDTO (Maybe Integer)
+curveAdminFeeChangeLogDTOVidL f CurveAdminFeeChangeLogDTO{..} = (\curveAdminFeeChangeLogDTOVid -> CurveAdminFeeChangeLogDTO { curveAdminFeeChangeLogDTOVid, ..} ) <$> f curveAdminFeeChangeLogDTOVid
+{-# INLINE curveAdminFeeChangeLogDTOVidL #-}
+
+
+
+-- * CurveAmplificationCoeffChangeLogDTO
+
+-- | 'curveAmplificationCoeffChangeLogDTOEntryTime' Lens
+curveAmplificationCoeffChangeLogDTOEntryTimeL :: Lens_' CurveAmplificationCoeffChangeLogDTO (Maybe DateTime)
+curveAmplificationCoeffChangeLogDTOEntryTimeL f CurveAmplificationCoeffChangeLogDTO{..} = (\curveAmplificationCoeffChangeLogDTOEntryTime -> CurveAmplificationCoeffChangeLogDTO { curveAmplificationCoeffChangeLogDTOEntryTime, ..} ) <$> f curveAmplificationCoeffChangeLogDTOEntryTime
+{-# INLINE curveAmplificationCoeffChangeLogDTOEntryTimeL #-}
+
+-- | 'curveAmplificationCoeffChangeLogDTORecvTime' Lens
+curveAmplificationCoeffChangeLogDTORecvTimeL :: Lens_' CurveAmplificationCoeffChangeLogDTO (Maybe DateTime)
+curveAmplificationCoeffChangeLogDTORecvTimeL f CurveAmplificationCoeffChangeLogDTO{..} = (\curveAmplificationCoeffChangeLogDTORecvTime -> CurveAmplificationCoeffChangeLogDTO { curveAmplificationCoeffChangeLogDTORecvTime, ..} ) <$> f curveAmplificationCoeffChangeLogDTORecvTime
+{-# INLINE curveAmplificationCoeffChangeLogDTORecvTimeL #-}
+
+-- | 'curveAmplificationCoeffChangeLogDTOBlockNumber' Lens
+curveAmplificationCoeffChangeLogDTOBlockNumberL :: Lens_' CurveAmplificationCoeffChangeLogDTO (Maybe Integer)
+curveAmplificationCoeffChangeLogDTOBlockNumberL f CurveAmplificationCoeffChangeLogDTO{..} = (\curveAmplificationCoeffChangeLogDTOBlockNumber -> CurveAmplificationCoeffChangeLogDTO { curveAmplificationCoeffChangeLogDTOBlockNumber, ..} ) <$> f curveAmplificationCoeffChangeLogDTOBlockNumber
+{-# INLINE curveAmplificationCoeffChangeLogDTOBlockNumberL #-}
+
+-- | 'curveAmplificationCoeffChangeLogDTOId' Lens
+curveAmplificationCoeffChangeLogDTOIdL :: Lens_' CurveAmplificationCoeffChangeLogDTO (Maybe Text)
+curveAmplificationCoeffChangeLogDTOIdL f CurveAmplificationCoeffChangeLogDTO{..} = (\curveAmplificationCoeffChangeLogDTOId -> CurveAmplificationCoeffChangeLogDTO { curveAmplificationCoeffChangeLogDTOId, ..} ) <$> f curveAmplificationCoeffChangeLogDTOId
+{-# INLINE curveAmplificationCoeffChangeLogDTOIdL #-}
+
+-- | 'curveAmplificationCoeffChangeLogDTOPool' Lens
+curveAmplificationCoeffChangeLogDTOPoolL :: Lens_' CurveAmplificationCoeffChangeLogDTO (Maybe Text)
+curveAmplificationCoeffChangeLogDTOPoolL f CurveAmplificationCoeffChangeLogDTO{..} = (\curveAmplificationCoeffChangeLogDTOPool -> CurveAmplificationCoeffChangeLogDTO { curveAmplificationCoeffChangeLogDTOPool, ..} ) <$> f curveAmplificationCoeffChangeLogDTOPool
+{-# INLINE curveAmplificationCoeffChangeLogDTOPoolL #-}
+
+-- | 'curveAmplificationCoeffChangeLogDTOValue' Lens
+curveAmplificationCoeffChangeLogDTOValueL :: Lens_' CurveAmplificationCoeffChangeLogDTO (Maybe Text)
+curveAmplificationCoeffChangeLogDTOValueL f CurveAmplificationCoeffChangeLogDTO{..} = (\curveAmplificationCoeffChangeLogDTOValue -> CurveAmplificationCoeffChangeLogDTO { curveAmplificationCoeffChangeLogDTOValue, ..} ) <$> f curveAmplificationCoeffChangeLogDTOValue
+{-# INLINE curveAmplificationCoeffChangeLogDTOValueL #-}
+
+-- | 'curveAmplificationCoeffChangeLogDTOBlock' Lens
+curveAmplificationCoeffChangeLogDTOBlockL :: Lens_' CurveAmplificationCoeffChangeLogDTO (Maybe Text)
+curveAmplificationCoeffChangeLogDTOBlockL f CurveAmplificationCoeffChangeLogDTO{..} = (\curveAmplificationCoeffChangeLogDTOBlock -> CurveAmplificationCoeffChangeLogDTO { curveAmplificationCoeffChangeLogDTOBlock, ..} ) <$> f curveAmplificationCoeffChangeLogDTOBlock
+{-# INLINE curveAmplificationCoeffChangeLogDTOBlockL #-}
+
+-- | 'curveAmplificationCoeffChangeLogDTOTimestamp' Lens
+curveAmplificationCoeffChangeLogDTOTimestampL :: Lens_' CurveAmplificationCoeffChangeLogDTO (Maybe Text)
+curveAmplificationCoeffChangeLogDTOTimestampL f CurveAmplificationCoeffChangeLogDTO{..} = (\curveAmplificationCoeffChangeLogDTOTimestamp -> CurveAmplificationCoeffChangeLogDTO { curveAmplificationCoeffChangeLogDTOTimestamp, ..} ) <$> f curveAmplificationCoeffChangeLogDTOTimestamp
+{-# INLINE curveAmplificationCoeffChangeLogDTOTimestampL #-}
+
+-- | 'curveAmplificationCoeffChangeLogDTOTransaction' Lens
+curveAmplificationCoeffChangeLogDTOTransactionL :: Lens_' CurveAmplificationCoeffChangeLogDTO (Maybe Text)
+curveAmplificationCoeffChangeLogDTOTransactionL f CurveAmplificationCoeffChangeLogDTO{..} = (\curveAmplificationCoeffChangeLogDTOTransaction -> CurveAmplificationCoeffChangeLogDTO { curveAmplificationCoeffChangeLogDTOTransaction, ..} ) <$> f curveAmplificationCoeffChangeLogDTOTransaction
+{-# INLINE curveAmplificationCoeffChangeLogDTOTransactionL #-}
+
+-- | 'curveAmplificationCoeffChangeLogDTOVid' Lens
+curveAmplificationCoeffChangeLogDTOVidL :: Lens_' CurveAmplificationCoeffChangeLogDTO (Maybe Integer)
+curveAmplificationCoeffChangeLogDTOVidL f CurveAmplificationCoeffChangeLogDTO{..} = (\curveAmplificationCoeffChangeLogDTOVid -> CurveAmplificationCoeffChangeLogDTO { curveAmplificationCoeffChangeLogDTOVid, ..} ) <$> f curveAmplificationCoeffChangeLogDTOVid
+{-# INLINE curveAmplificationCoeffChangeLogDTOVidL #-}
+
+
+
+-- * CurveCoinDTO
+
+-- | 'curveCoinDTOEntryTime' Lens
+curveCoinDTOEntryTimeL :: Lens_' CurveCoinDTO (Maybe DateTime)
+curveCoinDTOEntryTimeL f CurveCoinDTO{..} = (\curveCoinDTOEntryTime -> CurveCoinDTO { curveCoinDTOEntryTime, ..} ) <$> f curveCoinDTOEntryTime
+{-# INLINE curveCoinDTOEntryTimeL #-}
+
+-- | 'curveCoinDTORecvTime' Lens
+curveCoinDTORecvTimeL :: Lens_' CurveCoinDTO (Maybe DateTime)
+curveCoinDTORecvTimeL f CurveCoinDTO{..} = (\curveCoinDTORecvTime -> CurveCoinDTO { curveCoinDTORecvTime, ..} ) <$> f curveCoinDTORecvTime
+{-# INLINE curveCoinDTORecvTimeL #-}
+
+-- | 'curveCoinDTOBlockNumber' Lens
+curveCoinDTOBlockNumberL :: Lens_' CurveCoinDTO (Maybe Integer)
+curveCoinDTOBlockNumberL f CurveCoinDTO{..} = (\curveCoinDTOBlockNumber -> CurveCoinDTO { curveCoinDTOBlockNumber, ..} ) <$> f curveCoinDTOBlockNumber
+{-# INLINE curveCoinDTOBlockNumberL #-}
+
+-- | 'curveCoinDTOId' Lens
+curveCoinDTOIdL :: Lens_' CurveCoinDTO (Maybe Text)
+curveCoinDTOIdL f CurveCoinDTO{..} = (\curveCoinDTOId -> CurveCoinDTO { curveCoinDTOId, ..} ) <$> f curveCoinDTOId
+{-# INLINE curveCoinDTOIdL #-}
+
+-- | 'curveCoinDTOIndex' Lens
+curveCoinDTOIndexL :: Lens_' CurveCoinDTO (Maybe Int)
+curveCoinDTOIndexL f CurveCoinDTO{..} = (\curveCoinDTOIndex -> CurveCoinDTO { curveCoinDTOIndex, ..} ) <$> f curveCoinDTOIndex
+{-# INLINE curveCoinDTOIndexL #-}
+
+-- | 'curveCoinDTOPool' Lens
+curveCoinDTOPoolL :: Lens_' CurveCoinDTO (Maybe Text)
+curveCoinDTOPoolL f CurveCoinDTO{..} = (\curveCoinDTOPool -> CurveCoinDTO { curveCoinDTOPool, ..} ) <$> f curveCoinDTOPool
+{-# INLINE curveCoinDTOPoolL #-}
+
+-- | 'curveCoinDTOToken' Lens
+curveCoinDTOTokenL :: Lens_' CurveCoinDTO (Maybe Text)
+curveCoinDTOTokenL f CurveCoinDTO{..} = (\curveCoinDTOToken -> CurveCoinDTO { curveCoinDTOToken, ..} ) <$> f curveCoinDTOToken
+{-# INLINE curveCoinDTOTokenL #-}
+
+-- | 'curveCoinDTOUnderlying' Lens
+curveCoinDTOUnderlyingL :: Lens_' CurveCoinDTO (Maybe Text)
+curveCoinDTOUnderlyingL f CurveCoinDTO{..} = (\curveCoinDTOUnderlying -> CurveCoinDTO { curveCoinDTOUnderlying, ..} ) <$> f curveCoinDTOUnderlying
+{-# INLINE curveCoinDTOUnderlyingL #-}
+
+-- | 'curveCoinDTOBalance' Lens
+curveCoinDTOBalanceL :: Lens_' CurveCoinDTO (Maybe Text)
+curveCoinDTOBalanceL f CurveCoinDTO{..} = (\curveCoinDTOBalance -> CurveCoinDTO { curveCoinDTOBalance, ..} ) <$> f curveCoinDTOBalance
+{-# INLINE curveCoinDTOBalanceL #-}
+
+-- | 'curveCoinDTORate' Lens
+curveCoinDTORateL :: Lens_' CurveCoinDTO (Maybe Text)
+curveCoinDTORateL f CurveCoinDTO{..} = (\curveCoinDTORate -> CurveCoinDTO { curveCoinDTORate, ..} ) <$> f curveCoinDTORate
+{-# INLINE curveCoinDTORateL #-}
+
+-- | 'curveCoinDTOUpdated' Lens
+curveCoinDTOUpdatedL :: Lens_' CurveCoinDTO (Maybe Text)
+curveCoinDTOUpdatedL f CurveCoinDTO{..} = (\curveCoinDTOUpdated -> CurveCoinDTO { curveCoinDTOUpdated, ..} ) <$> f curveCoinDTOUpdated
+{-# INLINE curveCoinDTOUpdatedL #-}
+
+-- | 'curveCoinDTOUpdatedAtBlock' Lens
+curveCoinDTOUpdatedAtBlockL :: Lens_' CurveCoinDTO (Maybe Text)
+curveCoinDTOUpdatedAtBlockL f CurveCoinDTO{..} = (\curveCoinDTOUpdatedAtBlock -> CurveCoinDTO { curveCoinDTOUpdatedAtBlock, ..} ) <$> f curveCoinDTOUpdatedAtBlock
+{-# INLINE curveCoinDTOUpdatedAtBlockL #-}
+
+-- | 'curveCoinDTOUpdatedAtTransaction' Lens
+curveCoinDTOUpdatedAtTransactionL :: Lens_' CurveCoinDTO (Maybe Text)
+curveCoinDTOUpdatedAtTransactionL f CurveCoinDTO{..} = (\curveCoinDTOUpdatedAtTransaction -> CurveCoinDTO { curveCoinDTOUpdatedAtTransaction, ..} ) <$> f curveCoinDTOUpdatedAtTransaction
+{-# INLINE curveCoinDTOUpdatedAtTransactionL #-}
+
+-- | 'curveCoinDTOVid' Lens
+curveCoinDTOVidL :: Lens_' CurveCoinDTO (Maybe Integer)
+curveCoinDTOVidL f CurveCoinDTO{..} = (\curveCoinDTOVid -> CurveCoinDTO { curveCoinDTOVid, ..} ) <$> f curveCoinDTOVid
+{-# INLINE curveCoinDTOVidL #-}
+
+-- | 'curveCoinDTOBlockRange' Lens
+curveCoinDTOBlockRangeL :: Lens_' CurveCoinDTO (Maybe Text)
+curveCoinDTOBlockRangeL f CurveCoinDTO{..} = (\curveCoinDTOBlockRange -> CurveCoinDTO { curveCoinDTOBlockRange, ..} ) <$> f curveCoinDTOBlockRange
+{-# INLINE curveCoinDTOBlockRangeL #-}
+
+
+
+-- * CurveContractDTO
+
+-- | 'curveContractDTOEntryTime' Lens
+curveContractDTOEntryTimeL :: Lens_' CurveContractDTO (Maybe DateTime)
+curveContractDTOEntryTimeL f CurveContractDTO{..} = (\curveContractDTOEntryTime -> CurveContractDTO { curveContractDTOEntryTime, ..} ) <$> f curveContractDTOEntryTime
+{-# INLINE curveContractDTOEntryTimeL #-}
+
+-- | 'curveContractDTORecvTime' Lens
+curveContractDTORecvTimeL :: Lens_' CurveContractDTO (Maybe DateTime)
+curveContractDTORecvTimeL f CurveContractDTO{..} = (\curveContractDTORecvTime -> CurveContractDTO { curveContractDTORecvTime, ..} ) <$> f curveContractDTORecvTime
+{-# INLINE curveContractDTORecvTimeL #-}
+
+-- | 'curveContractDTOBlockNumber' Lens
+curveContractDTOBlockNumberL :: Lens_' CurveContractDTO (Maybe Integer)
+curveContractDTOBlockNumberL f CurveContractDTO{..} = (\curveContractDTOBlockNumber -> CurveContractDTO { curveContractDTOBlockNumber, ..} ) <$> f curveContractDTOBlockNumber
+{-# INLINE curveContractDTOBlockNumberL #-}
+
+-- | 'curveContractDTOId' Lens
+curveContractDTOIdL :: Lens_' CurveContractDTO (Maybe Text)
+curveContractDTOIdL f CurveContractDTO{..} = (\curveContractDTOId -> CurveContractDTO { curveContractDTOId, ..} ) <$> f curveContractDTOId
+{-# INLINE curveContractDTOIdL #-}
+
+-- | 'curveContractDTODescription' Lens
+curveContractDTODescriptionL :: Lens_' CurveContractDTO (Maybe Text)
+curveContractDTODescriptionL f CurveContractDTO{..} = (\curveContractDTODescription -> CurveContractDTO { curveContractDTODescription, ..} ) <$> f curveContractDTODescription
+{-# INLINE curveContractDTODescriptionL #-}
+
+-- | 'curveContractDTOAdded' Lens
+curveContractDTOAddedL :: Lens_' CurveContractDTO (Maybe Text)
+curveContractDTOAddedL f CurveContractDTO{..} = (\curveContractDTOAdded -> CurveContractDTO { curveContractDTOAdded, ..} ) <$> f curveContractDTOAdded
+{-# INLINE curveContractDTOAddedL #-}
+
+-- | 'curveContractDTOAddedAtBlock' Lens
+curveContractDTOAddedAtBlockL :: Lens_' CurveContractDTO (Maybe Text)
+curveContractDTOAddedAtBlockL f CurveContractDTO{..} = (\curveContractDTOAddedAtBlock -> CurveContractDTO { curveContractDTOAddedAtBlock, ..} ) <$> f curveContractDTOAddedAtBlock
+{-# INLINE curveContractDTOAddedAtBlockL #-}
+
+-- | 'curveContractDTOAddedAtTransaction' Lens
+curveContractDTOAddedAtTransactionL :: Lens_' CurveContractDTO (Maybe Text)
+curveContractDTOAddedAtTransactionL f CurveContractDTO{..} = (\curveContractDTOAddedAtTransaction -> CurveContractDTO { curveContractDTOAddedAtTransaction, ..} ) <$> f curveContractDTOAddedAtTransaction
+{-# INLINE curveContractDTOAddedAtTransactionL #-}
+
+-- | 'curveContractDTOModified' Lens
+curveContractDTOModifiedL :: Lens_' CurveContractDTO (Maybe Text)
+curveContractDTOModifiedL f CurveContractDTO{..} = (\curveContractDTOModified -> CurveContractDTO { curveContractDTOModified, ..} ) <$> f curveContractDTOModified
+{-# INLINE curveContractDTOModifiedL #-}
+
+-- | 'curveContractDTOModifiedAtBlock' Lens
+curveContractDTOModifiedAtBlockL :: Lens_' CurveContractDTO (Maybe Text)
+curveContractDTOModifiedAtBlockL f CurveContractDTO{..} = (\curveContractDTOModifiedAtBlock -> CurveContractDTO { curveContractDTOModifiedAtBlock, ..} ) <$> f curveContractDTOModifiedAtBlock
+{-# INLINE curveContractDTOModifiedAtBlockL #-}
+
+-- | 'curveContractDTOModifiedAtTransaction' Lens
+curveContractDTOModifiedAtTransactionL :: Lens_' CurveContractDTO (Maybe Text)
+curveContractDTOModifiedAtTransactionL f CurveContractDTO{..} = (\curveContractDTOModifiedAtTransaction -> CurveContractDTO { curveContractDTOModifiedAtTransaction, ..} ) <$> f curveContractDTOModifiedAtTransaction
+{-# INLINE curveContractDTOModifiedAtTransactionL #-}
+
+-- | 'curveContractDTOVid' Lens
+curveContractDTOVidL :: Lens_' CurveContractDTO (Maybe Integer)
+curveContractDTOVidL f CurveContractDTO{..} = (\curveContractDTOVid -> CurveContractDTO { curveContractDTOVid, ..} ) <$> f curveContractDTOVid
+{-# INLINE curveContractDTOVidL #-}
+
+
+
+-- * CurveContractVersionDTO
+
+-- | 'curveContractVersionDTOEntryTime' Lens
+curveContractVersionDTOEntryTimeL :: Lens_' CurveContractVersionDTO (Maybe DateTime)
+curveContractVersionDTOEntryTimeL f CurveContractVersionDTO{..} = (\curveContractVersionDTOEntryTime -> CurveContractVersionDTO { curveContractVersionDTOEntryTime, ..} ) <$> f curveContractVersionDTOEntryTime
+{-# INLINE curveContractVersionDTOEntryTimeL #-}
+
+-- | 'curveContractVersionDTORecvTime' Lens
+curveContractVersionDTORecvTimeL :: Lens_' CurveContractVersionDTO (Maybe DateTime)
+curveContractVersionDTORecvTimeL f CurveContractVersionDTO{..} = (\curveContractVersionDTORecvTime -> CurveContractVersionDTO { curveContractVersionDTORecvTime, ..} ) <$> f curveContractVersionDTORecvTime
+{-# INLINE curveContractVersionDTORecvTimeL #-}
+
+-- | 'curveContractVersionDTOBlockNumber' Lens
+curveContractVersionDTOBlockNumberL :: Lens_' CurveContractVersionDTO (Maybe Integer)
+curveContractVersionDTOBlockNumberL f CurveContractVersionDTO{..} = (\curveContractVersionDTOBlockNumber -> CurveContractVersionDTO { curveContractVersionDTOBlockNumber, ..} ) <$> f curveContractVersionDTOBlockNumber
+{-# INLINE curveContractVersionDTOBlockNumberL #-}
+
+-- | 'curveContractVersionDTOId' Lens
+curveContractVersionDTOIdL :: Lens_' CurveContractVersionDTO (Maybe Text)
+curveContractVersionDTOIdL f CurveContractVersionDTO{..} = (\curveContractVersionDTOId -> CurveContractVersionDTO { curveContractVersionDTOId, ..} ) <$> f curveContractVersionDTOId
+{-# INLINE curveContractVersionDTOIdL #-}
+
+-- | 'curveContractVersionDTOContract' Lens
+curveContractVersionDTOContractL :: Lens_' CurveContractVersionDTO (Maybe Text)
+curveContractVersionDTOContractL f CurveContractVersionDTO{..} = (\curveContractVersionDTOContract -> CurveContractVersionDTO { curveContractVersionDTOContract, ..} ) <$> f curveContractVersionDTOContract
+{-# INLINE curveContractVersionDTOContractL #-}
+
+-- | 'curveContractVersionDTOAddress' Lens
+curveContractVersionDTOAddressL :: Lens_' CurveContractVersionDTO (Maybe Text)
+curveContractVersionDTOAddressL f CurveContractVersionDTO{..} = (\curveContractVersionDTOAddress -> CurveContractVersionDTO { curveContractVersionDTOAddress, ..} ) <$> f curveContractVersionDTOAddress
+{-# INLINE curveContractVersionDTOAddressL #-}
+
+-- | 'curveContractVersionDTOVersion' Lens
+curveContractVersionDTOVersionL :: Lens_' CurveContractVersionDTO (Maybe Text)
+curveContractVersionDTOVersionL f CurveContractVersionDTO{..} = (\curveContractVersionDTOVersion -> CurveContractVersionDTO { curveContractVersionDTOVersion, ..} ) <$> f curveContractVersionDTOVersion
+{-# INLINE curveContractVersionDTOVersionL #-}
+
+-- | 'curveContractVersionDTOAdded' Lens
+curveContractVersionDTOAddedL :: Lens_' CurveContractVersionDTO (Maybe Text)
+curveContractVersionDTOAddedL f CurveContractVersionDTO{..} = (\curveContractVersionDTOAdded -> CurveContractVersionDTO { curveContractVersionDTOAdded, ..} ) <$> f curveContractVersionDTOAdded
+{-# INLINE curveContractVersionDTOAddedL #-}
+
+-- | 'curveContractVersionDTOAddedAtBlock' Lens
+curveContractVersionDTOAddedAtBlockL :: Lens_' CurveContractVersionDTO (Maybe Text)
+curveContractVersionDTOAddedAtBlockL f CurveContractVersionDTO{..} = (\curveContractVersionDTOAddedAtBlock -> CurveContractVersionDTO { curveContractVersionDTOAddedAtBlock, ..} ) <$> f curveContractVersionDTOAddedAtBlock
+{-# INLINE curveContractVersionDTOAddedAtBlockL #-}
+
+-- | 'curveContractVersionDTOAddedAtTransaction' Lens
+curveContractVersionDTOAddedAtTransactionL :: Lens_' CurveContractVersionDTO (Maybe Text)
+curveContractVersionDTOAddedAtTransactionL f CurveContractVersionDTO{..} = (\curveContractVersionDTOAddedAtTransaction -> CurveContractVersionDTO { curveContractVersionDTOAddedAtTransaction, ..} ) <$> f curveContractVersionDTOAddedAtTransaction
+{-# INLINE curveContractVersionDTOAddedAtTransactionL #-}
+
+-- | 'curveContractVersionDTOVid' Lens
+curveContractVersionDTOVidL :: Lens_' CurveContractVersionDTO (Maybe Integer)
+curveContractVersionDTOVidL f CurveContractVersionDTO{..} = (\curveContractVersionDTOVid -> CurveContractVersionDTO { curveContractVersionDTOVid, ..} ) <$> f curveContractVersionDTOVid
+{-# INLINE curveContractVersionDTOVidL #-}
+
+
+
+-- * CurveDailyVolumeDTO
+
+-- | 'curveDailyVolumeDTOEntryTime' Lens
+curveDailyVolumeDTOEntryTimeL :: Lens_' CurveDailyVolumeDTO (Maybe DateTime)
+curveDailyVolumeDTOEntryTimeL f CurveDailyVolumeDTO{..} = (\curveDailyVolumeDTOEntryTime -> CurveDailyVolumeDTO { curveDailyVolumeDTOEntryTime, ..} ) <$> f curveDailyVolumeDTOEntryTime
+{-# INLINE curveDailyVolumeDTOEntryTimeL #-}
+
+-- | 'curveDailyVolumeDTORecvTime' Lens
+curveDailyVolumeDTORecvTimeL :: Lens_' CurveDailyVolumeDTO (Maybe DateTime)
+curveDailyVolumeDTORecvTimeL f CurveDailyVolumeDTO{..} = (\curveDailyVolumeDTORecvTime -> CurveDailyVolumeDTO { curveDailyVolumeDTORecvTime, ..} ) <$> f curveDailyVolumeDTORecvTime
+{-# INLINE curveDailyVolumeDTORecvTimeL #-}
+
+-- | 'curveDailyVolumeDTOBlockNumber' Lens
+curveDailyVolumeDTOBlockNumberL :: Lens_' CurveDailyVolumeDTO (Maybe Integer)
+curveDailyVolumeDTOBlockNumberL f CurveDailyVolumeDTO{..} = (\curveDailyVolumeDTOBlockNumber -> CurveDailyVolumeDTO { curveDailyVolumeDTOBlockNumber, ..} ) <$> f curveDailyVolumeDTOBlockNumber
+{-# INLINE curveDailyVolumeDTOBlockNumberL #-}
+
+-- | 'curveDailyVolumeDTOId' Lens
+curveDailyVolumeDTOIdL :: Lens_' CurveDailyVolumeDTO (Maybe Text)
+curveDailyVolumeDTOIdL f CurveDailyVolumeDTO{..} = (\curveDailyVolumeDTOId -> CurveDailyVolumeDTO { curveDailyVolumeDTOId, ..} ) <$> f curveDailyVolumeDTOId
+{-# INLINE curveDailyVolumeDTOIdL #-}
+
+-- | 'curveDailyVolumeDTOPool' Lens
+curveDailyVolumeDTOPoolL :: Lens_' CurveDailyVolumeDTO (Maybe Text)
+curveDailyVolumeDTOPoolL f CurveDailyVolumeDTO{..} = (\curveDailyVolumeDTOPool -> CurveDailyVolumeDTO { curveDailyVolumeDTOPool, ..} ) <$> f curveDailyVolumeDTOPool
+{-# INLINE curveDailyVolumeDTOPoolL #-}
+
+-- | 'curveDailyVolumeDTOTimestamp' Lens
+curveDailyVolumeDTOTimestampL :: Lens_' CurveDailyVolumeDTO (Maybe Text)
+curveDailyVolumeDTOTimestampL f CurveDailyVolumeDTO{..} = (\curveDailyVolumeDTOTimestamp -> CurveDailyVolumeDTO { curveDailyVolumeDTOTimestamp, ..} ) <$> f curveDailyVolumeDTOTimestamp
+{-# INLINE curveDailyVolumeDTOTimestampL #-}
+
+-- | 'curveDailyVolumeDTOVolume' Lens
+curveDailyVolumeDTOVolumeL :: Lens_' CurveDailyVolumeDTO (Maybe Text)
+curveDailyVolumeDTOVolumeL f CurveDailyVolumeDTO{..} = (\curveDailyVolumeDTOVolume -> CurveDailyVolumeDTO { curveDailyVolumeDTOVolume, ..} ) <$> f curveDailyVolumeDTOVolume
+{-# INLINE curveDailyVolumeDTOVolumeL #-}
+
+-- | 'curveDailyVolumeDTOVid' Lens
+curveDailyVolumeDTOVidL :: Lens_' CurveDailyVolumeDTO (Maybe Integer)
+curveDailyVolumeDTOVidL f CurveDailyVolumeDTO{..} = (\curveDailyVolumeDTOVid -> CurveDailyVolumeDTO { curveDailyVolumeDTOVid, ..} ) <$> f curveDailyVolumeDTOVid
+{-# INLINE curveDailyVolumeDTOVidL #-}
+
+-- | 'curveDailyVolumeDTOBlockRange' Lens
+curveDailyVolumeDTOBlockRangeL :: Lens_' CurveDailyVolumeDTO (Maybe Text)
+curveDailyVolumeDTOBlockRangeL f CurveDailyVolumeDTO{..} = (\curveDailyVolumeDTOBlockRange -> CurveDailyVolumeDTO { curveDailyVolumeDTOBlockRange, ..} ) <$> f curveDailyVolumeDTOBlockRange
+{-# INLINE curveDailyVolumeDTOBlockRangeL #-}
+
+
+
 -- * CurveExchangeDTO
 
 -- | 'curveExchangeDTOEntryTime' Lens
@@ -138,6 +925,2011 @@ curveExchangeDTOPoolIdL f CurveExchangeDTO{..} = (\curveExchangeDTOPoolId -> Cur
 curveExchangeDTOTransactionIdL :: Lens_' CurveExchangeDTO (Maybe Text)
 curveExchangeDTOTransactionIdL f CurveExchangeDTO{..} = (\curveExchangeDTOTransactionId -> CurveExchangeDTO { curveExchangeDTOTransactionId, ..} ) <$> f curveExchangeDTOTransactionId
 {-# INLINE curveExchangeDTOTransactionIdL #-}
+
+
+
+-- * CurveFeeChangeLogDTO
+
+-- | 'curveFeeChangeLogDTOEntryTime' Lens
+curveFeeChangeLogDTOEntryTimeL :: Lens_' CurveFeeChangeLogDTO (Maybe DateTime)
+curveFeeChangeLogDTOEntryTimeL f CurveFeeChangeLogDTO{..} = (\curveFeeChangeLogDTOEntryTime -> CurveFeeChangeLogDTO { curveFeeChangeLogDTOEntryTime, ..} ) <$> f curveFeeChangeLogDTOEntryTime
+{-# INLINE curveFeeChangeLogDTOEntryTimeL #-}
+
+-- | 'curveFeeChangeLogDTORecvTime' Lens
+curveFeeChangeLogDTORecvTimeL :: Lens_' CurveFeeChangeLogDTO (Maybe DateTime)
+curveFeeChangeLogDTORecvTimeL f CurveFeeChangeLogDTO{..} = (\curveFeeChangeLogDTORecvTime -> CurveFeeChangeLogDTO { curveFeeChangeLogDTORecvTime, ..} ) <$> f curveFeeChangeLogDTORecvTime
+{-# INLINE curveFeeChangeLogDTORecvTimeL #-}
+
+-- | 'curveFeeChangeLogDTOBlockNumber' Lens
+curveFeeChangeLogDTOBlockNumberL :: Lens_' CurveFeeChangeLogDTO (Maybe Integer)
+curveFeeChangeLogDTOBlockNumberL f CurveFeeChangeLogDTO{..} = (\curveFeeChangeLogDTOBlockNumber -> CurveFeeChangeLogDTO { curveFeeChangeLogDTOBlockNumber, ..} ) <$> f curveFeeChangeLogDTOBlockNumber
+{-# INLINE curveFeeChangeLogDTOBlockNumberL #-}
+
+-- | 'curveFeeChangeLogDTOId' Lens
+curveFeeChangeLogDTOIdL :: Lens_' CurveFeeChangeLogDTO (Maybe Text)
+curveFeeChangeLogDTOIdL f CurveFeeChangeLogDTO{..} = (\curveFeeChangeLogDTOId -> CurveFeeChangeLogDTO { curveFeeChangeLogDTOId, ..} ) <$> f curveFeeChangeLogDTOId
+{-# INLINE curveFeeChangeLogDTOIdL #-}
+
+-- | 'curveFeeChangeLogDTOPool' Lens
+curveFeeChangeLogDTOPoolL :: Lens_' CurveFeeChangeLogDTO (Maybe Text)
+curveFeeChangeLogDTOPoolL f CurveFeeChangeLogDTO{..} = (\curveFeeChangeLogDTOPool -> CurveFeeChangeLogDTO { curveFeeChangeLogDTOPool, ..} ) <$> f curveFeeChangeLogDTOPool
+{-# INLINE curveFeeChangeLogDTOPoolL #-}
+
+-- | 'curveFeeChangeLogDTOValue' Lens
+curveFeeChangeLogDTOValueL :: Lens_' CurveFeeChangeLogDTO (Maybe Text)
+curveFeeChangeLogDTOValueL f CurveFeeChangeLogDTO{..} = (\curveFeeChangeLogDTOValue -> CurveFeeChangeLogDTO { curveFeeChangeLogDTOValue, ..} ) <$> f curveFeeChangeLogDTOValue
+{-# INLINE curveFeeChangeLogDTOValueL #-}
+
+-- | 'curveFeeChangeLogDTOBlock' Lens
+curveFeeChangeLogDTOBlockL :: Lens_' CurveFeeChangeLogDTO (Maybe Text)
+curveFeeChangeLogDTOBlockL f CurveFeeChangeLogDTO{..} = (\curveFeeChangeLogDTOBlock -> CurveFeeChangeLogDTO { curveFeeChangeLogDTOBlock, ..} ) <$> f curveFeeChangeLogDTOBlock
+{-# INLINE curveFeeChangeLogDTOBlockL #-}
+
+-- | 'curveFeeChangeLogDTOTimestamp' Lens
+curveFeeChangeLogDTOTimestampL :: Lens_' CurveFeeChangeLogDTO (Maybe Text)
+curveFeeChangeLogDTOTimestampL f CurveFeeChangeLogDTO{..} = (\curveFeeChangeLogDTOTimestamp -> CurveFeeChangeLogDTO { curveFeeChangeLogDTOTimestamp, ..} ) <$> f curveFeeChangeLogDTOTimestamp
+{-# INLINE curveFeeChangeLogDTOTimestampL #-}
+
+-- | 'curveFeeChangeLogDTOTransaction' Lens
+curveFeeChangeLogDTOTransactionL :: Lens_' CurveFeeChangeLogDTO (Maybe Text)
+curveFeeChangeLogDTOTransactionL f CurveFeeChangeLogDTO{..} = (\curveFeeChangeLogDTOTransaction -> CurveFeeChangeLogDTO { curveFeeChangeLogDTOTransaction, ..} ) <$> f curveFeeChangeLogDTOTransaction
+{-# INLINE curveFeeChangeLogDTOTransactionL #-}
+
+-- | 'curveFeeChangeLogDTOVid' Lens
+curveFeeChangeLogDTOVidL :: Lens_' CurveFeeChangeLogDTO (Maybe Integer)
+curveFeeChangeLogDTOVidL f CurveFeeChangeLogDTO{..} = (\curveFeeChangeLogDTOVid -> CurveFeeChangeLogDTO { curveFeeChangeLogDTOVid, ..} ) <$> f curveFeeChangeLogDTOVid
+{-# INLINE curveFeeChangeLogDTOVidL #-}
+
+
+
+-- * CurveGaugeDTO
+
+-- | 'curveGaugeDTOEntryTime' Lens
+curveGaugeDTOEntryTimeL :: Lens_' CurveGaugeDTO (Maybe DateTime)
+curveGaugeDTOEntryTimeL f CurveGaugeDTO{..} = (\curveGaugeDTOEntryTime -> CurveGaugeDTO { curveGaugeDTOEntryTime, ..} ) <$> f curveGaugeDTOEntryTime
+{-# INLINE curveGaugeDTOEntryTimeL #-}
+
+-- | 'curveGaugeDTORecvTime' Lens
+curveGaugeDTORecvTimeL :: Lens_' CurveGaugeDTO (Maybe DateTime)
+curveGaugeDTORecvTimeL f CurveGaugeDTO{..} = (\curveGaugeDTORecvTime -> CurveGaugeDTO { curveGaugeDTORecvTime, ..} ) <$> f curveGaugeDTORecvTime
+{-# INLINE curveGaugeDTORecvTimeL #-}
+
+-- | 'curveGaugeDTOBlockNumber' Lens
+curveGaugeDTOBlockNumberL :: Lens_' CurveGaugeDTO (Maybe Integer)
+curveGaugeDTOBlockNumberL f CurveGaugeDTO{..} = (\curveGaugeDTOBlockNumber -> CurveGaugeDTO { curveGaugeDTOBlockNumber, ..} ) <$> f curveGaugeDTOBlockNumber
+{-# INLINE curveGaugeDTOBlockNumberL #-}
+
+-- | 'curveGaugeDTOId' Lens
+curveGaugeDTOIdL :: Lens_' CurveGaugeDTO (Maybe Text)
+curveGaugeDTOIdL f CurveGaugeDTO{..} = (\curveGaugeDTOId -> CurveGaugeDTO { curveGaugeDTOId, ..} ) <$> f curveGaugeDTOId
+{-# INLINE curveGaugeDTOIdL #-}
+
+-- | 'curveGaugeDTOAddress' Lens
+curveGaugeDTOAddressL :: Lens_' CurveGaugeDTO (Maybe Text)
+curveGaugeDTOAddressL f CurveGaugeDTO{..} = (\curveGaugeDTOAddress -> CurveGaugeDTO { curveGaugeDTOAddress, ..} ) <$> f curveGaugeDTOAddress
+{-# INLINE curveGaugeDTOAddressL #-}
+
+-- | 'curveGaugeDTOType' Lens
+curveGaugeDTOTypeL :: Lens_' CurveGaugeDTO (Maybe Text)
+curveGaugeDTOTypeL f CurveGaugeDTO{..} = (\curveGaugeDTOType -> CurveGaugeDTO { curveGaugeDTOType, ..} ) <$> f curveGaugeDTOType
+{-# INLINE curveGaugeDTOTypeL #-}
+
+-- | 'curveGaugeDTOPool' Lens
+curveGaugeDTOPoolL :: Lens_' CurveGaugeDTO (Maybe Text)
+curveGaugeDTOPoolL f CurveGaugeDTO{..} = (\curveGaugeDTOPool -> CurveGaugeDTO { curveGaugeDTOPool, ..} ) <$> f curveGaugeDTOPool
+{-# INLINE curveGaugeDTOPoolL #-}
+
+-- | 'curveGaugeDTOCreated' Lens
+curveGaugeDTOCreatedL :: Lens_' CurveGaugeDTO (Maybe Text)
+curveGaugeDTOCreatedL f CurveGaugeDTO{..} = (\curveGaugeDTOCreated -> CurveGaugeDTO { curveGaugeDTOCreated, ..} ) <$> f curveGaugeDTOCreated
+{-# INLINE curveGaugeDTOCreatedL #-}
+
+-- | 'curveGaugeDTOCreatedAtBlock' Lens
+curveGaugeDTOCreatedAtBlockL :: Lens_' CurveGaugeDTO (Maybe Text)
+curveGaugeDTOCreatedAtBlockL f CurveGaugeDTO{..} = (\curveGaugeDTOCreatedAtBlock -> CurveGaugeDTO { curveGaugeDTOCreatedAtBlock, ..} ) <$> f curveGaugeDTOCreatedAtBlock
+{-# INLINE curveGaugeDTOCreatedAtBlockL #-}
+
+-- | 'curveGaugeDTOCreatedAtTransaction' Lens
+curveGaugeDTOCreatedAtTransactionL :: Lens_' CurveGaugeDTO (Maybe Text)
+curveGaugeDTOCreatedAtTransactionL f CurveGaugeDTO{..} = (\curveGaugeDTOCreatedAtTransaction -> CurveGaugeDTO { curveGaugeDTOCreatedAtTransaction, ..} ) <$> f curveGaugeDTOCreatedAtTransaction
+{-# INLINE curveGaugeDTOCreatedAtTransactionL #-}
+
+-- | 'curveGaugeDTOVid' Lens
+curveGaugeDTOVidL :: Lens_' CurveGaugeDTO (Maybe Integer)
+curveGaugeDTOVidL f CurveGaugeDTO{..} = (\curveGaugeDTOVid -> CurveGaugeDTO { curveGaugeDTOVid, ..} ) <$> f curveGaugeDTOVid
+{-# INLINE curveGaugeDTOVidL #-}
+
+
+
+-- * CurveGaugeDepositDTO
+
+-- | 'curveGaugeDepositDTOEntryTime' Lens
+curveGaugeDepositDTOEntryTimeL :: Lens_' CurveGaugeDepositDTO (Maybe DateTime)
+curveGaugeDepositDTOEntryTimeL f CurveGaugeDepositDTO{..} = (\curveGaugeDepositDTOEntryTime -> CurveGaugeDepositDTO { curveGaugeDepositDTOEntryTime, ..} ) <$> f curveGaugeDepositDTOEntryTime
+{-# INLINE curveGaugeDepositDTOEntryTimeL #-}
+
+-- | 'curveGaugeDepositDTORecvTime' Lens
+curveGaugeDepositDTORecvTimeL :: Lens_' CurveGaugeDepositDTO (Maybe DateTime)
+curveGaugeDepositDTORecvTimeL f CurveGaugeDepositDTO{..} = (\curveGaugeDepositDTORecvTime -> CurveGaugeDepositDTO { curveGaugeDepositDTORecvTime, ..} ) <$> f curveGaugeDepositDTORecvTime
+{-# INLINE curveGaugeDepositDTORecvTimeL #-}
+
+-- | 'curveGaugeDepositDTOBlockNumber' Lens
+curveGaugeDepositDTOBlockNumberL :: Lens_' CurveGaugeDepositDTO (Maybe Integer)
+curveGaugeDepositDTOBlockNumberL f CurveGaugeDepositDTO{..} = (\curveGaugeDepositDTOBlockNumber -> CurveGaugeDepositDTO { curveGaugeDepositDTOBlockNumber, ..} ) <$> f curveGaugeDepositDTOBlockNumber
+{-# INLINE curveGaugeDepositDTOBlockNumberL #-}
+
+-- | 'curveGaugeDepositDTOId' Lens
+curveGaugeDepositDTOIdL :: Lens_' CurveGaugeDepositDTO (Maybe Text)
+curveGaugeDepositDTOIdL f CurveGaugeDepositDTO{..} = (\curveGaugeDepositDTOId -> CurveGaugeDepositDTO { curveGaugeDepositDTOId, ..} ) <$> f curveGaugeDepositDTOId
+{-# INLINE curveGaugeDepositDTOIdL #-}
+
+-- | 'curveGaugeDepositDTOGauge' Lens
+curveGaugeDepositDTOGaugeL :: Lens_' CurveGaugeDepositDTO (Maybe Text)
+curveGaugeDepositDTOGaugeL f CurveGaugeDepositDTO{..} = (\curveGaugeDepositDTOGauge -> CurveGaugeDepositDTO { curveGaugeDepositDTOGauge, ..} ) <$> f curveGaugeDepositDTOGauge
+{-# INLINE curveGaugeDepositDTOGaugeL #-}
+
+-- | 'curveGaugeDepositDTOProvider' Lens
+curveGaugeDepositDTOProviderL :: Lens_' CurveGaugeDepositDTO (Maybe Text)
+curveGaugeDepositDTOProviderL f CurveGaugeDepositDTO{..} = (\curveGaugeDepositDTOProvider -> CurveGaugeDepositDTO { curveGaugeDepositDTOProvider, ..} ) <$> f curveGaugeDepositDTOProvider
+{-# INLINE curveGaugeDepositDTOProviderL #-}
+
+-- | 'curveGaugeDepositDTOValue' Lens
+curveGaugeDepositDTOValueL :: Lens_' CurveGaugeDepositDTO (Maybe Text)
+curveGaugeDepositDTOValueL f CurveGaugeDepositDTO{..} = (\curveGaugeDepositDTOValue -> CurveGaugeDepositDTO { curveGaugeDepositDTOValue, ..} ) <$> f curveGaugeDepositDTOValue
+{-# INLINE curveGaugeDepositDTOValueL #-}
+
+-- | 'curveGaugeDepositDTOVid' Lens
+curveGaugeDepositDTOVidL :: Lens_' CurveGaugeDepositDTO (Maybe Integer)
+curveGaugeDepositDTOVidL f CurveGaugeDepositDTO{..} = (\curveGaugeDepositDTOVid -> CurveGaugeDepositDTO { curveGaugeDepositDTOVid, ..} ) <$> f curveGaugeDepositDTOVid
+{-# INLINE curveGaugeDepositDTOVidL #-}
+
+-- | 'curveGaugeDepositDTOBlockRange' Lens
+curveGaugeDepositDTOBlockRangeL :: Lens_' CurveGaugeDepositDTO (Maybe Text)
+curveGaugeDepositDTOBlockRangeL f CurveGaugeDepositDTO{..} = (\curveGaugeDepositDTOBlockRange -> CurveGaugeDepositDTO { curveGaugeDepositDTOBlockRange, ..} ) <$> f curveGaugeDepositDTOBlockRange
+{-# INLINE curveGaugeDepositDTOBlockRangeL #-}
+
+
+
+-- * CurveGaugeLiquidityDTO
+
+-- | 'curveGaugeLiquidityDTOEntryTime' Lens
+curveGaugeLiquidityDTOEntryTimeL :: Lens_' CurveGaugeLiquidityDTO (Maybe DateTime)
+curveGaugeLiquidityDTOEntryTimeL f CurveGaugeLiquidityDTO{..} = (\curveGaugeLiquidityDTOEntryTime -> CurveGaugeLiquidityDTO { curveGaugeLiquidityDTOEntryTime, ..} ) <$> f curveGaugeLiquidityDTOEntryTime
+{-# INLINE curveGaugeLiquidityDTOEntryTimeL #-}
+
+-- | 'curveGaugeLiquidityDTORecvTime' Lens
+curveGaugeLiquidityDTORecvTimeL :: Lens_' CurveGaugeLiquidityDTO (Maybe DateTime)
+curveGaugeLiquidityDTORecvTimeL f CurveGaugeLiquidityDTO{..} = (\curveGaugeLiquidityDTORecvTime -> CurveGaugeLiquidityDTO { curveGaugeLiquidityDTORecvTime, ..} ) <$> f curveGaugeLiquidityDTORecvTime
+{-# INLINE curveGaugeLiquidityDTORecvTimeL #-}
+
+-- | 'curveGaugeLiquidityDTOBlockNumber' Lens
+curveGaugeLiquidityDTOBlockNumberL :: Lens_' CurveGaugeLiquidityDTO (Maybe Integer)
+curveGaugeLiquidityDTOBlockNumberL f CurveGaugeLiquidityDTO{..} = (\curveGaugeLiquidityDTOBlockNumber -> CurveGaugeLiquidityDTO { curveGaugeLiquidityDTOBlockNumber, ..} ) <$> f curveGaugeLiquidityDTOBlockNumber
+{-# INLINE curveGaugeLiquidityDTOBlockNumberL #-}
+
+-- | 'curveGaugeLiquidityDTOId' Lens
+curveGaugeLiquidityDTOIdL :: Lens_' CurveGaugeLiquidityDTO (Maybe Text)
+curveGaugeLiquidityDTOIdL f CurveGaugeLiquidityDTO{..} = (\curveGaugeLiquidityDTOId -> CurveGaugeLiquidityDTO { curveGaugeLiquidityDTOId, ..} ) <$> f curveGaugeLiquidityDTOId
+{-# INLINE curveGaugeLiquidityDTOIdL #-}
+
+-- | 'curveGaugeLiquidityDTOUser' Lens
+curveGaugeLiquidityDTOUserL :: Lens_' CurveGaugeLiquidityDTO (Maybe Text)
+curveGaugeLiquidityDTOUserL f CurveGaugeLiquidityDTO{..} = (\curveGaugeLiquidityDTOUser -> CurveGaugeLiquidityDTO { curveGaugeLiquidityDTOUser, ..} ) <$> f curveGaugeLiquidityDTOUser
+{-# INLINE curveGaugeLiquidityDTOUserL #-}
+
+-- | 'curveGaugeLiquidityDTOGauge' Lens
+curveGaugeLiquidityDTOGaugeL :: Lens_' CurveGaugeLiquidityDTO (Maybe Text)
+curveGaugeLiquidityDTOGaugeL f CurveGaugeLiquidityDTO{..} = (\curveGaugeLiquidityDTOGauge -> CurveGaugeLiquidityDTO { curveGaugeLiquidityDTOGauge, ..} ) <$> f curveGaugeLiquidityDTOGauge
+{-# INLINE curveGaugeLiquidityDTOGaugeL #-}
+
+-- | 'curveGaugeLiquidityDTOOriginalBalance' Lens
+curveGaugeLiquidityDTOOriginalBalanceL :: Lens_' CurveGaugeLiquidityDTO (Maybe Text)
+curveGaugeLiquidityDTOOriginalBalanceL f CurveGaugeLiquidityDTO{..} = (\curveGaugeLiquidityDTOOriginalBalance -> CurveGaugeLiquidityDTO { curveGaugeLiquidityDTOOriginalBalance, ..} ) <$> f curveGaugeLiquidityDTOOriginalBalance
+{-# INLINE curveGaugeLiquidityDTOOriginalBalanceL #-}
+
+-- | 'curveGaugeLiquidityDTOOriginalSupply' Lens
+curveGaugeLiquidityDTOOriginalSupplyL :: Lens_' CurveGaugeLiquidityDTO (Maybe Text)
+curveGaugeLiquidityDTOOriginalSupplyL f CurveGaugeLiquidityDTO{..} = (\curveGaugeLiquidityDTOOriginalSupply -> CurveGaugeLiquidityDTO { curveGaugeLiquidityDTOOriginalSupply, ..} ) <$> f curveGaugeLiquidityDTOOriginalSupply
+{-# INLINE curveGaugeLiquidityDTOOriginalSupplyL #-}
+
+-- | 'curveGaugeLiquidityDTOWorkingBalance' Lens
+curveGaugeLiquidityDTOWorkingBalanceL :: Lens_' CurveGaugeLiquidityDTO (Maybe Text)
+curveGaugeLiquidityDTOWorkingBalanceL f CurveGaugeLiquidityDTO{..} = (\curveGaugeLiquidityDTOWorkingBalance -> CurveGaugeLiquidityDTO { curveGaugeLiquidityDTOWorkingBalance, ..} ) <$> f curveGaugeLiquidityDTOWorkingBalance
+{-# INLINE curveGaugeLiquidityDTOWorkingBalanceL #-}
+
+-- | 'curveGaugeLiquidityDTOWorkingSupply' Lens
+curveGaugeLiquidityDTOWorkingSupplyL :: Lens_' CurveGaugeLiquidityDTO (Maybe Text)
+curveGaugeLiquidityDTOWorkingSupplyL f CurveGaugeLiquidityDTO{..} = (\curveGaugeLiquidityDTOWorkingSupply -> CurveGaugeLiquidityDTO { curveGaugeLiquidityDTOWorkingSupply, ..} ) <$> f curveGaugeLiquidityDTOWorkingSupply
+{-# INLINE curveGaugeLiquidityDTOWorkingSupplyL #-}
+
+-- | 'curveGaugeLiquidityDTOTimestamp' Lens
+curveGaugeLiquidityDTOTimestampL :: Lens_' CurveGaugeLiquidityDTO (Maybe Text)
+curveGaugeLiquidityDTOTimestampL f CurveGaugeLiquidityDTO{..} = (\curveGaugeLiquidityDTOTimestamp -> CurveGaugeLiquidityDTO { curveGaugeLiquidityDTOTimestamp, ..} ) <$> f curveGaugeLiquidityDTOTimestamp
+{-# INLINE curveGaugeLiquidityDTOTimestampL #-}
+
+-- | 'curveGaugeLiquidityDTOBlock' Lens
+curveGaugeLiquidityDTOBlockL :: Lens_' CurveGaugeLiquidityDTO (Maybe Text)
+curveGaugeLiquidityDTOBlockL f CurveGaugeLiquidityDTO{..} = (\curveGaugeLiquidityDTOBlock -> CurveGaugeLiquidityDTO { curveGaugeLiquidityDTOBlock, ..} ) <$> f curveGaugeLiquidityDTOBlock
+{-# INLINE curveGaugeLiquidityDTOBlockL #-}
+
+-- | 'curveGaugeLiquidityDTOTransaction' Lens
+curveGaugeLiquidityDTOTransactionL :: Lens_' CurveGaugeLiquidityDTO (Maybe Text)
+curveGaugeLiquidityDTOTransactionL f CurveGaugeLiquidityDTO{..} = (\curveGaugeLiquidityDTOTransaction -> CurveGaugeLiquidityDTO { curveGaugeLiquidityDTOTransaction, ..} ) <$> f curveGaugeLiquidityDTOTransaction
+{-# INLINE curveGaugeLiquidityDTOTransactionL #-}
+
+-- | 'curveGaugeLiquidityDTOVid' Lens
+curveGaugeLiquidityDTOVidL :: Lens_' CurveGaugeLiquidityDTO (Maybe Integer)
+curveGaugeLiquidityDTOVidL f CurveGaugeLiquidityDTO{..} = (\curveGaugeLiquidityDTOVid -> CurveGaugeLiquidityDTO { curveGaugeLiquidityDTOVid, ..} ) <$> f curveGaugeLiquidityDTOVid
+{-# INLINE curveGaugeLiquidityDTOVidL #-}
+
+
+
+-- * CurveGaugeTotalWeightDTO
+
+-- | 'curveGaugeTotalWeightDTOEntryTime' Lens
+curveGaugeTotalWeightDTOEntryTimeL :: Lens_' CurveGaugeTotalWeightDTO (Maybe DateTime)
+curveGaugeTotalWeightDTOEntryTimeL f CurveGaugeTotalWeightDTO{..} = (\curveGaugeTotalWeightDTOEntryTime -> CurveGaugeTotalWeightDTO { curveGaugeTotalWeightDTOEntryTime, ..} ) <$> f curveGaugeTotalWeightDTOEntryTime
+{-# INLINE curveGaugeTotalWeightDTOEntryTimeL #-}
+
+-- | 'curveGaugeTotalWeightDTORecvTime' Lens
+curveGaugeTotalWeightDTORecvTimeL :: Lens_' CurveGaugeTotalWeightDTO (Maybe DateTime)
+curveGaugeTotalWeightDTORecvTimeL f CurveGaugeTotalWeightDTO{..} = (\curveGaugeTotalWeightDTORecvTime -> CurveGaugeTotalWeightDTO { curveGaugeTotalWeightDTORecvTime, ..} ) <$> f curveGaugeTotalWeightDTORecvTime
+{-# INLINE curveGaugeTotalWeightDTORecvTimeL #-}
+
+-- | 'curveGaugeTotalWeightDTOBlockNumber' Lens
+curveGaugeTotalWeightDTOBlockNumberL :: Lens_' CurveGaugeTotalWeightDTO (Maybe Integer)
+curveGaugeTotalWeightDTOBlockNumberL f CurveGaugeTotalWeightDTO{..} = (\curveGaugeTotalWeightDTOBlockNumber -> CurveGaugeTotalWeightDTO { curveGaugeTotalWeightDTOBlockNumber, ..} ) <$> f curveGaugeTotalWeightDTOBlockNumber
+{-# INLINE curveGaugeTotalWeightDTOBlockNumberL #-}
+
+-- | 'curveGaugeTotalWeightDTOId' Lens
+curveGaugeTotalWeightDTOIdL :: Lens_' CurveGaugeTotalWeightDTO (Maybe Text)
+curveGaugeTotalWeightDTOIdL f CurveGaugeTotalWeightDTO{..} = (\curveGaugeTotalWeightDTOId -> CurveGaugeTotalWeightDTO { curveGaugeTotalWeightDTOId, ..} ) <$> f curveGaugeTotalWeightDTOId
+{-# INLINE curveGaugeTotalWeightDTOIdL #-}
+
+-- | 'curveGaugeTotalWeightDTOTime' Lens
+curveGaugeTotalWeightDTOTimeL :: Lens_' CurveGaugeTotalWeightDTO (Maybe Text)
+curveGaugeTotalWeightDTOTimeL f CurveGaugeTotalWeightDTO{..} = (\curveGaugeTotalWeightDTOTime -> CurveGaugeTotalWeightDTO { curveGaugeTotalWeightDTOTime, ..} ) <$> f curveGaugeTotalWeightDTOTime
+{-# INLINE curveGaugeTotalWeightDTOTimeL #-}
+
+-- | 'curveGaugeTotalWeightDTOWeight' Lens
+curveGaugeTotalWeightDTOWeightL :: Lens_' CurveGaugeTotalWeightDTO (Maybe Text)
+curveGaugeTotalWeightDTOWeightL f CurveGaugeTotalWeightDTO{..} = (\curveGaugeTotalWeightDTOWeight -> CurveGaugeTotalWeightDTO { curveGaugeTotalWeightDTOWeight, ..} ) <$> f curveGaugeTotalWeightDTOWeight
+{-# INLINE curveGaugeTotalWeightDTOWeightL #-}
+
+-- | 'curveGaugeTotalWeightDTOVid' Lens
+curveGaugeTotalWeightDTOVidL :: Lens_' CurveGaugeTotalWeightDTO (Maybe Integer)
+curveGaugeTotalWeightDTOVidL f CurveGaugeTotalWeightDTO{..} = (\curveGaugeTotalWeightDTOVid -> CurveGaugeTotalWeightDTO { curveGaugeTotalWeightDTOVid, ..} ) <$> f curveGaugeTotalWeightDTOVid
+{-# INLINE curveGaugeTotalWeightDTOVidL #-}
+
+
+
+-- * CurveGaugeTypeDTO
+
+-- | 'curveGaugeTypeDTOEntryTime' Lens
+curveGaugeTypeDTOEntryTimeL :: Lens_' CurveGaugeTypeDTO (Maybe DateTime)
+curveGaugeTypeDTOEntryTimeL f CurveGaugeTypeDTO{..} = (\curveGaugeTypeDTOEntryTime -> CurveGaugeTypeDTO { curveGaugeTypeDTOEntryTime, ..} ) <$> f curveGaugeTypeDTOEntryTime
+{-# INLINE curveGaugeTypeDTOEntryTimeL #-}
+
+-- | 'curveGaugeTypeDTORecvTime' Lens
+curveGaugeTypeDTORecvTimeL :: Lens_' CurveGaugeTypeDTO (Maybe DateTime)
+curveGaugeTypeDTORecvTimeL f CurveGaugeTypeDTO{..} = (\curveGaugeTypeDTORecvTime -> CurveGaugeTypeDTO { curveGaugeTypeDTORecvTime, ..} ) <$> f curveGaugeTypeDTORecvTime
+{-# INLINE curveGaugeTypeDTORecvTimeL #-}
+
+-- | 'curveGaugeTypeDTOBlockNumber' Lens
+curveGaugeTypeDTOBlockNumberL :: Lens_' CurveGaugeTypeDTO (Maybe Integer)
+curveGaugeTypeDTOBlockNumberL f CurveGaugeTypeDTO{..} = (\curveGaugeTypeDTOBlockNumber -> CurveGaugeTypeDTO { curveGaugeTypeDTOBlockNumber, ..} ) <$> f curveGaugeTypeDTOBlockNumber
+{-# INLINE curveGaugeTypeDTOBlockNumberL #-}
+
+-- | 'curveGaugeTypeDTOId' Lens
+curveGaugeTypeDTOIdL :: Lens_' CurveGaugeTypeDTO (Maybe Text)
+curveGaugeTypeDTOIdL f CurveGaugeTypeDTO{..} = (\curveGaugeTypeDTOId -> CurveGaugeTypeDTO { curveGaugeTypeDTOId, ..} ) <$> f curveGaugeTypeDTOId
+{-# INLINE curveGaugeTypeDTOIdL #-}
+
+-- | 'curveGaugeTypeDTOName' Lens
+curveGaugeTypeDTONameL :: Lens_' CurveGaugeTypeDTO (Maybe Text)
+curveGaugeTypeDTONameL f CurveGaugeTypeDTO{..} = (\curveGaugeTypeDTOName -> CurveGaugeTypeDTO { curveGaugeTypeDTOName, ..} ) <$> f curveGaugeTypeDTOName
+{-# INLINE curveGaugeTypeDTONameL #-}
+
+-- | 'curveGaugeTypeDTOGaugeCount' Lens
+curveGaugeTypeDTOGaugeCountL :: Lens_' CurveGaugeTypeDTO (Maybe Text)
+curveGaugeTypeDTOGaugeCountL f CurveGaugeTypeDTO{..} = (\curveGaugeTypeDTOGaugeCount -> CurveGaugeTypeDTO { curveGaugeTypeDTOGaugeCount, ..} ) <$> f curveGaugeTypeDTOGaugeCount
+{-# INLINE curveGaugeTypeDTOGaugeCountL #-}
+
+-- | 'curveGaugeTypeDTOVid' Lens
+curveGaugeTypeDTOVidL :: Lens_' CurveGaugeTypeDTO (Maybe Integer)
+curveGaugeTypeDTOVidL f CurveGaugeTypeDTO{..} = (\curveGaugeTypeDTOVid -> CurveGaugeTypeDTO { curveGaugeTypeDTOVid, ..} ) <$> f curveGaugeTypeDTOVid
+{-# INLINE curveGaugeTypeDTOVidL #-}
+
+
+
+-- * CurveGaugeTypeWeightDTO
+
+-- | 'curveGaugeTypeWeightDTOEntryTime' Lens
+curveGaugeTypeWeightDTOEntryTimeL :: Lens_' CurveGaugeTypeWeightDTO (Maybe DateTime)
+curveGaugeTypeWeightDTOEntryTimeL f CurveGaugeTypeWeightDTO{..} = (\curveGaugeTypeWeightDTOEntryTime -> CurveGaugeTypeWeightDTO { curveGaugeTypeWeightDTOEntryTime, ..} ) <$> f curveGaugeTypeWeightDTOEntryTime
+{-# INLINE curveGaugeTypeWeightDTOEntryTimeL #-}
+
+-- | 'curveGaugeTypeWeightDTORecvTime' Lens
+curveGaugeTypeWeightDTORecvTimeL :: Lens_' CurveGaugeTypeWeightDTO (Maybe DateTime)
+curveGaugeTypeWeightDTORecvTimeL f CurveGaugeTypeWeightDTO{..} = (\curveGaugeTypeWeightDTORecvTime -> CurveGaugeTypeWeightDTO { curveGaugeTypeWeightDTORecvTime, ..} ) <$> f curveGaugeTypeWeightDTORecvTime
+{-# INLINE curveGaugeTypeWeightDTORecvTimeL #-}
+
+-- | 'curveGaugeTypeWeightDTOBlockNumber' Lens
+curveGaugeTypeWeightDTOBlockNumberL :: Lens_' CurveGaugeTypeWeightDTO (Maybe Integer)
+curveGaugeTypeWeightDTOBlockNumberL f CurveGaugeTypeWeightDTO{..} = (\curveGaugeTypeWeightDTOBlockNumber -> CurveGaugeTypeWeightDTO { curveGaugeTypeWeightDTOBlockNumber, ..} ) <$> f curveGaugeTypeWeightDTOBlockNumber
+{-# INLINE curveGaugeTypeWeightDTOBlockNumberL #-}
+
+-- | 'curveGaugeTypeWeightDTOId' Lens
+curveGaugeTypeWeightDTOIdL :: Lens_' CurveGaugeTypeWeightDTO (Maybe Text)
+curveGaugeTypeWeightDTOIdL f CurveGaugeTypeWeightDTO{..} = (\curveGaugeTypeWeightDTOId -> CurveGaugeTypeWeightDTO { curveGaugeTypeWeightDTOId, ..} ) <$> f curveGaugeTypeWeightDTOId
+{-# INLINE curveGaugeTypeWeightDTOIdL #-}
+
+-- | 'curveGaugeTypeWeightDTOType' Lens
+curveGaugeTypeWeightDTOTypeL :: Lens_' CurveGaugeTypeWeightDTO (Maybe Text)
+curveGaugeTypeWeightDTOTypeL f CurveGaugeTypeWeightDTO{..} = (\curveGaugeTypeWeightDTOType -> CurveGaugeTypeWeightDTO { curveGaugeTypeWeightDTOType, ..} ) <$> f curveGaugeTypeWeightDTOType
+{-# INLINE curveGaugeTypeWeightDTOTypeL #-}
+
+-- | 'curveGaugeTypeWeightDTOTime' Lens
+curveGaugeTypeWeightDTOTimeL :: Lens_' CurveGaugeTypeWeightDTO (Maybe Text)
+curveGaugeTypeWeightDTOTimeL f CurveGaugeTypeWeightDTO{..} = (\curveGaugeTypeWeightDTOTime -> CurveGaugeTypeWeightDTO { curveGaugeTypeWeightDTOTime, ..} ) <$> f curveGaugeTypeWeightDTOTime
+{-# INLINE curveGaugeTypeWeightDTOTimeL #-}
+
+-- | 'curveGaugeTypeWeightDTOWeight' Lens
+curveGaugeTypeWeightDTOWeightL :: Lens_' CurveGaugeTypeWeightDTO (Maybe Text)
+curveGaugeTypeWeightDTOWeightL f CurveGaugeTypeWeightDTO{..} = (\curveGaugeTypeWeightDTOWeight -> CurveGaugeTypeWeightDTO { curveGaugeTypeWeightDTOWeight, ..} ) <$> f curveGaugeTypeWeightDTOWeight
+{-# INLINE curveGaugeTypeWeightDTOWeightL #-}
+
+-- | 'curveGaugeTypeWeightDTOVid' Lens
+curveGaugeTypeWeightDTOVidL :: Lens_' CurveGaugeTypeWeightDTO (Maybe Integer)
+curveGaugeTypeWeightDTOVidL f CurveGaugeTypeWeightDTO{..} = (\curveGaugeTypeWeightDTOVid -> CurveGaugeTypeWeightDTO { curveGaugeTypeWeightDTOVid, ..} ) <$> f curveGaugeTypeWeightDTOVid
+{-# INLINE curveGaugeTypeWeightDTOVidL #-}
+
+
+
+-- * CurveGaugeWeightDTO
+
+-- | 'curveGaugeWeightDTOEntryTime' Lens
+curveGaugeWeightDTOEntryTimeL :: Lens_' CurveGaugeWeightDTO (Maybe DateTime)
+curveGaugeWeightDTOEntryTimeL f CurveGaugeWeightDTO{..} = (\curveGaugeWeightDTOEntryTime -> CurveGaugeWeightDTO { curveGaugeWeightDTOEntryTime, ..} ) <$> f curveGaugeWeightDTOEntryTime
+{-# INLINE curveGaugeWeightDTOEntryTimeL #-}
+
+-- | 'curveGaugeWeightDTORecvTime' Lens
+curveGaugeWeightDTORecvTimeL :: Lens_' CurveGaugeWeightDTO (Maybe DateTime)
+curveGaugeWeightDTORecvTimeL f CurveGaugeWeightDTO{..} = (\curveGaugeWeightDTORecvTime -> CurveGaugeWeightDTO { curveGaugeWeightDTORecvTime, ..} ) <$> f curveGaugeWeightDTORecvTime
+{-# INLINE curveGaugeWeightDTORecvTimeL #-}
+
+-- | 'curveGaugeWeightDTOBlockNumber' Lens
+curveGaugeWeightDTOBlockNumberL :: Lens_' CurveGaugeWeightDTO (Maybe Integer)
+curveGaugeWeightDTOBlockNumberL f CurveGaugeWeightDTO{..} = (\curveGaugeWeightDTOBlockNumber -> CurveGaugeWeightDTO { curveGaugeWeightDTOBlockNumber, ..} ) <$> f curveGaugeWeightDTOBlockNumber
+{-# INLINE curveGaugeWeightDTOBlockNumberL #-}
+
+-- | 'curveGaugeWeightDTOId' Lens
+curveGaugeWeightDTOIdL :: Lens_' CurveGaugeWeightDTO (Maybe Text)
+curveGaugeWeightDTOIdL f CurveGaugeWeightDTO{..} = (\curveGaugeWeightDTOId -> CurveGaugeWeightDTO { curveGaugeWeightDTOId, ..} ) <$> f curveGaugeWeightDTOId
+{-# INLINE curveGaugeWeightDTOIdL #-}
+
+-- | 'curveGaugeWeightDTOGauge' Lens
+curveGaugeWeightDTOGaugeL :: Lens_' CurveGaugeWeightDTO (Maybe Text)
+curveGaugeWeightDTOGaugeL f CurveGaugeWeightDTO{..} = (\curveGaugeWeightDTOGauge -> CurveGaugeWeightDTO { curveGaugeWeightDTOGauge, ..} ) <$> f curveGaugeWeightDTOGauge
+{-# INLINE curveGaugeWeightDTOGaugeL #-}
+
+-- | 'curveGaugeWeightDTOTime' Lens
+curveGaugeWeightDTOTimeL :: Lens_' CurveGaugeWeightDTO (Maybe Text)
+curveGaugeWeightDTOTimeL f CurveGaugeWeightDTO{..} = (\curveGaugeWeightDTOTime -> CurveGaugeWeightDTO { curveGaugeWeightDTOTime, ..} ) <$> f curveGaugeWeightDTOTime
+{-# INLINE curveGaugeWeightDTOTimeL #-}
+
+-- | 'curveGaugeWeightDTOWeight' Lens
+curveGaugeWeightDTOWeightL :: Lens_' CurveGaugeWeightDTO (Maybe Text)
+curveGaugeWeightDTOWeightL f CurveGaugeWeightDTO{..} = (\curveGaugeWeightDTOWeight -> CurveGaugeWeightDTO { curveGaugeWeightDTOWeight, ..} ) <$> f curveGaugeWeightDTOWeight
+{-# INLINE curveGaugeWeightDTOWeightL #-}
+
+-- | 'curveGaugeWeightDTOVid' Lens
+curveGaugeWeightDTOVidL :: Lens_' CurveGaugeWeightDTO (Maybe Integer)
+curveGaugeWeightDTOVidL f CurveGaugeWeightDTO{..} = (\curveGaugeWeightDTOVid -> CurveGaugeWeightDTO { curveGaugeWeightDTOVid, ..} ) <$> f curveGaugeWeightDTOVid
+{-# INLINE curveGaugeWeightDTOVidL #-}
+
+
+
+-- * CurveGaugeWeightVoteDTO
+
+-- | 'curveGaugeWeightVoteDTOEntryTime' Lens
+curveGaugeWeightVoteDTOEntryTimeL :: Lens_' CurveGaugeWeightVoteDTO (Maybe DateTime)
+curveGaugeWeightVoteDTOEntryTimeL f CurveGaugeWeightVoteDTO{..} = (\curveGaugeWeightVoteDTOEntryTime -> CurveGaugeWeightVoteDTO { curveGaugeWeightVoteDTOEntryTime, ..} ) <$> f curveGaugeWeightVoteDTOEntryTime
+{-# INLINE curveGaugeWeightVoteDTOEntryTimeL #-}
+
+-- | 'curveGaugeWeightVoteDTORecvTime' Lens
+curveGaugeWeightVoteDTORecvTimeL :: Lens_' CurveGaugeWeightVoteDTO (Maybe DateTime)
+curveGaugeWeightVoteDTORecvTimeL f CurveGaugeWeightVoteDTO{..} = (\curveGaugeWeightVoteDTORecvTime -> CurveGaugeWeightVoteDTO { curveGaugeWeightVoteDTORecvTime, ..} ) <$> f curveGaugeWeightVoteDTORecvTime
+{-# INLINE curveGaugeWeightVoteDTORecvTimeL #-}
+
+-- | 'curveGaugeWeightVoteDTOBlockNumber' Lens
+curveGaugeWeightVoteDTOBlockNumberL :: Lens_' CurveGaugeWeightVoteDTO (Maybe Integer)
+curveGaugeWeightVoteDTOBlockNumberL f CurveGaugeWeightVoteDTO{..} = (\curveGaugeWeightVoteDTOBlockNumber -> CurveGaugeWeightVoteDTO { curveGaugeWeightVoteDTOBlockNumber, ..} ) <$> f curveGaugeWeightVoteDTOBlockNumber
+{-# INLINE curveGaugeWeightVoteDTOBlockNumberL #-}
+
+-- | 'curveGaugeWeightVoteDTOId' Lens
+curveGaugeWeightVoteDTOIdL :: Lens_' CurveGaugeWeightVoteDTO (Maybe Text)
+curveGaugeWeightVoteDTOIdL f CurveGaugeWeightVoteDTO{..} = (\curveGaugeWeightVoteDTOId -> CurveGaugeWeightVoteDTO { curveGaugeWeightVoteDTOId, ..} ) <$> f curveGaugeWeightVoteDTOId
+{-# INLINE curveGaugeWeightVoteDTOIdL #-}
+
+-- | 'curveGaugeWeightVoteDTOGauge' Lens
+curveGaugeWeightVoteDTOGaugeL :: Lens_' CurveGaugeWeightVoteDTO (Maybe Text)
+curveGaugeWeightVoteDTOGaugeL f CurveGaugeWeightVoteDTO{..} = (\curveGaugeWeightVoteDTOGauge -> CurveGaugeWeightVoteDTO { curveGaugeWeightVoteDTOGauge, ..} ) <$> f curveGaugeWeightVoteDTOGauge
+{-# INLINE curveGaugeWeightVoteDTOGaugeL #-}
+
+-- | 'curveGaugeWeightVoteDTOUser' Lens
+curveGaugeWeightVoteDTOUserL :: Lens_' CurveGaugeWeightVoteDTO (Maybe Text)
+curveGaugeWeightVoteDTOUserL f CurveGaugeWeightVoteDTO{..} = (\curveGaugeWeightVoteDTOUser -> CurveGaugeWeightVoteDTO { curveGaugeWeightVoteDTOUser, ..} ) <$> f curveGaugeWeightVoteDTOUser
+{-# INLINE curveGaugeWeightVoteDTOUserL #-}
+
+-- | 'curveGaugeWeightVoteDTOTime' Lens
+curveGaugeWeightVoteDTOTimeL :: Lens_' CurveGaugeWeightVoteDTO (Maybe Text)
+curveGaugeWeightVoteDTOTimeL f CurveGaugeWeightVoteDTO{..} = (\curveGaugeWeightVoteDTOTime -> CurveGaugeWeightVoteDTO { curveGaugeWeightVoteDTOTime, ..} ) <$> f curveGaugeWeightVoteDTOTime
+{-# INLINE curveGaugeWeightVoteDTOTimeL #-}
+
+-- | 'curveGaugeWeightVoteDTOWeight' Lens
+curveGaugeWeightVoteDTOWeightL :: Lens_' CurveGaugeWeightVoteDTO (Maybe Text)
+curveGaugeWeightVoteDTOWeightL f CurveGaugeWeightVoteDTO{..} = (\curveGaugeWeightVoteDTOWeight -> CurveGaugeWeightVoteDTO { curveGaugeWeightVoteDTOWeight, ..} ) <$> f curveGaugeWeightVoteDTOWeight
+{-# INLINE curveGaugeWeightVoteDTOWeightL #-}
+
+-- | 'curveGaugeWeightVoteDTOVid' Lens
+curveGaugeWeightVoteDTOVidL :: Lens_' CurveGaugeWeightVoteDTO (Maybe Integer)
+curveGaugeWeightVoteDTOVidL f CurveGaugeWeightVoteDTO{..} = (\curveGaugeWeightVoteDTOVid -> CurveGaugeWeightVoteDTO { curveGaugeWeightVoteDTOVid, ..} ) <$> f curveGaugeWeightVoteDTOVid
+{-# INLINE curveGaugeWeightVoteDTOVidL #-}
+
+
+
+-- * CurveGaugeWithdrawDTO
+
+-- | 'curveGaugeWithdrawDTOEntryTime' Lens
+curveGaugeWithdrawDTOEntryTimeL :: Lens_' CurveGaugeWithdrawDTO (Maybe DateTime)
+curveGaugeWithdrawDTOEntryTimeL f CurveGaugeWithdrawDTO{..} = (\curveGaugeWithdrawDTOEntryTime -> CurveGaugeWithdrawDTO { curveGaugeWithdrawDTOEntryTime, ..} ) <$> f curveGaugeWithdrawDTOEntryTime
+{-# INLINE curveGaugeWithdrawDTOEntryTimeL #-}
+
+-- | 'curveGaugeWithdrawDTORecvTime' Lens
+curveGaugeWithdrawDTORecvTimeL :: Lens_' CurveGaugeWithdrawDTO (Maybe DateTime)
+curveGaugeWithdrawDTORecvTimeL f CurveGaugeWithdrawDTO{..} = (\curveGaugeWithdrawDTORecvTime -> CurveGaugeWithdrawDTO { curveGaugeWithdrawDTORecvTime, ..} ) <$> f curveGaugeWithdrawDTORecvTime
+{-# INLINE curveGaugeWithdrawDTORecvTimeL #-}
+
+-- | 'curveGaugeWithdrawDTOBlockNumber' Lens
+curveGaugeWithdrawDTOBlockNumberL :: Lens_' CurveGaugeWithdrawDTO (Maybe Integer)
+curveGaugeWithdrawDTOBlockNumberL f CurveGaugeWithdrawDTO{..} = (\curveGaugeWithdrawDTOBlockNumber -> CurveGaugeWithdrawDTO { curveGaugeWithdrawDTOBlockNumber, ..} ) <$> f curveGaugeWithdrawDTOBlockNumber
+{-# INLINE curveGaugeWithdrawDTOBlockNumberL #-}
+
+-- | 'curveGaugeWithdrawDTOId' Lens
+curveGaugeWithdrawDTOIdL :: Lens_' CurveGaugeWithdrawDTO (Maybe Text)
+curveGaugeWithdrawDTOIdL f CurveGaugeWithdrawDTO{..} = (\curveGaugeWithdrawDTOId -> CurveGaugeWithdrawDTO { curveGaugeWithdrawDTOId, ..} ) <$> f curveGaugeWithdrawDTOId
+{-# INLINE curveGaugeWithdrawDTOIdL #-}
+
+-- | 'curveGaugeWithdrawDTOGauge' Lens
+curveGaugeWithdrawDTOGaugeL :: Lens_' CurveGaugeWithdrawDTO (Maybe Text)
+curveGaugeWithdrawDTOGaugeL f CurveGaugeWithdrawDTO{..} = (\curveGaugeWithdrawDTOGauge -> CurveGaugeWithdrawDTO { curveGaugeWithdrawDTOGauge, ..} ) <$> f curveGaugeWithdrawDTOGauge
+{-# INLINE curveGaugeWithdrawDTOGaugeL #-}
+
+-- | 'curveGaugeWithdrawDTOProvider' Lens
+curveGaugeWithdrawDTOProviderL :: Lens_' CurveGaugeWithdrawDTO (Maybe Text)
+curveGaugeWithdrawDTOProviderL f CurveGaugeWithdrawDTO{..} = (\curveGaugeWithdrawDTOProvider -> CurveGaugeWithdrawDTO { curveGaugeWithdrawDTOProvider, ..} ) <$> f curveGaugeWithdrawDTOProvider
+{-# INLINE curveGaugeWithdrawDTOProviderL #-}
+
+-- | 'curveGaugeWithdrawDTOValue' Lens
+curveGaugeWithdrawDTOValueL :: Lens_' CurveGaugeWithdrawDTO (Maybe Text)
+curveGaugeWithdrawDTOValueL f CurveGaugeWithdrawDTO{..} = (\curveGaugeWithdrawDTOValue -> CurveGaugeWithdrawDTO { curveGaugeWithdrawDTOValue, ..} ) <$> f curveGaugeWithdrawDTOValue
+{-# INLINE curveGaugeWithdrawDTOValueL #-}
+
+-- | 'curveGaugeWithdrawDTOVid' Lens
+curveGaugeWithdrawDTOVidL :: Lens_' CurveGaugeWithdrawDTO (Maybe Integer)
+curveGaugeWithdrawDTOVidL f CurveGaugeWithdrawDTO{..} = (\curveGaugeWithdrawDTOVid -> CurveGaugeWithdrawDTO { curveGaugeWithdrawDTOVid, ..} ) <$> f curveGaugeWithdrawDTOVid
+{-# INLINE curveGaugeWithdrawDTOVidL #-}
+
+
+
+-- * CurveHourlyVolumeDTO
+
+-- | 'curveHourlyVolumeDTOEntryTime' Lens
+curveHourlyVolumeDTOEntryTimeL :: Lens_' CurveHourlyVolumeDTO (Maybe DateTime)
+curveHourlyVolumeDTOEntryTimeL f CurveHourlyVolumeDTO{..} = (\curveHourlyVolumeDTOEntryTime -> CurveHourlyVolumeDTO { curveHourlyVolumeDTOEntryTime, ..} ) <$> f curveHourlyVolumeDTOEntryTime
+{-# INLINE curveHourlyVolumeDTOEntryTimeL #-}
+
+-- | 'curveHourlyVolumeDTORecvTime' Lens
+curveHourlyVolumeDTORecvTimeL :: Lens_' CurveHourlyVolumeDTO (Maybe DateTime)
+curveHourlyVolumeDTORecvTimeL f CurveHourlyVolumeDTO{..} = (\curveHourlyVolumeDTORecvTime -> CurveHourlyVolumeDTO { curveHourlyVolumeDTORecvTime, ..} ) <$> f curveHourlyVolumeDTORecvTime
+{-# INLINE curveHourlyVolumeDTORecvTimeL #-}
+
+-- | 'curveHourlyVolumeDTOBlockNumber' Lens
+curveHourlyVolumeDTOBlockNumberL :: Lens_' CurveHourlyVolumeDTO (Maybe Integer)
+curveHourlyVolumeDTOBlockNumberL f CurveHourlyVolumeDTO{..} = (\curveHourlyVolumeDTOBlockNumber -> CurveHourlyVolumeDTO { curveHourlyVolumeDTOBlockNumber, ..} ) <$> f curveHourlyVolumeDTOBlockNumber
+{-# INLINE curveHourlyVolumeDTOBlockNumberL #-}
+
+-- | 'curveHourlyVolumeDTOId' Lens
+curveHourlyVolumeDTOIdL :: Lens_' CurveHourlyVolumeDTO (Maybe Text)
+curveHourlyVolumeDTOIdL f CurveHourlyVolumeDTO{..} = (\curveHourlyVolumeDTOId -> CurveHourlyVolumeDTO { curveHourlyVolumeDTOId, ..} ) <$> f curveHourlyVolumeDTOId
+{-# INLINE curveHourlyVolumeDTOIdL #-}
+
+-- | 'curveHourlyVolumeDTOPool' Lens
+curveHourlyVolumeDTOPoolL :: Lens_' CurveHourlyVolumeDTO (Maybe Text)
+curveHourlyVolumeDTOPoolL f CurveHourlyVolumeDTO{..} = (\curveHourlyVolumeDTOPool -> CurveHourlyVolumeDTO { curveHourlyVolumeDTOPool, ..} ) <$> f curveHourlyVolumeDTOPool
+{-# INLINE curveHourlyVolumeDTOPoolL #-}
+
+-- | 'curveHourlyVolumeDTOTimestamp' Lens
+curveHourlyVolumeDTOTimestampL :: Lens_' CurveHourlyVolumeDTO (Maybe Text)
+curveHourlyVolumeDTOTimestampL f CurveHourlyVolumeDTO{..} = (\curveHourlyVolumeDTOTimestamp -> CurveHourlyVolumeDTO { curveHourlyVolumeDTOTimestamp, ..} ) <$> f curveHourlyVolumeDTOTimestamp
+{-# INLINE curveHourlyVolumeDTOTimestampL #-}
+
+-- | 'curveHourlyVolumeDTOVolume' Lens
+curveHourlyVolumeDTOVolumeL :: Lens_' CurveHourlyVolumeDTO (Maybe Text)
+curveHourlyVolumeDTOVolumeL f CurveHourlyVolumeDTO{..} = (\curveHourlyVolumeDTOVolume -> CurveHourlyVolumeDTO { curveHourlyVolumeDTOVolume, ..} ) <$> f curveHourlyVolumeDTOVolume
+{-# INLINE curveHourlyVolumeDTOVolumeL #-}
+
+-- | 'curveHourlyVolumeDTOVid' Lens
+curveHourlyVolumeDTOVidL :: Lens_' CurveHourlyVolumeDTO (Maybe Integer)
+curveHourlyVolumeDTOVidL f CurveHourlyVolumeDTO{..} = (\curveHourlyVolumeDTOVid -> CurveHourlyVolumeDTO { curveHourlyVolumeDTOVid, ..} ) <$> f curveHourlyVolumeDTOVid
+{-# INLINE curveHourlyVolumeDTOVidL #-}
+
+
+
+-- * CurveLpTokenDTO
+
+-- | 'curveLpTokenDTOEntryTime' Lens
+curveLpTokenDTOEntryTimeL :: Lens_' CurveLpTokenDTO (Maybe DateTime)
+curveLpTokenDTOEntryTimeL f CurveLpTokenDTO{..} = (\curveLpTokenDTOEntryTime -> CurveLpTokenDTO { curveLpTokenDTOEntryTime, ..} ) <$> f curveLpTokenDTOEntryTime
+{-# INLINE curveLpTokenDTOEntryTimeL #-}
+
+-- | 'curveLpTokenDTORecvTime' Lens
+curveLpTokenDTORecvTimeL :: Lens_' CurveLpTokenDTO (Maybe DateTime)
+curveLpTokenDTORecvTimeL f CurveLpTokenDTO{..} = (\curveLpTokenDTORecvTime -> CurveLpTokenDTO { curveLpTokenDTORecvTime, ..} ) <$> f curveLpTokenDTORecvTime
+{-# INLINE curveLpTokenDTORecvTimeL #-}
+
+-- | 'curveLpTokenDTOBlockNumber' Lens
+curveLpTokenDTOBlockNumberL :: Lens_' CurveLpTokenDTO (Maybe Integer)
+curveLpTokenDTOBlockNumberL f CurveLpTokenDTO{..} = (\curveLpTokenDTOBlockNumber -> CurveLpTokenDTO { curveLpTokenDTOBlockNumber, ..} ) <$> f curveLpTokenDTOBlockNumber
+{-# INLINE curveLpTokenDTOBlockNumberL #-}
+
+-- | 'curveLpTokenDTOId' Lens
+curveLpTokenDTOIdL :: Lens_' CurveLpTokenDTO (Maybe Text)
+curveLpTokenDTOIdL f CurveLpTokenDTO{..} = (\curveLpTokenDTOId -> CurveLpTokenDTO { curveLpTokenDTOId, ..} ) <$> f curveLpTokenDTOId
+{-# INLINE curveLpTokenDTOIdL #-}
+
+-- | 'curveLpTokenDTOAddress' Lens
+curveLpTokenDTOAddressL :: Lens_' CurveLpTokenDTO (Maybe Text)
+curveLpTokenDTOAddressL f CurveLpTokenDTO{..} = (\curveLpTokenDTOAddress -> CurveLpTokenDTO { curveLpTokenDTOAddress, ..} ) <$> f curveLpTokenDTOAddress
+{-# INLINE curveLpTokenDTOAddressL #-}
+
+-- | 'curveLpTokenDTODecimals' Lens
+curveLpTokenDTODecimalsL :: Lens_' CurveLpTokenDTO (Maybe Text)
+curveLpTokenDTODecimalsL f CurveLpTokenDTO{..} = (\curveLpTokenDTODecimals -> CurveLpTokenDTO { curveLpTokenDTODecimals, ..} ) <$> f curveLpTokenDTODecimals
+{-# INLINE curveLpTokenDTODecimalsL #-}
+
+-- | 'curveLpTokenDTOName' Lens
+curveLpTokenDTONameL :: Lens_' CurveLpTokenDTO (Maybe Text)
+curveLpTokenDTONameL f CurveLpTokenDTO{..} = (\curveLpTokenDTOName -> CurveLpTokenDTO { curveLpTokenDTOName, ..} ) <$> f curveLpTokenDTOName
+{-# INLINE curveLpTokenDTONameL #-}
+
+-- | 'curveLpTokenDTOSymbol' Lens
+curveLpTokenDTOSymbolL :: Lens_' CurveLpTokenDTO (Maybe Text)
+curveLpTokenDTOSymbolL f CurveLpTokenDTO{..} = (\curveLpTokenDTOSymbol -> CurveLpTokenDTO { curveLpTokenDTOSymbol, ..} ) <$> f curveLpTokenDTOSymbol
+{-# INLINE curveLpTokenDTOSymbolL #-}
+
+-- | 'curveLpTokenDTOGauge' Lens
+curveLpTokenDTOGaugeL :: Lens_' CurveLpTokenDTO (Maybe Text)
+curveLpTokenDTOGaugeL f CurveLpTokenDTO{..} = (\curveLpTokenDTOGauge -> CurveLpTokenDTO { curveLpTokenDTOGauge, ..} ) <$> f curveLpTokenDTOGauge
+{-# INLINE curveLpTokenDTOGaugeL #-}
+
+-- | 'curveLpTokenDTOPool' Lens
+curveLpTokenDTOPoolL :: Lens_' CurveLpTokenDTO (Maybe Text)
+curveLpTokenDTOPoolL f CurveLpTokenDTO{..} = (\curveLpTokenDTOPool -> CurveLpTokenDTO { curveLpTokenDTOPool, ..} ) <$> f curveLpTokenDTOPool
+{-# INLINE curveLpTokenDTOPoolL #-}
+
+-- | 'curveLpTokenDTOVid' Lens
+curveLpTokenDTOVidL :: Lens_' CurveLpTokenDTO (Maybe Integer)
+curveLpTokenDTOVidL f CurveLpTokenDTO{..} = (\curveLpTokenDTOVid -> CurveLpTokenDTO { curveLpTokenDTOVid, ..} ) <$> f curveLpTokenDTOVid
+{-# INLINE curveLpTokenDTOVidL #-}
+
+
+
+-- * CurvePoolDTO
+
+-- | 'curvePoolDTOEntryTime' Lens
+curvePoolDTOEntryTimeL :: Lens_' CurvePoolDTO (Maybe DateTime)
+curvePoolDTOEntryTimeL f CurvePoolDTO{..} = (\curvePoolDTOEntryTime -> CurvePoolDTO { curvePoolDTOEntryTime, ..} ) <$> f curvePoolDTOEntryTime
+{-# INLINE curvePoolDTOEntryTimeL #-}
+
+-- | 'curvePoolDTORecvTime' Lens
+curvePoolDTORecvTimeL :: Lens_' CurvePoolDTO (Maybe DateTime)
+curvePoolDTORecvTimeL f CurvePoolDTO{..} = (\curvePoolDTORecvTime -> CurvePoolDTO { curvePoolDTORecvTime, ..} ) <$> f curvePoolDTORecvTime
+{-# INLINE curvePoolDTORecvTimeL #-}
+
+-- | 'curvePoolDTOBlockNumber' Lens
+curvePoolDTOBlockNumberL :: Lens_' CurvePoolDTO (Maybe Integer)
+curvePoolDTOBlockNumberL f CurvePoolDTO{..} = (\curvePoolDTOBlockNumber -> CurvePoolDTO { curvePoolDTOBlockNumber, ..} ) <$> f curvePoolDTOBlockNumber
+{-# INLINE curvePoolDTOBlockNumberL #-}
+
+-- | 'curvePoolDTOId' Lens
+curvePoolDTOIdL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTOIdL f CurvePoolDTO{..} = (\curvePoolDTOId -> CurvePoolDTO { curvePoolDTOId, ..} ) <$> f curvePoolDTOId
+{-# INLINE curvePoolDTOIdL #-}
+
+-- | 'curvePoolDTOName' Lens
+curvePoolDTONameL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTONameL f CurvePoolDTO{..} = (\curvePoolDTOName -> CurvePoolDTO { curvePoolDTOName, ..} ) <$> f curvePoolDTOName
+{-# INLINE curvePoolDTONameL #-}
+
+-- | 'curvePoolDTOIsMeta' Lens
+curvePoolDTOIsMetaL :: Lens_' CurvePoolDTO (Maybe Bool)
+curvePoolDTOIsMetaL f CurvePoolDTO{..} = (\curvePoolDTOIsMeta -> CurvePoolDTO { curvePoolDTOIsMeta, ..} ) <$> f curvePoolDTOIsMeta
+{-# INLINE curvePoolDTOIsMetaL #-}
+
+-- | 'curvePoolDTORegistryAddress' Lens
+curvePoolDTORegistryAddressL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTORegistryAddressL f CurvePoolDTO{..} = (\curvePoolDTORegistryAddress -> CurvePoolDTO { curvePoolDTORegistryAddress, ..} ) <$> f curvePoolDTORegistryAddress
+{-# INLINE curvePoolDTORegistryAddressL #-}
+
+-- | 'curvePoolDTOSwapAddress' Lens
+curvePoolDTOSwapAddressL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTOSwapAddressL f CurvePoolDTO{..} = (\curvePoolDTOSwapAddress -> CurvePoolDTO { curvePoolDTOSwapAddress, ..} ) <$> f curvePoolDTOSwapAddress
+{-# INLINE curvePoolDTOSwapAddressL #-}
+
+-- | 'curvePoolDTOLpToken' Lens
+curvePoolDTOLpTokenL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTOLpTokenL f CurvePoolDTO{..} = (\curvePoolDTOLpToken -> CurvePoolDTO { curvePoolDTOLpToken, ..} ) <$> f curvePoolDTOLpToken
+{-# INLINE curvePoolDTOLpTokenL #-}
+
+-- | 'curvePoolDTOCoinCount' Lens
+curvePoolDTOCoinCountL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTOCoinCountL f CurvePoolDTO{..} = (\curvePoolDTOCoinCount -> CurvePoolDTO { curvePoolDTOCoinCount, ..} ) <$> f curvePoolDTOCoinCount
+{-# INLINE curvePoolDTOCoinCountL #-}
+
+-- | 'curvePoolDTOUnderlyingCount' Lens
+curvePoolDTOUnderlyingCountL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTOUnderlyingCountL f CurvePoolDTO{..} = (\curvePoolDTOUnderlyingCount -> CurvePoolDTO { curvePoolDTOUnderlyingCount, ..} ) <$> f curvePoolDTOUnderlyingCount
+{-# INLINE curvePoolDTOUnderlyingCountL #-}
+
+-- | 'curvePoolDTOA' Lens
+curvePoolDTOAL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTOAL f CurvePoolDTO{..} = (\curvePoolDTOA -> CurvePoolDTO { curvePoolDTOA, ..} ) <$> f curvePoolDTOA
+{-# INLINE curvePoolDTOAL #-}
+
+-- | 'curvePoolDTOFee' Lens
+curvePoolDTOFeeL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTOFeeL f CurvePoolDTO{..} = (\curvePoolDTOFee -> CurvePoolDTO { curvePoolDTOFee, ..} ) <$> f curvePoolDTOFee
+{-# INLINE curvePoolDTOFeeL #-}
+
+-- | 'curvePoolDTOAdminFee' Lens
+curvePoolDTOAdminFeeL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTOAdminFeeL f CurvePoolDTO{..} = (\curvePoolDTOAdminFee -> CurvePoolDTO { curvePoolDTOAdminFee, ..} ) <$> f curvePoolDTOAdminFee
+{-# INLINE curvePoolDTOAdminFeeL #-}
+
+-- | 'curvePoolDTOOwner' Lens
+curvePoolDTOOwnerL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTOOwnerL f CurvePoolDTO{..} = (\curvePoolDTOOwner -> CurvePoolDTO { curvePoolDTOOwner, ..} ) <$> f curvePoolDTOOwner
+{-# INLINE curvePoolDTOOwnerL #-}
+
+-- | 'curvePoolDTOVirtualPrice' Lens
+curvePoolDTOVirtualPriceL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTOVirtualPriceL f CurvePoolDTO{..} = (\curvePoolDTOVirtualPrice -> CurvePoolDTO { curvePoolDTOVirtualPrice, ..} ) <$> f curvePoolDTOVirtualPrice
+{-# INLINE curvePoolDTOVirtualPriceL #-}
+
+-- | 'curvePoolDTOLocked' Lens
+curvePoolDTOLockedL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTOLockedL f CurvePoolDTO{..} = (\curvePoolDTOLocked -> CurvePoolDTO { curvePoolDTOLocked, ..} ) <$> f curvePoolDTOLocked
+{-# INLINE curvePoolDTOLockedL #-}
+
+-- | 'curvePoolDTOAddedAt' Lens
+curvePoolDTOAddedAtL :: Lens_' CurvePoolDTO (Maybe DateTime)
+curvePoolDTOAddedAtL f CurvePoolDTO{..} = (\curvePoolDTOAddedAt -> CurvePoolDTO { curvePoolDTOAddedAt, ..} ) <$> f curvePoolDTOAddedAt
+{-# INLINE curvePoolDTOAddedAtL #-}
+
+-- | 'curvePoolDTOAddedAtBlock' Lens
+curvePoolDTOAddedAtBlockL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTOAddedAtBlockL f CurvePoolDTO{..} = (\curvePoolDTOAddedAtBlock -> CurvePoolDTO { curvePoolDTOAddedAtBlock, ..} ) <$> f curvePoolDTOAddedAtBlock
+{-# INLINE curvePoolDTOAddedAtBlockL #-}
+
+-- | 'curvePoolDTOAddedAtTransaction' Lens
+curvePoolDTOAddedAtTransactionL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTOAddedAtTransactionL f CurvePoolDTO{..} = (\curvePoolDTOAddedAtTransaction -> CurvePoolDTO { curvePoolDTOAddedAtTransaction, ..} ) <$> f curvePoolDTOAddedAtTransaction
+{-# INLINE curvePoolDTOAddedAtTransactionL #-}
+
+-- | 'curvePoolDTORemovedAt' Lens
+curvePoolDTORemovedAtL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTORemovedAtL f CurvePoolDTO{..} = (\curvePoolDTORemovedAt -> CurvePoolDTO { curvePoolDTORemovedAt, ..} ) <$> f curvePoolDTORemovedAt
+{-# INLINE curvePoolDTORemovedAtL #-}
+
+-- | 'curvePoolDTORemovedAtBlock' Lens
+curvePoolDTORemovedAtBlockL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTORemovedAtBlockL f CurvePoolDTO{..} = (\curvePoolDTORemovedAtBlock -> CurvePoolDTO { curvePoolDTORemovedAtBlock, ..} ) <$> f curvePoolDTORemovedAtBlock
+{-# INLINE curvePoolDTORemovedAtBlockL #-}
+
+-- | 'curvePoolDTORemovedAtTransaction' Lens
+curvePoolDTORemovedAtTransactionL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTORemovedAtTransactionL f CurvePoolDTO{..} = (\curvePoolDTORemovedAtTransaction -> CurvePoolDTO { curvePoolDTORemovedAtTransaction, ..} ) <$> f curvePoolDTORemovedAtTransaction
+{-# INLINE curvePoolDTORemovedAtTransactionL #-}
+
+-- | 'curvePoolDTOExchangeCount' Lens
+curvePoolDTOExchangeCountL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTOExchangeCountL f CurvePoolDTO{..} = (\curvePoolDTOExchangeCount -> CurvePoolDTO { curvePoolDTOExchangeCount, ..} ) <$> f curvePoolDTOExchangeCount
+{-# INLINE curvePoolDTOExchangeCountL #-}
+
+-- | 'curvePoolDTOGaugeCount' Lens
+curvePoolDTOGaugeCountL :: Lens_' CurvePoolDTO (Maybe Text)
+curvePoolDTOGaugeCountL f CurvePoolDTO{..} = (\curvePoolDTOGaugeCount -> CurvePoolDTO { curvePoolDTOGaugeCount, ..} ) <$> f curvePoolDTOGaugeCount
+{-# INLINE curvePoolDTOGaugeCountL #-}
+
+-- | 'curvePoolDTOVid' Lens
+curvePoolDTOVidL :: Lens_' CurvePoolDTO (Maybe Integer)
+curvePoolDTOVidL f CurvePoolDTO{..} = (\curvePoolDTOVid -> CurvePoolDTO { curvePoolDTOVid, ..} ) <$> f curvePoolDTOVid
+{-# INLINE curvePoolDTOVidL #-}
+
+-- | 'curvePoolDTOEvaluatedAsk' Lens
+curvePoolDTOEvaluatedAskL :: Lens_' CurvePoolDTO (Maybe Double)
+curvePoolDTOEvaluatedAskL f CurvePoolDTO{..} = (\curvePoolDTOEvaluatedAsk -> CurvePoolDTO { curvePoolDTOEvaluatedAsk, ..} ) <$> f curvePoolDTOEvaluatedAsk
+{-# INLINE curvePoolDTOEvaluatedAskL #-}
+
+
+
+-- * CurveProposalDTO
+
+-- | 'curveProposalDTOEntryTime' Lens
+curveProposalDTOEntryTimeL :: Lens_' CurveProposalDTO (Maybe DateTime)
+curveProposalDTOEntryTimeL f CurveProposalDTO{..} = (\curveProposalDTOEntryTime -> CurveProposalDTO { curveProposalDTOEntryTime, ..} ) <$> f curveProposalDTOEntryTime
+{-# INLINE curveProposalDTOEntryTimeL #-}
+
+-- | 'curveProposalDTORecvTime' Lens
+curveProposalDTORecvTimeL :: Lens_' CurveProposalDTO (Maybe DateTime)
+curveProposalDTORecvTimeL f CurveProposalDTO{..} = (\curveProposalDTORecvTime -> CurveProposalDTO { curveProposalDTORecvTime, ..} ) <$> f curveProposalDTORecvTime
+{-# INLINE curveProposalDTORecvTimeL #-}
+
+-- | 'curveProposalDTOBlockNumber' Lens
+curveProposalDTOBlockNumberL :: Lens_' CurveProposalDTO (Maybe Integer)
+curveProposalDTOBlockNumberL f CurveProposalDTO{..} = (\curveProposalDTOBlockNumber -> CurveProposalDTO { curveProposalDTOBlockNumber, ..} ) <$> f curveProposalDTOBlockNumber
+{-# INLINE curveProposalDTOBlockNumberL #-}
+
+-- | 'curveProposalDTOId' Lens
+curveProposalDTOIdL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOIdL f CurveProposalDTO{..} = (\curveProposalDTOId -> CurveProposalDTO { curveProposalDTOId, ..} ) <$> f curveProposalDTOId
+{-# INLINE curveProposalDTOIdL #-}
+
+-- | 'curveProposalDTONumber' Lens
+curveProposalDTONumberL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTONumberL f CurveProposalDTO{..} = (\curveProposalDTONumber -> CurveProposalDTO { curveProposalDTONumber, ..} ) <$> f curveProposalDTONumber
+{-# INLINE curveProposalDTONumberL #-}
+
+-- | 'curveProposalDTOApp' Lens
+curveProposalDTOAppL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOAppL f CurveProposalDTO{..} = (\curveProposalDTOApp -> CurveProposalDTO { curveProposalDTOApp, ..} ) <$> f curveProposalDTOApp
+{-# INLINE curveProposalDTOAppL #-}
+
+-- | 'curveProposalDTOCreator' Lens
+curveProposalDTOCreatorL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOCreatorL f CurveProposalDTO{..} = (\curveProposalDTOCreator -> CurveProposalDTO { curveProposalDTOCreator, ..} ) <$> f curveProposalDTOCreator
+{-# INLINE curveProposalDTOCreatorL #-}
+
+-- | 'curveProposalDTOExecutionScript' Lens
+curveProposalDTOExecutionScriptL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOExecutionScriptL f CurveProposalDTO{..} = (\curveProposalDTOExecutionScript -> CurveProposalDTO { curveProposalDTOExecutionScript, ..} ) <$> f curveProposalDTOExecutionScript
+{-# INLINE curveProposalDTOExecutionScriptL #-}
+
+-- | 'curveProposalDTOExpireDate' Lens
+curveProposalDTOExpireDateL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOExpireDateL f CurveProposalDTO{..} = (\curveProposalDTOExpireDate -> CurveProposalDTO { curveProposalDTOExpireDate, ..} ) <$> f curveProposalDTOExpireDate
+{-# INLINE curveProposalDTOExpireDateL #-}
+
+-- | 'curveProposalDTOMinimumQuorum' Lens
+curveProposalDTOMinimumQuorumL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOMinimumQuorumL f CurveProposalDTO{..} = (\curveProposalDTOMinimumQuorum -> CurveProposalDTO { curveProposalDTOMinimumQuorum, ..} ) <$> f curveProposalDTOMinimumQuorum
+{-# INLINE curveProposalDTOMinimumQuorumL #-}
+
+-- | 'curveProposalDTORequiredSupport' Lens
+curveProposalDTORequiredSupportL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTORequiredSupportL f CurveProposalDTO{..} = (\curveProposalDTORequiredSupport -> CurveProposalDTO { curveProposalDTORequiredSupport, ..} ) <$> f curveProposalDTORequiredSupport
+{-# INLINE curveProposalDTORequiredSupportL #-}
+
+-- | 'curveProposalDTOSnapshotBlock' Lens
+curveProposalDTOSnapshotBlockL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOSnapshotBlockL f CurveProposalDTO{..} = (\curveProposalDTOSnapshotBlock -> CurveProposalDTO { curveProposalDTOSnapshotBlock, ..} ) <$> f curveProposalDTOSnapshotBlock
+{-# INLINE curveProposalDTOSnapshotBlockL #-}
+
+-- | 'curveProposalDTOVotingPower' Lens
+curveProposalDTOVotingPowerL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOVotingPowerL f CurveProposalDTO{..} = (\curveProposalDTOVotingPower -> CurveProposalDTO { curveProposalDTOVotingPower, ..} ) <$> f curveProposalDTOVotingPower
+{-# INLINE curveProposalDTOVotingPowerL #-}
+
+-- | 'curveProposalDTOMetadata' Lens
+curveProposalDTOMetadataL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOMetadataL f CurveProposalDTO{..} = (\curveProposalDTOMetadata -> CurveProposalDTO { curveProposalDTOMetadata, ..} ) <$> f curveProposalDTOMetadata
+{-# INLINE curveProposalDTOMetadataL #-}
+
+-- | 'curveProposalDTOText' Lens
+curveProposalDTOTextL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOTextL f CurveProposalDTO{..} = (\curveProposalDTOText -> CurveProposalDTO { curveProposalDTOText, ..} ) <$> f curveProposalDTOText
+{-# INLINE curveProposalDTOTextL #-}
+
+-- | 'curveProposalDTOVoteCount' Lens
+curveProposalDTOVoteCountL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOVoteCountL f CurveProposalDTO{..} = (\curveProposalDTOVoteCount -> CurveProposalDTO { curveProposalDTOVoteCount, ..} ) <$> f curveProposalDTOVoteCount
+{-# INLINE curveProposalDTOVoteCountL #-}
+
+-- | 'curveProposalDTOPositiveVoteCount' Lens
+curveProposalDTOPositiveVoteCountL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOPositiveVoteCountL f CurveProposalDTO{..} = (\curveProposalDTOPositiveVoteCount -> CurveProposalDTO { curveProposalDTOPositiveVoteCount, ..} ) <$> f curveProposalDTOPositiveVoteCount
+{-# INLINE curveProposalDTOPositiveVoteCountL #-}
+
+-- | 'curveProposalDTONegativeVoteCount' Lens
+curveProposalDTONegativeVoteCountL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTONegativeVoteCountL f CurveProposalDTO{..} = (\curveProposalDTONegativeVoteCount -> CurveProposalDTO { curveProposalDTONegativeVoteCount, ..} ) <$> f curveProposalDTONegativeVoteCount
+{-# INLINE curveProposalDTONegativeVoteCountL #-}
+
+-- | 'curveProposalDTOCurrentQuorum' Lens
+curveProposalDTOCurrentQuorumL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOCurrentQuorumL f CurveProposalDTO{..} = (\curveProposalDTOCurrentQuorum -> CurveProposalDTO { curveProposalDTOCurrentQuorum, ..} ) <$> f curveProposalDTOCurrentQuorum
+{-# INLINE curveProposalDTOCurrentQuorumL #-}
+
+-- | 'curveProposalDTOCurrentSupport' Lens
+curveProposalDTOCurrentSupportL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOCurrentSupportL f CurveProposalDTO{..} = (\curveProposalDTOCurrentSupport -> CurveProposalDTO { curveProposalDTOCurrentSupport, ..} ) <$> f curveProposalDTOCurrentSupport
+{-# INLINE curveProposalDTOCurrentSupportL #-}
+
+-- | 'curveProposalDTOStakedSupport' Lens
+curveProposalDTOStakedSupportL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOStakedSupportL f CurveProposalDTO{..} = (\curveProposalDTOStakedSupport -> CurveProposalDTO { curveProposalDTOStakedSupport, ..} ) <$> f curveProposalDTOStakedSupport
+{-# INLINE curveProposalDTOStakedSupportL #-}
+
+-- | 'curveProposalDTOTotalStaked' Lens
+curveProposalDTOTotalStakedL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOTotalStakedL f CurveProposalDTO{..} = (\curveProposalDTOTotalStaked -> CurveProposalDTO { curveProposalDTOTotalStaked, ..} ) <$> f curveProposalDTOTotalStaked
+{-# INLINE curveProposalDTOTotalStakedL #-}
+
+-- | 'curveProposalDTOCreated' Lens
+curveProposalDTOCreatedL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOCreatedL f CurveProposalDTO{..} = (\curveProposalDTOCreated -> CurveProposalDTO { curveProposalDTOCreated, ..} ) <$> f curveProposalDTOCreated
+{-# INLINE curveProposalDTOCreatedL #-}
+
+-- | 'curveProposalDTOCreatedAtBlock' Lens
+curveProposalDTOCreatedAtBlockL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOCreatedAtBlockL f CurveProposalDTO{..} = (\curveProposalDTOCreatedAtBlock -> CurveProposalDTO { curveProposalDTOCreatedAtBlock, ..} ) <$> f curveProposalDTOCreatedAtBlock
+{-# INLINE curveProposalDTOCreatedAtBlockL #-}
+
+-- | 'curveProposalDTOCreatedAtTransaction' Lens
+curveProposalDTOCreatedAtTransactionL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOCreatedAtTransactionL f CurveProposalDTO{..} = (\curveProposalDTOCreatedAtTransaction -> CurveProposalDTO { curveProposalDTOCreatedAtTransaction, ..} ) <$> f curveProposalDTOCreatedAtTransaction
+{-# INLINE curveProposalDTOCreatedAtTransactionL #-}
+
+-- | 'curveProposalDTOUpdated' Lens
+curveProposalDTOUpdatedL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOUpdatedL f CurveProposalDTO{..} = (\curveProposalDTOUpdated -> CurveProposalDTO { curveProposalDTOUpdated, ..} ) <$> f curveProposalDTOUpdated
+{-# INLINE curveProposalDTOUpdatedL #-}
+
+-- | 'curveProposalDTOUpdatedAtBlock' Lens
+curveProposalDTOUpdatedAtBlockL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOUpdatedAtBlockL f CurveProposalDTO{..} = (\curveProposalDTOUpdatedAtBlock -> CurveProposalDTO { curveProposalDTOUpdatedAtBlock, ..} ) <$> f curveProposalDTOUpdatedAtBlock
+{-# INLINE curveProposalDTOUpdatedAtBlockL #-}
+
+-- | 'curveProposalDTOUpdatedAtTransaction' Lens
+curveProposalDTOUpdatedAtTransactionL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOUpdatedAtTransactionL f CurveProposalDTO{..} = (\curveProposalDTOUpdatedAtTransaction -> CurveProposalDTO { curveProposalDTOUpdatedAtTransaction, ..} ) <$> f curveProposalDTOUpdatedAtTransaction
+{-# INLINE curveProposalDTOUpdatedAtTransactionL #-}
+
+-- | 'curveProposalDTOExecuted' Lens
+curveProposalDTOExecutedL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOExecutedL f CurveProposalDTO{..} = (\curveProposalDTOExecuted -> CurveProposalDTO { curveProposalDTOExecuted, ..} ) <$> f curveProposalDTOExecuted
+{-# INLINE curveProposalDTOExecutedL #-}
+
+-- | 'curveProposalDTOExecutedAtBlock' Lens
+curveProposalDTOExecutedAtBlockL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOExecutedAtBlockL f CurveProposalDTO{..} = (\curveProposalDTOExecutedAtBlock -> CurveProposalDTO { curveProposalDTOExecutedAtBlock, ..} ) <$> f curveProposalDTOExecutedAtBlock
+{-# INLINE curveProposalDTOExecutedAtBlockL #-}
+
+-- | 'curveProposalDTOExecutedAtTransaction' Lens
+curveProposalDTOExecutedAtTransactionL :: Lens_' CurveProposalDTO (Maybe Text)
+curveProposalDTOExecutedAtTransactionL f CurveProposalDTO{..} = (\curveProposalDTOExecutedAtTransaction -> CurveProposalDTO { curveProposalDTOExecutedAtTransaction, ..} ) <$> f curveProposalDTOExecutedAtTransaction
+{-# INLINE curveProposalDTOExecutedAtTransactionL #-}
+
+-- | 'curveProposalDTOVid' Lens
+curveProposalDTOVidL :: Lens_' CurveProposalDTO (Maybe Integer)
+curveProposalDTOVidL f CurveProposalDTO{..} = (\curveProposalDTOVid -> CurveProposalDTO { curveProposalDTOVid, ..} ) <$> f curveProposalDTOVid
+{-# INLINE curveProposalDTOVidL #-}
+
+
+
+-- * CurveProposalVoteDTO
+
+-- | 'curveProposalVoteDTOEntryTime' Lens
+curveProposalVoteDTOEntryTimeL :: Lens_' CurveProposalVoteDTO (Maybe DateTime)
+curveProposalVoteDTOEntryTimeL f CurveProposalVoteDTO{..} = (\curveProposalVoteDTOEntryTime -> CurveProposalVoteDTO { curveProposalVoteDTOEntryTime, ..} ) <$> f curveProposalVoteDTOEntryTime
+{-# INLINE curveProposalVoteDTOEntryTimeL #-}
+
+-- | 'curveProposalVoteDTORecvTime' Lens
+curveProposalVoteDTORecvTimeL :: Lens_' CurveProposalVoteDTO (Maybe DateTime)
+curveProposalVoteDTORecvTimeL f CurveProposalVoteDTO{..} = (\curveProposalVoteDTORecvTime -> CurveProposalVoteDTO { curveProposalVoteDTORecvTime, ..} ) <$> f curveProposalVoteDTORecvTime
+{-# INLINE curveProposalVoteDTORecvTimeL #-}
+
+-- | 'curveProposalVoteDTOBlockNumber' Lens
+curveProposalVoteDTOBlockNumberL :: Lens_' CurveProposalVoteDTO (Maybe Integer)
+curveProposalVoteDTOBlockNumberL f CurveProposalVoteDTO{..} = (\curveProposalVoteDTOBlockNumber -> CurveProposalVoteDTO { curveProposalVoteDTOBlockNumber, ..} ) <$> f curveProposalVoteDTOBlockNumber
+{-# INLINE curveProposalVoteDTOBlockNumberL #-}
+
+-- | 'curveProposalVoteDTOId' Lens
+curveProposalVoteDTOIdL :: Lens_' CurveProposalVoteDTO (Maybe Text)
+curveProposalVoteDTOIdL f CurveProposalVoteDTO{..} = (\curveProposalVoteDTOId -> CurveProposalVoteDTO { curveProposalVoteDTOId, ..} ) <$> f curveProposalVoteDTOId
+{-# INLINE curveProposalVoteDTOIdL #-}
+
+-- | 'curveProposalVoteDTOProposal' Lens
+curveProposalVoteDTOProposalL :: Lens_' CurveProposalVoteDTO (Maybe Text)
+curveProposalVoteDTOProposalL f CurveProposalVoteDTO{..} = (\curveProposalVoteDTOProposal -> CurveProposalVoteDTO { curveProposalVoteDTOProposal, ..} ) <$> f curveProposalVoteDTOProposal
+{-# INLINE curveProposalVoteDTOProposalL #-}
+
+-- | 'curveProposalVoteDTOSupports' Lens
+curveProposalVoteDTOSupportsL :: Lens_' CurveProposalVoteDTO (Maybe Bool)
+curveProposalVoteDTOSupportsL f CurveProposalVoteDTO{..} = (\curveProposalVoteDTOSupports -> CurveProposalVoteDTO { curveProposalVoteDTOSupports, ..} ) <$> f curveProposalVoteDTOSupports
+{-# INLINE curveProposalVoteDTOSupportsL #-}
+
+-- | 'curveProposalVoteDTOStake' Lens
+curveProposalVoteDTOStakeL :: Lens_' CurveProposalVoteDTO (Maybe Text)
+curveProposalVoteDTOStakeL f CurveProposalVoteDTO{..} = (\curveProposalVoteDTOStake -> CurveProposalVoteDTO { curveProposalVoteDTOStake, ..} ) <$> f curveProposalVoteDTOStake
+{-# INLINE curveProposalVoteDTOStakeL #-}
+
+-- | 'curveProposalVoteDTOVoter' Lens
+curveProposalVoteDTOVoterL :: Lens_' CurveProposalVoteDTO (Maybe Text)
+curveProposalVoteDTOVoterL f CurveProposalVoteDTO{..} = (\curveProposalVoteDTOVoter -> CurveProposalVoteDTO { curveProposalVoteDTOVoter, ..} ) <$> f curveProposalVoteDTOVoter
+{-# INLINE curveProposalVoteDTOVoterL #-}
+
+-- | 'curveProposalVoteDTOCreated' Lens
+curveProposalVoteDTOCreatedL :: Lens_' CurveProposalVoteDTO (Maybe Text)
+curveProposalVoteDTOCreatedL f CurveProposalVoteDTO{..} = (\curveProposalVoteDTOCreated -> CurveProposalVoteDTO { curveProposalVoteDTOCreated, ..} ) <$> f curveProposalVoteDTOCreated
+{-# INLINE curveProposalVoteDTOCreatedL #-}
+
+-- | 'curveProposalVoteDTOCreatedAtBlock' Lens
+curveProposalVoteDTOCreatedAtBlockL :: Lens_' CurveProposalVoteDTO (Maybe Text)
+curveProposalVoteDTOCreatedAtBlockL f CurveProposalVoteDTO{..} = (\curveProposalVoteDTOCreatedAtBlock -> CurveProposalVoteDTO { curveProposalVoteDTOCreatedAtBlock, ..} ) <$> f curveProposalVoteDTOCreatedAtBlock
+{-# INLINE curveProposalVoteDTOCreatedAtBlockL #-}
+
+-- | 'curveProposalVoteDTOCreatedAtTransaction' Lens
+curveProposalVoteDTOCreatedAtTransactionL :: Lens_' CurveProposalVoteDTO (Maybe Text)
+curveProposalVoteDTOCreatedAtTransactionL f CurveProposalVoteDTO{..} = (\curveProposalVoteDTOCreatedAtTransaction -> CurveProposalVoteDTO { curveProposalVoteDTOCreatedAtTransaction, ..} ) <$> f curveProposalVoteDTOCreatedAtTransaction
+{-# INLINE curveProposalVoteDTOCreatedAtTransactionL #-}
+
+-- | 'curveProposalVoteDTOVid' Lens
+curveProposalVoteDTOVidL :: Lens_' CurveProposalVoteDTO (Maybe Integer)
+curveProposalVoteDTOVidL f CurveProposalVoteDTO{..} = (\curveProposalVoteDTOVid -> CurveProposalVoteDTO { curveProposalVoteDTOVid, ..} ) <$> f curveProposalVoteDTOVid
+{-# INLINE curveProposalVoteDTOVidL #-}
+
+
+
+-- * CurveRemoveLiquidityEventDTO
+
+-- | 'curveRemoveLiquidityEventDTOEntryTime' Lens
+curveRemoveLiquidityEventDTOEntryTimeL :: Lens_' CurveRemoveLiquidityEventDTO (Maybe DateTime)
+curveRemoveLiquidityEventDTOEntryTimeL f CurveRemoveLiquidityEventDTO{..} = (\curveRemoveLiquidityEventDTOEntryTime -> CurveRemoveLiquidityEventDTO { curveRemoveLiquidityEventDTOEntryTime, ..} ) <$> f curveRemoveLiquidityEventDTOEntryTime
+{-# INLINE curveRemoveLiquidityEventDTOEntryTimeL #-}
+
+-- | 'curveRemoveLiquidityEventDTORecvTime' Lens
+curveRemoveLiquidityEventDTORecvTimeL :: Lens_' CurveRemoveLiquidityEventDTO (Maybe DateTime)
+curveRemoveLiquidityEventDTORecvTimeL f CurveRemoveLiquidityEventDTO{..} = (\curveRemoveLiquidityEventDTORecvTime -> CurveRemoveLiquidityEventDTO { curveRemoveLiquidityEventDTORecvTime, ..} ) <$> f curveRemoveLiquidityEventDTORecvTime
+{-# INLINE curveRemoveLiquidityEventDTORecvTimeL #-}
+
+-- | 'curveRemoveLiquidityEventDTOBlockNumber' Lens
+curveRemoveLiquidityEventDTOBlockNumberL :: Lens_' CurveRemoveLiquidityEventDTO (Maybe Integer)
+curveRemoveLiquidityEventDTOBlockNumberL f CurveRemoveLiquidityEventDTO{..} = (\curveRemoveLiquidityEventDTOBlockNumber -> CurveRemoveLiquidityEventDTO { curveRemoveLiquidityEventDTOBlockNumber, ..} ) <$> f curveRemoveLiquidityEventDTOBlockNumber
+{-# INLINE curveRemoveLiquidityEventDTOBlockNumberL #-}
+
+-- | 'curveRemoveLiquidityEventDTOId' Lens
+curveRemoveLiquidityEventDTOIdL :: Lens_' CurveRemoveLiquidityEventDTO (Maybe Text)
+curveRemoveLiquidityEventDTOIdL f CurveRemoveLiquidityEventDTO{..} = (\curveRemoveLiquidityEventDTOId -> CurveRemoveLiquidityEventDTO { curveRemoveLiquidityEventDTOId, ..} ) <$> f curveRemoveLiquidityEventDTOId
+{-# INLINE curveRemoveLiquidityEventDTOIdL #-}
+
+-- | 'curveRemoveLiquidityEventDTOPool' Lens
+curveRemoveLiquidityEventDTOPoolL :: Lens_' CurveRemoveLiquidityEventDTO (Maybe Text)
+curveRemoveLiquidityEventDTOPoolL f CurveRemoveLiquidityEventDTO{..} = (\curveRemoveLiquidityEventDTOPool -> CurveRemoveLiquidityEventDTO { curveRemoveLiquidityEventDTOPool, ..} ) <$> f curveRemoveLiquidityEventDTOPool
+{-# INLINE curveRemoveLiquidityEventDTOPoolL #-}
+
+-- | 'curveRemoveLiquidityEventDTOProvider' Lens
+curveRemoveLiquidityEventDTOProviderL :: Lens_' CurveRemoveLiquidityEventDTO (Maybe Text)
+curveRemoveLiquidityEventDTOProviderL f CurveRemoveLiquidityEventDTO{..} = (\curveRemoveLiquidityEventDTOProvider -> CurveRemoveLiquidityEventDTO { curveRemoveLiquidityEventDTOProvider, ..} ) <$> f curveRemoveLiquidityEventDTOProvider
+{-# INLINE curveRemoveLiquidityEventDTOProviderL #-}
+
+-- | 'curveRemoveLiquidityEventDTOTokenAmounts' Lens
+curveRemoveLiquidityEventDTOTokenAmountsL :: Lens_' CurveRemoveLiquidityEventDTO (Maybe [Text])
+curveRemoveLiquidityEventDTOTokenAmountsL f CurveRemoveLiquidityEventDTO{..} = (\curveRemoveLiquidityEventDTOTokenAmounts -> CurveRemoveLiquidityEventDTO { curveRemoveLiquidityEventDTOTokenAmounts, ..} ) <$> f curveRemoveLiquidityEventDTOTokenAmounts
+{-# INLINE curveRemoveLiquidityEventDTOTokenAmountsL #-}
+
+-- | 'curveRemoveLiquidityEventDTOFees' Lens
+curveRemoveLiquidityEventDTOFeesL :: Lens_' CurveRemoveLiquidityEventDTO (Maybe [Text])
+curveRemoveLiquidityEventDTOFeesL f CurveRemoveLiquidityEventDTO{..} = (\curveRemoveLiquidityEventDTOFees -> CurveRemoveLiquidityEventDTO { curveRemoveLiquidityEventDTOFees, ..} ) <$> f curveRemoveLiquidityEventDTOFees
+{-# INLINE curveRemoveLiquidityEventDTOFeesL #-}
+
+-- | 'curveRemoveLiquidityEventDTOTokenSupply' Lens
+curveRemoveLiquidityEventDTOTokenSupplyL :: Lens_' CurveRemoveLiquidityEventDTO (Maybe Text)
+curveRemoveLiquidityEventDTOTokenSupplyL f CurveRemoveLiquidityEventDTO{..} = (\curveRemoveLiquidityEventDTOTokenSupply -> CurveRemoveLiquidityEventDTO { curveRemoveLiquidityEventDTOTokenSupply, ..} ) <$> f curveRemoveLiquidityEventDTOTokenSupply
+{-# INLINE curveRemoveLiquidityEventDTOTokenSupplyL #-}
+
+-- | 'curveRemoveLiquidityEventDTOInvariant' Lens
+curveRemoveLiquidityEventDTOInvariantL :: Lens_' CurveRemoveLiquidityEventDTO (Maybe Text)
+curveRemoveLiquidityEventDTOInvariantL f CurveRemoveLiquidityEventDTO{..} = (\curveRemoveLiquidityEventDTOInvariant -> CurveRemoveLiquidityEventDTO { curveRemoveLiquidityEventDTOInvariant, ..} ) <$> f curveRemoveLiquidityEventDTOInvariant
+{-# INLINE curveRemoveLiquidityEventDTOInvariantL #-}
+
+-- | 'curveRemoveLiquidityEventDTOBlock' Lens
+curveRemoveLiquidityEventDTOBlockL :: Lens_' CurveRemoveLiquidityEventDTO (Maybe Text)
+curveRemoveLiquidityEventDTOBlockL f CurveRemoveLiquidityEventDTO{..} = (\curveRemoveLiquidityEventDTOBlock -> CurveRemoveLiquidityEventDTO { curveRemoveLiquidityEventDTOBlock, ..} ) <$> f curveRemoveLiquidityEventDTOBlock
+{-# INLINE curveRemoveLiquidityEventDTOBlockL #-}
+
+-- | 'curveRemoveLiquidityEventDTOTimestamp' Lens
+curveRemoveLiquidityEventDTOTimestampL :: Lens_' CurveRemoveLiquidityEventDTO (Maybe Text)
+curveRemoveLiquidityEventDTOTimestampL f CurveRemoveLiquidityEventDTO{..} = (\curveRemoveLiquidityEventDTOTimestamp -> CurveRemoveLiquidityEventDTO { curveRemoveLiquidityEventDTOTimestamp, ..} ) <$> f curveRemoveLiquidityEventDTOTimestamp
+{-# INLINE curveRemoveLiquidityEventDTOTimestampL #-}
+
+-- | 'curveRemoveLiquidityEventDTOTransaction' Lens
+curveRemoveLiquidityEventDTOTransactionL :: Lens_' CurveRemoveLiquidityEventDTO (Maybe Text)
+curveRemoveLiquidityEventDTOTransactionL f CurveRemoveLiquidityEventDTO{..} = (\curveRemoveLiquidityEventDTOTransaction -> CurveRemoveLiquidityEventDTO { curveRemoveLiquidityEventDTOTransaction, ..} ) <$> f curveRemoveLiquidityEventDTOTransaction
+{-# INLINE curveRemoveLiquidityEventDTOTransactionL #-}
+
+-- | 'curveRemoveLiquidityEventDTOVid' Lens
+curveRemoveLiquidityEventDTOVidL :: Lens_' CurveRemoveLiquidityEventDTO (Maybe Integer)
+curveRemoveLiquidityEventDTOVidL f CurveRemoveLiquidityEventDTO{..} = (\curveRemoveLiquidityEventDTOVid -> CurveRemoveLiquidityEventDTO { curveRemoveLiquidityEventDTOVid, ..} ) <$> f curveRemoveLiquidityEventDTOVid
+{-# INLINE curveRemoveLiquidityEventDTOVidL #-}
+
+
+
+-- * CurveRemoveLiquidityOneEventDTO
+
+-- | 'curveRemoveLiquidityOneEventDTOEntryTime' Lens
+curveRemoveLiquidityOneEventDTOEntryTimeL :: Lens_' CurveRemoveLiquidityOneEventDTO (Maybe DateTime)
+curveRemoveLiquidityOneEventDTOEntryTimeL f CurveRemoveLiquidityOneEventDTO{..} = (\curveRemoveLiquidityOneEventDTOEntryTime -> CurveRemoveLiquidityOneEventDTO { curveRemoveLiquidityOneEventDTOEntryTime, ..} ) <$> f curveRemoveLiquidityOneEventDTOEntryTime
+{-# INLINE curveRemoveLiquidityOneEventDTOEntryTimeL #-}
+
+-- | 'curveRemoveLiquidityOneEventDTORecvTime' Lens
+curveRemoveLiquidityOneEventDTORecvTimeL :: Lens_' CurveRemoveLiquidityOneEventDTO (Maybe DateTime)
+curveRemoveLiquidityOneEventDTORecvTimeL f CurveRemoveLiquidityOneEventDTO{..} = (\curveRemoveLiquidityOneEventDTORecvTime -> CurveRemoveLiquidityOneEventDTO { curveRemoveLiquidityOneEventDTORecvTime, ..} ) <$> f curveRemoveLiquidityOneEventDTORecvTime
+{-# INLINE curveRemoveLiquidityOneEventDTORecvTimeL #-}
+
+-- | 'curveRemoveLiquidityOneEventDTOBlockNumber' Lens
+curveRemoveLiquidityOneEventDTOBlockNumberL :: Lens_' CurveRemoveLiquidityOneEventDTO (Maybe Integer)
+curveRemoveLiquidityOneEventDTOBlockNumberL f CurveRemoveLiquidityOneEventDTO{..} = (\curveRemoveLiquidityOneEventDTOBlockNumber -> CurveRemoveLiquidityOneEventDTO { curveRemoveLiquidityOneEventDTOBlockNumber, ..} ) <$> f curveRemoveLiquidityOneEventDTOBlockNumber
+{-# INLINE curveRemoveLiquidityOneEventDTOBlockNumberL #-}
+
+-- | 'curveRemoveLiquidityOneEventDTOId' Lens
+curveRemoveLiquidityOneEventDTOIdL :: Lens_' CurveRemoveLiquidityOneEventDTO (Maybe Text)
+curveRemoveLiquidityOneEventDTOIdL f CurveRemoveLiquidityOneEventDTO{..} = (\curveRemoveLiquidityOneEventDTOId -> CurveRemoveLiquidityOneEventDTO { curveRemoveLiquidityOneEventDTOId, ..} ) <$> f curveRemoveLiquidityOneEventDTOId
+{-# INLINE curveRemoveLiquidityOneEventDTOIdL #-}
+
+-- | 'curveRemoveLiquidityOneEventDTOPool' Lens
+curveRemoveLiquidityOneEventDTOPoolL :: Lens_' CurveRemoveLiquidityOneEventDTO (Maybe Text)
+curveRemoveLiquidityOneEventDTOPoolL f CurveRemoveLiquidityOneEventDTO{..} = (\curveRemoveLiquidityOneEventDTOPool -> CurveRemoveLiquidityOneEventDTO { curveRemoveLiquidityOneEventDTOPool, ..} ) <$> f curveRemoveLiquidityOneEventDTOPool
+{-# INLINE curveRemoveLiquidityOneEventDTOPoolL #-}
+
+-- | 'curveRemoveLiquidityOneEventDTOProvider' Lens
+curveRemoveLiquidityOneEventDTOProviderL :: Lens_' CurveRemoveLiquidityOneEventDTO (Maybe Text)
+curveRemoveLiquidityOneEventDTOProviderL f CurveRemoveLiquidityOneEventDTO{..} = (\curveRemoveLiquidityOneEventDTOProvider -> CurveRemoveLiquidityOneEventDTO { curveRemoveLiquidityOneEventDTOProvider, ..} ) <$> f curveRemoveLiquidityOneEventDTOProvider
+{-# INLINE curveRemoveLiquidityOneEventDTOProviderL #-}
+
+-- | 'curveRemoveLiquidityOneEventDTOTokenAmount' Lens
+curveRemoveLiquidityOneEventDTOTokenAmountL :: Lens_' CurveRemoveLiquidityOneEventDTO (Maybe Text)
+curveRemoveLiquidityOneEventDTOTokenAmountL f CurveRemoveLiquidityOneEventDTO{..} = (\curveRemoveLiquidityOneEventDTOTokenAmount -> CurveRemoveLiquidityOneEventDTO { curveRemoveLiquidityOneEventDTOTokenAmount, ..} ) <$> f curveRemoveLiquidityOneEventDTOTokenAmount
+{-# INLINE curveRemoveLiquidityOneEventDTOTokenAmountL #-}
+
+-- | 'curveRemoveLiquidityOneEventDTOCoinAmount' Lens
+curveRemoveLiquidityOneEventDTOCoinAmountL :: Lens_' CurveRemoveLiquidityOneEventDTO (Maybe Text)
+curveRemoveLiquidityOneEventDTOCoinAmountL f CurveRemoveLiquidityOneEventDTO{..} = (\curveRemoveLiquidityOneEventDTOCoinAmount -> CurveRemoveLiquidityOneEventDTO { curveRemoveLiquidityOneEventDTOCoinAmount, ..} ) <$> f curveRemoveLiquidityOneEventDTOCoinAmount
+{-# INLINE curveRemoveLiquidityOneEventDTOCoinAmountL #-}
+
+-- | 'curveRemoveLiquidityOneEventDTOBlock' Lens
+curveRemoveLiquidityOneEventDTOBlockL :: Lens_' CurveRemoveLiquidityOneEventDTO (Maybe Text)
+curveRemoveLiquidityOneEventDTOBlockL f CurveRemoveLiquidityOneEventDTO{..} = (\curveRemoveLiquidityOneEventDTOBlock -> CurveRemoveLiquidityOneEventDTO { curveRemoveLiquidityOneEventDTOBlock, ..} ) <$> f curveRemoveLiquidityOneEventDTOBlock
+{-# INLINE curveRemoveLiquidityOneEventDTOBlockL #-}
+
+-- | 'curveRemoveLiquidityOneEventDTOTimestamp' Lens
+curveRemoveLiquidityOneEventDTOTimestampL :: Lens_' CurveRemoveLiquidityOneEventDTO (Maybe Text)
+curveRemoveLiquidityOneEventDTOTimestampL f CurveRemoveLiquidityOneEventDTO{..} = (\curveRemoveLiquidityOneEventDTOTimestamp -> CurveRemoveLiquidityOneEventDTO { curveRemoveLiquidityOneEventDTOTimestamp, ..} ) <$> f curveRemoveLiquidityOneEventDTOTimestamp
+{-# INLINE curveRemoveLiquidityOneEventDTOTimestampL #-}
+
+-- | 'curveRemoveLiquidityOneEventDTOTransaction' Lens
+curveRemoveLiquidityOneEventDTOTransactionL :: Lens_' CurveRemoveLiquidityOneEventDTO (Maybe Text)
+curveRemoveLiquidityOneEventDTOTransactionL f CurveRemoveLiquidityOneEventDTO{..} = (\curveRemoveLiquidityOneEventDTOTransaction -> CurveRemoveLiquidityOneEventDTO { curveRemoveLiquidityOneEventDTOTransaction, ..} ) <$> f curveRemoveLiquidityOneEventDTOTransaction
+{-# INLINE curveRemoveLiquidityOneEventDTOTransactionL #-}
+
+-- | 'curveRemoveLiquidityOneEventDTOVid' Lens
+curveRemoveLiquidityOneEventDTOVidL :: Lens_' CurveRemoveLiquidityOneEventDTO (Maybe Integer)
+curveRemoveLiquidityOneEventDTOVidL f CurveRemoveLiquidityOneEventDTO{..} = (\curveRemoveLiquidityOneEventDTOVid -> CurveRemoveLiquidityOneEventDTO { curveRemoveLiquidityOneEventDTOVid, ..} ) <$> f curveRemoveLiquidityOneEventDTOVid
+{-# INLINE curveRemoveLiquidityOneEventDTOVidL #-}
+
+
+
+-- * CurveSystemStateDTO
+
+-- | 'curveSystemStateDTOEntryTime' Lens
+curveSystemStateDTOEntryTimeL :: Lens_' CurveSystemStateDTO (Maybe DateTime)
+curveSystemStateDTOEntryTimeL f CurveSystemStateDTO{..} = (\curveSystemStateDTOEntryTime -> CurveSystemStateDTO { curveSystemStateDTOEntryTime, ..} ) <$> f curveSystemStateDTOEntryTime
+{-# INLINE curveSystemStateDTOEntryTimeL #-}
+
+-- | 'curveSystemStateDTORecvTime' Lens
+curveSystemStateDTORecvTimeL :: Lens_' CurveSystemStateDTO (Maybe DateTime)
+curveSystemStateDTORecvTimeL f CurveSystemStateDTO{..} = (\curveSystemStateDTORecvTime -> CurveSystemStateDTO { curveSystemStateDTORecvTime, ..} ) <$> f curveSystemStateDTORecvTime
+{-# INLINE curveSystemStateDTORecvTimeL #-}
+
+-- | 'curveSystemStateDTOBlockNumber' Lens
+curveSystemStateDTOBlockNumberL :: Lens_' CurveSystemStateDTO (Maybe Integer)
+curveSystemStateDTOBlockNumberL f CurveSystemStateDTO{..} = (\curveSystemStateDTOBlockNumber -> CurveSystemStateDTO { curveSystemStateDTOBlockNumber, ..} ) <$> f curveSystemStateDTOBlockNumber
+{-# INLINE curveSystemStateDTOBlockNumberL #-}
+
+-- | 'curveSystemStateDTOId' Lens
+curveSystemStateDTOIdL :: Lens_' CurveSystemStateDTO (Maybe Text)
+curveSystemStateDTOIdL f CurveSystemStateDTO{..} = (\curveSystemStateDTOId -> CurveSystemStateDTO { curveSystemStateDTOId, ..} ) <$> f curveSystemStateDTOId
+{-# INLINE curveSystemStateDTOIdL #-}
+
+-- | 'curveSystemStateDTORegistryContract' Lens
+curveSystemStateDTORegistryContractL :: Lens_' CurveSystemStateDTO (Maybe Text)
+curveSystemStateDTORegistryContractL f CurveSystemStateDTO{..} = (\curveSystemStateDTORegistryContract -> CurveSystemStateDTO { curveSystemStateDTORegistryContract, ..} ) <$> f curveSystemStateDTORegistryContract
+{-# INLINE curveSystemStateDTORegistryContractL #-}
+
+-- | 'curveSystemStateDTOContractCount' Lens
+curveSystemStateDTOContractCountL :: Lens_' CurveSystemStateDTO (Maybe Text)
+curveSystemStateDTOContractCountL f CurveSystemStateDTO{..} = (\curveSystemStateDTOContractCount -> CurveSystemStateDTO { curveSystemStateDTOContractCount, ..} ) <$> f curveSystemStateDTOContractCount
+{-# INLINE curveSystemStateDTOContractCountL #-}
+
+-- | 'curveSystemStateDTOGaugeCount' Lens
+curveSystemStateDTOGaugeCountL :: Lens_' CurveSystemStateDTO (Maybe Text)
+curveSystemStateDTOGaugeCountL f CurveSystemStateDTO{..} = (\curveSystemStateDTOGaugeCount -> CurveSystemStateDTO { curveSystemStateDTOGaugeCount, ..} ) <$> f curveSystemStateDTOGaugeCount
+{-# INLINE curveSystemStateDTOGaugeCountL #-}
+
+-- | 'curveSystemStateDTOGaugeTypeCount' Lens
+curveSystemStateDTOGaugeTypeCountL :: Lens_' CurveSystemStateDTO (Maybe Text)
+curveSystemStateDTOGaugeTypeCountL f CurveSystemStateDTO{..} = (\curveSystemStateDTOGaugeTypeCount -> CurveSystemStateDTO { curveSystemStateDTOGaugeTypeCount, ..} ) <$> f curveSystemStateDTOGaugeTypeCount
+{-# INLINE curveSystemStateDTOGaugeTypeCountL #-}
+
+-- | 'curveSystemStateDTOPoolCount' Lens
+curveSystemStateDTOPoolCountL :: Lens_' CurveSystemStateDTO (Maybe Text)
+curveSystemStateDTOPoolCountL f CurveSystemStateDTO{..} = (\curveSystemStateDTOPoolCount -> CurveSystemStateDTO { curveSystemStateDTOPoolCount, ..} ) <$> f curveSystemStateDTOPoolCount
+{-# INLINE curveSystemStateDTOPoolCountL #-}
+
+-- | 'curveSystemStateDTOTokenCount' Lens
+curveSystemStateDTOTokenCountL :: Lens_' CurveSystemStateDTO (Maybe Text)
+curveSystemStateDTOTokenCountL f CurveSystemStateDTO{..} = (\curveSystemStateDTOTokenCount -> CurveSystemStateDTO { curveSystemStateDTOTokenCount, ..} ) <$> f curveSystemStateDTOTokenCount
+{-# INLINE curveSystemStateDTOTokenCountL #-}
+
+-- | 'curveSystemStateDTOTotalPoolCount' Lens
+curveSystemStateDTOTotalPoolCountL :: Lens_' CurveSystemStateDTO (Maybe Text)
+curveSystemStateDTOTotalPoolCountL f CurveSystemStateDTO{..} = (\curveSystemStateDTOTotalPoolCount -> CurveSystemStateDTO { curveSystemStateDTOTotalPoolCount, ..} ) <$> f curveSystemStateDTOTotalPoolCount
+{-# INLINE curveSystemStateDTOTotalPoolCountL #-}
+
+-- | 'curveSystemStateDTOUpdated' Lens
+curveSystemStateDTOUpdatedL :: Lens_' CurveSystemStateDTO (Maybe Text)
+curveSystemStateDTOUpdatedL f CurveSystemStateDTO{..} = (\curveSystemStateDTOUpdated -> CurveSystemStateDTO { curveSystemStateDTOUpdated, ..} ) <$> f curveSystemStateDTOUpdated
+{-# INLINE curveSystemStateDTOUpdatedL #-}
+
+-- | 'curveSystemStateDTOUpdatedAtBlock' Lens
+curveSystemStateDTOUpdatedAtBlockL :: Lens_' CurveSystemStateDTO (Maybe Text)
+curveSystemStateDTOUpdatedAtBlockL f CurveSystemStateDTO{..} = (\curveSystemStateDTOUpdatedAtBlock -> CurveSystemStateDTO { curveSystemStateDTOUpdatedAtBlock, ..} ) <$> f curveSystemStateDTOUpdatedAtBlock
+{-# INLINE curveSystemStateDTOUpdatedAtBlockL #-}
+
+-- | 'curveSystemStateDTOUpdatedAtTransaction' Lens
+curveSystemStateDTOUpdatedAtTransactionL :: Lens_' CurveSystemStateDTO (Maybe Text)
+curveSystemStateDTOUpdatedAtTransactionL f CurveSystemStateDTO{..} = (\curveSystemStateDTOUpdatedAtTransaction -> CurveSystemStateDTO { curveSystemStateDTOUpdatedAtTransaction, ..} ) <$> f curveSystemStateDTOUpdatedAtTransaction
+{-# INLINE curveSystemStateDTOUpdatedAtTransactionL #-}
+
+-- | 'curveSystemStateDTOVid' Lens
+curveSystemStateDTOVidL :: Lens_' CurveSystemStateDTO (Maybe Integer)
+curveSystemStateDTOVidL f CurveSystemStateDTO{..} = (\curveSystemStateDTOVid -> CurveSystemStateDTO { curveSystemStateDTOVid, ..} ) <$> f curveSystemStateDTOVid
+{-# INLINE curveSystemStateDTOVidL #-}
+
+
+
+-- * CurveTokenDTO
+
+-- | 'curveTokenDTOEntryTime' Lens
+curveTokenDTOEntryTimeL :: Lens_' CurveTokenDTO (Maybe DateTime)
+curveTokenDTOEntryTimeL f CurveTokenDTO{..} = (\curveTokenDTOEntryTime -> CurveTokenDTO { curveTokenDTOEntryTime, ..} ) <$> f curveTokenDTOEntryTime
+{-# INLINE curveTokenDTOEntryTimeL #-}
+
+-- | 'curveTokenDTORecvTime' Lens
+curveTokenDTORecvTimeL :: Lens_' CurveTokenDTO (Maybe DateTime)
+curveTokenDTORecvTimeL f CurveTokenDTO{..} = (\curveTokenDTORecvTime -> CurveTokenDTO { curveTokenDTORecvTime, ..} ) <$> f curveTokenDTORecvTime
+{-# INLINE curveTokenDTORecvTimeL #-}
+
+-- | 'curveTokenDTOBlockNumber' Lens
+curveTokenDTOBlockNumberL :: Lens_' CurveTokenDTO (Maybe Integer)
+curveTokenDTOBlockNumberL f CurveTokenDTO{..} = (\curveTokenDTOBlockNumber -> CurveTokenDTO { curveTokenDTOBlockNumber, ..} ) <$> f curveTokenDTOBlockNumber
+{-# INLINE curveTokenDTOBlockNumberL #-}
+
+-- | 'curveTokenDTOId' Lens
+curveTokenDTOIdL :: Lens_' CurveTokenDTO (Maybe Text)
+curveTokenDTOIdL f CurveTokenDTO{..} = (\curveTokenDTOId -> CurveTokenDTO { curveTokenDTOId, ..} ) <$> f curveTokenDTOId
+{-# INLINE curveTokenDTOIdL #-}
+
+-- | 'curveTokenDTOAddress' Lens
+curveTokenDTOAddressL :: Lens_' CurveTokenDTO (Maybe Text)
+curveTokenDTOAddressL f CurveTokenDTO{..} = (\curveTokenDTOAddress -> CurveTokenDTO { curveTokenDTOAddress, ..} ) <$> f curveTokenDTOAddress
+{-# INLINE curveTokenDTOAddressL #-}
+
+-- | 'curveTokenDTODecimals' Lens
+curveTokenDTODecimalsL :: Lens_' CurveTokenDTO (Maybe Text)
+curveTokenDTODecimalsL f CurveTokenDTO{..} = (\curveTokenDTODecimals -> CurveTokenDTO { curveTokenDTODecimals, ..} ) <$> f curveTokenDTODecimals
+{-# INLINE curveTokenDTODecimalsL #-}
+
+-- | 'curveTokenDTOName' Lens
+curveTokenDTONameL :: Lens_' CurveTokenDTO (Maybe Text)
+curveTokenDTONameL f CurveTokenDTO{..} = (\curveTokenDTOName -> CurveTokenDTO { curveTokenDTOName, ..} ) <$> f curveTokenDTOName
+{-# INLINE curveTokenDTONameL #-}
+
+-- | 'curveTokenDTOSymbol' Lens
+curveTokenDTOSymbolL :: Lens_' CurveTokenDTO (Maybe Text)
+curveTokenDTOSymbolL f CurveTokenDTO{..} = (\curveTokenDTOSymbol -> CurveTokenDTO { curveTokenDTOSymbol, ..} ) <$> f curveTokenDTOSymbol
+{-# INLINE curveTokenDTOSymbolL #-}
+
+-- | 'curveTokenDTOPools' Lens
+curveTokenDTOPoolsL :: Lens_' CurveTokenDTO (Maybe [Text])
+curveTokenDTOPoolsL f CurveTokenDTO{..} = (\curveTokenDTOPools -> CurveTokenDTO { curveTokenDTOPools, ..} ) <$> f curveTokenDTOPools
+{-# INLINE curveTokenDTOPoolsL #-}
+
+-- | 'curveTokenDTOVid' Lens
+curveTokenDTOVidL :: Lens_' CurveTokenDTO (Maybe Integer)
+curveTokenDTOVidL f CurveTokenDTO{..} = (\curveTokenDTOVid -> CurveTokenDTO { curveTokenDTOVid, ..} ) <$> f curveTokenDTOVid
+{-# INLINE curveTokenDTOVidL #-}
+
+-- | 'curveTokenDTOTokenSymbol' Lens
+curveTokenDTOTokenSymbolL :: Lens_' CurveTokenDTO (Maybe Text)
+curveTokenDTOTokenSymbolL f CurveTokenDTO{..} = (\curveTokenDTOTokenSymbol -> CurveTokenDTO { curveTokenDTOTokenSymbol, ..} ) <$> f curveTokenDTOTokenSymbol
+{-# INLINE curveTokenDTOTokenSymbolL #-}
+
+
+
+-- * CurveTransferOwnershipEventDTO
+
+-- | 'curveTransferOwnershipEventDTOEntryTime' Lens
+curveTransferOwnershipEventDTOEntryTimeL :: Lens_' CurveTransferOwnershipEventDTO (Maybe DateTime)
+curveTransferOwnershipEventDTOEntryTimeL f CurveTransferOwnershipEventDTO{..} = (\curveTransferOwnershipEventDTOEntryTime -> CurveTransferOwnershipEventDTO { curveTransferOwnershipEventDTOEntryTime, ..} ) <$> f curveTransferOwnershipEventDTOEntryTime
+{-# INLINE curveTransferOwnershipEventDTOEntryTimeL #-}
+
+-- | 'curveTransferOwnershipEventDTORecvTime' Lens
+curveTransferOwnershipEventDTORecvTimeL :: Lens_' CurveTransferOwnershipEventDTO (Maybe DateTime)
+curveTransferOwnershipEventDTORecvTimeL f CurveTransferOwnershipEventDTO{..} = (\curveTransferOwnershipEventDTORecvTime -> CurveTransferOwnershipEventDTO { curveTransferOwnershipEventDTORecvTime, ..} ) <$> f curveTransferOwnershipEventDTORecvTime
+{-# INLINE curveTransferOwnershipEventDTORecvTimeL #-}
+
+-- | 'curveTransferOwnershipEventDTOBlockNumber' Lens
+curveTransferOwnershipEventDTOBlockNumberL :: Lens_' CurveTransferOwnershipEventDTO (Maybe Integer)
+curveTransferOwnershipEventDTOBlockNumberL f CurveTransferOwnershipEventDTO{..} = (\curveTransferOwnershipEventDTOBlockNumber -> CurveTransferOwnershipEventDTO { curveTransferOwnershipEventDTOBlockNumber, ..} ) <$> f curveTransferOwnershipEventDTOBlockNumber
+{-# INLINE curveTransferOwnershipEventDTOBlockNumberL #-}
+
+-- | 'curveTransferOwnershipEventDTOId' Lens
+curveTransferOwnershipEventDTOIdL :: Lens_' CurveTransferOwnershipEventDTO (Maybe Text)
+curveTransferOwnershipEventDTOIdL f CurveTransferOwnershipEventDTO{..} = (\curveTransferOwnershipEventDTOId -> CurveTransferOwnershipEventDTO { curveTransferOwnershipEventDTOId, ..} ) <$> f curveTransferOwnershipEventDTOId
+{-# INLINE curveTransferOwnershipEventDTOIdL #-}
+
+-- | 'curveTransferOwnershipEventDTOPool' Lens
+curveTransferOwnershipEventDTOPoolL :: Lens_' CurveTransferOwnershipEventDTO (Maybe Text)
+curveTransferOwnershipEventDTOPoolL f CurveTransferOwnershipEventDTO{..} = (\curveTransferOwnershipEventDTOPool -> CurveTransferOwnershipEventDTO { curveTransferOwnershipEventDTOPool, ..} ) <$> f curveTransferOwnershipEventDTOPool
+{-# INLINE curveTransferOwnershipEventDTOPoolL #-}
+
+-- | 'curveTransferOwnershipEventDTONewAdmin' Lens
+curveTransferOwnershipEventDTONewAdminL :: Lens_' CurveTransferOwnershipEventDTO (Maybe Text)
+curveTransferOwnershipEventDTONewAdminL f CurveTransferOwnershipEventDTO{..} = (\curveTransferOwnershipEventDTONewAdmin -> CurveTransferOwnershipEventDTO { curveTransferOwnershipEventDTONewAdmin, ..} ) <$> f curveTransferOwnershipEventDTONewAdmin
+{-# INLINE curveTransferOwnershipEventDTONewAdminL #-}
+
+-- | 'curveTransferOwnershipEventDTOBlock' Lens
+curveTransferOwnershipEventDTOBlockL :: Lens_' CurveTransferOwnershipEventDTO (Maybe Text)
+curveTransferOwnershipEventDTOBlockL f CurveTransferOwnershipEventDTO{..} = (\curveTransferOwnershipEventDTOBlock -> CurveTransferOwnershipEventDTO { curveTransferOwnershipEventDTOBlock, ..} ) <$> f curveTransferOwnershipEventDTOBlock
+{-# INLINE curveTransferOwnershipEventDTOBlockL #-}
+
+-- | 'curveTransferOwnershipEventDTOTimestamp' Lens
+curveTransferOwnershipEventDTOTimestampL :: Lens_' CurveTransferOwnershipEventDTO (Maybe Text)
+curveTransferOwnershipEventDTOTimestampL f CurveTransferOwnershipEventDTO{..} = (\curveTransferOwnershipEventDTOTimestamp -> CurveTransferOwnershipEventDTO { curveTransferOwnershipEventDTOTimestamp, ..} ) <$> f curveTransferOwnershipEventDTOTimestamp
+{-# INLINE curveTransferOwnershipEventDTOTimestampL #-}
+
+-- | 'curveTransferOwnershipEventDTOTransaction' Lens
+curveTransferOwnershipEventDTOTransactionL :: Lens_' CurveTransferOwnershipEventDTO (Maybe Text)
+curveTransferOwnershipEventDTOTransactionL f CurveTransferOwnershipEventDTO{..} = (\curveTransferOwnershipEventDTOTransaction -> CurveTransferOwnershipEventDTO { curveTransferOwnershipEventDTOTransaction, ..} ) <$> f curveTransferOwnershipEventDTOTransaction
+{-# INLINE curveTransferOwnershipEventDTOTransactionL #-}
+
+-- | 'curveTransferOwnershipEventDTOVid' Lens
+curveTransferOwnershipEventDTOVidL :: Lens_' CurveTransferOwnershipEventDTO (Maybe Integer)
+curveTransferOwnershipEventDTOVidL f CurveTransferOwnershipEventDTO{..} = (\curveTransferOwnershipEventDTOVid -> CurveTransferOwnershipEventDTO { curveTransferOwnershipEventDTOVid, ..} ) <$> f curveTransferOwnershipEventDTOVid
+{-# INLINE curveTransferOwnershipEventDTOVidL #-}
+
+
+
+-- * CurveUnderlyingCoinDTO
+
+-- | 'curveUnderlyingCoinDTOEntryTime' Lens
+curveUnderlyingCoinDTOEntryTimeL :: Lens_' CurveUnderlyingCoinDTO (Maybe DateTime)
+curveUnderlyingCoinDTOEntryTimeL f CurveUnderlyingCoinDTO{..} = (\curveUnderlyingCoinDTOEntryTime -> CurveUnderlyingCoinDTO { curveUnderlyingCoinDTOEntryTime, ..} ) <$> f curveUnderlyingCoinDTOEntryTime
+{-# INLINE curveUnderlyingCoinDTOEntryTimeL #-}
+
+-- | 'curveUnderlyingCoinDTORecvTime' Lens
+curveUnderlyingCoinDTORecvTimeL :: Lens_' CurveUnderlyingCoinDTO (Maybe DateTime)
+curveUnderlyingCoinDTORecvTimeL f CurveUnderlyingCoinDTO{..} = (\curveUnderlyingCoinDTORecvTime -> CurveUnderlyingCoinDTO { curveUnderlyingCoinDTORecvTime, ..} ) <$> f curveUnderlyingCoinDTORecvTime
+{-# INLINE curveUnderlyingCoinDTORecvTimeL #-}
+
+-- | 'curveUnderlyingCoinDTOBlockNumber' Lens
+curveUnderlyingCoinDTOBlockNumberL :: Lens_' CurveUnderlyingCoinDTO (Maybe Integer)
+curveUnderlyingCoinDTOBlockNumberL f CurveUnderlyingCoinDTO{..} = (\curveUnderlyingCoinDTOBlockNumber -> CurveUnderlyingCoinDTO { curveUnderlyingCoinDTOBlockNumber, ..} ) <$> f curveUnderlyingCoinDTOBlockNumber
+{-# INLINE curveUnderlyingCoinDTOBlockNumberL #-}
+
+-- | 'curveUnderlyingCoinDTOId' Lens
+curveUnderlyingCoinDTOIdL :: Lens_' CurveUnderlyingCoinDTO (Maybe Text)
+curveUnderlyingCoinDTOIdL f CurveUnderlyingCoinDTO{..} = (\curveUnderlyingCoinDTOId -> CurveUnderlyingCoinDTO { curveUnderlyingCoinDTOId, ..} ) <$> f curveUnderlyingCoinDTOId
+{-# INLINE curveUnderlyingCoinDTOIdL #-}
+
+-- | 'curveUnderlyingCoinDTOIndex' Lens
+curveUnderlyingCoinDTOIndexL :: Lens_' CurveUnderlyingCoinDTO (Maybe Int)
+curveUnderlyingCoinDTOIndexL f CurveUnderlyingCoinDTO{..} = (\curveUnderlyingCoinDTOIndex -> CurveUnderlyingCoinDTO { curveUnderlyingCoinDTOIndex, ..} ) <$> f curveUnderlyingCoinDTOIndex
+{-# INLINE curveUnderlyingCoinDTOIndexL #-}
+
+-- | 'curveUnderlyingCoinDTOPool' Lens
+curveUnderlyingCoinDTOPoolL :: Lens_' CurveUnderlyingCoinDTO (Maybe Text)
+curveUnderlyingCoinDTOPoolL f CurveUnderlyingCoinDTO{..} = (\curveUnderlyingCoinDTOPool -> CurveUnderlyingCoinDTO { curveUnderlyingCoinDTOPool, ..} ) <$> f curveUnderlyingCoinDTOPool
+{-# INLINE curveUnderlyingCoinDTOPoolL #-}
+
+-- | 'curveUnderlyingCoinDTOToken' Lens
+curveUnderlyingCoinDTOTokenL :: Lens_' CurveUnderlyingCoinDTO (Maybe Text)
+curveUnderlyingCoinDTOTokenL f CurveUnderlyingCoinDTO{..} = (\curveUnderlyingCoinDTOToken -> CurveUnderlyingCoinDTO { curveUnderlyingCoinDTOToken, ..} ) <$> f curveUnderlyingCoinDTOToken
+{-# INLINE curveUnderlyingCoinDTOTokenL #-}
+
+-- | 'curveUnderlyingCoinDTOCoin' Lens
+curveUnderlyingCoinDTOCoinL :: Lens_' CurveUnderlyingCoinDTO (Maybe Text)
+curveUnderlyingCoinDTOCoinL f CurveUnderlyingCoinDTO{..} = (\curveUnderlyingCoinDTOCoin -> CurveUnderlyingCoinDTO { curveUnderlyingCoinDTOCoin, ..} ) <$> f curveUnderlyingCoinDTOCoin
+{-# INLINE curveUnderlyingCoinDTOCoinL #-}
+
+-- | 'curveUnderlyingCoinDTOBalance' Lens
+curveUnderlyingCoinDTOBalanceL :: Lens_' CurveUnderlyingCoinDTO (Maybe Text)
+curveUnderlyingCoinDTOBalanceL f CurveUnderlyingCoinDTO{..} = (\curveUnderlyingCoinDTOBalance -> CurveUnderlyingCoinDTO { curveUnderlyingCoinDTOBalance, ..} ) <$> f curveUnderlyingCoinDTOBalance
+{-# INLINE curveUnderlyingCoinDTOBalanceL #-}
+
+-- | 'curveUnderlyingCoinDTOUpdated' Lens
+curveUnderlyingCoinDTOUpdatedL :: Lens_' CurveUnderlyingCoinDTO (Maybe Text)
+curveUnderlyingCoinDTOUpdatedL f CurveUnderlyingCoinDTO{..} = (\curveUnderlyingCoinDTOUpdated -> CurveUnderlyingCoinDTO { curveUnderlyingCoinDTOUpdated, ..} ) <$> f curveUnderlyingCoinDTOUpdated
+{-# INLINE curveUnderlyingCoinDTOUpdatedL #-}
+
+-- | 'curveUnderlyingCoinDTOUpdatedAtBlock' Lens
+curveUnderlyingCoinDTOUpdatedAtBlockL :: Lens_' CurveUnderlyingCoinDTO (Maybe Text)
+curveUnderlyingCoinDTOUpdatedAtBlockL f CurveUnderlyingCoinDTO{..} = (\curveUnderlyingCoinDTOUpdatedAtBlock -> CurveUnderlyingCoinDTO { curveUnderlyingCoinDTOUpdatedAtBlock, ..} ) <$> f curveUnderlyingCoinDTOUpdatedAtBlock
+{-# INLINE curveUnderlyingCoinDTOUpdatedAtBlockL #-}
+
+-- | 'curveUnderlyingCoinDTOUpdatedAtTransaction' Lens
+curveUnderlyingCoinDTOUpdatedAtTransactionL :: Lens_' CurveUnderlyingCoinDTO (Maybe Text)
+curveUnderlyingCoinDTOUpdatedAtTransactionL f CurveUnderlyingCoinDTO{..} = (\curveUnderlyingCoinDTOUpdatedAtTransaction -> CurveUnderlyingCoinDTO { curveUnderlyingCoinDTOUpdatedAtTransaction, ..} ) <$> f curveUnderlyingCoinDTOUpdatedAtTransaction
+{-# INLINE curveUnderlyingCoinDTOUpdatedAtTransactionL #-}
+
+-- | 'curveUnderlyingCoinDTOVid' Lens
+curveUnderlyingCoinDTOVidL :: Lens_' CurveUnderlyingCoinDTO (Maybe Integer)
+curveUnderlyingCoinDTOVidL f CurveUnderlyingCoinDTO{..} = (\curveUnderlyingCoinDTOVid -> CurveUnderlyingCoinDTO { curveUnderlyingCoinDTOVid, ..} ) <$> f curveUnderlyingCoinDTOVid
+{-# INLINE curveUnderlyingCoinDTOVidL #-}
+
+
+
+-- * CurveVotingAppDTO
+
+-- | 'curveVotingAppDTOEntryTime' Lens
+curveVotingAppDTOEntryTimeL :: Lens_' CurveVotingAppDTO (Maybe DateTime)
+curveVotingAppDTOEntryTimeL f CurveVotingAppDTO{..} = (\curveVotingAppDTOEntryTime -> CurveVotingAppDTO { curveVotingAppDTOEntryTime, ..} ) <$> f curveVotingAppDTOEntryTime
+{-# INLINE curveVotingAppDTOEntryTimeL #-}
+
+-- | 'curveVotingAppDTORecvTime' Lens
+curveVotingAppDTORecvTimeL :: Lens_' CurveVotingAppDTO (Maybe DateTime)
+curveVotingAppDTORecvTimeL f CurveVotingAppDTO{..} = (\curveVotingAppDTORecvTime -> CurveVotingAppDTO { curveVotingAppDTORecvTime, ..} ) <$> f curveVotingAppDTORecvTime
+{-# INLINE curveVotingAppDTORecvTimeL #-}
+
+-- | 'curveVotingAppDTOBlockNumber' Lens
+curveVotingAppDTOBlockNumberL :: Lens_' CurveVotingAppDTO (Maybe Integer)
+curveVotingAppDTOBlockNumberL f CurveVotingAppDTO{..} = (\curveVotingAppDTOBlockNumber -> CurveVotingAppDTO { curveVotingAppDTOBlockNumber, ..} ) <$> f curveVotingAppDTOBlockNumber
+{-# INLINE curveVotingAppDTOBlockNumberL #-}
+
+-- | 'curveVotingAppDTOId' Lens
+curveVotingAppDTOIdL :: Lens_' CurveVotingAppDTO (Maybe Text)
+curveVotingAppDTOIdL f CurveVotingAppDTO{..} = (\curveVotingAppDTOId -> CurveVotingAppDTO { curveVotingAppDTOId, ..} ) <$> f curveVotingAppDTOId
+{-# INLINE curveVotingAppDTOIdL #-}
+
+-- | 'curveVotingAppDTOAddress' Lens
+curveVotingAppDTOAddressL :: Lens_' CurveVotingAppDTO (Maybe Text)
+curveVotingAppDTOAddressL f CurveVotingAppDTO{..} = (\curveVotingAppDTOAddress -> CurveVotingAppDTO { curveVotingAppDTOAddress, ..} ) <$> f curveVotingAppDTOAddress
+{-# INLINE curveVotingAppDTOAddressL #-}
+
+-- | 'curveVotingAppDTOCodename' Lens
+curveVotingAppDTOCodenameL :: Lens_' CurveVotingAppDTO (Maybe Text)
+curveVotingAppDTOCodenameL f CurveVotingAppDTO{..} = (\curveVotingAppDTOCodename -> CurveVotingAppDTO { curveVotingAppDTOCodename, ..} ) <$> f curveVotingAppDTOCodename
+{-# INLINE curveVotingAppDTOCodenameL #-}
+
+-- | 'curveVotingAppDTOMinimumBalance' Lens
+curveVotingAppDTOMinimumBalanceL :: Lens_' CurveVotingAppDTO (Maybe Text)
+curveVotingAppDTOMinimumBalanceL f CurveVotingAppDTO{..} = (\curveVotingAppDTOMinimumBalance -> CurveVotingAppDTO { curveVotingAppDTOMinimumBalance, ..} ) <$> f curveVotingAppDTOMinimumBalance
+{-# INLINE curveVotingAppDTOMinimumBalanceL #-}
+
+-- | 'curveVotingAppDTOMinimumQuorum' Lens
+curveVotingAppDTOMinimumQuorumL :: Lens_' CurveVotingAppDTO (Maybe Text)
+curveVotingAppDTOMinimumQuorumL f CurveVotingAppDTO{..} = (\curveVotingAppDTOMinimumQuorum -> CurveVotingAppDTO { curveVotingAppDTOMinimumQuorum, ..} ) <$> f curveVotingAppDTOMinimumQuorum
+{-# INLINE curveVotingAppDTOMinimumQuorumL #-}
+
+-- | 'curveVotingAppDTOMinimumTime' Lens
+curveVotingAppDTOMinimumTimeL :: Lens_' CurveVotingAppDTO (Maybe Text)
+curveVotingAppDTOMinimumTimeL f CurveVotingAppDTO{..} = (\curveVotingAppDTOMinimumTime -> CurveVotingAppDTO { curveVotingAppDTOMinimumTime, ..} ) <$> f curveVotingAppDTOMinimumTime
+{-# INLINE curveVotingAppDTOMinimumTimeL #-}
+
+-- | 'curveVotingAppDTORequiredSupport' Lens
+curveVotingAppDTORequiredSupportL :: Lens_' CurveVotingAppDTO (Maybe Text)
+curveVotingAppDTORequiredSupportL f CurveVotingAppDTO{..} = (\curveVotingAppDTORequiredSupport -> CurveVotingAppDTO { curveVotingAppDTORequiredSupport, ..} ) <$> f curveVotingAppDTORequiredSupport
+{-# INLINE curveVotingAppDTORequiredSupportL #-}
+
+-- | 'curveVotingAppDTOVoteTime' Lens
+curveVotingAppDTOVoteTimeL :: Lens_' CurveVotingAppDTO (Maybe Text)
+curveVotingAppDTOVoteTimeL f CurveVotingAppDTO{..} = (\curveVotingAppDTOVoteTime -> CurveVotingAppDTO { curveVotingAppDTOVoteTime, ..} ) <$> f curveVotingAppDTOVoteTime
+{-# INLINE curveVotingAppDTOVoteTimeL #-}
+
+-- | 'curveVotingAppDTOProposalCount' Lens
+curveVotingAppDTOProposalCountL :: Lens_' CurveVotingAppDTO (Maybe Text)
+curveVotingAppDTOProposalCountL f CurveVotingAppDTO{..} = (\curveVotingAppDTOProposalCount -> CurveVotingAppDTO { curveVotingAppDTOProposalCount, ..} ) <$> f curveVotingAppDTOProposalCount
+{-# INLINE curveVotingAppDTOProposalCountL #-}
+
+-- | 'curveVotingAppDTOVoteCount' Lens
+curveVotingAppDTOVoteCountL :: Lens_' CurveVotingAppDTO (Maybe Text)
+curveVotingAppDTOVoteCountL f CurveVotingAppDTO{..} = (\curveVotingAppDTOVoteCount -> CurveVotingAppDTO { curveVotingAppDTOVoteCount, ..} ) <$> f curveVotingAppDTOVoteCount
+{-# INLINE curveVotingAppDTOVoteCountL #-}
+
+-- | 'curveVotingAppDTOToken' Lens
+curveVotingAppDTOTokenL :: Lens_' CurveVotingAppDTO (Maybe Text)
+curveVotingAppDTOTokenL f CurveVotingAppDTO{..} = (\curveVotingAppDTOToken -> CurveVotingAppDTO { curveVotingAppDTOToken, ..} ) <$> f curveVotingAppDTOToken
+{-# INLINE curveVotingAppDTOTokenL #-}
+
+-- | 'curveVotingAppDTOVid' Lens
+curveVotingAppDTOVidL :: Lens_' CurveVotingAppDTO (Maybe Integer)
+curveVotingAppDTOVidL f CurveVotingAppDTO{..} = (\curveVotingAppDTOVid -> CurveVotingAppDTO { curveVotingAppDTOVid, ..} ) <$> f curveVotingAppDTOVid
+{-# INLINE curveVotingAppDTOVidL #-}
+
+
+
+-- * CurveWeeklyVolumeDTO
+
+-- | 'curveWeeklyVolumeDTOEntryTime' Lens
+curveWeeklyVolumeDTOEntryTimeL :: Lens_' CurveWeeklyVolumeDTO (Maybe DateTime)
+curveWeeklyVolumeDTOEntryTimeL f CurveWeeklyVolumeDTO{..} = (\curveWeeklyVolumeDTOEntryTime -> CurveWeeklyVolumeDTO { curveWeeklyVolumeDTOEntryTime, ..} ) <$> f curveWeeklyVolumeDTOEntryTime
+{-# INLINE curveWeeklyVolumeDTOEntryTimeL #-}
+
+-- | 'curveWeeklyVolumeDTORecvTime' Lens
+curveWeeklyVolumeDTORecvTimeL :: Lens_' CurveWeeklyVolumeDTO (Maybe DateTime)
+curveWeeklyVolumeDTORecvTimeL f CurveWeeklyVolumeDTO{..} = (\curveWeeklyVolumeDTORecvTime -> CurveWeeklyVolumeDTO { curveWeeklyVolumeDTORecvTime, ..} ) <$> f curveWeeklyVolumeDTORecvTime
+{-# INLINE curveWeeklyVolumeDTORecvTimeL #-}
+
+-- | 'curveWeeklyVolumeDTOBlockNumber' Lens
+curveWeeklyVolumeDTOBlockNumberL :: Lens_' CurveWeeklyVolumeDTO (Maybe Integer)
+curveWeeklyVolumeDTOBlockNumberL f CurveWeeklyVolumeDTO{..} = (\curveWeeklyVolumeDTOBlockNumber -> CurveWeeklyVolumeDTO { curveWeeklyVolumeDTOBlockNumber, ..} ) <$> f curveWeeklyVolumeDTOBlockNumber
+{-# INLINE curveWeeklyVolumeDTOBlockNumberL #-}
+
+-- | 'curveWeeklyVolumeDTOId' Lens
+curveWeeklyVolumeDTOIdL :: Lens_' CurveWeeklyVolumeDTO (Maybe Text)
+curveWeeklyVolumeDTOIdL f CurveWeeklyVolumeDTO{..} = (\curveWeeklyVolumeDTOId -> CurveWeeklyVolumeDTO { curveWeeklyVolumeDTOId, ..} ) <$> f curveWeeklyVolumeDTOId
+{-# INLINE curveWeeklyVolumeDTOIdL #-}
+
+-- | 'curveWeeklyVolumeDTOPool' Lens
+curveWeeklyVolumeDTOPoolL :: Lens_' CurveWeeklyVolumeDTO (Maybe Text)
+curveWeeklyVolumeDTOPoolL f CurveWeeklyVolumeDTO{..} = (\curveWeeklyVolumeDTOPool -> CurveWeeklyVolumeDTO { curveWeeklyVolumeDTOPool, ..} ) <$> f curveWeeklyVolumeDTOPool
+{-# INLINE curveWeeklyVolumeDTOPoolL #-}
+
+-- | 'curveWeeklyVolumeDTOTimestamp' Lens
+curveWeeklyVolumeDTOTimestampL :: Lens_' CurveWeeklyVolumeDTO (Maybe Text)
+curveWeeklyVolumeDTOTimestampL f CurveWeeklyVolumeDTO{..} = (\curveWeeklyVolumeDTOTimestamp -> CurveWeeklyVolumeDTO { curveWeeklyVolumeDTOTimestamp, ..} ) <$> f curveWeeklyVolumeDTOTimestamp
+{-# INLINE curveWeeklyVolumeDTOTimestampL #-}
+
+-- | 'curveWeeklyVolumeDTOVolume' Lens
+curveWeeklyVolumeDTOVolumeL :: Lens_' CurveWeeklyVolumeDTO (Maybe Text)
+curveWeeklyVolumeDTOVolumeL f CurveWeeklyVolumeDTO{..} = (\curveWeeklyVolumeDTOVolume -> CurveWeeklyVolumeDTO { curveWeeklyVolumeDTOVolume, ..} ) <$> f curveWeeklyVolumeDTOVolume
+{-# INLINE curveWeeklyVolumeDTOVolumeL #-}
+
+-- | 'curveWeeklyVolumeDTOVid' Lens
+curveWeeklyVolumeDTOVidL :: Lens_' CurveWeeklyVolumeDTO (Maybe Integer)
+curveWeeklyVolumeDTOVidL f CurveWeeklyVolumeDTO{..} = (\curveWeeklyVolumeDTOVid -> CurveWeeklyVolumeDTO { curveWeeklyVolumeDTOVid, ..} ) <$> f curveWeeklyVolumeDTOVid
+{-# INLINE curveWeeklyVolumeDTOVidL #-}
+
+
+
+-- * DexBatchDTO
+
+-- | 'dexBatchDTOEntryTime' Lens
+dexBatchDTOEntryTimeL :: Lens_' DexBatchDTO (Maybe DateTime)
+dexBatchDTOEntryTimeL f DexBatchDTO{..} = (\dexBatchDTOEntryTime -> DexBatchDTO { dexBatchDTOEntryTime, ..} ) <$> f dexBatchDTOEntryTime
+{-# INLINE dexBatchDTOEntryTimeL #-}
+
+-- | 'dexBatchDTORecvTime' Lens
+dexBatchDTORecvTimeL :: Lens_' DexBatchDTO (Maybe DateTime)
+dexBatchDTORecvTimeL f DexBatchDTO{..} = (\dexBatchDTORecvTime -> DexBatchDTO { dexBatchDTORecvTime, ..} ) <$> f dexBatchDTORecvTime
+{-# INLINE dexBatchDTORecvTimeL #-}
+
+-- | 'dexBatchDTOBlockNumber' Lens
+dexBatchDTOBlockNumberL :: Lens_' DexBatchDTO (Maybe Integer)
+dexBatchDTOBlockNumberL f DexBatchDTO{..} = (\dexBatchDTOBlockNumber -> DexBatchDTO { dexBatchDTOBlockNumber, ..} ) <$> f dexBatchDTOBlockNumber
+{-# INLINE dexBatchDTOBlockNumberL #-}
+
+-- | 'dexBatchDTOId' Lens
+dexBatchDTOIdL :: Lens_' DexBatchDTO (Maybe Text)
+dexBatchDTOIdL f DexBatchDTO{..} = (\dexBatchDTOId -> DexBatchDTO { dexBatchDTOId, ..} ) <$> f dexBatchDTOId
+{-# INLINE dexBatchDTOIdL #-}
+
+-- | 'dexBatchDTOStartEpoch' Lens
+dexBatchDTOStartEpochL :: Lens_' DexBatchDTO (Maybe Text)
+dexBatchDTOStartEpochL f DexBatchDTO{..} = (\dexBatchDTOStartEpoch -> DexBatchDTO { dexBatchDTOStartEpoch, ..} ) <$> f dexBatchDTOStartEpoch
+{-# INLINE dexBatchDTOStartEpochL #-}
+
+-- | 'dexBatchDTOEndEpoch' Lens
+dexBatchDTOEndEpochL :: Lens_' DexBatchDTO (Maybe Text)
+dexBatchDTOEndEpochL f DexBatchDTO{..} = (\dexBatchDTOEndEpoch -> DexBatchDTO { dexBatchDTOEndEpoch, ..} ) <$> f dexBatchDTOEndEpoch
+{-# INLINE dexBatchDTOEndEpochL #-}
+
+-- | 'dexBatchDTOSolution' Lens
+dexBatchDTOSolutionL :: Lens_' DexBatchDTO (Maybe Text)
+dexBatchDTOSolutionL f DexBatchDTO{..} = (\dexBatchDTOSolution -> DexBatchDTO { dexBatchDTOSolution, ..} ) <$> f dexBatchDTOSolution
+{-# INLINE dexBatchDTOSolutionL #-}
+
+-- | 'dexBatchDTOFirstSolutionEpoch' Lens
+dexBatchDTOFirstSolutionEpochL :: Lens_' DexBatchDTO (Maybe Text)
+dexBatchDTOFirstSolutionEpochL f DexBatchDTO{..} = (\dexBatchDTOFirstSolutionEpoch -> DexBatchDTO { dexBatchDTOFirstSolutionEpoch, ..} ) <$> f dexBatchDTOFirstSolutionEpoch
+{-# INLINE dexBatchDTOFirstSolutionEpochL #-}
+
+-- | 'dexBatchDTOLastRevertEpoch' Lens
+dexBatchDTOLastRevertEpochL :: Lens_' DexBatchDTO (Maybe Text)
+dexBatchDTOLastRevertEpochL f DexBatchDTO{..} = (\dexBatchDTOLastRevertEpoch -> DexBatchDTO { dexBatchDTOLastRevertEpoch, ..} ) <$> f dexBatchDTOLastRevertEpoch
+{-# INLINE dexBatchDTOLastRevertEpochL #-}
+
+-- | 'dexBatchDTOTxHash' Lens
+dexBatchDTOTxHashL :: Lens_' DexBatchDTO (Maybe Text)
+dexBatchDTOTxHashL f DexBatchDTO{..} = (\dexBatchDTOTxHash -> DexBatchDTO { dexBatchDTOTxHash, ..} ) <$> f dexBatchDTOTxHash
+{-# INLINE dexBatchDTOTxHashL #-}
+
+-- | 'dexBatchDTOVid' Lens
+dexBatchDTOVidL :: Lens_' DexBatchDTO (Maybe Integer)
+dexBatchDTOVidL f DexBatchDTO{..} = (\dexBatchDTOVid -> DexBatchDTO { dexBatchDTOVid, ..} ) <$> f dexBatchDTOVid
+{-# INLINE dexBatchDTOVidL #-}
+
+
+
+-- * DexDepositDTO
+
+-- | 'dexDepositDTOEntryTime' Lens
+dexDepositDTOEntryTimeL :: Lens_' DexDepositDTO (Maybe DateTime)
+dexDepositDTOEntryTimeL f DexDepositDTO{..} = (\dexDepositDTOEntryTime -> DexDepositDTO { dexDepositDTOEntryTime, ..} ) <$> f dexDepositDTOEntryTime
+{-# INLINE dexDepositDTOEntryTimeL #-}
+
+-- | 'dexDepositDTORecvTime' Lens
+dexDepositDTORecvTimeL :: Lens_' DexDepositDTO (Maybe DateTime)
+dexDepositDTORecvTimeL f DexDepositDTO{..} = (\dexDepositDTORecvTime -> DexDepositDTO { dexDepositDTORecvTime, ..} ) <$> f dexDepositDTORecvTime
+{-# INLINE dexDepositDTORecvTimeL #-}
+
+-- | 'dexDepositDTOBlockNumber' Lens
+dexDepositDTOBlockNumberL :: Lens_' DexDepositDTO (Maybe Integer)
+dexDepositDTOBlockNumberL f DexDepositDTO{..} = (\dexDepositDTOBlockNumber -> DexDepositDTO { dexDepositDTOBlockNumber, ..} ) <$> f dexDepositDTOBlockNumber
+{-# INLINE dexDepositDTOBlockNumberL #-}
+
+-- | 'dexDepositDTOId' Lens
+dexDepositDTOIdL :: Lens_' DexDepositDTO (Maybe Text)
+dexDepositDTOIdL f DexDepositDTO{..} = (\dexDepositDTOId -> DexDepositDTO { dexDepositDTOId, ..} ) <$> f dexDepositDTOId
+{-# INLINE dexDepositDTOIdL #-}
+
+-- | 'dexDepositDTOUser' Lens
+dexDepositDTOUserL :: Lens_' DexDepositDTO (Maybe Text)
+dexDepositDTOUserL f DexDepositDTO{..} = (\dexDepositDTOUser -> DexDepositDTO { dexDepositDTOUser, ..} ) <$> f dexDepositDTOUser
+{-# INLINE dexDepositDTOUserL #-}
+
+-- | 'dexDepositDTOTokenAddress' Lens
+dexDepositDTOTokenAddressL :: Lens_' DexDepositDTO (Maybe Text)
+dexDepositDTOTokenAddressL f DexDepositDTO{..} = (\dexDepositDTOTokenAddress -> DexDepositDTO { dexDepositDTOTokenAddress, ..} ) <$> f dexDepositDTOTokenAddress
+{-# INLINE dexDepositDTOTokenAddressL #-}
+
+-- | 'dexDepositDTOAmount' Lens
+dexDepositDTOAmountL :: Lens_' DexDepositDTO (Maybe Text)
+dexDepositDTOAmountL f DexDepositDTO{..} = (\dexDepositDTOAmount -> DexDepositDTO { dexDepositDTOAmount, ..} ) <$> f dexDepositDTOAmount
+{-# INLINE dexDepositDTOAmountL #-}
+
+-- | 'dexDepositDTOBatchId' Lens
+dexDepositDTOBatchIdL :: Lens_' DexDepositDTO (Maybe Text)
+dexDepositDTOBatchIdL f DexDepositDTO{..} = (\dexDepositDTOBatchId -> DexDepositDTO { dexDepositDTOBatchId, ..} ) <$> f dexDepositDTOBatchId
+{-# INLINE dexDepositDTOBatchIdL #-}
+
+-- | 'dexDepositDTOCreateEpoch' Lens
+dexDepositDTOCreateEpochL :: Lens_' DexDepositDTO (Maybe Text)
+dexDepositDTOCreateEpochL f DexDepositDTO{..} = (\dexDepositDTOCreateEpoch -> DexDepositDTO { dexDepositDTOCreateEpoch, ..} ) <$> f dexDepositDTOCreateEpoch
+{-# INLINE dexDepositDTOCreateEpochL #-}
+
+-- | 'dexDepositDTOTxHash' Lens
+dexDepositDTOTxHashL :: Lens_' DexDepositDTO (Maybe Text)
+dexDepositDTOTxHashL f DexDepositDTO{..} = (\dexDepositDTOTxHash -> DexDepositDTO { dexDepositDTOTxHash, ..} ) <$> f dexDepositDTOTxHash
+{-# INLINE dexDepositDTOTxHashL #-}
+
+-- | 'dexDepositDTOVid' Lens
+dexDepositDTOVidL :: Lens_' DexDepositDTO (Maybe Integer)
+dexDepositDTOVidL f DexDepositDTO{..} = (\dexDepositDTOVid -> DexDepositDTO { dexDepositDTOVid, ..} ) <$> f dexDepositDTOVid
+{-# INLINE dexDepositDTOVidL #-}
+
+
+
+-- * DexOrderDTO
+
+-- | 'dexOrderDTOEntryTime' Lens
+dexOrderDTOEntryTimeL :: Lens_' DexOrderDTO (Maybe DateTime)
+dexOrderDTOEntryTimeL f DexOrderDTO{..} = (\dexOrderDTOEntryTime -> DexOrderDTO { dexOrderDTOEntryTime, ..} ) <$> f dexOrderDTOEntryTime
+{-# INLINE dexOrderDTOEntryTimeL #-}
+
+-- | 'dexOrderDTORecvTime' Lens
+dexOrderDTORecvTimeL :: Lens_' DexOrderDTO (Maybe DateTime)
+dexOrderDTORecvTimeL f DexOrderDTO{..} = (\dexOrderDTORecvTime -> DexOrderDTO { dexOrderDTORecvTime, ..} ) <$> f dexOrderDTORecvTime
+{-# INLINE dexOrderDTORecvTimeL #-}
+
+-- | 'dexOrderDTOBlockNumber' Lens
+dexOrderDTOBlockNumberL :: Lens_' DexOrderDTO (Maybe Integer)
+dexOrderDTOBlockNumberL f DexOrderDTO{..} = (\dexOrderDTOBlockNumber -> DexOrderDTO { dexOrderDTOBlockNumber, ..} ) <$> f dexOrderDTOBlockNumber
+{-# INLINE dexOrderDTOBlockNumberL #-}
+
+-- | 'dexOrderDTOId' Lens
+dexOrderDTOIdL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTOIdL f DexOrderDTO{..} = (\dexOrderDTOId -> DexOrderDTO { dexOrderDTOId, ..} ) <$> f dexOrderDTOId
+{-# INLINE dexOrderDTOIdL #-}
+
+-- | 'dexOrderDTOOwner' Lens
+dexOrderDTOOwnerL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTOOwnerL f DexOrderDTO{..} = (\dexOrderDTOOwner -> DexOrderDTO { dexOrderDTOOwner, ..} ) <$> f dexOrderDTOOwner
+{-# INLINE dexOrderDTOOwnerL #-}
+
+-- | 'dexOrderDTOOrderId' Lens
+dexOrderDTOOrderIdL :: Lens_' DexOrderDTO (Maybe Int)
+dexOrderDTOOrderIdL f DexOrderDTO{..} = (\dexOrderDTOOrderId -> DexOrderDTO { dexOrderDTOOrderId, ..} ) <$> f dexOrderDTOOrderId
+{-# INLINE dexOrderDTOOrderIdL #-}
+
+-- | 'dexOrderDTOFromBatchId' Lens
+dexOrderDTOFromBatchIdL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTOFromBatchIdL f DexOrderDTO{..} = (\dexOrderDTOFromBatchId -> DexOrderDTO { dexOrderDTOFromBatchId, ..} ) <$> f dexOrderDTOFromBatchId
+{-# INLINE dexOrderDTOFromBatchIdL #-}
+
+-- | 'dexOrderDTOFromEpoch' Lens
+dexOrderDTOFromEpochL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTOFromEpochL f DexOrderDTO{..} = (\dexOrderDTOFromEpoch -> DexOrderDTO { dexOrderDTOFromEpoch, ..} ) <$> f dexOrderDTOFromEpoch
+{-# INLINE dexOrderDTOFromEpochL #-}
+
+-- | 'dexOrderDTOUntilBatchId' Lens
+dexOrderDTOUntilBatchIdL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTOUntilBatchIdL f DexOrderDTO{..} = (\dexOrderDTOUntilBatchId -> DexOrderDTO { dexOrderDTOUntilBatchId, ..} ) <$> f dexOrderDTOUntilBatchId
+{-# INLINE dexOrderDTOUntilBatchIdL #-}
+
+-- | 'dexOrderDTOUntilEpoch' Lens
+dexOrderDTOUntilEpochL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTOUntilEpochL f DexOrderDTO{..} = (\dexOrderDTOUntilEpoch -> DexOrderDTO { dexOrderDTOUntilEpoch, ..} ) <$> f dexOrderDTOUntilEpoch
+{-# INLINE dexOrderDTOUntilEpochL #-}
+
+-- | 'dexOrderDTOBuyToken' Lens
+dexOrderDTOBuyTokenL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTOBuyTokenL f DexOrderDTO{..} = (\dexOrderDTOBuyToken -> DexOrderDTO { dexOrderDTOBuyToken, ..} ) <$> f dexOrderDTOBuyToken
+{-# INLINE dexOrderDTOBuyTokenL #-}
+
+-- | 'dexOrderDTOSellToken' Lens
+dexOrderDTOSellTokenL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTOSellTokenL f DexOrderDTO{..} = (\dexOrderDTOSellToken -> DexOrderDTO { dexOrderDTOSellToken, ..} ) <$> f dexOrderDTOSellToken
+{-# INLINE dexOrderDTOSellTokenL #-}
+
+-- | 'dexOrderDTOPriceNumerator' Lens
+dexOrderDTOPriceNumeratorL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTOPriceNumeratorL f DexOrderDTO{..} = (\dexOrderDTOPriceNumerator -> DexOrderDTO { dexOrderDTOPriceNumerator, ..} ) <$> f dexOrderDTOPriceNumerator
+{-# INLINE dexOrderDTOPriceNumeratorL #-}
+
+-- | 'dexOrderDTOPriceDenominator' Lens
+dexOrderDTOPriceDenominatorL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTOPriceDenominatorL f DexOrderDTO{..} = (\dexOrderDTOPriceDenominator -> DexOrderDTO { dexOrderDTOPriceDenominator, ..} ) <$> f dexOrderDTOPriceDenominator
+{-# INLINE dexOrderDTOPriceDenominatorL #-}
+
+-- | 'dexOrderDTOMaxSellAmount' Lens
+dexOrderDTOMaxSellAmountL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTOMaxSellAmountL f DexOrderDTO{..} = (\dexOrderDTOMaxSellAmount -> DexOrderDTO { dexOrderDTOMaxSellAmount, ..} ) <$> f dexOrderDTOMaxSellAmount
+{-# INLINE dexOrderDTOMaxSellAmountL #-}
+
+-- | 'dexOrderDTOMinReceiveAmount' Lens
+dexOrderDTOMinReceiveAmountL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTOMinReceiveAmountL f DexOrderDTO{..} = (\dexOrderDTOMinReceiveAmount -> DexOrderDTO { dexOrderDTOMinReceiveAmount, ..} ) <$> f dexOrderDTOMinReceiveAmount
+{-# INLINE dexOrderDTOMinReceiveAmountL #-}
+
+-- | 'dexOrderDTOSoldVolume' Lens
+dexOrderDTOSoldVolumeL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTOSoldVolumeL f DexOrderDTO{..} = (\dexOrderDTOSoldVolume -> DexOrderDTO { dexOrderDTOSoldVolume, ..} ) <$> f dexOrderDTOSoldVolume
+{-# INLINE dexOrderDTOSoldVolumeL #-}
+
+-- | 'dexOrderDTOBoughtVolume' Lens
+dexOrderDTOBoughtVolumeL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTOBoughtVolumeL f DexOrderDTO{..} = (\dexOrderDTOBoughtVolume -> DexOrderDTO { dexOrderDTOBoughtVolume, ..} ) <$> f dexOrderDTOBoughtVolume
+{-# INLINE dexOrderDTOBoughtVolumeL #-}
+
+-- | 'dexOrderDTOCreateEpoch' Lens
+dexOrderDTOCreateEpochL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTOCreateEpochL f DexOrderDTO{..} = (\dexOrderDTOCreateEpoch -> DexOrderDTO { dexOrderDTOCreateEpoch, ..} ) <$> f dexOrderDTOCreateEpoch
+{-# INLINE dexOrderDTOCreateEpochL #-}
+
+-- | 'dexOrderDTOCancelEpoch' Lens
+dexOrderDTOCancelEpochL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTOCancelEpochL f DexOrderDTO{..} = (\dexOrderDTOCancelEpoch -> DexOrderDTO { dexOrderDTOCancelEpoch, ..} ) <$> f dexOrderDTOCancelEpoch
+{-# INLINE dexOrderDTOCancelEpochL #-}
+
+-- | 'dexOrderDTODeleteEpoch' Lens
+dexOrderDTODeleteEpochL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTODeleteEpochL f DexOrderDTO{..} = (\dexOrderDTODeleteEpoch -> DexOrderDTO { dexOrderDTODeleteEpoch, ..} ) <$> f dexOrderDTODeleteEpoch
+{-# INLINE dexOrderDTODeleteEpochL #-}
+
+-- | 'dexOrderDTOTxHash' Lens
+dexOrderDTOTxHashL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTOTxHashL f DexOrderDTO{..} = (\dexOrderDTOTxHash -> DexOrderDTO { dexOrderDTOTxHash, ..} ) <$> f dexOrderDTOTxHash
+{-# INLINE dexOrderDTOTxHashL #-}
+
+-- | 'dexOrderDTOTxLogIndex' Lens
+dexOrderDTOTxLogIndexL :: Lens_' DexOrderDTO (Maybe Text)
+dexOrderDTOTxLogIndexL f DexOrderDTO{..} = (\dexOrderDTOTxLogIndex -> DexOrderDTO { dexOrderDTOTxLogIndex, ..} ) <$> f dexOrderDTOTxLogIndex
+{-# INLINE dexOrderDTOTxLogIndexL #-}
+
+-- | 'dexOrderDTOVid' Lens
+dexOrderDTOVidL :: Lens_' DexOrderDTO (Maybe Integer)
+dexOrderDTOVidL f DexOrderDTO{..} = (\dexOrderDTOVid -> DexOrderDTO { dexOrderDTOVid, ..} ) <$> f dexOrderDTOVid
+{-# INLINE dexOrderDTOVidL #-}
+
+
+
+-- * DexPriceDTO
+
+-- | 'dexPriceDTOEntryTime' Lens
+dexPriceDTOEntryTimeL :: Lens_' DexPriceDTO (Maybe DateTime)
+dexPriceDTOEntryTimeL f DexPriceDTO{..} = (\dexPriceDTOEntryTime -> DexPriceDTO { dexPriceDTOEntryTime, ..} ) <$> f dexPriceDTOEntryTime
+{-# INLINE dexPriceDTOEntryTimeL #-}
+
+-- | 'dexPriceDTORecvTime' Lens
+dexPriceDTORecvTimeL :: Lens_' DexPriceDTO (Maybe DateTime)
+dexPriceDTORecvTimeL f DexPriceDTO{..} = (\dexPriceDTORecvTime -> DexPriceDTO { dexPriceDTORecvTime, ..} ) <$> f dexPriceDTORecvTime
+{-# INLINE dexPriceDTORecvTimeL #-}
+
+-- | 'dexPriceDTOBlockNumber' Lens
+dexPriceDTOBlockNumberL :: Lens_' DexPriceDTO (Maybe Integer)
+dexPriceDTOBlockNumberL f DexPriceDTO{..} = (\dexPriceDTOBlockNumber -> DexPriceDTO { dexPriceDTOBlockNumber, ..} ) <$> f dexPriceDTOBlockNumber
+{-# INLINE dexPriceDTOBlockNumberL #-}
+
+-- | 'dexPriceDTOId' Lens
+dexPriceDTOIdL :: Lens_' DexPriceDTO (Maybe Text)
+dexPriceDTOIdL f DexPriceDTO{..} = (\dexPriceDTOId -> DexPriceDTO { dexPriceDTOId, ..} ) <$> f dexPriceDTOId
+{-# INLINE dexPriceDTOIdL #-}
+
+-- | 'dexPriceDTOToken' Lens
+dexPriceDTOTokenL :: Lens_' DexPriceDTO (Maybe Text)
+dexPriceDTOTokenL f DexPriceDTO{..} = (\dexPriceDTOToken -> DexPriceDTO { dexPriceDTOToken, ..} ) <$> f dexPriceDTOToken
+{-# INLINE dexPriceDTOTokenL #-}
+
+-- | 'dexPriceDTOBatchId' Lens
+dexPriceDTOBatchIdL :: Lens_' DexPriceDTO (Maybe Text)
+dexPriceDTOBatchIdL f DexPriceDTO{..} = (\dexPriceDTOBatchId -> DexPriceDTO { dexPriceDTOBatchId, ..} ) <$> f dexPriceDTOBatchId
+{-# INLINE dexPriceDTOBatchIdL #-}
+
+-- | 'dexPriceDTOPriceInOwlNumerator' Lens
+dexPriceDTOPriceInOwlNumeratorL :: Lens_' DexPriceDTO (Maybe Text)
+dexPriceDTOPriceInOwlNumeratorL f DexPriceDTO{..} = (\dexPriceDTOPriceInOwlNumerator -> DexPriceDTO { dexPriceDTOPriceInOwlNumerator, ..} ) <$> f dexPriceDTOPriceInOwlNumerator
+{-# INLINE dexPriceDTOPriceInOwlNumeratorL #-}
+
+-- | 'dexPriceDTOPriceInOwlDenominator' Lens
+dexPriceDTOPriceInOwlDenominatorL :: Lens_' DexPriceDTO (Maybe Text)
+dexPriceDTOPriceInOwlDenominatorL f DexPriceDTO{..} = (\dexPriceDTOPriceInOwlDenominator -> DexPriceDTO { dexPriceDTOPriceInOwlDenominator, ..} ) <$> f dexPriceDTOPriceInOwlDenominator
+{-# INLINE dexPriceDTOPriceInOwlDenominatorL #-}
+
+-- | 'dexPriceDTOVolume' Lens
+dexPriceDTOVolumeL :: Lens_' DexPriceDTO (Maybe Text)
+dexPriceDTOVolumeL f DexPriceDTO{..} = (\dexPriceDTOVolume -> DexPriceDTO { dexPriceDTOVolume, ..} ) <$> f dexPriceDTOVolume
+{-# INLINE dexPriceDTOVolumeL #-}
+
+-- | 'dexPriceDTOCreateEpoch' Lens
+dexPriceDTOCreateEpochL :: Lens_' DexPriceDTO (Maybe Text)
+dexPriceDTOCreateEpochL f DexPriceDTO{..} = (\dexPriceDTOCreateEpoch -> DexPriceDTO { dexPriceDTOCreateEpoch, ..} ) <$> f dexPriceDTOCreateEpoch
+{-# INLINE dexPriceDTOCreateEpochL #-}
+
+-- | 'dexPriceDTOTxHash' Lens
+dexPriceDTOTxHashL :: Lens_' DexPriceDTO (Maybe Text)
+dexPriceDTOTxHashL f DexPriceDTO{..} = (\dexPriceDTOTxHash -> DexPriceDTO { dexPriceDTOTxHash, ..} ) <$> f dexPriceDTOTxHash
+{-# INLINE dexPriceDTOTxHashL #-}
+
+-- | 'dexPriceDTOVid' Lens
+dexPriceDTOVidL :: Lens_' DexPriceDTO (Maybe Integer)
+dexPriceDTOVidL f DexPriceDTO{..} = (\dexPriceDTOVid -> DexPriceDTO { dexPriceDTOVid, ..} ) <$> f dexPriceDTOVid
+{-# INLINE dexPriceDTOVidL #-}
+
+
+
+-- * DexSolutionDTO
+
+-- | 'dexSolutionDTOEntryTime' Lens
+dexSolutionDTOEntryTimeL :: Lens_' DexSolutionDTO (Maybe DateTime)
+dexSolutionDTOEntryTimeL f DexSolutionDTO{..} = (\dexSolutionDTOEntryTime -> DexSolutionDTO { dexSolutionDTOEntryTime, ..} ) <$> f dexSolutionDTOEntryTime
+{-# INLINE dexSolutionDTOEntryTimeL #-}
+
+-- | 'dexSolutionDTORecvTime' Lens
+dexSolutionDTORecvTimeL :: Lens_' DexSolutionDTO (Maybe DateTime)
+dexSolutionDTORecvTimeL f DexSolutionDTO{..} = (\dexSolutionDTORecvTime -> DexSolutionDTO { dexSolutionDTORecvTime, ..} ) <$> f dexSolutionDTORecvTime
+{-# INLINE dexSolutionDTORecvTimeL #-}
+
+-- | 'dexSolutionDTOBlockNumber' Lens
+dexSolutionDTOBlockNumberL :: Lens_' DexSolutionDTO (Maybe Integer)
+dexSolutionDTOBlockNumberL f DexSolutionDTO{..} = (\dexSolutionDTOBlockNumber -> DexSolutionDTO { dexSolutionDTOBlockNumber, ..} ) <$> f dexSolutionDTOBlockNumber
+{-# INLINE dexSolutionDTOBlockNumberL #-}
+
+-- | 'dexSolutionDTOId' Lens
+dexSolutionDTOIdL :: Lens_' DexSolutionDTO (Maybe Text)
+dexSolutionDTOIdL f DexSolutionDTO{..} = (\dexSolutionDTOId -> DexSolutionDTO { dexSolutionDTOId, ..} ) <$> f dexSolutionDTOId
+{-# INLINE dexSolutionDTOIdL #-}
+
+-- | 'dexSolutionDTOBatch' Lens
+dexSolutionDTOBatchL :: Lens_' DexSolutionDTO (Maybe Text)
+dexSolutionDTOBatchL f DexSolutionDTO{..} = (\dexSolutionDTOBatch -> DexSolutionDTO { dexSolutionDTOBatch, ..} ) <$> f dexSolutionDTOBatch
+{-# INLINE dexSolutionDTOBatchL #-}
+
+-- | 'dexSolutionDTOSolver' Lens
+dexSolutionDTOSolverL :: Lens_' DexSolutionDTO (Maybe Text)
+dexSolutionDTOSolverL f DexSolutionDTO{..} = (\dexSolutionDTOSolver -> DexSolutionDTO { dexSolutionDTOSolver, ..} ) <$> f dexSolutionDTOSolver
+{-# INLINE dexSolutionDTOSolverL #-}
+
+-- | 'dexSolutionDTOFeeReward' Lens
+dexSolutionDTOFeeRewardL :: Lens_' DexSolutionDTO (Maybe Text)
+dexSolutionDTOFeeRewardL f DexSolutionDTO{..} = (\dexSolutionDTOFeeReward -> DexSolutionDTO { dexSolutionDTOFeeReward, ..} ) <$> f dexSolutionDTOFeeReward
+{-# INLINE dexSolutionDTOFeeRewardL #-}
+
+-- | 'dexSolutionDTOObjectiveValue' Lens
+dexSolutionDTOObjectiveValueL :: Lens_' DexSolutionDTO (Maybe Text)
+dexSolutionDTOObjectiveValueL f DexSolutionDTO{..} = (\dexSolutionDTOObjectiveValue -> DexSolutionDTO { dexSolutionDTOObjectiveValue, ..} ) <$> f dexSolutionDTOObjectiveValue
+{-# INLINE dexSolutionDTOObjectiveValueL #-}
+
+-- | 'dexSolutionDTOUtility' Lens
+dexSolutionDTOUtilityL :: Lens_' DexSolutionDTO (Maybe Text)
+dexSolutionDTOUtilityL f DexSolutionDTO{..} = (\dexSolutionDTOUtility -> DexSolutionDTO { dexSolutionDTOUtility, ..} ) <$> f dexSolutionDTOUtility
+{-# INLINE dexSolutionDTOUtilityL #-}
+
+-- | 'dexSolutionDTOTrades' Lens
+dexSolutionDTOTradesL :: Lens_' DexSolutionDTO (Maybe [Text])
+dexSolutionDTOTradesL f DexSolutionDTO{..} = (\dexSolutionDTOTrades -> DexSolutionDTO { dexSolutionDTOTrades, ..} ) <$> f dexSolutionDTOTrades
+{-# INLINE dexSolutionDTOTradesL #-}
+
+-- | 'dexSolutionDTOCreateEpoch' Lens
+dexSolutionDTOCreateEpochL :: Lens_' DexSolutionDTO (Maybe Text)
+dexSolutionDTOCreateEpochL f DexSolutionDTO{..} = (\dexSolutionDTOCreateEpoch -> DexSolutionDTO { dexSolutionDTOCreateEpoch, ..} ) <$> f dexSolutionDTOCreateEpoch
+{-# INLINE dexSolutionDTOCreateEpochL #-}
+
+-- | 'dexSolutionDTORevertEpoch' Lens
+dexSolutionDTORevertEpochL :: Lens_' DexSolutionDTO (Maybe Text)
+dexSolutionDTORevertEpochL f DexSolutionDTO{..} = (\dexSolutionDTORevertEpoch -> DexSolutionDTO { dexSolutionDTORevertEpoch, ..} ) <$> f dexSolutionDTORevertEpoch
+{-# INLINE dexSolutionDTORevertEpochL #-}
+
+-- | 'dexSolutionDTOTxHash' Lens
+dexSolutionDTOTxHashL :: Lens_' DexSolutionDTO (Maybe Text)
+dexSolutionDTOTxHashL f DexSolutionDTO{..} = (\dexSolutionDTOTxHash -> DexSolutionDTO { dexSolutionDTOTxHash, ..} ) <$> f dexSolutionDTOTxHash
+{-# INLINE dexSolutionDTOTxHashL #-}
+
+-- | 'dexSolutionDTOTxLogIndex' Lens
+dexSolutionDTOTxLogIndexL :: Lens_' DexSolutionDTO (Maybe Text)
+dexSolutionDTOTxLogIndexL f DexSolutionDTO{..} = (\dexSolutionDTOTxLogIndex -> DexSolutionDTO { dexSolutionDTOTxLogIndex, ..} ) <$> f dexSolutionDTOTxLogIndex
+{-# INLINE dexSolutionDTOTxLogIndexL #-}
+
+-- | 'dexSolutionDTOVid' Lens
+dexSolutionDTOVidL :: Lens_' DexSolutionDTO (Maybe Integer)
+dexSolutionDTOVidL f DexSolutionDTO{..} = (\dexSolutionDTOVid -> DexSolutionDTO { dexSolutionDTOVid, ..} ) <$> f dexSolutionDTOVid
+{-# INLINE dexSolutionDTOVidL #-}
+
+
+
+-- * DexStatsDTO
+
+-- | 'dexStatsDTOEntryTime' Lens
+dexStatsDTOEntryTimeL :: Lens_' DexStatsDTO (Maybe DateTime)
+dexStatsDTOEntryTimeL f DexStatsDTO{..} = (\dexStatsDTOEntryTime -> DexStatsDTO { dexStatsDTOEntryTime, ..} ) <$> f dexStatsDTOEntryTime
+{-# INLINE dexStatsDTOEntryTimeL #-}
+
+-- | 'dexStatsDTORecvTime' Lens
+dexStatsDTORecvTimeL :: Lens_' DexStatsDTO (Maybe DateTime)
+dexStatsDTORecvTimeL f DexStatsDTO{..} = (\dexStatsDTORecvTime -> DexStatsDTO { dexStatsDTORecvTime, ..} ) <$> f dexStatsDTORecvTime
+{-# INLINE dexStatsDTORecvTimeL #-}
+
+-- | 'dexStatsDTOBlockNumber' Lens
+dexStatsDTOBlockNumberL :: Lens_' DexStatsDTO (Maybe Integer)
+dexStatsDTOBlockNumberL f DexStatsDTO{..} = (\dexStatsDTOBlockNumber -> DexStatsDTO { dexStatsDTOBlockNumber, ..} ) <$> f dexStatsDTOBlockNumber
+{-# INLINE dexStatsDTOBlockNumberL #-}
+
+-- | 'dexStatsDTOId' Lens
+dexStatsDTOIdL :: Lens_' DexStatsDTO (Maybe Text)
+dexStatsDTOIdL f DexStatsDTO{..} = (\dexStatsDTOId -> DexStatsDTO { dexStatsDTOId, ..} ) <$> f dexStatsDTOId
+{-# INLINE dexStatsDTOIdL #-}
+
+-- | 'dexStatsDTOVolumeInOwl' Lens
+dexStatsDTOVolumeInOwlL :: Lens_' DexStatsDTO (Maybe Text)
+dexStatsDTOVolumeInOwlL f DexStatsDTO{..} = (\dexStatsDTOVolumeInOwl -> DexStatsDTO { dexStatsDTOVolumeInOwl, ..} ) <$> f dexStatsDTOVolumeInOwl
+{-# INLINE dexStatsDTOVolumeInOwlL #-}
+
+-- | 'dexStatsDTOUtilityInOwl' Lens
+dexStatsDTOUtilityInOwlL :: Lens_' DexStatsDTO (Maybe Text)
+dexStatsDTOUtilityInOwlL f DexStatsDTO{..} = (\dexStatsDTOUtilityInOwl -> DexStatsDTO { dexStatsDTOUtilityInOwl, ..} ) <$> f dexStatsDTOUtilityInOwl
+{-# INLINE dexStatsDTOUtilityInOwlL #-}
+
+-- | 'dexStatsDTOOwlBurnt' Lens
+dexStatsDTOOwlBurntL :: Lens_' DexStatsDTO (Maybe Text)
+dexStatsDTOOwlBurntL f DexStatsDTO{..} = (\dexStatsDTOOwlBurnt -> DexStatsDTO { dexStatsDTOOwlBurnt, ..} ) <$> f dexStatsDTOOwlBurnt
+{-# INLINE dexStatsDTOOwlBurntL #-}
+
+-- | 'dexStatsDTOSettledBatchCount' Lens
+dexStatsDTOSettledBatchCountL :: Lens_' DexStatsDTO (Maybe Int)
+dexStatsDTOSettledBatchCountL f DexStatsDTO{..} = (\dexStatsDTOSettledBatchCount -> DexStatsDTO { dexStatsDTOSettledBatchCount, ..} ) <$> f dexStatsDTOSettledBatchCount
+{-# INLINE dexStatsDTOSettledBatchCountL #-}
+
+-- | 'dexStatsDTOSettledTradeCount' Lens
+dexStatsDTOSettledTradeCountL :: Lens_' DexStatsDTO (Maybe Int)
+dexStatsDTOSettledTradeCountL f DexStatsDTO{..} = (\dexStatsDTOSettledTradeCount -> DexStatsDTO { dexStatsDTOSettledTradeCount, ..} ) <$> f dexStatsDTOSettledTradeCount
+{-# INLINE dexStatsDTOSettledTradeCountL #-}
+
+-- | 'dexStatsDTOListedTokens' Lens
+dexStatsDTOListedTokensL :: Lens_' DexStatsDTO (Maybe Int)
+dexStatsDTOListedTokensL f DexStatsDTO{..} = (\dexStatsDTOListedTokens -> DexStatsDTO { dexStatsDTOListedTokens, ..} ) <$> f dexStatsDTOListedTokens
+{-# INLINE dexStatsDTOListedTokensL #-}
+
+-- | 'dexStatsDTOVid' Lens
+dexStatsDTOVidL :: Lens_' DexStatsDTO (Maybe Integer)
+dexStatsDTOVidL f DexStatsDTO{..} = (\dexStatsDTOVid -> DexStatsDTO { dexStatsDTOVid, ..} ) <$> f dexStatsDTOVid
+{-# INLINE dexStatsDTOVidL #-}
+
+
+
+-- * DexTokenDTO
+
+-- | 'dexTokenDTOEntryTime' Lens
+dexTokenDTOEntryTimeL :: Lens_' DexTokenDTO (Maybe DateTime)
+dexTokenDTOEntryTimeL f DexTokenDTO{..} = (\dexTokenDTOEntryTime -> DexTokenDTO { dexTokenDTOEntryTime, ..} ) <$> f dexTokenDTOEntryTime
+{-# INLINE dexTokenDTOEntryTimeL #-}
+
+-- | 'dexTokenDTORecvTime' Lens
+dexTokenDTORecvTimeL :: Lens_' DexTokenDTO (Maybe DateTime)
+dexTokenDTORecvTimeL f DexTokenDTO{..} = (\dexTokenDTORecvTime -> DexTokenDTO { dexTokenDTORecvTime, ..} ) <$> f dexTokenDTORecvTime
+{-# INLINE dexTokenDTORecvTimeL #-}
+
+-- | 'dexTokenDTOBlockNumber' Lens
+dexTokenDTOBlockNumberL :: Lens_' DexTokenDTO (Maybe Integer)
+dexTokenDTOBlockNumberL f DexTokenDTO{..} = (\dexTokenDTOBlockNumber -> DexTokenDTO { dexTokenDTOBlockNumber, ..} ) <$> f dexTokenDTOBlockNumber
+{-# INLINE dexTokenDTOBlockNumberL #-}
+
+-- | 'dexTokenDTOId' Lens
+dexTokenDTOIdL :: Lens_' DexTokenDTO (Maybe Text)
+dexTokenDTOIdL f DexTokenDTO{..} = (\dexTokenDTOId -> DexTokenDTO { dexTokenDTOId, ..} ) <$> f dexTokenDTOId
+{-# INLINE dexTokenDTOIdL #-}
+
+-- | 'dexTokenDTOAddress' Lens
+dexTokenDTOAddressL :: Lens_' DexTokenDTO (Maybe Text)
+dexTokenDTOAddressL f DexTokenDTO{..} = (\dexTokenDTOAddress -> DexTokenDTO { dexTokenDTOAddress, ..} ) <$> f dexTokenDTOAddress
+{-# INLINE dexTokenDTOAddressL #-}
+
+-- | 'dexTokenDTOFromBatchId' Lens
+dexTokenDTOFromBatchIdL :: Lens_' DexTokenDTO (Maybe Text)
+dexTokenDTOFromBatchIdL f DexTokenDTO{..} = (\dexTokenDTOFromBatchId -> DexTokenDTO { dexTokenDTOFromBatchId, ..} ) <$> f dexTokenDTOFromBatchId
+{-# INLINE dexTokenDTOFromBatchIdL #-}
+
+-- | 'dexTokenDTOSymbol' Lens
+dexTokenDTOSymbolL :: Lens_' DexTokenDTO (Maybe Text)
+dexTokenDTOSymbolL f DexTokenDTO{..} = (\dexTokenDTOSymbol -> DexTokenDTO { dexTokenDTOSymbol, ..} ) <$> f dexTokenDTOSymbol
+{-# INLINE dexTokenDTOSymbolL #-}
+
+-- | 'dexTokenDTODecimals' Lens
+dexTokenDTODecimalsL :: Lens_' DexTokenDTO (Maybe Text)
+dexTokenDTODecimalsL f DexTokenDTO{..} = (\dexTokenDTODecimals -> DexTokenDTO { dexTokenDTODecimals, ..} ) <$> f dexTokenDTODecimals
+{-# INLINE dexTokenDTODecimalsL #-}
+
+-- | 'dexTokenDTOName' Lens
+dexTokenDTONameL :: Lens_' DexTokenDTO (Maybe Text)
+dexTokenDTONameL f DexTokenDTO{..} = (\dexTokenDTOName -> DexTokenDTO { dexTokenDTOName, ..} ) <$> f dexTokenDTOName
+{-# INLINE dexTokenDTONameL #-}
+
+-- | 'dexTokenDTOSellVolume' Lens
+dexTokenDTOSellVolumeL :: Lens_' DexTokenDTO (Maybe Text)
+dexTokenDTOSellVolumeL f DexTokenDTO{..} = (\dexTokenDTOSellVolume -> DexTokenDTO { dexTokenDTOSellVolume, ..} ) <$> f dexTokenDTOSellVolume
+{-# INLINE dexTokenDTOSellVolumeL #-}
+
+-- | 'dexTokenDTOCreateEpoch' Lens
+dexTokenDTOCreateEpochL :: Lens_' DexTokenDTO (Maybe Text)
+dexTokenDTOCreateEpochL f DexTokenDTO{..} = (\dexTokenDTOCreateEpoch -> DexTokenDTO { dexTokenDTOCreateEpoch, ..} ) <$> f dexTokenDTOCreateEpoch
+{-# INLINE dexTokenDTOCreateEpochL #-}
+
+-- | 'dexTokenDTOTxHash' Lens
+dexTokenDTOTxHashL :: Lens_' DexTokenDTO (Maybe Text)
+dexTokenDTOTxHashL f DexTokenDTO{..} = (\dexTokenDTOTxHash -> DexTokenDTO { dexTokenDTOTxHash, ..} ) <$> f dexTokenDTOTxHash
+{-# INLINE dexTokenDTOTxHashL #-}
+
+-- | 'dexTokenDTOVid' Lens
+dexTokenDTOVidL :: Lens_' DexTokenDTO (Maybe Integer)
+dexTokenDTOVidL f DexTokenDTO{..} = (\dexTokenDTOVid -> DexTokenDTO { dexTokenDTOVid, ..} ) <$> f dexTokenDTOVid
+{-# INLINE dexTokenDTOVidL #-}
+
+-- | 'dexTokenDTOTokenSymbol' Lens
+dexTokenDTOTokenSymbolL :: Lens_' DexTokenDTO (Maybe Text)
+dexTokenDTOTokenSymbolL f DexTokenDTO{..} = (\dexTokenDTOTokenSymbol -> DexTokenDTO { dexTokenDTOTokenSymbol, ..} ) <$> f dexTokenDTOTokenSymbol
+{-# INLINE dexTokenDTOTokenSymbolL #-}
 
 
 
@@ -255,6 +3047,173 @@ dexTradeDTOEvaluatedAggressorL f DexTradeDTO{..} = (\dexTradeDTOEvaluatedAggress
 
 
 
+-- * DexUserDTO
+
+-- | 'dexUserDTOEntryTime' Lens
+dexUserDTOEntryTimeL :: Lens_' DexUserDTO (Maybe DateTime)
+dexUserDTOEntryTimeL f DexUserDTO{..} = (\dexUserDTOEntryTime -> DexUserDTO { dexUserDTOEntryTime, ..} ) <$> f dexUserDTOEntryTime
+{-# INLINE dexUserDTOEntryTimeL #-}
+
+-- | 'dexUserDTORecvTime' Lens
+dexUserDTORecvTimeL :: Lens_' DexUserDTO (Maybe DateTime)
+dexUserDTORecvTimeL f DexUserDTO{..} = (\dexUserDTORecvTime -> DexUserDTO { dexUserDTORecvTime, ..} ) <$> f dexUserDTORecvTime
+{-# INLINE dexUserDTORecvTimeL #-}
+
+-- | 'dexUserDTOBlockNumber' Lens
+dexUserDTOBlockNumberL :: Lens_' DexUserDTO (Maybe Integer)
+dexUserDTOBlockNumberL f DexUserDTO{..} = (\dexUserDTOBlockNumber -> DexUserDTO { dexUserDTOBlockNumber, ..} ) <$> f dexUserDTOBlockNumber
+{-# INLINE dexUserDTOBlockNumberL #-}
+
+-- | 'dexUserDTOId' Lens
+dexUserDTOIdL :: Lens_' DexUserDTO (Maybe Text)
+dexUserDTOIdL f DexUserDTO{..} = (\dexUserDTOId -> DexUserDTO { dexUserDTOId, ..} ) <$> f dexUserDTOId
+{-# INLINE dexUserDTOIdL #-}
+
+-- | 'dexUserDTOFromBatchId' Lens
+dexUserDTOFromBatchIdL :: Lens_' DexUserDTO (Maybe Text)
+dexUserDTOFromBatchIdL f DexUserDTO{..} = (\dexUserDTOFromBatchId -> DexUserDTO { dexUserDTOFromBatchId, ..} ) <$> f dexUserDTOFromBatchId
+{-# INLINE dexUserDTOFromBatchIdL #-}
+
+-- | 'dexUserDTOCreateEpoch' Lens
+dexUserDTOCreateEpochL :: Lens_' DexUserDTO (Maybe Text)
+dexUserDTOCreateEpochL f DexUserDTO{..} = (\dexUserDTOCreateEpoch -> DexUserDTO { dexUserDTOCreateEpoch, ..} ) <$> f dexUserDTOCreateEpoch
+{-# INLINE dexUserDTOCreateEpochL #-}
+
+-- | 'dexUserDTOTxHash' Lens
+dexUserDTOTxHashL :: Lens_' DexUserDTO (Maybe Text)
+dexUserDTOTxHashL f DexUserDTO{..} = (\dexUserDTOTxHash -> DexUserDTO { dexUserDTOTxHash, ..} ) <$> f dexUserDTOTxHash
+{-# INLINE dexUserDTOTxHashL #-}
+
+-- | 'dexUserDTOVid' Lens
+dexUserDTOVidL :: Lens_' DexUserDTO (Maybe Integer)
+dexUserDTOVidL f DexUserDTO{..} = (\dexUserDTOVid -> DexUserDTO { dexUserDTOVid, ..} ) <$> f dexUserDTOVid
+{-# INLINE dexUserDTOVidL #-}
+
+
+
+-- * DexWithdrawDTO
+
+-- | 'dexWithdrawDTOEntryTime' Lens
+dexWithdrawDTOEntryTimeL :: Lens_' DexWithdrawDTO (Maybe DateTime)
+dexWithdrawDTOEntryTimeL f DexWithdrawDTO{..} = (\dexWithdrawDTOEntryTime -> DexWithdrawDTO { dexWithdrawDTOEntryTime, ..} ) <$> f dexWithdrawDTOEntryTime
+{-# INLINE dexWithdrawDTOEntryTimeL #-}
+
+-- | 'dexWithdrawDTORecvTime' Lens
+dexWithdrawDTORecvTimeL :: Lens_' DexWithdrawDTO (Maybe DateTime)
+dexWithdrawDTORecvTimeL f DexWithdrawDTO{..} = (\dexWithdrawDTORecvTime -> DexWithdrawDTO { dexWithdrawDTORecvTime, ..} ) <$> f dexWithdrawDTORecvTime
+{-# INLINE dexWithdrawDTORecvTimeL #-}
+
+-- | 'dexWithdrawDTOBlockNumber' Lens
+dexWithdrawDTOBlockNumberL :: Lens_' DexWithdrawDTO (Maybe Integer)
+dexWithdrawDTOBlockNumberL f DexWithdrawDTO{..} = (\dexWithdrawDTOBlockNumber -> DexWithdrawDTO { dexWithdrawDTOBlockNumber, ..} ) <$> f dexWithdrawDTOBlockNumber
+{-# INLINE dexWithdrawDTOBlockNumberL #-}
+
+-- | 'dexWithdrawDTOId' Lens
+dexWithdrawDTOIdL :: Lens_' DexWithdrawDTO (Maybe Text)
+dexWithdrawDTOIdL f DexWithdrawDTO{..} = (\dexWithdrawDTOId -> DexWithdrawDTO { dexWithdrawDTOId, ..} ) <$> f dexWithdrawDTOId
+{-# INLINE dexWithdrawDTOIdL #-}
+
+-- | 'dexWithdrawDTOUser' Lens
+dexWithdrawDTOUserL :: Lens_' DexWithdrawDTO (Maybe Text)
+dexWithdrawDTOUserL f DexWithdrawDTO{..} = (\dexWithdrawDTOUser -> DexWithdrawDTO { dexWithdrawDTOUser, ..} ) <$> f dexWithdrawDTOUser
+{-# INLINE dexWithdrawDTOUserL #-}
+
+-- | 'dexWithdrawDTOTokenAddress' Lens
+dexWithdrawDTOTokenAddressL :: Lens_' DexWithdrawDTO (Maybe Text)
+dexWithdrawDTOTokenAddressL f DexWithdrawDTO{..} = (\dexWithdrawDTOTokenAddress -> DexWithdrawDTO { dexWithdrawDTOTokenAddress, ..} ) <$> f dexWithdrawDTOTokenAddress
+{-# INLINE dexWithdrawDTOTokenAddressL #-}
+
+-- | 'dexWithdrawDTOAmount' Lens
+dexWithdrawDTOAmountL :: Lens_' DexWithdrawDTO (Maybe Text)
+dexWithdrawDTOAmountL f DexWithdrawDTO{..} = (\dexWithdrawDTOAmount -> DexWithdrawDTO { dexWithdrawDTOAmount, ..} ) <$> f dexWithdrawDTOAmount
+{-# INLINE dexWithdrawDTOAmountL #-}
+
+-- | 'dexWithdrawDTOCreateEpoch' Lens
+dexWithdrawDTOCreateEpochL :: Lens_' DexWithdrawDTO (Maybe Text)
+dexWithdrawDTOCreateEpochL f DexWithdrawDTO{..} = (\dexWithdrawDTOCreateEpoch -> DexWithdrawDTO { dexWithdrawDTOCreateEpoch, ..} ) <$> f dexWithdrawDTOCreateEpoch
+{-# INLINE dexWithdrawDTOCreateEpochL #-}
+
+-- | 'dexWithdrawDTOCreateBatchId' Lens
+dexWithdrawDTOCreateBatchIdL :: Lens_' DexWithdrawDTO (Maybe Text)
+dexWithdrawDTOCreateBatchIdL f DexWithdrawDTO{..} = (\dexWithdrawDTOCreateBatchId -> DexWithdrawDTO { dexWithdrawDTOCreateBatchId, ..} ) <$> f dexWithdrawDTOCreateBatchId
+{-# INLINE dexWithdrawDTOCreateBatchIdL #-}
+
+-- | 'dexWithdrawDTOTxHash' Lens
+dexWithdrawDTOTxHashL :: Lens_' DexWithdrawDTO (Maybe Text)
+dexWithdrawDTOTxHashL f DexWithdrawDTO{..} = (\dexWithdrawDTOTxHash -> DexWithdrawDTO { dexWithdrawDTOTxHash, ..} ) <$> f dexWithdrawDTOTxHash
+{-# INLINE dexWithdrawDTOTxHashL #-}
+
+-- | 'dexWithdrawDTOVid' Lens
+dexWithdrawDTOVidL :: Lens_' DexWithdrawDTO (Maybe Integer)
+dexWithdrawDTOVidL f DexWithdrawDTO{..} = (\dexWithdrawDTOVid -> DexWithdrawDTO { dexWithdrawDTOVid, ..} ) <$> f dexWithdrawDTOVid
+{-# INLINE dexWithdrawDTOVidL #-}
+
+
+
+-- * DexWithdrawRequestDTO
+
+-- | 'dexWithdrawRequestDTOEntryTime' Lens
+dexWithdrawRequestDTOEntryTimeL :: Lens_' DexWithdrawRequestDTO (Maybe DateTime)
+dexWithdrawRequestDTOEntryTimeL f DexWithdrawRequestDTO{..} = (\dexWithdrawRequestDTOEntryTime -> DexWithdrawRequestDTO { dexWithdrawRequestDTOEntryTime, ..} ) <$> f dexWithdrawRequestDTOEntryTime
+{-# INLINE dexWithdrawRequestDTOEntryTimeL #-}
+
+-- | 'dexWithdrawRequestDTORecvTime' Lens
+dexWithdrawRequestDTORecvTimeL :: Lens_' DexWithdrawRequestDTO (Maybe DateTime)
+dexWithdrawRequestDTORecvTimeL f DexWithdrawRequestDTO{..} = (\dexWithdrawRequestDTORecvTime -> DexWithdrawRequestDTO { dexWithdrawRequestDTORecvTime, ..} ) <$> f dexWithdrawRequestDTORecvTime
+{-# INLINE dexWithdrawRequestDTORecvTimeL #-}
+
+-- | 'dexWithdrawRequestDTOBlockNumber' Lens
+dexWithdrawRequestDTOBlockNumberL :: Lens_' DexWithdrawRequestDTO (Maybe Integer)
+dexWithdrawRequestDTOBlockNumberL f DexWithdrawRequestDTO{..} = (\dexWithdrawRequestDTOBlockNumber -> DexWithdrawRequestDTO { dexWithdrawRequestDTOBlockNumber, ..} ) <$> f dexWithdrawRequestDTOBlockNumber
+{-# INLINE dexWithdrawRequestDTOBlockNumberL #-}
+
+-- | 'dexWithdrawRequestDTOId' Lens
+dexWithdrawRequestDTOIdL :: Lens_' DexWithdrawRequestDTO (Maybe Text)
+dexWithdrawRequestDTOIdL f DexWithdrawRequestDTO{..} = (\dexWithdrawRequestDTOId -> DexWithdrawRequestDTO { dexWithdrawRequestDTOId, ..} ) <$> f dexWithdrawRequestDTOId
+{-# INLINE dexWithdrawRequestDTOIdL #-}
+
+-- | 'dexWithdrawRequestDTOUser' Lens
+dexWithdrawRequestDTOUserL :: Lens_' DexWithdrawRequestDTO (Maybe Text)
+dexWithdrawRequestDTOUserL f DexWithdrawRequestDTO{..} = (\dexWithdrawRequestDTOUser -> DexWithdrawRequestDTO { dexWithdrawRequestDTOUser, ..} ) <$> f dexWithdrawRequestDTOUser
+{-# INLINE dexWithdrawRequestDTOUserL #-}
+
+-- | 'dexWithdrawRequestDTOTokenAddress' Lens
+dexWithdrawRequestDTOTokenAddressL :: Lens_' DexWithdrawRequestDTO (Maybe Text)
+dexWithdrawRequestDTOTokenAddressL f DexWithdrawRequestDTO{..} = (\dexWithdrawRequestDTOTokenAddress -> DexWithdrawRequestDTO { dexWithdrawRequestDTOTokenAddress, ..} ) <$> f dexWithdrawRequestDTOTokenAddress
+{-# INLINE dexWithdrawRequestDTOTokenAddressL #-}
+
+-- | 'dexWithdrawRequestDTOAmount' Lens
+dexWithdrawRequestDTOAmountL :: Lens_' DexWithdrawRequestDTO (Maybe Text)
+dexWithdrawRequestDTOAmountL f DexWithdrawRequestDTO{..} = (\dexWithdrawRequestDTOAmount -> DexWithdrawRequestDTO { dexWithdrawRequestDTOAmount, ..} ) <$> f dexWithdrawRequestDTOAmount
+{-# INLINE dexWithdrawRequestDTOAmountL #-}
+
+-- | 'dexWithdrawRequestDTOWithdrawableFromBatchId' Lens
+dexWithdrawRequestDTOWithdrawableFromBatchIdL :: Lens_' DexWithdrawRequestDTO (Maybe Text)
+dexWithdrawRequestDTOWithdrawableFromBatchIdL f DexWithdrawRequestDTO{..} = (\dexWithdrawRequestDTOWithdrawableFromBatchId -> DexWithdrawRequestDTO { dexWithdrawRequestDTOWithdrawableFromBatchId, ..} ) <$> f dexWithdrawRequestDTOWithdrawableFromBatchId
+{-# INLINE dexWithdrawRequestDTOWithdrawableFromBatchIdL #-}
+
+-- | 'dexWithdrawRequestDTOCreateEpoch' Lens
+dexWithdrawRequestDTOCreateEpochL :: Lens_' DexWithdrawRequestDTO (Maybe Text)
+dexWithdrawRequestDTOCreateEpochL f DexWithdrawRequestDTO{..} = (\dexWithdrawRequestDTOCreateEpoch -> DexWithdrawRequestDTO { dexWithdrawRequestDTOCreateEpoch, ..} ) <$> f dexWithdrawRequestDTOCreateEpoch
+{-# INLINE dexWithdrawRequestDTOCreateEpochL #-}
+
+-- | 'dexWithdrawRequestDTOCreateBatchId' Lens
+dexWithdrawRequestDTOCreateBatchIdL :: Lens_' DexWithdrawRequestDTO (Maybe Text)
+dexWithdrawRequestDTOCreateBatchIdL f DexWithdrawRequestDTO{..} = (\dexWithdrawRequestDTOCreateBatchId -> DexWithdrawRequestDTO { dexWithdrawRequestDTOCreateBatchId, ..} ) <$> f dexWithdrawRequestDTOCreateBatchId
+{-# INLINE dexWithdrawRequestDTOCreateBatchIdL #-}
+
+-- | 'dexWithdrawRequestDTOTxHash' Lens
+dexWithdrawRequestDTOTxHashL :: Lens_' DexWithdrawRequestDTO (Maybe Text)
+dexWithdrawRequestDTOTxHashL f DexWithdrawRequestDTO{..} = (\dexWithdrawRequestDTOTxHash -> DexWithdrawRequestDTO { dexWithdrawRequestDTOTxHash, ..} ) <$> f dexWithdrawRequestDTOTxHash
+{-# INLINE dexWithdrawRequestDTOTxHashL #-}
+
+-- | 'dexWithdrawRequestDTOVid' Lens
+dexWithdrawRequestDTOVidL :: Lens_' DexWithdrawRequestDTO (Maybe Integer)
+dexWithdrawRequestDTOVidL f DexWithdrawRequestDTO{..} = (\dexWithdrawRequestDTOVid -> DexWithdrawRequestDTO { dexWithdrawRequestDTOVid, ..} ) <$> f dexWithdrawRequestDTOVid
+{-# INLINE dexWithdrawRequestDTOVidL #-}
+
+
+
 -- * NumericsBigInteger
 
 -- | 'numericsBigIntegerIsPowerOfTwo' Lens
@@ -281,6 +3240,578 @@ numericsBigIntegerIsEvenL f NumericsBigInteger{..} = (\numericsBigIntegerIsEven 
 numericsBigIntegerSignL :: Lens_' NumericsBigInteger (Maybe Int)
 numericsBigIntegerSignL f NumericsBigInteger{..} = (\numericsBigIntegerSign -> NumericsBigInteger { numericsBigIntegerSign, ..} ) <$> f numericsBigIntegerSign
 {-# INLINE numericsBigIntegerSignL #-}
+
+
+
+-- * SushiswapBundleDTO
+
+-- | 'sushiswapBundleDTOEntryTime' Lens
+sushiswapBundleDTOEntryTimeL :: Lens_' SushiswapBundleDTO (Maybe DateTime)
+sushiswapBundleDTOEntryTimeL f SushiswapBundleDTO{..} = (\sushiswapBundleDTOEntryTime -> SushiswapBundleDTO { sushiswapBundleDTOEntryTime, ..} ) <$> f sushiswapBundleDTOEntryTime
+{-# INLINE sushiswapBundleDTOEntryTimeL #-}
+
+-- | 'sushiswapBundleDTORecvTime' Lens
+sushiswapBundleDTORecvTimeL :: Lens_' SushiswapBundleDTO (Maybe DateTime)
+sushiswapBundleDTORecvTimeL f SushiswapBundleDTO{..} = (\sushiswapBundleDTORecvTime -> SushiswapBundleDTO { sushiswapBundleDTORecvTime, ..} ) <$> f sushiswapBundleDTORecvTime
+{-# INLINE sushiswapBundleDTORecvTimeL #-}
+
+-- | 'sushiswapBundleDTOBlockNumber' Lens
+sushiswapBundleDTOBlockNumberL :: Lens_' SushiswapBundleDTO (Maybe Integer)
+sushiswapBundleDTOBlockNumberL f SushiswapBundleDTO{..} = (\sushiswapBundleDTOBlockNumber -> SushiswapBundleDTO { sushiswapBundleDTOBlockNumber, ..} ) <$> f sushiswapBundleDTOBlockNumber
+{-# INLINE sushiswapBundleDTOBlockNumberL #-}
+
+-- | 'sushiswapBundleDTOId' Lens
+sushiswapBundleDTOIdL :: Lens_' SushiswapBundleDTO (Maybe Text)
+sushiswapBundleDTOIdL f SushiswapBundleDTO{..} = (\sushiswapBundleDTOId -> SushiswapBundleDTO { sushiswapBundleDTOId, ..} ) <$> f sushiswapBundleDTOId
+{-# INLINE sushiswapBundleDTOIdL #-}
+
+-- | 'sushiswapBundleDTOEthPrice' Lens
+sushiswapBundleDTOEthPriceL :: Lens_' SushiswapBundleDTO (Maybe Text)
+sushiswapBundleDTOEthPriceL f SushiswapBundleDTO{..} = (\sushiswapBundleDTOEthPrice -> SushiswapBundleDTO { sushiswapBundleDTOEthPrice, ..} ) <$> f sushiswapBundleDTOEthPrice
+{-# INLINE sushiswapBundleDTOEthPriceL #-}
+
+-- | 'sushiswapBundleDTOVid' Lens
+sushiswapBundleDTOVidL :: Lens_' SushiswapBundleDTO (Maybe Integer)
+sushiswapBundleDTOVidL f SushiswapBundleDTO{..} = (\sushiswapBundleDTOVid -> SushiswapBundleDTO { sushiswapBundleDTOVid, ..} ) <$> f sushiswapBundleDTOVid
+{-# INLINE sushiswapBundleDTOVidL #-}
+
+
+
+-- * SushiswapBurnDTO
+
+-- | 'sushiswapBurnDTOEntryTime' Lens
+sushiswapBurnDTOEntryTimeL :: Lens_' SushiswapBurnDTO (Maybe DateTime)
+sushiswapBurnDTOEntryTimeL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOEntryTime -> SushiswapBurnDTO { sushiswapBurnDTOEntryTime, ..} ) <$> f sushiswapBurnDTOEntryTime
+{-# INLINE sushiswapBurnDTOEntryTimeL #-}
+
+-- | 'sushiswapBurnDTORecvTime' Lens
+sushiswapBurnDTORecvTimeL :: Lens_' SushiswapBurnDTO (Maybe DateTime)
+sushiswapBurnDTORecvTimeL f SushiswapBurnDTO{..} = (\sushiswapBurnDTORecvTime -> SushiswapBurnDTO { sushiswapBurnDTORecvTime, ..} ) <$> f sushiswapBurnDTORecvTime
+{-# INLINE sushiswapBurnDTORecvTimeL #-}
+
+-- | 'sushiswapBurnDTOBlockNumber' Lens
+sushiswapBurnDTOBlockNumberL :: Lens_' SushiswapBurnDTO (Maybe Integer)
+sushiswapBurnDTOBlockNumberL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOBlockNumber -> SushiswapBurnDTO { sushiswapBurnDTOBlockNumber, ..} ) <$> f sushiswapBurnDTOBlockNumber
+{-# INLINE sushiswapBurnDTOBlockNumberL #-}
+
+-- | 'sushiswapBurnDTOId' Lens
+sushiswapBurnDTOIdL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOIdL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOId -> SushiswapBurnDTO { sushiswapBurnDTOId, ..} ) <$> f sushiswapBurnDTOId
+{-# INLINE sushiswapBurnDTOIdL #-}
+
+-- | 'sushiswapBurnDTOTransaction' Lens
+sushiswapBurnDTOTransactionL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOTransactionL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOTransaction -> SushiswapBurnDTO { sushiswapBurnDTOTransaction, ..} ) <$> f sushiswapBurnDTOTransaction
+{-# INLINE sushiswapBurnDTOTransactionL #-}
+
+-- | 'sushiswapBurnDTOTimestamp' Lens
+sushiswapBurnDTOTimestampL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOTimestampL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOTimestamp -> SushiswapBurnDTO { sushiswapBurnDTOTimestamp, ..} ) <$> f sushiswapBurnDTOTimestamp
+{-# INLINE sushiswapBurnDTOTimestampL #-}
+
+-- | 'sushiswapBurnDTOPair' Lens
+sushiswapBurnDTOPairL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOPairL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOPair -> SushiswapBurnDTO { sushiswapBurnDTOPair, ..} ) <$> f sushiswapBurnDTOPair
+{-# INLINE sushiswapBurnDTOPairL #-}
+
+-- | 'sushiswapBurnDTOLiquidity' Lens
+sushiswapBurnDTOLiquidityL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOLiquidityL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOLiquidity -> SushiswapBurnDTO { sushiswapBurnDTOLiquidity, ..} ) <$> f sushiswapBurnDTOLiquidity
+{-# INLINE sushiswapBurnDTOLiquidityL #-}
+
+-- | 'sushiswapBurnDTOSender' Lens
+sushiswapBurnDTOSenderL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOSenderL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOSender -> SushiswapBurnDTO { sushiswapBurnDTOSender, ..} ) <$> f sushiswapBurnDTOSender
+{-# INLINE sushiswapBurnDTOSenderL #-}
+
+-- | 'sushiswapBurnDTOAmount0' Lens
+sushiswapBurnDTOAmount0L :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOAmount0L f SushiswapBurnDTO{..} = (\sushiswapBurnDTOAmount0 -> SushiswapBurnDTO { sushiswapBurnDTOAmount0, ..} ) <$> f sushiswapBurnDTOAmount0
+{-# INLINE sushiswapBurnDTOAmount0L #-}
+
+-- | 'sushiswapBurnDTOAmount1' Lens
+sushiswapBurnDTOAmount1L :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOAmount1L f SushiswapBurnDTO{..} = (\sushiswapBurnDTOAmount1 -> SushiswapBurnDTO { sushiswapBurnDTOAmount1, ..} ) <$> f sushiswapBurnDTOAmount1
+{-# INLINE sushiswapBurnDTOAmount1L #-}
+
+-- | 'sushiswapBurnDTOTo' Lens
+sushiswapBurnDTOToL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOToL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOTo -> SushiswapBurnDTO { sushiswapBurnDTOTo, ..} ) <$> f sushiswapBurnDTOTo
+{-# INLINE sushiswapBurnDTOToL #-}
+
+-- | 'sushiswapBurnDTOLogIndex' Lens
+sushiswapBurnDTOLogIndexL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOLogIndexL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOLogIndex -> SushiswapBurnDTO { sushiswapBurnDTOLogIndex, ..} ) <$> f sushiswapBurnDTOLogIndex
+{-# INLINE sushiswapBurnDTOLogIndexL #-}
+
+-- | 'sushiswapBurnDTOAmountUsd' Lens
+sushiswapBurnDTOAmountUsdL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOAmountUsdL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOAmountUsd -> SushiswapBurnDTO { sushiswapBurnDTOAmountUsd, ..} ) <$> f sushiswapBurnDTOAmountUsd
+{-# INLINE sushiswapBurnDTOAmountUsdL #-}
+
+-- | 'sushiswapBurnDTOComplete' Lens
+sushiswapBurnDTOCompleteL :: Lens_' SushiswapBurnDTO (Maybe Bool)
+sushiswapBurnDTOCompleteL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOComplete -> SushiswapBurnDTO { sushiswapBurnDTOComplete, ..} ) <$> f sushiswapBurnDTOComplete
+{-# INLINE sushiswapBurnDTOCompleteL #-}
+
+-- | 'sushiswapBurnDTOFeeTo' Lens
+sushiswapBurnDTOFeeToL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOFeeToL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOFeeTo -> SushiswapBurnDTO { sushiswapBurnDTOFeeTo, ..} ) <$> f sushiswapBurnDTOFeeTo
+{-# INLINE sushiswapBurnDTOFeeToL #-}
+
+-- | 'sushiswapBurnDTOFeeLiquidity' Lens
+sushiswapBurnDTOFeeLiquidityL :: Lens_' SushiswapBurnDTO (Maybe Text)
+sushiswapBurnDTOFeeLiquidityL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOFeeLiquidity -> SushiswapBurnDTO { sushiswapBurnDTOFeeLiquidity, ..} ) <$> f sushiswapBurnDTOFeeLiquidity
+{-# INLINE sushiswapBurnDTOFeeLiquidityL #-}
+
+-- | 'sushiswapBurnDTOVid' Lens
+sushiswapBurnDTOVidL :: Lens_' SushiswapBurnDTO (Maybe Integer)
+sushiswapBurnDTOVidL f SushiswapBurnDTO{..} = (\sushiswapBurnDTOVid -> SushiswapBurnDTO { sushiswapBurnDTOVid, ..} ) <$> f sushiswapBurnDTOVid
+{-# INLINE sushiswapBurnDTOVidL #-}
+
+
+
+-- * SushiswapDayDataDTO
+
+-- | 'sushiswapDayDataDTOEntryTime' Lens
+sushiswapDayDataDTOEntryTimeL :: Lens_' SushiswapDayDataDTO (Maybe DateTime)
+sushiswapDayDataDTOEntryTimeL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOEntryTime -> SushiswapDayDataDTO { sushiswapDayDataDTOEntryTime, ..} ) <$> f sushiswapDayDataDTOEntryTime
+{-# INLINE sushiswapDayDataDTOEntryTimeL #-}
+
+-- | 'sushiswapDayDataDTORecvTime' Lens
+sushiswapDayDataDTORecvTimeL :: Lens_' SushiswapDayDataDTO (Maybe DateTime)
+sushiswapDayDataDTORecvTimeL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTORecvTime -> SushiswapDayDataDTO { sushiswapDayDataDTORecvTime, ..} ) <$> f sushiswapDayDataDTORecvTime
+{-# INLINE sushiswapDayDataDTORecvTimeL #-}
+
+-- | 'sushiswapDayDataDTOBlockNumber' Lens
+sushiswapDayDataDTOBlockNumberL :: Lens_' SushiswapDayDataDTO (Maybe Integer)
+sushiswapDayDataDTOBlockNumberL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOBlockNumber -> SushiswapDayDataDTO { sushiswapDayDataDTOBlockNumber, ..} ) <$> f sushiswapDayDataDTOBlockNumber
+{-# INLINE sushiswapDayDataDTOBlockNumberL #-}
+
+-- | 'sushiswapDayDataDTOId' Lens
+sushiswapDayDataDTOIdL :: Lens_' SushiswapDayDataDTO (Maybe Text)
+sushiswapDayDataDTOIdL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOId -> SushiswapDayDataDTO { sushiswapDayDataDTOId, ..} ) <$> f sushiswapDayDataDTOId
+{-# INLINE sushiswapDayDataDTOIdL #-}
+
+-- | 'sushiswapDayDataDTODate' Lens
+sushiswapDayDataDTODateL :: Lens_' SushiswapDayDataDTO (Maybe Int)
+sushiswapDayDataDTODateL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTODate -> SushiswapDayDataDTO { sushiswapDayDataDTODate, ..} ) <$> f sushiswapDayDataDTODate
+{-# INLINE sushiswapDayDataDTODateL #-}
+
+-- | 'sushiswapDayDataDTOFactory' Lens
+sushiswapDayDataDTOFactoryL :: Lens_' SushiswapDayDataDTO (Maybe Text)
+sushiswapDayDataDTOFactoryL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOFactory -> SushiswapDayDataDTO { sushiswapDayDataDTOFactory, ..} ) <$> f sushiswapDayDataDTOFactory
+{-# INLINE sushiswapDayDataDTOFactoryL #-}
+
+-- | 'sushiswapDayDataDTOVolumeEth' Lens
+sushiswapDayDataDTOVolumeEthL :: Lens_' SushiswapDayDataDTO (Maybe Text)
+sushiswapDayDataDTOVolumeEthL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOVolumeEth -> SushiswapDayDataDTO { sushiswapDayDataDTOVolumeEth, ..} ) <$> f sushiswapDayDataDTOVolumeEth
+{-# INLINE sushiswapDayDataDTOVolumeEthL #-}
+
+-- | 'sushiswapDayDataDTOVolumeUsd' Lens
+sushiswapDayDataDTOVolumeUsdL :: Lens_' SushiswapDayDataDTO (Maybe Text)
+sushiswapDayDataDTOVolumeUsdL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOVolumeUsd -> SushiswapDayDataDTO { sushiswapDayDataDTOVolumeUsd, ..} ) <$> f sushiswapDayDataDTOVolumeUsd
+{-# INLINE sushiswapDayDataDTOVolumeUsdL #-}
+
+-- | 'sushiswapDayDataDTOUntrackedVolume' Lens
+sushiswapDayDataDTOUntrackedVolumeL :: Lens_' SushiswapDayDataDTO (Maybe Text)
+sushiswapDayDataDTOUntrackedVolumeL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOUntrackedVolume -> SushiswapDayDataDTO { sushiswapDayDataDTOUntrackedVolume, ..} ) <$> f sushiswapDayDataDTOUntrackedVolume
+{-# INLINE sushiswapDayDataDTOUntrackedVolumeL #-}
+
+-- | 'sushiswapDayDataDTOLiquidityEth' Lens
+sushiswapDayDataDTOLiquidityEthL :: Lens_' SushiswapDayDataDTO (Maybe Text)
+sushiswapDayDataDTOLiquidityEthL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOLiquidityEth -> SushiswapDayDataDTO { sushiswapDayDataDTOLiquidityEth, ..} ) <$> f sushiswapDayDataDTOLiquidityEth
+{-# INLINE sushiswapDayDataDTOLiquidityEthL #-}
+
+-- | 'sushiswapDayDataDTOLiquidityUsd' Lens
+sushiswapDayDataDTOLiquidityUsdL :: Lens_' SushiswapDayDataDTO (Maybe Text)
+sushiswapDayDataDTOLiquidityUsdL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOLiquidityUsd -> SushiswapDayDataDTO { sushiswapDayDataDTOLiquidityUsd, ..} ) <$> f sushiswapDayDataDTOLiquidityUsd
+{-# INLINE sushiswapDayDataDTOLiquidityUsdL #-}
+
+-- | 'sushiswapDayDataDTOTxCount' Lens
+sushiswapDayDataDTOTxCountL :: Lens_' SushiswapDayDataDTO (Maybe Text)
+sushiswapDayDataDTOTxCountL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOTxCount -> SushiswapDayDataDTO { sushiswapDayDataDTOTxCount, ..} ) <$> f sushiswapDayDataDTOTxCount
+{-# INLINE sushiswapDayDataDTOTxCountL #-}
+
+-- | 'sushiswapDayDataDTOVid' Lens
+sushiswapDayDataDTOVidL :: Lens_' SushiswapDayDataDTO (Maybe Integer)
+sushiswapDayDataDTOVidL f SushiswapDayDataDTO{..} = (\sushiswapDayDataDTOVid -> SushiswapDayDataDTO { sushiswapDayDataDTOVid, ..} ) <$> f sushiswapDayDataDTOVid
+{-# INLINE sushiswapDayDataDTOVidL #-}
+
+
+
+-- * SushiswapFactoryDTO
+
+-- | 'sushiswapFactoryDTOEntryTime' Lens
+sushiswapFactoryDTOEntryTimeL :: Lens_' SushiswapFactoryDTO (Maybe DateTime)
+sushiswapFactoryDTOEntryTimeL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOEntryTime -> SushiswapFactoryDTO { sushiswapFactoryDTOEntryTime, ..} ) <$> f sushiswapFactoryDTOEntryTime
+{-# INLINE sushiswapFactoryDTOEntryTimeL #-}
+
+-- | 'sushiswapFactoryDTORecvTime' Lens
+sushiswapFactoryDTORecvTimeL :: Lens_' SushiswapFactoryDTO (Maybe DateTime)
+sushiswapFactoryDTORecvTimeL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTORecvTime -> SushiswapFactoryDTO { sushiswapFactoryDTORecvTime, ..} ) <$> f sushiswapFactoryDTORecvTime
+{-# INLINE sushiswapFactoryDTORecvTimeL #-}
+
+-- | 'sushiswapFactoryDTOBlockNumber' Lens
+sushiswapFactoryDTOBlockNumberL :: Lens_' SushiswapFactoryDTO (Maybe Integer)
+sushiswapFactoryDTOBlockNumberL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOBlockNumber -> SushiswapFactoryDTO { sushiswapFactoryDTOBlockNumber, ..} ) <$> f sushiswapFactoryDTOBlockNumber
+{-# INLINE sushiswapFactoryDTOBlockNumberL #-}
+
+-- | 'sushiswapFactoryDTOId' Lens
+sushiswapFactoryDTOIdL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOIdL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOId -> SushiswapFactoryDTO { sushiswapFactoryDTOId, ..} ) <$> f sushiswapFactoryDTOId
+{-# INLINE sushiswapFactoryDTOIdL #-}
+
+-- | 'sushiswapFactoryDTOPairCount' Lens
+sushiswapFactoryDTOPairCountL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOPairCountL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOPairCount -> SushiswapFactoryDTO { sushiswapFactoryDTOPairCount, ..} ) <$> f sushiswapFactoryDTOPairCount
+{-# INLINE sushiswapFactoryDTOPairCountL #-}
+
+-- | 'sushiswapFactoryDTOVolumeUsd' Lens
+sushiswapFactoryDTOVolumeUsdL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOVolumeUsdL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOVolumeUsd -> SushiswapFactoryDTO { sushiswapFactoryDTOVolumeUsd, ..} ) <$> f sushiswapFactoryDTOVolumeUsd
+{-# INLINE sushiswapFactoryDTOVolumeUsdL #-}
+
+-- | 'sushiswapFactoryDTOVolumeEth' Lens
+sushiswapFactoryDTOVolumeEthL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOVolumeEthL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOVolumeEth -> SushiswapFactoryDTO { sushiswapFactoryDTOVolumeEth, ..} ) <$> f sushiswapFactoryDTOVolumeEth
+{-# INLINE sushiswapFactoryDTOVolumeEthL #-}
+
+-- | 'sushiswapFactoryDTOUntrackedVolumeUsd' Lens
+sushiswapFactoryDTOUntrackedVolumeUsdL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOUntrackedVolumeUsdL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOUntrackedVolumeUsd -> SushiswapFactoryDTO { sushiswapFactoryDTOUntrackedVolumeUsd, ..} ) <$> f sushiswapFactoryDTOUntrackedVolumeUsd
+{-# INLINE sushiswapFactoryDTOUntrackedVolumeUsdL #-}
+
+-- | 'sushiswapFactoryDTOLiquidityUsd' Lens
+sushiswapFactoryDTOLiquidityUsdL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOLiquidityUsdL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOLiquidityUsd -> SushiswapFactoryDTO { sushiswapFactoryDTOLiquidityUsd, ..} ) <$> f sushiswapFactoryDTOLiquidityUsd
+{-# INLINE sushiswapFactoryDTOLiquidityUsdL #-}
+
+-- | 'sushiswapFactoryDTOLiquidityEth' Lens
+sushiswapFactoryDTOLiquidityEthL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOLiquidityEthL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOLiquidityEth -> SushiswapFactoryDTO { sushiswapFactoryDTOLiquidityEth, ..} ) <$> f sushiswapFactoryDTOLiquidityEth
+{-# INLINE sushiswapFactoryDTOLiquidityEthL #-}
+
+-- | 'sushiswapFactoryDTOTxCount' Lens
+sushiswapFactoryDTOTxCountL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOTxCountL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOTxCount -> SushiswapFactoryDTO { sushiswapFactoryDTOTxCount, ..} ) <$> f sushiswapFactoryDTOTxCount
+{-# INLINE sushiswapFactoryDTOTxCountL #-}
+
+-- | 'sushiswapFactoryDTOTokenCount' Lens
+sushiswapFactoryDTOTokenCountL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOTokenCountL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOTokenCount -> SushiswapFactoryDTO { sushiswapFactoryDTOTokenCount, ..} ) <$> f sushiswapFactoryDTOTokenCount
+{-# INLINE sushiswapFactoryDTOTokenCountL #-}
+
+-- | 'sushiswapFactoryDTOUserCount' Lens
+sushiswapFactoryDTOUserCountL :: Lens_' SushiswapFactoryDTO (Maybe Text)
+sushiswapFactoryDTOUserCountL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOUserCount -> SushiswapFactoryDTO { sushiswapFactoryDTOUserCount, ..} ) <$> f sushiswapFactoryDTOUserCount
+{-# INLINE sushiswapFactoryDTOUserCountL #-}
+
+-- | 'sushiswapFactoryDTOVid' Lens
+sushiswapFactoryDTOVidL :: Lens_' SushiswapFactoryDTO (Maybe Integer)
+sushiswapFactoryDTOVidL f SushiswapFactoryDTO{..} = (\sushiswapFactoryDTOVid -> SushiswapFactoryDTO { sushiswapFactoryDTOVid, ..} ) <$> f sushiswapFactoryDTOVid
+{-# INLINE sushiswapFactoryDTOVidL #-}
+
+
+
+-- * SushiswapHourDataDTO
+
+-- | 'sushiswapHourDataDTOEntryTime' Lens
+sushiswapHourDataDTOEntryTimeL :: Lens_' SushiswapHourDataDTO (Maybe DateTime)
+sushiswapHourDataDTOEntryTimeL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOEntryTime -> SushiswapHourDataDTO { sushiswapHourDataDTOEntryTime, ..} ) <$> f sushiswapHourDataDTOEntryTime
+{-# INLINE sushiswapHourDataDTOEntryTimeL #-}
+
+-- | 'sushiswapHourDataDTORecvTime' Lens
+sushiswapHourDataDTORecvTimeL :: Lens_' SushiswapHourDataDTO (Maybe DateTime)
+sushiswapHourDataDTORecvTimeL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTORecvTime -> SushiswapHourDataDTO { sushiswapHourDataDTORecvTime, ..} ) <$> f sushiswapHourDataDTORecvTime
+{-# INLINE sushiswapHourDataDTORecvTimeL #-}
+
+-- | 'sushiswapHourDataDTOBlockNumber' Lens
+sushiswapHourDataDTOBlockNumberL :: Lens_' SushiswapHourDataDTO (Maybe Integer)
+sushiswapHourDataDTOBlockNumberL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOBlockNumber -> SushiswapHourDataDTO { sushiswapHourDataDTOBlockNumber, ..} ) <$> f sushiswapHourDataDTOBlockNumber
+{-# INLINE sushiswapHourDataDTOBlockNumberL #-}
+
+-- | 'sushiswapHourDataDTOId' Lens
+sushiswapHourDataDTOIdL :: Lens_' SushiswapHourDataDTO (Maybe Text)
+sushiswapHourDataDTOIdL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOId -> SushiswapHourDataDTO { sushiswapHourDataDTOId, ..} ) <$> f sushiswapHourDataDTOId
+{-# INLINE sushiswapHourDataDTOIdL #-}
+
+-- | 'sushiswapHourDataDTODate' Lens
+sushiswapHourDataDTODateL :: Lens_' SushiswapHourDataDTO (Maybe Int)
+sushiswapHourDataDTODateL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTODate -> SushiswapHourDataDTO { sushiswapHourDataDTODate, ..} ) <$> f sushiswapHourDataDTODate
+{-# INLINE sushiswapHourDataDTODateL #-}
+
+-- | 'sushiswapHourDataDTOFactory' Lens
+sushiswapHourDataDTOFactoryL :: Lens_' SushiswapHourDataDTO (Maybe Text)
+sushiswapHourDataDTOFactoryL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOFactory -> SushiswapHourDataDTO { sushiswapHourDataDTOFactory, ..} ) <$> f sushiswapHourDataDTOFactory
+{-# INLINE sushiswapHourDataDTOFactoryL #-}
+
+-- | 'sushiswapHourDataDTOVolumeEth' Lens
+sushiswapHourDataDTOVolumeEthL :: Lens_' SushiswapHourDataDTO (Maybe Text)
+sushiswapHourDataDTOVolumeEthL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOVolumeEth -> SushiswapHourDataDTO { sushiswapHourDataDTOVolumeEth, ..} ) <$> f sushiswapHourDataDTOVolumeEth
+{-# INLINE sushiswapHourDataDTOVolumeEthL #-}
+
+-- | 'sushiswapHourDataDTOVolumeUsd' Lens
+sushiswapHourDataDTOVolumeUsdL :: Lens_' SushiswapHourDataDTO (Maybe Text)
+sushiswapHourDataDTOVolumeUsdL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOVolumeUsd -> SushiswapHourDataDTO { sushiswapHourDataDTOVolumeUsd, ..} ) <$> f sushiswapHourDataDTOVolumeUsd
+{-# INLINE sushiswapHourDataDTOVolumeUsdL #-}
+
+-- | 'sushiswapHourDataDTOUntrackedVolume' Lens
+sushiswapHourDataDTOUntrackedVolumeL :: Lens_' SushiswapHourDataDTO (Maybe Text)
+sushiswapHourDataDTOUntrackedVolumeL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOUntrackedVolume -> SushiswapHourDataDTO { sushiswapHourDataDTOUntrackedVolume, ..} ) <$> f sushiswapHourDataDTOUntrackedVolume
+{-# INLINE sushiswapHourDataDTOUntrackedVolumeL #-}
+
+-- | 'sushiswapHourDataDTOLiquidityEth' Lens
+sushiswapHourDataDTOLiquidityEthL :: Lens_' SushiswapHourDataDTO (Maybe Text)
+sushiswapHourDataDTOLiquidityEthL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOLiquidityEth -> SushiswapHourDataDTO { sushiswapHourDataDTOLiquidityEth, ..} ) <$> f sushiswapHourDataDTOLiquidityEth
+{-# INLINE sushiswapHourDataDTOLiquidityEthL #-}
+
+-- | 'sushiswapHourDataDTOLiquidityUsd' Lens
+sushiswapHourDataDTOLiquidityUsdL :: Lens_' SushiswapHourDataDTO (Maybe Text)
+sushiswapHourDataDTOLiquidityUsdL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOLiquidityUsd -> SushiswapHourDataDTO { sushiswapHourDataDTOLiquidityUsd, ..} ) <$> f sushiswapHourDataDTOLiquidityUsd
+{-# INLINE sushiswapHourDataDTOLiquidityUsdL #-}
+
+-- | 'sushiswapHourDataDTOTxCount' Lens
+sushiswapHourDataDTOTxCountL :: Lens_' SushiswapHourDataDTO (Maybe Text)
+sushiswapHourDataDTOTxCountL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOTxCount -> SushiswapHourDataDTO { sushiswapHourDataDTOTxCount, ..} ) <$> f sushiswapHourDataDTOTxCount
+{-# INLINE sushiswapHourDataDTOTxCountL #-}
+
+-- | 'sushiswapHourDataDTOVid' Lens
+sushiswapHourDataDTOVidL :: Lens_' SushiswapHourDataDTO (Maybe Integer)
+sushiswapHourDataDTOVidL f SushiswapHourDataDTO{..} = (\sushiswapHourDataDTOVid -> SushiswapHourDataDTO { sushiswapHourDataDTOVid, ..} ) <$> f sushiswapHourDataDTOVid
+{-# INLINE sushiswapHourDataDTOVidL #-}
+
+
+
+-- * SushiswapLiquidityPositionDTO
+
+-- | 'sushiswapLiquidityPositionDTOEntryTime' Lens
+sushiswapLiquidityPositionDTOEntryTimeL :: Lens_' SushiswapLiquidityPositionDTO (Maybe DateTime)
+sushiswapLiquidityPositionDTOEntryTimeL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTOEntryTime -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTOEntryTime, ..} ) <$> f sushiswapLiquidityPositionDTOEntryTime
+{-# INLINE sushiswapLiquidityPositionDTOEntryTimeL #-}
+
+-- | 'sushiswapLiquidityPositionDTORecvTime' Lens
+sushiswapLiquidityPositionDTORecvTimeL :: Lens_' SushiswapLiquidityPositionDTO (Maybe DateTime)
+sushiswapLiquidityPositionDTORecvTimeL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTORecvTime -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTORecvTime, ..} ) <$> f sushiswapLiquidityPositionDTORecvTime
+{-# INLINE sushiswapLiquidityPositionDTORecvTimeL #-}
+
+-- | 'sushiswapLiquidityPositionDTOBlockNumber' Lens
+sushiswapLiquidityPositionDTOBlockNumberL :: Lens_' SushiswapLiquidityPositionDTO (Maybe Integer)
+sushiswapLiquidityPositionDTOBlockNumberL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTOBlockNumber -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTOBlockNumber, ..} ) <$> f sushiswapLiquidityPositionDTOBlockNumber
+{-# INLINE sushiswapLiquidityPositionDTOBlockNumberL #-}
+
+-- | 'sushiswapLiquidityPositionDTOId' Lens
+sushiswapLiquidityPositionDTOIdL :: Lens_' SushiswapLiquidityPositionDTO (Maybe Text)
+sushiswapLiquidityPositionDTOIdL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTOId -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTOId, ..} ) <$> f sushiswapLiquidityPositionDTOId
+{-# INLINE sushiswapLiquidityPositionDTOIdL #-}
+
+-- | 'sushiswapLiquidityPositionDTOUser' Lens
+sushiswapLiquidityPositionDTOUserL :: Lens_' SushiswapLiquidityPositionDTO (Maybe Text)
+sushiswapLiquidityPositionDTOUserL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTOUser -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTOUser, ..} ) <$> f sushiswapLiquidityPositionDTOUser
+{-# INLINE sushiswapLiquidityPositionDTOUserL #-}
+
+-- | 'sushiswapLiquidityPositionDTOPair' Lens
+sushiswapLiquidityPositionDTOPairL :: Lens_' SushiswapLiquidityPositionDTO (Maybe Text)
+sushiswapLiquidityPositionDTOPairL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTOPair -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTOPair, ..} ) <$> f sushiswapLiquidityPositionDTOPair
+{-# INLINE sushiswapLiquidityPositionDTOPairL #-}
+
+-- | 'sushiswapLiquidityPositionDTOLiquidityTokenBalance' Lens
+sushiswapLiquidityPositionDTOLiquidityTokenBalanceL :: Lens_' SushiswapLiquidityPositionDTO (Maybe Text)
+sushiswapLiquidityPositionDTOLiquidityTokenBalanceL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTOLiquidityTokenBalance -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTOLiquidityTokenBalance, ..} ) <$> f sushiswapLiquidityPositionDTOLiquidityTokenBalance
+{-# INLINE sushiswapLiquidityPositionDTOLiquidityTokenBalanceL #-}
+
+-- | 'sushiswapLiquidityPositionDTOBlock' Lens
+sushiswapLiquidityPositionDTOBlockL :: Lens_' SushiswapLiquidityPositionDTO (Maybe Int)
+sushiswapLiquidityPositionDTOBlockL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTOBlock -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTOBlock, ..} ) <$> f sushiswapLiquidityPositionDTOBlock
+{-# INLINE sushiswapLiquidityPositionDTOBlockL #-}
+
+-- | 'sushiswapLiquidityPositionDTOTimestamp' Lens
+sushiswapLiquidityPositionDTOTimestampL :: Lens_' SushiswapLiquidityPositionDTO (Maybe Int)
+sushiswapLiquidityPositionDTOTimestampL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTOTimestamp -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTOTimestamp, ..} ) <$> f sushiswapLiquidityPositionDTOTimestamp
+{-# INLINE sushiswapLiquidityPositionDTOTimestampL #-}
+
+-- | 'sushiswapLiquidityPositionDTOVid' Lens
+sushiswapLiquidityPositionDTOVidL :: Lens_' SushiswapLiquidityPositionDTO (Maybe Integer)
+sushiswapLiquidityPositionDTOVidL f SushiswapLiquidityPositionDTO{..} = (\sushiswapLiquidityPositionDTOVid -> SushiswapLiquidityPositionDTO { sushiswapLiquidityPositionDTOVid, ..} ) <$> f sushiswapLiquidityPositionDTOVid
+{-# INLINE sushiswapLiquidityPositionDTOVidL #-}
+
+
+
+-- * SushiswapLiquidityPositionSnapshotDTO
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOEntryTime' Lens
+sushiswapLiquidityPositionSnapshotDTOEntryTimeL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe DateTime)
+sushiswapLiquidityPositionSnapshotDTOEntryTimeL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOEntryTime -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOEntryTime, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOEntryTime
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOEntryTimeL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTORecvTime' Lens
+sushiswapLiquidityPositionSnapshotDTORecvTimeL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe DateTime)
+sushiswapLiquidityPositionSnapshotDTORecvTimeL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTORecvTime -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTORecvTime, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTORecvTime
+{-# INLINE sushiswapLiquidityPositionSnapshotDTORecvTimeL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOBlockNumber' Lens
+sushiswapLiquidityPositionSnapshotDTOBlockNumberL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Integer)
+sushiswapLiquidityPositionSnapshotDTOBlockNumberL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOBlockNumber -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOBlockNumber, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOBlockNumber
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOBlockNumberL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOId' Lens
+sushiswapLiquidityPositionSnapshotDTOIdL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOIdL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOId -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOId, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOId
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOIdL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOLiquidityPosition' Lens
+sushiswapLiquidityPositionSnapshotDTOLiquidityPositionL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOLiquidityPositionL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOLiquidityPosition -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOLiquidityPosition, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOLiquidityPosition
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOLiquidityPositionL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOTimestamp' Lens
+sushiswapLiquidityPositionSnapshotDTOTimestampL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Int)
+sushiswapLiquidityPositionSnapshotDTOTimestampL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOTimestamp -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOTimestamp, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOTimestamp
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOTimestampL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOBlock' Lens
+sushiswapLiquidityPositionSnapshotDTOBlockL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Int)
+sushiswapLiquidityPositionSnapshotDTOBlockL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOBlock -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOBlock, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOBlock
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOBlockL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOUser' Lens
+sushiswapLiquidityPositionSnapshotDTOUserL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOUserL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOUser -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOUser, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOUser
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOUserL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOPair' Lens
+sushiswapLiquidityPositionSnapshotDTOPairL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOPairL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOPair -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOPair, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOPair
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOPairL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOToken0PriceUsd' Lens
+sushiswapLiquidityPositionSnapshotDTOToken0PriceUsdL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOToken0PriceUsdL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOToken0PriceUsd -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOToken0PriceUsd, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOToken0PriceUsd
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOToken0PriceUsdL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOToken1PriceUsd' Lens
+sushiswapLiquidityPositionSnapshotDTOToken1PriceUsdL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOToken1PriceUsdL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOToken1PriceUsd -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOToken1PriceUsd, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOToken1PriceUsd
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOToken1PriceUsdL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOReserve0' Lens
+sushiswapLiquidityPositionSnapshotDTOReserve0L :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOReserve0L f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOReserve0 -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOReserve0, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOReserve0
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOReserve0L #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOReserve1' Lens
+sushiswapLiquidityPositionSnapshotDTOReserve1L :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOReserve1L f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOReserve1 -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOReserve1, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOReserve1
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOReserve1L #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOReserveUsd' Lens
+sushiswapLiquidityPositionSnapshotDTOReserveUsdL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOReserveUsdL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOReserveUsd -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOReserveUsd, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOReserveUsd
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOReserveUsdL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOLiquidityTokenTotalSupply' Lens
+sushiswapLiquidityPositionSnapshotDTOLiquidityTokenTotalSupplyL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOLiquidityTokenTotalSupplyL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOLiquidityTokenTotalSupply -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOLiquidityTokenTotalSupply, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOLiquidityTokenTotalSupply
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOLiquidityTokenTotalSupplyL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOLiquidityTokenBalance' Lens
+sushiswapLiquidityPositionSnapshotDTOLiquidityTokenBalanceL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Text)
+sushiswapLiquidityPositionSnapshotDTOLiquidityTokenBalanceL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOLiquidityTokenBalance -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOLiquidityTokenBalance, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOLiquidityTokenBalance
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOLiquidityTokenBalanceL #-}
+
+-- | 'sushiswapLiquidityPositionSnapshotDTOVid' Lens
+sushiswapLiquidityPositionSnapshotDTOVidL :: Lens_' SushiswapLiquidityPositionSnapshotDTO (Maybe Integer)
+sushiswapLiquidityPositionSnapshotDTOVidL f SushiswapLiquidityPositionSnapshotDTO{..} = (\sushiswapLiquidityPositionSnapshotDTOVid -> SushiswapLiquidityPositionSnapshotDTO { sushiswapLiquidityPositionSnapshotDTOVid, ..} ) <$> f sushiswapLiquidityPositionSnapshotDTOVid
+{-# INLINE sushiswapLiquidityPositionSnapshotDTOVidL #-}
+
+
+
+-- * SushiswapMintDTO
+
+-- | 'sushiswapMintDTOEntryTime' Lens
+sushiswapMintDTOEntryTimeL :: Lens_' SushiswapMintDTO (Maybe DateTime)
+sushiswapMintDTOEntryTimeL f SushiswapMintDTO{..} = (\sushiswapMintDTOEntryTime -> SushiswapMintDTO { sushiswapMintDTOEntryTime, ..} ) <$> f sushiswapMintDTOEntryTime
+{-# INLINE sushiswapMintDTOEntryTimeL #-}
+
+-- | 'sushiswapMintDTORecvTime' Lens
+sushiswapMintDTORecvTimeL :: Lens_' SushiswapMintDTO (Maybe DateTime)
+sushiswapMintDTORecvTimeL f SushiswapMintDTO{..} = (\sushiswapMintDTORecvTime -> SushiswapMintDTO { sushiswapMintDTORecvTime, ..} ) <$> f sushiswapMintDTORecvTime
+{-# INLINE sushiswapMintDTORecvTimeL #-}
+
+-- | 'sushiswapMintDTOBlockNumber' Lens
+sushiswapMintDTOBlockNumberL :: Lens_' SushiswapMintDTO (Maybe Integer)
+sushiswapMintDTOBlockNumberL f SushiswapMintDTO{..} = (\sushiswapMintDTOBlockNumber -> SushiswapMintDTO { sushiswapMintDTOBlockNumber, ..} ) <$> f sushiswapMintDTOBlockNumber
+{-# INLINE sushiswapMintDTOBlockNumberL #-}
+
+-- | 'sushiswapMintDTOId' Lens
+sushiswapMintDTOIdL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOIdL f SushiswapMintDTO{..} = (\sushiswapMintDTOId -> SushiswapMintDTO { sushiswapMintDTOId, ..} ) <$> f sushiswapMintDTOId
+{-# INLINE sushiswapMintDTOIdL #-}
+
+-- | 'sushiswapMintDTOTransaction' Lens
+sushiswapMintDTOTransactionL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOTransactionL f SushiswapMintDTO{..} = (\sushiswapMintDTOTransaction -> SushiswapMintDTO { sushiswapMintDTOTransaction, ..} ) <$> f sushiswapMintDTOTransaction
+{-# INLINE sushiswapMintDTOTransactionL #-}
+
+-- | 'sushiswapMintDTOTimestamp' Lens
+sushiswapMintDTOTimestampL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOTimestampL f SushiswapMintDTO{..} = (\sushiswapMintDTOTimestamp -> SushiswapMintDTO { sushiswapMintDTOTimestamp, ..} ) <$> f sushiswapMintDTOTimestamp
+{-# INLINE sushiswapMintDTOTimestampL #-}
+
+-- | 'sushiswapMintDTOPair' Lens
+sushiswapMintDTOPairL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOPairL f SushiswapMintDTO{..} = (\sushiswapMintDTOPair -> SushiswapMintDTO { sushiswapMintDTOPair, ..} ) <$> f sushiswapMintDTOPair
+{-# INLINE sushiswapMintDTOPairL #-}
+
+-- | 'sushiswapMintDTOTo' Lens
+sushiswapMintDTOToL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOToL f SushiswapMintDTO{..} = (\sushiswapMintDTOTo -> SushiswapMintDTO { sushiswapMintDTOTo, ..} ) <$> f sushiswapMintDTOTo
+{-# INLINE sushiswapMintDTOToL #-}
+
+-- | 'sushiswapMintDTOLiquidity' Lens
+sushiswapMintDTOLiquidityL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOLiquidityL f SushiswapMintDTO{..} = (\sushiswapMintDTOLiquidity -> SushiswapMintDTO { sushiswapMintDTOLiquidity, ..} ) <$> f sushiswapMintDTOLiquidity
+{-# INLINE sushiswapMintDTOLiquidityL #-}
+
+-- | 'sushiswapMintDTOSender' Lens
+sushiswapMintDTOSenderL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOSenderL f SushiswapMintDTO{..} = (\sushiswapMintDTOSender -> SushiswapMintDTO { sushiswapMintDTOSender, ..} ) <$> f sushiswapMintDTOSender
+{-# INLINE sushiswapMintDTOSenderL #-}
+
+-- | 'sushiswapMintDTOAmount0' Lens
+sushiswapMintDTOAmount0L :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOAmount0L f SushiswapMintDTO{..} = (\sushiswapMintDTOAmount0 -> SushiswapMintDTO { sushiswapMintDTOAmount0, ..} ) <$> f sushiswapMintDTOAmount0
+{-# INLINE sushiswapMintDTOAmount0L #-}
+
+-- | 'sushiswapMintDTOAmount1' Lens
+sushiswapMintDTOAmount1L :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOAmount1L f SushiswapMintDTO{..} = (\sushiswapMintDTOAmount1 -> SushiswapMintDTO { sushiswapMintDTOAmount1, ..} ) <$> f sushiswapMintDTOAmount1
+{-# INLINE sushiswapMintDTOAmount1L #-}
+
+-- | 'sushiswapMintDTOLogIndex' Lens
+sushiswapMintDTOLogIndexL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOLogIndexL f SushiswapMintDTO{..} = (\sushiswapMintDTOLogIndex -> SushiswapMintDTO { sushiswapMintDTOLogIndex, ..} ) <$> f sushiswapMintDTOLogIndex
+{-# INLINE sushiswapMintDTOLogIndexL #-}
+
+-- | 'sushiswapMintDTOAmountUsd' Lens
+sushiswapMintDTOAmountUsdL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOAmountUsdL f SushiswapMintDTO{..} = (\sushiswapMintDTOAmountUsd -> SushiswapMintDTO { sushiswapMintDTOAmountUsd, ..} ) <$> f sushiswapMintDTOAmountUsd
+{-# INLINE sushiswapMintDTOAmountUsdL #-}
+
+-- | 'sushiswapMintDTOFeeTo' Lens
+sushiswapMintDTOFeeToL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOFeeToL f SushiswapMintDTO{..} = (\sushiswapMintDTOFeeTo -> SushiswapMintDTO { sushiswapMintDTOFeeTo, ..} ) <$> f sushiswapMintDTOFeeTo
+{-# INLINE sushiswapMintDTOFeeToL #-}
+
+-- | 'sushiswapMintDTOFeeLiquidity' Lens
+sushiswapMintDTOFeeLiquidityL :: Lens_' SushiswapMintDTO (Maybe Text)
+sushiswapMintDTOFeeLiquidityL f SushiswapMintDTO{..} = (\sushiswapMintDTOFeeLiquidity -> SushiswapMintDTO { sushiswapMintDTOFeeLiquidity, ..} ) <$> f sushiswapMintDTOFeeLiquidity
+{-# INLINE sushiswapMintDTOFeeLiquidityL #-}
+
+-- | 'sushiswapMintDTOVid' Lens
+sushiswapMintDTOVidL :: Lens_' SushiswapMintDTO (Maybe Integer)
+sushiswapMintDTOVidL f SushiswapMintDTO{..} = (\sushiswapMintDTOVid -> SushiswapMintDTO { sushiswapMintDTOVid, ..} ) <$> f sushiswapMintDTOVid
+{-# INLINE sushiswapMintDTOVidL #-}
 
 
 
@@ -415,6 +3946,169 @@ sushiswapPairDTOVidL f SushiswapPairDTO{..} = (\sushiswapPairDTOVid -> Sushiswap
 sushiswapPairDTOEvaluatedAskL :: Lens_' SushiswapPairDTO (Maybe Double)
 sushiswapPairDTOEvaluatedAskL f SushiswapPairDTO{..} = (\sushiswapPairDTOEvaluatedAsk -> SushiswapPairDTO { sushiswapPairDTOEvaluatedAsk, ..} ) <$> f sushiswapPairDTOEvaluatedAsk
 {-# INLINE sushiswapPairDTOEvaluatedAskL #-}
+
+
+
+-- * SushiswapPairDayDataDTO
+
+-- | 'sushiswapPairDayDataDTOEntryTime' Lens
+sushiswapPairDayDataDTOEntryTimeL :: Lens_' SushiswapPairDayDataDTO (Maybe DateTime)
+sushiswapPairDayDataDTOEntryTimeL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOEntryTime -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOEntryTime, ..} ) <$> f sushiswapPairDayDataDTOEntryTime
+{-# INLINE sushiswapPairDayDataDTOEntryTimeL #-}
+
+-- | 'sushiswapPairDayDataDTORecvTime' Lens
+sushiswapPairDayDataDTORecvTimeL :: Lens_' SushiswapPairDayDataDTO (Maybe DateTime)
+sushiswapPairDayDataDTORecvTimeL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTORecvTime -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTORecvTime, ..} ) <$> f sushiswapPairDayDataDTORecvTime
+{-# INLINE sushiswapPairDayDataDTORecvTimeL #-}
+
+-- | 'sushiswapPairDayDataDTOBlockNumber' Lens
+sushiswapPairDayDataDTOBlockNumberL :: Lens_' SushiswapPairDayDataDTO (Maybe Integer)
+sushiswapPairDayDataDTOBlockNumberL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOBlockNumber -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOBlockNumber, ..} ) <$> f sushiswapPairDayDataDTOBlockNumber
+{-# INLINE sushiswapPairDayDataDTOBlockNumberL #-}
+
+-- | 'sushiswapPairDayDataDTOId' Lens
+sushiswapPairDayDataDTOIdL :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOIdL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOId -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOId, ..} ) <$> f sushiswapPairDayDataDTOId
+{-# INLINE sushiswapPairDayDataDTOIdL #-}
+
+-- | 'sushiswapPairDayDataDTODate' Lens
+sushiswapPairDayDataDTODateL :: Lens_' SushiswapPairDayDataDTO (Maybe Int)
+sushiswapPairDayDataDTODateL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTODate -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTODate, ..} ) <$> f sushiswapPairDayDataDTODate
+{-# INLINE sushiswapPairDayDataDTODateL #-}
+
+-- | 'sushiswapPairDayDataDTOPair' Lens
+sushiswapPairDayDataDTOPairL :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOPairL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOPair -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOPair, ..} ) <$> f sushiswapPairDayDataDTOPair
+{-# INLINE sushiswapPairDayDataDTOPairL #-}
+
+-- | 'sushiswapPairDayDataDTOToken0' Lens
+sushiswapPairDayDataDTOToken0L :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOToken0L f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOToken0 -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOToken0, ..} ) <$> f sushiswapPairDayDataDTOToken0
+{-# INLINE sushiswapPairDayDataDTOToken0L #-}
+
+-- | 'sushiswapPairDayDataDTOToken1' Lens
+sushiswapPairDayDataDTOToken1L :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOToken1L f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOToken1 -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOToken1, ..} ) <$> f sushiswapPairDayDataDTOToken1
+{-# INLINE sushiswapPairDayDataDTOToken1L #-}
+
+-- | 'sushiswapPairDayDataDTOReserve0' Lens
+sushiswapPairDayDataDTOReserve0L :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOReserve0L f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOReserve0 -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOReserve0, ..} ) <$> f sushiswapPairDayDataDTOReserve0
+{-# INLINE sushiswapPairDayDataDTOReserve0L #-}
+
+-- | 'sushiswapPairDayDataDTOReserve1' Lens
+sushiswapPairDayDataDTOReserve1L :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOReserve1L f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOReserve1 -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOReserve1, ..} ) <$> f sushiswapPairDayDataDTOReserve1
+{-# INLINE sushiswapPairDayDataDTOReserve1L #-}
+
+-- | 'sushiswapPairDayDataDTOTotalSupply' Lens
+sushiswapPairDayDataDTOTotalSupplyL :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOTotalSupplyL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOTotalSupply -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOTotalSupply, ..} ) <$> f sushiswapPairDayDataDTOTotalSupply
+{-# INLINE sushiswapPairDayDataDTOTotalSupplyL #-}
+
+-- | 'sushiswapPairDayDataDTOReserveUsd' Lens
+sushiswapPairDayDataDTOReserveUsdL :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOReserveUsdL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOReserveUsd -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOReserveUsd, ..} ) <$> f sushiswapPairDayDataDTOReserveUsd
+{-# INLINE sushiswapPairDayDataDTOReserveUsdL #-}
+
+-- | 'sushiswapPairDayDataDTOVolumeToken0' Lens
+sushiswapPairDayDataDTOVolumeToken0L :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOVolumeToken0L f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOVolumeToken0 -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOVolumeToken0, ..} ) <$> f sushiswapPairDayDataDTOVolumeToken0
+{-# INLINE sushiswapPairDayDataDTOVolumeToken0L #-}
+
+-- | 'sushiswapPairDayDataDTOVolumeToken1' Lens
+sushiswapPairDayDataDTOVolumeToken1L :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOVolumeToken1L f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOVolumeToken1 -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOVolumeToken1, ..} ) <$> f sushiswapPairDayDataDTOVolumeToken1
+{-# INLINE sushiswapPairDayDataDTOVolumeToken1L #-}
+
+-- | 'sushiswapPairDayDataDTOVolumeUsd' Lens
+sushiswapPairDayDataDTOVolumeUsdL :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOVolumeUsdL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOVolumeUsd -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOVolumeUsd, ..} ) <$> f sushiswapPairDayDataDTOVolumeUsd
+{-# INLINE sushiswapPairDayDataDTOVolumeUsdL #-}
+
+-- | 'sushiswapPairDayDataDTOTxCount' Lens
+sushiswapPairDayDataDTOTxCountL :: Lens_' SushiswapPairDayDataDTO (Maybe Text)
+sushiswapPairDayDataDTOTxCountL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOTxCount -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOTxCount, ..} ) <$> f sushiswapPairDayDataDTOTxCount
+{-# INLINE sushiswapPairDayDataDTOTxCountL #-}
+
+-- | 'sushiswapPairDayDataDTOVid' Lens
+sushiswapPairDayDataDTOVidL :: Lens_' SushiswapPairDayDataDTO (Maybe Integer)
+sushiswapPairDayDataDTOVidL f SushiswapPairDayDataDTO{..} = (\sushiswapPairDayDataDTOVid -> SushiswapPairDayDataDTO { sushiswapPairDayDataDTOVid, ..} ) <$> f sushiswapPairDayDataDTOVid
+{-# INLINE sushiswapPairDayDataDTOVidL #-}
+
+
+
+-- * SushiswapPairHourDataDTO
+
+-- | 'sushiswapPairHourDataDTOEntryTime' Lens
+sushiswapPairHourDataDTOEntryTimeL :: Lens_' SushiswapPairHourDataDTO (Maybe DateTime)
+sushiswapPairHourDataDTOEntryTimeL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOEntryTime -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOEntryTime, ..} ) <$> f sushiswapPairHourDataDTOEntryTime
+{-# INLINE sushiswapPairHourDataDTOEntryTimeL #-}
+
+-- | 'sushiswapPairHourDataDTORecvTime' Lens
+sushiswapPairHourDataDTORecvTimeL :: Lens_' SushiswapPairHourDataDTO (Maybe DateTime)
+sushiswapPairHourDataDTORecvTimeL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTORecvTime -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTORecvTime, ..} ) <$> f sushiswapPairHourDataDTORecvTime
+{-# INLINE sushiswapPairHourDataDTORecvTimeL #-}
+
+-- | 'sushiswapPairHourDataDTOBlockNumber' Lens
+sushiswapPairHourDataDTOBlockNumberL :: Lens_' SushiswapPairHourDataDTO (Maybe Integer)
+sushiswapPairHourDataDTOBlockNumberL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOBlockNumber -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOBlockNumber, ..} ) <$> f sushiswapPairHourDataDTOBlockNumber
+{-# INLINE sushiswapPairHourDataDTOBlockNumberL #-}
+
+-- | 'sushiswapPairHourDataDTOId' Lens
+sushiswapPairHourDataDTOIdL :: Lens_' SushiswapPairHourDataDTO (Maybe Text)
+sushiswapPairHourDataDTOIdL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOId -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOId, ..} ) <$> f sushiswapPairHourDataDTOId
+{-# INLINE sushiswapPairHourDataDTOIdL #-}
+
+-- | 'sushiswapPairHourDataDTODate' Lens
+sushiswapPairHourDataDTODateL :: Lens_' SushiswapPairHourDataDTO (Maybe Int)
+sushiswapPairHourDataDTODateL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTODate -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTODate, ..} ) <$> f sushiswapPairHourDataDTODate
+{-# INLINE sushiswapPairHourDataDTODateL #-}
+
+-- | 'sushiswapPairHourDataDTOPair' Lens
+sushiswapPairHourDataDTOPairL :: Lens_' SushiswapPairHourDataDTO (Maybe Text)
+sushiswapPairHourDataDTOPairL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOPair -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOPair, ..} ) <$> f sushiswapPairHourDataDTOPair
+{-# INLINE sushiswapPairHourDataDTOPairL #-}
+
+-- | 'sushiswapPairHourDataDTOReserve0' Lens
+sushiswapPairHourDataDTOReserve0L :: Lens_' SushiswapPairHourDataDTO (Maybe Text)
+sushiswapPairHourDataDTOReserve0L f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOReserve0 -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOReserve0, ..} ) <$> f sushiswapPairHourDataDTOReserve0
+{-# INLINE sushiswapPairHourDataDTOReserve0L #-}
+
+-- | 'sushiswapPairHourDataDTOReserve1' Lens
+sushiswapPairHourDataDTOReserve1L :: Lens_' SushiswapPairHourDataDTO (Maybe Text)
+sushiswapPairHourDataDTOReserve1L f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOReserve1 -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOReserve1, ..} ) <$> f sushiswapPairHourDataDTOReserve1
+{-# INLINE sushiswapPairHourDataDTOReserve1L #-}
+
+-- | 'sushiswapPairHourDataDTOReserveUsd' Lens
+sushiswapPairHourDataDTOReserveUsdL :: Lens_' SushiswapPairHourDataDTO (Maybe Text)
+sushiswapPairHourDataDTOReserveUsdL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOReserveUsd -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOReserveUsd, ..} ) <$> f sushiswapPairHourDataDTOReserveUsd
+{-# INLINE sushiswapPairHourDataDTOReserveUsdL #-}
+
+-- | 'sushiswapPairHourDataDTOVolumeToken0' Lens
+sushiswapPairHourDataDTOVolumeToken0L :: Lens_' SushiswapPairHourDataDTO (Maybe Text)
+sushiswapPairHourDataDTOVolumeToken0L f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOVolumeToken0 -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOVolumeToken0, ..} ) <$> f sushiswapPairHourDataDTOVolumeToken0
+{-# INLINE sushiswapPairHourDataDTOVolumeToken0L #-}
+
+-- | 'sushiswapPairHourDataDTOVolumeToken1' Lens
+sushiswapPairHourDataDTOVolumeToken1L :: Lens_' SushiswapPairHourDataDTO (Maybe Text)
+sushiswapPairHourDataDTOVolumeToken1L f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOVolumeToken1 -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOVolumeToken1, ..} ) <$> f sushiswapPairHourDataDTOVolumeToken1
+{-# INLINE sushiswapPairHourDataDTOVolumeToken1L #-}
+
+-- | 'sushiswapPairHourDataDTOVolumeUsd' Lens
+sushiswapPairHourDataDTOVolumeUsdL :: Lens_' SushiswapPairHourDataDTO (Maybe Text)
+sushiswapPairHourDataDTOVolumeUsdL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOVolumeUsd -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOVolumeUsd, ..} ) <$> f sushiswapPairHourDataDTOVolumeUsd
+{-# INLINE sushiswapPairHourDataDTOVolumeUsdL #-}
+
+-- | 'sushiswapPairHourDataDTOTxCount' Lens
+sushiswapPairHourDataDTOTxCountL :: Lens_' SushiswapPairHourDataDTO (Maybe Text)
+sushiswapPairHourDataDTOTxCountL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOTxCount -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOTxCount, ..} ) <$> f sushiswapPairHourDataDTOTxCount
+{-# INLINE sushiswapPairHourDataDTOTxCountL #-}
+
+-- | 'sushiswapPairHourDataDTOVid' Lens
+sushiswapPairHourDataDTOVidL :: Lens_' SushiswapPairHourDataDTO (Maybe Integer)
+sushiswapPairHourDataDTOVidL f SushiswapPairHourDataDTO{..} = (\sushiswapPairHourDataDTOVid -> SushiswapPairHourDataDTO { sushiswapPairHourDataDTOVid, ..} ) <$> f sushiswapPairHourDataDTOVid
+{-# INLINE sushiswapPairHourDataDTOVidL #-}
 
 
 
@@ -621,7 +4315,697 @@ sushiswapTokenDTOTokenSymbolL f SushiswapTokenDTO{..} = (\sushiswapTokenDTOToken
 
 
 
+-- * SushiswapTokenDayDataDTO
+
+-- | 'sushiswapTokenDayDataDTOEntryTime' Lens
+sushiswapTokenDayDataDTOEntryTimeL :: Lens_' SushiswapTokenDayDataDTO (Maybe DateTime)
+sushiswapTokenDayDataDTOEntryTimeL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOEntryTime -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOEntryTime, ..} ) <$> f sushiswapTokenDayDataDTOEntryTime
+{-# INLINE sushiswapTokenDayDataDTOEntryTimeL #-}
+
+-- | 'sushiswapTokenDayDataDTORecvTime' Lens
+sushiswapTokenDayDataDTORecvTimeL :: Lens_' SushiswapTokenDayDataDTO (Maybe DateTime)
+sushiswapTokenDayDataDTORecvTimeL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTORecvTime -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTORecvTime, ..} ) <$> f sushiswapTokenDayDataDTORecvTime
+{-# INLINE sushiswapTokenDayDataDTORecvTimeL #-}
+
+-- | 'sushiswapTokenDayDataDTOBlockNumber' Lens
+sushiswapTokenDayDataDTOBlockNumberL :: Lens_' SushiswapTokenDayDataDTO (Maybe Integer)
+sushiswapTokenDayDataDTOBlockNumberL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOBlockNumber -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOBlockNumber, ..} ) <$> f sushiswapTokenDayDataDTOBlockNumber
+{-# INLINE sushiswapTokenDayDataDTOBlockNumberL #-}
+
+-- | 'sushiswapTokenDayDataDTOId' Lens
+sushiswapTokenDayDataDTOIdL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOIdL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOId -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOId, ..} ) <$> f sushiswapTokenDayDataDTOId
+{-# INLINE sushiswapTokenDayDataDTOIdL #-}
+
+-- | 'sushiswapTokenDayDataDTODate' Lens
+sushiswapTokenDayDataDTODateL :: Lens_' SushiswapTokenDayDataDTO (Maybe Int)
+sushiswapTokenDayDataDTODateL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTODate -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTODate, ..} ) <$> f sushiswapTokenDayDataDTODate
+{-# INLINE sushiswapTokenDayDataDTODateL #-}
+
+-- | 'sushiswapTokenDayDataDTOToken' Lens
+sushiswapTokenDayDataDTOTokenL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOTokenL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOToken -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOToken, ..} ) <$> f sushiswapTokenDayDataDTOToken
+{-# INLINE sushiswapTokenDayDataDTOTokenL #-}
+
+-- | 'sushiswapTokenDayDataDTOVolume' Lens
+sushiswapTokenDayDataDTOVolumeL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOVolumeL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOVolume -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOVolume, ..} ) <$> f sushiswapTokenDayDataDTOVolume
+{-# INLINE sushiswapTokenDayDataDTOVolumeL #-}
+
+-- | 'sushiswapTokenDayDataDTOVolumeEth' Lens
+sushiswapTokenDayDataDTOVolumeEthL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOVolumeEthL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOVolumeEth -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOVolumeEth, ..} ) <$> f sushiswapTokenDayDataDTOVolumeEth
+{-# INLINE sushiswapTokenDayDataDTOVolumeEthL #-}
+
+-- | 'sushiswapTokenDayDataDTOVolumeUsd' Lens
+sushiswapTokenDayDataDTOVolumeUsdL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOVolumeUsdL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOVolumeUsd -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOVolumeUsd, ..} ) <$> f sushiswapTokenDayDataDTOVolumeUsd
+{-# INLINE sushiswapTokenDayDataDTOVolumeUsdL #-}
+
+-- | 'sushiswapTokenDayDataDTOTxCount' Lens
+sushiswapTokenDayDataDTOTxCountL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOTxCountL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOTxCount -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOTxCount, ..} ) <$> f sushiswapTokenDayDataDTOTxCount
+{-# INLINE sushiswapTokenDayDataDTOTxCountL #-}
+
+-- | 'sushiswapTokenDayDataDTOLiquidity' Lens
+sushiswapTokenDayDataDTOLiquidityL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOLiquidityL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOLiquidity -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOLiquidity, ..} ) <$> f sushiswapTokenDayDataDTOLiquidity
+{-# INLINE sushiswapTokenDayDataDTOLiquidityL #-}
+
+-- | 'sushiswapTokenDayDataDTOLiquidityEth' Lens
+sushiswapTokenDayDataDTOLiquidityEthL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOLiquidityEthL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOLiquidityEth -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOLiquidityEth, ..} ) <$> f sushiswapTokenDayDataDTOLiquidityEth
+{-# INLINE sushiswapTokenDayDataDTOLiquidityEthL #-}
+
+-- | 'sushiswapTokenDayDataDTOLiquidityUsd' Lens
+sushiswapTokenDayDataDTOLiquidityUsdL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOLiquidityUsdL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOLiquidityUsd -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOLiquidityUsd, ..} ) <$> f sushiswapTokenDayDataDTOLiquidityUsd
+{-# INLINE sushiswapTokenDayDataDTOLiquidityUsdL #-}
+
+-- | 'sushiswapTokenDayDataDTOPriceUsd' Lens
+sushiswapTokenDayDataDTOPriceUsdL :: Lens_' SushiswapTokenDayDataDTO (Maybe Text)
+sushiswapTokenDayDataDTOPriceUsdL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOPriceUsd -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOPriceUsd, ..} ) <$> f sushiswapTokenDayDataDTOPriceUsd
+{-# INLINE sushiswapTokenDayDataDTOPriceUsdL #-}
+
+-- | 'sushiswapTokenDayDataDTOVid' Lens
+sushiswapTokenDayDataDTOVidL :: Lens_' SushiswapTokenDayDataDTO (Maybe Integer)
+sushiswapTokenDayDataDTOVidL f SushiswapTokenDayDataDTO{..} = (\sushiswapTokenDayDataDTOVid -> SushiswapTokenDayDataDTO { sushiswapTokenDayDataDTOVid, ..} ) <$> f sushiswapTokenDayDataDTOVid
+{-# INLINE sushiswapTokenDayDataDTOVidL #-}
+
+
+
+-- * SushiswapTransactionDTO
+
+-- | 'sushiswapTransactionDTOEntryTime' Lens
+sushiswapTransactionDTOEntryTimeL :: Lens_' SushiswapTransactionDTO (Maybe DateTime)
+sushiswapTransactionDTOEntryTimeL f SushiswapTransactionDTO{..} = (\sushiswapTransactionDTOEntryTime -> SushiswapTransactionDTO { sushiswapTransactionDTOEntryTime, ..} ) <$> f sushiswapTransactionDTOEntryTime
+{-# INLINE sushiswapTransactionDTOEntryTimeL #-}
+
+-- | 'sushiswapTransactionDTORecvTime' Lens
+sushiswapTransactionDTORecvTimeL :: Lens_' SushiswapTransactionDTO (Maybe DateTime)
+sushiswapTransactionDTORecvTimeL f SushiswapTransactionDTO{..} = (\sushiswapTransactionDTORecvTime -> SushiswapTransactionDTO { sushiswapTransactionDTORecvTime, ..} ) <$> f sushiswapTransactionDTORecvTime
+{-# INLINE sushiswapTransactionDTORecvTimeL #-}
+
+-- | 'sushiswapTransactionDTOBlockNumber' Lens
+sushiswapTransactionDTOBlockNumberL :: Lens_' SushiswapTransactionDTO (Maybe Integer)
+sushiswapTransactionDTOBlockNumberL f SushiswapTransactionDTO{..} = (\sushiswapTransactionDTOBlockNumber -> SushiswapTransactionDTO { sushiswapTransactionDTOBlockNumber, ..} ) <$> f sushiswapTransactionDTOBlockNumber
+{-# INLINE sushiswapTransactionDTOBlockNumberL #-}
+
+-- | 'sushiswapTransactionDTOId' Lens
+sushiswapTransactionDTOIdL :: Lens_' SushiswapTransactionDTO (Maybe Text)
+sushiswapTransactionDTOIdL f SushiswapTransactionDTO{..} = (\sushiswapTransactionDTOId -> SushiswapTransactionDTO { sushiswapTransactionDTOId, ..} ) <$> f sushiswapTransactionDTOId
+{-# INLINE sushiswapTransactionDTOIdL #-}
+
+-- | 'sushiswapTransactionDTOTimestamp' Lens
+sushiswapTransactionDTOTimestampL :: Lens_' SushiswapTransactionDTO (Maybe Text)
+sushiswapTransactionDTOTimestampL f SushiswapTransactionDTO{..} = (\sushiswapTransactionDTOTimestamp -> SushiswapTransactionDTO { sushiswapTransactionDTOTimestamp, ..} ) <$> f sushiswapTransactionDTOTimestamp
+{-# INLINE sushiswapTransactionDTOTimestampL #-}
+
+-- | 'sushiswapTransactionDTOMints' Lens
+sushiswapTransactionDTOMintsL :: Lens_' SushiswapTransactionDTO (Maybe [Text])
+sushiswapTransactionDTOMintsL f SushiswapTransactionDTO{..} = (\sushiswapTransactionDTOMints -> SushiswapTransactionDTO { sushiswapTransactionDTOMints, ..} ) <$> f sushiswapTransactionDTOMints
+{-# INLINE sushiswapTransactionDTOMintsL #-}
+
+-- | 'sushiswapTransactionDTOBurns' Lens
+sushiswapTransactionDTOBurnsL :: Lens_' SushiswapTransactionDTO (Maybe [Text])
+sushiswapTransactionDTOBurnsL f SushiswapTransactionDTO{..} = (\sushiswapTransactionDTOBurns -> SushiswapTransactionDTO { sushiswapTransactionDTOBurns, ..} ) <$> f sushiswapTransactionDTOBurns
+{-# INLINE sushiswapTransactionDTOBurnsL #-}
+
+-- | 'sushiswapTransactionDTOSwaps' Lens
+sushiswapTransactionDTOSwapsL :: Lens_' SushiswapTransactionDTO (Maybe [Text])
+sushiswapTransactionDTOSwapsL f SushiswapTransactionDTO{..} = (\sushiswapTransactionDTOSwaps -> SushiswapTransactionDTO { sushiswapTransactionDTOSwaps, ..} ) <$> f sushiswapTransactionDTOSwaps
+{-# INLINE sushiswapTransactionDTOSwapsL #-}
+
+-- | 'sushiswapTransactionDTOVid' Lens
+sushiswapTransactionDTOVidL :: Lens_' SushiswapTransactionDTO (Maybe Integer)
+sushiswapTransactionDTOVidL f SushiswapTransactionDTO{..} = (\sushiswapTransactionDTOVid -> SushiswapTransactionDTO { sushiswapTransactionDTOVid, ..} ) <$> f sushiswapTransactionDTOVid
+{-# INLINE sushiswapTransactionDTOVidL #-}
+
+
+
+-- * SushiswapUserDTO
+
+-- | 'sushiswapUserDTOEntryTime' Lens
+sushiswapUserDTOEntryTimeL :: Lens_' SushiswapUserDTO (Maybe DateTime)
+sushiswapUserDTOEntryTimeL f SushiswapUserDTO{..} = (\sushiswapUserDTOEntryTime -> SushiswapUserDTO { sushiswapUserDTOEntryTime, ..} ) <$> f sushiswapUserDTOEntryTime
+{-# INLINE sushiswapUserDTOEntryTimeL #-}
+
+-- | 'sushiswapUserDTORecvTime' Lens
+sushiswapUserDTORecvTimeL :: Lens_' SushiswapUserDTO (Maybe DateTime)
+sushiswapUserDTORecvTimeL f SushiswapUserDTO{..} = (\sushiswapUserDTORecvTime -> SushiswapUserDTO { sushiswapUserDTORecvTime, ..} ) <$> f sushiswapUserDTORecvTime
+{-# INLINE sushiswapUserDTORecvTimeL #-}
+
+-- | 'sushiswapUserDTOBlockNumber' Lens
+sushiswapUserDTOBlockNumberL :: Lens_' SushiswapUserDTO (Maybe Integer)
+sushiswapUserDTOBlockNumberL f SushiswapUserDTO{..} = (\sushiswapUserDTOBlockNumber -> SushiswapUserDTO { sushiswapUserDTOBlockNumber, ..} ) <$> f sushiswapUserDTOBlockNumber
+{-# INLINE sushiswapUserDTOBlockNumberL #-}
+
+-- | 'sushiswapUserDTOId' Lens
+sushiswapUserDTOIdL :: Lens_' SushiswapUserDTO (Maybe Text)
+sushiswapUserDTOIdL f SushiswapUserDTO{..} = (\sushiswapUserDTOId -> SushiswapUserDTO { sushiswapUserDTOId, ..} ) <$> f sushiswapUserDTOId
+{-# INLINE sushiswapUserDTOIdL #-}
+
+-- | 'sushiswapUserDTOVid' Lens
+sushiswapUserDTOVidL :: Lens_' SushiswapUserDTO (Maybe Integer)
+sushiswapUserDTOVidL f SushiswapUserDTO{..} = (\sushiswapUserDTOVid -> SushiswapUserDTO { sushiswapUserDTOVid, ..} ) <$> f sushiswapUserDTOVid
+{-# INLINE sushiswapUserDTOVidL #-}
+
+
+
 -- * TransactionsETradeAggressiveSide
+
+
+
+-- * UniswapV2BundleV2DTO
+
+-- | 'uniswapV2BundleV2DTOEntryTime' Lens
+uniswapV2BundleV2DTOEntryTimeL :: Lens_' UniswapV2BundleV2DTO (Maybe DateTime)
+uniswapV2BundleV2DTOEntryTimeL f UniswapV2BundleV2DTO{..} = (\uniswapV2BundleV2DTOEntryTime -> UniswapV2BundleV2DTO { uniswapV2BundleV2DTOEntryTime, ..} ) <$> f uniswapV2BundleV2DTOEntryTime
+{-# INLINE uniswapV2BundleV2DTOEntryTimeL #-}
+
+-- | 'uniswapV2BundleV2DTORecvTime' Lens
+uniswapV2BundleV2DTORecvTimeL :: Lens_' UniswapV2BundleV2DTO (Maybe DateTime)
+uniswapV2BundleV2DTORecvTimeL f UniswapV2BundleV2DTO{..} = (\uniswapV2BundleV2DTORecvTime -> UniswapV2BundleV2DTO { uniswapV2BundleV2DTORecvTime, ..} ) <$> f uniswapV2BundleV2DTORecvTime
+{-# INLINE uniswapV2BundleV2DTORecvTimeL #-}
+
+-- | 'uniswapV2BundleV2DTOBlockNumber' Lens
+uniswapV2BundleV2DTOBlockNumberL :: Lens_' UniswapV2BundleV2DTO (Maybe Integer)
+uniswapV2BundleV2DTOBlockNumberL f UniswapV2BundleV2DTO{..} = (\uniswapV2BundleV2DTOBlockNumber -> UniswapV2BundleV2DTO { uniswapV2BundleV2DTOBlockNumber, ..} ) <$> f uniswapV2BundleV2DTOBlockNumber
+{-# INLINE uniswapV2BundleV2DTOBlockNumberL #-}
+
+-- | 'uniswapV2BundleV2DTOId' Lens
+uniswapV2BundleV2DTOIdL :: Lens_' UniswapV2BundleV2DTO (Maybe Text)
+uniswapV2BundleV2DTOIdL f UniswapV2BundleV2DTO{..} = (\uniswapV2BundleV2DTOId -> UniswapV2BundleV2DTO { uniswapV2BundleV2DTOId, ..} ) <$> f uniswapV2BundleV2DTOId
+{-# INLINE uniswapV2BundleV2DTOIdL #-}
+
+-- | 'uniswapV2BundleV2DTOEthPrice' Lens
+uniswapV2BundleV2DTOEthPriceL :: Lens_' UniswapV2BundleV2DTO (Maybe Text)
+uniswapV2BundleV2DTOEthPriceL f UniswapV2BundleV2DTO{..} = (\uniswapV2BundleV2DTOEthPrice -> UniswapV2BundleV2DTO { uniswapV2BundleV2DTOEthPrice, ..} ) <$> f uniswapV2BundleV2DTOEthPrice
+{-# INLINE uniswapV2BundleV2DTOEthPriceL #-}
+
+-- | 'uniswapV2BundleV2DTOVid' Lens
+uniswapV2BundleV2DTOVidL :: Lens_' UniswapV2BundleV2DTO (Maybe Integer)
+uniswapV2BundleV2DTOVidL f UniswapV2BundleV2DTO{..} = (\uniswapV2BundleV2DTOVid -> UniswapV2BundleV2DTO { uniswapV2BundleV2DTOVid, ..} ) <$> f uniswapV2BundleV2DTOVid
+{-# INLINE uniswapV2BundleV2DTOVidL #-}
+
+-- | 'uniswapV2BundleV2DTOBlockRange' Lens
+uniswapV2BundleV2DTOBlockRangeL :: Lens_' UniswapV2BundleV2DTO (Maybe Text)
+uniswapV2BundleV2DTOBlockRangeL f UniswapV2BundleV2DTO{..} = (\uniswapV2BundleV2DTOBlockRange -> UniswapV2BundleV2DTO { uniswapV2BundleV2DTOBlockRange, ..} ) <$> f uniswapV2BundleV2DTOBlockRange
+{-# INLINE uniswapV2BundleV2DTOBlockRangeL #-}
+
+
+
+-- * UniswapV2BurnV2DTO
+
+-- | 'uniswapV2BurnV2DTOEntryTime' Lens
+uniswapV2BurnV2DTOEntryTimeL :: Lens_' UniswapV2BurnV2DTO (Maybe DateTime)
+uniswapV2BurnV2DTOEntryTimeL f UniswapV2BurnV2DTO{..} = (\uniswapV2BurnV2DTOEntryTime -> UniswapV2BurnV2DTO { uniswapV2BurnV2DTOEntryTime, ..} ) <$> f uniswapV2BurnV2DTOEntryTime
+{-# INLINE uniswapV2BurnV2DTOEntryTimeL #-}
+
+-- | 'uniswapV2BurnV2DTORecvTime' Lens
+uniswapV2BurnV2DTORecvTimeL :: Lens_' UniswapV2BurnV2DTO (Maybe DateTime)
+uniswapV2BurnV2DTORecvTimeL f UniswapV2BurnV2DTO{..} = (\uniswapV2BurnV2DTORecvTime -> UniswapV2BurnV2DTO { uniswapV2BurnV2DTORecvTime, ..} ) <$> f uniswapV2BurnV2DTORecvTime
+{-# INLINE uniswapV2BurnV2DTORecvTimeL #-}
+
+-- | 'uniswapV2BurnV2DTOBlockNumber' Lens
+uniswapV2BurnV2DTOBlockNumberL :: Lens_' UniswapV2BurnV2DTO (Maybe Integer)
+uniswapV2BurnV2DTOBlockNumberL f UniswapV2BurnV2DTO{..} = (\uniswapV2BurnV2DTOBlockNumber -> UniswapV2BurnV2DTO { uniswapV2BurnV2DTOBlockNumber, ..} ) <$> f uniswapV2BurnV2DTOBlockNumber
+{-# INLINE uniswapV2BurnV2DTOBlockNumberL #-}
+
+-- | 'uniswapV2BurnV2DTOId' Lens
+uniswapV2BurnV2DTOIdL :: Lens_' UniswapV2BurnV2DTO (Maybe Text)
+uniswapV2BurnV2DTOIdL f UniswapV2BurnV2DTO{..} = (\uniswapV2BurnV2DTOId -> UniswapV2BurnV2DTO { uniswapV2BurnV2DTOId, ..} ) <$> f uniswapV2BurnV2DTOId
+{-# INLINE uniswapV2BurnV2DTOIdL #-}
+
+-- | 'uniswapV2BurnV2DTOTransaction' Lens
+uniswapV2BurnV2DTOTransactionL :: Lens_' UniswapV2BurnV2DTO (Maybe Text)
+uniswapV2BurnV2DTOTransactionL f UniswapV2BurnV2DTO{..} = (\uniswapV2BurnV2DTOTransaction -> UniswapV2BurnV2DTO { uniswapV2BurnV2DTOTransaction, ..} ) <$> f uniswapV2BurnV2DTOTransaction
+{-# INLINE uniswapV2BurnV2DTOTransactionL #-}
+
+-- | 'uniswapV2BurnV2DTOTimestamp' Lens
+uniswapV2BurnV2DTOTimestampL :: Lens_' UniswapV2BurnV2DTO (Maybe Text)
+uniswapV2BurnV2DTOTimestampL f UniswapV2BurnV2DTO{..} = (\uniswapV2BurnV2DTOTimestamp -> UniswapV2BurnV2DTO { uniswapV2BurnV2DTOTimestamp, ..} ) <$> f uniswapV2BurnV2DTOTimestamp
+{-# INLINE uniswapV2BurnV2DTOTimestampL #-}
+
+-- | 'uniswapV2BurnV2DTOPair' Lens
+uniswapV2BurnV2DTOPairL :: Lens_' UniswapV2BurnV2DTO (Maybe Text)
+uniswapV2BurnV2DTOPairL f UniswapV2BurnV2DTO{..} = (\uniswapV2BurnV2DTOPair -> UniswapV2BurnV2DTO { uniswapV2BurnV2DTOPair, ..} ) <$> f uniswapV2BurnV2DTOPair
+{-# INLINE uniswapV2BurnV2DTOPairL #-}
+
+-- | 'uniswapV2BurnV2DTOLiquidity' Lens
+uniswapV2BurnV2DTOLiquidityL :: Lens_' UniswapV2BurnV2DTO (Maybe Text)
+uniswapV2BurnV2DTOLiquidityL f UniswapV2BurnV2DTO{..} = (\uniswapV2BurnV2DTOLiquidity -> UniswapV2BurnV2DTO { uniswapV2BurnV2DTOLiquidity, ..} ) <$> f uniswapV2BurnV2DTOLiquidity
+{-# INLINE uniswapV2BurnV2DTOLiquidityL #-}
+
+-- | 'uniswapV2BurnV2DTOSender' Lens
+uniswapV2BurnV2DTOSenderL :: Lens_' UniswapV2BurnV2DTO (Maybe Text)
+uniswapV2BurnV2DTOSenderL f UniswapV2BurnV2DTO{..} = (\uniswapV2BurnV2DTOSender -> UniswapV2BurnV2DTO { uniswapV2BurnV2DTOSender, ..} ) <$> f uniswapV2BurnV2DTOSender
+{-# INLINE uniswapV2BurnV2DTOSenderL #-}
+
+-- | 'uniswapV2BurnV2DTOAmount0' Lens
+uniswapV2BurnV2DTOAmount0L :: Lens_' UniswapV2BurnV2DTO (Maybe Text)
+uniswapV2BurnV2DTOAmount0L f UniswapV2BurnV2DTO{..} = (\uniswapV2BurnV2DTOAmount0 -> UniswapV2BurnV2DTO { uniswapV2BurnV2DTOAmount0, ..} ) <$> f uniswapV2BurnV2DTOAmount0
+{-# INLINE uniswapV2BurnV2DTOAmount0L #-}
+
+-- | 'uniswapV2BurnV2DTOAmount1' Lens
+uniswapV2BurnV2DTOAmount1L :: Lens_' UniswapV2BurnV2DTO (Maybe Text)
+uniswapV2BurnV2DTOAmount1L f UniswapV2BurnV2DTO{..} = (\uniswapV2BurnV2DTOAmount1 -> UniswapV2BurnV2DTO { uniswapV2BurnV2DTOAmount1, ..} ) <$> f uniswapV2BurnV2DTOAmount1
+{-# INLINE uniswapV2BurnV2DTOAmount1L #-}
+
+-- | 'uniswapV2BurnV2DTOTo' Lens
+uniswapV2BurnV2DTOToL :: Lens_' UniswapV2BurnV2DTO (Maybe Text)
+uniswapV2BurnV2DTOToL f UniswapV2BurnV2DTO{..} = (\uniswapV2BurnV2DTOTo -> UniswapV2BurnV2DTO { uniswapV2BurnV2DTOTo, ..} ) <$> f uniswapV2BurnV2DTOTo
+{-# INLINE uniswapV2BurnV2DTOToL #-}
+
+-- | 'uniswapV2BurnV2DTOLogIndex' Lens
+uniswapV2BurnV2DTOLogIndexL :: Lens_' UniswapV2BurnV2DTO (Maybe Text)
+uniswapV2BurnV2DTOLogIndexL f UniswapV2BurnV2DTO{..} = (\uniswapV2BurnV2DTOLogIndex -> UniswapV2BurnV2DTO { uniswapV2BurnV2DTOLogIndex, ..} ) <$> f uniswapV2BurnV2DTOLogIndex
+{-# INLINE uniswapV2BurnV2DTOLogIndexL #-}
+
+-- | 'uniswapV2BurnV2DTOAmountUsd' Lens
+uniswapV2BurnV2DTOAmountUsdL :: Lens_' UniswapV2BurnV2DTO (Maybe Text)
+uniswapV2BurnV2DTOAmountUsdL f UniswapV2BurnV2DTO{..} = (\uniswapV2BurnV2DTOAmountUsd -> UniswapV2BurnV2DTO { uniswapV2BurnV2DTOAmountUsd, ..} ) <$> f uniswapV2BurnV2DTOAmountUsd
+{-# INLINE uniswapV2BurnV2DTOAmountUsdL #-}
+
+-- | 'uniswapV2BurnV2DTONeedsComplete' Lens
+uniswapV2BurnV2DTONeedsCompleteL :: Lens_' UniswapV2BurnV2DTO (Maybe Bool)
+uniswapV2BurnV2DTONeedsCompleteL f UniswapV2BurnV2DTO{..} = (\uniswapV2BurnV2DTONeedsComplete -> UniswapV2BurnV2DTO { uniswapV2BurnV2DTONeedsComplete, ..} ) <$> f uniswapV2BurnV2DTONeedsComplete
+{-# INLINE uniswapV2BurnV2DTONeedsCompleteL #-}
+
+-- | 'uniswapV2BurnV2DTOFeeTo' Lens
+uniswapV2BurnV2DTOFeeToL :: Lens_' UniswapV2BurnV2DTO (Maybe Text)
+uniswapV2BurnV2DTOFeeToL f UniswapV2BurnV2DTO{..} = (\uniswapV2BurnV2DTOFeeTo -> UniswapV2BurnV2DTO { uniswapV2BurnV2DTOFeeTo, ..} ) <$> f uniswapV2BurnV2DTOFeeTo
+{-# INLINE uniswapV2BurnV2DTOFeeToL #-}
+
+-- | 'uniswapV2BurnV2DTOFeeLiquidity' Lens
+uniswapV2BurnV2DTOFeeLiquidityL :: Lens_' UniswapV2BurnV2DTO (Maybe Text)
+uniswapV2BurnV2DTOFeeLiquidityL f UniswapV2BurnV2DTO{..} = (\uniswapV2BurnV2DTOFeeLiquidity -> UniswapV2BurnV2DTO { uniswapV2BurnV2DTOFeeLiquidity, ..} ) <$> f uniswapV2BurnV2DTOFeeLiquidity
+{-# INLINE uniswapV2BurnV2DTOFeeLiquidityL #-}
+
+-- | 'uniswapV2BurnV2DTOVid' Lens
+uniswapV2BurnV2DTOVidL :: Lens_' UniswapV2BurnV2DTO (Maybe Integer)
+uniswapV2BurnV2DTOVidL f UniswapV2BurnV2DTO{..} = (\uniswapV2BurnV2DTOVid -> UniswapV2BurnV2DTO { uniswapV2BurnV2DTOVid, ..} ) <$> f uniswapV2BurnV2DTOVid
+{-# INLINE uniswapV2BurnV2DTOVidL #-}
+
+
+
+-- * UniswapV2LiquidityPositionSnapshotV2DTO
+
+-- | 'uniswapV2LiquidityPositionSnapshotV2DTOEntryTime' Lens
+uniswapV2LiquidityPositionSnapshotV2DTOEntryTimeL :: Lens_' UniswapV2LiquidityPositionSnapshotV2DTO (Maybe DateTime)
+uniswapV2LiquidityPositionSnapshotV2DTOEntryTimeL f UniswapV2LiquidityPositionSnapshotV2DTO{..} = (\uniswapV2LiquidityPositionSnapshotV2DTOEntryTime -> UniswapV2LiquidityPositionSnapshotV2DTO { uniswapV2LiquidityPositionSnapshotV2DTOEntryTime, ..} ) <$> f uniswapV2LiquidityPositionSnapshotV2DTOEntryTime
+{-# INLINE uniswapV2LiquidityPositionSnapshotV2DTOEntryTimeL #-}
+
+-- | 'uniswapV2LiquidityPositionSnapshotV2DTORecvTime' Lens
+uniswapV2LiquidityPositionSnapshotV2DTORecvTimeL :: Lens_' UniswapV2LiquidityPositionSnapshotV2DTO (Maybe DateTime)
+uniswapV2LiquidityPositionSnapshotV2DTORecvTimeL f UniswapV2LiquidityPositionSnapshotV2DTO{..} = (\uniswapV2LiquidityPositionSnapshotV2DTORecvTime -> UniswapV2LiquidityPositionSnapshotV2DTO { uniswapV2LiquidityPositionSnapshotV2DTORecvTime, ..} ) <$> f uniswapV2LiquidityPositionSnapshotV2DTORecvTime
+{-# INLINE uniswapV2LiquidityPositionSnapshotV2DTORecvTimeL #-}
+
+-- | 'uniswapV2LiquidityPositionSnapshotV2DTOBlockNumber' Lens
+uniswapV2LiquidityPositionSnapshotV2DTOBlockNumberL :: Lens_' UniswapV2LiquidityPositionSnapshotV2DTO (Maybe Integer)
+uniswapV2LiquidityPositionSnapshotV2DTOBlockNumberL f UniswapV2LiquidityPositionSnapshotV2DTO{..} = (\uniswapV2LiquidityPositionSnapshotV2DTOBlockNumber -> UniswapV2LiquidityPositionSnapshotV2DTO { uniswapV2LiquidityPositionSnapshotV2DTOBlockNumber, ..} ) <$> f uniswapV2LiquidityPositionSnapshotV2DTOBlockNumber
+{-# INLINE uniswapV2LiquidityPositionSnapshotV2DTOBlockNumberL #-}
+
+-- | 'uniswapV2LiquidityPositionSnapshotV2DTOId' Lens
+uniswapV2LiquidityPositionSnapshotV2DTOIdL :: Lens_' UniswapV2LiquidityPositionSnapshotV2DTO (Maybe Text)
+uniswapV2LiquidityPositionSnapshotV2DTOIdL f UniswapV2LiquidityPositionSnapshotV2DTO{..} = (\uniswapV2LiquidityPositionSnapshotV2DTOId -> UniswapV2LiquidityPositionSnapshotV2DTO { uniswapV2LiquidityPositionSnapshotV2DTOId, ..} ) <$> f uniswapV2LiquidityPositionSnapshotV2DTOId
+{-# INLINE uniswapV2LiquidityPositionSnapshotV2DTOIdL #-}
+
+-- | 'uniswapV2LiquidityPositionSnapshotV2DTOLiquidityPosition' Lens
+uniswapV2LiquidityPositionSnapshotV2DTOLiquidityPositionL :: Lens_' UniswapV2LiquidityPositionSnapshotV2DTO (Maybe Text)
+uniswapV2LiquidityPositionSnapshotV2DTOLiquidityPositionL f UniswapV2LiquidityPositionSnapshotV2DTO{..} = (\uniswapV2LiquidityPositionSnapshotV2DTOLiquidityPosition -> UniswapV2LiquidityPositionSnapshotV2DTO { uniswapV2LiquidityPositionSnapshotV2DTOLiquidityPosition, ..} ) <$> f uniswapV2LiquidityPositionSnapshotV2DTOLiquidityPosition
+{-# INLINE uniswapV2LiquidityPositionSnapshotV2DTOLiquidityPositionL #-}
+
+-- | 'uniswapV2LiquidityPositionSnapshotV2DTOTimestamp' Lens
+uniswapV2LiquidityPositionSnapshotV2DTOTimestampL :: Lens_' UniswapV2LiquidityPositionSnapshotV2DTO (Maybe Int)
+uniswapV2LiquidityPositionSnapshotV2DTOTimestampL f UniswapV2LiquidityPositionSnapshotV2DTO{..} = (\uniswapV2LiquidityPositionSnapshotV2DTOTimestamp -> UniswapV2LiquidityPositionSnapshotV2DTO { uniswapV2LiquidityPositionSnapshotV2DTOTimestamp, ..} ) <$> f uniswapV2LiquidityPositionSnapshotV2DTOTimestamp
+{-# INLINE uniswapV2LiquidityPositionSnapshotV2DTOTimestampL #-}
+
+-- | 'uniswapV2LiquidityPositionSnapshotV2DTOBlock' Lens
+uniswapV2LiquidityPositionSnapshotV2DTOBlockL :: Lens_' UniswapV2LiquidityPositionSnapshotV2DTO (Maybe Int)
+uniswapV2LiquidityPositionSnapshotV2DTOBlockL f UniswapV2LiquidityPositionSnapshotV2DTO{..} = (\uniswapV2LiquidityPositionSnapshotV2DTOBlock -> UniswapV2LiquidityPositionSnapshotV2DTO { uniswapV2LiquidityPositionSnapshotV2DTOBlock, ..} ) <$> f uniswapV2LiquidityPositionSnapshotV2DTOBlock
+{-# INLINE uniswapV2LiquidityPositionSnapshotV2DTOBlockL #-}
+
+-- | 'uniswapV2LiquidityPositionSnapshotV2DTOUser' Lens
+uniswapV2LiquidityPositionSnapshotV2DTOUserL :: Lens_' UniswapV2LiquidityPositionSnapshotV2DTO (Maybe Text)
+uniswapV2LiquidityPositionSnapshotV2DTOUserL f UniswapV2LiquidityPositionSnapshotV2DTO{..} = (\uniswapV2LiquidityPositionSnapshotV2DTOUser -> UniswapV2LiquidityPositionSnapshotV2DTO { uniswapV2LiquidityPositionSnapshotV2DTOUser, ..} ) <$> f uniswapV2LiquidityPositionSnapshotV2DTOUser
+{-# INLINE uniswapV2LiquidityPositionSnapshotV2DTOUserL #-}
+
+-- | 'uniswapV2LiquidityPositionSnapshotV2DTOPair' Lens
+uniswapV2LiquidityPositionSnapshotV2DTOPairL :: Lens_' UniswapV2LiquidityPositionSnapshotV2DTO (Maybe Text)
+uniswapV2LiquidityPositionSnapshotV2DTOPairL f UniswapV2LiquidityPositionSnapshotV2DTO{..} = (\uniswapV2LiquidityPositionSnapshotV2DTOPair -> UniswapV2LiquidityPositionSnapshotV2DTO { uniswapV2LiquidityPositionSnapshotV2DTOPair, ..} ) <$> f uniswapV2LiquidityPositionSnapshotV2DTOPair
+{-# INLINE uniswapV2LiquidityPositionSnapshotV2DTOPairL #-}
+
+-- | 'uniswapV2LiquidityPositionSnapshotV2DTOToken0PriceUsd' Lens
+uniswapV2LiquidityPositionSnapshotV2DTOToken0PriceUsdL :: Lens_' UniswapV2LiquidityPositionSnapshotV2DTO (Maybe Text)
+uniswapV2LiquidityPositionSnapshotV2DTOToken0PriceUsdL f UniswapV2LiquidityPositionSnapshotV2DTO{..} = (\uniswapV2LiquidityPositionSnapshotV2DTOToken0PriceUsd -> UniswapV2LiquidityPositionSnapshotV2DTO { uniswapV2LiquidityPositionSnapshotV2DTOToken0PriceUsd, ..} ) <$> f uniswapV2LiquidityPositionSnapshotV2DTOToken0PriceUsd
+{-# INLINE uniswapV2LiquidityPositionSnapshotV2DTOToken0PriceUsdL #-}
+
+-- | 'uniswapV2LiquidityPositionSnapshotV2DTOToken1PriceUsd' Lens
+uniswapV2LiquidityPositionSnapshotV2DTOToken1PriceUsdL :: Lens_' UniswapV2LiquidityPositionSnapshotV2DTO (Maybe Text)
+uniswapV2LiquidityPositionSnapshotV2DTOToken1PriceUsdL f UniswapV2LiquidityPositionSnapshotV2DTO{..} = (\uniswapV2LiquidityPositionSnapshotV2DTOToken1PriceUsd -> UniswapV2LiquidityPositionSnapshotV2DTO { uniswapV2LiquidityPositionSnapshotV2DTOToken1PriceUsd, ..} ) <$> f uniswapV2LiquidityPositionSnapshotV2DTOToken1PriceUsd
+{-# INLINE uniswapV2LiquidityPositionSnapshotV2DTOToken1PriceUsdL #-}
+
+-- | 'uniswapV2LiquidityPositionSnapshotV2DTOReserve0' Lens
+uniswapV2LiquidityPositionSnapshotV2DTOReserve0L :: Lens_' UniswapV2LiquidityPositionSnapshotV2DTO (Maybe Text)
+uniswapV2LiquidityPositionSnapshotV2DTOReserve0L f UniswapV2LiquidityPositionSnapshotV2DTO{..} = (\uniswapV2LiquidityPositionSnapshotV2DTOReserve0 -> UniswapV2LiquidityPositionSnapshotV2DTO { uniswapV2LiquidityPositionSnapshotV2DTOReserve0, ..} ) <$> f uniswapV2LiquidityPositionSnapshotV2DTOReserve0
+{-# INLINE uniswapV2LiquidityPositionSnapshotV2DTOReserve0L #-}
+
+-- | 'uniswapV2LiquidityPositionSnapshotV2DTOReserve1' Lens
+uniswapV2LiquidityPositionSnapshotV2DTOReserve1L :: Lens_' UniswapV2LiquidityPositionSnapshotV2DTO (Maybe Text)
+uniswapV2LiquidityPositionSnapshotV2DTOReserve1L f UniswapV2LiquidityPositionSnapshotV2DTO{..} = (\uniswapV2LiquidityPositionSnapshotV2DTOReserve1 -> UniswapV2LiquidityPositionSnapshotV2DTO { uniswapV2LiquidityPositionSnapshotV2DTOReserve1, ..} ) <$> f uniswapV2LiquidityPositionSnapshotV2DTOReserve1
+{-# INLINE uniswapV2LiquidityPositionSnapshotV2DTOReserve1L #-}
+
+-- | 'uniswapV2LiquidityPositionSnapshotV2DTOReserveUsd' Lens
+uniswapV2LiquidityPositionSnapshotV2DTOReserveUsdL :: Lens_' UniswapV2LiquidityPositionSnapshotV2DTO (Maybe Text)
+uniswapV2LiquidityPositionSnapshotV2DTOReserveUsdL f UniswapV2LiquidityPositionSnapshotV2DTO{..} = (\uniswapV2LiquidityPositionSnapshotV2DTOReserveUsd -> UniswapV2LiquidityPositionSnapshotV2DTO { uniswapV2LiquidityPositionSnapshotV2DTOReserveUsd, ..} ) <$> f uniswapV2LiquidityPositionSnapshotV2DTOReserveUsd
+{-# INLINE uniswapV2LiquidityPositionSnapshotV2DTOReserveUsdL #-}
+
+-- | 'uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenTotalSupply' Lens
+uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenTotalSupplyL :: Lens_' UniswapV2LiquidityPositionSnapshotV2DTO (Maybe Text)
+uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenTotalSupplyL f UniswapV2LiquidityPositionSnapshotV2DTO{..} = (\uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenTotalSupply -> UniswapV2LiquidityPositionSnapshotV2DTO { uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenTotalSupply, ..} ) <$> f uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenTotalSupply
+{-# INLINE uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenTotalSupplyL #-}
+
+-- | 'uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenBalance' Lens
+uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenBalanceL :: Lens_' UniswapV2LiquidityPositionSnapshotV2DTO (Maybe Text)
+uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenBalanceL f UniswapV2LiquidityPositionSnapshotV2DTO{..} = (\uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenBalance -> UniswapV2LiquidityPositionSnapshotV2DTO { uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenBalance, ..} ) <$> f uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenBalance
+{-# INLINE uniswapV2LiquidityPositionSnapshotV2DTOLiquidityTokenBalanceL #-}
+
+-- | 'uniswapV2LiquidityPositionSnapshotV2DTOVid' Lens
+uniswapV2LiquidityPositionSnapshotV2DTOVidL :: Lens_' UniswapV2LiquidityPositionSnapshotV2DTO (Maybe Integer)
+uniswapV2LiquidityPositionSnapshotV2DTOVidL f UniswapV2LiquidityPositionSnapshotV2DTO{..} = (\uniswapV2LiquidityPositionSnapshotV2DTOVid -> UniswapV2LiquidityPositionSnapshotV2DTO { uniswapV2LiquidityPositionSnapshotV2DTOVid, ..} ) <$> f uniswapV2LiquidityPositionSnapshotV2DTOVid
+{-# INLINE uniswapV2LiquidityPositionSnapshotV2DTOVidL #-}
+
+-- | 'uniswapV2LiquidityPositionSnapshotV2DTOBlockRange' Lens
+uniswapV2LiquidityPositionSnapshotV2DTOBlockRangeL :: Lens_' UniswapV2LiquidityPositionSnapshotV2DTO (Maybe Text)
+uniswapV2LiquidityPositionSnapshotV2DTOBlockRangeL f UniswapV2LiquidityPositionSnapshotV2DTO{..} = (\uniswapV2LiquidityPositionSnapshotV2DTOBlockRange -> UniswapV2LiquidityPositionSnapshotV2DTO { uniswapV2LiquidityPositionSnapshotV2DTOBlockRange, ..} ) <$> f uniswapV2LiquidityPositionSnapshotV2DTOBlockRange
+{-# INLINE uniswapV2LiquidityPositionSnapshotV2DTOBlockRangeL #-}
+
+
+
+-- * UniswapV2LiquidityPositionV2DTO
+
+-- | 'uniswapV2LiquidityPositionV2DTOEntryTime' Lens
+uniswapV2LiquidityPositionV2DTOEntryTimeL :: Lens_' UniswapV2LiquidityPositionV2DTO (Maybe DateTime)
+uniswapV2LiquidityPositionV2DTOEntryTimeL f UniswapV2LiquidityPositionV2DTO{..} = (\uniswapV2LiquidityPositionV2DTOEntryTime -> UniswapV2LiquidityPositionV2DTO { uniswapV2LiquidityPositionV2DTOEntryTime, ..} ) <$> f uniswapV2LiquidityPositionV2DTOEntryTime
+{-# INLINE uniswapV2LiquidityPositionV2DTOEntryTimeL #-}
+
+-- | 'uniswapV2LiquidityPositionV2DTORecvTime' Lens
+uniswapV2LiquidityPositionV2DTORecvTimeL :: Lens_' UniswapV2LiquidityPositionV2DTO (Maybe DateTime)
+uniswapV2LiquidityPositionV2DTORecvTimeL f UniswapV2LiquidityPositionV2DTO{..} = (\uniswapV2LiquidityPositionV2DTORecvTime -> UniswapV2LiquidityPositionV2DTO { uniswapV2LiquidityPositionV2DTORecvTime, ..} ) <$> f uniswapV2LiquidityPositionV2DTORecvTime
+{-# INLINE uniswapV2LiquidityPositionV2DTORecvTimeL #-}
+
+-- | 'uniswapV2LiquidityPositionV2DTOBlockNumber' Lens
+uniswapV2LiquidityPositionV2DTOBlockNumberL :: Lens_' UniswapV2LiquidityPositionV2DTO (Maybe Integer)
+uniswapV2LiquidityPositionV2DTOBlockNumberL f UniswapV2LiquidityPositionV2DTO{..} = (\uniswapV2LiquidityPositionV2DTOBlockNumber -> UniswapV2LiquidityPositionV2DTO { uniswapV2LiquidityPositionV2DTOBlockNumber, ..} ) <$> f uniswapV2LiquidityPositionV2DTOBlockNumber
+{-# INLINE uniswapV2LiquidityPositionV2DTOBlockNumberL #-}
+
+-- | 'uniswapV2LiquidityPositionV2DTOId' Lens
+uniswapV2LiquidityPositionV2DTOIdL :: Lens_' UniswapV2LiquidityPositionV2DTO (Maybe Text)
+uniswapV2LiquidityPositionV2DTOIdL f UniswapV2LiquidityPositionV2DTO{..} = (\uniswapV2LiquidityPositionV2DTOId -> UniswapV2LiquidityPositionV2DTO { uniswapV2LiquidityPositionV2DTOId, ..} ) <$> f uniswapV2LiquidityPositionV2DTOId
+{-# INLINE uniswapV2LiquidityPositionV2DTOIdL #-}
+
+-- | 'uniswapV2LiquidityPositionV2DTOUser' Lens
+uniswapV2LiquidityPositionV2DTOUserL :: Lens_' UniswapV2LiquidityPositionV2DTO (Maybe Text)
+uniswapV2LiquidityPositionV2DTOUserL f UniswapV2LiquidityPositionV2DTO{..} = (\uniswapV2LiquidityPositionV2DTOUser -> UniswapV2LiquidityPositionV2DTO { uniswapV2LiquidityPositionV2DTOUser, ..} ) <$> f uniswapV2LiquidityPositionV2DTOUser
+{-# INLINE uniswapV2LiquidityPositionV2DTOUserL #-}
+
+-- | 'uniswapV2LiquidityPositionV2DTOPair' Lens
+uniswapV2LiquidityPositionV2DTOPairL :: Lens_' UniswapV2LiquidityPositionV2DTO (Maybe Text)
+uniswapV2LiquidityPositionV2DTOPairL f UniswapV2LiquidityPositionV2DTO{..} = (\uniswapV2LiquidityPositionV2DTOPair -> UniswapV2LiquidityPositionV2DTO { uniswapV2LiquidityPositionV2DTOPair, ..} ) <$> f uniswapV2LiquidityPositionV2DTOPair
+{-# INLINE uniswapV2LiquidityPositionV2DTOPairL #-}
+
+-- | 'uniswapV2LiquidityPositionV2DTOLiquidityTokenBalance' Lens
+uniswapV2LiquidityPositionV2DTOLiquidityTokenBalanceL :: Lens_' UniswapV2LiquidityPositionV2DTO (Maybe Text)
+uniswapV2LiquidityPositionV2DTOLiquidityTokenBalanceL f UniswapV2LiquidityPositionV2DTO{..} = (\uniswapV2LiquidityPositionV2DTOLiquidityTokenBalance -> UniswapV2LiquidityPositionV2DTO { uniswapV2LiquidityPositionV2DTOLiquidityTokenBalance, ..} ) <$> f uniswapV2LiquidityPositionV2DTOLiquidityTokenBalance
+{-# INLINE uniswapV2LiquidityPositionV2DTOLiquidityTokenBalanceL #-}
+
+-- | 'uniswapV2LiquidityPositionV2DTOVid' Lens
+uniswapV2LiquidityPositionV2DTOVidL :: Lens_' UniswapV2LiquidityPositionV2DTO (Maybe Integer)
+uniswapV2LiquidityPositionV2DTOVidL f UniswapV2LiquidityPositionV2DTO{..} = (\uniswapV2LiquidityPositionV2DTOVid -> UniswapV2LiquidityPositionV2DTO { uniswapV2LiquidityPositionV2DTOVid, ..} ) <$> f uniswapV2LiquidityPositionV2DTOVid
+{-# INLINE uniswapV2LiquidityPositionV2DTOVidL #-}
+
+
+
+-- * UniswapV2MintV2DTO
+
+-- | 'uniswapV2MintV2DTOEntryTime' Lens
+uniswapV2MintV2DTOEntryTimeL :: Lens_' UniswapV2MintV2DTO (Maybe DateTime)
+uniswapV2MintV2DTOEntryTimeL f UniswapV2MintV2DTO{..} = (\uniswapV2MintV2DTOEntryTime -> UniswapV2MintV2DTO { uniswapV2MintV2DTOEntryTime, ..} ) <$> f uniswapV2MintV2DTOEntryTime
+{-# INLINE uniswapV2MintV2DTOEntryTimeL #-}
+
+-- | 'uniswapV2MintV2DTORecvTime' Lens
+uniswapV2MintV2DTORecvTimeL :: Lens_' UniswapV2MintV2DTO (Maybe DateTime)
+uniswapV2MintV2DTORecvTimeL f UniswapV2MintV2DTO{..} = (\uniswapV2MintV2DTORecvTime -> UniswapV2MintV2DTO { uniswapV2MintV2DTORecvTime, ..} ) <$> f uniswapV2MintV2DTORecvTime
+{-# INLINE uniswapV2MintV2DTORecvTimeL #-}
+
+-- | 'uniswapV2MintV2DTOBlockNumber' Lens
+uniswapV2MintV2DTOBlockNumberL :: Lens_' UniswapV2MintV2DTO (Maybe Integer)
+uniswapV2MintV2DTOBlockNumberL f UniswapV2MintV2DTO{..} = (\uniswapV2MintV2DTOBlockNumber -> UniswapV2MintV2DTO { uniswapV2MintV2DTOBlockNumber, ..} ) <$> f uniswapV2MintV2DTOBlockNumber
+{-# INLINE uniswapV2MintV2DTOBlockNumberL #-}
+
+-- | 'uniswapV2MintV2DTOId' Lens
+uniswapV2MintV2DTOIdL :: Lens_' UniswapV2MintV2DTO (Maybe Text)
+uniswapV2MintV2DTOIdL f UniswapV2MintV2DTO{..} = (\uniswapV2MintV2DTOId -> UniswapV2MintV2DTO { uniswapV2MintV2DTOId, ..} ) <$> f uniswapV2MintV2DTOId
+{-# INLINE uniswapV2MintV2DTOIdL #-}
+
+-- | 'uniswapV2MintV2DTOTransaction' Lens
+uniswapV2MintV2DTOTransactionL :: Lens_' UniswapV2MintV2DTO (Maybe Text)
+uniswapV2MintV2DTOTransactionL f UniswapV2MintV2DTO{..} = (\uniswapV2MintV2DTOTransaction -> UniswapV2MintV2DTO { uniswapV2MintV2DTOTransaction, ..} ) <$> f uniswapV2MintV2DTOTransaction
+{-# INLINE uniswapV2MintV2DTOTransactionL #-}
+
+-- | 'uniswapV2MintV2DTOTimestamp' Lens
+uniswapV2MintV2DTOTimestampL :: Lens_' UniswapV2MintV2DTO (Maybe Text)
+uniswapV2MintV2DTOTimestampL f UniswapV2MintV2DTO{..} = (\uniswapV2MintV2DTOTimestamp -> UniswapV2MintV2DTO { uniswapV2MintV2DTOTimestamp, ..} ) <$> f uniswapV2MintV2DTOTimestamp
+{-# INLINE uniswapV2MintV2DTOTimestampL #-}
+
+-- | 'uniswapV2MintV2DTOPair' Lens
+uniswapV2MintV2DTOPairL :: Lens_' UniswapV2MintV2DTO (Maybe Text)
+uniswapV2MintV2DTOPairL f UniswapV2MintV2DTO{..} = (\uniswapV2MintV2DTOPair -> UniswapV2MintV2DTO { uniswapV2MintV2DTOPair, ..} ) <$> f uniswapV2MintV2DTOPair
+{-# INLINE uniswapV2MintV2DTOPairL #-}
+
+-- | 'uniswapV2MintV2DTOTo' Lens
+uniswapV2MintV2DTOToL :: Lens_' UniswapV2MintV2DTO (Maybe Text)
+uniswapV2MintV2DTOToL f UniswapV2MintV2DTO{..} = (\uniswapV2MintV2DTOTo -> UniswapV2MintV2DTO { uniswapV2MintV2DTOTo, ..} ) <$> f uniswapV2MintV2DTOTo
+{-# INLINE uniswapV2MintV2DTOToL #-}
+
+-- | 'uniswapV2MintV2DTOLiquidity' Lens
+uniswapV2MintV2DTOLiquidityL :: Lens_' UniswapV2MintV2DTO (Maybe Text)
+uniswapV2MintV2DTOLiquidityL f UniswapV2MintV2DTO{..} = (\uniswapV2MintV2DTOLiquidity -> UniswapV2MintV2DTO { uniswapV2MintV2DTOLiquidity, ..} ) <$> f uniswapV2MintV2DTOLiquidity
+{-# INLINE uniswapV2MintV2DTOLiquidityL #-}
+
+-- | 'uniswapV2MintV2DTOSender' Lens
+uniswapV2MintV2DTOSenderL :: Lens_' UniswapV2MintV2DTO (Maybe Text)
+uniswapV2MintV2DTOSenderL f UniswapV2MintV2DTO{..} = (\uniswapV2MintV2DTOSender -> UniswapV2MintV2DTO { uniswapV2MintV2DTOSender, ..} ) <$> f uniswapV2MintV2DTOSender
+{-# INLINE uniswapV2MintV2DTOSenderL #-}
+
+-- | 'uniswapV2MintV2DTOAmount0' Lens
+uniswapV2MintV2DTOAmount0L :: Lens_' UniswapV2MintV2DTO (Maybe Text)
+uniswapV2MintV2DTOAmount0L f UniswapV2MintV2DTO{..} = (\uniswapV2MintV2DTOAmount0 -> UniswapV2MintV2DTO { uniswapV2MintV2DTOAmount0, ..} ) <$> f uniswapV2MintV2DTOAmount0
+{-# INLINE uniswapV2MintV2DTOAmount0L #-}
+
+-- | 'uniswapV2MintV2DTOAmount1' Lens
+uniswapV2MintV2DTOAmount1L :: Lens_' UniswapV2MintV2DTO (Maybe Text)
+uniswapV2MintV2DTOAmount1L f UniswapV2MintV2DTO{..} = (\uniswapV2MintV2DTOAmount1 -> UniswapV2MintV2DTO { uniswapV2MintV2DTOAmount1, ..} ) <$> f uniswapV2MintV2DTOAmount1
+{-# INLINE uniswapV2MintV2DTOAmount1L #-}
+
+-- | 'uniswapV2MintV2DTOLogIndex' Lens
+uniswapV2MintV2DTOLogIndexL :: Lens_' UniswapV2MintV2DTO (Maybe Text)
+uniswapV2MintV2DTOLogIndexL f UniswapV2MintV2DTO{..} = (\uniswapV2MintV2DTOLogIndex -> UniswapV2MintV2DTO { uniswapV2MintV2DTOLogIndex, ..} ) <$> f uniswapV2MintV2DTOLogIndex
+{-# INLINE uniswapV2MintV2DTOLogIndexL #-}
+
+-- | 'uniswapV2MintV2DTOAmountUsd' Lens
+uniswapV2MintV2DTOAmountUsdL :: Lens_' UniswapV2MintV2DTO (Maybe Text)
+uniswapV2MintV2DTOAmountUsdL f UniswapV2MintV2DTO{..} = (\uniswapV2MintV2DTOAmountUsd -> UniswapV2MintV2DTO { uniswapV2MintV2DTOAmountUsd, ..} ) <$> f uniswapV2MintV2DTOAmountUsd
+{-# INLINE uniswapV2MintV2DTOAmountUsdL #-}
+
+-- | 'uniswapV2MintV2DTOFeeTo' Lens
+uniswapV2MintV2DTOFeeToL :: Lens_' UniswapV2MintV2DTO (Maybe Text)
+uniswapV2MintV2DTOFeeToL f UniswapV2MintV2DTO{..} = (\uniswapV2MintV2DTOFeeTo -> UniswapV2MintV2DTO { uniswapV2MintV2DTOFeeTo, ..} ) <$> f uniswapV2MintV2DTOFeeTo
+{-# INLINE uniswapV2MintV2DTOFeeToL #-}
+
+-- | 'uniswapV2MintV2DTOFeeLiquidity' Lens
+uniswapV2MintV2DTOFeeLiquidityL :: Lens_' UniswapV2MintV2DTO (Maybe Text)
+uniswapV2MintV2DTOFeeLiquidityL f UniswapV2MintV2DTO{..} = (\uniswapV2MintV2DTOFeeLiquidity -> UniswapV2MintV2DTO { uniswapV2MintV2DTOFeeLiquidity, ..} ) <$> f uniswapV2MintV2DTOFeeLiquidity
+{-# INLINE uniswapV2MintV2DTOFeeLiquidityL #-}
+
+-- | 'uniswapV2MintV2DTOVid' Lens
+uniswapV2MintV2DTOVidL :: Lens_' UniswapV2MintV2DTO (Maybe Integer)
+uniswapV2MintV2DTOVidL f UniswapV2MintV2DTO{..} = (\uniswapV2MintV2DTOVid -> UniswapV2MintV2DTO { uniswapV2MintV2DTOVid, ..} ) <$> f uniswapV2MintV2DTOVid
+{-# INLINE uniswapV2MintV2DTOVidL #-}
+
+-- | 'uniswapV2MintV2DTOBlockRange' Lens
+uniswapV2MintV2DTOBlockRangeL :: Lens_' UniswapV2MintV2DTO (Maybe Text)
+uniswapV2MintV2DTOBlockRangeL f UniswapV2MintV2DTO{..} = (\uniswapV2MintV2DTOBlockRange -> UniswapV2MintV2DTO { uniswapV2MintV2DTOBlockRange, ..} ) <$> f uniswapV2MintV2DTOBlockRange
+{-# INLINE uniswapV2MintV2DTOBlockRangeL #-}
+
+
+
+-- * UniswapV2PairDayDataV2DTO
+
+-- | 'uniswapV2PairDayDataV2DTOEntryTime' Lens
+uniswapV2PairDayDataV2DTOEntryTimeL :: Lens_' UniswapV2PairDayDataV2DTO (Maybe DateTime)
+uniswapV2PairDayDataV2DTOEntryTimeL f UniswapV2PairDayDataV2DTO{..} = (\uniswapV2PairDayDataV2DTOEntryTime -> UniswapV2PairDayDataV2DTO { uniswapV2PairDayDataV2DTOEntryTime, ..} ) <$> f uniswapV2PairDayDataV2DTOEntryTime
+{-# INLINE uniswapV2PairDayDataV2DTOEntryTimeL #-}
+
+-- | 'uniswapV2PairDayDataV2DTORecvTime' Lens
+uniswapV2PairDayDataV2DTORecvTimeL :: Lens_' UniswapV2PairDayDataV2DTO (Maybe DateTime)
+uniswapV2PairDayDataV2DTORecvTimeL f UniswapV2PairDayDataV2DTO{..} = (\uniswapV2PairDayDataV2DTORecvTime -> UniswapV2PairDayDataV2DTO { uniswapV2PairDayDataV2DTORecvTime, ..} ) <$> f uniswapV2PairDayDataV2DTORecvTime
+{-# INLINE uniswapV2PairDayDataV2DTORecvTimeL #-}
+
+-- | 'uniswapV2PairDayDataV2DTOBlockNumber' Lens
+uniswapV2PairDayDataV2DTOBlockNumberL :: Lens_' UniswapV2PairDayDataV2DTO (Maybe Integer)
+uniswapV2PairDayDataV2DTOBlockNumberL f UniswapV2PairDayDataV2DTO{..} = (\uniswapV2PairDayDataV2DTOBlockNumber -> UniswapV2PairDayDataV2DTO { uniswapV2PairDayDataV2DTOBlockNumber, ..} ) <$> f uniswapV2PairDayDataV2DTOBlockNumber
+{-# INLINE uniswapV2PairDayDataV2DTOBlockNumberL #-}
+
+-- | 'uniswapV2PairDayDataV2DTOId' Lens
+uniswapV2PairDayDataV2DTOIdL :: Lens_' UniswapV2PairDayDataV2DTO (Maybe Text)
+uniswapV2PairDayDataV2DTOIdL f UniswapV2PairDayDataV2DTO{..} = (\uniswapV2PairDayDataV2DTOId -> UniswapV2PairDayDataV2DTO { uniswapV2PairDayDataV2DTOId, ..} ) <$> f uniswapV2PairDayDataV2DTOId
+{-# INLINE uniswapV2PairDayDataV2DTOIdL #-}
+
+-- | 'uniswapV2PairDayDataV2DTODate' Lens
+uniswapV2PairDayDataV2DTODateL :: Lens_' UniswapV2PairDayDataV2DTO (Maybe Int)
+uniswapV2PairDayDataV2DTODateL f UniswapV2PairDayDataV2DTO{..} = (\uniswapV2PairDayDataV2DTODate -> UniswapV2PairDayDataV2DTO { uniswapV2PairDayDataV2DTODate, ..} ) <$> f uniswapV2PairDayDataV2DTODate
+{-# INLINE uniswapV2PairDayDataV2DTODateL #-}
+
+-- | 'uniswapV2PairDayDataV2DTOPairAddress' Lens
+uniswapV2PairDayDataV2DTOPairAddressL :: Lens_' UniswapV2PairDayDataV2DTO (Maybe Text)
+uniswapV2PairDayDataV2DTOPairAddressL f UniswapV2PairDayDataV2DTO{..} = (\uniswapV2PairDayDataV2DTOPairAddress -> UniswapV2PairDayDataV2DTO { uniswapV2PairDayDataV2DTOPairAddress, ..} ) <$> f uniswapV2PairDayDataV2DTOPairAddress
+{-# INLINE uniswapV2PairDayDataV2DTOPairAddressL #-}
+
+-- | 'uniswapV2PairDayDataV2DTOToken0' Lens
+uniswapV2PairDayDataV2DTOToken0L :: Lens_' UniswapV2PairDayDataV2DTO (Maybe Text)
+uniswapV2PairDayDataV2DTOToken0L f UniswapV2PairDayDataV2DTO{..} = (\uniswapV2PairDayDataV2DTOToken0 -> UniswapV2PairDayDataV2DTO { uniswapV2PairDayDataV2DTOToken0, ..} ) <$> f uniswapV2PairDayDataV2DTOToken0
+{-# INLINE uniswapV2PairDayDataV2DTOToken0L #-}
+
+-- | 'uniswapV2PairDayDataV2DTOToken1' Lens
+uniswapV2PairDayDataV2DTOToken1L :: Lens_' UniswapV2PairDayDataV2DTO (Maybe Text)
+uniswapV2PairDayDataV2DTOToken1L f UniswapV2PairDayDataV2DTO{..} = (\uniswapV2PairDayDataV2DTOToken1 -> UniswapV2PairDayDataV2DTO { uniswapV2PairDayDataV2DTOToken1, ..} ) <$> f uniswapV2PairDayDataV2DTOToken1
+{-# INLINE uniswapV2PairDayDataV2DTOToken1L #-}
+
+-- | 'uniswapV2PairDayDataV2DTOReserve0' Lens
+uniswapV2PairDayDataV2DTOReserve0L :: Lens_' UniswapV2PairDayDataV2DTO (Maybe Text)
+uniswapV2PairDayDataV2DTOReserve0L f UniswapV2PairDayDataV2DTO{..} = (\uniswapV2PairDayDataV2DTOReserve0 -> UniswapV2PairDayDataV2DTO { uniswapV2PairDayDataV2DTOReserve0, ..} ) <$> f uniswapV2PairDayDataV2DTOReserve0
+{-# INLINE uniswapV2PairDayDataV2DTOReserve0L #-}
+
+-- | 'uniswapV2PairDayDataV2DTOReserve1' Lens
+uniswapV2PairDayDataV2DTOReserve1L :: Lens_' UniswapV2PairDayDataV2DTO (Maybe Text)
+uniswapV2PairDayDataV2DTOReserve1L f UniswapV2PairDayDataV2DTO{..} = (\uniswapV2PairDayDataV2DTOReserve1 -> UniswapV2PairDayDataV2DTO { uniswapV2PairDayDataV2DTOReserve1, ..} ) <$> f uniswapV2PairDayDataV2DTOReserve1
+{-# INLINE uniswapV2PairDayDataV2DTOReserve1L #-}
+
+-- | 'uniswapV2PairDayDataV2DTOTotalSupply' Lens
+uniswapV2PairDayDataV2DTOTotalSupplyL :: Lens_' UniswapV2PairDayDataV2DTO (Maybe Text)
+uniswapV2PairDayDataV2DTOTotalSupplyL f UniswapV2PairDayDataV2DTO{..} = (\uniswapV2PairDayDataV2DTOTotalSupply -> UniswapV2PairDayDataV2DTO { uniswapV2PairDayDataV2DTOTotalSupply, ..} ) <$> f uniswapV2PairDayDataV2DTOTotalSupply
+{-# INLINE uniswapV2PairDayDataV2DTOTotalSupplyL #-}
+
+-- | 'uniswapV2PairDayDataV2DTOReserveUsd' Lens
+uniswapV2PairDayDataV2DTOReserveUsdL :: Lens_' UniswapV2PairDayDataV2DTO (Maybe Text)
+uniswapV2PairDayDataV2DTOReserveUsdL f UniswapV2PairDayDataV2DTO{..} = (\uniswapV2PairDayDataV2DTOReserveUsd -> UniswapV2PairDayDataV2DTO { uniswapV2PairDayDataV2DTOReserveUsd, ..} ) <$> f uniswapV2PairDayDataV2DTOReserveUsd
+{-# INLINE uniswapV2PairDayDataV2DTOReserveUsdL #-}
+
+-- | 'uniswapV2PairDayDataV2DTODailyVolumeToken0' Lens
+uniswapV2PairDayDataV2DTODailyVolumeToken0L :: Lens_' UniswapV2PairDayDataV2DTO (Maybe Text)
+uniswapV2PairDayDataV2DTODailyVolumeToken0L f UniswapV2PairDayDataV2DTO{..} = (\uniswapV2PairDayDataV2DTODailyVolumeToken0 -> UniswapV2PairDayDataV2DTO { uniswapV2PairDayDataV2DTODailyVolumeToken0, ..} ) <$> f uniswapV2PairDayDataV2DTODailyVolumeToken0
+{-# INLINE uniswapV2PairDayDataV2DTODailyVolumeToken0L #-}
+
+-- | 'uniswapV2PairDayDataV2DTODailyVolumeToken1' Lens
+uniswapV2PairDayDataV2DTODailyVolumeToken1L :: Lens_' UniswapV2PairDayDataV2DTO (Maybe Text)
+uniswapV2PairDayDataV2DTODailyVolumeToken1L f UniswapV2PairDayDataV2DTO{..} = (\uniswapV2PairDayDataV2DTODailyVolumeToken1 -> UniswapV2PairDayDataV2DTO { uniswapV2PairDayDataV2DTODailyVolumeToken1, ..} ) <$> f uniswapV2PairDayDataV2DTODailyVolumeToken1
+{-# INLINE uniswapV2PairDayDataV2DTODailyVolumeToken1L #-}
+
+-- | 'uniswapV2PairDayDataV2DTODailyVolumeUsd' Lens
+uniswapV2PairDayDataV2DTODailyVolumeUsdL :: Lens_' UniswapV2PairDayDataV2DTO (Maybe Text)
+uniswapV2PairDayDataV2DTODailyVolumeUsdL f UniswapV2PairDayDataV2DTO{..} = (\uniswapV2PairDayDataV2DTODailyVolumeUsd -> UniswapV2PairDayDataV2DTO { uniswapV2PairDayDataV2DTODailyVolumeUsd, ..} ) <$> f uniswapV2PairDayDataV2DTODailyVolumeUsd
+{-# INLINE uniswapV2PairDayDataV2DTODailyVolumeUsdL #-}
+
+-- | 'uniswapV2PairDayDataV2DTODailyTxns' Lens
+uniswapV2PairDayDataV2DTODailyTxnsL :: Lens_' UniswapV2PairDayDataV2DTO (Maybe Text)
+uniswapV2PairDayDataV2DTODailyTxnsL f UniswapV2PairDayDataV2DTO{..} = (\uniswapV2PairDayDataV2DTODailyTxns -> UniswapV2PairDayDataV2DTO { uniswapV2PairDayDataV2DTODailyTxns, ..} ) <$> f uniswapV2PairDayDataV2DTODailyTxns
+{-# INLINE uniswapV2PairDayDataV2DTODailyTxnsL #-}
+
+-- | 'uniswapV2PairDayDataV2DTOVid' Lens
+uniswapV2PairDayDataV2DTOVidL :: Lens_' UniswapV2PairDayDataV2DTO (Maybe Integer)
+uniswapV2PairDayDataV2DTOVidL f UniswapV2PairDayDataV2DTO{..} = (\uniswapV2PairDayDataV2DTOVid -> UniswapV2PairDayDataV2DTO { uniswapV2PairDayDataV2DTOVid, ..} ) <$> f uniswapV2PairDayDataV2DTOVid
+{-# INLINE uniswapV2PairDayDataV2DTOVidL #-}
+
+
+
+-- * UniswapV2PairHourDataV2DTO
+
+-- | 'uniswapV2PairHourDataV2DTOEntryTime' Lens
+uniswapV2PairHourDataV2DTOEntryTimeL :: Lens_' UniswapV2PairHourDataV2DTO (Maybe DateTime)
+uniswapV2PairHourDataV2DTOEntryTimeL f UniswapV2PairHourDataV2DTO{..} = (\uniswapV2PairHourDataV2DTOEntryTime -> UniswapV2PairHourDataV2DTO { uniswapV2PairHourDataV2DTOEntryTime, ..} ) <$> f uniswapV2PairHourDataV2DTOEntryTime
+{-# INLINE uniswapV2PairHourDataV2DTOEntryTimeL #-}
+
+-- | 'uniswapV2PairHourDataV2DTORecvTime' Lens
+uniswapV2PairHourDataV2DTORecvTimeL :: Lens_' UniswapV2PairHourDataV2DTO (Maybe DateTime)
+uniswapV2PairHourDataV2DTORecvTimeL f UniswapV2PairHourDataV2DTO{..} = (\uniswapV2PairHourDataV2DTORecvTime -> UniswapV2PairHourDataV2DTO { uniswapV2PairHourDataV2DTORecvTime, ..} ) <$> f uniswapV2PairHourDataV2DTORecvTime
+{-# INLINE uniswapV2PairHourDataV2DTORecvTimeL #-}
+
+-- | 'uniswapV2PairHourDataV2DTOBlockNumber' Lens
+uniswapV2PairHourDataV2DTOBlockNumberL :: Lens_' UniswapV2PairHourDataV2DTO (Maybe Integer)
+uniswapV2PairHourDataV2DTOBlockNumberL f UniswapV2PairHourDataV2DTO{..} = (\uniswapV2PairHourDataV2DTOBlockNumber -> UniswapV2PairHourDataV2DTO { uniswapV2PairHourDataV2DTOBlockNumber, ..} ) <$> f uniswapV2PairHourDataV2DTOBlockNumber
+{-# INLINE uniswapV2PairHourDataV2DTOBlockNumberL #-}
+
+-- | 'uniswapV2PairHourDataV2DTOId' Lens
+uniswapV2PairHourDataV2DTOIdL :: Lens_' UniswapV2PairHourDataV2DTO (Maybe Text)
+uniswapV2PairHourDataV2DTOIdL f UniswapV2PairHourDataV2DTO{..} = (\uniswapV2PairHourDataV2DTOId -> UniswapV2PairHourDataV2DTO { uniswapV2PairHourDataV2DTOId, ..} ) <$> f uniswapV2PairHourDataV2DTOId
+{-# INLINE uniswapV2PairHourDataV2DTOIdL #-}
+
+-- | 'uniswapV2PairHourDataV2DTOHourStartUnix' Lens
+uniswapV2PairHourDataV2DTOHourStartUnixL :: Lens_' UniswapV2PairHourDataV2DTO (Maybe Int)
+uniswapV2PairHourDataV2DTOHourStartUnixL f UniswapV2PairHourDataV2DTO{..} = (\uniswapV2PairHourDataV2DTOHourStartUnix -> UniswapV2PairHourDataV2DTO { uniswapV2PairHourDataV2DTOHourStartUnix, ..} ) <$> f uniswapV2PairHourDataV2DTOHourStartUnix
+{-# INLINE uniswapV2PairHourDataV2DTOHourStartUnixL #-}
+
+-- | 'uniswapV2PairHourDataV2DTOPair' Lens
+uniswapV2PairHourDataV2DTOPairL :: Lens_' UniswapV2PairHourDataV2DTO (Maybe Text)
+uniswapV2PairHourDataV2DTOPairL f UniswapV2PairHourDataV2DTO{..} = (\uniswapV2PairHourDataV2DTOPair -> UniswapV2PairHourDataV2DTO { uniswapV2PairHourDataV2DTOPair, ..} ) <$> f uniswapV2PairHourDataV2DTOPair
+{-# INLINE uniswapV2PairHourDataV2DTOPairL #-}
+
+-- | 'uniswapV2PairHourDataV2DTOReserve0' Lens
+uniswapV2PairHourDataV2DTOReserve0L :: Lens_' UniswapV2PairHourDataV2DTO (Maybe Text)
+uniswapV2PairHourDataV2DTOReserve0L f UniswapV2PairHourDataV2DTO{..} = (\uniswapV2PairHourDataV2DTOReserve0 -> UniswapV2PairHourDataV2DTO { uniswapV2PairHourDataV2DTOReserve0, ..} ) <$> f uniswapV2PairHourDataV2DTOReserve0
+{-# INLINE uniswapV2PairHourDataV2DTOReserve0L #-}
+
+-- | 'uniswapV2PairHourDataV2DTOReserve1' Lens
+uniswapV2PairHourDataV2DTOReserve1L :: Lens_' UniswapV2PairHourDataV2DTO (Maybe Text)
+uniswapV2PairHourDataV2DTOReserve1L f UniswapV2PairHourDataV2DTO{..} = (\uniswapV2PairHourDataV2DTOReserve1 -> UniswapV2PairHourDataV2DTO { uniswapV2PairHourDataV2DTOReserve1, ..} ) <$> f uniswapV2PairHourDataV2DTOReserve1
+{-# INLINE uniswapV2PairHourDataV2DTOReserve1L #-}
+
+-- | 'uniswapV2PairHourDataV2DTOTotalSupply' Lens
+uniswapV2PairHourDataV2DTOTotalSupplyL :: Lens_' UniswapV2PairHourDataV2DTO (Maybe Text)
+uniswapV2PairHourDataV2DTOTotalSupplyL f UniswapV2PairHourDataV2DTO{..} = (\uniswapV2PairHourDataV2DTOTotalSupply -> UniswapV2PairHourDataV2DTO { uniswapV2PairHourDataV2DTOTotalSupply, ..} ) <$> f uniswapV2PairHourDataV2DTOTotalSupply
+{-# INLINE uniswapV2PairHourDataV2DTOTotalSupplyL #-}
+
+-- | 'uniswapV2PairHourDataV2DTOReserveUsd' Lens
+uniswapV2PairHourDataV2DTOReserveUsdL :: Lens_' UniswapV2PairHourDataV2DTO (Maybe Text)
+uniswapV2PairHourDataV2DTOReserveUsdL f UniswapV2PairHourDataV2DTO{..} = (\uniswapV2PairHourDataV2DTOReserveUsd -> UniswapV2PairHourDataV2DTO { uniswapV2PairHourDataV2DTOReserveUsd, ..} ) <$> f uniswapV2PairHourDataV2DTOReserveUsd
+{-# INLINE uniswapV2PairHourDataV2DTOReserveUsdL #-}
+
+-- | 'uniswapV2PairHourDataV2DTOHourlyVolumeToken0' Lens
+uniswapV2PairHourDataV2DTOHourlyVolumeToken0L :: Lens_' UniswapV2PairHourDataV2DTO (Maybe Text)
+uniswapV2PairHourDataV2DTOHourlyVolumeToken0L f UniswapV2PairHourDataV2DTO{..} = (\uniswapV2PairHourDataV2DTOHourlyVolumeToken0 -> UniswapV2PairHourDataV2DTO { uniswapV2PairHourDataV2DTOHourlyVolumeToken0, ..} ) <$> f uniswapV2PairHourDataV2DTOHourlyVolumeToken0
+{-# INLINE uniswapV2PairHourDataV2DTOHourlyVolumeToken0L #-}
+
+-- | 'uniswapV2PairHourDataV2DTOHourlyVolumeToken1' Lens
+uniswapV2PairHourDataV2DTOHourlyVolumeToken1L :: Lens_' UniswapV2PairHourDataV2DTO (Maybe Text)
+uniswapV2PairHourDataV2DTOHourlyVolumeToken1L f UniswapV2PairHourDataV2DTO{..} = (\uniswapV2PairHourDataV2DTOHourlyVolumeToken1 -> UniswapV2PairHourDataV2DTO { uniswapV2PairHourDataV2DTOHourlyVolumeToken1, ..} ) <$> f uniswapV2PairHourDataV2DTOHourlyVolumeToken1
+{-# INLINE uniswapV2PairHourDataV2DTOHourlyVolumeToken1L #-}
+
+-- | 'uniswapV2PairHourDataV2DTOHourlyVolumeUsd' Lens
+uniswapV2PairHourDataV2DTOHourlyVolumeUsdL :: Lens_' UniswapV2PairHourDataV2DTO (Maybe Text)
+uniswapV2PairHourDataV2DTOHourlyVolumeUsdL f UniswapV2PairHourDataV2DTO{..} = (\uniswapV2PairHourDataV2DTOHourlyVolumeUsd -> UniswapV2PairHourDataV2DTO { uniswapV2PairHourDataV2DTOHourlyVolumeUsd, ..} ) <$> f uniswapV2PairHourDataV2DTOHourlyVolumeUsd
+{-# INLINE uniswapV2PairHourDataV2DTOHourlyVolumeUsdL #-}
+
+-- | 'uniswapV2PairHourDataV2DTOHourlyTxns' Lens
+uniswapV2PairHourDataV2DTOHourlyTxnsL :: Lens_' UniswapV2PairHourDataV2DTO (Maybe Text)
+uniswapV2PairHourDataV2DTOHourlyTxnsL f UniswapV2PairHourDataV2DTO{..} = (\uniswapV2PairHourDataV2DTOHourlyTxns -> UniswapV2PairHourDataV2DTO { uniswapV2PairHourDataV2DTOHourlyTxns, ..} ) <$> f uniswapV2PairHourDataV2DTOHourlyTxns
+{-# INLINE uniswapV2PairHourDataV2DTOHourlyTxnsL #-}
+
+-- | 'uniswapV2PairHourDataV2DTOVid' Lens
+uniswapV2PairHourDataV2DTOVidL :: Lens_' UniswapV2PairHourDataV2DTO (Maybe Integer)
+uniswapV2PairHourDataV2DTOVidL f UniswapV2PairHourDataV2DTO{..} = (\uniswapV2PairHourDataV2DTOVid -> UniswapV2PairHourDataV2DTO { uniswapV2PairHourDataV2DTOVid, ..} ) <$> f uniswapV2PairHourDataV2DTOVid
+{-# INLINE uniswapV2PairHourDataV2DTOVidL #-}
 
 
 
@@ -858,6 +5242,85 @@ uniswapV2SwapV2DTOTransactionIdL f UniswapV2SwapV2DTO{..} = (\uniswapV2SwapV2DTO
 
 
 
+-- * UniswapV2TokenDayDataV2DTO
+
+-- | 'uniswapV2TokenDayDataV2DTOEntryTime' Lens
+uniswapV2TokenDayDataV2DTOEntryTimeL :: Lens_' UniswapV2TokenDayDataV2DTO (Maybe DateTime)
+uniswapV2TokenDayDataV2DTOEntryTimeL f UniswapV2TokenDayDataV2DTO{..} = (\uniswapV2TokenDayDataV2DTOEntryTime -> UniswapV2TokenDayDataV2DTO { uniswapV2TokenDayDataV2DTOEntryTime, ..} ) <$> f uniswapV2TokenDayDataV2DTOEntryTime
+{-# INLINE uniswapV2TokenDayDataV2DTOEntryTimeL #-}
+
+-- | 'uniswapV2TokenDayDataV2DTORecvTime' Lens
+uniswapV2TokenDayDataV2DTORecvTimeL :: Lens_' UniswapV2TokenDayDataV2DTO (Maybe DateTime)
+uniswapV2TokenDayDataV2DTORecvTimeL f UniswapV2TokenDayDataV2DTO{..} = (\uniswapV2TokenDayDataV2DTORecvTime -> UniswapV2TokenDayDataV2DTO { uniswapV2TokenDayDataV2DTORecvTime, ..} ) <$> f uniswapV2TokenDayDataV2DTORecvTime
+{-# INLINE uniswapV2TokenDayDataV2DTORecvTimeL #-}
+
+-- | 'uniswapV2TokenDayDataV2DTOBlockNumber' Lens
+uniswapV2TokenDayDataV2DTOBlockNumberL :: Lens_' UniswapV2TokenDayDataV2DTO (Maybe Integer)
+uniswapV2TokenDayDataV2DTOBlockNumberL f UniswapV2TokenDayDataV2DTO{..} = (\uniswapV2TokenDayDataV2DTOBlockNumber -> UniswapV2TokenDayDataV2DTO { uniswapV2TokenDayDataV2DTOBlockNumber, ..} ) <$> f uniswapV2TokenDayDataV2DTOBlockNumber
+{-# INLINE uniswapV2TokenDayDataV2DTOBlockNumberL #-}
+
+-- | 'uniswapV2TokenDayDataV2DTOId' Lens
+uniswapV2TokenDayDataV2DTOIdL :: Lens_' UniswapV2TokenDayDataV2DTO (Maybe Text)
+uniswapV2TokenDayDataV2DTOIdL f UniswapV2TokenDayDataV2DTO{..} = (\uniswapV2TokenDayDataV2DTOId -> UniswapV2TokenDayDataV2DTO { uniswapV2TokenDayDataV2DTOId, ..} ) <$> f uniswapV2TokenDayDataV2DTOId
+{-# INLINE uniswapV2TokenDayDataV2DTOIdL #-}
+
+-- | 'uniswapV2TokenDayDataV2DTODate' Lens
+uniswapV2TokenDayDataV2DTODateL :: Lens_' UniswapV2TokenDayDataV2DTO (Maybe Int)
+uniswapV2TokenDayDataV2DTODateL f UniswapV2TokenDayDataV2DTO{..} = (\uniswapV2TokenDayDataV2DTODate -> UniswapV2TokenDayDataV2DTO { uniswapV2TokenDayDataV2DTODate, ..} ) <$> f uniswapV2TokenDayDataV2DTODate
+{-# INLINE uniswapV2TokenDayDataV2DTODateL #-}
+
+-- | 'uniswapV2TokenDayDataV2DTOToken' Lens
+uniswapV2TokenDayDataV2DTOTokenL :: Lens_' UniswapV2TokenDayDataV2DTO (Maybe Text)
+uniswapV2TokenDayDataV2DTOTokenL f UniswapV2TokenDayDataV2DTO{..} = (\uniswapV2TokenDayDataV2DTOToken -> UniswapV2TokenDayDataV2DTO { uniswapV2TokenDayDataV2DTOToken, ..} ) <$> f uniswapV2TokenDayDataV2DTOToken
+{-# INLINE uniswapV2TokenDayDataV2DTOTokenL #-}
+
+-- | 'uniswapV2TokenDayDataV2DTODailyVolumeToken' Lens
+uniswapV2TokenDayDataV2DTODailyVolumeTokenL :: Lens_' UniswapV2TokenDayDataV2DTO (Maybe Text)
+uniswapV2TokenDayDataV2DTODailyVolumeTokenL f UniswapV2TokenDayDataV2DTO{..} = (\uniswapV2TokenDayDataV2DTODailyVolumeToken -> UniswapV2TokenDayDataV2DTO { uniswapV2TokenDayDataV2DTODailyVolumeToken, ..} ) <$> f uniswapV2TokenDayDataV2DTODailyVolumeToken
+{-# INLINE uniswapV2TokenDayDataV2DTODailyVolumeTokenL #-}
+
+-- | 'uniswapV2TokenDayDataV2DTODailyVolumeEth' Lens
+uniswapV2TokenDayDataV2DTODailyVolumeEthL :: Lens_' UniswapV2TokenDayDataV2DTO (Maybe Text)
+uniswapV2TokenDayDataV2DTODailyVolumeEthL f UniswapV2TokenDayDataV2DTO{..} = (\uniswapV2TokenDayDataV2DTODailyVolumeEth -> UniswapV2TokenDayDataV2DTO { uniswapV2TokenDayDataV2DTODailyVolumeEth, ..} ) <$> f uniswapV2TokenDayDataV2DTODailyVolumeEth
+{-# INLINE uniswapV2TokenDayDataV2DTODailyVolumeEthL #-}
+
+-- | 'uniswapV2TokenDayDataV2DTODailyVolumeUsd' Lens
+uniswapV2TokenDayDataV2DTODailyVolumeUsdL :: Lens_' UniswapV2TokenDayDataV2DTO (Maybe Text)
+uniswapV2TokenDayDataV2DTODailyVolumeUsdL f UniswapV2TokenDayDataV2DTO{..} = (\uniswapV2TokenDayDataV2DTODailyVolumeUsd -> UniswapV2TokenDayDataV2DTO { uniswapV2TokenDayDataV2DTODailyVolumeUsd, ..} ) <$> f uniswapV2TokenDayDataV2DTODailyVolumeUsd
+{-# INLINE uniswapV2TokenDayDataV2DTODailyVolumeUsdL #-}
+
+-- | 'uniswapV2TokenDayDataV2DTODailyTxns' Lens
+uniswapV2TokenDayDataV2DTODailyTxnsL :: Lens_' UniswapV2TokenDayDataV2DTO (Maybe Text)
+uniswapV2TokenDayDataV2DTODailyTxnsL f UniswapV2TokenDayDataV2DTO{..} = (\uniswapV2TokenDayDataV2DTODailyTxns -> UniswapV2TokenDayDataV2DTO { uniswapV2TokenDayDataV2DTODailyTxns, ..} ) <$> f uniswapV2TokenDayDataV2DTODailyTxns
+{-# INLINE uniswapV2TokenDayDataV2DTODailyTxnsL #-}
+
+-- | 'uniswapV2TokenDayDataV2DTOTotalLiquidityToken' Lens
+uniswapV2TokenDayDataV2DTOTotalLiquidityTokenL :: Lens_' UniswapV2TokenDayDataV2DTO (Maybe Text)
+uniswapV2TokenDayDataV2DTOTotalLiquidityTokenL f UniswapV2TokenDayDataV2DTO{..} = (\uniswapV2TokenDayDataV2DTOTotalLiquidityToken -> UniswapV2TokenDayDataV2DTO { uniswapV2TokenDayDataV2DTOTotalLiquidityToken, ..} ) <$> f uniswapV2TokenDayDataV2DTOTotalLiquidityToken
+{-# INLINE uniswapV2TokenDayDataV2DTOTotalLiquidityTokenL #-}
+
+-- | 'uniswapV2TokenDayDataV2DTOTotalLiquidityEth' Lens
+uniswapV2TokenDayDataV2DTOTotalLiquidityEthL :: Lens_' UniswapV2TokenDayDataV2DTO (Maybe Text)
+uniswapV2TokenDayDataV2DTOTotalLiquidityEthL f UniswapV2TokenDayDataV2DTO{..} = (\uniswapV2TokenDayDataV2DTOTotalLiquidityEth -> UniswapV2TokenDayDataV2DTO { uniswapV2TokenDayDataV2DTOTotalLiquidityEth, ..} ) <$> f uniswapV2TokenDayDataV2DTOTotalLiquidityEth
+{-# INLINE uniswapV2TokenDayDataV2DTOTotalLiquidityEthL #-}
+
+-- | 'uniswapV2TokenDayDataV2DTOTotalLiquidityUsd' Lens
+uniswapV2TokenDayDataV2DTOTotalLiquidityUsdL :: Lens_' UniswapV2TokenDayDataV2DTO (Maybe Text)
+uniswapV2TokenDayDataV2DTOTotalLiquidityUsdL f UniswapV2TokenDayDataV2DTO{..} = (\uniswapV2TokenDayDataV2DTOTotalLiquidityUsd -> UniswapV2TokenDayDataV2DTO { uniswapV2TokenDayDataV2DTOTotalLiquidityUsd, ..} ) <$> f uniswapV2TokenDayDataV2DTOTotalLiquidityUsd
+{-# INLINE uniswapV2TokenDayDataV2DTOTotalLiquidityUsdL #-}
+
+-- | 'uniswapV2TokenDayDataV2DTOPriceUsd' Lens
+uniswapV2TokenDayDataV2DTOPriceUsdL :: Lens_' UniswapV2TokenDayDataV2DTO (Maybe Text)
+uniswapV2TokenDayDataV2DTOPriceUsdL f UniswapV2TokenDayDataV2DTO{..} = (\uniswapV2TokenDayDataV2DTOPriceUsd -> UniswapV2TokenDayDataV2DTO { uniswapV2TokenDayDataV2DTOPriceUsd, ..} ) <$> f uniswapV2TokenDayDataV2DTOPriceUsd
+{-# INLINE uniswapV2TokenDayDataV2DTOPriceUsdL #-}
+
+-- | 'uniswapV2TokenDayDataV2DTOVid' Lens
+uniswapV2TokenDayDataV2DTOVidL :: Lens_' UniswapV2TokenDayDataV2DTO (Maybe Integer)
+uniswapV2TokenDayDataV2DTOVidL f UniswapV2TokenDayDataV2DTO{..} = (\uniswapV2TokenDayDataV2DTOVid -> UniswapV2TokenDayDataV2DTO { uniswapV2TokenDayDataV2DTOVid, ..} ) <$> f uniswapV2TokenDayDataV2DTOVid
+{-# INLINE uniswapV2TokenDayDataV2DTOVidL #-}
+
+
+
 -- * UniswapV2TokenV2DTO
 
 -- | 'uniswapV2TokenV2DTOEntryTime' Lens
@@ -939,6 +5402,227 @@ uniswapV2TokenV2DTODerivedEthL f UniswapV2TokenV2DTO{..} = (\uniswapV2TokenV2DTO
 uniswapV2TokenV2DTOTokenSymbolL :: Lens_' UniswapV2TokenV2DTO (Maybe Text)
 uniswapV2TokenV2DTOTokenSymbolL f UniswapV2TokenV2DTO{..} = (\uniswapV2TokenV2DTOTokenSymbol -> UniswapV2TokenV2DTO { uniswapV2TokenV2DTOTokenSymbol, ..} ) <$> f uniswapV2TokenV2DTOTokenSymbol
 {-# INLINE uniswapV2TokenV2DTOTokenSymbolL #-}
+
+
+
+-- * UniswapV2TransactionV2DTO
+
+-- | 'uniswapV2TransactionV2DTOEntryTime' Lens
+uniswapV2TransactionV2DTOEntryTimeL :: Lens_' UniswapV2TransactionV2DTO (Maybe DateTime)
+uniswapV2TransactionV2DTOEntryTimeL f UniswapV2TransactionV2DTO{..} = (\uniswapV2TransactionV2DTOEntryTime -> UniswapV2TransactionV2DTO { uniswapV2TransactionV2DTOEntryTime, ..} ) <$> f uniswapV2TransactionV2DTOEntryTime
+{-# INLINE uniswapV2TransactionV2DTOEntryTimeL #-}
+
+-- | 'uniswapV2TransactionV2DTORecvTime' Lens
+uniswapV2TransactionV2DTORecvTimeL :: Lens_' UniswapV2TransactionV2DTO (Maybe DateTime)
+uniswapV2TransactionV2DTORecvTimeL f UniswapV2TransactionV2DTO{..} = (\uniswapV2TransactionV2DTORecvTime -> UniswapV2TransactionV2DTO { uniswapV2TransactionV2DTORecvTime, ..} ) <$> f uniswapV2TransactionV2DTORecvTime
+{-# INLINE uniswapV2TransactionV2DTORecvTimeL #-}
+
+-- | 'uniswapV2TransactionV2DTOBlockNumber' Lens
+uniswapV2TransactionV2DTOBlockNumberL :: Lens_' UniswapV2TransactionV2DTO (Maybe Integer)
+uniswapV2TransactionV2DTOBlockNumberL f UniswapV2TransactionV2DTO{..} = (\uniswapV2TransactionV2DTOBlockNumber -> UniswapV2TransactionV2DTO { uniswapV2TransactionV2DTOBlockNumber, ..} ) <$> f uniswapV2TransactionV2DTOBlockNumber
+{-# INLINE uniswapV2TransactionV2DTOBlockNumberL #-}
+
+-- | 'uniswapV2TransactionV2DTOId' Lens
+uniswapV2TransactionV2DTOIdL :: Lens_' UniswapV2TransactionV2DTO (Maybe Text)
+uniswapV2TransactionV2DTOIdL f UniswapV2TransactionV2DTO{..} = (\uniswapV2TransactionV2DTOId -> UniswapV2TransactionV2DTO { uniswapV2TransactionV2DTOId, ..} ) <$> f uniswapV2TransactionV2DTOId
+{-# INLINE uniswapV2TransactionV2DTOIdL #-}
+
+-- | 'uniswapV2TransactionV2DTOTimestamp' Lens
+uniswapV2TransactionV2DTOTimestampL :: Lens_' UniswapV2TransactionV2DTO (Maybe Text)
+uniswapV2TransactionV2DTOTimestampL f UniswapV2TransactionV2DTO{..} = (\uniswapV2TransactionV2DTOTimestamp -> UniswapV2TransactionV2DTO { uniswapV2TransactionV2DTOTimestamp, ..} ) <$> f uniswapV2TransactionV2DTOTimestamp
+{-# INLINE uniswapV2TransactionV2DTOTimestampL #-}
+
+-- | 'uniswapV2TransactionV2DTOMints' Lens
+uniswapV2TransactionV2DTOMintsL :: Lens_' UniswapV2TransactionV2DTO (Maybe [Text])
+uniswapV2TransactionV2DTOMintsL f UniswapV2TransactionV2DTO{..} = (\uniswapV2TransactionV2DTOMints -> UniswapV2TransactionV2DTO { uniswapV2TransactionV2DTOMints, ..} ) <$> f uniswapV2TransactionV2DTOMints
+{-# INLINE uniswapV2TransactionV2DTOMintsL #-}
+
+-- | 'uniswapV2TransactionV2DTOBurns' Lens
+uniswapV2TransactionV2DTOBurnsL :: Lens_' UniswapV2TransactionV2DTO (Maybe [Text])
+uniswapV2TransactionV2DTOBurnsL f UniswapV2TransactionV2DTO{..} = (\uniswapV2TransactionV2DTOBurns -> UniswapV2TransactionV2DTO { uniswapV2TransactionV2DTOBurns, ..} ) <$> f uniswapV2TransactionV2DTOBurns
+{-# INLINE uniswapV2TransactionV2DTOBurnsL #-}
+
+-- | 'uniswapV2TransactionV2DTOSwaps' Lens
+uniswapV2TransactionV2DTOSwapsL :: Lens_' UniswapV2TransactionV2DTO (Maybe [Text])
+uniswapV2TransactionV2DTOSwapsL f UniswapV2TransactionV2DTO{..} = (\uniswapV2TransactionV2DTOSwaps -> UniswapV2TransactionV2DTO { uniswapV2TransactionV2DTOSwaps, ..} ) <$> f uniswapV2TransactionV2DTOSwaps
+{-# INLINE uniswapV2TransactionV2DTOSwapsL #-}
+
+-- | 'uniswapV2TransactionV2DTOVid' Lens
+uniswapV2TransactionV2DTOVidL :: Lens_' UniswapV2TransactionV2DTO (Maybe Integer)
+uniswapV2TransactionV2DTOVidL f UniswapV2TransactionV2DTO{..} = (\uniswapV2TransactionV2DTOVid -> UniswapV2TransactionV2DTO { uniswapV2TransactionV2DTOVid, ..} ) <$> f uniswapV2TransactionV2DTOVid
+{-# INLINE uniswapV2TransactionV2DTOVidL #-}
+
+
+
+-- * UniswapV2UniswapDayDataV2DTO
+
+-- | 'uniswapV2UniswapDayDataV2DTOEntryTime' Lens
+uniswapV2UniswapDayDataV2DTOEntryTimeL :: Lens_' UniswapV2UniswapDayDataV2DTO (Maybe DateTime)
+uniswapV2UniswapDayDataV2DTOEntryTimeL f UniswapV2UniswapDayDataV2DTO{..} = (\uniswapV2UniswapDayDataV2DTOEntryTime -> UniswapV2UniswapDayDataV2DTO { uniswapV2UniswapDayDataV2DTOEntryTime, ..} ) <$> f uniswapV2UniswapDayDataV2DTOEntryTime
+{-# INLINE uniswapV2UniswapDayDataV2DTOEntryTimeL #-}
+
+-- | 'uniswapV2UniswapDayDataV2DTORecvTime' Lens
+uniswapV2UniswapDayDataV2DTORecvTimeL :: Lens_' UniswapV2UniswapDayDataV2DTO (Maybe DateTime)
+uniswapV2UniswapDayDataV2DTORecvTimeL f UniswapV2UniswapDayDataV2DTO{..} = (\uniswapV2UniswapDayDataV2DTORecvTime -> UniswapV2UniswapDayDataV2DTO { uniswapV2UniswapDayDataV2DTORecvTime, ..} ) <$> f uniswapV2UniswapDayDataV2DTORecvTime
+{-# INLINE uniswapV2UniswapDayDataV2DTORecvTimeL #-}
+
+-- | 'uniswapV2UniswapDayDataV2DTOBlockNumber' Lens
+uniswapV2UniswapDayDataV2DTOBlockNumberL :: Lens_' UniswapV2UniswapDayDataV2DTO (Maybe Integer)
+uniswapV2UniswapDayDataV2DTOBlockNumberL f UniswapV2UniswapDayDataV2DTO{..} = (\uniswapV2UniswapDayDataV2DTOBlockNumber -> UniswapV2UniswapDayDataV2DTO { uniswapV2UniswapDayDataV2DTOBlockNumber, ..} ) <$> f uniswapV2UniswapDayDataV2DTOBlockNumber
+{-# INLINE uniswapV2UniswapDayDataV2DTOBlockNumberL #-}
+
+-- | 'uniswapV2UniswapDayDataV2DTOId' Lens
+uniswapV2UniswapDayDataV2DTOIdL :: Lens_' UniswapV2UniswapDayDataV2DTO (Maybe Text)
+uniswapV2UniswapDayDataV2DTOIdL f UniswapV2UniswapDayDataV2DTO{..} = (\uniswapV2UniswapDayDataV2DTOId -> UniswapV2UniswapDayDataV2DTO { uniswapV2UniswapDayDataV2DTOId, ..} ) <$> f uniswapV2UniswapDayDataV2DTOId
+{-# INLINE uniswapV2UniswapDayDataV2DTOIdL #-}
+
+-- | 'uniswapV2UniswapDayDataV2DTODate' Lens
+uniswapV2UniswapDayDataV2DTODateL :: Lens_' UniswapV2UniswapDayDataV2DTO (Maybe Int)
+uniswapV2UniswapDayDataV2DTODateL f UniswapV2UniswapDayDataV2DTO{..} = (\uniswapV2UniswapDayDataV2DTODate -> UniswapV2UniswapDayDataV2DTO { uniswapV2UniswapDayDataV2DTODate, ..} ) <$> f uniswapV2UniswapDayDataV2DTODate
+{-# INLINE uniswapV2UniswapDayDataV2DTODateL #-}
+
+-- | 'uniswapV2UniswapDayDataV2DTODailyVolumeEth' Lens
+uniswapV2UniswapDayDataV2DTODailyVolumeEthL :: Lens_' UniswapV2UniswapDayDataV2DTO (Maybe Text)
+uniswapV2UniswapDayDataV2DTODailyVolumeEthL f UniswapV2UniswapDayDataV2DTO{..} = (\uniswapV2UniswapDayDataV2DTODailyVolumeEth -> UniswapV2UniswapDayDataV2DTO { uniswapV2UniswapDayDataV2DTODailyVolumeEth, ..} ) <$> f uniswapV2UniswapDayDataV2DTODailyVolumeEth
+{-# INLINE uniswapV2UniswapDayDataV2DTODailyVolumeEthL #-}
+
+-- | 'uniswapV2UniswapDayDataV2DTODailyVolumeUsd' Lens
+uniswapV2UniswapDayDataV2DTODailyVolumeUsdL :: Lens_' UniswapV2UniswapDayDataV2DTO (Maybe Text)
+uniswapV2UniswapDayDataV2DTODailyVolumeUsdL f UniswapV2UniswapDayDataV2DTO{..} = (\uniswapV2UniswapDayDataV2DTODailyVolumeUsd -> UniswapV2UniswapDayDataV2DTO { uniswapV2UniswapDayDataV2DTODailyVolumeUsd, ..} ) <$> f uniswapV2UniswapDayDataV2DTODailyVolumeUsd
+{-# INLINE uniswapV2UniswapDayDataV2DTODailyVolumeUsdL #-}
+
+-- | 'uniswapV2UniswapDayDataV2DTODailyVolumeUntracked' Lens
+uniswapV2UniswapDayDataV2DTODailyVolumeUntrackedL :: Lens_' UniswapV2UniswapDayDataV2DTO (Maybe Text)
+uniswapV2UniswapDayDataV2DTODailyVolumeUntrackedL f UniswapV2UniswapDayDataV2DTO{..} = (\uniswapV2UniswapDayDataV2DTODailyVolumeUntracked -> UniswapV2UniswapDayDataV2DTO { uniswapV2UniswapDayDataV2DTODailyVolumeUntracked, ..} ) <$> f uniswapV2UniswapDayDataV2DTODailyVolumeUntracked
+{-# INLINE uniswapV2UniswapDayDataV2DTODailyVolumeUntrackedL #-}
+
+-- | 'uniswapV2UniswapDayDataV2DTOTotalVolumeEth' Lens
+uniswapV2UniswapDayDataV2DTOTotalVolumeEthL :: Lens_' UniswapV2UniswapDayDataV2DTO (Maybe Text)
+uniswapV2UniswapDayDataV2DTOTotalVolumeEthL f UniswapV2UniswapDayDataV2DTO{..} = (\uniswapV2UniswapDayDataV2DTOTotalVolumeEth -> UniswapV2UniswapDayDataV2DTO { uniswapV2UniswapDayDataV2DTOTotalVolumeEth, ..} ) <$> f uniswapV2UniswapDayDataV2DTOTotalVolumeEth
+{-# INLINE uniswapV2UniswapDayDataV2DTOTotalVolumeEthL #-}
+
+-- | 'uniswapV2UniswapDayDataV2DTOTotalLiquidityEth' Lens
+uniswapV2UniswapDayDataV2DTOTotalLiquidityEthL :: Lens_' UniswapV2UniswapDayDataV2DTO (Maybe Text)
+uniswapV2UniswapDayDataV2DTOTotalLiquidityEthL f UniswapV2UniswapDayDataV2DTO{..} = (\uniswapV2UniswapDayDataV2DTOTotalLiquidityEth -> UniswapV2UniswapDayDataV2DTO { uniswapV2UniswapDayDataV2DTOTotalLiquidityEth, ..} ) <$> f uniswapV2UniswapDayDataV2DTOTotalLiquidityEth
+{-# INLINE uniswapV2UniswapDayDataV2DTOTotalLiquidityEthL #-}
+
+-- | 'uniswapV2UniswapDayDataV2DTOTotalVolumeUsd' Lens
+uniswapV2UniswapDayDataV2DTOTotalVolumeUsdL :: Lens_' UniswapV2UniswapDayDataV2DTO (Maybe Text)
+uniswapV2UniswapDayDataV2DTOTotalVolumeUsdL f UniswapV2UniswapDayDataV2DTO{..} = (\uniswapV2UniswapDayDataV2DTOTotalVolumeUsd -> UniswapV2UniswapDayDataV2DTO { uniswapV2UniswapDayDataV2DTOTotalVolumeUsd, ..} ) <$> f uniswapV2UniswapDayDataV2DTOTotalVolumeUsd
+{-# INLINE uniswapV2UniswapDayDataV2DTOTotalVolumeUsdL #-}
+
+-- | 'uniswapV2UniswapDayDataV2DTOTotalLiquidityUsd' Lens
+uniswapV2UniswapDayDataV2DTOTotalLiquidityUsdL :: Lens_' UniswapV2UniswapDayDataV2DTO (Maybe Text)
+uniswapV2UniswapDayDataV2DTOTotalLiquidityUsdL f UniswapV2UniswapDayDataV2DTO{..} = (\uniswapV2UniswapDayDataV2DTOTotalLiquidityUsd -> UniswapV2UniswapDayDataV2DTO { uniswapV2UniswapDayDataV2DTOTotalLiquidityUsd, ..} ) <$> f uniswapV2UniswapDayDataV2DTOTotalLiquidityUsd
+{-# INLINE uniswapV2UniswapDayDataV2DTOTotalLiquidityUsdL #-}
+
+-- | 'uniswapV2UniswapDayDataV2DTOTxCount' Lens
+uniswapV2UniswapDayDataV2DTOTxCountL :: Lens_' UniswapV2UniswapDayDataV2DTO (Maybe Text)
+uniswapV2UniswapDayDataV2DTOTxCountL f UniswapV2UniswapDayDataV2DTO{..} = (\uniswapV2UniswapDayDataV2DTOTxCount -> UniswapV2UniswapDayDataV2DTO { uniswapV2UniswapDayDataV2DTOTxCount, ..} ) <$> f uniswapV2UniswapDayDataV2DTOTxCount
+{-# INLINE uniswapV2UniswapDayDataV2DTOTxCountL #-}
+
+-- | 'uniswapV2UniswapDayDataV2DTOVid' Lens
+uniswapV2UniswapDayDataV2DTOVidL :: Lens_' UniswapV2UniswapDayDataV2DTO (Maybe Integer)
+uniswapV2UniswapDayDataV2DTOVidL f UniswapV2UniswapDayDataV2DTO{..} = (\uniswapV2UniswapDayDataV2DTOVid -> UniswapV2UniswapDayDataV2DTO { uniswapV2UniswapDayDataV2DTOVid, ..} ) <$> f uniswapV2UniswapDayDataV2DTOVid
+{-# INLINE uniswapV2UniswapDayDataV2DTOVidL #-}
+
+
+
+-- * UniswapV2UniswapFactoryV2DTO
+
+-- | 'uniswapV2UniswapFactoryV2DTOEntryTime' Lens
+uniswapV2UniswapFactoryV2DTOEntryTimeL :: Lens_' UniswapV2UniswapFactoryV2DTO (Maybe DateTime)
+uniswapV2UniswapFactoryV2DTOEntryTimeL f UniswapV2UniswapFactoryV2DTO{..} = (\uniswapV2UniswapFactoryV2DTOEntryTime -> UniswapV2UniswapFactoryV2DTO { uniswapV2UniswapFactoryV2DTOEntryTime, ..} ) <$> f uniswapV2UniswapFactoryV2DTOEntryTime
+{-# INLINE uniswapV2UniswapFactoryV2DTOEntryTimeL #-}
+
+-- | 'uniswapV2UniswapFactoryV2DTORecvTime' Lens
+uniswapV2UniswapFactoryV2DTORecvTimeL :: Lens_' UniswapV2UniswapFactoryV2DTO (Maybe DateTime)
+uniswapV2UniswapFactoryV2DTORecvTimeL f UniswapV2UniswapFactoryV2DTO{..} = (\uniswapV2UniswapFactoryV2DTORecvTime -> UniswapV2UniswapFactoryV2DTO { uniswapV2UniswapFactoryV2DTORecvTime, ..} ) <$> f uniswapV2UniswapFactoryV2DTORecvTime
+{-# INLINE uniswapV2UniswapFactoryV2DTORecvTimeL #-}
+
+-- | 'uniswapV2UniswapFactoryV2DTOBlockNumber' Lens
+uniswapV2UniswapFactoryV2DTOBlockNumberL :: Lens_' UniswapV2UniswapFactoryV2DTO (Maybe Integer)
+uniswapV2UniswapFactoryV2DTOBlockNumberL f UniswapV2UniswapFactoryV2DTO{..} = (\uniswapV2UniswapFactoryV2DTOBlockNumber -> UniswapV2UniswapFactoryV2DTO { uniswapV2UniswapFactoryV2DTOBlockNumber, ..} ) <$> f uniswapV2UniswapFactoryV2DTOBlockNumber
+{-# INLINE uniswapV2UniswapFactoryV2DTOBlockNumberL #-}
+
+-- | 'uniswapV2UniswapFactoryV2DTOId' Lens
+uniswapV2UniswapFactoryV2DTOIdL :: Lens_' UniswapV2UniswapFactoryV2DTO (Maybe Text)
+uniswapV2UniswapFactoryV2DTOIdL f UniswapV2UniswapFactoryV2DTO{..} = (\uniswapV2UniswapFactoryV2DTOId -> UniswapV2UniswapFactoryV2DTO { uniswapV2UniswapFactoryV2DTOId, ..} ) <$> f uniswapV2UniswapFactoryV2DTOId
+{-# INLINE uniswapV2UniswapFactoryV2DTOIdL #-}
+
+-- | 'uniswapV2UniswapFactoryV2DTOPairCount' Lens
+uniswapV2UniswapFactoryV2DTOPairCountL :: Lens_' UniswapV2UniswapFactoryV2DTO (Maybe Int)
+uniswapV2UniswapFactoryV2DTOPairCountL f UniswapV2UniswapFactoryV2DTO{..} = (\uniswapV2UniswapFactoryV2DTOPairCount -> UniswapV2UniswapFactoryV2DTO { uniswapV2UniswapFactoryV2DTOPairCount, ..} ) <$> f uniswapV2UniswapFactoryV2DTOPairCount
+{-# INLINE uniswapV2UniswapFactoryV2DTOPairCountL #-}
+
+-- | 'uniswapV2UniswapFactoryV2DTOTotalVolumeUsd' Lens
+uniswapV2UniswapFactoryV2DTOTotalVolumeUsdL :: Lens_' UniswapV2UniswapFactoryV2DTO (Maybe Text)
+uniswapV2UniswapFactoryV2DTOTotalVolumeUsdL f UniswapV2UniswapFactoryV2DTO{..} = (\uniswapV2UniswapFactoryV2DTOTotalVolumeUsd -> UniswapV2UniswapFactoryV2DTO { uniswapV2UniswapFactoryV2DTOTotalVolumeUsd, ..} ) <$> f uniswapV2UniswapFactoryV2DTOTotalVolumeUsd
+{-# INLINE uniswapV2UniswapFactoryV2DTOTotalVolumeUsdL #-}
+
+-- | 'uniswapV2UniswapFactoryV2DTOTotalVolumeEth' Lens
+uniswapV2UniswapFactoryV2DTOTotalVolumeEthL :: Lens_' UniswapV2UniswapFactoryV2DTO (Maybe Text)
+uniswapV2UniswapFactoryV2DTOTotalVolumeEthL f UniswapV2UniswapFactoryV2DTO{..} = (\uniswapV2UniswapFactoryV2DTOTotalVolumeEth -> UniswapV2UniswapFactoryV2DTO { uniswapV2UniswapFactoryV2DTOTotalVolumeEth, ..} ) <$> f uniswapV2UniswapFactoryV2DTOTotalVolumeEth
+{-# INLINE uniswapV2UniswapFactoryV2DTOTotalVolumeEthL #-}
+
+-- | 'uniswapV2UniswapFactoryV2DTOUntrackedVolumeUsd' Lens
+uniswapV2UniswapFactoryV2DTOUntrackedVolumeUsdL :: Lens_' UniswapV2UniswapFactoryV2DTO (Maybe Text)
+uniswapV2UniswapFactoryV2DTOUntrackedVolumeUsdL f UniswapV2UniswapFactoryV2DTO{..} = (\uniswapV2UniswapFactoryV2DTOUntrackedVolumeUsd -> UniswapV2UniswapFactoryV2DTO { uniswapV2UniswapFactoryV2DTOUntrackedVolumeUsd, ..} ) <$> f uniswapV2UniswapFactoryV2DTOUntrackedVolumeUsd
+{-# INLINE uniswapV2UniswapFactoryV2DTOUntrackedVolumeUsdL #-}
+
+-- | 'uniswapV2UniswapFactoryV2DTOTotalLiquidityUsd' Lens
+uniswapV2UniswapFactoryV2DTOTotalLiquidityUsdL :: Lens_' UniswapV2UniswapFactoryV2DTO (Maybe Text)
+uniswapV2UniswapFactoryV2DTOTotalLiquidityUsdL f UniswapV2UniswapFactoryV2DTO{..} = (\uniswapV2UniswapFactoryV2DTOTotalLiquidityUsd -> UniswapV2UniswapFactoryV2DTO { uniswapV2UniswapFactoryV2DTOTotalLiquidityUsd, ..} ) <$> f uniswapV2UniswapFactoryV2DTOTotalLiquidityUsd
+{-# INLINE uniswapV2UniswapFactoryV2DTOTotalLiquidityUsdL #-}
+
+-- | 'uniswapV2UniswapFactoryV2DTOTotalLiquidityEth' Lens
+uniswapV2UniswapFactoryV2DTOTotalLiquidityEthL :: Lens_' UniswapV2UniswapFactoryV2DTO (Maybe Text)
+uniswapV2UniswapFactoryV2DTOTotalLiquidityEthL f UniswapV2UniswapFactoryV2DTO{..} = (\uniswapV2UniswapFactoryV2DTOTotalLiquidityEth -> UniswapV2UniswapFactoryV2DTO { uniswapV2UniswapFactoryV2DTOTotalLiquidityEth, ..} ) <$> f uniswapV2UniswapFactoryV2DTOTotalLiquidityEth
+{-# INLINE uniswapV2UniswapFactoryV2DTOTotalLiquidityEthL #-}
+
+-- | 'uniswapV2UniswapFactoryV2DTOTxCount' Lens
+uniswapV2UniswapFactoryV2DTOTxCountL :: Lens_' UniswapV2UniswapFactoryV2DTO (Maybe Text)
+uniswapV2UniswapFactoryV2DTOTxCountL f UniswapV2UniswapFactoryV2DTO{..} = (\uniswapV2UniswapFactoryV2DTOTxCount -> UniswapV2UniswapFactoryV2DTO { uniswapV2UniswapFactoryV2DTOTxCount, ..} ) <$> f uniswapV2UniswapFactoryV2DTOTxCount
+{-# INLINE uniswapV2UniswapFactoryV2DTOTxCountL #-}
+
+-- | 'uniswapV2UniswapFactoryV2DTOVid' Lens
+uniswapV2UniswapFactoryV2DTOVidL :: Lens_' UniswapV2UniswapFactoryV2DTO (Maybe Integer)
+uniswapV2UniswapFactoryV2DTOVidL f UniswapV2UniswapFactoryV2DTO{..} = (\uniswapV2UniswapFactoryV2DTOVid -> UniswapV2UniswapFactoryV2DTO { uniswapV2UniswapFactoryV2DTOVid, ..} ) <$> f uniswapV2UniswapFactoryV2DTOVid
+{-# INLINE uniswapV2UniswapFactoryV2DTOVidL #-}
+
+
+
+-- * UniswapV2UserV2DTO
+
+-- | 'uniswapV2UserV2DTOEntryTime' Lens
+uniswapV2UserV2DTOEntryTimeL :: Lens_' UniswapV2UserV2DTO (Maybe DateTime)
+uniswapV2UserV2DTOEntryTimeL f UniswapV2UserV2DTO{..} = (\uniswapV2UserV2DTOEntryTime -> UniswapV2UserV2DTO { uniswapV2UserV2DTOEntryTime, ..} ) <$> f uniswapV2UserV2DTOEntryTime
+{-# INLINE uniswapV2UserV2DTOEntryTimeL #-}
+
+-- | 'uniswapV2UserV2DTORecvTime' Lens
+uniswapV2UserV2DTORecvTimeL :: Lens_' UniswapV2UserV2DTO (Maybe DateTime)
+uniswapV2UserV2DTORecvTimeL f UniswapV2UserV2DTO{..} = (\uniswapV2UserV2DTORecvTime -> UniswapV2UserV2DTO { uniswapV2UserV2DTORecvTime, ..} ) <$> f uniswapV2UserV2DTORecvTime
+{-# INLINE uniswapV2UserV2DTORecvTimeL #-}
+
+-- | 'uniswapV2UserV2DTOBlockNumber' Lens
+uniswapV2UserV2DTOBlockNumberL :: Lens_' UniswapV2UserV2DTO (Maybe Integer)
+uniswapV2UserV2DTOBlockNumberL f UniswapV2UserV2DTO{..} = (\uniswapV2UserV2DTOBlockNumber -> UniswapV2UserV2DTO { uniswapV2UserV2DTOBlockNumber, ..} ) <$> f uniswapV2UserV2DTOBlockNumber
+{-# INLINE uniswapV2UserV2DTOBlockNumberL #-}
+
+-- | 'uniswapV2UserV2DTOId' Lens
+uniswapV2UserV2DTOIdL :: Lens_' UniswapV2UserV2DTO (Maybe Text)
+uniswapV2UserV2DTOIdL f UniswapV2UserV2DTO{..} = (\uniswapV2UserV2DTOId -> UniswapV2UserV2DTO { uniswapV2UserV2DTOId, ..} ) <$> f uniswapV2UserV2DTOId
+{-# INLINE uniswapV2UserV2DTOIdL #-}
+
+-- | 'uniswapV2UserV2DTOUsdSwapped' Lens
+uniswapV2UserV2DTOUsdSwappedL :: Lens_' UniswapV2UserV2DTO (Maybe Text)
+uniswapV2UserV2DTOUsdSwappedL f UniswapV2UserV2DTO{..} = (\uniswapV2UserV2DTOUsdSwapped -> UniswapV2UserV2DTO { uniswapV2UserV2DTOUsdSwapped, ..} ) <$> f uniswapV2UserV2DTOUsdSwapped
+{-# INLINE uniswapV2UserV2DTOUsdSwappedL #-}
+
+-- | 'uniswapV2UserV2DTOVid' Lens
+uniswapV2UserV2DTOVidL :: Lens_' UniswapV2UserV2DTO (Maybe Integer)
+uniswapV2UserV2DTOVidL f UniswapV2UserV2DTO{..} = (\uniswapV2UserV2DTOVid -> UniswapV2UserV2DTO { uniswapV2UserV2DTOVid, ..} ) <$> f uniswapV2UserV2DTOVid
+{-# INLINE uniswapV2UserV2DTOVidL #-}
 
 
 
@@ -2519,6 +7203,50 @@ uniswapV3TokenV3DayDataDTOLowL f UniswapV3TokenV3DayDataDTO{..} = (\uniswapV3Tok
 uniswapV3TokenV3DayDataDTOCloseL :: Lens_' UniswapV3TokenV3DayDataDTO (Maybe Text)
 uniswapV3TokenV3DayDataDTOCloseL f UniswapV3TokenV3DayDataDTO{..} = (\uniswapV3TokenV3DayDataDTOClose -> UniswapV3TokenV3DayDataDTO { uniswapV3TokenV3DayDataDTOClose, ..} ) <$> f uniswapV3TokenV3DayDataDTOClose
 {-# INLINE uniswapV3TokenV3DayDataDTOCloseL #-}
+
+
+
+-- * UniswapV3TransactionV3DTO
+
+-- | 'uniswapV3TransactionV3DTOEntryTime' Lens
+uniswapV3TransactionV3DTOEntryTimeL :: Lens_' UniswapV3TransactionV3DTO (Maybe DateTime)
+uniswapV3TransactionV3DTOEntryTimeL f UniswapV3TransactionV3DTO{..} = (\uniswapV3TransactionV3DTOEntryTime -> UniswapV3TransactionV3DTO { uniswapV3TransactionV3DTOEntryTime, ..} ) <$> f uniswapV3TransactionV3DTOEntryTime
+{-# INLINE uniswapV3TransactionV3DTOEntryTimeL #-}
+
+-- | 'uniswapV3TransactionV3DTORecvTime' Lens
+uniswapV3TransactionV3DTORecvTimeL :: Lens_' UniswapV3TransactionV3DTO (Maybe DateTime)
+uniswapV3TransactionV3DTORecvTimeL f UniswapV3TransactionV3DTO{..} = (\uniswapV3TransactionV3DTORecvTime -> UniswapV3TransactionV3DTO { uniswapV3TransactionV3DTORecvTime, ..} ) <$> f uniswapV3TransactionV3DTORecvTime
+{-# INLINE uniswapV3TransactionV3DTORecvTimeL #-}
+
+-- | 'uniswapV3TransactionV3DTOBlockNumber' Lens
+uniswapV3TransactionV3DTOBlockNumberL :: Lens_' UniswapV3TransactionV3DTO (Maybe Integer)
+uniswapV3TransactionV3DTOBlockNumberL f UniswapV3TransactionV3DTO{..} = (\uniswapV3TransactionV3DTOBlockNumber -> UniswapV3TransactionV3DTO { uniswapV3TransactionV3DTOBlockNumber, ..} ) <$> f uniswapV3TransactionV3DTOBlockNumber
+{-# INLINE uniswapV3TransactionV3DTOBlockNumberL #-}
+
+-- | 'uniswapV3TransactionV3DTOId' Lens
+uniswapV3TransactionV3DTOIdL :: Lens_' UniswapV3TransactionV3DTO (Maybe Text)
+uniswapV3TransactionV3DTOIdL f UniswapV3TransactionV3DTO{..} = (\uniswapV3TransactionV3DTOId -> UniswapV3TransactionV3DTO { uniswapV3TransactionV3DTOId, ..} ) <$> f uniswapV3TransactionV3DTOId
+{-# INLINE uniswapV3TransactionV3DTOIdL #-}
+
+-- | 'uniswapV3TransactionV3DTOTimestamp' Lens
+uniswapV3TransactionV3DTOTimestampL :: Lens_' UniswapV3TransactionV3DTO (Maybe Text)
+uniswapV3TransactionV3DTOTimestampL f UniswapV3TransactionV3DTO{..} = (\uniswapV3TransactionV3DTOTimestamp -> UniswapV3TransactionV3DTO { uniswapV3TransactionV3DTOTimestamp, ..} ) <$> f uniswapV3TransactionV3DTOTimestamp
+{-# INLINE uniswapV3TransactionV3DTOTimestampL #-}
+
+-- | 'uniswapV3TransactionV3DTOGasUsed' Lens
+uniswapV3TransactionV3DTOGasUsedL :: Lens_' UniswapV3TransactionV3DTO (Maybe Text)
+uniswapV3TransactionV3DTOGasUsedL f UniswapV3TransactionV3DTO{..} = (\uniswapV3TransactionV3DTOGasUsed -> UniswapV3TransactionV3DTO { uniswapV3TransactionV3DTOGasUsed, ..} ) <$> f uniswapV3TransactionV3DTOGasUsed
+{-# INLINE uniswapV3TransactionV3DTOGasUsedL #-}
+
+-- | 'uniswapV3TransactionV3DTOGasPrice' Lens
+uniswapV3TransactionV3DTOGasPriceL :: Lens_' UniswapV3TransactionV3DTO (Maybe Text)
+uniswapV3TransactionV3DTOGasPriceL f UniswapV3TransactionV3DTO{..} = (\uniswapV3TransactionV3DTOGasPrice -> UniswapV3TransactionV3DTO { uniswapV3TransactionV3DTOGasPrice, ..} ) <$> f uniswapV3TransactionV3DTOGasPrice
+{-# INLINE uniswapV3TransactionV3DTOGasPriceL #-}
+
+-- | 'uniswapV3TransactionV3DTOVid' Lens
+uniswapV3TransactionV3DTOVidL :: Lens_' UniswapV3TransactionV3DTO (Maybe Integer)
+uniswapV3TransactionV3DTOVidL f UniswapV3TransactionV3DTO{..} = (\uniswapV3TransactionV3DTOVid -> UniswapV3TransactionV3DTO { uniswapV3TransactionV3DTOVid, ..} ) <$> f uniswapV3TransactionV3DTOVid
+{-# INLINE uniswapV3TransactionV3DTOVidL #-}
 
 
 

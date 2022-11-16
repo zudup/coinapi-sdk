@@ -6,6 +6,9 @@ Setup.hs
 git_push.sh
 lib/OnChain.hs
 lib/OnChain/API.hs
+lib/OnChain/API/Cow.hs
+lib/OnChain/API/Curve.hs
+lib/OnChain/API/Dex.hs
 lib/OnChain/API/Sushiswap.hs
 lib/OnChain/API/UniswapV2.hs
 lib/OnChain/API/UniswapV3.hs

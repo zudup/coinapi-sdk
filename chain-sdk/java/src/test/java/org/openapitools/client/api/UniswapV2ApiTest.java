@@ -14,9 +14,22 @@
 package org.openapitools.client.api;
 
 import org.openapitools.client.ApiException;
+import java.time.OffsetDateTime;
+import org.openapitools.client.model.UniswapV2BundleV2DTO;
+import org.openapitools.client.model.UniswapV2BurnV2DTO;
+import org.openapitools.client.model.UniswapV2LiquidityPositionSnapshotV2DTO;
+import org.openapitools.client.model.UniswapV2LiquidityPositionV2DTO;
+import org.openapitools.client.model.UniswapV2MintV2DTO;
+import org.openapitools.client.model.UniswapV2PairDayDataV2DTO;
+import org.openapitools.client.model.UniswapV2PairHourDataV2DTO;
 import org.openapitools.client.model.UniswapV2PairV2DTO;
 import org.openapitools.client.model.UniswapV2SwapV2DTO;
+import org.openapitools.client.model.UniswapV2TokenDayDataV2DTO;
 import org.openapitools.client.model.UniswapV2TokenV2DTO;
+import org.openapitools.client.model.UniswapV2TransactionV2DTO;
+import org.openapitools.client.model.UniswapV2UniswapDayDataV2DTO;
+import org.openapitools.client.model.UniswapV2UniswapFactoryV2DTO;
+import org.openapitools.client.model.UniswapV2UserV2DTO;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -34,6 +47,161 @@ public class UniswapV2ApiTest {
     private final UniswapV2Api api = new UniswapV2Api();
 
     /**
+     * BundleV2s (historical) 🔥
+     *
+     * Gets bundlev2s.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV2GetBundleV2sHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        List<UniswapV2BundleV2DTO> response = api.uniswapV2GetBundleV2sHistorical(startBlock, endBlock, startDate, endDate, id);
+        // TODO: test validations
+    }
+
+    /**
+     * BurnV2s (historical) 🔥
+     *
+     * Gets burnv2s.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV2GetBurnV2sHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        String pair = null;
+        List<UniswapV2BurnV2DTO> response = api.uniswapV2GetBurnV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityPositionSnapshotV2s (historical) 🔥
+     *
+     * Gets liquiditypositionsnapshotv2s.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV2GetLiquidityPositionSnapshotV2sHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        String user = null;
+        String pair = null;
+        List<UniswapV2LiquidityPositionSnapshotV2DTO> response = api.uniswapV2GetLiquidityPositionSnapshotV2sHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
+        // TODO: test validations
+    }
+
+    /**
+     * LiquidityPositionV2s (historical) 🔥
+     *
+     * Gets liquiditypositionv2s.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV2GetLiquidityPositionV2sHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        String user = null;
+        String pair = null;
+        List<UniswapV2LiquidityPositionV2DTO> response = api.uniswapV2GetLiquidityPositionV2sHistorical(startBlock, endBlock, startDate, endDate, id, user, pair);
+        // TODO: test validations
+    }
+
+    /**
+     * MintV2s (historical) 🔥
+     *
+     * Gets mintv2s.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV2GetMintV2sHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        String pair = null;
+        List<UniswapV2MintV2DTO> response = api.uniswapV2GetMintV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+        // TODO: test validations
+    }
+
+    /**
+     * PairDayDataV2s (historical) 🔥
+     *
+     * Gets pairdaydatav2s.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV2GetPairDayDataV2sHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        String token0 = null;
+        String token1 = null;
+        List<UniswapV2PairDayDataV2DTO> response = api.uniswapV2GetPairDayDataV2sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
+        // TODO: test validations
+    }
+
+    /**
+     * PairHourDataV2s (historical) 🔥
+     *
+     * Gets pairhourdatav2s.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV2GetPairHourDataV2sHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        String pair = null;
+        List<UniswapV2PairHourDataV2DTO> response = api.uniswapV2GetPairHourDataV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+        // TODO: test validations
+    }
+
+    /**
+     * PairV2s (historical) 🔥
+     *
+     * Gets pairv2s.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV2GetPairV2sHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        String token0 = null;
+        String token1 = null;
+        List<UniswapV2PairV2DTO> response = api.uniswapV2GetPairV2sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
+        // TODO: test validations
+    }
+
+    /**
      * Pools (current) 🔥
      *
      * Gets pools.
@@ -44,6 +212,25 @@ public class UniswapV2ApiTest {
     public void uniswapV2GetPoolsCurrentTest() throws ApiException {
         String filterPoolId = null;
         List<UniswapV2PairV2DTO> response = api.uniswapV2GetPoolsCurrent(filterPoolId);
+        // TODO: test validations
+    }
+
+    /**
+     * SwapV2s (historical) 🔥
+     *
+     * Gets swapv2s.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV2GetSwapV2sHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        String pair = null;
+        List<UniswapV2SwapV2DTO> response = api.uniswapV2GetSwapV2sHistorical(startBlock, endBlock, startDate, endDate, id, pair);
         // TODO: test validations
     }
 
@@ -61,6 +248,44 @@ public class UniswapV2ApiTest {
     }
 
     /**
+     * TokenDayDataV2s (historical) 🔥
+     *
+     * Gets tokendaydatav2s.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV2GetTokenDayDataV2sHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        List<UniswapV2TokenDayDataV2DTO> response = api.uniswapV2GetTokenDayDataV2sHistorical(startBlock, endBlock, startDate, endDate, id);
+        // TODO: test validations
+    }
+
+    /**
+     * TokenV2s (historical) 🔥
+     *
+     * Gets tokenv2s.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV2GetTokenV2sHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        String symbol = null;
+        String name = null;
+        List<UniswapV2TokenV2DTO> response = api.uniswapV2GetTokenV2sHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name);
+        // TODO: test validations
+    }
+
+    /**
      * Tokens (current) 🔥
      *
      * Gets tokens.
@@ -70,6 +295,78 @@ public class UniswapV2ApiTest {
     @Test
     public void uniswapV2GetTokensCurrentTest() throws ApiException {
         List<UniswapV2TokenV2DTO> response = api.uniswapV2GetTokensCurrent();
+        // TODO: test validations
+    }
+
+    /**
+     * TransactionV2s (historical) 🔥
+     *
+     * Gets transactionv2s.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV2GetTransactionV2sHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        List<UniswapV2TransactionV2DTO> response = api.uniswapV2GetTransactionV2sHistorical(startBlock, endBlock, startDate, endDate, id);
+        // TODO: test validations
+    }
+
+    /**
+     * UniswapDayDataV2s (historical) 🔥
+     *
+     * Gets uniswapdaydatav2s.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV2GetUniswapDayDataV2sHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        List<UniswapV2UniswapDayDataV2DTO> response = api.uniswapV2GetUniswapDayDataV2sHistorical(startBlock, endBlock, startDate, endDate, id);
+        // TODO: test validations
+    }
+
+    /**
+     * UniswapFactoryV2s (historical) 🔥
+     *
+     * Gets uniswapfactoryv2s.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV2GetUniswapFactoryV2sHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        List<UniswapV2UniswapFactoryV2DTO> response = api.uniswapV2GetUniswapFactoryV2sHistorical(startBlock, endBlock, startDate, endDate, id);
+        // TODO: test validations
+    }
+
+    /**
+     * UserV2s (historical) 🔥
+     *
+     * Gets userv2s.
+     *
+     * @throws ApiException if the Api call fails
+     */
+    @Test
+    public void uniswapV2GetUserV2sHistoricalTest() throws ApiException {
+        Long startBlock = null;
+        Long endBlock = null;
+        OffsetDateTime startDate = null;
+        OffsetDateTime endDate = null;
+        String id = null;
+        List<UniswapV2UserV2DTO> response = api.uniswapV2GetUserV2sHistorical(startBlock, endBlock, startDate, endDate, id);
         // TODO: test validations
     }
 

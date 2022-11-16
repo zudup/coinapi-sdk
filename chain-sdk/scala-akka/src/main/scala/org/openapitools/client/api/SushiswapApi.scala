@@ -11,11 +11,25 @@
  */
 package org.openapitools.client.api
 
+import org.openapitools.client.model.BundleDTO
+import org.openapitools.client.model.BurnDTO
+import org.openapitools.client.model.DayDataDTO
 import org.openapitools.client.model.ExchangeDTO
+import org.openapitools.client.model.FactoryDTO
+import org.openapitools.client.model.HourDataDTO
+import org.openapitools.client.model.LiquidityPositionDTO
+import org.openapitools.client.model.LiquidityPositionSnapshotDTO
+import org.openapitools.client.model.MintDTO
+import java.time.OffsetDateTime
 import org.openapitools.client.model.PairDTO
+import org.openapitools.client.model.PairDayDataDTO
+import org.openapitools.client.model.PairHourDataDTO
 import org.openapitools.client.model.SwapDTO
 import org.openapitools.client.model.TokenDTO
+import org.openapitools.client.model.TokenDayDataDTO
 import org.openapitools.client.model.TradeDTO
+import org.openapitools.client.model.TransactionDTO
+import org.openapitools.client.model.UserDTO
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
 import org.openapitools.client.core.ApiKeyLocations._
@@ -50,6 +64,274 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
+   * Gets bundles.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[BundleDTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Hardcoded to '1'.
+   */
+  def sushiswapGetBundlesHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[BundleDTO]] =
+    ApiRequest[Seq[BundleDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/bundles/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[BundleDTO]](200)
+      
+
+  /**
+   * Gets burns.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[BurnDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param id 
+   * @param pair 
+   */
+  def sushiswapGetBurnsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pair: Option[String] = None): ApiRequest[Seq[BurnDTO]] =
+    ApiRequest[Seq[BurnDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/burns/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("pair", pair)
+      .withSuccessResponse[Seq[BurnDTO]](200)
+      
+
+  /**
+   * Gets daydatas.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[DayDataDTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Unix timestamp for start of day / 86400 giving a unique day index.
+   */
+  def sushiswapGetDayDatasHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[DayDataDTO]] =
+    ApiRequest[Seq[DayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/daydatas/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[DayDataDTO]](200)
+      
+
+  /**
+   * Gets factorys.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[FactoryDTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Factory address.
+   */
+  def sushiswapGetFactorysHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[FactoryDTO]] =
+    ApiRequest[Seq[FactoryDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/factorys/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[FactoryDTO]](200)
+      
+
+  /**
+   * Gets hourdatas.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[HourDataDTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Start of hour timestamp.
+   */
+  def sushiswapGetHourDatasHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[HourDataDTO]] =
+    ApiRequest[Seq[HourDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/hourdatas/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[HourDataDTO]](200)
+      
+
+  /**
+   * Gets liquiditypositionsnapshots.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LiquidityPositionSnapshotDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param id 
+   * @param user 
+   * @param pair 
+   */
+  def sushiswapGetLiquidityPositionSnapshotsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, user: Option[String] = None, pair: Option[String] = None): ApiRequest[Seq[LiquidityPositionSnapshotDTO]] =
+    ApiRequest[Seq[LiquidityPositionSnapshotDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/liquiditypositionsnapshots/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("user", user)
+      .withQueryParam("pair", pair)
+      .withSuccessResponse[Seq[LiquidityPositionSnapshotDTO]](200)
+      
+
+  /**
+   * Gets liquiditypositions.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LiquidityPositionDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param id 
+   * @param user 
+   * @param pair 
+   */
+  def sushiswapGetLiquidityPositionsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, user: Option[String] = None, pair: Option[String] = None): ApiRequest[Seq[LiquidityPositionDTO]] =
+    ApiRequest[Seq[LiquidityPositionDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/liquiditypositions/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("user", user)
+      .withQueryParam("pair", pair)
+      .withSuccessResponse[Seq[LiquidityPositionDTO]](200)
+      
+
+  /**
+   * Gets mints.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[MintDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param id 
+   * @param pair 
+   */
+  def sushiswapGetMintsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pair: Option[String] = None): ApiRequest[Seq[MintDTO]] =
+    ApiRequest[Seq[MintDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/mints/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("pair", pair)
+      .withSuccessResponse[Seq[MintDTO]](200)
+      
+
+  /**
+   * Gets pairdaydatas.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[PairDayDataDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param id 
+   * @param pair 
+   * @param token0 
+   * @param token1 
+   */
+  def sushiswapGetPairDayDatasHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pair: Option[String] = None, token0: Option[String] = None, token1: Option[String] = None): ApiRequest[Seq[PairDayDataDTO]] =
+    ApiRequest[Seq[PairDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/pairdaydatas/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("pair", pair)
+      .withQueryParam("token_0", token0)
+      .withQueryParam("token_1", token1)
+      .withSuccessResponse[Seq[PairDayDataDTO]](200)
+      
+
+  /**
+   * Gets pairhourdatas.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[PairHourDataDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param id 
+   * @param pair 
+   */
+  def sushiswapGetPairHourDatasHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pair: Option[String] = None): ApiRequest[Seq[PairHourDataDTO]] =
+    ApiRequest[Seq[PairHourDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/pairhourdatas/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("pair", pair)
+      .withSuccessResponse[Seq[PairHourDataDTO]](200)
+      
+
+  /**
+   * Gets pairs.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[PairDTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param id 
+   * @param name 
+   * @param token0 
+   * @param token1 
+   */
+  def sushiswapGetPairsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, name: Option[String] = None, token0: Option[String] = None, token1: Option[String] = None): ApiRequest[Seq[PairDTO]] =
+    ApiRequest[Seq[PairDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/pairs/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("name", name)
+      .withQueryParam("token_0", token0)
+      .withQueryParam("token_1", token1)
+      .withSuccessResponse[Seq[PairDTO]](200)
+      
+
+  /**
    * Gets pools.
    * 
    * Expected answers:
@@ -72,6 +354,52 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
+   * Gets swaps.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[SwapDTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Transaction hash plus index in Transaction swap array.
+   * @param pair Reference to pair.
+   */
+  def sushiswapGetSwapsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pair: Option[String] = None): ApiRequest[Seq[SwapDTO]] =
+    ApiRequest[Seq[SwapDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/swaps/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("pair", pair)
+      .withSuccessResponse[Seq[SwapDTO]](200)
+      
+
+  /**
+   * Gets tokendaydatas.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TokenDayDataDTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, day start timestamp in unix / 86400.
+   */
+  def sushiswapGetTokenDayDatasHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[TokenDayDataDTO]] =
+    ApiRequest[Seq[TokenDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/tokendaydatas/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[TokenDayDataDTO]](200)
+      
+
+  /**
    * Gets tokens.
    * 
    * Expected answers:
@@ -80,6 +408,76 @@ class SushiswapApi(baseUrl: String) {
   def sushiswapGetTokensCurrent(): ApiRequest[Seq[TokenDTO]] =
     ApiRequest[Seq[TokenDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/tokens/current", "application/json")
       .withSuccessResponse[Seq[TokenDTO]](200)
+      
+
+  /**
+   * Gets tokens.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TokenDTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Token address.
+   * @param symbol Token symbol.
+   * @param name Token name.
+   */
+  def sushiswapGetTokensHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, symbol: Option[String] = None, name: Option[String] = None): ApiRequest[Seq[TokenDTO]] =
+    ApiRequest[Seq[TokenDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/tokens/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("symbol", symbol)
+      .withQueryParam("name", name)
+      .withSuccessResponse[Seq[TokenDTO]](200)
+      
+
+  /**
+   * Gets transactions.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TransactionDTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Ethereum transaction hash.
+   */
+  def sushiswapGetTransactionsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[TransactionDTO]] =
+    ApiRequest[Seq[TransactionDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/transactions/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[TransactionDTO]](200)
+      
+
+  /**
+   * Gets users.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[UserDTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id User address.
+   */
+  def sushiswapGetUsersHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[UserDTO]] =
+    ApiRequest[Seq[UserDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/users/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[UserDTO]](200)
       
 
 

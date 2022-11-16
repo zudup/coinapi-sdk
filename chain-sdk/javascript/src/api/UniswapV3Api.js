@@ -28,6 +28,7 @@ import UniswapV3TickV3DTO from '../model/UniswapV3TickV3DTO';
 import UniswapV3TokenHourDataV3DTO from '../model/UniswapV3TokenHourDataV3DTO';
 import UniswapV3TokenV3DTO from '../model/UniswapV3TokenV3DTO';
 import UniswapV3TokenV3DayDataDTO from '../model/UniswapV3TokenV3DayDataDTO';
+import UniswapV3TransactionV3DTO from '../model/UniswapV3TransactionV3DTO';
 import UniswapV3UniswapDayDataV3DTO from '../model/UniswapV3UniswapDayDataV3DTO';
 
 /**
@@ -48,6 +49,55 @@ export default class UniswapV3Api {
         this.apiClient = apiClient || ApiClient.instance;
     }
 
+
+    /**
+     * Callback function to receive the result of the uniswapV3GetBundleV3sHistorical operation.
+     * @callback module:api/UniswapV3Api~uniswapV3GetBundleV3sHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV3BundleV3DTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * BundleV3s (historical) 🔥
+     * Gets bundlev3s.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id 
+     * @param {module:api/UniswapV3Api~uniswapV3GetBundleV3sHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV3BundleV3DTO>}
+     */
+    uniswapV3GetBundleV3sHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV3BundleV3DTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv3/bundlev3s/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
 
     /**
      * Callback function to receive the result of the uniswapV3GetBundlesCurrent operation.
@@ -81,6 +131,61 @@ export default class UniswapV3Api {
       let returnType = [UniswapV3BundleV3DTO];
       return this.apiClient.callApi(
         '/dapps/uniswapv3/bundles/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uniswapV3GetBurnV3sHistorical operation.
+     * @callback module:api/UniswapV3Api~uniswapV3GetBurnV3sHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV3BurnV3DTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * BurnV3s (historical) 🔥
+     * Gets burnv3s.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Transaction hash + '#' + index in mints Transaction array.
+     * @param {String} opts.pool Pool position is within.
+     * @param {String} opts.token0 Reference to token0 as stored in pool contract.
+     * @param {String} opts.token1 Reference to token1 as stored in pool contract.
+     * @param {module:api/UniswapV3Api~uniswapV3GetBurnV3sHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV3BurnV3DTO>}
+     */
+    uniswapV3GetBurnV3sHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'pool': opts['pool'],
+        'token_0': opts['token0'],
+        'token_1': opts['token1']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV3BurnV3DTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv3/burnv3s/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -202,6 +307,110 @@ export default class UniswapV3Api {
     }
 
     /**
+     * Callback function to receive the result of the uniswapV3GetFactoryV3sHistorical operation.
+     * @callback module:api/UniswapV3Api~uniswapV3GetFactoryV3sHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV3FactoryV3DTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * FactoryV3s (historical) 🔥
+     * Gets factoryv3s.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Factory address.
+     * @param {module:api/UniswapV3Api~uniswapV3GetFactoryV3sHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV3FactoryV3DTO>}
+     */
+    uniswapV3GetFactoryV3sHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV3FactoryV3DTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv3/factoryv3s/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uniswapV3GetMintV3sHistorical operation.
+     * @callback module:api/UniswapV3Api~uniswapV3GetMintV3sHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV3MintV3DTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * MintV3s (historical) 🔥
+     * Gets mintv3s.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Transaction hash + '#' + index in mints Transaction array.
+     * @param {String} opts.pool Pool address.
+     * @param {String} opts.token0 Reference to token0 as stored in pool contract.
+     * @param {String} opts.token1 Reference to token1 as stored in pool contract.
+     * @param {module:api/UniswapV3Api~uniswapV3GetMintV3sHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV3MintV3DTO>}
+     */
+    uniswapV3GetMintV3sHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'pool': opts['pool'],
+        'token_0': opts['token0'],
+        'token_1': opts['token1']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV3MintV3DTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv3/mintv3s/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the uniswapV3GetMintsCurrent operation.
      * @callback module:api/UniswapV3Api~uniswapV3GetMintsCurrentCallback
      * @param {String} error Error message, if any.
@@ -237,6 +446,161 @@ export default class UniswapV3Api {
       let returnType = [UniswapV3MintV3DTO];
       return this.apiClient.callApi(
         '/dapps/uniswapv3/mints/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uniswapV3GetPoolDayDataV3sHistorical operation.
+     * @callback module:api/UniswapV3Api~uniswapV3GetPoolDayDataV3sHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV3PoolDayDataV3DTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PoolDayDataV3s (historical) 🔥
+     * Gets pooldaydatav3s.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.id 
+     * @param {String} opts.pool 
+     * @param {module:api/UniswapV3Api~uniswapV3GetPoolDayDataV3sHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV3PoolDayDataV3DTO>}
+     */
+    uniswapV3GetPoolDayDataV3sHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'pool': opts['pool']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV3PoolDayDataV3DTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv3/pooldaydatav3s/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uniswapV3GetPoolHourDataV3sHistorical operation.
+     * @callback module:api/UniswapV3Api~uniswapV3GetPoolHourDataV3sHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV3PoolHourDataV3DTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PoolHourDataV3s (historical) 🔥
+     * Gets poolhourdatav3s.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.id 
+     * @param {String} opts.pool 
+     * @param {module:api/UniswapV3Api~uniswapV3GetPoolHourDataV3sHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV3PoolHourDataV3DTO>}
+     */
+    uniswapV3GetPoolHourDataV3sHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'pool': opts['pool']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV3PoolHourDataV3DTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv3/poolhourdatav3s/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uniswapV3GetPoolV3sHistorical operation.
+     * @callback module:api/UniswapV3Api~uniswapV3GetPoolV3sHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV3PoolV3DTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PoolV3s (historical) 🔥
+     * Gets poolv3s.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Pool address.
+     * @param {String} opts.token0 Reference to token0 as stored in pool contract.
+     * @param {String} opts.token1 Reference to token1 as stored in pool contract.
+     * @param {module:api/UniswapV3Api~uniswapV3GetPoolV3sHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV3PoolV3DTO>}
+     */
+    uniswapV3GetPoolV3sHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'token_0': opts['token0'],
+        'token_1': opts['token1']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV3PoolV3DTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv3/poolv3s/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -366,6 +730,112 @@ export default class UniswapV3Api {
     }
 
     /**
+     * Callback function to receive the result of the uniswapV3GetPositionSnapshotV3sHistorical operation.
+     * @callback module:api/UniswapV3Api~uniswapV3GetPositionSnapshotV3sHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV3PositionSnapshotV3DTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PositionSnapshotV3s (historical) 🔥
+     * Gets positionsnapshotv3s.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.id 
+     * @param {String} opts.pool 
+     * @param {module:api/UniswapV3Api~uniswapV3GetPositionSnapshotV3sHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV3PositionSnapshotV3DTO>}
+     */
+    uniswapV3GetPositionSnapshotV3sHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'pool': opts['pool']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV3PositionSnapshotV3DTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv3/positionsnapshotv3s/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uniswapV3GetPositionV3sHistorical operation.
+     * @callback module:api/UniswapV3Api~uniswapV3GetPositionV3sHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV3PositionV3DTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PositionV3s (historical) 🔥
+     * Gets positionv3s.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id NFT token identifier.
+     * @param {String} opts.pool Pool position is within.
+     * @param {String} opts.token0 Reference to token0 as stored in pair contract.
+     * @param {String} opts.token1 Reference to token1 as stored in pair contract.
+     * @param {module:api/UniswapV3Api~uniswapV3GetPositionV3sHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV3PositionV3DTO>}
+     */
+    uniswapV3GetPositionV3sHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'pool': opts['pool'],
+        'token_0': opts['token0'],
+        'token_1': opts['token1']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV3PositionV3DTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv3/positionv3s/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the uniswapV3GetPositionsCurrent operation.
      * @callback module:api/UniswapV3Api~uniswapV3GetPositionsCurrentCallback
      * @param {String} error Error message, if any.
@@ -448,6 +918,61 @@ export default class UniswapV3Api {
     }
 
     /**
+     * Callback function to receive the result of the uniswapV3GetSwapV3sHistorical operation.
+     * @callback module:api/UniswapV3Api~uniswapV3GetSwapV3sHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV3SwapV3DTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * SwapV3s (historical) 🔥
+     * Gets swapv3s.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+     * @param {String} opts.pool Pool swap occured within.
+     * @param {String} opts.token0 Reference to token0 as stored in pair contract.
+     * @param {String} opts.token1 Reference to token1 as stored in pair contract.
+     * @param {module:api/UniswapV3Api~uniswapV3GetSwapV3sHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV3SwapV3DTO>}
+     */
+    uniswapV3GetSwapV3sHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'pool': opts['pool'],
+        'token_0': opts['token0'],
+        'token_1': opts['token1']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV3SwapV3DTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv3/swapv3s/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the uniswapV3GetSwapsCurrent operation.
      * @callback module:api/UniswapV3Api~uniswapV3GetSwapsCurrentCallback
      * @param {String} error Error message, if any.
@@ -483,6 +1008,108 @@ export default class UniswapV3Api {
       let returnType = [UniswapV3SwapV3DTO];
       return this.apiClient.callApi(
         '/dapps/uniswapv3/swaps/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uniswapV3GetTickDayDataV3sHistorical operation.
+     * @callback module:api/UniswapV3Api~uniswapV3GetTickDayDataV3sHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV3TickDayDataV3DTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TickDayDataV3s (historical) 🔥
+     * Gets tickdaydatav3s.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.id 
+     * @param {String} opts.pool 
+     * @param {module:api/UniswapV3Api~uniswapV3GetTickDayDataV3sHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV3TickDayDataV3DTO>}
+     */
+    uniswapV3GetTickDayDataV3sHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'pool': opts['pool']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV3TickDayDataV3DTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv3/tickdaydatav3s/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uniswapV3GetTickV3sHistorical operation.
+     * @callback module:api/UniswapV3Api~uniswapV3GetTickV3sHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV3TickV3DTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TickV3s (historical) 🔥
+     * Gets tickv3s.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.id 
+     * @param {String} opts.pool 
+     * @param {module:api/UniswapV3Api~uniswapV3GetTickV3sHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV3TickV3DTO>}
+     */
+    uniswapV3GetTickV3sHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'pool': opts['pool']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV3TickV3DTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv3/tickv3s/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -565,6 +1192,157 @@ export default class UniswapV3Api {
       let returnType = [UniswapV3TickDayDataV3DTO];
       return this.apiClient.callApi(
         '/dapps/uniswapv3/ticksDayData/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uniswapV3GetTokenHourDataV3sHistorical operation.
+     * @callback module:api/UniswapV3Api~uniswapV3GetTokenHourDataV3sHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV3TokenHourDataV3DTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TokenHourDataV3s (historical) 🔥
+     * Gets tokenhourdatav3s.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Token address concatendated with date.
+     * @param {module:api/UniswapV3Api~uniswapV3GetTokenHourDataV3sHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV3TokenHourDataV3DTO>}
+     */
+    uniswapV3GetTokenHourDataV3sHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV3TokenHourDataV3DTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv3/tokenhourdatav3s/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uniswapV3GetTokenV3DayDatasHistorical operation.
+     * @callback module:api/UniswapV3Api~uniswapV3GetTokenV3DayDatasHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV3TokenV3DayDataDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TokenV3DayDatas (historical) 🔥
+     * Gets tokenv3daydatas.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Token address concatendated with date.
+     * @param {module:api/UniswapV3Api~uniswapV3GetTokenV3DayDatasHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV3TokenV3DayDataDTO>}
+     */
+    uniswapV3GetTokenV3DayDatasHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV3TokenV3DayDataDTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv3/tokenv3daydatas/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uniswapV3GetTokenV3sHistorical operation.
+     * @callback module:api/UniswapV3Api~uniswapV3GetTokenV3sHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV3TokenV3DTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TokenV3s (historical) 🔥
+     * Gets tokenv3s.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Token address.
+     * @param {String} opts.symbol Token symbol.
+     * @param {String} opts.name Token name.
+     * @param {module:api/UniswapV3Api~uniswapV3GetTokenV3sHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV3TokenV3DTO>}
+     */
+    uniswapV3GetTokenV3sHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'symbol': opts['symbol'],
+        'name': opts['name']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV3TokenV3DTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv3/tokenv3s/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -688,6 +1466,104 @@ export default class UniswapV3Api {
       let returnType = [UniswapV3TokenHourDataV3DTO];
       return this.apiClient.callApi(
         '/dapps/uniswapv3/tokensHourData/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uniswapV3GetTransactionV3sHistorical operation.
+     * @callback module:api/UniswapV3Api~uniswapV3GetTransactionV3sHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV3TransactionV3DTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TransactionV3s (historical) 🔥
+     * Gets transactionv3s.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Transaction hash.
+     * @param {module:api/UniswapV3Api~uniswapV3GetTransactionV3sHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV3TransactionV3DTO>}
+     */
+    uniswapV3GetTransactionV3sHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV3TransactionV3DTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv3/transactionv3s/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the uniswapV3GetUniswapDayDataV3sHistorical operation.
+     * @callback module:api/UniswapV3Api~uniswapV3GetUniswapDayDataV3sHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/UniswapV3UniswapDayDataV3DTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * UniswapDayDataV3s (historical) 🔥
+     * Gets uniswapdaydatav3s.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Timestamp rounded to current day by dividing by 86400.
+     * @param {module:api/UniswapV3Api~uniswapV3GetUniswapDayDataV3sHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/UniswapV3UniswapDayDataV3DTO>}
+     */
+    uniswapV3GetUniswapDayDataV3sHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [UniswapV3UniswapDayDataV3DTO];
+      return this.apiClient.callApi(
+        '/dapps/uniswapv3/uniswapdaydatav3s/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

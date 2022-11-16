@@ -16,6 +16,107 @@ class UniswapV3Api {
 
   final ApiClient apiClient;
 
+  /// BundleV3s (historical) 🔥
+  ///
+  /// Gets bundlev3s.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   
+  Future<Response> uniswapV3GetBundleV3sHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/bundlev3s/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// BundleV3s (historical) 🔥
+  ///
+  /// Gets bundlev3s.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   
+  Future<List<UniswapV3BundleV3DTO>?> uniswapV3GetBundleV3sHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await uniswapV3GetBundleV3sHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3BundleV3DTO>') as List)
+        .cast<UniswapV3BundleV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// Bundles (current)
   ///
   /// Gets bundles.
@@ -61,6 +162,134 @@ class UniswapV3Api {
       final responseBody = await _decodeBodyBytes(response);
       return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3BundleV3DTO>') as List)
         .cast<UniswapV3BundleV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// BurnV3s (historical) 🔥
+  ///
+  /// Gets burnv3s.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Transaction hash + '#' + index in mints Transaction array.
+  ///
+  /// * [String] pool:
+  ///   Pool position is within.
+  ///
+  /// * [String] token0:
+  ///   Reference to token0 as stored in pool contract.
+  ///
+  /// * [String] token1:
+  ///   Reference to token1 as stored in pool contract.
+  Future<Response> uniswapV3GetBurnV3sHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, String? token0, String? token1, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/burnv3s/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
+    if (pool != null) {
+      queryParams.addAll(_queryParams('', 'pool', pool));
+    }
+    if (token0 != null) {
+      queryParams.addAll(_queryParams('', 'token_0', token0));
+    }
+    if (token1 != null) {
+      queryParams.addAll(_queryParams('', 'token_1', token1));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// BurnV3s (historical) 🔥
+  ///
+  /// Gets burnv3s.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Transaction hash + '#' + index in mints Transaction array.
+  ///
+  /// * [String] pool:
+  ///   Pool position is within.
+  ///
+  /// * [String] token0:
+  ///   Reference to token0 as stored in pool contract.
+  ///
+  /// * [String] token1:
+  ///   Reference to token1 as stored in pool contract.
+  Future<List<UniswapV3BurnV3DTO>?> uniswapV3GetBurnV3sHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, String? token0, String? token1, }) async {
+    final response = await uniswapV3GetBurnV3sHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, token0: token0, token1: token1, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3BurnV3DTO>') as List)
+        .cast<UniswapV3BurnV3DTO>()
         .toList();
 
     }
@@ -232,6 +461,235 @@ class UniswapV3Api {
     return null;
   }
 
+  /// FactoryV3s (historical) 🔥
+  ///
+  /// Gets factoryv3s.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Factory address.
+  Future<Response> uniswapV3GetFactoryV3sHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/factoryv3s/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// FactoryV3s (historical) 🔥
+  ///
+  /// Gets factoryv3s.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Factory address.
+  Future<List<UniswapV3FactoryV3DTO>?> uniswapV3GetFactoryV3sHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await uniswapV3GetFactoryV3sHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3FactoryV3DTO>') as List)
+        .cast<UniswapV3FactoryV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// MintV3s (historical) 🔥
+  ///
+  /// Gets mintv3s.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Transaction hash + '#' + index in mints Transaction array.
+  ///
+  /// * [String] pool:
+  ///   Pool address.
+  ///
+  /// * [String] token0:
+  ///   Reference to token0 as stored in pool contract.
+  ///
+  /// * [String] token1:
+  ///   Reference to token1 as stored in pool contract.
+  Future<Response> uniswapV3GetMintV3sHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, String? token0, String? token1, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/mintv3s/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
+    if (pool != null) {
+      queryParams.addAll(_queryParams('', 'pool', pool));
+    }
+    if (token0 != null) {
+      queryParams.addAll(_queryParams('', 'token_0', token0));
+    }
+    if (token1 != null) {
+      queryParams.addAll(_queryParams('', 'token_1', token1));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// MintV3s (historical) 🔥
+  ///
+  /// Gets mintv3s.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Transaction hash + '#' + index in mints Transaction array.
+  ///
+  /// * [String] pool:
+  ///   Pool address.
+  ///
+  /// * [String] token0:
+  ///   Reference to token0 as stored in pool contract.
+  ///
+  /// * [String] token1:
+  ///   Reference to token1 as stored in pool contract.
+  Future<List<UniswapV3MintV3DTO>?> uniswapV3GetMintV3sHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, String? token0, String? token1, }) async {
+    final response = await uniswapV3GetMintV3sHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, token0: token0, token1: token1, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3MintV3DTO>') as List)
+        .cast<UniswapV3MintV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// Mints (current)
   ///
   /// Gets mints.
@@ -289,6 +747,321 @@ class UniswapV3Api {
       final responseBody = await _decodeBodyBytes(response);
       return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3MintV3DTO>') as List)
         .cast<UniswapV3MintV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// PoolDayDataV3s (historical) 🔥
+  ///
+  /// Gets pooldaydatav3s.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] id:
+  ///
+  /// * [String] pool:
+  Future<Response> uniswapV3GetPoolDayDataV3sHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/pooldaydatav3s/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
+    if (pool != null) {
+      queryParams.addAll(_queryParams('', 'pool', pool));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// PoolDayDataV3s (historical) 🔥
+  ///
+  /// Gets pooldaydatav3s.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] id:
+  ///
+  /// * [String] pool:
+  Future<List<UniswapV3PoolDayDataV3DTO>?> uniswapV3GetPoolDayDataV3sHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
+    final response = await uniswapV3GetPoolDayDataV3sHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3PoolDayDataV3DTO>') as List)
+        .cast<UniswapV3PoolDayDataV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// PoolHourDataV3s (historical) 🔥
+  ///
+  /// Gets poolhourdatav3s.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] id:
+  ///
+  /// * [String] pool:
+  Future<Response> uniswapV3GetPoolHourDataV3sHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/poolhourdatav3s/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
+    if (pool != null) {
+      queryParams.addAll(_queryParams('', 'pool', pool));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// PoolHourDataV3s (historical) 🔥
+  ///
+  /// Gets poolhourdatav3s.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] id:
+  ///
+  /// * [String] pool:
+  Future<List<UniswapV3PoolHourDataV3DTO>?> uniswapV3GetPoolHourDataV3sHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
+    final response = await uniswapV3GetPoolHourDataV3sHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3PoolHourDataV3DTO>') as List)
+        .cast<UniswapV3PoolHourDataV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// PoolV3s (historical) 🔥
+  ///
+  /// Gets poolv3s.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Pool address.
+  ///
+  /// * [String] token0:
+  ///   Reference to token0 as stored in pool contract.
+  ///
+  /// * [String] token1:
+  ///   Reference to token1 as stored in pool contract.
+  Future<Response> uniswapV3GetPoolV3sHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? token0, String? token1, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/poolv3s/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
+    if (token0 != null) {
+      queryParams.addAll(_queryParams('', 'token_0', token0));
+    }
+    if (token1 != null) {
+      queryParams.addAll(_queryParams('', 'token_1', token1));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// PoolV3s (historical) 🔥
+  ///
+  /// Gets poolv3s.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Pool address.
+  ///
+  /// * [String] token0:
+  ///   Reference to token0 as stored in pool contract.
+  ///
+  /// * [String] token1:
+  ///   Reference to token1 as stored in pool contract.
+  Future<List<UniswapV3PoolV3DTO>?> uniswapV3GetPoolV3sHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? token0, String? token1, }) async {
+    final response = await uniswapV3GetPoolV3sHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, token0: token0, token1: token1, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3PoolV3DTO>') as List)
+        .cast<UniswapV3PoolV3DTO>()
         .toList();
 
     }
@@ -484,6 +1257,232 @@ class UniswapV3Api {
     return null;
   }
 
+  /// PositionSnapshotV3s (historical) 🔥
+  ///
+  /// Gets positionsnapshotv3s.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] id:
+  ///
+  /// * [String] pool:
+  Future<Response> uniswapV3GetPositionSnapshotV3sHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/positionsnapshotv3s/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
+    if (pool != null) {
+      queryParams.addAll(_queryParams('', 'pool', pool));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// PositionSnapshotV3s (historical) 🔥
+  ///
+  /// Gets positionsnapshotv3s.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] id:
+  ///
+  /// * [String] pool:
+  Future<List<UniswapV3PositionSnapshotV3DTO>?> uniswapV3GetPositionSnapshotV3sHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
+    final response = await uniswapV3GetPositionSnapshotV3sHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3PositionSnapshotV3DTO>') as List)
+        .cast<UniswapV3PositionSnapshotV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// PositionV3s (historical) 🔥
+  ///
+  /// Gets positionv3s.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   NFT token identifier.
+  ///
+  /// * [String] pool:
+  ///   Pool position is within.
+  ///
+  /// * [String] token0:
+  ///   Reference to token0 as stored in pair contract.
+  ///
+  /// * [String] token1:
+  ///   Reference to token1 as stored in pair contract.
+  Future<Response> uniswapV3GetPositionV3sHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, String? token0, String? token1, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/positionv3s/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
+    if (pool != null) {
+      queryParams.addAll(_queryParams('', 'pool', pool));
+    }
+    if (token0 != null) {
+      queryParams.addAll(_queryParams('', 'token_0', token0));
+    }
+    if (token1 != null) {
+      queryParams.addAll(_queryParams('', 'token_1', token1));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// PositionV3s (historical) 🔥
+  ///
+  /// Gets positionv3s.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   NFT token identifier.
+  ///
+  /// * [String] pool:
+  ///   Pool position is within.
+  ///
+  /// * [String] token0:
+  ///   Reference to token0 as stored in pair contract.
+  ///
+  /// * [String] token1:
+  ///   Reference to token1 as stored in pair contract.
+  Future<List<UniswapV3PositionV3DTO>?> uniswapV3GetPositionV3sHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, String? token0, String? token1, }) async {
+    final response = await uniswapV3GetPositionV3sHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, token0: token0, token1: token1, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3PositionV3DTO>') as List)
+        .cast<UniswapV3PositionV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// Positions (current)
   ///
   /// Gets positions.
@@ -610,6 +1609,134 @@ class UniswapV3Api {
     return null;
   }
 
+  /// SwapV3s (historical) 🔥
+  ///
+  /// Gets swapv3s.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+  ///
+  /// * [String] pool:
+  ///   Pool swap occured within.
+  ///
+  /// * [String] token0:
+  ///   Reference to token0 as stored in pair contract.
+  ///
+  /// * [String] token1:
+  ///   Reference to token1 as stored in pair contract.
+  Future<Response> uniswapV3GetSwapV3sHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, String? token0, String? token1, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/swapv3s/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
+    if (pool != null) {
+      queryParams.addAll(_queryParams('', 'pool', pool));
+    }
+    if (token0 != null) {
+      queryParams.addAll(_queryParams('', 'token_0', token0));
+    }
+    if (token1 != null) {
+      queryParams.addAll(_queryParams('', 'token_1', token1));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// SwapV3s (historical) 🔥
+  ///
+  /// Gets swapv3s.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+  ///
+  /// * [String] pool:
+  ///   Pool swap occured within.
+  ///
+  /// * [String] token0:
+  ///   Reference to token0 as stored in pair contract.
+  ///
+  /// * [String] token1:
+  ///   Reference to token1 as stored in pair contract.
+  Future<List<UniswapV3SwapV3DTO>?> uniswapV3GetSwapV3sHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, String? token0, String? token1, }) async {
+    final response = await uniswapV3GetSwapV3sHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, token0: token0, token1: token1, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3SwapV3DTO>') as List)
+        .cast<UniswapV3SwapV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
   /// Swaps (current) 🔥
   ///
   /// Gets swaps.
@@ -667,6 +1794,202 @@ class UniswapV3Api {
       final responseBody = await _decodeBodyBytes(response);
       return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3SwapV3DTO>') as List)
         .cast<UniswapV3SwapV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// TickDayDataV3s (historical) 🔥
+  ///
+  /// Gets tickdaydatav3s.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] id:
+  ///
+  /// * [String] pool:
+  Future<Response> uniswapV3GetTickDayDataV3sHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/tickdaydatav3s/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
+    if (pool != null) {
+      queryParams.addAll(_queryParams('', 'pool', pool));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// TickDayDataV3s (historical) 🔥
+  ///
+  /// Gets tickdaydatav3s.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] id:
+  ///
+  /// * [String] pool:
+  Future<List<UniswapV3TickDayDataV3DTO>?> uniswapV3GetTickDayDataV3sHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
+    final response = await uniswapV3GetTickDayDataV3sHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TickDayDataV3DTO>') as List)
+        .cast<UniswapV3TickDayDataV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// TickV3s (historical) 🔥
+  ///
+  /// Gets tickv3s.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] id:
+  ///
+  /// * [String] pool:
+  Future<Response> uniswapV3GetTickV3sHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/tickv3s/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
+    if (pool != null) {
+      queryParams.addAll(_queryParams('', 'pool', pool));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// TickV3s (historical) 🔥
+  ///
+  /// Gets tickv3s.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///
+  /// * [int] endBlock:
+  ///
+  /// * [DateTime] startDate:
+  ///
+  /// * [DateTime] endDate:
+  ///
+  /// * [String] id:
+  ///
+  /// * [String] pool:
+  Future<List<UniswapV3TickV3DTO>?> uniswapV3GetTickV3sHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
+    final response = await uniswapV3GetTickV3sHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TickV3DTO>') as List)
+        .cast<UniswapV3TickV3DTO>()
         .toList();
 
     }
@@ -793,6 +2116,327 @@ class UniswapV3Api {
       final responseBody = await _decodeBodyBytes(response);
       return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TickDayDataV3DTO>') as List)
         .cast<UniswapV3TickDayDataV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// TokenHourDataV3s (historical) 🔥
+  ///
+  /// Gets tokenhourdatav3s.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Token address concatendated with date.
+  Future<Response> uniswapV3GetTokenHourDataV3sHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/tokenhourdatav3s/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// TokenHourDataV3s (historical) 🔥
+  ///
+  /// Gets tokenhourdatav3s.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Token address concatendated with date.
+  Future<List<UniswapV3TokenHourDataV3DTO>?> uniswapV3GetTokenHourDataV3sHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await uniswapV3GetTokenHourDataV3sHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TokenHourDataV3DTO>') as List)
+        .cast<UniswapV3TokenHourDataV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// TokenV3DayDatas (historical) 🔥
+  ///
+  /// Gets tokenv3daydatas.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Token address concatendated with date.
+  Future<Response> uniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/tokenv3daydatas/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// TokenV3DayDatas (historical) 🔥
+  ///
+  /// Gets tokenv3daydatas.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Token address concatendated with date.
+  Future<List<UniswapV3TokenV3DayDataDTO>?> uniswapV3GetTokenV3DayDatasHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await uniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TokenV3DayDataDTO>') as List)
+        .cast<UniswapV3TokenV3DayDataDTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// TokenV3s (historical) 🔥
+  ///
+  /// Gets tokenv3s.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Token address.
+  ///
+  /// * [String] symbol:
+  ///   Token symbol.
+  ///
+  /// * [String] name:
+  ///   Token name.
+  Future<Response> uniswapV3GetTokenV3sHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? symbol, String? name, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/tokenv3s/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
+    if (symbol != null) {
+      queryParams.addAll(_queryParams('', 'symbol', symbol));
+    }
+    if (name != null) {
+      queryParams.addAll(_queryParams('', 'name', name));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// TokenV3s (historical) 🔥
+  ///
+  /// Gets tokenv3s.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Token address.
+  ///
+  /// * [String] symbol:
+  ///   Token symbol.
+  ///
+  /// * [String] name:
+  ///   Token name.
+  Future<List<UniswapV3TokenV3DTO>?> uniswapV3GetTokenV3sHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? symbol, String? name, }) async {
+    final response = await uniswapV3GetTokenV3sHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, symbol: symbol, name: name, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TokenV3DTO>') as List)
+        .cast<UniswapV3TokenV3DTO>()
         .toList();
 
     }
@@ -982,6 +2626,208 @@ class UniswapV3Api {
       final responseBody = await _decodeBodyBytes(response);
       return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TokenHourDataV3DTO>') as List)
         .cast<UniswapV3TokenHourDataV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// TransactionV3s (historical) 🔥
+  ///
+  /// Gets transactionv3s.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Transaction hash.
+  Future<Response> uniswapV3GetTransactionV3sHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/transactionv3s/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// TransactionV3s (historical) 🔥
+  ///
+  /// Gets transactionv3s.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Transaction hash.
+  Future<List<UniswapV3TransactionV3DTO>?> uniswapV3GetTransactionV3sHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await uniswapV3GetTransactionV3sHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3TransactionV3DTO>') as List)
+        .cast<UniswapV3TransactionV3DTO>()
+        .toList();
+
+    }
+    return null;
+  }
+
+  /// UniswapDayDataV3s (historical) 🔥
+  ///
+  /// Gets uniswapdaydatav3s.
+  ///
+  /// Note: This method returns the HTTP [Response].
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Timestamp rounded to current day by dividing by 86400.
+  Future<Response> uniswapV3GetUniswapDayDataV3sHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    // ignore: prefer_const_declarations
+    final path = r'/dapps/uniswapv3/uniswapdaydatav3s/historical';
+
+    // ignore: prefer_final_locals
+    Object? postBody;
+
+    final queryParams = <QueryParam>[];
+    final headerParams = <String, String>{};
+    final formParams = <String, String>{};
+
+    if (startBlock != null) {
+      queryParams.addAll(_queryParams('', 'startBlock', startBlock));
+    }
+    if (endBlock != null) {
+      queryParams.addAll(_queryParams('', 'endBlock', endBlock));
+    }
+    if (startDate != null) {
+      queryParams.addAll(_queryParams('', 'startDate', startDate));
+    }
+    if (endDate != null) {
+      queryParams.addAll(_queryParams('', 'endDate', endDate));
+    }
+    if (id != null) {
+      queryParams.addAll(_queryParams('', 'id', id));
+    }
+
+    const contentTypes = <String>[];
+
+
+    return apiClient.invokeAPI(
+      path,
+      'GET',
+      queryParams,
+      postBody,
+      headerParams,
+      formParams,
+      contentTypes.isEmpty ? null : contentTypes.first,
+    );
+  }
+
+  /// UniswapDayDataV3s (historical) 🔥
+  ///
+  /// Gets uniswapdaydatav3s.
+  ///
+  /// Parameters:
+  ///
+  /// * [int] startBlock:
+  ///   The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  ///
+  /// * [int] endBlock:
+  ///   The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  ///
+  /// * [DateTime] startDate:
+  ///   The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  ///
+  /// * [DateTime] endDate:
+  ///   The end date of timeframe.
+  ///
+  /// * [String] id:
+  ///   Timestamp rounded to current day by dividing by 86400.
+  Future<List<UniswapV3UniswapDayDataV3DTO>?> uniswapV3GetUniswapDayDataV3sHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await uniswapV3GetUniswapDayDataV3sHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+    if (response.statusCode >= HttpStatus.badRequest) {
+      throw ApiException(response.statusCode, await _decodeBodyBytes(response));
+    }
+    // When a remote server returns no body with a status of 204, we shall not decode it.
+    // At the time of writing this, `dart:convert` will throw an "Unexpected end of input"
+    // FormatException when trying to decode an empty string.
+    if (response.body.isNotEmpty && response.statusCode != HttpStatus.noContent) {
+      final responseBody = await _decodeBodyBytes(response);
+      return (await apiClient.deserializeAsync(responseBody, 'List<UniswapV3UniswapDayDataV3DTO>') as List)
+        .cast<UniswapV3UniswapDayDataV3DTO>()
         .toList();
 
     }

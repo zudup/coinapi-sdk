@@ -5,12 +5,47 @@ context("Test UniswapV3Api")
 
 api_instance <- UniswapV3Api$new()
 
+test_that("UniswapV3GetBundleV3sHistorical", {
+  # tests for UniswapV3GetBundleV3sHistorical
+  # base path: https://onchain.coinapi.io
+  # BundleV3s (historical) 🔥
+  # Gets bundlev3s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character  (optional)
+  # @return [array[UniswapV3BundleV3DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("UniswapV3GetBundlesCurrent", {
   # tests for UniswapV3GetBundlesCurrent
   # base path: https://onchain.coinapi.io
   # Bundles (current)
   # Gets bundles.
   # @return [array[UniswapV3BundleV3DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV3GetBurnV3sHistorical", {
+  # tests for UniswapV3GetBurnV3sHistorical
+  # base path: https://onchain.coinapi.io
+  # BurnV3s (historical) 🔥
+  # Gets burnv3s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Transaction hash + '#' + index in mints Transaction array. (optional)
+  # @param pool character Pool position is within. (optional)
+  # @param token_0 character Reference to token0 as stored in pool contract. (optional)
+  # @param token_1 character Reference to token1 as stored in pool contract. (optional)
+  # @return [array[UniswapV3BurnV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -50,6 +85,41 @@ test_that("UniswapV3GetFactoryCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
+test_that("UniswapV3GetFactoryV3sHistorical", {
+  # tests for UniswapV3GetFactoryV3sHistorical
+  # base path: https://onchain.coinapi.io
+  # FactoryV3s (historical) 🔥
+  # Gets factoryv3s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Factory address. (optional)
+  # @return [array[UniswapV3FactoryV3DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV3GetMintV3sHistorical", {
+  # tests for UniswapV3GetMintV3sHistorical
+  # base path: https://onchain.coinapi.io
+  # MintV3s (historical) 🔥
+  # Gets mintv3s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Transaction hash + '#' + index in mints Transaction array. (optional)
+  # @param pool character Pool address. (optional)
+  # @param token_0 character Reference to token0 as stored in pool contract. (optional)
+  # @param token_1 character Reference to token1 as stored in pool contract. (optional)
+  # @return [array[UniswapV3MintV3DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("UniswapV3GetMintsCurrent", {
   # tests for UniswapV3GetMintsCurrent
   # base path: https://onchain.coinapi.io
@@ -57,6 +127,58 @@ test_that("UniswapV3GetMintsCurrent", {
   # Gets mints.
   # @param filter_pool_id character  (optional)
   # @return [array[UniswapV3MintV3DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV3GetPoolDayDataV3sHistorical", {
+  # tests for UniswapV3GetPoolDayDataV3sHistorical
+  # base path: https://onchain.coinapi.io
+  # PoolDayDataV3s (historical) 🔥
+  # Gets pooldaydatav3s.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param id character  (optional)
+  # @param pool character  (optional)
+  # @return [array[UniswapV3PoolDayDataV3DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV3GetPoolHourDataV3sHistorical", {
+  # tests for UniswapV3GetPoolHourDataV3sHistorical
+  # base path: https://onchain.coinapi.io
+  # PoolHourDataV3s (historical) 🔥
+  # Gets poolhourdatav3s.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param id character  (optional)
+  # @param pool character  (optional)
+  # @return [array[UniswapV3PoolHourDataV3DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV3GetPoolV3sHistorical", {
+  # tests for UniswapV3GetPoolV3sHistorical
+  # base path: https://onchain.coinapi.io
+  # PoolV3s (historical) 🔥
+  # Gets poolv3s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Pool address. (optional)
+  # @param token_0 character Reference to token0 as stored in pool contract. (optional)
+  # @param token_1 character Reference to token1 as stored in pool contract. (optional)
+  # @return [array[UniswapV3PoolV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -98,6 +220,42 @@ test_that("UniswapV3GetPoolsHourDataCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
+test_that("UniswapV3GetPositionSnapshotV3sHistorical", {
+  # tests for UniswapV3GetPositionSnapshotV3sHistorical
+  # base path: https://onchain.coinapi.io
+  # PositionSnapshotV3s (historical) 🔥
+  # Gets positionsnapshotv3s.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param id character  (optional)
+  # @param pool character  (optional)
+  # @return [array[UniswapV3PositionSnapshotV3DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV3GetPositionV3sHistorical", {
+  # tests for UniswapV3GetPositionV3sHistorical
+  # base path: https://onchain.coinapi.io
+  # PositionV3s (historical) 🔥
+  # Gets positionv3s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character NFT token identifier. (optional)
+  # @param pool character Pool position is within. (optional)
+  # @param token_0 character Reference to token0 as stored in pair contract. (optional)
+  # @param token_1 character Reference to token1 as stored in pair contract. (optional)
+  # @return [array[UniswapV3PositionV3DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("UniswapV3GetPositionsCurrent", {
   # tests for UniswapV3GetPositionsCurrent
   # base path: https://onchain.coinapi.io
@@ -122,6 +280,25 @@ test_that("UniswapV3GetPositionsSnapshotsCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
+test_that("UniswapV3GetSwapV3sHistorical", {
+  # tests for UniswapV3GetSwapV3sHistorical
+  # base path: https://onchain.coinapi.io
+  # SwapV3s (historical) 🔥
+  # Gets swapv3s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Identifier, format: transaction hash + \"#\" + index in swaps Transaction array. (optional)
+  # @param pool character Pool swap occured within. (optional)
+  # @param token_0 character Reference to token0 as stored in pair contract. (optional)
+  # @param token_1 character Reference to token1 as stored in pair contract. (optional)
+  # @return [array[UniswapV3SwapV3DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("UniswapV3GetSwapsCurrent", {
   # tests for UniswapV3GetSwapsCurrent
   # base path: https://onchain.coinapi.io
@@ -129,6 +306,40 @@ test_that("UniswapV3GetSwapsCurrent", {
   # Gets swaps.
   # @param filter_pool_id character  (optional)
   # @return [array[UniswapV3SwapV3DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV3GetTickDayDataV3sHistorical", {
+  # tests for UniswapV3GetTickDayDataV3sHistorical
+  # base path: https://onchain.coinapi.io
+  # TickDayDataV3s (historical) 🔥
+  # Gets tickdaydatav3s.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param id character  (optional)
+  # @param pool character  (optional)
+  # @return [array[UniswapV3TickDayDataV3DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV3GetTickV3sHistorical", {
+  # tests for UniswapV3GetTickV3sHistorical
+  # base path: https://onchain.coinapi.io
+  # TickV3s (historical) 🔥
+  # Gets tickv3s.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param id character  (optional)
+  # @param pool character  (optional)
+  # @return [array[UniswapV3TickV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -153,6 +364,56 @@ test_that("UniswapV3GetTicksDayDataCurrent", {
   # Gets ticks day data.
   # @param filter_pool_id character  (optional)
   # @return [array[UniswapV3TickDayDataV3DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV3GetTokenHourDataV3sHistorical", {
+  # tests for UniswapV3GetTokenHourDataV3sHistorical
+  # base path: https://onchain.coinapi.io
+  # TokenHourDataV3s (historical) 🔥
+  # Gets tokenhourdatav3s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Token address concatendated with date. (optional)
+  # @return [array[UniswapV3TokenHourDataV3DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV3GetTokenV3DayDatasHistorical", {
+  # tests for UniswapV3GetTokenV3DayDatasHistorical
+  # base path: https://onchain.coinapi.io
+  # TokenV3DayDatas (historical) 🔥
+  # Gets tokenv3daydatas.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Token address concatendated with date. (optional)
+  # @return [array[UniswapV3TokenV3DayDataDTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV3GetTokenV3sHistorical", {
+  # tests for UniswapV3GetTokenV3sHistorical
+  # base path: https://onchain.coinapi.io
+  # TokenV3s (historical) 🔥
+  # Gets tokenv3s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Token address. (optional)
+  # @param symbol character Token symbol. (optional)
+  # @param name character Token name. (optional)
+  # @return [array[UniswapV3TokenV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -189,6 +450,38 @@ test_that("UniswapV3GetTokensHourDataCurrent", {
   # Gets tokens hour data.
   # @param filter_token_id character  (optional)
   # @return [array[UniswapV3TokenHourDataV3DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV3GetTransactionV3sHistorical", {
+  # tests for UniswapV3GetTransactionV3sHistorical
+  # base path: https://onchain.coinapi.io
+  # TransactionV3s (historical) 🔥
+  # Gets transactionv3s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Transaction hash. (optional)
+  # @return [array[UniswapV3TransactionV3DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV3GetUniswapDayDataV3sHistorical", {
+  # tests for UniswapV3GetUniswapDayDataV3sHistorical
+  # base path: https://onchain.coinapi.io
+  # UniswapDayDataV3s (historical) 🔥
+  # Gets uniswapdaydatav3s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Timestamp rounded to current day by dividing by 86400. (optional)
+  # @return [array[UniswapV3UniswapDayDataV3DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

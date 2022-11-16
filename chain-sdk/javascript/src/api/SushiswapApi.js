@@ -15,9 +15,22 @@
 import ApiClient from "../ApiClient";
 import CurveExchangeDTO from '../model/CurveExchangeDTO';
 import DexTradeDTO from '../model/DexTradeDTO';
+import SushiswapBundleDTO from '../model/SushiswapBundleDTO';
+import SushiswapBurnDTO from '../model/SushiswapBurnDTO';
+import SushiswapDayDataDTO from '../model/SushiswapDayDataDTO';
+import SushiswapFactoryDTO from '../model/SushiswapFactoryDTO';
+import SushiswapHourDataDTO from '../model/SushiswapHourDataDTO';
+import SushiswapLiquidityPositionDTO from '../model/SushiswapLiquidityPositionDTO';
+import SushiswapLiquidityPositionSnapshotDTO from '../model/SushiswapLiquidityPositionSnapshotDTO';
+import SushiswapMintDTO from '../model/SushiswapMintDTO';
 import SushiswapPairDTO from '../model/SushiswapPairDTO';
+import SushiswapPairDayDataDTO from '../model/SushiswapPairDayDataDTO';
+import SushiswapPairHourDataDTO from '../model/SushiswapPairHourDataDTO';
 import SushiswapSwapDTO from '../model/SushiswapSwapDTO';
 import SushiswapTokenDTO from '../model/SushiswapTokenDTO';
+import SushiswapTokenDayDataDTO from '../model/SushiswapTokenDayDataDTO';
+import SushiswapTransactionDTO from '../model/SushiswapTransactionDTO';
+import SushiswapUserDTO from '../model/SushiswapUserDTO';
 
 /**
 * Sushiswap service.
@@ -113,6 +126,571 @@ export default class SushiswapApi {
     }
 
     /**
+     * Callback function to receive the result of the sushiswapGetBundlesHistorical operation.
+     * @callback module:api/SushiswapApi~sushiswapGetBundlesHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SushiswapBundleDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Bundles (historical) 🔥
+     * Gets bundles.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Hardcoded to '1'.
+     * @param {module:api/SushiswapApi~sushiswapGetBundlesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SushiswapBundleDTO>}
+     */
+    sushiswapGetBundlesHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [SushiswapBundleDTO];
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/bundles/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sushiswapGetBurnsHistorical operation.
+     * @callback module:api/SushiswapApi~sushiswapGetBurnsHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SushiswapBurnDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Burns (historical) 🔥
+     * Gets burns.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.id 
+     * @param {String} opts.pair 
+     * @param {module:api/SushiswapApi~sushiswapGetBurnsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SushiswapBurnDTO>}
+     */
+    sushiswapGetBurnsHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'pair': opts['pair']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [SushiswapBurnDTO];
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/burns/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sushiswapGetDayDatasHistorical operation.
+     * @callback module:api/SushiswapApi~sushiswapGetDayDatasHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SushiswapDayDataDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * DayDatas (historical) 🔥
+     * Gets daydatas.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Unix timestamp for start of day / 86400 giving a unique day index.
+     * @param {module:api/SushiswapApi~sushiswapGetDayDatasHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SushiswapDayDataDTO>}
+     */
+    sushiswapGetDayDatasHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [SushiswapDayDataDTO];
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/daydatas/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sushiswapGetFactorysHistorical operation.
+     * @callback module:api/SushiswapApi~sushiswapGetFactorysHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SushiswapFactoryDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Factorys (historical) 🔥
+     * Gets factorys.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Factory address.
+     * @param {module:api/SushiswapApi~sushiswapGetFactorysHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SushiswapFactoryDTO>}
+     */
+    sushiswapGetFactorysHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [SushiswapFactoryDTO];
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/factorys/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sushiswapGetHourDatasHistorical operation.
+     * @callback module:api/SushiswapApi~sushiswapGetHourDatasHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SushiswapHourDataDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * HourDatas (historical) 🔥
+     * Gets hourdatas.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Start of hour timestamp.
+     * @param {module:api/SushiswapApi~sushiswapGetHourDatasHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SushiswapHourDataDTO>}
+     */
+    sushiswapGetHourDatasHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [SushiswapHourDataDTO];
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/hourdatas/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sushiswapGetLiquidityPositionSnapshotsHistorical operation.
+     * @callback module:api/SushiswapApi~sushiswapGetLiquidityPositionSnapshotsHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SushiswapLiquidityPositionSnapshotDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPositionSnapshots (historical) 🔥
+     * Gets liquiditypositionsnapshots.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.id 
+     * @param {String} opts.user 
+     * @param {String} opts.pair 
+     * @param {module:api/SushiswapApi~sushiswapGetLiquidityPositionSnapshotsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SushiswapLiquidityPositionSnapshotDTO>}
+     */
+    sushiswapGetLiquidityPositionSnapshotsHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'user': opts['user'],
+        'pair': opts['pair']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [SushiswapLiquidityPositionSnapshotDTO];
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/liquiditypositionsnapshots/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sushiswapGetLiquidityPositionsHistorical operation.
+     * @callback module:api/SushiswapApi~sushiswapGetLiquidityPositionsHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SushiswapLiquidityPositionDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * LiquidityPositions (historical) 🔥
+     * Gets liquiditypositions.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.id 
+     * @param {String} opts.user 
+     * @param {String} opts.pair 
+     * @param {module:api/SushiswapApi~sushiswapGetLiquidityPositionsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SushiswapLiquidityPositionDTO>}
+     */
+    sushiswapGetLiquidityPositionsHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'user': opts['user'],
+        'pair': opts['pair']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [SushiswapLiquidityPositionDTO];
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/liquiditypositions/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sushiswapGetMintsHistorical operation.
+     * @callback module:api/SushiswapApi~sushiswapGetMintsHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SushiswapMintDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Mints (historical) 🔥
+     * Gets mints.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.id 
+     * @param {String} opts.pair 
+     * @param {module:api/SushiswapApi~sushiswapGetMintsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SushiswapMintDTO>}
+     */
+    sushiswapGetMintsHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'pair': opts['pair']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [SushiswapMintDTO];
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/mints/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sushiswapGetPairDayDatasHistorical operation.
+     * @callback module:api/SushiswapApi~sushiswapGetPairDayDatasHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SushiswapPairDayDataDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PairDayDatas (historical) 🔥
+     * Gets pairdaydatas.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.id 
+     * @param {String} opts.pair 
+     * @param {String} opts.token0 
+     * @param {String} opts.token1 
+     * @param {module:api/SushiswapApi~sushiswapGetPairDayDatasHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SushiswapPairDayDataDTO>}
+     */
+    sushiswapGetPairDayDatasHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'pair': opts['pair'],
+        'token_0': opts['token0'],
+        'token_1': opts['token1']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [SushiswapPairDayDataDTO];
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/pairdaydatas/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sushiswapGetPairHourDatasHistorical operation.
+     * @callback module:api/SushiswapApi~sushiswapGetPairHourDatasHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SushiswapPairHourDataDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * PairHourDatas (historical) 🔥
+     * Gets pairhourdatas.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.id 
+     * @param {String} opts.pair 
+     * @param {module:api/SushiswapApi~sushiswapGetPairHourDatasHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SushiswapPairHourDataDTO>}
+     */
+    sushiswapGetPairHourDatasHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'pair': opts['pair']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [SushiswapPairHourDataDTO];
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/pairhourdatas/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sushiswapGetPairsHistorical operation.
+     * @callback module:api/SushiswapApi~sushiswapGetPairsHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SushiswapPairDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Pairs (historical) 🔥
+     * Gets pairs.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock 
+     * @param {Number} opts.endBlock 
+     * @param {Date} opts.startDate 
+     * @param {Date} opts.endDate 
+     * @param {String} opts.id 
+     * @param {String} opts.name 
+     * @param {String} opts.token0 
+     * @param {String} opts.token1 
+     * @param {module:api/SushiswapApi~sushiswapGetPairsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SushiswapPairDTO>}
+     */
+    sushiswapGetPairsHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'name': opts['name'],
+        'token_0': opts['token0'],
+        'token_1': opts['token1']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [SushiswapPairDTO];
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/pairs/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the sushiswapGetPoolsCurrent operation.
      * @callback module:api/SushiswapApi~sushiswapGetPoolsCurrentCallback
      * @param {String} error Error message, if any.
@@ -187,6 +765,106 @@ export default class SushiswapApi {
     }
 
     /**
+     * Callback function to receive the result of the sushiswapGetSwapsHistorical operation.
+     * @callback module:api/SushiswapApi~sushiswapGetSwapsHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SushiswapSwapDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Swaps (historical) 🔥
+     * Gets swaps.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Transaction hash plus index in Transaction swap array.
+     * @param {String} opts.pair Reference to pair.
+     * @param {module:api/SushiswapApi~sushiswapGetSwapsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SushiswapSwapDTO>}
+     */
+    sushiswapGetSwapsHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'pair': opts['pair']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [SushiswapSwapDTO];
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/swaps/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sushiswapGetTokenDayDatasHistorical operation.
+     * @callback module:api/SushiswapApi~sushiswapGetTokenDayDatasHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SushiswapTokenDayDataDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * TokenDayDatas (historical) 🔥
+     * Gets tokendaydatas.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Identifier, day start timestamp in unix / 86400.
+     * @param {module:api/SushiswapApi~sushiswapGetTokenDayDatasHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SushiswapTokenDayDataDTO>}
+     */
+    sushiswapGetTokenDayDatasHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [SushiswapTokenDayDataDTO];
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/tokendaydatas/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
      * Callback function to receive the result of the sushiswapGetTokensCurrent operation.
      * @callback module:api/SushiswapApi~sushiswapGetTokensCurrentCallback
      * @param {String} error Error message, if any.
@@ -218,6 +896,157 @@ export default class SushiswapApi {
       let returnType = [SushiswapTokenDTO];
       return this.apiClient.callApi(
         '/dapps/sushiswap/tokens/current', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sushiswapGetTokensHistorical operation.
+     * @callback module:api/SushiswapApi~sushiswapGetTokensHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SushiswapTokenDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Tokens (historical) 🔥
+     * Gets tokens.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Token address.
+     * @param {String} opts.symbol Token symbol.
+     * @param {String} opts.name Token name.
+     * @param {module:api/SushiswapApi~sushiswapGetTokensHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SushiswapTokenDTO>}
+     */
+    sushiswapGetTokensHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id'],
+        'symbol': opts['symbol'],
+        'name': opts['name']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [SushiswapTokenDTO];
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/tokens/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sushiswapGetTransactionsHistorical operation.
+     * @callback module:api/SushiswapApi~sushiswapGetTransactionsHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SushiswapTransactionDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Transactions (historical) 🔥
+     * Gets transactions.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id Ethereum transaction hash.
+     * @param {module:api/SushiswapApi~sushiswapGetTransactionsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SushiswapTransactionDTO>}
+     */
+    sushiswapGetTransactionsHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [SushiswapTransactionDTO];
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/transactions/historical', 'GET',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null, callback
+      );
+    }
+
+    /**
+     * Callback function to receive the result of the sushiswapGetUsersHistorical operation.
+     * @callback module:api/SushiswapApi~sushiswapGetUsersHistoricalCallback
+     * @param {String} error Error message, if any.
+     * @param {Array.<module:model/SushiswapUserDTO>} data The data returned by the service call.
+     * @param {String} response The complete HTTP response.
+     */
+
+    /**
+     * Users (historical) 🔥
+     * Gets users.
+     * @param {Object} opts Optional parameters
+     * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+     * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+     * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+     * @param {Date} opts.endDate The end date of timeframe.
+     * @param {String} opts.id User address.
+     * @param {module:api/SushiswapApi~sushiswapGetUsersHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * data is of type: {@link Array.<module:model/SushiswapUserDTO>}
+     */
+    sushiswapGetUsersHistorical(opts, callback) {
+      opts = opts || {};
+      let postBody = null;
+
+      let pathParams = {
+      };
+      let queryParams = {
+        'startBlock': opts['startBlock'],
+        'endBlock': opts['endBlock'],
+        'startDate': opts['startDate'],
+        'endDate': opts['endDate'],
+        'id': opts['id']
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = [];
+      let accepts = ['text/plain', 'application/json', 'text/json'];
+      let returnType = [SushiswapUserDTO];
+      return this.apiClient.callApi(
+        '/dapps/sushiswap/users/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

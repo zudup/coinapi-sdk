@@ -49,6 +49,110 @@ sub new {
 
 
 #
+# uniswap_v3_get_bundle_v3s__historical
+#
+# BundleV3s (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id  (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_bundle_v3s__historical' } = {
+        summary => 'BundleV3s (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV3BundleV3DTO]',
+        };
+}
+# @return ARRAY[UniswapV3BundleV3DTO]
+#
+sub uniswap_v3_get_bundle_v3s__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv3/bundlev3s/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3BundleV3DTO]', $response);
+    return $_response_object;
+}
+
+#
 # uniswap_v3_get_bundles__current
 #
 # Bundles (current)
@@ -94,6 +198,143 @@ sub uniswap_v3_get_bundles__current {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3BundleV3DTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v3_get_burn_v3s__historical
+#
+# BurnV3s (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Transaction hash + &#39;#&#39; + index in mints Transaction array. (optional)
+# @param string $pool Pool position is within. (optional)
+# @param string $token_0 Reference to token0 as stored in pool contract. (optional)
+# @param string $token_1 Reference to token1 as stored in pool contract. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'Transaction hash + &#39;#&#39; + index in mints Transaction array.',
+        required => '0',
+    },
+    'pool' => {
+        data_type => 'string',
+        description => 'Pool position is within.',
+        required => '0',
+    },
+    'token_0' => {
+        data_type => 'string',
+        description => 'Reference to token0 as stored in pool contract.',
+        required => '0',
+    },
+    'token_1' => {
+        data_type => 'string',
+        description => 'Reference to token1 as stored in pool contract.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_burn_v3s__historical' } = {
+        summary => 'BurnV3s (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV3BurnV3DTO]',
+        };
+}
+# @return ARRAY[UniswapV3BurnV3DTO]
+#
+sub uniswap_v3_get_burn_v3s__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv3/burnv3s/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    # query params
+    if ( exists $args{'token_0'}) {
+        $query_params->{'token_0'} = $self->{api_client}->to_query_value($args{'token_0'});
+    }
+
+    # query params
+    if ( exists $args{'token_1'}) {
+        $query_params->{'token_1'} = $self->{api_client}->to_query_value($args{'token_1'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3BurnV3DTO]', $response);
     return $_response_object;
 }
 
@@ -256,6 +497,247 @@ sub uniswap_v3_get_factory__current {
 }
 
 #
+# uniswap_v3_get_factory_v3s__historical
+#
+# FactoryV3s (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Factory address. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'Factory address.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_factory_v3s__historical' } = {
+        summary => 'FactoryV3s (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV3FactoryV3DTO]',
+        };
+}
+# @return ARRAY[UniswapV3FactoryV3DTO]
+#
+sub uniswap_v3_get_factory_v3s__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv3/factoryv3s/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3FactoryV3DTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v3_get_mint_v3s__historical
+#
+# MintV3s (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Transaction hash + &#39;#&#39; + index in mints Transaction array. (optional)
+# @param string $pool Pool address. (optional)
+# @param string $token_0 Reference to token0 as stored in pool contract. (optional)
+# @param string $token_1 Reference to token1 as stored in pool contract. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'Transaction hash + &#39;#&#39; + index in mints Transaction array.',
+        required => '0',
+    },
+    'pool' => {
+        data_type => 'string',
+        description => 'Pool address.',
+        required => '0',
+    },
+    'token_0' => {
+        data_type => 'string',
+        description => 'Reference to token0 as stored in pool contract.',
+        required => '0',
+    },
+    'token_1' => {
+        data_type => 'string',
+        description => 'Reference to token1 as stored in pool contract.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_mint_v3s__historical' } = {
+        summary => 'MintV3s (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV3MintV3DTO]',
+        };
+}
+# @return ARRAY[UniswapV3MintV3DTO]
+#
+sub uniswap_v3_get_mint_v3s__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv3/mintv3s/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    # query params
+    if ( exists $args{'token_0'}) {
+        $query_params->{'token_0'} = $self->{api_client}->to_query_value($args{'token_0'});
+    }
+
+    # query params
+    if ( exists $args{'token_1'}) {
+        $query_params->{'token_1'} = $self->{api_client}->to_query_value($args{'token_1'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3MintV3DTO]', $response);
+    return $_response_object;
+}
+
+#
 # uniswap_v3_get_mints__current
 #
 # Mints (current)
@@ -312,6 +794,362 @@ sub uniswap_v3_get_mints__current {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3MintV3DTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v3_get_pool_day_data_v3s__historical
+#
+# PoolDayDataV3s (historical) 🔥
+#
+# @param int $start_block  (optional)
+# @param int $end_block  (optional)
+# @param DATE_TIME $start_date  (optional)
+# @param DATE_TIME $end_date  (optional)
+# @param string $id  (optional)
+# @param string $pool  (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    'pool' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_pool_day_data_v3s__historical' } = {
+        summary => 'PoolDayDataV3s (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV3PoolDayDataV3DTO]',
+        };
+}
+# @return ARRAY[UniswapV3PoolDayDataV3DTO]
+#
+sub uniswap_v3_get_pool_day_data_v3s__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv3/pooldaydatav3s/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3PoolDayDataV3DTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v3_get_pool_hour_data_v3s__historical
+#
+# PoolHourDataV3s (historical) 🔥
+#
+# @param int $start_block  (optional)
+# @param int $end_block  (optional)
+# @param DATE_TIME $start_date  (optional)
+# @param DATE_TIME $end_date  (optional)
+# @param string $id  (optional)
+# @param string $pool  (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    'pool' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_pool_hour_data_v3s__historical' } = {
+        summary => 'PoolHourDataV3s (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV3PoolHourDataV3DTO]',
+        };
+}
+# @return ARRAY[UniswapV3PoolHourDataV3DTO]
+#
+sub uniswap_v3_get_pool_hour_data_v3s__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv3/poolhourdatav3s/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3PoolHourDataV3DTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v3_get_pool_v3s__historical
+#
+# PoolV3s (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Pool address. (optional)
+# @param string $token_0 Reference to token0 as stored in pool contract. (optional)
+# @param string $token_1 Reference to token1 as stored in pool contract. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'Pool address.',
+        required => '0',
+    },
+    'token_0' => {
+        data_type => 'string',
+        description => 'Reference to token0 as stored in pool contract.',
+        required => '0',
+    },
+    'token_1' => {
+        data_type => 'string',
+        description => 'Reference to token1 as stored in pool contract.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_pool_v3s__historical' } = {
+        summary => 'PoolV3s (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV3PoolV3DTO]',
+        };
+}
+# @return ARRAY[UniswapV3PoolV3DTO]
+#
+sub uniswap_v3_get_pool_v3s__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv3/poolv3s/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'token_0'}) {
+        $query_params->{'token_0'} = $self->{api_client}->to_query_value($args{'token_0'});
+    }
+
+    # query params
+    if ( exists $args{'token_1'}) {
+        $query_params->{'token_1'} = $self->{api_client}->to_query_value($args{'token_1'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3PoolV3DTO]', $response);
     return $_response_object;
 }
 
@@ -496,6 +1334,258 @@ sub uniswap_v3_get_pools_hour_data__current {
 }
 
 #
+# uniswap_v3_get_position_snapshot_v3s__historical
+#
+# PositionSnapshotV3s (historical) 🔥
+#
+# @param int $start_block  (optional)
+# @param int $end_block  (optional)
+# @param DATE_TIME $start_date  (optional)
+# @param DATE_TIME $end_date  (optional)
+# @param string $id  (optional)
+# @param string $pool  (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    'pool' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_position_snapshot_v3s__historical' } = {
+        summary => 'PositionSnapshotV3s (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV3PositionSnapshotV3DTO]',
+        };
+}
+# @return ARRAY[UniswapV3PositionSnapshotV3DTO]
+#
+sub uniswap_v3_get_position_snapshot_v3s__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv3/positionsnapshotv3s/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3PositionSnapshotV3DTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v3_get_position_v3s__historical
+#
+# PositionV3s (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id NFT token identifier. (optional)
+# @param string $pool Pool position is within. (optional)
+# @param string $token_0 Reference to token0 as stored in pair contract. (optional)
+# @param string $token_1 Reference to token1 as stored in pair contract. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'NFT token identifier.',
+        required => '0',
+    },
+    'pool' => {
+        data_type => 'string',
+        description => 'Pool position is within.',
+        required => '0',
+    },
+    'token_0' => {
+        data_type => 'string',
+        description => 'Reference to token0 as stored in pair contract.',
+        required => '0',
+    },
+    'token_1' => {
+        data_type => 'string',
+        description => 'Reference to token1 as stored in pair contract.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_position_v3s__historical' } = {
+        summary => 'PositionV3s (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV3PositionV3DTO]',
+        };
+}
+# @return ARRAY[UniswapV3PositionV3DTO]
+#
+sub uniswap_v3_get_position_v3s__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv3/positionv3s/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    # query params
+    if ( exists $args{'token_0'}) {
+        $query_params->{'token_0'} = $self->{api_client}->to_query_value($args{'token_0'});
+    }
+
+    # query params
+    if ( exists $args{'token_1'}) {
+        $query_params->{'token_1'} = $self->{api_client}->to_query_value($args{'token_1'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3PositionV3DTO]', $response);
+    return $_response_object;
+}
+
+#
 # uniswap_v3_get_positions__current
 #
 # Positions (current)
@@ -616,6 +1706,143 @@ sub uniswap_v3_get_positions_snapshots__current {
 }
 
 #
+# uniswap_v3_get_swap_v3s__historical
+#
+# SwapV3s (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. (optional)
+# @param string $pool Pool swap occured within. (optional)
+# @param string $token_0 Reference to token0 as stored in pair contract. (optional)
+# @param string $token_1 Reference to token1 as stored in pair contract. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array.',
+        required => '0',
+    },
+    'pool' => {
+        data_type => 'string',
+        description => 'Pool swap occured within.',
+        required => '0',
+    },
+    'token_0' => {
+        data_type => 'string',
+        description => 'Reference to token0 as stored in pair contract.',
+        required => '0',
+    },
+    'token_1' => {
+        data_type => 'string',
+        description => 'Reference to token1 as stored in pair contract.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_swap_v3s__historical' } = {
+        summary => 'SwapV3s (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV3SwapV3DTO]',
+        };
+}
+# @return ARRAY[UniswapV3SwapV3DTO]
+#
+sub uniswap_v3_get_swap_v3s__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv3/swapv3s/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    # query params
+    if ( exists $args{'token_0'}) {
+        $query_params->{'token_0'} = $self->{api_client}->to_query_value($args{'token_0'});
+    }
+
+    # query params
+    if ( exists $args{'token_1'}) {
+        $query_params->{'token_1'} = $self->{api_client}->to_query_value($args{'token_1'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3SwapV3DTO]', $response);
+    return $_response_object;
+}
+
+#
 # uniswap_v3_get_swaps__current
 #
 # Swaps (current) 🔥
@@ -672,6 +1899,236 @@ sub uniswap_v3_get_swaps__current {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3SwapV3DTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v3_get_tick_day_data_v3s__historical
+#
+# TickDayDataV3s (historical) 🔥
+#
+# @param int $start_block  (optional)
+# @param int $end_block  (optional)
+# @param DATE_TIME $start_date  (optional)
+# @param DATE_TIME $end_date  (optional)
+# @param string $id  (optional)
+# @param string $pool  (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    'pool' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_tick_day_data_v3s__historical' } = {
+        summary => 'TickDayDataV3s (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV3TickDayDataV3DTO]',
+        };
+}
+# @return ARRAY[UniswapV3TickDayDataV3DTO]
+#
+sub uniswap_v3_get_tick_day_data_v3s__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv3/tickdaydatav3s/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3TickDayDataV3DTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v3_get_tick_v3s__historical
+#
+# TickV3s (historical) 🔥
+#
+# @param int $start_block  (optional)
+# @param int $end_block  (optional)
+# @param DATE_TIME $start_date  (optional)
+# @param DATE_TIME $end_date  (optional)
+# @param string $id  (optional)
+# @param string $pool  (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => '',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => '',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    'pool' => {
+        data_type => 'string',
+        description => '',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_tick_v3s__historical' } = {
+        summary => 'TickV3s (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV3TickV3DTO]',
+        };
+}
+# @return ARRAY[UniswapV3TickV3DTO]
+#
+sub uniswap_v3_get_tick_v3s__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv3/tickv3s/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'pool'}) {
+        $query_params->{'pool'} = $self->{api_client}->to_query_value($args{'pool'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3TickV3DTO]', $response);
     return $_response_object;
 }
 
@@ -792,6 +2249,340 @@ sub uniswap_v3_get_ticks_day_data__current {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3TickDayDataV3DTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v3_get_token_hour_data_v3s__historical
+#
+# TokenHourDataV3s (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Token address concatendated with date. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'Token address concatendated with date.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_token_hour_data_v3s__historical' } = {
+        summary => 'TokenHourDataV3s (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV3TokenHourDataV3DTO]',
+        };
+}
+# @return ARRAY[UniswapV3TokenHourDataV3DTO]
+#
+sub uniswap_v3_get_token_hour_data_v3s__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv3/tokenhourdatav3s/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3TokenHourDataV3DTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v3_get_token_v3_day_datas__historical
+#
+# TokenV3DayDatas (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Token address concatendated with date. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'Token address concatendated with date.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_token_v3_day_datas__historical' } = {
+        summary => 'TokenV3DayDatas (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV3TokenV3DayDataDTO]',
+        };
+}
+# @return ARRAY[UniswapV3TokenV3DayDataDTO]
+#
+sub uniswap_v3_get_token_v3_day_datas__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv3/tokenv3daydatas/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3TokenV3DayDataDTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v3_get_token_v3s__historical
+#
+# TokenV3s (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Token address. (optional)
+# @param string $symbol Token symbol. (optional)
+# @param string $name Token name. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'Token address.',
+        required => '0',
+    },
+    'symbol' => {
+        data_type => 'string',
+        description => 'Token symbol.',
+        required => '0',
+    },
+    'name' => {
+        data_type => 'string',
+        description => 'Token name.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_token_v3s__historical' } = {
+        summary => 'TokenV3s (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV3TokenV3DTO]',
+        };
+}
+# @return ARRAY[UniswapV3TokenV3DTO]
+#
+sub uniswap_v3_get_token_v3s__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv3/tokenv3s/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    # query params
+    if ( exists $args{'symbol'}) {
+        $query_params->{'symbol'} = $self->{api_client}->to_query_value($args{'symbol'});
+    }
+
+    # query params
+    if ( exists $args{'name'}) {
+        $query_params->{'name'} = $self->{api_client}->to_query_value($args{'name'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3TokenV3DTO]', $response);
     return $_response_object;
 }
 
@@ -972,6 +2763,214 @@ sub uniswap_v3_get_tokens_hour_data__current {
         return;
     }
     my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3TokenHourDataV3DTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v3_get_transaction_v3s__historical
+#
+# TransactionV3s (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Transaction hash. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'Transaction hash.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_transaction_v3s__historical' } = {
+        summary => 'TransactionV3s (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV3TransactionV3DTO]',
+        };
+}
+# @return ARRAY[UniswapV3TransactionV3DTO]
+#
+sub uniswap_v3_get_transaction_v3s__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv3/transactionv3s/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3TransactionV3DTO]', $response);
+    return $_response_object;
+}
+
+#
+# uniswap_v3_get_uniswap_day_data_v3s__historical
+#
+# UniswapDayDataV3s (historical) 🔥
+#
+# @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+# @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+# @param DATE_TIME $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+# @param DATE_TIME $end_date The end date of timeframe. (optional)
+# @param string $id Timestamp rounded to current day by dividing by 86400. (optional)
+{
+    my $params = {
+    'start_block' => {
+        data_type => 'int',
+        description => 'The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.',
+        required => '0',
+    },
+    'end_block' => {
+        data_type => 'int',
+        description => 'The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).',
+        required => '0',
+    },
+    'start_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.',
+        required => '0',
+    },
+    'end_date' => {
+        data_type => 'DATE_TIME',
+        description => 'The end date of timeframe.',
+        required => '0',
+    },
+    'id' => {
+        data_type => 'string',
+        description => 'Timestamp rounded to current day by dividing by 86400.',
+        required => '0',
+    },
+    };
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_uniswap_day_data_v3s__historical' } = {
+        summary => 'UniswapDayDataV3s (historical) 🔥',
+        params => $params,
+        returns => 'ARRAY[UniswapV3UniswapDayDataV3DTO]',
+        };
+}
+# @return ARRAY[UniswapV3UniswapDayDataV3DTO]
+#
+sub uniswap_v3_get_uniswap_day_data_v3s__historical {
+    my ($self, %args) = @_;
+
+    # parse inputs
+    my $_resource_path = '/dapps/uniswapv3/uniswapdaydatav3s/historical';
+
+    my $_method = 'GET';
+    my $query_params = {};
+    my $header_params = {};
+    my $form_params = {};
+
+    # 'Accept' and 'Content-Type' header
+    my $_header_accept = $self->{api_client}->select_header_accept('text/plain', 'application/json', 'text/json');
+    if ($_header_accept) {
+        $header_params->{'Accept'} = $_header_accept;
+    }
+    $header_params->{'Content-Type'} = $self->{api_client}->select_header_content_type();
+
+    # query params
+    if ( exists $args{'start_block'}) {
+        $query_params->{'startBlock'} = $self->{api_client}->to_query_value($args{'start_block'});
+    }
+
+    # query params
+    if ( exists $args{'end_block'}) {
+        $query_params->{'endBlock'} = $self->{api_client}->to_query_value($args{'end_block'});
+    }
+
+    # query params
+    if ( exists $args{'start_date'}) {
+        $query_params->{'startDate'} = $self->{api_client}->to_query_value($args{'start_date'});
+    }
+
+    # query params
+    if ( exists $args{'end_date'}) {
+        $query_params->{'endDate'} = $self->{api_client}->to_query_value($args{'end_date'});
+    }
+
+    # query params
+    if ( exists $args{'id'}) {
+        $query_params->{'id'} = $self->{api_client}->to_query_value($args{'id'});
+    }
+
+    my $_body_data;
+    # authentication setting, if any
+    my $auth_settings = [qw()];
+
+    # make the API Call
+    my $response = $self->{api_client}->call_api($_resource_path, $_method,
+                                           $query_params, $form_params,
+                                           $header_params, $_body_data, $auth_settings);
+    if (!$response) {
+        return;
+    }
+    my $_response_object = $self->{api_client}->deserialize('ARRAY[UniswapV3UniswapDayDataV3DTO]', $response);
     return $_response_object;
 }
 

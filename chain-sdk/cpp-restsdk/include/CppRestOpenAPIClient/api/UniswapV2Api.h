@@ -23,9 +23,21 @@
 
 #include "CppRestOpenAPIClient/ApiClient.h"
 
+#include "CppRestOpenAPIClient/model/UniswapV2_BundleV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_BurnV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_LiquidityPositionSnapshotV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_LiquidityPositionV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_MintV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_PairDayDataV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_PairHourDataV2DTO.h"
 #include "CppRestOpenAPIClient/model/UniswapV2_PairV2DTO.h"
 #include "CppRestOpenAPIClient/model/UniswapV2_SwapV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_TokenDayDataV2DTO.h"
 #include "CppRestOpenAPIClient/model/UniswapV2_TokenV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_TransactionV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_UniswapDayDataV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_UniswapFactoryV2DTO.h"
+#include "CppRestOpenAPIClient/model/UniswapV2_UserV2DTO.h"
 #include <cpprest/details/basic_types.h>
 #include <boost/optional.hpp>
 
@@ -47,6 +59,172 @@ public:
     virtual ~UniswapV2Api();
 
     /// <summary>
+    /// BundleV2s (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets bundlev2s.
+    /// </remarks>
+    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
+    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
+    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
+    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
+    /// <param name="id">Constant 1. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_BundleV2DTO>>> uniswapV2_GetBundleV2s__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> id
+    ) const;
+    /// <summary>
+    /// BurnV2s (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets burnv2s.
+    /// </remarks>
+    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
+    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
+    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
+    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
+    /// <param name="id">Transaction hash plus index in the transaction burn array (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="pair">Reference to pair. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_BurnV2DTO>>> uniswapV2_GetBurnV2s__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> id,
+        boost::optional<utility::string_t> pair
+    ) const;
+    /// <summary>
+    /// LiquidityPositionSnapshotV2s (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets liquiditypositionsnapshotv2s.
+    /// </remarks>
+    /// <param name="startBlock"> (optional, default to 0L)</param>
+    /// <param name="endBlock"> (optional, default to 0L)</param>
+    /// <param name="startDate"> (optional, default to utility::datetime())</param>
+    /// <param name="endDate"> (optional, default to utility::datetime())</param>
+    /// <param name="id"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="user"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="pair"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_LiquidityPositionSnapshotV2DTO>>> uniswapV2_GetLiquidityPositionSnapshotV2s__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> id,
+        boost::optional<utility::string_t> user,
+        boost::optional<utility::string_t> pair
+    ) const;
+    /// <summary>
+    /// LiquidityPositionV2s (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets liquiditypositionv2s.
+    /// </remarks>
+    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
+    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
+    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
+    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
+    /// <param name="id">User address and pair address concatenated with a dash. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="user">Reference to user. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="pair">Reference to the pair liquidity is being provided on. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_LiquidityPositionV2DTO>>> uniswapV2_GetLiquidityPositionV2s__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> id,
+        boost::optional<utility::string_t> user,
+        boost::optional<utility::string_t> pair
+    ) const;
+    /// <summary>
+    /// MintV2s (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets mintv2s.
+    /// </remarks>
+    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
+    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
+    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
+    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
+    /// <param name="id">Transaction hash plus index in the transaction mint array. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="pair">Reference to pair. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_MintV2DTO>>> uniswapV2_GetMintV2s__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> id,
+        boost::optional<utility::string_t> pair
+    ) const;
+    /// <summary>
+    /// PairDayDataV2s (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets pairdaydatav2s.
+    /// </remarks>
+    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
+    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
+    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
+    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
+    /// <param name="id"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="token0">Reference to token0. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="token1">Reference to token1. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_PairDayDataV2DTO>>> uniswapV2_GetPairDayDataV2s__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> id,
+        boost::optional<utility::string_t> token0,
+        boost::optional<utility::string_t> token1
+    ) const;
+    /// <summary>
+    /// PairHourDataV2s (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets pairhourdatav2s.
+    /// </remarks>
+    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
+    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
+    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
+    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
+    /// <param name="id"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="pair">Address for pair contract. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_PairHourDataV2DTO>>> uniswapV2_GetPairHourDataV2s__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> id,
+        boost::optional<utility::string_t> pair
+    ) const;
+    /// <summary>
+    /// PairV2s (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets pairv2s.
+    /// </remarks>
+    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
+    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
+    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
+    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
+    /// <param name="id">Pair contract address. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="token0">Reference to token0 as stored in pair contract. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="token1">Reference to token1 as stored in pair contract. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_PairV2DTO>>> uniswapV2_GetPairV2s__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> id,
+        boost::optional<utility::string_t> token0,
+        boost::optional<utility::string_t> token1
+    ) const;
+    /// <summary>
     /// Pools (current) 🔥
     /// </summary>
     /// <remarks>
@@ -57,6 +235,26 @@ public:
         boost::optional<utility::string_t> filterPoolId
     ) const;
     /// <summary>
+    /// SwapV2s (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets swapv2s.
+    /// </remarks>
+    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
+    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
+    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
+    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
+    /// <param name="id">Transaction hash plus index in Transaction swap array. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="pair">Reference to pair. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapV2DTO>>> uniswapV2_GetSwapV2s__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> id,
+        boost::optional<utility::string_t> pair
+    ) const;
+    /// <summary>
     /// Swaps (current) 🔥
     /// </summary>
     /// <remarks>
@@ -65,12 +263,124 @@ public:
     pplx::task<std::vector<std::shared_ptr<UniswapV2_SwapV2DTO>>> uniswapV2_GetSwaps__current(
     ) const;
     /// <summary>
+    /// TokenDayDataV2s (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets tokendaydatav2s.
+    /// </remarks>
+    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
+    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
+    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
+    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
+    /// <param name="id">Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenDayDataV2DTO>>> uniswapV2_GetTokenDayDataV2s__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> id
+    ) const;
+    /// <summary>
+    /// TokenV2s (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets tokenv2s.
+    /// </remarks>
+    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
+    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
+    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
+    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
+    /// <param name="id">Token address. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="symbol">Token symbol. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    /// <param name="name">Token name. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenV2DTO>>> uniswapV2_GetTokenV2s__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> id,
+        boost::optional<utility::string_t> symbol,
+        boost::optional<utility::string_t> name
+    ) const;
+    /// <summary>
     /// Tokens (current) 🔥
     /// </summary>
     /// <remarks>
     /// Gets tokens.
     /// </remarks>
     pplx::task<std::vector<std::shared_ptr<UniswapV2_TokenV2DTO>>> uniswapV2_GetTokens__current(
+    ) const;
+    /// <summary>
+    /// TransactionV2s (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets transactionv2s.
+    /// </remarks>
+    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
+    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
+    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
+    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
+    /// <param name="id">Ethereum transaction hash. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_TransactionV2DTO>>> uniswapV2_GetTransactionV2s__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> id
+    ) const;
+    /// <summary>
+    /// UniswapDayDataV2s (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets uniswapdaydatav2s.
+    /// </remarks>
+    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
+    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
+    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
+    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
+    /// <param name="id">Unix timestamp for start of day / 86400 giving a unique day index. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_UniswapDayDataV2DTO>>> uniswapV2_GetUniswapDayDataV2s__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> id
+    ) const;
+    /// <summary>
+    /// UniswapFactoryV2s (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets uniswapfactoryv2s.
+    /// </remarks>
+    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
+    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
+    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
+    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
+    /// <param name="id">Factory address. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_UniswapFactoryV2DTO>>> uniswapV2_GetUniswapFactoryV2s__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> id
+    ) const;
+    /// <summary>
+    /// UserV2s (historical) 🔥
+    /// </summary>
+    /// <remarks>
+    /// Gets userv2s.
+    /// </remarks>
+    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
+    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
+    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
+    /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
+    /// <param name="id">User address. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
+    pplx::task<std::vector<std::shared_ptr<UniswapV2_UserV2DTO>>> uniswapV2_GetUserV2s__historical(
+        boost::optional<int64_t> startBlock,
+        boost::optional<int64_t> endBlock,
+        boost::optional<utility::datetime> startDate,
+        boost::optional<utility::datetime> endDate,
+        boost::optional<utility::string_t> id
     ) const;
 
 protected:

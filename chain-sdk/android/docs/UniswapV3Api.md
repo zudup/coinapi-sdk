@@ -4,23 +4,94 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**uniswapV3GetBundleV3sHistorical**](UniswapV3Api.md#uniswapV3GetBundleV3sHistorical) | **GET** /dapps/uniswapv3/bundlev3s/historical | BundleV3s (historical) 🔥
 [**uniswapV3GetBundlesCurrent**](UniswapV3Api.md#uniswapV3GetBundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
+[**uniswapV3GetBurnV3sHistorical**](UniswapV3Api.md#uniswapV3GetBurnV3sHistorical) | **GET** /dapps/uniswapv3/burnv3s/historical | BurnV3s (historical) 🔥
 [**uniswapV3GetBurnsCurrent**](UniswapV3Api.md#uniswapV3GetBurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
 [**uniswapV3GetDayDataCurrent**](UniswapV3Api.md#uniswapV3GetDayDataCurrent) | **GET** /dapps/uniswapv3/dayData/current | DayData (current)
 [**uniswapV3GetFactoryCurrent**](UniswapV3Api.md#uniswapV3GetFactoryCurrent) | **GET** /dapps/uniswapv3/factory/current | Factory (current)
+[**uniswapV3GetFactoryV3sHistorical**](UniswapV3Api.md#uniswapV3GetFactoryV3sHistorical) | **GET** /dapps/uniswapv3/factoryv3s/historical | FactoryV3s (historical) 🔥
+[**uniswapV3GetMintV3sHistorical**](UniswapV3Api.md#uniswapV3GetMintV3sHistorical) | **GET** /dapps/uniswapv3/mintv3s/historical | MintV3s (historical) 🔥
 [**uniswapV3GetMintsCurrent**](UniswapV3Api.md#uniswapV3GetMintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
+[**uniswapV3GetPoolDayDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetPoolDayDataV3sHistorical) | **GET** /dapps/uniswapv3/pooldaydatav3s/historical | PoolDayDataV3s (historical) 🔥
+[**uniswapV3GetPoolHourDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetPoolHourDataV3sHistorical) | **GET** /dapps/uniswapv3/poolhourdatav3s/historical | PoolHourDataV3s (historical) 🔥
+[**uniswapV3GetPoolV3sHistorical**](UniswapV3Api.md#uniswapV3GetPoolV3sHistorical) | **GET** /dapps/uniswapv3/poolv3s/historical | PoolV3s (historical) 🔥
 [**uniswapV3GetPoolsCurrent**](UniswapV3Api.md#uniswapV3GetPoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current) 🔥
 [**uniswapV3GetPoolsDayDataCurrent**](UniswapV3Api.md#uniswapV3GetPoolsDayDataCurrent) | **GET** /dapps/uniswapv3/poolsDayData/current | PoolsDayData (current)
 [**uniswapV3GetPoolsHourDataCurrent**](UniswapV3Api.md#uniswapV3GetPoolsHourDataCurrent) | **GET** /dapps/uniswapv3/poolsHourData/current | PoolsHourData (current)
+[**uniswapV3GetPositionSnapshotV3sHistorical**](UniswapV3Api.md#uniswapV3GetPositionSnapshotV3sHistorical) | **GET** /dapps/uniswapv3/positionsnapshotv3s/historical | PositionSnapshotV3s (historical) 🔥
+[**uniswapV3GetPositionV3sHistorical**](UniswapV3Api.md#uniswapV3GetPositionV3sHistorical) | **GET** /dapps/uniswapv3/positionv3s/historical | PositionV3s (historical) 🔥
 [**uniswapV3GetPositionsCurrent**](UniswapV3Api.md#uniswapV3GetPositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
 [**uniswapV3GetPositionsSnapshotsCurrent**](UniswapV3Api.md#uniswapV3GetPositionsSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionsSnapshots (current)
+[**uniswapV3GetSwapV3sHistorical**](UniswapV3Api.md#uniswapV3GetSwapV3sHistorical) | **GET** /dapps/uniswapv3/swapv3s/historical | SwapV3s (historical) 🔥
 [**uniswapV3GetSwapsCurrent**](UniswapV3Api.md#uniswapV3GetSwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) 🔥
+[**uniswapV3GetTickDayDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetTickDayDataV3sHistorical) | **GET** /dapps/uniswapv3/tickdaydatav3s/historical | TickDayDataV3s (historical) 🔥
+[**uniswapV3GetTickV3sHistorical**](UniswapV3Api.md#uniswapV3GetTickV3sHistorical) | **GET** /dapps/uniswapv3/tickv3s/historical | TickV3s (historical) 🔥
 [**uniswapV3GetTicksCurrent**](UniswapV3Api.md#uniswapV3GetTicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
 [**uniswapV3GetTicksDayDataCurrent**](UniswapV3Api.md#uniswapV3GetTicksDayDataCurrent) | **GET** /dapps/uniswapv3/ticksDayData/current | TicksDayData (current)
+[**uniswapV3GetTokenHourDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetTokenHourDataV3sHistorical) | **GET** /dapps/uniswapv3/tokenhourdatav3s/historical | TokenHourDataV3s (historical) 🔥
+[**uniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3DayDatasHistorical) | **GET** /dapps/uniswapv3/tokenv3daydatas/historical | TokenV3DayDatas (historical) 🔥
+[**uniswapV3GetTokenV3sHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3sHistorical) | **GET** /dapps/uniswapv3/tokenv3s/historical | TokenV3s (historical) 🔥
 [**uniswapV3GetTokensCurrent**](UniswapV3Api.md#uniswapV3GetTokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) 🔥
 [**uniswapV3GetTokensDayDataCurrent**](UniswapV3Api.md#uniswapV3GetTokensDayDataCurrent) | **GET** /dapps/uniswapv3/tokensDayData/current | TokensDayData (current)
 [**uniswapV3GetTokensHourDataCurrent**](UniswapV3Api.md#uniswapV3GetTokensHourDataCurrent) | **GET** /dapps/uniswapv3/tokensHourData/current | TokensHourData (current)
+[**uniswapV3GetTransactionV3sHistorical**](UniswapV3Api.md#uniswapV3GetTransactionV3sHistorical) | **GET** /dapps/uniswapv3/transactionv3s/historical | TransactionV3s (historical) 🔥
+[**uniswapV3GetUniswapDayDataV3sHistorical**](UniswapV3Api.md#uniswapV3GetUniswapDayDataV3sHistorical) | **GET** /dapps/uniswapv3/uniswapdaydatav3s/historical | UniswapDayDataV3s (historical) 🔥
 
+
+
+## uniswapV3GetBundleV3sHistorical
+
+> List&lt;UniswapV3BundleV3DTO&gt; uniswapV3GetBundleV3sHistorical(startBlock, endBlock, startDate, endDate, id)
+
+BundleV3s (historical) 🔥
+
+Gets bundlev3s.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV3Api;
+
+UniswapV3Api apiInstance = new UniswapV3Api();
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | 
+try {
+    List<UniswapV3BundleV3DTO> result = apiInstance.uniswapV3GetBundleV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBundleV3sHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;UniswapV3BundleV3DTO&gt;**](UniswapV3BundleV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
 
 
 ## uniswapV3GetBundlesCurrent
@@ -54,6 +125,66 @@ This endpoint does not need any parameter.
 ### Return type
 
 [**List&lt;UniswapV3BundleV3DTO&gt;**](UniswapV3BundleV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3GetBurnV3sHistorical
+
+> List&lt;UniswapV3BurnV3DTO&gt; uniswapV3GetBurnV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
+
+BurnV3s (historical) 🔥
+
+Gets burnv3s.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV3Api;
+
+UniswapV3Api apiInstance = new UniswapV3Api();
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Transaction hash + '#' + index in mints Transaction array.
+String pool = null; // String | Pool position is within.
+String token0 = null; // String | Reference to token0 as stored in pool contract.
+String token1 = null; // String | Reference to token1 as stored in pool contract.
+try {
+    List<UniswapV3BurnV3DTO> result = apiInstance.uniswapV3GetBurnV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV3Api#uniswapV3GetBurnV3sHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Transaction hash + &#39;#&#39; + index in mints Transaction array. | [optional] [default to null]
+ **pool** | **String**| Pool position is within. | [optional] [default to null]
+ **token0** | **String**| Reference to token0 as stored in pool contract. | [optional] [default to null]
+ **token1** | **String**| Reference to token1 as stored in pool contract. | [optional] [default to null]
+
+### Return type
+
+[**List&lt;UniswapV3BurnV3DTO&gt;**](UniswapV3BurnV3DTO.md)
 
 ### Authorization
 
@@ -195,6 +326,120 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
+## uniswapV3GetFactoryV3sHistorical
+
+> List&lt;UniswapV3FactoryV3DTO&gt; uniswapV3GetFactoryV3sHistorical(startBlock, endBlock, startDate, endDate, id)
+
+FactoryV3s (historical) 🔥
+
+Gets factoryv3s.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV3Api;
+
+UniswapV3Api apiInstance = new UniswapV3Api();
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Factory address.
+try {
+    List<UniswapV3FactoryV3DTO> result = apiInstance.uniswapV3GetFactoryV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV3Api#uniswapV3GetFactoryV3sHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Factory address. | [optional] [default to null]
+
+### Return type
+
+[**List&lt;UniswapV3FactoryV3DTO&gt;**](UniswapV3FactoryV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3GetMintV3sHistorical
+
+> List&lt;UniswapV3MintV3DTO&gt; uniswapV3GetMintV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
+
+MintV3s (historical) 🔥
+
+Gets mintv3s.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV3Api;
+
+UniswapV3Api apiInstance = new UniswapV3Api();
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Transaction hash + '#' + index in mints Transaction array.
+String pool = null; // String | Pool address.
+String token0 = null; // String | Reference to token0 as stored in pool contract.
+String token1 = null; // String | Reference to token1 as stored in pool contract.
+try {
+    List<UniswapV3MintV3DTO> result = apiInstance.uniswapV3GetMintV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV3Api#uniswapV3GetMintV3sHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Transaction hash + &#39;#&#39; + index in mints Transaction array. | [optional] [default to null]
+ **pool** | **String**| Pool address. | [optional] [default to null]
+ **token0** | **String**| Reference to token0 as stored in pool contract. | [optional] [default to null]
+ **token1** | **String**| Reference to token1 as stored in pool contract. | [optional] [default to null]
+
+### Return type
+
+[**List&lt;UniswapV3MintV3DTO&gt;**](UniswapV3MintV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
 ## uniswapV3GetMintsCurrent
 
 > List&lt;UniswapV3MintV3DTO&gt; uniswapV3GetMintsCurrent(filterPoolId)
@@ -230,6 +475,176 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;UniswapV3MintV3DTO&gt;**](UniswapV3MintV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3GetPoolDayDataV3sHistorical
+
+> List&lt;UniswapV3PoolDayDataV3DTO&gt; uniswapV3GetPoolDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+
+PoolDayDataV3s (historical) 🔥
+
+Gets pooldaydatav3s.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV3Api;
+
+UniswapV3Api apiInstance = new UniswapV3Api();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+String id = null; // String | 
+String pool = null; // String | 
+try {
+    List<UniswapV3PoolDayDataV3DTO> result = apiInstance.uniswapV3GetPoolDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolDayDataV3sHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+ **id** | **String**|  | [optional] [default to null]
+ **pool** | **String**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;UniswapV3PoolDayDataV3DTO&gt;**](UniswapV3PoolDayDataV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3GetPoolHourDataV3sHistorical
+
+> List&lt;UniswapV3PoolHourDataV3DTO&gt; uniswapV3GetPoolHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+
+PoolHourDataV3s (historical) 🔥
+
+Gets poolhourdatav3s.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV3Api;
+
+UniswapV3Api apiInstance = new UniswapV3Api();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+String id = null; // String | 
+String pool = null; // String | 
+try {
+    List<UniswapV3PoolHourDataV3DTO> result = apiInstance.uniswapV3GetPoolHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolHourDataV3sHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+ **id** | **String**|  | [optional] [default to null]
+ **pool** | **String**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;UniswapV3PoolHourDataV3DTO&gt;**](UniswapV3PoolHourDataV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3GetPoolV3sHistorical
+
+> List&lt;UniswapV3PoolV3DTO&gt; uniswapV3GetPoolV3sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
+
+PoolV3s (historical) 🔥
+
+Gets poolv3s.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV3Api;
+
+UniswapV3Api apiInstance = new UniswapV3Api();
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Pool address.
+String token0 = null; // String | Reference to token0 as stored in pool contract.
+String token1 = null; // String | Reference to token1 as stored in pool contract.
+try {
+    List<UniswapV3PoolV3DTO> result = apiInstance.uniswapV3GetPoolV3sHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolV3sHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Pool address. | [optional] [default to null]
+ **token0** | **String**| Reference to token0 as stored in pool contract. | [optional] [default to null]
+ **token1** | **String**| Reference to token1 as stored in pool contract. | [optional] [default to null]
+
+### Return type
+
+[**List&lt;UniswapV3PoolV3DTO&gt;**](UniswapV3PoolV3DTO.md)
 
 ### Authorization
 
@@ -379,6 +794,122 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
+## uniswapV3GetPositionSnapshotV3sHistorical
+
+> List&lt;UniswapV3PositionSnapshotV3DTO&gt; uniswapV3GetPositionSnapshotV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+
+PositionSnapshotV3s (historical) 🔥
+
+Gets positionsnapshotv3s.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV3Api;
+
+UniswapV3Api apiInstance = new UniswapV3Api();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+String id = null; // String | 
+String pool = null; // String | 
+try {
+    List<UniswapV3PositionSnapshotV3DTO> result = apiInstance.uniswapV3GetPositionSnapshotV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionSnapshotV3sHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+ **id** | **String**|  | [optional] [default to null]
+ **pool** | **String**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;UniswapV3PositionSnapshotV3DTO&gt;**](UniswapV3PositionSnapshotV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3GetPositionV3sHistorical
+
+> List&lt;UniswapV3PositionV3DTO&gt; uniswapV3GetPositionV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
+
+PositionV3s (historical) 🔥
+
+Gets positionv3s.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV3Api;
+
+UniswapV3Api apiInstance = new UniswapV3Api();
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | NFT token identifier.
+String pool = null; // String | Pool position is within.
+String token0 = null; // String | Reference to token0 as stored in pair contract.
+String token1 = null; // String | Reference to token1 as stored in pair contract.
+try {
+    List<UniswapV3PositionV3DTO> result = apiInstance.uniswapV3GetPositionV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPositionV3sHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| NFT token identifier. | [optional] [default to null]
+ **pool** | **String**| Pool position is within. | [optional] [default to null]
+ **token0** | **String**| Reference to token0 as stored in pair contract. | [optional] [default to null]
+ **token1** | **String**| Reference to token1 as stored in pair contract. | [optional] [default to null]
+
+### Return type
+
+[**List&lt;UniswapV3PositionV3DTO&gt;**](UniswapV3PositionV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
 ## uniswapV3GetPositionsCurrent
 
 > List&lt;UniswapV3PositionV3DTO&gt; uniswapV3GetPositionsCurrent(filterPoolId)
@@ -471,6 +1002,66 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
+## uniswapV3GetSwapV3sHistorical
+
+> List&lt;UniswapV3SwapV3DTO&gt; uniswapV3GetSwapV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1)
+
+SwapV3s (historical) 🔥
+
+Gets swapv3s.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV3Api;
+
+UniswapV3Api apiInstance = new UniswapV3Api();
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+String pool = null; // String | Pool swap occured within.
+String token0 = null; // String | Reference to token0 as stored in pair contract.
+String token1 = null; // String | Reference to token1 as stored in pair contract.
+try {
+    List<UniswapV3SwapV3DTO> result = apiInstance.uniswapV3GetSwapV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool, token0, token1);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV3Api#uniswapV3GetSwapV3sHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Identifier, format: transaction hash + \&quot;#\&quot; + index in swaps Transaction array. | [optional] [default to null]
+ **pool** | **String**| Pool swap occured within. | [optional] [default to null]
+ **token0** | **String**| Reference to token0 as stored in pair contract. | [optional] [default to null]
+ **token1** | **String**| Reference to token1 as stored in pair contract. | [optional] [default to null]
+
+### Return type
+
+[**List&lt;UniswapV3SwapV3DTO&gt;**](UniswapV3SwapV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
 ## uniswapV3GetSwapsCurrent
 
 > List&lt;UniswapV3SwapV3DTO&gt; uniswapV3GetSwapsCurrent(filterPoolId)
@@ -506,6 +1097,118 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;UniswapV3SwapV3DTO&gt;**](UniswapV3SwapV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3GetTickDayDataV3sHistorical
+
+> List&lt;UniswapV3TickDayDataV3DTO&gt; uniswapV3GetTickDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+
+TickDayDataV3s (historical) 🔥
+
+Gets tickdaydatav3s.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV3Api;
+
+UniswapV3Api apiInstance = new UniswapV3Api();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+String id = null; // String | 
+String pool = null; // String | 
+try {
+    List<UniswapV3TickDayDataV3DTO> result = apiInstance.uniswapV3GetTickDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTickDayDataV3sHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+ **id** | **String**|  | [optional] [default to null]
+ **pool** | **String**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;UniswapV3TickDayDataV3DTO&gt;**](UniswapV3TickDayDataV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3GetTickV3sHistorical
+
+> List&lt;UniswapV3TickV3DTO&gt; uniswapV3GetTickV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+
+TickV3s (historical) 🔥
+
+Gets tickv3s.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV3Api;
+
+UniswapV3Api apiInstance = new UniswapV3Api();
+Long startBlock = null; // Long | 
+Long endBlock = null; // Long | 
+Date startDate = null; // Date | 
+Date endDate = null; // Date | 
+String id = null; // String | 
+String pool = null; // String | 
+try {
+    List<UniswapV3TickV3DTO> result = apiInstance.uniswapV3GetTickV3sHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTickV3sHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**|  | [optional] [default to null]
+ **endBlock** | **Long**|  | [optional] [default to null]
+ **startDate** | **Date**|  | [optional] [default to null]
+ **endDate** | **Date**|  | [optional] [default to null]
+ **id** | **String**|  | [optional] [default to null]
+ **pool** | **String**|  | [optional] [default to null]
+
+### Return type
+
+[**List&lt;UniswapV3TickV3DTO&gt;**](UniswapV3TickV3DTO.md)
 
 ### Authorization
 
@@ -598,6 +1301,172 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;UniswapV3TickDayDataV3DTO&gt;**](UniswapV3TickDayDataV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3GetTokenHourDataV3sHistorical
+
+> List&lt;UniswapV3TokenHourDataV3DTO&gt; uniswapV3GetTokenHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id)
+
+TokenHourDataV3s (historical) 🔥
+
+Gets tokenhourdatav3s.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV3Api;
+
+UniswapV3Api apiInstance = new UniswapV3Api();
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Token address concatendated with date.
+try {
+    List<UniswapV3TokenHourDataV3DTO> result = apiInstance.uniswapV3GetTokenHourDataV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenHourDataV3sHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Token address concatendated with date. | [optional] [default to null]
+
+### Return type
+
+[**List&lt;UniswapV3TokenHourDataV3DTO&gt;**](UniswapV3TokenHourDataV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3GetTokenV3DayDatasHistorical
+
+> List&lt;UniswapV3TokenV3DayDataDTO&gt; uniswapV3GetTokenV3DayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+
+TokenV3DayDatas (historical) 🔥
+
+Gets tokenv3daydatas.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV3Api;
+
+UniswapV3Api apiInstance = new UniswapV3Api();
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Token address concatendated with date.
+try {
+    List<UniswapV3TokenV3DayDataDTO> result = apiInstance.uniswapV3GetTokenV3DayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenV3DayDatasHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Token address concatendated with date. | [optional] [default to null]
+
+### Return type
+
+[**List&lt;UniswapV3TokenV3DayDataDTO&gt;**](UniswapV3TokenV3DayDataDTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3GetTokenV3sHistorical
+
+> List&lt;UniswapV3TokenV3DTO&gt; uniswapV3GetTokenV3sHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name)
+
+TokenV3s (historical) 🔥
+
+Gets tokenv3s.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV3Api;
+
+UniswapV3Api apiInstance = new UniswapV3Api();
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Token address.
+String symbol = null; // String | Token symbol.
+String name = null; // String | Token name.
+try {
+    List<UniswapV3TokenV3DTO> result = apiInstance.uniswapV3GetTokenV3sHistorical(startBlock, endBlock, startDate, endDate, id, symbol, name);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenV3sHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Token address. | [optional] [default to null]
+ **symbol** | **String**| Token symbol. | [optional] [default to null]
+ **name** | **String**| Token name. | [optional] [default to null]
+
+### Return type
+
+[**List&lt;UniswapV3TokenV3DTO&gt;**](UniswapV3TokenV3DTO.md)
 
 ### Authorization
 
@@ -736,6 +1605,114 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**List&lt;UniswapV3TokenHourDataV3DTO&gt;**](UniswapV3TokenHourDataV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3GetTransactionV3sHistorical
+
+> List&lt;UniswapV3TransactionV3DTO&gt; uniswapV3GetTransactionV3sHistorical(startBlock, endBlock, startDate, endDate, id)
+
+TransactionV3s (historical) 🔥
+
+Gets transactionv3s.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV3Api;
+
+UniswapV3Api apiInstance = new UniswapV3Api();
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Transaction hash.
+try {
+    List<UniswapV3TransactionV3DTO> result = apiInstance.uniswapV3GetTransactionV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTransactionV3sHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Transaction hash. | [optional] [default to null]
+
+### Return type
+
+[**List&lt;UniswapV3TransactionV3DTO&gt;**](UniswapV3TransactionV3DTO.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: text/plain, application/json, text/json
+
+
+## uniswapV3GetUniswapDayDataV3sHistorical
+
+> List&lt;UniswapV3UniswapDayDataV3DTO&gt; uniswapV3GetUniswapDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id)
+
+UniswapDayDataV3s (historical) 🔥
+
+Gets uniswapdaydatav3s.
+
+### Example
+
+```java
+// Import classes:
+//import org.openapitools.client.api.UniswapV3Api;
+
+UniswapV3Api apiInstance = new UniswapV3Api();
+Long startBlock = null; // Long | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+Long endBlock = null; // Long | The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+Date startDate = null; // Date | The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+Date endDate = null; // Date | The end date of timeframe.
+String id = null; // String | Timestamp rounded to current day by dividing by 86400.
+try {
+    List<UniswapV3UniswapDayDataV3DTO> result = apiInstance.uniswapV3GetUniswapDayDataV3sHistorical(startBlock, endBlock, startDate, endDate, id);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling UniswapV3Api#uniswapV3GetUniswapDayDataV3sHistorical");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startBlock** | **Long**| The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. | [optional] [default to null]
+ **endBlock** | **Long**| The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). | [optional] [default to null]
+ **startDate** | **Date**| The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. | [optional] [default to null]
+ **endDate** | **Date**| The end date of timeframe. | [optional] [default to null]
+ **id** | **String**| Timestamp rounded to current day by dividing by 86400. | [optional] [default to null]
+
+### Return type
+
+[**List&lt;UniswapV3UniswapDayDataV3DTO&gt;**](UniswapV3UniswapDayDataV3DTO.md)
 
 ### Authorization
 

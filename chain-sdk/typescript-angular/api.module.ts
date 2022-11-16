@@ -2,6 +2,9 @@ import { NgModule, ModuleWithProviders, SkipSelf, Optional } from '@angular/core
 import { Configuration } from './configuration';
 import { HttpClient } from '@angular/common/http';
 
+import { CowService } from './api/cow.service';
+import { CurveService } from './api/curve.service';
+import { DexService } from './api/dex.service';
 import { SushiswapService } from './api/sushiswap.service';
 import { UniswapV2Service } from './api/uniswapV2.service';
 import { UniswapV3Service } from './api/uniswapV3.service';

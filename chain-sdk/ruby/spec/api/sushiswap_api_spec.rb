@@ -54,6 +54,195 @@ describe 'SushiswapApi' do
     end
   end
 
+  # unit tests for sushiswap_get_bundles__historical
+  # Bundles (historical) 🔥
+  # Gets bundles.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  # @option opts [Time] :end_date The end date of timeframe.
+  # @option opts [String] :id Hardcoded to &#39;1&#39;.
+  # @return [Array<SushiswapBundleDTO>]
+  describe 'sushiswap_get_bundles__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_burns__historical
+  # Burns (historical) 🔥
+  # Gets burns.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :id 
+  # @option opts [String] :pair 
+  # @return [Array<SushiswapBurnDTO>]
+  describe 'sushiswap_get_burns__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_day_datas__historical
+  # DayDatas (historical) 🔥
+  # Gets daydatas.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  # @option opts [Time] :end_date The end date of timeframe.
+  # @option opts [String] :id Unix timestamp for start of day / 86400 giving a unique day index.
+  # @return [Array<SushiswapDayDataDTO>]
+  describe 'sushiswap_get_day_datas__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_factorys__historical
+  # Factorys (historical) 🔥
+  # Gets factorys.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  # @option opts [Time] :end_date The end date of timeframe.
+  # @option opts [String] :id Factory address.
+  # @return [Array<SushiswapFactoryDTO>]
+  describe 'sushiswap_get_factorys__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_hour_datas__historical
+  # HourDatas (historical) 🔥
+  # Gets hourdatas.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  # @option opts [Time] :end_date The end date of timeframe.
+  # @option opts [String] :id Start of hour timestamp.
+  # @return [Array<SushiswapHourDataDTO>]
+  describe 'sushiswap_get_hour_datas__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_liquidity_position_snapshots__historical
+  # LiquidityPositionSnapshots (historical) 🔥
+  # Gets liquiditypositionsnapshots.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :id 
+  # @option opts [String] :user 
+  # @option opts [String] :pair 
+  # @return [Array<SushiswapLiquidityPositionSnapshotDTO>]
+  describe 'sushiswap_get_liquidity_position_snapshots__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_liquidity_positions__historical
+  # LiquidityPositions (historical) 🔥
+  # Gets liquiditypositions.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :id 
+  # @option opts [String] :user 
+  # @option opts [String] :pair 
+  # @return [Array<SushiswapLiquidityPositionDTO>]
+  describe 'sushiswap_get_liquidity_positions__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_mints__historical
+  # Mints (historical) 🔥
+  # Gets mints.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :id 
+  # @option opts [String] :pair 
+  # @return [Array<SushiswapMintDTO>]
+  describe 'sushiswap_get_mints__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_pair_day_datas__historical
+  # PairDayDatas (historical) 🔥
+  # Gets pairdaydatas.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :id 
+  # @option opts [String] :pair 
+  # @option opts [String] :token_0 
+  # @option opts [String] :token_1 
+  # @return [Array<SushiswapPairDayDataDTO>]
+  describe 'sushiswap_get_pair_day_datas__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_pair_hour_datas__historical
+  # PairHourDatas (historical) 🔥
+  # Gets pairhourdatas.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :id 
+  # @option opts [String] :pair 
+  # @return [Array<SushiswapPairHourDataDTO>]
+  describe 'sushiswap_get_pair_hour_datas__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_pairs__historical
+  # Pairs (historical) 🔥
+  # Gets pairs.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block 
+  # @option opts [Integer] :end_block 
+  # @option opts [Time] :start_date 
+  # @option opts [Time] :end_date 
+  # @option opts [String] :id 
+  # @option opts [String] :name 
+  # @option opts [String] :token_0 
+  # @option opts [String] :token_1 
+  # @return [Array<SushiswapPairDTO>]
+  describe 'sushiswap_get_pairs__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for sushiswap_get_pools__current
   # Pools (current) 🔥
   # Gets pools.
@@ -76,12 +265,95 @@ describe 'SushiswapApi' do
     end
   end
 
+  # unit tests for sushiswap_get_swaps__historical
+  # Swaps (historical) 🔥
+  # Gets swaps.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  # @option opts [Time] :end_date The end date of timeframe.
+  # @option opts [String] :id Transaction hash plus index in Transaction swap array.
+  # @option opts [String] :pair Reference to pair.
+  # @return [Array<SushiswapSwapDTO>]
+  describe 'sushiswap_get_swaps__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_token_day_datas__historical
+  # TokenDayDatas (historical) 🔥
+  # Gets tokendaydatas.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  # @option opts [Time] :end_date The end date of timeframe.
+  # @option opts [String] :id Identifier, day start timestamp in unix / 86400.
+  # @return [Array<SushiswapTokenDayDataDTO>]
+  describe 'sushiswap_get_token_day_datas__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
   # unit tests for sushiswap_get_tokens__current
   # Tokens (current) 🔥
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @return [Array<SushiswapTokenDTO>]
   describe 'sushiswap_get_tokens__current test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_tokens__historical
+  # Tokens (historical) 🔥
+  # Gets tokens.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  # @option opts [Time] :end_date The end date of timeframe.
+  # @option opts [String] :id Token address.
+  # @option opts [String] :symbol Token symbol.
+  # @option opts [String] :name Token name.
+  # @return [Array<SushiswapTokenDTO>]
+  describe 'sushiswap_get_tokens__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_transactions__historical
+  # Transactions (historical) 🔥
+  # Gets transactions.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  # @option opts [Time] :end_date The end date of timeframe.
+  # @option opts [String] :id Ethereum transaction hash.
+  # @return [Array<SushiswapTransactionDTO>]
+  describe 'sushiswap_get_transactions__historical test' do
+    it 'should work' do
+      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
+    end
+  end
+
+  # unit tests for sushiswap_get_users__historical
+  # Users (historical) 🔥
+  # Gets users.
+  # @param [Hash] opts the optional parameters
+  # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+  # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+  # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+  # @option opts [Time] :end_date The end date of timeframe.
+  # @option opts [String] :id User address.
+  # @return [Array<SushiswapUserDTO>]
+  describe 'sushiswap_get_users__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

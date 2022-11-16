@@ -50,6 +50,12 @@ type APIClient struct {
 
 	// API Services
 
+	CowApi *CowApiService
+
+	CurveApi *CurveApiService
+
+	DexApi *DexApiService
+
 	SushiswapApi *SushiswapApiService
 
 	UniswapV2Api *UniswapV2ApiService
@@ -73,6 +79,9 @@ func NewAPIClient(cfg *Configuration) *APIClient {
 	c.common.client = c
 
 	// API Services
+	c.CowApi = (*CowApiService)(&c.common)
+	c.CurveApi = (*CurveApiService)(&c.common)
+	c.DexApi = (*DexApiService)(&c.common)
 	c.SushiswapApi = (*SushiswapApiService)(&c.common)
 	c.UniswapV2Api = (*UniswapV2ApiService)(&c.common)
 	c.UniswapV3Api = (*UniswapV3ApiService)(&c.common)

@@ -5,6 +5,145 @@ context("Test UniswapV2Api")
 
 api_instance <- UniswapV2Api$new()
 
+test_that("UniswapV2GetBundleV2sHistorical", {
+  # tests for UniswapV2GetBundleV2sHistorical
+  # base path: https://onchain.coinapi.io
+  # BundleV2s (historical) 🔥
+  # Gets bundlev2s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Constant 1. (optional)
+  # @return [array[UniswapV2BundleV2DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV2GetBurnV2sHistorical", {
+  # tests for UniswapV2GetBurnV2sHistorical
+  # base path: https://onchain.coinapi.io
+  # BurnV2s (historical) 🔥
+  # Gets burnv2s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Transaction hash plus index in the transaction burn array (optional)
+  # @param pair character Reference to pair. (optional)
+  # @return [array[UniswapV2BurnV2DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV2GetLiquidityPositionSnapshotV2sHistorical", {
+  # tests for UniswapV2GetLiquidityPositionSnapshotV2sHistorical
+  # base path: https://onchain.coinapi.io
+  # LiquidityPositionSnapshotV2s (historical) 🔥
+  # Gets liquiditypositionsnapshotv2s.
+  # @param start_block integer  (optional)
+  # @param end_block integer  (optional)
+  # @param start_date character  (optional)
+  # @param end_date character  (optional)
+  # @param id character  (optional)
+  # @param user character  (optional)
+  # @param pair character  (optional)
+  # @return [array[UniswapV2LiquidityPositionSnapshotV2DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV2GetLiquidityPositionV2sHistorical", {
+  # tests for UniswapV2GetLiquidityPositionV2sHistorical
+  # base path: https://onchain.coinapi.io
+  # LiquidityPositionV2s (historical) 🔥
+  # Gets liquiditypositionv2s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character User address and pair address concatenated with a dash. (optional)
+  # @param user character Reference to user. (optional)
+  # @param pair character Reference to the pair liquidity is being provided on. (optional)
+  # @return [array[UniswapV2LiquidityPositionV2DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV2GetMintV2sHistorical", {
+  # tests for UniswapV2GetMintV2sHistorical
+  # base path: https://onchain.coinapi.io
+  # MintV2s (historical) 🔥
+  # Gets mintv2s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Transaction hash plus index in the transaction mint array. (optional)
+  # @param pair character Reference to pair. (optional)
+  # @return [array[UniswapV2MintV2DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV2GetPairDayDataV2sHistorical", {
+  # tests for UniswapV2GetPairDayDataV2sHistorical
+  # base path: https://onchain.coinapi.io
+  # PairDayDataV2s (historical) 🔥
+  # Gets pairdaydatav2s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character  (optional)
+  # @param token_0 character Reference to token0. (optional)
+  # @param token_1 character Reference to token1. (optional)
+  # @return [array[UniswapV2PairDayDataV2DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV2GetPairHourDataV2sHistorical", {
+  # tests for UniswapV2GetPairHourDataV2sHistorical
+  # base path: https://onchain.coinapi.io
+  # PairHourDataV2s (historical) 🔥
+  # Gets pairhourdatav2s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character  (optional)
+  # @param pair character Address for pair contract. (optional)
+  # @return [array[UniswapV2PairHourDataV2DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV2GetPairV2sHistorical", {
+  # tests for UniswapV2GetPairV2sHistorical
+  # base path: https://onchain.coinapi.io
+  # PairV2s (historical) 🔥
+  # Gets pairv2s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Pair contract address. (optional)
+  # @param token_0 character Reference to token0 as stored in pair contract. (optional)
+  # @param token_1 character Reference to token1 as stored in pair contract. (optional)
+  # @return [array[UniswapV2PairV2DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("UniswapV2GetPoolsCurrent", {
   # tests for UniswapV2GetPoolsCurrent
   # base path: https://onchain.coinapi.io
@@ -12,6 +151,23 @@ test_that("UniswapV2GetPoolsCurrent", {
   # Gets pools.
   # @param filter_pool_id character  (optional)
   # @return [array[UniswapV2PairV2DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV2GetSwapV2sHistorical", {
+  # tests for UniswapV2GetSwapV2sHistorical
+  # base path: https://onchain.coinapi.io
+  # SwapV2s (historical) 🔥
+  # Gets swapv2s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Transaction hash plus index in Transaction swap array. (optional)
+  # @param pair character Reference to pair. (optional)
+  # @return [array[UniswapV2SwapV2DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
@@ -28,12 +184,110 @@ test_that("UniswapV2GetSwapsCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
+test_that("UniswapV2GetTokenDayDataV2sHistorical", {
+  # tests for UniswapV2GetTokenDayDataV2sHistorical
+  # base path: https://onchain.coinapi.io
+  # TokenDayDataV2s (historical) 🔥
+  # Gets tokendaydatav2s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)
+  # @return [array[UniswapV2TokenDayDataV2DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV2GetTokenV2sHistorical", {
+  # tests for UniswapV2GetTokenV2sHistorical
+  # base path: https://onchain.coinapi.io
+  # TokenV2s (historical) 🔥
+  # Gets tokenv2s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Token address. (optional)
+  # @param symbol character Token symbol. (optional)
+  # @param name character Token name. (optional)
+  # @return [array[UniswapV2TokenV2DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
 test_that("UniswapV2GetTokensCurrent", {
   # tests for UniswapV2GetTokensCurrent
   # base path: https://onchain.coinapi.io
   # Tokens (current) 🔥
   # Gets tokens.
   # @return [array[UniswapV2TokenV2DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV2GetTransactionV2sHistorical", {
+  # tests for UniswapV2GetTransactionV2sHistorical
+  # base path: https://onchain.coinapi.io
+  # TransactionV2s (historical) 🔥
+  # Gets transactionv2s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Ethereum transaction hash. (optional)
+  # @return [array[UniswapV2TransactionV2DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV2GetUniswapDayDataV2sHistorical", {
+  # tests for UniswapV2GetUniswapDayDataV2sHistorical
+  # base path: https://onchain.coinapi.io
+  # UniswapDayDataV2s (historical) 🔥
+  # Gets uniswapdaydatav2s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Unix timestamp for start of day / 86400 giving a unique day index. (optional)
+  # @return [array[UniswapV2UniswapDayDataV2DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV2GetUniswapFactoryV2sHistorical", {
+  # tests for UniswapV2GetUniswapFactoryV2sHistorical
+  # base path: https://onchain.coinapi.io
+  # UniswapFactoryV2s (historical) 🔥
+  # Gets uniswapfactoryv2s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character Factory address. (optional)
+  # @return [array[UniswapV2UniswapFactoryV2DTO]]
+
+  # uncomment below to test the operation
+  #expect_equal(result, "EXPECTED_RESULT")
+})
+
+test_that("UniswapV2GetUserV2sHistorical", {
+  # tests for UniswapV2GetUserV2sHistorical
+  # base path: https://onchain.coinapi.io
+  # UserV2s (historical) 🔥
+  # Gets userv2s.
+  # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
+  # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
+  # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
+  # @param end_date character The end date of timeframe. (optional)
+  # @param id character User address. (optional)
+  # @return [array[UniswapV2UserV2DTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")

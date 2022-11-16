@@ -15,6 +15,7 @@ import org.openapitools.client.model.BundleV3DTO
 import org.openapitools.client.model.BurnV3DTO
 import org.openapitools.client.model.FactoryV3DTO
 import org.openapitools.client.model.MintV3DTO
+import java.time.OffsetDateTime
 import org.openapitools.client.model.PoolDayDataV3DTO
 import org.openapitools.client.model.PoolHourDataV3DTO
 import org.openapitools.client.model.PoolV3DTO
@@ -26,6 +27,7 @@ import org.openapitools.client.model.TickV3DTO
 import org.openapitools.client.model.TokenHourDataV3DTO
 import org.openapitools.client.model.TokenV3DTO
 import org.openapitools.client.model.TokenV3DayDataDTO
+import org.openapitools.client.model.TransactionV3DTO
 import org.openapitools.client.model.UniswapDayDataV3DTO
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
@@ -39,6 +41,28 @@ object UniswapV3Api {
 class UniswapV3Api(baseUrl: String) {
 
   /**
+   * Gets bundlev3s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[BundleV3DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id 
+   */
+  def uniswapV3GetBundleV3sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[BundleV3DTO]] =
+    ApiRequest[Seq[BundleV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/bundlev3s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[BundleV3DTO]](200)
+      
+
+  /**
    * Gets bundles.
    * 
    * Expected answers:
@@ -47,6 +71,34 @@ class UniswapV3Api(baseUrl: String) {
   def uniswapV3GetBundlesCurrent(): ApiRequest[Seq[BundleV3DTO]] =
     ApiRequest[Seq[BundleV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/bundles/current", "application/json")
       .withSuccessResponse[Seq[BundleV3DTO]](200)
+      
+
+  /**
+   * Gets burnv3s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[BurnV3DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Transaction hash + '#' + index in mints Transaction array.
+   * @param pool Pool position is within.
+   * @param token0 Reference to token0 as stored in pool contract.
+   * @param token1 Reference to token1 as stored in pool contract.
+   */
+  def uniswapV3GetBurnV3sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None, token0: Option[String] = None, token1: Option[String] = None): ApiRequest[Seq[BurnV3DTO]] =
+    ApiRequest[Seq[BurnV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/burnv3s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("pool", pool)
+      .withQueryParam("token_0", token0)
+      .withQueryParam("token_1", token1)
+      .withSuccessResponse[Seq[BurnV3DTO]](200)
       
 
   /**
@@ -86,6 +138,56 @@ class UniswapV3Api(baseUrl: String) {
       
 
   /**
+   * Gets factoryv3s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[FactoryV3DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Factory address.
+   */
+  def uniswapV3GetFactoryV3sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[FactoryV3DTO]] =
+    ApiRequest[Seq[FactoryV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/factoryv3s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[FactoryV3DTO]](200)
+      
+
+  /**
+   * Gets mintv3s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[MintV3DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Transaction hash + '#' + index in mints Transaction array.
+   * @param pool Pool address.
+   * @param token0 Reference to token0 as stored in pool contract.
+   * @param token1 Reference to token1 as stored in pool contract.
+   */
+  def uniswapV3GetMintV3sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None, token0: Option[String] = None, token1: Option[String] = None): ApiRequest[Seq[MintV3DTO]] =
+    ApiRequest[Seq[MintV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/mintv3s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("pool", pool)
+      .withQueryParam("token_0", token0)
+      .withQueryParam("token_1", token1)
+      .withSuccessResponse[Seq[MintV3DTO]](200)
+      
+
+  /**
    * Gets mints.
    * 
    * Expected answers:
@@ -97,6 +199,80 @@ class UniswapV3Api(baseUrl: String) {
     ApiRequest[Seq[MintV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/mints/current", "application/json")
       .withQueryParam("filter_pool_id", filterPoolId)
       .withSuccessResponse[Seq[MintV3DTO]](200)
+      
+
+  /**
+   * Gets pooldaydatav3s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[PoolDayDataV3DTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param id 
+   * @param pool 
+   */
+  def uniswapV3GetPoolDayDataV3sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[PoolDayDataV3DTO]] =
+    ApiRequest[Seq[PoolDayDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/pooldaydatav3s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("pool", pool)
+      .withSuccessResponse[Seq[PoolDayDataV3DTO]](200)
+      
+
+  /**
+   * Gets poolhourdatav3s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[PoolHourDataV3DTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param id 
+   * @param pool 
+   */
+  def uniswapV3GetPoolHourDataV3sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[PoolHourDataV3DTO]] =
+    ApiRequest[Seq[PoolHourDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/poolhourdatav3s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("pool", pool)
+      .withSuccessResponse[Seq[PoolHourDataV3DTO]](200)
+      
+
+  /**
+   * Gets poolv3s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[PoolV3DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Pool address.
+   * @param token0 Reference to token0 as stored in pool contract.
+   * @param token1 Reference to token1 as stored in pool contract.
+   */
+  def uniswapV3GetPoolV3sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, token0: Option[String] = None, token1: Option[String] = None): ApiRequest[Seq[PoolV3DTO]] =
+    ApiRequest[Seq[PoolV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/poolv3s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("token_0", token0)
+      .withQueryParam("token_1", token1)
+      .withSuccessResponse[Seq[PoolV3DTO]](200)
       
 
   /**
@@ -142,6 +318,58 @@ class UniswapV3Api(baseUrl: String) {
       
 
   /**
+   * Gets positionsnapshotv3s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[PositionSnapshotV3DTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param id 
+   * @param pool 
+   */
+  def uniswapV3GetPositionSnapshotV3sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[PositionSnapshotV3DTO]] =
+    ApiRequest[Seq[PositionSnapshotV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/positionsnapshotv3s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("pool", pool)
+      .withSuccessResponse[Seq[PositionSnapshotV3DTO]](200)
+      
+
+  /**
+   * Gets positionv3s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[PositionV3DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id NFT token identifier.
+   * @param pool Pool position is within.
+   * @param token0 Reference to token0 as stored in pair contract.
+   * @param token1 Reference to token1 as stored in pair contract.
+   */
+  def uniswapV3GetPositionV3sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None, token0: Option[String] = None, token1: Option[String] = None): ApiRequest[Seq[PositionV3DTO]] =
+    ApiRequest[Seq[PositionV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/positionv3s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("pool", pool)
+      .withQueryParam("token_0", token0)
+      .withQueryParam("token_1", token1)
+      .withSuccessResponse[Seq[PositionV3DTO]](200)
+      
+
+  /**
    * Gets positions.
    * 
    * Expected answers:
@@ -170,6 +398,34 @@ class UniswapV3Api(baseUrl: String) {
       
 
   /**
+   * Gets swapv3s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[SwapV3DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Identifier, format: transaction hash + \"#\" + index in swaps Transaction array.
+   * @param pool Pool swap occured within.
+   * @param token0 Reference to token0 as stored in pair contract.
+   * @param token1 Reference to token1 as stored in pair contract.
+   */
+  def uniswapV3GetSwapV3sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None, token0: Option[String] = None, token1: Option[String] = None): ApiRequest[Seq[SwapV3DTO]] =
+    ApiRequest[Seq[SwapV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/swapv3s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("pool", pool)
+      .withQueryParam("token_0", token0)
+      .withQueryParam("token_1", token1)
+      .withSuccessResponse[Seq[SwapV3DTO]](200)
+      
+
+  /**
    * Gets swaps.
    * 
    * Expected answers:
@@ -181,6 +437,54 @@ class UniswapV3Api(baseUrl: String) {
     ApiRequest[Seq[SwapV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/swaps/current", "application/json")
       .withQueryParam("filter_pool_id", filterPoolId)
       .withSuccessResponse[Seq[SwapV3DTO]](200)
+      
+
+  /**
+   * Gets tickdaydatav3s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TickDayDataV3DTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param id 
+   * @param pool 
+   */
+  def uniswapV3GetTickDayDataV3sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[TickDayDataV3DTO]] =
+    ApiRequest[Seq[TickDayDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/tickdaydatav3s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("pool", pool)
+      .withSuccessResponse[Seq[TickDayDataV3DTO]](200)
+      
+
+  /**
+   * Gets tickv3s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TickV3DTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param id 
+   * @param pool 
+   */
+  def uniswapV3GetTickV3sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pool: Option[String] = None): ApiRequest[Seq[TickV3DTO]] =
+    ApiRequest[Seq[TickV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/tickv3s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("pool", pool)
+      .withSuccessResponse[Seq[TickV3DTO]](200)
       
 
   /**
@@ -209,6 +513,76 @@ class UniswapV3Api(baseUrl: String) {
     ApiRequest[Seq[TickDayDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/ticksDayData/current", "application/json")
       .withQueryParam("filter_pool_id", filterPoolId)
       .withSuccessResponse[Seq[TickDayDataV3DTO]](200)
+      
+
+  /**
+   * Gets tokenhourdatav3s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TokenHourDataV3DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Token address concatendated with date.
+   */
+  def uniswapV3GetTokenHourDataV3sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[TokenHourDataV3DTO]] =
+    ApiRequest[Seq[TokenHourDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/tokenhourdatav3s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[TokenHourDataV3DTO]](200)
+      
+
+  /**
+   * Gets tokenv3daydatas.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TokenV3DayDataDTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Token address concatendated with date.
+   */
+  def uniswapV3GetTokenV3DayDatasHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[TokenV3DayDataDTO]] =
+    ApiRequest[Seq[TokenV3DayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/tokenv3daydatas/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[TokenV3DayDataDTO]](200)
+      
+
+  /**
+   * Gets tokenv3s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TokenV3DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Token address.
+   * @param symbol Token symbol.
+   * @param name Token name.
+   */
+  def uniswapV3GetTokenV3sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, symbol: Option[String] = None, name: Option[String] = None): ApiRequest[Seq[TokenV3DTO]] =
+    ApiRequest[Seq[TokenV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/tokenv3s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("symbol", symbol)
+      .withQueryParam("name", name)
+      .withSuccessResponse[Seq[TokenV3DTO]](200)
       
 
   /**
@@ -251,6 +625,50 @@ class UniswapV3Api(baseUrl: String) {
     ApiRequest[Seq[TokenHourDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/tokensHourData/current", "application/json")
       .withQueryParam("filter_token_id", filterTokenId)
       .withSuccessResponse[Seq[TokenHourDataV3DTO]](200)
+      
+
+  /**
+   * Gets transactionv3s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TransactionV3DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Transaction hash.
+   */
+  def uniswapV3GetTransactionV3sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[TransactionV3DTO]] =
+    ApiRequest[Seq[TransactionV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/transactionv3s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[TransactionV3DTO]](200)
+      
+
+  /**
+   * Gets uniswapdaydatav3s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[UniswapDayDataV3DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Timestamp rounded to current day by dividing by 86400.
+   */
+  def uniswapV3GetUniswapDayDataV3sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[UniswapDayDataV3DTO]] =
+    ApiRequest[Seq[UniswapDayDataV3DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv3/uniswapdaydatav3s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[UniswapDayDataV3DTO]](200)
       
 
 

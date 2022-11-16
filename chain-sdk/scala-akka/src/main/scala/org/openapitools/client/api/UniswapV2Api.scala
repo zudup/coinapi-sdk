@@ -11,9 +11,22 @@
  */
 package org.openapitools.client.api
 
+import org.openapitools.client.model.BundleV2DTO
+import org.openapitools.client.model.BurnV2DTO
+import org.openapitools.client.model.LiquidityPositionSnapshotV2DTO
+import org.openapitools.client.model.LiquidityPositionV2DTO
+import org.openapitools.client.model.MintV2DTO
+import java.time.OffsetDateTime
+import org.openapitools.client.model.PairDayDataV2DTO
+import org.openapitools.client.model.PairHourDataV2DTO
 import org.openapitools.client.model.PairV2DTO
 import org.openapitools.client.model.SwapV2DTO
+import org.openapitools.client.model.TokenDayDataV2DTO
 import org.openapitools.client.model.TokenV2DTO
+import org.openapitools.client.model.TransactionV2DTO
+import org.openapitools.client.model.UniswapDayDataV2DTO
+import org.openapitools.client.model.UniswapFactoryV2DTO
+import org.openapitools.client.model.UserV2DTO
 import org.openapitools.client.core._
 import org.openapitools.client.core.CollectionFormats._
 import org.openapitools.client.core.ApiKeyLocations._
@@ -24,6 +37,204 @@ object UniswapV2Api {
 }
 
 class UniswapV2Api(baseUrl: String) {
+
+  /**
+   * Gets bundlev2s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[BundleV2DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Constant 1.
+   */
+  def uniswapV2GetBundleV2sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[BundleV2DTO]] =
+    ApiRequest[Seq[BundleV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/bundlev2s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[BundleV2DTO]](200)
+      
+
+  /**
+   * Gets burnv2s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[BurnV2DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Transaction hash plus index in the transaction burn array
+   * @param pair Reference to pair.
+   */
+  def uniswapV2GetBurnV2sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pair: Option[String] = None): ApiRequest[Seq[BurnV2DTO]] =
+    ApiRequest[Seq[BurnV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/burnv2s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("pair", pair)
+      .withSuccessResponse[Seq[BurnV2DTO]](200)
+      
+
+  /**
+   * Gets liquiditypositionsnapshotv2s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LiquidityPositionSnapshotV2DTO] (successful operation)
+   * 
+   * @param startBlock 
+   * @param endBlock 
+   * @param startDate 
+   * @param endDate 
+   * @param id 
+   * @param user 
+   * @param pair 
+   */
+  def uniswapV2GetLiquidityPositionSnapshotV2sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, user: Option[String] = None, pair: Option[String] = None): ApiRequest[Seq[LiquidityPositionSnapshotV2DTO]] =
+    ApiRequest[Seq[LiquidityPositionSnapshotV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/liquiditypositionsnapshotv2s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("user", user)
+      .withQueryParam("pair", pair)
+      .withSuccessResponse[Seq[LiquidityPositionSnapshotV2DTO]](200)
+      
+
+  /**
+   * Gets liquiditypositionv2s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[LiquidityPositionV2DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id User address and pair address concatenated with a dash.
+   * @param user Reference to user.
+   * @param pair Reference to the pair liquidity is being provided on.
+   */
+  def uniswapV2GetLiquidityPositionV2sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, user: Option[String] = None, pair: Option[String] = None): ApiRequest[Seq[LiquidityPositionV2DTO]] =
+    ApiRequest[Seq[LiquidityPositionV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/liquiditypositionv2s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("user", user)
+      .withQueryParam("pair", pair)
+      .withSuccessResponse[Seq[LiquidityPositionV2DTO]](200)
+      
+
+  /**
+   * Gets mintv2s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[MintV2DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Transaction hash plus index in the transaction mint array.
+   * @param pair Reference to pair.
+   */
+  def uniswapV2GetMintV2sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pair: Option[String] = None): ApiRequest[Seq[MintV2DTO]] =
+    ApiRequest[Seq[MintV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/mintv2s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("pair", pair)
+      .withSuccessResponse[Seq[MintV2DTO]](200)
+      
+
+  /**
+   * Gets pairdaydatav2s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[PairDayDataV2DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id 
+   * @param token0 Reference to token0.
+   * @param token1 Reference to token1.
+   */
+  def uniswapV2GetPairDayDataV2sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, token0: Option[String] = None, token1: Option[String] = None): ApiRequest[Seq[PairDayDataV2DTO]] =
+    ApiRequest[Seq[PairDayDataV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/pairdaydatav2s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("token_0", token0)
+      .withQueryParam("token_1", token1)
+      .withSuccessResponse[Seq[PairDayDataV2DTO]](200)
+      
+
+  /**
+   * Gets pairhourdatav2s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[PairHourDataV2DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id 
+   * @param pair Address for pair contract.
+   */
+  def uniswapV2GetPairHourDataV2sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pair: Option[String] = None): ApiRequest[Seq[PairHourDataV2DTO]] =
+    ApiRequest[Seq[PairHourDataV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/pairhourdatav2s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("pair", pair)
+      .withSuccessResponse[Seq[PairHourDataV2DTO]](200)
+      
+
+  /**
+   * Gets pairv2s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[PairV2DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Pair contract address.
+   * @param token0 Reference to token0 as stored in pair contract.
+   * @param token1 Reference to token1 as stored in pair contract.
+   */
+  def uniswapV2GetPairV2sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, token0: Option[String] = None, token1: Option[String] = None): ApiRequest[Seq[PairV2DTO]] =
+    ApiRequest[Seq[PairV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/pairv2s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("token_0", token0)
+      .withQueryParam("token_1", token1)
+      .withSuccessResponse[Seq[PairV2DTO]](200)
+      
 
   /**
    * Gets pools.
@@ -40,6 +251,30 @@ class UniswapV2Api(baseUrl: String) {
       
 
   /**
+   * Gets swapv2s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[SwapV2DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Transaction hash plus index in Transaction swap array.
+   * @param pair Reference to pair.
+   */
+  def uniswapV2GetSwapV2sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pair: Option[String] = None): ApiRequest[Seq[SwapV2DTO]] =
+    ApiRequest[Seq[SwapV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/swapv2s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("pair", pair)
+      .withSuccessResponse[Seq[SwapV2DTO]](200)
+      
+
+  /**
    * Gets swaps.
    * 
    * Expected answers:
@@ -51,6 +286,54 @@ class UniswapV2Api(baseUrl: String) {
       
 
   /**
+   * Gets tokendaydatav2s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TokenDayDataV2DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
+   */
+  def uniswapV2GetTokenDayDataV2sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[TokenDayDataV2DTO]] =
+    ApiRequest[Seq[TokenDayDataV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/tokendaydatav2s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[TokenDayDataV2DTO]](200)
+      
+
+  /**
+   * Gets tokenv2s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TokenV2DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Token address.
+   * @param symbol Token symbol.
+   * @param name Token name.
+   */
+  def uniswapV2GetTokenV2sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, symbol: Option[String] = None, name: Option[String] = None): ApiRequest[Seq[TokenV2DTO]] =
+    ApiRequest[Seq[TokenV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/tokenv2s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withQueryParam("symbol", symbol)
+      .withQueryParam("name", name)
+      .withSuccessResponse[Seq[TokenV2DTO]](200)
+      
+
+  /**
    * Gets tokens.
    * 
    * Expected answers:
@@ -59,6 +342,94 @@ class UniswapV2Api(baseUrl: String) {
   def uniswapV2GetTokensCurrent(): ApiRequest[Seq[TokenV2DTO]] =
     ApiRequest[Seq[TokenV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/tokens/current", "application/json")
       .withSuccessResponse[Seq[TokenV2DTO]](200)
+      
+
+  /**
+   * Gets transactionv2s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[TransactionV2DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Ethereum transaction hash.
+   */
+  def uniswapV2GetTransactionV2sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[TransactionV2DTO]] =
+    ApiRequest[Seq[TransactionV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/transactionv2s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[TransactionV2DTO]](200)
+      
+
+  /**
+   * Gets uniswapdaydatav2s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[UniswapDayDataV2DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Unix timestamp for start of day / 86400 giving a unique day index.
+   */
+  def uniswapV2GetUniswapDayDataV2sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[UniswapDayDataV2DTO]] =
+    ApiRequest[Seq[UniswapDayDataV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/uniswapdaydatav2s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[UniswapDayDataV2DTO]](200)
+      
+
+  /**
+   * Gets uniswapfactoryv2s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[UniswapFactoryV2DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id Factory address.
+   */
+  def uniswapV2GetUniswapFactoryV2sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[UniswapFactoryV2DTO]] =
+    ApiRequest[Seq[UniswapFactoryV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/uniswapfactoryv2s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[UniswapFactoryV2DTO]](200)
+      
+
+  /**
+   * Gets userv2s.
+   * 
+   * Expected answers:
+   *   code 200 : Seq[UserV2DTO] (successful operation)
+   * 
+   * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+   * @param endDate The end date of timeframe.
+   * @param id User address.
+   */
+  def uniswapV2GetUserV2sHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[UserV2DTO]] =
+    ApiRequest[Seq[UserV2DTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/userv2s/historical", "application/json")
+      .withQueryParam("startBlock", startBlock)
+      .withQueryParam("endBlock", endBlock)
+      .withQueryParam("startDate", startDate)
+      .withQueryParam("endDate", endDate)
+      .withQueryParam("id", id)
+      .withSuccessResponse[Seq[UserV2DTO]](200)
       
 
 

@@ -9,6 +9,9 @@ import 'package:openapi/src/auth/api_key_auth.dart';
 import 'package:openapi/src/auth/basic_auth.dart';
 import 'package:openapi/src/auth/bearer_auth.dart';
 import 'package:openapi/src/auth/oauth.dart';
+import 'package:openapi/src/api/cow_api.dart';
+import 'package:openapi/src/api/curve_api.dart';
+import 'package:openapi/src/api/dex_api.dart';
 import 'package:openapi/src/api/sushiswap_api.dart';
 import 'package:openapi/src/api/uniswap_v2_api.dart';
 import 'package:openapi/src/api/uniswap_v3_api.dart';
@@ -65,6 +68,24 @@ class Openapi {
     if (this.dio.interceptors.any((i) => i is ApiKeyAuthInterceptor)) {
       (this.dio.interceptors.firstWhere((element) => element is ApiKeyAuthInterceptor) as ApiKeyAuthInterceptor).apiKeys[name] = apiKey;
     }
+  }
+
+  /// Get CowApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  CowApi getCowApi() {
+    return CowApi(dio, serializers);
+  }
+
+  /// Get CurveApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  CurveApi getCurveApi() {
+    return CurveApi(dio, serializers);
+  }
+
+  /// Get DexApi instance, base route and serializer can be overridden by a given but be careful,
+  /// by doing that all interceptors will not be executed
+  DexApi getDexApi() {
+    return DexApi(dio, serializers);
   }
 
   /// Get SushiswapApi instance, base route and serializer can be overridden by a given but be careful,

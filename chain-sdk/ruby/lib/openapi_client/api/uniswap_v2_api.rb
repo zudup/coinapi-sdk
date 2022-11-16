@@ -19,6 +19,615 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
+    # BundleV2s (historical) 🔥
+    # Gets bundlev2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Constant 1.
+    # @return [Array<UniswapV2BundleV2DTO>]
+    def uniswap_v2_get_bundle_v2s__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_bundle_v2s__historical_with_http_info(opts)
+      data
+    end
+
+    # BundleV2s (historical) 🔥
+    # Gets bundlev2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Constant 1.
+    # @return [Array<(Array<UniswapV2BundleV2DTO>, Integer, Hash)>] Array<UniswapV2BundleV2DTO> data, response status code and response headers
+    def uniswap_v2_get_bundle_v2s__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_bundle_v2s__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/bundlev2s/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2BundleV2DTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_get_bundle_v2s__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_bundle_v2s__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # BurnV2s (historical) 🔥
+    # Gets burnv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Transaction hash plus index in the transaction burn array
+    # @option opts [String] :pair Reference to pair.
+    # @return [Array<UniswapV2BurnV2DTO>]
+    def uniswap_v2_get_burn_v2s__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_burn_v2s__historical_with_http_info(opts)
+      data
+    end
+
+    # BurnV2s (historical) 🔥
+    # Gets burnv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Transaction hash plus index in the transaction burn array
+    # @option opts [String] :pair Reference to pair.
+    # @return [Array<(Array<UniswapV2BurnV2DTO>, Integer, Hash)>] Array<UniswapV2BurnV2DTO> data, response status code and response headers
+    def uniswap_v2_get_burn_v2s__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_burn_v2s__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/burnv2s/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+      query_params[:'pair'] = opts[:'pair'] if !opts[:'pair'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2BurnV2DTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_get_burn_v2s__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_burn_v2s__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # LiquidityPositionSnapshotV2s (historical) 🔥
+    # Gets liquiditypositionsnapshotv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block 
+    # @option opts [Integer] :end_block 
+    # @option opts [Time] :start_date 
+    # @option opts [Time] :end_date 
+    # @option opts [String] :id 
+    # @option opts [String] :user 
+    # @option opts [String] :pair 
+    # @return [Array<UniswapV2LiquidityPositionSnapshotV2DTO>]
+    def uniswap_v2_get_liquidity_position_snapshot_v2s__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_liquidity_position_snapshot_v2s__historical_with_http_info(opts)
+      data
+    end
+
+    # LiquidityPositionSnapshotV2s (historical) 🔥
+    # Gets liquiditypositionsnapshotv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block 
+    # @option opts [Integer] :end_block 
+    # @option opts [Time] :start_date 
+    # @option opts [Time] :end_date 
+    # @option opts [String] :id 
+    # @option opts [String] :user 
+    # @option opts [String] :pair 
+    # @return [Array<(Array<UniswapV2LiquidityPositionSnapshotV2DTO>, Integer, Hash)>] Array<UniswapV2LiquidityPositionSnapshotV2DTO> data, response status code and response headers
+    def uniswap_v2_get_liquidity_position_snapshot_v2s__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_liquidity_position_snapshot_v2s__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/liquiditypositionsnapshotv2s/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+      query_params[:'user'] = opts[:'user'] if !opts[:'user'].nil?
+      query_params[:'pair'] = opts[:'pair'] if !opts[:'pair'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2LiquidityPositionSnapshotV2DTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_get_liquidity_position_snapshot_v2s__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_liquidity_position_snapshot_v2s__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # LiquidityPositionV2s (historical) 🔥
+    # Gets liquiditypositionv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id User address and pair address concatenated with a dash.
+    # @option opts [String] :user Reference to user.
+    # @option opts [String] :pair Reference to the pair liquidity is being provided on.
+    # @return [Array<UniswapV2LiquidityPositionV2DTO>]
+    def uniswap_v2_get_liquidity_position_v2s__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_liquidity_position_v2s__historical_with_http_info(opts)
+      data
+    end
+
+    # LiquidityPositionV2s (historical) 🔥
+    # Gets liquiditypositionv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id User address and pair address concatenated with a dash.
+    # @option opts [String] :user Reference to user.
+    # @option opts [String] :pair Reference to the pair liquidity is being provided on.
+    # @return [Array<(Array<UniswapV2LiquidityPositionV2DTO>, Integer, Hash)>] Array<UniswapV2LiquidityPositionV2DTO> data, response status code and response headers
+    def uniswap_v2_get_liquidity_position_v2s__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_liquidity_position_v2s__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/liquiditypositionv2s/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+      query_params[:'user'] = opts[:'user'] if !opts[:'user'].nil?
+      query_params[:'pair'] = opts[:'pair'] if !opts[:'pair'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2LiquidityPositionV2DTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_get_liquidity_position_v2s__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_liquidity_position_v2s__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # MintV2s (historical) 🔥
+    # Gets mintv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Transaction hash plus index in the transaction mint array.
+    # @option opts [String] :pair Reference to pair.
+    # @return [Array<UniswapV2MintV2DTO>]
+    def uniswap_v2_get_mint_v2s__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_mint_v2s__historical_with_http_info(opts)
+      data
+    end
+
+    # MintV2s (historical) 🔥
+    # Gets mintv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Transaction hash plus index in the transaction mint array.
+    # @option opts [String] :pair Reference to pair.
+    # @return [Array<(Array<UniswapV2MintV2DTO>, Integer, Hash)>] Array<UniswapV2MintV2DTO> data, response status code and response headers
+    def uniswap_v2_get_mint_v2s__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_mint_v2s__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/mintv2s/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+      query_params[:'pair'] = opts[:'pair'] if !opts[:'pair'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2MintV2DTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_get_mint_v2s__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_mint_v2s__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # PairDayDataV2s (historical) 🔥
+    # Gets pairdaydatav2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id 
+    # @option opts [String] :token_0 Reference to token0.
+    # @option opts [String] :token_1 Reference to token1.
+    # @return [Array<UniswapV2PairDayDataV2DTO>]
+    def uniswap_v2_get_pair_day_data_v2s__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_pair_day_data_v2s__historical_with_http_info(opts)
+      data
+    end
+
+    # PairDayDataV2s (historical) 🔥
+    # Gets pairdaydatav2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id 
+    # @option opts [String] :token_0 Reference to token0.
+    # @option opts [String] :token_1 Reference to token1.
+    # @return [Array<(Array<UniswapV2PairDayDataV2DTO>, Integer, Hash)>] Array<UniswapV2PairDayDataV2DTO> data, response status code and response headers
+    def uniswap_v2_get_pair_day_data_v2s__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_pair_day_data_v2s__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/pairdaydatav2s/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+      query_params[:'token_0'] = opts[:'token_0'] if !opts[:'token_0'].nil?
+      query_params[:'token_1'] = opts[:'token_1'] if !opts[:'token_1'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2PairDayDataV2DTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_get_pair_day_data_v2s__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_pair_day_data_v2s__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # PairHourDataV2s (historical) 🔥
+    # Gets pairhourdatav2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id 
+    # @option opts [String] :pair Address for pair contract.
+    # @return [Array<UniswapV2PairHourDataV2DTO>]
+    def uniswap_v2_get_pair_hour_data_v2s__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_pair_hour_data_v2s__historical_with_http_info(opts)
+      data
+    end
+
+    # PairHourDataV2s (historical) 🔥
+    # Gets pairhourdatav2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id 
+    # @option opts [String] :pair Address for pair contract.
+    # @return [Array<(Array<UniswapV2PairHourDataV2DTO>, Integer, Hash)>] Array<UniswapV2PairHourDataV2DTO> data, response status code and response headers
+    def uniswap_v2_get_pair_hour_data_v2s__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_pair_hour_data_v2s__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/pairhourdatav2s/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+      query_params[:'pair'] = opts[:'pair'] if !opts[:'pair'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2PairHourDataV2DTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_get_pair_hour_data_v2s__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_pair_hour_data_v2s__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # PairV2s (historical) 🔥
+    # Gets pairv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Pair contract address.
+    # @option opts [String] :token_0 Reference to token0 as stored in pair contract.
+    # @option opts [String] :token_1 Reference to token1 as stored in pair contract.
+    # @return [Array<UniswapV2PairV2DTO>]
+    def uniswap_v2_get_pair_v2s__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_pair_v2s__historical_with_http_info(opts)
+      data
+    end
+
+    # PairV2s (historical) 🔥
+    # Gets pairv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Pair contract address.
+    # @option opts [String] :token_0 Reference to token0 as stored in pair contract.
+    # @option opts [String] :token_1 Reference to token1 as stored in pair contract.
+    # @return [Array<(Array<UniswapV2PairV2DTO>, Integer, Hash)>] Array<UniswapV2PairV2DTO> data, response status code and response headers
+    def uniswap_v2_get_pair_v2s__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_pair_v2s__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/pairv2s/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+      query_params[:'token_0'] = opts[:'token_0'] if !opts[:'token_0'].nil?
+      query_params[:'token_1'] = opts[:'token_1'] if !opts[:'token_1'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2PairV2DTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_get_pair_v2s__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_pair_v2s__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Pools (current) 🔥
     # Gets pools.
     # @param [Hash] opts the optional parameters
@@ -75,6 +684,81 @@ module OpenapiClient
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_pools__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # SwapV2s (historical) 🔥
+    # Gets swapv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Transaction hash plus index in Transaction swap array.
+    # @option opts [String] :pair Reference to pair.
+    # @return [Array<UniswapV2SwapV2DTO>]
+    def uniswap_v2_get_swap_v2s__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_swap_v2s__historical_with_http_info(opts)
+      data
+    end
+
+    # SwapV2s (historical) 🔥
+    # Gets swapv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Transaction hash plus index in Transaction swap array.
+    # @option opts [String] :pair Reference to pair.
+    # @return [Array<(Array<UniswapV2SwapV2DTO>, Integer, Hash)>] Array<UniswapV2SwapV2DTO> data, response status code and response headers
+    def uniswap_v2_get_swap_v2s__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_swap_v2s__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/swapv2s/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+      query_params[:'pair'] = opts[:'pair'] if !opts[:'pair'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2SwapV2DTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_get_swap_v2s__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_swap_v2s__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -136,6 +820,156 @@ module OpenapiClient
       return data, status_code, headers
     end
 
+    # TokenDayDataV2s (historical) 🔥
+    # Gets tokendaydatav2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
+    # @return [Array<UniswapV2TokenDayDataV2DTO>]
+    def uniswap_v2_get_token_day_data_v2s__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_token_day_data_v2s__historical_with_http_info(opts)
+      data
+    end
+
+    # TokenDayDataV2s (historical) 🔥
+    # Gets tokendaydatav2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
+    # @return [Array<(Array<UniswapV2TokenDayDataV2DTO>, Integer, Hash)>] Array<UniswapV2TokenDayDataV2DTO> data, response status code and response headers
+    def uniswap_v2_get_token_day_data_v2s__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_token_day_data_v2s__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/tokendaydatav2s/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2TokenDayDataV2DTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_get_token_day_data_v2s__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_token_day_data_v2s__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # TokenV2s (historical) 🔥
+    # Gets tokenv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Token address.
+    # @option opts [String] :symbol Token symbol.
+    # @option opts [String] :name Token name.
+    # @return [Array<UniswapV2TokenV2DTO>]
+    def uniswap_v2_get_token_v2s__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_token_v2s__historical_with_http_info(opts)
+      data
+    end
+
+    # TokenV2s (historical) 🔥
+    # Gets tokenv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Token address.
+    # @option opts [String] :symbol Token symbol.
+    # @option opts [String] :name Token name.
+    # @return [Array<(Array<UniswapV2TokenV2DTO>, Integer, Hash)>] Array<UniswapV2TokenV2DTO> data, response status code and response headers
+    def uniswap_v2_get_token_v2s__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_token_v2s__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/tokenv2s/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+      query_params[:'symbol'] = opts[:'symbol'] if !opts[:'symbol'].nil?
+      query_params[:'name'] = opts[:'name'] if !opts[:'name'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2TokenV2DTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_get_token_v2s__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_token_v2s__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
     # Tokens (current) 🔥
     # Gets tokens.
     # @param [Hash] opts the optional parameters
@@ -189,6 +1023,294 @@ module OpenapiClient
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
         @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_tokens__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # TransactionV2s (historical) 🔥
+    # Gets transactionv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Ethereum transaction hash.
+    # @return [Array<UniswapV2TransactionV2DTO>]
+    def uniswap_v2_get_transaction_v2s__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_transaction_v2s__historical_with_http_info(opts)
+      data
+    end
+
+    # TransactionV2s (historical) 🔥
+    # Gets transactionv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Ethereum transaction hash.
+    # @return [Array<(Array<UniswapV2TransactionV2DTO>, Integer, Hash)>] Array<UniswapV2TransactionV2DTO> data, response status code and response headers
+    def uniswap_v2_get_transaction_v2s__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_transaction_v2s__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/transactionv2s/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2TransactionV2DTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_get_transaction_v2s__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_transaction_v2s__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # UniswapDayDataV2s (historical) 🔥
+    # Gets uniswapdaydatav2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Unix timestamp for start of day / 86400 giving a unique day index.
+    # @return [Array<UniswapV2UniswapDayDataV2DTO>]
+    def uniswap_v2_get_uniswap_day_data_v2s__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_uniswap_day_data_v2s__historical_with_http_info(opts)
+      data
+    end
+
+    # UniswapDayDataV2s (historical) 🔥
+    # Gets uniswapdaydatav2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Unix timestamp for start of day / 86400 giving a unique day index.
+    # @return [Array<(Array<UniswapV2UniswapDayDataV2DTO>, Integer, Hash)>] Array<UniswapV2UniswapDayDataV2DTO> data, response status code and response headers
+    def uniswap_v2_get_uniswap_day_data_v2s__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_uniswap_day_data_v2s__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/uniswapdaydatav2s/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2UniswapDayDataV2DTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_get_uniswap_day_data_v2s__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_uniswap_day_data_v2s__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # UniswapFactoryV2s (historical) 🔥
+    # Gets uniswapfactoryv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Factory address.
+    # @return [Array<UniswapV2UniswapFactoryV2DTO>]
+    def uniswap_v2_get_uniswap_factory_v2s__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_uniswap_factory_v2s__historical_with_http_info(opts)
+      data
+    end
+
+    # UniswapFactoryV2s (historical) 🔥
+    # Gets uniswapfactoryv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id Factory address.
+    # @return [Array<(Array<UniswapV2UniswapFactoryV2DTO>, Integer, Hash)>] Array<UniswapV2UniswapFactoryV2DTO> data, response status code and response headers
+    def uniswap_v2_get_uniswap_factory_v2s__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_uniswap_factory_v2s__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/uniswapfactoryv2s/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2UniswapFactoryV2DTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_get_uniswap_factory_v2s__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_uniswap_factory_v2s__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+      end
+      return data, status_code, headers
+    end
+
+    # UserV2s (historical) 🔥
+    # Gets userv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id User address.
+    # @return [Array<UniswapV2UserV2DTO>]
+    def uniswap_v2_get_user_v2s__historical(opts = {})
+      data, _status_code, _headers = uniswap_v2_get_user_v2s__historical_with_http_info(opts)
+      data
+    end
+
+    # UserV2s (historical) 🔥
+    # Gets userv2s.
+    # @param [Hash] opts the optional parameters
+    # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
+    # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
+    # @option opts [Time] :start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
+    # @option opts [Time] :end_date The end date of timeframe.
+    # @option opts [String] :id User address.
+    # @return [Array<(Array<UniswapV2UserV2DTO>, Integer, Hash)>] Array<UniswapV2UserV2DTO> data, response status code and response headers
+    def uniswap_v2_get_user_v2s__historical_with_http_info(opts = {})
+      if @api_client.config.debugging
+        @api_client.config.logger.debug 'Calling API: UniswapV2Api.uniswap_v2_get_user_v2s__historical ...'
+      end
+      # resource path
+      local_var_path = '/dapps/uniswapv2/userv2s/historical'
+
+      # query parameters
+      query_params = opts[:query_params] || {}
+      query_params[:'startBlock'] = opts[:'start_block'] if !opts[:'start_block'].nil?
+      query_params[:'endBlock'] = opts[:'end_block'] if !opts[:'end_block'].nil?
+      query_params[:'startDate'] = opts[:'start_date'] if !opts[:'start_date'].nil?
+      query_params[:'endDate'] = opts[:'end_date'] if !opts[:'end_date'].nil?
+      query_params[:'id'] = opts[:'id'] if !opts[:'id'].nil?
+
+      # header parameters
+      header_params = opts[:header_params] || {}
+      # HTTP header 'Accept' (if needed)
+      header_params['Accept'] = @api_client.select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+      # form parameters
+      form_params = opts[:form_params] || {}
+
+      # http body (model)
+      post_body = opts[:debug_body]
+
+      # return_type
+      return_type = opts[:debug_return_type] || 'Array<UniswapV2UserV2DTO>'
+
+      # auth_names
+      auth_names = opts[:debug_auth_names] || []
+
+      new_options = opts.merge(
+        :operation => :"UniswapV2Api.uniswap_v2_get_user_v2s__historical",
+        :header_params => header_params,
+        :query_params => query_params,
+        :form_params => form_params,
+        :body => post_body,
+        :auth_names => auth_names,
+        :return_type => return_type
+      )
+
+      data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
+      if @api_client.config.debugging
+        @api_client.config.logger.debug "API called: UniswapV2Api#uniswap_v2_get_user_v2s__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

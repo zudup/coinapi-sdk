@@ -23,6 +23,94 @@ Describe -tag 'PSOpenAPITools' -name 'SushiswapApi' {
         }
     }
 
+    Context 'Invoke-SushiswapGetBundlesHistorical' {
+        It 'Test Invoke-SushiswapGetBundlesHistorical' {
+            #$TestResult = Invoke-SushiswapGetBundlesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapGetBurnsHistorical' {
+        It 'Test Invoke-SushiswapGetBurnsHistorical' {
+            #$TestResult = Invoke-SushiswapGetBurnsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE" -Pair "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapGetDayDatasHistorical' {
+        It 'Test Invoke-SushiswapGetDayDatasHistorical' {
+            #$TestResult = Invoke-SushiswapGetDayDatasHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapGetFactorysHistorical' {
+        It 'Test Invoke-SushiswapGetFactorysHistorical' {
+            #$TestResult = Invoke-SushiswapGetFactorysHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapGetHourDatasHistorical' {
+        It 'Test Invoke-SushiswapGetHourDatasHistorical' {
+            #$TestResult = Invoke-SushiswapGetHourDatasHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical' {
+        It 'Test Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical' {
+            #$TestResult = Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE" -User "TEST_VALUE" -Pair "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapGetLiquidityPositionsHistorical' {
+        It 'Test Invoke-SushiswapGetLiquidityPositionsHistorical' {
+            #$TestResult = Invoke-SushiswapGetLiquidityPositionsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE" -User "TEST_VALUE" -Pair "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapGetMintsHistorical' {
+        It 'Test Invoke-SushiswapGetMintsHistorical' {
+            #$TestResult = Invoke-SushiswapGetMintsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE" -Pair "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapGetPairDayDatasHistorical' {
+        It 'Test Invoke-SushiswapGetPairDayDatasHistorical' {
+            #$TestResult = Invoke-SushiswapGetPairDayDatasHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE" -Pair "TEST_VALUE" -Token0 "TEST_VALUE" -Token1 "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapGetPairHourDatasHistorical' {
+        It 'Test Invoke-SushiswapGetPairHourDatasHistorical' {
+            #$TestResult = Invoke-SushiswapGetPairHourDatasHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE" -Pair "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapGetPairsHistorical' {
+        It 'Test Invoke-SushiswapGetPairsHistorical' {
+            #$TestResult = Invoke-SushiswapGetPairsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE" -Name "TEST_VALUE" -Token0 "TEST_VALUE" -Token1 "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-SushiswapGetPoolsCurrent' {
         It 'Test Invoke-SushiswapGetPoolsCurrent' {
             #$TestResult = Invoke-SushiswapGetPoolsCurrent
@@ -39,9 +127,49 @@ Describe -tag 'PSOpenAPITools' -name 'SushiswapApi' {
         }
     }
 
+    Context 'Invoke-SushiswapGetSwapsHistorical' {
+        It 'Test Invoke-SushiswapGetSwapsHistorical' {
+            #$TestResult = Invoke-SushiswapGetSwapsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE" -Pair "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapGetTokenDayDatasHistorical' {
+        It 'Test Invoke-SushiswapGetTokenDayDatasHistorical' {
+            #$TestResult = Invoke-SushiswapGetTokenDayDatasHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
     Context 'Invoke-SushiswapGetTokensCurrent' {
         It 'Test Invoke-SushiswapGetTokensCurrent' {
             #$TestResult = Invoke-SushiswapGetTokensCurrent
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapGetTokensHistorical' {
+        It 'Test Invoke-SushiswapGetTokensHistorical' {
+            #$TestResult = Invoke-SushiswapGetTokensHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE" -Symbol "TEST_VALUE" -Name "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapGetTransactionsHistorical' {
+        It 'Test Invoke-SushiswapGetTransactionsHistorical' {
+            #$TestResult = Invoke-SushiswapGetTransactionsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE"
+            #$TestResult | Should -BeOfType TODO
+            #$TestResult.property | Should -Be 0
+        }
+    }
+
+    Context 'Invoke-SushiswapGetUsersHistorical' {
+        It 'Test Invoke-SushiswapGetUsersHistorical' {
+            #$TestResult = Invoke-SushiswapGetUsersHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

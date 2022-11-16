@@ -181,26 +181,168 @@ class ApiClient {
           return valueString == 'true' || valueString == '1';
         case 'DateTime':
           return value is DateTime ? value : DateTime.tryParse(value);
+        case 'CowOrderDTO':
+          return CowOrderDTO.fromJson(value);
+        case 'CowSettlementDTO':
+          return CowSettlementDTO.fromJson(value);
+        case 'CowTokenDTO':
+          return CowTokenDTO.fromJson(value);
+        case 'CowTradeDTO':
+          return CowTradeDTO.fromJson(value);
+        case 'CowUserDTO':
+          return CowUserDTO.fromJson(value);
+        case 'CurveAccountDTO':
+          return CurveAccountDTO.fromJson(value);
+        case 'CurveAddLiquidityEventDTO':
+          return CurveAddLiquidityEventDTO.fromJson(value);
+        case 'CurveAdminFeeChangeLogDTO':
+          return CurveAdminFeeChangeLogDTO.fromJson(value);
+        case 'CurveAmplificationCoeffChangeLogDTO':
+          return CurveAmplificationCoeffChangeLogDTO.fromJson(value);
+        case 'CurveCoinDTO':
+          return CurveCoinDTO.fromJson(value);
+        case 'CurveContractDTO':
+          return CurveContractDTO.fromJson(value);
+        case 'CurveContractVersionDTO':
+          return CurveContractVersionDTO.fromJson(value);
+        case 'CurveDailyVolumeDTO':
+          return CurveDailyVolumeDTO.fromJson(value);
         case 'CurveExchangeDTO':
           return CurveExchangeDTO.fromJson(value);
+        case 'CurveFeeChangeLogDTO':
+          return CurveFeeChangeLogDTO.fromJson(value);
+        case 'CurveGaugeDTO':
+          return CurveGaugeDTO.fromJson(value);
+        case 'CurveGaugeDepositDTO':
+          return CurveGaugeDepositDTO.fromJson(value);
+        case 'CurveGaugeLiquidityDTO':
+          return CurveGaugeLiquidityDTO.fromJson(value);
+        case 'CurveGaugeTotalWeightDTO':
+          return CurveGaugeTotalWeightDTO.fromJson(value);
+        case 'CurveGaugeTypeDTO':
+          return CurveGaugeTypeDTO.fromJson(value);
+        case 'CurveGaugeTypeWeightDTO':
+          return CurveGaugeTypeWeightDTO.fromJson(value);
+        case 'CurveGaugeWeightDTO':
+          return CurveGaugeWeightDTO.fromJson(value);
+        case 'CurveGaugeWeightVoteDTO':
+          return CurveGaugeWeightVoteDTO.fromJson(value);
+        case 'CurveGaugeWithdrawDTO':
+          return CurveGaugeWithdrawDTO.fromJson(value);
+        case 'CurveHourlyVolumeDTO':
+          return CurveHourlyVolumeDTO.fromJson(value);
+        case 'CurveLpTokenDTO':
+          return CurveLpTokenDTO.fromJson(value);
+        case 'CurvePoolDTO':
+          return CurvePoolDTO.fromJson(value);
+        case 'CurveProposalDTO':
+          return CurveProposalDTO.fromJson(value);
+        case 'CurveProposalVoteDTO':
+          return CurveProposalVoteDTO.fromJson(value);
+        case 'CurveRemoveLiquidityEventDTO':
+          return CurveRemoveLiquidityEventDTO.fromJson(value);
+        case 'CurveRemoveLiquidityOneEventDTO':
+          return CurveRemoveLiquidityOneEventDTO.fromJson(value);
+        case 'CurveSystemStateDTO':
+          return CurveSystemStateDTO.fromJson(value);
+        case 'CurveTokenDTO':
+          return CurveTokenDTO.fromJson(value);
+        case 'CurveTransferOwnershipEventDTO':
+          return CurveTransferOwnershipEventDTO.fromJson(value);
+        case 'CurveUnderlyingCoinDTO':
+          return CurveUnderlyingCoinDTO.fromJson(value);
+        case 'CurveVotingAppDTO':
+          return CurveVotingAppDTO.fromJson(value);
+        case 'CurveWeeklyVolumeDTO':
+          return CurveWeeklyVolumeDTO.fromJson(value);
+        case 'DexBatchDTO':
+          return DexBatchDTO.fromJson(value);
+        case 'DexDepositDTO':
+          return DexDepositDTO.fromJson(value);
+        case 'DexOrderDTO':
+          return DexOrderDTO.fromJson(value);
+        case 'DexPriceDTO':
+          return DexPriceDTO.fromJson(value);
+        case 'DexSolutionDTO':
+          return DexSolutionDTO.fromJson(value);
+        case 'DexStatsDTO':
+          return DexStatsDTO.fromJson(value);
+        case 'DexTokenDTO':
+          return DexTokenDTO.fromJson(value);
         case 'DexTradeDTO':
           return DexTradeDTO.fromJson(value);
+        case 'DexUserDTO':
+          return DexUserDTO.fromJson(value);
+        case 'DexWithdrawDTO':
+          return DexWithdrawDTO.fromJson(value);
+        case 'DexWithdrawRequestDTO':
+          return DexWithdrawRequestDTO.fromJson(value);
         case 'NumericsBigInteger':
           return NumericsBigInteger.fromJson(value);
+        case 'SushiswapBundleDTO':
+          return SushiswapBundleDTO.fromJson(value);
+        case 'SushiswapBurnDTO':
+          return SushiswapBurnDTO.fromJson(value);
+        case 'SushiswapDayDataDTO':
+          return SushiswapDayDataDTO.fromJson(value);
+        case 'SushiswapFactoryDTO':
+          return SushiswapFactoryDTO.fromJson(value);
+        case 'SushiswapHourDataDTO':
+          return SushiswapHourDataDTO.fromJson(value);
+        case 'SushiswapLiquidityPositionDTO':
+          return SushiswapLiquidityPositionDTO.fromJson(value);
+        case 'SushiswapLiquidityPositionSnapshotDTO':
+          return SushiswapLiquidityPositionSnapshotDTO.fromJson(value);
+        case 'SushiswapMintDTO':
+          return SushiswapMintDTO.fromJson(value);
         case 'SushiswapPairDTO':
           return SushiswapPairDTO.fromJson(value);
+        case 'SushiswapPairDayDataDTO':
+          return SushiswapPairDayDataDTO.fromJson(value);
+        case 'SushiswapPairHourDataDTO':
+          return SushiswapPairHourDataDTO.fromJson(value);
         case 'SushiswapSwapDTO':
           return SushiswapSwapDTO.fromJson(value);
         case 'SushiswapTokenDTO':
           return SushiswapTokenDTO.fromJson(value);
+        case 'SushiswapTokenDayDataDTO':
+          return SushiswapTokenDayDataDTO.fromJson(value);
+        case 'SushiswapTransactionDTO':
+          return SushiswapTransactionDTO.fromJson(value);
+        case 'SushiswapUserDTO':
+          return SushiswapUserDTO.fromJson(value);
         case 'TransactionsETradeAggressiveSide':
           return TransactionsETradeAggressiveSideTypeTransformer().decode(value);
+        case 'UniswapV2BundleV2DTO':
+          return UniswapV2BundleV2DTO.fromJson(value);
+        case 'UniswapV2BurnV2DTO':
+          return UniswapV2BurnV2DTO.fromJson(value);
+        case 'UniswapV2LiquidityPositionSnapshotV2DTO':
+          return UniswapV2LiquidityPositionSnapshotV2DTO.fromJson(value);
+        case 'UniswapV2LiquidityPositionV2DTO':
+          return UniswapV2LiquidityPositionV2DTO.fromJson(value);
+        case 'UniswapV2MintV2DTO':
+          return UniswapV2MintV2DTO.fromJson(value);
+        case 'UniswapV2PairDayDataV2DTO':
+          return UniswapV2PairDayDataV2DTO.fromJson(value);
+        case 'UniswapV2PairHourDataV2DTO':
+          return UniswapV2PairHourDataV2DTO.fromJson(value);
         case 'UniswapV2PairV2DTO':
           return UniswapV2PairV2DTO.fromJson(value);
         case 'UniswapV2SwapV2DTO':
           return UniswapV2SwapV2DTO.fromJson(value);
+        case 'UniswapV2TokenDayDataV2DTO':
+          return UniswapV2TokenDayDataV2DTO.fromJson(value);
         case 'UniswapV2TokenV2DTO':
           return UniswapV2TokenV2DTO.fromJson(value);
+        case 'UniswapV2TransactionV2DTO':
+          return UniswapV2TransactionV2DTO.fromJson(value);
+        case 'UniswapV2UniswapDayDataV2DTO':
+          return UniswapV2UniswapDayDataV2DTO.fromJson(value);
+        case 'UniswapV2UniswapFactoryV2DTO':
+          return UniswapV2UniswapFactoryV2DTO.fromJson(value);
+        case 'UniswapV2UserV2DTO':
+          return UniswapV2UserV2DTO.fromJson(value);
         case 'UniswapV3BundleV3DTO':
           return UniswapV3BundleV3DTO.fromJson(value);
         case 'UniswapV3BurnV3DTO':
@@ -231,6 +373,8 @@ class ApiClient {
           return UniswapV3TokenV3DTO.fromJson(value);
         case 'UniswapV3TokenV3DayDataDTO':
           return UniswapV3TokenV3DayDataDTO.fromJson(value);
+        case 'UniswapV3TransactionV3DTO':
+          return UniswapV3TransactionV3DTO.fromJson(value);
         case 'UniswapV3UniswapDayDataV3DTO':
           return UniswapV3UniswapDayDataV3DTO.fromJson(value);
         default:
