@@ -50,7 +50,7 @@ import org.openapitools.client.JSON;
 /**
  * UniswapV3PositionSnapshotV3DTO
  */
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-16T13:54:35.958423Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-16T14:23:44.336467Z[Etc/UTC]")
 public class UniswapV3PositionSnapshotV3DTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
