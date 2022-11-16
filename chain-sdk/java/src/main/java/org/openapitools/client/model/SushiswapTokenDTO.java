@@ -53,7 +53,7 @@ import org.openapitools.client.JSON;
  * Stores aggregated information for a specific token across all pairs that token is included in.
  */
 @ApiModel(description = "Stores aggregated information for a specific token across all pairs that token is included in.")
-@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-15T14:23:54.835821Z[Etc/UTC]")
+@javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen", date = "2022-11-16T12:46:06.464035Z[Etc/UTC]")
 public class SushiswapTokenDTO {
   public static final String SERIALIZED_NAME_ENTRY_TIME = "entry_time";
   @SerializedName(SERIALIZED_NAME_ENTRY_TIME)
