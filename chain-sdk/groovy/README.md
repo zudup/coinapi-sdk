@@ -10,7 +10,7 @@ This Groovy package, using the [http-builder-ng library](https://http-builder-ng
 
 - API version: v1
 - Package version: v1
-- Build date: 2022-11-16T12:46:05.739176Z[Etc/UTC]
+- Build date: 2022-11-16T13:54:35.676385Z[Etc/UTC]
 - Build package: org.openapitools.codegen.languages.GroovyClientCodegen
 For more information, please visit [https://www.coinapi.io](https://www.coinapi.io)
 
@@ -37,16 +37,12 @@ Then, run:
 
 
 ```groovy
-def apiInstance = new CowApi()
-def startBlock = 56L // Long | 
-def endBlock = 56L // Long | 
-def startDate = new Date() // Date | 
-def endDate = new Date() // Date | 
+def apiInstance = new SushiswapApi()
 
-apiInstance.cowGetOrdersHistorical(startBlock, endBlock, startDate, endDate)
+apiInstance.curveGetExchangesCurrent()
     {
     // on success
-    def result = (List&lt;CowOrderDTO&gt;)it
+    def result = (List&lt;CurveExchangeDTO&gt;)it
     println result
     
 }

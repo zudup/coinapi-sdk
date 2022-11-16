@@ -30,118 +30,11 @@ my $api = WWW::OpenAPIClient::UniswapV2Api->new();
 isa_ok($api, 'WWW::OpenAPIClient::UniswapV2Api');
 
 #
-# uniswap_v2_get_bundles__historical test
-#
-# uncomment below and update the test
-#my $uniswap_v2_get_bundles__historical_start_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_bundles__historical_end_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_bundles__historical_start_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_bundles__historical_end_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_bundles__historical_result = $api->uniswap_v2_get_bundles__historical(start_block => $uniswap_v2_get_bundles__historical_start_block, end_block => $uniswap_v2_get_bundles__historical_end_block, start_date => $uniswap_v2_get_bundles__historical_start_date, end_date => $uniswap_v2_get_bundles__historical_end_date);
-
-#
-# uniswap_v2_get_burns__historical test
-#
-# uncomment below and update the test
-#my $uniswap_v2_get_burns__historical_start_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_burns__historical_end_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_burns__historical_start_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_burns__historical_end_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_burns__historical_pool_id = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_burns__historical_result = $api->uniswap_v2_get_burns__historical(start_block => $uniswap_v2_get_burns__historical_start_block, end_block => $uniswap_v2_get_burns__historical_end_block, start_date => $uniswap_v2_get_burns__historical_start_date, end_date => $uniswap_v2_get_burns__historical_end_date, pool_id => $uniswap_v2_get_burns__historical_pool_id);
-
-#
-# uniswap_v2_get_day_data__historical test
-#
-# uncomment below and update the test
-#my $uniswap_v2_get_day_data__historical_start_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_day_data__historical_end_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_day_data__historical_start_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_day_data__historical_end_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_day_data__historical_result = $api->uniswap_v2_get_day_data__historical(start_block => $uniswap_v2_get_day_data__historical_start_block, end_block => $uniswap_v2_get_day_data__historical_end_block, start_date => $uniswap_v2_get_day_data__historical_start_date, end_date => $uniswap_v2_get_day_data__historical_end_date);
-
-#
-# uniswap_v2_get_factory__historical test
-#
-# uncomment below and update the test
-#my $uniswap_v2_get_factory__historical_start_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_factory__historical_end_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_factory__historical_start_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_factory__historical_end_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_factory__historical_result = $api->uniswap_v2_get_factory__historical(start_block => $uniswap_v2_get_factory__historical_start_block, end_block => $uniswap_v2_get_factory__historical_end_block, start_date => $uniswap_v2_get_factory__historical_start_date, end_date => $uniswap_v2_get_factory__historical_end_date);
-
-#
-# uniswap_v2_get_liquidity_positions__historical test
-#
-# uncomment below and update the test
-#my $uniswap_v2_get_liquidity_positions__historical_start_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_liquidity_positions__historical_end_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_liquidity_positions__historical_start_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_liquidity_positions__historical_end_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_liquidity_positions__historical_pool_id = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_liquidity_positions__historical_result = $api->uniswap_v2_get_liquidity_positions__historical(start_block => $uniswap_v2_get_liquidity_positions__historical_start_block, end_block => $uniswap_v2_get_liquidity_positions__historical_end_block, start_date => $uniswap_v2_get_liquidity_positions__historical_start_date, end_date => $uniswap_v2_get_liquidity_positions__historical_end_date, pool_id => $uniswap_v2_get_liquidity_positions__historical_pool_id);
-
-#
-# uniswap_v2_get_liquidity_positions_snapshots__historical test
-#
-# uncomment below and update the test
-#my $uniswap_v2_get_liquidity_positions_snapshots__historical_start_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_liquidity_positions_snapshots__historical_end_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_liquidity_positions_snapshots__historical_start_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_liquidity_positions_snapshots__historical_end_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_liquidity_positions_snapshots__historical_pool_id = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_liquidity_positions_snapshots__historical_result = $api->uniswap_v2_get_liquidity_positions_snapshots__historical(start_block => $uniswap_v2_get_liquidity_positions_snapshots__historical_start_block, end_block => $uniswap_v2_get_liquidity_positions_snapshots__historical_end_block, start_date => $uniswap_v2_get_liquidity_positions_snapshots__historical_start_date, end_date => $uniswap_v2_get_liquidity_positions_snapshots__historical_end_date, pool_id => $uniswap_v2_get_liquidity_positions_snapshots__historical_pool_id);
-
-#
-# uniswap_v2_get_mints__historical test
-#
-# uncomment below and update the test
-#my $uniswap_v2_get_mints__historical_start_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_mints__historical_end_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_mints__historical_start_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_mints__historical_end_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_mints__historical_pool_id = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_mints__historical_result = $api->uniswap_v2_get_mints__historical(start_block => $uniswap_v2_get_mints__historical_start_block, end_block => $uniswap_v2_get_mints__historical_end_block, start_date => $uniswap_v2_get_mints__historical_start_date, end_date => $uniswap_v2_get_mints__historical_end_date, pool_id => $uniswap_v2_get_mints__historical_pool_id);
-
-#
 # uniswap_v2_get_pools__current test
 #
 # uncomment below and update the test
 #my $uniswap_v2_get_pools__current_filter_pool_id = undef; # replace NULL with a proper value
 #my $uniswap_v2_get_pools__current_result = $api->uniswap_v2_get_pools__current(filter_pool_id => $uniswap_v2_get_pools__current_filter_pool_id);
-
-#
-# uniswap_v2_get_pools__historical test
-#
-# uncomment below and update the test
-#my $uniswap_v2_get_pools__historical_start_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_pools__historical_end_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_pools__historical_start_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_pools__historical_end_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_pools__historical_pool_id = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_pools__historical_result = $api->uniswap_v2_get_pools__historical(start_block => $uniswap_v2_get_pools__historical_start_block, end_block => $uniswap_v2_get_pools__historical_end_block, start_date => $uniswap_v2_get_pools__historical_start_date, end_date => $uniswap_v2_get_pools__historical_end_date, pool_id => $uniswap_v2_get_pools__historical_pool_id);
-
-#
-# uniswap_v2_get_pools_day_data__historical test
-#
-# uncomment below and update the test
-#my $uniswap_v2_get_pools_day_data__historical_start_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_pools_day_data__historical_end_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_pools_day_data__historical_start_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_pools_day_data__historical_end_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_pools_day_data__historical_pool_id = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_pools_day_data__historical_result = $api->uniswap_v2_get_pools_day_data__historical(start_block => $uniswap_v2_get_pools_day_data__historical_start_block, end_block => $uniswap_v2_get_pools_day_data__historical_end_block, start_date => $uniswap_v2_get_pools_day_data__historical_start_date, end_date => $uniswap_v2_get_pools_day_data__historical_end_date, pool_id => $uniswap_v2_get_pools_day_data__historical_pool_id);
-
-#
-# uniswap_v2_get_pools_hour_data__historical test
-#
-# uncomment below and update the test
-#my $uniswap_v2_get_pools_hour_data__historical_start_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_pools_hour_data__historical_end_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_pools_hour_data__historical_start_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_pools_hour_data__historical_end_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_pools_hour_data__historical_pool_id = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_pools_hour_data__historical_result = $api->uniswap_v2_get_pools_hour_data__historical(start_block => $uniswap_v2_get_pools_hour_data__historical_start_block, end_block => $uniswap_v2_get_pools_hour_data__historical_end_block, start_date => $uniswap_v2_get_pools_hour_data__historical_start_date, end_date => $uniswap_v2_get_pools_hour_data__historical_end_date, pool_id => $uniswap_v2_get_pools_hour_data__historical_pool_id);
 
 #
 # uniswap_v2_get_swaps__current test
@@ -150,61 +43,8 @@ isa_ok($api, 'WWW::OpenAPIClient::UniswapV2Api');
 #my $uniswap_v2_get_swaps__current_result = $api->uniswap_v2_get_swaps__current();
 
 #
-# uniswap_v2_get_swaps__historical test
-#
-# uncomment below and update the test
-#my $uniswap_v2_get_swaps__historical_start_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_swaps__historical_end_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_swaps__historical_start_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_swaps__historical_end_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_swaps__historical_pool_id = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_swaps__historical_result = $api->uniswap_v2_get_swaps__historical(start_block => $uniswap_v2_get_swaps__historical_start_block, end_block => $uniswap_v2_get_swaps__historical_end_block, start_date => $uniswap_v2_get_swaps__historical_start_date, end_date => $uniswap_v2_get_swaps__historical_end_date, pool_id => $uniswap_v2_get_swaps__historical_pool_id);
-
-#
 # uniswap_v2_get_tokens__current test
 #
 # uncomment below and update the test
 #my $uniswap_v2_get_tokens__current_result = $api->uniswap_v2_get_tokens__current();
-
-#
-# uniswap_v2_get_tokens__historical test
-#
-# uncomment below and update the test
-#my $uniswap_v2_get_tokens__historical_start_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_tokens__historical_end_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_tokens__historical_start_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_tokens__historical_end_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_tokens__historical_token_id = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_tokens__historical_result = $api->uniswap_v2_get_tokens__historical(start_block => $uniswap_v2_get_tokens__historical_start_block, end_block => $uniswap_v2_get_tokens__historical_end_block, start_date => $uniswap_v2_get_tokens__historical_start_date, end_date => $uniswap_v2_get_tokens__historical_end_date, token_id => $uniswap_v2_get_tokens__historical_token_id);
-
-#
-# uniswap_v2_get_tokens_day_data__historical test
-#
-# uncomment below and update the test
-#my $uniswap_v2_get_tokens_day_data__historical_start_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_tokens_day_data__historical_end_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_tokens_day_data__historical_start_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_tokens_day_data__historical_end_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_tokens_day_data__historical_token_id = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_tokens_day_data__historical_result = $api->uniswap_v2_get_tokens_day_data__historical(start_block => $uniswap_v2_get_tokens_day_data__historical_start_block, end_block => $uniswap_v2_get_tokens_day_data__historical_end_block, start_date => $uniswap_v2_get_tokens_day_data__historical_start_date, end_date => $uniswap_v2_get_tokens_day_data__historical_end_date, token_id => $uniswap_v2_get_tokens_day_data__historical_token_id);
-
-#
-# uniswap_v2_get_transactions__historical test
-#
-# uncomment below and update the test
-#my $uniswap_v2_get_transactions__historical_start_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_transactions__historical_end_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_transactions__historical_start_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_transactions__historical_end_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_transactions__historical_result = $api->uniswap_v2_get_transactions__historical(start_block => $uniswap_v2_get_transactions__historical_start_block, end_block => $uniswap_v2_get_transactions__historical_end_block, start_date => $uniswap_v2_get_transactions__historical_start_date, end_date => $uniswap_v2_get_transactions__historical_end_date);
-
-#
-# uniswap_v2_get_users__historical test
-#
-# uncomment below and update the test
-#my $uniswap_v2_get_users__historical_start_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_users__historical_end_block = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_users__historical_start_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_users__historical_end_date = undef; # replace NULL with a proper value
-#my $uniswap_v2_get_users__historical_result = $api->uniswap_v2_get_users__historical(start_block => $uniswap_v2_get_users__historical_start_block, end_block => $uniswap_v2_get_users__historical_end_block, start_date => $uniswap_v2_get_users__historical_start_date, end_date => $uniswap_v2_get_users__historical_end_date);
 

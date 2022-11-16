@@ -78,130 +78,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test SushiswapGetBundlesHistorical
-        /// </summary>
-        [Fact]
-        public void SushiswapGetBundlesHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //var response = instance.SushiswapGetBundlesHistorical(startBlock, endBlock, startDate, endDate);
-            //Assert.IsType<List<SushiswapBundleDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test SushiswapGetBurnsHistorical
-        /// </summary>
-        [Fact]
-        public void SushiswapGetBurnsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.SushiswapGetBurnsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<SushiswapBurnDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test SushiswapGetDayDataHistorical
-        /// </summary>
-        [Fact]
-        public void SushiswapGetDayDataHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //var response = instance.SushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate);
-            //Assert.IsType<List<SushiswapDayDataDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test SushiswapGetFactoryHistorical
-        /// </summary>
-        [Fact]
-        public void SushiswapGetFactoryHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //var response = instance.SushiswapGetFactoryHistorical(startBlock, endBlock, startDate, endDate);
-            //Assert.IsType<List<SushiswapFactoryDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test SushiswapGetHourDataHistorical
-        /// </summary>
-        [Fact]
-        public void SushiswapGetHourDataHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //var response = instance.SushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate);
-            //Assert.IsType<List<SushiswapHourDataDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test SushiswapGetLiquidityPositionHistorical
-        /// </summary>
-        [Fact]
-        public void SushiswapGetLiquidityPositionHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.SushiswapGetLiquidityPositionHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<SushiswapLiquidityPositionDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test SushiswapGetLiquidityPositionSnapshotHistorical
-        /// </summary>
-        [Fact]
-        public void SushiswapGetLiquidityPositionSnapshotHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.SushiswapGetLiquidityPositionSnapshotHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<SushiswapLiquidityPositionSnapshotDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test SushiswapGetMintsHistorical
-        /// </summary>
-        [Fact]
-        public void SushiswapGetMintsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.SushiswapGetMintsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<SushiswapMintDTO>>(response);
-        }
-
-        /// <summary>
         /// Test SushiswapGetPoolsCurrent
         /// </summary>
         [Fact]
@@ -210,54 +86,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.SushiswapGetPoolsCurrent();
             //Assert.IsType<List<SushiswapPairDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test SushiswapGetPoolsDayDataHistorical
-        /// </summary>
-        [Fact]
-        public void SushiswapGetPoolsDayDataHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.SushiswapGetPoolsDayDataHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<SushiswapPairDayDataDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test SushiswapGetPoolsHistorical
-        /// </summary>
-        [Fact]
-        public void SushiswapGetPoolsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.SushiswapGetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<SushiswapPairDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test SushiswapGetPoolsHourDataHistorical
-        /// </summary>
-        [Fact]
-        public void SushiswapGetPoolsHourDataHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.SushiswapGetPoolsHourDataHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<SushiswapPairHourDataDTO>>(response);
         }
 
         /// <summary>
@@ -272,22 +100,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test SushiswapGetSwapsHistorical
-        /// </summary>
-        [Fact]
-        public void SushiswapGetSwapsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string poolId = null;
-            //var response = instance.SushiswapGetSwapsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-            //Assert.IsType<List<SushiswapSwapDTO>>(response);
-        }
-
-        /// <summary>
         /// Test SushiswapGetTokensCurrent
         /// </summary>
         [Fact]
@@ -296,68 +108,6 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             // TODO uncomment below to test the method and replace null with proper value
             //var response = instance.SushiswapGetTokensCurrent();
             //Assert.IsType<List<SushiswapTokenDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test SushiswapGetTokensDayDataHistorical
-        /// </summary>
-        [Fact]
-        public void SushiswapGetTokensDayDataHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string tokenId = null;
-            //var response = instance.SushiswapGetTokensDayDataHistorical(startBlock, endBlock, startDate, endDate, tokenId);
-            //Assert.IsType<List<SushiswapTokenDayDataDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test SushiswapGetTokensHistorical
-        /// </summary>
-        [Fact]
-        public void SushiswapGetTokensHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //string tokenId = null;
-            //var response = instance.SushiswapGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId);
-            //Assert.IsType<List<SushiswapTokenDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test SushiswapGetTransactionsHistorical
-        /// </summary>
-        [Fact]
-        public void SushiswapGetTransactionsHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //var response = instance.SushiswapGetTransactionsHistorical(startBlock, endBlock, startDate, endDate);
-            //Assert.IsType<List<SushiswapTransactionDTO>>(response);
-        }
-
-        /// <summary>
-        /// Test SushiswapGetUsersHistorical
-        /// </summary>
-        [Fact]
-        public void SushiswapGetUsersHistoricalTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //long? startBlock = null;
-            //long? endBlock = null;
-            //DateTime? startDate = null;
-            //DateTime? endDate = null;
-            //var response = instance.SushiswapGetUsersHistorical(startBlock, endBlock, startDate, endDate);
-            //Assert.IsType<List<SushiswapUserDTO>>(response);
         }
     }
 }

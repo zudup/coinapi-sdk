@@ -73,132 +73,12 @@ class UniswapV2ApiTest extends TestCase
     }
 
     /**
-     * Test case for uniswapV2GetBundlesHistorical
-     *
-     * Bundles (historical).
-     *
-     */
-    public function testUniswapV2GetBundlesHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV2GetBurnsHistorical
-     *
-     * Burns (historical).
-     *
-     */
-    public function testUniswapV2GetBurnsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV2GetDayDataHistorical
-     *
-     * DayData (historical).
-     *
-     */
-    public function testUniswapV2GetDayDataHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV2GetFactoryHistorical
-     *
-     * Factory (historical).
-     *
-     */
-    public function testUniswapV2GetFactoryHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV2GetLiquidityPositionsHistorical
-     *
-     * LiquidityPositions (historical).
-     *
-     */
-    public function testUniswapV2GetLiquidityPositionsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV2GetLiquidityPositionsSnapshotsHistorical
-     *
-     * LiquidityPositionsSnapshots (historical).
-     *
-     */
-    public function testUniswapV2GetLiquidityPositionsSnapshotsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV2GetMintsHistorical
-     *
-     * Mints (historical).
-     *
-     */
-    public function testUniswapV2GetMintsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for uniswapV2GetPoolsCurrent
      *
      * Pools (current) 🔥.
      *
      */
     public function testUniswapV2GetPoolsCurrent()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV2GetPoolsDayDataHistorical
-     *
-     * PoolsDayData (historical).
-     *
-     */
-    public function testUniswapV2GetPoolsDayDataHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV2GetPoolsHistorical
-     *
-     * Pools (historical) 🔥.
-     *
-     */
-    public function testUniswapV2GetPoolsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV2GetPoolsHourDataHistorical
-     *
-     * PoolsHourData (historical).
-     *
-     */
-    public function testUniswapV2GetPoolsHourDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -217,72 +97,12 @@ class UniswapV2ApiTest extends TestCase
     }
 
     /**
-     * Test case for uniswapV2GetSwapsHistorical
-     *
-     * Swaps (historical) 🔥.
-     *
-     */
-    public function testUniswapV2GetSwapsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
      * Test case for uniswapV2GetTokensCurrent
      *
      * Tokens (current) 🔥.
      *
      */
     public function testUniswapV2GetTokensCurrent()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV2GetTokensDayDataHistorical
-     *
-     * TokensDayData (historical).
-     *
-     */
-    public function testUniswapV2GetTokensDayDataHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV2GetTokensHistorical
-     *
-     * Tokens (historical) 🔥.
-     *
-     */
-    public function testUniswapV2GetTokensHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV2GetTransactionsHistorical
-     *
-     * Transactions (historical).
-     *
-     */
-    public function testUniswapV2GetTransactionsHistorical()
-    {
-        // TODO: implement
-        $this->markTestIncomplete('Not implemented');
-    }
-
-    /**
-     * Test case for uniswapV2GetUsersHistorical
-     *
-     * Users (historical).
-     *
-     */
-    public function testUniswapV2GetUsersHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

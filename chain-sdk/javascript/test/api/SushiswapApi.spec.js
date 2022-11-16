@@ -68,120 +68,10 @@
         done();
       });
     });
-    describe('sushiswapGetBundlesHistorical', function() {
-      it('should call sushiswapGetBundlesHistorical successfully', function(done) {
-        //uncomment below and update the code to test sushiswapGetBundlesHistorical
-        //instance.sushiswapGetBundlesHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('sushiswapGetBurnsHistorical', function() {
-      it('should call sushiswapGetBurnsHistorical successfully', function(done) {
-        //uncomment below and update the code to test sushiswapGetBurnsHistorical
-        //instance.sushiswapGetBurnsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('sushiswapGetDayDataHistorical', function() {
-      it('should call sushiswapGetDayDataHistorical successfully', function(done) {
-        //uncomment below and update the code to test sushiswapGetDayDataHistorical
-        //instance.sushiswapGetDayDataHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('sushiswapGetFactoryHistorical', function() {
-      it('should call sushiswapGetFactoryHistorical successfully', function(done) {
-        //uncomment below and update the code to test sushiswapGetFactoryHistorical
-        //instance.sushiswapGetFactoryHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('sushiswapGetHourDataHistorical', function() {
-      it('should call sushiswapGetHourDataHistorical successfully', function(done) {
-        //uncomment below and update the code to test sushiswapGetHourDataHistorical
-        //instance.sushiswapGetHourDataHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('sushiswapGetLiquidityPositionHistorical', function() {
-      it('should call sushiswapGetLiquidityPositionHistorical successfully', function(done) {
-        //uncomment below and update the code to test sushiswapGetLiquidityPositionHistorical
-        //instance.sushiswapGetLiquidityPositionHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('sushiswapGetLiquidityPositionSnapshotHistorical', function() {
-      it('should call sushiswapGetLiquidityPositionSnapshotHistorical successfully', function(done) {
-        //uncomment below and update the code to test sushiswapGetLiquidityPositionSnapshotHistorical
-        //instance.sushiswapGetLiquidityPositionSnapshotHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('sushiswapGetMintsHistorical', function() {
-      it('should call sushiswapGetMintsHistorical successfully', function(done) {
-        //uncomment below and update the code to test sushiswapGetMintsHistorical
-        //instance.sushiswapGetMintsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('sushiswapGetPoolsCurrent', function() {
       it('should call sushiswapGetPoolsCurrent successfully', function(done) {
         //uncomment below and update the code to test sushiswapGetPoolsCurrent
         //instance.sushiswapGetPoolsCurrent(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('sushiswapGetPoolsDayDataHistorical', function() {
-      it('should call sushiswapGetPoolsDayDataHistorical successfully', function(done) {
-        //uncomment below and update the code to test sushiswapGetPoolsDayDataHistorical
-        //instance.sushiswapGetPoolsDayDataHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('sushiswapGetPoolsHistorical', function() {
-      it('should call sushiswapGetPoolsHistorical successfully', function(done) {
-        //uncomment below and update the code to test sushiswapGetPoolsHistorical
-        //instance.sushiswapGetPoolsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('sushiswapGetPoolsHourDataHistorical', function() {
-      it('should call sushiswapGetPoolsHourDataHistorical successfully', function(done) {
-        //uncomment below and update the code to test sushiswapGetPoolsHourDataHistorical
-        //instance.sushiswapGetPoolsHourDataHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -198,60 +88,10 @@
         done();
       });
     });
-    describe('sushiswapGetSwapsHistorical', function() {
-      it('should call sushiswapGetSwapsHistorical successfully', function(done) {
-        //uncomment below and update the code to test sushiswapGetSwapsHistorical
-        //instance.sushiswapGetSwapsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
     describe('sushiswapGetTokensCurrent', function() {
       it('should call sushiswapGetTokensCurrent successfully', function(done) {
         //uncomment below and update the code to test sushiswapGetTokensCurrent
         //instance.sushiswapGetTokensCurrent(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('sushiswapGetTokensDayDataHistorical', function() {
-      it('should call sushiswapGetTokensDayDataHistorical successfully', function(done) {
-        //uncomment below and update the code to test sushiswapGetTokensDayDataHistorical
-        //instance.sushiswapGetTokensDayDataHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('sushiswapGetTokensHistorical', function() {
-      it('should call sushiswapGetTokensHistorical successfully', function(done) {
-        //uncomment below and update the code to test sushiswapGetTokensHistorical
-        //instance.sushiswapGetTokensHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('sushiswapGetTransactionsHistorical', function() {
-      it('should call sushiswapGetTransactionsHistorical successfully', function(done) {
-        //uncomment below and update the code to test sushiswapGetTransactionsHistorical
-        //instance.sushiswapGetTransactionsHistorical(function(error) {
-        //  if (error) throw error;
-        //expect().to.be();
-        //});
-        done();
-      });
-    });
-    describe('sushiswapGetUsersHistorical', function() {
-      it('should call sushiswapGetUsersHistorical successfully', function(done) {
-        //uncomment below and update the code to test sushiswapGetUsersHistorical
-        //instance.sushiswapGetUsersHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

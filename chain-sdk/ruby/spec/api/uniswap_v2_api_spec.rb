@@ -32,115 +32,6 @@ describe 'UniswapV2Api' do
     end
   end
 
-  # unit tests for uniswap_v2_get_bundles__historical
-  # Bundles (historical)
-  # Gets bundles.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @return [Array<UniswapV2BundleV2DTO>]
-  describe 'uniswap_v2_get_bundles__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for uniswap_v2_get_burns__historical
-  # Burns (historical)
-  # Gets burns.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<UniswapV2BurnV2DTO>]
-  describe 'uniswap_v2_get_burns__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for uniswap_v2_get_day_data__historical
-  # DayData (historical)
-  # Gets uniswapv2 day data.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @return [Array<UniswapV2UniswapDayDataV2DTO>]
-  describe 'uniswap_v2_get_day_data__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for uniswap_v2_get_factory__historical
-  # Factory (historical)
-  # Gets factory.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @return [Array<UniswapV2UniswapFactoryV2DTO>]
-  describe 'uniswap_v2_get_factory__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for uniswap_v2_get_liquidity_positions__historical
-  # LiquidityPositions (historical)
-  # Gets liquidity positions.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<UniswapV2LiquidityPositionV2DTO>]
-  describe 'uniswap_v2_get_liquidity_positions__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for uniswap_v2_get_liquidity_positions_snapshots__historical
-  # LiquidityPositionsSnapshots (historical)
-  # Gets liquidity positions snapshots.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<UniswapV2LiquidityPositionSnapshotV2DTO>]
-  describe 'uniswap_v2_get_liquidity_positions_snapshots__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for uniswap_v2_get_mints__historical
-  # Mints (historical)
-  # Gets mints.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<UniswapV2MintV2DTO>]
-  describe 'uniswap_v2_get_mints__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for uniswap_v2_get_pools__current
   # Pools (current) 🔥
   # Gets pools.
@@ -148,54 +39,6 @@ describe 'UniswapV2Api' do
   # @option opts [String] :filter_pool_id 
   # @return [Array<UniswapV2PairV2DTO>]
   describe 'uniswap_v2_get_pools__current test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for uniswap_v2_get_pools__historical
-  # Pools (historical) 🔥
-  # Gets pools.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<UniswapV2PairV2DTO>]
-  describe 'uniswap_v2_get_pools__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for uniswap_v2_get_pools_day_data__historical
-  # PoolsDayData (historical)
-  # Gets pools day data.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<UniswapV2PairDayDataV2DTO>]
-  describe 'uniswap_v2_get_pools_day_data__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for uniswap_v2_get_pools_hour_data__historical
-  # PoolsHourData (historical)
-  # Gets pools tracked each our.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<UniswapV2PairHourDataV2DTO>]
-  describe 'uniswap_v2_get_pools_hour_data__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -212,90 +55,12 @@ describe 'UniswapV2Api' do
     end
   end
 
-  # unit tests for uniswap_v2_get_swaps__historical
-  # Swaps (historical) 🔥
-  # Gets swaps.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :pool_id 
-  # @return [Array<UniswapV2SwapV2DTO>]
-  describe 'uniswap_v2_get_swaps__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
   # unit tests for uniswap_v2_get_tokens__current
   # Tokens (current) 🔥
   # Gets tokens.
   # @param [Hash] opts the optional parameters
   # @return [Array<UniswapV2TokenV2DTO>]
   describe 'uniswap_v2_get_tokens__current test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for uniswap_v2_get_tokens__historical
-  # Tokens (historical) 🔥
-  # Gets tokens.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :token_id 
-  # @return [Array<UniswapV2TokenV2DTO>]
-  describe 'uniswap_v2_get_tokens__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for uniswap_v2_get_tokens_day_data__historical
-  # TokensDayData (historical)
-  # Gets tokens day data.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @option opts [String] :token_id 
-  # @return [Array<UniswapV2TokenDayDataV2DTO>]
-  describe 'uniswap_v2_get_tokens_day_data__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for uniswap_v2_get_transactions__historical
-  # Transactions (historical)
-  # Gets transactions.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @return [Array<UniswapV2TransactionV2DTO>]
-  describe 'uniswap_v2_get_transactions__historical test' do
-    it 'should work' do
-      # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
-    end
-  end
-
-  # unit tests for uniswap_v2_get_users__historical
-  # Users (historical)
-  # Gets users.
-  # @param [Hash] opts the optional parameters
-  # @option opts [Integer] :start_block 
-  # @option opts [Integer] :end_block 
-  # @option opts [Time] :start_date 
-  # @option opts [Time] :end_date 
-  # @return [Array<UniswapV2UserV2DTO>]
-  describe 'uniswap_v2_get_users__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

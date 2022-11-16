@@ -4,9 +4,6 @@ README.md
 elm.json
 src/Api.elm
 src/Api/Data.elm
-src/Api/Request/Cow.elm
-src/Api/Request/Curve.elm
-src/Api/Request/Dex.elm
 src/Api/Request/Sushiswap.elm
 src/Api/Request/UniswapV2.elm
 src/Api/Request/UniswapV3.elm

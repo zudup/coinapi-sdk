@@ -64,9 +64,6 @@ library
   exposed-modules:
       OnChain
       OnChain.API
-      OnChain.API.Cow
-      OnChain.API.Curve
-      OnChain.API.Dex
       OnChain.API.Sushiswap
       OnChain.API.UniswapV2
       OnChain.API.UniswapV3

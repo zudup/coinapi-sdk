@@ -16,23 +16,9 @@ package org.openapitools.client.api;
 import org.openapitools.client.ApiException;
 import org.openapitools.client.model.CurveExchangeDTO;
 import org.openapitools.client.model.DexTradeDTO;
-import java.time.OffsetDateTime;
-import org.openapitools.client.model.SushiswapBundleDTO;
-import org.openapitools.client.model.SushiswapBurnDTO;
-import org.openapitools.client.model.SushiswapDayDataDTO;
-import org.openapitools.client.model.SushiswapFactoryDTO;
-import org.openapitools.client.model.SushiswapHourDataDTO;
-import org.openapitools.client.model.SushiswapLiquidityPositionDTO;
-import org.openapitools.client.model.SushiswapLiquidityPositionSnapshotDTO;
-import org.openapitools.client.model.SushiswapMintDTO;
 import org.openapitools.client.model.SushiswapPairDTO;
-import org.openapitools.client.model.SushiswapPairDayDataDTO;
-import org.openapitools.client.model.SushiswapPairHourDataDTO;
 import org.openapitools.client.model.SushiswapSwapDTO;
 import org.openapitools.client.model.SushiswapTokenDTO;
-import org.openapitools.client.model.SushiswapTokenDayDataDTO;
-import org.openapitools.client.model.SushiswapTransactionDTO;
-import org.openapitools.client.model.SushiswapUserDTO;
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 
@@ -76,146 +62,6 @@ public class SushiswapApiTest {
     }
 
     /**
-     * Bundles (historical)
-     *
-     * Gets bundles.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetBundlesHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        List<SushiswapBundleDTO> response = api.sushiswapGetBundlesHistorical(startBlock, endBlock, startDate, endDate);
-        // TODO: test validations
-    }
-
-    /**
-     * Burns (historical)
-     *
-     * Gets burns.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetBurnsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<SushiswapBurnDTO> response = api.sushiswapGetBurnsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * DayData (historical)
-     *
-     * Gets day data.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetDayDataHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        List<SushiswapDayDataDTO> response = api.sushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate);
-        // TODO: test validations
-    }
-
-    /**
-     * Factory (historical)
-     *
-     * Gets factory.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetFactoryHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        List<SushiswapFactoryDTO> response = api.sushiswapGetFactoryHistorical(startBlock, endBlock, startDate, endDate);
-        // TODO: test validations
-    }
-
-    /**
-     * HourData (historical)
-     *
-     * Gets hour data.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetHourDataHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        List<SushiswapHourDataDTO> response = api.sushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate);
-        // TODO: test validations
-    }
-
-    /**
-     * LiquidityPosition (historical)
-     *
-     * Gets liquidity position.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetLiquidityPositionHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<SushiswapLiquidityPositionDTO> response = api.sushiswapGetLiquidityPositionHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * LiquidityPositionSnapshot (historical)
-     *
-     * Gets liquidity position snapshot.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetLiquidityPositionSnapshotHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<SushiswapLiquidityPositionSnapshotDTO> response = api.sushiswapGetLiquidityPositionSnapshotHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * Mints (historical)
-     *
-     * Gets mints.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetMintsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<SushiswapMintDTO> response = api.sushiswapGetMintsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
      * Pools (current) 🔥
      *
      * Gets pools.
@@ -225,60 +71,6 @@ public class SushiswapApiTest {
     @Test
     public void sushiswapGetPoolsCurrentTest() throws ApiException {
         List<SushiswapPairDTO> response = api.sushiswapGetPoolsCurrent();
-        // TODO: test validations
-    }
-
-    /**
-     * PoolsDayData (historical)
-     *
-     * Gets pools day data.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetPoolsDayDataHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<SushiswapPairDayDataDTO> response = api.sushiswapGetPoolsDayDataHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * Pools (historical) 🔥
-     *
-     * Gets list of pools for given filters.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetPoolsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<SushiswapPairDTO> response = api.sushiswapGetPoolsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
-     * PoolsHourData (historical)
-     *
-     * Gets pools tracked each our.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetPoolsHourDataHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<SushiswapPairHourDataDTO> response = api.sushiswapGetPoolsHourDataHistorical(startBlock, endBlock, startDate, endDate, poolId);
         // TODO: test validations
     }
 
@@ -296,24 +88,6 @@ public class SushiswapApiTest {
     }
 
     /**
-     * Swaps (historical) 🔥
-     *
-     * Gets list of swaps for given filters.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetSwapsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String poolId = null;
-        List<SushiswapSwapDTO> response = api.sushiswapGetSwapsHistorical(startBlock, endBlock, startDate, endDate, poolId);
-        // TODO: test validations
-    }
-
-    /**
      * Tokens (current) 🔥
      *
      * Gets tokens.
@@ -323,76 +97,6 @@ public class SushiswapApiTest {
     @Test
     public void sushiswapGetTokensCurrentTest() throws ApiException {
         List<SushiswapTokenDTO> response = api.sushiswapGetTokensCurrent();
-        // TODO: test validations
-    }
-
-    /**
-     * TokensDayData (historical)
-     *
-     * Gets tokens day data.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetTokensDayDataHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String tokenId = null;
-        List<SushiswapTokenDayDataDTO> response = api.sushiswapGetTokensDayDataHistorical(startBlock, endBlock, startDate, endDate, tokenId);
-        // TODO: test validations
-    }
-
-    /**
-     * Tokens (historical) 🔥
-     *
-     * Gets list of tokens for given filters.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetTokensHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        String tokenId = null;
-        List<SushiswapTokenDTO> response = api.sushiswapGetTokensHistorical(startBlock, endBlock, startDate, endDate, tokenId);
-        // TODO: test validations
-    }
-
-    /**
-     * Transactions (historical)
-     *
-     * Gets transactions.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetTransactionsHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        List<SushiswapTransactionDTO> response = api.sushiswapGetTransactionsHistorical(startBlock, endBlock, startDate, endDate);
-        // TODO: test validations
-    }
-
-    /**
-     * Users (historical)
-     *
-     * Gets users.
-     *
-     * @throws ApiException if the Api call fails
-     */
-    @Test
-    public void sushiswapGetUsersHistoricalTest() throws ApiException {
-        Long startBlock = null;
-        Long endBlock = null;
-        OffsetDateTime startDate = null;
-        OffsetDateTime endDate = null;
-        List<SushiswapUserDTO> response = api.sushiswapGetUsersHistorical(startBlock, endBlock, startDate, endDate);
         // TODO: test validations
     }
 

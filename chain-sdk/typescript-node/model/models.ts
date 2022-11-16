@@ -1,86 +1,15 @@
 import localVarRequest from 'request';
 
-export * from './cowOrderDTO';
-export * from './cowSettlementDTO';
-export * from './cowTokenDTO';
-export * from './cowTradeDTO';
-export * from './cowUserDTO';
-export * from './curveAccountDTO';
-export * from './curveAddLiquidityEventDTO';
-export * from './curveAdminFeeChangeLogDTO';
-export * from './curveAmplificationCoeffChangeLogDTO';
-export * from './curveCoinDTO';
-export * from './curveContractDTO';
-export * from './curveContractVersionDTO';
-export * from './curveDailyVolumeDTO';
 export * from './curveExchangeDTO';
-export * from './curveFeeChangeLogDTO';
-export * from './curveGaugeDTO';
-export * from './curveGaugeDepositDTO';
-export * from './curveGaugeLiquidityDTO';
-export * from './curveGaugeTotalWeightDTO';
-export * from './curveGaugeTypeDTO';
-export * from './curveGaugeTypeWeightDTO';
-export * from './curveGaugeWeightDTO';
-export * from './curveGaugeWeightVoteDTO';
-export * from './curveGaugeWithdrawDTO';
-export * from './curveHourlyVolumeDTO';
-export * from './curveLpTokenDTO';
-export * from './curvePoolDTO';
-export * from './curveProposalDTO';
-export * from './curveProposalVoteDTO';
-export * from './curveRemoveLiquidityEventDTO';
-export * from './curveRemoveLiquidityOneEventDTO';
-export * from './curveSystemStateDTO';
-export * from './curveTokenDTO';
-export * from './curveTransferOwnershipEventDTO';
-export * from './curveUnderlyingCoinDTO';
-export * from './curveVotingAppDTO';
-export * from './curveWeeklyVolumeDTO';
-export * from './dexBatchDTO';
-export * from './dexDepositDTO';
-export * from './dexOrderDTO';
-export * from './dexPriceDTO';
-export * from './dexSolutionDTO';
-export * from './dexStatsDTO';
-export * from './dexTokenDTO';
 export * from './dexTradeDTO';
-export * from './dexUserDTO';
-export * from './dexWithdrawDTO';
-export * from './dexWithdrawRequestDTO';
 export * from './numericsBigInteger';
-export * from './sushiswapBundleDTO';
-export * from './sushiswapBurnDTO';
-export * from './sushiswapDayDataDTO';
-export * from './sushiswapFactoryDTO';
-export * from './sushiswapHourDataDTO';
-export * from './sushiswapLiquidityPositionDTO';
-export * from './sushiswapLiquidityPositionSnapshotDTO';
-export * from './sushiswapMintDTO';
 export * from './sushiswapPairDTO';
-export * from './sushiswapPairDayDataDTO';
-export * from './sushiswapPairHourDataDTO';
 export * from './sushiswapSwapDTO';
 export * from './sushiswapTokenDTO';
-export * from './sushiswapTokenDayDataDTO';
-export * from './sushiswapTransactionDTO';
-export * from './sushiswapUserDTO';
 export * from './transactionsETradeAggressiveSide';
-export * from './uniswapV2BundleV2DTO';
-export * from './uniswapV2BurnV2DTO';
-export * from './uniswapV2LiquidityPositionSnapshotV2DTO';
-export * from './uniswapV2LiquidityPositionV2DTO';
-export * from './uniswapV2MintV2DTO';
-export * from './uniswapV2PairDayDataV2DTO';
-export * from './uniswapV2PairHourDataV2DTO';
 export * from './uniswapV2PairV2DTO';
 export * from './uniswapV2SwapV2DTO';
-export * from './uniswapV2TokenDayDataV2DTO';
 export * from './uniswapV2TokenV2DTO';
-export * from './uniswapV2TransactionV2DTO';
-export * from './uniswapV2UniswapDayDataV2DTO';
-export * from './uniswapV2UniswapFactoryV2DTO';
-export * from './uniswapV2UserV2DTO';
 export * from './uniswapV3BundleV3DTO';
 export * from './uniswapV3BurnV3DTO';
 export * from './uniswapV3FactoryV3DTO';
@@ -96,7 +25,6 @@ export * from './uniswapV3TickV3DTO';
 export * from './uniswapV3TokenHourDataV3DTO';
 export * from './uniswapV3TokenV3DTO';
 export * from './uniswapV3TokenV3DayDataDTO';
-export * from './uniswapV3TransactionV3DTO';
 export * from './uniswapV3UniswapDayDataV3DTO';
 
 import * as fs from 'fs';
@@ -112,87 +40,16 @@ export interface RequestDetailedFile {
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 
-import { CowOrderDTO } from './cowOrderDTO';
-import { CowSettlementDTO } from './cowSettlementDTO';
-import { CowTokenDTO } from './cowTokenDTO';
-import { CowTradeDTO } from './cowTradeDTO';
-import { CowUserDTO } from './cowUserDTO';
-import { CurveAccountDTO } from './curveAccountDTO';
-import { CurveAddLiquidityEventDTO } from './curveAddLiquidityEventDTO';
-import { CurveAdminFeeChangeLogDTO } from './curveAdminFeeChangeLogDTO';
-import { CurveAmplificationCoeffChangeLogDTO } from './curveAmplificationCoeffChangeLogDTO';
-import { CurveCoinDTO } from './curveCoinDTO';
-import { CurveContractDTO } from './curveContractDTO';
-import { CurveContractVersionDTO } from './curveContractVersionDTO';
-import { CurveDailyVolumeDTO } from './curveDailyVolumeDTO';
 import { CurveExchangeDTO } from './curveExchangeDTO';
-import { CurveFeeChangeLogDTO } from './curveFeeChangeLogDTO';
-import { CurveGaugeDTO } from './curveGaugeDTO';
-import { CurveGaugeDepositDTO } from './curveGaugeDepositDTO';
-import { CurveGaugeLiquidityDTO } from './curveGaugeLiquidityDTO';
-import { CurveGaugeTotalWeightDTO } from './curveGaugeTotalWeightDTO';
-import { CurveGaugeTypeDTO } from './curveGaugeTypeDTO';
-import { CurveGaugeTypeWeightDTO } from './curveGaugeTypeWeightDTO';
-import { CurveGaugeWeightDTO } from './curveGaugeWeightDTO';
-import { CurveGaugeWeightVoteDTO } from './curveGaugeWeightVoteDTO';
-import { CurveGaugeWithdrawDTO } from './curveGaugeWithdrawDTO';
-import { CurveHourlyVolumeDTO } from './curveHourlyVolumeDTO';
-import { CurveLpTokenDTO } from './curveLpTokenDTO';
-import { CurvePoolDTO } from './curvePoolDTO';
-import { CurveProposalDTO } from './curveProposalDTO';
-import { CurveProposalVoteDTO } from './curveProposalVoteDTO';
-import { CurveRemoveLiquidityEventDTO } from './curveRemoveLiquidityEventDTO';
-import { CurveRemoveLiquidityOneEventDTO } from './curveRemoveLiquidityOneEventDTO';
-import { CurveSystemStateDTO } from './curveSystemStateDTO';
-import { CurveTokenDTO } from './curveTokenDTO';
-import { CurveTransferOwnershipEventDTO } from './curveTransferOwnershipEventDTO';
-import { CurveUnderlyingCoinDTO } from './curveUnderlyingCoinDTO';
-import { CurveVotingAppDTO } from './curveVotingAppDTO';
-import { CurveWeeklyVolumeDTO } from './curveWeeklyVolumeDTO';
-import { DexBatchDTO } from './dexBatchDTO';
-import { DexDepositDTO } from './dexDepositDTO';
-import { DexOrderDTO } from './dexOrderDTO';
-import { DexPriceDTO } from './dexPriceDTO';
-import { DexSolutionDTO } from './dexSolutionDTO';
-import { DexStatsDTO } from './dexStatsDTO';
-import { DexTokenDTO } from './dexTokenDTO';
 import { DexTradeDTO } from './dexTradeDTO';
-import { DexUserDTO } from './dexUserDTO';
-import { DexWithdrawDTO } from './dexWithdrawDTO';
-import { DexWithdrawRequestDTO } from './dexWithdrawRequestDTO';
 import { NumericsBigInteger } from './numericsBigInteger';
-import { SushiswapBundleDTO } from './sushiswapBundleDTO';
-import { SushiswapBurnDTO } from './sushiswapBurnDTO';
-import { SushiswapDayDataDTO } from './sushiswapDayDataDTO';
-import { SushiswapFactoryDTO } from './sushiswapFactoryDTO';
-import { SushiswapHourDataDTO } from './sushiswapHourDataDTO';
-import { SushiswapLiquidityPositionDTO } from './sushiswapLiquidityPositionDTO';
-import { SushiswapLiquidityPositionSnapshotDTO } from './sushiswapLiquidityPositionSnapshotDTO';
-import { SushiswapMintDTO } from './sushiswapMintDTO';
 import { SushiswapPairDTO } from './sushiswapPairDTO';
-import { SushiswapPairDayDataDTO } from './sushiswapPairDayDataDTO';
-import { SushiswapPairHourDataDTO } from './sushiswapPairHourDataDTO';
 import { SushiswapSwapDTO } from './sushiswapSwapDTO';
 import { SushiswapTokenDTO } from './sushiswapTokenDTO';
-import { SushiswapTokenDayDataDTO } from './sushiswapTokenDayDataDTO';
-import { SushiswapTransactionDTO } from './sushiswapTransactionDTO';
-import { SushiswapUserDTO } from './sushiswapUserDTO';
 import { TransactionsETradeAggressiveSide } from './transactionsETradeAggressiveSide';
-import { UniswapV2BundleV2DTO } from './uniswapV2BundleV2DTO';
-import { UniswapV2BurnV2DTO } from './uniswapV2BurnV2DTO';
-import { UniswapV2LiquidityPositionSnapshotV2DTO } from './uniswapV2LiquidityPositionSnapshotV2DTO';
-import { UniswapV2LiquidityPositionV2DTO } from './uniswapV2LiquidityPositionV2DTO';
-import { UniswapV2MintV2DTO } from './uniswapV2MintV2DTO';
-import { UniswapV2PairDayDataV2DTO } from './uniswapV2PairDayDataV2DTO';
-import { UniswapV2PairHourDataV2DTO } from './uniswapV2PairHourDataV2DTO';
 import { UniswapV2PairV2DTO } from './uniswapV2PairV2DTO';
 import { UniswapV2SwapV2DTO } from './uniswapV2SwapV2DTO';
-import { UniswapV2TokenDayDataV2DTO } from './uniswapV2TokenDayDataV2DTO';
 import { UniswapV2TokenV2DTO } from './uniswapV2TokenV2DTO';
-import { UniswapV2TransactionV2DTO } from './uniswapV2TransactionV2DTO';
-import { UniswapV2UniswapDayDataV2DTO } from './uniswapV2UniswapDayDataV2DTO';
-import { UniswapV2UniswapFactoryV2DTO } from './uniswapV2UniswapFactoryV2DTO';
-import { UniswapV2UserV2DTO } from './uniswapV2UserV2DTO';
 import { UniswapV3BundleV3DTO } from './uniswapV3BundleV3DTO';
 import { UniswapV3BurnV3DTO } from './uniswapV3BurnV3DTO';
 import { UniswapV3FactoryV3DTO } from './uniswapV3FactoryV3DTO';
@@ -208,7 +65,6 @@ import { UniswapV3TickV3DTO } from './uniswapV3TickV3DTO';
 import { UniswapV3TokenHourDataV3DTO } from './uniswapV3TokenHourDataV3DTO';
 import { UniswapV3TokenV3DTO } from './uniswapV3TokenV3DTO';
 import { UniswapV3TokenV3DayDataDTO } from './uniswapV3TokenV3DayDataDTO';
-import { UniswapV3TransactionV3DTO } from './uniswapV3TransactionV3DTO';
 import { UniswapV3UniswapDayDataV3DTO } from './uniswapV3UniswapDayDataV3DTO';
 
 /* tslint:disable:no-unused-variable */
@@ -228,86 +84,15 @@ let enumsMap: {[index: string]: any} = {
 }
 
 let typeMap: {[index: string]: any} = {
-    "CowOrderDTO": CowOrderDTO,
-    "CowSettlementDTO": CowSettlementDTO,
-    "CowTokenDTO": CowTokenDTO,
-    "CowTradeDTO": CowTradeDTO,
-    "CowUserDTO": CowUserDTO,
-    "CurveAccountDTO": CurveAccountDTO,
-    "CurveAddLiquidityEventDTO": CurveAddLiquidityEventDTO,
-    "CurveAdminFeeChangeLogDTO": CurveAdminFeeChangeLogDTO,
-    "CurveAmplificationCoeffChangeLogDTO": CurveAmplificationCoeffChangeLogDTO,
-    "CurveCoinDTO": CurveCoinDTO,
-    "CurveContractDTO": CurveContractDTO,
-    "CurveContractVersionDTO": CurveContractVersionDTO,
-    "CurveDailyVolumeDTO": CurveDailyVolumeDTO,
     "CurveExchangeDTO": CurveExchangeDTO,
-    "CurveFeeChangeLogDTO": CurveFeeChangeLogDTO,
-    "CurveGaugeDTO": CurveGaugeDTO,
-    "CurveGaugeDepositDTO": CurveGaugeDepositDTO,
-    "CurveGaugeLiquidityDTO": CurveGaugeLiquidityDTO,
-    "CurveGaugeTotalWeightDTO": CurveGaugeTotalWeightDTO,
-    "CurveGaugeTypeDTO": CurveGaugeTypeDTO,
-    "CurveGaugeTypeWeightDTO": CurveGaugeTypeWeightDTO,
-    "CurveGaugeWeightDTO": CurveGaugeWeightDTO,
-    "CurveGaugeWeightVoteDTO": CurveGaugeWeightVoteDTO,
-    "CurveGaugeWithdrawDTO": CurveGaugeWithdrawDTO,
-    "CurveHourlyVolumeDTO": CurveHourlyVolumeDTO,
-    "CurveLpTokenDTO": CurveLpTokenDTO,
-    "CurvePoolDTO": CurvePoolDTO,
-    "CurveProposalDTO": CurveProposalDTO,
-    "CurveProposalVoteDTO": CurveProposalVoteDTO,
-    "CurveRemoveLiquidityEventDTO": CurveRemoveLiquidityEventDTO,
-    "CurveRemoveLiquidityOneEventDTO": CurveRemoveLiquidityOneEventDTO,
-    "CurveSystemStateDTO": CurveSystemStateDTO,
-    "CurveTokenDTO": CurveTokenDTO,
-    "CurveTransferOwnershipEventDTO": CurveTransferOwnershipEventDTO,
-    "CurveUnderlyingCoinDTO": CurveUnderlyingCoinDTO,
-    "CurveVotingAppDTO": CurveVotingAppDTO,
-    "CurveWeeklyVolumeDTO": CurveWeeklyVolumeDTO,
-    "DexBatchDTO": DexBatchDTO,
-    "DexDepositDTO": DexDepositDTO,
-    "DexOrderDTO": DexOrderDTO,
-    "DexPriceDTO": DexPriceDTO,
-    "DexSolutionDTO": DexSolutionDTO,
-    "DexStatsDTO": DexStatsDTO,
-    "DexTokenDTO": DexTokenDTO,
     "DexTradeDTO": DexTradeDTO,
-    "DexUserDTO": DexUserDTO,
-    "DexWithdrawDTO": DexWithdrawDTO,
-    "DexWithdrawRequestDTO": DexWithdrawRequestDTO,
     "NumericsBigInteger": NumericsBigInteger,
-    "SushiswapBundleDTO": SushiswapBundleDTO,
-    "SushiswapBurnDTO": SushiswapBurnDTO,
-    "SushiswapDayDataDTO": SushiswapDayDataDTO,
-    "SushiswapFactoryDTO": SushiswapFactoryDTO,
-    "SushiswapHourDataDTO": SushiswapHourDataDTO,
-    "SushiswapLiquidityPositionDTO": SushiswapLiquidityPositionDTO,
-    "SushiswapLiquidityPositionSnapshotDTO": SushiswapLiquidityPositionSnapshotDTO,
-    "SushiswapMintDTO": SushiswapMintDTO,
     "SushiswapPairDTO": SushiswapPairDTO,
-    "SushiswapPairDayDataDTO": SushiswapPairDayDataDTO,
-    "SushiswapPairHourDataDTO": SushiswapPairHourDataDTO,
     "SushiswapSwapDTO": SushiswapSwapDTO,
     "SushiswapTokenDTO": SushiswapTokenDTO,
-    "SushiswapTokenDayDataDTO": SushiswapTokenDayDataDTO,
-    "SushiswapTransactionDTO": SushiswapTransactionDTO,
-    "SushiswapUserDTO": SushiswapUserDTO,
-    "UniswapV2BundleV2DTO": UniswapV2BundleV2DTO,
-    "UniswapV2BurnV2DTO": UniswapV2BurnV2DTO,
-    "UniswapV2LiquidityPositionSnapshotV2DTO": UniswapV2LiquidityPositionSnapshotV2DTO,
-    "UniswapV2LiquidityPositionV2DTO": UniswapV2LiquidityPositionV2DTO,
-    "UniswapV2MintV2DTO": UniswapV2MintV2DTO,
-    "UniswapV2PairDayDataV2DTO": UniswapV2PairDayDataV2DTO,
-    "UniswapV2PairHourDataV2DTO": UniswapV2PairHourDataV2DTO,
     "UniswapV2PairV2DTO": UniswapV2PairV2DTO,
     "UniswapV2SwapV2DTO": UniswapV2SwapV2DTO,
-    "UniswapV2TokenDayDataV2DTO": UniswapV2TokenDayDataV2DTO,
     "UniswapV2TokenV2DTO": UniswapV2TokenV2DTO,
-    "UniswapV2TransactionV2DTO": UniswapV2TransactionV2DTO,
-    "UniswapV2UniswapDayDataV2DTO": UniswapV2UniswapDayDataV2DTO,
-    "UniswapV2UniswapFactoryV2DTO": UniswapV2UniswapFactoryV2DTO,
-    "UniswapV2UserV2DTO": UniswapV2UserV2DTO,
     "UniswapV3BundleV3DTO": UniswapV3BundleV3DTO,
     "UniswapV3BurnV3DTO": UniswapV3BurnV3DTO,
     "UniswapV3FactoryV3DTO": UniswapV3FactoryV3DTO,
@@ -323,7 +108,6 @@ let typeMap: {[index: string]: any} = {
     "UniswapV3TokenHourDataV3DTO": UniswapV3TokenHourDataV3DTO,
     "UniswapV3TokenV3DTO": UniswapV3TokenV3DTO,
     "UniswapV3TokenV3DayDataDTO": UniswapV3TokenV3DayDataDTO,
-    "UniswapV3TransactionV3DTO": UniswapV3TransactionV3DTO,
     "UniswapV3UniswapDayDataV3DTO": UniswapV3UniswapDayDataV3DTO,
 }
 

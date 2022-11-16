@@ -25,23 +25,9 @@
 
 #include "CppRestOpenAPIClient/model/Curve_ExchangeDTO.h"
 #include "CppRestOpenAPIClient/model/Dex_TradeDTO.h"
-#include "CppRestOpenAPIClient/model/Sushiswap_BundleDTO.h"
-#include "CppRestOpenAPIClient/model/Sushiswap_BurnDTO.h"
-#include "CppRestOpenAPIClient/model/Sushiswap_DayDataDTO.h"
-#include "CppRestOpenAPIClient/model/Sushiswap_FactoryDTO.h"
-#include "CppRestOpenAPIClient/model/Sushiswap_HourDataDTO.h"
-#include "CppRestOpenAPIClient/model/Sushiswap_LiquidityPositionDTO.h"
-#include "CppRestOpenAPIClient/model/Sushiswap_LiquidityPositionSnapshotDTO.h"
-#include "CppRestOpenAPIClient/model/Sushiswap_MintDTO.h"
 #include "CppRestOpenAPIClient/model/Sushiswap_PairDTO.h"
-#include "CppRestOpenAPIClient/model/Sushiswap_PairDayDataDTO.h"
-#include "CppRestOpenAPIClient/model/Sushiswap_PairHourDataDTO.h"
 #include "CppRestOpenAPIClient/model/Sushiswap_SwapDTO.h"
 #include "CppRestOpenAPIClient/model/Sushiswap_TokenDTO.h"
-#include "CppRestOpenAPIClient/model/Sushiswap_TokenDayDataDTO.h"
-#include "CppRestOpenAPIClient/model/Sushiswap_TransactionDTO.h"
-#include "CppRestOpenAPIClient/model/Sushiswap_UserDTO.h"
-#include <cpprest/details/basic_types.h>
 #include <boost/optional.hpp>
 
 namespace org {
@@ -78,202 +64,12 @@ public:
     pplx::task<std::vector<std::shared_ptr<Dex_TradeDTO>>> dex_GetTrades__current(
     ) const;
     /// <summary>
-    /// Bundles (historical)
-    /// </summary>
-    /// <remarks>
-    /// Gets bundles.
-    /// </remarks>
-    /// <param name="startBlock">AAAAAAAAAA (optional, default to 0L)</param>
-    /// <param name="endBlock">BBBBBBBBBBBB (optional, default to 0L)</param>
-    /// <param name="startDate">CCCCCCCCC (optional, default to utility::datetime())</param>
-    /// <param name="endDate">DDDDDDDDDDD (optional, default to utility::datetime())</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_BundleDTO>>> sushiswap_GetBundles__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate
-    ) const;
-    /// <summary>
-    /// Burns (historical)
-    /// </summary>
-    /// <remarks>
-    /// Gets burns.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_BurnDTO>>> sushiswap_GetBurns__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// DayData (historical)
-    /// </summary>
-    /// <remarks>
-    /// Gets day data.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> sushiswap_GetDayData__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate
-    ) const;
-    /// <summary>
-    /// Factory (historical)
-    /// </summary>
-    /// <remarks>
-    /// Gets factory.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> sushiswap_GetFactory__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate
-    ) const;
-    /// <summary>
-    /// HourData (historical)
-    /// </summary>
-    /// <remarks>
-    /// Gets hour data.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> sushiswap_GetHourData__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate
-    ) const;
-    /// <summary>
-    /// LiquidityPositionSnapshot (historical)
-    /// </summary>
-    /// <remarks>
-    /// Gets liquidity position snapshot.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_LiquidityPositionSnapshotDTO>>> sushiswap_GetLiquidityPositionSnapshot__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// LiquidityPosition (historical)
-    /// </summary>
-    /// <remarks>
-    /// Gets liquidity position.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_LiquidityPositionDTO>>> sushiswap_GetLiquidityPosition__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// Mints (historical)
-    /// </summary>
-    /// <remarks>
-    /// Gets mints.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_MintDTO>>> sushiswap_GetMints__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// PoolsDayData (historical)
-    /// </summary>
-    /// <remarks>
-    /// Gets pools day data.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> sushiswap_GetPoolsDayData__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// PoolsHourData (historical)
-    /// </summary>
-    /// <remarks>
-    /// Gets pools tracked each our.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="poolId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> sushiswap_GetPoolsHourData__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
     /// Pools (current) 🔥
     /// </summary>
     /// <remarks>
     /// Gets pools.
     /// </remarks>
     pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDTO>>> sushiswap_GetPools__current(
-    ) const;
-    /// <summary>
-    /// Pools (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets list of pools for given filters.
-    /// </remarks>
-    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
-    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
-    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
-    /// <param name="endDate">The end date of timeframe (optional, default to utility::datetime())</param>
-    /// <param name="poolId">The pool address. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDTO>>> sushiswap_GetPools__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
     ) const;
     /// <summary>
     /// Swaps (current) 🔥
@@ -284,98 +80,12 @@ public:
     pplx::task<std::vector<std::shared_ptr<Sushiswap_SwapDTO>>> sushiswap_GetSwaps__current(
     ) const;
     /// <summary>
-    /// Swaps (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets list of swaps for given filters.
-    /// </remarks>
-    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
-    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
-    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
-    /// <param name="endDate">The end date of timeframe (optional, default to utility::datetime())</param>
-    /// <param name="poolId">The pool address. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_SwapDTO>>> sushiswap_GetSwaps__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> poolId
-    ) const;
-    /// <summary>
-    /// TokensDayData (historical)
-    /// </summary>
-    /// <remarks>
-    /// Gets tokens day data.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    /// <param name="tokenId"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> sushiswap_GetTokensDayData__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> tokenId
-    ) const;
-    /// <summary>
     /// Tokens (current) 🔥
     /// </summary>
     /// <remarks>
     /// Gets tokens.
     /// </remarks>
     pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDTO>>> sushiswap_GetTokens__current(
-    ) const;
-    /// <summary>
-    /// Tokens (historical) 🔥
-    /// </summary>
-    /// <remarks>
-    /// Gets list of tokens for given filters.
-    /// </remarks>
-    /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
-    /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
-    /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
-    /// <param name="endDate">The end date of timeframe (optional, default to utility::datetime())</param>
-    /// <param name="tokenId">The token address. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDTO>>> sushiswap_GetTokens__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate,
-        boost::optional<utility::string_t> tokenId
-    ) const;
-    /// <summary>
-    /// Transactions (historical)
-    /// </summary>
-    /// <remarks>
-    /// Gets transactions.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_TransactionDTO>>> sushiswap_GetTransactions__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate
-    ) const;
-    /// <summary>
-    /// Users (historical)
-    /// </summary>
-    /// <remarks>
-    /// Gets users.
-    /// </remarks>
-    /// <param name="startBlock"> (optional, default to 0L)</param>
-    /// <param name="endBlock"> (optional, default to 0L)</param>
-    /// <param name="startDate"> (optional, default to utility::datetime())</param>
-    /// <param name="endDate"> (optional, default to utility::datetime())</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_UserDTO>>> sushiswap_GetUsers__historical(
-        boost::optional<int64_t> startBlock,
-        boost::optional<int64_t> endBlock,
-        boost::optional<utility::datetime> startDate,
-        boost::optional<utility::datetime> endDate
     ) const;
 
 protected:

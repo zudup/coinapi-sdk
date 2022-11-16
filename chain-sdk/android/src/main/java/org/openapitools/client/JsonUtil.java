@@ -57,244 +57,20 @@ public class JsonUtil {
   public static Type getListTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
     
-    if ("CowOrderDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CowOrderDTO>>(){}.getType();
-    }
-    
-    if ("CowSettlementDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CowSettlementDTO>>(){}.getType();
-    }
-    
-    if ("CowTokenDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CowTokenDTO>>(){}.getType();
-    }
-    
-    if ("CowTradeDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CowTradeDTO>>(){}.getType();
-    }
-    
-    if ("CowUserDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CowUserDTO>>(){}.getType();
-    }
-    
-    if ("CurveAccountDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveAccountDTO>>(){}.getType();
-    }
-    
-    if ("CurveAddLiquidityEventDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveAddLiquidityEventDTO>>(){}.getType();
-    }
-    
-    if ("CurveAdminFeeChangeLogDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveAdminFeeChangeLogDTO>>(){}.getType();
-    }
-    
-    if ("CurveAmplificationCoeffChangeLogDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveAmplificationCoeffChangeLogDTO>>(){}.getType();
-    }
-    
-    if ("CurveCoinDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveCoinDTO>>(){}.getType();
-    }
-    
-    if ("CurveContractDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveContractDTO>>(){}.getType();
-    }
-    
-    if ("CurveContractVersionDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveContractVersionDTO>>(){}.getType();
-    }
-    
-    if ("CurveDailyVolumeDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveDailyVolumeDTO>>(){}.getType();
-    }
-    
     if ("CurveExchangeDTO".equalsIgnoreCase(className)) {
       return new TypeToken<List<CurveExchangeDTO>>(){}.getType();
-    }
-    
-    if ("CurveFeeChangeLogDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveFeeChangeLogDTO>>(){}.getType();
-    }
-    
-    if ("CurveGaugeDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveGaugeDTO>>(){}.getType();
-    }
-    
-    if ("CurveGaugeDepositDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveGaugeDepositDTO>>(){}.getType();
-    }
-    
-    if ("CurveGaugeLiquidityDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveGaugeLiquidityDTO>>(){}.getType();
-    }
-    
-    if ("CurveGaugeTotalWeightDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveGaugeTotalWeightDTO>>(){}.getType();
-    }
-    
-    if ("CurveGaugeTypeDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveGaugeTypeDTO>>(){}.getType();
-    }
-    
-    if ("CurveGaugeTypeWeightDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveGaugeTypeWeightDTO>>(){}.getType();
-    }
-    
-    if ("CurveGaugeWeightDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveGaugeWeightDTO>>(){}.getType();
-    }
-    
-    if ("CurveGaugeWeightVoteDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveGaugeWeightVoteDTO>>(){}.getType();
-    }
-    
-    if ("CurveGaugeWithdrawDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveGaugeWithdrawDTO>>(){}.getType();
-    }
-    
-    if ("CurveHourlyVolumeDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveHourlyVolumeDTO>>(){}.getType();
-    }
-    
-    if ("CurveLpTokenDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveLpTokenDTO>>(){}.getType();
-    }
-    
-    if ("CurvePoolDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurvePoolDTO>>(){}.getType();
-    }
-    
-    if ("CurveProposalDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveProposalDTO>>(){}.getType();
-    }
-    
-    if ("CurveProposalVoteDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveProposalVoteDTO>>(){}.getType();
-    }
-    
-    if ("CurveRemoveLiquidityEventDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveRemoveLiquidityEventDTO>>(){}.getType();
-    }
-    
-    if ("CurveRemoveLiquidityOneEventDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveRemoveLiquidityOneEventDTO>>(){}.getType();
-    }
-    
-    if ("CurveSystemStateDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveSystemStateDTO>>(){}.getType();
-    }
-    
-    if ("CurveTokenDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveTokenDTO>>(){}.getType();
-    }
-    
-    if ("CurveTransferOwnershipEventDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveTransferOwnershipEventDTO>>(){}.getType();
-    }
-    
-    if ("CurveUnderlyingCoinDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveUnderlyingCoinDTO>>(){}.getType();
-    }
-    
-    if ("CurveVotingAppDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveVotingAppDTO>>(){}.getType();
-    }
-    
-    if ("CurveWeeklyVolumeDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<CurveWeeklyVolumeDTO>>(){}.getType();
-    }
-    
-    if ("DexBatchDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<DexBatchDTO>>(){}.getType();
-    }
-    
-    if ("DexDepositDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<DexDepositDTO>>(){}.getType();
-    }
-    
-    if ("DexOrderDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<DexOrderDTO>>(){}.getType();
-    }
-    
-    if ("DexPriceDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<DexPriceDTO>>(){}.getType();
-    }
-    
-    if ("DexSolutionDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<DexSolutionDTO>>(){}.getType();
-    }
-    
-    if ("DexStatsDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<DexStatsDTO>>(){}.getType();
-    }
-    
-    if ("DexTokenDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<DexTokenDTO>>(){}.getType();
     }
     
     if ("DexTradeDTO".equalsIgnoreCase(className)) {
       return new TypeToken<List<DexTradeDTO>>(){}.getType();
     }
     
-    if ("DexUserDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<DexUserDTO>>(){}.getType();
-    }
-    
-    if ("DexWithdrawDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<DexWithdrawDTO>>(){}.getType();
-    }
-    
-    if ("DexWithdrawRequestDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<DexWithdrawRequestDTO>>(){}.getType();
-    }
-    
     if ("NumericsBigInteger".equalsIgnoreCase(className)) {
       return new TypeToken<List<NumericsBigInteger>>(){}.getType();
     }
     
-    if ("SushiswapBundleDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<SushiswapBundleDTO>>(){}.getType();
-    }
-    
-    if ("SushiswapBurnDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<SushiswapBurnDTO>>(){}.getType();
-    }
-    
-    if ("SushiswapDayDataDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<SushiswapDayDataDTO>>(){}.getType();
-    }
-    
-    if ("SushiswapFactoryDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<SushiswapFactoryDTO>>(){}.getType();
-    }
-    
-    if ("SushiswapHourDataDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<SushiswapHourDataDTO>>(){}.getType();
-    }
-    
-    if ("SushiswapLiquidityPositionDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<SushiswapLiquidityPositionDTO>>(){}.getType();
-    }
-    
-    if ("SushiswapLiquidityPositionSnapshotDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<SushiswapLiquidityPositionSnapshotDTO>>(){}.getType();
-    }
-    
-    if ("SushiswapMintDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<SushiswapMintDTO>>(){}.getType();
-    }
-    
     if ("SushiswapPairDTO".equalsIgnoreCase(className)) {
       return new TypeToken<List<SushiswapPairDTO>>(){}.getType();
-    }
-    
-    if ("SushiswapPairDayDataDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<SushiswapPairDayDataDTO>>(){}.getType();
-    }
-    
-    if ("SushiswapPairHourDataDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<SushiswapPairHourDataDTO>>(){}.getType();
     }
     
     if ("SushiswapSwapDTO".equalsIgnoreCase(className)) {
@@ -305,48 +81,8 @@ public class JsonUtil {
       return new TypeToken<List<SushiswapTokenDTO>>(){}.getType();
     }
     
-    if ("SushiswapTokenDayDataDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<SushiswapTokenDayDataDTO>>(){}.getType();
-    }
-    
-    if ("SushiswapTransactionDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<SushiswapTransactionDTO>>(){}.getType();
-    }
-    
-    if ("SushiswapUserDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<SushiswapUserDTO>>(){}.getType();
-    }
-    
     if ("TransactionsETradeAggressiveSide".equalsIgnoreCase(className)) {
       return new TypeToken<List<TransactionsETradeAggressiveSide>>(){}.getType();
-    }
-    
-    if ("UniswapV2BundleV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2BundleV2DTO>>(){}.getType();
-    }
-    
-    if ("UniswapV2BurnV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2BurnV2DTO>>(){}.getType();
-    }
-    
-    if ("UniswapV2LiquidityPositionSnapshotV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2LiquidityPositionSnapshotV2DTO>>(){}.getType();
-    }
-    
-    if ("UniswapV2LiquidityPositionV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2LiquidityPositionV2DTO>>(){}.getType();
-    }
-    
-    if ("UniswapV2MintV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2MintV2DTO>>(){}.getType();
-    }
-    
-    if ("UniswapV2PairDayDataV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2PairDayDataV2DTO>>(){}.getType();
-    }
-    
-    if ("UniswapV2PairHourDataV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2PairHourDataV2DTO>>(){}.getType();
     }
     
     if ("UniswapV2PairV2DTO".equalsIgnoreCase(className)) {
@@ -357,28 +93,8 @@ public class JsonUtil {
       return new TypeToken<List<UniswapV2SwapV2DTO>>(){}.getType();
     }
     
-    if ("UniswapV2TokenDayDataV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2TokenDayDataV2DTO>>(){}.getType();
-    }
-    
     if ("UniswapV2TokenV2DTO".equalsIgnoreCase(className)) {
       return new TypeToken<List<UniswapV2TokenV2DTO>>(){}.getType();
-    }
-    
-    if ("UniswapV2TransactionV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2TransactionV2DTO>>(){}.getType();
-    }
-    
-    if ("UniswapV2UniswapDayDataV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2UniswapDayDataV2DTO>>(){}.getType();
-    }
-    
-    if ("UniswapV2UniswapFactoryV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2UniswapFactoryV2DTO>>(){}.getType();
-    }
-    
-    if ("UniswapV2UserV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV2UserV2DTO>>(){}.getType();
     }
     
     if ("UniswapV3BundleV3DTO".equalsIgnoreCase(className)) {
@@ -441,10 +157,6 @@ public class JsonUtil {
       return new TypeToken<List<UniswapV3TokenV3DayDataDTO>>(){}.getType();
     }
     
-    if ("UniswapV3TransactionV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<List<UniswapV3TransactionV3DTO>>(){}.getType();
-    }
-    
     if ("UniswapV3UniswapDayDataV3DTO".equalsIgnoreCase(className)) {
       return new TypeToken<List<UniswapV3UniswapDayDataV3DTO>>(){}.getType();
     }
@@ -455,244 +167,20 @@ public class JsonUtil {
   public static Type getTypeForDeserialization(Class cls) {
     String className = cls.getSimpleName();
     
-    if ("CowOrderDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CowOrderDTO>(){}.getType();
-    }
-    
-    if ("CowSettlementDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CowSettlementDTO>(){}.getType();
-    }
-    
-    if ("CowTokenDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CowTokenDTO>(){}.getType();
-    }
-    
-    if ("CowTradeDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CowTradeDTO>(){}.getType();
-    }
-    
-    if ("CowUserDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CowUserDTO>(){}.getType();
-    }
-    
-    if ("CurveAccountDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveAccountDTO>(){}.getType();
-    }
-    
-    if ("CurveAddLiquidityEventDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveAddLiquidityEventDTO>(){}.getType();
-    }
-    
-    if ("CurveAdminFeeChangeLogDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveAdminFeeChangeLogDTO>(){}.getType();
-    }
-    
-    if ("CurveAmplificationCoeffChangeLogDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveAmplificationCoeffChangeLogDTO>(){}.getType();
-    }
-    
-    if ("CurveCoinDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveCoinDTO>(){}.getType();
-    }
-    
-    if ("CurveContractDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveContractDTO>(){}.getType();
-    }
-    
-    if ("CurveContractVersionDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveContractVersionDTO>(){}.getType();
-    }
-    
-    if ("CurveDailyVolumeDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveDailyVolumeDTO>(){}.getType();
-    }
-    
     if ("CurveExchangeDTO".equalsIgnoreCase(className)) {
       return new TypeToken<CurveExchangeDTO>(){}.getType();
-    }
-    
-    if ("CurveFeeChangeLogDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveFeeChangeLogDTO>(){}.getType();
-    }
-    
-    if ("CurveGaugeDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveGaugeDTO>(){}.getType();
-    }
-    
-    if ("CurveGaugeDepositDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveGaugeDepositDTO>(){}.getType();
-    }
-    
-    if ("CurveGaugeLiquidityDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveGaugeLiquidityDTO>(){}.getType();
-    }
-    
-    if ("CurveGaugeTotalWeightDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveGaugeTotalWeightDTO>(){}.getType();
-    }
-    
-    if ("CurveGaugeTypeDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveGaugeTypeDTO>(){}.getType();
-    }
-    
-    if ("CurveGaugeTypeWeightDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveGaugeTypeWeightDTO>(){}.getType();
-    }
-    
-    if ("CurveGaugeWeightDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveGaugeWeightDTO>(){}.getType();
-    }
-    
-    if ("CurveGaugeWeightVoteDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveGaugeWeightVoteDTO>(){}.getType();
-    }
-    
-    if ("CurveGaugeWithdrawDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveGaugeWithdrawDTO>(){}.getType();
-    }
-    
-    if ("CurveHourlyVolumeDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveHourlyVolumeDTO>(){}.getType();
-    }
-    
-    if ("CurveLpTokenDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveLpTokenDTO>(){}.getType();
-    }
-    
-    if ("CurvePoolDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurvePoolDTO>(){}.getType();
-    }
-    
-    if ("CurveProposalDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveProposalDTO>(){}.getType();
-    }
-    
-    if ("CurveProposalVoteDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveProposalVoteDTO>(){}.getType();
-    }
-    
-    if ("CurveRemoveLiquidityEventDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveRemoveLiquidityEventDTO>(){}.getType();
-    }
-    
-    if ("CurveRemoveLiquidityOneEventDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveRemoveLiquidityOneEventDTO>(){}.getType();
-    }
-    
-    if ("CurveSystemStateDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveSystemStateDTO>(){}.getType();
-    }
-    
-    if ("CurveTokenDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveTokenDTO>(){}.getType();
-    }
-    
-    if ("CurveTransferOwnershipEventDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveTransferOwnershipEventDTO>(){}.getType();
-    }
-    
-    if ("CurveUnderlyingCoinDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveUnderlyingCoinDTO>(){}.getType();
-    }
-    
-    if ("CurveVotingAppDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveVotingAppDTO>(){}.getType();
-    }
-    
-    if ("CurveWeeklyVolumeDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<CurveWeeklyVolumeDTO>(){}.getType();
-    }
-    
-    if ("DexBatchDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<DexBatchDTO>(){}.getType();
-    }
-    
-    if ("DexDepositDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<DexDepositDTO>(){}.getType();
-    }
-    
-    if ("DexOrderDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<DexOrderDTO>(){}.getType();
-    }
-    
-    if ("DexPriceDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<DexPriceDTO>(){}.getType();
-    }
-    
-    if ("DexSolutionDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<DexSolutionDTO>(){}.getType();
-    }
-    
-    if ("DexStatsDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<DexStatsDTO>(){}.getType();
-    }
-    
-    if ("DexTokenDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<DexTokenDTO>(){}.getType();
     }
     
     if ("DexTradeDTO".equalsIgnoreCase(className)) {
       return new TypeToken<DexTradeDTO>(){}.getType();
     }
     
-    if ("DexUserDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<DexUserDTO>(){}.getType();
-    }
-    
-    if ("DexWithdrawDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<DexWithdrawDTO>(){}.getType();
-    }
-    
-    if ("DexWithdrawRequestDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<DexWithdrawRequestDTO>(){}.getType();
-    }
-    
     if ("NumericsBigInteger".equalsIgnoreCase(className)) {
       return new TypeToken<NumericsBigInteger>(){}.getType();
     }
     
-    if ("SushiswapBundleDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<SushiswapBundleDTO>(){}.getType();
-    }
-    
-    if ("SushiswapBurnDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<SushiswapBurnDTO>(){}.getType();
-    }
-    
-    if ("SushiswapDayDataDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<SushiswapDayDataDTO>(){}.getType();
-    }
-    
-    if ("SushiswapFactoryDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<SushiswapFactoryDTO>(){}.getType();
-    }
-    
-    if ("SushiswapHourDataDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<SushiswapHourDataDTO>(){}.getType();
-    }
-    
-    if ("SushiswapLiquidityPositionDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<SushiswapLiquidityPositionDTO>(){}.getType();
-    }
-    
-    if ("SushiswapLiquidityPositionSnapshotDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<SushiswapLiquidityPositionSnapshotDTO>(){}.getType();
-    }
-    
-    if ("SushiswapMintDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<SushiswapMintDTO>(){}.getType();
-    }
-    
     if ("SushiswapPairDTO".equalsIgnoreCase(className)) {
       return new TypeToken<SushiswapPairDTO>(){}.getType();
-    }
-    
-    if ("SushiswapPairDayDataDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<SushiswapPairDayDataDTO>(){}.getType();
-    }
-    
-    if ("SushiswapPairHourDataDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<SushiswapPairHourDataDTO>(){}.getType();
     }
     
     if ("SushiswapSwapDTO".equalsIgnoreCase(className)) {
@@ -703,48 +191,8 @@ public class JsonUtil {
       return new TypeToken<SushiswapTokenDTO>(){}.getType();
     }
     
-    if ("SushiswapTokenDayDataDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<SushiswapTokenDayDataDTO>(){}.getType();
-    }
-    
-    if ("SushiswapTransactionDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<SushiswapTransactionDTO>(){}.getType();
-    }
-    
-    if ("SushiswapUserDTO".equalsIgnoreCase(className)) {
-      return new TypeToken<SushiswapUserDTO>(){}.getType();
-    }
-    
     if ("TransactionsETradeAggressiveSide".equalsIgnoreCase(className)) {
       return new TypeToken<TransactionsETradeAggressiveSide>(){}.getType();
-    }
-    
-    if ("UniswapV2BundleV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2BundleV2DTO>(){}.getType();
-    }
-    
-    if ("UniswapV2BurnV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2BurnV2DTO>(){}.getType();
-    }
-    
-    if ("UniswapV2LiquidityPositionSnapshotV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2LiquidityPositionSnapshotV2DTO>(){}.getType();
-    }
-    
-    if ("UniswapV2LiquidityPositionV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2LiquidityPositionV2DTO>(){}.getType();
-    }
-    
-    if ("UniswapV2MintV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2MintV2DTO>(){}.getType();
-    }
-    
-    if ("UniswapV2PairDayDataV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2PairDayDataV2DTO>(){}.getType();
-    }
-    
-    if ("UniswapV2PairHourDataV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2PairHourDataV2DTO>(){}.getType();
     }
     
     if ("UniswapV2PairV2DTO".equalsIgnoreCase(className)) {
@@ -755,28 +203,8 @@ public class JsonUtil {
       return new TypeToken<UniswapV2SwapV2DTO>(){}.getType();
     }
     
-    if ("UniswapV2TokenDayDataV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2TokenDayDataV2DTO>(){}.getType();
-    }
-    
     if ("UniswapV2TokenV2DTO".equalsIgnoreCase(className)) {
       return new TypeToken<UniswapV2TokenV2DTO>(){}.getType();
-    }
-    
-    if ("UniswapV2TransactionV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2TransactionV2DTO>(){}.getType();
-    }
-    
-    if ("UniswapV2UniswapDayDataV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2UniswapDayDataV2DTO>(){}.getType();
-    }
-    
-    if ("UniswapV2UniswapFactoryV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2UniswapFactoryV2DTO>(){}.getType();
-    }
-    
-    if ("UniswapV2UserV2DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV2UserV2DTO>(){}.getType();
     }
     
     if ("UniswapV3BundleV3DTO".equalsIgnoreCase(className)) {
@@ -837,10 +265,6 @@ public class JsonUtil {
     
     if ("UniswapV3TokenV3DayDataDTO".equalsIgnoreCase(className)) {
       return new TypeToken<UniswapV3TokenV3DayDataDTO>(){}.getType();
-    }
-    
-    if ("UniswapV3TransactionV3DTO".equalsIgnoreCase(className)) {
-      return new TypeToken<UniswapV3TransactionV3DTO>(){}.getType();
     }
     
     if ("UniswapV3UniswapDayDataV3DTO".equalsIgnoreCase(className)) {
