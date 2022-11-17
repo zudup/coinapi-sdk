@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**CurveExchangesCurrent**](CurveApi.md#CurveExchangesCurrent) | **Get** /dapps/curve/exchanges/current | Exchanges (current)
 [**CurveFeeChangeLogsCurrent**](CurveApi.md#CurveFeeChangeLogsCurrent) | **Get** /dapps/curve/feeChangeLogs/current | FeeChangeLogs (current)
 [**CurveGaugeDepositsCurrent**](CurveApi.md#CurveGaugeDepositsCurrent) | **Get** /dapps/curve/gaugeDeposits/current | GaugeDeposits (current)
-[**CurveGaugeLiquiditysCurrent**](CurveApi.md#CurveGaugeLiquiditysCurrent) | **Get** /dapps/curve/gaugeLiquiditys/current | GaugeLiquiditys (current)
+[**CurveGaugeLiquiditiesCurrent**](CurveApi.md#CurveGaugeLiquiditiesCurrent) | **Get** /dapps/curve/gaugeLiquidities/current | GaugeLiquidities (current)
 [**CurveGaugeTotalWeightsCurrent**](CurveApi.md#CurveGaugeTotalWeightsCurrent) | **Get** /dapps/curve/gaugeTotalWeights/current | GaugeTotalWeights (current)
 [**CurveGaugeTypeWeightsCurrent**](CurveApi.md#CurveGaugeTypeWeightsCurrent) | **Get** /dapps/curve/gaugeTypeWeights/current | GaugeTypeWeights (current)
 [**CurveGaugeTypesCurrent**](CurveApi.md#CurveGaugeTypesCurrent) | **Get** /dapps/curve/gaugeTypes/current | GaugeTypes (current)
@@ -34,7 +34,7 @@ Method | HTTP request | Description
 [**CurveGetExchangesHistorical**](CurveApi.md#CurveGetExchangesHistorical) | **Get** /dapps/curve/exchanges/historical | Exchanges (historical)
 [**CurveGetFeeChangeLogsHistorical**](CurveApi.md#CurveGetFeeChangeLogsHistorical) | **Get** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical)
 [**CurveGetGaugeDepositsHistorical**](CurveApi.md#CurveGetGaugeDepositsHistorical) | **Get** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical)
-[**CurveGetGaugeLiquiditysHistorical**](CurveApi.md#CurveGetGaugeLiquiditysHistorical) | **Get** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical)
+[**CurveGetGaugeLiquiditiesHistorical**](CurveApi.md#CurveGetGaugeLiquiditiesHistorical) | **Get** /dapps/curve/gaugeLiquidities/historical | GaugeLiquidities (historical)
 [**CurveGetGaugeTotalWeightsHistorical**](CurveApi.md#CurveGetGaugeTotalWeightsHistorical) | **Get** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical)
 [**CurveGetGaugeTypeWeightsHistorical**](CurveApi.md#CurveGetGaugeTypeWeightsHistorical) | **Get** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical)
 [**CurveGetGaugeTypesHistorical**](CurveApi.md#CurveGetGaugeTypesHistorical) | **Get** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical)
@@ -747,11 +747,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## CurveGaugeLiquiditysCurrent
+## CurveGaugeLiquiditiesCurrent
 
-> []CurveGaugeLiquidityDTO CurveGaugeLiquiditysCurrent(ctx).Execute()
+> []CurveGaugeLiquidityDTO CurveGaugeLiquiditiesCurrent(ctx).Execute()
 
-GaugeLiquiditys (current)
+GaugeLiquidities (current)
 
 
 
@@ -771,13 +771,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.CurveApi.CurveGaugeLiquiditysCurrent(context.Background()).Execute()
+    resp, r, err := apiClient.CurveApi.CurveGaugeLiquiditiesCurrent(context.Background()).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGaugeLiquiditysCurrent``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGaugeLiquiditiesCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CurveGaugeLiquiditysCurrent`: []CurveGaugeLiquidityDTO
-    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGaugeLiquiditysCurrent`: %v\n", resp)
+    // response from `CurveGaugeLiquiditiesCurrent`: []CurveGaugeLiquidityDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGaugeLiquiditiesCurrent`: %v\n", resp)
 }
 ```
 
@@ -787,7 +787,7 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiCurveGaugeLiquiditysCurrentRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiCurveGaugeLiquiditiesCurrentRequest struct via the builder pattern
 
 
 ### Return type
@@ -2078,11 +2078,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## CurveGetGaugeLiquiditysHistorical
+## CurveGetGaugeLiquiditiesHistorical
 
-> []CurveGaugeLiquidityDTO CurveGetGaugeLiquiditysHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).User(user).Execute()
+> []CurveGaugeLiquidityDTO CurveGetGaugeLiquiditiesHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).User(user).Execute()
 
-GaugeLiquiditys (historical)
+GaugeLiquidities (historical)
 
 
 
@@ -2109,13 +2109,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.CurveApi.CurveGetGaugeLiquiditysHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).User(user).Execute()
+    resp, r, err := apiClient.CurveApi.CurveGetGaugeLiquiditiesHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).User(user).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetGaugeLiquiditysHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `CurveApi.CurveGetGaugeLiquiditiesHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `CurveGetGaugeLiquiditysHistorical`: []CurveGaugeLiquidityDTO
-    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetGaugeLiquiditysHistorical`: %v\n", resp)
+    // response from `CurveGetGaugeLiquiditiesHistorical`: []CurveGaugeLiquidityDTO
+    fmt.Fprintf(os.Stdout, "Response from `CurveApi.CurveGetGaugeLiquiditiesHistorical`: %v\n", resp)
 }
 ```
 
@@ -2125,7 +2125,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiCurveGetGaugeLiquiditysHistoricalRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiCurveGetGaugeLiquiditiesHistoricalRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes

@@ -105,7 +105,7 @@ class CurveApi
         'curveGaugeDepositsCurrent' => [
             'application/json',
         ],
-        'curveGaugeLiquiditysCurrent' => [
+        'curveGaugeLiquiditiesCurrent' => [
             'application/json',
         ],
         'curveGaugeTotalWeightsCurrent' => [
@@ -162,7 +162,7 @@ class CurveApi
         'curveGetGaugeDepositsHistorical' => [
             'application/json',
         ],
-        'curveGetGaugeLiquiditysHistorical' => [
+        'curveGetGaugeLiquiditiesHistorical' => [
             'application/json',
         ],
         'curveGetGaugeTotalWeightsHistorical' => [
@@ -3221,36 +3221,36 @@ class CurveApi
     }
 
     /**
-     * Operation curveGaugeLiquiditysCurrent
+     * Operation curveGaugeLiquiditiesCurrent
      *
-     * GaugeLiquiditys (current)
+     * GaugeLiquidities (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGaugeLiquiditysCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGaugeLiquiditiesCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\CurveGaugeLiquidityDTO[]
      */
-    public function curveGaugeLiquiditysCurrent(string $contentType = self::contentTypes['curveGaugeLiquiditysCurrent'][0])
+    public function curveGaugeLiquiditiesCurrent(string $contentType = self::contentTypes['curveGaugeLiquiditiesCurrent'][0])
     {
-        list($response) = $this->curveGaugeLiquiditysCurrentWithHttpInfo($contentType);
+        list($response) = $this->curveGaugeLiquiditiesCurrentWithHttpInfo($contentType);
         return $response;
     }
 
     /**
-     * Operation curveGaugeLiquiditysCurrentWithHttpInfo
+     * Operation curveGaugeLiquiditiesCurrentWithHttpInfo
      *
-     * GaugeLiquiditys (current)
+     * GaugeLiquidities (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGaugeLiquiditysCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGaugeLiquiditiesCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\CurveGaugeLiquidityDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function curveGaugeLiquiditysCurrentWithHttpInfo(string $contentType = self::contentTypes['curveGaugeLiquiditysCurrent'][0])
+    public function curveGaugeLiquiditiesCurrentWithHttpInfo(string $contentType = self::contentTypes['curveGaugeLiquiditiesCurrent'][0])
     {
-        $request = $this->curveGaugeLiquiditysCurrentRequest($contentType);
+        $request = $this->curveGaugeLiquiditiesCurrentRequest($contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -3337,18 +3337,18 @@ class CurveApi
     }
 
     /**
-     * Operation curveGaugeLiquiditysCurrentAsync
+     * Operation curveGaugeLiquiditiesCurrentAsync
      *
-     * GaugeLiquiditys (current)
+     * GaugeLiquidities (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGaugeLiquiditysCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGaugeLiquiditiesCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function curveGaugeLiquiditysCurrentAsync(string $contentType = self::contentTypes['curveGaugeLiquiditysCurrent'][0])
+    public function curveGaugeLiquiditiesCurrentAsync(string $contentType = self::contentTypes['curveGaugeLiquiditiesCurrent'][0])
     {
-        return $this->curveGaugeLiquiditysCurrentAsyncWithHttpInfo($contentType)
+        return $this->curveGaugeLiquiditiesCurrentAsyncWithHttpInfo($contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -3357,19 +3357,19 @@ class CurveApi
     }
 
     /**
-     * Operation curveGaugeLiquiditysCurrentAsyncWithHttpInfo
+     * Operation curveGaugeLiquiditiesCurrentAsyncWithHttpInfo
      *
-     * GaugeLiquiditys (current)
+     * GaugeLiquidities (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGaugeLiquiditysCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGaugeLiquiditiesCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function curveGaugeLiquiditysCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['curveGaugeLiquiditysCurrent'][0])
+    public function curveGaugeLiquiditiesCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['curveGaugeLiquiditiesCurrent'][0])
     {
         $returnType = '\OpenAPI\Client\Model\CurveGaugeLiquidityDTO[]';
-        $request = $this->curveGaugeLiquiditysCurrentRequest($contentType);
+        $request = $this->curveGaugeLiquiditiesCurrentRequest($contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3408,18 +3408,18 @@ class CurveApi
     }
 
     /**
-     * Create request for operation 'curveGaugeLiquiditysCurrent'
+     * Create request for operation 'curveGaugeLiquiditiesCurrent'
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGaugeLiquiditysCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGaugeLiquiditiesCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function curveGaugeLiquiditysCurrentRequest(string $contentType = self::contentTypes['curveGaugeLiquiditysCurrent'][0])
+    public function curveGaugeLiquiditiesCurrentRequest(string $contentType = self::contentTypes['curveGaugeLiquiditiesCurrent'][0])
     {
 
 
-        $resourcePath = '/dapps/curve/gaugeLiquiditys/current';
+        $resourcePath = '/dapps/curve/gaugeLiquidities/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -9178,9 +9178,9 @@ class CurveApi
     }
 
     /**
-     * Operation curveGetGaugeLiquiditysHistorical
+     * Operation curveGetGaugeLiquiditiesHistorical
      *
-     * GaugeLiquiditys (historical)
+     * GaugeLiquidities (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -9188,22 +9188,22 @@ class CurveApi
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id  (optional)
      * @param  string $user  (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeLiquiditysHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeLiquiditiesHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\CurveGaugeLiquidityDTO[]
      */
-    public function curveGetGaugeLiquiditysHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, string $contentType = self::contentTypes['curveGetGaugeLiquiditysHistorical'][0])
+    public function curveGetGaugeLiquiditiesHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, string $contentType = self::contentTypes['curveGetGaugeLiquiditiesHistorical'][0])
     {
-        list($response) = $this->curveGetGaugeLiquiditysHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $user, $contentType);
+        list($response) = $this->curveGetGaugeLiquiditiesHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $user, $contentType);
         return $response;
     }
 
     /**
-     * Operation curveGetGaugeLiquiditysHistoricalWithHttpInfo
+     * Operation curveGetGaugeLiquiditiesHistoricalWithHttpInfo
      *
-     * GaugeLiquiditys (historical)
+     * GaugeLiquidities (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -9211,15 +9211,15 @@ class CurveApi
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id  (optional)
      * @param  string $user  (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeLiquiditysHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeLiquiditiesHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\CurveGaugeLiquidityDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function curveGetGaugeLiquiditysHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, string $contentType = self::contentTypes['curveGetGaugeLiquiditysHistorical'][0])
+    public function curveGetGaugeLiquiditiesHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, string $contentType = self::contentTypes['curveGetGaugeLiquiditiesHistorical'][0])
     {
-        $request = $this->curveGetGaugeLiquiditysHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $user, $contentType);
+        $request = $this->curveGetGaugeLiquiditiesHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $user, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9306,9 +9306,9 @@ class CurveApi
     }
 
     /**
-     * Operation curveGetGaugeLiquiditysHistoricalAsync
+     * Operation curveGetGaugeLiquiditiesHistoricalAsync
      *
-     * GaugeLiquiditys (historical)
+     * GaugeLiquidities (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -9316,14 +9316,14 @@ class CurveApi
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id  (optional)
      * @param  string $user  (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeLiquiditysHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeLiquiditiesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function curveGetGaugeLiquiditysHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, string $contentType = self::contentTypes['curveGetGaugeLiquiditysHistorical'][0])
+    public function curveGetGaugeLiquiditiesHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, string $contentType = self::contentTypes['curveGetGaugeLiquiditiesHistorical'][0])
     {
-        return $this->curveGetGaugeLiquiditysHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $user, $contentType)
+        return $this->curveGetGaugeLiquiditiesHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $user, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9332,9 +9332,9 @@ class CurveApi
     }
 
     /**
-     * Operation curveGetGaugeLiquiditysHistoricalAsyncWithHttpInfo
+     * Operation curveGetGaugeLiquiditiesHistoricalAsyncWithHttpInfo
      *
-     * GaugeLiquiditys (historical)
+     * GaugeLiquidities (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -9342,15 +9342,15 @@ class CurveApi
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id  (optional)
      * @param  string $user  (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeLiquiditysHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeLiquiditiesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function curveGetGaugeLiquiditysHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, string $contentType = self::contentTypes['curveGetGaugeLiquiditysHistorical'][0])
+    public function curveGetGaugeLiquiditiesHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, string $contentType = self::contentTypes['curveGetGaugeLiquiditiesHistorical'][0])
     {
         $returnType = '\OpenAPI\Client\Model\CurveGaugeLiquidityDTO[]';
-        $request = $this->curveGetGaugeLiquiditysHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $user, $contentType);
+        $request = $this->curveGetGaugeLiquiditiesHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $user, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9389,7 +9389,7 @@ class CurveApi
     }
 
     /**
-     * Create request for operation 'curveGetGaugeLiquiditysHistorical'
+     * Create request for operation 'curveGetGaugeLiquiditiesHistorical'
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -9397,12 +9397,12 @@ class CurveApi
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id  (optional)
      * @param  string $user  (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeLiquiditysHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['curveGetGaugeLiquiditiesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function curveGetGaugeLiquiditysHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, string $contentType = self::contentTypes['curveGetGaugeLiquiditysHistorical'][0])
+    public function curveGetGaugeLiquiditiesHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $user = null, string $contentType = self::contentTypes['curveGetGaugeLiquiditiesHistorical'][0])
     {
 
 
@@ -9412,7 +9412,7 @@ class CurveApi
 
 
 
-        $resourcePath = '/dapps/curve/gaugeLiquiditys/historical';
+        $resourcePath = '/dapps/curve/gaugeLiquidities/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

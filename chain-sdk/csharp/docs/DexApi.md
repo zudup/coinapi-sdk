@@ -4,14 +4,14 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DexBatchsCurrent**](DexApi.md#dexbatchscurrent) | **GET** /dapps/dex/batchs/current | Batchs (current)
+[**DexBatchesCurrent**](DexApi.md#dexbatchescurrent) | **GET** /dapps/dex/batches/current | Batches (current)
 [**DexDepositsCurrent**](DexApi.md#dexdepositscurrent) | **GET** /dapps/dex/deposits/current | Deposits (current)
-[**DexGetBatchsHistorical**](DexApi.md#dexgetbatchshistorical) | **GET** /dapps/dex/batchs/historical | Batchs (historical)
+[**DexGetBatchesHistorical**](DexApi.md#dexgetbatcheshistorical) | **GET** /dapps/dex/batches/historical | Batches (historical)
 [**DexGetDepositsHistorical**](DexApi.md#dexgetdepositshistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical)
 [**DexGetOrdersHistorical**](DexApi.md#dexgetordershistorical) | **GET** /dapps/dex/orders/historical | Orders (historical)
 [**DexGetPricesHistorical**](DexApi.md#dexgetpriceshistorical) | **GET** /dapps/dex/prices/historical | Prices (historical)
 [**DexGetSolutionsHistorical**](DexApi.md#dexgetsolutionshistorical) | **GET** /dapps/dex/solutions/historical | Solutions (historical)
-[**DexGetStatssHistorical**](DexApi.md#dexgetstatsshistorical) | **GET** /dapps/dex/statss/historical | Statss (historical)
+[**DexGetStatsHistorical**](DexApi.md#dexgetstatshistorical) | **GET** /dapps/dex/stats/historical | Stats (historical)
 [**DexGetTokensHistorical**](DexApi.md#dexgettokenshistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical)
 [**DexGetTradesHistorical**](DexApi.md#dexgettradeshistorical) | **GET** /dapps/dex/trades/historical | Trades (historical)
 [**DexGetUsersHistorical**](DexApi.md#dexgetusershistorical) | **GET** /dapps/dex/users/historical | Users (historical)
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 [**DexOrdersCurrent**](DexApi.md#dexorderscurrent) | **GET** /dapps/dex/orders/current | Orders (current)
 [**DexPricesCurrent**](DexApi.md#dexpricescurrent) | **GET** /dapps/dex/prices/current | Prices (current)
 [**DexSolutionsCurrent**](DexApi.md#dexsolutionscurrent) | **GET** /dapps/dex/solutions/current | Solutions (current)
-[**DexStatssCurrent**](DexApi.md#dexstatsscurrent) | **GET** /dapps/dex/statss/current | Statss (current)
+[**DexStatsCurrent**](DexApi.md#dexstatscurrent) | **GET** /dapps/dex/stats/current | Stats (current)
 [**DexTokensCurrent**](DexApi.md#dextokenscurrent) | **GET** /dapps/dex/tokens/current | Tokens (current)
 [**DexTradesCurrent**](DexApi.md#dextradescurrent) | **GET** /dapps/dex/trades/current | Trades (current)
 [**DexUsersCurrent**](DexApi.md#dexuserscurrent) | **GET** /dapps/dex/users/current | Users (current)
@@ -29,13 +29,13 @@ Method | HTTP request | Description
 
 
 
-## DexBatchsCurrent
+## DexBatchesCurrent
 
-> List&lt;DexBatchDTO&gt; DexBatchsCurrent ()
+> List&lt;DexBatchDTO&gt; DexBatchesCurrent ()
 
-Batchs (current)
+Batches (current)
 
-Gets batchs.
+Gets batches.
 
 ### Example
 
@@ -48,7 +48,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DexBatchsCurrentExample
+    public class DexBatchesCurrentExample
     {
         public static void Main()
         {
@@ -57,13 +57,13 @@ namespace Example
 
             try
             {
-                // Batchs (current)
-                List<DexBatchDTO> result = apiInstance.DexBatchsCurrent();
+                // Batches (current)
+                List<DexBatchDTO> result = apiInstance.DexBatchesCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling DexApi.DexBatchsCurrent: " + e.Message );
+                Debug.Print("Exception when calling DexApi.DexBatchesCurrent: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -173,13 +173,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DexGetBatchsHistorical
+## DexGetBatchesHistorical
 
-> List&lt;DexBatchDTO&gt; DexGetBatchsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+> List&lt;DexBatchDTO&gt; DexGetBatchesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Batchs (historical)
+Batches (historical)
 
-Gets batchs.
+Gets batches.
 
 ### Example
 
@@ -192,7 +192,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DexGetBatchsHistoricalExample
+    public class DexGetBatchesHistoricalExample
     {
         public static void Main()
         {
@@ -206,13 +206,13 @@ namespace Example
 
             try
             {
-                // Batchs (historical)
-                List<DexBatchDTO> result = apiInstance.DexGetBatchsHistorical(startBlock, endBlock, startDate, endDate, id);
+                // Batches (historical)
+                List<DexBatchDTO> result = apiInstance.DexGetBatchesHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling DexApi.DexGetBatchsHistorical: " + e.Message );
+                Debug.Print("Exception when calling DexApi.DexGetBatchesHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -599,13 +599,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DexGetStatssHistorical
+## DexGetStatsHistorical
 
-> List&lt;DexStatsDTO&gt; DexGetStatssHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+> List&lt;DexStatsDTO&gt; DexGetStatsHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Statss (historical)
+Stats (historical)
 
-Gets statss.
+Gets stats.
 
 ### Example
 
@@ -618,7 +618,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DexGetStatssHistoricalExample
+    public class DexGetStatsHistoricalExample
     {
         public static void Main()
         {
@@ -632,13 +632,13 @@ namespace Example
 
             try
             {
-                // Statss (historical)
-                List<DexStatsDTO> result = apiInstance.DexGetStatssHistorical(startBlock, endBlock, startDate, endDate, id);
+                // Stats (historical)
+                List<DexStatsDTO> result = apiInstance.DexGetStatsHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling DexApi.DexGetStatssHistorical: " + e.Message );
+                Debug.Print("Exception when calling DexApi.DexGetStatsHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1333,13 +1333,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DexStatssCurrent
+## DexStatsCurrent
 
-> List&lt;DexStatsDTO&gt; DexStatssCurrent ()
+> List&lt;DexStatsDTO&gt; DexStatsCurrent ()
 
-Statss (current)
+Stats (current)
 
-Gets statss.
+Gets stats.
 
 ### Example
 
@@ -1352,7 +1352,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class DexStatssCurrentExample
+    public class DexStatsCurrentExample
     {
         public static void Main()
         {
@@ -1361,13 +1361,13 @@ namespace Example
 
             try
             {
-                // Statss (current)
-                List<DexStatsDTO> result = apiInstance.DexStatssCurrent();
+                // Stats (current)
+                List<DexStatsDTO> result = apiInstance.DexStatsCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling DexApi.DexStatssCurrent: " + e.Message );
+                Debug.Print("Exception when calling DexApi.DexStatsCurrent: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }

@@ -15,8 +15,8 @@ Please update as you see appropriate
 ]]
 describe("dex_api", function()
   local openapiclient_dex_api = require "openapiclient.api.dex_api"
-  -- unit tests for dex_batchs__current
-  describe("dex_batchs__current test", function()
+  -- unit tests for dex_batches__current
+  describe("dex_batches__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -29,8 +29,8 @@ describe("dex_api", function()
     end)
   end)
 
-  -- unit tests for dex_get_batchs__historical
-  describe("dex_get_batchs__historical test", function()
+  -- unit tests for dex_get_batches__historical
+  describe("dex_get_batches__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -64,8 +64,8 @@ describe("dex_api", function()
     end)
   end)
 
-  -- unit tests for dex_get_statss__historical
-  describe("dex_get_statss__historical test", function()
+  -- unit tests for dex_get_stats__historical
+  describe("dex_get_stats__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -127,8 +127,8 @@ describe("dex_api", function()
     end)
   end)
 
-  -- unit tests for dex_statss__current
-  describe("dex_statss__current test", function()
+  -- unit tests for dex_stats__current
+  describe("dex_stats__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

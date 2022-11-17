@@ -1123,25 +1123,25 @@ func (a *CurveApiService) CurveGaugeDepositsCurrentExecute(r ApiCurveGaugeDeposi
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiCurveGaugeLiquiditysCurrentRequest struct {
+type ApiCurveGaugeLiquiditiesCurrentRequest struct {
 	ctx context.Context
 	ApiService *CurveApiService
 }
 
-func (r ApiCurveGaugeLiquiditysCurrentRequest) Execute() ([]CurveGaugeLiquidityDTO, *http.Response, error) {
-	return r.ApiService.CurveGaugeLiquiditysCurrentExecute(r)
+func (r ApiCurveGaugeLiquiditiesCurrentRequest) Execute() ([]CurveGaugeLiquidityDTO, *http.Response, error) {
+	return r.ApiService.CurveGaugeLiquiditiesCurrentExecute(r)
 }
 
 /*
-CurveGaugeLiquiditysCurrent GaugeLiquiditys (current)
+CurveGaugeLiquiditiesCurrent GaugeLiquidities (current)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiCurveGaugeLiquiditysCurrentRequest
+ @return ApiCurveGaugeLiquiditiesCurrentRequest
 */
-func (a *CurveApiService) CurveGaugeLiquiditysCurrent(ctx context.Context) ApiCurveGaugeLiquiditysCurrentRequest {
-	return ApiCurveGaugeLiquiditysCurrentRequest{
+func (a *CurveApiService) CurveGaugeLiquiditiesCurrent(ctx context.Context) ApiCurveGaugeLiquiditiesCurrentRequest {
+	return ApiCurveGaugeLiquiditiesCurrentRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -1149,7 +1149,7 @@ func (a *CurveApiService) CurveGaugeLiquiditysCurrent(ctx context.Context) ApiCu
 
 // Execute executes the request
 //  @return []CurveGaugeLiquidityDTO
-func (a *CurveApiService) CurveGaugeLiquiditysCurrentExecute(r ApiCurveGaugeLiquiditysCurrentRequest) ([]CurveGaugeLiquidityDTO, *http.Response, error) {
+func (a *CurveApiService) CurveGaugeLiquiditiesCurrentExecute(r ApiCurveGaugeLiquiditiesCurrentRequest) ([]CurveGaugeLiquidityDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -1157,12 +1157,12 @@ func (a *CurveApiService) CurveGaugeLiquiditysCurrentExecute(r ApiCurveGaugeLiqu
 		localVarReturnValue  []CurveGaugeLiquidityDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGaugeLiquiditysCurrent")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGaugeLiquiditiesCurrent")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/curve/gaugeLiquiditys/current"
+	localVarPath := localBasePath + "/dapps/curve/gaugeLiquidities/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -3638,7 +3638,7 @@ func (a *CurveApiService) CurveGetGaugeDepositsHistoricalExecute(r ApiCurveGetGa
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiCurveGetGaugeLiquiditysHistoricalRequest struct {
+type ApiCurveGetGaugeLiquiditiesHistoricalRequest struct {
 	ctx context.Context
 	ApiService *CurveApiService
 	startBlock *int64
@@ -3650,55 +3650,55 @@ type ApiCurveGetGaugeLiquiditysHistoricalRequest struct {
 }
 
 // The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-func (r ApiCurveGetGaugeLiquiditysHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetGaugeLiquiditysHistoricalRequest {
+func (r ApiCurveGetGaugeLiquiditiesHistoricalRequest) StartBlock(startBlock int64) ApiCurveGetGaugeLiquiditiesHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
 // The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-func (r ApiCurveGetGaugeLiquiditysHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetGaugeLiquiditysHistoricalRequest {
+func (r ApiCurveGetGaugeLiquiditiesHistoricalRequest) EndBlock(endBlock int64) ApiCurveGetGaugeLiquiditiesHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
 // The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-func (r ApiCurveGetGaugeLiquiditysHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetGaugeLiquiditysHistoricalRequest {
+func (r ApiCurveGetGaugeLiquiditiesHistoricalRequest) StartDate(startDate time.Time) ApiCurveGetGaugeLiquiditiesHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
 // The end date of timeframe.
-func (r ApiCurveGetGaugeLiquiditysHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetGaugeLiquiditysHistoricalRequest {
+func (r ApiCurveGetGaugeLiquiditiesHistoricalRequest) EndDate(endDate time.Time) ApiCurveGetGaugeLiquiditiesHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
 // 
-func (r ApiCurveGetGaugeLiquiditysHistoricalRequest) Id(id string) ApiCurveGetGaugeLiquiditysHistoricalRequest {
+func (r ApiCurveGetGaugeLiquiditiesHistoricalRequest) Id(id string) ApiCurveGetGaugeLiquiditiesHistoricalRequest {
 	r.id = &id
 	return r
 }
 
 // 
-func (r ApiCurveGetGaugeLiquiditysHistoricalRequest) User(user string) ApiCurveGetGaugeLiquiditysHistoricalRequest {
+func (r ApiCurveGetGaugeLiquiditiesHistoricalRequest) User(user string) ApiCurveGetGaugeLiquiditiesHistoricalRequest {
 	r.user = &user
 	return r
 }
 
-func (r ApiCurveGetGaugeLiquiditysHistoricalRequest) Execute() ([]CurveGaugeLiquidityDTO, *http.Response, error) {
-	return r.ApiService.CurveGetGaugeLiquiditysHistoricalExecute(r)
+func (r ApiCurveGetGaugeLiquiditiesHistoricalRequest) Execute() ([]CurveGaugeLiquidityDTO, *http.Response, error) {
+	return r.ApiService.CurveGetGaugeLiquiditiesHistoricalExecute(r)
 }
 
 /*
-CurveGetGaugeLiquiditysHistorical GaugeLiquiditys (historical)
+CurveGetGaugeLiquiditiesHistorical GaugeLiquidities (historical)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiCurveGetGaugeLiquiditysHistoricalRequest
+ @return ApiCurveGetGaugeLiquiditiesHistoricalRequest
 */
-func (a *CurveApiService) CurveGetGaugeLiquiditysHistorical(ctx context.Context) ApiCurveGetGaugeLiquiditysHistoricalRequest {
-	return ApiCurveGetGaugeLiquiditysHistoricalRequest{
+func (a *CurveApiService) CurveGetGaugeLiquiditiesHistorical(ctx context.Context) ApiCurveGetGaugeLiquiditiesHistoricalRequest {
+	return ApiCurveGetGaugeLiquiditiesHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -3706,7 +3706,7 @@ func (a *CurveApiService) CurveGetGaugeLiquiditysHistorical(ctx context.Context)
 
 // Execute executes the request
 //  @return []CurveGaugeLiquidityDTO
-func (a *CurveApiService) CurveGetGaugeLiquiditysHistoricalExecute(r ApiCurveGetGaugeLiquiditysHistoricalRequest) ([]CurveGaugeLiquidityDTO, *http.Response, error) {
+func (a *CurveApiService) CurveGetGaugeLiquiditiesHistoricalExecute(r ApiCurveGetGaugeLiquiditiesHistoricalRequest) ([]CurveGaugeLiquidityDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -3714,12 +3714,12 @@ func (a *CurveApiService) CurveGetGaugeLiquiditysHistoricalExecute(r ApiCurveGet
 		localVarReturnValue  []CurveGaugeLiquidityDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetGaugeLiquiditysHistorical")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "CurveApiService.CurveGetGaugeLiquiditiesHistorical")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/curve/gaugeLiquiditys/historical"
+	localVarPath := localBasePath + "/dapps/curve/gaugeLiquidities/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}

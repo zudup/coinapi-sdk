@@ -1861,10 +1861,10 @@ paths:
       summary: Gauges (current)
       tags:
       - Curve
-  /dapps/curve/gaugeLiquiditys/historical:
+  /dapps/curve/gaugeLiquidities/historical:
     get:
-      description: Gets gaugeLiquiditys.
-      operationId: Curve.GetGaugeLiquiditys (historical)
+      description: Gets gaugeLiquidities.
+      operationId: Curve.GetGaugeLiquidities (historical)
       parameters:
       - description: "The start block. If endblock is not given, only those entities\
           \ will be included that were exactly created in startBlock."
@@ -1940,13 +1940,13 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeLiquidityDTO'
                 type: array
           description: successful operation
-      summary: GaugeLiquiditys (historical)
+      summary: GaugeLiquidities (historical)
       tags:
       - Curve
-  /dapps/curve/gaugeLiquiditys/current:
+  /dapps/curve/gaugeLiquidities/current:
     get:
-      description: Gets gaugeLiquiditys.
-      operationId: Curve.GaugeLiquiditys (current)
+      description: Gets gaugeLiquidities.
+      operationId: Curve.GaugeLiquidities (current)
       responses:
         "200":
           content:
@@ -1966,7 +1966,7 @@ paths:
                   $ref: '#/components/schemas/Curve.GaugeLiquidityDTO'
                 type: array
           description: successful operation
-      summary: GaugeLiquiditys (current)
+      summary: GaugeLiquidities (current)
       tags:
       - Curve
   /dapps/curve/gaugeTotalWeights/historical:
@@ -4005,10 +4005,10 @@ paths:
       summary: WeeklyVolumes (current)
       tags:
       - Curve
-  /dapps/dex/batchs/historical:
+  /dapps/dex/batches/historical:
     get:
-      description: Gets batchs.
-      operationId: Dex.GetBatchs (historical)
+      description: Gets batches.
+      operationId: Dex.GetBatches (historical)
       parameters:
       - description: "The start block. If endblock is not given, only those entities\
           \ will be included that were exactly created in startBlock."
@@ -4076,13 +4076,13 @@ paths:
                   $ref: '#/components/schemas/Dex.BatchDTO'
                 type: array
           description: successful operation
-      summary: Batchs (historical)
+      summary: Batches (historical)
       tags:
       - Dex
-  /dapps/dex/batchs/current:
+  /dapps/dex/batches/current:
     get:
-      description: Gets batchs.
-      operationId: Dex.Batchs (current)
+      description: Gets batches.
+      operationId: Dex.Batches (current)
       responses:
         "200":
           content:
@@ -4102,7 +4102,7 @@ paths:
                   $ref: '#/components/schemas/Dex.BatchDTO'
                 type: array
           description: successful operation
-      summary: Batchs (current)
+      summary: Batches (current)
       tags:
       - Dex
   /dapps/dex/deposits/historical:
@@ -4502,10 +4502,10 @@ paths:
       summary: Solutions (current)
       tags:
       - Dex
-  /dapps/dex/statss/historical:
+  /dapps/dex/stats/historical:
     get:
-      description: Gets statss.
-      operationId: Dex.GetStatss (historical)
+      description: Gets stats.
+      operationId: Dex.GetStats (historical)
       parameters:
       - description: "The start block. If endblock is not given, only those entities\
           \ will be included that were exactly created in startBlock."
@@ -4573,13 +4573,13 @@ paths:
                   $ref: '#/components/schemas/Dex.StatsDTO'
                 type: array
           description: successful operation
-      summary: Statss (historical)
+      summary: Stats (historical)
       tags:
       - Dex
-  /dapps/dex/statss/current:
+  /dapps/dex/stats/current:
     get:
-      description: Gets statss.
-      operationId: Dex.Statss (current)
+      description: Gets stats.
+      operationId: Dex.Stats (current)
       responses:
         "200":
           content:
@@ -4599,7 +4599,7 @@ paths:
                   $ref: '#/components/schemas/Dex.StatsDTO'
                 type: array
           description: successful operation
-      summary: Statss (current)
+      summary: Stats (current)
       tags:
       - Dex
   /dapps/dex/tokens/historical:
@@ -5339,10 +5339,10 @@ paths:
       summary: Burns (current)
       tags:
       - Sushiswap
-  /dapps/sushiswap/dayDatas/historical:
+  /dapps/sushiswap/dayData/historical:
     get:
-      description: Gets dayDatas.
-      operationId: Sushiswap.GetDayDatas (historical)
+      description: Gets dayData.
+      operationId: Sushiswap.GetDayData (historical)
       parameters:
       - description: "The start block. If endblock is not given, only those entities\
           \ will be included that were exactly created in startBlock."
@@ -5410,13 +5410,13 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.DayDataDTO'
                 type: array
           description: successful operation
-      summary: DayDatas (historical)
+      summary: DayData (historical)
       tags:
       - Sushiswap
-  /dapps/sushiswap/dayDatas/current:
+  /dapps/sushiswap/dayData/current:
     get:
-      description: Gets dayDatas.
-      operationId: Sushiswap.DayDatas (current)
+      description: Gets dayData.
+      operationId: Sushiswap.DayData (current)
       responses:
         "200":
           content:
@@ -5436,13 +5436,13 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.DayDataDTO'
                 type: array
           description: successful operation
-      summary: DayDatas (current)
+      summary: DayData (current)
       tags:
       - Sushiswap
-  /dapps/sushiswap/factorys/historical:
+  /dapps/sushiswap/factories/historical:
     get:
-      description: Gets factorys.
-      operationId: Sushiswap.GetFactorys (historical)
+      description: Gets factories.
+      operationId: Sushiswap.GetFactories (historical)
       parameters:
       - description: "The start block. If endblock is not given, only those entities\
           \ will be included that were exactly created in startBlock."
@@ -5510,13 +5510,13 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.FactoryDTO'
                 type: array
           description: successful operation
-      summary: Factorys (historical)
+      summary: Factories (historical)
       tags:
       - Sushiswap
-  /dapps/sushiswap/factorys/current:
+  /dapps/sushiswap/factories/current:
     get:
-      description: Gets factorys.
-      operationId: Sushiswap.Factorys (current)
+      description: Gets factories.
+      operationId: Sushiswap.Factories (current)
       responses:
         "200":
           content:
@@ -5536,13 +5536,13 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.FactoryDTO'
                 type: array
           description: successful operation
-      summary: Factorys (current)
+      summary: Factories (current)
       tags:
       - Sushiswap
-  /dapps/sushiswap/hourDatas/historical:
+  /dapps/sushiswap/hourData/historical:
     get:
-      description: Gets hourDatas.
-      operationId: Sushiswap.GetHourDatas (historical)
+      description: Gets hourData.
+      operationId: Sushiswap.GetHourData (historical)
       parameters:
       - description: "The start block. If endblock is not given, only those entities\
           \ will be included that were exactly created in startBlock."
@@ -5610,13 +5610,13 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.HourDataDTO'
                 type: array
           description: successful operation
-      summary: HourDatas (historical)
+      summary: HourData (historical)
       tags:
       - Sushiswap
-  /dapps/sushiswap/hourDatas/current:
+  /dapps/sushiswap/hourData/current:
     get:
-      description: Gets hourDatas.
-      operationId: Sushiswap.HourDatas (current)
+      description: Gets hourData.
+      operationId: Sushiswap.HourData (current)
       responses:
         "200":
           content:
@@ -5636,7 +5636,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.HourDataDTO'
                 type: array
           description: successful operation
-      summary: HourDatas (current)
+      summary: HourData (current)
       tags:
       - Sushiswap
   /dapps/sushiswap/liquidityPositions/historical:
@@ -5950,10 +5950,10 @@ paths:
       summary: Mints (current)
       tags:
       - Sushiswap
-  /dapps/sushiswap/pairDayDatas/historical:
+  /dapps/sushiswap/pairDayData/historical:
     get:
-      description: Gets pairDayDatas.
-      operationId: Sushiswap.GetPairDayDatas (historical)
+      description: Gets pairDayData.
+      operationId: Sushiswap.GetPairDayData (historical)
       parameters:
       - explode: true
         in: query
@@ -6034,13 +6034,13 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.PairDayDataDTO'
                 type: array
           description: successful operation
-      summary: PairDayDatas (historical)
+      summary: PairDayData (historical)
       tags:
       - Sushiswap
-  /dapps/sushiswap/pairDayDatas/current:
+  /dapps/sushiswap/pairDayData/current:
     get:
-      description: Gets pairDayDatas.
-      operationId: Sushiswap.PairDayDatas (current)
+      description: Gets pairDayData.
+      operationId: Sushiswap.PairDayData (current)
       responses:
         "200":
           content:
@@ -6060,7 +6060,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.PairDayDataDTO'
                 type: array
           description: successful operation
-      summary: PairDayDatas (current)
+      summary: PairDayData (current)
       tags:
       - Sushiswap
   /dapps/sushiswap/pairs/historical:
@@ -6185,10 +6185,10 @@ paths:
       summary: Pairs (current)
       tags:
       - Sushiswap
-  /dapps/sushiswap/pairHourDatas/historical:
+  /dapps/sushiswap/pairHourData/historical:
     get:
-      description: Gets pairHourDatas.
-      operationId: Sushiswap.GetPairHourDatas (historical)
+      description: Gets pairHourData.
+      operationId: Sushiswap.GetPairHourData (historical)
       parameters:
       - explode: true
         in: query
@@ -6255,13 +6255,13 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.PairHourDataDTO'
                 type: array
           description: successful operation
-      summary: PairHourDatas (historical)
+      summary: PairHourData (historical)
       tags:
       - Sushiswap
-  /dapps/sushiswap/pairHourDatas/current:
+  /dapps/sushiswap/pairHourData/current:
     get:
-      description: Gets pairHourDatas.
-      operationId: Sushiswap.PairHourDatas (current)
+      description: Gets pairHourData.
+      operationId: Sushiswap.PairHourData (current)
       responses:
         "200":
           content:
@@ -6281,7 +6281,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.PairHourDataDTO'
                 type: array
           description: successful operation
-      summary: PairHourDatas (current)
+      summary: PairHourData (current)
       tags:
       - Sushiswap
   /dapps/sushiswap/swaps/historical:
@@ -6401,10 +6401,10 @@ paths:
       summary: Swaps (current)
       tags:
       - Sushiswap
-  /dapps/sushiswap/tokenDayDatas/historical:
+  /dapps/sushiswap/tokenDayData/historical:
     get:
-      description: Gets tokenDayDatas.
-      operationId: Sushiswap.GetTokenDayDatas (historical)
+      description: Gets tokenDayData.
+      operationId: Sushiswap.GetTokenDayData (historical)
       parameters:
       - description: "The start block. If endblock is not given, only those entities\
           \ will be included that were exactly created in startBlock."
@@ -6472,13 +6472,13 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.TokenDayDataDTO'
                 type: array
           description: successful operation
-      summary: TokenDayDatas (historical)
+      summary: TokenDayData (historical)
       tags:
       - Sushiswap
-  /dapps/sushiswap/tokenDayDatas/current:
+  /dapps/sushiswap/tokenDayData/current:
     get:
-      description: Gets tokenDayDatas.
-      operationId: Sushiswap.TokenDayDatas (current)
+      description: Gets tokenDayData.
+      operationId: Sushiswap.TokenDayData (current)
       responses:
         "200":
           content:
@@ -6498,7 +6498,7 @@ paths:
                   $ref: '#/components/schemas/Sushiswap.TokenDayDataDTO'
                 type: array
           description: successful operation
-      summary: TokenDayDatas (current)
+      summary: TokenDayData (current)
       tags:
       - Sushiswap
   /dapps/sushiswap/tokens/historical:
@@ -7355,10 +7355,10 @@ paths:
       summary: Mints (current)
       tags:
       - UniswapV2
-  /dapps/uniswapv2/pairDayDatas/historical:
+  /dapps/uniswapv2/pairDayData/historical:
     get:
-      description: Gets pairDayDatas.
-      operationId: UniswapV2.GetPairDayDatas (historical)
+      description: Gets pairDayData.
+      operationId: UniswapV2.GetPairDayData (historical)
       parameters:
       - description: "The start block. If endblock is not given, only those entities\
           \ will be included that were exactly created in startBlock."
@@ -7442,13 +7442,13 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.PairDayDataDTO'
                 type: array
           description: successful operation
-      summary: PairDayDatas (historical)
+      summary: PairDayData (historical)
       tags:
       - UniswapV2
-  /dapps/uniswapv2/pairDayDatas/current:
+  /dapps/uniswapv2/pairDayData/current:
     get:
-      description: Gets pairDayDatas.
-      operationId: UniswapV2.PairDayDatas (current)
+      description: Gets pairDayData.
+      operationId: UniswapV2.PairDayData (current)
       responses:
         "200":
           content:
@@ -7468,7 +7468,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.PairDayDataDTO'
                 type: array
           description: successful operation
-      summary: PairDayDatas (current)
+      summary: PairDayData (current)
       tags:
       - UniswapV2
   /dapps/uniswapv2/pairs/historical:
@@ -7596,10 +7596,10 @@ paths:
       summary: Pairs (current)
       tags:
       - UniswapV2
-  /dapps/uniswapv2/pairHourDatas/historical:
+  /dapps/uniswapv2/pairHourData/historical:
     get:
-      description: Gets pairHourDatas.
-      operationId: UniswapV2.GetPairHourDatas (historical)
+      description: Gets pairHourData.
+      operationId: UniswapV2.GetPairHourData (historical)
       parameters:
       - description: "The start block. If endblock is not given, only those entities\
           \ will be included that were exactly created in startBlock."
@@ -7675,13 +7675,13 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.PairHourDataDTO'
                 type: array
           description: successful operation
-      summary: PairHourDatas (historical)
+      summary: PairHourData (historical)
       tags:
       - UniswapV2
-  /dapps/uniswapv2/pairHourDatas/current:
+  /dapps/uniswapv2/pairHourData/current:
     get:
-      description: Gets pairHourDatas.
-      operationId: UniswapV2.PairHourDatas (current)
+      description: Gets pairHourData.
+      operationId: UniswapV2.PairHourData (current)
       responses:
         "200":
           content:
@@ -7701,7 +7701,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.PairHourDataDTO'
                 type: array
           description: successful operation
-      summary: PairHourDatas (current)
+      summary: PairHourData (current)
       tags:
       - UniswapV2
   /dapps/uniswapv2/swaps/historical:
@@ -7821,10 +7821,10 @@ paths:
       summary: Swaps (current)
       tags:
       - UniswapV2
-  /dapps/uniswapv2/tokenDayDatas/historical:
+  /dapps/uniswapv2/tokenDayData/historical:
     get:
-      description: Gets tokenDayDatas.
-      operationId: UniswapV2.GetTokenDayDatas (historical)
+      description: Gets tokenDayData.
+      operationId: UniswapV2.GetTokenDayData (historical)
       parameters:
       - description: "The start block. If endblock is not given, only those entities\
           \ will be included that were exactly created in startBlock."
@@ -7893,13 +7893,13 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.TokenDayDataDTO'
                 type: array
           description: successful operation
-      summary: TokenDayDatas (historical)
+      summary: TokenDayData (historical)
       tags:
       - UniswapV2
-  /dapps/uniswapv2/tokenDayDatas/current:
+  /dapps/uniswapv2/tokenDayData/current:
     get:
-      description: Gets tokenDayDatas.
-      operationId: UniswapV2.TokenDayDatas (current)
+      description: Gets tokenDayData.
+      operationId: UniswapV2.TokenDayData (current)
       responses:
         "200":
           content:
@@ -7919,7 +7919,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.TokenDayDataDTO'
                 type: array
           description: successful operation
-      summary: TokenDayDatas (current)
+      summary: TokenDayData (current)
       tags:
       - UniswapV2
   /dapps/uniswapv2/tokens/historical:
@@ -8138,10 +8138,10 @@ paths:
       summary: Transactions (current)
       tags:
       - UniswapV2
-  /dapps/uniswapv2/uniswapDayDatas/historical:
+  /dapps/uniswapv2/uniswapDayData/historical:
     get:
-      description: Gets uniswapDayDatas.
-      operationId: UniswapV2.GetUniswapDayDatas (historical)
+      description: Gets uniswapDayData.
+      operationId: UniswapV2.GetUniswapDayData (historical)
       parameters:
       - description: "The start block. If endblock is not given, only those entities\
           \ will be included that were exactly created in startBlock."
@@ -8209,13 +8209,13 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.UniswapDayDataDTO'
                 type: array
           description: successful operation
-      summary: UniswapDayDatas (historical)
+      summary: UniswapDayData (historical)
       tags:
       - UniswapV2
-  /dapps/uniswapv2/uniswapDayDatas/current:
+  /dapps/uniswapv2/uniswapDayData/current:
     get:
-      description: Gets uniswapDayDatas.
-      operationId: UniswapV2.UniswapDayDatas (current)
+      description: Gets uniswapDayData.
+      operationId: UniswapV2.UniswapDayData (current)
       responses:
         "200":
           content:
@@ -8235,13 +8235,13 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.UniswapDayDataDTO'
                 type: array
           description: successful operation
-      summary: UniswapDayDatas (current)
+      summary: UniswapDayData (current)
       tags:
       - UniswapV2
-  /dapps/uniswapv2/uniswapFactorys/historical:
+  /dapps/uniswapv2/uniswapFactories/historical:
     get:
-      description: Gets uniswapFactorys.
-      operationId: UniswapV2.GetUniswapFactorys (historical)
+      description: Gets uniswapFactories.
+      operationId: UniswapV2.GetUniswapFactories (historical)
       parameters:
       - description: "The start block. If endblock is not given, only those entities\
           \ will be included that were exactly created in startBlock."
@@ -8309,13 +8309,13 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.UniswapFactoryDTO'
                 type: array
           description: successful operation
-      summary: UniswapFactorys (historical)
+      summary: UniswapFactories (historical)
       tags:
       - UniswapV2
-  /dapps/uniswapv2/uniswapFactorys/current:
+  /dapps/uniswapv2/uniswapFactories/current:
     get:
-      description: Gets uniswapFactorys.
-      operationId: UniswapV2.UniswapFactorys (current)
+      description: Gets uniswapFactories.
+      operationId: UniswapV2.UniswapFactories (current)
       responses:
         "200":
           content:
@@ -8335,7 +8335,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV2.UniswapFactoryDTO'
                 type: array
           description: successful operation
-      summary: UniswapFactorys (current)
+      summary: UniswapFactories (current)
       tags:
       - UniswapV2
   /dapps/uniswapv2/users/historical:
@@ -8662,10 +8662,10 @@ paths:
       summary: Burns (current)
       tags:
       - UniswapV3
-  /dapps/uniswapv3/factorys/historical:
+  /dapps/uniswapv3/factories/historical:
     get:
-      description: Gets factorys.
-      operationId: UniswapV3.GetFactorys (historical)
+      description: Gets factories.
+      operationId: UniswapV3.GetFactories (historical)
       parameters:
       - description: "The start block. If endblock is not given, only those entities\
           \ will be included that were exactly created in startBlock."
@@ -8733,13 +8733,13 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.FactoryDTO'
                 type: array
           description: successful operation
-      summary: Factorys (historical)
+      summary: Factories (historical)
       tags:
       - UniswapV3
-  /dapps/uniswapv3/factorys/current:
+  /dapps/uniswapv3/factories/current:
     get:
-      description: Gets factorys.
-      operationId: UniswapV3.Factorys (current)
+      description: Gets factories.
+      operationId: UniswapV3.Factories (current)
       responses:
         "200":
           content:
@@ -8759,7 +8759,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.FactoryDTO'
                 type: array
           description: successful operation
-      summary: Factorys (current)
+      summary: Factories (current)
       tags:
       - UniswapV3
   /dapps/uniswapv3/mints/historical:
@@ -8886,10 +8886,10 @@ paths:
       summary: Mints (current)
       tags:
       - UniswapV3
-  /dapps/uniswapv3/poolDayDatas/historical:
+  /dapps/uniswapv3/poolDayData/historical:
     get:
-      description: Gets poolDayDatas.
-      operationId: UniswapV3.GetPoolDayDatas (historical)
+      description: Gets poolDayData.
+      operationId: UniswapV3.GetPoolDayData (historical)
       parameters:
       - explode: true
         in: query
@@ -8956,13 +8956,13 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PoolDayDataDTO'
                 type: array
           description: successful operation
-      summary: PoolDayDatas (historical)
+      summary: PoolDayData (historical)
       tags:
       - UniswapV3
-  /dapps/uniswapv3/poolDayDatas/current:
+  /dapps/uniswapv3/poolDayData/current:
     get:
-      description: Gets poolDayDatas.
-      operationId: UniswapV3.PoolDayDatas (current)
+      description: Gets poolDayData.
+      operationId: UniswapV3.PoolDayData (current)
       responses:
         "200":
           content:
@@ -8982,7 +8982,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PoolDayDataDTO'
                 type: array
           description: successful operation
-      summary: PoolDayDatas (current)
+      summary: PoolDayData (current)
       tags:
       - UniswapV3
   /dapps/uniswapv3/pools/historical:
@@ -9110,10 +9110,10 @@ paths:
       summary: Pools (current)
       tags:
       - UniswapV3
-  /dapps/uniswapv3/poolHourDatas/historical:
+  /dapps/uniswapv3/poolHourData/historical:
     get:
-      description: Gets poolHourDatas.
-      operationId: UniswapV3.GetPoolHourDatas (historical)
+      description: Gets poolHourData.
+      operationId: UniswapV3.GetPoolHourData (historical)
       parameters:
       - explode: true
         in: query
@@ -9180,13 +9180,13 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PoolHourDataDTO'
                 type: array
           description: successful operation
-      summary: PoolHourDatas (historical)
+      summary: PoolHourData (historical)
       tags:
       - UniswapV3
-  /dapps/uniswapv3/poolHourDatas/current:
+  /dapps/uniswapv3/poolHourData/current:
     get:
-      description: Gets poolHourDatas.
-      operationId: UniswapV3.PoolHourDatas (current)
+      description: Gets poolHourData.
+      operationId: UniswapV3.PoolHourData (current)
       responses:
         "200":
           content:
@@ -9206,7 +9206,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.PoolHourDataDTO'
                 type: array
           description: successful operation
-      summary: PoolHourDatas (current)
+      summary: PoolHourData (current)
       tags:
       - UniswapV3
   /dapps/uniswapv3/positions/historical:
@@ -9566,10 +9566,10 @@ paths:
       summary: Swaps (current)
       tags:
       - UniswapV3
-  /dapps/uniswapv3/tickDayDatas/historical:
+  /dapps/uniswapv3/tickDayData/historical:
     get:
-      description: Gets tickDayDatas.
-      operationId: UniswapV3.GetTickDayDatas (historical)
+      description: Gets tickDayData.
+      operationId: UniswapV3.GetTickDayData (historical)
       parameters:
       - explode: true
         in: query
@@ -9636,13 +9636,13 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TickDayDataDTO'
                 type: array
           description: successful operation
-      summary: TickDayDatas (historical)
+      summary: TickDayData (historical)
       tags:
       - UniswapV3
-  /dapps/uniswapv3/tickDayDatas/current:
+  /dapps/uniswapv3/tickDayData/current:
     get:
-      description: Gets tickDayDatas.
-      operationId: UniswapV3.TickDayDatas (current)
+      description: Gets tickDayData.
+      operationId: UniswapV3.TickDayData (current)
       responses:
         "200":
           content:
@@ -9662,7 +9662,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TickDayDataDTO'
                 type: array
           description: successful operation
-      summary: TickDayDatas (current)
+      summary: TickDayData (current)
       tags:
       - UniswapV3
   /dapps/uniswapv3/ticks/historical:
@@ -9880,10 +9880,10 @@ paths:
       summary: Tokens (current)
       tags:
       - UniswapV3
-  /dapps/uniswapv3/tokenHourDatas/historical:
+  /dapps/uniswapv3/tokenHourData/historical:
     get:
-      description: Gets tokenHourDatas.
-      operationId: UniswapV3.GetTokenHourDatas (historical)
+      description: Gets tokenHourData.
+      operationId: UniswapV3.GetTokenHourData (historical)
       parameters:
       - description: "The start block. If endblock is not given, only those entities\
           \ will be included that were exactly created in startBlock."
@@ -9951,13 +9951,13 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TokenHourDataDTO'
                 type: array
           description: successful operation
-      summary: TokenHourDatas (historical)
+      summary: TokenHourData (historical)
       tags:
       - UniswapV3
-  /dapps/uniswapv3/tokenHourDatas/current:
+  /dapps/uniswapv3/tokenHourData/current:
     get:
-      description: Gets tokenHourDatas.
-      operationId: UniswapV3.TokenHourDatas (current)
+      description: Gets tokenHourData.
+      operationId: UniswapV3.TokenHourData (current)
       responses:
         "200":
           content:
@@ -9977,13 +9977,13 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TokenHourDataDTO'
                 type: array
           description: successful operation
-      summary: TokenHourDatas (current)
+      summary: TokenHourData (current)
       tags:
       - UniswapV3
-  /dapps/uniswapv3/tokenV3DayDatas/historical:
+  /dapps/uniswapv3/tokenV3DayData/historical:
     get:
-      description: Gets tokenV3DayDatas.
-      operationId: UniswapV3.GetTokenV3DayDatas (historical)
+      description: Gets tokenV3DayData.
+      operationId: UniswapV3.GetTokenV3DayData (historical)
       parameters:
       - description: "The start block. If endblock is not given, only those entities\
           \ will be included that were exactly created in startBlock."
@@ -10051,13 +10051,13 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TokenV3DayDataDTO'
                 type: array
           description: successful operation
-      summary: TokenV3DayDatas (historical)
+      summary: TokenV3DayData (historical)
       tags:
       - UniswapV3
-  /dapps/uniswapv3/tokenV3DayDatas/current:
+  /dapps/uniswapv3/tokenV3DayData/current:
     get:
-      description: Gets tokenV3DayDatas.
-      operationId: UniswapV3.TokenV3DayDatas (current)
+      description: Gets tokenV3DayData.
+      operationId: UniswapV3.TokenV3DayData (current)
       responses:
         "200":
           content:
@@ -10077,7 +10077,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.TokenV3DayDataDTO'
                 type: array
           description: successful operation
-      summary: TokenV3DayDatas (current)
+      summary: TokenV3DayData (current)
       tags:
       - UniswapV3
   /dapps/uniswapv3/transactions/historical:
@@ -10180,10 +10180,10 @@ paths:
       summary: Transactions (current)
       tags:
       - UniswapV3
-  /dapps/uniswapv3/uniswapDayDatas/historical:
+  /dapps/uniswapv3/uniswapDayData/historical:
     get:
-      description: Gets uniswapDayDatas.
-      operationId: UniswapV3.GetUniswapDayDatas (historical)
+      description: Gets uniswapDayData.
+      operationId: UniswapV3.GetUniswapDayData (historical)
       parameters:
       - description: "The start block. If endblock is not given, only those entities\
           \ will be included that were exactly created in startBlock."
@@ -10251,13 +10251,13 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.UniswapDayDataDTO'
                 type: array
           description: successful operation
-      summary: UniswapDayDatas (historical)
+      summary: UniswapDayData (historical)
       tags:
       - UniswapV3
-  /dapps/uniswapv3/uniswapDayDatas/current:
+  /dapps/uniswapv3/uniswapDayData/current:
     get:
-      description: Gets uniswapDayDatas.
-      operationId: UniswapV3.UniswapDayDatas (current)
+      description: Gets uniswapDayData.
+      operationId: UniswapV3.UniswapDayData (current)
       responses:
         "200":
           content:
@@ -10277,7 +10277,7 @@ paths:
                   $ref: '#/components/schemas/UniswapV3.UniswapDayDataDTO'
                 type: array
           description: successful operation
-      summary: UniswapDayDatas (current)
+      summary: UniswapDayData (current)
       tags:
       - UniswapV3
 components:

@@ -35,13 +35,13 @@ object DexApi {
 class DexApi(baseUrl: String) {
 
   /**
-   * Gets batchs.
+   * Gets batches.
    * 
    * Expected answers:
    *   code 200 : Seq[BatchDTO] (successful operation)
    */
-  def dexBatchsCurrent(): ApiRequest[Seq[BatchDTO]] =
-    ApiRequest[Seq[BatchDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/batchs/current", "application/json")
+  def dexBatchesCurrent(): ApiRequest[Seq[BatchDTO]] =
+    ApiRequest[Seq[BatchDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/batches/current", "application/json")
       .withSuccessResponse[Seq[BatchDTO]](200)
       
 
@@ -57,7 +57,7 @@ class DexApi(baseUrl: String) {
       
 
   /**
-   * Gets batchs.
+   * Gets batches.
    * 
    * Expected answers:
    *   code 200 : Seq[BatchDTO] (successful operation)
@@ -68,8 +68,8 @@ class DexApi(baseUrl: String) {
    * @param endDate The end date of timeframe.
    * @param id Identifier.
    */
-  def dexGetBatchsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[BatchDTO]] =
-    ApiRequest[Seq[BatchDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/batchs/historical", "application/json")
+  def dexGetBatchesHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[BatchDTO]] =
+    ApiRequest[Seq[BatchDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/batches/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -173,7 +173,7 @@ class DexApi(baseUrl: String) {
       
 
   /**
-   * Gets statss.
+   * Gets stats.
    * 
    * Expected answers:
    *   code 200 : Seq[StatsDTO] (successful operation)
@@ -184,8 +184,8 @@ class DexApi(baseUrl: String) {
    * @param endDate The end date of timeframe.
    * @param id 
    */
-  def dexGetStatssHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[StatsDTO]] =
-    ApiRequest[Seq[StatsDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/statss/historical", "application/json")
+  def dexGetStatsHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[StatsDTO]] =
+    ApiRequest[Seq[StatsDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/stats/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -352,13 +352,13 @@ class DexApi(baseUrl: String) {
       
 
   /**
-   * Gets statss.
+   * Gets stats.
    * 
    * Expected answers:
    *   code 200 : Seq[StatsDTO] (successful operation)
    */
-  def dexStatssCurrent(): ApiRequest[Seq[StatsDTO]] =
-    ApiRequest[Seq[StatsDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/statss/current", "application/json")
+  def dexStatsCurrent(): ApiRequest[Seq[StatsDTO]] =
+    ApiRequest[Seq[StatsDTO]](ApiMethods.GET, baseUrl, "/dapps/dex/stats/current", "application/json")
       .withSuccessResponse[Seq[StatsDTO]](200)
       
 

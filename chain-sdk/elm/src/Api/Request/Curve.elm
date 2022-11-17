@@ -26,7 +26,7 @@ module Api.Request.Curve exposing
     , curveExchangesCurrent
     , curveFeeChangeLogsCurrent
     , curveGaugeDepositsCurrent
-    , curveGaugeLiquiditysCurrent
+    , curveGaugeLiquiditiesCurrent
     , curveGaugeTotalWeightsCurrent
     , curveGaugeTypeWeightsCurrent
     , curveGaugeTypesCurrent
@@ -45,7 +45,7 @@ module Api.Request.Curve exposing
     , curveGetExchangesHistorical
     , curveGetFeeChangeLogsHistorical
     , curveGetGaugeDepositsHistorical
-    , curveGetGaugeLiquiditysHistorical
+    , curveGetGaugeLiquiditiesHistorical
     , curveGetGaugeTotalWeightsHistorical
     , curveGetGaugeTypeWeightsHistorical
     , curveGetGaugeTypesHistorical
@@ -256,13 +256,13 @@ curveGaugeDepositsCurrent =
 
 
 
-{-| Gets gaugeLiquiditys.
+{-| Gets gaugeLiquidities.
 -}
-curveGaugeLiquiditysCurrent : Api.Request (List Api.Data.CurveGaugeLiquidityDTO)
-curveGaugeLiquiditysCurrent =
+curveGaugeLiquiditiesCurrent : Api.Request (List Api.Data.CurveGaugeLiquidityDTO)
+curveGaugeLiquiditiesCurrent =
     Api.request
         "GET"
-        "/dapps/curve/gaugeLiquiditys/current"
+        "/dapps/curve/gaugeLiquidities/current"
         []
         []
         []
@@ -541,13 +541,13 @@ curveGetGaugeDepositsHistorical startBlock_query endBlock_query startDate_query 
 
 
 
-{-| Gets gaugeLiquiditys.
+{-| Gets gaugeLiquidities.
 -}
-curveGetGaugeLiquiditysHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CurveGaugeLiquidityDTO)
-curveGetGaugeLiquiditysHistorical startBlock_query endBlock_query startDate_query endDate_query id_query user_query =
+curveGetGaugeLiquiditiesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.CurveGaugeLiquidityDTO)
+curveGetGaugeLiquiditiesHistorical startBlock_query endBlock_query startDate_query endDate_query id_query user_query =
     Api.request
         "GET"
-        "/dapps/curve/gaugeLiquiditys/historical"
+        "/dapps/curve/gaugeLiquidities/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "user", Maybe.map identity user_query ) ]
         []

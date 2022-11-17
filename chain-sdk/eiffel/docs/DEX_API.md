@@ -4,14 +4,14 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Feature | HTTP request | Description
 ------------- | ------------- | -------------
-[**dex_batchs_current**](DEX_API.md#dex_batchs_current) | **Get** /dapps/dex/batchs/current | Batchs (current)
+[**dex_batches_current**](DEX_API.md#dex_batches_current) | **Get** /dapps/dex/batches/current | Batches (current)
 [**dex_deposits_current**](DEX_API.md#dex_deposits_current) | **Get** /dapps/dex/deposits/current | Deposits (current)
-[**dex_get_batchs_historical**](DEX_API.md#dex_get_batchs_historical) | **Get** /dapps/dex/batchs/historical | Batchs (historical)
+[**dex_get_batches_historical**](DEX_API.md#dex_get_batches_historical) | **Get** /dapps/dex/batches/historical | Batches (historical)
 [**dex_get_deposits_historical**](DEX_API.md#dex_get_deposits_historical) | **Get** /dapps/dex/deposits/historical | Deposits (historical)
 [**dex_get_orders_historical**](DEX_API.md#dex_get_orders_historical) | **Get** /dapps/dex/orders/historical | Orders (historical)
 [**dex_get_prices_historical**](DEX_API.md#dex_get_prices_historical) | **Get** /dapps/dex/prices/historical | Prices (historical)
 [**dex_get_solutions_historical**](DEX_API.md#dex_get_solutions_historical) | **Get** /dapps/dex/solutions/historical | Solutions (historical)
-[**dex_get_statss_historical**](DEX_API.md#dex_get_statss_historical) | **Get** /dapps/dex/statss/historical | Statss (historical)
+[**dex_get_stats_historical**](DEX_API.md#dex_get_stats_historical) | **Get** /dapps/dex/stats/historical | Stats (historical)
 [**dex_get_tokens_historical**](DEX_API.md#dex_get_tokens_historical) | **Get** /dapps/dex/tokens/historical | Tokens (historical)
 [**dex_get_trades_historical**](DEX_API.md#dex_get_trades_historical) | **Get** /dapps/dex/trades/historical | Trades (historical)
 [**dex_get_users_historical**](DEX_API.md#dex_get_users_historical) | **Get** /dapps/dex/users/historical | Users (historical)
@@ -20,7 +20,7 @@ Feature | HTTP request | Description
 [**dex_orders_current**](DEX_API.md#dex_orders_current) | **Get** /dapps/dex/orders/current | Orders (current)
 [**dex_prices_current**](DEX_API.md#dex_prices_current) | **Get** /dapps/dex/prices/current | Prices (current)
 [**dex_solutions_current**](DEX_API.md#dex_solutions_current) | **Get** /dapps/dex/solutions/current | Solutions (current)
-[**dex_statss_current**](DEX_API.md#dex_statss_current) | **Get** /dapps/dex/statss/current | Statss (current)
+[**dex_stats_current**](DEX_API.md#dex_stats_current) | **Get** /dapps/dex/stats/current | Stats (current)
 [**dex_tokens_current**](DEX_API.md#dex_tokens_current) | **Get** /dapps/dex/tokens/current | Tokens (current)
 [**dex_trades_current**](DEX_API.md#dex_trades_current) | **Get** /dapps/dex/trades/current | Trades (current)
 [**dex_users_current**](DEX_API.md#dex_users_current) | **Get** /dapps/dex/users/current | Users (current)
@@ -28,13 +28,13 @@ Feature | HTTP request | Description
 [**dex_withdraws_current**](DEX_API.md#dex_withdraws_current) | **Get** /dapps/dex/withdraws/current | Withdraws (current)
 
 
-# **dex_batchs_current**
-> dex_batchs_current : detachable LIST [DEX_BATCH_DTO]
+# **dex_batches_current**
+> dex_batches_current : detachable LIST [DEX_BATCH_DTO]
 
 
-Batchs (current)
+Batches (current)
 
-Gets batchs.
+Gets batches.
 
 
 ### Parameters
@@ -82,13 +82,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dex_get_batchs_historical**
-> dex_get_batchs_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [DEX_BATCH_DTO]
+# **dex_get_batches_historical**
+> dex_get_batches_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [DEX_BATCH_DTO]
 
 
-Batchs (historical)
+Batches (historical)
 
-Gets batchs.
+Gets batches.
 
 
 ### Parameters
@@ -255,13 +255,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dex_get_statss_historical**
-> dex_get_statss_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [DEX_STATS_DTO]
+# **dex_get_stats_historical**
+> dex_get_stats_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [DEX_STATS_DTO]
 
 
-Statss (historical)
+Stats (historical)
 
-Gets statss.
+Gets stats.
 
 
 ### Parameters
@@ -547,13 +547,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dex_statss_current**
-> dex_statss_current : detachable LIST [DEX_STATS_DTO]
+# **dex_stats_current**
+> dex_stats_current : detachable LIST [DEX_STATS_DTO]
 
 
-Statss (current)
+Stats (current)
 
-Gets statss.
+Gets stats.
 
 
 ### Parameters

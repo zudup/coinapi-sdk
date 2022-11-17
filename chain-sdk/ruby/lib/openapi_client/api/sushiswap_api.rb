@@ -133,25 +133,25 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # DayDatas (current)
-    # Gets dayDatas.
+    # DayData (current)
+    # Gets dayData.
     # @param [Hash] opts the optional parameters
     # @return [Array<SushiswapDayDataDTO>]
-    def sushiswap_day_datas__current(opts = {})
-      data, _status_code, _headers = sushiswap_day_datas__current_with_http_info(opts)
+    def sushiswap_day_data__current(opts = {})
+      data, _status_code, _headers = sushiswap_day_data__current_with_http_info(opts)
       data
     end
 
-    # DayDatas (current)
-    # Gets dayDatas.
+    # DayData (current)
+    # Gets dayData.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<SushiswapDayDataDTO>, Integer, Hash)>] Array<SushiswapDayDataDTO> data, response status code and response headers
-    def sushiswap_day_datas__current_with_http_info(opts = {})
+    def sushiswap_day_data__current_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_day_datas__current ...'
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_day_data__current ...'
       end
       # resource path
-      local_var_path = '/dapps/sushiswap/dayDatas/current'
+      local_var_path = '/dapps/sushiswap/dayData/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -174,7 +174,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SushiswapApi.sushiswap_day_datas__current",
+        :operation => :"SushiswapApi.sushiswap_day_data__current",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -185,30 +185,30 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_day_datas__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_day_data__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Factorys (current)
-    # Gets factorys.
+    # Factories (current)
+    # Gets factories.
     # @param [Hash] opts the optional parameters
     # @return [Array<SushiswapFactoryDTO>]
-    def sushiswap_factorys__current(opts = {})
-      data, _status_code, _headers = sushiswap_factorys__current_with_http_info(opts)
+    def sushiswap_factories__current(opts = {})
+      data, _status_code, _headers = sushiswap_factories__current_with_http_info(opts)
       data
     end
 
-    # Factorys (current)
-    # Gets factorys.
+    # Factories (current)
+    # Gets factories.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<SushiswapFactoryDTO>, Integer, Hash)>] Array<SushiswapFactoryDTO> data, response status code and response headers
-    def sushiswap_factorys__current_with_http_info(opts = {})
+    def sushiswap_factories__current_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_factorys__current ...'
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_factories__current ...'
       end
       # resource path
-      local_var_path = '/dapps/sushiswap/factorys/current'
+      local_var_path = '/dapps/sushiswap/factories/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -231,7 +231,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SushiswapApi.sushiswap_factorys__current",
+        :operation => :"SushiswapApi.sushiswap_factories__current",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -242,7 +242,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_factorys__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_factories__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -394,8 +394,8 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # DayDatas (historical)
-    # Gets dayDatas.
+    # DayData (historical)
+    # Gets dayData.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -403,13 +403,13 @@ module OpenapiClient
     # @option opts [Time] :end_date The end date of timeframe.
     # @option opts [String] :id Unix timestamp for start of day / 86400 giving a unique day index.
     # @return [Array<SushiswapDayDataDTO>]
-    def sushiswap_get_day_datas__historical(opts = {})
-      data, _status_code, _headers = sushiswap_get_day_datas__historical_with_http_info(opts)
+    def sushiswap_get_day_data__historical(opts = {})
+      data, _status_code, _headers = sushiswap_get_day_data__historical_with_http_info(opts)
       data
     end
 
-    # DayDatas (historical)
-    # Gets dayDatas.
+    # DayData (historical)
+    # Gets dayData.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -417,12 +417,12 @@ module OpenapiClient
     # @option opts [Time] :end_date The end date of timeframe.
     # @option opts [String] :id Unix timestamp for start of day / 86400 giving a unique day index.
     # @return [Array<(Array<SushiswapDayDataDTO>, Integer, Hash)>] Array<SushiswapDayDataDTO> data, response status code and response headers
-    def sushiswap_get_day_datas__historical_with_http_info(opts = {})
+    def sushiswap_get_day_data__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_day_datas__historical ...'
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_day_data__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/sushiswap/dayDatas/historical'
+      local_var_path = '/dapps/sushiswap/dayData/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -450,7 +450,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SushiswapApi.sushiswap_get_day_datas__historical",
+        :operation => :"SushiswapApi.sushiswap_get_day_data__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -461,13 +461,13 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_day_datas__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_day_data__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # Factorys (historical)
-    # Gets factorys.
+    # Factories (historical)
+    # Gets factories.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -475,13 +475,13 @@ module OpenapiClient
     # @option opts [Time] :end_date The end date of timeframe.
     # @option opts [String] :id Factory address.
     # @return [Array<SushiswapFactoryDTO>]
-    def sushiswap_get_factorys__historical(opts = {})
-      data, _status_code, _headers = sushiswap_get_factorys__historical_with_http_info(opts)
+    def sushiswap_get_factories__historical(opts = {})
+      data, _status_code, _headers = sushiswap_get_factories__historical_with_http_info(opts)
       data
     end
 
-    # Factorys (historical)
-    # Gets factorys.
+    # Factories (historical)
+    # Gets factories.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -489,12 +489,12 @@ module OpenapiClient
     # @option opts [Time] :end_date The end date of timeframe.
     # @option opts [String] :id Factory address.
     # @return [Array<(Array<SushiswapFactoryDTO>, Integer, Hash)>] Array<SushiswapFactoryDTO> data, response status code and response headers
-    def sushiswap_get_factorys__historical_with_http_info(opts = {})
+    def sushiswap_get_factories__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_factorys__historical ...'
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_factories__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/sushiswap/factorys/historical'
+      local_var_path = '/dapps/sushiswap/factories/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -522,7 +522,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SushiswapApi.sushiswap_get_factorys__historical",
+        :operation => :"SushiswapApi.sushiswap_get_factories__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -533,13 +533,13 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_factorys__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_factories__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # HourDatas (historical)
-    # Gets hourDatas.
+    # HourData (historical)
+    # Gets hourData.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -547,13 +547,13 @@ module OpenapiClient
     # @option opts [Time] :end_date The end date of timeframe.
     # @option opts [String] :id Start of hour timestamp.
     # @return [Array<SushiswapHourDataDTO>]
-    def sushiswap_get_hour_datas__historical(opts = {})
-      data, _status_code, _headers = sushiswap_get_hour_datas__historical_with_http_info(opts)
+    def sushiswap_get_hour_data__historical(opts = {})
+      data, _status_code, _headers = sushiswap_get_hour_data__historical_with_http_info(opts)
       data
     end
 
-    # HourDatas (historical)
-    # Gets hourDatas.
+    # HourData (historical)
+    # Gets hourData.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -561,12 +561,12 @@ module OpenapiClient
     # @option opts [Time] :end_date The end date of timeframe.
     # @option opts [String] :id Start of hour timestamp.
     # @return [Array<(Array<SushiswapHourDataDTO>, Integer, Hash)>] Array<SushiswapHourDataDTO> data, response status code and response headers
-    def sushiswap_get_hour_datas__historical_with_http_info(opts = {})
+    def sushiswap_get_hour_data__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_hour_datas__historical ...'
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_hour_data__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/sushiswap/hourDatas/historical'
+      local_var_path = '/dapps/sushiswap/hourData/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -594,7 +594,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SushiswapApi.sushiswap_get_hour_datas__historical",
+        :operation => :"SushiswapApi.sushiswap_get_hour_data__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -605,7 +605,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_hour_datas__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_hour_data__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -841,8 +841,8 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # PairDayDatas (historical)
-    # Gets pairDayDatas.
+    # PairDayData (historical)
+    # Gets pairDayData.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -853,13 +853,13 @@ module OpenapiClient
     # @option opts [String] :token_0 
     # @option opts [String] :token_1 
     # @return [Array<SushiswapPairDayDataDTO>]
-    def sushiswap_get_pair_day_datas__historical(opts = {})
-      data, _status_code, _headers = sushiswap_get_pair_day_datas__historical_with_http_info(opts)
+    def sushiswap_get_pair_day_data__historical(opts = {})
+      data, _status_code, _headers = sushiswap_get_pair_day_data__historical_with_http_info(opts)
       data
     end
 
-    # PairDayDatas (historical)
-    # Gets pairDayDatas.
+    # PairDayData (historical)
+    # Gets pairDayData.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -870,12 +870,12 @@ module OpenapiClient
     # @option opts [String] :token_0 
     # @option opts [String] :token_1 
     # @return [Array<(Array<SushiswapPairDayDataDTO>, Integer, Hash)>] Array<SushiswapPairDayDataDTO> data, response status code and response headers
-    def sushiswap_get_pair_day_datas__historical_with_http_info(opts = {})
+    def sushiswap_get_pair_day_data__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_pair_day_datas__historical ...'
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_pair_day_data__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/sushiswap/pairDayDatas/historical'
+      local_var_path = '/dapps/sushiswap/pairDayData/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -906,7 +906,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SushiswapApi.sushiswap_get_pair_day_datas__historical",
+        :operation => :"SushiswapApi.sushiswap_get_pair_day_data__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -917,13 +917,13 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_pair_day_datas__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_pair_day_data__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # PairHourDatas (historical)
-    # Gets pairHourDatas.
+    # PairHourData (historical)
+    # Gets pairHourData.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -932,13 +932,13 @@ module OpenapiClient
     # @option opts [String] :id 
     # @option opts [String] :pair 
     # @return [Array<SushiswapPairHourDataDTO>]
-    def sushiswap_get_pair_hour_datas__historical(opts = {})
-      data, _status_code, _headers = sushiswap_get_pair_hour_datas__historical_with_http_info(opts)
+    def sushiswap_get_pair_hour_data__historical(opts = {})
+      data, _status_code, _headers = sushiswap_get_pair_hour_data__historical_with_http_info(opts)
       data
     end
 
-    # PairHourDatas (historical)
-    # Gets pairHourDatas.
+    # PairHourData (historical)
+    # Gets pairHourData.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block 
     # @option opts [Integer] :end_block 
@@ -947,12 +947,12 @@ module OpenapiClient
     # @option opts [String] :id 
     # @option opts [String] :pair 
     # @return [Array<(Array<SushiswapPairHourDataDTO>, Integer, Hash)>] Array<SushiswapPairHourDataDTO> data, response status code and response headers
-    def sushiswap_get_pair_hour_datas__historical_with_http_info(opts = {})
+    def sushiswap_get_pair_hour_data__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_pair_hour_datas__historical ...'
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_pair_hour_data__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/sushiswap/pairHourDatas/historical'
+      local_var_path = '/dapps/sushiswap/pairHourData/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -981,7 +981,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SushiswapApi.sushiswap_get_pair_hour_datas__historical",
+        :operation => :"SushiswapApi.sushiswap_get_pair_hour_data__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -992,7 +992,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_pair_hour_datas__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_pair_hour_data__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1153,8 +1153,8 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # TokenDayDatas (historical)
-    # Gets tokenDayDatas.
+    # TokenDayData (historical)
+    # Gets tokenDayData.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1162,13 +1162,13 @@ module OpenapiClient
     # @option opts [Time] :end_date The end date of timeframe.
     # @option opts [String] :id Identifier, day start timestamp in unix / 86400.
     # @return [Array<SushiswapTokenDayDataDTO>]
-    def sushiswap_get_token_day_datas__historical(opts = {})
-      data, _status_code, _headers = sushiswap_get_token_day_datas__historical_with_http_info(opts)
+    def sushiswap_get_token_day_data__historical(opts = {})
+      data, _status_code, _headers = sushiswap_get_token_day_data__historical_with_http_info(opts)
       data
     end
 
-    # TokenDayDatas (historical)
-    # Gets tokenDayDatas.
+    # TokenDayData (historical)
+    # Gets tokenDayData.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1176,12 +1176,12 @@ module OpenapiClient
     # @option opts [Time] :end_date The end date of timeframe.
     # @option opts [String] :id Identifier, day start timestamp in unix / 86400.
     # @return [Array<(Array<SushiswapTokenDayDataDTO>, Integer, Hash)>] Array<SushiswapTokenDayDataDTO> data, response status code and response headers
-    def sushiswap_get_token_day_datas__historical_with_http_info(opts = {})
+    def sushiswap_get_token_day_data__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_token_day_datas__historical ...'
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_get_token_day_data__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/sushiswap/tokenDayDatas/historical'
+      local_var_path = '/dapps/sushiswap/tokenDayData/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1209,7 +1209,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SushiswapApi.sushiswap_get_token_day_datas__historical",
+        :operation => :"SushiswapApi.sushiswap_get_token_day_data__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1220,7 +1220,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_token_day_datas__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_get_token_day_data__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1447,25 +1447,25 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # HourDatas (current)
-    # Gets hourDatas.
+    # HourData (current)
+    # Gets hourData.
     # @param [Hash] opts the optional parameters
     # @return [Array<SushiswapHourDataDTO>]
-    def sushiswap_hour_datas__current(opts = {})
-      data, _status_code, _headers = sushiswap_hour_datas__current_with_http_info(opts)
+    def sushiswap_hour_data__current(opts = {})
+      data, _status_code, _headers = sushiswap_hour_data__current_with_http_info(opts)
       data
     end
 
-    # HourDatas (current)
-    # Gets hourDatas.
+    # HourData (current)
+    # Gets hourData.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<SushiswapHourDataDTO>, Integer, Hash)>] Array<SushiswapHourDataDTO> data, response status code and response headers
-    def sushiswap_hour_datas__current_with_http_info(opts = {})
+    def sushiswap_hour_data__current_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_hour_datas__current ...'
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_hour_data__current ...'
       end
       # resource path
-      local_var_path = '/dapps/sushiswap/hourDatas/current'
+      local_var_path = '/dapps/sushiswap/hourData/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1488,7 +1488,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SushiswapApi.sushiswap_hour_datas__current",
+        :operation => :"SushiswapApi.sushiswap_hour_data__current",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1499,7 +1499,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_hour_datas__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_hour_data__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1675,25 +1675,25 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # PairDayDatas (current)
-    # Gets pairDayDatas.
+    # PairDayData (current)
+    # Gets pairDayData.
     # @param [Hash] opts the optional parameters
     # @return [Array<SushiswapPairDayDataDTO>]
-    def sushiswap_pair_day_datas__current(opts = {})
-      data, _status_code, _headers = sushiswap_pair_day_datas__current_with_http_info(opts)
+    def sushiswap_pair_day_data__current(opts = {})
+      data, _status_code, _headers = sushiswap_pair_day_data__current_with_http_info(opts)
       data
     end
 
-    # PairDayDatas (current)
-    # Gets pairDayDatas.
+    # PairDayData (current)
+    # Gets pairDayData.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<SushiswapPairDayDataDTO>, Integer, Hash)>] Array<SushiswapPairDayDataDTO> data, response status code and response headers
-    def sushiswap_pair_day_datas__current_with_http_info(opts = {})
+    def sushiswap_pair_day_data__current_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_pair_day_datas__current ...'
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_pair_day_data__current ...'
       end
       # resource path
-      local_var_path = '/dapps/sushiswap/pairDayDatas/current'
+      local_var_path = '/dapps/sushiswap/pairDayData/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1716,7 +1716,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SushiswapApi.sushiswap_pair_day_datas__current",
+        :operation => :"SushiswapApi.sushiswap_pair_day_data__current",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1727,30 +1727,30 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_pair_day_datas__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_pair_day_data__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
 
-    # PairHourDatas (current)
-    # Gets pairHourDatas.
+    # PairHourData (current)
+    # Gets pairHourData.
     # @param [Hash] opts the optional parameters
     # @return [Array<SushiswapPairHourDataDTO>]
-    def sushiswap_pair_hour_datas__current(opts = {})
-      data, _status_code, _headers = sushiswap_pair_hour_datas__current_with_http_info(opts)
+    def sushiswap_pair_hour_data__current(opts = {})
+      data, _status_code, _headers = sushiswap_pair_hour_data__current_with_http_info(opts)
       data
     end
 
-    # PairHourDatas (current)
-    # Gets pairHourDatas.
+    # PairHourData (current)
+    # Gets pairHourData.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<SushiswapPairHourDataDTO>, Integer, Hash)>] Array<SushiswapPairHourDataDTO> data, response status code and response headers
-    def sushiswap_pair_hour_datas__current_with_http_info(opts = {})
+    def sushiswap_pair_hour_data__current_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_pair_hour_datas__current ...'
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_pair_hour_data__current ...'
       end
       # resource path
-      local_var_path = '/dapps/sushiswap/pairHourDatas/current'
+      local_var_path = '/dapps/sushiswap/pairHourData/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1773,7 +1773,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SushiswapApi.sushiswap_pair_hour_datas__current",
+        :operation => :"SushiswapApi.sushiswap_pair_hour_data__current",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1784,7 +1784,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_pair_hour_datas__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_pair_hour_data__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1909,25 +1909,25 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # TokenDayDatas (current)
-    # Gets tokenDayDatas.
+    # TokenDayData (current)
+    # Gets tokenDayData.
     # @param [Hash] opts the optional parameters
     # @return [Array<SushiswapTokenDayDataDTO>]
-    def sushiswap_token_day_datas__current(opts = {})
-      data, _status_code, _headers = sushiswap_token_day_datas__current_with_http_info(opts)
+    def sushiswap_token_day_data__current(opts = {})
+      data, _status_code, _headers = sushiswap_token_day_data__current_with_http_info(opts)
       data
     end
 
-    # TokenDayDatas (current)
-    # Gets tokenDayDatas.
+    # TokenDayData (current)
+    # Gets tokenDayData.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<SushiswapTokenDayDataDTO>, Integer, Hash)>] Array<SushiswapTokenDayDataDTO> data, response status code and response headers
-    def sushiswap_token_day_datas__current_with_http_info(opts = {})
+    def sushiswap_token_day_data__current_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_token_day_datas__current ...'
+        @api_client.config.logger.debug 'Calling API: SushiswapApi.sushiswap_token_day_data__current ...'
       end
       # resource path
-      local_var_path = '/dapps/sushiswap/tokenDayDatas/current'
+      local_var_path = '/dapps/sushiswap/tokenDayData/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1950,7 +1950,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SushiswapApi.sushiswap_token_day_datas__current",
+        :operation => :"SushiswapApi.sushiswap_token_day_data__current",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1961,7 +1961,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_token_day_datas__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SushiswapApi#sushiswap_token_day_data__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

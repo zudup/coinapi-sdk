@@ -6,38 +6,38 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**UniswapV3BundlesCurrent**](UniswapV3Api.md#UniswapV3BundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
 [**UniswapV3BurnsCurrent**](UniswapV3Api.md#UniswapV3BurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
-[**UniswapV3FactorysCurrent**](UniswapV3Api.md#UniswapV3FactorysCurrent) | **GET** /dapps/uniswapv3/factorys/current | Factorys (current)
+[**UniswapV3FactoriesCurrent**](UniswapV3Api.md#UniswapV3FactoriesCurrent) | **GET** /dapps/uniswapv3/factories/current | Factories (current)
 [**UniswapV3GetBundlesHistorical**](UniswapV3Api.md#UniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical)
 [**UniswapV3GetBurnsHistorical**](UniswapV3Api.md#UniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical)
-[**UniswapV3GetFactorysHistorical**](UniswapV3Api.md#UniswapV3GetFactorysHistorical) | **GET** /dapps/uniswapv3/factorys/historical | Factorys (historical)
+[**UniswapV3GetFactoriesHistorical**](UniswapV3Api.md#UniswapV3GetFactoriesHistorical) | **GET** /dapps/uniswapv3/factories/historical | Factories (historical)
 [**UniswapV3GetMintsHistorical**](UniswapV3Api.md#UniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical)
-[**UniswapV3GetPoolDayDatasHistorical**](UniswapV3Api.md#UniswapV3GetPoolDayDatasHistorical) | **GET** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical)
-[**UniswapV3GetPoolHourDatasHistorical**](UniswapV3Api.md#UniswapV3GetPoolHourDatasHistorical) | **GET** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical)
+[**UniswapV3GetPoolDayDataHistorical**](UniswapV3Api.md#UniswapV3GetPoolDayDataHistorical) | **GET** /dapps/uniswapv3/poolDayData/historical | PoolDayData (historical)
+[**UniswapV3GetPoolHourDataHistorical**](UniswapV3Api.md#UniswapV3GetPoolHourDataHistorical) | **GET** /dapps/uniswapv3/poolHourData/historical | PoolHourData (historical)
 [**UniswapV3GetPoolsHistorical**](UniswapV3Api.md#UniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical)
 [**UniswapV3GetPositionSnapshotsHistorical**](UniswapV3Api.md#UniswapV3GetPositionSnapshotsHistorical) | **GET** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical)
 [**UniswapV3GetPositionsHistorical**](UniswapV3Api.md#UniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical)
 [**UniswapV3GetSwapsHistorical**](UniswapV3Api.md#UniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical)
-[**UniswapV3GetTickDayDatasHistorical**](UniswapV3Api.md#UniswapV3GetTickDayDatasHistorical) | **GET** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical)
+[**UniswapV3GetTickDayDataHistorical**](UniswapV3Api.md#UniswapV3GetTickDayDataHistorical) | **GET** /dapps/uniswapv3/tickDayData/historical | TickDayData (historical)
 [**UniswapV3GetTicksHistorical**](UniswapV3Api.md#UniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical)
-[**UniswapV3GetTokenHourDatasHistorical**](UniswapV3Api.md#UniswapV3GetTokenHourDatasHistorical) | **GET** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical)
-[**UniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#UniswapV3GetTokenV3DayDatasHistorical) | **GET** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical)
+[**UniswapV3GetTokenHourDataHistorical**](UniswapV3Api.md#UniswapV3GetTokenHourDataHistorical) | **GET** /dapps/uniswapv3/tokenHourData/historical | TokenHourData (historical)
+[**UniswapV3GetTokenV3DayDataHistorical**](UniswapV3Api.md#UniswapV3GetTokenV3DayDataHistorical) | **GET** /dapps/uniswapv3/tokenV3DayData/historical | TokenV3DayData (historical)
 [**UniswapV3GetTokensHistorical**](UniswapV3Api.md#UniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical)
 [**UniswapV3GetTransactionsHistorical**](UniswapV3Api.md#UniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical)
-[**UniswapV3GetUniswapDayDatasHistorical**](UniswapV3Api.md#UniswapV3GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical)
+[**UniswapV3GetUniswapDayDataHistorical**](UniswapV3Api.md#UniswapV3GetUniswapDayDataHistorical) | **GET** /dapps/uniswapv3/uniswapDayData/historical | UniswapDayData (historical)
 [**UniswapV3MintsCurrent**](UniswapV3Api.md#UniswapV3MintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
-[**UniswapV3PoolDayDatasCurrent**](UniswapV3Api.md#UniswapV3PoolDayDatasCurrent) | **GET** /dapps/uniswapv3/poolDayDatas/current | PoolDayDatas (current)
-[**UniswapV3PoolHourDatasCurrent**](UniswapV3Api.md#UniswapV3PoolHourDatasCurrent) | **GET** /dapps/uniswapv3/poolHourDatas/current | PoolHourDatas (current)
+[**UniswapV3PoolDayDataCurrent**](UniswapV3Api.md#UniswapV3PoolDayDataCurrent) | **GET** /dapps/uniswapv3/poolDayData/current | PoolDayData (current)
+[**UniswapV3PoolHourDataCurrent**](UniswapV3Api.md#UniswapV3PoolHourDataCurrent) | **GET** /dapps/uniswapv3/poolHourData/current | PoolHourData (current)
 [**UniswapV3PoolsCurrent**](UniswapV3Api.md#UniswapV3PoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current)
 [**UniswapV3PositionSnapshotsCurrent**](UniswapV3Api.md#UniswapV3PositionSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionSnapshots (current)
 [**UniswapV3PositionsCurrent**](UniswapV3Api.md#UniswapV3PositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
 [**UniswapV3SwapsCurrent**](UniswapV3Api.md#UniswapV3SwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current)
-[**UniswapV3TickDayDatasCurrent**](UniswapV3Api.md#UniswapV3TickDayDatasCurrent) | **GET** /dapps/uniswapv3/tickDayDatas/current | TickDayDatas (current)
+[**UniswapV3TickDayDataCurrent**](UniswapV3Api.md#UniswapV3TickDayDataCurrent) | **GET** /dapps/uniswapv3/tickDayData/current | TickDayData (current)
 [**UniswapV3TicksCurrent**](UniswapV3Api.md#UniswapV3TicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
-[**UniswapV3TokenHourDatasCurrent**](UniswapV3Api.md#UniswapV3TokenHourDatasCurrent) | **GET** /dapps/uniswapv3/tokenHourDatas/current | TokenHourDatas (current)
-[**UniswapV3TokenV3DayDatasCurrent**](UniswapV3Api.md#UniswapV3TokenV3DayDatasCurrent) | **GET** /dapps/uniswapv3/tokenV3DayDatas/current | TokenV3DayDatas (current)
+[**UniswapV3TokenHourDataCurrent**](UniswapV3Api.md#UniswapV3TokenHourDataCurrent) | **GET** /dapps/uniswapv3/tokenHourData/current | TokenHourData (current)
+[**UniswapV3TokenV3DayDataCurrent**](UniswapV3Api.md#UniswapV3TokenV3DayDataCurrent) | **GET** /dapps/uniswapv3/tokenV3DayData/current | TokenV3DayData (current)
 [**UniswapV3TokensCurrent**](UniswapV3Api.md#UniswapV3TokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current)
 [**UniswapV3TransactionsCurrent**](UniswapV3Api.md#UniswapV3TransactionsCurrent) | **GET** /dapps/uniswapv3/transactions/current | Transactions (current)
-[**UniswapV3UniswapDayDatasCurrent**](UniswapV3Api.md#UniswapV3UniswapDayDatasCurrent) | **GET** /dapps/uniswapv3/uniswapDayDatas/current | UniswapDayDatas (current)
+[**UniswapV3UniswapDayDataCurrent**](UniswapV3Api.md#UniswapV3UniswapDayDataCurrent) | **GET** /dapps/uniswapv3/uniswapDayData/current | UniswapDayData (current)
 
 
 # **UniswapV3BundlesCurrent**
@@ -124,24 +124,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV3FactorysCurrent**
-> array[UniswapV3FactoryDTO] UniswapV3FactorysCurrent()
+# **UniswapV3FactoriesCurrent**
+> array[UniswapV3FactoryDTO] UniswapV3FactoriesCurrent()
 
-Factorys (current)
+Factories (current)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 ```R
 library(openapi)
 
-# Factorys (current)
+# Factories (current)
 #
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV3FactorysCurrent(data_file = "result.txt")
-result <- api_instance$UniswapV3FactorysCurrent()
+# result <- api_instance$UniswapV3FactoriesCurrent(data_file = "result.txt")
+result <- api_instance$UniswapV3FactoriesCurrent()
 dput(result)
 ```
 
@@ -282,18 +282,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV3GetFactorysHistorical**
-> array[UniswapV3FactoryDTO] UniswapV3GetFactorysHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
+# **UniswapV3GetFactoriesHistorical**
+> array[UniswapV3FactoryDTO] UniswapV3GetFactoriesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-Factorys (historical)
+Factories (historical)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 ```R
 library(openapi)
 
-# Factorys (historical)
+# Factories (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -304,8 +304,8 @@ var_id <- "id_example" # character | Factory address. (Optional)
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV3GetFactorysHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
-result <- api_instance$UniswapV3GetFactorysHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
+# result <- api_instance$UniswapV3GetFactoriesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
+result <- api_instance$UniswapV3GetFactoriesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
 dput(result)
 ```
 
@@ -398,18 +398,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV3GetPoolDayDatasHistorical**
-> array[UniswapV3PoolDayDataDTO] UniswapV3GetPoolDayDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pool = var.pool)
+# **UniswapV3GetPoolDayDataHistorical**
+> array[UniswapV3PoolDayDataDTO] UniswapV3GetPoolDayDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pool = var.pool)
 
-PoolDayDatas (historical)
+PoolDayData (historical)
 
-Gets poolDayDatas.
+Gets poolDayData.
 
 ### Example
 ```R
 library(openapi)
 
-# PoolDayDatas (historical)
+# PoolDayData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -421,8 +421,8 @@ var_pool <- "pool_example" # character |  (Optional)
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV3GetPoolDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pool = var_pooldata_file = "result.txt")
-result <- api_instance$UniswapV3GetPoolDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pool = var_pool)
+# result <- api_instance$UniswapV3GetPoolDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pool = var_pooldata_file = "result.txt")
+result <- api_instance$UniswapV3GetPoolDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pool = var_pool)
 dput(result)
 ```
 
@@ -455,18 +455,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV3GetPoolHourDatasHistorical**
-> array[UniswapV3PoolHourDataDTO] UniswapV3GetPoolHourDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pool = var.pool)
+# **UniswapV3GetPoolHourDataHistorical**
+> array[UniswapV3PoolHourDataDTO] UniswapV3GetPoolHourDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pool = var.pool)
 
-PoolHourDatas (historical)
+PoolHourData (historical)
 
-Gets poolHourDatas.
+Gets poolHourData.
 
 ### Example
 ```R
 library(openapi)
 
-# PoolHourDatas (historical)
+# PoolHourData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -478,8 +478,8 @@ var_pool <- "pool_example" # character |  (Optional)
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV3GetPoolHourDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pool = var_pooldata_file = "result.txt")
-result <- api_instance$UniswapV3GetPoolHourDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pool = var_pool)
+# result <- api_instance$UniswapV3GetPoolHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pool = var_pooldata_file = "result.txt")
+result <- api_instance$UniswapV3GetPoolHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pool = var_pool)
 dput(result)
 ```
 
@@ -750,18 +750,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV3GetTickDayDatasHistorical**
-> array[UniswapV3TickDayDataDTO] UniswapV3GetTickDayDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pool = var.pool)
+# **UniswapV3GetTickDayDataHistorical**
+> array[UniswapV3TickDayDataDTO] UniswapV3GetTickDayDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pool = var.pool)
 
-TickDayDatas (historical)
+TickDayData (historical)
 
-Gets tickDayDatas.
+Gets tickDayData.
 
 ### Example
 ```R
 library(openapi)
 
-# TickDayDatas (historical)
+# TickDayData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -773,8 +773,8 @@ var_pool <- "pool_example" # character |  (Optional)
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV3GetTickDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pool = var_pooldata_file = "result.txt")
-result <- api_instance$UniswapV3GetTickDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pool = var_pool)
+# result <- api_instance$UniswapV3GetTickDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pool = var_pooldata_file = "result.txt")
+result <- api_instance$UniswapV3GetTickDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pool = var_pool)
 dput(result)
 ```
 
@@ -864,18 +864,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV3GetTokenHourDatasHistorical**
-> array[UniswapV3TokenHourDataDTO] UniswapV3GetTokenHourDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
+# **UniswapV3GetTokenHourDataHistorical**
+> array[UniswapV3TokenHourDataDTO] UniswapV3GetTokenHourDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-TokenHourDatas (historical)
+TokenHourData (historical)
 
-Gets tokenHourDatas.
+Gets tokenHourData.
 
 ### Example
 ```R
 library(openapi)
 
-# TokenHourDatas (historical)
+# TokenHourData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -886,8 +886,8 @@ var_id <- "id_example" # character | Token address concatendated with date. (Opt
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV3GetTokenHourDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
-result <- api_instance$UniswapV3GetTokenHourDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
+# result <- api_instance$UniswapV3GetTokenHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
+result <- api_instance$UniswapV3GetTokenHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
 dput(result)
 ```
 
@@ -919,18 +919,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV3GetTokenV3DayDatasHistorical**
-> array[UniswapV3TokenV3DayDataDTO] UniswapV3GetTokenV3DayDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
+# **UniswapV3GetTokenV3DayDataHistorical**
+> array[UniswapV3TokenV3DayDataDTO] UniswapV3GetTokenV3DayDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-TokenV3DayDatas (historical)
+TokenV3DayData (historical)
 
-Gets tokenV3DayDatas.
+Gets tokenV3DayData.
 
 ### Example
 ```R
 library(openapi)
 
-# TokenV3DayDatas (historical)
+# TokenV3DayData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -941,8 +941,8 @@ var_id <- "id_example" # character | Token address concatendated with date. (Opt
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV3GetTokenV3DayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
-result <- api_instance$UniswapV3GetTokenV3DayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
+# result <- api_instance$UniswapV3GetTokenV3DayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
+result <- api_instance$UniswapV3GetTokenV3DayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
 dput(result)
 ```
 
@@ -1088,18 +1088,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV3GetUniswapDayDatasHistorical**
-> array[UniswapV3UniswapDayDataDTO] UniswapV3GetUniswapDayDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
+# **UniswapV3GetUniswapDayDataHistorical**
+> array[UniswapV3UniswapDayDataDTO] UniswapV3GetUniswapDayDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-UniswapDayDatas (historical)
+UniswapDayData (historical)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 ```R
 library(openapi)
 
-# UniswapDayDatas (historical)
+# UniswapDayData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -1110,8 +1110,8 @@ var_id <- "id_example" # character | Timestamp rounded to current day by dividin
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV3GetUniswapDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
-result <- api_instance$UniswapV3GetUniswapDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
+# result <- api_instance$UniswapV3GetUniswapDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
+result <- api_instance$UniswapV3GetUniswapDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
 dput(result)
 ```
 
@@ -1185,24 +1185,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV3PoolDayDatasCurrent**
-> array[UniswapV3PoolDayDataDTO] UniswapV3PoolDayDatasCurrent()
+# **UniswapV3PoolDayDataCurrent**
+> array[UniswapV3PoolDayDataDTO] UniswapV3PoolDayDataCurrent()
 
-PoolDayDatas (current)
+PoolDayData (current)
 
-Gets poolDayDatas.
+Gets poolDayData.
 
 ### Example
 ```R
 library(openapi)
 
-# PoolDayDatas (current)
+# PoolDayData (current)
 #
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV3PoolDayDatasCurrent(data_file = "result.txt")
-result <- api_instance$UniswapV3PoolDayDatasCurrent()
+# result <- api_instance$UniswapV3PoolDayDataCurrent(data_file = "result.txt")
+result <- api_instance$UniswapV3PoolDayDataCurrent()
 dput(result)
 ```
 
@@ -1227,24 +1227,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV3PoolHourDatasCurrent**
-> array[UniswapV3PoolHourDataDTO] UniswapV3PoolHourDatasCurrent()
+# **UniswapV3PoolHourDataCurrent**
+> array[UniswapV3PoolHourDataDTO] UniswapV3PoolHourDataCurrent()
 
-PoolHourDatas (current)
+PoolHourData (current)
 
-Gets poolHourDatas.
+Gets poolHourData.
 
 ### Example
 ```R
 library(openapi)
 
-# PoolHourDatas (current)
+# PoolHourData (current)
 #
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV3PoolHourDatasCurrent(data_file = "result.txt")
-result <- api_instance$UniswapV3PoolHourDatasCurrent()
+# result <- api_instance$UniswapV3PoolHourDataCurrent(data_file = "result.txt")
+result <- api_instance$UniswapV3PoolHourDataCurrent()
 dput(result)
 ```
 
@@ -1447,24 +1447,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV3TickDayDatasCurrent**
-> array[UniswapV3TickDayDataDTO] UniswapV3TickDayDatasCurrent()
+# **UniswapV3TickDayDataCurrent**
+> array[UniswapV3TickDayDataDTO] UniswapV3TickDayDataCurrent()
 
-TickDayDatas (current)
+TickDayData (current)
 
-Gets tickDayDatas.
+Gets tickDayData.
 
 ### Example
 ```R
 library(openapi)
 
-# TickDayDatas (current)
+# TickDayData (current)
 #
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV3TickDayDatasCurrent(data_file = "result.txt")
-result <- api_instance$UniswapV3TickDayDatasCurrent()
+# result <- api_instance$UniswapV3TickDayDataCurrent(data_file = "result.txt")
+result <- api_instance$UniswapV3TickDayDataCurrent()
 dput(result)
 ```
 
@@ -1531,24 +1531,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV3TokenHourDatasCurrent**
-> array[UniswapV3TokenHourDataDTO] UniswapV3TokenHourDatasCurrent()
+# **UniswapV3TokenHourDataCurrent**
+> array[UniswapV3TokenHourDataDTO] UniswapV3TokenHourDataCurrent()
 
-TokenHourDatas (current)
+TokenHourData (current)
 
-Gets tokenHourDatas.
+Gets tokenHourData.
 
 ### Example
 ```R
 library(openapi)
 
-# TokenHourDatas (current)
+# TokenHourData (current)
 #
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV3TokenHourDatasCurrent(data_file = "result.txt")
-result <- api_instance$UniswapV3TokenHourDatasCurrent()
+# result <- api_instance$UniswapV3TokenHourDataCurrent(data_file = "result.txt")
+result <- api_instance$UniswapV3TokenHourDataCurrent()
 dput(result)
 ```
 
@@ -1573,24 +1573,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV3TokenV3DayDatasCurrent**
-> array[UniswapV3TokenV3DayDataDTO] UniswapV3TokenV3DayDatasCurrent()
+# **UniswapV3TokenV3DayDataCurrent**
+> array[UniswapV3TokenV3DayDataDTO] UniswapV3TokenV3DayDataCurrent()
 
-TokenV3DayDatas (current)
+TokenV3DayData (current)
 
-Gets tokenV3DayDatas.
+Gets tokenV3DayData.
 
 ### Example
 ```R
 library(openapi)
 
-# TokenV3DayDatas (current)
+# TokenV3DayData (current)
 #
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV3TokenV3DayDatasCurrent(data_file = "result.txt")
-result <- api_instance$UniswapV3TokenV3DayDatasCurrent()
+# result <- api_instance$UniswapV3TokenV3DayDataCurrent(data_file = "result.txt")
+result <- api_instance$UniswapV3TokenV3DayDataCurrent()
 dput(result)
 ```
 
@@ -1699,24 +1699,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV3UniswapDayDatasCurrent**
-> array[UniswapV3UniswapDayDataDTO] UniswapV3UniswapDayDatasCurrent()
+# **UniswapV3UniswapDayDataCurrent**
+> array[UniswapV3UniswapDayDataDTO] UniswapV3UniswapDayDataCurrent()
 
-UniswapDayDatas (current)
+UniswapDayData (current)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 ```R
 library(openapi)
 
-# UniswapDayDatas (current)
+# UniswapDayData (current)
 #
 
 api_instance <- UniswapV3Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV3UniswapDayDatasCurrent(data_file = "result.txt")
-result <- api_instance$UniswapV3UniswapDayDatasCurrent()
+# result <- api_instance$UniswapV3UniswapDayDataCurrent(data_file = "result.txt")
+result <- api_instance$UniswapV3UniswapDayDataCurrent()
 dput(result)
 ```
 

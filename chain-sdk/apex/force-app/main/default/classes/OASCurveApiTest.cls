@@ -467,12 +467,12 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GaugeLiquiditys (current)
+     * GaugeLiquidities (current)
      *
-     * Gets gaugeLiquiditys.
+     * Gets gaugeLiquidities.
      */
     @isTest
-    private static void curveGaugeLiquiditysCurrentTest() {
+    private static void curveGaugeLiquiditiesCurrentTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -490,21 +490,21 @@ private class OASCurveApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASCurveGaugeLiquidityDTO>{OASCurveGaugeLiquidityDTO.getExample()};
-        response = (List<OASCurveGaugeLiquidityDTO>) api.curveGaugeLiquiditysCurrent();
+        response = (List<OASCurveGaugeLiquidityDTO>) api.curveGaugeLiquiditiesCurrent();
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASCurveGaugeLiquidityDTO>{OASCurveGaugeLiquidityDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
         expectedResponse = new List<OASCurveGaugeLiquidityDTO>{OASCurveGaugeLiquidityDTO.getExample()};
-        response = (List<OASCurveGaugeLiquidityDTO>) api.curveGaugeLiquiditysCurrent();
+        response = (List<OASCurveGaugeLiquidityDTO>) api.curveGaugeLiquiditiesCurrent();
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASCurveGaugeLiquidityDTO>{OASCurveGaugeLiquidityDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASCurveGaugeLiquidityDTO>{OASCurveGaugeLiquidityDTO.getExample()};
-        response = (List<OASCurveGaugeLiquidityDTO>) api.curveGaugeLiquiditysCurrent();
+        response = (List<OASCurveGaugeLiquidityDTO>) api.curveGaugeLiquiditiesCurrent();
         System.assertEquals(expectedResponse, response);
     }
 
@@ -1362,12 +1362,12 @@ private class OASCurveApiTest {
     }
 
     /**
-     * GaugeLiquiditys (historical)
+     * GaugeLiquidities (historical)
      *
-     * Gets gaugeLiquiditys.
+     * Gets gaugeLiquidities.
      */
     @isTest
-    private static void curveGetGaugeLiquiditysHistoricalTest() {
+    private static void curveGetGaugeLiquiditiesHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -1394,21 +1394,21 @@ private class OASCurveApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASCurveGaugeLiquidityDTO>{OASCurveGaugeLiquidityDTO.getExample()};
-        response = (List<OASCurveGaugeLiquidityDTO>) api.curveGetGaugeLiquiditysHistorical(params);
+        response = (List<OASCurveGaugeLiquidityDTO>) api.curveGetGaugeLiquiditiesHistorical(params);
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASCurveGaugeLiquidityDTO>{OASCurveGaugeLiquidityDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
         expectedResponse = new List<OASCurveGaugeLiquidityDTO>{OASCurveGaugeLiquidityDTO.getExample()};
-        response = (List<OASCurveGaugeLiquidityDTO>) api.curveGetGaugeLiquiditysHistorical(params);
+        response = (List<OASCurveGaugeLiquidityDTO>) api.curveGetGaugeLiquiditiesHistorical(params);
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASCurveGaugeLiquidityDTO>{OASCurveGaugeLiquidityDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASCurveGaugeLiquidityDTO>{OASCurveGaugeLiquidityDTO.getExample()};
-        response = (List<OASCurveGaugeLiquidityDTO>) api.curveGetGaugeLiquiditysHistorical(params);
+        response = (List<OASCurveGaugeLiquidityDTO>) api.curveGetGaugeLiquiditiesHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 

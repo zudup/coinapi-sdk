@@ -166,12 +166,12 @@ public:
     pplx::task<std::vector<std::shared_ptr<Curve_GaugeDepositDTO>>> curve_GaugeDeposits__current(
     ) const;
     /// <summary>
-    /// GaugeLiquiditys (current)
+    /// GaugeLiquidities (current)
     /// </summary>
     /// <remarks>
-    /// Gets gaugeLiquiditys.
+    /// Gets gaugeLiquidities.
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> curve_GaugeLiquiditys__current(
+    pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> curve_GaugeLiquidities__current(
     ) const;
     /// <summary>
     /// GaugeTotalWeights (current)
@@ -446,10 +446,10 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// GaugeLiquiditys (historical)
+    /// GaugeLiquidities (historical)
     /// </summary>
     /// <remarks>
-    /// Gets gaugeLiquiditys.
+    /// Gets gaugeLiquidities.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
@@ -457,7 +457,7 @@ public:
     /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
     /// <param name="id"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="user"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> curve_GetGaugeLiquiditys__historical(
+    pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> curve_GetGaugeLiquidities__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,

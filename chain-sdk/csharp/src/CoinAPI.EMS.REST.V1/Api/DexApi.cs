@@ -26,24 +26,24 @@ namespace CoinAPI.EMS.REST.V1.Api
     {
         #region Synchronous Operations
         /// <summary>
-        /// Batchs (current)
+        /// Batches (current)
         /// </summary>
         /// <remarks>
-        /// Gets batchs.
+        /// Gets batches.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List<DexBatchDTO></returns>
-        List<DexBatchDTO> DexBatchsCurrent ();
+        List<DexBatchDTO> DexBatchesCurrent ();
 
         /// <summary>
-        /// Batchs (current)
+        /// Batches (current)
         /// </summary>
         /// <remarks>
-        /// Gets batchs.
+        /// Gets batches.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<DexBatchDTO></returns>
-        ApiResponse<List<DexBatchDTO>> DexBatchsCurrentWithHttpInfo ();
+        ApiResponse<List<DexBatchDTO>> DexBatchesCurrentWithHttpInfo ();
         /// <summary>
         /// Deposits (current)
         /// </summary>
@@ -64,10 +64,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<DexDepositDTO></returns>
         ApiResponse<List<DexDepositDTO>> DexDepositsCurrentWithHttpInfo ();
         /// <summary>
-        /// Batchs (historical)
+        /// Batches (historical)
         /// </summary>
         /// <remarks>
-        /// Gets batchs.
+        /// Gets batches.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -76,13 +76,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Identifier. (optional)</param>
         /// <returns>List<DexBatchDTO></returns>
-        List<DexBatchDTO> DexGetBatchsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        List<DexBatchDTO> DexGetBatchesHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
 
         /// <summary>
-        /// Batchs (historical)
+        /// Batches (historical)
         /// </summary>
         /// <remarks>
-        /// Gets batchs.
+        /// Gets batches.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -91,7 +91,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Identifier. (optional)</param>
         /// <returns>ApiResponse of List<DexBatchDTO></returns>
-        ApiResponse<List<DexBatchDTO>> DexGetBatchsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        ApiResponse<List<DexBatchDTO>> DexGetBatchesHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
         /// <summary>
         /// Deposits (historical)
         /// </summary>
@@ -215,10 +215,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<DexSolutionDTO></returns>
         ApiResponse<List<DexSolutionDTO>> DexGetSolutionsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
         /// <summary>
-        /// Statss (historical)
+        /// Stats (historical)
         /// </summary>
         /// <remarks>
-        /// Gets statss.
+        /// Gets stats.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -227,13 +227,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id"> (optional)</param>
         /// <returns>List<DexStatsDTO></returns>
-        List<DexStatsDTO> DexGetStatssHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        List<DexStatsDTO> DexGetStatsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
 
         /// <summary>
-        /// Statss (historical)
+        /// Stats (historical)
         /// </summary>
         /// <remarks>
-        /// Gets statss.
+        /// Gets stats.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -242,7 +242,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id"> (optional)</param>
         /// <returns>ApiResponse of List<DexStatsDTO></returns>
-        ApiResponse<List<DexStatsDTO>> DexGetStatssHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        ApiResponse<List<DexStatsDTO>> DexGetStatsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
         /// <summary>
         /// Tokens (historical)
         /// </summary>
@@ -460,24 +460,24 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<DexSolutionDTO></returns>
         ApiResponse<List<DexSolutionDTO>> DexSolutionsCurrentWithHttpInfo ();
         /// <summary>
-        /// Statss (current)
+        /// Stats (current)
         /// </summary>
         /// <remarks>
-        /// Gets statss.
+        /// Gets stats.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List<DexStatsDTO></returns>
-        List<DexStatsDTO> DexStatssCurrent ();
+        List<DexStatsDTO> DexStatsCurrent ();
 
         /// <summary>
-        /// Statss (current)
+        /// Stats (current)
         /// </summary>
         /// <remarks>
-        /// Gets statss.
+        /// Gets stats.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<DexStatsDTO></returns>
-        ApiResponse<List<DexStatsDTO>> DexStatssCurrentWithHttpInfo ();
+        ApiResponse<List<DexStatsDTO>> DexStatsCurrentWithHttpInfo ();
         /// <summary>
         /// Tokens (current)
         /// </summary>
@@ -576,26 +576,26 @@ namespace CoinAPI.EMS.REST.V1.Api
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Batchs (current)
+        /// Batches (current)
         /// </summary>
         /// <remarks>
-        /// Gets batchs.
+        /// Gets batches.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<DexBatchDTO></returns>
-        System.Threading.Tasks.Task<List<DexBatchDTO>> DexBatchsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<DexBatchDTO>> DexBatchesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Batchs (current)
+        /// Batches (current)
         /// </summary>
         /// <remarks>
-        /// Gets batchs.
+        /// Gets batches.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;DexBatchDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<DexBatchDTO>>> DexBatchsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<DexBatchDTO>>> DexBatchesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Deposits (current)
         /// </summary>
@@ -618,10 +618,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;DexDepositDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<DexDepositDTO>>> DexDepositsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// Batchs (historical)
+        /// Batches (historical)
         /// </summary>
         /// <remarks>
-        /// Gets batchs.
+        /// Gets batches.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -631,13 +631,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Identifier. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<DexBatchDTO></returns>
-        System.Threading.Tasks.Task<List<DexBatchDTO>> DexGetBatchsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<DexBatchDTO>> DexGetBatchesHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Batchs (historical)
+        /// Batches (historical)
         /// </summary>
         /// <remarks>
-        /// Gets batchs.
+        /// Gets batches.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -647,7 +647,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Identifier. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;DexBatchDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<DexBatchDTO>>> DexGetBatchsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<DexBatchDTO>>> DexGetBatchesHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Deposits (historical)
         /// </summary>
@@ -779,10 +779,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;DexSolutionDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<DexSolutionDTO>>> DexGetSolutionsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// Statss (historical)
+        /// Stats (historical)
         /// </summary>
         /// <remarks>
-        /// Gets statss.
+        /// Gets stats.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -792,13 +792,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<DexStatsDTO></returns>
-        System.Threading.Tasks.Task<List<DexStatsDTO>> DexGetStatssHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<DexStatsDTO>> DexGetStatsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Statss (historical)
+        /// Stats (historical)
         /// </summary>
         /// <remarks>
-        /// Gets statss.
+        /// Gets stats.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -808,7 +808,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;DexStatsDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<DexStatsDTO>>> DexGetStatssHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<DexStatsDTO>>> DexGetStatsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Tokens (historical)
         /// </summary>
@@ -1042,26 +1042,26 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;DexSolutionDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<DexSolutionDTO>>> DexSolutionsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// Statss (current)
+        /// Stats (current)
         /// </summary>
         /// <remarks>
-        /// Gets statss.
+        /// Gets stats.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<DexStatsDTO></returns>
-        System.Threading.Tasks.Task<List<DexStatsDTO>> DexStatssCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<DexStatsDTO>> DexStatsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Statss (current)
+        /// Stats (current)
         /// </summary>
         /// <remarks>
-        /// Gets statss.
+        /// Gets stats.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;DexStatsDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<DexStatsDTO>>> DexStatssCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<DexStatsDTO>>> DexStatsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Tokens (current)
         /// </summary>
@@ -1279,25 +1279,25 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Batchs (current) Gets batchs.
+        /// Batches (current) Gets batches.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List<DexBatchDTO></returns>
-        public List<DexBatchDTO> DexBatchsCurrent ()
+        public List<DexBatchDTO> DexBatchesCurrent ()
         {
-             ApiResponse<List<DexBatchDTO>> localVarResponse = DexBatchsCurrentWithHttpInfo();
+             ApiResponse<List<DexBatchDTO>> localVarResponse = DexBatchesCurrentWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Batchs (current) Gets batchs.
+        /// Batches (current) Gets batches.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<DexBatchDTO></returns>
-        public ApiResponse<List<DexBatchDTO>> DexBatchsCurrentWithHttpInfo ()
+        public ApiResponse<List<DexBatchDTO>> DexBatchesCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/dex/batchs/current";
+            var localVarPath = "/dapps/dex/batches/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1331,7 +1331,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DexBatchsCurrent", localVarResponse);
+                Exception exception = ExceptionFactory("DexBatchesCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1341,28 +1341,28 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Batchs (current) Gets batchs.
+        /// Batches (current) Gets batches.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<DexBatchDTO></returns>
-        public async System.Threading.Tasks.Task<List<DexBatchDTO>> DexBatchsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<DexBatchDTO>> DexBatchesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<DexBatchDTO>> localVarResponse = await DexBatchsCurrentWithHttpInfoAsync(cancellationToken);
+             ApiResponse<List<DexBatchDTO>> localVarResponse = await DexBatchesCurrentWithHttpInfoAsync(cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Batchs (current) Gets batchs.
+        /// Batches (current) Gets batches.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;DexBatchDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<DexBatchDTO>>> DexBatchsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<DexBatchDTO>>> DexBatchesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/dex/batchs/current";
+            var localVarPath = "/dapps/dex/batches/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1396,7 +1396,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DexBatchsCurrent", localVarResponse);
+                Exception exception = ExceptionFactory("DexBatchesCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1533,7 +1533,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Batchs (historical) Gets batchs.
+        /// Batches (historical) Gets batches.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1542,14 +1542,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Identifier. (optional)</param>
         /// <returns>List<DexBatchDTO></returns>
-        public List<DexBatchDTO> DexGetBatchsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        public List<DexBatchDTO> DexGetBatchesHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
-             ApiResponse<List<DexBatchDTO>> localVarResponse = DexGetBatchsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+             ApiResponse<List<DexBatchDTO>> localVarResponse = DexGetBatchesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Batchs (historical) Gets batchs.
+        /// Batches (historical) Gets batches.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1558,10 +1558,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Identifier. (optional)</param>
         /// <returns>ApiResponse of List<DexBatchDTO></returns>
-        public ApiResponse<List<DexBatchDTO>> DexGetBatchsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        public ApiResponse<List<DexBatchDTO>> DexGetBatchesHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/dex/batchs/historical";
+            var localVarPath = "/dapps/dex/batches/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1600,7 +1600,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DexGetBatchsHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("DexGetBatchesHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -1610,7 +1610,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Batchs (historical) Gets batchs.
+        /// Batches (historical) Gets batches.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1620,15 +1620,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Identifier. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<DexBatchDTO></returns>
-        public async System.Threading.Tasks.Task<List<DexBatchDTO>> DexGetBatchsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<DexBatchDTO>> DexGetBatchesHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<DexBatchDTO>> localVarResponse = await DexGetBatchsHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
+             ApiResponse<List<DexBatchDTO>> localVarResponse = await DexGetBatchesHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Batchs (historical) Gets batchs.
+        /// Batches (historical) Gets batches.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1638,10 +1638,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Identifier. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;DexBatchDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<DexBatchDTO>>> DexGetBatchsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<DexBatchDTO>>> DexGetBatchesHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/dex/batchs/historical";
+            var localVarPath = "/dapps/dex/batches/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1680,7 +1680,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DexGetBatchsHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("DexGetBatchesHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2336,7 +2336,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Statss (historical) Gets statss.
+        /// Stats (historical) Gets stats.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2345,14 +2345,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id"> (optional)</param>
         /// <returns>List<DexStatsDTO></returns>
-        public List<DexStatsDTO> DexGetStatssHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        public List<DexStatsDTO> DexGetStatsHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
-             ApiResponse<List<DexStatsDTO>> localVarResponse = DexGetStatssHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+             ApiResponse<List<DexStatsDTO>> localVarResponse = DexGetStatsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Statss (historical) Gets statss.
+        /// Stats (historical) Gets stats.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2361,10 +2361,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id"> (optional)</param>
         /// <returns>ApiResponse of List<DexStatsDTO></returns>
-        public ApiResponse<List<DexStatsDTO>> DexGetStatssHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        public ApiResponse<List<DexStatsDTO>> DexGetStatsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/dex/statss/historical";
+            var localVarPath = "/dapps/dex/stats/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2403,7 +2403,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DexGetStatssHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("DexGetStatsHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2413,7 +2413,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Statss (historical) Gets statss.
+        /// Stats (historical) Gets stats.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2423,15 +2423,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<DexStatsDTO></returns>
-        public async System.Threading.Tasks.Task<List<DexStatsDTO>> DexGetStatssHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<DexStatsDTO>> DexGetStatsHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<DexStatsDTO>> localVarResponse = await DexGetStatssHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
+             ApiResponse<List<DexStatsDTO>> localVarResponse = await DexGetStatsHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Statss (historical) Gets statss.
+        /// Stats (historical) Gets stats.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2441,10 +2441,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;DexStatsDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<DexStatsDTO>>> DexGetStatssHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<DexStatsDTO>>> DexGetStatsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/dex/statss/historical";
+            var localVarPath = "/dapps/dex/stats/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2483,7 +2483,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DexGetStatssHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("DexGetStatsHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3701,25 +3701,25 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Statss (current) Gets statss.
+        /// Stats (current) Gets stats.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List<DexStatsDTO></returns>
-        public List<DexStatsDTO> DexStatssCurrent ()
+        public List<DexStatsDTO> DexStatsCurrent ()
         {
-             ApiResponse<List<DexStatsDTO>> localVarResponse = DexStatssCurrentWithHttpInfo();
+             ApiResponse<List<DexStatsDTO>> localVarResponse = DexStatsCurrentWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Statss (current) Gets statss.
+        /// Stats (current) Gets stats.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<DexStatsDTO></returns>
-        public ApiResponse<List<DexStatsDTO>> DexStatssCurrentWithHttpInfo ()
+        public ApiResponse<List<DexStatsDTO>> DexStatsCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/dex/statss/current";
+            var localVarPath = "/dapps/dex/stats/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3753,7 +3753,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DexStatssCurrent", localVarResponse);
+                Exception exception = ExceptionFactory("DexStatsCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3763,28 +3763,28 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Statss (current) Gets statss.
+        /// Stats (current) Gets stats.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<DexStatsDTO></returns>
-        public async System.Threading.Tasks.Task<List<DexStatsDTO>> DexStatssCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<DexStatsDTO>> DexStatsCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<DexStatsDTO>> localVarResponse = await DexStatssCurrentWithHttpInfoAsync(cancellationToken);
+             ApiResponse<List<DexStatsDTO>> localVarResponse = await DexStatsCurrentWithHttpInfoAsync(cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Statss (current) Gets statss.
+        /// Stats (current) Gets stats.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;DexStatsDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<DexStatsDTO>>> DexStatssCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<DexStatsDTO>>> DexStatsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/dex/statss/current";
+            var localVarPath = "/dapps/dex/stats/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3818,7 +3818,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("DexStatssCurrent", localVarResponse);
+                Exception exception = ExceptionFactory("DexStatsCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 

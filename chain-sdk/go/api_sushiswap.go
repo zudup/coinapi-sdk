@@ -222,25 +222,25 @@ func (a *SushiswapApiService) SushiswapBurnsCurrentExecute(r ApiSushiswapBurnsCu
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSushiswapDayDatasCurrentRequest struct {
+type ApiSushiswapDayDataCurrentRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 }
 
-func (r ApiSushiswapDayDatasCurrentRequest) Execute() ([]SushiswapDayDataDTO, *http.Response, error) {
-	return r.ApiService.SushiswapDayDatasCurrentExecute(r)
+func (r ApiSushiswapDayDataCurrentRequest) Execute() ([]SushiswapDayDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapDayDataCurrentExecute(r)
 }
 
 /*
-SushiswapDayDatasCurrent DayDatas (current)
+SushiswapDayDataCurrent DayData (current)
 
-Gets dayDatas.
+Gets dayData.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSushiswapDayDatasCurrentRequest
+ @return ApiSushiswapDayDataCurrentRequest
 */
-func (a *SushiswapApiService) SushiswapDayDatasCurrent(ctx context.Context) ApiSushiswapDayDatasCurrentRequest {
-	return ApiSushiswapDayDatasCurrentRequest{
+func (a *SushiswapApiService) SushiswapDayDataCurrent(ctx context.Context) ApiSushiswapDayDataCurrentRequest {
+	return ApiSushiswapDayDataCurrentRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -248,7 +248,7 @@ func (a *SushiswapApiService) SushiswapDayDatasCurrent(ctx context.Context) ApiS
 
 // Execute executes the request
 //  @return []SushiswapDayDataDTO
-func (a *SushiswapApiService) SushiswapDayDatasCurrentExecute(r ApiSushiswapDayDatasCurrentRequest) ([]SushiswapDayDataDTO, *http.Response, error) {
+func (a *SushiswapApiService) SushiswapDayDataCurrentExecute(r ApiSushiswapDayDataCurrentRequest) ([]SushiswapDayDataDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -256,12 +256,12 @@ func (a *SushiswapApiService) SushiswapDayDatasCurrentExecute(r ApiSushiswapDayD
 		localVarReturnValue  []SushiswapDayDataDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapDayDatasCurrent")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapDayDataCurrent")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/dayDatas/current"
+	localVarPath := localBasePath + "/dapps/sushiswap/dayData/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -321,25 +321,25 @@ func (a *SushiswapApiService) SushiswapDayDatasCurrentExecute(r ApiSushiswapDayD
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSushiswapFactorysCurrentRequest struct {
+type ApiSushiswapFactoriesCurrentRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 }
 
-func (r ApiSushiswapFactorysCurrentRequest) Execute() ([]SushiswapFactoryDTO, *http.Response, error) {
-	return r.ApiService.SushiswapFactorysCurrentExecute(r)
+func (r ApiSushiswapFactoriesCurrentRequest) Execute() ([]SushiswapFactoryDTO, *http.Response, error) {
+	return r.ApiService.SushiswapFactoriesCurrentExecute(r)
 }
 
 /*
-SushiswapFactorysCurrent Factorys (current)
+SushiswapFactoriesCurrent Factories (current)
 
-Gets factorys.
+Gets factories.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSushiswapFactorysCurrentRequest
+ @return ApiSushiswapFactoriesCurrentRequest
 */
-func (a *SushiswapApiService) SushiswapFactorysCurrent(ctx context.Context) ApiSushiswapFactorysCurrentRequest {
-	return ApiSushiswapFactorysCurrentRequest{
+func (a *SushiswapApiService) SushiswapFactoriesCurrent(ctx context.Context) ApiSushiswapFactoriesCurrentRequest {
+	return ApiSushiswapFactoriesCurrentRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -347,7 +347,7 @@ func (a *SushiswapApiService) SushiswapFactorysCurrent(ctx context.Context) ApiS
 
 // Execute executes the request
 //  @return []SushiswapFactoryDTO
-func (a *SushiswapApiService) SushiswapFactorysCurrentExecute(r ApiSushiswapFactorysCurrentRequest) ([]SushiswapFactoryDTO, *http.Response, error) {
+func (a *SushiswapApiService) SushiswapFactoriesCurrentExecute(r ApiSushiswapFactoriesCurrentRequest) ([]SushiswapFactoryDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -355,12 +355,12 @@ func (a *SushiswapApiService) SushiswapFactorysCurrentExecute(r ApiSushiswapFact
 		localVarReturnValue  []SushiswapFactoryDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapFactorysCurrent")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapFactoriesCurrent")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/factorys/current"
+	localVarPath := localBasePath + "/dapps/sushiswap/factories/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -722,7 +722,7 @@ func (a *SushiswapApiService) SushiswapGetBurnsHistoricalExecute(r ApiSushiswapG
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSushiswapGetDayDatasHistoricalRequest struct {
+type ApiSushiswapGetDayDataHistoricalRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 	startBlock *int64
@@ -733,49 +733,49 @@ type ApiSushiswapGetDayDatasHistoricalRequest struct {
 }
 
 // The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-func (r ApiSushiswapGetDayDatasHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetDayDatasHistoricalRequest {
+func (r ApiSushiswapGetDayDataHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetDayDataHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
 // The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-func (r ApiSushiswapGetDayDatasHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetDayDatasHistoricalRequest {
+func (r ApiSushiswapGetDayDataHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetDayDataHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
 // The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-func (r ApiSushiswapGetDayDatasHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetDayDatasHistoricalRequest {
+func (r ApiSushiswapGetDayDataHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetDayDataHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
 // The end date of timeframe.
-func (r ApiSushiswapGetDayDatasHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetDayDatasHistoricalRequest {
+func (r ApiSushiswapGetDayDataHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetDayDataHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
 // Unix timestamp for start of day / 86400 giving a unique day index.
-func (r ApiSushiswapGetDayDatasHistoricalRequest) Id(id string) ApiSushiswapGetDayDatasHistoricalRequest {
+func (r ApiSushiswapGetDayDataHistoricalRequest) Id(id string) ApiSushiswapGetDayDataHistoricalRequest {
 	r.id = &id
 	return r
 }
 
-func (r ApiSushiswapGetDayDatasHistoricalRequest) Execute() ([]SushiswapDayDataDTO, *http.Response, error) {
-	return r.ApiService.SushiswapGetDayDatasHistoricalExecute(r)
+func (r ApiSushiswapGetDayDataHistoricalRequest) Execute() ([]SushiswapDayDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetDayDataHistoricalExecute(r)
 }
 
 /*
-SushiswapGetDayDatasHistorical DayDatas (historical)
+SushiswapGetDayDataHistorical DayData (historical)
 
-Gets dayDatas.
+Gets dayData.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSushiswapGetDayDatasHistoricalRequest
+ @return ApiSushiswapGetDayDataHistoricalRequest
 */
-func (a *SushiswapApiService) SushiswapGetDayDatasHistorical(ctx context.Context) ApiSushiswapGetDayDatasHistoricalRequest {
-	return ApiSushiswapGetDayDatasHistoricalRequest{
+func (a *SushiswapApiService) SushiswapGetDayDataHistorical(ctx context.Context) ApiSushiswapGetDayDataHistoricalRequest {
+	return ApiSushiswapGetDayDataHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -783,7 +783,7 @@ func (a *SushiswapApiService) SushiswapGetDayDatasHistorical(ctx context.Context
 
 // Execute executes the request
 //  @return []SushiswapDayDataDTO
-func (a *SushiswapApiService) SushiswapGetDayDatasHistoricalExecute(r ApiSushiswapGetDayDatasHistoricalRequest) ([]SushiswapDayDataDTO, *http.Response, error) {
+func (a *SushiswapApiService) SushiswapGetDayDataHistoricalExecute(r ApiSushiswapGetDayDataHistoricalRequest) ([]SushiswapDayDataDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -791,12 +791,12 @@ func (a *SushiswapApiService) SushiswapGetDayDatasHistoricalExecute(r ApiSushisw
 		localVarReturnValue  []SushiswapDayDataDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetDayDatasHistorical")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetDayDataHistorical")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/dayDatas/historical"
+	localVarPath := localBasePath + "/dapps/sushiswap/dayData/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -871,7 +871,7 @@ func (a *SushiswapApiService) SushiswapGetDayDatasHistoricalExecute(r ApiSushisw
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSushiswapGetFactorysHistoricalRequest struct {
+type ApiSushiswapGetFactoriesHistoricalRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 	startBlock *int64
@@ -882,49 +882,49 @@ type ApiSushiswapGetFactorysHistoricalRequest struct {
 }
 
 // The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-func (r ApiSushiswapGetFactorysHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetFactorysHistoricalRequest {
+func (r ApiSushiswapGetFactoriesHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetFactoriesHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
 // The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-func (r ApiSushiswapGetFactorysHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetFactorysHistoricalRequest {
+func (r ApiSushiswapGetFactoriesHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetFactoriesHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
 // The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-func (r ApiSushiswapGetFactorysHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetFactorysHistoricalRequest {
+func (r ApiSushiswapGetFactoriesHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetFactoriesHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
 // The end date of timeframe.
-func (r ApiSushiswapGetFactorysHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetFactorysHistoricalRequest {
+func (r ApiSushiswapGetFactoriesHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetFactoriesHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
 // Factory address.
-func (r ApiSushiswapGetFactorysHistoricalRequest) Id(id string) ApiSushiswapGetFactorysHistoricalRequest {
+func (r ApiSushiswapGetFactoriesHistoricalRequest) Id(id string) ApiSushiswapGetFactoriesHistoricalRequest {
 	r.id = &id
 	return r
 }
 
-func (r ApiSushiswapGetFactorysHistoricalRequest) Execute() ([]SushiswapFactoryDTO, *http.Response, error) {
-	return r.ApiService.SushiswapGetFactorysHistoricalExecute(r)
+func (r ApiSushiswapGetFactoriesHistoricalRequest) Execute() ([]SushiswapFactoryDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetFactoriesHistoricalExecute(r)
 }
 
 /*
-SushiswapGetFactorysHistorical Factorys (historical)
+SushiswapGetFactoriesHistorical Factories (historical)
 
-Gets factorys.
+Gets factories.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSushiswapGetFactorysHistoricalRequest
+ @return ApiSushiswapGetFactoriesHistoricalRequest
 */
-func (a *SushiswapApiService) SushiswapGetFactorysHistorical(ctx context.Context) ApiSushiswapGetFactorysHistoricalRequest {
-	return ApiSushiswapGetFactorysHistoricalRequest{
+func (a *SushiswapApiService) SushiswapGetFactoriesHistorical(ctx context.Context) ApiSushiswapGetFactoriesHistoricalRequest {
+	return ApiSushiswapGetFactoriesHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -932,7 +932,7 @@ func (a *SushiswapApiService) SushiswapGetFactorysHistorical(ctx context.Context
 
 // Execute executes the request
 //  @return []SushiswapFactoryDTO
-func (a *SushiswapApiService) SushiswapGetFactorysHistoricalExecute(r ApiSushiswapGetFactorysHistoricalRequest) ([]SushiswapFactoryDTO, *http.Response, error) {
+func (a *SushiswapApiService) SushiswapGetFactoriesHistoricalExecute(r ApiSushiswapGetFactoriesHistoricalRequest) ([]SushiswapFactoryDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -940,12 +940,12 @@ func (a *SushiswapApiService) SushiswapGetFactorysHistoricalExecute(r ApiSushisw
 		localVarReturnValue  []SushiswapFactoryDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetFactorysHistorical")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetFactoriesHistorical")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/factorys/historical"
+	localVarPath := localBasePath + "/dapps/sushiswap/factories/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1020,7 +1020,7 @@ func (a *SushiswapApiService) SushiswapGetFactorysHistoricalExecute(r ApiSushisw
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSushiswapGetHourDatasHistoricalRequest struct {
+type ApiSushiswapGetHourDataHistoricalRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 	startBlock *int64
@@ -1031,49 +1031,49 @@ type ApiSushiswapGetHourDatasHistoricalRequest struct {
 }
 
 // The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-func (r ApiSushiswapGetHourDatasHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetHourDatasHistoricalRequest {
+func (r ApiSushiswapGetHourDataHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetHourDataHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
 // The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-func (r ApiSushiswapGetHourDatasHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetHourDatasHistoricalRequest {
+func (r ApiSushiswapGetHourDataHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetHourDataHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
 // The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-func (r ApiSushiswapGetHourDatasHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetHourDatasHistoricalRequest {
+func (r ApiSushiswapGetHourDataHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetHourDataHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
 // The end date of timeframe.
-func (r ApiSushiswapGetHourDatasHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetHourDatasHistoricalRequest {
+func (r ApiSushiswapGetHourDataHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetHourDataHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
 // Start of hour timestamp.
-func (r ApiSushiswapGetHourDatasHistoricalRequest) Id(id string) ApiSushiswapGetHourDatasHistoricalRequest {
+func (r ApiSushiswapGetHourDataHistoricalRequest) Id(id string) ApiSushiswapGetHourDataHistoricalRequest {
 	r.id = &id
 	return r
 }
 
-func (r ApiSushiswapGetHourDatasHistoricalRequest) Execute() ([]SushiswapHourDataDTO, *http.Response, error) {
-	return r.ApiService.SushiswapGetHourDatasHistoricalExecute(r)
+func (r ApiSushiswapGetHourDataHistoricalRequest) Execute() ([]SushiswapHourDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetHourDataHistoricalExecute(r)
 }
 
 /*
-SushiswapGetHourDatasHistorical HourDatas (historical)
+SushiswapGetHourDataHistorical HourData (historical)
 
-Gets hourDatas.
+Gets hourData.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSushiswapGetHourDatasHistoricalRequest
+ @return ApiSushiswapGetHourDataHistoricalRequest
 */
-func (a *SushiswapApiService) SushiswapGetHourDatasHistorical(ctx context.Context) ApiSushiswapGetHourDatasHistoricalRequest {
-	return ApiSushiswapGetHourDatasHistoricalRequest{
+func (a *SushiswapApiService) SushiswapGetHourDataHistorical(ctx context.Context) ApiSushiswapGetHourDataHistoricalRequest {
+	return ApiSushiswapGetHourDataHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -1081,7 +1081,7 @@ func (a *SushiswapApiService) SushiswapGetHourDatasHistorical(ctx context.Contex
 
 // Execute executes the request
 //  @return []SushiswapHourDataDTO
-func (a *SushiswapApiService) SushiswapGetHourDatasHistoricalExecute(r ApiSushiswapGetHourDatasHistoricalRequest) ([]SushiswapHourDataDTO, *http.Response, error) {
+func (a *SushiswapApiService) SushiswapGetHourDataHistoricalExecute(r ApiSushiswapGetHourDataHistoricalRequest) ([]SushiswapHourDataDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -1089,12 +1089,12 @@ func (a *SushiswapApiService) SushiswapGetHourDatasHistoricalExecute(r ApiSushis
 		localVarReturnValue  []SushiswapHourDataDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetHourDatasHistorical")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetHourDataHistorical")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/hourDatas/historical"
+	localVarPath := localBasePath + "/dapps/sushiswap/hourData/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1646,7 +1646,7 @@ func (a *SushiswapApiService) SushiswapGetMintsHistoricalExecute(r ApiSushiswapG
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSushiswapGetPairDayDatasHistoricalRequest struct {
+type ApiSushiswapGetPairDayDataHistoricalRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 	startBlock *int64
@@ -1659,60 +1659,60 @@ type ApiSushiswapGetPairDayDatasHistoricalRequest struct {
 	token1 *string
 }
 
-func (r ApiSushiswapGetPairDayDatasHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetPairDayDatasHistoricalRequest {
+func (r ApiSushiswapGetPairDayDataHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetPairDayDataHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiSushiswapGetPairDayDatasHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetPairDayDatasHistoricalRequest {
+func (r ApiSushiswapGetPairDayDataHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetPairDayDataHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiSushiswapGetPairDayDatasHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetPairDayDatasHistoricalRequest {
+func (r ApiSushiswapGetPairDayDataHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetPairDayDataHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiSushiswapGetPairDayDatasHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetPairDayDatasHistoricalRequest {
+func (r ApiSushiswapGetPairDayDataHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetPairDayDataHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiSushiswapGetPairDayDatasHistoricalRequest) Id(id string) ApiSushiswapGetPairDayDatasHistoricalRequest {
+func (r ApiSushiswapGetPairDayDataHistoricalRequest) Id(id string) ApiSushiswapGetPairDayDataHistoricalRequest {
 	r.id = &id
 	return r
 }
 
-func (r ApiSushiswapGetPairDayDatasHistoricalRequest) Pair(pair string) ApiSushiswapGetPairDayDatasHistoricalRequest {
+func (r ApiSushiswapGetPairDayDataHistoricalRequest) Pair(pair string) ApiSushiswapGetPairDayDataHistoricalRequest {
 	r.pair = &pair
 	return r
 }
 
-func (r ApiSushiswapGetPairDayDatasHistoricalRequest) Token0(token0 string) ApiSushiswapGetPairDayDatasHistoricalRequest {
+func (r ApiSushiswapGetPairDayDataHistoricalRequest) Token0(token0 string) ApiSushiswapGetPairDayDataHistoricalRequest {
 	r.token0 = &token0
 	return r
 }
 
-func (r ApiSushiswapGetPairDayDatasHistoricalRequest) Token1(token1 string) ApiSushiswapGetPairDayDatasHistoricalRequest {
+func (r ApiSushiswapGetPairDayDataHistoricalRequest) Token1(token1 string) ApiSushiswapGetPairDayDataHistoricalRequest {
 	r.token1 = &token1
 	return r
 }
 
-func (r ApiSushiswapGetPairDayDatasHistoricalRequest) Execute() ([]SushiswapPairDayDataDTO, *http.Response, error) {
-	return r.ApiService.SushiswapGetPairDayDatasHistoricalExecute(r)
+func (r ApiSushiswapGetPairDayDataHistoricalRequest) Execute() ([]SushiswapPairDayDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetPairDayDataHistoricalExecute(r)
 }
 
 /*
-SushiswapGetPairDayDatasHistorical PairDayDatas (historical)
+SushiswapGetPairDayDataHistorical PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSushiswapGetPairDayDatasHistoricalRequest
+ @return ApiSushiswapGetPairDayDataHistoricalRequest
 */
-func (a *SushiswapApiService) SushiswapGetPairDayDatasHistorical(ctx context.Context) ApiSushiswapGetPairDayDatasHistoricalRequest {
-	return ApiSushiswapGetPairDayDatasHistoricalRequest{
+func (a *SushiswapApiService) SushiswapGetPairDayDataHistorical(ctx context.Context) ApiSushiswapGetPairDayDataHistoricalRequest {
+	return ApiSushiswapGetPairDayDataHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -1720,7 +1720,7 @@ func (a *SushiswapApiService) SushiswapGetPairDayDatasHistorical(ctx context.Con
 
 // Execute executes the request
 //  @return []SushiswapPairDayDataDTO
-func (a *SushiswapApiService) SushiswapGetPairDayDatasHistoricalExecute(r ApiSushiswapGetPairDayDatasHistoricalRequest) ([]SushiswapPairDayDataDTO, *http.Response, error) {
+func (a *SushiswapApiService) SushiswapGetPairDayDataHistoricalExecute(r ApiSushiswapGetPairDayDataHistoricalRequest) ([]SushiswapPairDayDataDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -1728,12 +1728,12 @@ func (a *SushiswapApiService) SushiswapGetPairDayDatasHistoricalExecute(r ApiSus
 		localVarReturnValue  []SushiswapPairDayDataDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetPairDayDatasHistorical")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetPairDayDataHistorical")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/pairDayDatas/historical"
+	localVarPath := localBasePath + "/dapps/sushiswap/pairDayData/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -1817,7 +1817,7 @@ func (a *SushiswapApiService) SushiswapGetPairDayDatasHistoricalExecute(r ApiSus
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSushiswapGetPairHourDatasHistoricalRequest struct {
+type ApiSushiswapGetPairHourDataHistoricalRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 	startBlock *int64
@@ -1828,50 +1828,50 @@ type ApiSushiswapGetPairHourDatasHistoricalRequest struct {
 	pair *string
 }
 
-func (r ApiSushiswapGetPairHourDatasHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetPairHourDatasHistoricalRequest {
+func (r ApiSushiswapGetPairHourDataHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetPairHourDataHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
-func (r ApiSushiswapGetPairHourDatasHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetPairHourDatasHistoricalRequest {
+func (r ApiSushiswapGetPairHourDataHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetPairHourDataHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
-func (r ApiSushiswapGetPairHourDatasHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetPairHourDatasHistoricalRequest {
+func (r ApiSushiswapGetPairHourDataHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetPairHourDataHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
-func (r ApiSushiswapGetPairHourDatasHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetPairHourDatasHistoricalRequest {
+func (r ApiSushiswapGetPairHourDataHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetPairHourDataHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
-func (r ApiSushiswapGetPairHourDatasHistoricalRequest) Id(id string) ApiSushiswapGetPairHourDatasHistoricalRequest {
+func (r ApiSushiswapGetPairHourDataHistoricalRequest) Id(id string) ApiSushiswapGetPairHourDataHistoricalRequest {
 	r.id = &id
 	return r
 }
 
-func (r ApiSushiswapGetPairHourDatasHistoricalRequest) Pair(pair string) ApiSushiswapGetPairHourDatasHistoricalRequest {
+func (r ApiSushiswapGetPairHourDataHistoricalRequest) Pair(pair string) ApiSushiswapGetPairHourDataHistoricalRequest {
 	r.pair = &pair
 	return r
 }
 
-func (r ApiSushiswapGetPairHourDatasHistoricalRequest) Execute() ([]SushiswapPairHourDataDTO, *http.Response, error) {
-	return r.ApiService.SushiswapGetPairHourDatasHistoricalExecute(r)
+func (r ApiSushiswapGetPairHourDataHistoricalRequest) Execute() ([]SushiswapPairHourDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetPairHourDataHistoricalExecute(r)
 }
 
 /*
-SushiswapGetPairHourDatasHistorical PairHourDatas (historical)
+SushiswapGetPairHourDataHistorical PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSushiswapGetPairHourDatasHistoricalRequest
+ @return ApiSushiswapGetPairHourDataHistoricalRequest
 */
-func (a *SushiswapApiService) SushiswapGetPairHourDatasHistorical(ctx context.Context) ApiSushiswapGetPairHourDatasHistoricalRequest {
-	return ApiSushiswapGetPairHourDatasHistoricalRequest{
+func (a *SushiswapApiService) SushiswapGetPairHourDataHistorical(ctx context.Context) ApiSushiswapGetPairHourDataHistoricalRequest {
+	return ApiSushiswapGetPairHourDataHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -1879,7 +1879,7 @@ func (a *SushiswapApiService) SushiswapGetPairHourDatasHistorical(ctx context.Co
 
 // Execute executes the request
 //  @return []SushiswapPairHourDataDTO
-func (a *SushiswapApiService) SushiswapGetPairHourDatasHistoricalExecute(r ApiSushiswapGetPairHourDatasHistoricalRequest) ([]SushiswapPairHourDataDTO, *http.Response, error) {
+func (a *SushiswapApiService) SushiswapGetPairHourDataHistoricalExecute(r ApiSushiswapGetPairHourDataHistoricalRequest) ([]SushiswapPairHourDataDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -1887,12 +1887,12 @@ func (a *SushiswapApiService) SushiswapGetPairHourDatasHistoricalExecute(r ApiSu
 		localVarReturnValue  []SushiswapPairHourDataDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetPairHourDatasHistorical")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetPairHourDataHistorical")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/pairHourDatas/historical"
+	localVarPath := localBasePath + "/dapps/sushiswap/pairHourData/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2300,7 +2300,7 @@ func (a *SushiswapApiService) SushiswapGetSwapsHistoricalExecute(r ApiSushiswapG
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSushiswapGetTokenDayDatasHistoricalRequest struct {
+type ApiSushiswapGetTokenDayDataHistoricalRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 	startBlock *int64
@@ -2311,49 +2311,49 @@ type ApiSushiswapGetTokenDayDatasHistoricalRequest struct {
 }
 
 // The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-func (r ApiSushiswapGetTokenDayDatasHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetTokenDayDatasHistoricalRequest {
+func (r ApiSushiswapGetTokenDayDataHistoricalRequest) StartBlock(startBlock int64) ApiSushiswapGetTokenDayDataHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
 // The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-func (r ApiSushiswapGetTokenDayDatasHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetTokenDayDatasHistoricalRequest {
+func (r ApiSushiswapGetTokenDayDataHistoricalRequest) EndBlock(endBlock int64) ApiSushiswapGetTokenDayDataHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
 // The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-func (r ApiSushiswapGetTokenDayDatasHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetTokenDayDatasHistoricalRequest {
+func (r ApiSushiswapGetTokenDayDataHistoricalRequest) StartDate(startDate time.Time) ApiSushiswapGetTokenDayDataHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
 // The end date of timeframe.
-func (r ApiSushiswapGetTokenDayDatasHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetTokenDayDatasHistoricalRequest {
+func (r ApiSushiswapGetTokenDayDataHistoricalRequest) EndDate(endDate time.Time) ApiSushiswapGetTokenDayDataHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
 // Identifier, day start timestamp in unix / 86400.
-func (r ApiSushiswapGetTokenDayDatasHistoricalRequest) Id(id string) ApiSushiswapGetTokenDayDatasHistoricalRequest {
+func (r ApiSushiswapGetTokenDayDataHistoricalRequest) Id(id string) ApiSushiswapGetTokenDayDataHistoricalRequest {
 	r.id = &id
 	return r
 }
 
-func (r ApiSushiswapGetTokenDayDatasHistoricalRequest) Execute() ([]SushiswapTokenDayDataDTO, *http.Response, error) {
-	return r.ApiService.SushiswapGetTokenDayDatasHistoricalExecute(r)
+func (r ApiSushiswapGetTokenDayDataHistoricalRequest) Execute() ([]SushiswapTokenDayDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapGetTokenDayDataHistoricalExecute(r)
 }
 
 /*
-SushiswapGetTokenDayDatasHistorical TokenDayDatas (historical)
+SushiswapGetTokenDayDataHistorical TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSushiswapGetTokenDayDatasHistoricalRequest
+ @return ApiSushiswapGetTokenDayDataHistoricalRequest
 */
-func (a *SushiswapApiService) SushiswapGetTokenDayDatasHistorical(ctx context.Context) ApiSushiswapGetTokenDayDatasHistoricalRequest {
-	return ApiSushiswapGetTokenDayDatasHistoricalRequest{
+func (a *SushiswapApiService) SushiswapGetTokenDayDataHistorical(ctx context.Context) ApiSushiswapGetTokenDayDataHistoricalRequest {
+	return ApiSushiswapGetTokenDayDataHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -2361,7 +2361,7 @@ func (a *SushiswapApiService) SushiswapGetTokenDayDatasHistorical(ctx context.Co
 
 // Execute executes the request
 //  @return []SushiswapTokenDayDataDTO
-func (a *SushiswapApiService) SushiswapGetTokenDayDatasHistoricalExecute(r ApiSushiswapGetTokenDayDatasHistoricalRequest) ([]SushiswapTokenDayDataDTO, *http.Response, error) {
+func (a *SushiswapApiService) SushiswapGetTokenDayDataHistoricalExecute(r ApiSushiswapGetTokenDayDataHistoricalRequest) ([]SushiswapTokenDayDataDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -2369,12 +2369,12 @@ func (a *SushiswapApiService) SushiswapGetTokenDayDatasHistoricalExecute(r ApiSu
 		localVarReturnValue  []SushiswapTokenDayDataDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetTokenDayDatasHistorical")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapGetTokenDayDataHistorical")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/tokenDayDatas/historical"
+	localVarPath := localBasePath + "/dapps/sushiswap/tokenDayData/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2916,25 +2916,25 @@ func (a *SushiswapApiService) SushiswapGetUsersHistoricalExecute(r ApiSushiswapG
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSushiswapHourDatasCurrentRequest struct {
+type ApiSushiswapHourDataCurrentRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 }
 
-func (r ApiSushiswapHourDatasCurrentRequest) Execute() ([]SushiswapHourDataDTO, *http.Response, error) {
-	return r.ApiService.SushiswapHourDatasCurrentExecute(r)
+func (r ApiSushiswapHourDataCurrentRequest) Execute() ([]SushiswapHourDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapHourDataCurrentExecute(r)
 }
 
 /*
-SushiswapHourDatasCurrent HourDatas (current)
+SushiswapHourDataCurrent HourData (current)
 
-Gets hourDatas.
+Gets hourData.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSushiswapHourDatasCurrentRequest
+ @return ApiSushiswapHourDataCurrentRequest
 */
-func (a *SushiswapApiService) SushiswapHourDatasCurrent(ctx context.Context) ApiSushiswapHourDatasCurrentRequest {
-	return ApiSushiswapHourDatasCurrentRequest{
+func (a *SushiswapApiService) SushiswapHourDataCurrent(ctx context.Context) ApiSushiswapHourDataCurrentRequest {
+	return ApiSushiswapHourDataCurrentRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -2942,7 +2942,7 @@ func (a *SushiswapApiService) SushiswapHourDatasCurrent(ctx context.Context) Api
 
 // Execute executes the request
 //  @return []SushiswapHourDataDTO
-func (a *SushiswapApiService) SushiswapHourDatasCurrentExecute(r ApiSushiswapHourDatasCurrentRequest) ([]SushiswapHourDataDTO, *http.Response, error) {
+func (a *SushiswapApiService) SushiswapHourDataCurrentExecute(r ApiSushiswapHourDataCurrentRequest) ([]SushiswapHourDataDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -2950,12 +2950,12 @@ func (a *SushiswapApiService) SushiswapHourDatasCurrentExecute(r ApiSushiswapHou
 		localVarReturnValue  []SushiswapHourDataDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapHourDatasCurrent")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapHourDataCurrent")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/hourDatas/current"
+	localVarPath := localBasePath + "/dapps/sushiswap/hourData/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -3312,25 +3312,25 @@ func (a *SushiswapApiService) SushiswapMintsCurrentExecute(r ApiSushiswapMintsCu
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSushiswapPairDayDatasCurrentRequest struct {
+type ApiSushiswapPairDayDataCurrentRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 }
 
-func (r ApiSushiswapPairDayDatasCurrentRequest) Execute() ([]SushiswapPairDayDataDTO, *http.Response, error) {
-	return r.ApiService.SushiswapPairDayDatasCurrentExecute(r)
+func (r ApiSushiswapPairDayDataCurrentRequest) Execute() ([]SushiswapPairDayDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapPairDayDataCurrentExecute(r)
 }
 
 /*
-SushiswapPairDayDatasCurrent PairDayDatas (current)
+SushiswapPairDayDataCurrent PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSushiswapPairDayDatasCurrentRequest
+ @return ApiSushiswapPairDayDataCurrentRequest
 */
-func (a *SushiswapApiService) SushiswapPairDayDatasCurrent(ctx context.Context) ApiSushiswapPairDayDatasCurrentRequest {
-	return ApiSushiswapPairDayDatasCurrentRequest{
+func (a *SushiswapApiService) SushiswapPairDayDataCurrent(ctx context.Context) ApiSushiswapPairDayDataCurrentRequest {
+	return ApiSushiswapPairDayDataCurrentRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -3338,7 +3338,7 @@ func (a *SushiswapApiService) SushiswapPairDayDatasCurrent(ctx context.Context) 
 
 // Execute executes the request
 //  @return []SushiswapPairDayDataDTO
-func (a *SushiswapApiService) SushiswapPairDayDatasCurrentExecute(r ApiSushiswapPairDayDatasCurrentRequest) ([]SushiswapPairDayDataDTO, *http.Response, error) {
+func (a *SushiswapApiService) SushiswapPairDayDataCurrentExecute(r ApiSushiswapPairDayDataCurrentRequest) ([]SushiswapPairDayDataDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -3346,12 +3346,12 @@ func (a *SushiswapApiService) SushiswapPairDayDatasCurrentExecute(r ApiSushiswap
 		localVarReturnValue  []SushiswapPairDayDataDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapPairDayDatasCurrent")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapPairDayDataCurrent")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/pairDayDatas/current"
+	localVarPath := localBasePath + "/dapps/sushiswap/pairDayData/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -3411,25 +3411,25 @@ func (a *SushiswapApiService) SushiswapPairDayDatasCurrentExecute(r ApiSushiswap
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSushiswapPairHourDatasCurrentRequest struct {
+type ApiSushiswapPairHourDataCurrentRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 }
 
-func (r ApiSushiswapPairHourDatasCurrentRequest) Execute() ([]SushiswapPairHourDataDTO, *http.Response, error) {
-	return r.ApiService.SushiswapPairHourDatasCurrentExecute(r)
+func (r ApiSushiswapPairHourDataCurrentRequest) Execute() ([]SushiswapPairHourDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapPairHourDataCurrentExecute(r)
 }
 
 /*
-SushiswapPairHourDatasCurrent PairHourDatas (current)
+SushiswapPairHourDataCurrent PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSushiswapPairHourDatasCurrentRequest
+ @return ApiSushiswapPairHourDataCurrentRequest
 */
-func (a *SushiswapApiService) SushiswapPairHourDatasCurrent(ctx context.Context) ApiSushiswapPairHourDatasCurrentRequest {
-	return ApiSushiswapPairHourDatasCurrentRequest{
+func (a *SushiswapApiService) SushiswapPairHourDataCurrent(ctx context.Context) ApiSushiswapPairHourDataCurrentRequest {
+	return ApiSushiswapPairHourDataCurrentRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -3437,7 +3437,7 @@ func (a *SushiswapApiService) SushiswapPairHourDatasCurrent(ctx context.Context)
 
 // Execute executes the request
 //  @return []SushiswapPairHourDataDTO
-func (a *SushiswapApiService) SushiswapPairHourDatasCurrentExecute(r ApiSushiswapPairHourDatasCurrentRequest) ([]SushiswapPairHourDataDTO, *http.Response, error) {
+func (a *SushiswapApiService) SushiswapPairHourDataCurrentExecute(r ApiSushiswapPairHourDataCurrentRequest) ([]SushiswapPairHourDataDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -3445,12 +3445,12 @@ func (a *SushiswapApiService) SushiswapPairHourDatasCurrentExecute(r ApiSushiswa
 		localVarReturnValue  []SushiswapPairHourDataDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapPairHourDatasCurrent")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapPairHourDataCurrent")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/pairHourDatas/current"
+	localVarPath := localBasePath + "/dapps/sushiswap/pairHourData/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -3728,25 +3728,25 @@ func (a *SushiswapApiService) SushiswapSwapsCurrentExecute(r ApiSushiswapSwapsCu
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiSushiswapTokenDayDatasCurrentRequest struct {
+type ApiSushiswapTokenDayDataCurrentRequest struct {
 	ctx context.Context
 	ApiService *SushiswapApiService
 }
 
-func (r ApiSushiswapTokenDayDatasCurrentRequest) Execute() ([]SushiswapTokenDayDataDTO, *http.Response, error) {
-	return r.ApiService.SushiswapTokenDayDatasCurrentExecute(r)
+func (r ApiSushiswapTokenDayDataCurrentRequest) Execute() ([]SushiswapTokenDayDataDTO, *http.Response, error) {
+	return r.ApiService.SushiswapTokenDayDataCurrentExecute(r)
 }
 
 /*
-SushiswapTokenDayDatasCurrent TokenDayDatas (current)
+SushiswapTokenDayDataCurrent TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiSushiswapTokenDayDatasCurrentRequest
+ @return ApiSushiswapTokenDayDataCurrentRequest
 */
-func (a *SushiswapApiService) SushiswapTokenDayDatasCurrent(ctx context.Context) ApiSushiswapTokenDayDatasCurrentRequest {
-	return ApiSushiswapTokenDayDatasCurrentRequest{
+func (a *SushiswapApiService) SushiswapTokenDayDataCurrent(ctx context.Context) ApiSushiswapTokenDayDataCurrentRequest {
+	return ApiSushiswapTokenDayDataCurrentRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -3754,7 +3754,7 @@ func (a *SushiswapApiService) SushiswapTokenDayDatasCurrent(ctx context.Context)
 
 // Execute executes the request
 //  @return []SushiswapTokenDayDataDTO
-func (a *SushiswapApiService) SushiswapTokenDayDatasCurrentExecute(r ApiSushiswapTokenDayDatasCurrentRequest) ([]SushiswapTokenDayDataDTO, *http.Response, error) {
+func (a *SushiswapApiService) SushiswapTokenDayDataCurrentExecute(r ApiSushiswapTokenDayDataCurrentRequest) ([]SushiswapTokenDayDataDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -3762,12 +3762,12 @@ func (a *SushiswapApiService) SushiswapTokenDayDatasCurrentExecute(r ApiSushiswa
 		localVarReturnValue  []SushiswapTokenDayDataDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapTokenDayDatasCurrent")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SushiswapApiService.SushiswapTokenDayDataCurrent")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/sushiswap/tokenDayDatas/current"
+	localVarPath := localBasePath + "/dapps/sushiswap/tokenDayData/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}

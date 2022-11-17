@@ -4,12 +4,12 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dexBatchsCurrent**](DexApi.md#dexBatchsCurrent) | **GET** /dapps/dex/batchs/current | Batchs (current)
-[**dexBatchsCurrentWithHttpInfo**](DexApi.md#dexBatchsCurrentWithHttpInfo) | **GET** /dapps/dex/batchs/current | Batchs (current)
+[**dexBatchesCurrent**](DexApi.md#dexBatchesCurrent) | **GET** /dapps/dex/batches/current | Batches (current)
+[**dexBatchesCurrentWithHttpInfo**](DexApi.md#dexBatchesCurrentWithHttpInfo) | **GET** /dapps/dex/batches/current | Batches (current)
 [**dexDepositsCurrent**](DexApi.md#dexDepositsCurrent) | **GET** /dapps/dex/deposits/current | Deposits (current)
 [**dexDepositsCurrentWithHttpInfo**](DexApi.md#dexDepositsCurrentWithHttpInfo) | **GET** /dapps/dex/deposits/current | Deposits (current)
-[**dexGetBatchsHistorical**](DexApi.md#dexGetBatchsHistorical) | **GET** /dapps/dex/batchs/historical | Batchs (historical)
-[**dexGetBatchsHistoricalWithHttpInfo**](DexApi.md#dexGetBatchsHistoricalWithHttpInfo) | **GET** /dapps/dex/batchs/historical | Batchs (historical)
+[**dexGetBatchesHistorical**](DexApi.md#dexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | Batches (historical)
+[**dexGetBatchesHistoricalWithHttpInfo**](DexApi.md#dexGetBatchesHistoricalWithHttpInfo) | **GET** /dapps/dex/batches/historical | Batches (historical)
 [**dexGetDepositsHistorical**](DexApi.md#dexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical)
 [**dexGetDepositsHistoricalWithHttpInfo**](DexApi.md#dexGetDepositsHistoricalWithHttpInfo) | **GET** /dapps/dex/deposits/historical | Deposits (historical)
 [**dexGetOrdersHistorical**](DexApi.md#dexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | Orders (historical)
@@ -18,8 +18,8 @@ Method | HTTP request | Description
 [**dexGetPricesHistoricalWithHttpInfo**](DexApi.md#dexGetPricesHistoricalWithHttpInfo) | **GET** /dapps/dex/prices/historical | Prices (historical)
 [**dexGetSolutionsHistorical**](DexApi.md#dexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | Solutions (historical)
 [**dexGetSolutionsHistoricalWithHttpInfo**](DexApi.md#dexGetSolutionsHistoricalWithHttpInfo) | **GET** /dapps/dex/solutions/historical | Solutions (historical)
-[**dexGetStatssHistorical**](DexApi.md#dexGetStatssHistorical) | **GET** /dapps/dex/statss/historical | Statss (historical)
-[**dexGetStatssHistoricalWithHttpInfo**](DexApi.md#dexGetStatssHistoricalWithHttpInfo) | **GET** /dapps/dex/statss/historical | Statss (historical)
+[**dexGetStatsHistorical**](DexApi.md#dexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | Stats (historical)
+[**dexGetStatsHistoricalWithHttpInfo**](DexApi.md#dexGetStatsHistoricalWithHttpInfo) | **GET** /dapps/dex/stats/historical | Stats (historical)
 [**dexGetTokensHistorical**](DexApi.md#dexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical)
 [**dexGetTokensHistoricalWithHttpInfo**](DexApi.md#dexGetTokensHistoricalWithHttpInfo) | **GET** /dapps/dex/tokens/historical | Tokens (historical)
 [**dexGetTradesHistorical**](DexApi.md#dexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | Trades (historical)
@@ -36,8 +36,8 @@ Method | HTTP request | Description
 [**dexPricesCurrentWithHttpInfo**](DexApi.md#dexPricesCurrentWithHttpInfo) | **GET** /dapps/dex/prices/current | Prices (current)
 [**dexSolutionsCurrent**](DexApi.md#dexSolutionsCurrent) | **GET** /dapps/dex/solutions/current | Solutions (current)
 [**dexSolutionsCurrentWithHttpInfo**](DexApi.md#dexSolutionsCurrentWithHttpInfo) | **GET** /dapps/dex/solutions/current | Solutions (current)
-[**dexStatssCurrent**](DexApi.md#dexStatssCurrent) | **GET** /dapps/dex/statss/current | Statss (current)
-[**dexStatssCurrentWithHttpInfo**](DexApi.md#dexStatssCurrentWithHttpInfo) | **GET** /dapps/dex/statss/current | Statss (current)
+[**dexStatsCurrent**](DexApi.md#dexStatsCurrent) | **GET** /dapps/dex/stats/current | Stats (current)
+[**dexStatsCurrentWithHttpInfo**](DexApi.md#dexStatsCurrentWithHttpInfo) | **GET** /dapps/dex/stats/current | Stats (current)
 [**dexTokensCurrent**](DexApi.md#dexTokensCurrent) | **GET** /dapps/dex/tokens/current | Tokens (current)
 [**dexTokensCurrentWithHttpInfo**](DexApi.md#dexTokensCurrentWithHttpInfo) | **GET** /dapps/dex/tokens/current | Tokens (current)
 [**dexTradesCurrent**](DexApi.md#dexTradesCurrent) | **GET** /dapps/dex/trades/current | Trades (current)
@@ -51,13 +51,13 @@ Method | HTTP request | Description
 
 
 
-## dexBatchsCurrent
+## dexBatchesCurrent
 
-> dexBatchsCurrent(): ApiRequest[Seq[BatchDTO]]
+> dexBatchesCurrent(): ApiRequest[Seq[BatchDTO]]
 
-Batchs (current)
+Batches (current)
 
-Gets batchs.
+Gets batches.
 
 ### Example
 
@@ -79,7 +79,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = DexApi("https://onchain.coinapi.io")    
-    val request = apiInstance.dexBatchsCurrent()
+    val request = apiInstance.dexBatchesCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -89,14 +89,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling DexApi#dexBatchsCurrent")
+            System.err.println("Exception when calling DexApi#dexBatchesCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling DexApi#dexBatchsCurrent")
+            System.err.println("Exception when calling DexApi#dexBatchesCurrent")
             exception.printStackTrace();
     }
 }
@@ -201,13 +201,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## dexGetBatchsHistorical
+## dexGetBatchesHistorical
 
-> dexGetBatchsHistorical(dexGetBatchsHistoricalRequest): ApiRequest[Seq[BatchDTO]]
+> dexGetBatchesHistorical(dexGetBatchesHistoricalRequest): ApiRequest[Seq[BatchDTO]]
 
-Batchs (historical)
+Batches (historical)
 
-Gets batchs.
+Gets batches.
 
 ### Example
 
@@ -240,7 +240,7 @@ object Example extends App {
 
     val id: String = id_example // String | Identifier.
     
-    val request = apiInstance.dexGetBatchsHistorical(startBlock, endBlock, startDate, endDate, id)
+    val request = apiInstance.dexGetBatchesHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -250,14 +250,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling DexApi#dexGetBatchsHistorical")
+            System.err.println("Exception when calling DexApi#dexGetBatchesHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling DexApi#dexGetBatchsHistorical")
+            System.err.println("Exception when calling DexApi#dexGetBatchesHistorical")
             exception.printStackTrace();
     }
 }
@@ -675,13 +675,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## dexGetStatssHistorical
+## dexGetStatsHistorical
 
-> dexGetStatssHistorical(dexGetStatssHistoricalRequest): ApiRequest[Seq[StatsDTO]]
+> dexGetStatsHistorical(dexGetStatsHistoricalRequest): ApiRequest[Seq[StatsDTO]]
 
-Statss (historical)
+Stats (historical)
 
-Gets statss.
+Gets stats.
 
 ### Example
 
@@ -714,7 +714,7 @@ object Example extends App {
 
     val id: String = id_example // String | 
     
-    val request = apiInstance.dexGetStatssHistorical(startBlock, endBlock, startDate, endDate, id)
+    val request = apiInstance.dexGetStatsHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -724,14 +724,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling DexApi#dexGetStatssHistorical")
+            System.err.println("Exception when calling DexApi#dexGetStatsHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling DexApi#dexGetStatssHistorical")
+            System.err.println("Exception when calling DexApi#dexGetStatsHistorical")
             exception.printStackTrace();
     }
 }
@@ -1479,13 +1479,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## dexStatssCurrent
+## dexStatsCurrent
 
-> dexStatssCurrent(): ApiRequest[Seq[StatsDTO]]
+> dexStatsCurrent(): ApiRequest[Seq[StatsDTO]]
 
-Statss (current)
+Stats (current)
 
-Gets statss.
+Gets stats.
 
 ### Example
 
@@ -1507,7 +1507,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = DexApi("https://onchain.coinapi.io")    
-    val request = apiInstance.dexStatssCurrent()
+    val request = apiInstance.dexStatsCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1517,14 +1517,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling DexApi#dexStatssCurrent")
+            System.err.println("Exception when calling DexApi#dexStatsCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling DexApi#dexStatssCurrent")
+            System.err.println("Exception when calling DexApi#dexStatsCurrent")
             exception.printStackTrace();
     }
 }

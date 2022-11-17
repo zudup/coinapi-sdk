@@ -89,51 +89,51 @@ bool sushiswapBurns (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief DayDatas (current). *Synchronous*
+/*! \brief DayData (current). *Synchronous*
  *
- * Gets dayDatas.
+ * Gets dayData.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapDayDatas (current)Sync(char * accessToken,
+bool sushiswapDayData (current)Sync(char * accessToken,
 	
 	void(* handler)(std::list<Sushiswap.DayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief DayDatas (current). *Asynchronous*
+/*! \brief DayData (current). *Asynchronous*
  *
- * Gets dayDatas.
+ * Gets dayData.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapDayDatas (current)Async(char * accessToken,
+bool sushiswapDayData (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<Sushiswap.DayDataDTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief Factorys (current). *Synchronous*
+/*! \brief Factories (current). *Synchronous*
  *
- * Gets factorys.
+ * Gets factories.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapFactorys (current)Sync(char * accessToken,
+bool sushiswapFactories (current)Sync(char * accessToken,
 	
 	void(* handler)(std::list<Sushiswap.FactoryDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Factorys (current). *Asynchronous*
+/*! \brief Factories (current). *Asynchronous*
  *
- * Gets factorys.
+ * Gets factories.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapFactorys (current)Async(char * accessToken,
+bool sushiswapFactories (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<Sushiswap.FactoryDTO>, Error, void* )
 	, void* userData);
@@ -211,9 +211,9 @@ bool sushiswapGetBurns (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief DayDatas (historical). *Synchronous*
+/*! \brief DayData (historical). *Synchronous*
  *
- * Gets dayDatas.
+ * Gets dayData.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -223,14 +223,14 @@ bool sushiswapGetBurns (historical)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapGetDayDatas (historical)Sync(char * accessToken,
+bool sushiswapGetDayData (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<Sushiswap.DayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief DayDatas (historical). *Asynchronous*
+/*! \brief DayData (historical). *Asynchronous*
  *
- * Gets dayDatas.
+ * Gets dayData.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -240,15 +240,15 @@ bool sushiswapGetDayDatas (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapGetDayDatas (historical)Async(char * accessToken,
+bool sushiswapGetDayData (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<Sushiswap.DayDataDTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief Factorys (historical). *Synchronous*
+/*! \brief Factories (historical). *Synchronous*
  *
- * Gets factorys.
+ * Gets factories.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -258,14 +258,14 @@ bool sushiswapGetDayDatas (historical)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapGetFactorys (historical)Sync(char * accessToken,
+bool sushiswapGetFactories (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<Sushiswap.FactoryDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Factorys (historical). *Asynchronous*
+/*! \brief Factories (historical). *Asynchronous*
  *
- * Gets factorys.
+ * Gets factories.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -275,15 +275,15 @@ bool sushiswapGetFactorys (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapGetFactorys (historical)Async(char * accessToken,
+bool sushiswapGetFactories (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<Sushiswap.FactoryDTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief HourDatas (historical). *Synchronous*
+/*! \brief HourData (historical). *Synchronous*
  *
- * Gets hourDatas.
+ * Gets hourData.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -293,14 +293,14 @@ bool sushiswapGetFactorys (historical)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapGetHourDatas (historical)Sync(char * accessToken,
+bool sushiswapGetHourData (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<Sushiswap.HourDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief HourDatas (historical). *Asynchronous*
+/*! \brief HourData (historical). *Asynchronous*
  *
- * Gets hourDatas.
+ * Gets hourData.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -310,7 +310,7 @@ bool sushiswapGetHourDatas (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapGetHourDatas (historical)Async(char * accessToken,
+bool sushiswapGetHourData (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<Sushiswap.HourDataDTO>, Error, void* )
 	, void* userData);
@@ -431,9 +431,9 @@ bool sushiswapGetMints (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief PairDayDatas (historical). *Synchronous*
+/*! \brief PairDayData (historical). *Synchronous*
  *
- * Gets pairDayDatas.
+ * Gets pairDayData.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -446,14 +446,14 @@ bool sushiswapGetMints (historical)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapGetPairDayDatas (historical)Sync(char * accessToken,
+bool sushiswapGetPairDayData (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string pair, std::string token0, std::string token1, 
 	void(* handler)(std::list<Sushiswap.PairDayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief PairDayDatas (historical). *Asynchronous*
+/*! \brief PairDayData (historical). *Asynchronous*
  *
- * Gets pairDayDatas.
+ * Gets pairDayData.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -466,15 +466,15 @@ bool sushiswapGetPairDayDatas (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapGetPairDayDatas (historical)Async(char * accessToken,
+bool sushiswapGetPairDayData (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string pair, std::string token0, std::string token1, 
 	void(* handler)(std::list<Sushiswap.PairDayDataDTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief PairHourDatas (historical). *Synchronous*
+/*! \brief PairHourData (historical). *Synchronous*
  *
- * Gets pairHourDatas.
+ * Gets pairHourData.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -485,14 +485,14 @@ bool sushiswapGetPairDayDatas (historical)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapGetPairHourDatas (historical)Sync(char * accessToken,
+bool sushiswapGetPairHourData (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string pair, 
 	void(* handler)(std::list<Sushiswap.PairHourDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief PairHourDatas (historical). *Asynchronous*
+/*! \brief PairHourData (historical). *Asynchronous*
  *
- * Gets pairHourDatas.
+ * Gets pairHourData.
  * \param startBlock 
  * \param endBlock 
  * \param startDate 
@@ -503,7 +503,7 @@ bool sushiswapGetPairHourDatas (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapGetPairHourDatas (historical)Async(char * accessToken,
+bool sushiswapGetPairHourData (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string pair, 
 	void(* handler)(std::list<Sushiswap.PairHourDataDTO>, Error, void* )
 	, void* userData);
@@ -587,9 +587,9 @@ bool sushiswapGetSwaps (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief TokenDayDatas (historical). *Synchronous*
+/*! \brief TokenDayData (historical). *Synchronous*
  *
- * Gets tokenDayDatas.
+ * Gets tokenDayData.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -599,14 +599,14 @@ bool sushiswapGetSwaps (historical)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapGetTokenDayDatas (historical)Sync(char * accessToken,
+bool sushiswapGetTokenDayData (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<Sushiswap.TokenDayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief TokenDayDatas (historical). *Asynchronous*
+/*! \brief TokenDayData (historical). *Asynchronous*
  *
- * Gets tokenDayDatas.
+ * Gets tokenDayData.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -616,7 +616,7 @@ bool sushiswapGetTokenDayDatas (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapGetTokenDayDatas (historical)Async(char * accessToken,
+bool sushiswapGetTokenDayData (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<Sushiswap.TokenDayDataDTO>, Error, void* )
 	, void* userData);
@@ -731,26 +731,26 @@ bool sushiswapGetUsers (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief HourDatas (current). *Synchronous*
+/*! \brief HourData (current). *Synchronous*
  *
- * Gets hourDatas.
+ * Gets hourData.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapHourDatas (current)Sync(char * accessToken,
+bool sushiswapHourData (current)Sync(char * accessToken,
 	
 	void(* handler)(std::list<Sushiswap.HourDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief HourDatas (current). *Asynchronous*
+/*! \brief HourData (current). *Asynchronous*
  *
- * Gets hourDatas.
+ * Gets hourData.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapHourDatas (current)Async(char * accessToken,
+bool sushiswapHourData (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<Sushiswap.HourDataDTO>, Error, void* )
 	, void* userData);
@@ -831,51 +831,51 @@ bool sushiswapMints (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief PairDayDatas (current). *Synchronous*
+/*! \brief PairDayData (current). *Synchronous*
  *
- * Gets pairDayDatas.
+ * Gets pairDayData.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapPairDayDatas (current)Sync(char * accessToken,
+bool sushiswapPairDayData (current)Sync(char * accessToken,
 	
 	void(* handler)(std::list<Sushiswap.PairDayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief PairDayDatas (current). *Asynchronous*
+/*! \brief PairDayData (current). *Asynchronous*
  *
- * Gets pairDayDatas.
+ * Gets pairDayData.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapPairDayDatas (current)Async(char * accessToken,
+bool sushiswapPairDayData (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<Sushiswap.PairDayDataDTO>, Error, void* )
 	, void* userData);
 
 
-/*! \brief PairHourDatas (current). *Synchronous*
+/*! \brief PairHourData (current). *Synchronous*
  *
- * Gets pairHourDatas.
+ * Gets pairHourData.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapPairHourDatas (current)Sync(char * accessToken,
+bool sushiswapPairHourData (current)Sync(char * accessToken,
 	
 	void(* handler)(std::list<Sushiswap.PairHourDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief PairHourDatas (current). *Asynchronous*
+/*! \brief PairHourData (current). *Asynchronous*
  *
- * Gets pairHourDatas.
+ * Gets pairHourData.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapPairHourDatas (current)Async(char * accessToken,
+bool sushiswapPairHourData (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<Sushiswap.PairHourDataDTO>, Error, void* )
 	, void* userData);
@@ -935,26 +935,26 @@ bool sushiswapSwaps (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief TokenDayDatas (current). *Synchronous*
+/*! \brief TokenDayData (current). *Synchronous*
  *
- * Gets tokenDayDatas.
+ * Gets tokenDayData.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapTokenDayDatas (current)Sync(char * accessToken,
+bool sushiswapTokenDayData (current)Sync(char * accessToken,
 	
 	void(* handler)(std::list<Sushiswap.TokenDayDataDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief TokenDayDatas (current). *Asynchronous*
+/*! \brief TokenDayData (current). *Asynchronous*
  *
- * Gets tokenDayDatas.
+ * Gets tokenDayData.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool sushiswapTokenDayDatas (current)Async(char * accessToken,
+bool sushiswapTokenDayData (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<Sushiswap.TokenDayDataDTO>, Error, void* )
 	, void* userData);

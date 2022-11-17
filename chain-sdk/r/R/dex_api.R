@@ -14,8 +14,8 @@
 #'
 #' @section Methods:
 #' \describe{
-#' \strong{ DexBatchsCurrent } \emph{ Batchs (current) }
-#' Gets batchs.
+#' \strong{ DexBatchesCurrent } \emph{ Batches (current) }
+#' Gets batches.
 #'
 #' \itemize{
 #' \item \emph{ @returnType } list( \link{Dex.BatchDTO} ) \cr
@@ -46,8 +46,8 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetBatchsHistorical } \emph{ Batchs (historical) }
-#' Gets batchs.
+#' \strong{ DexGetBatchesHistorical } \emph{ Batches (historical) }
+#' Gets batches.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -154,8 +154,8 @@
 #' }
 #' }
 #'
-#' \strong{ DexGetStatssHistorical } \emph{ Statss (historical) }
-#' Gets statss.
+#' \strong{ DexGetStatsHistorical } \emph{ Stats (historical) }
+#' Gets stats.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -335,8 +335,8 @@
 #' }
 #' }
 #'
-#' \strong{ DexStatssCurrent } \emph{ Statss (current) }
-#' Gets statss.
+#' \strong{ DexStatsCurrent } \emph{ Stats (current) }
+#' Gets stats.
 #'
 #' \itemize{
 #' \item \emph{ @returnType } list( \link{Dex.StatsDTO} ) \cr
@@ -436,16 +436,16 @@
 #'
 #' @examples
 #' \dontrun{
-#' ####################  DexBatchsCurrent  ####################
+#' ####################  DexBatchesCurrent  ####################
 #'
 #' library(openapi)
 #'
-#' #Batchs (current)
+#' #Batches (current)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DexBatchsCurrent(data_file = "result.txt")
-#' result <- api_instance$DexBatchsCurrent()
+#' # result <- api_instance$DexBatchesCurrent(data_file = "result.txt")
+#' result <- api_instance$DexBatchesCurrent()
 #' dput(result)
 #'
 #'
@@ -462,7 +462,7 @@
 #' dput(result)
 #'
 #'
-#' ####################  DexGetBatchsHistorical  ####################
+#' ####################  DexGetBatchesHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -471,12 +471,12 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character | Identifier. (Optional)
 #'
-#' #Batchs (historical)
+#' #Batches (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DexGetBatchsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
-#' result <- api_instance$DexGetBatchsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
+#' # result <- api_instance$DexGetBatchesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
+#' result <- api_instance$DexGetBatchesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
 #' dput(result)
 #'
 #'
@@ -555,7 +555,7 @@
 #' dput(result)
 #'
 #'
-#' ####################  DexGetStatssHistorical  ####################
+#' ####################  DexGetStatsHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -564,12 +564,12 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character |  (Optional)
 #'
-#' #Statss (historical)
+#' #Stats (historical)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DexGetStatssHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
-#' result <- api_instance$DexGetStatssHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
+#' # result <- api_instance$DexGetStatsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
+#' result <- api_instance$DexGetStatsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
 #' dput(result)
 #'
 #'
@@ -709,16 +709,16 @@
 #' dput(result)
 #'
 #'
-#' ####################  DexStatssCurrent  ####################
+#' ####################  DexStatsCurrent  ####################
 #'
 #' library(openapi)
 #'
-#' #Statss (current)
+#' #Stats (current)
 #' api_instance <- DexApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$DexStatssCurrent(data_file = "result.txt")
-#' result <- api_instance$DexStatssCurrent()
+#' # result <- api_instance$DexStatsCurrent(data_file = "result.txt")
+#' result <- api_instance$DexStatsCurrent()
 #' dput(result)
 #'
 #'
@@ -809,17 +809,17 @@ DexApi <- R6::R6Class(
         self$api_client <- ApiClient$new()
       }
     },
-    #' Batchs (current)
+    #' Batches (current)
     #'
     #' @description
-    #' Batchs (current)
+    #' Batches (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[DexBatchDTO]
     #' @export
-    DexBatchsCurrent = function(data_file = NULL, ...) {
-      local_var_response <- self$DexBatchsCurrentWithHttpInfo(data_file = data_file, ...)
+    DexBatchesCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$DexBatchesCurrentWithHttpInfo(data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -830,16 +830,16 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Batchs (current)
+    #' Batches (current)
     #'
     #' @description
-    #' Batchs (current)
+    #' Batches (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[DexBatchDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DexBatchsCurrentWithHttpInfo = function(data_file = NULL, ...) {
+    DexBatchesCurrentWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -849,7 +849,7 @@ DexApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/dex/batchs/current"
+      local_var_url_path <- "/dapps/dex/batches/current"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")
@@ -981,10 +981,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Batchs (historical)
+    #' Batches (historical)
     #'
     #' @description
-    #' Batchs (historical)
+    #' Batches (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -995,8 +995,8 @@ DexApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return array[DexBatchDTO]
     #' @export
-    DexGetBatchsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
-      local_var_response <- self$DexGetBatchsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, id, data_file = data_file, ...)
+    DexGetBatchesHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$DexGetBatchesHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1007,10 +1007,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Batchs (historical)
+    #' Batches (historical)
     #'
     #' @description
-    #' Batchs (historical)
+    #' Batches (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1021,7 +1021,7 @@ DexApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (array[DexBatchDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DexGetBatchsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
+    DexGetBatchesHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1046,7 +1046,7 @@ DexApi <- R6::R6Class(
 
       query_params[["id"]] <- `id`
 
-      local_var_url_path <- "/dapps/dex/batchs/historical"
+      local_var_url_path <- "/dapps/dex/batches/historical"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")
@@ -1551,10 +1551,10 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Statss (historical)
+    #' Stats (historical)
     #'
     #' @description
-    #' Statss (historical)
+    #' Stats (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1565,8 +1565,8 @@ DexApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return array[DexStatsDTO]
     #' @export
-    DexGetStatssHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
-      local_var_response <- self$DexGetStatssHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, id, data_file = data_file, ...)
+    DexGetStatsHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$DexGetStatsHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1577,10 +1577,10 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Statss (historical)
+    #' Stats (historical)
     #'
     #' @description
-    #' Statss (historical)
+    #' Stats (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1591,7 +1591,7 @@ DexApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (array[DexStatsDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DexGetStatssHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
+    DexGetStatsHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1616,7 +1616,7 @@ DexApi <- R6::R6Class(
 
       query_params[["id"]] <- `id`
 
-      local_var_url_path <- "/dapps/dex/statss/historical"
+      local_var_url_path <- "/dapps/dex/stats/historical"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")
@@ -2510,17 +2510,17 @@ DexApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' Statss (current)
+    #' Stats (current)
     #'
     #' @description
-    #' Statss (current)
+    #' Stats (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[DexStatsDTO]
     #' @export
-    DexStatssCurrent = function(data_file = NULL, ...) {
-      local_var_response <- self$DexStatssCurrentWithHttpInfo(data_file = data_file, ...)
+    DexStatsCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$DexStatsCurrentWithHttpInfo(data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2531,16 +2531,16 @@ DexApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' Statss (current)
+    #' Stats (current)
     #'
     #' @description
-    #' Statss (current)
+    #' Stats (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[DexStatsDTO]) with additional information such as HTTP status code, headers
     #' @export
-    DexStatssCurrentWithHttpInfo = function(data_file = NULL, ...) {
+    DexStatsCurrentWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2550,7 +2550,7 @@ DexApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/dex/statss/current"
+      local_var_url_path <- "/dapps/dex/stats/current"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")

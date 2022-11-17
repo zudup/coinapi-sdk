@@ -26,17 +26,17 @@ public class OASDexApi {
     }
 
     /**
-     * Batchs (current)
-     * Gets batchs.
+     * Batches (current)
+     * Gets batches.
      * @return List<OASDexBatchDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASDexBatchDTO> dexBatchsCurrent() {
+    public List<OASDexBatchDTO> dexBatchesCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASDexBatchDTO>) client.invoke(
-            'GET', '/dapps/dex/batchs/current', '',
+            'GET', '/dapps/dex/batches/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -68,8 +68,8 @@ public class OASDexApi {
         );
     }
     /**
-     * Batchs (historical)
-     * Gets batchs.
+     * Batches (historical)
+     * Gets batches.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -78,7 +78,7 @@ public class OASDexApi {
      * @return List<OASDexBatchDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASDexBatchDTO> dexGetBatchsHistorical(Map<String, Object> params) {
+    public List<OASDexBatchDTO> dexGetBatchesHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -91,7 +91,7 @@ public class OASDexApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASDexBatchDTO>) client.invoke(
-            'GET', '/dapps/dex/batchs/historical', '',
+            'GET', '/dapps/dex/batches/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -244,8 +244,8 @@ public class OASDexApi {
         );
     }
     /**
-     * Statss (historical)
-     * Gets statss.
+     * Stats (historical)
+     * Gets stats.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -254,7 +254,7 @@ public class OASDexApi {
      * @return List<OASDexStatsDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASDexStatsDTO> dexGetStatssHistorical(Map<String, Object> params) {
+    public List<OASDexStatsDTO> dexGetStatsHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -267,7 +267,7 @@ public class OASDexApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASDexStatsDTO>) client.invoke(
-            'GET', '/dapps/dex/statss/historical', '',
+            'GET', '/dapps/dex/stats/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -525,17 +525,17 @@ public class OASDexApi {
         );
     }
     /**
-     * Statss (current)
-     * Gets statss.
+     * Stats (current)
+     * Gets stats.
      * @return List<OASDexStatsDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASDexStatsDTO> dexStatssCurrent() {
+    public List<OASDexStatsDTO> dexStatsCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASDexStatsDTO>) client.invoke(
-            'GET', '/dapps/dex/statss/current', '',
+            'GET', '/dapps/dex/stats/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),

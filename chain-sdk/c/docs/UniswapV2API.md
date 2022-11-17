@@ -11,28 +11,28 @@ Method | HTTP request | Description
 [**UniswapV2API_uniswapV2GetLiquidityPositionSnapshotsHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**UniswapV2API_uniswapV2GetLiquidityPositionsHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetLiquidityPositionsHistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical)
 [**UniswapV2API_uniswapV2GetMintsHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetMintsHistorical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical)
-[**UniswapV2API_uniswapV2GetPairDayDatasHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetPairDayDatasHistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical)
-[**UniswapV2API_uniswapV2GetPairHourDatasHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetPairHourDatasHistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical)
+[**UniswapV2API_uniswapV2GetPairDayDataHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetPairDayDataHistorical) | **GET** /dapps/uniswapv2/pairDayData/historical | PairDayData (historical)
+[**UniswapV2API_uniswapV2GetPairHourDataHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetPairHourDataHistorical) | **GET** /dapps/uniswapv2/pairHourData/historical | PairHourData (historical)
 [**UniswapV2API_uniswapV2GetPairsHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetPairsHistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical)
 [**UniswapV2API_uniswapV2GetSwapsHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical)
-[**UniswapV2API_uniswapV2GetTokenDayDatasHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetTokenDayDatasHistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical)
+[**UniswapV2API_uniswapV2GetTokenDayDataHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetTokenDayDataHistorical) | **GET** /dapps/uniswapv2/tokenDayData/historical | TokenDayData (historical)
 [**UniswapV2API_uniswapV2GetTokensHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical)
 [**UniswapV2API_uniswapV2GetTransactionsHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical)
-[**UniswapV2API_uniswapV2GetUniswapDayDatasHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical)
-[**UniswapV2API_uniswapV2GetUniswapFactorysHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetUniswapFactorysHistorical) | **GET** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical)
+[**UniswapV2API_uniswapV2GetUniswapDayDataHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetUniswapDayDataHistorical) | **GET** /dapps/uniswapv2/uniswapDayData/historical | UniswapDayData (historical)
+[**UniswapV2API_uniswapV2GetUniswapFactoriesHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetUniswapFactoriesHistorical) | **GET** /dapps/uniswapv2/uniswapFactories/historical | UniswapFactories (historical)
 [**UniswapV2API_uniswapV2GetUsersHistorical**](UniswapV2API.md#UniswapV2API_uniswapV2GetUsersHistorical) | **GET** /dapps/uniswapv2/users/historical | Users (historical)
 [**UniswapV2API_uniswapV2LiquidityPositionSnapshotsCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2LiquidityPositionSnapshotsCurrent) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**UniswapV2API_uniswapV2LiquidityPositionsCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2LiquidityPositionsCurrent) | **GET** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
 [**UniswapV2API_uniswapV2MintsCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2MintsCurrent) | **GET** /dapps/uniswapv2/mints/current | Mints (current)
-[**UniswapV2API_uniswapV2PairDayDatasCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2PairDayDatasCurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
-[**UniswapV2API_uniswapV2PairHourDatasCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2PairHourDatasCurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
+[**UniswapV2API_uniswapV2PairDayDataCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2PairDayDataCurrent) | **GET** /dapps/uniswapv2/pairDayData/current | PairDayData (current)
+[**UniswapV2API_uniswapV2PairHourDataCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2PairHourDataCurrent) | **GET** /dapps/uniswapv2/pairHourData/current | PairHourData (current)
 [**UniswapV2API_uniswapV2PairsCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2PairsCurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
 [**UniswapV2API_uniswapV2SwapsCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2SwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current)
-[**UniswapV2API_uniswapV2TokenDayDatasCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2TokenDayDatasCurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**UniswapV2API_uniswapV2TokenDayDataCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2TokenDayDataCurrent) | **GET** /dapps/uniswapv2/tokenDayData/current | TokenDayData (current)
 [**UniswapV2API_uniswapV2TokensCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2TokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**UniswapV2API_uniswapV2TransactionsCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2TransactionsCurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
-[**UniswapV2API_uniswapV2UniswapDayDatasCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2UniswapDayDatasCurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
-[**UniswapV2API_uniswapV2UniswapFactorysCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2UniswapFactorysCurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
+[**UniswapV2API_uniswapV2UniswapDayDataCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2UniswapDayDataCurrent) | **GET** /dapps/uniswapv2/uniswapDayData/current | UniswapDayData (current)
+[**UniswapV2API_uniswapV2UniswapFactoriesCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2UniswapFactoriesCurrent) | **GET** /dapps/uniswapv2/uniswapFactories/current | UniswapFactories (current)
 [**UniswapV2API_uniswapV2UsersCurrent**](UniswapV2API.md#UniswapV2API_uniswapV2UsersCurrent) | **GET** /dapps/uniswapv2/users/current | Users (current)
 
 
@@ -277,13 +277,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **UniswapV2API_uniswapV2GetPairDayDatasHistorical**
+# **UniswapV2API_uniswapV2GetPairDayDataHistorical**
 ```c
-// PairDayDatas (historical)
+// PairDayData (historical)
 //
-// Gets pairDayDatas.
+// Gets pairDayData.
 //
-list_t* UniswapV2API_uniswapV2GetPairDayDatasHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * id, char * token_0, char * token_1);
+list_t* UniswapV2API_uniswapV2GetPairDayDataHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * id, char * token_0, char * token_1);
 ```
 
 ### Parameters
@@ -314,13 +314,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **UniswapV2API_uniswapV2GetPairHourDatasHistorical**
+# **UniswapV2API_uniswapV2GetPairHourDataHistorical**
 ```c
-// PairHourDatas (historical)
+// PairHourData (historical)
 //
-// Gets pairHourDatas.
+// Gets pairHourData.
 //
-list_t* UniswapV2API_uniswapV2GetPairHourDatasHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * id, char * pair);
+list_t* UniswapV2API_uniswapV2GetPairHourDataHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * id, char * pair);
 ```
 
 ### Parameters
@@ -423,13 +423,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **UniswapV2API_uniswapV2GetTokenDayDatasHistorical**
+# **UniswapV2API_uniswapV2GetTokenDayDataHistorical**
 ```c
-// TokenDayDatas (historical)
+// TokenDayData (historical)
 //
-// Gets tokenDayDatas.
+// Gets tokenDayData.
 //
-list_t* UniswapV2API_uniswapV2GetTokenDayDatasHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * id);
+list_t* UniswapV2API_uniswapV2GetTokenDayDataHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * id);
 ```
 
 ### Parameters
@@ -530,13 +530,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **UniswapV2API_uniswapV2GetUniswapDayDatasHistorical**
+# **UniswapV2API_uniswapV2GetUniswapDayDataHistorical**
 ```c
-// UniswapDayDatas (historical)
+// UniswapDayData (historical)
 //
-// Gets uniswapDayDatas.
+// Gets uniswapDayData.
 //
-list_t* UniswapV2API_uniswapV2GetUniswapDayDatasHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * id);
+list_t* UniswapV2API_uniswapV2GetUniswapDayDataHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * id);
 ```
 
 ### Parameters
@@ -565,13 +565,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **UniswapV2API_uniswapV2GetUniswapFactorysHistorical**
+# **UniswapV2API_uniswapV2GetUniswapFactoriesHistorical**
 ```c
-// UniswapFactorys (historical)
+// UniswapFactories (historical)
 //
-// Gets uniswapFactorys.
+// Gets uniswapFactories.
 //
-list_t* UniswapV2API_uniswapV2GetUniswapFactorysHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * id);
+list_t* UniswapV2API_uniswapV2GetUniswapFactoriesHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * id);
 ```
 
 ### Parameters
@@ -725,13 +725,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **UniswapV2API_uniswapV2PairDayDatasCurrent**
+# **UniswapV2API_uniswapV2PairDayDataCurrent**
 ```c
-// PairDayDatas (current)
+// PairDayData (current)
 //
-// Gets pairDayDatas.
+// Gets pairDayData.
 //
-list_t* UniswapV2API_uniswapV2PairDayDatasCurrent(apiClient_t *apiClient);
+list_t* UniswapV2API_uniswapV2PairDayDataCurrent(apiClient_t *apiClient);
 ```
 
 ### Parameters
@@ -755,13 +755,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **UniswapV2API_uniswapV2PairHourDatasCurrent**
+# **UniswapV2API_uniswapV2PairHourDataCurrent**
 ```c
-// PairHourDatas (current)
+// PairHourData (current)
 //
-// Gets pairHourDatas.
+// Gets pairHourData.
 //
-list_t* UniswapV2API_uniswapV2PairHourDatasCurrent(apiClient_t *apiClient);
+list_t* UniswapV2API_uniswapV2PairHourDataCurrent(apiClient_t *apiClient);
 ```
 
 ### Parameters
@@ -847,13 +847,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **UniswapV2API_uniswapV2TokenDayDatasCurrent**
+# **UniswapV2API_uniswapV2TokenDayDataCurrent**
 ```c
-// TokenDayDatas (current)
+// TokenDayData (current)
 //
-// Gets tokenDayDatas.
+// Gets tokenDayData.
 //
-list_t* UniswapV2API_uniswapV2TokenDayDatasCurrent(apiClient_t *apiClient);
+list_t* UniswapV2API_uniswapV2TokenDayDataCurrent(apiClient_t *apiClient);
 ```
 
 ### Parameters
@@ -937,13 +937,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **UniswapV2API_uniswapV2UniswapDayDatasCurrent**
+# **UniswapV2API_uniswapV2UniswapDayDataCurrent**
 ```c
-// UniswapDayDatas (current)
+// UniswapDayData (current)
 //
-// Gets uniswapDayDatas.
+// Gets uniswapDayData.
 //
-list_t* UniswapV2API_uniswapV2UniswapDayDatasCurrent(apiClient_t *apiClient);
+list_t* UniswapV2API_uniswapV2UniswapDayDataCurrent(apiClient_t *apiClient);
 ```
 
 ### Parameters
@@ -967,13 +967,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **UniswapV2API_uniswapV2UniswapFactorysCurrent**
+# **UniswapV2API_uniswapV2UniswapFactoriesCurrent**
 ```c
-// UniswapFactorys (current)
+// UniswapFactories (current)
 //
-// Gets uniswapFactorys.
+// Gets uniswapFactories.
 //
-list_t* UniswapV2API_uniswapV2UniswapFactorysCurrent(apiClient_t *apiClient);
+list_t* UniswapV2API_uniswapV2UniswapFactoriesCurrent(apiClient_t *apiClient);
 ```
 
 ### Parameters

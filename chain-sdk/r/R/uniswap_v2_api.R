@@ -157,8 +157,8 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetPairDayDatasHistorical } \emph{ PairDayDatas (historical) }
-#' Gets pairDayDatas.
+#' \strong{ UniswapV2GetPairDayDataHistorical } \emph{ PairDayData (historical) }
+#' Gets pairDayData.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -180,8 +180,8 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetPairHourDatasHistorical } \emph{ PairHourDatas (historical) }
-#' Gets pairHourDatas.
+#' \strong{ UniswapV2GetPairHourDataHistorical } \emph{ PairHourData (historical) }
+#' Gets pairHourData.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -247,8 +247,8 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetTokenDayDatasHistorical } \emph{ TokenDayDatas (historical) }
-#' Gets tokenDayDatas.
+#' \strong{ UniswapV2GetTokenDayDataHistorical } \emph{ TokenDayData (historical) }
+#' Gets tokenDayData.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -312,8 +312,8 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetUniswapDayDatasHistorical } \emph{ UniswapDayDatas (historical) }
-#' Gets uniswapDayDatas.
+#' \strong{ UniswapV2GetUniswapDayDataHistorical } \emph{ UniswapDayData (historical) }
+#' Gets uniswapDayData.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -333,8 +333,8 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2GetUniswapFactorysHistorical } \emph{ UniswapFactorys (historical) }
-#' Gets uniswapFactorys.
+#' \strong{ UniswapV2GetUniswapFactoriesHistorical } \emph{ UniswapFactories (historical) }
+#' Gets uniswapFactories.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -423,8 +423,8 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2PairDayDatasCurrent } \emph{ PairDayDatas (current) }
-#' Gets pairDayDatas.
+#' \strong{ UniswapV2PairDayDataCurrent } \emph{ PairDayData (current) }
+#' Gets pairDayData.
 #'
 #' \itemize{
 #' \item \emph{ @returnType } list( \link{UniswapV2.PairDayDataDTO} ) \cr
@@ -439,8 +439,8 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2PairHourDatasCurrent } \emph{ PairHourDatas (current) }
-#' Gets pairHourDatas.
+#' \strong{ UniswapV2PairHourDataCurrent } \emph{ PairHourData (current) }
+#' Gets pairHourData.
 #'
 #' \itemize{
 #' \item \emph{ @returnType } list( \link{UniswapV2.PairHourDataDTO} ) \cr
@@ -489,8 +489,8 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2TokenDayDatasCurrent } \emph{ TokenDayDatas (current) }
-#' Gets tokenDayDatas.
+#' \strong{ UniswapV2TokenDayDataCurrent } \emph{ TokenDayData (current) }
+#' Gets tokenDayData.
 #'
 #' \itemize{
 #' \item \emph{ @returnType } list( \link{UniswapV2.TokenDayDataDTO} ) \cr
@@ -537,8 +537,8 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2UniswapDayDatasCurrent } \emph{ UniswapDayDatas (current) }
-#' Gets uniswapDayDatas.
+#' \strong{ UniswapV2UniswapDayDataCurrent } \emph{ UniswapDayData (current) }
+#' Gets uniswapDayData.
 #'
 #' \itemize{
 #' \item \emph{ @returnType } list( \link{UniswapV2.UniswapDayDataDTO} ) \cr
@@ -553,8 +553,8 @@
 #' }
 #' }
 #'
-#' \strong{ UniswapV2UniswapFactorysCurrent } \emph{ UniswapFactorys (current) }
-#' Gets uniswapFactorys.
+#' \strong{ UniswapV2UniswapFactoriesCurrent } \emph{ UniswapFactories (current) }
+#' Gets uniswapFactories.
 #'
 #' \itemize{
 #' \item \emph{ @returnType } list( \link{UniswapV2.UniswapFactoryDTO} ) \cr
@@ -712,7 +712,7 @@
 #' dput(result)
 #'
 #'
-#' ####################  UniswapV2GetPairDayDatasHistorical  ####################
+#' ####################  UniswapV2GetPairDayDataHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -723,16 +723,16 @@
 #' var_token_0 <- "token_0_example" # character | Reference to token0. (Optional)
 #' var_token_1 <- "token_1_example" # character | Reference to token1. (Optional)
 #'
-#' #PairDayDatas (historical)
+#' #PairDayData (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$UniswapV2GetPairDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, token_0 = var_token_0, token_1 = var_token_1data_file = "result.txt")
-#' result <- api_instance$UniswapV2GetPairDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, token_0 = var_token_0, token_1 = var_token_1)
+#' # result <- api_instance$UniswapV2GetPairDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, token_0 = var_token_0, token_1 = var_token_1data_file = "result.txt")
+#' result <- api_instance$UniswapV2GetPairDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, token_0 = var_token_0, token_1 = var_token_1)
 #' dput(result)
 #'
 #'
-#' ####################  UniswapV2GetPairHourDatasHistorical  ####################
+#' ####################  UniswapV2GetPairHourDataHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -742,12 +742,12 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_pair <- "pair_example" # character | Address for pair contract. (Optional)
 #'
-#' #PairHourDatas (historical)
+#' #PairHourData (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$UniswapV2GetPairHourDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pair = var_pairdata_file = "result.txt")
-#' result <- api_instance$UniswapV2GetPairHourDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pair = var_pair)
+#' # result <- api_instance$UniswapV2GetPairHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pair = var_pairdata_file = "result.txt")
+#' result <- api_instance$UniswapV2GetPairHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pair = var_pair)
 #' dput(result)
 #'
 #'
@@ -790,7 +790,7 @@
 #' dput(result)
 #'
 #'
-#' ####################  UniswapV2GetTokenDayDatasHistorical  ####################
+#' ####################  UniswapV2GetTokenDayDataHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -799,12 +799,12 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character | Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (Optional)
 #'
-#' #TokenDayDatas (historical)
+#' #TokenDayData (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$UniswapV2GetTokenDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
-#' result <- api_instance$UniswapV2GetTokenDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
+#' # result <- api_instance$UniswapV2GetTokenDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV2GetTokenDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
 #' dput(result)
 #'
 #'
@@ -846,7 +846,7 @@
 #' dput(result)
 #'
 #'
-#' ####################  UniswapV2GetUniswapDayDatasHistorical  ####################
+#' ####################  UniswapV2GetUniswapDayDataHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -855,16 +855,16 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character | Unix timestamp for start of day / 86400 giving a unique day index. (Optional)
 #'
-#' #UniswapDayDatas (historical)
+#' #UniswapDayData (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$UniswapV2GetUniswapDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
-#' result <- api_instance$UniswapV2GetUniswapDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
+#' # result <- api_instance$UniswapV2GetUniswapDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV2GetUniswapDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
 #' dput(result)
 #'
 #'
-#' ####################  UniswapV2GetUniswapFactorysHistorical  ####################
+#' ####################  UniswapV2GetUniswapFactoriesHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -873,12 +873,12 @@
 #' var_end_date <- "end_date_example" # character | The end date of timeframe. (Optional)
 #' var_id <- "id_example" # character | Factory address. (Optional)
 #'
-#' #UniswapFactorys (historical)
+#' #UniswapFactories (historical)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$UniswapV2GetUniswapFactorysHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
-#' result <- api_instance$UniswapV2GetUniswapFactorysHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
+#' # result <- api_instance$UniswapV2GetUniswapFactoriesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
+#' result <- api_instance$UniswapV2GetUniswapFactoriesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
 #' dput(result)
 #'
 #'
@@ -939,29 +939,29 @@
 #' dput(result)
 #'
 #'
-#' ####################  UniswapV2PairDayDatasCurrent  ####################
+#' ####################  UniswapV2PairDayDataCurrent  ####################
 #'
 #' library(openapi)
 #'
-#' #PairDayDatas (current)
+#' #PairDayData (current)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$UniswapV2PairDayDatasCurrent(data_file = "result.txt")
-#' result <- api_instance$UniswapV2PairDayDatasCurrent()
+#' # result <- api_instance$UniswapV2PairDayDataCurrent(data_file = "result.txt")
+#' result <- api_instance$UniswapV2PairDayDataCurrent()
 #' dput(result)
 #'
 #'
-#' ####################  UniswapV2PairHourDatasCurrent  ####################
+#' ####################  UniswapV2PairHourDataCurrent  ####################
 #'
 #' library(openapi)
 #'
-#' #PairHourDatas (current)
+#' #PairHourData (current)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$UniswapV2PairHourDatasCurrent(data_file = "result.txt")
-#' result <- api_instance$UniswapV2PairHourDatasCurrent()
+#' # result <- api_instance$UniswapV2PairHourDataCurrent(data_file = "result.txt")
+#' result <- api_instance$UniswapV2PairHourDataCurrent()
 #' dput(result)
 #'
 #'
@@ -993,16 +993,16 @@
 #' dput(result)
 #'
 #'
-#' ####################  UniswapV2TokenDayDatasCurrent  ####################
+#' ####################  UniswapV2TokenDayDataCurrent  ####################
 #'
 #' library(openapi)
 #'
-#' #TokenDayDatas (current)
+#' #TokenDayData (current)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$UniswapV2TokenDayDatasCurrent(data_file = "result.txt")
-#' result <- api_instance$UniswapV2TokenDayDatasCurrent()
+#' # result <- api_instance$UniswapV2TokenDayDataCurrent(data_file = "result.txt")
+#' result <- api_instance$UniswapV2TokenDayDataCurrent()
 #' dput(result)
 #'
 #'
@@ -1032,29 +1032,29 @@
 #' dput(result)
 #'
 #'
-#' ####################  UniswapV2UniswapDayDatasCurrent  ####################
+#' ####################  UniswapV2UniswapDayDataCurrent  ####################
 #'
 #' library(openapi)
 #'
-#' #UniswapDayDatas (current)
+#' #UniswapDayData (current)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$UniswapV2UniswapDayDatasCurrent(data_file = "result.txt")
-#' result <- api_instance$UniswapV2UniswapDayDatasCurrent()
+#' # result <- api_instance$UniswapV2UniswapDayDataCurrent(data_file = "result.txt")
+#' result <- api_instance$UniswapV2UniswapDayDataCurrent()
 #' dput(result)
 #'
 #'
-#' ####################  UniswapV2UniswapFactorysCurrent  ####################
+#' ####################  UniswapV2UniswapFactoriesCurrent  ####################
 #'
 #' library(openapi)
 #'
-#' #UniswapFactorys (current)
+#' #UniswapFactories (current)
 #' api_instance <- UniswapV2Api$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$UniswapV2UniswapFactorysCurrent(data_file = "result.txt")
-#' result <- api_instance$UniswapV2UniswapFactorysCurrent()
+#' # result <- api_instance$UniswapV2UniswapFactoriesCurrent(data_file = "result.txt")
+#' result <- api_instance$UniswapV2UniswapFactoriesCurrent()
 #' dput(result)
 #'
 #'
@@ -1850,10 +1850,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' PairDayDatas (historical)
+    #' PairDayData (historical)
     #'
     #' @description
-    #' PairDayDatas (historical)
+    #' PairDayData (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1866,8 +1866,8 @@ UniswapV2Api <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return array[UniswapV2PairDayDataDTO]
     #' @export
-    UniswapV2GetPairDayDatasHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, token_0 = NULL, token_1 = NULL, data_file = NULL, ...) {
-      local_var_response <- self$UniswapV2GetPairDayDatasHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, id, token_0, token_1, data_file = data_file, ...)
+    UniswapV2GetPairDayDataHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, token_0 = NULL, token_1 = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV2GetPairDayDataHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, id, token_0, token_1, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1878,10 +1878,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' PairDayDatas (historical)
+    #' PairDayData (historical)
     #'
     #' @description
-    #' PairDayDatas (historical)
+    #' PairDayData (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1894,7 +1894,7 @@ UniswapV2Api <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV2PairDayDataDTO]) with additional information such as HTTP status code, headers
     #' @export
-    UniswapV2GetPairDayDatasHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, token_0 = NULL, token_1 = NULL, data_file = NULL, ...) {
+    UniswapV2GetPairDayDataHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, token_0 = NULL, token_1 = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -1925,7 +1925,7 @@ UniswapV2Api <- R6::R6Class(
 
       query_params[["token_1"]] <- `token_1`
 
-      local_var_url_path <- "/dapps/uniswapv2/pairDayDatas/historical"
+      local_var_url_path <- "/dapps/uniswapv2/pairDayData/historical"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")
@@ -1971,10 +1971,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' PairHourDatas (historical)
+    #' PairHourData (historical)
     #'
     #' @description
-    #' PairHourDatas (historical)
+    #' PairHourData (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1986,8 +1986,8 @@ UniswapV2Api <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return array[UniswapV2PairHourDataDTO]
     #' @export
-    UniswapV2GetPairHourDatasHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, pair = NULL, data_file = NULL, ...) {
-      local_var_response <- self$UniswapV2GetPairHourDatasHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, id, pair, data_file = data_file, ...)
+    UniswapV2GetPairHourDataHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, pair = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV2GetPairHourDataHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, id, pair, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -1998,10 +1998,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' PairHourDatas (historical)
+    #' PairHourData (historical)
     #'
     #' @description
-    #' PairHourDatas (historical)
+    #' PairHourData (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2013,7 +2013,7 @@ UniswapV2Api <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV2PairHourDataDTO]) with additional information such as HTTP status code, headers
     #' @export
-    UniswapV2GetPairHourDatasHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, pair = NULL, data_file = NULL, ...) {
+    UniswapV2GetPairHourDataHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, pair = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2041,7 +2041,7 @@ UniswapV2Api <- R6::R6Class(
 
       query_params[["pair"]] <- `pair`
 
-      local_var_url_path <- "/dapps/uniswapv2/pairHourDatas/historical"
+      local_var_url_path <- "/dapps/uniswapv2/pairHourData/historical"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")
@@ -2324,10 +2324,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' TokenDayDatas (historical)
+    #' TokenDayData (historical)
     #'
     #' @description
-    #' TokenDayDatas (historical)
+    #' TokenDayData (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2338,8 +2338,8 @@ UniswapV2Api <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return array[UniswapV2TokenDayDataDTO]
     #' @export
-    UniswapV2GetTokenDayDatasHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
-      local_var_response <- self$UniswapV2GetTokenDayDatasHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, id, data_file = data_file, ...)
+    UniswapV2GetTokenDayDataHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV2GetTokenDayDataHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2350,10 +2350,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' TokenDayDatas (historical)
+    #' TokenDayData (historical)
     #'
     #' @description
-    #' TokenDayDatas (historical)
+    #' TokenDayData (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2364,7 +2364,7 @@ UniswapV2Api <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV2TokenDayDataDTO]) with additional information such as HTTP status code, headers
     #' @export
-    UniswapV2GetTokenDayDatasHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
+    UniswapV2GetTokenDayDataHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2389,7 +2389,7 @@ UniswapV2Api <- R6::R6Class(
 
       query_params[["id"]] <- `id`
 
-      local_var_url_path <- "/dapps/uniswapv2/tokenDayDatas/historical"
+      local_var_url_path <- "/dapps/uniswapv2/tokenDayData/historical"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")
@@ -2667,10 +2667,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' UniswapDayDatas (historical)
+    #' UniswapDayData (historical)
     #'
     #' @description
-    #' UniswapDayDatas (historical)
+    #' UniswapDayData (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2681,8 +2681,8 @@ UniswapV2Api <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return array[UniswapV2UniswapDayDataDTO]
     #' @export
-    UniswapV2GetUniswapDayDatasHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
-      local_var_response <- self$UniswapV2GetUniswapDayDatasHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, id, data_file = data_file, ...)
+    UniswapV2GetUniswapDayDataHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV2GetUniswapDayDataHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2693,10 +2693,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' UniswapDayDatas (historical)
+    #' UniswapDayData (historical)
     #'
     #' @description
-    #' UniswapDayDatas (historical)
+    #' UniswapDayData (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2707,7 +2707,7 @@ UniswapV2Api <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV2UniswapDayDataDTO]) with additional information such as HTTP status code, headers
     #' @export
-    UniswapV2GetUniswapDayDatasHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
+    UniswapV2GetUniswapDayDataHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2732,7 +2732,7 @@ UniswapV2Api <- R6::R6Class(
 
       query_params[["id"]] <- `id`
 
-      local_var_url_path <- "/dapps/uniswapv2/uniswapDayDatas/historical"
+      local_var_url_path <- "/dapps/uniswapv2/uniswapDayData/historical"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")
@@ -2778,10 +2778,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' UniswapFactorys (historical)
+    #' UniswapFactories (historical)
     #'
     #' @description
-    #' UniswapFactorys (historical)
+    #' UniswapFactories (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2792,8 +2792,8 @@ UniswapV2Api <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return array[UniswapV2UniswapFactoryDTO]
     #' @export
-    UniswapV2GetUniswapFactorysHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
-      local_var_response <- self$UniswapV2GetUniswapFactorysHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, id, data_file = data_file, ...)
+    UniswapV2GetUniswapFactoriesHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
+      local_var_response <- self$UniswapV2GetUniswapFactoriesHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, id, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -2804,10 +2804,10 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' UniswapFactorys (historical)
+    #' UniswapFactories (historical)
     #'
     #' @description
-    #' UniswapFactorys (historical)
+    #' UniswapFactories (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -2818,7 +2818,7 @@ UniswapV2Api <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV2UniswapFactoryDTO]) with additional information such as HTTP status code, headers
     #' @export
-    UniswapV2GetUniswapFactorysHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
+    UniswapV2GetUniswapFactoriesHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -2843,7 +2843,7 @@ UniswapV2Api <- R6::R6Class(
 
       query_params[["id"]] <- `id`
 
-      local_var_url_path <- "/dapps/uniswapv2/uniswapFactorys/historical"
+      local_var_url_path <- "/dapps/uniswapv2/uniswapFactories/historical"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")
@@ -3258,17 +3258,17 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' PairDayDatas (current)
+    #' PairDayData (current)
     #'
     #' @description
-    #' PairDayDatas (current)
+    #' PairDayData (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV2PairDayDataDTO]
     #' @export
-    UniswapV2PairDayDatasCurrent = function(data_file = NULL, ...) {
-      local_var_response <- self$UniswapV2PairDayDatasCurrentWithHttpInfo(data_file = data_file, ...)
+    UniswapV2PairDayDataCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UniswapV2PairDayDataCurrentWithHttpInfo(data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3279,16 +3279,16 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' PairDayDatas (current)
+    #' PairDayData (current)
     #'
     #' @description
-    #' PairDayDatas (current)
+    #' PairDayData (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV2PairDayDataDTO]) with additional information such as HTTP status code, headers
     #' @export
-    UniswapV2PairDayDatasCurrentWithHttpInfo = function(data_file = NULL, ...) {
+    UniswapV2PairDayDataCurrentWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3298,7 +3298,7 @@ UniswapV2Api <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswapv2/pairDayDatas/current"
+      local_var_url_path <- "/dapps/uniswapv2/pairDayData/current"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")
@@ -3344,17 +3344,17 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' PairHourDatas (current)
+    #' PairHourData (current)
     #'
     #' @description
-    #' PairHourDatas (current)
+    #' PairHourData (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV2PairHourDataDTO]
     #' @export
-    UniswapV2PairHourDatasCurrent = function(data_file = NULL, ...) {
-      local_var_response <- self$UniswapV2PairHourDatasCurrentWithHttpInfo(data_file = data_file, ...)
+    UniswapV2PairHourDataCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UniswapV2PairHourDataCurrentWithHttpInfo(data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3365,16 +3365,16 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' PairHourDatas (current)
+    #' PairHourData (current)
     #'
     #' @description
-    #' PairHourDatas (current)
+    #' PairHourData (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV2PairHourDataDTO]) with additional information such as HTTP status code, headers
     #' @export
-    UniswapV2PairHourDatasCurrentWithHttpInfo = function(data_file = NULL, ...) {
+    UniswapV2PairHourDataCurrentWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3384,7 +3384,7 @@ UniswapV2Api <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswapv2/pairHourDatas/current"
+      local_var_url_path <- "/dapps/uniswapv2/pairHourData/current"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")
@@ -3612,17 +3612,17 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' TokenDayDatas (current)
+    #' TokenDayData (current)
     #'
     #' @description
-    #' TokenDayDatas (current)
+    #' TokenDayData (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV2TokenDayDataDTO]
     #' @export
-    UniswapV2TokenDayDatasCurrent = function(data_file = NULL, ...) {
-      local_var_response <- self$UniswapV2TokenDayDatasCurrentWithHttpInfo(data_file = data_file, ...)
+    UniswapV2TokenDayDataCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UniswapV2TokenDayDataCurrentWithHttpInfo(data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3633,16 +3633,16 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' TokenDayDatas (current)
+    #' TokenDayData (current)
     #'
     #' @description
-    #' TokenDayDatas (current)
+    #' TokenDayData (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV2TokenDayDataDTO]) with additional information such as HTTP status code, headers
     #' @export
-    UniswapV2TokenDayDatasCurrentWithHttpInfo = function(data_file = NULL, ...) {
+    UniswapV2TokenDayDataCurrentWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3652,7 +3652,7 @@ UniswapV2Api <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswapv2/tokenDayDatas/current"
+      local_var_url_path <- "/dapps/uniswapv2/tokenDayData/current"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")
@@ -3870,17 +3870,17 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' UniswapDayDatas (current)
+    #' UniswapDayData (current)
     #'
     #' @description
-    #' UniswapDayDatas (current)
+    #' UniswapDayData (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV2UniswapDayDataDTO]
     #' @export
-    UniswapV2UniswapDayDatasCurrent = function(data_file = NULL, ...) {
-      local_var_response <- self$UniswapV2UniswapDayDatasCurrentWithHttpInfo(data_file = data_file, ...)
+    UniswapV2UniswapDayDataCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UniswapV2UniswapDayDataCurrentWithHttpInfo(data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3891,16 +3891,16 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' UniswapDayDatas (current)
+    #' UniswapDayData (current)
     #'
     #' @description
-    #' UniswapDayDatas (current)
+    #' UniswapDayData (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV2UniswapDayDataDTO]) with additional information such as HTTP status code, headers
     #' @export
-    UniswapV2UniswapDayDatasCurrentWithHttpInfo = function(data_file = NULL, ...) {
+    UniswapV2UniswapDayDataCurrentWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3910,7 +3910,7 @@ UniswapV2Api <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswapv2/uniswapDayDatas/current"
+      local_var_url_path <- "/dapps/uniswapv2/uniswapDayData/current"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")
@@ -3956,17 +3956,17 @@ UniswapV2Api <- R6::R6Class(
         local_var_resp
       }
     },
-    #' UniswapFactorys (current)
+    #' UniswapFactories (current)
     #'
     #' @description
-    #' UniswapFactorys (current)
+    #' UniswapFactories (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[UniswapV2UniswapFactoryDTO]
     #' @export
-    UniswapV2UniswapFactorysCurrent = function(data_file = NULL, ...) {
-      local_var_response <- self$UniswapV2UniswapFactorysCurrentWithHttpInfo(data_file = data_file, ...)
+    UniswapV2UniswapFactoriesCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$UniswapV2UniswapFactoriesCurrentWithHttpInfo(data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3977,16 +3977,16 @@ UniswapV2Api <- R6::R6Class(
         local_var_response
       }
     },
-    #' UniswapFactorys (current)
+    #' UniswapFactories (current)
     #'
     #' @description
-    #' UniswapFactorys (current)
+    #' UniswapFactories (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[UniswapV2UniswapFactoryDTO]) with additional information such as HTTP status code, headers
     #' @export
-    UniswapV2UniswapFactorysCurrentWithHttpInfo = function(data_file = NULL, ...) {
+    UniswapV2UniswapFactoriesCurrentWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3996,7 +3996,7 @@ UniswapV2Api <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/uniswapv2/uniswapFactorys/current"
+      local_var_url_path <- "/dapps/uniswapv2/uniswapFactories/current"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")

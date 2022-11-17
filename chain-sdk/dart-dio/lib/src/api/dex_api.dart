@@ -29,8 +29,8 @@ class DexApi {
 
   const DexApi(this._dio, this._serializers);
 
-  /// Batchs (current)
-  /// Gets batchs.
+  /// Batches (current)
+  /// Gets batches.
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -42,7 +42,7 @@ class DexApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<DexBatchDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<DexBatchDTO>>> dexBatchsCurrent({ 
+  Future<Response<BuiltList<DexBatchDTO>>> dexBatchesCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -50,7 +50,7 @@ class DexApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/dex/batchs/current';
+    final _path = r'/dapps/dex/batches/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -173,8 +173,8 @@ class DexApi {
     );
   }
 
-  /// Batchs (historical)
-  /// Gets batchs.
+  /// Batches (historical)
+  /// Gets batches.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -191,7 +191,7 @@ class DexApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<DexBatchDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<DexBatchDTO>>> dexGetBatchsHistorical({ 
+  Future<Response<BuiltList<DexBatchDTO>>> dexGetBatchesHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -204,7 +204,7 @@ class DexApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/dex/batchs/historical';
+    final _path = r'/dapps/dex/batches/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -637,8 +637,8 @@ class DexApi {
     );
   }
 
-  /// Statss (historical)
-  /// Gets statss.
+  /// Stats (historical)
+  /// Gets stats.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -655,7 +655,7 @@ class DexApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<DexStatsDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<DexStatsDTO>>> dexGetStatssHistorical({ 
+  Future<Response<BuiltList<DexStatsDTO>>> dexGetStatsHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -668,7 +668,7 @@ class DexApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/dex/statss/historical';
+    final _path = r'/dapps/dex/stats/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1420,8 +1420,8 @@ class DexApi {
     );
   }
 
-  /// Statss (current)
-  /// Gets statss.
+  /// Stats (current)
+  /// Gets stats.
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -1433,7 +1433,7 @@ class DexApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<DexStatsDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<DexStatsDTO>>> dexStatssCurrent({ 
+  Future<Response<BuiltList<DexStatsDTO>>> dexStatsCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1441,7 +1441,7 @@ class DexApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/dex/statss/current';
+    final _path = r'/dapps/dex/stats/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{

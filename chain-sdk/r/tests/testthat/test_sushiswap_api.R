@@ -27,22 +27,22 @@ test_that("SushiswapBurnsCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("SushiswapDayDatasCurrent", {
-  # tests for SushiswapDayDatasCurrent
+test_that("SushiswapDayDataCurrent", {
+  # tests for SushiswapDayDataCurrent
   # base path: https://onchain.coinapi.io
-  # DayDatas (current)
-  # Gets dayDatas.
+  # DayData (current)
+  # Gets dayData.
   # @return [array[SushiswapDayDataDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("SushiswapFactorysCurrent", {
-  # tests for SushiswapFactorysCurrent
+test_that("SushiswapFactoriesCurrent", {
+  # tests for SushiswapFactoriesCurrent
   # base path: https://onchain.coinapi.io
-  # Factorys (current)
-  # Gets factorys.
+  # Factories (current)
+  # Gets factories.
   # @return [array[SushiswapFactoryDTO]]
 
   # uncomment below to test the operation
@@ -82,11 +82,11 @@ test_that("SushiswapGetBurnsHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("SushiswapGetDayDatasHistorical", {
-  # tests for SushiswapGetDayDatasHistorical
+test_that("SushiswapGetDayDataHistorical", {
+  # tests for SushiswapGetDayDataHistorical
   # base path: https://onchain.coinapi.io
-  # DayDatas (historical)
-  # Gets dayDatas.
+  # DayData (historical)
+  # Gets dayData.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
   # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -98,11 +98,11 @@ test_that("SushiswapGetDayDatasHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("SushiswapGetFactorysHistorical", {
-  # tests for SushiswapGetFactorysHistorical
+test_that("SushiswapGetFactoriesHistorical", {
+  # tests for SushiswapGetFactoriesHistorical
   # base path: https://onchain.coinapi.io
-  # Factorys (historical)
-  # Gets factorys.
+  # Factories (historical)
+  # Gets factories.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
   # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -114,11 +114,11 @@ test_that("SushiswapGetFactorysHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("SushiswapGetHourDatasHistorical", {
-  # tests for SushiswapGetHourDatasHistorical
+test_that("SushiswapGetHourDataHistorical", {
+  # tests for SushiswapGetHourDataHistorical
   # base path: https://onchain.coinapi.io
-  # HourDatas (historical)
-  # Gets hourDatas.
+  # HourData (historical)
+  # Gets hourData.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
   # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -183,11 +183,11 @@ test_that("SushiswapGetMintsHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("SushiswapGetPairDayDatasHistorical", {
-  # tests for SushiswapGetPairDayDatasHistorical
+test_that("SushiswapGetPairDayDataHistorical", {
+  # tests for SushiswapGetPairDayDataHistorical
   # base path: https://onchain.coinapi.io
-  # PairDayDatas (historical)
-  # Gets pairDayDatas.
+  # PairDayData (historical)
+  # Gets pairDayData.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
@@ -202,11 +202,11 @@ test_that("SushiswapGetPairDayDatasHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("SushiswapGetPairHourDatasHistorical", {
-  # tests for SushiswapGetPairHourDatasHistorical
+test_that("SushiswapGetPairHourDataHistorical", {
+  # tests for SushiswapGetPairHourDataHistorical
   # base path: https://onchain.coinapi.io
-  # PairHourDatas (historical)
-  # Gets pairHourDatas.
+  # PairHourData (historical)
+  # Gets pairHourData.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
@@ -255,11 +255,11 @@ test_that("SushiswapGetSwapsHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("SushiswapGetTokenDayDatasHistorical", {
-  # tests for SushiswapGetTokenDayDatasHistorical
+test_that("SushiswapGetTokenDayDataHistorical", {
+  # tests for SushiswapGetTokenDayDataHistorical
   # base path: https://onchain.coinapi.io
-  # TokenDayDatas (historical)
-  # Gets tokenDayDatas.
+  # TokenDayData (historical)
+  # Gets tokenDayData.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
   # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -321,11 +321,11 @@ test_that("SushiswapGetUsersHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("SushiswapHourDatasCurrent", {
-  # tests for SushiswapHourDatasCurrent
+test_that("SushiswapHourDataCurrent", {
+  # tests for SushiswapHourDataCurrent
   # base path: https://onchain.coinapi.io
-  # HourDatas (current)
-  # Gets hourDatas.
+  # HourData (current)
+  # Gets hourData.
   # @return [array[SushiswapHourDataDTO]]
 
   # uncomment below to test the operation
@@ -365,22 +365,22 @@ test_that("SushiswapMintsCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("SushiswapPairDayDatasCurrent", {
-  # tests for SushiswapPairDayDatasCurrent
+test_that("SushiswapPairDayDataCurrent", {
+  # tests for SushiswapPairDayDataCurrent
   # base path: https://onchain.coinapi.io
-  # PairDayDatas (current)
-  # Gets pairDayDatas.
+  # PairDayData (current)
+  # Gets pairDayData.
   # @return [array[SushiswapPairDayDataDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("SushiswapPairHourDatasCurrent", {
-  # tests for SushiswapPairHourDatasCurrent
+test_that("SushiswapPairHourDataCurrent", {
+  # tests for SushiswapPairHourDataCurrent
   # base path: https://onchain.coinapi.io
-  # PairHourDatas (current)
-  # Gets pairHourDatas.
+  # PairHourData (current)
+  # Gets pairHourData.
   # @return [array[SushiswapPairHourDataDTO]]
 
   # uncomment below to test the operation
@@ -411,11 +411,11 @@ test_that("SushiswapSwapsCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("SushiswapTokenDayDatasCurrent", {
-  # tests for SushiswapTokenDayDatasCurrent
+test_that("SushiswapTokenDayDataCurrent", {
+  # tests for SushiswapTokenDayDataCurrent
   # base path: https://onchain.coinapi.io
-  # TokenDayDatas (current)
-  # Gets tokenDayDatas.
+  # TokenDayData (current)
+  # Gets tokenDayData.
   # @return [array[SushiswapTokenDayDataDTO]]
 
   # uncomment below to test the operation

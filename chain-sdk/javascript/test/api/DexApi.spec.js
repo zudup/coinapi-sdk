@@ -48,10 +48,10 @@
   }
 
   describe('DexApi', function() {
-    describe('dexBatchsCurrent', function() {
-      it('should call dexBatchsCurrent successfully', function(done) {
-        //uncomment below and update the code to test dexBatchsCurrent
-        //instance.dexBatchsCurrent(function(error) {
+    describe('dexBatchesCurrent', function() {
+      it('should call dexBatchesCurrent successfully', function(done) {
+        //uncomment below and update the code to test dexBatchesCurrent
+        //instance.dexBatchesCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -68,10 +68,10 @@
         done();
       });
     });
-    describe('dexGetBatchsHistorical', function() {
-      it('should call dexGetBatchsHistorical successfully', function(done) {
-        //uncomment below and update the code to test dexGetBatchsHistorical
-        //instance.dexGetBatchsHistorical(function(error) {
+    describe('dexGetBatchesHistorical', function() {
+      it('should call dexGetBatchesHistorical successfully', function(done) {
+        //uncomment below and update the code to test dexGetBatchesHistorical
+        //instance.dexGetBatchesHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -118,10 +118,10 @@
         done();
       });
     });
-    describe('dexGetStatssHistorical', function() {
-      it('should call dexGetStatssHistorical successfully', function(done) {
-        //uncomment below and update the code to test dexGetStatssHistorical
-        //instance.dexGetStatssHistorical(function(error) {
+    describe('dexGetStatsHistorical', function() {
+      it('should call dexGetStatsHistorical successfully', function(done) {
+        //uncomment below and update the code to test dexGetStatsHistorical
+        //instance.dexGetStatsHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -208,10 +208,10 @@
         done();
       });
     });
-    describe('dexStatssCurrent', function() {
-      it('should call dexStatssCurrent successfully', function(done) {
-        //uncomment below and update the code to test dexStatssCurrent
-        //instance.dexStatssCurrent(function(error) {
+    describe('dexStatsCurrent', function() {
+      it('should call dexStatsCurrent successfully', function(done) {
+        //uncomment below and update the code to test dexStatsCurrent
+        //instance.dexStatsCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

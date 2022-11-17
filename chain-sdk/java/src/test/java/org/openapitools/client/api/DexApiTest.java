@@ -43,15 +43,15 @@ public class DexApiTest {
     private final DexApi api = new DexApi();
 
     /**
-     * Batchs (current)
+     * Batches (current)
      *
-     * Gets batchs.
+     * Gets batches.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dexBatchsCurrentTest() throws ApiException {
-        List<DexBatchDTO> response = api.dexBatchsCurrent();
+    public void dexBatchesCurrentTest() throws ApiException {
+        List<DexBatchDTO> response = api.dexBatchesCurrent();
         // TODO: test validations
     }
 
@@ -69,20 +69,20 @@ public class DexApiTest {
     }
 
     /**
-     * Batchs (historical)
+     * Batches (historical)
      *
-     * Gets batchs.
+     * Gets batches.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dexGetBatchsHistoricalTest() throws ApiException {
+    public void dexGetBatchesHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String id = null;
-        List<DexBatchDTO> response = api.dexGetBatchsHistorical(startBlock, endBlock, startDate, endDate, id);
+        List<DexBatchDTO> response = api.dexGetBatchesHistorical(startBlock, endBlock, startDate, endDate, id);
         // TODO: test validations
     }
 
@@ -162,20 +162,20 @@ public class DexApiTest {
     }
 
     /**
-     * Statss (historical)
+     * Stats (historical)
      *
-     * Gets statss.
+     * Gets stats.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dexGetStatssHistoricalTest() throws ApiException {
+    public void dexGetStatsHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String id = null;
-        List<DexStatsDTO> response = api.dexGetStatssHistorical(startBlock, endBlock, startDate, endDate, id);
+        List<DexStatsDTO> response = api.dexGetStatsHistorical(startBlock, endBlock, startDate, endDate, id);
         // TODO: test validations
     }
 
@@ -316,15 +316,15 @@ public class DexApiTest {
     }
 
     /**
-     * Statss (current)
+     * Stats (current)
      *
-     * Gets statss.
+     * Gets stats.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void dexStatssCurrentTest() throws ApiException {
-        List<DexStatsDTO> response = api.dexStatssCurrent();
+    public void dexStatsCurrentTest() throws ApiException {
+        List<DexStatsDTO> response = api.dexStatsCurrent();
         // TODO: test validations
     }
 

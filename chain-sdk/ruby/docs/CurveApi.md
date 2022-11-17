@@ -15,7 +15,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**curve_exchanges__current**](CurveApi.md#curve_exchanges__current) | **GET** /dapps/curve/exchanges/current | Exchanges (current) |
 | [**curve_fee_change_logs__current**](CurveApi.md#curve_fee_change_logs__current) | **GET** /dapps/curve/feeChangeLogs/current | FeeChangeLogs (current) |
 | [**curve_gauge_deposits__current**](CurveApi.md#curve_gauge_deposits__current) | **GET** /dapps/curve/gaugeDeposits/current | GaugeDeposits (current) |
-| [**curve_gauge_liquiditys__current**](CurveApi.md#curve_gauge_liquiditys__current) | **GET** /dapps/curve/gaugeLiquiditys/current | GaugeLiquiditys (current) |
+| [**curve_gauge_liquidities__current**](CurveApi.md#curve_gauge_liquidities__current) | **GET** /dapps/curve/gaugeLiquidities/current | GaugeLiquidities (current) |
 | [**curve_gauge_total_weights__current**](CurveApi.md#curve_gauge_total_weights__current) | **GET** /dapps/curve/gaugeTotalWeights/current | GaugeTotalWeights (current) |
 | [**curve_gauge_type_weights__current**](CurveApi.md#curve_gauge_type_weights__current) | **GET** /dapps/curve/gaugeTypeWeights/current | GaugeTypeWeights (current) |
 | [**curve_gauge_types__current**](CurveApi.md#curve_gauge_types__current) | **GET** /dapps/curve/gaugeTypes/current | GaugeTypes (current) |
@@ -34,7 +34,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**curve_get_exchanges__historical**](CurveApi.md#curve_get_exchanges__historical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical) |
 | [**curve_get_fee_change_logs__historical**](CurveApi.md#curve_get_fee_change_logs__historical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical) |
 | [**curve_get_gauge_deposits__historical**](CurveApi.md#curve_get_gauge_deposits__historical) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical) |
-| [**curve_get_gauge_liquiditys__historical**](CurveApi.md#curve_get_gauge_liquiditys__historical) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical) |
+| [**curve_get_gauge_liquidities__historical**](CurveApi.md#curve_get_gauge_liquidities__historical) | **GET** /dapps/curve/gaugeLiquidities/historical | GaugeLiquidities (historical) |
 | [**curve_get_gauge_total_weights__historical**](CurveApi.md#curve_get_gauge_total_weights__historical) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical) |
 | [**curve_get_gauge_type_weights__historical**](CurveApi.md#curve_get_gauge_type_weights__historical) | **GET** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical) |
 | [**curve_get_gauge_types__historical**](CurveApi.md#curve_get_gauge_types__historical) | **GET** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical) |
@@ -746,13 +746,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## curve_gauge_liquiditys__current
+## curve_gauge_liquidities__current
 
-> <Array<CurveGaugeLiquidityDTO>> curve_gauge_liquiditys__current
+> <Array<CurveGaugeLiquidityDTO>> curve_gauge_liquidities__current
 
-GaugeLiquiditys (current)
+GaugeLiquidities (current)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Examples
 
@@ -763,29 +763,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::CurveApi.new
 
 begin
-  # GaugeLiquiditys (current)
-  result = api_instance.curve_gauge_liquiditys__current
+  # GaugeLiquidities (current)
+  result = api_instance.curve_gauge_liquidities__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->curve_gauge_liquiditys__current: #{e}"
+  puts "Error when calling CurveApi->curve_gauge_liquidities__current: #{e}"
 end
 ```
 
-#### Using the curve_gauge_liquiditys__current_with_http_info variant
+#### Using the curve_gauge_liquidities__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<CurveGaugeLiquidityDTO>>, Integer, Hash)> curve_gauge_liquiditys__current_with_http_info
+> <Array(<Array<CurveGaugeLiquidityDTO>>, Integer, Hash)> curve_gauge_liquidities__current_with_http_info
 
 ```ruby
 begin
-  # GaugeLiquiditys (current)
-  data, status_code, headers = api_instance.curve_gauge_liquiditys__current_with_http_info
+  # GaugeLiquidities (current)
+  data, status_code, headers = api_instance.curve_gauge_liquidities__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<CurveGaugeLiquidityDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->curve_gauge_liquiditys__current_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_gauge_liquidities__current_with_http_info: #{e}"
 end
 ```
 
@@ -2066,13 +2066,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## curve_get_gauge_liquiditys__historical
+## curve_get_gauge_liquidities__historical
 
-> <Array<CurveGaugeLiquidityDTO>> curve_get_gauge_liquiditys__historical(opts)
+> <Array<CurveGaugeLiquidityDTO>> curve_get_gauge_liquidities__historical(opts)
 
-GaugeLiquiditys (historical)
+GaugeLiquidities (historical)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Examples
 
@@ -2091,29 +2091,29 @@ opts = {
 }
 
 begin
-  # GaugeLiquiditys (historical)
-  result = api_instance.curve_get_gauge_liquiditys__historical(opts)
+  # GaugeLiquidities (historical)
+  result = api_instance.curve_get_gauge_liquidities__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->curve_get_gauge_liquiditys__historical: #{e}"
+  puts "Error when calling CurveApi->curve_get_gauge_liquidities__historical: #{e}"
 end
 ```
 
-#### Using the curve_get_gauge_liquiditys__historical_with_http_info variant
+#### Using the curve_get_gauge_liquidities__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<CurveGaugeLiquidityDTO>>, Integer, Hash)> curve_get_gauge_liquiditys__historical_with_http_info(opts)
+> <Array(<Array<CurveGaugeLiquidityDTO>>, Integer, Hash)> curve_get_gauge_liquidities__historical_with_http_info(opts)
 
 ```ruby
 begin
-  # GaugeLiquiditys (historical)
-  data, status_code, headers = api_instance.curve_get_gauge_liquiditys__historical_with_http_info(opts)
+  # GaugeLiquidities (historical)
+  data, status_code, headers = api_instance.curve_get_gauge_liquidities__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<CurveGaugeLiquidityDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling CurveApi->curve_get_gauge_liquiditys__historical_with_http_info: #{e}"
+  puts "Error when calling CurveApi->curve_get_gauge_liquidities__historical_with_http_info: #{e}"
 end
 ```
 

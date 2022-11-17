@@ -1573,7 +1573,7 @@ bool CurveManager::curveGaugeDeposits (current)Sync(char * accessToken,
 	handler, userData, false);
 }
 
-static bool curveGaugeLiquiditys (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool curveGaugeLiquidities (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )
@@ -1620,7 +1620,7 @@ static bool curveGaugeLiquiditys (current)Processor(MemoryStruct_s p_chunk, long
 			}
 }
 
-static bool curveGaugeLiquiditys (current)Helper(char * accessToken,
+static bool curveGaugeLiquidities (current)Helper(char * accessToken,
 	
 	void(* handler)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -1642,7 +1642,7 @@ static bool curveGaugeLiquiditys (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/curve/gaugeLiquiditys/current");
+	string url("/dapps/curve/gaugeLiquidities/current");
 	int pos;
 
 
@@ -1661,7 +1661,7 @@ static bool curveGaugeLiquiditys (current)Helper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = curveGaugeLiquiditys (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = curveGaugeLiquidities (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -1679,7 +1679,7 @@ static bool curveGaugeLiquiditys (current)Helper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGaugeLiquiditys (current)Processor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGaugeLiquidities (current)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -1691,22 +1691,22 @@ static bool curveGaugeLiquiditys (current)Helper(char * accessToken,
 
 
 
-bool CurveManager::curveGaugeLiquiditys (current)Async(char * accessToken,
+bool CurveManager::curveGaugeLiquidities (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )
 	, void* userData)
 {
-	return curveGaugeLiquiditys (current)Helper(accessToken,
+	return curveGaugeLiquidities (current)Helper(accessToken,
 	
 	handler, userData, true);
 }
 
-bool CurveManager::curveGaugeLiquiditys (current)Sync(char * accessToken,
+bool CurveManager::curveGaugeLiquidities (current)Sync(char * accessToken,
 	
 	void(* handler)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )
 	, void* userData)
 {
-	return curveGaugeLiquiditys (current)Helper(accessToken,
+	return curveGaugeLiquidities (current)Helper(accessToken,
 	
 	handler, userData, false);
 }
@@ -4643,7 +4643,7 @@ bool CurveManager::curveGetGaugeDeposits (historical)Sync(char * accessToken,
 	handler, userData, false);
 }
 
-static bool curveGetGaugeLiquiditys (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool curveGetGaugeLiquidities (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )
@@ -4690,7 +4690,7 @@ static bool curveGetGaugeLiquiditys (historical)Processor(MemoryStruct_s p_chunk
 			}
 }
 
-static bool curveGetGaugeLiquiditys (historical)Helper(char * accessToken,
+static bool curveGetGaugeLiquidities (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string user, 
 	void(* handler)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -4754,7 +4754,7 @@ static bool curveGetGaugeLiquiditys (historical)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/curve/gaugeLiquiditys/historical");
+	string url("/dapps/curve/gaugeLiquidities/historical");
 	int pos;
 
 
@@ -4773,7 +4773,7 @@ static bool curveGetGaugeLiquiditys (historical)Helper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(CurveManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = curveGetGaugeLiquiditys (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = curveGetGaugeLiquidities (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -4791,7 +4791,7 @@ static bool curveGetGaugeLiquiditys (historical)Helper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (CurveManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetGaugeLiquiditys (historical)Processor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), curveGetGaugeLiquidities (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -4803,22 +4803,22 @@ static bool curveGetGaugeLiquiditys (historical)Helper(char * accessToken,
 
 
 
-bool CurveManager::curveGetGaugeLiquiditys (historical)Async(char * accessToken,
+bool CurveManager::curveGetGaugeLiquidities (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string user, 
 	void(* handler)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )
 	, void* userData)
 {
-	return curveGetGaugeLiquiditys (historical)Helper(accessToken,
+	return curveGetGaugeLiquidities (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, id, user, 
 	handler, userData, true);
 }
 
-bool CurveManager::curveGetGaugeLiquiditys (historical)Sync(char * accessToken,
+bool CurveManager::curveGetGaugeLiquidities (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string user, 
 	void(* handler)(std::list<Curve.GaugeLiquidityDTO>, Error, void* )
 	, void* userData)
 {
-	return curveGetGaugeLiquiditys (historical)Helper(accessToken,
+	return curveGetGaugeLiquidities (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, id, user, 
 	handler, userData, false);
 }

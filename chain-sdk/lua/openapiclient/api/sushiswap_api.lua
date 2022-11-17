@@ -157,12 +157,12 @@ function sushiswap_api:sushiswap_burns__current()
 	end
 end
 
-function sushiswap_api:sushiswap_day_datas__current()
+function sushiswap_api:sushiswap_day_data__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/dayDatas/current",
+		path = string.format("%s/dapps/sushiswap/dayData/current",
 			self.basePath);
 	})
 
@@ -206,12 +206,12 @@ function sushiswap_api:sushiswap_day_datas__current()
 	end
 end
 
-function sushiswap_api:sushiswap_factorys__current()
+function sushiswap_api:sushiswap_factories__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/factorys/current",
+		path = string.format("%s/dapps/sushiswap/factories/current",
 			self.basePath);
 	})
 
@@ -353,12 +353,12 @@ function sushiswap_api:sushiswap_get_burns__historical(start_block, end_block, s
 	end
 end
 
-function sushiswap_api:sushiswap_get_day_datas__historical(start_block, end_block, start_date, end_date, id)
+function sushiswap_api:sushiswap_get_day_data__historical(start_block, end_block, start_date, end_date, id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/dayDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/sushiswap/dayData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -402,12 +402,12 @@ function sushiswap_api:sushiswap_get_day_datas__historical(start_block, end_bloc
 	end
 end
 
-function sushiswap_api:sushiswap_get_factorys__historical(start_block, end_block, start_date, end_date, id)
+function sushiswap_api:sushiswap_get_factories__historical(start_block, end_block, start_date, end_date, id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/factorys/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/sushiswap/factories/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -451,12 +451,12 @@ function sushiswap_api:sushiswap_get_factorys__historical(start_block, end_block
 	end
 end
 
-function sushiswap_api:sushiswap_get_hour_datas__historical(start_block, end_block, start_date, end_date, id)
+function sushiswap_api:sushiswap_get_hour_data__historical(start_block, end_block, start_date, end_date, id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/hourDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/sushiswap/hourData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -647,12 +647,12 @@ function sushiswap_api:sushiswap_get_mints__historical(start_block, end_block, s
 	end
 end
 
-function sushiswap_api:sushiswap_get_pair_day_datas__historical(start_block, end_block, start_date, end_date, id, pair, token_0, token_1)
+function sushiswap_api:sushiswap_get_pair_day_data__historical(start_block, end_block, start_date, end_date, id, pair, token_0, token_1)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/pairDayDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pair=%s&token_0=%s&token_1=%s",
+		path = string.format("%s/dapps/sushiswap/pairDayData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pair=%s&token_0=%s&token_1=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(pair), http_util.encodeURIComponent(token_0), http_util.encodeURIComponent(token_1));
 	})
 
@@ -696,12 +696,12 @@ function sushiswap_api:sushiswap_get_pair_day_datas__historical(start_block, end
 	end
 end
 
-function sushiswap_api:sushiswap_get_pair_hour_datas__historical(start_block, end_block, start_date, end_date, id, pair)
+function sushiswap_api:sushiswap_get_pair_hour_data__historical(start_block, end_block, start_date, end_date, id, pair)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/pairHourDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pair=%s",
+		path = string.format("%s/dapps/sushiswap/pairHourData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pair=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(pair));
 	})
 
@@ -843,12 +843,12 @@ function sushiswap_api:sushiswap_get_swaps__historical(start_block, end_block, s
 	end
 end
 
-function sushiswap_api:sushiswap_get_token_day_datas__historical(start_block, end_block, start_date, end_date, id)
+function sushiswap_api:sushiswap_get_token_day_data__historical(start_block, end_block, start_date, end_date, id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/tokenDayDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/sushiswap/tokenDayData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -1039,12 +1039,12 @@ function sushiswap_api:sushiswap_get_users__historical(start_block, end_block, s
 	end
 end
 
-function sushiswap_api:sushiswap_hour_datas__current()
+function sushiswap_api:sushiswap_hour_data__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/hourDatas/current",
+		path = string.format("%s/dapps/sushiswap/hourData/current",
 			self.basePath);
 	})
 
@@ -1235,12 +1235,12 @@ function sushiswap_api:sushiswap_mints__current()
 	end
 end
 
-function sushiswap_api:sushiswap_pair_day_datas__current()
+function sushiswap_api:sushiswap_pair_day_data__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/pairDayDatas/current",
+		path = string.format("%s/dapps/sushiswap/pairDayData/current",
 			self.basePath);
 	})
 
@@ -1284,12 +1284,12 @@ function sushiswap_api:sushiswap_pair_day_datas__current()
 	end
 end
 
-function sushiswap_api:sushiswap_pair_hour_datas__current()
+function sushiswap_api:sushiswap_pair_hour_data__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/pairHourDatas/current",
+		path = string.format("%s/dapps/sushiswap/pairHourData/current",
 			self.basePath);
 	})
 
@@ -1431,12 +1431,12 @@ function sushiswap_api:sushiswap_swaps__current(pair)
 	end
 end
 
-function sushiswap_api:sushiswap_token_day_datas__current()
+function sushiswap_api:sushiswap_token_day_data__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/sushiswap/tokenDayDatas/current",
+		path = string.format("%s/dapps/sushiswap/tokenDayData/current",
 			self.basePath);
 	})
 

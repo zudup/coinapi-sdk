@@ -30,10 +30,10 @@ my $api = WWW::OpenAPIClient::DexApi->new();
 isa_ok($api, 'WWW::OpenAPIClient::DexApi');
 
 #
-# dex_batchs__current test
+# dex_batches__current test
 #
 # uncomment below and update the test
-#my $dex_batchs__current_result = $api->dex_batchs__current();
+#my $dex_batches__current_result = $api->dex_batches__current();
 
 #
 # dex_deposits__current test
@@ -42,15 +42,15 @@ isa_ok($api, 'WWW::OpenAPIClient::DexApi');
 #my $dex_deposits__current_result = $api->dex_deposits__current();
 
 #
-# dex_get_batchs__historical test
+# dex_get_batches__historical test
 #
 # uncomment below and update the test
-#my $dex_get_batchs__historical_start_block = undef; # replace NULL with a proper value
-#my $dex_get_batchs__historical_end_block = undef; # replace NULL with a proper value
-#my $dex_get_batchs__historical_start_date = undef; # replace NULL with a proper value
-#my $dex_get_batchs__historical_end_date = undef; # replace NULL with a proper value
-#my $dex_get_batchs__historical_id = undef; # replace NULL with a proper value
-#my $dex_get_batchs__historical_result = $api->dex_get_batchs__historical(start_block => $dex_get_batchs__historical_start_block, end_block => $dex_get_batchs__historical_end_block, start_date => $dex_get_batchs__historical_start_date, end_date => $dex_get_batchs__historical_end_date, id => $dex_get_batchs__historical_id);
+#my $dex_get_batches__historical_start_block = undef; # replace NULL with a proper value
+#my $dex_get_batches__historical_end_block = undef; # replace NULL with a proper value
+#my $dex_get_batches__historical_start_date = undef; # replace NULL with a proper value
+#my $dex_get_batches__historical_end_date = undef; # replace NULL with a proper value
+#my $dex_get_batches__historical_id = undef; # replace NULL with a proper value
+#my $dex_get_batches__historical_result = $api->dex_get_batches__historical(start_block => $dex_get_batches__historical_start_block, end_block => $dex_get_batches__historical_end_block, start_date => $dex_get_batches__historical_start_date, end_date => $dex_get_batches__historical_end_date, id => $dex_get_batches__historical_id);
 
 #
 # dex_get_deposits__historical test
@@ -100,15 +100,15 @@ isa_ok($api, 'WWW::OpenAPIClient::DexApi');
 #my $dex_get_solutions__historical_result = $api->dex_get_solutions__historical(start_block => $dex_get_solutions__historical_start_block, end_block => $dex_get_solutions__historical_end_block, start_date => $dex_get_solutions__historical_start_date, end_date => $dex_get_solutions__historical_end_date, id => $dex_get_solutions__historical_id);
 
 #
-# dex_get_statss__historical test
+# dex_get_stats__historical test
 #
 # uncomment below and update the test
-#my $dex_get_statss__historical_start_block = undef; # replace NULL with a proper value
-#my $dex_get_statss__historical_end_block = undef; # replace NULL with a proper value
-#my $dex_get_statss__historical_start_date = undef; # replace NULL with a proper value
-#my $dex_get_statss__historical_end_date = undef; # replace NULL with a proper value
-#my $dex_get_statss__historical_id = undef; # replace NULL with a proper value
-#my $dex_get_statss__historical_result = $api->dex_get_statss__historical(start_block => $dex_get_statss__historical_start_block, end_block => $dex_get_statss__historical_end_block, start_date => $dex_get_statss__historical_start_date, end_date => $dex_get_statss__historical_end_date, id => $dex_get_statss__historical_id);
+#my $dex_get_stats__historical_start_block = undef; # replace NULL with a proper value
+#my $dex_get_stats__historical_end_block = undef; # replace NULL with a proper value
+#my $dex_get_stats__historical_start_date = undef; # replace NULL with a proper value
+#my $dex_get_stats__historical_end_date = undef; # replace NULL with a proper value
+#my $dex_get_stats__historical_id = undef; # replace NULL with a proper value
+#my $dex_get_stats__historical_result = $api->dex_get_stats__historical(start_block => $dex_get_stats__historical_start_block, end_block => $dex_get_stats__historical_end_block, start_date => $dex_get_stats__historical_start_date, end_date => $dex_get_stats__historical_end_date, id => $dex_get_stats__historical_id);
 
 #
 # dex_get_tokens__historical test
@@ -191,10 +191,10 @@ isa_ok($api, 'WWW::OpenAPIClient::DexApi');
 #my $dex_solutions__current_result = $api->dex_solutions__current();
 
 #
-# dex_statss__current test
+# dex_stats__current test
 #
 # uncomment below and update the test
-#my $dex_statss__current_result = $api->dex_statss__current();
+#my $dex_stats__current_result = $api->dex_stats__current();
 
 #
 # dex_tokens__current test

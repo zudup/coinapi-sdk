@@ -976,8 +976,8 @@ public class UniswapV2Api {
     }
   }
   /**
-  * PairDayDatas (historical)
-  * Gets pairDayDatas.
+  * PairDayData (historical)
+  * Gets pairDayData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -987,11 +987,11 @@ public class UniswapV2Api {
    * @param token1 Reference to token1.
    * @return List<UniswapV2PairDayDataDTO>
   */
-  public List<UniswapV2PairDayDataDTO> uniswapV2GetPairDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String token0, String token1) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV2PairDayDataDTO> uniswapV2GetPairDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String token0, String token1) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/pairDayDatas/historical";
+    String path = "/dapps/uniswapv2/pairDayData/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1046,16 +1046,16 @@ public class UniswapV2Api {
   }
 
       /**
-   * PairDayDatas (historical)
-   * Gets pairDayDatas.
+   * PairDayData (historical)
+   * Gets pairDayData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param token0 Reference to token0.   * @param token1 Reference to token1.
   */
-  public void uniswapV2GetPairDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String token0, String token1, final Response.Listener<List<UniswapV2PairDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV2GetPairDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String token0, String token1, final Response.Listener<List<UniswapV2PairDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/pairDayDatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv2/pairDayData/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1113,8 +1113,8 @@ public class UniswapV2Api {
     }
   }
   /**
-  * PairHourDatas (historical)
-  * Gets pairHourDatas.
+  * PairHourData (historical)
+  * Gets pairHourData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1123,11 +1123,11 @@ public class UniswapV2Api {
    * @param pair Address for pair contract.
    * @return List<UniswapV2PairHourDataDTO>
   */
-  public List<UniswapV2PairHourDataDTO> uniswapV2GetPairHourDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV2PairHourDataDTO> uniswapV2GetPairHourDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/pairHourDatas/historical";
+    String path = "/dapps/uniswapv2/pairHourData/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1181,16 +1181,16 @@ public class UniswapV2Api {
   }
 
       /**
-   * PairHourDatas (historical)
-   * Gets pairHourDatas.
+   * PairHourData (historical)
+   * Gets pairHourData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param pair Address for pair contract.
   */
-  public void uniswapV2GetPairHourDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, final Response.Listener<List<UniswapV2PairHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV2GetPairHourDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, final Response.Listener<List<UniswapV2PairHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/pairHourDatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv2/pairHourData/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1518,8 +1518,8 @@ public class UniswapV2Api {
     }
   }
   /**
-  * TokenDayDatas (historical)
-  * Gets tokenDayDatas.
+  * TokenDayData (historical)
+  * Gets tokenDayData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1527,11 +1527,11 @@ public class UniswapV2Api {
    * @param id Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
    * @return List<UniswapV2TokenDayDataDTO>
   */
-  public List<UniswapV2TokenDayDataDTO> uniswapV2GetTokenDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV2TokenDayDataDTO> uniswapV2GetTokenDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/tokenDayDatas/historical";
+    String path = "/dapps/uniswapv2/tokenDayData/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1584,16 +1584,16 @@ public class UniswapV2Api {
   }
 
       /**
-   * TokenDayDatas (historical)
-   * Gets tokenDayDatas.
+   * TokenDayData (historical)
+   * Gets tokenDayData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
   */
-  public void uniswapV2GetTokenDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<UniswapV2TokenDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV2GetTokenDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<UniswapV2TokenDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/tokenDayDatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv2/tokenDayData/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1917,8 +1917,8 @@ public class UniswapV2Api {
     }
   }
   /**
-  * UniswapDayDatas (historical)
-  * Gets uniswapDayDatas.
+  * UniswapDayData (historical)
+  * Gets uniswapDayData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1926,11 +1926,11 @@ public class UniswapV2Api {
    * @param id Unix timestamp for start of day / 86400 giving a unique day index.
    * @return List<UniswapV2UniswapDayDataDTO>
   */
-  public List<UniswapV2UniswapDayDataDTO> uniswapV2GetUniswapDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV2UniswapDayDataDTO> uniswapV2GetUniswapDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/uniswapDayDatas/historical";
+    String path = "/dapps/uniswapv2/uniswapDayData/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1983,16 +1983,16 @@ public class UniswapV2Api {
   }
 
       /**
-   * UniswapDayDatas (historical)
-   * Gets uniswapDayDatas.
+   * UniswapDayData (historical)
+   * Gets uniswapDayData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Unix timestamp for start of day / 86400 giving a unique day index.
   */
-  public void uniswapV2GetUniswapDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<UniswapV2UniswapDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV2GetUniswapDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<UniswapV2UniswapDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/uniswapDayDatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv2/uniswapDayData/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2048,8 +2048,8 @@ public class UniswapV2Api {
     }
   }
   /**
-  * UniswapFactorys (historical)
-  * Gets uniswapFactorys.
+  * UniswapFactories (historical)
+  * Gets uniswapFactories.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -2057,11 +2057,11 @@ public class UniswapV2Api {
    * @param id Factory address.
    * @return List<UniswapV2UniswapFactoryDTO>
   */
-  public List<UniswapV2UniswapFactoryDTO> uniswapV2GetUniswapFactorysHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV2UniswapFactoryDTO> uniswapV2GetUniswapFactoriesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/uniswapFactorys/historical";
+    String path = "/dapps/uniswapv2/uniswapFactories/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2114,16 +2114,16 @@ public class UniswapV2Api {
   }
 
       /**
-   * UniswapFactorys (historical)
-   * Gets uniswapFactorys.
+   * UniswapFactories (historical)
+   * Gets uniswapFactories.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Factory address.
   */
-  public void uniswapV2GetUniswapFactorysHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<UniswapV2UniswapFactoryDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV2GetUniswapFactoriesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<UniswapV2UniswapFactoryDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/uniswapFactorys/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv2/uniswapFactories/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2658,15 +2658,15 @@ public class UniswapV2Api {
     }
   }
   /**
-  * PairDayDatas (current)
-  * Gets pairDayDatas.
+  * PairDayData (current)
+  * Gets pairDayData.
    * @return List<UniswapV2PairDayDataDTO>
   */
-  public List<UniswapV2PairDayDataDTO> uniswapV2PairDayDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV2PairDayDataDTO> uniswapV2PairDayDataCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/pairDayDatas/current";
+    String path = "/dapps/uniswapv2/pairDayData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2714,16 +2714,16 @@ public class UniswapV2Api {
   }
 
       /**
-   * PairDayDatas (current)
-   * Gets pairDayDatas.
+   * PairDayData (current)
+   * Gets pairDayData.
 
   */
-  public void uniswapV2PairDayDatasCurrent (final Response.Listener<List<UniswapV2PairDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV2PairDayDataCurrent (final Response.Listener<List<UniswapV2PairDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/pairDayDatas/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv2/pairDayData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2774,15 +2774,15 @@ public class UniswapV2Api {
     }
   }
   /**
-  * PairHourDatas (current)
-  * Gets pairHourDatas.
+  * PairHourData (current)
+  * Gets pairHourData.
    * @return List<UniswapV2PairHourDataDTO>
   */
-  public List<UniswapV2PairHourDataDTO> uniswapV2PairHourDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV2PairHourDataDTO> uniswapV2PairHourDataCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/pairHourDatas/current";
+    String path = "/dapps/uniswapv2/pairHourData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2830,16 +2830,16 @@ public class UniswapV2Api {
   }
 
       /**
-   * PairHourDatas (current)
-   * Gets pairHourDatas.
+   * PairHourData (current)
+   * Gets pairHourData.
 
   */
-  public void uniswapV2PairHourDatasCurrent (final Response.Listener<List<UniswapV2PairHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV2PairHourDataCurrent (final Response.Listener<List<UniswapV2PairHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/pairHourDatas/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv2/pairHourData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3128,15 +3128,15 @@ public class UniswapV2Api {
     }
   }
   /**
-  * TokenDayDatas (current)
-  * Gets tokenDayDatas.
+  * TokenDayData (current)
+  * Gets tokenDayData.
    * @return List<UniswapV2TokenDayDataDTO>
   */
-  public List<UniswapV2TokenDayDataDTO> uniswapV2TokenDayDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV2TokenDayDataDTO> uniswapV2TokenDayDataCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/tokenDayDatas/current";
+    String path = "/dapps/uniswapv2/tokenDayData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3184,16 +3184,16 @@ public class UniswapV2Api {
   }
 
       /**
-   * TokenDayDatas (current)
-   * Gets tokenDayDatas.
+   * TokenDayData (current)
+   * Gets tokenDayData.
 
   */
-  public void uniswapV2TokenDayDatasCurrent (final Response.Listener<List<UniswapV2TokenDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV2TokenDayDataCurrent (final Response.Listener<List<UniswapV2TokenDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/tokenDayDatas/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv2/tokenDayData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3476,15 +3476,15 @@ public class UniswapV2Api {
     }
   }
   /**
-  * UniswapDayDatas (current)
-  * Gets uniswapDayDatas.
+  * UniswapDayData (current)
+  * Gets uniswapDayData.
    * @return List<UniswapV2UniswapDayDataDTO>
   */
-  public List<UniswapV2UniswapDayDataDTO> uniswapV2UniswapDayDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV2UniswapDayDataDTO> uniswapV2UniswapDayDataCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/uniswapDayDatas/current";
+    String path = "/dapps/uniswapv2/uniswapDayData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3532,16 +3532,16 @@ public class UniswapV2Api {
   }
 
       /**
-   * UniswapDayDatas (current)
-   * Gets uniswapDayDatas.
+   * UniswapDayData (current)
+   * Gets uniswapDayData.
 
   */
-  public void uniswapV2UniswapDayDatasCurrent (final Response.Listener<List<UniswapV2UniswapDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV2UniswapDayDataCurrent (final Response.Listener<List<UniswapV2UniswapDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/uniswapDayDatas/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv2/uniswapDayData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3592,15 +3592,15 @@ public class UniswapV2Api {
     }
   }
   /**
-  * UniswapFactorys (current)
-  * Gets uniswapFactorys.
+  * UniswapFactories (current)
+  * Gets uniswapFactories.
    * @return List<UniswapV2UniswapFactoryDTO>
   */
-  public List<UniswapV2UniswapFactoryDTO> uniswapV2UniswapFactorysCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV2UniswapFactoryDTO> uniswapV2UniswapFactoriesCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/uniswapFactorys/current";
+    String path = "/dapps/uniswapv2/uniswapFactories/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3648,16 +3648,16 @@ public class UniswapV2Api {
   }
 
       /**
-   * UniswapFactorys (current)
-   * Gets uniswapFactorys.
+   * UniswapFactories (current)
+   * Gets uniswapFactories.
 
   */
-  public void uniswapV2UniswapFactorysCurrent (final Response.Listener<List<UniswapV2UniswapFactoryDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV2UniswapFactoriesCurrent (final Response.Listener<List<UniswapV2UniswapFactoryDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv2/uniswapFactorys/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv2/uniswapFactories/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

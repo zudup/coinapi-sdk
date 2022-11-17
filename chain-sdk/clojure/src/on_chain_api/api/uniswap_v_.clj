@@ -276,12 +276,12 @@
         res))))
 
 
-(defn-spec uniswap-v2-get-pair-day-datas-historical-with-http-info any?
-  "PairDayDatas (historical)
-  Gets pairDayDatas."
-  ([] (uniswap-v2-get-pair-day-datas-historical-with-http-info nil))
+(defn-spec uniswap-v2-get-pair-day-data-historical-with-http-info any?
+  "PairDayData (historical)
+  Gets pairDayData."
+  ([] (uniswap-v2-get-pair-day-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id token_0 token_1]} (s/map-of keyword? any?)]
-   (call-api "/dapps/uniswapv2/pairDayDatas/historical" :get
+   (call-api "/dapps/uniswapv2/pairDayData/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id "token_0" token_0 "token_1" token_1 }
@@ -290,23 +290,23 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec uniswap-v2-get-pair-day-datas-historical (s/coll-of uniswap-v2/pair-day-data-dto-spec)
-  "PairDayDatas (historical)
-  Gets pairDayDatas."
-  ([] (uniswap-v2-get-pair-day-datas-historical nil))
+(defn-spec uniswap-v2-get-pair-day-data-historical (s/coll-of uniswap-v2/pair-day-data-dto-spec)
+  "PairDayData (historical)
+  Gets pairDayData."
+  ([] (uniswap-v2-get-pair-day-data-historical nil))
   ([optional-params any?]
-   (let [res (:data (uniswap-v2-get-pair-day-datas-historical-with-http-info optional-params))]
+   (let [res (:data (uniswap-v2-get-pair-day-data-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v2/pair-day-data-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec uniswap-v2-get-pair-hour-datas-historical-with-http-info any?
-  "PairHourDatas (historical)
-  Gets pairHourDatas."
-  ([] (uniswap-v2-get-pair-hour-datas-historical-with-http-info nil))
+(defn-spec uniswap-v2-get-pair-hour-data-historical-with-http-info any?
+  "PairHourData (historical)
+  Gets pairHourData."
+  ([] (uniswap-v2-get-pair-hour-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pair]} (s/map-of keyword? any?)]
-   (call-api "/dapps/uniswapv2/pairHourDatas/historical" :get
+   (call-api "/dapps/uniswapv2/pairHourData/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id "pair" pair }
@@ -315,12 +315,12 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec uniswap-v2-get-pair-hour-datas-historical (s/coll-of uniswap-v2/pair-hour-data-dto-spec)
-  "PairHourDatas (historical)
-  Gets pairHourDatas."
-  ([] (uniswap-v2-get-pair-hour-datas-historical nil))
+(defn-spec uniswap-v2-get-pair-hour-data-historical (s/coll-of uniswap-v2/pair-hour-data-dto-spec)
+  "PairHourData (historical)
+  Gets pairHourData."
+  ([] (uniswap-v2-get-pair-hour-data-historical nil))
   ([optional-params any?]
-   (let [res (:data (uniswap-v2-get-pair-hour-datas-historical-with-http-info optional-params))]
+   (let [res (:data (uniswap-v2-get-pair-hour-data-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v2/pair-hour-data-dto-spec) res st/string-transformer)
         res))))
@@ -376,12 +376,12 @@
         res))))
 
 
-(defn-spec uniswap-v2-get-token-day-datas-historical-with-http-info any?
-  "TokenDayDatas (historical)
-  Gets tokenDayDatas."
-  ([] (uniswap-v2-get-token-day-datas-historical-with-http-info nil))
+(defn-spec uniswap-v2-get-token-day-data-historical-with-http-info any?
+  "TokenDayData (historical)
+  Gets tokenDayData."
+  ([] (uniswap-v2-get-token-day-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/uniswapv2/tokenDayDatas/historical" :get
+   (call-api "/dapps/uniswapv2/tokenDayData/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
@@ -390,12 +390,12 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec uniswap-v2-get-token-day-datas-historical (s/coll-of uniswap-v2/token-day-data-dto-spec)
-  "TokenDayDatas (historical)
-  Gets tokenDayDatas."
-  ([] (uniswap-v2-get-token-day-datas-historical nil))
+(defn-spec uniswap-v2-get-token-day-data-historical (s/coll-of uniswap-v2/token-day-data-dto-spec)
+  "TokenDayData (historical)
+  Gets tokenDayData."
+  ([] (uniswap-v2-get-token-day-data-historical nil))
   ([optional-params any?]
-   (let [res (:data (uniswap-v2-get-token-day-datas-historical-with-http-info optional-params))]
+   (let [res (:data (uniswap-v2-get-token-day-data-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v2/token-day-data-dto-spec) res st/string-transformer)
         res))))
@@ -451,12 +451,12 @@
         res))))
 
 
-(defn-spec uniswap-v2-get-uniswap-day-datas-historical-with-http-info any?
-  "UniswapDayDatas (historical)
-  Gets uniswapDayDatas."
-  ([] (uniswap-v2-get-uniswap-day-datas-historical-with-http-info nil))
+(defn-spec uniswap-v2-get-uniswap-day-data-historical-with-http-info any?
+  "UniswapDayData (historical)
+  Gets uniswapDayData."
+  ([] (uniswap-v2-get-uniswap-day-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/uniswapv2/uniswapDayDatas/historical" :get
+   (call-api "/dapps/uniswapv2/uniswapDayData/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
@@ -465,23 +465,23 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec uniswap-v2-get-uniswap-day-datas-historical (s/coll-of uniswap-v2/uniswap-day-data-dto-spec)
-  "UniswapDayDatas (historical)
-  Gets uniswapDayDatas."
-  ([] (uniswap-v2-get-uniswap-day-datas-historical nil))
+(defn-spec uniswap-v2-get-uniswap-day-data-historical (s/coll-of uniswap-v2/uniswap-day-data-dto-spec)
+  "UniswapDayData (historical)
+  Gets uniswapDayData."
+  ([] (uniswap-v2-get-uniswap-day-data-historical nil))
   ([optional-params any?]
-   (let [res (:data (uniswap-v2-get-uniswap-day-datas-historical-with-http-info optional-params))]
+   (let [res (:data (uniswap-v2-get-uniswap-day-data-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v2/uniswap-day-data-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec uniswap-v2-get-uniswap-factorys-historical-with-http-info any?
-  "UniswapFactorys (historical)
-  Gets uniswapFactorys."
-  ([] (uniswap-v2-get-uniswap-factorys-historical-with-http-info nil))
+(defn-spec uniswap-v2-get-uniswap-factories-historical-with-http-info any?
+  "UniswapFactories (historical)
+  Gets uniswapFactories."
+  ([] (uniswap-v2-get-uniswap-factories-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/uniswapv2/uniswapFactorys/historical" :get
+   (call-api "/dapps/uniswapv2/uniswapFactories/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
@@ -490,12 +490,12 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec uniswap-v2-get-uniswap-factorys-historical (s/coll-of uniswap-v2/uniswap-factory-dto-spec)
-  "UniswapFactorys (historical)
-  Gets uniswapFactorys."
-  ([] (uniswap-v2-get-uniswap-factorys-historical nil))
+(defn-spec uniswap-v2-get-uniswap-factories-historical (s/coll-of uniswap-v2/uniswap-factory-dto-spec)
+  "UniswapFactories (historical)
+  Gets uniswapFactories."
+  ([] (uniswap-v2-get-uniswap-factories-historical nil))
   ([optional-params any?]
-   (let [res (:data (uniswap-v2-get-uniswap-factorys-historical-with-http-info optional-params))]
+   (let [res (:data (uniswap-v2-get-uniswap-factories-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v2/uniswap-factory-dto-spec) res st/string-transformer)
         res))))
@@ -595,11 +595,11 @@
        res)))
 
 
-(defn-spec uniswap-v2-pair-day-datas-current-with-http-info any?
-  "PairDayDatas (current)
-  Gets pairDayDatas."
+(defn-spec uniswap-v2-pair-day-data-current-with-http-info any?
+  "PairDayData (current)
+  Gets pairDayData."
   []
-  (call-api "/dapps/uniswapv2/pairDayDatas/current" :get
+  (call-api "/dapps/uniswapv2/pairDayData/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -608,21 +608,21 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec uniswap-v2-pair-day-datas-current (s/coll-of uniswap-v2/pair-day-data-dto-spec)
-  "PairDayDatas (current)
-  Gets pairDayDatas."
+(defn-spec uniswap-v2-pair-day-data-current (s/coll-of uniswap-v2/pair-day-data-dto-spec)
+  "PairDayData (current)
+  Gets pairDayData."
   []
-  (let [res (:data (uniswap-v2-pair-day-datas-current-with-http-info))]
+  (let [res (:data (uniswap-v2-pair-day-data-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of uniswap-v2/pair-day-data-dto-spec) res st/string-transformer)
        res)))
 
 
-(defn-spec uniswap-v2-pair-hour-datas-current-with-http-info any?
-  "PairHourDatas (current)
-  Gets pairHourDatas."
+(defn-spec uniswap-v2-pair-hour-data-current-with-http-info any?
+  "PairHourData (current)
+  Gets pairHourData."
   []
-  (call-api "/dapps/uniswapv2/pairHourDatas/current" :get
+  (call-api "/dapps/uniswapv2/pairHourData/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -631,11 +631,11 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec uniswap-v2-pair-hour-datas-current (s/coll-of uniswap-v2/pair-hour-data-dto-spec)
-  "PairHourDatas (current)
-  Gets pairHourDatas."
+(defn-spec uniswap-v2-pair-hour-data-current (s/coll-of uniswap-v2/pair-hour-data-dto-spec)
+  "PairHourData (current)
+  Gets pairHourData."
   []
-  (let [res (:data (uniswap-v2-pair-hour-datas-current-with-http-info))]
+  (let [res (:data (uniswap-v2-pair-hour-data-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of uniswap-v2/pair-hour-data-dto-spec) res st/string-transformer)
        res)))
@@ -691,11 +691,11 @@
         res))))
 
 
-(defn-spec uniswap-v2-token-day-datas-current-with-http-info any?
-  "TokenDayDatas (current)
-  Gets tokenDayDatas."
+(defn-spec uniswap-v2-token-day-data-current-with-http-info any?
+  "TokenDayData (current)
+  Gets tokenDayData."
   []
-  (call-api "/dapps/uniswapv2/tokenDayDatas/current" :get
+  (call-api "/dapps/uniswapv2/tokenDayData/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -704,11 +704,11 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec uniswap-v2-token-day-datas-current (s/coll-of uniswap-v2/token-day-data-dto-spec)
-  "TokenDayDatas (current)
-  Gets tokenDayDatas."
+(defn-spec uniswap-v2-token-day-data-current (s/coll-of uniswap-v2/token-day-data-dto-spec)
+  "TokenDayData (current)
+  Gets tokenDayData."
   []
-  (let [res (:data (uniswap-v2-token-day-datas-current-with-http-info))]
+  (let [res (:data (uniswap-v2-token-day-data-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of uniswap-v2/token-day-data-dto-spec) res st/string-transformer)
        res)))
@@ -760,11 +760,11 @@
        res)))
 
 
-(defn-spec uniswap-v2-uniswap-day-datas-current-with-http-info any?
-  "UniswapDayDatas (current)
-  Gets uniswapDayDatas."
+(defn-spec uniswap-v2-uniswap-day-data-current-with-http-info any?
+  "UniswapDayData (current)
+  Gets uniswapDayData."
   []
-  (call-api "/dapps/uniswapv2/uniswapDayDatas/current" :get
+  (call-api "/dapps/uniswapv2/uniswapDayData/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -773,21 +773,21 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec uniswap-v2-uniswap-day-datas-current (s/coll-of uniswap-v2/uniswap-day-data-dto-spec)
-  "UniswapDayDatas (current)
-  Gets uniswapDayDatas."
+(defn-spec uniswap-v2-uniswap-day-data-current (s/coll-of uniswap-v2/uniswap-day-data-dto-spec)
+  "UniswapDayData (current)
+  Gets uniswapDayData."
   []
-  (let [res (:data (uniswap-v2-uniswap-day-datas-current-with-http-info))]
+  (let [res (:data (uniswap-v2-uniswap-day-data-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of uniswap-v2/uniswap-day-data-dto-spec) res st/string-transformer)
        res)))
 
 
-(defn-spec uniswap-v2-uniswap-factorys-current-with-http-info any?
-  "UniswapFactorys (current)
-  Gets uniswapFactorys."
+(defn-spec uniswap-v2-uniswap-factories-current-with-http-info any?
+  "UniswapFactories (current)
+  Gets uniswapFactories."
   []
-  (call-api "/dapps/uniswapv2/uniswapFactorys/current" :get
+  (call-api "/dapps/uniswapv2/uniswapFactories/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -796,11 +796,11 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec uniswap-v2-uniswap-factorys-current (s/coll-of uniswap-v2/uniswap-factory-dto-spec)
-  "UniswapFactorys (current)
-  Gets uniswapFactorys."
+(defn-spec uniswap-v2-uniswap-factories-current (s/coll-of uniswap-v2/uniswap-factory-dto-spec)
+  "UniswapFactories (current)
+  Gets uniswapFactories."
   []
-  (let [res (:data (uniswap-v2-uniswap-factorys-current-with-http-info))]
+  (let [res (:data (uniswap-v2-uniswap-factories-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of uniswap-v2/uniswap-factory-dto-spec) res st/string-transformer)
        res)))
@@ -875,11 +875,11 @@
        res)))
 
 
-(defn-spec uniswap-v3-factorys-current-with-http-info any?
-  "Factorys (current)
-  Gets factorys."
+(defn-spec uniswap-v3-factories-current-with-http-info any?
+  "Factories (current)
+  Gets factories."
   []
-  (call-api "/dapps/uniswapv3/factorys/current" :get
+  (call-api "/dapps/uniswapv3/factories/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -888,11 +888,11 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec uniswap-v3-factorys-current (s/coll-of uniswap-v3/factory-dto-spec)
-  "Factorys (current)
-  Gets factorys."
+(defn-spec uniswap-v3-factories-current (s/coll-of uniswap-v3/factory-dto-spec)
+  "Factories (current)
+  Gets factories."
   []
-  (let [res (:data (uniswap-v3-factorys-current-with-http-info))]
+  (let [res (:data (uniswap-v3-factories-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of uniswap-v3/factory-dto-spec) res st/string-transformer)
        res)))
@@ -948,12 +948,12 @@
         res))))
 
 
-(defn-spec uniswap-v3-get-factorys-historical-with-http-info any?
-  "Factorys (historical)
-  Gets factorys."
-  ([] (uniswap-v3-get-factorys-historical-with-http-info nil))
+(defn-spec uniswap-v3-get-factories-historical-with-http-info any?
+  "Factories (historical)
+  Gets factories."
+  ([] (uniswap-v3-get-factories-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/uniswapv3/factorys/historical" :get
+   (call-api "/dapps/uniswapv3/factories/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
@@ -962,12 +962,12 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec uniswap-v3-get-factorys-historical (s/coll-of uniswap-v3/factory-dto-spec)
-  "Factorys (historical)
-  Gets factorys."
-  ([] (uniswap-v3-get-factorys-historical nil))
+(defn-spec uniswap-v3-get-factories-historical (s/coll-of uniswap-v3/factory-dto-spec)
+  "Factories (historical)
+  Gets factories."
+  ([] (uniswap-v3-get-factories-historical nil))
   ([optional-params any?]
-   (let [res (:data (uniswap-v3-get-factorys-historical-with-http-info optional-params))]
+   (let [res (:data (uniswap-v3-get-factories-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v3/factory-dto-spec) res st/string-transformer)
         res))))
@@ -998,12 +998,12 @@
         res))))
 
 
-(defn-spec uniswap-v3-get-pool-day-datas-historical-with-http-info any?
-  "PoolDayDatas (historical)
-  Gets poolDayDatas."
-  ([] (uniswap-v3-get-pool-day-datas-historical-with-http-info nil))
+(defn-spec uniswap-v3-get-pool-day-data-historical-with-http-info any?
+  "PoolDayData (historical)
+  Gets poolDayData."
+  ([] (uniswap-v3-get-pool-day-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
-   (call-api "/dapps/uniswapv3/poolDayDatas/historical" :get
+   (call-api "/dapps/uniswapv3/poolDayData/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id "pool" pool }
@@ -1012,23 +1012,23 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec uniswap-v3-get-pool-day-datas-historical (s/coll-of uniswap-v3/pool-day-data-dto-spec)
-  "PoolDayDatas (historical)
-  Gets poolDayDatas."
-  ([] (uniswap-v3-get-pool-day-datas-historical nil))
+(defn-spec uniswap-v3-get-pool-day-data-historical (s/coll-of uniswap-v3/pool-day-data-dto-spec)
+  "PoolDayData (historical)
+  Gets poolDayData."
+  ([] (uniswap-v3-get-pool-day-data-historical nil))
   ([optional-params any?]
-   (let [res (:data (uniswap-v3-get-pool-day-datas-historical-with-http-info optional-params))]
+   (let [res (:data (uniswap-v3-get-pool-day-data-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v3/pool-day-data-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec uniswap-v3-get-pool-hour-datas-historical-with-http-info any?
-  "PoolHourDatas (historical)
-  Gets poolHourDatas."
-  ([] (uniswap-v3-get-pool-hour-datas-historical-with-http-info nil))
+(defn-spec uniswap-v3-get-pool-hour-data-historical-with-http-info any?
+  "PoolHourData (historical)
+  Gets poolHourData."
+  ([] (uniswap-v3-get-pool-hour-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
-   (call-api "/dapps/uniswapv3/poolHourDatas/historical" :get
+   (call-api "/dapps/uniswapv3/poolHourData/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id "pool" pool }
@@ -1037,12 +1037,12 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec uniswap-v3-get-pool-hour-datas-historical (s/coll-of uniswap-v3/pool-hour-data-dto-spec)
-  "PoolHourDatas (historical)
-  Gets poolHourDatas."
-  ([] (uniswap-v3-get-pool-hour-datas-historical nil))
+(defn-spec uniswap-v3-get-pool-hour-data-historical (s/coll-of uniswap-v3/pool-hour-data-dto-spec)
+  "PoolHourData (historical)
+  Gets poolHourData."
+  ([] (uniswap-v3-get-pool-hour-data-historical nil))
   ([optional-params any?]
-   (let [res (:data (uniswap-v3-get-pool-hour-datas-historical-with-http-info optional-params))]
+   (let [res (:data (uniswap-v3-get-pool-hour-data-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v3/pool-hour-data-dto-spec) res st/string-transformer)
         res))))
@@ -1148,12 +1148,12 @@
         res))))
 
 
-(defn-spec uniswap-v3-get-tick-day-datas-historical-with-http-info any?
-  "TickDayDatas (historical)
-  Gets tickDayDatas."
-  ([] (uniswap-v3-get-tick-day-datas-historical-with-http-info nil))
+(defn-spec uniswap-v3-get-tick-day-data-historical-with-http-info any?
+  "TickDayData (historical)
+  Gets tickDayData."
+  ([] (uniswap-v3-get-tick-day-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pool]} (s/map-of keyword? any?)]
-   (call-api "/dapps/uniswapv3/tickDayDatas/historical" :get
+   (call-api "/dapps/uniswapv3/tickDayData/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id "pool" pool }
@@ -1162,12 +1162,12 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec uniswap-v3-get-tick-day-datas-historical (s/coll-of uniswap-v3/tick-day-data-dto-spec)
-  "TickDayDatas (historical)
-  Gets tickDayDatas."
-  ([] (uniswap-v3-get-tick-day-datas-historical nil))
+(defn-spec uniswap-v3-get-tick-day-data-historical (s/coll-of uniswap-v3/tick-day-data-dto-spec)
+  "TickDayData (historical)
+  Gets tickDayData."
+  ([] (uniswap-v3-get-tick-day-data-historical nil))
   ([optional-params any?]
-   (let [res (:data (uniswap-v3-get-tick-day-datas-historical-with-http-info optional-params))]
+   (let [res (:data (uniswap-v3-get-tick-day-data-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v3/tick-day-data-dto-spec) res st/string-transformer)
         res))))
@@ -1198,12 +1198,12 @@
         res))))
 
 
-(defn-spec uniswap-v3-get-token-hour-datas-historical-with-http-info any?
-  "TokenHourDatas (historical)
-  Gets tokenHourDatas."
-  ([] (uniswap-v3-get-token-hour-datas-historical-with-http-info nil))
+(defn-spec uniswap-v3-get-token-hour-data-historical-with-http-info any?
+  "TokenHourData (historical)
+  Gets tokenHourData."
+  ([] (uniswap-v3-get-token-hour-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/uniswapv3/tokenHourDatas/historical" :get
+   (call-api "/dapps/uniswapv3/tokenHourData/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
@@ -1212,23 +1212,23 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec uniswap-v3-get-token-hour-datas-historical (s/coll-of uniswap-v3/token-hour-data-dto-spec)
-  "TokenHourDatas (historical)
-  Gets tokenHourDatas."
-  ([] (uniswap-v3-get-token-hour-datas-historical nil))
+(defn-spec uniswap-v3-get-token-hour-data-historical (s/coll-of uniswap-v3/token-hour-data-dto-spec)
+  "TokenHourData (historical)
+  Gets tokenHourData."
+  ([] (uniswap-v3-get-token-hour-data-historical nil))
   ([optional-params any?]
-   (let [res (:data (uniswap-v3-get-token-hour-datas-historical-with-http-info optional-params))]
+   (let [res (:data (uniswap-v3-get-token-hour-data-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v3/token-hour-data-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec uniswap-v3-get-token-v3-day-datas-historical-with-http-info any?
-  "TokenV3DayDatas (historical)
-  Gets tokenV3DayDatas."
-  ([] (uniswap-v3-get-token-v3-day-datas-historical-with-http-info nil))
+(defn-spec uniswap-v3-get-token-v3-day-data-historical-with-http-info any?
+  "TokenV3DayData (historical)
+  Gets tokenV3DayData."
+  ([] (uniswap-v3-get-token-v3-day-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/uniswapv3/tokenV3DayDatas/historical" :get
+   (call-api "/dapps/uniswapv3/tokenV3DayData/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
@@ -1237,12 +1237,12 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec uniswap-v3-get-token-v3-day-datas-historical (s/coll-of uniswap-v3/token-v3-day-data-dto-spec)
-  "TokenV3DayDatas (historical)
-  Gets tokenV3DayDatas."
-  ([] (uniswap-v3-get-token-v3-day-datas-historical nil))
+(defn-spec uniswap-v3-get-token-v3-day-data-historical (s/coll-of uniswap-v3/token-v3-day-data-dto-spec)
+  "TokenV3DayData (historical)
+  Gets tokenV3DayData."
+  ([] (uniswap-v3-get-token-v3-day-data-historical nil))
   ([optional-params any?]
-   (let [res (:data (uniswap-v3-get-token-v3-day-datas-historical-with-http-info optional-params))]
+   (let [res (:data (uniswap-v3-get-token-v3-day-data-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v3/token-v3-day-data-dto-spec) res st/string-transformer)
         res))))
@@ -1298,12 +1298,12 @@
         res))))
 
 
-(defn-spec uniswap-v3-get-uniswap-day-datas-historical-with-http-info any?
-  "UniswapDayDatas (historical)
-  Gets uniswapDayDatas."
-  ([] (uniswap-v3-get-uniswap-day-datas-historical-with-http-info nil))
+(defn-spec uniswap-v3-get-uniswap-day-data-historical-with-http-info any?
+  "UniswapDayData (historical)
+  Gets uniswapDayData."
+  ([] (uniswap-v3-get-uniswap-day-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/uniswapv3/uniswapDayDatas/historical" :get
+   (call-api "/dapps/uniswapv3/uniswapDayData/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
@@ -1312,12 +1312,12 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec uniswap-v3-get-uniswap-day-datas-historical (s/coll-of uniswap-v3/uniswap-day-data-dto-spec)
-  "UniswapDayDatas (historical)
-  Gets uniswapDayDatas."
-  ([] (uniswap-v3-get-uniswap-day-datas-historical nil))
+(defn-spec uniswap-v3-get-uniswap-day-data-historical (s/coll-of uniswap-v3/uniswap-day-data-dto-spec)
+  "UniswapDayData (historical)
+  Gets uniswapDayData."
+  ([] (uniswap-v3-get-uniswap-day-data-historical nil))
   ([optional-params any?]
-   (let [res (:data (uniswap-v3-get-uniswap-day-datas-historical-with-http-info optional-params))]
+   (let [res (:data (uniswap-v3-get-uniswap-day-data-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of uniswap-v3/uniswap-day-data-dto-spec) res st/string-transformer)
         res))))
@@ -1346,11 +1346,11 @@
        res)))
 
 
-(defn-spec uniswap-v3-pool-day-datas-current-with-http-info any?
-  "PoolDayDatas (current)
-  Gets poolDayDatas."
+(defn-spec uniswap-v3-pool-day-data-current-with-http-info any?
+  "PoolDayData (current)
+  Gets poolDayData."
   []
-  (call-api "/dapps/uniswapv3/poolDayDatas/current" :get
+  (call-api "/dapps/uniswapv3/poolDayData/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -1359,21 +1359,21 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec uniswap-v3-pool-day-datas-current (s/coll-of uniswap-v3/pool-day-data-dto-spec)
-  "PoolDayDatas (current)
-  Gets poolDayDatas."
+(defn-spec uniswap-v3-pool-day-data-current (s/coll-of uniswap-v3/pool-day-data-dto-spec)
+  "PoolDayData (current)
+  Gets poolDayData."
   []
-  (let [res (:data (uniswap-v3-pool-day-datas-current-with-http-info))]
+  (let [res (:data (uniswap-v3-pool-day-data-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of uniswap-v3/pool-day-data-dto-spec) res st/string-transformer)
        res)))
 
 
-(defn-spec uniswap-v3-pool-hour-datas-current-with-http-info any?
-  "PoolHourDatas (current)
-  Gets poolHourDatas."
+(defn-spec uniswap-v3-pool-hour-data-current-with-http-info any?
+  "PoolHourData (current)
+  Gets poolHourData."
   []
-  (call-api "/dapps/uniswapv3/poolHourDatas/current" :get
+  (call-api "/dapps/uniswapv3/poolHourData/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -1382,11 +1382,11 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec uniswap-v3-pool-hour-datas-current (s/coll-of uniswap-v3/pool-hour-data-dto-spec)
-  "PoolHourDatas (current)
-  Gets poolHourDatas."
+(defn-spec uniswap-v3-pool-hour-data-current (s/coll-of uniswap-v3/pool-hour-data-dto-spec)
+  "PoolHourData (current)
+  Gets poolHourData."
   []
-  (let [res (:data (uniswap-v3-pool-hour-datas-current-with-http-info))]
+  (let [res (:data (uniswap-v3-pool-hour-data-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of uniswap-v3/pool-hour-data-dto-spec) res st/string-transformer)
        res)))
@@ -1488,11 +1488,11 @@
         res))))
 
 
-(defn-spec uniswap-v3-tick-day-datas-current-with-http-info any?
-  "TickDayDatas (current)
-  Gets tickDayDatas."
+(defn-spec uniswap-v3-tick-day-data-current-with-http-info any?
+  "TickDayData (current)
+  Gets tickDayData."
   []
-  (call-api "/dapps/uniswapv3/tickDayDatas/current" :get
+  (call-api "/dapps/uniswapv3/tickDayData/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -1501,11 +1501,11 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec uniswap-v3-tick-day-datas-current (s/coll-of uniswap-v3/tick-day-data-dto-spec)
-  "TickDayDatas (current)
-  Gets tickDayDatas."
+(defn-spec uniswap-v3-tick-day-data-current (s/coll-of uniswap-v3/tick-day-data-dto-spec)
+  "TickDayData (current)
+  Gets tickDayData."
   []
-  (let [res (:data (uniswap-v3-tick-day-datas-current-with-http-info))]
+  (let [res (:data (uniswap-v3-tick-day-data-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of uniswap-v3/tick-day-data-dto-spec) res st/string-transformer)
        res)))
@@ -1534,11 +1534,11 @@
        res)))
 
 
-(defn-spec uniswap-v3-token-hour-datas-current-with-http-info any?
-  "TokenHourDatas (current)
-  Gets tokenHourDatas."
+(defn-spec uniswap-v3-token-hour-data-current-with-http-info any?
+  "TokenHourData (current)
+  Gets tokenHourData."
   []
-  (call-api "/dapps/uniswapv3/tokenHourDatas/current" :get
+  (call-api "/dapps/uniswapv3/tokenHourData/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -1547,21 +1547,21 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec uniswap-v3-token-hour-datas-current (s/coll-of uniswap-v3/token-hour-data-dto-spec)
-  "TokenHourDatas (current)
-  Gets tokenHourDatas."
+(defn-spec uniswap-v3-token-hour-data-current (s/coll-of uniswap-v3/token-hour-data-dto-spec)
+  "TokenHourData (current)
+  Gets tokenHourData."
   []
-  (let [res (:data (uniswap-v3-token-hour-datas-current-with-http-info))]
+  (let [res (:data (uniswap-v3-token-hour-data-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of uniswap-v3/token-hour-data-dto-spec) res st/string-transformer)
        res)))
 
 
-(defn-spec uniswap-v3-token-v3-day-datas-current-with-http-info any?
-  "TokenV3DayDatas (current)
-  Gets tokenV3DayDatas."
+(defn-spec uniswap-v3-token-v3-day-data-current-with-http-info any?
+  "TokenV3DayData (current)
+  Gets tokenV3DayData."
   []
-  (call-api "/dapps/uniswapv3/tokenV3DayDatas/current" :get
+  (call-api "/dapps/uniswapv3/tokenV3DayData/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -1570,11 +1570,11 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec uniswap-v3-token-v3-day-datas-current (s/coll-of uniswap-v3/token-v3-day-data-dto-spec)
-  "TokenV3DayDatas (current)
-  Gets tokenV3DayDatas."
+(defn-spec uniswap-v3-token-v3-day-data-current (s/coll-of uniswap-v3/token-v3-day-data-dto-spec)
+  "TokenV3DayData (current)
+  Gets tokenV3DayData."
   []
-  (let [res (:data (uniswap-v3-token-v3-day-datas-current-with-http-info))]
+  (let [res (:data (uniswap-v3-token-v3-day-data-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of uniswap-v3/token-v3-day-data-dto-spec) res st/string-transformer)
        res)))
@@ -1626,11 +1626,11 @@
        res)))
 
 
-(defn-spec uniswap-v3-uniswap-day-datas-current-with-http-info any?
-  "UniswapDayDatas (current)
-  Gets uniswapDayDatas."
+(defn-spec uniswap-v3-uniswap-day-data-current-with-http-info any?
+  "UniswapDayData (current)
+  Gets uniswapDayData."
   []
-  (call-api "/dapps/uniswapv3/uniswapDayDatas/current" :get
+  (call-api "/dapps/uniswapv3/uniswapDayData/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -1639,11 +1639,11 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec uniswap-v3-uniswap-day-datas-current (s/coll-of uniswap-v3/uniswap-day-data-dto-spec)
-  "UniswapDayDatas (current)
-  Gets uniswapDayDatas."
+(defn-spec uniswap-v3-uniswap-day-data-current (s/coll-of uniswap-v3/uniswap-day-data-dto-spec)
+  "UniswapDayData (current)
+  Gets uniswapDayData."
   []
-  (let [res (:data (uniswap-v3-uniswap-day-datas-current-with-http-info))]
+  (let [res (:data (uniswap-v3-uniswap-day-data-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of uniswap-v3/uniswap-day-data-dto-spec) res st/string-transformer)
        res)))

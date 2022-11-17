@@ -159,7 +159,7 @@ function Invoke-UniswapV3BurnsCurrent {
 <#
 .SYNOPSIS
 
-Factorys (current)
+Factories (current)
 
 .DESCRIPTION
 
@@ -177,7 +177,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 UniswapV3FactoryDTO[]
 #>
-function Invoke-UniswapV3FactorysCurrent {
+function Invoke-UniswapV3FactoriesCurrent {
     [CmdletBinding()]
     Param (
         [String]
@@ -188,7 +188,7 @@ function Invoke-UniswapV3FactorysCurrent {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3FactorysCurrent' | Write-Debug
+        'Calling method: Invoke-UniswapV3FactoriesCurrent' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -209,7 +209,7 @@ function Invoke-UniswapV3FactorysCurrent {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/factorys/current'
+        $LocalVarUri = '/dapps/uniswapv3/factories/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -514,7 +514,7 @@ function Invoke-UniswapV3GetBurnsHistorical {
 <#
 .SYNOPSIS
 
-Factorys (historical)
+Factories (historical)
 
 .DESCRIPTION
 
@@ -547,7 +547,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 UniswapV3FactoryDTO[]
 #>
-function Invoke-UniswapV3GetFactorysHistorical {
+function Invoke-UniswapV3GetFactoriesHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -573,7 +573,7 @@ function Invoke-UniswapV3GetFactorysHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetFactorysHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetFactoriesHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -594,7 +594,7 @@ function Invoke-UniswapV3GetFactorysHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/factorys/historical'
+        $LocalVarUri = '/dapps/uniswapv3/factories/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -794,7 +794,7 @@ function Invoke-UniswapV3GetMintsHistorical {
 <#
 .SYNOPSIS
 
-PoolDayDatas (historical)
+PoolDayData (historical)
 
 .DESCRIPTION
 
@@ -830,7 +830,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 UniswapV3PoolDayDataDTO[]
 #>
-function Invoke-UniswapV3GetPoolDayDatasHistorical {
+function Invoke-UniswapV3GetPoolDayDataHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -859,7 +859,7 @@ function Invoke-UniswapV3GetPoolDayDatasHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetPoolDayDatasHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetPoolDayDataHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -880,7 +880,7 @@ function Invoke-UniswapV3GetPoolDayDatasHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/poolDayDatas/historical'
+        $LocalVarUri = '/dapps/uniswapv3/poolDayData/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -929,7 +929,7 @@ function Invoke-UniswapV3GetPoolDayDatasHistorical {
 <#
 .SYNOPSIS
 
-PoolHourDatas (historical)
+PoolHourData (historical)
 
 .DESCRIPTION
 
@@ -965,7 +965,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 UniswapV3PoolHourDataDTO[]
 #>
-function Invoke-UniswapV3GetPoolHourDatasHistorical {
+function Invoke-UniswapV3GetPoolHourDataHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -994,7 +994,7 @@ function Invoke-UniswapV3GetPoolHourDatasHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetPoolHourDatasHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetPoolHourDataHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -1015,7 +1015,7 @@ function Invoke-UniswapV3GetPoolHourDatasHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/poolHourDatas/historical'
+        $LocalVarUri = '/dapps/uniswapv3/poolHourData/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1654,7 +1654,7 @@ function Invoke-UniswapV3GetSwapsHistorical {
 <#
 .SYNOPSIS
 
-TickDayDatas (historical)
+TickDayData (historical)
 
 .DESCRIPTION
 
@@ -1690,7 +1690,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 UniswapV3TickDayDataDTO[]
 #>
-function Invoke-UniswapV3GetTickDayDatasHistorical {
+function Invoke-UniswapV3GetTickDayDataHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -1719,7 +1719,7 @@ function Invoke-UniswapV3GetTickDayDatasHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetTickDayDatasHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetTickDayDataHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -1740,7 +1740,7 @@ function Invoke-UniswapV3GetTickDayDatasHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/tickDayDatas/historical'
+        $LocalVarUri = '/dapps/uniswapv3/tickDayData/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1924,7 +1924,7 @@ function Invoke-UniswapV3GetTicksHistorical {
 <#
 .SYNOPSIS
 
-TokenHourDatas (historical)
+TokenHourData (historical)
 
 .DESCRIPTION
 
@@ -1957,7 +1957,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 UniswapV3TokenHourDataDTO[]
 #>
-function Invoke-UniswapV3GetTokenHourDatasHistorical {
+function Invoke-UniswapV3GetTokenHourDataHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -1983,7 +1983,7 @@ function Invoke-UniswapV3GetTokenHourDatasHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetTokenHourDatasHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetTokenHourDataHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -2004,7 +2004,7 @@ function Invoke-UniswapV3GetTokenHourDatasHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/tokenHourDatas/historical'
+        $LocalVarUri = '/dapps/uniswapv3/tokenHourData/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -2049,7 +2049,7 @@ function Invoke-UniswapV3GetTokenHourDatasHistorical {
 <#
 .SYNOPSIS
 
-TokenV3DayDatas (historical)
+TokenV3DayData (historical)
 
 .DESCRIPTION
 
@@ -2082,7 +2082,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 UniswapV3TokenV3DayDataDTO[]
 #>
-function Invoke-UniswapV3GetTokenV3DayDatasHistorical {
+function Invoke-UniswapV3GetTokenV3DayDataHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -2108,7 +2108,7 @@ function Invoke-UniswapV3GetTokenV3DayDatasHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetTokenV3DayDatasHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetTokenV3DayDataHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -2129,7 +2129,7 @@ function Invoke-UniswapV3GetTokenV3DayDatasHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/tokenV3DayDatas/historical'
+        $LocalVarUri = '/dapps/uniswapv3/tokenV3DayData/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -2444,7 +2444,7 @@ function Invoke-UniswapV3GetTransactionsHistorical {
 <#
 .SYNOPSIS
 
-UniswapDayDatas (historical)
+UniswapDayData (historical)
 
 .DESCRIPTION
 
@@ -2477,7 +2477,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 UniswapV3UniswapDayDataDTO[]
 #>
-function Invoke-UniswapV3GetUniswapDayDatasHistorical {
+function Invoke-UniswapV3GetUniswapDayDataHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -2503,7 +2503,7 @@ function Invoke-UniswapV3GetUniswapDayDatasHistorical {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3GetUniswapDayDatasHistorical' | Write-Debug
+        'Calling method: Invoke-UniswapV3GetUniswapDayDataHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -2524,7 +2524,7 @@ function Invoke-UniswapV3GetUniswapDayDatasHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/uniswapDayDatas/historical'
+        $LocalVarUri = '/dapps/uniswapv3/uniswapDayData/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -2644,7 +2644,7 @@ function Invoke-UniswapV3MintsCurrent {
 <#
 .SYNOPSIS
 
-PoolDayDatas (current)
+PoolDayData (current)
 
 .DESCRIPTION
 
@@ -2662,7 +2662,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 UniswapV3PoolDayDataDTO[]
 #>
-function Invoke-UniswapV3PoolDayDatasCurrent {
+function Invoke-UniswapV3PoolDayDataCurrent {
     [CmdletBinding()]
     Param (
         [String]
@@ -2673,7 +2673,7 @@ function Invoke-UniswapV3PoolDayDatasCurrent {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3PoolDayDatasCurrent' | Write-Debug
+        'Calling method: Invoke-UniswapV3PoolDayDataCurrent' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -2694,7 +2694,7 @@ function Invoke-UniswapV3PoolDayDatasCurrent {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/poolDayDatas/current'
+        $LocalVarUri = '/dapps/uniswapv3/poolDayData/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -2719,7 +2719,7 @@ function Invoke-UniswapV3PoolDayDatasCurrent {
 <#
 .SYNOPSIS
 
-PoolHourDatas (current)
+PoolHourData (current)
 
 .DESCRIPTION
 
@@ -2737,7 +2737,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 UniswapV3PoolHourDataDTO[]
 #>
-function Invoke-UniswapV3PoolHourDatasCurrent {
+function Invoke-UniswapV3PoolHourDataCurrent {
     [CmdletBinding()]
     Param (
         [String]
@@ -2748,7 +2748,7 @@ function Invoke-UniswapV3PoolHourDatasCurrent {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3PoolHourDatasCurrent' | Write-Debug
+        'Calling method: Invoke-UniswapV3PoolHourDataCurrent' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -2769,7 +2769,7 @@ function Invoke-UniswapV3PoolHourDatasCurrent {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/poolHourDatas/current'
+        $LocalVarUri = '/dapps/uniswapv3/poolHourData/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -3114,7 +3114,7 @@ function Invoke-UniswapV3SwapsCurrent {
 <#
 .SYNOPSIS
 
-TickDayDatas (current)
+TickDayData (current)
 
 .DESCRIPTION
 
@@ -3132,7 +3132,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 UniswapV3TickDayDataDTO[]
 #>
-function Invoke-UniswapV3TickDayDatasCurrent {
+function Invoke-UniswapV3TickDayDataCurrent {
     [CmdletBinding()]
     Param (
         [String]
@@ -3143,7 +3143,7 @@ function Invoke-UniswapV3TickDayDatasCurrent {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3TickDayDatasCurrent' | Write-Debug
+        'Calling method: Invoke-UniswapV3TickDayDataCurrent' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -3164,7 +3164,7 @@ function Invoke-UniswapV3TickDayDatasCurrent {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/tickDayDatas/current'
+        $LocalVarUri = '/dapps/uniswapv3/tickDayData/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -3264,7 +3264,7 @@ function Invoke-UniswapV3TicksCurrent {
 <#
 .SYNOPSIS
 
-TokenHourDatas (current)
+TokenHourData (current)
 
 .DESCRIPTION
 
@@ -3282,7 +3282,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 UniswapV3TokenHourDataDTO[]
 #>
-function Invoke-UniswapV3TokenHourDatasCurrent {
+function Invoke-UniswapV3TokenHourDataCurrent {
     [CmdletBinding()]
     Param (
         [String]
@@ -3293,7 +3293,7 @@ function Invoke-UniswapV3TokenHourDatasCurrent {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3TokenHourDatasCurrent' | Write-Debug
+        'Calling method: Invoke-UniswapV3TokenHourDataCurrent' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -3314,7 +3314,7 @@ function Invoke-UniswapV3TokenHourDatasCurrent {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/tokenHourDatas/current'
+        $LocalVarUri = '/dapps/uniswapv3/tokenHourData/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -3339,7 +3339,7 @@ function Invoke-UniswapV3TokenHourDatasCurrent {
 <#
 .SYNOPSIS
 
-TokenV3DayDatas (current)
+TokenV3DayData (current)
 
 .DESCRIPTION
 
@@ -3357,7 +3357,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 UniswapV3TokenV3DayDataDTO[]
 #>
-function Invoke-UniswapV3TokenV3DayDatasCurrent {
+function Invoke-UniswapV3TokenV3DayDataCurrent {
     [CmdletBinding()]
     Param (
         [String]
@@ -3368,7 +3368,7 @@ function Invoke-UniswapV3TokenV3DayDatasCurrent {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3TokenV3DayDatasCurrent' | Write-Debug
+        'Calling method: Invoke-UniswapV3TokenV3DayDataCurrent' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -3389,7 +3389,7 @@ function Invoke-UniswapV3TokenV3DayDatasCurrent {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/tokenV3DayDatas/current'
+        $LocalVarUri = '/dapps/uniswapv3/tokenV3DayData/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -3564,7 +3564,7 @@ function Invoke-UniswapV3TransactionsCurrent {
 <#
 .SYNOPSIS
 
-UniswapDayDatas (current)
+UniswapDayData (current)
 
 .DESCRIPTION
 
@@ -3582,7 +3582,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 UniswapV3UniswapDayDataDTO[]
 #>
-function Invoke-UniswapV3UniswapDayDatasCurrent {
+function Invoke-UniswapV3UniswapDayDataCurrent {
     [CmdletBinding()]
     Param (
         [String]
@@ -3593,7 +3593,7 @@ function Invoke-UniswapV3UniswapDayDatasCurrent {
     )
 
     Process {
-        'Calling method: Invoke-UniswapV3UniswapDayDatasCurrent' | Write-Debug
+        'Calling method: Invoke-UniswapV3UniswapDayDataCurrent' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -3614,7 +3614,7 @@ function Invoke-UniswapV3UniswapDayDatasCurrent {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/uniswapv3/uniswapDayDatas/current'
+        $LocalVarUri = '/dapps/uniswapv3/uniswapDayData/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `

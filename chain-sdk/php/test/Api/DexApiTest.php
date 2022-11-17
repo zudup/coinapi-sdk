@@ -73,12 +73,12 @@ class DexApiTest extends TestCase
     }
 
     /**
-     * Test case for dexBatchsCurrent
+     * Test case for dexBatchesCurrent
      *
-     * Batchs (current).
+     * Batches (current).
      *
      */
-    public function testDexBatchsCurrent()
+    public function testDexBatchesCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -97,12 +97,12 @@ class DexApiTest extends TestCase
     }
 
     /**
-     * Test case for dexGetBatchsHistorical
+     * Test case for dexGetBatchesHistorical
      *
-     * Batchs (historical).
+     * Batches (historical).
      *
      */
-    public function testDexGetBatchsHistorical()
+    public function testDexGetBatchesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -157,12 +157,12 @@ class DexApiTest extends TestCase
     }
 
     /**
-     * Test case for dexGetStatssHistorical
+     * Test case for dexGetStatsHistorical
      *
-     * Statss (historical).
+     * Stats (historical).
      *
      */
-    public function testDexGetStatssHistorical()
+    public function testDexGetStatsHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -265,12 +265,12 @@ class DexApiTest extends TestCase
     }
 
     /**
-     * Test case for dexStatssCurrent
+     * Test case for dexStatsCurrent
      *
-     * Statss (current).
+     * Stats (current).
      *
      */
-    public function testDexStatssCurrent()
+    public function testDexStatsCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

@@ -18,8 +18,8 @@ class DexApi {
     String versionPath = ""
     ApiUtils apiUtils = new ApiUtils();
 
-    def dexBatchsCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/dex/batchs/current"
+    def dexBatchesCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/batches/current"
 
         // params
         def queryParams = [:]
@@ -58,8 +58,8 @@ class DexApi {
 
     }
 
-    def dexGetBatchsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/dex/batchs/historical"
+    def dexGetBatchesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/batches/historical"
 
         // params
         def queryParams = [:]
@@ -242,8 +242,8 @@ class DexApi {
 
     }
 
-    def dexGetStatssHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/dex/statss/historical"
+    def dexGetStatsHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/stats/historical"
 
         // params
         def queryParams = [:]
@@ -533,8 +533,8 @@ class DexApi {
 
     }
 
-    def dexStatssCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/dex/statss/current"
+    def dexStatsCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/dex/stats/current"
 
         // params
         def queryParams = [:]

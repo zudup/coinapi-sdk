@@ -16,7 +16,7 @@ Method | HTTP request | Description
 [**curve_exchanges__current**](#curve_exchanges__current) | **get** /dapps/curve/exchanges/current | Exchanges (current)
 [**curve_fee_change_logs__current**](#curve_fee_change_logs__current) | **get** /dapps/curve/feeChangeLogs/current | FeeChangeLogs (current)
 [**curve_gauge_deposits__current**](#curve_gauge_deposits__current) | **get** /dapps/curve/gaugeDeposits/current | GaugeDeposits (current)
-[**curve_gauge_liquiditys__current**](#curve_gauge_liquiditys__current) | **get** /dapps/curve/gaugeLiquiditys/current | GaugeLiquiditys (current)
+[**curve_gauge_liquidities__current**](#curve_gauge_liquidities__current) | **get** /dapps/curve/gaugeLiquidities/current | GaugeLiquidities (current)
 [**curve_gauge_total_weights__current**](#curve_gauge_total_weights__current) | **get** /dapps/curve/gaugeTotalWeights/current | GaugeTotalWeights (current)
 [**curve_gauge_type_weights__current**](#curve_gauge_type_weights__current) | **get** /dapps/curve/gaugeTypeWeights/current | GaugeTypeWeights (current)
 [**curve_gauge_types__current**](#curve_gauge_types__current) | **get** /dapps/curve/gaugeTypes/current | GaugeTypes (current)
@@ -35,7 +35,7 @@ Method | HTTP request | Description
 [**curve_get_exchanges__historical**](#curve_get_exchanges__historical) | **get** /dapps/curve/exchanges/historical | Exchanges (historical)
 [**curve_get_fee_change_logs__historical**](#curve_get_fee_change_logs__historical) | **get** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical)
 [**curve_get_gauge_deposits__historical**](#curve_get_gauge_deposits__historical) | **get** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical)
-[**curve_get_gauge_liquiditys__historical**](#curve_get_gauge_liquiditys__historical) | **get** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical)
+[**curve_get_gauge_liquidities__historical**](#curve_get_gauge_liquidities__historical) | **get** /dapps/curve/gaugeLiquidities/historical | GaugeLiquidities (historical)
 [**curve_get_gauge_total_weights__historical**](#curve_get_gauge_total_weights__historical) | **get** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical)
 [**curve_get_gauge_type_weights__historical**](#curve_get_gauge_type_weights__historical) | **get** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical)
 [**curve_get_gauge_types__historical**](#curve_get_gauge_types__historical) | **get** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical)
@@ -1120,13 +1120,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **curve_gauge_liquiditys__current**
-<a name="curve_gauge_liquiditys__current"></a>
-> [CurveGaugeLiquidityDTO] curve_gauge_liquiditys__current()
+# **curve_gauge_liquidities__current**
+<a name="curve_gauge_liquidities__current"></a>
+> [CurveGaugeLiquidityDTO] curve_gauge_liquidities__current()
 
-GaugeLiquiditys (current)
+GaugeLiquidities (current)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 
@@ -1148,11 +1148,11 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # GaugeLiquiditys (current)
-        api_response = api_instance.curve_gauge_liquiditys__current()
+        # GaugeLiquidities (current)
+        api_response = api_instance.curve_gauge_liquidities__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling CurveApi->curve_gauge_liquiditys__current: %s\n" % e)
+        print("Exception when calling CurveApi->curve_gauge_liquidities__current: %s\n" % e)
 ```
 ### Parameters
 This endpoint does not need any parameter.
@@ -1162,9 +1162,9 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#curve_gauge_liquiditys__current.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#curve_gauge_liquidities__current.ApiResponseFor200) | successful operation
 
-#### curve_gauge_liquiditys__current.ApiResponseFor200
+#### curve_gauge_liquidities__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -3661,13 +3661,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **curve_get_gauge_liquiditys__historical**
-<a name="curve_get_gauge_liquiditys__historical"></a>
-> [CurveGaugeLiquidityDTO] curve_get_gauge_liquiditys__historical()
+# **curve_get_gauge_liquidities__historical**
+<a name="curve_get_gauge_liquidities__historical"></a>
+> [CurveGaugeLiquidityDTO] curve_get_gauge_liquidities__historical()
 
-GaugeLiquiditys (historical)
+GaugeLiquidities (historical)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 
@@ -3697,13 +3697,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'user': "user_example",
     }
     try:
-        # GaugeLiquiditys (historical)
-        api_response = api_instance.curve_get_gauge_liquiditys__historical(
+        # GaugeLiquidities (historical)
+        api_response = api_instance.curve_get_gauge_liquidities__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling CurveApi->curve_get_gauge_liquiditys__historical: %s\n" % e)
+        print("Exception when calling CurveApi->curve_get_gauge_liquidities__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -3775,9 +3775,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#curve_get_gauge_liquiditys__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#curve_get_gauge_liquidities__historical.ApiResponseFor200) | successful operation
 
-#### curve_get_gauge_liquiditys__historical.ApiResponseFor200
+#### curve_get_gauge_liquidities__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |

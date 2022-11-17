@@ -78,24 +78,24 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test SushiswapDayDatasCurrent
+        /// Test SushiswapDayDataCurrent
         /// </summary>
         [Fact]
-        public void SushiswapDayDatasCurrentTest()
+        public void SushiswapDayDataCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.SushiswapDayDatasCurrent();
+            //var response = instance.SushiswapDayDataCurrent();
             //Assert.IsType<List<SushiswapDayDataDTO>>(response);
         }
 
         /// <summary>
-        /// Test SushiswapFactorysCurrent
+        /// Test SushiswapFactoriesCurrent
         /// </summary>
         [Fact]
-        public void SushiswapFactorysCurrentTest()
+        public void SushiswapFactoriesCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.SushiswapFactorysCurrent();
+            //var response = instance.SushiswapFactoriesCurrent();
             //Assert.IsType<List<SushiswapFactoryDTO>>(response);
         }
 
@@ -133,10 +133,10 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test SushiswapGetDayDatasHistorical
+        /// Test SushiswapGetDayDataHistorical
         /// </summary>
         [Fact]
-        public void SushiswapGetDayDatasHistoricalTest()
+        public void SushiswapGetDayDataHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -144,15 +144,15 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string id = null;
-            //var response = instance.SushiswapGetDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+            //var response = instance.SushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate, id);
             //Assert.IsType<List<SushiswapDayDataDTO>>(response);
         }
 
         /// <summary>
-        /// Test SushiswapGetFactorysHistorical
+        /// Test SushiswapGetFactoriesHistorical
         /// </summary>
         [Fact]
-        public void SushiswapGetFactorysHistoricalTest()
+        public void SushiswapGetFactoriesHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -160,15 +160,15 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string id = null;
-            //var response = instance.SushiswapGetFactorysHistorical(startBlock, endBlock, startDate, endDate, id);
+            //var response = instance.SushiswapGetFactoriesHistorical(startBlock, endBlock, startDate, endDate, id);
             //Assert.IsType<List<SushiswapFactoryDTO>>(response);
         }
 
         /// <summary>
-        /// Test SushiswapGetHourDatasHistorical
+        /// Test SushiswapGetHourDataHistorical
         /// </summary>
         [Fact]
-        public void SushiswapGetHourDatasHistoricalTest()
+        public void SushiswapGetHourDataHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -176,7 +176,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string id = null;
-            //var response = instance.SushiswapGetHourDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+            //var response = instance.SushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate, id);
             //Assert.IsType<List<SushiswapHourDataDTO>>(response);
         }
 
@@ -234,10 +234,10 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test SushiswapGetPairDayDatasHistorical
+        /// Test SushiswapGetPairDayDataHistorical
         /// </summary>
         [Fact]
-        public void SushiswapGetPairDayDatasHistoricalTest()
+        public void SushiswapGetPairDayDataHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -248,15 +248,15 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //string pair = null;
             //string token0 = null;
             //string token1 = null;
-            //var response = instance.SushiswapGetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1);
+            //var response = instance.SushiswapGetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1);
             //Assert.IsType<List<SushiswapPairDayDataDTO>>(response);
         }
 
         /// <summary>
-        /// Test SushiswapGetPairHourDatasHistorical
+        /// Test SushiswapGetPairHourDataHistorical
         /// </summary>
         [Fact]
-        public void SushiswapGetPairHourDatasHistoricalTest()
+        public void SushiswapGetPairHourDataHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -265,7 +265,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? endDate = null;
             //string id = null;
             //string pair = null;
-            //var response = instance.SushiswapGetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+            //var response = instance.SushiswapGetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair);
             //Assert.IsType<List<SushiswapPairHourDataDTO>>(response);
         }
 
@@ -306,10 +306,10 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test SushiswapGetTokenDayDatasHistorical
+        /// Test SushiswapGetTokenDayDataHistorical
         /// </summary>
         [Fact]
-        public void SushiswapGetTokenDayDatasHistoricalTest()
+        public void SushiswapGetTokenDayDataHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -317,7 +317,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string id = null;
-            //var response = instance.SushiswapGetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+            //var response = instance.SushiswapGetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id);
             //Assert.IsType<List<SushiswapTokenDayDataDTO>>(response);
         }
 
@@ -372,13 +372,13 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test SushiswapHourDatasCurrent
+        /// Test SushiswapHourDataCurrent
         /// </summary>
         [Fact]
-        public void SushiswapHourDatasCurrentTest()
+        public void SushiswapHourDataCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.SushiswapHourDatasCurrent();
+            //var response = instance.SushiswapHourDataCurrent();
             //Assert.IsType<List<SushiswapHourDataDTO>>(response);
         }
 
@@ -416,24 +416,24 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test SushiswapPairDayDatasCurrent
+        /// Test SushiswapPairDayDataCurrent
         /// </summary>
         [Fact]
-        public void SushiswapPairDayDatasCurrentTest()
+        public void SushiswapPairDayDataCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.SushiswapPairDayDatasCurrent();
+            //var response = instance.SushiswapPairDayDataCurrent();
             //Assert.IsType<List<SushiswapPairDayDataDTO>>(response);
         }
 
         /// <summary>
-        /// Test SushiswapPairHourDatasCurrent
+        /// Test SushiswapPairHourDataCurrent
         /// </summary>
         [Fact]
-        public void SushiswapPairHourDatasCurrentTest()
+        public void SushiswapPairHourDataCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.SushiswapPairHourDatasCurrent();
+            //var response = instance.SushiswapPairHourDataCurrent();
             //Assert.IsType<List<SushiswapPairHourDataDTO>>(response);
         }
 
@@ -462,13 +462,13 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test SushiswapTokenDayDatasCurrent
+        /// Test SushiswapTokenDayDataCurrent
         /// </summary>
         [Fact]
-        public void SushiswapTokenDayDatasCurrentTest()
+        public void SushiswapTokenDayDataCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.SushiswapTokenDayDatasCurrent();
+            //var response = instance.SushiswapTokenDayDataCurrent();
             //Assert.IsType<List<SushiswapTokenDayDataDTO>>(response);
         }
 

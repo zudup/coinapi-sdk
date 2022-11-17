@@ -58,27 +58,27 @@ import qualified Prelude as P
 
 -- ** Dex
 
--- *** dexBatchsCurrent
+-- *** dexBatchesCurrent
 
--- | @GET \/dapps\/dex\/batchs\/current@
+-- | @GET \/dapps\/dex\/batches\/current@
 -- 
--- Batchs (current)
+-- Batches (current)
 -- 
--- Gets batchs.
+-- Gets batches.
 -- 
-dexBatchsCurrent
+dexBatchesCurrent
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DexBatchsCurrent MimeNoContent [DexBatchDTO] accept
-dexBatchsCurrent  _ =
-  _mkRequest "GET" ["/dapps/dex/batchs/current"]
+  -> OnChainRequest DexBatchesCurrent MimeNoContent [DexBatchDTO] accept
+dexBatchesCurrent  _ =
+  _mkRequest "GET" ["/dapps/dex/batches/current"]
 
-data DexBatchsCurrent  
+data DexBatchesCurrent  
 -- | @application/json@
-instance Produces DexBatchsCurrent MimeJSON
+instance Produces DexBatchesCurrent MimeJSON
 -- | @text/json@
-instance Produces DexBatchsCurrent MimeTextJson
+instance Produces DexBatchesCurrent MimeTextJson
 -- | @text/plain@
-instance Produces DexBatchsCurrent MimePlainText
+instance Produces DexBatchesCurrent MimePlainText
 
 
 -- *** dexDepositsCurrent
@@ -104,52 +104,52 @@ instance Produces DexDepositsCurrent MimeTextJson
 instance Produces DexDepositsCurrent MimePlainText
 
 
--- *** dexGetBatchsHistorical
+-- *** dexGetBatchesHistorical
 
--- | @GET \/dapps\/dex\/batchs\/historical@
+-- | @GET \/dapps\/dex\/batches\/historical@
 -- 
--- Batchs (historical)
+-- Batches (historical)
 -- 
--- Gets batchs.
+-- Gets batches.
 -- 
-dexGetBatchsHistorical
+dexGetBatchesHistorical
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DexGetBatchsHistorical MimeNoContent [DexBatchDTO] accept
-dexGetBatchsHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/batchs/historical"]
+  -> OnChainRequest DexGetBatchesHistorical MimeNoContent [DexBatchDTO] accept
+dexGetBatchesHistorical  _ =
+  _mkRequest "GET" ["/dapps/dex/batches/historical"]
 
-data DexGetBatchsHistorical  
+data DexGetBatchesHistorical  
 
 -- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-instance HasOptionalParam DexGetBatchsHistorical StartBlock where
+instance HasOptionalParam DexGetBatchesHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
 
 -- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-instance HasOptionalParam DexGetBatchsHistorical EndBlock where
+instance HasOptionalParam DexGetBatchesHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
 
 -- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-instance HasOptionalParam DexGetBatchsHistorical StartDate where
+instance HasOptionalParam DexGetBatchesHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
 
 -- | /Optional Param/ "endDate" - The end date of timeframe.
-instance HasOptionalParam DexGetBatchsHistorical EndDate where
+instance HasOptionalParam DexGetBatchesHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
 
 -- | /Optional Param/ "id" - Identifier.
-instance HasOptionalParam DexGetBatchsHistorical Id where
+instance HasOptionalParam DexGetBatchesHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
 -- | @application/json@
-instance Produces DexGetBatchsHistorical MimeJSON
+instance Produces DexGetBatchesHistorical MimeJSON
 -- | @text/json@
-instance Produces DexGetBatchsHistorical MimeTextJson
+instance Produces DexGetBatchesHistorical MimeTextJson
 -- | @text/plain@
-instance Produces DexGetBatchsHistorical MimePlainText
+instance Produces DexGetBatchesHistorical MimePlainText
 
 
 -- *** dexGetDepositsHistorical
@@ -323,52 +323,52 @@ instance Produces DexGetSolutionsHistorical MimeTextJson
 instance Produces DexGetSolutionsHistorical MimePlainText
 
 
--- *** dexGetStatssHistorical
+-- *** dexGetStatsHistorical
 
--- | @GET \/dapps\/dex\/statss\/historical@
+-- | @GET \/dapps\/dex\/stats\/historical@
 -- 
--- Statss (historical)
+-- Stats (historical)
 -- 
--- Gets statss.
+-- Gets stats.
 -- 
-dexGetStatssHistorical
+dexGetStatsHistorical
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DexGetStatssHistorical MimeNoContent [DexStatsDTO] accept
-dexGetStatssHistorical  _ =
-  _mkRequest "GET" ["/dapps/dex/statss/historical"]
+  -> OnChainRequest DexGetStatsHistorical MimeNoContent [DexStatsDTO] accept
+dexGetStatsHistorical  _ =
+  _mkRequest "GET" ["/dapps/dex/stats/historical"]
 
-data DexGetStatssHistorical  
+data DexGetStatsHistorical  
 
 -- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-instance HasOptionalParam DexGetStatssHistorical StartBlock where
+instance HasOptionalParam DexGetStatsHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
 
 -- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-instance HasOptionalParam DexGetStatssHistorical EndBlock where
+instance HasOptionalParam DexGetStatsHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
 
 -- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-instance HasOptionalParam DexGetStatssHistorical StartDate where
+instance HasOptionalParam DexGetStatsHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
 
 -- | /Optional Param/ "endDate" - The end date of timeframe.
-instance HasOptionalParam DexGetStatssHistorical EndDate where
+instance HasOptionalParam DexGetStatsHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
 
 -- | /Optional Param/ "id" - 
-instance HasOptionalParam DexGetStatssHistorical Id where
+instance HasOptionalParam DexGetStatsHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
 -- | @application/json@
-instance Produces DexGetStatssHistorical MimeJSON
+instance Produces DexGetStatsHistorical MimeJSON
 -- | @text/json@
-instance Produces DexGetStatssHistorical MimeTextJson
+instance Produces DexGetStatsHistorical MimeTextJson
 -- | @text/plain@
-instance Produces DexGetStatssHistorical MimePlainText
+instance Produces DexGetStatsHistorical MimePlainText
 
 
 -- *** dexGetTokensHistorical
@@ -691,27 +691,27 @@ instance Produces DexSolutionsCurrent MimeTextJson
 instance Produces DexSolutionsCurrent MimePlainText
 
 
--- *** dexStatssCurrent
+-- *** dexStatsCurrent
 
--- | @GET \/dapps\/dex\/statss\/current@
+-- | @GET \/dapps\/dex\/stats\/current@
 -- 
--- Statss (current)
+-- Stats (current)
 -- 
--- Gets statss.
+-- Gets stats.
 -- 
-dexStatssCurrent
+dexStatsCurrent
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest DexStatssCurrent MimeNoContent [DexStatsDTO] accept
-dexStatssCurrent  _ =
-  _mkRequest "GET" ["/dapps/dex/statss/current"]
+  -> OnChainRequest DexStatsCurrent MimeNoContent [DexStatsDTO] accept
+dexStatsCurrent  _ =
+  _mkRequest "GET" ["/dapps/dex/stats/current"]
 
-data DexStatssCurrent  
+data DexStatsCurrent  
 -- | @application/json@
-instance Produces DexStatssCurrent MimeJSON
+instance Produces DexStatsCurrent MimeJSON
 -- | @text/json@
-instance Produces DexStatssCurrent MimeTextJson
+instance Produces DexStatsCurrent MimeTextJson
 -- | @text/plain@
-instance Produces DexStatssCurrent MimePlainText
+instance Produces DexStatsCurrent MimePlainText
 
 
 -- *** dexTokensCurrent

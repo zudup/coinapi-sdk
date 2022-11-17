@@ -163,14 +163,14 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets factorys.
-     * @summary Factorys (current)
+     * Gets factories.
+     * @summary Factories (current)
      */
-    public uniswapV3FactorysCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uniswapV3FactoriesCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3FactoryDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/factorys/current';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/factories/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -389,19 +389,19 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets factorys.
-     * @summary Factorys (historical)
+     * Gets factories.
+     * @summary Factories (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Factory address.
      */
-    public uniswapV3GetFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uniswapV3GetFactoriesHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3FactoryDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/factorys/historical';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/factories/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -557,8 +557,8 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets poolDayDatas.
-     * @summary PoolDayDatas (historical)
+     * Gets poolDayData.
+     * @summary PoolDayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -566,11 +566,11 @@ export class UniswapV3Api {
      * @param id 
      * @param pool 
      */
-    public uniswapV3GetPoolDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uniswapV3GetPoolDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3PoolDayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/poolDayDatas/historical';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/poolDayData/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -639,8 +639,8 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets poolHourDatas.
-     * @summary PoolHourDatas (historical)
+     * Gets poolHourData.
+     * @summary PoolHourData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -648,11 +648,11 @@ export class UniswapV3Api {
      * @param id 
      * @param pool 
      */
-    public uniswapV3GetPoolHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uniswapV3GetPoolHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3PoolHourDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/poolHourDatas/historical';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/poolHourData/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1069,8 +1069,8 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets tickDayDatas.
-     * @summary TickDayDatas (historical)
+     * Gets tickDayData.
+     * @summary TickDayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1078,11 +1078,11 @@ export class UniswapV3Api {
      * @param id 
      * @param pool 
      */
-    public uniswapV3GetTickDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uniswapV3GetTickDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pool?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3TickDayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/tickDayDatas/historical';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/tickDayData/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1233,19 +1233,19 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets tokenHourDatas.
-     * @summary TokenHourDatas (historical)
+     * Gets tokenHourData.
+     * @summary TokenHourData (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Token address concatendated with date.
      */
-    public uniswapV3GetTokenHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uniswapV3GetTokenHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3TokenHourDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/tokenHourDatas/historical';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/tokenHourData/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1311,19 +1311,19 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets tokenV3DayDatas.
-     * @summary TokenV3DayDatas (historical)
+     * Gets tokenV3DayData.
+     * @summary TokenV3DayData (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Token address concatendated with date.
      */
-    public uniswapV3GetTokenV3DayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uniswapV3GetTokenV3DayDataHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3TokenV3DayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/tokenV3DayDatas/historical';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/tokenV3DayData/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1553,19 +1553,19 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets uniswapDayDatas.
-     * @summary UniswapDayDatas (historical)
+     * Gets uniswapDayData.
+     * @summary UniswapDayData (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Timestamp rounded to current day by dividing by 86400.
      */
-    public uniswapV3GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uniswapV3GetUniswapDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3UniswapDayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/uniswapDayDatas/historical';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/uniswapDayData/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1689,14 +1689,14 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets poolDayDatas.
-     * @summary PoolDayDatas (current)
+     * Gets poolDayData.
+     * @summary PoolDayData (current)
      */
-    public uniswapV3PoolDayDatasCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uniswapV3PoolDayDataCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3PoolDayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/poolDayDatas/current';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/poolDayData/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1747,14 +1747,14 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets poolHourDatas.
-     * @summary PoolHourDatas (current)
+     * Gets poolHourData.
+     * @summary PoolHourData (current)
      */
-    public uniswapV3PoolHourDatasCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uniswapV3PoolHourDataCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3PoolHourDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/poolHourDatas/current';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/poolHourData/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -2045,14 +2045,14 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets tickDayDatas.
-     * @summary TickDayDatas (current)
+     * Gets tickDayData.
+     * @summary TickDayData (current)
      */
-    public uniswapV3TickDayDatasCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uniswapV3TickDayDataCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3TickDayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/tickDayDatas/current';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/tickDayData/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -2161,14 +2161,14 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets tokenHourDatas.
-     * @summary TokenHourDatas (current)
+     * Gets tokenHourData.
+     * @summary TokenHourData (current)
      */
-    public uniswapV3TokenHourDatasCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uniswapV3TokenHourDataCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3TokenHourDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/tokenHourDatas/current';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/tokenHourData/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -2219,14 +2219,14 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets tokenV3DayDatas.
-     * @summary TokenV3DayDatas (current)
+     * Gets tokenV3DayData.
+     * @summary TokenV3DayData (current)
      */
-    public uniswapV3TokenV3DayDatasCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uniswapV3TokenV3DayDataCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3TokenV3DayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/tokenV3DayDatas/current';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/tokenV3DayData/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -2393,14 +2393,14 @@ export class UniswapV3Api {
     }
 
     /**
-     * Gets uniswapDayDatas.
-     * @summary UniswapDayDatas (current)
+     * Gets uniswapDayData.
+     * @summary UniswapDayData (current)
      */
-    public uniswapV3UniswapDayDatasCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public uniswapV3UniswapDayDataCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.UniswapV3UniswapDayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/uniswapv3/uniswapDayDatas/current';
+        let localVarPath = this.basePath + '/dapps/uniswapv3/uniswapDayData/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};

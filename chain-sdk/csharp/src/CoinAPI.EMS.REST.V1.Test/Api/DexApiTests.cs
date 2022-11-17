@@ -64,13 +64,13 @@ namespace CoinAPI.EMS.REST.V1.Test
 
         
         /// <summary>
-        /// Test DexBatchsCurrent
+        /// Test DexBatchesCurrent
         /// </summary>
         [Test]
-        public void DexBatchsCurrentTest()
+        public void DexBatchesCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.DexBatchsCurrent();
+            //var response = instance.DexBatchesCurrent();
             //Assert.IsInstanceOf(typeof(List<DexBatchDTO>), response, "response is List<DexBatchDTO>");
         }
         
@@ -86,10 +86,10 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test DexGetBatchsHistorical
+        /// Test DexGetBatchesHistorical
         /// </summary>
         [Test]
-        public void DexGetBatchsHistoricalTest()
+        public void DexGetBatchesHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -97,7 +97,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string id = null;
-            //var response = instance.DexGetBatchsHistorical(startBlock, endBlock, startDate, endDate, id);
+            //var response = instance.DexGetBatchesHistorical(startBlock, endBlock, startDate, endDate, id);
             //Assert.IsInstanceOf(typeof(List<DexBatchDTO>), response, "response is List<DexBatchDTO>");
         }
         
@@ -169,10 +169,10 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test DexGetStatssHistorical
+        /// Test DexGetStatsHistorical
         /// </summary>
         [Test]
-        public void DexGetStatssHistoricalTest()
+        public void DexGetStatsHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -180,7 +180,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string id = null;
-            //var response = instance.DexGetStatssHistorical(startBlock, endBlock, startDate, endDate, id);
+            //var response = instance.DexGetStatsHistorical(startBlock, endBlock, startDate, endDate, id);
             //Assert.IsInstanceOf(typeof(List<DexStatsDTO>), response, "response is List<DexStatsDTO>");
         }
         
@@ -305,13 +305,13 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test DexStatssCurrent
+        /// Test DexStatsCurrent
         /// </summary>
         [Test]
-        public void DexStatssCurrentTest()
+        public void DexStatsCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.DexStatssCurrent();
+            //var response = instance.DexStatsCurrent();
             //Assert.IsInstanceOf(typeof(List<DexStatsDTO>), response, "response is List<DexStatsDTO>");
         }
         

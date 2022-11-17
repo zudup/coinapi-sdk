@@ -17,28 +17,28 @@ from openapi_client.paths.dapps_uniswapv2_burns_historical.get import UniswapV2G
 from openapi_client.paths.dapps_uniswapv2_liquidity_position_snapshots_historical.get import UniswapV2GetLiquidityPositionSnapshotsHistorical
 from openapi_client.paths.dapps_uniswapv2_liquidity_positions_historical.get import UniswapV2GetLiquidityPositionsHistorical
 from openapi_client.paths.dapps_uniswapv2_mints_historical.get import UniswapV2GetMintsHistorical
-from openapi_client.paths.dapps_uniswapv2_pair_day_datas_historical.get import UniswapV2GetPairDayDatasHistorical
-from openapi_client.paths.dapps_uniswapv2_pair_hour_datas_historical.get import UniswapV2GetPairHourDatasHistorical
+from openapi_client.paths.dapps_uniswapv2_pair_day_data_historical.get import UniswapV2GetPairDayDataHistorical
+from openapi_client.paths.dapps_uniswapv2_pair_hour_data_historical.get import UniswapV2GetPairHourDataHistorical
 from openapi_client.paths.dapps_uniswapv2_pairs_historical.get import UniswapV2GetPairsHistorical
 from openapi_client.paths.dapps_uniswapv2_swaps_historical.get import UniswapV2GetSwapsHistorical
-from openapi_client.paths.dapps_uniswapv2_token_day_datas_historical.get import UniswapV2GetTokenDayDatasHistorical
+from openapi_client.paths.dapps_uniswapv2_token_day_data_historical.get import UniswapV2GetTokenDayDataHistorical
 from openapi_client.paths.dapps_uniswapv2_tokens_historical.get import UniswapV2GetTokensHistorical
 from openapi_client.paths.dapps_uniswapv2_transactions_historical.get import UniswapV2GetTransactionsHistorical
-from openapi_client.paths.dapps_uniswapv2_uniswap_day_datas_historical.get import UniswapV2GetUniswapDayDatasHistorical
-from openapi_client.paths.dapps_uniswapv2_uniswap_factorys_historical.get import UniswapV2GetUniswapFactorysHistorical
+from openapi_client.paths.dapps_uniswapv2_uniswap_day_data_historical.get import UniswapV2GetUniswapDayDataHistorical
+from openapi_client.paths.dapps_uniswapv2_uniswap_factories_historical.get import UniswapV2GetUniswapFactoriesHistorical
 from openapi_client.paths.dapps_uniswapv2_users_historical.get import UniswapV2GetUsersHistorical
 from openapi_client.paths.dapps_uniswapv2_liquidity_position_snapshots_current.get import UniswapV2LiquidityPositionSnapshotsCurrent
 from openapi_client.paths.dapps_uniswapv2_liquidity_positions_current.get import UniswapV2LiquidityPositionsCurrent
 from openapi_client.paths.dapps_uniswapv2_mints_current.get import UniswapV2MintsCurrent
-from openapi_client.paths.dapps_uniswapv2_pair_day_datas_current.get import UniswapV2PairDayDatasCurrent
-from openapi_client.paths.dapps_uniswapv2_pair_hour_datas_current.get import UniswapV2PairHourDatasCurrent
+from openapi_client.paths.dapps_uniswapv2_pair_day_data_current.get import UniswapV2PairDayDataCurrent
+from openapi_client.paths.dapps_uniswapv2_pair_hour_data_current.get import UniswapV2PairHourDataCurrent
 from openapi_client.paths.dapps_uniswapv2_pairs_current.get import UniswapV2PairsCurrent
 from openapi_client.paths.dapps_uniswapv2_swaps_current.get import UniswapV2SwapsCurrent
-from openapi_client.paths.dapps_uniswapv2_token_day_datas_current.get import UniswapV2TokenDayDatasCurrent
+from openapi_client.paths.dapps_uniswapv2_token_day_data_current.get import UniswapV2TokenDayDataCurrent
 from openapi_client.paths.dapps_uniswapv2_tokens_current.get import UniswapV2TokensCurrent
 from openapi_client.paths.dapps_uniswapv2_transactions_current.get import UniswapV2TransactionsCurrent
-from openapi_client.paths.dapps_uniswapv2_uniswap_day_datas_current.get import UniswapV2UniswapDayDatasCurrent
-from openapi_client.paths.dapps_uniswapv2_uniswap_factorys_current.get import UniswapV2UniswapFactorysCurrent
+from openapi_client.paths.dapps_uniswapv2_uniswap_day_data_current.get import UniswapV2UniswapDayDataCurrent
+from openapi_client.paths.dapps_uniswapv2_uniswap_factories_current.get import UniswapV2UniswapFactoriesCurrent
 from openapi_client.paths.dapps_uniswapv2_users_current.get import UniswapV2UsersCurrent
 
 
@@ -50,28 +50,28 @@ class UniswapV2Api(
     UniswapV2GetLiquidityPositionSnapshotsHistorical,
     UniswapV2GetLiquidityPositionsHistorical,
     UniswapV2GetMintsHistorical,
-    UniswapV2GetPairDayDatasHistorical,
-    UniswapV2GetPairHourDatasHistorical,
+    UniswapV2GetPairDayDataHistorical,
+    UniswapV2GetPairHourDataHistorical,
     UniswapV2GetPairsHistorical,
     UniswapV2GetSwapsHistorical,
-    UniswapV2GetTokenDayDatasHistorical,
+    UniswapV2GetTokenDayDataHistorical,
     UniswapV2GetTokensHistorical,
     UniswapV2GetTransactionsHistorical,
-    UniswapV2GetUniswapDayDatasHistorical,
-    UniswapV2GetUniswapFactorysHistorical,
+    UniswapV2GetUniswapDayDataHistorical,
+    UniswapV2GetUniswapFactoriesHistorical,
     UniswapV2GetUsersHistorical,
     UniswapV2LiquidityPositionSnapshotsCurrent,
     UniswapV2LiquidityPositionsCurrent,
     UniswapV2MintsCurrent,
-    UniswapV2PairDayDatasCurrent,
-    UniswapV2PairHourDatasCurrent,
+    UniswapV2PairDayDataCurrent,
+    UniswapV2PairHourDataCurrent,
     UniswapV2PairsCurrent,
     UniswapV2SwapsCurrent,
-    UniswapV2TokenDayDatasCurrent,
+    UniswapV2TokenDayDataCurrent,
     UniswapV2TokensCurrent,
     UniswapV2TransactionsCurrent,
-    UniswapV2UniswapDayDatasCurrent,
-    UniswapV2UniswapFactorysCurrent,
+    UniswapV2UniswapDayDataCurrent,
+    UniswapV2UniswapFactoriesCurrent,
     UniswapV2UsersCurrent,
 ):
     """NOTE: This class is auto generated by OpenAPI Generator

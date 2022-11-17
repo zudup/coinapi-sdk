@@ -105,11 +105,11 @@
   (:import (java.io File)))
 
 
-(defn-spec dex-batchs-current-with-http-info any?
-  "Batchs (current)
-  Gets batchs."
+(defn-spec dex-batches-current-with-http-info any?
+  "Batches (current)
+  Gets batches."
   []
-  (call-api "/dapps/dex/batchs/current" :get
+  (call-api "/dapps/dex/batches/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -118,11 +118,11 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec dex-batchs-current (s/coll-of dex/batch-dto-spec)
-  "Batchs (current)
-  Gets batchs."
+(defn-spec dex-batches-current (s/coll-of dex/batch-dto-spec)
+  "Batches (current)
+  Gets batches."
   []
-  (let [res (:data (dex-batchs-current-with-http-info))]
+  (let [res (:data (dex-batches-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of dex/batch-dto-spec) res st/string-transformer)
        res)))
@@ -151,12 +151,12 @@
        res)))
 
 
-(defn-spec dex-get-batchs-historical-with-http-info any?
-  "Batchs (historical)
-  Gets batchs."
-  ([] (dex-get-batchs-historical-with-http-info nil))
+(defn-spec dex-get-batches-historical-with-http-info any?
+  "Batches (historical)
+  Gets batches."
+  ([] (dex-get-batches-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/dex/batchs/historical" :get
+   (call-api "/dapps/dex/batches/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
@@ -165,12 +165,12 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dex-get-batchs-historical (s/coll-of dex/batch-dto-spec)
-  "Batchs (historical)
-  Gets batchs."
-  ([] (dex-get-batchs-historical nil))
+(defn-spec dex-get-batches-historical (s/coll-of dex/batch-dto-spec)
+  "Batches (historical)
+  Gets batches."
+  ([] (dex-get-batches-historical nil))
   ([optional-params any?]
-   (let [res (:data (dex-get-batchs-historical-with-http-info optional-params))]
+   (let [res (:data (dex-get-batches-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of dex/batch-dto-spec) res st/string-transformer)
         res))))
@@ -276,12 +276,12 @@
         res))))
 
 
-(defn-spec dex-get-statss-historical-with-http-info any?
-  "Statss (historical)
-  Gets statss."
-  ([] (dex-get-statss-historical-with-http-info nil))
+(defn-spec dex-get-stats-historical-with-http-info any?
+  "Stats (historical)
+  Gets stats."
+  ([] (dex-get-stats-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/dex/statss/historical" :get
+   (call-api "/dapps/dex/stats/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
@@ -290,12 +290,12 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec dex-get-statss-historical (s/coll-of dex/stats-dto-spec)
-  "Statss (historical)
-  Gets statss."
-  ([] (dex-get-statss-historical nil))
+(defn-spec dex-get-stats-historical (s/coll-of dex/stats-dto-spec)
+  "Stats (historical)
+  Gets stats."
+  ([] (dex-get-stats-historical nil))
   ([optional-params any?]
-   (let [res (:data (dex-get-statss-historical-with-http-info optional-params))]
+   (let [res (:data (dex-get-stats-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of dex/stats-dto-spec) res st/string-transformer)
         res))))
@@ -495,11 +495,11 @@
        res)))
 
 
-(defn-spec dex-statss-current-with-http-info any?
-  "Statss (current)
-  Gets statss."
+(defn-spec dex-stats-current-with-http-info any?
+  "Stats (current)
+  Gets stats."
   []
-  (call-api "/dapps/dex/statss/current" :get
+  (call-api "/dapps/dex/stats/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -508,11 +508,11 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec dex-statss-current (s/coll-of dex/stats-dto-spec)
-  "Statss (current)
-  Gets statss."
+(defn-spec dex-stats-current (s/coll-of dex/stats-dto-spec)
+  "Stats (current)
+  Gets stats."
   []
-  (let [res (:data (dex-statss-current-with-http-info))]
+  (let [res (:data (dex-stats-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of dex/stats-dto-spec) res st/string-transformer)
        res)))

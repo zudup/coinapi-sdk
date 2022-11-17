@@ -154,12 +154,12 @@ describe 'CurveApi' do
     end
   end
 
-  # unit tests for curve_gauge_liquiditys__current
-  # GaugeLiquiditys (current)
-  # Gets gaugeLiquiditys.
+  # unit tests for curve_gauge_liquidities__current
+  # GaugeLiquidities (current)
+  # Gets gaugeLiquidities.
   # @param [Hash] opts the optional parameters
   # @return [Array<CurveGaugeLiquidityDTO>]
-  describe 'curve_gauge_liquiditys__current test' do
+  describe 'curve_gauge_liquidities__current test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -427,9 +427,9 @@ describe 'CurveApi' do
     end
   end
 
-  # unit tests for curve_get_gauge_liquiditys__historical
-  # GaugeLiquiditys (historical)
-  # Gets gaugeLiquiditys.
+  # unit tests for curve_get_gauge_liquidities__historical
+  # GaugeLiquidities (historical)
+  # Gets gaugeLiquidities.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -438,7 +438,7 @@ describe 'CurveApi' do
   # @option opts [String] :id 
   # @option opts [String] :user 
   # @return [Array<CurveGaugeLiquidityDTO>]
-  describe 'curve_get_gauge_liquiditys__historical test' do
+  describe 'curve_get_gauge_liquidities__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

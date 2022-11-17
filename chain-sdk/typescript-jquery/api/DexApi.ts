@@ -47,14 +47,14 @@ export class DexApi {
     }
 
     /**
-     * Gets batchs.
-     * @summary Batchs (current)
+     * Gets batches.
+     * @summary Batches (current)
      */
-    public dexBatchsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public dexBatchesCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.DexBatchDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/dex/batchs/current';
+        let localVarPath = this.basePath + '/dapps/dex/batches/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -163,19 +163,19 @@ export class DexApi {
     }
 
     /**
-     * Gets batchs.
-     * @summary Batchs (historical)
+     * Gets batches.
+     * @summary Batches (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Identifier.
      */
-    public dexGetBatchsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public dexGetBatchesHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.DexBatchDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/dex/batchs/historical';
+        let localVarPath = this.basePath + '/dapps/dex/batches/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -565,19 +565,19 @@ export class DexApi {
     }
 
     /**
-     * Gets statss.
-     * @summary Statss (historical)
+     * Gets stats.
+     * @summary Stats (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id 
      */
-    public dexGetStatssHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public dexGetStatsHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.DexStatsDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/dex/statss/historical';
+        let localVarPath = this.basePath + '/dapps/dex/stats/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1235,14 +1235,14 @@ export class DexApi {
     }
 
     /**
-     * Gets statss.
-     * @summary Statss (current)
+     * Gets stats.
+     * @summary Stats (current)
      */
-    public dexStatssCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public dexStatsCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.DexStatsDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/dex/statss/current';
+        let localVarPath = this.basePath + '/dapps/dex/stats/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};

@@ -6,38 +6,38 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 | ------------- | ------------- | ------------- |
 | [**uniswapV3BundlesCurrent()**](UniswapV3Api.md#uniswapV3BundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current) |
 | [**uniswapV3BurnsCurrent()**](UniswapV3Api.md#uniswapV3BurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current) |
-| [**uniswapV3FactorysCurrent()**](UniswapV3Api.md#uniswapV3FactorysCurrent) | **GET** /dapps/uniswapv3/factorys/current | Factorys (current) |
+| [**uniswapV3FactoriesCurrent()**](UniswapV3Api.md#uniswapV3FactoriesCurrent) | **GET** /dapps/uniswapv3/factories/current | Factories (current) |
 | [**uniswapV3GetBundlesHistorical()**](UniswapV3Api.md#uniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical) |
 | [**uniswapV3GetBurnsHistorical()**](UniswapV3Api.md#uniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical) |
-| [**uniswapV3GetFactorysHistorical()**](UniswapV3Api.md#uniswapV3GetFactorysHistorical) | **GET** /dapps/uniswapv3/factorys/historical | Factorys (historical) |
+| [**uniswapV3GetFactoriesHistorical()**](UniswapV3Api.md#uniswapV3GetFactoriesHistorical) | **GET** /dapps/uniswapv3/factories/historical | Factories (historical) |
 | [**uniswapV3GetMintsHistorical()**](UniswapV3Api.md#uniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical) |
-| [**uniswapV3GetPoolDayDatasHistorical()**](UniswapV3Api.md#uniswapV3GetPoolDayDatasHistorical) | **GET** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical) |
-| [**uniswapV3GetPoolHourDatasHistorical()**](UniswapV3Api.md#uniswapV3GetPoolHourDatasHistorical) | **GET** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical) |
+| [**uniswapV3GetPoolDayDataHistorical()**](UniswapV3Api.md#uniswapV3GetPoolDayDataHistorical) | **GET** /dapps/uniswapv3/poolDayData/historical | PoolDayData (historical) |
+| [**uniswapV3GetPoolHourDataHistorical()**](UniswapV3Api.md#uniswapV3GetPoolHourDataHistorical) | **GET** /dapps/uniswapv3/poolHourData/historical | PoolHourData (historical) |
 | [**uniswapV3GetPoolsHistorical()**](UniswapV3Api.md#uniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) |
 | [**uniswapV3GetPositionSnapshotsHistorical()**](UniswapV3Api.md#uniswapV3GetPositionSnapshotsHistorical) | **GET** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical) |
 | [**uniswapV3GetPositionsHistorical()**](UniswapV3Api.md#uniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical) |
 | [**uniswapV3GetSwapsHistorical()**](UniswapV3Api.md#uniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) |
-| [**uniswapV3GetTickDayDatasHistorical()**](UniswapV3Api.md#uniswapV3GetTickDayDatasHistorical) | **GET** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical) |
+| [**uniswapV3GetTickDayDataHistorical()**](UniswapV3Api.md#uniswapV3GetTickDayDataHistorical) | **GET** /dapps/uniswapv3/tickDayData/historical | TickDayData (historical) |
 | [**uniswapV3GetTicksHistorical()**](UniswapV3Api.md#uniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical) |
-| [**uniswapV3GetTokenHourDatasHistorical()**](UniswapV3Api.md#uniswapV3GetTokenHourDatasHistorical) | **GET** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical) |
-| [**uniswapV3GetTokenV3DayDatasHistorical()**](UniswapV3Api.md#uniswapV3GetTokenV3DayDatasHistorical) | **GET** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical) |
+| [**uniswapV3GetTokenHourDataHistorical()**](UniswapV3Api.md#uniswapV3GetTokenHourDataHistorical) | **GET** /dapps/uniswapv3/tokenHourData/historical | TokenHourData (historical) |
+| [**uniswapV3GetTokenV3DayDataHistorical()**](UniswapV3Api.md#uniswapV3GetTokenV3DayDataHistorical) | **GET** /dapps/uniswapv3/tokenV3DayData/historical | TokenV3DayData (historical) |
 | [**uniswapV3GetTokensHistorical()**](UniswapV3Api.md#uniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) |
 | [**uniswapV3GetTransactionsHistorical()**](UniswapV3Api.md#uniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical) |
-| [**uniswapV3GetUniswapDayDatasHistorical()**](UniswapV3Api.md#uniswapV3GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical) |
+| [**uniswapV3GetUniswapDayDataHistorical()**](UniswapV3Api.md#uniswapV3GetUniswapDayDataHistorical) | **GET** /dapps/uniswapv3/uniswapDayData/historical | UniswapDayData (historical) |
 | [**uniswapV3MintsCurrent()**](UniswapV3Api.md#uniswapV3MintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current) |
-| [**uniswapV3PoolDayDatasCurrent()**](UniswapV3Api.md#uniswapV3PoolDayDatasCurrent) | **GET** /dapps/uniswapv3/poolDayDatas/current | PoolDayDatas (current) |
-| [**uniswapV3PoolHourDatasCurrent()**](UniswapV3Api.md#uniswapV3PoolHourDatasCurrent) | **GET** /dapps/uniswapv3/poolHourDatas/current | PoolHourDatas (current) |
+| [**uniswapV3PoolDayDataCurrent()**](UniswapV3Api.md#uniswapV3PoolDayDataCurrent) | **GET** /dapps/uniswapv3/poolDayData/current | PoolDayData (current) |
+| [**uniswapV3PoolHourDataCurrent()**](UniswapV3Api.md#uniswapV3PoolHourDataCurrent) | **GET** /dapps/uniswapv3/poolHourData/current | PoolHourData (current) |
 | [**uniswapV3PoolsCurrent()**](UniswapV3Api.md#uniswapV3PoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current) |
 | [**uniswapV3PositionSnapshotsCurrent()**](UniswapV3Api.md#uniswapV3PositionSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionSnapshots (current) |
 | [**uniswapV3PositionsCurrent()**](UniswapV3Api.md#uniswapV3PositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current) |
 | [**uniswapV3SwapsCurrent()**](UniswapV3Api.md#uniswapV3SwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) |
-| [**uniswapV3TickDayDatasCurrent()**](UniswapV3Api.md#uniswapV3TickDayDatasCurrent) | **GET** /dapps/uniswapv3/tickDayDatas/current | TickDayDatas (current) |
+| [**uniswapV3TickDayDataCurrent()**](UniswapV3Api.md#uniswapV3TickDayDataCurrent) | **GET** /dapps/uniswapv3/tickDayData/current | TickDayData (current) |
 | [**uniswapV3TicksCurrent()**](UniswapV3Api.md#uniswapV3TicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current) |
-| [**uniswapV3TokenHourDatasCurrent()**](UniswapV3Api.md#uniswapV3TokenHourDatasCurrent) | **GET** /dapps/uniswapv3/tokenHourDatas/current | TokenHourDatas (current) |
-| [**uniswapV3TokenV3DayDatasCurrent()**](UniswapV3Api.md#uniswapV3TokenV3DayDatasCurrent) | **GET** /dapps/uniswapv3/tokenV3DayDatas/current | TokenV3DayDatas (current) |
+| [**uniswapV3TokenHourDataCurrent()**](UniswapV3Api.md#uniswapV3TokenHourDataCurrent) | **GET** /dapps/uniswapv3/tokenHourData/current | TokenHourData (current) |
+| [**uniswapV3TokenV3DayDataCurrent()**](UniswapV3Api.md#uniswapV3TokenV3DayDataCurrent) | **GET** /dapps/uniswapv3/tokenV3DayData/current | TokenV3DayData (current) |
 | [**uniswapV3TokensCurrent()**](UniswapV3Api.md#uniswapV3TokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) |
 | [**uniswapV3TransactionsCurrent()**](UniswapV3Api.md#uniswapV3TransactionsCurrent) | **GET** /dapps/uniswapv3/transactions/current | Transactions (current) |
-| [**uniswapV3UniswapDayDatasCurrent()**](UniswapV3Api.md#uniswapV3UniswapDayDatasCurrent) | **GET** /dapps/uniswapv3/uniswapDayDatas/current | UniswapDayDatas (current) |
+| [**uniswapV3UniswapDayDataCurrent()**](UniswapV3Api.md#uniswapV3UniswapDayDataCurrent) | **GET** /dapps/uniswapv3/uniswapDayData/current | UniswapDayData (current) |
 
 
 ## `uniswapV3BundlesCurrent()`
@@ -146,15 +146,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV3FactorysCurrent()`
+## `uniswapV3FactoriesCurrent()`
 
 ```php
-uniswapV3FactorysCurrent(): \OpenAPI\Client\Model\UniswapV3FactoryDTO[]
+uniswapV3FactoriesCurrent(): \OpenAPI\Client\Model\UniswapV3FactoryDTO[]
 ```
 
-Factorys (current)
+Factories (current)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 
@@ -171,10 +171,10 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
 );
 
 try {
-    $result = $apiInstance->uniswapV3FactorysCurrent();
+    $result = $apiInstance->uniswapV3FactoriesCurrent();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->uniswapV3FactorysCurrent: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3FactoriesCurrent: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -333,15 +333,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV3GetFactorysHistorical()`
+## `uniswapV3GetFactoriesHistorical()`
 
 ```php
-uniswapV3GetFactorysHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV3FactoryDTO[]
+uniswapV3GetFactoriesHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV3FactoryDTO[]
 ```
 
-Factorys (historical)
+Factories (historical)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 
@@ -363,10 +363,10 @@ $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end d
 $id = 'id_example'; // string | Factory address.
 
 try {
-    $result = $apiInstance->uniswapV3GetFactorysHistorical($start_block, $end_block, $start_date, $end_date, $id);
+    $result = $apiInstance->uniswapV3GetFactoriesHistorical($start_block, $end_block, $start_date, $end_date, $id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->uniswapV3GetFactorysHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetFactoriesHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -467,15 +467,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV3GetPoolDayDatasHistorical()`
+## `uniswapV3GetPoolDayDataHistorical()`
 
 ```php
-uniswapV3GetPoolDayDatasHistorical($start_block, $end_block, $start_date, $end_date, $id, $pool): \OpenAPI\Client\Model\UniswapV3PoolDayDataDTO[]
+uniswapV3GetPoolDayDataHistorical($start_block, $end_block, $start_date, $end_date, $id, $pool): \OpenAPI\Client\Model\UniswapV3PoolDayDataDTO[]
 ```
 
-PoolDayDatas (historical)
+PoolDayData (historical)
 
-Gets poolDayDatas.
+Gets poolDayData.
 
 ### Example
 
@@ -498,10 +498,10 @@ $id = 'id_example'; // string
 $pool = 'pool_example'; // string
 
 try {
-    $result = $apiInstance->uniswapV3GetPoolDayDatasHistorical($start_block, $end_block, $start_date, $end_date, $id, $pool);
+    $result = $apiInstance->uniswapV3GetPoolDayDataHistorical($start_block, $end_block, $start_date, $end_date, $id, $pool);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->uniswapV3GetPoolDayDatasHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetPoolDayDataHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -533,15 +533,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV3GetPoolHourDatasHistorical()`
+## `uniswapV3GetPoolHourDataHistorical()`
 
 ```php
-uniswapV3GetPoolHourDatasHistorical($start_block, $end_block, $start_date, $end_date, $id, $pool): \OpenAPI\Client\Model\UniswapV3PoolHourDataDTO[]
+uniswapV3GetPoolHourDataHistorical($start_block, $end_block, $start_date, $end_date, $id, $pool): \OpenAPI\Client\Model\UniswapV3PoolHourDataDTO[]
 ```
 
-PoolHourDatas (historical)
+PoolHourData (historical)
 
-Gets poolHourDatas.
+Gets poolHourData.
 
 ### Example
 
@@ -564,10 +564,10 @@ $id = 'id_example'; // string
 $pool = 'pool_example'; // string
 
 try {
-    $result = $apiInstance->uniswapV3GetPoolHourDatasHistorical($start_block, $end_block, $start_date, $end_date, $id, $pool);
+    $result = $apiInstance->uniswapV3GetPoolHourDataHistorical($start_block, $end_block, $start_date, $end_date, $id, $pool);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->uniswapV3GetPoolHourDatasHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetPoolHourDataHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -873,15 +873,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV3GetTickDayDatasHistorical()`
+## `uniswapV3GetTickDayDataHistorical()`
 
 ```php
-uniswapV3GetTickDayDatasHistorical($start_block, $end_block, $start_date, $end_date, $id, $pool): \OpenAPI\Client\Model\UniswapV3TickDayDataDTO[]
+uniswapV3GetTickDayDataHistorical($start_block, $end_block, $start_date, $end_date, $id, $pool): \OpenAPI\Client\Model\UniswapV3TickDayDataDTO[]
 ```
 
-TickDayDatas (historical)
+TickDayData (historical)
 
-Gets tickDayDatas.
+Gets tickDayData.
 
 ### Example
 
@@ -904,10 +904,10 @@ $id = 'id_example'; // string
 $pool = 'pool_example'; // string
 
 try {
-    $result = $apiInstance->uniswapV3GetTickDayDatasHistorical($start_block, $end_block, $start_date, $end_date, $id, $pool);
+    $result = $apiInstance->uniswapV3GetTickDayDataHistorical($start_block, $end_block, $start_date, $end_date, $id, $pool);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->uniswapV3GetTickDayDatasHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetTickDayDataHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1005,15 +1005,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV3GetTokenHourDatasHistorical()`
+## `uniswapV3GetTokenHourDataHistorical()`
 
 ```php
-uniswapV3GetTokenHourDatasHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV3TokenHourDataDTO[]
+uniswapV3GetTokenHourDataHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV3TokenHourDataDTO[]
 ```
 
-TokenHourDatas (historical)
+TokenHourData (historical)
 
-Gets tokenHourDatas.
+Gets tokenHourData.
 
 ### Example
 
@@ -1035,10 +1035,10 @@ $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end d
 $id = 'id_example'; // string | Token address concatendated with date.
 
 try {
-    $result = $apiInstance->uniswapV3GetTokenHourDatasHistorical($start_block, $end_block, $start_date, $end_date, $id);
+    $result = $apiInstance->uniswapV3GetTokenHourDataHistorical($start_block, $end_block, $start_date, $end_date, $id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->uniswapV3GetTokenHourDatasHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetTokenHourDataHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1069,15 +1069,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV3GetTokenV3DayDatasHistorical()`
+## `uniswapV3GetTokenV3DayDataHistorical()`
 
 ```php
-uniswapV3GetTokenV3DayDatasHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]
+uniswapV3GetTokenV3DayDataHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]
 ```
 
-TokenV3DayDatas (historical)
+TokenV3DayData (historical)
 
-Gets tokenV3DayDatas.
+Gets tokenV3DayData.
 
 ### Example
 
@@ -1099,10 +1099,10 @@ $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end d
 $id = 'id_example'; // string | Token address concatendated with date.
 
 try {
-    $result = $apiInstance->uniswapV3GetTokenV3DayDatasHistorical($start_block, $end_block, $start_date, $end_date, $id);
+    $result = $apiInstance->uniswapV3GetTokenV3DayDataHistorical($start_block, $end_block, $start_date, $end_date, $id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->uniswapV3GetTokenV3DayDatasHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetTokenV3DayDataHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1265,15 +1265,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV3GetUniswapDayDatasHistorical()`
+## `uniswapV3GetUniswapDayDataHistorical()`
 
 ```php
-uniswapV3GetUniswapDayDatasHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV3UniswapDayDataDTO[]
+uniswapV3GetUniswapDayDataHistorical($start_block, $end_block, $start_date, $end_date, $id): \OpenAPI\Client\Model\UniswapV3UniswapDayDataDTO[]
 ```
 
-UniswapDayDatas (historical)
+UniswapDayData (historical)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 
@@ -1295,10 +1295,10 @@ $end_date = new \DateTime("2013-10-20T19:20:30+01:00"); // \DateTime | The end d
 $id = 'id_example'; // string | Timestamp rounded to current day by dividing by 86400.
 
 try {
-    $result = $apiInstance->uniswapV3GetUniswapDayDatasHistorical($start_block, $end_block, $start_date, $end_date, $id);
+    $result = $apiInstance->uniswapV3GetUniswapDayDataHistorical($start_block, $end_block, $start_date, $end_date, $id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->uniswapV3GetUniswapDayDatasHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3GetUniswapDayDataHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1382,15 +1382,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV3PoolDayDatasCurrent()`
+## `uniswapV3PoolDayDataCurrent()`
 
 ```php
-uniswapV3PoolDayDatasCurrent(): \OpenAPI\Client\Model\UniswapV3PoolDayDataDTO[]
+uniswapV3PoolDayDataCurrent(): \OpenAPI\Client\Model\UniswapV3PoolDayDataDTO[]
 ```
 
-PoolDayDatas (current)
+PoolDayData (current)
 
-Gets poolDayDatas.
+Gets poolDayData.
 
 ### Example
 
@@ -1407,10 +1407,10 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
 );
 
 try {
-    $result = $apiInstance->uniswapV3PoolDayDatasCurrent();
+    $result = $apiInstance->uniswapV3PoolDayDataCurrent();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->uniswapV3PoolDayDatasCurrent: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3PoolDayDataCurrent: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1435,15 +1435,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV3PoolHourDatasCurrent()`
+## `uniswapV3PoolHourDataCurrent()`
 
 ```php
-uniswapV3PoolHourDatasCurrent(): \OpenAPI\Client\Model\UniswapV3PoolHourDataDTO[]
+uniswapV3PoolHourDataCurrent(): \OpenAPI\Client\Model\UniswapV3PoolHourDataDTO[]
 ```
 
-PoolHourDatas (current)
+PoolHourData (current)
 
-Gets poolHourDatas.
+Gets poolHourData.
 
 ### Example
 
@@ -1460,10 +1460,10 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
 );
 
 try {
-    $result = $apiInstance->uniswapV3PoolHourDatasCurrent();
+    $result = $apiInstance->uniswapV3PoolHourDataCurrent();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->uniswapV3PoolHourDatasCurrent: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3PoolHourDataCurrent: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1706,15 +1706,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV3TickDayDatasCurrent()`
+## `uniswapV3TickDayDataCurrent()`
 
 ```php
-uniswapV3TickDayDatasCurrent(): \OpenAPI\Client\Model\UniswapV3TickDayDataDTO[]
+uniswapV3TickDayDataCurrent(): \OpenAPI\Client\Model\UniswapV3TickDayDataDTO[]
 ```
 
-TickDayDatas (current)
+TickDayData (current)
 
-Gets tickDayDatas.
+Gets tickDayData.
 
 ### Example
 
@@ -1731,10 +1731,10 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
 );
 
 try {
-    $result = $apiInstance->uniswapV3TickDayDatasCurrent();
+    $result = $apiInstance->uniswapV3TickDayDataCurrent();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->uniswapV3TickDayDatasCurrent: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3TickDayDataCurrent: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1812,15 +1812,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV3TokenHourDatasCurrent()`
+## `uniswapV3TokenHourDataCurrent()`
 
 ```php
-uniswapV3TokenHourDatasCurrent(): \OpenAPI\Client\Model\UniswapV3TokenHourDataDTO[]
+uniswapV3TokenHourDataCurrent(): \OpenAPI\Client\Model\UniswapV3TokenHourDataDTO[]
 ```
 
-TokenHourDatas (current)
+TokenHourData (current)
 
-Gets tokenHourDatas.
+Gets tokenHourData.
 
 ### Example
 
@@ -1837,10 +1837,10 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
 );
 
 try {
-    $result = $apiInstance->uniswapV3TokenHourDatasCurrent();
+    $result = $apiInstance->uniswapV3TokenHourDataCurrent();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->uniswapV3TokenHourDatasCurrent: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3TokenHourDataCurrent: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1865,15 +1865,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV3TokenV3DayDatasCurrent()`
+## `uniswapV3TokenV3DayDataCurrent()`
 
 ```php
-uniswapV3TokenV3DayDatasCurrent(): \OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]
+uniswapV3TokenV3DayDataCurrent(): \OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]
 ```
 
-TokenV3DayDatas (current)
+TokenV3DayData (current)
 
-Gets tokenV3DayDatas.
+Gets tokenV3DayData.
 
 ### Example
 
@@ -1890,10 +1890,10 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
 );
 
 try {
-    $result = $apiInstance->uniswapV3TokenV3DayDatasCurrent();
+    $result = $apiInstance->uniswapV3TokenV3DayDataCurrent();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->uniswapV3TokenV3DayDatasCurrent: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3TokenV3DayDataCurrent: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -2024,15 +2024,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `uniswapV3UniswapDayDatasCurrent()`
+## `uniswapV3UniswapDayDataCurrent()`
 
 ```php
-uniswapV3UniswapDayDatasCurrent(): \OpenAPI\Client\Model\UniswapV3UniswapDayDataDTO[]
+uniswapV3UniswapDayDataCurrent(): \OpenAPI\Client\Model\UniswapV3UniswapDayDataDTO[]
 ```
 
-UniswapDayDatas (current)
+UniswapDayData (current)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 
@@ -2049,10 +2049,10 @@ $apiInstance = new OpenAPI\Client\Api\UniswapV3Api(
 );
 
 try {
-    $result = $apiInstance->uniswapV3UniswapDayDatasCurrent();
+    $result = $apiInstance->uniswapV3UniswapDayDataCurrent();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling UniswapV3Api->uniswapV3UniswapDayDatasCurrent: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling UniswapV3Api->uniswapV3UniswapDayDataCurrent: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

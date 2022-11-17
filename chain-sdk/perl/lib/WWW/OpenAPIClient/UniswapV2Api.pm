@@ -733,9 +733,9 @@ sub uniswap_v2_get_mints__historical {
 }
 
 #
-# uniswap_v2_get_pair_day_datas__historical
+# uniswap_v2_get_pair_day_data__historical
 #
-# PairDayDatas (historical)
+# PairDayData (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -782,19 +782,19 @@ sub uniswap_v2_get_mints__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pair_day_datas__historical' } = {
-        summary => 'PairDayDatas (historical)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pair_day_data__historical' } = {
+        summary => 'PairDayData (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2PairDayDataDTO]',
         };
 }
 # @return ARRAY[UniswapV2PairDayDataDTO]
 #
-sub uniswap_v2_get_pair_day_datas__historical {
+sub uniswap_v2_get_pair_day_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/pairDayDatas/historical';
+    my $_resource_path = '/dapps/uniswapv2/pairDayData/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -859,9 +859,9 @@ sub uniswap_v2_get_pair_day_datas__historical {
 }
 
 #
-# uniswap_v2_get_pair_hour_datas__historical
+# uniswap_v2_get_pair_hour_data__historical
 #
-# PairHourDatas (historical)
+# PairHourData (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -902,19 +902,19 @@ sub uniswap_v2_get_pair_day_datas__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pair_hour_datas__historical' } = {
-        summary => 'PairHourDatas (historical)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_pair_hour_data__historical' } = {
+        summary => 'PairHourData (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2PairHourDataDTO]',
         };
 }
 # @return ARRAY[UniswapV2PairHourDataDTO]
 #
-sub uniswap_v2_get_pair_hour_datas__historical {
+sub uniswap_v2_get_pair_hour_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/pairHourDatas/historical';
+    my $_resource_path = '/dapps/uniswapv2/pairHourData/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1215,9 +1215,9 @@ sub uniswap_v2_get_swaps__historical {
 }
 
 #
-# uniswap_v2_get_token_day_datas__historical
+# uniswap_v2_get_token_day_data__historical
 #
-# TokenDayDatas (historical)
+# TokenDayData (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1252,19 +1252,19 @@ sub uniswap_v2_get_swaps__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_token_day_datas__historical' } = {
-        summary => 'TokenDayDatas (historical)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_token_day_data__historical' } = {
+        summary => 'TokenDayData (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2TokenDayDataDTO]',
         };
 }
 # @return ARRAY[UniswapV2TokenDayDataDTO]
 #
-sub uniswap_v2_get_token_day_datas__historical {
+sub uniswap_v2_get_token_day_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/tokenDayDatas/historical';
+    my $_resource_path = '/dapps/uniswapv2/tokenDayData/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1549,9 +1549,9 @@ sub uniswap_v2_get_transactions__historical {
 }
 
 #
-# uniswap_v2_get_uniswap_day_datas__historical
+# uniswap_v2_get_uniswap_day_data__historical
 #
-# UniswapDayDatas (historical)
+# UniswapDayData (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1586,19 +1586,19 @@ sub uniswap_v2_get_transactions__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_uniswap_day_datas__historical' } = {
-        summary => 'UniswapDayDatas (historical)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_uniswap_day_data__historical' } = {
+        summary => 'UniswapDayData (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2UniswapDayDataDTO]',
         };
 }
 # @return ARRAY[UniswapV2UniswapDayDataDTO]
 #
-sub uniswap_v2_get_uniswap_day_datas__historical {
+sub uniswap_v2_get_uniswap_day_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/uniswapDayDatas/historical';
+    my $_resource_path = '/dapps/uniswapv2/uniswapDayData/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1653,9 +1653,9 @@ sub uniswap_v2_get_uniswap_day_datas__historical {
 }
 
 #
-# uniswap_v2_get_uniswap_factorys__historical
+# uniswap_v2_get_uniswap_factories__historical
 #
-# UniswapFactorys (historical)
+# UniswapFactories (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1690,19 +1690,19 @@ sub uniswap_v2_get_uniswap_day_datas__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_uniswap_factorys__historical' } = {
-        summary => 'UniswapFactorys (historical)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_get_uniswap_factories__historical' } = {
+        summary => 'UniswapFactories (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV2UniswapFactoryDTO]',
         };
 }
 # @return ARRAY[UniswapV2UniswapFactoryDTO]
 #
-sub uniswap_v2_get_uniswap_factorys__historical {
+sub uniswap_v2_get_uniswap_factories__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/uniswapFactorys/historical';
+    my $_resource_path = '/dapps/uniswapv2/uniswapFactories/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2008,26 +2008,26 @@ sub uniswap_v2_mints__current {
 }
 
 #
-# uniswap_v2_pair_day_datas__current
+# uniswap_v2_pair_day_data__current
 #
-# PairDayDatas (current)
+# PairDayData (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_pair_day_datas__current' } = {
-        summary => 'PairDayDatas (current)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_pair_day_data__current' } = {
+        summary => 'PairDayData (current)',
         params => $params,
         returns => 'ARRAY[UniswapV2PairDayDataDTO]',
         };
 }
 # @return ARRAY[UniswapV2PairDayDataDTO]
 #
-sub uniswap_v2_pair_day_datas__current {
+sub uniswap_v2_pair_day_data__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/pairDayDatas/current';
+    my $_resource_path = '/dapps/uniswapv2/pairDayData/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2057,26 +2057,26 @@ sub uniswap_v2_pair_day_datas__current {
 }
 
 #
-# uniswap_v2_pair_hour_datas__current
+# uniswap_v2_pair_hour_data__current
 #
-# PairHourDatas (current)
+# PairHourData (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_pair_hour_datas__current' } = {
-        summary => 'PairHourDatas (current)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_pair_hour_data__current' } = {
+        summary => 'PairHourData (current)',
         params => $params,
         returns => 'ARRAY[UniswapV2PairHourDataDTO]',
         };
 }
 # @return ARRAY[UniswapV2PairHourDataDTO]
 #
-sub uniswap_v2_pair_hour_datas__current {
+sub uniswap_v2_pair_hour_data__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/pairHourDatas/current';
+    my $_resource_path = '/dapps/uniswapv2/pairHourData/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2226,26 +2226,26 @@ sub uniswap_v2_swaps__current {
 }
 
 #
-# uniswap_v2_token_day_datas__current
+# uniswap_v2_token_day_data__current
 #
-# TokenDayDatas (current)
+# TokenDayData (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_token_day_datas__current' } = {
-        summary => 'TokenDayDatas (current)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_token_day_data__current' } = {
+        summary => 'TokenDayData (current)',
         params => $params,
         returns => 'ARRAY[UniswapV2TokenDayDataDTO]',
         };
 }
 # @return ARRAY[UniswapV2TokenDayDataDTO]
 #
-sub uniswap_v2_token_day_datas__current {
+sub uniswap_v2_token_day_data__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/tokenDayDatas/current';
+    my $_resource_path = '/dapps/uniswapv2/tokenDayData/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2373,26 +2373,26 @@ sub uniswap_v2_transactions__current {
 }
 
 #
-# uniswap_v2_uniswap_day_datas__current
+# uniswap_v2_uniswap_day_data__current
 #
-# UniswapDayDatas (current)
+# UniswapDayData (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_uniswap_day_datas__current' } = {
-        summary => 'UniswapDayDatas (current)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_uniswap_day_data__current' } = {
+        summary => 'UniswapDayData (current)',
         params => $params,
         returns => 'ARRAY[UniswapV2UniswapDayDataDTO]',
         };
 }
 # @return ARRAY[UniswapV2UniswapDayDataDTO]
 #
-sub uniswap_v2_uniswap_day_datas__current {
+sub uniswap_v2_uniswap_day_data__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/uniswapDayDatas/current';
+    my $_resource_path = '/dapps/uniswapv2/uniswapDayData/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2422,26 +2422,26 @@ sub uniswap_v2_uniswap_day_datas__current {
 }
 
 #
-# uniswap_v2_uniswap_factorys__current
+# uniswap_v2_uniswap_factories__current
 #
-# UniswapFactorys (current)
+# UniswapFactories (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v2_uniswap_factorys__current' } = {
-        summary => 'UniswapFactorys (current)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v2_uniswap_factories__current' } = {
+        summary => 'UniswapFactories (current)',
         params => $params,
         returns => 'ARRAY[UniswapV2UniswapFactoryDTO]',
         };
 }
 # @return ARRAY[UniswapV2UniswapFactoryDTO]
 #
-sub uniswap_v2_uniswap_factorys__current {
+sub uniswap_v2_uniswap_factories__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv2/uniswapFactorys/current';
+    my $_resource_path = '/dapps/uniswapv2/uniswapFactories/current';
 
     my $_method = 'GET';
     my $query_params = {};

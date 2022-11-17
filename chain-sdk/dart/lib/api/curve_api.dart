@@ -591,14 +591,14 @@ class CurveApi {
     return null;
   }
 
-  /// GaugeLiquiditys (current)
+  /// GaugeLiquidities (current)
   ///
-  /// Gets gaugeLiquiditys.
+  /// Gets gaugeLiquidities.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> curveGaugeLiquiditysCurrentWithHttpInfo() async {
+  Future<Response> curveGaugeLiquiditiesCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/curve/gaugeLiquiditys/current';
+    final path = r'/dapps/curve/gaugeLiquidities/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -621,11 +621,11 @@ class CurveApi {
     );
   }
 
-  /// GaugeLiquiditys (current)
+  /// GaugeLiquidities (current)
   ///
-  /// Gets gaugeLiquiditys.
-  Future<List<CurveGaugeLiquidityDTO>?> curveGaugeLiquiditysCurrent() async {
-    final response = await curveGaugeLiquiditysCurrentWithHttpInfo();
+  /// Gets gaugeLiquidities.
+  Future<List<CurveGaugeLiquidityDTO>?> curveGaugeLiquiditiesCurrent() async {
+    final response = await curveGaugeLiquiditiesCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2179,9 +2179,9 @@ class CurveApi {
     return null;
   }
 
-  /// GaugeLiquiditys (historical)
+  /// GaugeLiquidities (historical)
   ///
-  /// Gets gaugeLiquiditys.
+  /// Gets gaugeLiquidities.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -2204,9 +2204,9 @@ class CurveApi {
   ///
   /// * [String] user:
   ///   
-  Future<Response> curveGetGaugeLiquiditysHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? user, }) async {
+  Future<Response> curveGetGaugeLiquiditiesHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? user, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/curve/gaugeLiquiditys/historical';
+    final path = r'/dapps/curve/gaugeLiquidities/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -2248,9 +2248,9 @@ class CurveApi {
     );
   }
 
-  /// GaugeLiquiditys (historical)
+  /// GaugeLiquidities (historical)
   ///
-  /// Gets gaugeLiquiditys.
+  /// Gets gaugeLiquidities.
   ///
   /// Parameters:
   ///
@@ -2271,8 +2271,8 @@ class CurveApi {
   ///
   /// * [String] user:
   ///   
-  Future<List<CurveGaugeLiquidityDTO>?> curveGetGaugeLiquiditysHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? user, }) async {
-    final response = await curveGetGaugeLiquiditysHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, user: user, );
+  Future<List<CurveGaugeLiquidityDTO>?> curveGetGaugeLiquiditiesHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? user, }) async {
+    final response = await curveGetGaugeLiquiditiesHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, user: user, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

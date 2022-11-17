@@ -16,28 +16,28 @@ Method | HTTP request | Description
 [**uniswapV2GetLiquidityPositionSnapshotsHistorical**](UniswapV2Api.md#uniswapv2getliquiditypositionsnapshotshistorical) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**uniswapV2GetLiquidityPositionsHistorical**](UniswapV2Api.md#uniswapv2getliquiditypositionshistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical)
 [**uniswapV2GetMintsHistorical**](UniswapV2Api.md#uniswapv2getmintshistorical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical)
-[**uniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#uniswapv2getpairdaydatashistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical)
-[**uniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#uniswapv2getpairhourdatashistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical)
+[**uniswapV2GetPairDayDataHistorical**](UniswapV2Api.md#uniswapv2getpairdaydatahistorical) | **GET** /dapps/uniswapv2/pairDayData/historical | PairDayData (historical)
+[**uniswapV2GetPairHourDataHistorical**](UniswapV2Api.md#uniswapv2getpairhourdatahistorical) | **GET** /dapps/uniswapv2/pairHourData/historical | PairHourData (historical)
 [**uniswapV2GetPairsHistorical**](UniswapV2Api.md#uniswapv2getpairshistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical)
 [**uniswapV2GetSwapsHistorical**](UniswapV2Api.md#uniswapv2getswapshistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical)
-[**uniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#uniswapv2gettokendaydatashistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical)
+[**uniswapV2GetTokenDayDataHistorical**](UniswapV2Api.md#uniswapv2gettokendaydatahistorical) | **GET** /dapps/uniswapv2/tokenDayData/historical | TokenDayData (historical)
 [**uniswapV2GetTokensHistorical**](UniswapV2Api.md#uniswapv2gettokenshistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical)
 [**uniswapV2GetTransactionsHistorical**](UniswapV2Api.md#uniswapv2gettransactionshistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical)
-[**uniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#uniswapv2getuniswapdaydatashistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical)
-[**uniswapV2GetUniswapFactorysHistorical**](UniswapV2Api.md#uniswapv2getuniswapfactoryshistorical) | **GET** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical)
+[**uniswapV2GetUniswapDayDataHistorical**](UniswapV2Api.md#uniswapv2getuniswapdaydatahistorical) | **GET** /dapps/uniswapv2/uniswapDayData/historical | UniswapDayData (historical)
+[**uniswapV2GetUniswapFactoriesHistorical**](UniswapV2Api.md#uniswapv2getuniswapfactorieshistorical) | **GET** /dapps/uniswapv2/uniswapFactories/historical | UniswapFactories (historical)
 [**uniswapV2GetUsersHistorical**](UniswapV2Api.md#uniswapv2getusershistorical) | **GET** /dapps/uniswapv2/users/historical | Users (historical)
 [**uniswapV2LiquidityPositionSnapshotsCurrent**](UniswapV2Api.md#uniswapv2liquiditypositionsnapshotscurrent) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**uniswapV2LiquidityPositionsCurrent**](UniswapV2Api.md#uniswapv2liquiditypositionscurrent) | **GET** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
 [**uniswapV2MintsCurrent**](UniswapV2Api.md#uniswapv2mintscurrent) | **GET** /dapps/uniswapv2/mints/current | Mints (current)
-[**uniswapV2PairDayDatasCurrent**](UniswapV2Api.md#uniswapv2pairdaydatascurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
-[**uniswapV2PairHourDatasCurrent**](UniswapV2Api.md#uniswapv2pairhourdatascurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
+[**uniswapV2PairDayDataCurrent**](UniswapV2Api.md#uniswapv2pairdaydatacurrent) | **GET** /dapps/uniswapv2/pairDayData/current | PairDayData (current)
+[**uniswapV2PairHourDataCurrent**](UniswapV2Api.md#uniswapv2pairhourdatacurrent) | **GET** /dapps/uniswapv2/pairHourData/current | PairHourData (current)
 [**uniswapV2PairsCurrent**](UniswapV2Api.md#uniswapv2pairscurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
 [**uniswapV2SwapsCurrent**](UniswapV2Api.md#uniswapv2swapscurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current)
-[**uniswapV2TokenDayDatasCurrent**](UniswapV2Api.md#uniswapv2tokendaydatascurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**uniswapV2TokenDayDataCurrent**](UniswapV2Api.md#uniswapv2tokendaydatacurrent) | **GET** /dapps/uniswapv2/tokenDayData/current | TokenDayData (current)
 [**uniswapV2TokensCurrent**](UniswapV2Api.md#uniswapv2tokenscurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**uniswapV2TransactionsCurrent**](UniswapV2Api.md#uniswapv2transactionscurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
-[**uniswapV2UniswapDayDatasCurrent**](UniswapV2Api.md#uniswapv2uniswapdaydatascurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
-[**uniswapV2UniswapFactorysCurrent**](UniswapV2Api.md#uniswapv2uniswapfactoryscurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
+[**uniswapV2UniswapDayDataCurrent**](UniswapV2Api.md#uniswapv2uniswapdaydatacurrent) | **GET** /dapps/uniswapv2/uniswapDayData/current | UniswapDayData (current)
+[**uniswapV2UniswapFactoriesCurrent**](UniswapV2Api.md#uniswapv2uniswapfactoriescurrent) | **GET** /dapps/uniswapv2/uniswapFactories/current | UniswapFactories (current)
 [**uniswapV2UsersCurrent**](UniswapV2Api.md#uniswapv2userscurrent) | **GET** /dapps/uniswapv2/users/current | Users (current)
 
 
@@ -386,12 +386,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2GetPairDayDatasHistorical**
-> List<UniswapV2PairDayDataDTO> uniswapV2GetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
+# **uniswapV2GetPairDayDataHistorical**
+> List<UniswapV2PairDayDataDTO> uniswapV2GetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 ```dart
@@ -407,10 +407,10 @@ final token0 = token0_example; // String | Reference to token0.
 final token1 = token1_example; // String | Reference to token1.
 
 try {
-    final result = api_instance.uniswapV2GetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
+    final result = api_instance.uniswapV2GetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetPairDayDatasHistorical: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetPairDayDataHistorical: $e\n');
 }
 ```
 
@@ -441,12 +441,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2GetPairHourDatasHistorical**
-> List<UniswapV2PairHourDataDTO> uniswapV2GetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair)
+# **uniswapV2GetPairHourDataHistorical**
+> List<UniswapV2PairHourDataDTO> uniswapV2GetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 ```dart
@@ -461,10 +461,10 @@ final id = id_example; // String |
 final pair = pair_example; // String | Address for pair contract.
 
 try {
-    final result = api_instance.uniswapV2GetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+    final result = api_instance.uniswapV2GetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetPairHourDatasHistorical: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetPairHourDataHistorical: $e\n');
 }
 ```
 
@@ -602,12 +602,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2GetTokenDayDatasHistorical**
-> List<UniswapV2TokenDayDataDTO> uniswapV2GetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+# **uniswapV2GetTokenDayDataHistorical**
+> List<UniswapV2TokenDayDataDTO> uniswapV2GetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 ```dart
@@ -621,10 +621,10 @@ final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timefra
 final id = id_example; // String | Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
 
 try {
-    final result = api_instance.uniswapV2GetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+    final result = api_instance.uniswapV2GetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetTokenDayDatasHistorical: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetTokenDayDataHistorical: $e\n');
 }
 ```
 
@@ -759,12 +759,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2GetUniswapDayDatasHistorical**
-> List<UniswapV2UniswapDayDataDTO> uniswapV2GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+# **uniswapV2GetUniswapDayDataHistorical**
+> List<UniswapV2UniswapDayDataDTO> uniswapV2GetUniswapDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
-UniswapDayDatas (historical)
+UniswapDayData (historical)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 ```dart
@@ -778,10 +778,10 @@ final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timefra
 final id = id_example; // String | Unix timestamp for start of day / 86400 giving a unique day index.
 
 try {
-    final result = api_instance.uniswapV2GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+    final result = api_instance.uniswapV2GetUniswapDayDataHistorical(startBlock, endBlock, startDate, endDate, id);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetUniswapDayDatasHistorical: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetUniswapDayDataHistorical: $e\n');
 }
 ```
 
@@ -810,12 +810,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2GetUniswapFactorysHistorical**
-> List<UniswapV2UniswapFactoryDTO> uniswapV2GetUniswapFactorysHistorical(startBlock, endBlock, startDate, endDate, id)
+# **uniswapV2GetUniswapFactoriesHistorical**
+> List<UniswapV2UniswapFactoryDTO> uniswapV2GetUniswapFactoriesHistorical(startBlock, endBlock, startDate, endDate, id)
 
-UniswapFactorys (historical)
+UniswapFactories (historical)
 
-Gets uniswapFactorys.
+Gets uniswapFactories.
 
 ### Example
 ```dart
@@ -829,10 +829,10 @@ final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timefra
 final id = id_example; // String | Factory address.
 
 try {
-    final result = api_instance.uniswapV2GetUniswapFactorysHistorical(startBlock, endBlock, startDate, endDate, id);
+    final result = api_instance.uniswapV2GetUniswapFactoriesHistorical(startBlock, endBlock, startDate, endDate, id);
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2GetUniswapFactorysHistorical: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2GetUniswapFactoriesHistorical: $e\n');
 }
 ```
 
@@ -1029,12 +1029,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2PairDayDatasCurrent**
-> List<UniswapV2PairDayDataDTO> uniswapV2PairDayDatasCurrent()
+# **uniswapV2PairDayDataCurrent**
+> List<UniswapV2PairDayDataDTO> uniswapV2PairDayDataCurrent()
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 ```dart
@@ -1043,10 +1043,10 @@ import 'package:openapi/api.dart';
 final api_instance = UniswapV2Api();
 
 try {
-    final result = api_instance.uniswapV2PairDayDatasCurrent();
+    final result = api_instance.uniswapV2PairDayDataCurrent();
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2PairDayDatasCurrent: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2PairDayDataCurrent: $e\n');
 }
 ```
 
@@ -1068,12 +1068,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2PairHourDatasCurrent**
-> List<UniswapV2PairHourDataDTO> uniswapV2PairHourDatasCurrent()
+# **uniswapV2PairHourDataCurrent**
+> List<UniswapV2PairHourDataDTO> uniswapV2PairHourDataCurrent()
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 ```dart
@@ -1082,10 +1082,10 @@ import 'package:openapi/api.dart';
 final api_instance = UniswapV2Api();
 
 try {
-    final result = api_instance.uniswapV2PairHourDatasCurrent();
+    final result = api_instance.uniswapV2PairHourDataCurrent();
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2PairHourDatasCurrent: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2PairHourDataCurrent: $e\n');
 }
 ```
 
@@ -1193,12 +1193,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2TokenDayDatasCurrent**
-> List<UniswapV2TokenDayDataDTO> uniswapV2TokenDayDatasCurrent()
+# **uniswapV2TokenDayDataCurrent**
+> List<UniswapV2TokenDayDataDTO> uniswapV2TokenDayDataCurrent()
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 ```dart
@@ -1207,10 +1207,10 @@ import 'package:openapi/api.dart';
 final api_instance = UniswapV2Api();
 
 try {
-    final result = api_instance.uniswapV2TokenDayDatasCurrent();
+    final result = api_instance.uniswapV2TokenDayDataCurrent();
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2TokenDayDatasCurrent: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2TokenDayDataCurrent: $e\n');
 }
 ```
 
@@ -1310,12 +1310,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2UniswapDayDatasCurrent**
-> List<UniswapV2UniswapDayDataDTO> uniswapV2UniswapDayDatasCurrent()
+# **uniswapV2UniswapDayDataCurrent**
+> List<UniswapV2UniswapDayDataDTO> uniswapV2UniswapDayDataCurrent()
 
-UniswapDayDatas (current)
+UniswapDayData (current)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 ```dart
@@ -1324,10 +1324,10 @@ import 'package:openapi/api.dart';
 final api_instance = UniswapV2Api();
 
 try {
-    final result = api_instance.uniswapV2UniswapDayDatasCurrent();
+    final result = api_instance.uniswapV2UniswapDayDataCurrent();
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2UniswapDayDatasCurrent: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2UniswapDayDataCurrent: $e\n');
 }
 ```
 
@@ -1349,12 +1349,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswapV2UniswapFactorysCurrent**
-> List<UniswapV2UniswapFactoryDTO> uniswapV2UniswapFactorysCurrent()
+# **uniswapV2UniswapFactoriesCurrent**
+> List<UniswapV2UniswapFactoryDTO> uniswapV2UniswapFactoriesCurrent()
 
-UniswapFactorys (current)
+UniswapFactories (current)
 
-Gets uniswapFactorys.
+Gets uniswapFactories.
 
 ### Example
 ```dart
@@ -1363,10 +1363,10 @@ import 'package:openapi/api.dart';
 final api_instance = UniswapV2Api();
 
 try {
-    final result = api_instance.uniswapV2UniswapFactorysCurrent();
+    final result = api_instance.uniswapV2UniswapFactoriesCurrent();
     print(result);
 } catch (e) {
-    print('Exception when calling UniswapV2Api->uniswapV2UniswapFactorysCurrent: $e\n');
+    print('Exception when calling UniswapV2Api->uniswapV2UniswapFactoriesCurrent: $e\n');
 }
 ```
 

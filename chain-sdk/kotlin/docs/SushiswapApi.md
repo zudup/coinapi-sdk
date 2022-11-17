@@ -6,33 +6,33 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**sushiswapBundlesCurrent**](SushiswapApi.md#sushiswapBundlesCurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
 [**sushiswapBurnsCurrent**](SushiswapApi.md#sushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
-[**sushiswapDayDatasCurrent**](SushiswapApi.md#sushiswapDayDatasCurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
-[**sushiswapFactorysCurrent**](SushiswapApi.md#sushiswapFactorysCurrent) | **GET** /dapps/sushiswap/factorys/current | Factorys (current)
+[**sushiswapDayDataCurrent**](SushiswapApi.md#sushiswapDayDataCurrent) | **GET** /dapps/sushiswap/dayData/current | DayData (current)
+[**sushiswapFactoriesCurrent**](SushiswapApi.md#sushiswapFactoriesCurrent) | **GET** /dapps/sushiswap/factories/current | Factories (current)
 [**sushiswapGetBundlesHistorical**](SushiswapApi.md#sushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical)
 [**sushiswapGetBurnsHistorical**](SushiswapApi.md#sushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical)
-[**sushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical)
-[**sushiswapGetFactorysHistorical**](SushiswapApi.md#sushiswapGetFactorysHistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical)
-[**sushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical)
+[**sushiswapGetDayDataHistorical**](SushiswapApi.md#sushiswapGetDayDataHistorical) | **GET** /dapps/sushiswap/dayData/historical | DayData (historical)
+[**sushiswapGetFactoriesHistorical**](SushiswapApi.md#sushiswapGetFactoriesHistorical) | **GET** /dapps/sushiswap/factories/historical | Factories (historical)
+[**sushiswapGetHourDataHistorical**](SushiswapApi.md#sushiswapGetHourDataHistorical) | **GET** /dapps/sushiswap/hourData/historical | HourData (historical)
 [**sushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**sushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical)
 [**sushiswapGetMintsHistorical**](SushiswapApi.md#sushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical)
-[**sushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical)
-[**sushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical)
+[**sushiswapGetPairDayDataHistorical**](SushiswapApi.md#sushiswapGetPairDayDataHistorical) | **GET** /dapps/sushiswap/pairDayData/historical | PairDayData (historical)
+[**sushiswapGetPairHourDataHistorical**](SushiswapApi.md#sushiswapGetPairHourDataHistorical) | **GET** /dapps/sushiswap/pairHourData/historical | PairHourData (historical)
 [**sushiswapGetPairsHistorical**](SushiswapApi.md#sushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical)
 [**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical)
-[**sushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical)
+[**sushiswapGetTokenDayDataHistorical**](SushiswapApi.md#sushiswapGetTokenDayDataHistorical) | **GET** /dapps/sushiswap/tokenDayData/historical | TokenDayData (historical)
 [**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical)
 [**sushiswapGetTransactionsHistorical**](SushiswapApi.md#sushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical)
 [**sushiswapGetUsersHistorical**](SushiswapApi.md#sushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical)
-[**sushiswapHourDatasCurrent**](SushiswapApi.md#sushiswapHourDatasCurrent) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current)
+[**sushiswapHourDataCurrent**](SushiswapApi.md#sushiswapHourDataCurrent) | **GET** /dapps/sushiswap/hourData/current | HourData (current)
 [**sushiswapLiquidityPositionSnapshotsCurrent**](SushiswapApi.md#sushiswapLiquidityPositionSnapshotsCurrent) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**sushiswapLiquidityPositionsCurrent**](SushiswapApi.md#sushiswapLiquidityPositionsCurrent) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
 [**sushiswapMintsCurrent**](SushiswapApi.md#sushiswapMintsCurrent) | **GET** /dapps/sushiswap/mints/current | Mints (current)
-[**sushiswapPairDayDatasCurrent**](SushiswapApi.md#sushiswapPairDayDatasCurrent) | **GET** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current)
-[**sushiswapPairHourDatasCurrent**](SushiswapApi.md#sushiswapPairHourDatasCurrent) | **GET** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current)
+[**sushiswapPairDayDataCurrent**](SushiswapApi.md#sushiswapPairDayDataCurrent) | **GET** /dapps/sushiswap/pairDayData/current | PairDayData (current)
+[**sushiswapPairHourDataCurrent**](SushiswapApi.md#sushiswapPairHourDataCurrent) | **GET** /dapps/sushiswap/pairHourData/current | PairHourData (current)
 [**sushiswapPairsCurrent**](SushiswapApi.md#sushiswapPairsCurrent) | **GET** /dapps/sushiswap/pairs/current | Pairs (current)
 [**sushiswapSwapsCurrent**](SushiswapApi.md#sushiswapSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current)
-[**sushiswapTokenDayDatasCurrent**](SushiswapApi.md#sushiswapTokenDayDatasCurrent) | **GET** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current)
+[**sushiswapTokenDayDataCurrent**](SushiswapApi.md#sushiswapTokenDayDataCurrent) | **GET** /dapps/sushiswap/tokenDayData/current | TokenDayData (current)
 [**sushiswapTokensCurrent**](SushiswapApi.md#sushiswapTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current)
 [**sushiswapTransactionsCurrent**](SushiswapApi.md#sushiswapTransactionsCurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
 [**sushiswapUsersCurrent**](SushiswapApi.md#sushiswapUsersCurrent) | **GET** /dapps/sushiswap/users/current | Users (current)
@@ -124,13 +124,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapDayDatasCurrent"></a>
-# **sushiswapDayDatasCurrent**
-> kotlin.collections.List&lt;SushiswapDayDataDTO&gt; sushiswapDayDatasCurrent()
+<a name="sushiswapDayDataCurrent"></a>
+# **sushiswapDayDataCurrent**
+> kotlin.collections.List&lt;SushiswapDayDataDTO&gt; sushiswapDayDataCurrent()
 
-DayDatas (current)
+DayData (current)
 
-Gets dayDatas.
+Gets dayData.
 
 ### Example
 ```kotlin
@@ -140,13 +140,13 @@ Gets dayDatas.
 
 val apiInstance = SushiswapApi()
 try {
-    val result : kotlin.collections.List<SushiswapDayDataDTO> = apiInstance.sushiswapDayDatasCurrent()
+    val result : kotlin.collections.List<SushiswapDayDataDTO> = apiInstance.sushiswapDayDataCurrent()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling SushiswapApi#sushiswapDayDatasCurrent")
+    println("4xx response calling SushiswapApi#sushiswapDayDataCurrent")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling SushiswapApi#sushiswapDayDatasCurrent")
+    println("5xx response calling SushiswapApi#sushiswapDayDataCurrent")
     e.printStackTrace()
 }
 ```
@@ -167,13 +167,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapFactorysCurrent"></a>
-# **sushiswapFactorysCurrent**
-> kotlin.collections.List&lt;SushiswapFactoryDTO&gt; sushiswapFactorysCurrent()
+<a name="sushiswapFactoriesCurrent"></a>
+# **sushiswapFactoriesCurrent**
+> kotlin.collections.List&lt;SushiswapFactoryDTO&gt; sushiswapFactoriesCurrent()
 
-Factorys (current)
+Factories (current)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 ```kotlin
@@ -183,13 +183,13 @@ Gets factorys.
 
 val apiInstance = SushiswapApi()
 try {
-    val result : kotlin.collections.List<SushiswapFactoryDTO> = apiInstance.sushiswapFactorysCurrent()
+    val result : kotlin.collections.List<SushiswapFactoryDTO> = apiInstance.sushiswapFactoriesCurrent()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling SushiswapApi#sushiswapFactorysCurrent")
+    println("4xx response calling SushiswapApi#sushiswapFactoriesCurrent")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling SushiswapApi#sushiswapFactorysCurrent")
+    println("5xx response calling SushiswapApi#sushiswapFactoriesCurrent")
     e.printStackTrace()
 }
 ```
@@ -322,13 +322,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetDayDatasHistorical"></a>
-# **sushiswapGetDayDatasHistorical**
-> kotlin.collections.List&lt;SushiswapDayDataDTO&gt; sushiswapGetDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+<a name="sushiswapGetDayDataHistorical"></a>
+# **sushiswapGetDayDataHistorical**
+> kotlin.collections.List&lt;SushiswapDayDataDTO&gt; sushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
-DayDatas (historical)
+DayData (historical)
 
-Gets dayDatas.
+Gets dayData.
 
 ### Example
 ```kotlin
@@ -343,13 +343,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
 val id : kotlin.String = id_example // kotlin.String | Unix timestamp for start of day / 86400 giving a unique day index.
 try {
-    val result : kotlin.collections.List<SushiswapDayDataDTO> = apiInstance.sushiswapGetDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+    val result : kotlin.collections.List<SushiswapDayDataDTO> = apiInstance.sushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling SushiswapApi#sushiswapGetDayDatasHistorical")
+    println("4xx response calling SushiswapApi#sushiswapGetDayDataHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling SushiswapApi#sushiswapGetDayDatasHistorical")
+    println("5xx response calling SushiswapApi#sushiswapGetDayDataHistorical")
     e.printStackTrace()
 }
 ```
@@ -377,13 +377,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetFactorysHistorical"></a>
-# **sushiswapGetFactorysHistorical**
-> kotlin.collections.List&lt;SushiswapFactoryDTO&gt; sushiswapGetFactorysHistorical(startBlock, endBlock, startDate, endDate, id)
+<a name="sushiswapGetFactoriesHistorical"></a>
+# **sushiswapGetFactoriesHistorical**
+> kotlin.collections.List&lt;SushiswapFactoryDTO&gt; sushiswapGetFactoriesHistorical(startBlock, endBlock, startDate, endDate, id)
 
-Factorys (historical)
+Factories (historical)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 ```kotlin
@@ -398,13 +398,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
 val id : kotlin.String = id_example // kotlin.String | Factory address.
 try {
-    val result : kotlin.collections.List<SushiswapFactoryDTO> = apiInstance.sushiswapGetFactorysHistorical(startBlock, endBlock, startDate, endDate, id)
+    val result : kotlin.collections.List<SushiswapFactoryDTO> = apiInstance.sushiswapGetFactoriesHistorical(startBlock, endBlock, startDate, endDate, id)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling SushiswapApi#sushiswapGetFactorysHistorical")
+    println("4xx response calling SushiswapApi#sushiswapGetFactoriesHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling SushiswapApi#sushiswapGetFactorysHistorical")
+    println("5xx response calling SushiswapApi#sushiswapGetFactoriesHistorical")
     e.printStackTrace()
 }
 ```
@@ -432,13 +432,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetHourDatasHistorical"></a>
-# **sushiswapGetHourDatasHistorical**
-> kotlin.collections.List&lt;SushiswapHourDataDTO&gt; sushiswapGetHourDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+<a name="sushiswapGetHourDataHistorical"></a>
+# **sushiswapGetHourDataHistorical**
+> kotlin.collections.List&lt;SushiswapHourDataDTO&gt; sushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
-HourDatas (historical)
+HourData (historical)
 
-Gets hourDatas.
+Gets hourData.
 
 ### Example
 ```kotlin
@@ -453,13 +453,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
 val id : kotlin.String = id_example // kotlin.String | Start of hour timestamp.
 try {
-    val result : kotlin.collections.List<SushiswapHourDataDTO> = apiInstance.sushiswapGetHourDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+    val result : kotlin.collections.List<SushiswapHourDataDTO> = apiInstance.sushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate, id)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling SushiswapApi#sushiswapGetHourDatasHistorical")
+    println("4xx response calling SushiswapApi#sushiswapGetHourDataHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling SushiswapApi#sushiswapGetHourDatasHistorical")
+    println("5xx response calling SushiswapApi#sushiswapGetHourDataHistorical")
     e.printStackTrace()
 }
 ```
@@ -662,13 +662,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetPairDayDatasHistorical"></a>
-# **sushiswapGetPairDayDatasHistorical**
-> kotlin.collections.List&lt;SushiswapPairDayDataDTO&gt; sushiswapGetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1)
+<a name="sushiswapGetPairDayDataHistorical"></a>
+# **sushiswapGetPairDayDataHistorical**
+> kotlin.collections.List&lt;SushiswapPairDayDataDTO&gt; sushiswapGetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1)
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 ```kotlin
@@ -686,13 +686,13 @@ val pair : kotlin.String = pair_example // kotlin.String |
 val token0 : kotlin.String = token0_example // kotlin.String | 
 val token1 : kotlin.String = token1_example // kotlin.String | 
 try {
-    val result : kotlin.collections.List<SushiswapPairDayDataDTO> = apiInstance.sushiswapGetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1)
+    val result : kotlin.collections.List<SushiswapPairDayDataDTO> = apiInstance.sushiswapGetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling SushiswapApi#sushiswapGetPairDayDatasHistorical")
+    println("4xx response calling SushiswapApi#sushiswapGetPairDayDataHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling SushiswapApi#sushiswapGetPairDayDatasHistorical")
+    println("5xx response calling SushiswapApi#sushiswapGetPairDayDataHistorical")
     e.printStackTrace()
 }
 ```
@@ -723,13 +723,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetPairHourDatasHistorical"></a>
-# **sushiswapGetPairHourDatasHistorical**
-> kotlin.collections.List&lt;SushiswapPairHourDataDTO&gt; sushiswapGetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair)
+<a name="sushiswapGetPairHourDataHistorical"></a>
+# **sushiswapGetPairHourDataHistorical**
+> kotlin.collections.List&lt;SushiswapPairHourDataDTO&gt; sushiswapGetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 ```kotlin
@@ -745,13 +745,13 @@ val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.
 val id : kotlin.String = id_example // kotlin.String | 
 val pair : kotlin.String = pair_example // kotlin.String | 
 try {
-    val result : kotlin.collections.List<SushiswapPairHourDataDTO> = apiInstance.sushiswapGetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair)
+    val result : kotlin.collections.List<SushiswapPairHourDataDTO> = apiInstance.sushiswapGetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling SushiswapApi#sushiswapGetPairHourDatasHistorical")
+    println("4xx response calling SushiswapApi#sushiswapGetPairHourDataHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling SushiswapApi#sushiswapGetPairHourDatasHistorical")
+    println("5xx response calling SushiswapApi#sushiswapGetPairHourDataHistorical")
     e.printStackTrace()
 }
 ```
@@ -898,13 +898,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapGetTokenDayDatasHistorical"></a>
-# **sushiswapGetTokenDayDatasHistorical**
-> kotlin.collections.List&lt;SushiswapTokenDayDataDTO&gt; sushiswapGetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+<a name="sushiswapGetTokenDayDataHistorical"></a>
+# **sushiswapGetTokenDayDataHistorical**
+> kotlin.collections.List&lt;SushiswapTokenDayDataDTO&gt; sushiswapGetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 ```kotlin
@@ -919,13 +919,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
 val id : kotlin.String = id_example // kotlin.String | Identifier, day start timestamp in unix / 86400.
 try {
-    val result : kotlin.collections.List<SushiswapTokenDayDataDTO> = apiInstance.sushiswapGetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+    val result : kotlin.collections.List<SushiswapTokenDayDataDTO> = apiInstance.sushiswapGetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling SushiswapApi#sushiswapGetTokenDayDatasHistorical")
+    println("4xx response calling SushiswapApi#sushiswapGetTokenDayDataHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling SushiswapApi#sushiswapGetTokenDayDatasHistorical")
+    println("5xx response calling SushiswapApi#sushiswapGetTokenDayDataHistorical")
     e.printStackTrace()
 }
 ```
@@ -1122,13 +1122,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapHourDatasCurrent"></a>
-# **sushiswapHourDatasCurrent**
-> kotlin.collections.List&lt;SushiswapHourDataDTO&gt; sushiswapHourDatasCurrent()
+<a name="sushiswapHourDataCurrent"></a>
+# **sushiswapHourDataCurrent**
+> kotlin.collections.List&lt;SushiswapHourDataDTO&gt; sushiswapHourDataCurrent()
 
-HourDatas (current)
+HourData (current)
 
-Gets hourDatas.
+Gets hourData.
 
 ### Example
 ```kotlin
@@ -1138,13 +1138,13 @@ Gets hourDatas.
 
 val apiInstance = SushiswapApi()
 try {
-    val result : kotlin.collections.List<SushiswapHourDataDTO> = apiInstance.sushiswapHourDatasCurrent()
+    val result : kotlin.collections.List<SushiswapHourDataDTO> = apiInstance.sushiswapHourDataCurrent()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling SushiswapApi#sushiswapHourDatasCurrent")
+    println("4xx response calling SushiswapApi#sushiswapHourDataCurrent")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling SushiswapApi#sushiswapHourDatasCurrent")
+    println("5xx response calling SushiswapApi#sushiswapHourDataCurrent")
     e.printStackTrace()
 }
 ```
@@ -1294,13 +1294,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapPairDayDatasCurrent"></a>
-# **sushiswapPairDayDatasCurrent**
-> kotlin.collections.List&lt;SushiswapPairDayDataDTO&gt; sushiswapPairDayDatasCurrent()
+<a name="sushiswapPairDayDataCurrent"></a>
+# **sushiswapPairDayDataCurrent**
+> kotlin.collections.List&lt;SushiswapPairDayDataDTO&gt; sushiswapPairDayDataCurrent()
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 ```kotlin
@@ -1310,13 +1310,13 @@ Gets pairDayDatas.
 
 val apiInstance = SushiswapApi()
 try {
-    val result : kotlin.collections.List<SushiswapPairDayDataDTO> = apiInstance.sushiswapPairDayDatasCurrent()
+    val result : kotlin.collections.List<SushiswapPairDayDataDTO> = apiInstance.sushiswapPairDayDataCurrent()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling SushiswapApi#sushiswapPairDayDatasCurrent")
+    println("4xx response calling SushiswapApi#sushiswapPairDayDataCurrent")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling SushiswapApi#sushiswapPairDayDatasCurrent")
+    println("5xx response calling SushiswapApi#sushiswapPairDayDataCurrent")
     e.printStackTrace()
 }
 ```
@@ -1337,13 +1337,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapPairHourDatasCurrent"></a>
-# **sushiswapPairHourDatasCurrent**
-> kotlin.collections.List&lt;SushiswapPairHourDataDTO&gt; sushiswapPairHourDatasCurrent()
+<a name="sushiswapPairHourDataCurrent"></a>
+# **sushiswapPairHourDataCurrent**
+> kotlin.collections.List&lt;SushiswapPairHourDataDTO&gt; sushiswapPairHourDataCurrent()
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 ```kotlin
@@ -1353,13 +1353,13 @@ Gets pairHourDatas.
 
 val apiInstance = SushiswapApi()
 try {
-    val result : kotlin.collections.List<SushiswapPairHourDataDTO> = apiInstance.sushiswapPairHourDatasCurrent()
+    val result : kotlin.collections.List<SushiswapPairHourDataDTO> = apiInstance.sushiswapPairHourDataCurrent()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling SushiswapApi#sushiswapPairHourDatasCurrent")
+    println("4xx response calling SushiswapApi#sushiswapPairHourDataCurrent")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling SushiswapApi#sushiswapPairHourDatasCurrent")
+    println("5xx response calling SushiswapApi#sushiswapPairHourDataCurrent")
     e.printStackTrace()
 }
 ```
@@ -1474,13 +1474,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="sushiswapTokenDayDatasCurrent"></a>
-# **sushiswapTokenDayDatasCurrent**
-> kotlin.collections.List&lt;SushiswapTokenDayDataDTO&gt; sushiswapTokenDayDatasCurrent()
+<a name="sushiswapTokenDayDataCurrent"></a>
+# **sushiswapTokenDayDataCurrent**
+> kotlin.collections.List&lt;SushiswapTokenDayDataDTO&gt; sushiswapTokenDayDataCurrent()
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 ```kotlin
@@ -1490,13 +1490,13 @@ Gets tokenDayDatas.
 
 val apiInstance = SushiswapApi()
 try {
-    val result : kotlin.collections.List<SushiswapTokenDayDataDTO> = apiInstance.sushiswapTokenDayDatasCurrent()
+    val result : kotlin.collections.List<SushiswapTokenDayDataDTO> = apiInstance.sushiswapTokenDayDataCurrent()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling SushiswapApi#sushiswapTokenDayDatasCurrent")
+    println("4xx response calling SushiswapApi#sushiswapTokenDayDataCurrent")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling SushiswapApi#sushiswapTokenDayDatasCurrent")
+    println("5xx response calling SushiswapApi#sushiswapTokenDayDataCurrent")
     e.printStackTrace()
 }
 ```

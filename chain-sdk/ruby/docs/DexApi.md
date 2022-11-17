@@ -4,14 +4,14 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**dex_batchs__current**](DexApi.md#dex_batchs__current) | **GET** /dapps/dex/batchs/current | Batchs (current) |
+| [**dex_batches__current**](DexApi.md#dex_batches__current) | **GET** /dapps/dex/batches/current | Batches (current) |
 | [**dex_deposits__current**](DexApi.md#dex_deposits__current) | **GET** /dapps/dex/deposits/current | Deposits (current) |
-| [**dex_get_batchs__historical**](DexApi.md#dex_get_batchs__historical) | **GET** /dapps/dex/batchs/historical | Batchs (historical) |
+| [**dex_get_batches__historical**](DexApi.md#dex_get_batches__historical) | **GET** /dapps/dex/batches/historical | Batches (historical) |
 | [**dex_get_deposits__historical**](DexApi.md#dex_get_deposits__historical) | **GET** /dapps/dex/deposits/historical | Deposits (historical) |
 | [**dex_get_orders__historical**](DexApi.md#dex_get_orders__historical) | **GET** /dapps/dex/orders/historical | Orders (historical) |
 | [**dex_get_prices__historical**](DexApi.md#dex_get_prices__historical) | **GET** /dapps/dex/prices/historical | Prices (historical) |
 | [**dex_get_solutions__historical**](DexApi.md#dex_get_solutions__historical) | **GET** /dapps/dex/solutions/historical | Solutions (historical) |
-| [**dex_get_statss__historical**](DexApi.md#dex_get_statss__historical) | **GET** /dapps/dex/statss/historical | Statss (historical) |
+| [**dex_get_stats__historical**](DexApi.md#dex_get_stats__historical) | **GET** /dapps/dex/stats/historical | Stats (historical) |
 | [**dex_get_tokens__historical**](DexApi.md#dex_get_tokens__historical) | **GET** /dapps/dex/tokens/historical | Tokens (historical) |
 | [**dex_get_trades__historical**](DexApi.md#dex_get_trades__historical) | **GET** /dapps/dex/trades/historical | Trades (historical) |
 | [**dex_get_users__historical**](DexApi.md#dex_get_users__historical) | **GET** /dapps/dex/users/historical | Users (historical) |
@@ -20,7 +20,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**dex_orders__current**](DexApi.md#dex_orders__current) | **GET** /dapps/dex/orders/current | Orders (current) |
 | [**dex_prices__current**](DexApi.md#dex_prices__current) | **GET** /dapps/dex/prices/current | Prices (current) |
 | [**dex_solutions__current**](DexApi.md#dex_solutions__current) | **GET** /dapps/dex/solutions/current | Solutions (current) |
-| [**dex_statss__current**](DexApi.md#dex_statss__current) | **GET** /dapps/dex/statss/current | Statss (current) |
+| [**dex_stats__current**](DexApi.md#dex_stats__current) | **GET** /dapps/dex/stats/current | Stats (current) |
 | [**dex_tokens__current**](DexApi.md#dex_tokens__current) | **GET** /dapps/dex/tokens/current | Tokens (current) |
 | [**dex_trades__current**](DexApi.md#dex_trades__current) | **GET** /dapps/dex/trades/current | Trades (current) |
 | [**dex_users__current**](DexApi.md#dex_users__current) | **GET** /dapps/dex/users/current | Users (current) |
@@ -28,13 +28,13 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**dex_withdraws__current**](DexApi.md#dex_withdraws__current) | **GET** /dapps/dex/withdraws/current | Withdraws (current) |
 
 
-## dex_batchs__current
+## dex_batches__current
 
-> <Array<DexBatchDTO>> dex_batchs__current
+> <Array<DexBatchDTO>> dex_batches__current
 
-Batchs (current)
+Batches (current)
 
-Gets batchs.
+Gets batches.
 
 ### Examples
 
@@ -45,29 +45,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::DexApi.new
 
 begin
-  # Batchs (current)
-  result = api_instance.dex_batchs__current
+  # Batches (current)
+  result = api_instance.dex_batches__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dex_batchs__current: #{e}"
+  puts "Error when calling DexApi->dex_batches__current: #{e}"
 end
 ```
 
-#### Using the dex_batchs__current_with_http_info variant
+#### Using the dex_batches__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<DexBatchDTO>>, Integer, Hash)> dex_batchs__current_with_http_info
+> <Array(<Array<DexBatchDTO>>, Integer, Hash)> dex_batches__current_with_http_info
 
 ```ruby
 begin
-  # Batchs (current)
-  data, status_code, headers = api_instance.dex_batchs__current_with_http_info
+  # Batches (current)
+  data, status_code, headers = api_instance.dex_batches__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<DexBatchDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dex_batchs__current_with_http_info: #{e}"
+  puts "Error when calling DexApi->dex_batches__current_with_http_info: #{e}"
 end
 ```
 
@@ -150,13 +150,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## dex_get_batchs__historical
+## dex_get_batches__historical
 
-> <Array<DexBatchDTO>> dex_get_batchs__historical(opts)
+> <Array<DexBatchDTO>> dex_get_batches__historical(opts)
 
-Batchs (historical)
+Batches (historical)
 
-Gets batchs.
+Gets batches.
 
 ### Examples
 
@@ -174,29 +174,29 @@ opts = {
 }
 
 begin
-  # Batchs (historical)
-  result = api_instance.dex_get_batchs__historical(opts)
+  # Batches (historical)
+  result = api_instance.dex_get_batches__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dex_get_batchs__historical: #{e}"
+  puts "Error when calling DexApi->dex_get_batches__historical: #{e}"
 end
 ```
 
-#### Using the dex_get_batchs__historical_with_http_info variant
+#### Using the dex_get_batches__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<DexBatchDTO>>, Integer, Hash)> dex_get_batchs__historical_with_http_info(opts)
+> <Array(<Array<DexBatchDTO>>, Integer, Hash)> dex_get_batches__historical_with_http_info(opts)
 
 ```ruby
 begin
-  # Batchs (historical)
-  data, status_code, headers = api_instance.dex_get_batchs__historical_with_http_info(opts)
+  # Batches (historical)
+  data, status_code, headers = api_instance.dex_get_batches__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<DexBatchDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dex_get_batchs__historical_with_http_info: #{e}"
+  puts "Error when calling DexApi->dex_get_batches__historical_with_http_info: #{e}"
 end
 ```
 
@@ -526,13 +526,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## dex_get_statss__historical
+## dex_get_stats__historical
 
-> <Array<DexStatsDTO>> dex_get_statss__historical(opts)
+> <Array<DexStatsDTO>> dex_get_stats__historical(opts)
 
-Statss (historical)
+Stats (historical)
 
-Gets statss.
+Gets stats.
 
 ### Examples
 
@@ -550,29 +550,29 @@ opts = {
 }
 
 begin
-  # Statss (historical)
-  result = api_instance.dex_get_statss__historical(opts)
+  # Stats (historical)
+  result = api_instance.dex_get_stats__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dex_get_statss__historical: #{e}"
+  puts "Error when calling DexApi->dex_get_stats__historical: #{e}"
 end
 ```
 
-#### Using the dex_get_statss__historical_with_http_info variant
+#### Using the dex_get_stats__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<DexStatsDTO>>, Integer, Hash)> dex_get_statss__historical_with_http_info(opts)
+> <Array(<Array<DexStatsDTO>>, Integer, Hash)> dex_get_stats__historical_with_http_info(opts)
 
 ```ruby
 begin
-  # Statss (historical)
-  data, status_code, headers = api_instance.dex_get_statss__historical_with_http_info(opts)
+  # Stats (historical)
+  data, status_code, headers = api_instance.dex_get_stats__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<DexStatsDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dex_get_statss__historical_with_http_info: #{e}"
+  puts "Error when calling DexApi->dex_get_stats__historical_with_http_info: #{e}"
 end
 ```
 
@@ -1167,13 +1167,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## dex_statss__current
+## dex_stats__current
 
-> <Array<DexStatsDTO>> dex_statss__current
+> <Array<DexStatsDTO>> dex_stats__current
 
-Statss (current)
+Stats (current)
 
-Gets statss.
+Gets stats.
 
 ### Examples
 
@@ -1184,29 +1184,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::DexApi.new
 
 begin
-  # Statss (current)
-  result = api_instance.dex_statss__current
+  # Stats (current)
+  result = api_instance.dex_stats__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dex_statss__current: #{e}"
+  puts "Error when calling DexApi->dex_stats__current: #{e}"
 end
 ```
 
-#### Using the dex_statss__current_with_http_info variant
+#### Using the dex_stats__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<DexStatsDTO>>, Integer, Hash)> dex_statss__current_with_http_info
+> <Array(<Array<DexStatsDTO>>, Integer, Hash)> dex_stats__current_with_http_info
 
 ```ruby
 begin
-  # Statss (current)
-  data, status_code, headers = api_instance.dex_statss__current_with_http_info
+  # Stats (current)
+  data, status_code, headers = api_instance.dex_stats__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<DexStatsDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling DexApi->dex_statss__current_with_http_info: #{e}"
+  puts "Error when calling DexApi->dex_stats__current_with_http_info: #{e}"
 end
 ```
 

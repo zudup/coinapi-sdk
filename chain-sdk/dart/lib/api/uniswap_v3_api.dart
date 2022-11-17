@@ -118,14 +118,14 @@ class UniswapV3Api {
     return null;
   }
 
-  /// Factorys (current)
+  /// Factories (current)
   ///
-  /// Gets factorys.
+  /// Gets factories.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> uniswapV3FactorysCurrentWithHttpInfo() async {
+  Future<Response> uniswapV3FactoriesCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv3/factorys/current';
+    final path = r'/dapps/uniswapv3/factories/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -148,11 +148,11 @@ class UniswapV3Api {
     );
   }
 
-  /// Factorys (current)
+  /// Factories (current)
   ///
-  /// Gets factorys.
-  Future<List<UniswapV3FactoryDTO>?> uniswapV3FactorysCurrent() async {
-    final response = await uniswapV3FactorysCurrentWithHttpInfo();
+  /// Gets factories.
+  Future<List<UniswapV3FactoryDTO>?> uniswapV3FactoriesCurrent() async {
+    final response = await uniswapV3FactoriesCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -398,9 +398,9 @@ class UniswapV3Api {
     return null;
   }
 
-  /// Factorys (historical)
+  /// Factories (historical)
   ///
-  /// Gets factorys.
+  /// Gets factories.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -420,9 +420,9 @@ class UniswapV3Api {
   ///
   /// * [String] id:
   ///   Factory address.
-  Future<Response> uniswapV3GetFactorysHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+  Future<Response> uniswapV3GetFactoriesHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv3/factorys/historical';
+    final path = r'/dapps/uniswapv3/factories/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -461,9 +461,9 @@ class UniswapV3Api {
     );
   }
 
-  /// Factorys (historical)
+  /// Factories (historical)
   ///
-  /// Gets factorys.
+  /// Gets factories.
   ///
   /// Parameters:
   ///
@@ -481,8 +481,8 @@ class UniswapV3Api {
   ///
   /// * [String] id:
   ///   Factory address.
-  Future<List<UniswapV3FactoryDTO>?> uniswapV3GetFactorysHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
-    final response = await uniswapV3GetFactorysHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+  Future<List<UniswapV3FactoryDTO>?> uniswapV3GetFactoriesHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await uniswapV3GetFactoriesHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -627,9 +627,9 @@ class UniswapV3Api {
     return null;
   }
 
-  /// PoolDayDatas (historical)
+  /// PoolDayData (historical)
   ///
-  /// Gets poolDayDatas.
+  /// Gets poolDayData.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -646,9 +646,9 @@ class UniswapV3Api {
   /// * [String] id:
   ///
   /// * [String] pool:
-  Future<Response> uniswapV3GetPoolDayDatasHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
+  Future<Response> uniswapV3GetPoolDayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv3/poolDayDatas/historical';
+    final path = r'/dapps/uniswapv3/poolDayData/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -690,9 +690,9 @@ class UniswapV3Api {
     );
   }
 
-  /// PoolDayDatas (historical)
+  /// PoolDayData (historical)
   ///
-  /// Gets poolDayDatas.
+  /// Gets poolDayData.
   ///
   /// Parameters:
   ///
@@ -707,8 +707,8 @@ class UniswapV3Api {
   /// * [String] id:
   ///
   /// * [String] pool:
-  Future<List<UniswapV3PoolDayDataDTO>?> uniswapV3GetPoolDayDatasHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
-    final response = await uniswapV3GetPoolDayDatasHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, );
+  Future<List<UniswapV3PoolDayDataDTO>?> uniswapV3GetPoolDayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
+    final response = await uniswapV3GetPoolDayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -725,9 +725,9 @@ class UniswapV3Api {
     return null;
   }
 
-  /// PoolHourDatas (historical)
+  /// PoolHourData (historical)
   ///
-  /// Gets poolHourDatas.
+  /// Gets poolHourData.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -744,9 +744,9 @@ class UniswapV3Api {
   /// * [String] id:
   ///
   /// * [String] pool:
-  Future<Response> uniswapV3GetPoolHourDatasHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
+  Future<Response> uniswapV3GetPoolHourDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv3/poolHourDatas/historical';
+    final path = r'/dapps/uniswapv3/poolHourData/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -788,9 +788,9 @@ class UniswapV3Api {
     );
   }
 
-  /// PoolHourDatas (historical)
+  /// PoolHourData (historical)
   ///
-  /// Gets poolHourDatas.
+  /// Gets poolHourData.
   ///
   /// Parameters:
   ///
@@ -805,8 +805,8 @@ class UniswapV3Api {
   /// * [String] id:
   ///
   /// * [String] pool:
-  Future<List<UniswapV3PoolHourDataDTO>?> uniswapV3GetPoolHourDatasHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
-    final response = await uniswapV3GetPoolHourDatasHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, );
+  Future<List<UniswapV3PoolHourDataDTO>?> uniswapV3GetPoolHourDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
+    final response = await uniswapV3GetPoolHourDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1296,9 +1296,9 @@ class UniswapV3Api {
     return null;
   }
 
-  /// TickDayDatas (historical)
+  /// TickDayData (historical)
   ///
-  /// Gets tickDayDatas.
+  /// Gets tickDayData.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1315,9 +1315,9 @@ class UniswapV3Api {
   /// * [String] id:
   ///
   /// * [String] pool:
-  Future<Response> uniswapV3GetTickDayDatasHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
+  Future<Response> uniswapV3GetTickDayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv3/tickDayDatas/historical';
+    final path = r'/dapps/uniswapv3/tickDayData/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1359,9 +1359,9 @@ class UniswapV3Api {
     );
   }
 
-  /// TickDayDatas (historical)
+  /// TickDayData (historical)
   ///
-  /// Gets tickDayDatas.
+  /// Gets tickDayData.
   ///
   /// Parameters:
   ///
@@ -1376,8 +1376,8 @@ class UniswapV3Api {
   /// * [String] id:
   ///
   /// * [String] pool:
-  Future<List<UniswapV3TickDayDataDTO>?> uniswapV3GetTickDayDatasHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
-    final response = await uniswapV3GetTickDayDatasHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, );
+  Future<List<UniswapV3TickDayDataDTO>?> uniswapV3GetTickDayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pool, }) async {
+    final response = await uniswapV3GetTickDayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pool: pool, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1492,9 +1492,9 @@ class UniswapV3Api {
     return null;
   }
 
-  /// TokenHourDatas (historical)
+  /// TokenHourData (historical)
   ///
-  /// Gets tokenHourDatas.
+  /// Gets tokenHourData.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1514,9 +1514,9 @@ class UniswapV3Api {
   ///
   /// * [String] id:
   ///   Token address concatendated with date.
-  Future<Response> uniswapV3GetTokenHourDatasHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+  Future<Response> uniswapV3GetTokenHourDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv3/tokenHourDatas/historical';
+    final path = r'/dapps/uniswapv3/tokenHourData/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1555,9 +1555,9 @@ class UniswapV3Api {
     );
   }
 
-  /// TokenHourDatas (historical)
+  /// TokenHourData (historical)
   ///
-  /// Gets tokenHourDatas.
+  /// Gets tokenHourData.
   ///
   /// Parameters:
   ///
@@ -1575,8 +1575,8 @@ class UniswapV3Api {
   ///
   /// * [String] id:
   ///   Token address concatendated with date.
-  Future<List<UniswapV3TokenHourDataDTO>?> uniswapV3GetTokenHourDatasHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
-    final response = await uniswapV3GetTokenHourDatasHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+  Future<List<UniswapV3TokenHourDataDTO>?> uniswapV3GetTokenHourDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await uniswapV3GetTokenHourDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1593,9 +1593,9 @@ class UniswapV3Api {
     return null;
   }
 
-  /// TokenV3DayDatas (historical)
+  /// TokenV3DayData (historical)
   ///
-  /// Gets tokenV3DayDatas.
+  /// Gets tokenV3DayData.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1615,9 +1615,9 @@ class UniswapV3Api {
   ///
   /// * [String] id:
   ///   Token address concatendated with date.
-  Future<Response> uniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+  Future<Response> uniswapV3GetTokenV3DayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv3/tokenV3DayDatas/historical';
+    final path = r'/dapps/uniswapv3/tokenV3DayData/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1656,9 +1656,9 @@ class UniswapV3Api {
     );
   }
 
-  /// TokenV3DayDatas (historical)
+  /// TokenV3DayData (historical)
   ///
-  /// Gets tokenV3DayDatas.
+  /// Gets tokenV3DayData.
   ///
   /// Parameters:
   ///
@@ -1676,8 +1676,8 @@ class UniswapV3Api {
   ///
   /// * [String] id:
   ///   Token address concatendated with date.
-  Future<List<UniswapV3TokenV3DayDataDTO>?> uniswapV3GetTokenV3DayDatasHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
-    final response = await uniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+  Future<List<UniswapV3TokenV3DayDataDTO>?> uniswapV3GetTokenV3DayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await uniswapV3GetTokenV3DayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1914,9 +1914,9 @@ class UniswapV3Api {
     return null;
   }
 
-  /// UniswapDayDatas (historical)
+  /// UniswapDayData (historical)
   ///
-  /// Gets uniswapDayDatas.
+  /// Gets uniswapDayData.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1936,9 +1936,9 @@ class UniswapV3Api {
   ///
   /// * [String] id:
   ///   Timestamp rounded to current day by dividing by 86400.
-  Future<Response> uniswapV3GetUniswapDayDatasHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+  Future<Response> uniswapV3GetUniswapDayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv3/uniswapDayDatas/historical';
+    final path = r'/dapps/uniswapv3/uniswapDayData/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1977,9 +1977,9 @@ class UniswapV3Api {
     );
   }
 
-  /// UniswapDayDatas (historical)
+  /// UniswapDayData (historical)
   ///
-  /// Gets uniswapDayDatas.
+  /// Gets uniswapDayData.
   ///
   /// Parameters:
   ///
@@ -1997,8 +1997,8 @@ class UniswapV3Api {
   ///
   /// * [String] id:
   ///   Timestamp rounded to current day by dividing by 86400.
-  Future<List<UniswapV3UniswapDayDataDTO>?> uniswapV3GetUniswapDayDatasHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
-    final response = await uniswapV3GetUniswapDayDatasHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+  Future<List<UniswapV3UniswapDayDataDTO>?> uniswapV3GetUniswapDayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await uniswapV3GetUniswapDayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2066,14 +2066,14 @@ class UniswapV3Api {
     return null;
   }
 
-  /// PoolDayDatas (current)
+  /// PoolDayData (current)
   ///
-  /// Gets poolDayDatas.
+  /// Gets poolDayData.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> uniswapV3PoolDayDatasCurrentWithHttpInfo() async {
+  Future<Response> uniswapV3PoolDayDataCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv3/poolDayDatas/current';
+    final path = r'/dapps/uniswapv3/poolDayData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -2096,11 +2096,11 @@ class UniswapV3Api {
     );
   }
 
-  /// PoolDayDatas (current)
+  /// PoolDayData (current)
   ///
-  /// Gets poolDayDatas.
-  Future<List<UniswapV3PoolDayDataDTO>?> uniswapV3PoolDayDatasCurrent() async {
-    final response = await uniswapV3PoolDayDatasCurrentWithHttpInfo();
+  /// Gets poolDayData.
+  Future<List<UniswapV3PoolDayDataDTO>?> uniswapV3PoolDayDataCurrent() async {
+    final response = await uniswapV3PoolDayDataCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2117,14 +2117,14 @@ class UniswapV3Api {
     return null;
   }
 
-  /// PoolHourDatas (current)
+  /// PoolHourData (current)
   ///
-  /// Gets poolHourDatas.
+  /// Gets poolHourData.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> uniswapV3PoolHourDatasCurrentWithHttpInfo() async {
+  Future<Response> uniswapV3PoolHourDataCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv3/poolHourDatas/current';
+    final path = r'/dapps/uniswapv3/poolHourData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -2147,11 +2147,11 @@ class UniswapV3Api {
     );
   }
 
-  /// PoolHourDatas (current)
+  /// PoolHourData (current)
   ///
-  /// Gets poolHourDatas.
-  Future<List<UniswapV3PoolHourDataDTO>?> uniswapV3PoolHourDatasCurrent() async {
-    final response = await uniswapV3PoolHourDatasCurrentWithHttpInfo();
+  /// Gets poolHourData.
+  Future<List<UniswapV3PoolHourDataDTO>?> uniswapV3PoolHourDataCurrent() async {
+    final response = await uniswapV3PoolHourDataCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2400,14 +2400,14 @@ class UniswapV3Api {
     return null;
   }
 
-  /// TickDayDatas (current)
+  /// TickDayData (current)
   ///
-  /// Gets tickDayDatas.
+  /// Gets tickDayData.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> uniswapV3TickDayDatasCurrentWithHttpInfo() async {
+  Future<Response> uniswapV3TickDayDataCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv3/tickDayDatas/current';
+    final path = r'/dapps/uniswapv3/tickDayData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -2430,11 +2430,11 @@ class UniswapV3Api {
     );
   }
 
-  /// TickDayDatas (current)
+  /// TickDayData (current)
   ///
-  /// Gets tickDayDatas.
-  Future<List<UniswapV3TickDayDataDTO>?> uniswapV3TickDayDatasCurrent() async {
-    final response = await uniswapV3TickDayDatasCurrentWithHttpInfo();
+  /// Gets tickDayData.
+  Future<List<UniswapV3TickDayDataDTO>?> uniswapV3TickDayDataCurrent() async {
+    final response = await uniswapV3TickDayDataCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2502,14 +2502,14 @@ class UniswapV3Api {
     return null;
   }
 
-  /// TokenHourDatas (current)
+  /// TokenHourData (current)
   ///
-  /// Gets tokenHourDatas.
+  /// Gets tokenHourData.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> uniswapV3TokenHourDatasCurrentWithHttpInfo() async {
+  Future<Response> uniswapV3TokenHourDataCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv3/tokenHourDatas/current';
+    final path = r'/dapps/uniswapv3/tokenHourData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -2532,11 +2532,11 @@ class UniswapV3Api {
     );
   }
 
-  /// TokenHourDatas (current)
+  /// TokenHourData (current)
   ///
-  /// Gets tokenHourDatas.
-  Future<List<UniswapV3TokenHourDataDTO>?> uniswapV3TokenHourDatasCurrent() async {
-    final response = await uniswapV3TokenHourDatasCurrentWithHttpInfo();
+  /// Gets tokenHourData.
+  Future<List<UniswapV3TokenHourDataDTO>?> uniswapV3TokenHourDataCurrent() async {
+    final response = await uniswapV3TokenHourDataCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2553,14 +2553,14 @@ class UniswapV3Api {
     return null;
   }
 
-  /// TokenV3DayDatas (current)
+  /// TokenV3DayData (current)
   ///
-  /// Gets tokenV3DayDatas.
+  /// Gets tokenV3DayData.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> uniswapV3TokenV3DayDatasCurrentWithHttpInfo() async {
+  Future<Response> uniswapV3TokenV3DayDataCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv3/tokenV3DayDatas/current';
+    final path = r'/dapps/uniswapv3/tokenV3DayData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -2583,11 +2583,11 @@ class UniswapV3Api {
     );
   }
 
-  /// TokenV3DayDatas (current)
+  /// TokenV3DayData (current)
   ///
-  /// Gets tokenV3DayDatas.
-  Future<List<UniswapV3TokenV3DayDataDTO>?> uniswapV3TokenV3DayDatasCurrent() async {
-    final response = await uniswapV3TokenV3DayDatasCurrentWithHttpInfo();
+  /// Gets tokenV3DayData.
+  Future<List<UniswapV3TokenV3DayDataDTO>?> uniswapV3TokenV3DayDataCurrent() async {
+    final response = await uniswapV3TokenV3DayDataCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2706,14 +2706,14 @@ class UniswapV3Api {
     return null;
   }
 
-  /// UniswapDayDatas (current)
+  /// UniswapDayData (current)
   ///
-  /// Gets uniswapDayDatas.
+  /// Gets uniswapDayData.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> uniswapV3UniswapDayDatasCurrentWithHttpInfo() async {
+  Future<Response> uniswapV3UniswapDayDataCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv3/uniswapDayDatas/current';
+    final path = r'/dapps/uniswapv3/uniswapDayData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -2736,11 +2736,11 @@ class UniswapV3Api {
     );
   }
 
-  /// UniswapDayDatas (current)
+  /// UniswapDayData (current)
   ///
-  /// Gets uniswapDayDatas.
-  Future<List<UniswapV3UniswapDayDataDTO>?> uniswapV3UniswapDayDatasCurrent() async {
-    final response = await uniswapV3UniswapDayDatasCurrentWithHttpInfo();
+  /// Gets uniswapDayData.
+  Future<List<UniswapV3UniswapDayDataDTO>?> uniswapV3UniswapDayDataCurrent() async {
+    final response = await uniswapV3UniswapDayDataCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

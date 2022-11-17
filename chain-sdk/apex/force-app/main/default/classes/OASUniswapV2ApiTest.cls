@@ -341,12 +341,12 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * PairDayDatas (historical)
+     * PairDayData (historical)
      *
-     * Gets pairDayDatas.
+     * Gets pairDayData.
      */
     @isTest
-    private static void uniswapV2GetPairDayDatasHistoricalTest() {
+    private static void uniswapV2GetPairDayDataHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -374,31 +374,31 @@ private class OASUniswapV2ApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2PairDayDataDTO>{OASUniswapV2PairDayDataDTO.getExample()};
-        response = (List<OASUniswapV2PairDayDataDTO>) api.uniswapV2GetPairDayDatasHistorical(params);
+        response = (List<OASUniswapV2PairDayDataDTO>) api.uniswapV2GetPairDayDataHistorical(params);
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2PairDayDataDTO>{OASUniswapV2PairDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2PairDayDataDTO>{OASUniswapV2PairDayDataDTO.getExample()};
-        response = (List<OASUniswapV2PairDayDataDTO>) api.uniswapV2GetPairDayDatasHistorical(params);
+        response = (List<OASUniswapV2PairDayDataDTO>) api.uniswapV2GetPairDayDataHistorical(params);
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2PairDayDataDTO>{OASUniswapV2PairDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2PairDayDataDTO>{OASUniswapV2PairDayDataDTO.getExample()};
-        response = (List<OASUniswapV2PairDayDataDTO>) api.uniswapV2GetPairDayDatasHistorical(params);
+        response = (List<OASUniswapV2PairDayDataDTO>) api.uniswapV2GetPairDayDataHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * PairHourDatas (historical)
+     * PairHourData (historical)
      *
-     * Gets pairHourDatas.
+     * Gets pairHourData.
      */
     @isTest
-    private static void uniswapV2GetPairHourDatasHistoricalTest() {
+    private static void uniswapV2GetPairHourDataHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -425,21 +425,21 @@ private class OASUniswapV2ApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2PairHourDataDTO>{OASUniswapV2PairHourDataDTO.getExample()};
-        response = (List<OASUniswapV2PairHourDataDTO>) api.uniswapV2GetPairHourDatasHistorical(params);
+        response = (List<OASUniswapV2PairHourDataDTO>) api.uniswapV2GetPairHourDataHistorical(params);
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2PairHourDataDTO>{OASUniswapV2PairHourDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2PairHourDataDTO>{OASUniswapV2PairHourDataDTO.getExample()};
-        response = (List<OASUniswapV2PairHourDataDTO>) api.uniswapV2GetPairHourDatasHistorical(params);
+        response = (List<OASUniswapV2PairHourDataDTO>) api.uniswapV2GetPairHourDataHistorical(params);
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2PairHourDataDTO>{OASUniswapV2PairHourDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2PairHourDataDTO>{OASUniswapV2PairHourDataDTO.getExample()};
-        response = (List<OASUniswapV2PairHourDataDTO>) api.uniswapV2GetPairHourDatasHistorical(params);
+        response = (List<OASUniswapV2PairHourDataDTO>) api.uniswapV2GetPairHourDataHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -547,12 +547,12 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * TokenDayDatas (historical)
+     * TokenDayData (historical)
      *
-     * Gets tokenDayDatas.
+     * Gets tokenDayData.
      */
     @isTest
-    private static void uniswapV2GetTokenDayDatasHistoricalTest() {
+    private static void uniswapV2GetTokenDayDataHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -578,21 +578,21 @@ private class OASUniswapV2ApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2TokenDayDataDTO>{OASUniswapV2TokenDayDataDTO.getExample()};
-        response = (List<OASUniswapV2TokenDayDataDTO>) api.uniswapV2GetTokenDayDatasHistorical(params);
+        response = (List<OASUniswapV2TokenDayDataDTO>) api.uniswapV2GetTokenDayDataHistorical(params);
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2TokenDayDataDTO>{OASUniswapV2TokenDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2TokenDayDataDTO>{OASUniswapV2TokenDayDataDTO.getExample()};
-        response = (List<OASUniswapV2TokenDayDataDTO>) api.uniswapV2GetTokenDayDatasHistorical(params);
+        response = (List<OASUniswapV2TokenDayDataDTO>) api.uniswapV2GetTokenDayDataHistorical(params);
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2TokenDayDataDTO>{OASUniswapV2TokenDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2TokenDayDataDTO>{OASUniswapV2TokenDayDataDTO.getExample()};
-        response = (List<OASUniswapV2TokenDayDataDTO>) api.uniswapV2GetTokenDayDatasHistorical(params);
+        response = (List<OASUniswapV2TokenDayDataDTO>) api.uniswapV2GetTokenDayDataHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -699,12 +699,12 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * UniswapDayDatas (historical)
+     * UniswapDayData (historical)
      *
-     * Gets uniswapDayDatas.
+     * Gets uniswapDayData.
      */
     @isTest
-    private static void uniswapV2GetUniswapDayDatasHistoricalTest() {
+    private static void uniswapV2GetUniswapDayDataHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -730,31 +730,31 @@ private class OASUniswapV2ApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2UniswapDayDataDTO>{OASUniswapV2UniswapDayDataDTO.getExample()};
-        response = (List<OASUniswapV2UniswapDayDataDTO>) api.uniswapV2GetUniswapDayDatasHistorical(params);
+        response = (List<OASUniswapV2UniswapDayDataDTO>) api.uniswapV2GetUniswapDayDataHistorical(params);
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2UniswapDayDataDTO>{OASUniswapV2UniswapDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2UniswapDayDataDTO>{OASUniswapV2UniswapDayDataDTO.getExample()};
-        response = (List<OASUniswapV2UniswapDayDataDTO>) api.uniswapV2GetUniswapDayDatasHistorical(params);
+        response = (List<OASUniswapV2UniswapDayDataDTO>) api.uniswapV2GetUniswapDayDataHistorical(params);
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2UniswapDayDataDTO>{OASUniswapV2UniswapDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2UniswapDayDataDTO>{OASUniswapV2UniswapDayDataDTO.getExample()};
-        response = (List<OASUniswapV2UniswapDayDataDTO>) api.uniswapV2GetUniswapDayDatasHistorical(params);
+        response = (List<OASUniswapV2UniswapDayDataDTO>) api.uniswapV2GetUniswapDayDataHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * UniswapFactorys (historical)
+     * UniswapFactories (historical)
      *
-     * Gets uniswapFactorys.
+     * Gets uniswapFactories.
      */
     @isTest
-    private static void uniswapV2GetUniswapFactorysHistoricalTest() {
+    private static void uniswapV2GetUniswapFactoriesHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -780,21 +780,21 @@ private class OASUniswapV2ApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2UniswapFactoryDTO>{OASUniswapV2UniswapFactoryDTO.getExample()};
-        response = (List<OASUniswapV2UniswapFactoryDTO>) api.uniswapV2GetUniswapFactorysHistorical(params);
+        response = (List<OASUniswapV2UniswapFactoryDTO>) api.uniswapV2GetUniswapFactoriesHistorical(params);
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2UniswapFactoryDTO>{OASUniswapV2UniswapFactoryDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2UniswapFactoryDTO>{OASUniswapV2UniswapFactoryDTO.getExample()};
-        response = (List<OASUniswapV2UniswapFactoryDTO>) api.uniswapV2GetUniswapFactorysHistorical(params);
+        response = (List<OASUniswapV2UniswapFactoryDTO>) api.uniswapV2GetUniswapFactoriesHistorical(params);
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2UniswapFactoryDTO>{OASUniswapV2UniswapFactoryDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2UniswapFactoryDTO>{OASUniswapV2UniswapFactoryDTO.getExample()};
-        response = (List<OASUniswapV2UniswapFactoryDTO>) api.uniswapV2GetUniswapFactorysHistorical(params);
+        response = (List<OASUniswapV2UniswapFactoryDTO>) api.uniswapV2GetUniswapFactoriesHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -975,12 +975,12 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * PairDayDatas (current)
+     * PairDayData (current)
      *
-     * Gets pairDayDatas.
+     * Gets pairDayData.
      */
     @isTest
-    private static void uniswapV2PairDayDatasCurrentTest() {
+    private static void uniswapV2PairDayDataCurrentTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -998,31 +998,31 @@ private class OASUniswapV2ApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2PairDayDataDTO>{OASUniswapV2PairDayDataDTO.getExample()};
-        response = (List<OASUniswapV2PairDayDataDTO>) api.uniswapV2PairDayDatasCurrent();
+        response = (List<OASUniswapV2PairDayDataDTO>) api.uniswapV2PairDayDataCurrent();
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2PairDayDataDTO>{OASUniswapV2PairDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2PairDayDataDTO>{OASUniswapV2PairDayDataDTO.getExample()};
-        response = (List<OASUniswapV2PairDayDataDTO>) api.uniswapV2PairDayDatasCurrent();
+        response = (List<OASUniswapV2PairDayDataDTO>) api.uniswapV2PairDayDataCurrent();
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2PairDayDataDTO>{OASUniswapV2PairDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2PairDayDataDTO>{OASUniswapV2PairDayDataDTO.getExample()};
-        response = (List<OASUniswapV2PairDayDataDTO>) api.uniswapV2PairDayDatasCurrent();
+        response = (List<OASUniswapV2PairDayDataDTO>) api.uniswapV2PairDayDataCurrent();
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * PairHourDatas (current)
+     * PairHourData (current)
      *
-     * Gets pairHourDatas.
+     * Gets pairHourData.
      */
     @isTest
-    private static void uniswapV2PairHourDatasCurrentTest() {
+    private static void uniswapV2PairHourDataCurrentTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -1040,21 +1040,21 @@ private class OASUniswapV2ApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2PairHourDataDTO>{OASUniswapV2PairHourDataDTO.getExample()};
-        response = (List<OASUniswapV2PairHourDataDTO>) api.uniswapV2PairHourDatasCurrent();
+        response = (List<OASUniswapV2PairHourDataDTO>) api.uniswapV2PairHourDataCurrent();
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2PairHourDataDTO>{OASUniswapV2PairHourDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2PairHourDataDTO>{OASUniswapV2PairHourDataDTO.getExample()};
-        response = (List<OASUniswapV2PairHourDataDTO>) api.uniswapV2PairHourDatasCurrent();
+        response = (List<OASUniswapV2PairHourDataDTO>) api.uniswapV2PairHourDataCurrent();
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2PairHourDataDTO>{OASUniswapV2PairHourDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2PairHourDataDTO>{OASUniswapV2PairHourDataDTO.getExample()};
-        response = (List<OASUniswapV2PairHourDataDTO>) api.uniswapV2PairHourDatasCurrent();
+        response = (List<OASUniswapV2PairHourDataDTO>) api.uniswapV2PairHourDataCurrent();
         System.assertEquals(expectedResponse, response);
     }
 
@@ -1151,12 +1151,12 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * TokenDayDatas (current)
+     * TokenDayData (current)
      *
-     * Gets tokenDayDatas.
+     * Gets tokenDayData.
      */
     @isTest
-    private static void uniswapV2TokenDayDatasCurrentTest() {
+    private static void uniswapV2TokenDayDataCurrentTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -1174,21 +1174,21 @@ private class OASUniswapV2ApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2TokenDayDataDTO>{OASUniswapV2TokenDayDataDTO.getExample()};
-        response = (List<OASUniswapV2TokenDayDataDTO>) api.uniswapV2TokenDayDatasCurrent();
+        response = (List<OASUniswapV2TokenDayDataDTO>) api.uniswapV2TokenDayDataCurrent();
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2TokenDayDataDTO>{OASUniswapV2TokenDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2TokenDayDataDTO>{OASUniswapV2TokenDayDataDTO.getExample()};
-        response = (List<OASUniswapV2TokenDayDataDTO>) api.uniswapV2TokenDayDatasCurrent();
+        response = (List<OASUniswapV2TokenDayDataDTO>) api.uniswapV2TokenDayDataCurrent();
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2TokenDayDataDTO>{OASUniswapV2TokenDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2TokenDayDataDTO>{OASUniswapV2TokenDayDataDTO.getExample()};
-        response = (List<OASUniswapV2TokenDayDataDTO>) api.uniswapV2TokenDayDatasCurrent();
+        response = (List<OASUniswapV2TokenDayDataDTO>) api.uniswapV2TokenDayDataCurrent();
         System.assertEquals(expectedResponse, response);
     }
 
@@ -1277,12 +1277,12 @@ private class OASUniswapV2ApiTest {
     }
 
     /**
-     * UniswapDayDatas (current)
+     * UniswapDayData (current)
      *
-     * Gets uniswapDayDatas.
+     * Gets uniswapDayData.
      */
     @isTest
-    private static void uniswapV2UniswapDayDatasCurrentTest() {
+    private static void uniswapV2UniswapDayDataCurrentTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -1300,31 +1300,31 @@ private class OASUniswapV2ApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2UniswapDayDataDTO>{OASUniswapV2UniswapDayDataDTO.getExample()};
-        response = (List<OASUniswapV2UniswapDayDataDTO>) api.uniswapV2UniswapDayDatasCurrent();
+        response = (List<OASUniswapV2UniswapDayDataDTO>) api.uniswapV2UniswapDayDataCurrent();
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2UniswapDayDataDTO>{OASUniswapV2UniswapDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2UniswapDayDataDTO>{OASUniswapV2UniswapDayDataDTO.getExample()};
-        response = (List<OASUniswapV2UniswapDayDataDTO>) api.uniswapV2UniswapDayDatasCurrent();
+        response = (List<OASUniswapV2UniswapDayDataDTO>) api.uniswapV2UniswapDayDataCurrent();
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2UniswapDayDataDTO>{OASUniswapV2UniswapDayDataDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2UniswapDayDataDTO>{OASUniswapV2UniswapDayDataDTO.getExample()};
-        response = (List<OASUniswapV2UniswapDayDataDTO>) api.uniswapV2UniswapDayDatasCurrent();
+        response = (List<OASUniswapV2UniswapDayDataDTO>) api.uniswapV2UniswapDayDataCurrent();
         System.assertEquals(expectedResponse, response);
     }
 
     /**
-     * UniswapFactorys (current)
+     * UniswapFactories (current)
      *
-     * Gets uniswapFactorys.
+     * Gets uniswapFactories.
      */
     @isTest
-    private static void uniswapV2UniswapFactorysCurrentTest() {
+    private static void uniswapV2UniswapFactoriesCurrentTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -1342,21 +1342,21 @@ private class OASUniswapV2ApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2UniswapFactoryDTO>{OASUniswapV2UniswapFactoryDTO.getExample()};
-        response = (List<OASUniswapV2UniswapFactoryDTO>) api.uniswapV2UniswapFactorysCurrent();
+        response = (List<OASUniswapV2UniswapFactoryDTO>) api.uniswapV2UniswapFactoriesCurrent();
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2UniswapFactoryDTO>{OASUniswapV2UniswapFactoryDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2UniswapFactoryDTO>{OASUniswapV2UniswapFactoryDTO.getExample()};
-        response = (List<OASUniswapV2UniswapFactoryDTO>) api.uniswapV2UniswapFactorysCurrent();
+        response = (List<OASUniswapV2UniswapFactoryDTO>) api.uniswapV2UniswapFactoriesCurrent();
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASUniswapV2UniswapFactoryDTO>{OASUniswapV2UniswapFactoryDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASUniswapV2UniswapFactoryDTO>{OASUniswapV2UniswapFactoryDTO.getExample()};
-        response = (List<OASUniswapV2UniswapFactoryDTO>) api.uniswapV2UniswapFactorysCurrent();
+        response = (List<OASUniswapV2UniswapFactoryDTO>) api.uniswapV2UniswapFactoriesCurrent();
         System.assertEquals(expectedResponse, response);
     }
 

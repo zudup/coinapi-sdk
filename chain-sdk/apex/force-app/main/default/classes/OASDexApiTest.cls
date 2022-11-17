@@ -1,12 +1,12 @@
 @isTest
 private class OASDexApiTest {
     /**
-     * Batchs (current)
+     * Batches (current)
      *
-     * Gets batchs.
+     * Gets batches.
      */
     @isTest
-    private static void dexBatchsCurrentTest() {
+    private static void dexBatchesCurrentTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -24,21 +24,21 @@ private class OASDexApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()};
-        response = (List<OASDexBatchDTO>) api.dexBatchsCurrent();
+        response = (List<OASDexBatchDTO>) api.dexBatchesCurrent();
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
         expectedResponse = new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()};
-        response = (List<OASDexBatchDTO>) api.dexBatchsCurrent();
+        response = (List<OASDexBatchDTO>) api.dexBatchesCurrent();
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()};
-        response = (List<OASDexBatchDTO>) api.dexBatchsCurrent();
+        response = (List<OASDexBatchDTO>) api.dexBatchesCurrent();
         System.assertEquals(expectedResponse, response);
     }
 
@@ -85,12 +85,12 @@ private class OASDexApiTest {
     }
 
     /**
-     * Batchs (historical)
+     * Batches (historical)
      *
-     * Gets batchs.
+     * Gets batches.
      */
     @isTest
-    private static void dexGetBatchsHistoricalTest() {
+    private static void dexGetBatchesHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -116,21 +116,21 @@ private class OASDexApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()};
-        response = (List<OASDexBatchDTO>) api.dexGetBatchsHistorical(params);
+        response = (List<OASDexBatchDTO>) api.dexGetBatchesHistorical(params);
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
         expectedResponse = new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()};
-        response = (List<OASDexBatchDTO>) api.dexGetBatchsHistorical(params);
+        response = (List<OASDexBatchDTO>) api.dexGetBatchesHistorical(params);
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASDexBatchDTO>{OASDexBatchDTO.getExample()};
-        response = (List<OASDexBatchDTO>) api.dexGetBatchsHistorical(params);
+        response = (List<OASDexBatchDTO>) api.dexGetBatchesHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -338,12 +338,12 @@ private class OASDexApiTest {
     }
 
     /**
-     * Statss (historical)
+     * Stats (historical)
      *
-     * Gets statss.
+     * Gets stats.
      */
     @isTest
-    private static void dexGetStatssHistoricalTest() {
+    private static void dexGetStatsHistoricalTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -369,21 +369,21 @@ private class OASDexApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()};
-        response = (List<OASDexStatsDTO>) api.dexGetStatssHistorical(params);
+        response = (List<OASDexStatsDTO>) api.dexGetStatsHistorical(params);
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
         expectedResponse = new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()};
-        response = (List<OASDexStatsDTO>) api.dexGetStatssHistorical(params);
+        response = (List<OASDexStatsDTO>) api.dexGetStatsHistorical(params);
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()};
-        response = (List<OASDexStatsDTO>) api.dexGetStatssHistorical(params);
+        response = (List<OASDexStatsDTO>) api.dexGetStatsHistorical(params);
         System.assertEquals(expectedResponse, response);
     }
 
@@ -771,12 +771,12 @@ private class OASDexApiTest {
     }
 
     /**
-     * Statss (current)
+     * Stats (current)
      *
-     * Gets statss.
+     * Gets stats.
      */
     @isTest
-    private static void dexStatssCurrentTest() {
+    private static void dexStatsCurrentTest() {
         HttpResponse res = new HttpResponse();
         res.setStatusCode(200);
         res.setStatus('OK');
@@ -794,21 +794,21 @@ private class OASDexApiTest {
         res.setHeader('Content-Type', 'application/json');
         res.setBody(js);
         expectedResponse = new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()};
-        response = (List<OASDexStatsDTO>) api.dexStatssCurrent();
+        response = (List<OASDexStatsDTO>) api.dexStatsCurrent();
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()});
         res.setHeader('Content-Type', 'text/json');
         res.setBody(js);
         expectedResponse = new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()};
-        response = (List<OASDexStatsDTO>) api.dexStatssCurrent();
+        response = (List<OASDexStatsDTO>) api.dexStatsCurrent();
         System.assertEquals(expectedResponse, response);
 
         js = JSON.serialize(new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()});
         res.setHeader('Content-Type', 'text/plain');
         res.setBody(js);
         expectedResponse = new List<OASDexStatsDTO>{OASDexStatsDTO.getExample()};
-        response = (List<OASDexStatsDTO>) api.dexStatssCurrent();
+        response = (List<OASDexStatsDTO>) api.dexStatsCurrent();
         System.assertEquals(expectedResponse, response);
     }
 

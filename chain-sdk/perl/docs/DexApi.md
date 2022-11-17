@@ -9,14 +9,14 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dex_batchs__current**](DexApi.md#dex_batchs__current) | **GET** /dapps/dex/batchs/current | Batchs (current)
+[**dex_batches__current**](DexApi.md#dex_batches__current) | **GET** /dapps/dex/batches/current | Batches (current)
 [**dex_deposits__current**](DexApi.md#dex_deposits__current) | **GET** /dapps/dex/deposits/current | Deposits (current)
-[**dex_get_batchs__historical**](DexApi.md#dex_get_batchs__historical) | **GET** /dapps/dex/batchs/historical | Batchs (historical)
+[**dex_get_batches__historical**](DexApi.md#dex_get_batches__historical) | **GET** /dapps/dex/batches/historical | Batches (historical)
 [**dex_get_deposits__historical**](DexApi.md#dex_get_deposits__historical) | **GET** /dapps/dex/deposits/historical | Deposits (historical)
 [**dex_get_orders__historical**](DexApi.md#dex_get_orders__historical) | **GET** /dapps/dex/orders/historical | Orders (historical)
 [**dex_get_prices__historical**](DexApi.md#dex_get_prices__historical) | **GET** /dapps/dex/prices/historical | Prices (historical)
 [**dex_get_solutions__historical**](DexApi.md#dex_get_solutions__historical) | **GET** /dapps/dex/solutions/historical | Solutions (historical)
-[**dex_get_statss__historical**](DexApi.md#dex_get_statss__historical) | **GET** /dapps/dex/statss/historical | Statss (historical)
+[**dex_get_stats__historical**](DexApi.md#dex_get_stats__historical) | **GET** /dapps/dex/stats/historical | Stats (historical)
 [**dex_get_tokens__historical**](DexApi.md#dex_get_tokens__historical) | **GET** /dapps/dex/tokens/historical | Tokens (historical)
 [**dex_get_trades__historical**](DexApi.md#dex_get_trades__historical) | **GET** /dapps/dex/trades/historical | Trades (historical)
 [**dex_get_users__historical**](DexApi.md#dex_get_users__historical) | **GET** /dapps/dex/users/historical | Users (historical)
@@ -25,7 +25,7 @@ Method | HTTP request | Description
 [**dex_orders__current**](DexApi.md#dex_orders__current) | **GET** /dapps/dex/orders/current | Orders (current)
 [**dex_prices__current**](DexApi.md#dex_prices__current) | **GET** /dapps/dex/prices/current | Prices (current)
 [**dex_solutions__current**](DexApi.md#dex_solutions__current) | **GET** /dapps/dex/solutions/current | Solutions (current)
-[**dex_statss__current**](DexApi.md#dex_statss__current) | **GET** /dapps/dex/statss/current | Statss (current)
+[**dex_stats__current**](DexApi.md#dex_stats__current) | **GET** /dapps/dex/stats/current | Stats (current)
 [**dex_tokens__current**](DexApi.md#dex_tokens__current) | **GET** /dapps/dex/tokens/current | Tokens (current)
 [**dex_trades__current**](DexApi.md#dex_trades__current) | **GET** /dapps/dex/trades/current | Trades (current)
 [**dex_users__current**](DexApi.md#dex_users__current) | **GET** /dapps/dex/users/current | Users (current)
@@ -33,12 +33,12 @@ Method | HTTP request | Description
 [**dex_withdraws__current**](DexApi.md#dex_withdraws__current) | **GET** /dapps/dex/withdraws/current | Withdraws (current)
 
 
-# **dex_batchs__current**
-> ARRAY[DexBatchDTO] dex_batchs__current()
+# **dex_batches__current**
+> ARRAY[DexBatchDTO] dex_batches__current()
 
-Batchs (current)
+Batches (current)
 
-Gets batchs.
+Gets batches.
 
 ### Example
 ```perl
@@ -49,11 +49,11 @@ my $api_instance = WWW::OpenAPIClient::DexApi->new(
 
 
 eval {
-    my $result = $api_instance->dex_batchs__current();
+    my $result = $api_instance->dex_batches__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling DexApi->dex_batchs__current: $@\n";
+    warn "Exception when calling DexApi->dex_batches__current: $@\n";
 }
 ```
 
@@ -117,12 +117,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dex_get_batchs__historical**
-> ARRAY[DexBatchDTO] dex_get_batchs__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
+# **dex_get_batches__historical**
+> ARRAY[DexBatchDTO] dex_get_batches__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
 
-Batchs (historical)
+Batches (historical)
 
-Gets batchs.
+Gets batches.
 
 ### Example
 ```perl
@@ -138,11 +138,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | Th
 my $id = "id_example"; # string | Identifier.
 
 eval {
-    my $result = $api_instance->dex_get_batchs__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
+    my $result = $api_instance->dex_get_batches__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling DexApi->dex_get_batchs__historical: $@\n";
+    warn "Exception when calling DexApi->dex_get_batches__historical: $@\n";
 }
 ```
 
@@ -393,12 +393,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dex_get_statss__historical**
-> ARRAY[DexStatsDTO] dex_get_statss__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
+# **dex_get_stats__historical**
+> ARRAY[DexStatsDTO] dex_get_stats__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
 
-Statss (historical)
+Stats (historical)
 
-Gets statss.
+Gets stats.
 
 ### Example
 ```perl
@@ -414,11 +414,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | Th
 my $id = "id_example"; # string | 
 
 eval {
-    my $result = $api_instance->dex_get_statss__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
+    my $result = $api_instance->dex_get_stats__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling DexApi->dex_get_statss__historical: $@\n";
+    warn "Exception when calling DexApi->dex_get_stats__historical: $@\n";
 }
 ```
 
@@ -857,12 +857,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dex_statss__current**
-> ARRAY[DexStatsDTO] dex_statss__current()
+# **dex_stats__current**
+> ARRAY[DexStatsDTO] dex_stats__current()
 
-Statss (current)
+Stats (current)
 
-Gets statss.
+Gets stats.
 
 ### Example
 ```perl
@@ -873,11 +873,11 @@ my $api_instance = WWW::OpenAPIClient::DexApi->new(
 
 
 eval {
-    my $result = $api_instance->dex_statss__current();
+    my $result = $api_instance->dex_stats__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling DexApi->dex_statss__current: $@\n";
+    warn "Exception when calling DexApi->dex_stats__current: $@\n";
 }
 ```
 

@@ -63,8 +63,8 @@ class SushiswapApi {
 
     }
 
-    def sushiswapDayDatasCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/dayDatas/current"
+    def sushiswapDayDataCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/dayData/current"
 
         // params
         def queryParams = [:]
@@ -83,8 +83,8 @@ class SushiswapApi {
 
     }
 
-    def sushiswapFactorysCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/factorys/current"
+    def sushiswapFactoriesCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/factories/current"
 
         // params
         def queryParams = [:]
@@ -176,8 +176,8 @@ class SushiswapApi {
 
     }
 
-    def sushiswapGetDayDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/dayDatas/historical"
+    def sushiswapGetDayDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/dayData/historical"
 
         // params
         def queryParams = [:]
@@ -211,8 +211,8 @@ class SushiswapApi {
 
     }
 
-    def sushiswapGetFactorysHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/factorys/historical"
+    def sushiswapGetFactoriesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/factories/historical"
 
         // params
         def queryParams = [:]
@@ -246,8 +246,8 @@ class SushiswapApi {
 
     }
 
-    def sushiswapGetHourDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/hourDatas/historical"
+    def sushiswapGetHourDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/hourData/historical"
 
         // params
         def queryParams = [:]
@@ -401,8 +401,8 @@ class SushiswapApi {
 
     }
 
-    def sushiswapGetPairDayDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, String token0, String token1, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/pairDayDatas/historical"
+    def sushiswapGetPairDayDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, String token0, String token1, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/pairDayData/historical"
 
         // params
         def queryParams = [:]
@@ -445,8 +445,8 @@ class SushiswapApi {
 
     }
 
-    def sushiswapGetPairHourDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/pairHourDatas/historical"
+    def sushiswapGetPairHourDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/pairHourData/historical"
 
         // params
         def queryParams = [:]
@@ -565,8 +565,8 @@ class SushiswapApi {
 
     }
 
-    def sushiswapGetTokenDayDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/tokenDayDatas/historical"
+    def sushiswapGetTokenDayDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/tokenDayData/historical"
 
         // params
         def queryParams = [:]
@@ -711,8 +711,8 @@ class SushiswapApi {
 
     }
 
-    def sushiswapHourDatasCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/hourDatas/current"
+    def sushiswapHourDataCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/hourData/current"
 
         // params
         def queryParams = [:]
@@ -791,8 +791,8 @@ class SushiswapApi {
 
     }
 
-    def sushiswapPairDayDatasCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/pairDayDatas/current"
+    def sushiswapPairDayDataCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/pairDayData/current"
 
         // params
         def queryParams = [:]
@@ -811,8 +811,8 @@ class SushiswapApi {
 
     }
 
-    def sushiswapPairHourDatasCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/pairHourDatas/current"
+    def sushiswapPairHourDataCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/pairHourData/current"
 
         // params
         def queryParams = [:]
@@ -877,8 +877,8 @@ class SushiswapApi {
 
     }
 
-    def sushiswapTokenDayDatasCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/sushiswap/tokenDayDatas/current"
+    def sushiswapTokenDayDataCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/sushiswap/tokenDayData/current"
 
         // params
         def queryParams = [:]

@@ -6,33 +6,33 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**SushiswapBundlesCurrent**](SushiswapApi.md#sushiswapbundlescurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
 [**SushiswapBurnsCurrent**](SushiswapApi.md#sushiswapburnscurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
-[**SushiswapDayDatasCurrent**](SushiswapApi.md#sushiswapdaydatascurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
-[**SushiswapFactorysCurrent**](SushiswapApi.md#sushiswapfactoryscurrent) | **GET** /dapps/sushiswap/factorys/current | Factorys (current)
+[**SushiswapDayDataCurrent**](SushiswapApi.md#sushiswapdaydatacurrent) | **GET** /dapps/sushiswap/dayData/current | DayData (current)
+[**SushiswapFactoriesCurrent**](SushiswapApi.md#sushiswapfactoriescurrent) | **GET** /dapps/sushiswap/factories/current | Factories (current)
 [**SushiswapGetBundlesHistorical**](SushiswapApi.md#sushiswapgetbundleshistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical)
 [**SushiswapGetBurnsHistorical**](SushiswapApi.md#sushiswapgetburnshistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical)
-[**SushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapgetdaydatashistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical)
-[**SushiswapGetFactorysHistorical**](SushiswapApi.md#sushiswapgetfactoryshistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical)
-[**SushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapgethourdatashistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical)
+[**SushiswapGetDayDataHistorical**](SushiswapApi.md#sushiswapgetdaydatahistorical) | **GET** /dapps/sushiswap/dayData/historical | DayData (historical)
+[**SushiswapGetFactoriesHistorical**](SushiswapApi.md#sushiswapgetfactorieshistorical) | **GET** /dapps/sushiswap/factories/historical | Factories (historical)
+[**SushiswapGetHourDataHistorical**](SushiswapApi.md#sushiswapgethourdatahistorical) | **GET** /dapps/sushiswap/hourData/historical | HourData (historical)
 [**SushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapgetliquiditypositionsnapshotshistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**SushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapgetliquiditypositionshistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical)
 [**SushiswapGetMintsHistorical**](SushiswapApi.md#sushiswapgetmintshistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical)
-[**SushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapgetpairdaydatashistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical)
-[**SushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapgetpairhourdatashistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical)
+[**SushiswapGetPairDayDataHistorical**](SushiswapApi.md#sushiswapgetpairdaydatahistorical) | **GET** /dapps/sushiswap/pairDayData/historical | PairDayData (historical)
+[**SushiswapGetPairHourDataHistorical**](SushiswapApi.md#sushiswapgetpairhourdatahistorical) | **GET** /dapps/sushiswap/pairHourData/historical | PairHourData (historical)
 [**SushiswapGetPairsHistorical**](SushiswapApi.md#sushiswapgetpairshistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical)
 [**SushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapgetswapshistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical)
-[**SushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapgettokendaydatashistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical)
+[**SushiswapGetTokenDayDataHistorical**](SushiswapApi.md#sushiswapgettokendaydatahistorical) | **GET** /dapps/sushiswap/tokenDayData/historical | TokenDayData (historical)
 [**SushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapgettokenshistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical)
 [**SushiswapGetTransactionsHistorical**](SushiswapApi.md#sushiswapgettransactionshistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical)
 [**SushiswapGetUsersHistorical**](SushiswapApi.md#sushiswapgetusershistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical)
-[**SushiswapHourDatasCurrent**](SushiswapApi.md#sushiswaphourdatascurrent) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current)
+[**SushiswapHourDataCurrent**](SushiswapApi.md#sushiswaphourdatacurrent) | **GET** /dapps/sushiswap/hourData/current | HourData (current)
 [**SushiswapLiquidityPositionSnapshotsCurrent**](SushiswapApi.md#sushiswapliquiditypositionsnapshotscurrent) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**SushiswapLiquidityPositionsCurrent**](SushiswapApi.md#sushiswapliquiditypositionscurrent) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
 [**SushiswapMintsCurrent**](SushiswapApi.md#sushiswapmintscurrent) | **GET** /dapps/sushiswap/mints/current | Mints (current)
-[**SushiswapPairDayDatasCurrent**](SushiswapApi.md#sushiswappairdaydatascurrent) | **GET** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current)
-[**SushiswapPairHourDatasCurrent**](SushiswapApi.md#sushiswappairhourdatascurrent) | **GET** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current)
+[**SushiswapPairDayDataCurrent**](SushiswapApi.md#sushiswappairdaydatacurrent) | **GET** /dapps/sushiswap/pairDayData/current | PairDayData (current)
+[**SushiswapPairHourDataCurrent**](SushiswapApi.md#sushiswappairhourdatacurrent) | **GET** /dapps/sushiswap/pairHourData/current | PairHourData (current)
 [**SushiswapPairsCurrent**](SushiswapApi.md#sushiswappairscurrent) | **GET** /dapps/sushiswap/pairs/current | Pairs (current)
 [**SushiswapSwapsCurrent**](SushiswapApi.md#sushiswapswapscurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current)
-[**SushiswapTokenDayDatasCurrent**](SushiswapApi.md#sushiswaptokendaydatascurrent) | **GET** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current)
+[**SushiswapTokenDayDataCurrent**](SushiswapApi.md#sushiswaptokendaydatacurrent) | **GET** /dapps/sushiswap/tokenDayData/current | TokenDayData (current)
 [**SushiswapTokensCurrent**](SushiswapApi.md#sushiswaptokenscurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current)
 [**SushiswapTransactionsCurrent**](SushiswapApi.md#sushiswaptransactionscurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
 [**SushiswapUsersCurrent**](SushiswapApi.md#sushiswapuserscurrent) | **GET** /dapps/sushiswap/users/current | Users (current)
@@ -183,13 +183,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapDayDatasCurrent
+## SushiswapDayDataCurrent
 
-> List&lt;SushiswapDayDataDTO&gt; SushiswapDayDatasCurrent ()
+> List&lt;SushiswapDayDataDTO&gt; SushiswapDayDataCurrent ()
 
-DayDatas (current)
+DayData (current)
 
-Gets dayDatas.
+Gets dayData.
 
 ### Example
 
@@ -202,7 +202,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class SushiswapDayDatasCurrentExample
+    public class SushiswapDayDataCurrentExample
     {
         public static void Main()
         {
@@ -211,13 +211,13 @@ namespace Example
 
             try
             {
-                // DayDatas (current)
-                List<SushiswapDayDataDTO> result = apiInstance.SushiswapDayDatasCurrent();
+                // DayData (current)
+                List<SushiswapDayDataDTO> result = apiInstance.SushiswapDayDataCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.SushiswapDayDatasCurrent: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapDayDataCurrent: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -255,13 +255,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapFactorysCurrent
+## SushiswapFactoriesCurrent
 
-> List&lt;SushiswapFactoryDTO&gt; SushiswapFactorysCurrent ()
+> List&lt;SushiswapFactoryDTO&gt; SushiswapFactoriesCurrent ()
 
-Factorys (current)
+Factories (current)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 
@@ -274,7 +274,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class SushiswapFactorysCurrentExample
+    public class SushiswapFactoriesCurrentExample
     {
         public static void Main()
         {
@@ -283,13 +283,13 @@ namespace Example
 
             try
             {
-                // Factorys (current)
-                List<SushiswapFactoryDTO> result = apiInstance.SushiswapFactorysCurrent();
+                // Factories (current)
+                List<SushiswapFactoryDTO> result = apiInstance.SushiswapFactoriesCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.SushiswapFactorysCurrent: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapFactoriesCurrent: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -497,13 +497,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapGetDayDatasHistorical
+## SushiswapGetDayDataHistorical
 
-> List&lt;SushiswapDayDataDTO&gt; SushiswapGetDayDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+> List&lt;SushiswapDayDataDTO&gt; SushiswapGetDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-DayDatas (historical)
+DayData (historical)
 
-Gets dayDatas.
+Gets dayData.
 
 ### Example
 
@@ -516,7 +516,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class SushiswapGetDayDatasHistoricalExample
+    public class SushiswapGetDayDataHistoricalExample
     {
         public static void Main()
         {
@@ -530,13 +530,13 @@ namespace Example
 
             try
             {
-                // DayDatas (historical)
-                List<SushiswapDayDataDTO> result = apiInstance.SushiswapGetDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+                // DayData (historical)
+                List<SushiswapDayDataDTO> result = apiInstance.SushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.SushiswapGetDayDatasHistorical: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetDayDataHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -581,13 +581,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapGetFactorysHistorical
+## SushiswapGetFactoriesHistorical
 
-> List&lt;SushiswapFactoryDTO&gt; SushiswapGetFactorysHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+> List&lt;SushiswapFactoryDTO&gt; SushiswapGetFactoriesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Factorys (historical)
+Factories (historical)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 
@@ -600,7 +600,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class SushiswapGetFactorysHistoricalExample
+    public class SushiswapGetFactoriesHistoricalExample
     {
         public static void Main()
         {
@@ -614,13 +614,13 @@ namespace Example
 
             try
             {
-                // Factorys (historical)
-                List<SushiswapFactoryDTO> result = apiInstance.SushiswapGetFactorysHistorical(startBlock, endBlock, startDate, endDate, id);
+                // Factories (historical)
+                List<SushiswapFactoryDTO> result = apiInstance.SushiswapGetFactoriesHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.SushiswapGetFactorysHistorical: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetFactoriesHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -665,13 +665,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapGetHourDatasHistorical
+## SushiswapGetHourDataHistorical
 
-> List&lt;SushiswapHourDataDTO&gt; SushiswapGetHourDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+> List&lt;SushiswapHourDataDTO&gt; SushiswapGetHourDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-HourDatas (historical)
+HourData (historical)
 
-Gets hourDatas.
+Gets hourData.
 
 ### Example
 
@@ -684,7 +684,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class SushiswapGetHourDatasHistoricalExample
+    public class SushiswapGetHourDataHistoricalExample
     {
         public static void Main()
         {
@@ -698,13 +698,13 @@ namespace Example
 
             try
             {
-                // HourDatas (historical)
-                List<SushiswapHourDataDTO> result = apiInstance.SushiswapGetHourDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+                // HourData (historical)
+                List<SushiswapHourDataDTO> result = apiInstance.SushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.SushiswapGetHourDatasHistorical: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetHourDataHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1011,13 +1011,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapGetPairDayDatasHistorical
+## SushiswapGetPairDayDataHistorical
 
-> List&lt;SushiswapPairDayDataDTO&gt; SushiswapGetPairDayDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null, string token0 = null, string token1 = null)
+> List&lt;SushiswapPairDayDataDTO&gt; SushiswapGetPairDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null, string token0 = null, string token1 = null)
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 
@@ -1030,7 +1030,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class SushiswapGetPairDayDatasHistoricalExample
+    public class SushiswapGetPairDayDataHistoricalExample
     {
         public static void Main()
         {
@@ -1047,13 +1047,13 @@ namespace Example
 
             try
             {
-                // PairDayDatas (historical)
-                List<SushiswapPairDayDataDTO> result = apiInstance.SushiswapGetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1);
+                // PairDayData (historical)
+                List<SushiswapPairDayDataDTO> result = apiInstance.SushiswapGetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.SushiswapGetPairDayDatasHistorical: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetPairDayDataHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1101,13 +1101,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapGetPairHourDatasHistorical
+## SushiswapGetPairHourDataHistorical
 
-> List&lt;SushiswapPairHourDataDTO&gt; SushiswapGetPairHourDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null)
+> List&lt;SushiswapPairHourDataDTO&gt; SushiswapGetPairHourDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pair = null)
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 
@@ -1120,7 +1120,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class SushiswapGetPairHourDatasHistoricalExample
+    public class SushiswapGetPairHourDataHistoricalExample
     {
         public static void Main()
         {
@@ -1135,13 +1135,13 @@ namespace Example
 
             try
             {
-                // PairHourDatas (historical)
-                List<SushiswapPairHourDataDTO> result = apiInstance.SushiswapGetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+                // PairHourData (historical)
+                List<SushiswapPairHourDataDTO> result = apiInstance.SushiswapGetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.SushiswapGetPairHourDatasHistorical: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetPairHourDataHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1363,13 +1363,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapGetTokenDayDatasHistorical
+## SushiswapGetTokenDayDataHistorical
 
-> List&lt;SushiswapTokenDayDataDTO&gt; SushiswapGetTokenDayDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+> List&lt;SushiswapTokenDayDataDTO&gt; SushiswapGetTokenDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 
@@ -1382,7 +1382,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class SushiswapGetTokenDayDatasHistoricalExample
+    public class SushiswapGetTokenDayDataHistoricalExample
     {
         public static void Main()
         {
@@ -1396,13 +1396,13 @@ namespace Example
 
             try
             {
-                // TokenDayDatas (historical)
-                List<SushiswapTokenDayDataDTO> result = apiInstance.SushiswapGetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+                // TokenDayData (historical)
+                List<SushiswapTokenDayDataDTO> result = apiInstance.SushiswapGetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.SushiswapGetTokenDayDatasHistorical: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapGetTokenDayDataHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1703,13 +1703,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapHourDatasCurrent
+## SushiswapHourDataCurrent
 
-> List&lt;SushiswapHourDataDTO&gt; SushiswapHourDatasCurrent ()
+> List&lt;SushiswapHourDataDTO&gt; SushiswapHourDataCurrent ()
 
-HourDatas (current)
+HourData (current)
 
-Gets hourDatas.
+Gets hourData.
 
 ### Example
 
@@ -1722,7 +1722,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class SushiswapHourDatasCurrentExample
+    public class SushiswapHourDataCurrentExample
     {
         public static void Main()
         {
@@ -1731,13 +1731,13 @@ namespace Example
 
             try
             {
-                // HourDatas (current)
-                List<SushiswapHourDataDTO> result = apiInstance.SushiswapHourDatasCurrent();
+                // HourData (current)
+                List<SushiswapHourDataDTO> result = apiInstance.SushiswapHourDataCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.SushiswapHourDatasCurrent: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapHourDataCurrent: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1991,13 +1991,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapPairDayDatasCurrent
+## SushiswapPairDayDataCurrent
 
-> List&lt;SushiswapPairDayDataDTO&gt; SushiswapPairDayDatasCurrent ()
+> List&lt;SushiswapPairDayDataDTO&gt; SushiswapPairDayDataCurrent ()
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 
@@ -2010,7 +2010,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class SushiswapPairDayDatasCurrentExample
+    public class SushiswapPairDayDataCurrentExample
     {
         public static void Main()
         {
@@ -2019,13 +2019,13 @@ namespace Example
 
             try
             {
-                // PairDayDatas (current)
-                List<SushiswapPairDayDataDTO> result = apiInstance.SushiswapPairDayDatasCurrent();
+                // PairDayData (current)
+                List<SushiswapPairDayDataDTO> result = apiInstance.SushiswapPairDayDataCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.SushiswapPairDayDatasCurrent: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapPairDayDataCurrent: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2063,13 +2063,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapPairHourDatasCurrent
+## SushiswapPairHourDataCurrent
 
-> List&lt;SushiswapPairHourDataDTO&gt; SushiswapPairHourDatasCurrent ()
+> List&lt;SushiswapPairHourDataDTO&gt; SushiswapPairHourDataCurrent ()
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 
@@ -2082,7 +2082,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class SushiswapPairHourDatasCurrentExample
+    public class SushiswapPairHourDataCurrentExample
     {
         public static void Main()
         {
@@ -2091,13 +2091,13 @@ namespace Example
 
             try
             {
-                // PairHourDatas (current)
-                List<SushiswapPairHourDataDTO> result = apiInstance.SushiswapPairHourDatasCurrent();
+                // PairHourData (current)
+                List<SushiswapPairHourDataDTO> result = apiInstance.SushiswapPairHourDataCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.SushiswapPairHourDatasCurrent: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapPairHourDataCurrent: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2287,13 +2287,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapTokenDayDatasCurrent
+## SushiswapTokenDayDataCurrent
 
-> List&lt;SushiswapTokenDayDataDTO&gt; SushiswapTokenDayDatasCurrent ()
+> List&lt;SushiswapTokenDayDataDTO&gt; SushiswapTokenDayDataCurrent ()
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 
@@ -2306,7 +2306,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class SushiswapTokenDayDatasCurrentExample
+    public class SushiswapTokenDayDataCurrentExample
     {
         public static void Main()
         {
@@ -2315,13 +2315,13 @@ namespace Example
 
             try
             {
-                // TokenDayDatas (current)
-                List<SushiswapTokenDayDataDTO> result = apiInstance.SushiswapTokenDayDatasCurrent();
+                // TokenDayData (current)
+                List<SushiswapTokenDayDataDTO> result = apiInstance.SushiswapTokenDayDataCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling SushiswapApi.SushiswapTokenDayDatasCurrent: " + e.Message );
+                Debug.Print("Exception when calling SushiswapApi.SushiswapTokenDayDataCurrent: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }

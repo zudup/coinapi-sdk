@@ -78,20 +78,20 @@ list_t*
 UniswapV2API_uniswapV2GetMintsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pair );
 
 
-// PairDayDatas (historical)
+// PairDayData (historical)
 //
-// Gets pairDayDatas.
-//
-list_t*
-UniswapV2API_uniswapV2GetPairDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * token_0 , char * token_1 );
-
-
-// PairHourDatas (historical)
-//
-// Gets pairHourDatas.
+// Gets pairDayData.
 //
 list_t*
-UniswapV2API_uniswapV2GetPairHourDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pair );
+UniswapV2API_uniswapV2GetPairDayDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * token_0 , char * token_1 );
+
+
+// PairHourData (historical)
+//
+// Gets pairHourData.
+//
+list_t*
+UniswapV2API_uniswapV2GetPairHourDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pair );
 
 
 // Pairs (historical)
@@ -110,12 +110,12 @@ list_t*
 UniswapV2API_uniswapV2GetSwapsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pair );
 
 
-// TokenDayDatas (historical)
+// TokenDayData (historical)
 //
-// Gets tokenDayDatas.
+// Gets tokenDayData.
 //
 list_t*
-UniswapV2API_uniswapV2GetTokenDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
+UniswapV2API_uniswapV2GetTokenDayDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
 
 
 // Tokens (historical)
@@ -134,20 +134,20 @@ list_t*
 UniswapV2API_uniswapV2GetTransactionsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
 
 
-// UniswapDayDatas (historical)
+// UniswapDayData (historical)
 //
-// Gets uniswapDayDatas.
-//
-list_t*
-UniswapV2API_uniswapV2GetUniswapDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
-
-
-// UniswapFactorys (historical)
-//
-// Gets uniswapFactorys.
+// Gets uniswapDayData.
 //
 list_t*
-UniswapV2API_uniswapV2GetUniswapFactorysHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
+UniswapV2API_uniswapV2GetUniswapDayDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
+
+
+// UniswapFactories (historical)
+//
+// Gets uniswapFactories.
+//
+list_t*
+UniswapV2API_uniswapV2GetUniswapFactoriesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
 
 
 // Users (historical)
@@ -182,20 +182,20 @@ list_t*
 UniswapV2API_uniswapV2MintsCurrent(apiClient_t *apiClient);
 
 
-// PairDayDatas (current)
+// PairDayData (current)
 //
-// Gets pairDayDatas.
-//
-list_t*
-UniswapV2API_uniswapV2PairDayDatasCurrent(apiClient_t *apiClient);
-
-
-// PairHourDatas (current)
-//
-// Gets pairHourDatas.
+// Gets pairDayData.
 //
 list_t*
-UniswapV2API_uniswapV2PairHourDatasCurrent(apiClient_t *apiClient);
+UniswapV2API_uniswapV2PairDayDataCurrent(apiClient_t *apiClient);
+
+
+// PairHourData (current)
+//
+// Gets pairHourData.
+//
+list_t*
+UniswapV2API_uniswapV2PairHourDataCurrent(apiClient_t *apiClient);
 
 
 // Pairs (current)
@@ -214,12 +214,12 @@ list_t*
 UniswapV2API_uniswapV2SwapsCurrent(apiClient_t *apiClient, char * pair );
 
 
-// TokenDayDatas (current)
+// TokenDayData (current)
 //
-// Gets tokenDayDatas.
+// Gets tokenDayData.
 //
 list_t*
-UniswapV2API_uniswapV2TokenDayDatasCurrent(apiClient_t *apiClient);
+UniswapV2API_uniswapV2TokenDayDataCurrent(apiClient_t *apiClient);
 
 
 // Tokens (current)
@@ -238,20 +238,20 @@ list_t*
 UniswapV2API_uniswapV2TransactionsCurrent(apiClient_t *apiClient);
 
 
-// UniswapDayDatas (current)
+// UniswapDayData (current)
 //
-// Gets uniswapDayDatas.
-//
-list_t*
-UniswapV2API_uniswapV2UniswapDayDatasCurrent(apiClient_t *apiClient);
-
-
-// UniswapFactorys (current)
-//
-// Gets uniswapFactorys.
+// Gets uniswapDayData.
 //
 list_t*
-UniswapV2API_uniswapV2UniswapFactorysCurrent(apiClient_t *apiClient);
+UniswapV2API_uniswapV2UniswapDayDataCurrent(apiClient_t *apiClient);
+
+
+// UniswapFactories (current)
+//
+// Gets uniswapFactories.
+//
+list_t*
+UniswapV2API_uniswapV2UniswapFactoriesCurrent(apiClient_t *apiClient);
 
 
 // Users (current)

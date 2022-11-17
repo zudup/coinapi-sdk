@@ -25,21 +25,21 @@ void main() {
       // TODO
     });
 
-    // DayDatas (current)
+    // DayData (current)
     //
-    // Gets dayDatas.
+    // Gets dayData.
     //
-    //Future<BuiltList<SushiswapDayDataDTO>> sushiswapDayDatasCurrent() async
-    test('test sushiswapDayDatasCurrent', () async {
+    //Future<BuiltList<SushiswapDayDataDTO>> sushiswapDayDataCurrent() async
+    test('test sushiswapDayDataCurrent', () async {
       // TODO
     });
 
-    // Factorys (current)
+    // Factories (current)
     //
-    // Gets factorys.
+    // Gets factories.
     //
-    //Future<BuiltList<SushiswapFactoryDTO>> sushiswapFactorysCurrent() async
-    test('test sushiswapFactorysCurrent', () async {
+    //Future<BuiltList<SushiswapFactoryDTO>> sushiswapFactoriesCurrent() async
+    test('test sushiswapFactoriesCurrent', () async {
       // TODO
     });
 
@@ -61,30 +61,30 @@ void main() {
       // TODO
     });
 
-    // DayDatas (historical)
+    // DayData (historical)
     //
-    // Gets dayDatas.
+    // Gets dayData.
     //
-    //Future<BuiltList<SushiswapDayDataDTO>> sushiswapGetDayDatasHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
-    test('test sushiswapGetDayDatasHistorical', () async {
+    //Future<BuiltList<SushiswapDayDataDTO>> sushiswapGetDayDataHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
+    test('test sushiswapGetDayDataHistorical', () async {
       // TODO
     });
 
-    // Factorys (historical)
+    // Factories (historical)
     //
-    // Gets factorys.
+    // Gets factories.
     //
-    //Future<BuiltList<SushiswapFactoryDTO>> sushiswapGetFactorysHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
-    test('test sushiswapGetFactorysHistorical', () async {
+    //Future<BuiltList<SushiswapFactoryDTO>> sushiswapGetFactoriesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
+    test('test sushiswapGetFactoriesHistorical', () async {
       // TODO
     });
 
-    // HourDatas (historical)
+    // HourData (historical)
     //
-    // Gets hourDatas.
+    // Gets hourData.
     //
-    //Future<BuiltList<SushiswapHourDataDTO>> sushiswapGetHourDatasHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
-    test('test sushiswapGetHourDatasHistorical', () async {
+    //Future<BuiltList<SushiswapHourDataDTO>> sushiswapGetHourDataHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
+    test('test sushiswapGetHourDataHistorical', () async {
       // TODO
     });
 
@@ -115,21 +115,21 @@ void main() {
       // TODO
     });
 
-    // PairDayDatas (historical)
+    // PairDayData (historical)
     //
-    // Gets pairDayDatas.
+    // Gets pairDayData.
     //
-    //Future<BuiltList<SushiswapPairDayDataDTO>> sushiswapGetPairDayDatasHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id, String pair, String token0, String token1 }) async
-    test('test sushiswapGetPairDayDatasHistorical', () async {
+    //Future<BuiltList<SushiswapPairDayDataDTO>> sushiswapGetPairDayDataHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id, String pair, String token0, String token1 }) async
+    test('test sushiswapGetPairDayDataHistorical', () async {
       // TODO
     });
 
-    // PairHourDatas (historical)
+    // PairHourData (historical)
     //
-    // Gets pairHourDatas.
+    // Gets pairHourData.
     //
-    //Future<BuiltList<SushiswapPairHourDataDTO>> sushiswapGetPairHourDatasHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id, String pair }) async
-    test('test sushiswapGetPairHourDatasHistorical', () async {
+    //Future<BuiltList<SushiswapPairHourDataDTO>> sushiswapGetPairHourDataHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id, String pair }) async
+    test('test sushiswapGetPairHourDataHistorical', () async {
       // TODO
     });
 
@@ -151,12 +151,12 @@ void main() {
       // TODO
     });
 
-    // TokenDayDatas (historical)
+    // TokenDayData (historical)
     //
-    // Gets tokenDayDatas.
+    // Gets tokenDayData.
     //
-    //Future<BuiltList<SushiswapTokenDayDataDTO>> sushiswapGetTokenDayDatasHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
-    test('test sushiswapGetTokenDayDatasHistorical', () async {
+    //Future<BuiltList<SushiswapTokenDayDataDTO>> sushiswapGetTokenDayDataHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
+    test('test sushiswapGetTokenDayDataHistorical', () async {
       // TODO
     });
 
@@ -187,12 +187,12 @@ void main() {
       // TODO
     });
 
-    // HourDatas (current)
+    // HourData (current)
     //
-    // Gets hourDatas.
+    // Gets hourData.
     //
-    //Future<BuiltList<SushiswapHourDataDTO>> sushiswapHourDatasCurrent() async
-    test('test sushiswapHourDatasCurrent', () async {
+    //Future<BuiltList<SushiswapHourDataDTO>> sushiswapHourDataCurrent() async
+    test('test sushiswapHourDataCurrent', () async {
       // TODO
     });
 
@@ -223,21 +223,21 @@ void main() {
       // TODO
     });
 
-    // PairDayDatas (current)
+    // PairDayData (current)
     //
-    // Gets pairDayDatas.
+    // Gets pairDayData.
     //
-    //Future<BuiltList<SushiswapPairDayDataDTO>> sushiswapPairDayDatasCurrent() async
-    test('test sushiswapPairDayDatasCurrent', () async {
+    //Future<BuiltList<SushiswapPairDayDataDTO>> sushiswapPairDayDataCurrent() async
+    test('test sushiswapPairDayDataCurrent', () async {
       // TODO
     });
 
-    // PairHourDatas (current)
+    // PairHourData (current)
     //
-    // Gets pairHourDatas.
+    // Gets pairHourData.
     //
-    //Future<BuiltList<SushiswapPairHourDataDTO>> sushiswapPairHourDatasCurrent() async
-    test('test sushiswapPairHourDatasCurrent', () async {
+    //Future<BuiltList<SushiswapPairHourDataDTO>> sushiswapPairHourDataCurrent() async
+    test('test sushiswapPairHourDataCurrent', () async {
       // TODO
     });
 
@@ -259,12 +259,12 @@ void main() {
       // TODO
     });
 
-    // TokenDayDatas (current)
+    // TokenDayData (current)
     //
-    // Gets tokenDayDatas.
+    // Gets tokenDayData.
     //
-    //Future<BuiltList<SushiswapTokenDayDataDTO>> sushiswapTokenDayDatasCurrent() async
-    test('test sushiswapTokenDayDatasCurrent', () async {
+    //Future<BuiltList<SushiswapTokenDayDataDTO>> sushiswapTokenDayDataCurrent() async
+    test('test sushiswapTokenDayDataCurrent', () async {
       // TODO
     });
 

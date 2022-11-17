@@ -22,11 +22,11 @@ func Test_openapi_DexApiService(t *testing.T) {
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
 
-    t.Run("Test DexApiService DexBatchsCurrent", func(t *testing.T) {
+    t.Run("Test DexApiService DexBatchesCurrent", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.DexApi.DexBatchsCurrent(context.Background()).Execute()
+        resp, httpRes, err := apiClient.DexApi.DexBatchesCurrent(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -46,11 +46,11 @@ func Test_openapi_DexApiService(t *testing.T) {
 
     })
 
-    t.Run("Test DexApiService DexGetBatchsHistorical", func(t *testing.T) {
+    t.Run("Test DexApiService DexGetBatchesHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.DexApi.DexGetBatchsHistorical(context.Background()).Execute()
+        resp, httpRes, err := apiClient.DexApi.DexGetBatchesHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -106,11 +106,11 @@ func Test_openapi_DexApiService(t *testing.T) {
 
     })
 
-    t.Run("Test DexApiService DexGetStatssHistorical", func(t *testing.T) {
+    t.Run("Test DexApiService DexGetStatsHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.DexApi.DexGetStatssHistorical(context.Background()).Execute()
+        resp, httpRes, err := apiClient.DexApi.DexGetStatsHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -214,11 +214,11 @@ func Test_openapi_DexApiService(t *testing.T) {
 
     })
 
-    t.Run("Test DexApiService DexStatssCurrent", func(t *testing.T) {
+    t.Run("Test DexApiService DexStatsCurrent", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.DexApi.DexStatssCurrent(context.Background()).Execute()
+        resp, httpRes, err := apiClient.DexApi.DexStatsCurrent(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)

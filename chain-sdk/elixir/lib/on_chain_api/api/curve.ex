@@ -335,8 +335,8 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  GaugeLiquiditys (current)
-  Gets gaugeLiquiditys.
+  GaugeLiquidities (current)
+  Gets gaugeLiquidities.
 
   ### Parameters
 
@@ -348,12 +348,12 @@ defmodule OnChainAPI.Api.Curve do
   - `{:ok, [%CurveGaugeLiquidityDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec curve_gauge_liquiditys__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveGaugeLiquidityDto.t)} | {:error, Tesla.Env.t}
-  def curve_gauge_liquiditys__current(connection, _opts \\ []) do
+  @spec curve_gauge_liquidities__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveGaugeLiquidityDto.t)} | {:error, Tesla.Env.t}
+  def curve_gauge_liquidities__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/curve/gaugeLiquiditys/current")
+      |> url("/dapps/curve/gaugeLiquidities/current")
       |> Enum.into([])
 
     connection
@@ -1058,8 +1058,8 @@ defmodule OnChainAPI.Api.Curve do
   end
 
   @doc """
-  GaugeLiquiditys (historical)
-  Gets gaugeLiquiditys.
+  GaugeLiquidities (historical)
+  Gets gaugeLiquidities.
 
   ### Parameters
 
@@ -1077,8 +1077,8 @@ defmodule OnChainAPI.Api.Curve do
   - `{:ok, [%CurveGaugeLiquidityDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec curve_get_gauge_liquiditys__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveGaugeLiquidityDto.t)} | {:error, Tesla.Env.t}
-  def curve_get_gauge_liquiditys__historical(connection, opts \\ []) do
+  @spec curve_get_gauge_liquidities__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.CurveGaugeLiquidityDto.t)} | {:error, Tesla.Env.t}
+  def curve_get_gauge_liquidities__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -1091,7 +1091,7 @@ defmodule OnChainAPI.Api.Curve do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/curve/gaugeLiquiditys/historical")
+      |> url("/dapps/curve/gaugeLiquidities/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 

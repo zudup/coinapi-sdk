@@ -195,8 +195,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * DayDatas (current)
-     * Gets dayDatas.
+     * DayData (current)
+     * Gets dayData.
      * @return kotlin.collections.List<SushiswapDayDataDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -206,8 +206,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun sushiswapDayDatasCurrent() : kotlin.collections.List<SushiswapDayDataDTO> {
-        val localVarResponse = sushiswapDayDatasCurrentWithHttpInfo()
+    fun sushiswapDayDataCurrent() : kotlin.collections.List<SushiswapDayDataDTO> {
+        val localVarResponse = sushiswapDayDataCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapDayDataDTO>
@@ -225,16 +225,16 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * DayDatas (current)
-     * Gets dayDatas.
+     * DayData (current)
+     * Gets dayData.
      * @return ApiResponse<kotlin.collections.List<SushiswapDayDataDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun sushiswapDayDatasCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapDayDataDTO>?> {
-        val localVariableConfig = sushiswapDayDatasCurrentRequestConfig()
+    fun sushiswapDayDataCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapDayDataDTO>?> {
+        val localVariableConfig = sushiswapDayDataCurrentRequestConfig()
 
         return request<Unit, kotlin.collections.List<SushiswapDayDataDTO>>(
             localVariableConfig
@@ -242,11 +242,11 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation sushiswapDayDatasCurrent
+     * To obtain the request config of the operation sushiswapDayDataCurrent
      *
      * @return RequestConfig
      */
-    fun sushiswapDayDatasCurrentRequestConfig() : RequestConfig<Unit> {
+    fun sushiswapDayDataCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -254,7 +254,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/dayDatas/current",
+            path = "/dapps/sushiswap/dayData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -262,8 +262,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Factorys (current)
-     * Gets factorys.
+     * Factories (current)
+     * Gets factories.
      * @return kotlin.collections.List<SushiswapFactoryDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -273,8 +273,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun sushiswapFactorysCurrent() : kotlin.collections.List<SushiswapFactoryDTO> {
-        val localVarResponse = sushiswapFactorysCurrentWithHttpInfo()
+    fun sushiswapFactoriesCurrent() : kotlin.collections.List<SushiswapFactoryDTO> {
+        val localVarResponse = sushiswapFactoriesCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapFactoryDTO>
@@ -292,16 +292,16 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Factorys (current)
-     * Gets factorys.
+     * Factories (current)
+     * Gets factories.
      * @return ApiResponse<kotlin.collections.List<SushiswapFactoryDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun sushiswapFactorysCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapFactoryDTO>?> {
-        val localVariableConfig = sushiswapFactorysCurrentRequestConfig()
+    fun sushiswapFactoriesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapFactoryDTO>?> {
+        val localVariableConfig = sushiswapFactoriesCurrentRequestConfig()
 
         return request<Unit, kotlin.collections.List<SushiswapFactoryDTO>>(
             localVariableConfig
@@ -309,11 +309,11 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation sushiswapFactorysCurrent
+     * To obtain the request config of the operation sushiswapFactoriesCurrent
      *
      * @return RequestConfig
      */
-    fun sushiswapFactorysCurrentRequestConfig() : RequestConfig<Unit> {
+    fun sushiswapFactoriesCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -321,7 +321,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/factorys/current",
+            path = "/dapps/sushiswap/factories/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -533,8 +533,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * DayDatas (historical)
-     * Gets dayDatas.
+     * DayData (historical)
+     * Gets dayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -549,8 +549,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun sushiswapGetDayDatasHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null) : kotlin.collections.List<SushiswapDayDataDTO> {
-        val localVarResponse = sushiswapGetDayDatasHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
+    fun sushiswapGetDayDataHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null) : kotlin.collections.List<SushiswapDayDataDTO> {
+        val localVarResponse = sushiswapGetDayDataHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapDayDataDTO>
@@ -568,8 +568,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * DayDatas (historical)
-     * Gets dayDatas.
+     * DayData (historical)
+     * Gets dayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -581,8 +581,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun sushiswapGetDayDatasHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : ApiResponse<kotlin.collections.List<SushiswapDayDataDTO>?> {
-        val localVariableConfig = sushiswapGetDayDatasHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
+    fun sushiswapGetDayDataHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : ApiResponse<kotlin.collections.List<SushiswapDayDataDTO>?> {
+        val localVariableConfig = sushiswapGetDayDataHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
 
         return request<Unit, kotlin.collections.List<SushiswapDayDataDTO>>(
             localVariableConfig
@@ -590,7 +590,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation sushiswapGetDayDatasHistorical
+     * To obtain the request config of the operation sushiswapGetDayDataHistorical
      *
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -599,7 +599,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param id Unix timestamp for start of day / 86400 giving a unique day index. (optional)
      * @return RequestConfig
      */
-    fun sushiswapGetDayDatasHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
+    fun sushiswapGetDayDataHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -624,7 +624,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/dayDatas/historical",
+            path = "/dapps/sushiswap/dayData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -632,8 +632,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Factorys (historical)
-     * Gets factorys.
+     * Factories (historical)
+     * Gets factories.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -648,8 +648,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun sushiswapGetFactorysHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null) : kotlin.collections.List<SushiswapFactoryDTO> {
-        val localVarResponse = sushiswapGetFactorysHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
+    fun sushiswapGetFactoriesHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null) : kotlin.collections.List<SushiswapFactoryDTO> {
+        val localVarResponse = sushiswapGetFactoriesHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapFactoryDTO>
@@ -667,8 +667,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * Factorys (historical)
-     * Gets factorys.
+     * Factories (historical)
+     * Gets factories.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -680,8 +680,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun sushiswapGetFactorysHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : ApiResponse<kotlin.collections.List<SushiswapFactoryDTO>?> {
-        val localVariableConfig = sushiswapGetFactorysHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
+    fun sushiswapGetFactoriesHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : ApiResponse<kotlin.collections.List<SushiswapFactoryDTO>?> {
+        val localVariableConfig = sushiswapGetFactoriesHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
 
         return request<Unit, kotlin.collections.List<SushiswapFactoryDTO>>(
             localVariableConfig
@@ -689,7 +689,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation sushiswapGetFactorysHistorical
+     * To obtain the request config of the operation sushiswapGetFactoriesHistorical
      *
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -698,7 +698,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param id Factory address. (optional)
      * @return RequestConfig
      */
-    fun sushiswapGetFactorysHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
+    fun sushiswapGetFactoriesHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -723,7 +723,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/factorys/historical",
+            path = "/dapps/sushiswap/factories/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -731,8 +731,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * HourDatas (historical)
-     * Gets hourDatas.
+     * HourData (historical)
+     * Gets hourData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -747,8 +747,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun sushiswapGetHourDatasHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null) : kotlin.collections.List<SushiswapHourDataDTO> {
-        val localVarResponse = sushiswapGetHourDatasHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
+    fun sushiswapGetHourDataHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null) : kotlin.collections.List<SushiswapHourDataDTO> {
+        val localVarResponse = sushiswapGetHourDataHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapHourDataDTO>
@@ -766,8 +766,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * HourDatas (historical)
-     * Gets hourDatas.
+     * HourData (historical)
+     * Gets hourData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -779,8 +779,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun sushiswapGetHourDatasHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : ApiResponse<kotlin.collections.List<SushiswapHourDataDTO>?> {
-        val localVariableConfig = sushiswapGetHourDatasHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
+    fun sushiswapGetHourDataHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : ApiResponse<kotlin.collections.List<SushiswapHourDataDTO>?> {
+        val localVariableConfig = sushiswapGetHourDataHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
 
         return request<Unit, kotlin.collections.List<SushiswapHourDataDTO>>(
             localVariableConfig
@@ -788,7 +788,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation sushiswapGetHourDatasHistorical
+     * To obtain the request config of the operation sushiswapGetHourDataHistorical
      *
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -797,7 +797,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param id Start of hour timestamp. (optional)
      * @return RequestConfig
      */
-    fun sushiswapGetHourDatasHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
+    fun sushiswapGetHourDataHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -822,7 +822,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/hourDatas/historical",
+            path = "/dapps/sushiswap/hourData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1157,8 +1157,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * PairDayDatas (historical)
-     * Gets pairDayDatas.
+     * PairDayData (historical)
+     * Gets pairDayData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1176,8 +1176,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun sushiswapGetPairDayDatasHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null, pair: kotlin.String? = null, token0: kotlin.String? = null, token1: kotlin.String? = null) : kotlin.collections.List<SushiswapPairDayDataDTO> {
-        val localVarResponse = sushiswapGetPairDayDatasHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, pair = pair, token0 = token0, token1 = token1)
+    fun sushiswapGetPairDayDataHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null, pair: kotlin.String? = null, token0: kotlin.String? = null, token1: kotlin.String? = null) : kotlin.collections.List<SushiswapPairDayDataDTO> {
+        val localVarResponse = sushiswapGetPairDayDataHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, pair = pair, token0 = token0, token1 = token1)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapPairDayDataDTO>
@@ -1195,8 +1195,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * PairDayDatas (historical)
-     * Gets pairDayDatas.
+     * PairDayData (historical)
+     * Gets pairDayData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1211,8 +1211,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun sushiswapGetPairDayDatasHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pair: kotlin.String?, token0: kotlin.String?, token1: kotlin.String?) : ApiResponse<kotlin.collections.List<SushiswapPairDayDataDTO>?> {
-        val localVariableConfig = sushiswapGetPairDayDatasHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, pair = pair, token0 = token0, token1 = token1)
+    fun sushiswapGetPairDayDataHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pair: kotlin.String?, token0: kotlin.String?, token1: kotlin.String?) : ApiResponse<kotlin.collections.List<SushiswapPairDayDataDTO>?> {
+        val localVariableConfig = sushiswapGetPairDayDataHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, pair = pair, token0 = token0, token1 = token1)
 
         return request<Unit, kotlin.collections.List<SushiswapPairDayDataDTO>>(
             localVariableConfig
@@ -1220,7 +1220,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation sushiswapGetPairDayDatasHistorical
+     * To obtain the request config of the operation sushiswapGetPairDayDataHistorical
      *
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1232,7 +1232,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param token1  (optional)
      * @return RequestConfig
      */
-    fun sushiswapGetPairDayDatasHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pair: kotlin.String?, token0: kotlin.String?, token1: kotlin.String?) : RequestConfig<Unit> {
+    fun sushiswapGetPairDayDataHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pair: kotlin.String?, token0: kotlin.String?, token1: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -1266,7 +1266,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/pairDayDatas/historical",
+            path = "/dapps/sushiswap/pairDayData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1274,8 +1274,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * PairHourDatas (historical)
-     * Gets pairHourDatas.
+     * PairHourData (historical)
+     * Gets pairHourData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1291,8 +1291,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun sushiswapGetPairHourDatasHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null, pair: kotlin.String? = null) : kotlin.collections.List<SushiswapPairHourDataDTO> {
-        val localVarResponse = sushiswapGetPairHourDatasHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, pair = pair)
+    fun sushiswapGetPairHourDataHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null, pair: kotlin.String? = null) : kotlin.collections.List<SushiswapPairHourDataDTO> {
+        val localVarResponse = sushiswapGetPairHourDataHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, pair = pair)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapPairHourDataDTO>
@@ -1310,8 +1310,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * PairHourDatas (historical)
-     * Gets pairHourDatas.
+     * PairHourData (historical)
+     * Gets pairHourData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1324,8 +1324,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun sushiswapGetPairHourDatasHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pair: kotlin.String?) : ApiResponse<kotlin.collections.List<SushiswapPairHourDataDTO>?> {
-        val localVariableConfig = sushiswapGetPairHourDatasHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, pair = pair)
+    fun sushiswapGetPairHourDataHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pair: kotlin.String?) : ApiResponse<kotlin.collections.List<SushiswapPairHourDataDTO>?> {
+        val localVariableConfig = sushiswapGetPairHourDataHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, pair = pair)
 
         return request<Unit, kotlin.collections.List<SushiswapPairHourDataDTO>>(
             localVariableConfig
@@ -1333,7 +1333,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation sushiswapGetPairHourDatasHistorical
+     * To obtain the request config of the operation sushiswapGetPairHourDataHistorical
      *
      * @param startBlock  (optional)
      * @param endBlock  (optional)
@@ -1343,7 +1343,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param pair  (optional)
      * @return RequestConfig
      */
-    fun sushiswapGetPairHourDatasHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pair: kotlin.String?) : RequestConfig<Unit> {
+    fun sushiswapGetPairHourDataHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pair: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -1371,7 +1371,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/pairHourDatas/historical",
+            path = "/dapps/sushiswap/pairHourData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1601,8 +1601,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * TokenDayDatas (historical)
-     * Gets tokenDayDatas.
+     * TokenDayData (historical)
+     * Gets tokenDayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1617,8 +1617,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun sushiswapGetTokenDayDatasHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null) : kotlin.collections.List<SushiswapTokenDayDataDTO> {
-        val localVarResponse = sushiswapGetTokenDayDatasHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
+    fun sushiswapGetTokenDayDataHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null) : kotlin.collections.List<SushiswapTokenDayDataDTO> {
+        val localVarResponse = sushiswapGetTokenDayDataHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapTokenDayDataDTO>
@@ -1636,8 +1636,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * TokenDayDatas (historical)
-     * Gets tokenDayDatas.
+     * TokenDayData (historical)
+     * Gets tokenDayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1649,8 +1649,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun sushiswapGetTokenDayDatasHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : ApiResponse<kotlin.collections.List<SushiswapTokenDayDataDTO>?> {
-        val localVariableConfig = sushiswapGetTokenDayDatasHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
+    fun sushiswapGetTokenDayDataHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : ApiResponse<kotlin.collections.List<SushiswapTokenDayDataDTO>?> {
+        val localVariableConfig = sushiswapGetTokenDayDataHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
 
         return request<Unit, kotlin.collections.List<SushiswapTokenDayDataDTO>>(
             localVariableConfig
@@ -1658,7 +1658,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation sushiswapGetTokenDayDatasHistorical
+     * To obtain the request config of the operation sushiswapGetTokenDayDataHistorical
      *
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1667,7 +1667,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param id Identifier, day start timestamp in unix / 86400. (optional)
      * @return RequestConfig
      */
-    fun sushiswapGetTokenDayDatasHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
+    fun sushiswapGetTokenDayDataHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -1692,7 +1692,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/tokenDayDatas/historical",
+            path = "/dapps/sushiswap/tokenDayData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -2009,8 +2009,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * HourDatas (current)
-     * Gets hourDatas.
+     * HourData (current)
+     * Gets hourData.
      * @return kotlin.collections.List<SushiswapHourDataDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -2020,8 +2020,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun sushiswapHourDatasCurrent() : kotlin.collections.List<SushiswapHourDataDTO> {
-        val localVarResponse = sushiswapHourDatasCurrentWithHttpInfo()
+    fun sushiswapHourDataCurrent() : kotlin.collections.List<SushiswapHourDataDTO> {
+        val localVarResponse = sushiswapHourDataCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapHourDataDTO>
@@ -2039,16 +2039,16 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * HourDatas (current)
-     * Gets hourDatas.
+     * HourData (current)
+     * Gets hourData.
      * @return ApiResponse<kotlin.collections.List<SushiswapHourDataDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun sushiswapHourDatasCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapHourDataDTO>?> {
-        val localVariableConfig = sushiswapHourDatasCurrentRequestConfig()
+    fun sushiswapHourDataCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapHourDataDTO>?> {
+        val localVariableConfig = sushiswapHourDataCurrentRequestConfig()
 
         return request<Unit, kotlin.collections.List<SushiswapHourDataDTO>>(
             localVariableConfig
@@ -2056,11 +2056,11 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation sushiswapHourDatasCurrent
+     * To obtain the request config of the operation sushiswapHourDataCurrent
      *
      * @return RequestConfig
      */
-    fun sushiswapHourDatasCurrentRequestConfig() : RequestConfig<Unit> {
+    fun sushiswapHourDataCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -2068,7 +2068,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/hourDatas/current",
+            path = "/dapps/sushiswap/hourData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -2277,8 +2277,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * PairDayDatas (current)
-     * Gets pairDayDatas.
+     * PairDayData (current)
+     * Gets pairDayData.
      * @return kotlin.collections.List<SushiswapPairDayDataDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -2288,8 +2288,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun sushiswapPairDayDatasCurrent() : kotlin.collections.List<SushiswapPairDayDataDTO> {
-        val localVarResponse = sushiswapPairDayDatasCurrentWithHttpInfo()
+    fun sushiswapPairDayDataCurrent() : kotlin.collections.List<SushiswapPairDayDataDTO> {
+        val localVarResponse = sushiswapPairDayDataCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapPairDayDataDTO>
@@ -2307,16 +2307,16 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * PairDayDatas (current)
-     * Gets pairDayDatas.
+     * PairDayData (current)
+     * Gets pairDayData.
      * @return ApiResponse<kotlin.collections.List<SushiswapPairDayDataDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun sushiswapPairDayDatasCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapPairDayDataDTO>?> {
-        val localVariableConfig = sushiswapPairDayDatasCurrentRequestConfig()
+    fun sushiswapPairDayDataCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapPairDayDataDTO>?> {
+        val localVariableConfig = sushiswapPairDayDataCurrentRequestConfig()
 
         return request<Unit, kotlin.collections.List<SushiswapPairDayDataDTO>>(
             localVariableConfig
@@ -2324,11 +2324,11 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation sushiswapPairDayDatasCurrent
+     * To obtain the request config of the operation sushiswapPairDayDataCurrent
      *
      * @return RequestConfig
      */
-    fun sushiswapPairDayDatasCurrentRequestConfig() : RequestConfig<Unit> {
+    fun sushiswapPairDayDataCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -2336,7 +2336,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/pairDayDatas/current",
+            path = "/dapps/sushiswap/pairDayData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -2344,8 +2344,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * PairHourDatas (current)
-     * Gets pairHourDatas.
+     * PairHourData (current)
+     * Gets pairHourData.
      * @return kotlin.collections.List<SushiswapPairHourDataDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -2355,8 +2355,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun sushiswapPairHourDatasCurrent() : kotlin.collections.List<SushiswapPairHourDataDTO> {
-        val localVarResponse = sushiswapPairHourDatasCurrentWithHttpInfo()
+    fun sushiswapPairHourDataCurrent() : kotlin.collections.List<SushiswapPairHourDataDTO> {
+        val localVarResponse = sushiswapPairHourDataCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapPairHourDataDTO>
@@ -2374,16 +2374,16 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * PairHourDatas (current)
-     * Gets pairHourDatas.
+     * PairHourData (current)
+     * Gets pairHourData.
      * @return ApiResponse<kotlin.collections.List<SushiswapPairHourDataDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun sushiswapPairHourDatasCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapPairHourDataDTO>?> {
-        val localVariableConfig = sushiswapPairHourDatasCurrentRequestConfig()
+    fun sushiswapPairHourDataCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapPairHourDataDTO>?> {
+        val localVariableConfig = sushiswapPairHourDataCurrentRequestConfig()
 
         return request<Unit, kotlin.collections.List<SushiswapPairHourDataDTO>>(
             localVariableConfig
@@ -2391,11 +2391,11 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation sushiswapPairHourDatasCurrent
+     * To obtain the request config of the operation sushiswapPairHourDataCurrent
      *
      * @return RequestConfig
      */
-    fun sushiswapPairHourDatasCurrentRequestConfig() : RequestConfig<Unit> {
+    fun sushiswapPairHourDataCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -2403,7 +2403,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/pairHourDatas/current",
+            path = "/dapps/sushiswap/pairHourData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -2561,8 +2561,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * TokenDayDatas (current)
-     * Gets tokenDayDatas.
+     * TokenDayData (current)
+     * Gets tokenDayData.
      * @return kotlin.collections.List<SushiswapTokenDayDataDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -2572,8 +2572,8 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun sushiswapTokenDayDatasCurrent() : kotlin.collections.List<SushiswapTokenDayDataDTO> {
-        val localVarResponse = sushiswapTokenDayDatasCurrentWithHttpInfo()
+    fun sushiswapTokenDayDataCurrent() : kotlin.collections.List<SushiswapTokenDayDataDTO> {
+        val localVarResponse = sushiswapTokenDayDataCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<SushiswapTokenDayDataDTO>
@@ -2591,16 +2591,16 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * TokenDayDatas (current)
-     * Gets tokenDayDatas.
+     * TokenDayData (current)
+     * Gets tokenDayData.
      * @return ApiResponse<kotlin.collections.List<SushiswapTokenDayDataDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun sushiswapTokenDayDatasCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapTokenDayDataDTO>?> {
-        val localVariableConfig = sushiswapTokenDayDatasCurrentRequestConfig()
+    fun sushiswapTokenDayDataCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<SushiswapTokenDayDataDTO>?> {
+        val localVariableConfig = sushiswapTokenDayDataCurrentRequestConfig()
 
         return request<Unit, kotlin.collections.List<SushiswapTokenDayDataDTO>>(
             localVariableConfig
@@ -2608,11 +2608,11 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation sushiswapTokenDayDatasCurrent
+     * To obtain the request config of the operation sushiswapTokenDayDataCurrent
      *
      * @return RequestConfig
      */
-    fun sushiswapTokenDayDatasCurrentRequestConfig() : RequestConfig<Unit> {
+    fun sushiswapTokenDayDataCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -2620,7 +2620,7 @@ class SushiswapApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/sushiswap/tokenDayDatas/current",
+            path = "/dapps/sushiswap/tokenDayData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

@@ -48,7 +48,7 @@ static gpointer __DexManagerthreadFunc(gpointer data)
 }
 
 
-static bool dexBatchs (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dexBatches (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
@@ -95,7 +95,7 @@ static bool dexBatchs (current)Processor(MemoryStruct_s p_chunk, long code, char
 			}
 }
 
-static bool dexBatchs (current)Helper(char * accessToken,
+static bool dexBatches (current)Helper(char * accessToken,
 	
 	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -117,7 +117,7 @@ static bool dexBatchs (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/dex/batchs/current");
+	string url("/dapps/dex/batches/current");
 	int pos;
 
 
@@ -136,7 +136,7 @@ static bool dexBatchs (current)Helper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(DexManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dexBatchs (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dexBatches (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -154,7 +154,7 @@ static bool dexBatchs (current)Helper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (DexManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexBatchs (current)Processor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexBatches (current)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -166,22 +166,22 @@ static bool dexBatchs (current)Helper(char * accessToken,
 
 
 
-bool DexManager::dexBatchs (current)Async(char * accessToken,
+bool DexManager::dexBatches (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
 	, void* userData)
 {
-	return dexBatchs (current)Helper(accessToken,
+	return dexBatches (current)Helper(accessToken,
 	
 	handler, userData, true);
 }
 
-bool DexManager::dexBatchs (current)Sync(char * accessToken,
+bool DexManager::dexBatches (current)Sync(char * accessToken,
 	
 	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
 	, void* userData)
 {
-	return dexBatchs (current)Helper(accessToken,
+	return dexBatches (current)Helper(accessToken,
 	
 	handler, userData, false);
 }
@@ -324,7 +324,7 @@ bool DexManager::dexDeposits (current)Sync(char * accessToken,
 	handler, userData, false);
 }
 
-static bool dexGetBatchs (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dexGetBatches (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
@@ -371,7 +371,7 @@ static bool dexGetBatchs (historical)Processor(MemoryStruct_s p_chunk, long code
 			}
 }
 
-static bool dexGetBatchs (historical)Helper(char * accessToken,
+static bool dexGetBatches (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -428,7 +428,7 @@ static bool dexGetBatchs (historical)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/dex/batchs/historical");
+	string url("/dapps/dex/batches/historical");
 	int pos;
 
 
@@ -447,7 +447,7 @@ static bool dexGetBatchs (historical)Helper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(DexManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dexGetBatchs (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dexGetBatches (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -465,7 +465,7 @@ static bool dexGetBatchs (historical)Helper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (DexManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexGetBatchs (historical)Processor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexGetBatches (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -477,22 +477,22 @@ static bool dexGetBatchs (historical)Helper(char * accessToken,
 
 
 
-bool DexManager::dexGetBatchs (historical)Async(char * accessToken,
+bool DexManager::dexGetBatches (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
 	, void* userData)
 {
-	return dexGetBatchs (historical)Helper(accessToken,
+	return dexGetBatches (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, id, 
 	handler, userData, true);
 }
 
-bool DexManager::dexGetBatchs (historical)Sync(char * accessToken,
+bool DexManager::dexGetBatches (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
 	, void* userData)
 {
-	return dexGetBatchs (historical)Helper(accessToken,
+	return dexGetBatches (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, id, 
 	handler, userData, false);
 }
@@ -1210,7 +1210,7 @@ bool DexManager::dexGetSolutions (historical)Sync(char * accessToken,
 	handler, userData, false);
 }
 
-static bool dexGetStatss (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dexGetStats (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
@@ -1257,7 +1257,7 @@ static bool dexGetStatss (historical)Processor(MemoryStruct_s p_chunk, long code
 			}
 }
 
-static bool dexGetStatss (historical)Helper(char * accessToken,
+static bool dexGetStats (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -1314,7 +1314,7 @@ static bool dexGetStatss (historical)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/dex/statss/historical");
+	string url("/dapps/dex/stats/historical");
 	int pos;
 
 
@@ -1333,7 +1333,7 @@ static bool dexGetStatss (historical)Helper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(DexManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dexGetStatss (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dexGetStats (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -1351,7 +1351,7 @@ static bool dexGetStatss (historical)Helper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (DexManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexGetStatss (historical)Processor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexGetStats (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -1363,22 +1363,22 @@ static bool dexGetStatss (historical)Helper(char * accessToken,
 
 
 
-bool DexManager::dexGetStatss (historical)Async(char * accessToken,
+bool DexManager::dexGetStats (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
 	, void* userData)
 {
-	return dexGetStatss (historical)Helper(accessToken,
+	return dexGetStats (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, id, 
 	handler, userData, true);
 }
 
-bool DexManager::dexGetStatss (historical)Sync(char * accessToken,
+bool DexManager::dexGetStats (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
 	, void* userData)
 {
-	return dexGetStatss (historical)Helper(accessToken,
+	return dexGetStats (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, id, 
 	handler, userData, false);
 }
@@ -2711,7 +2711,7 @@ bool DexManager::dexSolutions (current)Sync(char * accessToken,
 	handler, userData, false);
 }
 
-static bool dexStatss (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool dexStats (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
@@ -2758,7 +2758,7 @@ static bool dexStatss (current)Processor(MemoryStruct_s p_chunk, long code, char
 			}
 }
 
-static bool dexStatss (current)Helper(char * accessToken,
+static bool dexStats (current)Helper(char * accessToken,
 	
 	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -2780,7 +2780,7 @@ static bool dexStatss (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/dex/statss/current");
+	string url("/dapps/dex/stats/current");
 	int pos;
 
 
@@ -2799,7 +2799,7 @@ static bool dexStatss (current)Helper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(DexManager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = dexStatss (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = dexStats (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -2817,7 +2817,7 @@ static bool dexStatss (current)Helper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (DexManager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexStatss (current)Processor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), dexStats (current)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -2829,22 +2829,22 @@ static bool dexStatss (current)Helper(char * accessToken,
 
 
 
-bool DexManager::dexStatss (current)Async(char * accessToken,
+bool DexManager::dexStats (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
 	, void* userData)
 {
-	return dexStatss (current)Helper(accessToken,
+	return dexStats (current)Helper(accessToken,
 	
 	handler, userData, true);
 }
 
-bool DexManager::dexStatss (current)Sync(char * accessToken,
+bool DexManager::dexStats (current)Sync(char * accessToken,
 	
 	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
 	, void* userData)
 {
-	return dexStatss (current)Helper(accessToken,
+	return dexStats (current)Helper(accessToken,
 	
 	handler, userData, false);
 }

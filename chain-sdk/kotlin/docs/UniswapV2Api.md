@@ -11,28 +11,28 @@ Method | HTTP request | Description
 [**uniswapV2GetLiquidityPositionSnapshotsHistorical**](UniswapV2Api.md#uniswapV2GetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**uniswapV2GetLiquidityPositionsHistorical**](UniswapV2Api.md#uniswapV2GetLiquidityPositionsHistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical)
 [**uniswapV2GetMintsHistorical**](UniswapV2Api.md#uniswapV2GetMintsHistorical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical)
-[**uniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetPairDayDatasHistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical)
-[**uniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#uniswapV2GetPairHourDatasHistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical)
+[**uniswapV2GetPairDayDataHistorical**](UniswapV2Api.md#uniswapV2GetPairDayDataHistorical) | **GET** /dapps/uniswapv2/pairDayData/historical | PairDayData (historical)
+[**uniswapV2GetPairHourDataHistorical**](UniswapV2Api.md#uniswapV2GetPairHourDataHistorical) | **GET** /dapps/uniswapv2/pairHourData/historical | PairHourData (historical)
 [**uniswapV2GetPairsHistorical**](UniswapV2Api.md#uniswapV2GetPairsHistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical)
 [**uniswapV2GetSwapsHistorical**](UniswapV2Api.md#uniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical)
-[**uniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetTokenDayDatasHistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical)
+[**uniswapV2GetTokenDayDataHistorical**](UniswapV2Api.md#uniswapV2GetTokenDayDataHistorical) | **GET** /dapps/uniswapv2/tokenDayData/historical | TokenDayData (historical)
 [**uniswapV2GetTokensHistorical**](UniswapV2Api.md#uniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical)
 [**uniswapV2GetTransactionsHistorical**](UniswapV2Api.md#uniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical)
-[**uniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical)
-[**uniswapV2GetUniswapFactorysHistorical**](UniswapV2Api.md#uniswapV2GetUniswapFactorysHistorical) | **GET** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical)
+[**uniswapV2GetUniswapDayDataHistorical**](UniswapV2Api.md#uniswapV2GetUniswapDayDataHistorical) | **GET** /dapps/uniswapv2/uniswapDayData/historical | UniswapDayData (historical)
+[**uniswapV2GetUniswapFactoriesHistorical**](UniswapV2Api.md#uniswapV2GetUniswapFactoriesHistorical) | **GET** /dapps/uniswapv2/uniswapFactories/historical | UniswapFactories (historical)
 [**uniswapV2GetUsersHistorical**](UniswapV2Api.md#uniswapV2GetUsersHistorical) | **GET** /dapps/uniswapv2/users/historical | Users (historical)
 [**uniswapV2LiquidityPositionSnapshotsCurrent**](UniswapV2Api.md#uniswapV2LiquidityPositionSnapshotsCurrent) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**uniswapV2LiquidityPositionsCurrent**](UniswapV2Api.md#uniswapV2LiquidityPositionsCurrent) | **GET** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
 [**uniswapV2MintsCurrent**](UniswapV2Api.md#uniswapV2MintsCurrent) | **GET** /dapps/uniswapv2/mints/current | Mints (current)
-[**uniswapV2PairDayDatasCurrent**](UniswapV2Api.md#uniswapV2PairDayDatasCurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
-[**uniswapV2PairHourDatasCurrent**](UniswapV2Api.md#uniswapV2PairHourDatasCurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
+[**uniswapV2PairDayDataCurrent**](UniswapV2Api.md#uniswapV2PairDayDataCurrent) | **GET** /dapps/uniswapv2/pairDayData/current | PairDayData (current)
+[**uniswapV2PairHourDataCurrent**](UniswapV2Api.md#uniswapV2PairHourDataCurrent) | **GET** /dapps/uniswapv2/pairHourData/current | PairHourData (current)
 [**uniswapV2PairsCurrent**](UniswapV2Api.md#uniswapV2PairsCurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
 [**uniswapV2SwapsCurrent**](UniswapV2Api.md#uniswapV2SwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current)
-[**uniswapV2TokenDayDatasCurrent**](UniswapV2Api.md#uniswapV2TokenDayDatasCurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**uniswapV2TokenDayDataCurrent**](UniswapV2Api.md#uniswapV2TokenDayDataCurrent) | **GET** /dapps/uniswapv2/tokenDayData/current | TokenDayData (current)
 [**uniswapV2TokensCurrent**](UniswapV2Api.md#uniswapV2TokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**uniswapV2TransactionsCurrent**](UniswapV2Api.md#uniswapV2TransactionsCurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
-[**uniswapV2UniswapDayDatasCurrent**](UniswapV2Api.md#uniswapV2UniswapDayDatasCurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
-[**uniswapV2UniswapFactorysCurrent**](UniswapV2Api.md#uniswapV2UniswapFactorysCurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
+[**uniswapV2UniswapDayDataCurrent**](UniswapV2Api.md#uniswapV2UniswapDayDataCurrent) | **GET** /dapps/uniswapv2/uniswapDayData/current | UniswapDayData (current)
+[**uniswapV2UniswapFactoriesCurrent**](UniswapV2Api.md#uniswapV2UniswapFactoriesCurrent) | **GET** /dapps/uniswapv2/uniswapFactories/current | UniswapFactories (current)
 [**uniswapV2UsersCurrent**](UniswapV2Api.md#uniswapV2UsersCurrent) | **GET** /dapps/uniswapv2/users/current | Users (current)
 
 
@@ -409,13 +409,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetPairDayDatasHistorical"></a>
-# **uniswapV2GetPairDayDatasHistorical**
-> kotlin.collections.List&lt;UniswapV2PairDayDataDTO&gt; uniswapV2GetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
+<a name="uniswapV2GetPairDayDataHistorical"></a>
+# **uniswapV2GetPairDayDataHistorical**
+> kotlin.collections.List&lt;UniswapV2PairDayDataDTO&gt; uniswapV2GetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 ```kotlin
@@ -432,13 +432,13 @@ val id : kotlin.String = id_example // kotlin.String |
 val token0 : kotlin.String = token0_example // kotlin.String | Reference to token0.
 val token1 : kotlin.String = token1_example // kotlin.String | Reference to token1.
 try {
-    val result : kotlin.collections.List<UniswapV2PairDayDataDTO> = apiInstance.uniswapV2GetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
+    val result : kotlin.collections.List<UniswapV2PairDayDataDTO> = apiInstance.uniswapV2GetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV2Api#uniswapV2GetPairDayDatasHistorical")
+    println("4xx response calling UniswapV2Api#uniswapV2GetPairDayDataHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV2Api#uniswapV2GetPairDayDatasHistorical")
+    println("5xx response calling UniswapV2Api#uniswapV2GetPairDayDataHistorical")
     e.printStackTrace()
 }
 ```
@@ -468,13 +468,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetPairHourDatasHistorical"></a>
-# **uniswapV2GetPairHourDatasHistorical**
-> kotlin.collections.List&lt;UniswapV2PairHourDataDTO&gt; uniswapV2GetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair)
+<a name="uniswapV2GetPairHourDataHistorical"></a>
+# **uniswapV2GetPairHourDataHistorical**
+> kotlin.collections.List&lt;UniswapV2PairHourDataDTO&gt; uniswapV2GetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 ```kotlin
@@ -490,13 +490,13 @@ val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.
 val id : kotlin.String = id_example // kotlin.String | 
 val pair : kotlin.String = pair_example // kotlin.String | Address for pair contract.
 try {
-    val result : kotlin.collections.List<UniswapV2PairHourDataDTO> = apiInstance.uniswapV2GetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair)
+    val result : kotlin.collections.List<UniswapV2PairHourDataDTO> = apiInstance.uniswapV2GetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV2Api#uniswapV2GetPairHourDatasHistorical")
+    println("4xx response calling UniswapV2Api#uniswapV2GetPairHourDataHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV2Api#uniswapV2GetPairHourDatasHistorical")
+    println("5xx response calling UniswapV2Api#uniswapV2GetPairHourDataHistorical")
     e.printStackTrace()
 }
 ```
@@ -641,13 +641,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetTokenDayDatasHistorical"></a>
-# **uniswapV2GetTokenDayDatasHistorical**
-> kotlin.collections.List&lt;UniswapV2TokenDayDataDTO&gt; uniswapV2GetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+<a name="uniswapV2GetTokenDayDataHistorical"></a>
+# **uniswapV2GetTokenDayDataHistorical**
+> kotlin.collections.List&lt;UniswapV2TokenDayDataDTO&gt; uniswapV2GetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 ```kotlin
@@ -662,13 +662,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
 val id : kotlin.String = id_example // kotlin.String | Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
 try {
-    val result : kotlin.collections.List<UniswapV2TokenDayDataDTO> = apiInstance.uniswapV2GetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+    val result : kotlin.collections.List<UniswapV2TokenDayDataDTO> = apiInstance.uniswapV2GetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV2Api#uniswapV2GetTokenDayDatasHistorical")
+    println("4xx response calling UniswapV2Api#uniswapV2GetTokenDayDataHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV2Api#uniswapV2GetTokenDayDatasHistorical")
+    println("5xx response calling UniswapV2Api#uniswapV2GetTokenDayDataHistorical")
     e.printStackTrace()
 }
 ```
@@ -810,13 +810,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetUniswapDayDatasHistorical"></a>
-# **uniswapV2GetUniswapDayDatasHistorical**
-> kotlin.collections.List&lt;UniswapV2UniswapDayDataDTO&gt; uniswapV2GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+<a name="uniswapV2GetUniswapDayDataHistorical"></a>
+# **uniswapV2GetUniswapDayDataHistorical**
+> kotlin.collections.List&lt;UniswapV2UniswapDayDataDTO&gt; uniswapV2GetUniswapDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
-UniswapDayDatas (historical)
+UniswapDayData (historical)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 ```kotlin
@@ -831,13 +831,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
 val id : kotlin.String = id_example // kotlin.String | Unix timestamp for start of day / 86400 giving a unique day index.
 try {
-    val result : kotlin.collections.List<UniswapV2UniswapDayDataDTO> = apiInstance.uniswapV2GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+    val result : kotlin.collections.List<UniswapV2UniswapDayDataDTO> = apiInstance.uniswapV2GetUniswapDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV2Api#uniswapV2GetUniswapDayDatasHistorical")
+    println("4xx response calling UniswapV2Api#uniswapV2GetUniswapDayDataHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV2Api#uniswapV2GetUniswapDayDatasHistorical")
+    println("5xx response calling UniswapV2Api#uniswapV2GetUniswapDayDataHistorical")
     e.printStackTrace()
 }
 ```
@@ -865,13 +865,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2GetUniswapFactorysHistorical"></a>
-# **uniswapV2GetUniswapFactorysHistorical**
-> kotlin.collections.List&lt;UniswapV2UniswapFactoryDTO&gt; uniswapV2GetUniswapFactorysHistorical(startBlock, endBlock, startDate, endDate, id)
+<a name="uniswapV2GetUniswapFactoriesHistorical"></a>
+# **uniswapV2GetUniswapFactoriesHistorical**
+> kotlin.collections.List&lt;UniswapV2UniswapFactoryDTO&gt; uniswapV2GetUniswapFactoriesHistorical(startBlock, endBlock, startDate, endDate, id)
 
-UniswapFactorys (historical)
+UniswapFactories (historical)
 
-Gets uniswapFactorys.
+Gets uniswapFactories.
 
 ### Example
 ```kotlin
@@ -886,13 +886,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
 val id : kotlin.String = id_example // kotlin.String | Factory address.
 try {
-    val result : kotlin.collections.List<UniswapV2UniswapFactoryDTO> = apiInstance.uniswapV2GetUniswapFactorysHistorical(startBlock, endBlock, startDate, endDate, id)
+    val result : kotlin.collections.List<UniswapV2UniswapFactoryDTO> = apiInstance.uniswapV2GetUniswapFactoriesHistorical(startBlock, endBlock, startDate, endDate, id)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV2Api#uniswapV2GetUniswapFactorysHistorical")
+    println("4xx response calling UniswapV2Api#uniswapV2GetUniswapFactoriesHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV2Api#uniswapV2GetUniswapFactorysHistorical")
+    println("5xx response calling UniswapV2Api#uniswapV2GetUniswapFactoriesHistorical")
     e.printStackTrace()
 }
 ```
@@ -1104,13 +1104,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2PairDayDatasCurrent"></a>
-# **uniswapV2PairDayDatasCurrent**
-> kotlin.collections.List&lt;UniswapV2PairDayDataDTO&gt; uniswapV2PairDayDatasCurrent()
+<a name="uniswapV2PairDayDataCurrent"></a>
+# **uniswapV2PairDayDataCurrent**
+> kotlin.collections.List&lt;UniswapV2PairDayDataDTO&gt; uniswapV2PairDayDataCurrent()
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 ```kotlin
@@ -1120,13 +1120,13 @@ Gets pairDayDatas.
 
 val apiInstance = UniswapV2Api()
 try {
-    val result : kotlin.collections.List<UniswapV2PairDayDataDTO> = apiInstance.uniswapV2PairDayDatasCurrent()
+    val result : kotlin.collections.List<UniswapV2PairDayDataDTO> = apiInstance.uniswapV2PairDayDataCurrent()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV2Api#uniswapV2PairDayDatasCurrent")
+    println("4xx response calling UniswapV2Api#uniswapV2PairDayDataCurrent")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV2Api#uniswapV2PairDayDatasCurrent")
+    println("5xx response calling UniswapV2Api#uniswapV2PairDayDataCurrent")
     e.printStackTrace()
 }
 ```
@@ -1147,13 +1147,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2PairHourDatasCurrent"></a>
-# **uniswapV2PairHourDatasCurrent**
-> kotlin.collections.List&lt;UniswapV2PairHourDataDTO&gt; uniswapV2PairHourDatasCurrent()
+<a name="uniswapV2PairHourDataCurrent"></a>
+# **uniswapV2PairHourDataCurrent**
+> kotlin.collections.List&lt;UniswapV2PairHourDataDTO&gt; uniswapV2PairHourDataCurrent()
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 ```kotlin
@@ -1163,13 +1163,13 @@ Gets pairHourDatas.
 
 val apiInstance = UniswapV2Api()
 try {
-    val result : kotlin.collections.List<UniswapV2PairHourDataDTO> = apiInstance.uniswapV2PairHourDatasCurrent()
+    val result : kotlin.collections.List<UniswapV2PairHourDataDTO> = apiInstance.uniswapV2PairHourDataCurrent()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV2Api#uniswapV2PairHourDatasCurrent")
+    println("4xx response calling UniswapV2Api#uniswapV2PairHourDataCurrent")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV2Api#uniswapV2PairHourDatasCurrent")
+    println("5xx response calling UniswapV2Api#uniswapV2PairHourDataCurrent")
     e.printStackTrace()
 }
 ```
@@ -1284,13 +1284,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2TokenDayDatasCurrent"></a>
-# **uniswapV2TokenDayDatasCurrent**
-> kotlin.collections.List&lt;UniswapV2TokenDayDataDTO&gt; uniswapV2TokenDayDatasCurrent()
+<a name="uniswapV2TokenDayDataCurrent"></a>
+# **uniswapV2TokenDayDataCurrent**
+> kotlin.collections.List&lt;UniswapV2TokenDayDataDTO&gt; uniswapV2TokenDayDataCurrent()
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 ```kotlin
@@ -1300,13 +1300,13 @@ Gets tokenDayDatas.
 
 val apiInstance = UniswapV2Api()
 try {
-    val result : kotlin.collections.List<UniswapV2TokenDayDataDTO> = apiInstance.uniswapV2TokenDayDatasCurrent()
+    val result : kotlin.collections.List<UniswapV2TokenDayDataDTO> = apiInstance.uniswapV2TokenDayDataCurrent()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV2Api#uniswapV2TokenDayDatasCurrent")
+    println("4xx response calling UniswapV2Api#uniswapV2TokenDayDataCurrent")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV2Api#uniswapV2TokenDayDatasCurrent")
+    println("5xx response calling UniswapV2Api#uniswapV2TokenDayDataCurrent")
     e.printStackTrace()
 }
 ```
@@ -1413,13 +1413,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2UniswapDayDatasCurrent"></a>
-# **uniswapV2UniswapDayDatasCurrent**
-> kotlin.collections.List&lt;UniswapV2UniswapDayDataDTO&gt; uniswapV2UniswapDayDatasCurrent()
+<a name="uniswapV2UniswapDayDataCurrent"></a>
+# **uniswapV2UniswapDayDataCurrent**
+> kotlin.collections.List&lt;UniswapV2UniswapDayDataDTO&gt; uniswapV2UniswapDayDataCurrent()
 
-UniswapDayDatas (current)
+UniswapDayData (current)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 ```kotlin
@@ -1429,13 +1429,13 @@ Gets uniswapDayDatas.
 
 val apiInstance = UniswapV2Api()
 try {
-    val result : kotlin.collections.List<UniswapV2UniswapDayDataDTO> = apiInstance.uniswapV2UniswapDayDatasCurrent()
+    val result : kotlin.collections.List<UniswapV2UniswapDayDataDTO> = apiInstance.uniswapV2UniswapDayDataCurrent()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV2Api#uniswapV2UniswapDayDatasCurrent")
+    println("4xx response calling UniswapV2Api#uniswapV2UniswapDayDataCurrent")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV2Api#uniswapV2UniswapDayDatasCurrent")
+    println("5xx response calling UniswapV2Api#uniswapV2UniswapDayDataCurrent")
     e.printStackTrace()
 }
 ```
@@ -1456,13 +1456,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="uniswapV2UniswapFactorysCurrent"></a>
-# **uniswapV2UniswapFactorysCurrent**
-> kotlin.collections.List&lt;UniswapV2UniswapFactoryDTO&gt; uniswapV2UniswapFactorysCurrent()
+<a name="uniswapV2UniswapFactoriesCurrent"></a>
+# **uniswapV2UniswapFactoriesCurrent**
+> kotlin.collections.List&lt;UniswapV2UniswapFactoryDTO&gt; uniswapV2UniswapFactoriesCurrent()
 
-UniswapFactorys (current)
+UniswapFactories (current)
 
-Gets uniswapFactorys.
+Gets uniswapFactories.
 
 ### Example
 ```kotlin
@@ -1472,13 +1472,13 @@ Gets uniswapFactorys.
 
 val apiInstance = UniswapV2Api()
 try {
-    val result : kotlin.collections.List<UniswapV2UniswapFactoryDTO> = apiInstance.uniswapV2UniswapFactorysCurrent()
+    val result : kotlin.collections.List<UniswapV2UniswapFactoryDTO> = apiInstance.uniswapV2UniswapFactoriesCurrent()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling UniswapV2Api#uniswapV2UniswapFactorysCurrent")
+    println("4xx response calling UniswapV2Api#uniswapV2UniswapFactoriesCurrent")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling UniswapV2Api#uniswapV2UniswapFactorysCurrent")
+    println("5xx response calling UniswapV2Api#uniswapV2UniswapFactoriesCurrent")
     e.printStackTrace()
 }
 ```

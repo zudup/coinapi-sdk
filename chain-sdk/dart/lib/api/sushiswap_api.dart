@@ -118,14 +118,14 @@ class SushiswapApi {
     return null;
   }
 
-  /// DayDatas (current)
+  /// DayData (current)
   ///
-  /// Gets dayDatas.
+  /// Gets dayData.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> sushiswapDayDatasCurrentWithHttpInfo() async {
+  Future<Response> sushiswapDayDataCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/sushiswap/dayDatas/current';
+    final path = r'/dapps/sushiswap/dayData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -148,11 +148,11 @@ class SushiswapApi {
     );
   }
 
-  /// DayDatas (current)
+  /// DayData (current)
   ///
-  /// Gets dayDatas.
-  Future<List<SushiswapDayDataDTO>?> sushiswapDayDatasCurrent() async {
-    final response = await sushiswapDayDatasCurrentWithHttpInfo();
+  /// Gets dayData.
+  Future<List<SushiswapDayDataDTO>?> sushiswapDayDataCurrent() async {
+    final response = await sushiswapDayDataCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -169,14 +169,14 @@ class SushiswapApi {
     return null;
   }
 
-  /// Factorys (current)
+  /// Factories (current)
   ///
-  /// Gets factorys.
+  /// Gets factories.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> sushiswapFactorysCurrentWithHttpInfo() async {
+  Future<Response> sushiswapFactoriesCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/sushiswap/factorys/current';
+    final path = r'/dapps/sushiswap/factories/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -199,11 +199,11 @@ class SushiswapApi {
     );
   }
 
-  /// Factorys (current)
+  /// Factories (current)
   ///
-  /// Gets factorys.
-  Future<List<SushiswapFactoryDTO>?> sushiswapFactorysCurrent() async {
-    final response = await sushiswapFactorysCurrentWithHttpInfo();
+  /// Gets factories.
+  Future<List<SushiswapFactoryDTO>?> sushiswapFactoriesCurrent() async {
+    final response = await sushiswapFactoriesCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -419,9 +419,9 @@ class SushiswapApi {
     return null;
   }
 
-  /// DayDatas (historical)
+  /// DayData (historical)
   ///
-  /// Gets dayDatas.
+  /// Gets dayData.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -441,9 +441,9 @@ class SushiswapApi {
   ///
   /// * [String] id:
   ///   Unix timestamp for start of day / 86400 giving a unique day index.
-  Future<Response> sushiswapGetDayDatasHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+  Future<Response> sushiswapGetDayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/sushiswap/dayDatas/historical';
+    final path = r'/dapps/sushiswap/dayData/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -482,9 +482,9 @@ class SushiswapApi {
     );
   }
 
-  /// DayDatas (historical)
+  /// DayData (historical)
   ///
-  /// Gets dayDatas.
+  /// Gets dayData.
   ///
   /// Parameters:
   ///
@@ -502,8 +502,8 @@ class SushiswapApi {
   ///
   /// * [String] id:
   ///   Unix timestamp for start of day / 86400 giving a unique day index.
-  Future<List<SushiswapDayDataDTO>?> sushiswapGetDayDatasHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
-    final response = await sushiswapGetDayDatasHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+  Future<List<SushiswapDayDataDTO>?> sushiswapGetDayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await sushiswapGetDayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -520,9 +520,9 @@ class SushiswapApi {
     return null;
   }
 
-  /// Factorys (historical)
+  /// Factories (historical)
   ///
-  /// Gets factorys.
+  /// Gets factories.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -542,9 +542,9 @@ class SushiswapApi {
   ///
   /// * [String] id:
   ///   Factory address.
-  Future<Response> sushiswapGetFactorysHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+  Future<Response> sushiswapGetFactoriesHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/sushiswap/factorys/historical';
+    final path = r'/dapps/sushiswap/factories/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -583,9 +583,9 @@ class SushiswapApi {
     );
   }
 
-  /// Factorys (historical)
+  /// Factories (historical)
   ///
-  /// Gets factorys.
+  /// Gets factories.
   ///
   /// Parameters:
   ///
@@ -603,8 +603,8 @@ class SushiswapApi {
   ///
   /// * [String] id:
   ///   Factory address.
-  Future<List<SushiswapFactoryDTO>?> sushiswapGetFactorysHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
-    final response = await sushiswapGetFactorysHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+  Future<List<SushiswapFactoryDTO>?> sushiswapGetFactoriesHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await sushiswapGetFactoriesHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -621,9 +621,9 @@ class SushiswapApi {
     return null;
   }
 
-  /// HourDatas (historical)
+  /// HourData (historical)
   ///
-  /// Gets hourDatas.
+  /// Gets hourData.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -643,9 +643,9 @@ class SushiswapApi {
   ///
   /// * [String] id:
   ///   Start of hour timestamp.
-  Future<Response> sushiswapGetHourDatasHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+  Future<Response> sushiswapGetHourDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/sushiswap/hourDatas/historical';
+    final path = r'/dapps/sushiswap/hourData/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -684,9 +684,9 @@ class SushiswapApi {
     );
   }
 
-  /// HourDatas (historical)
+  /// HourData (historical)
   ///
-  /// Gets hourDatas.
+  /// Gets hourData.
   ///
   /// Parameters:
   ///
@@ -704,8 +704,8 @@ class SushiswapApi {
   ///
   /// * [String] id:
   ///   Start of hour timestamp.
-  Future<List<SushiswapHourDataDTO>?> sushiswapGetHourDatasHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
-    final response = await sushiswapGetHourDatasHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+  Future<List<SushiswapHourDataDTO>?> sushiswapGetHourDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await sushiswapGetHourDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1030,9 +1030,9 @@ class SushiswapApi {
     return null;
   }
 
-  /// PairDayDatas (historical)
+  /// PairDayData (historical)
   ///
-  /// Gets pairDayDatas.
+  /// Gets pairDayData.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1053,9 +1053,9 @@ class SushiswapApi {
   /// * [String] token0:
   ///
   /// * [String] token1:
-  Future<Response> sushiswapGetPairDayDatasHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, String? token0, String? token1, }) async {
+  Future<Response> sushiswapGetPairDayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, String? token0, String? token1, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/sushiswap/pairDayDatas/historical';
+    final path = r'/dapps/sushiswap/pairDayData/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1103,9 +1103,9 @@ class SushiswapApi {
     );
   }
 
-  /// PairDayDatas (historical)
+  /// PairDayData (historical)
   ///
-  /// Gets pairDayDatas.
+  /// Gets pairDayData.
   ///
   /// Parameters:
   ///
@@ -1124,8 +1124,8 @@ class SushiswapApi {
   /// * [String] token0:
   ///
   /// * [String] token1:
-  Future<List<SushiswapPairDayDataDTO>?> sushiswapGetPairDayDatasHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, String? token0, String? token1, }) async {
-    final response = await sushiswapGetPairDayDatasHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pair: pair, token0: token0, token1: token1, );
+  Future<List<SushiswapPairDayDataDTO>?> sushiswapGetPairDayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, String? token0, String? token1, }) async {
+    final response = await sushiswapGetPairDayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pair: pair, token0: token0, token1: token1, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1142,9 +1142,9 @@ class SushiswapApi {
     return null;
   }
 
-  /// PairHourDatas (historical)
+  /// PairHourData (historical)
   ///
-  /// Gets pairHourDatas.
+  /// Gets pairHourData.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1161,9 +1161,9 @@ class SushiswapApi {
   /// * [String] id:
   ///
   /// * [String] pair:
-  Future<Response> sushiswapGetPairHourDatasHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, }) async {
+  Future<Response> sushiswapGetPairHourDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/sushiswap/pairHourDatas/historical';
+    final path = r'/dapps/sushiswap/pairHourData/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1205,9 +1205,9 @@ class SushiswapApi {
     );
   }
 
-  /// PairHourDatas (historical)
+  /// PairHourData (historical)
   ///
-  /// Gets pairHourDatas.
+  /// Gets pairHourData.
   ///
   /// Parameters:
   ///
@@ -1222,8 +1222,8 @@ class SushiswapApi {
   /// * [String] id:
   ///
   /// * [String] pair:
-  Future<List<SushiswapPairHourDataDTO>?> sushiswapGetPairHourDatasHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, }) async {
-    final response = await sushiswapGetPairHourDatasHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pair: pair, );
+  Future<List<SushiswapPairHourDataDTO>?> sushiswapGetPairHourDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, }) async {
+    final response = await sushiswapGetPairHourDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pair: pair, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1462,9 +1462,9 @@ class SushiswapApi {
     return null;
   }
 
-  /// TokenDayDatas (historical)
+  /// TokenDayData (historical)
   ///
-  /// Gets tokenDayDatas.
+  /// Gets tokenDayData.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1484,9 +1484,9 @@ class SushiswapApi {
   ///
   /// * [String] id:
   ///   Identifier, day start timestamp in unix / 86400.
-  Future<Response> sushiswapGetTokenDayDatasHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+  Future<Response> sushiswapGetTokenDayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/sushiswap/tokenDayDatas/historical';
+    final path = r'/dapps/sushiswap/tokenDayData/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1525,9 +1525,9 @@ class SushiswapApi {
     );
   }
 
-  /// TokenDayDatas (historical)
+  /// TokenDayData (historical)
   ///
-  /// Gets tokenDayDatas.
+  /// Gets tokenDayData.
   ///
   /// Parameters:
   ///
@@ -1545,8 +1545,8 @@ class SushiswapApi {
   ///
   /// * [String] id:
   ///   Identifier, day start timestamp in unix / 86400.
-  Future<List<SushiswapTokenDayDataDTO>?> sushiswapGetTokenDayDatasHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
-    final response = await sushiswapGetTokenDayDatasHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+  Future<List<SushiswapTokenDayDataDTO>?> sushiswapGetTokenDayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await sushiswapGetTokenDayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1884,14 +1884,14 @@ class SushiswapApi {
     return null;
   }
 
-  /// HourDatas (current)
+  /// HourData (current)
   ///
-  /// Gets hourDatas.
+  /// Gets hourData.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> sushiswapHourDatasCurrentWithHttpInfo() async {
+  Future<Response> sushiswapHourDataCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/sushiswap/hourDatas/current';
+    final path = r'/dapps/sushiswap/hourData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1914,11 +1914,11 @@ class SushiswapApi {
     );
   }
 
-  /// HourDatas (current)
+  /// HourData (current)
   ///
-  /// Gets hourDatas.
-  Future<List<SushiswapHourDataDTO>?> sushiswapHourDatasCurrent() async {
-    final response = await sushiswapHourDatasCurrentWithHttpInfo();
+  /// Gets hourData.
+  Future<List<SushiswapHourDataDTO>?> sushiswapHourDataCurrent() async {
+    final response = await sushiswapHourDataCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2088,14 +2088,14 @@ class SushiswapApi {
     return null;
   }
 
-  /// PairDayDatas (current)
+  /// PairDayData (current)
   ///
-  /// Gets pairDayDatas.
+  /// Gets pairDayData.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> sushiswapPairDayDatasCurrentWithHttpInfo() async {
+  Future<Response> sushiswapPairDayDataCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/sushiswap/pairDayDatas/current';
+    final path = r'/dapps/sushiswap/pairDayData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -2118,11 +2118,11 @@ class SushiswapApi {
     );
   }
 
-  /// PairDayDatas (current)
+  /// PairDayData (current)
   ///
-  /// Gets pairDayDatas.
-  Future<List<SushiswapPairDayDataDTO>?> sushiswapPairDayDatasCurrent() async {
-    final response = await sushiswapPairDayDatasCurrentWithHttpInfo();
+  /// Gets pairDayData.
+  Future<List<SushiswapPairDayDataDTO>?> sushiswapPairDayDataCurrent() async {
+    final response = await sushiswapPairDayDataCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2139,14 +2139,14 @@ class SushiswapApi {
     return null;
   }
 
-  /// PairHourDatas (current)
+  /// PairHourData (current)
   ///
-  /// Gets pairHourDatas.
+  /// Gets pairHourData.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> sushiswapPairHourDatasCurrentWithHttpInfo() async {
+  Future<Response> sushiswapPairHourDataCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/sushiswap/pairHourDatas/current';
+    final path = r'/dapps/sushiswap/pairHourData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -2169,11 +2169,11 @@ class SushiswapApi {
     );
   }
 
-  /// PairHourDatas (current)
+  /// PairHourData (current)
   ///
-  /// Gets pairHourDatas.
-  Future<List<SushiswapPairHourDataDTO>?> sushiswapPairHourDatasCurrent() async {
-    final response = await sushiswapPairHourDatasCurrentWithHttpInfo();
+  /// Gets pairHourData.
+  Future<List<SushiswapPairHourDataDTO>?> sushiswapPairHourDataCurrent() async {
+    final response = await sushiswapPairHourDataCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2320,14 +2320,14 @@ class SushiswapApi {
     return null;
   }
 
-  /// TokenDayDatas (current)
+  /// TokenDayData (current)
   ///
-  /// Gets tokenDayDatas.
+  /// Gets tokenDayData.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> sushiswapTokenDayDatasCurrentWithHttpInfo() async {
+  Future<Response> sushiswapTokenDayDataCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/sushiswap/tokenDayDatas/current';
+    final path = r'/dapps/sushiswap/tokenDayData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -2350,11 +2350,11 @@ class SushiswapApi {
     );
   }
 
-  /// TokenDayDatas (current)
+  /// TokenDayData (current)
   ///
-  /// Gets tokenDayDatas.
-  Future<List<SushiswapTokenDayDataDTO>?> sushiswapTokenDayDatasCurrent() async {
-    final response = await sushiswapTokenDayDatasCurrentWithHttpInfo();
+  /// Gets tokenDayData.
+  Future<List<SushiswapTokenDayDataDTO>?> sushiswapTokenDayDataCurrent() async {
+    final response = await sushiswapTokenDayDataCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

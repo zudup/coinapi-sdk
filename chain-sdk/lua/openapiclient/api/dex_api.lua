@@ -54,12 +54,12 @@ local function new_dex_api(authority, basePath, schemes)
 	}, dex_api_mt)
 end
 
-function dex_api:dex_batchs__current()
+function dex_api:dex_batches__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/dex/batchs/current",
+		path = string.format("%s/dapps/dex/batches/current",
 			self.basePath);
 	})
 
@@ -152,12 +152,12 @@ function dex_api:dex_deposits__current()
 	end
 end
 
-function dex_api:dex_get_batchs__historical(start_block, end_block, start_date, end_date, id)
+function dex_api:dex_get_batches__historical(start_block, end_block, start_date, end_date, id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/dex/batchs/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/dex/batches/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -397,12 +397,12 @@ function dex_api:dex_get_solutions__historical(start_block, end_block, start_dat
 	end
 end
 
-function dex_api:dex_get_statss__historical(start_block, end_block, start_date, end_date, id)
+function dex_api:dex_get_stats__historical(start_block, end_block, start_date, end_date, id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/dex/statss/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/dex/stats/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -838,12 +838,12 @@ function dex_api:dex_solutions__current()
 	end
 end
 
-function dex_api:dex_statss__current()
+function dex_api:dex_stats__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/dex/statss/current",
+		path = string.format("%s/dapps/dex/stats/current",
 			self.basePath);
 	})
 

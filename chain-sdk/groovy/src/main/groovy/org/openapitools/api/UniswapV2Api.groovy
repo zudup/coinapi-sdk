@@ -255,8 +255,8 @@ class UniswapV2Api {
 
     }
 
-    def uniswapV2GetPairDayDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String token0, String token1, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv2/pairDayDatas/historical"
+    def uniswapV2GetPairDayDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String token0, String token1, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv2/pairDayData/historical"
 
         // params
         def queryParams = [:]
@@ -296,8 +296,8 @@ class UniswapV2Api {
 
     }
 
-    def uniswapV2GetPairHourDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv2/pairHourDatas/historical"
+    def uniswapV2GetPairHourDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv2/pairHourData/historical"
 
         // params
         def queryParams = [:]
@@ -413,8 +413,8 @@ class UniswapV2Api {
 
     }
 
-    def uniswapV2GetTokenDayDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv2/tokenDayDatas/historical"
+    def uniswapV2GetTokenDayDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv2/tokenDayData/historical"
 
         // params
         def queryParams = [:]
@@ -524,8 +524,8 @@ class UniswapV2Api {
 
     }
 
-    def uniswapV2GetUniswapDayDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv2/uniswapDayDatas/historical"
+    def uniswapV2GetUniswapDayDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv2/uniswapDayData/historical"
 
         // params
         def queryParams = [:]
@@ -559,8 +559,8 @@ class UniswapV2Api {
 
     }
 
-    def uniswapV2GetUniswapFactorysHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv2/uniswapFactorys/historical"
+    def uniswapV2GetUniswapFactoriesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv2/uniswapFactories/historical"
 
         // params
         def queryParams = [:]
@@ -689,8 +689,8 @@ class UniswapV2Api {
 
     }
 
-    def uniswapV2PairDayDatasCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv2/pairDayDatas/current"
+    def uniswapV2PairDayDataCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv2/pairDayData/current"
 
         // params
         def queryParams = [:]
@@ -709,8 +709,8 @@ class UniswapV2Api {
 
     }
 
-    def uniswapV2PairHourDatasCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv2/pairHourDatas/current"
+    def uniswapV2PairHourDataCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv2/pairHourData/current"
 
         // params
         def queryParams = [:]
@@ -775,8 +775,8 @@ class UniswapV2Api {
 
     }
 
-    def uniswapV2TokenDayDatasCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv2/tokenDayDatas/current"
+    def uniswapV2TokenDayDataCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv2/tokenDayData/current"
 
         // params
         def queryParams = [:]
@@ -835,8 +835,8 @@ class UniswapV2Api {
 
     }
 
-    def uniswapV2UniswapDayDatasCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv2/uniswapDayDatas/current"
+    def uniswapV2UniswapDayDataCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv2/uniswapDayData/current"
 
         // params
         def queryParams = [:]
@@ -855,8 +855,8 @@ class UniswapV2Api {
 
     }
 
-    def uniswapV2UniswapFactorysCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv2/uniswapFactorys/current"
+    def uniswapV2UniswapFactoriesCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv2/uniswapFactories/current"
 
         // params
         def queryParams = [:]

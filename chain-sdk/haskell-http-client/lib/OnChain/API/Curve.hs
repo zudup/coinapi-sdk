@@ -316,27 +316,27 @@ instance Produces CurveGaugeDepositsCurrent MimeTextJson
 instance Produces CurveGaugeDepositsCurrent MimePlainText
 
 
--- *** curveGaugeLiquiditysCurrent
+-- *** curveGaugeLiquiditiesCurrent
 
--- | @GET \/dapps\/curve\/gaugeLiquiditys\/current@
+-- | @GET \/dapps\/curve\/gaugeLiquidities\/current@
 -- 
--- GaugeLiquiditys (current)
+-- GaugeLiquidities (current)
 -- 
--- Gets gaugeLiquiditys.
+-- Gets gaugeLiquidities.
 -- 
-curveGaugeLiquiditysCurrent
+curveGaugeLiquiditiesCurrent
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest CurveGaugeLiquiditysCurrent MimeNoContent [CurveGaugeLiquidityDTO] accept
-curveGaugeLiquiditysCurrent  _ =
-  _mkRequest "GET" ["/dapps/curve/gaugeLiquiditys/current"]
+  -> OnChainRequest CurveGaugeLiquiditiesCurrent MimeNoContent [CurveGaugeLiquidityDTO] accept
+curveGaugeLiquiditiesCurrent  _ =
+  _mkRequest "GET" ["/dapps/curve/gaugeLiquidities/current"]
 
-data CurveGaugeLiquiditysCurrent  
+data CurveGaugeLiquiditiesCurrent  
 -- | @application/json@
-instance Produces CurveGaugeLiquiditysCurrent MimeJSON
+instance Produces CurveGaugeLiquiditiesCurrent MimeJSON
 -- | @text/json@
-instance Produces CurveGaugeLiquiditysCurrent MimeTextJson
+instance Produces CurveGaugeLiquiditiesCurrent MimeTextJson
 -- | @text/plain@
-instance Produces CurveGaugeLiquiditysCurrent MimePlainText
+instance Produces CurveGaugeLiquiditiesCurrent MimePlainText
 
 
 -- *** curveGaugeTotalWeightsCurrent
@@ -1061,57 +1061,57 @@ instance Produces CurveGetGaugeDepositsHistorical MimeTextJson
 instance Produces CurveGetGaugeDepositsHistorical MimePlainText
 
 
--- *** curveGetGaugeLiquiditysHistorical
+-- *** curveGetGaugeLiquiditiesHistorical
 
--- | @GET \/dapps\/curve\/gaugeLiquiditys\/historical@
+-- | @GET \/dapps\/curve\/gaugeLiquidities\/historical@
 -- 
--- GaugeLiquiditys (historical)
+-- GaugeLiquidities (historical)
 -- 
--- Gets gaugeLiquiditys.
+-- Gets gaugeLiquidities.
 -- 
-curveGetGaugeLiquiditysHistorical
+curveGetGaugeLiquiditiesHistorical
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest CurveGetGaugeLiquiditysHistorical MimeNoContent [CurveGaugeLiquidityDTO] accept
-curveGetGaugeLiquiditysHistorical  _ =
-  _mkRequest "GET" ["/dapps/curve/gaugeLiquiditys/historical"]
+  -> OnChainRequest CurveGetGaugeLiquiditiesHistorical MimeNoContent [CurveGaugeLiquidityDTO] accept
+curveGetGaugeLiquiditiesHistorical  _ =
+  _mkRequest "GET" ["/dapps/curve/gaugeLiquidities/historical"]
 
-data CurveGetGaugeLiquiditysHistorical  
+data CurveGetGaugeLiquiditiesHistorical  
 
 -- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-instance HasOptionalParam CurveGetGaugeLiquiditysHistorical StartBlock where
+instance HasOptionalParam CurveGetGaugeLiquiditiesHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
 
 -- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-instance HasOptionalParam CurveGetGaugeLiquiditysHistorical EndBlock where
+instance HasOptionalParam CurveGetGaugeLiquiditiesHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
 
 -- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-instance HasOptionalParam CurveGetGaugeLiquiditysHistorical StartDate where
+instance HasOptionalParam CurveGetGaugeLiquiditiesHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
 
 -- | /Optional Param/ "endDate" - The end date of timeframe.
-instance HasOptionalParam CurveGetGaugeLiquiditysHistorical EndDate where
+instance HasOptionalParam CurveGetGaugeLiquiditiesHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
 
 -- | /Optional Param/ "id" - 
-instance HasOptionalParam CurveGetGaugeLiquiditysHistorical Id where
+instance HasOptionalParam CurveGetGaugeLiquiditiesHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
 
 -- | /Optional Param/ "user" - 
-instance HasOptionalParam CurveGetGaugeLiquiditysHistorical User where
+instance HasOptionalParam CurveGetGaugeLiquiditiesHistorical User where
   applyOptionalParam req (User xs) =
     req `addQuery` toQuery ("user", Just xs)
 -- | @application/json@
-instance Produces CurveGetGaugeLiquiditysHistorical MimeJSON
+instance Produces CurveGetGaugeLiquiditiesHistorical MimeJSON
 -- | @text/json@
-instance Produces CurveGetGaugeLiquiditysHistorical MimeTextJson
+instance Produces CurveGetGaugeLiquiditiesHistorical MimeTextJson
 -- | @text/plain@
-instance Produces CurveGetGaugeLiquiditysHistorical MimePlainText
+instance Produces CurveGetGaugeLiquiditiesHistorical MimePlainText
 
 
 -- *** curveGetGaugeTotalWeightsHistorical

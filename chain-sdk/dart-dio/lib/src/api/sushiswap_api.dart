@@ -178,8 +178,8 @@ class SushiswapApi {
     );
   }
 
-  /// DayDatas (current)
-  /// Gets dayDatas.
+  /// DayData (current)
+  /// Gets dayData.
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -191,7 +191,7 @@ class SushiswapApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapDayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<SushiswapDayDataDTO>>> sushiswapDayDatasCurrent({ 
+  Future<Response<BuiltList<SushiswapDayDataDTO>>> sushiswapDayDataCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -199,7 +199,7 @@ class SushiswapApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/sushiswap/dayDatas/current';
+    final _path = r'/dapps/sushiswap/dayData/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -250,8 +250,8 @@ class SushiswapApi {
     );
   }
 
-  /// Factorys (current)
-  /// Gets factorys.
+  /// Factories (current)
+  /// Gets factories.
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -263,7 +263,7 @@ class SushiswapApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapFactoryDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<SushiswapFactoryDTO>>> sushiswapFactorysCurrent({ 
+  Future<Response<BuiltList<SushiswapFactoryDTO>>> sushiswapFactoriesCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -271,7 +271,7 @@ class SushiswapApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/sushiswap/factorys/current';
+    final _path = r'/dapps/sushiswap/factories/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -507,8 +507,8 @@ class SushiswapApi {
     );
   }
 
-  /// DayDatas (historical)
-  /// Gets dayDatas.
+  /// DayData (historical)
+  /// Gets dayData.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -525,7 +525,7 @@ class SushiswapApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapDayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<SushiswapDayDataDTO>>> sushiswapGetDayDatasHistorical({ 
+  Future<Response<BuiltList<SushiswapDayDataDTO>>> sushiswapGetDayDataHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -538,7 +538,7 @@ class SushiswapApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/sushiswap/dayDatas/historical';
+    final _path = r'/dapps/sushiswap/dayData/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -598,8 +598,8 @@ class SushiswapApi {
     );
   }
 
-  /// Factorys (historical)
-  /// Gets factorys.
+  /// Factories (historical)
+  /// Gets factories.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -616,7 +616,7 @@ class SushiswapApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapFactoryDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<SushiswapFactoryDTO>>> sushiswapGetFactorysHistorical({ 
+  Future<Response<BuiltList<SushiswapFactoryDTO>>> sushiswapGetFactoriesHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -629,7 +629,7 @@ class SushiswapApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/sushiswap/factorys/historical';
+    final _path = r'/dapps/sushiswap/factories/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -689,8 +689,8 @@ class SushiswapApi {
     );
   }
 
-  /// HourDatas (historical)
-  /// Gets hourDatas.
+  /// HourData (historical)
+  /// Gets hourData.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -707,7 +707,7 @@ class SushiswapApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapHourDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<SushiswapHourDataDTO>>> sushiswapGetHourDatasHistorical({ 
+  Future<Response<BuiltList<SushiswapHourDataDTO>>> sushiswapGetHourDataHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -720,7 +720,7 @@ class SushiswapApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/sushiswap/hourDatas/historical';
+    final _path = r'/dapps/sushiswap/hourData/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1068,8 +1068,8 @@ class SushiswapApi {
     );
   }
 
-  /// PairDayDatas (historical)
-  /// Gets pairDayDatas.
+  /// PairDayData (historical)
+  /// Gets pairDayData.
   ///
   /// Parameters:
   /// * [startBlock] 
@@ -1089,7 +1089,7 @@ class SushiswapApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapPairDayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<SushiswapPairDayDataDTO>>> sushiswapGetPairDayDatasHistorical({ 
+  Future<Response<BuiltList<SushiswapPairDayDataDTO>>> sushiswapGetPairDayDataHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -1105,7 +1105,7 @@ class SushiswapApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/sushiswap/pairDayDatas/historical';
+    final _path = r'/dapps/sushiswap/pairDayData/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1168,8 +1168,8 @@ class SushiswapApi {
     );
   }
 
-  /// PairHourDatas (historical)
-  /// Gets pairHourDatas.
+  /// PairHourData (historical)
+  /// Gets pairHourData.
   ///
   /// Parameters:
   /// * [startBlock] 
@@ -1187,7 +1187,7 @@ class SushiswapApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapPairHourDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<SushiswapPairHourDataDTO>>> sushiswapGetPairHourDatasHistorical({ 
+  Future<Response<BuiltList<SushiswapPairHourDataDTO>>> sushiswapGetPairHourDataHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -1201,7 +1201,7 @@ class SushiswapApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/sushiswap/pairHourDatas/historical';
+    final _path = r'/dapps/sushiswap/pairHourData/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1456,8 +1456,8 @@ class SushiswapApi {
     );
   }
 
-  /// TokenDayDatas (historical)
-  /// Gets tokenDayDatas.
+  /// TokenDayData (historical)
+  /// Gets tokenDayData.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1474,7 +1474,7 @@ class SushiswapApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapTokenDayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<SushiswapTokenDayDataDTO>>> sushiswapGetTokenDayDatasHistorical({ 
+  Future<Response<BuiltList<SushiswapTokenDayDataDTO>>> sushiswapGetTokenDayDataHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -1487,7 +1487,7 @@ class SushiswapApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/sushiswap/tokenDayDatas/historical';
+    final _path = r'/dapps/sushiswap/tokenDayData/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1826,8 +1826,8 @@ class SushiswapApi {
     );
   }
 
-  /// HourDatas (current)
-  /// Gets hourDatas.
+  /// HourData (current)
+  /// Gets hourData.
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -1839,7 +1839,7 @@ class SushiswapApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapHourDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<SushiswapHourDataDTO>>> sushiswapHourDatasCurrent({ 
+  Future<Response<BuiltList<SushiswapHourDataDTO>>> sushiswapHourDataCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1847,7 +1847,7 @@ class SushiswapApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/sushiswap/hourDatas/current';
+    final _path = r'/dapps/sushiswap/hourData/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -2114,8 +2114,8 @@ class SushiswapApi {
     );
   }
 
-  /// PairDayDatas (current)
-  /// Gets pairDayDatas.
+  /// PairDayData (current)
+  /// Gets pairDayData.
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -2127,7 +2127,7 @@ class SushiswapApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapPairDayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<SushiswapPairDayDataDTO>>> sushiswapPairDayDatasCurrent({ 
+  Future<Response<BuiltList<SushiswapPairDayDataDTO>>> sushiswapPairDayDataCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -2135,7 +2135,7 @@ class SushiswapApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/sushiswap/pairDayDatas/current';
+    final _path = r'/dapps/sushiswap/pairDayData/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -2186,8 +2186,8 @@ class SushiswapApi {
     );
   }
 
-  /// PairHourDatas (current)
-  /// Gets pairHourDatas.
+  /// PairHourData (current)
+  /// Gets pairHourData.
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -2199,7 +2199,7 @@ class SushiswapApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapPairHourDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<SushiswapPairHourDataDTO>>> sushiswapPairHourDatasCurrent({ 
+  Future<Response<BuiltList<SushiswapPairHourDataDTO>>> sushiswapPairHourDataCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -2207,7 +2207,7 @@ class SushiswapApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/sushiswap/pairHourDatas/current';
+    final _path = r'/dapps/sushiswap/pairHourData/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -2416,8 +2416,8 @@ class SushiswapApi {
     );
   }
 
-  /// TokenDayDatas (current)
-  /// Gets tokenDayDatas.
+  /// TokenDayData (current)
+  /// Gets tokenDayData.
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -2429,7 +2429,7 @@ class SushiswapApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<SushiswapTokenDayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<SushiswapTokenDayDataDTO>>> sushiswapTokenDayDatasCurrent({ 
+  Future<Response<BuiltList<SushiswapTokenDayDataDTO>>> sushiswapTokenDayDataCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -2437,7 +2437,7 @@ class SushiswapApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/sushiswap/tokenDayDatas/current';
+    final _path = r'/dapps/sushiswap/tokenDayData/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{

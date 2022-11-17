@@ -4,14 +4,14 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dexBatchsCurrent**](DexApi.md#dexBatchsCurrent) | **GET** /dapps/dex/batchs/current | Batchs (current)
+[**dexBatchesCurrent**](DexApi.md#dexBatchesCurrent) | **GET** /dapps/dex/batches/current | Batches (current)
 [**dexDepositsCurrent**](DexApi.md#dexDepositsCurrent) | **GET** /dapps/dex/deposits/current | Deposits (current)
-[**dexGetBatchsHistorical**](DexApi.md#dexGetBatchsHistorical) | **GET** /dapps/dex/batchs/historical | Batchs (historical)
+[**dexGetBatchesHistorical**](DexApi.md#dexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | Batches (historical)
 [**dexGetDepositsHistorical**](DexApi.md#dexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical)
 [**dexGetOrdersHistorical**](DexApi.md#dexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | Orders (historical)
 [**dexGetPricesHistorical**](DexApi.md#dexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | Prices (historical)
 [**dexGetSolutionsHistorical**](DexApi.md#dexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | Solutions (historical)
-[**dexGetStatssHistorical**](DexApi.md#dexGetStatssHistorical) | **GET** /dapps/dex/statss/historical | Statss (historical)
+[**dexGetStatsHistorical**](DexApi.md#dexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | Stats (historical)
 [**dexGetTokensHistorical**](DexApi.md#dexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical)
 [**dexGetTradesHistorical**](DexApi.md#dexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | Trades (historical)
 [**dexGetUsersHistorical**](DexApi.md#dexGetUsersHistorical) | **GET** /dapps/dex/users/historical | Users (historical)
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 [**dexOrdersCurrent**](DexApi.md#dexOrdersCurrent) | **GET** /dapps/dex/orders/current | Orders (current)
 [**dexPricesCurrent**](DexApi.md#dexPricesCurrent) | **GET** /dapps/dex/prices/current | Prices (current)
 [**dexSolutionsCurrent**](DexApi.md#dexSolutionsCurrent) | **GET** /dapps/dex/solutions/current | Solutions (current)
-[**dexStatssCurrent**](DexApi.md#dexStatssCurrent) | **GET** /dapps/dex/statss/current | Statss (current)
+[**dexStatsCurrent**](DexApi.md#dexStatsCurrent) | **GET** /dapps/dex/stats/current | Stats (current)
 [**dexTokensCurrent**](DexApi.md#dexTokensCurrent) | **GET** /dapps/dex/tokens/current | Tokens (current)
 [**dexTradesCurrent**](DexApi.md#dexTradesCurrent) | **GET** /dapps/dex/trades/current | Trades (current)
 [**dexUsersCurrent**](DexApi.md#dexUsersCurrent) | **GET** /dapps/dex/users/current | Users (current)
@@ -28,13 +28,13 @@ Method | HTTP request | Description
 [**dexWithdrawsCurrent**](DexApi.md#dexWithdrawsCurrent) | **GET** /dapps/dex/withdraws/current | Withdraws (current)
 
 
-<a name="dexBatchsCurrent"></a>
-# **dexBatchsCurrent**
-> kotlin.collections.List&lt;DexBatchDTO&gt; dexBatchsCurrent()
+<a name="dexBatchesCurrent"></a>
+# **dexBatchesCurrent**
+> kotlin.collections.List&lt;DexBatchDTO&gt; dexBatchesCurrent()
 
-Batchs (current)
+Batches (current)
 
-Gets batchs.
+Gets batches.
 
 ### Example
 ```kotlin
@@ -44,13 +44,13 @@ Gets batchs.
 
 val apiInstance = DexApi()
 try {
-    val result : kotlin.collections.List<DexBatchDTO> = apiInstance.dexBatchsCurrent()
+    val result : kotlin.collections.List<DexBatchDTO> = apiInstance.dexBatchesCurrent()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling DexApi#dexBatchsCurrent")
+    println("4xx response calling DexApi#dexBatchesCurrent")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling DexApi#dexBatchsCurrent")
+    println("5xx response calling DexApi#dexBatchesCurrent")
     e.printStackTrace()
 }
 ```
@@ -114,13 +114,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexGetBatchsHistorical"></a>
-# **dexGetBatchsHistorical**
-> kotlin.collections.List&lt;DexBatchDTO&gt; dexGetBatchsHistorical(startBlock, endBlock, startDate, endDate, id)
+<a name="dexGetBatchesHistorical"></a>
+# **dexGetBatchesHistorical**
+> kotlin.collections.List&lt;DexBatchDTO&gt; dexGetBatchesHistorical(startBlock, endBlock, startDate, endDate, id)
 
-Batchs (historical)
+Batches (historical)
 
-Gets batchs.
+Gets batches.
 
 ### Example
 ```kotlin
@@ -135,13 +135,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
 val id : kotlin.String = id_example // kotlin.String | Identifier.
 try {
-    val result : kotlin.collections.List<DexBatchDTO> = apiInstance.dexGetBatchsHistorical(startBlock, endBlock, startDate, endDate, id)
+    val result : kotlin.collections.List<DexBatchDTO> = apiInstance.dexGetBatchesHistorical(startBlock, endBlock, startDate, endDate, id)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling DexApi#dexGetBatchsHistorical")
+    println("4xx response calling DexApi#dexGetBatchesHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling DexApi#dexGetBatchsHistorical")
+    println("5xx response calling DexApi#dexGetBatchesHistorical")
     e.printStackTrace()
 }
 ```
@@ -395,13 +395,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexGetStatssHistorical"></a>
-# **dexGetStatssHistorical**
-> kotlin.collections.List&lt;DexStatsDTO&gt; dexGetStatssHistorical(startBlock, endBlock, startDate, endDate, id)
+<a name="dexGetStatsHistorical"></a>
+# **dexGetStatsHistorical**
+> kotlin.collections.List&lt;DexStatsDTO&gt; dexGetStatsHistorical(startBlock, endBlock, startDate, endDate, id)
 
-Statss (historical)
+Stats (historical)
 
-Gets statss.
+Gets stats.
 
 ### Example
 ```kotlin
@@ -416,13 +416,13 @@ val startDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.tim
 val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.OffsetDateTime | The end date of timeframe.
 val id : kotlin.String = id_example // kotlin.String | 
 try {
-    val result : kotlin.collections.List<DexStatsDTO> = apiInstance.dexGetStatssHistorical(startBlock, endBlock, startDate, endDate, id)
+    val result : kotlin.collections.List<DexStatsDTO> = apiInstance.dexGetStatsHistorical(startBlock, endBlock, startDate, endDate, id)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling DexApi#dexGetStatssHistorical")
+    println("4xx response calling DexApi#dexGetStatsHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling DexApi#dexGetStatssHistorical")
+    println("5xx response calling DexApi#dexGetStatsHistorical")
     e.printStackTrace()
 }
 ```
@@ -868,13 +868,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="dexStatssCurrent"></a>
-# **dexStatssCurrent**
-> kotlin.collections.List&lt;DexStatsDTO&gt; dexStatssCurrent()
+<a name="dexStatsCurrent"></a>
+# **dexStatsCurrent**
+> kotlin.collections.List&lt;DexStatsDTO&gt; dexStatsCurrent()
 
-Statss (current)
+Stats (current)
 
-Gets statss.
+Gets stats.
 
 ### Example
 ```kotlin
@@ -884,13 +884,13 @@ Gets statss.
 
 val apiInstance = DexApi()
 try {
-    val result : kotlin.collections.List<DexStatsDTO> = apiInstance.dexStatssCurrent()
+    val result : kotlin.collections.List<DexStatsDTO> = apiInstance.dexStatsCurrent()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling DexApi#dexStatssCurrent")
+    println("4xx response calling DexApi#dexStatsCurrent")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling DexApi#dexStatssCurrent")
+    println("5xx response calling DexApi#dexStatsCurrent")
     e.printStackTrace()
 }
 ```

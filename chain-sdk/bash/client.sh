@@ -191,12 +191,12 @@ operation_parameters_minimum_occurrences["curveGetGaugeDepositsHistorical:::endB
 operation_parameters_minimum_occurrences["curveGetGaugeDepositsHistorical:::startDate"]=0
 operation_parameters_minimum_occurrences["curveGetGaugeDepositsHistorical:::endDate"]=0
 operation_parameters_minimum_occurrences["curveGetGaugeDepositsHistorical:::id"]=0
-operation_parameters_minimum_occurrences["curveGetGaugeLiquiditysHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["curveGetGaugeLiquiditysHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["curveGetGaugeLiquiditysHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["curveGetGaugeLiquiditysHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["curveGetGaugeLiquiditysHistorical:::id"]=0
-operation_parameters_minimum_occurrences["curveGetGaugeLiquiditysHistorical:::user"]=0
+operation_parameters_minimum_occurrences["curveGetGaugeLiquiditiesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugeLiquiditiesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["curveGetGaugeLiquiditiesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugeLiquiditiesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["curveGetGaugeLiquiditiesHistorical:::id"]=0
+operation_parameters_minimum_occurrences["curveGetGaugeLiquiditiesHistorical:::user"]=0
 operation_parameters_minimum_occurrences["curveGetGaugeTotalWeightsHistorical:::startBlock"]=0
 operation_parameters_minimum_occurrences["curveGetGaugeTotalWeightsHistorical:::endBlock"]=0
 operation_parameters_minimum_occurrences["curveGetGaugeTotalWeightsHistorical:::startDate"]=0
@@ -317,11 +317,11 @@ operation_parameters_minimum_occurrences["curveGetWeeklyVolumesHistorical:::endD
 operation_parameters_minimum_occurrences["curveGetWeeklyVolumesHistorical:::id"]=0
 operation_parameters_minimum_occurrences["curveGetWeeklyVolumesHistorical:::pool"]=0
 operation_parameters_minimum_occurrences["curvePoolsCurrent:::id"]=0
-operation_parameters_minimum_occurrences["dexGetBatchsHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["dexGetBatchsHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["dexGetBatchsHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["dexGetBatchsHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["dexGetBatchsHistorical:::id"]=0
+operation_parameters_minimum_occurrences["dexGetBatchesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["dexGetBatchesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["dexGetBatchesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["dexGetBatchesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["dexGetBatchesHistorical:::id"]=0
 operation_parameters_minimum_occurrences["dexGetDepositsHistorical:::startBlock"]=0
 operation_parameters_minimum_occurrences["dexGetDepositsHistorical:::endBlock"]=0
 operation_parameters_minimum_occurrences["dexGetDepositsHistorical:::startDate"]=0
@@ -345,11 +345,11 @@ operation_parameters_minimum_occurrences["dexGetSolutionsHistorical:::endBlock"]
 operation_parameters_minimum_occurrences["dexGetSolutionsHistorical:::startDate"]=0
 operation_parameters_minimum_occurrences["dexGetSolutionsHistorical:::endDate"]=0
 operation_parameters_minimum_occurrences["dexGetSolutionsHistorical:::id"]=0
-operation_parameters_minimum_occurrences["dexGetStatssHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["dexGetStatssHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["dexGetStatssHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["dexGetStatssHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["dexGetStatssHistorical:::id"]=0
+operation_parameters_minimum_occurrences["dexGetStatsHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["dexGetStatsHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["dexGetStatsHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["dexGetStatsHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["dexGetStatsHistorical:::id"]=0
 operation_parameters_minimum_occurrences["dexGetTokensHistorical:::startBlock"]=0
 operation_parameters_minimum_occurrences["dexGetTokensHistorical:::endBlock"]=0
 operation_parameters_minimum_occurrences["dexGetTokensHistorical:::startDate"]=0
@@ -393,21 +393,21 @@ operation_parameters_minimum_occurrences["sushiswapGetBurnsHistorical:::startDat
 operation_parameters_minimum_occurrences["sushiswapGetBurnsHistorical:::endDate"]=0
 operation_parameters_minimum_occurrences["sushiswapGetBurnsHistorical:::id"]=0
 operation_parameters_minimum_occurrences["sushiswapGetBurnsHistorical:::pair"]=0
-operation_parameters_minimum_occurrences["sushiswapGetDayDatasHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["sushiswapGetDayDatasHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["sushiswapGetDayDatasHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["sushiswapGetDayDatasHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["sushiswapGetDayDatasHistorical:::id"]=0
-operation_parameters_minimum_occurrences["sushiswapGetFactorysHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["sushiswapGetFactorysHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["sushiswapGetFactorysHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["sushiswapGetFactorysHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["sushiswapGetFactorysHistorical:::id"]=0
-operation_parameters_minimum_occurrences["sushiswapGetHourDatasHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["sushiswapGetHourDatasHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["sushiswapGetHourDatasHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["sushiswapGetHourDatasHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["sushiswapGetHourDatasHistorical:::id"]=0
+operation_parameters_minimum_occurrences["sushiswapGetDayDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["sushiswapGetDayDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["sushiswapGetDayDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetDayDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetDayDataHistorical:::id"]=0
+operation_parameters_minimum_occurrences["sushiswapGetFactoriesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["sushiswapGetFactoriesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["sushiswapGetFactoriesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetFactoriesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetFactoriesHistorical:::id"]=0
+operation_parameters_minimum_occurrences["sushiswapGetHourDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["sushiswapGetHourDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["sushiswapGetHourDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetHourDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetHourDataHistorical:::id"]=0
 operation_parameters_minimum_occurrences["sushiswapGetLiquidityPositionSnapshotsHistorical:::startBlock"]=0
 operation_parameters_minimum_occurrences["sushiswapGetLiquidityPositionSnapshotsHistorical:::endBlock"]=0
 operation_parameters_minimum_occurrences["sushiswapGetLiquidityPositionSnapshotsHistorical:::startDate"]=0
@@ -428,20 +428,20 @@ operation_parameters_minimum_occurrences["sushiswapGetMintsHistorical:::startDat
 operation_parameters_minimum_occurrences["sushiswapGetMintsHistorical:::endDate"]=0
 operation_parameters_minimum_occurrences["sushiswapGetMintsHistorical:::id"]=0
 operation_parameters_minimum_occurrences["sushiswapGetMintsHistorical:::pair"]=0
-operation_parameters_minimum_occurrences["sushiswapGetPairDayDatasHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["sushiswapGetPairDayDatasHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["sushiswapGetPairDayDatasHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["sushiswapGetPairDayDatasHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["sushiswapGetPairDayDatasHistorical:::id"]=0
-operation_parameters_minimum_occurrences["sushiswapGetPairDayDatasHistorical:::pair"]=0
-operation_parameters_minimum_occurrences["sushiswapGetPairDayDatasHistorical:::token_0"]=0
-operation_parameters_minimum_occurrences["sushiswapGetPairDayDatasHistorical:::token_1"]=0
-operation_parameters_minimum_occurrences["sushiswapGetPairHourDatasHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["sushiswapGetPairHourDatasHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["sushiswapGetPairHourDatasHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["sushiswapGetPairHourDatasHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["sushiswapGetPairHourDatasHistorical:::id"]=0
-operation_parameters_minimum_occurrences["sushiswapGetPairHourDatasHistorical:::pair"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPairDayDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPairDayDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPairDayDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPairDayDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPairDayDataHistorical:::id"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPairDayDataHistorical:::pair"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPairDayDataHistorical:::token_0"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPairDayDataHistorical:::token_1"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPairHourDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPairHourDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPairHourDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPairHourDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPairHourDataHistorical:::id"]=0
+operation_parameters_minimum_occurrences["sushiswapGetPairHourDataHistorical:::pair"]=0
 operation_parameters_minimum_occurrences["sushiswapGetPairsHistorical:::startBlock"]=0
 operation_parameters_minimum_occurrences["sushiswapGetPairsHistorical:::endBlock"]=0
 operation_parameters_minimum_occurrences["sushiswapGetPairsHistorical:::startDate"]=0
@@ -456,11 +456,11 @@ operation_parameters_minimum_occurrences["sushiswapGetSwapsHistorical:::startDat
 operation_parameters_minimum_occurrences["sushiswapGetSwapsHistorical:::endDate"]=0
 operation_parameters_minimum_occurrences["sushiswapGetSwapsHistorical:::id"]=0
 operation_parameters_minimum_occurrences["sushiswapGetSwapsHistorical:::pair"]=0
-operation_parameters_minimum_occurrences["sushiswapGetTokenDayDatasHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["sushiswapGetTokenDayDatasHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["sushiswapGetTokenDayDatasHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["sushiswapGetTokenDayDatasHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["sushiswapGetTokenDayDatasHistorical:::id"]=0
+operation_parameters_minimum_occurrences["sushiswapGetTokenDayDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["sushiswapGetTokenDayDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["sushiswapGetTokenDayDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetTokenDayDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["sushiswapGetTokenDayDataHistorical:::id"]=0
 operation_parameters_minimum_occurrences["sushiswapGetTokensHistorical:::startBlock"]=0
 operation_parameters_minimum_occurrences["sushiswapGetTokensHistorical:::endBlock"]=0
 operation_parameters_minimum_occurrences["sushiswapGetTokensHistorical:::startDate"]=0
@@ -511,19 +511,19 @@ operation_parameters_minimum_occurrences["uniswapV2GetMintsHistorical:::startDat
 operation_parameters_minimum_occurrences["uniswapV2GetMintsHistorical:::endDate"]=0
 operation_parameters_minimum_occurrences["uniswapV2GetMintsHistorical:::id"]=0
 operation_parameters_minimum_occurrences["uniswapV2GetMintsHistorical:::pair"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetPairDayDatasHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetPairDayDatasHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetPairDayDatasHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetPairDayDatasHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetPairDayDatasHistorical:::id"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetPairDayDatasHistorical:::token_0"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetPairDayDatasHistorical:::token_1"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetPairHourDatasHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetPairHourDatasHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetPairHourDatasHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetPairHourDatasHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetPairHourDatasHistorical:::id"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetPairHourDatasHistorical:::pair"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPairDayDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPairDayDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPairDayDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPairDayDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPairDayDataHistorical:::id"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPairDayDataHistorical:::token_0"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPairDayDataHistorical:::token_1"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPairHourDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPairHourDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPairHourDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPairHourDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPairHourDataHistorical:::id"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetPairHourDataHistorical:::pair"]=0
 operation_parameters_minimum_occurrences["uniswapV2GetPairsHistorical:::startBlock"]=0
 operation_parameters_minimum_occurrences["uniswapV2GetPairsHistorical:::endBlock"]=0
 operation_parameters_minimum_occurrences["uniswapV2GetPairsHistorical:::startDate"]=0
@@ -537,11 +537,11 @@ operation_parameters_minimum_occurrences["uniswapV2GetSwapsHistorical:::startDat
 operation_parameters_minimum_occurrences["uniswapV2GetSwapsHistorical:::endDate"]=0
 operation_parameters_minimum_occurrences["uniswapV2GetSwapsHistorical:::id"]=0
 operation_parameters_minimum_occurrences["uniswapV2GetSwapsHistorical:::pair"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetTokenDayDatasHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetTokenDayDatasHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetTokenDayDatasHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetTokenDayDatasHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetTokenDayDatasHistorical:::id"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTokenDayDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTokenDayDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTokenDayDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTokenDayDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetTokenDayDataHistorical:::id"]=0
 operation_parameters_minimum_occurrences["uniswapV2GetTokensHistorical:::startBlock"]=0
 operation_parameters_minimum_occurrences["uniswapV2GetTokensHistorical:::endBlock"]=0
 operation_parameters_minimum_occurrences["uniswapV2GetTokensHistorical:::startDate"]=0
@@ -554,16 +554,16 @@ operation_parameters_minimum_occurrences["uniswapV2GetTransactionsHistorical:::e
 operation_parameters_minimum_occurrences["uniswapV2GetTransactionsHistorical:::startDate"]=0
 operation_parameters_minimum_occurrences["uniswapV2GetTransactionsHistorical:::endDate"]=0
 operation_parameters_minimum_occurrences["uniswapV2GetTransactionsHistorical:::id"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetUniswapDayDatasHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetUniswapDayDatasHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetUniswapDayDatasHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetUniswapDayDatasHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetUniswapDayDatasHistorical:::id"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetUniswapFactorysHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetUniswapFactorysHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetUniswapFactorysHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetUniswapFactorysHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["uniswapV2GetUniswapFactorysHistorical:::id"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetUniswapDayDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetUniswapDayDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetUniswapDayDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetUniswapDayDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetUniswapDayDataHistorical:::id"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetUniswapFactoriesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetUniswapFactoriesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetUniswapFactoriesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetUniswapFactoriesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV2GetUniswapFactoriesHistorical:::id"]=0
 operation_parameters_minimum_occurrences["uniswapV2GetUsersHistorical:::startBlock"]=0
 operation_parameters_minimum_occurrences["uniswapV2GetUsersHistorical:::endBlock"]=0
 operation_parameters_minimum_occurrences["uniswapV2GetUsersHistorical:::startDate"]=0
@@ -584,11 +584,11 @@ operation_parameters_minimum_occurrences["uniswapV3GetBurnsHistorical:::id"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetBurnsHistorical:::pool"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetBurnsHistorical:::token_0"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetBurnsHistorical:::token_1"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetFactorysHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetFactorysHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetFactorysHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetFactorysHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetFactorysHistorical:::id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetFactoriesHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetFactoriesHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetFactoriesHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetFactoriesHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetFactoriesHistorical:::id"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetMintsHistorical:::startBlock"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetMintsHistorical:::endBlock"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetMintsHistorical:::startDate"]=0
@@ -597,18 +597,18 @@ operation_parameters_minimum_occurrences["uniswapV3GetMintsHistorical:::id"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetMintsHistorical:::pool"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetMintsHistorical:::token_0"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetMintsHistorical:::token_1"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetPoolDayDatasHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetPoolDayDatasHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetPoolDayDatasHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetPoolDayDatasHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetPoolDayDatasHistorical:::id"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetPoolDayDatasHistorical:::pool"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetPoolHourDatasHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetPoolHourDatasHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetPoolHourDatasHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetPoolHourDatasHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetPoolHourDatasHistorical:::id"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetPoolHourDatasHistorical:::pool"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolDayDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolDayDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolDayDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolDayDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolDayDataHistorical:::id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolDayDataHistorical:::pool"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolHourDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolHourDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolHourDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolHourDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolHourDataHistorical:::id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetPoolHourDataHistorical:::pool"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetPoolsHistorical:::startBlock"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetPoolsHistorical:::endBlock"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetPoolsHistorical:::startDate"]=0
@@ -638,28 +638,28 @@ operation_parameters_minimum_occurrences["uniswapV3GetSwapsHistorical:::id"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetSwapsHistorical:::pool"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetSwapsHistorical:::token_0"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetSwapsHistorical:::token_1"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetTickDayDatasHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetTickDayDatasHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetTickDayDatasHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetTickDayDatasHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetTickDayDatasHistorical:::id"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetTickDayDatasHistorical:::pool"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTickDayDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTickDayDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTickDayDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTickDayDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTickDayDataHistorical:::id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTickDayDataHistorical:::pool"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetTicksHistorical:::startBlock"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetTicksHistorical:::endBlock"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetTicksHistorical:::startDate"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetTicksHistorical:::endDate"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetTicksHistorical:::id"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetTicksHistorical:::pool"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetTokenHourDatasHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetTokenHourDatasHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetTokenHourDatasHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetTokenHourDatasHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetTokenHourDatasHistorical:::id"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetTokenV3DayDatasHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetTokenV3DayDatasHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetTokenV3DayDatasHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetTokenV3DayDatasHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetTokenV3DayDatasHistorical:::id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokenHourDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokenHourDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokenHourDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokenHourDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokenHourDataHistorical:::id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokenV3DayDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokenV3DayDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokenV3DayDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokenV3DayDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetTokenV3DayDataHistorical:::id"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetTokensHistorical:::startBlock"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetTokensHistorical:::endBlock"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetTokensHistorical:::startDate"]=0
@@ -672,11 +672,11 @@ operation_parameters_minimum_occurrences["uniswapV3GetTransactionsHistorical:::e
 operation_parameters_minimum_occurrences["uniswapV3GetTransactionsHistorical:::startDate"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetTransactionsHistorical:::endDate"]=0
 operation_parameters_minimum_occurrences["uniswapV3GetTransactionsHistorical:::id"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetUniswapDayDatasHistorical:::startBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetUniswapDayDatasHistorical:::endBlock"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetUniswapDayDatasHistorical:::startDate"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetUniswapDayDatasHistorical:::endDate"]=0
-operation_parameters_minimum_occurrences["uniswapV3GetUniswapDayDatasHistorical:::id"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetUniswapDayDataHistorical:::startBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetUniswapDayDataHistorical:::endBlock"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetUniswapDayDataHistorical:::startDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetUniswapDayDataHistorical:::endDate"]=0
+operation_parameters_minimum_occurrences["uniswapV3GetUniswapDayDataHistorical:::id"]=0
 operation_parameters_minimum_occurrences["uniswapV3PoolsCurrent:::id"]=0
 operation_parameters_minimum_occurrences["uniswapV3SwapsCurrent:::pool"]=0
 
@@ -783,12 +783,12 @@ operation_parameters_maximum_occurrences["curveGetGaugeDepositsHistorical:::endB
 operation_parameters_maximum_occurrences["curveGetGaugeDepositsHistorical:::startDate"]=0
 operation_parameters_maximum_occurrences["curveGetGaugeDepositsHistorical:::endDate"]=0
 operation_parameters_maximum_occurrences["curveGetGaugeDepositsHistorical:::id"]=0
-operation_parameters_maximum_occurrences["curveGetGaugeLiquiditysHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["curveGetGaugeLiquiditysHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["curveGetGaugeLiquiditysHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["curveGetGaugeLiquiditysHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["curveGetGaugeLiquiditysHistorical:::id"]=0
-operation_parameters_maximum_occurrences["curveGetGaugeLiquiditysHistorical:::user"]=0
+operation_parameters_maximum_occurrences["curveGetGaugeLiquiditiesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugeLiquiditiesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["curveGetGaugeLiquiditiesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugeLiquiditiesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["curveGetGaugeLiquiditiesHistorical:::id"]=0
+operation_parameters_maximum_occurrences["curveGetGaugeLiquiditiesHistorical:::user"]=0
 operation_parameters_maximum_occurrences["curveGetGaugeTotalWeightsHistorical:::startBlock"]=0
 operation_parameters_maximum_occurrences["curveGetGaugeTotalWeightsHistorical:::endBlock"]=0
 operation_parameters_maximum_occurrences["curveGetGaugeTotalWeightsHistorical:::startDate"]=0
@@ -909,11 +909,11 @@ operation_parameters_maximum_occurrences["curveGetWeeklyVolumesHistorical:::endD
 operation_parameters_maximum_occurrences["curveGetWeeklyVolumesHistorical:::id"]=0
 operation_parameters_maximum_occurrences["curveGetWeeklyVolumesHistorical:::pool"]=0
 operation_parameters_maximum_occurrences["curvePoolsCurrent:::id"]=0
-operation_parameters_maximum_occurrences["dexGetBatchsHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["dexGetBatchsHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["dexGetBatchsHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["dexGetBatchsHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["dexGetBatchsHistorical:::id"]=0
+operation_parameters_maximum_occurrences["dexGetBatchesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["dexGetBatchesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["dexGetBatchesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["dexGetBatchesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["dexGetBatchesHistorical:::id"]=0
 operation_parameters_maximum_occurrences["dexGetDepositsHistorical:::startBlock"]=0
 operation_parameters_maximum_occurrences["dexGetDepositsHistorical:::endBlock"]=0
 operation_parameters_maximum_occurrences["dexGetDepositsHistorical:::startDate"]=0
@@ -937,11 +937,11 @@ operation_parameters_maximum_occurrences["dexGetSolutionsHistorical:::endBlock"]
 operation_parameters_maximum_occurrences["dexGetSolutionsHistorical:::startDate"]=0
 operation_parameters_maximum_occurrences["dexGetSolutionsHistorical:::endDate"]=0
 operation_parameters_maximum_occurrences["dexGetSolutionsHistorical:::id"]=0
-operation_parameters_maximum_occurrences["dexGetStatssHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["dexGetStatssHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["dexGetStatssHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["dexGetStatssHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["dexGetStatssHistorical:::id"]=0
+operation_parameters_maximum_occurrences["dexGetStatsHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["dexGetStatsHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["dexGetStatsHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["dexGetStatsHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["dexGetStatsHistorical:::id"]=0
 operation_parameters_maximum_occurrences["dexGetTokensHistorical:::startBlock"]=0
 operation_parameters_maximum_occurrences["dexGetTokensHistorical:::endBlock"]=0
 operation_parameters_maximum_occurrences["dexGetTokensHistorical:::startDate"]=0
@@ -985,21 +985,21 @@ operation_parameters_maximum_occurrences["sushiswapGetBurnsHistorical:::startDat
 operation_parameters_maximum_occurrences["sushiswapGetBurnsHistorical:::endDate"]=0
 operation_parameters_maximum_occurrences["sushiswapGetBurnsHistorical:::id"]=0
 operation_parameters_maximum_occurrences["sushiswapGetBurnsHistorical:::pair"]=0
-operation_parameters_maximum_occurrences["sushiswapGetDayDatasHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["sushiswapGetDayDatasHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["sushiswapGetDayDatasHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["sushiswapGetDayDatasHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["sushiswapGetDayDatasHistorical:::id"]=0
-operation_parameters_maximum_occurrences["sushiswapGetFactorysHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["sushiswapGetFactorysHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["sushiswapGetFactorysHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["sushiswapGetFactorysHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["sushiswapGetFactorysHistorical:::id"]=0
-operation_parameters_maximum_occurrences["sushiswapGetHourDatasHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["sushiswapGetHourDatasHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["sushiswapGetHourDatasHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["sushiswapGetHourDatasHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["sushiswapGetHourDatasHistorical:::id"]=0
+operation_parameters_maximum_occurrences["sushiswapGetDayDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["sushiswapGetDayDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["sushiswapGetDayDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetDayDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetDayDataHistorical:::id"]=0
+operation_parameters_maximum_occurrences["sushiswapGetFactoriesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["sushiswapGetFactoriesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["sushiswapGetFactoriesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetFactoriesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetFactoriesHistorical:::id"]=0
+operation_parameters_maximum_occurrences["sushiswapGetHourDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["sushiswapGetHourDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["sushiswapGetHourDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetHourDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetHourDataHistorical:::id"]=0
 operation_parameters_maximum_occurrences["sushiswapGetLiquidityPositionSnapshotsHistorical:::startBlock"]=0
 operation_parameters_maximum_occurrences["sushiswapGetLiquidityPositionSnapshotsHistorical:::endBlock"]=0
 operation_parameters_maximum_occurrences["sushiswapGetLiquidityPositionSnapshotsHistorical:::startDate"]=0
@@ -1020,20 +1020,20 @@ operation_parameters_maximum_occurrences["sushiswapGetMintsHistorical:::startDat
 operation_parameters_maximum_occurrences["sushiswapGetMintsHistorical:::endDate"]=0
 operation_parameters_maximum_occurrences["sushiswapGetMintsHistorical:::id"]=0
 operation_parameters_maximum_occurrences["sushiswapGetMintsHistorical:::pair"]=0
-operation_parameters_maximum_occurrences["sushiswapGetPairDayDatasHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["sushiswapGetPairDayDatasHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["sushiswapGetPairDayDatasHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["sushiswapGetPairDayDatasHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["sushiswapGetPairDayDatasHistorical:::id"]=0
-operation_parameters_maximum_occurrences["sushiswapGetPairDayDatasHistorical:::pair"]=0
-operation_parameters_maximum_occurrences["sushiswapGetPairDayDatasHistorical:::token_0"]=0
-operation_parameters_maximum_occurrences["sushiswapGetPairDayDatasHistorical:::token_1"]=0
-operation_parameters_maximum_occurrences["sushiswapGetPairHourDatasHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["sushiswapGetPairHourDatasHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["sushiswapGetPairHourDatasHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["sushiswapGetPairHourDatasHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["sushiswapGetPairHourDatasHistorical:::id"]=0
-operation_parameters_maximum_occurrences["sushiswapGetPairHourDatasHistorical:::pair"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPairDayDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPairDayDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPairDayDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPairDayDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPairDayDataHistorical:::id"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPairDayDataHistorical:::pair"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPairDayDataHistorical:::token_0"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPairDayDataHistorical:::token_1"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPairHourDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPairHourDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPairHourDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPairHourDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPairHourDataHistorical:::id"]=0
+operation_parameters_maximum_occurrences["sushiswapGetPairHourDataHistorical:::pair"]=0
 operation_parameters_maximum_occurrences["sushiswapGetPairsHistorical:::startBlock"]=0
 operation_parameters_maximum_occurrences["sushiswapGetPairsHistorical:::endBlock"]=0
 operation_parameters_maximum_occurrences["sushiswapGetPairsHistorical:::startDate"]=0
@@ -1048,11 +1048,11 @@ operation_parameters_maximum_occurrences["sushiswapGetSwapsHistorical:::startDat
 operation_parameters_maximum_occurrences["sushiswapGetSwapsHistorical:::endDate"]=0
 operation_parameters_maximum_occurrences["sushiswapGetSwapsHistorical:::id"]=0
 operation_parameters_maximum_occurrences["sushiswapGetSwapsHistorical:::pair"]=0
-operation_parameters_maximum_occurrences["sushiswapGetTokenDayDatasHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["sushiswapGetTokenDayDatasHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["sushiswapGetTokenDayDatasHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["sushiswapGetTokenDayDatasHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["sushiswapGetTokenDayDatasHistorical:::id"]=0
+operation_parameters_maximum_occurrences["sushiswapGetTokenDayDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["sushiswapGetTokenDayDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["sushiswapGetTokenDayDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetTokenDayDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["sushiswapGetTokenDayDataHistorical:::id"]=0
 operation_parameters_maximum_occurrences["sushiswapGetTokensHistorical:::startBlock"]=0
 operation_parameters_maximum_occurrences["sushiswapGetTokensHistorical:::endBlock"]=0
 operation_parameters_maximum_occurrences["sushiswapGetTokensHistorical:::startDate"]=0
@@ -1103,19 +1103,19 @@ operation_parameters_maximum_occurrences["uniswapV2GetMintsHistorical:::startDat
 operation_parameters_maximum_occurrences["uniswapV2GetMintsHistorical:::endDate"]=0
 operation_parameters_maximum_occurrences["uniswapV2GetMintsHistorical:::id"]=0
 operation_parameters_maximum_occurrences["uniswapV2GetMintsHistorical:::pair"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetPairDayDatasHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetPairDayDatasHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetPairDayDatasHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetPairDayDatasHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetPairDayDatasHistorical:::id"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetPairDayDatasHistorical:::token_0"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetPairDayDatasHistorical:::token_1"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetPairHourDatasHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetPairHourDatasHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetPairHourDatasHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetPairHourDatasHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetPairHourDatasHistorical:::id"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetPairHourDatasHistorical:::pair"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPairDayDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPairDayDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPairDayDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPairDayDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPairDayDataHistorical:::id"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPairDayDataHistorical:::token_0"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPairDayDataHistorical:::token_1"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPairHourDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPairHourDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPairHourDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPairHourDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPairHourDataHistorical:::id"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetPairHourDataHistorical:::pair"]=0
 operation_parameters_maximum_occurrences["uniswapV2GetPairsHistorical:::startBlock"]=0
 operation_parameters_maximum_occurrences["uniswapV2GetPairsHistorical:::endBlock"]=0
 operation_parameters_maximum_occurrences["uniswapV2GetPairsHistorical:::startDate"]=0
@@ -1129,11 +1129,11 @@ operation_parameters_maximum_occurrences["uniswapV2GetSwapsHistorical:::startDat
 operation_parameters_maximum_occurrences["uniswapV2GetSwapsHistorical:::endDate"]=0
 operation_parameters_maximum_occurrences["uniswapV2GetSwapsHistorical:::id"]=0
 operation_parameters_maximum_occurrences["uniswapV2GetSwapsHistorical:::pair"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetTokenDayDatasHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetTokenDayDatasHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetTokenDayDatasHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetTokenDayDatasHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetTokenDayDatasHistorical:::id"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTokenDayDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTokenDayDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTokenDayDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTokenDayDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetTokenDayDataHistorical:::id"]=0
 operation_parameters_maximum_occurrences["uniswapV2GetTokensHistorical:::startBlock"]=0
 operation_parameters_maximum_occurrences["uniswapV2GetTokensHistorical:::endBlock"]=0
 operation_parameters_maximum_occurrences["uniswapV2GetTokensHistorical:::startDate"]=0
@@ -1146,16 +1146,16 @@ operation_parameters_maximum_occurrences["uniswapV2GetTransactionsHistorical:::e
 operation_parameters_maximum_occurrences["uniswapV2GetTransactionsHistorical:::startDate"]=0
 operation_parameters_maximum_occurrences["uniswapV2GetTransactionsHistorical:::endDate"]=0
 operation_parameters_maximum_occurrences["uniswapV2GetTransactionsHistorical:::id"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetUniswapDayDatasHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetUniswapDayDatasHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetUniswapDayDatasHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetUniswapDayDatasHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetUniswapDayDatasHistorical:::id"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetUniswapFactorysHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetUniswapFactorysHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetUniswapFactorysHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetUniswapFactorysHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["uniswapV2GetUniswapFactorysHistorical:::id"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetUniswapDayDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetUniswapDayDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetUniswapDayDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetUniswapDayDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetUniswapDayDataHistorical:::id"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetUniswapFactoriesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetUniswapFactoriesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetUniswapFactoriesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetUniswapFactoriesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV2GetUniswapFactoriesHistorical:::id"]=0
 operation_parameters_maximum_occurrences["uniswapV2GetUsersHistorical:::startBlock"]=0
 operation_parameters_maximum_occurrences["uniswapV2GetUsersHistorical:::endBlock"]=0
 operation_parameters_maximum_occurrences["uniswapV2GetUsersHistorical:::startDate"]=0
@@ -1176,11 +1176,11 @@ operation_parameters_maximum_occurrences["uniswapV3GetBurnsHistorical:::id"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetBurnsHistorical:::pool"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetBurnsHistorical:::token_0"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetBurnsHistorical:::token_1"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetFactorysHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetFactorysHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetFactorysHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetFactorysHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetFactorysHistorical:::id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetFactoriesHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetFactoriesHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetFactoriesHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetFactoriesHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetFactoriesHistorical:::id"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetMintsHistorical:::startBlock"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetMintsHistorical:::endBlock"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetMintsHistorical:::startDate"]=0
@@ -1189,18 +1189,18 @@ operation_parameters_maximum_occurrences["uniswapV3GetMintsHistorical:::id"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetMintsHistorical:::pool"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetMintsHistorical:::token_0"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetMintsHistorical:::token_1"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetPoolDayDatasHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetPoolDayDatasHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetPoolDayDatasHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetPoolDayDatasHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetPoolDayDatasHistorical:::id"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetPoolDayDatasHistorical:::pool"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetPoolHourDatasHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetPoolHourDatasHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetPoolHourDatasHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetPoolHourDatasHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetPoolHourDatasHistorical:::id"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetPoolHourDatasHistorical:::pool"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolDayDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolDayDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolDayDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolDayDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolDayDataHistorical:::id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolDayDataHistorical:::pool"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolHourDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolHourDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolHourDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolHourDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolHourDataHistorical:::id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetPoolHourDataHistorical:::pool"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetPoolsHistorical:::startBlock"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetPoolsHistorical:::endBlock"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetPoolsHistorical:::startDate"]=0
@@ -1230,28 +1230,28 @@ operation_parameters_maximum_occurrences["uniswapV3GetSwapsHistorical:::id"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetSwapsHistorical:::pool"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetSwapsHistorical:::token_0"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetSwapsHistorical:::token_1"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetTickDayDatasHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetTickDayDatasHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetTickDayDatasHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetTickDayDatasHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetTickDayDatasHistorical:::id"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetTickDayDatasHistorical:::pool"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTickDayDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTickDayDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTickDayDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTickDayDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTickDayDataHistorical:::id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTickDayDataHistorical:::pool"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetTicksHistorical:::startBlock"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetTicksHistorical:::endBlock"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetTicksHistorical:::startDate"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetTicksHistorical:::endDate"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetTicksHistorical:::id"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetTicksHistorical:::pool"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetTokenHourDatasHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetTokenHourDatasHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetTokenHourDatasHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetTokenHourDatasHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetTokenHourDatasHistorical:::id"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetTokenV3DayDatasHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetTokenV3DayDatasHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetTokenV3DayDatasHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetTokenV3DayDatasHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetTokenV3DayDatasHistorical:::id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokenHourDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokenHourDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokenHourDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokenHourDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokenHourDataHistorical:::id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokenV3DayDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokenV3DayDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokenV3DayDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokenV3DayDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetTokenV3DayDataHistorical:::id"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetTokensHistorical:::startBlock"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetTokensHistorical:::endBlock"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetTokensHistorical:::startDate"]=0
@@ -1264,11 +1264,11 @@ operation_parameters_maximum_occurrences["uniswapV3GetTransactionsHistorical:::e
 operation_parameters_maximum_occurrences["uniswapV3GetTransactionsHistorical:::startDate"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetTransactionsHistorical:::endDate"]=0
 operation_parameters_maximum_occurrences["uniswapV3GetTransactionsHistorical:::id"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetUniswapDayDatasHistorical:::startBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetUniswapDayDatasHistorical:::endBlock"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetUniswapDayDatasHistorical:::startDate"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetUniswapDayDatasHistorical:::endDate"]=0
-operation_parameters_maximum_occurrences["uniswapV3GetUniswapDayDatasHistorical:::id"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetUniswapDayDataHistorical:::startBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetUniswapDayDataHistorical:::endBlock"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetUniswapDayDataHistorical:::startDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetUniswapDayDataHistorical:::endDate"]=0
+operation_parameters_maximum_occurrences["uniswapV3GetUniswapDayDataHistorical:::id"]=0
 operation_parameters_maximum_occurrences["uniswapV3PoolsCurrent:::id"]=0
 operation_parameters_maximum_occurrences["uniswapV3SwapsCurrent:::pool"]=0
 
@@ -1372,12 +1372,12 @@ operation_parameters_collection_type["curveGetGaugeDepositsHistorical:::endBlock
 operation_parameters_collection_type["curveGetGaugeDepositsHistorical:::startDate"]=""
 operation_parameters_collection_type["curveGetGaugeDepositsHistorical:::endDate"]=""
 operation_parameters_collection_type["curveGetGaugeDepositsHistorical:::id"]=""
-operation_parameters_collection_type["curveGetGaugeLiquiditysHistorical:::startBlock"]=""
-operation_parameters_collection_type["curveGetGaugeLiquiditysHistorical:::endBlock"]=""
-operation_parameters_collection_type["curveGetGaugeLiquiditysHistorical:::startDate"]=""
-operation_parameters_collection_type["curveGetGaugeLiquiditysHistorical:::endDate"]=""
-operation_parameters_collection_type["curveGetGaugeLiquiditysHistorical:::id"]=""
-operation_parameters_collection_type["curveGetGaugeLiquiditysHistorical:::user"]=""
+operation_parameters_collection_type["curveGetGaugeLiquiditiesHistorical:::startBlock"]=""
+operation_parameters_collection_type["curveGetGaugeLiquiditiesHistorical:::endBlock"]=""
+operation_parameters_collection_type["curveGetGaugeLiquiditiesHistorical:::startDate"]=""
+operation_parameters_collection_type["curveGetGaugeLiquiditiesHistorical:::endDate"]=""
+operation_parameters_collection_type["curveGetGaugeLiquiditiesHistorical:::id"]=""
+operation_parameters_collection_type["curveGetGaugeLiquiditiesHistorical:::user"]=""
 operation_parameters_collection_type["curveGetGaugeTotalWeightsHistorical:::startBlock"]=""
 operation_parameters_collection_type["curveGetGaugeTotalWeightsHistorical:::endBlock"]=""
 operation_parameters_collection_type["curveGetGaugeTotalWeightsHistorical:::startDate"]=""
@@ -1498,11 +1498,11 @@ operation_parameters_collection_type["curveGetWeeklyVolumesHistorical:::endDate"
 operation_parameters_collection_type["curveGetWeeklyVolumesHistorical:::id"]=""
 operation_parameters_collection_type["curveGetWeeklyVolumesHistorical:::pool"]=""
 operation_parameters_collection_type["curvePoolsCurrent:::id"]=""
-operation_parameters_collection_type["dexGetBatchsHistorical:::startBlock"]=""
-operation_parameters_collection_type["dexGetBatchsHistorical:::endBlock"]=""
-operation_parameters_collection_type["dexGetBatchsHistorical:::startDate"]=""
-operation_parameters_collection_type["dexGetBatchsHistorical:::endDate"]=""
-operation_parameters_collection_type["dexGetBatchsHistorical:::id"]=""
+operation_parameters_collection_type["dexGetBatchesHistorical:::startBlock"]=""
+operation_parameters_collection_type["dexGetBatchesHistorical:::endBlock"]=""
+operation_parameters_collection_type["dexGetBatchesHistorical:::startDate"]=""
+operation_parameters_collection_type["dexGetBatchesHistorical:::endDate"]=""
+operation_parameters_collection_type["dexGetBatchesHistorical:::id"]=""
 operation_parameters_collection_type["dexGetDepositsHistorical:::startBlock"]=""
 operation_parameters_collection_type["dexGetDepositsHistorical:::endBlock"]=""
 operation_parameters_collection_type["dexGetDepositsHistorical:::startDate"]=""
@@ -1526,11 +1526,11 @@ operation_parameters_collection_type["dexGetSolutionsHistorical:::endBlock"]=""
 operation_parameters_collection_type["dexGetSolutionsHistorical:::startDate"]=""
 operation_parameters_collection_type["dexGetSolutionsHistorical:::endDate"]=""
 operation_parameters_collection_type["dexGetSolutionsHistorical:::id"]=""
-operation_parameters_collection_type["dexGetStatssHistorical:::startBlock"]=""
-operation_parameters_collection_type["dexGetStatssHistorical:::endBlock"]=""
-operation_parameters_collection_type["dexGetStatssHistorical:::startDate"]=""
-operation_parameters_collection_type["dexGetStatssHistorical:::endDate"]=""
-operation_parameters_collection_type["dexGetStatssHistorical:::id"]=""
+operation_parameters_collection_type["dexGetStatsHistorical:::startBlock"]=""
+operation_parameters_collection_type["dexGetStatsHistorical:::endBlock"]=""
+operation_parameters_collection_type["dexGetStatsHistorical:::startDate"]=""
+operation_parameters_collection_type["dexGetStatsHistorical:::endDate"]=""
+operation_parameters_collection_type["dexGetStatsHistorical:::id"]=""
 operation_parameters_collection_type["dexGetTokensHistorical:::startBlock"]=""
 operation_parameters_collection_type["dexGetTokensHistorical:::endBlock"]=""
 operation_parameters_collection_type["dexGetTokensHistorical:::startDate"]=""
@@ -1574,21 +1574,21 @@ operation_parameters_collection_type["sushiswapGetBurnsHistorical:::startDate"]=
 operation_parameters_collection_type["sushiswapGetBurnsHistorical:::endDate"]=""
 operation_parameters_collection_type["sushiswapGetBurnsHistorical:::id"]=""
 operation_parameters_collection_type["sushiswapGetBurnsHistorical:::pair"]=""
-operation_parameters_collection_type["sushiswapGetDayDatasHistorical:::startBlock"]=""
-operation_parameters_collection_type["sushiswapGetDayDatasHistorical:::endBlock"]=""
-operation_parameters_collection_type["sushiswapGetDayDatasHistorical:::startDate"]=""
-operation_parameters_collection_type["sushiswapGetDayDatasHistorical:::endDate"]=""
-operation_parameters_collection_type["sushiswapGetDayDatasHistorical:::id"]=""
-operation_parameters_collection_type["sushiswapGetFactorysHistorical:::startBlock"]=""
-operation_parameters_collection_type["sushiswapGetFactorysHistorical:::endBlock"]=""
-operation_parameters_collection_type["sushiswapGetFactorysHistorical:::startDate"]=""
-operation_parameters_collection_type["sushiswapGetFactorysHistorical:::endDate"]=""
-operation_parameters_collection_type["sushiswapGetFactorysHistorical:::id"]=""
-operation_parameters_collection_type["sushiswapGetHourDatasHistorical:::startBlock"]=""
-operation_parameters_collection_type["sushiswapGetHourDatasHistorical:::endBlock"]=""
-operation_parameters_collection_type["sushiswapGetHourDatasHistorical:::startDate"]=""
-operation_parameters_collection_type["sushiswapGetHourDatasHistorical:::endDate"]=""
-operation_parameters_collection_type["sushiswapGetHourDatasHistorical:::id"]=""
+operation_parameters_collection_type["sushiswapGetDayDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["sushiswapGetDayDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["sushiswapGetDayDataHistorical:::startDate"]=""
+operation_parameters_collection_type["sushiswapGetDayDataHistorical:::endDate"]=""
+operation_parameters_collection_type["sushiswapGetDayDataHistorical:::id"]=""
+operation_parameters_collection_type["sushiswapGetFactoriesHistorical:::startBlock"]=""
+operation_parameters_collection_type["sushiswapGetFactoriesHistorical:::endBlock"]=""
+operation_parameters_collection_type["sushiswapGetFactoriesHistorical:::startDate"]=""
+operation_parameters_collection_type["sushiswapGetFactoriesHistorical:::endDate"]=""
+operation_parameters_collection_type["sushiswapGetFactoriesHistorical:::id"]=""
+operation_parameters_collection_type["sushiswapGetHourDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["sushiswapGetHourDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["sushiswapGetHourDataHistorical:::startDate"]=""
+operation_parameters_collection_type["sushiswapGetHourDataHistorical:::endDate"]=""
+operation_parameters_collection_type["sushiswapGetHourDataHistorical:::id"]=""
 operation_parameters_collection_type["sushiswapGetLiquidityPositionSnapshotsHistorical:::startBlock"]=""
 operation_parameters_collection_type["sushiswapGetLiquidityPositionSnapshotsHistorical:::endBlock"]=""
 operation_parameters_collection_type["sushiswapGetLiquidityPositionSnapshotsHistorical:::startDate"]=""
@@ -1609,20 +1609,20 @@ operation_parameters_collection_type["sushiswapGetMintsHistorical:::startDate"]=
 operation_parameters_collection_type["sushiswapGetMintsHistorical:::endDate"]=""
 operation_parameters_collection_type["sushiswapGetMintsHistorical:::id"]=""
 operation_parameters_collection_type["sushiswapGetMintsHistorical:::pair"]=""
-operation_parameters_collection_type["sushiswapGetPairDayDatasHistorical:::startBlock"]=""
-operation_parameters_collection_type["sushiswapGetPairDayDatasHistorical:::endBlock"]=""
-operation_parameters_collection_type["sushiswapGetPairDayDatasHistorical:::startDate"]=""
-operation_parameters_collection_type["sushiswapGetPairDayDatasHistorical:::endDate"]=""
-operation_parameters_collection_type["sushiswapGetPairDayDatasHistorical:::id"]=""
-operation_parameters_collection_type["sushiswapGetPairDayDatasHistorical:::pair"]=""
-operation_parameters_collection_type["sushiswapGetPairDayDatasHistorical:::token_0"]=""
-operation_parameters_collection_type["sushiswapGetPairDayDatasHistorical:::token_1"]=""
-operation_parameters_collection_type["sushiswapGetPairHourDatasHistorical:::startBlock"]=""
-operation_parameters_collection_type["sushiswapGetPairHourDatasHistorical:::endBlock"]=""
-operation_parameters_collection_type["sushiswapGetPairHourDatasHistorical:::startDate"]=""
-operation_parameters_collection_type["sushiswapGetPairHourDatasHistorical:::endDate"]=""
-operation_parameters_collection_type["sushiswapGetPairHourDatasHistorical:::id"]=""
-operation_parameters_collection_type["sushiswapGetPairHourDatasHistorical:::pair"]=""
+operation_parameters_collection_type["sushiswapGetPairDayDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["sushiswapGetPairDayDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["sushiswapGetPairDayDataHistorical:::startDate"]=""
+operation_parameters_collection_type["sushiswapGetPairDayDataHistorical:::endDate"]=""
+operation_parameters_collection_type["sushiswapGetPairDayDataHistorical:::id"]=""
+operation_parameters_collection_type["sushiswapGetPairDayDataHistorical:::pair"]=""
+operation_parameters_collection_type["sushiswapGetPairDayDataHistorical:::token_0"]=""
+operation_parameters_collection_type["sushiswapGetPairDayDataHistorical:::token_1"]=""
+operation_parameters_collection_type["sushiswapGetPairHourDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["sushiswapGetPairHourDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["sushiswapGetPairHourDataHistorical:::startDate"]=""
+operation_parameters_collection_type["sushiswapGetPairHourDataHistorical:::endDate"]=""
+operation_parameters_collection_type["sushiswapGetPairHourDataHistorical:::id"]=""
+operation_parameters_collection_type["sushiswapGetPairHourDataHistorical:::pair"]=""
 operation_parameters_collection_type["sushiswapGetPairsHistorical:::startBlock"]=""
 operation_parameters_collection_type["sushiswapGetPairsHistorical:::endBlock"]=""
 operation_parameters_collection_type["sushiswapGetPairsHistorical:::startDate"]=""
@@ -1637,11 +1637,11 @@ operation_parameters_collection_type["sushiswapGetSwapsHistorical:::startDate"]=
 operation_parameters_collection_type["sushiswapGetSwapsHistorical:::endDate"]=""
 operation_parameters_collection_type["sushiswapGetSwapsHistorical:::id"]=""
 operation_parameters_collection_type["sushiswapGetSwapsHistorical:::pair"]=""
-operation_parameters_collection_type["sushiswapGetTokenDayDatasHistorical:::startBlock"]=""
-operation_parameters_collection_type["sushiswapGetTokenDayDatasHistorical:::endBlock"]=""
-operation_parameters_collection_type["sushiswapGetTokenDayDatasHistorical:::startDate"]=""
-operation_parameters_collection_type["sushiswapGetTokenDayDatasHistorical:::endDate"]=""
-operation_parameters_collection_type["sushiswapGetTokenDayDatasHistorical:::id"]=""
+operation_parameters_collection_type["sushiswapGetTokenDayDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["sushiswapGetTokenDayDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["sushiswapGetTokenDayDataHistorical:::startDate"]=""
+operation_parameters_collection_type["sushiswapGetTokenDayDataHistorical:::endDate"]=""
+operation_parameters_collection_type["sushiswapGetTokenDayDataHistorical:::id"]=""
 operation_parameters_collection_type["sushiswapGetTokensHistorical:::startBlock"]=""
 operation_parameters_collection_type["sushiswapGetTokensHistorical:::endBlock"]=""
 operation_parameters_collection_type["sushiswapGetTokensHistorical:::startDate"]=""
@@ -1692,19 +1692,19 @@ operation_parameters_collection_type["uniswapV2GetMintsHistorical:::startDate"]=
 operation_parameters_collection_type["uniswapV2GetMintsHistorical:::endDate"]=""
 operation_parameters_collection_type["uniswapV2GetMintsHistorical:::id"]=""
 operation_parameters_collection_type["uniswapV2GetMintsHistorical:::pair"]=""
-operation_parameters_collection_type["uniswapV2GetPairDayDatasHistorical:::startBlock"]=""
-operation_parameters_collection_type["uniswapV2GetPairDayDatasHistorical:::endBlock"]=""
-operation_parameters_collection_type["uniswapV2GetPairDayDatasHistorical:::startDate"]=""
-operation_parameters_collection_type["uniswapV2GetPairDayDatasHistorical:::endDate"]=""
-operation_parameters_collection_type["uniswapV2GetPairDayDatasHistorical:::id"]=""
-operation_parameters_collection_type["uniswapV2GetPairDayDatasHistorical:::token_0"]=""
-operation_parameters_collection_type["uniswapV2GetPairDayDatasHistorical:::token_1"]=""
-operation_parameters_collection_type["uniswapV2GetPairHourDatasHistorical:::startBlock"]=""
-operation_parameters_collection_type["uniswapV2GetPairHourDatasHistorical:::endBlock"]=""
-operation_parameters_collection_type["uniswapV2GetPairHourDatasHistorical:::startDate"]=""
-operation_parameters_collection_type["uniswapV2GetPairHourDatasHistorical:::endDate"]=""
-operation_parameters_collection_type["uniswapV2GetPairHourDatasHistorical:::id"]=""
-operation_parameters_collection_type["uniswapV2GetPairHourDatasHistorical:::pair"]=""
+operation_parameters_collection_type["uniswapV2GetPairDayDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetPairDayDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetPairDayDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetPairDayDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetPairDayDataHistorical:::id"]=""
+operation_parameters_collection_type["uniswapV2GetPairDayDataHistorical:::token_0"]=""
+operation_parameters_collection_type["uniswapV2GetPairDayDataHistorical:::token_1"]=""
+operation_parameters_collection_type["uniswapV2GetPairHourDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetPairHourDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetPairHourDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetPairHourDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetPairHourDataHistorical:::id"]=""
+operation_parameters_collection_type["uniswapV2GetPairHourDataHistorical:::pair"]=""
 operation_parameters_collection_type["uniswapV2GetPairsHistorical:::startBlock"]=""
 operation_parameters_collection_type["uniswapV2GetPairsHistorical:::endBlock"]=""
 operation_parameters_collection_type["uniswapV2GetPairsHistorical:::startDate"]=""
@@ -1718,11 +1718,11 @@ operation_parameters_collection_type["uniswapV2GetSwapsHistorical:::startDate"]=
 operation_parameters_collection_type["uniswapV2GetSwapsHistorical:::endDate"]=""
 operation_parameters_collection_type["uniswapV2GetSwapsHistorical:::id"]=""
 operation_parameters_collection_type["uniswapV2GetSwapsHistorical:::pair"]=""
-operation_parameters_collection_type["uniswapV2GetTokenDayDatasHistorical:::startBlock"]=""
-operation_parameters_collection_type["uniswapV2GetTokenDayDatasHistorical:::endBlock"]=""
-operation_parameters_collection_type["uniswapV2GetTokenDayDatasHistorical:::startDate"]=""
-operation_parameters_collection_type["uniswapV2GetTokenDayDatasHistorical:::endDate"]=""
-operation_parameters_collection_type["uniswapV2GetTokenDayDatasHistorical:::id"]=""
+operation_parameters_collection_type["uniswapV2GetTokenDayDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetTokenDayDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetTokenDayDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetTokenDayDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetTokenDayDataHistorical:::id"]=""
 operation_parameters_collection_type["uniswapV2GetTokensHistorical:::startBlock"]=""
 operation_parameters_collection_type["uniswapV2GetTokensHistorical:::endBlock"]=""
 operation_parameters_collection_type["uniswapV2GetTokensHistorical:::startDate"]=""
@@ -1735,16 +1735,16 @@ operation_parameters_collection_type["uniswapV2GetTransactionsHistorical:::endBl
 operation_parameters_collection_type["uniswapV2GetTransactionsHistorical:::startDate"]=""
 operation_parameters_collection_type["uniswapV2GetTransactionsHistorical:::endDate"]=""
 operation_parameters_collection_type["uniswapV2GetTransactionsHistorical:::id"]=""
-operation_parameters_collection_type["uniswapV2GetUniswapDayDatasHistorical:::startBlock"]=""
-operation_parameters_collection_type["uniswapV2GetUniswapDayDatasHistorical:::endBlock"]=""
-operation_parameters_collection_type["uniswapV2GetUniswapDayDatasHistorical:::startDate"]=""
-operation_parameters_collection_type["uniswapV2GetUniswapDayDatasHistorical:::endDate"]=""
-operation_parameters_collection_type["uniswapV2GetUniswapDayDatasHistorical:::id"]=""
-operation_parameters_collection_type["uniswapV2GetUniswapFactorysHistorical:::startBlock"]=""
-operation_parameters_collection_type["uniswapV2GetUniswapFactorysHistorical:::endBlock"]=""
-operation_parameters_collection_type["uniswapV2GetUniswapFactorysHistorical:::startDate"]=""
-operation_parameters_collection_type["uniswapV2GetUniswapFactorysHistorical:::endDate"]=""
-operation_parameters_collection_type["uniswapV2GetUniswapFactorysHistorical:::id"]=""
+operation_parameters_collection_type["uniswapV2GetUniswapDayDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetUniswapDayDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetUniswapDayDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetUniswapDayDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetUniswapDayDataHistorical:::id"]=""
+operation_parameters_collection_type["uniswapV2GetUniswapFactoriesHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV2GetUniswapFactoriesHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV2GetUniswapFactoriesHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV2GetUniswapFactoriesHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV2GetUniswapFactoriesHistorical:::id"]=""
 operation_parameters_collection_type["uniswapV2GetUsersHistorical:::startBlock"]=""
 operation_parameters_collection_type["uniswapV2GetUsersHistorical:::endBlock"]=""
 operation_parameters_collection_type["uniswapV2GetUsersHistorical:::startDate"]=""
@@ -1765,11 +1765,11 @@ operation_parameters_collection_type["uniswapV3GetBurnsHistorical:::id"]=""
 operation_parameters_collection_type["uniswapV3GetBurnsHistorical:::pool"]=""
 operation_parameters_collection_type["uniswapV3GetBurnsHistorical:::token_0"]=""
 operation_parameters_collection_type["uniswapV3GetBurnsHistorical:::token_1"]=""
-operation_parameters_collection_type["uniswapV3GetFactorysHistorical:::startBlock"]=""
-operation_parameters_collection_type["uniswapV3GetFactorysHistorical:::endBlock"]=""
-operation_parameters_collection_type["uniswapV3GetFactorysHistorical:::startDate"]=""
-operation_parameters_collection_type["uniswapV3GetFactorysHistorical:::endDate"]=""
-operation_parameters_collection_type["uniswapV3GetFactorysHistorical:::id"]=""
+operation_parameters_collection_type["uniswapV3GetFactoriesHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetFactoriesHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetFactoriesHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetFactoriesHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetFactoriesHistorical:::id"]=""
 operation_parameters_collection_type["uniswapV3GetMintsHistorical:::startBlock"]=""
 operation_parameters_collection_type["uniswapV3GetMintsHistorical:::endBlock"]=""
 operation_parameters_collection_type["uniswapV3GetMintsHistorical:::startDate"]=""
@@ -1778,18 +1778,18 @@ operation_parameters_collection_type["uniswapV3GetMintsHistorical:::id"]=""
 operation_parameters_collection_type["uniswapV3GetMintsHistorical:::pool"]=""
 operation_parameters_collection_type["uniswapV3GetMintsHistorical:::token_0"]=""
 operation_parameters_collection_type["uniswapV3GetMintsHistorical:::token_1"]=""
-operation_parameters_collection_type["uniswapV3GetPoolDayDatasHistorical:::startBlock"]=""
-operation_parameters_collection_type["uniswapV3GetPoolDayDatasHistorical:::endBlock"]=""
-operation_parameters_collection_type["uniswapV3GetPoolDayDatasHistorical:::startDate"]=""
-operation_parameters_collection_type["uniswapV3GetPoolDayDatasHistorical:::endDate"]=""
-operation_parameters_collection_type["uniswapV3GetPoolDayDatasHistorical:::id"]=""
-operation_parameters_collection_type["uniswapV3GetPoolDayDatasHistorical:::pool"]=""
-operation_parameters_collection_type["uniswapV3GetPoolHourDatasHistorical:::startBlock"]=""
-operation_parameters_collection_type["uniswapV3GetPoolHourDatasHistorical:::endBlock"]=""
-operation_parameters_collection_type["uniswapV3GetPoolHourDatasHistorical:::startDate"]=""
-operation_parameters_collection_type["uniswapV3GetPoolHourDatasHistorical:::endDate"]=""
-operation_parameters_collection_type["uniswapV3GetPoolHourDatasHistorical:::id"]=""
-operation_parameters_collection_type["uniswapV3GetPoolHourDatasHistorical:::pool"]=""
+operation_parameters_collection_type["uniswapV3GetPoolDayDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetPoolDayDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetPoolDayDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetPoolDayDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetPoolDayDataHistorical:::id"]=""
+operation_parameters_collection_type["uniswapV3GetPoolDayDataHistorical:::pool"]=""
+operation_parameters_collection_type["uniswapV3GetPoolHourDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetPoolHourDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetPoolHourDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetPoolHourDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetPoolHourDataHistorical:::id"]=""
+operation_parameters_collection_type["uniswapV3GetPoolHourDataHistorical:::pool"]=""
 operation_parameters_collection_type["uniswapV3GetPoolsHistorical:::startBlock"]=""
 operation_parameters_collection_type["uniswapV3GetPoolsHistorical:::endBlock"]=""
 operation_parameters_collection_type["uniswapV3GetPoolsHistorical:::startDate"]=""
@@ -1819,28 +1819,28 @@ operation_parameters_collection_type["uniswapV3GetSwapsHistorical:::id"]=""
 operation_parameters_collection_type["uniswapV3GetSwapsHistorical:::pool"]=""
 operation_parameters_collection_type["uniswapV3GetSwapsHistorical:::token_0"]=""
 operation_parameters_collection_type["uniswapV3GetSwapsHistorical:::token_1"]=""
-operation_parameters_collection_type["uniswapV3GetTickDayDatasHistorical:::startBlock"]=""
-operation_parameters_collection_type["uniswapV3GetTickDayDatasHistorical:::endBlock"]=""
-operation_parameters_collection_type["uniswapV3GetTickDayDatasHistorical:::startDate"]=""
-operation_parameters_collection_type["uniswapV3GetTickDayDatasHistorical:::endDate"]=""
-operation_parameters_collection_type["uniswapV3GetTickDayDatasHistorical:::id"]=""
-operation_parameters_collection_type["uniswapV3GetTickDayDatasHistorical:::pool"]=""
+operation_parameters_collection_type["uniswapV3GetTickDayDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetTickDayDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetTickDayDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetTickDayDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetTickDayDataHistorical:::id"]=""
+operation_parameters_collection_type["uniswapV3GetTickDayDataHistorical:::pool"]=""
 operation_parameters_collection_type["uniswapV3GetTicksHistorical:::startBlock"]=""
 operation_parameters_collection_type["uniswapV3GetTicksHistorical:::endBlock"]=""
 operation_parameters_collection_type["uniswapV3GetTicksHistorical:::startDate"]=""
 operation_parameters_collection_type["uniswapV3GetTicksHistorical:::endDate"]=""
 operation_parameters_collection_type["uniswapV3GetTicksHistorical:::id"]=""
 operation_parameters_collection_type["uniswapV3GetTicksHistorical:::pool"]=""
-operation_parameters_collection_type["uniswapV3GetTokenHourDatasHistorical:::startBlock"]=""
-operation_parameters_collection_type["uniswapV3GetTokenHourDatasHistorical:::endBlock"]=""
-operation_parameters_collection_type["uniswapV3GetTokenHourDatasHistorical:::startDate"]=""
-operation_parameters_collection_type["uniswapV3GetTokenHourDatasHistorical:::endDate"]=""
-operation_parameters_collection_type["uniswapV3GetTokenHourDatasHistorical:::id"]=""
-operation_parameters_collection_type["uniswapV3GetTokenV3DayDatasHistorical:::startBlock"]=""
-operation_parameters_collection_type["uniswapV3GetTokenV3DayDatasHistorical:::endBlock"]=""
-operation_parameters_collection_type["uniswapV3GetTokenV3DayDatasHistorical:::startDate"]=""
-operation_parameters_collection_type["uniswapV3GetTokenV3DayDatasHistorical:::endDate"]=""
-operation_parameters_collection_type["uniswapV3GetTokenV3DayDatasHistorical:::id"]=""
+operation_parameters_collection_type["uniswapV3GetTokenHourDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetTokenHourDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetTokenHourDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetTokenHourDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetTokenHourDataHistorical:::id"]=""
+operation_parameters_collection_type["uniswapV3GetTokenV3DayDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetTokenV3DayDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetTokenV3DayDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetTokenV3DayDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetTokenV3DayDataHistorical:::id"]=""
 operation_parameters_collection_type["uniswapV3GetTokensHistorical:::startBlock"]=""
 operation_parameters_collection_type["uniswapV3GetTokensHistorical:::endBlock"]=""
 operation_parameters_collection_type["uniswapV3GetTokensHistorical:::startDate"]=""
@@ -1853,11 +1853,11 @@ operation_parameters_collection_type["uniswapV3GetTransactionsHistorical:::endBl
 operation_parameters_collection_type["uniswapV3GetTransactionsHistorical:::startDate"]=""
 operation_parameters_collection_type["uniswapV3GetTransactionsHistorical:::endDate"]=""
 operation_parameters_collection_type["uniswapV3GetTransactionsHistorical:::id"]=""
-operation_parameters_collection_type["uniswapV3GetUniswapDayDatasHistorical:::startBlock"]=""
-operation_parameters_collection_type["uniswapV3GetUniswapDayDatasHistorical:::endBlock"]=""
-operation_parameters_collection_type["uniswapV3GetUniswapDayDatasHistorical:::startDate"]=""
-operation_parameters_collection_type["uniswapV3GetUniswapDayDatasHistorical:::endDate"]=""
-operation_parameters_collection_type["uniswapV3GetUniswapDayDatasHistorical:::id"]=""
+operation_parameters_collection_type["uniswapV3GetUniswapDayDataHistorical:::startBlock"]=""
+operation_parameters_collection_type["uniswapV3GetUniswapDayDataHistorical:::endBlock"]=""
+operation_parameters_collection_type["uniswapV3GetUniswapDayDataHistorical:::startDate"]=""
+operation_parameters_collection_type["uniswapV3GetUniswapDayDataHistorical:::endDate"]=""
+operation_parameters_collection_type["uniswapV3GetUniswapDayDataHistorical:::id"]=""
 operation_parameters_collection_type["uniswapV3PoolsCurrent:::id"]=""
 operation_parameters_collection_type["uniswapV3SwapsCurrent:::pool"]=""
 
@@ -2270,7 +2270,7 @@ read -r -d '' ops <<EOF
   ${CYAN}curveExchangesCurrent${OFF};Exchanges (current)
   ${CYAN}curveFeeChangeLogsCurrent${OFF};FeeChangeLogs (current)
   ${CYAN}curveGaugeDepositsCurrent${OFF};GaugeDeposits (current)
-  ${CYAN}curveGaugeLiquiditysCurrent${OFF};GaugeLiquiditys (current)
+  ${CYAN}curveGaugeLiquiditiesCurrent${OFF};GaugeLiquidities (current)
   ${CYAN}curveGaugeTotalWeightsCurrent${OFF};GaugeTotalWeights (current)
   ${CYAN}curveGaugeTypeWeightsCurrent${OFF};GaugeTypeWeights (current)
   ${CYAN}curveGaugeTypesCurrent${OFF};GaugeTypes (current)
@@ -2289,7 +2289,7 @@ read -r -d '' ops <<EOF
   ${CYAN}curveGetExchangesHistorical${OFF};Exchanges (historical)
   ${CYAN}curveGetFeeChangeLogsHistorical${OFF};FeeChangeLogs (historical)
   ${CYAN}curveGetGaugeDepositsHistorical${OFF};GaugeDeposits (historical)
-  ${CYAN}curveGetGaugeLiquiditysHistorical${OFF};GaugeLiquiditys (historical)
+  ${CYAN}curveGetGaugeLiquiditiesHistorical${OFF};GaugeLiquidities (historical)
   ${CYAN}curveGetGaugeTotalWeightsHistorical${OFF};GaugeTotalWeights (historical)
   ${CYAN}curveGetGaugeTypeWeightsHistorical${OFF};GaugeTypeWeights (historical)
   ${CYAN}curveGetGaugeTypesHistorical${OFF};GaugeTypes (historical)
@@ -2328,14 +2328,14 @@ echo "  $ops" | column -t -s ';'
     echo ""
     echo -e "${BOLD}${WHITE}[dex]${OFF}"
 read -r -d '' ops <<EOF
-  ${CYAN}dexBatchsCurrent${OFF};Batchs (current)
+  ${CYAN}dexBatchesCurrent${OFF};Batches (current)
   ${CYAN}dexDepositsCurrent${OFF};Deposits (current)
-  ${CYAN}dexGetBatchsHistorical${OFF};Batchs (historical)
+  ${CYAN}dexGetBatchesHistorical${OFF};Batches (historical)
   ${CYAN}dexGetDepositsHistorical${OFF};Deposits (historical)
   ${CYAN}dexGetOrdersHistorical${OFF};Orders (historical)
   ${CYAN}dexGetPricesHistorical${OFF};Prices (historical)
   ${CYAN}dexGetSolutionsHistorical${OFF};Solutions (historical)
-  ${CYAN}dexGetStatssHistorical${OFF};Statss (historical)
+  ${CYAN}dexGetStatsHistorical${OFF};Stats (historical)
   ${CYAN}dexGetTokensHistorical${OFF};Tokens (historical)
   ${CYAN}dexGetTradesHistorical${OFF};Trades (historical)
   ${CYAN}dexGetUsersHistorical${OFF};Users (historical)
@@ -2344,7 +2344,7 @@ read -r -d '' ops <<EOF
   ${CYAN}dexOrdersCurrent${OFF};Orders (current)
   ${CYAN}dexPricesCurrent${OFF};Prices (current)
   ${CYAN}dexSolutionsCurrent${OFF};Solutions (current)
-  ${CYAN}dexStatssCurrent${OFF};Statss (current)
+  ${CYAN}dexStatsCurrent${OFF};Stats (current)
   ${CYAN}dexTokensCurrent${OFF};Tokens (current)
   ${CYAN}dexTradesCurrent${OFF};Trades (current)
   ${CYAN}dexUsersCurrent${OFF};Users (current)
@@ -2357,33 +2357,33 @@ echo "  $ops" | column -t -s ';'
 read -r -d '' ops <<EOF
   ${CYAN}sushiswapBundlesCurrent${OFF};Bundles (current)
   ${CYAN}sushiswapBurnsCurrent${OFF};Burns (current)
-  ${CYAN}sushiswapDayDatasCurrent${OFF};DayDatas (current)
-  ${CYAN}sushiswapFactorysCurrent${OFF};Factorys (current)
+  ${CYAN}sushiswapDayDataCurrent${OFF};DayData (current)
+  ${CYAN}sushiswapFactoriesCurrent${OFF};Factories (current)
   ${CYAN}sushiswapGetBundlesHistorical${OFF};Bundles (historical)
   ${CYAN}sushiswapGetBurnsHistorical${OFF};Burns (historical)
-  ${CYAN}sushiswapGetDayDatasHistorical${OFF};DayDatas (historical)
-  ${CYAN}sushiswapGetFactorysHistorical${OFF};Factorys (historical)
-  ${CYAN}sushiswapGetHourDatasHistorical${OFF};HourDatas (historical)
+  ${CYAN}sushiswapGetDayDataHistorical${OFF};DayData (historical)
+  ${CYAN}sushiswapGetFactoriesHistorical${OFF};Factories (historical)
+  ${CYAN}sushiswapGetHourDataHistorical${OFF};HourData (historical)
   ${CYAN}sushiswapGetLiquidityPositionSnapshotsHistorical${OFF};LiquidityPositionSnapshots (historical)
   ${CYAN}sushiswapGetLiquidityPositionsHistorical${OFF};LiquidityPositions (historical)
   ${CYAN}sushiswapGetMintsHistorical${OFF};Mints (historical)
-  ${CYAN}sushiswapGetPairDayDatasHistorical${OFF};PairDayDatas (historical)
-  ${CYAN}sushiswapGetPairHourDatasHistorical${OFF};PairHourDatas (historical)
+  ${CYAN}sushiswapGetPairDayDataHistorical${OFF};PairDayData (historical)
+  ${CYAN}sushiswapGetPairHourDataHistorical${OFF};PairHourData (historical)
   ${CYAN}sushiswapGetPairsHistorical${OFF};Pairs (historical)
   ${CYAN}sushiswapGetSwapsHistorical${OFF};Swaps (historical)
-  ${CYAN}sushiswapGetTokenDayDatasHistorical${OFF};TokenDayDatas (historical)
+  ${CYAN}sushiswapGetTokenDayDataHistorical${OFF};TokenDayData (historical)
   ${CYAN}sushiswapGetTokensHistorical${OFF};Tokens (historical)
   ${CYAN}sushiswapGetTransactionsHistorical${OFF};Transactions (historical)
   ${CYAN}sushiswapGetUsersHistorical${OFF};Users (historical)
-  ${CYAN}sushiswapHourDatasCurrent${OFF};HourDatas (current)
+  ${CYAN}sushiswapHourDataCurrent${OFF};HourData (current)
   ${CYAN}sushiswapLiquidityPositionSnapshotsCurrent${OFF};LiquidityPositionSnapshots (current)
   ${CYAN}sushiswapLiquidityPositionsCurrent${OFF};LiquidityPositions (current)
   ${CYAN}sushiswapMintsCurrent${OFF};Mints (current)
-  ${CYAN}sushiswapPairDayDatasCurrent${OFF};PairDayDatas (current)
-  ${CYAN}sushiswapPairHourDatasCurrent${OFF};PairHourDatas (current)
+  ${CYAN}sushiswapPairDayDataCurrent${OFF};PairDayData (current)
+  ${CYAN}sushiswapPairHourDataCurrent${OFF};PairHourData (current)
   ${CYAN}sushiswapPairsCurrent${OFF};Pairs (current)
   ${CYAN}sushiswapSwapsCurrent${OFF};Swaps (current)
-  ${CYAN}sushiswapTokenDayDatasCurrent${OFF};TokenDayDatas (current)
+  ${CYAN}sushiswapTokenDayDataCurrent${OFF};TokenDayData (current)
   ${CYAN}sushiswapTokensCurrent${OFF};Tokens (current)
   ${CYAN}sushiswapTransactionsCurrent${OFF};Transactions (current)
   ${CYAN}sushiswapUsersCurrent${OFF};Users (current)
@@ -2399,28 +2399,28 @@ read -r -d '' ops <<EOF
   ${CYAN}uniswapV2GetLiquidityPositionSnapshotsHistorical${OFF};LiquidityPositionSnapshots (historical)
   ${CYAN}uniswapV2GetLiquidityPositionsHistorical${OFF};LiquidityPositions (historical)
   ${CYAN}uniswapV2GetMintsHistorical${OFF};Mints (historical)
-  ${CYAN}uniswapV2GetPairDayDatasHistorical${OFF};PairDayDatas (historical)
-  ${CYAN}uniswapV2GetPairHourDatasHistorical${OFF};PairHourDatas (historical)
+  ${CYAN}uniswapV2GetPairDayDataHistorical${OFF};PairDayData (historical)
+  ${CYAN}uniswapV2GetPairHourDataHistorical${OFF};PairHourData (historical)
   ${CYAN}uniswapV2GetPairsHistorical${OFF};Pairs (historical)
   ${CYAN}uniswapV2GetSwapsHistorical${OFF};Swaps (historical)
-  ${CYAN}uniswapV2GetTokenDayDatasHistorical${OFF};TokenDayDatas (historical)
+  ${CYAN}uniswapV2GetTokenDayDataHistorical${OFF};TokenDayData (historical)
   ${CYAN}uniswapV2GetTokensHistorical${OFF};Tokens (historical)
   ${CYAN}uniswapV2GetTransactionsHistorical${OFF};Transactions (historical)
-  ${CYAN}uniswapV2GetUniswapDayDatasHistorical${OFF};UniswapDayDatas (historical)
-  ${CYAN}uniswapV2GetUniswapFactorysHistorical${OFF};UniswapFactorys (historical)
+  ${CYAN}uniswapV2GetUniswapDayDataHistorical${OFF};UniswapDayData (historical)
+  ${CYAN}uniswapV2GetUniswapFactoriesHistorical${OFF};UniswapFactories (historical)
   ${CYAN}uniswapV2GetUsersHistorical${OFF};Users (historical)
   ${CYAN}uniswapV2LiquidityPositionSnapshotsCurrent${OFF};LiquidityPositionSnapshots (current)
   ${CYAN}uniswapV2LiquidityPositionsCurrent${OFF};LiquidityPositions (current)
   ${CYAN}uniswapV2MintsCurrent${OFF};Mints (current)
-  ${CYAN}uniswapV2PairDayDatasCurrent${OFF};PairDayDatas (current)
-  ${CYAN}uniswapV2PairHourDatasCurrent${OFF};PairHourDatas (current)
+  ${CYAN}uniswapV2PairDayDataCurrent${OFF};PairDayData (current)
+  ${CYAN}uniswapV2PairHourDataCurrent${OFF};PairHourData (current)
   ${CYAN}uniswapV2PairsCurrent${OFF};Pairs (current)
   ${CYAN}uniswapV2SwapsCurrent${OFF};Swaps (current)
-  ${CYAN}uniswapV2TokenDayDatasCurrent${OFF};TokenDayDatas (current)
+  ${CYAN}uniswapV2TokenDayDataCurrent${OFF};TokenDayData (current)
   ${CYAN}uniswapV2TokensCurrent${OFF};Tokens (current)
   ${CYAN}uniswapV2TransactionsCurrent${OFF};Transactions (current)
-  ${CYAN}uniswapV2UniswapDayDatasCurrent${OFF};UniswapDayDatas (current)
-  ${CYAN}uniswapV2UniswapFactorysCurrent${OFF};UniswapFactorys (current)
+  ${CYAN}uniswapV2UniswapDayDataCurrent${OFF};UniswapDayData (current)
+  ${CYAN}uniswapV2UniswapFactoriesCurrent${OFF};UniswapFactories (current)
   ${CYAN}uniswapV2UsersCurrent${OFF};Users (current)
 EOF
 echo "  $ops" | column -t -s ';'
@@ -2429,38 +2429,38 @@ echo "  $ops" | column -t -s ';'
 read -r -d '' ops <<EOF
   ${CYAN}uniswapV3BundlesCurrent${OFF};Bundles (current)
   ${CYAN}uniswapV3BurnsCurrent${OFF};Burns (current)
-  ${CYAN}uniswapV3FactorysCurrent${OFF};Factorys (current)
+  ${CYAN}uniswapV3FactoriesCurrent${OFF};Factories (current)
   ${CYAN}uniswapV3GetBundlesHistorical${OFF};Bundles (historical)
   ${CYAN}uniswapV3GetBurnsHistorical${OFF};Burns (historical)
-  ${CYAN}uniswapV3GetFactorysHistorical${OFF};Factorys (historical)
+  ${CYAN}uniswapV3GetFactoriesHistorical${OFF};Factories (historical)
   ${CYAN}uniswapV3GetMintsHistorical${OFF};Mints (historical)
-  ${CYAN}uniswapV3GetPoolDayDatasHistorical${OFF};PoolDayDatas (historical)
-  ${CYAN}uniswapV3GetPoolHourDatasHistorical${OFF};PoolHourDatas (historical)
+  ${CYAN}uniswapV3GetPoolDayDataHistorical${OFF};PoolDayData (historical)
+  ${CYAN}uniswapV3GetPoolHourDataHistorical${OFF};PoolHourData (historical)
   ${CYAN}uniswapV3GetPoolsHistorical${OFF};Pools (historical)
   ${CYAN}uniswapV3GetPositionSnapshotsHistorical${OFF};PositionSnapshots (historical)
   ${CYAN}uniswapV3GetPositionsHistorical${OFF};Positions (historical)
   ${CYAN}uniswapV3GetSwapsHistorical${OFF};Swaps (historical)
-  ${CYAN}uniswapV3GetTickDayDatasHistorical${OFF};TickDayDatas (historical)
+  ${CYAN}uniswapV3GetTickDayDataHistorical${OFF};TickDayData (historical)
   ${CYAN}uniswapV3GetTicksHistorical${OFF};Ticks (historical)
-  ${CYAN}uniswapV3GetTokenHourDatasHistorical${OFF};TokenHourDatas (historical)
-  ${CYAN}uniswapV3GetTokenV3DayDatasHistorical${OFF};TokenV3DayDatas (historical)
+  ${CYAN}uniswapV3GetTokenHourDataHistorical${OFF};TokenHourData (historical)
+  ${CYAN}uniswapV3GetTokenV3DayDataHistorical${OFF};TokenV3DayData (historical)
   ${CYAN}uniswapV3GetTokensHistorical${OFF};Tokens (historical)
   ${CYAN}uniswapV3GetTransactionsHistorical${OFF};Transactions (historical)
-  ${CYAN}uniswapV3GetUniswapDayDatasHistorical${OFF};UniswapDayDatas (historical)
+  ${CYAN}uniswapV3GetUniswapDayDataHistorical${OFF};UniswapDayData (historical)
   ${CYAN}uniswapV3MintsCurrent${OFF};Mints (current)
-  ${CYAN}uniswapV3PoolDayDatasCurrent${OFF};PoolDayDatas (current)
-  ${CYAN}uniswapV3PoolHourDatasCurrent${OFF};PoolHourDatas (current)
+  ${CYAN}uniswapV3PoolDayDataCurrent${OFF};PoolDayData (current)
+  ${CYAN}uniswapV3PoolHourDataCurrent${OFF};PoolHourData (current)
   ${CYAN}uniswapV3PoolsCurrent${OFF};Pools (current)
   ${CYAN}uniswapV3PositionSnapshotsCurrent${OFF};PositionSnapshots (current)
   ${CYAN}uniswapV3PositionsCurrent${OFF};Positions (current)
   ${CYAN}uniswapV3SwapsCurrent${OFF};Swaps (current)
-  ${CYAN}uniswapV3TickDayDatasCurrent${OFF};TickDayDatas (current)
+  ${CYAN}uniswapV3TickDayDataCurrent${OFF};TickDayData (current)
   ${CYAN}uniswapV3TicksCurrent${OFF};Ticks (current)
-  ${CYAN}uniswapV3TokenHourDatasCurrent${OFF};TokenHourDatas (current)
-  ${CYAN}uniswapV3TokenV3DayDatasCurrent${OFF};TokenV3DayDatas (current)
+  ${CYAN}uniswapV3TokenHourDataCurrent${OFF};TokenHourData (current)
+  ${CYAN}uniswapV3TokenV3DayDataCurrent${OFF};TokenV3DayData (current)
   ${CYAN}uniswapV3TokensCurrent${OFF};Tokens (current)
   ${CYAN}uniswapV3TransactionsCurrent${OFF};Transactions (current)
-  ${CYAN}uniswapV3UniswapDayDatasCurrent${OFF};UniswapDayDatas (current)
+  ${CYAN}uniswapV3UniswapDayDataCurrent${OFF};UniswapDayData (current)
 EOF
 echo "  $ops" | column -t -s ';'
     echo ""
@@ -2924,14 +2924,14 @@ print_curveGaugeDepositsCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for curveGaugeLiquiditysCurrent operation
+# Print help for curveGaugeLiquiditiesCurrent operation
 #
 ##############################################################################
-print_curveGaugeLiquiditysCurrent_help() {
+print_curveGaugeLiquiditiesCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGaugeLiquiditysCurrent - GaugeLiquiditys (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGaugeLiquiditiesCurrent - GaugeLiquidities (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets gaugeLiquiditys." | paste -sd' ' | fold -sw 80
+    echo -e "Gets gaugeLiquidities." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -3367,14 +3367,14 @@ print_curveGetGaugeDepositsHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for curveGetGaugeLiquiditysHistorical operation
+# Print help for curveGetGaugeLiquiditiesHistorical operation
 #
 ##############################################################################
-print_curveGetGaugeLiquiditysHistorical_help() {
+print_curveGetGaugeLiquiditiesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}curveGetGaugeLiquiditysHistorical - GaugeLiquiditys (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}curveGetGaugeLiquiditiesHistorical - GaugeLiquidities (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets gaugeLiquiditys." | paste -sd' ' | fold -sw 80
+    echo -e "Gets gaugeLiquidities." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4185,14 +4185,14 @@ print_curveWeeklyVolumesCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for dexBatchsCurrent operation
+# Print help for dexBatchesCurrent operation
 #
 ##############################################################################
-print_dexBatchsCurrent_help() {
+print_dexBatchesCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dexBatchsCurrent - Batchs (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexBatchesCurrent - Batches (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets batchs." | paste -sd' ' | fold -sw 80
+    echo -e "Gets batches." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -4217,14 +4217,14 @@ print_dexDepositsCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for dexGetBatchsHistorical operation
+# Print help for dexGetBatchesHistorical operation
 #
 ##############################################################################
-print_dexGetBatchsHistorical_help() {
+print_dexGetBatchesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dexGetBatchsHistorical - Batchs (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetBatchesHistorical - Batches (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets batchs." | paste -sd' ' | fold -sw 80
+    echo -e "Gets batches." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4358,14 +4358,14 @@ print_dexGetSolutionsHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for dexGetStatssHistorical operation
+# Print help for dexGetStatsHistorical operation
 #
 ##############################################################################
-print_dexGetStatssHistorical_help() {
+print_dexGetStatsHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dexGetStatssHistorical - Statss (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexGetStatsHistorical - Stats (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets statss." | paste -sd' ' | fold -sw 80
+    echo -e "Gets stats." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4582,14 +4582,14 @@ print_dexSolutionsCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for dexStatssCurrent operation
+# Print help for dexStatsCurrent operation
 #
 ##############################################################################
-print_dexStatssCurrent_help() {
+print_dexStatsCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}dexStatssCurrent - Statss (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}dexStatsCurrent - Stats (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets statss." | paste -sd' ' | fold -sw 80
+    echo -e "Gets stats." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -4710,14 +4710,14 @@ print_sushiswapBurnsCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for sushiswapDayDatasCurrent operation
+# Print help for sushiswapDayDataCurrent operation
 #
 ##############################################################################
-print_sushiswapDayDatasCurrent_help() {
+print_sushiswapDayDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapDayDatasCurrent - DayDatas (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapDayDataCurrent - DayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets dayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets dayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -4726,14 +4726,14 @@ print_sushiswapDayDatasCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for sushiswapFactorysCurrent operation
+# Print help for sushiswapFactoriesCurrent operation
 #
 ##############################################################################
-print_sushiswapFactorysCurrent_help() {
+print_sushiswapFactoriesCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapFactorysCurrent - Factorys (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapFactoriesCurrent - Factories (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets factorys." | paste -sd' ' | fold -sw 80
+    echo -e "Gets factories." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -4798,14 +4798,14 @@ print_sushiswapGetBurnsHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for sushiswapGetDayDatasHistorical operation
+# Print help for sushiswapGetDayDataHistorical operation
 #
 ##############################################################################
-print_sushiswapGetDayDatasHistorical_help() {
+print_sushiswapGetDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetDayDatasHistorical - DayDatas (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetDayDataHistorical - DayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets dayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets dayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4825,14 +4825,14 @@ print_sushiswapGetDayDatasHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for sushiswapGetFactorysHistorical operation
+# Print help for sushiswapGetFactoriesHistorical operation
 #
 ##############################################################################
-print_sushiswapGetFactorysHistorical_help() {
+print_sushiswapGetFactoriesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetFactorysHistorical - Factorys (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetFactoriesHistorical - Factories (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets factorys." | paste -sd' ' | fold -sw 80
+    echo -e "Gets factories." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4852,14 +4852,14 @@ print_sushiswapGetFactorysHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for sushiswapGetHourDatasHistorical operation
+# Print help for sushiswapGetHourDataHistorical operation
 #
 ##############################################################################
-print_sushiswapGetHourDatasHistorical_help() {
+print_sushiswapGetHourDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetHourDatasHistorical - HourDatas (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetHourDataHistorical - HourData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets hourDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets hourData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -4970,14 +4970,14 @@ print_sushiswapGetMintsHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for sushiswapGetPairDayDatasHistorical operation
+# Print help for sushiswapGetPairDayDataHistorical operation
 #
 ##############################################################################
-print_sushiswapGetPairDayDatasHistorical_help() {
+print_sushiswapGetPairDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetPairDayDatasHistorical - PairDayDatas (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetPairDayDataHistorical - PairDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets pairDayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets pairDayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -5003,14 +5003,14 @@ print_sushiswapGetPairDayDatasHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for sushiswapGetPairHourDatasHistorical operation
+# Print help for sushiswapGetPairHourDataHistorical operation
 #
 ##############################################################################
-print_sushiswapGetPairHourDatasHistorical_help() {
+print_sushiswapGetPairHourDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetPairHourDatasHistorical - PairHourDatas (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetPairHourDataHistorical - PairHourData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets pairHourDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets pairHourData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -5094,14 +5094,14 @@ print_sushiswapGetSwapsHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for sushiswapGetTokenDayDatasHistorical operation
+# Print help for sushiswapGetTokenDayDataHistorical operation
 #
 ##############################################################################
-print_sushiswapGetTokenDayDatasHistorical_help() {
+print_sushiswapGetTokenDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapGetTokenDayDatasHistorical - TokenDayDatas (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapGetTokenDayDataHistorical - TokenDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets tokenDayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets tokenDayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -5206,14 +5206,14 @@ print_sushiswapGetUsersHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for sushiswapHourDatasCurrent operation
+# Print help for sushiswapHourDataCurrent operation
 #
 ##############################################################################
-print_sushiswapHourDatasCurrent_help() {
+print_sushiswapHourDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapHourDatasCurrent - HourDatas (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapHourDataCurrent - HourData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets hourDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets hourData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -5270,14 +5270,14 @@ print_sushiswapMintsCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for sushiswapPairDayDatasCurrent operation
+# Print help for sushiswapPairDayDataCurrent operation
 #
 ##############################################################################
-print_sushiswapPairDayDatasCurrent_help() {
+print_sushiswapPairDayDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapPairDayDatasCurrent - PairDayDatas (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapPairDayDataCurrent - PairDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets pairDayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets pairDayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -5286,14 +5286,14 @@ print_sushiswapPairDayDatasCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for sushiswapPairHourDatasCurrent operation
+# Print help for sushiswapPairHourDataCurrent operation
 #
 ##############################################################################
-print_sushiswapPairHourDatasCurrent_help() {
+print_sushiswapPairHourDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapPairHourDatasCurrent - PairHourDatas (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapPairHourDataCurrent - PairHourData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets pairHourDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets pairHourData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -5340,14 +5340,14 @@ print_sushiswapSwapsCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for sushiswapTokenDayDatasCurrent operation
+# Print help for sushiswapTokenDayDataCurrent operation
 #
 ##############################################################################
-print_sushiswapTokenDayDatasCurrent_help() {
+print_sushiswapTokenDayDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}sushiswapTokenDayDatasCurrent - TokenDayDatas (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}sushiswapTokenDayDataCurrent - TokenDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets tokenDayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets tokenDayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -5583,14 +5583,14 @@ print_uniswapV2GetMintsHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV2GetPairDayDatasHistorical operation
+# Print help for uniswapV2GetPairDayDataHistorical operation
 #
 ##############################################################################
-print_uniswapV2GetPairDayDatasHistorical_help() {
+print_uniswapV2GetPairDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetPairDayDatasHistorical - PairDayDatas (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetPairDayDataHistorical - PairDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets pairDayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets pairDayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -5614,14 +5614,14 @@ print_uniswapV2GetPairDayDatasHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV2GetPairHourDatasHistorical operation
+# Print help for uniswapV2GetPairHourDataHistorical operation
 #
 ##############################################################################
-print_uniswapV2GetPairHourDatasHistorical_help() {
+print_uniswapV2GetPairHourDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetPairHourDatasHistorical - PairHourDatas (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetPairHourDataHistorical - PairHourData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets pairHourDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets pairHourData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -5703,14 +5703,14 @@ print_uniswapV2GetSwapsHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV2GetTokenDayDatasHistorical operation
+# Print help for uniswapV2GetTokenDayDataHistorical operation
 #
 ##############################################################################
-print_uniswapV2GetTokenDayDatasHistorical_help() {
+print_uniswapV2GetTokenDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetTokenDayDatasHistorical - TokenDayDatas (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetTokenDayDataHistorical - TokenDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets tokenDayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets tokenDayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -5788,14 +5788,14 @@ print_uniswapV2GetTransactionsHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV2GetUniswapDayDatasHistorical operation
+# Print help for uniswapV2GetUniswapDayDataHistorical operation
 #
 ##############################################################################
-print_uniswapV2GetUniswapDayDatasHistorical_help() {
+print_uniswapV2GetUniswapDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetUniswapDayDatasHistorical - UniswapDayDatas (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetUniswapDayDataHistorical - UniswapDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets uniswapDayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets uniswapDayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -5815,14 +5815,14 @@ print_uniswapV2GetUniswapDayDatasHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV2GetUniswapFactorysHistorical operation
+# Print help for uniswapV2GetUniswapFactoriesHistorical operation
 #
 ##############################################################################
-print_uniswapV2GetUniswapFactorysHistorical_help() {
+print_uniswapV2GetUniswapFactoriesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2GetUniswapFactorysHistorical - UniswapFactorys (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2GetUniswapFactoriesHistorical - UniswapFactories (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets uniswapFactorys." | paste -sd' ' | fold -sw 80
+    echo -e "Gets uniswapFactories." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -5917,14 +5917,14 @@ print_uniswapV2MintsCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV2PairDayDatasCurrent operation
+# Print help for uniswapV2PairDayDataCurrent operation
 #
 ##############################################################################
-print_uniswapV2PairDayDatasCurrent_help() {
+print_uniswapV2PairDayDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2PairDayDatasCurrent - PairDayDatas (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2PairDayDataCurrent - PairDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets pairDayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets pairDayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -5933,14 +5933,14 @@ print_uniswapV2PairDayDatasCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV2PairHourDatasCurrent operation
+# Print help for uniswapV2PairHourDataCurrent operation
 #
 ##############################################################################
-print_uniswapV2PairHourDatasCurrent_help() {
+print_uniswapV2PairHourDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2PairHourDatasCurrent - PairHourDatas (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2PairHourDataCurrent - PairHourData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets pairHourDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets pairHourData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -5987,14 +5987,14 @@ print_uniswapV2SwapsCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV2TokenDayDatasCurrent operation
+# Print help for uniswapV2TokenDayDataCurrent operation
 #
 ##############################################################################
-print_uniswapV2TokenDayDatasCurrent_help() {
+print_uniswapV2TokenDayDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2TokenDayDatasCurrent - TokenDayDatas (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2TokenDayDataCurrent - TokenDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets tokenDayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets tokenDayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -6035,14 +6035,14 @@ print_uniswapV2TransactionsCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV2UniswapDayDatasCurrent operation
+# Print help for uniswapV2UniswapDayDataCurrent operation
 #
 ##############################################################################
-print_uniswapV2UniswapDayDatasCurrent_help() {
+print_uniswapV2UniswapDayDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2UniswapDayDatasCurrent - UniswapDayDatas (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2UniswapDayDataCurrent - UniswapDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets uniswapDayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets uniswapDayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -6051,14 +6051,14 @@ print_uniswapV2UniswapDayDatasCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV2UniswapFactorysCurrent operation
+# Print help for uniswapV2UniswapFactoriesCurrent operation
 #
 ##############################################################################
-print_uniswapV2UniswapFactorysCurrent_help() {
+print_uniswapV2UniswapFactoriesCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV2UniswapFactorysCurrent - UniswapFactorys (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV2UniswapFactoriesCurrent - UniswapFactories (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets uniswapFactorys." | paste -sd' ' | fold -sw 80
+    echo -e "Gets uniswapFactories." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -6115,14 +6115,14 @@ print_uniswapV3BurnsCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV3FactorysCurrent operation
+# Print help for uniswapV3FactoriesCurrent operation
 #
 ##############################################################################
-print_uniswapV3FactorysCurrent_help() {
+print_uniswapV3FactoriesCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3FactorysCurrent - Factorys (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3FactoriesCurrent - Factories (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets factorys." | paste -sd' ' | fold -sw 80
+    echo -e "Gets factories." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -6191,14 +6191,14 @@ print_uniswapV3GetBurnsHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV3GetFactorysHistorical operation
+# Print help for uniswapV3GetFactoriesHistorical operation
 #
 ##############################################################################
-print_uniswapV3GetFactorysHistorical_help() {
+print_uniswapV3GetFactoriesHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetFactorysHistorical - Factorys (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetFactoriesHistorical - Factories (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets factorys." | paste -sd' ' | fold -sw 80
+    echo -e "Gets factories." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -6251,14 +6251,14 @@ print_uniswapV3GetMintsHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV3GetPoolDayDatasHistorical operation
+# Print help for uniswapV3GetPoolDayDataHistorical operation
 #
 ##############################################################################
-print_uniswapV3GetPoolDayDatasHistorical_help() {
+print_uniswapV3GetPoolDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetPoolDayDatasHistorical - PoolDayDatas (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPoolDayDataHistorical - PoolDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets poolDayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets poolDayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -6280,14 +6280,14 @@ print_uniswapV3GetPoolDayDatasHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV3GetPoolHourDatasHistorical operation
+# Print help for uniswapV3GetPoolHourDataHistorical operation
 #
 ##############################################################################
-print_uniswapV3GetPoolHourDatasHistorical_help() {
+print_uniswapV3GetPoolHourDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetPoolHourDatasHistorical - PoolHourDatas (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetPoolHourDataHistorical - PoolHourData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets poolHourDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets poolHourData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -6435,14 +6435,14 @@ print_uniswapV3GetSwapsHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV3GetTickDayDatasHistorical operation
+# Print help for uniswapV3GetTickDayDataHistorical operation
 #
 ##############################################################################
-print_uniswapV3GetTickDayDatasHistorical_help() {
+print_uniswapV3GetTickDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetTickDayDatasHistorical - TickDayDatas (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTickDayDataHistorical - TickDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets tickDayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets tickDayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - ${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -6493,14 +6493,14 @@ print_uniswapV3GetTicksHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV3GetTokenHourDatasHistorical operation
+# Print help for uniswapV3GetTokenHourDataHistorical operation
 #
 ##############################################################################
-print_uniswapV3GetTokenHourDatasHistorical_help() {
+print_uniswapV3GetTokenHourDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetTokenHourDatasHistorical - TokenHourDatas (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTokenHourDataHistorical - TokenHourData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets tokenHourDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets tokenHourData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -6520,14 +6520,14 @@ print_uniswapV3GetTokenHourDatasHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV3GetTokenV3DayDatasHistorical operation
+# Print help for uniswapV3GetTokenV3DayDataHistorical operation
 #
 ##############################################################################
-print_uniswapV3GetTokenV3DayDatasHistorical_help() {
+print_uniswapV3GetTokenV3DayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetTokenV3DayDatasHistorical - TokenV3DayDatas (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetTokenV3DayDataHistorical - TokenV3DayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets tokenV3DayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets tokenV3DayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -6605,14 +6605,14 @@ print_uniswapV3GetTransactionsHistorical_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV3GetUniswapDayDatasHistorical operation
+# Print help for uniswapV3GetUniswapDayDataHistorical operation
 #
 ##############################################################################
-print_uniswapV3GetUniswapDayDatasHistorical_help() {
+print_uniswapV3GetUniswapDayDataHistorical_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3GetUniswapDayDatasHistorical - UniswapDayDatas (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3GetUniswapDayDataHistorical - UniswapDayData (historical)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets uniswapDayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets uniswapDayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo -e "${BOLD}${WHITE}Parameters${OFF}"
     echo -e "  * ${GREEN}startBlock${OFF} ${BLUE}[integer]${OFF} ${CYAN}(default: null)${OFF} - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.${YELLOW} Specify as: startBlock=value${OFF}" \
@@ -6648,14 +6648,14 @@ print_uniswapV3MintsCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV3PoolDayDatasCurrent operation
+# Print help for uniswapV3PoolDayDataCurrent operation
 #
 ##############################################################################
-print_uniswapV3PoolDayDatasCurrent_help() {
+print_uniswapV3PoolDayDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3PoolDayDatasCurrent - PoolDayDatas (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3PoolDayDataCurrent - PoolDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets poolDayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets poolDayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -6664,14 +6664,14 @@ print_uniswapV3PoolDayDatasCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV3PoolHourDatasCurrent operation
+# Print help for uniswapV3PoolHourDataCurrent operation
 #
 ##############################################################################
-print_uniswapV3PoolHourDatasCurrent_help() {
+print_uniswapV3PoolHourDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3PoolHourDatasCurrent - PoolHourDatas (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3PoolHourDataCurrent - PoolHourData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets poolHourDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets poolHourData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -6750,14 +6750,14 @@ print_uniswapV3SwapsCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV3TickDayDatasCurrent operation
+# Print help for uniswapV3TickDayDataCurrent operation
 #
 ##############################################################################
-print_uniswapV3TickDayDatasCurrent_help() {
+print_uniswapV3TickDayDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3TickDayDatasCurrent - TickDayDatas (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3TickDayDataCurrent - TickDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets tickDayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets tickDayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -6782,14 +6782,14 @@ print_uniswapV3TicksCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV3TokenHourDatasCurrent operation
+# Print help for uniswapV3TokenHourDataCurrent operation
 #
 ##############################################################################
-print_uniswapV3TokenHourDatasCurrent_help() {
+print_uniswapV3TokenHourDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3TokenHourDatasCurrent - TokenHourDatas (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3TokenHourDataCurrent - TokenHourData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets tokenHourDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets tokenHourData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -6798,14 +6798,14 @@ print_uniswapV3TokenHourDatasCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV3TokenV3DayDatasCurrent operation
+# Print help for uniswapV3TokenV3DayDataCurrent operation
 #
 ##############################################################################
-print_uniswapV3TokenV3DayDatasCurrent_help() {
+print_uniswapV3TokenV3DayDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3TokenV3DayDatasCurrent - TokenV3DayDatas (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3TokenV3DayDataCurrent - TokenV3DayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets tokenV3DayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets tokenV3DayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -6846,14 +6846,14 @@ print_uniswapV3TransactionsCurrent_help() {
 }
 ##############################################################################
 #
-# Print help for uniswapV3UniswapDayDatasCurrent operation
+# Print help for uniswapV3UniswapDayDataCurrent operation
 #
 ##############################################################################
-print_uniswapV3UniswapDayDatasCurrent_help() {
+print_uniswapV3UniswapDayDataCurrent_help() {
     echo ""
-    echo -e "${BOLD}${WHITE}uniswapV3UniswapDayDatasCurrent - UniswapDayDatas (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
+    echo -e "${BOLD}${WHITE}uniswapV3UniswapDayDataCurrent - UniswapDayData (current)${OFF}" | paste -sd' ' | fold -sw 80 | sed '2,$s/^/    /'
     echo -e ""
-    echo -e "Gets uniswapDayDatas." | paste -sd' ' | fold -sw 80
+    echo -e "Gets uniswapDayData." | paste -sd' ' | fold -sw 80
     echo -e ""
     echo ""
     echo -e "${BOLD}${WHITE}Responses${OFF}"
@@ -7620,10 +7620,10 @@ call_curveGaugeDepositsCurrent() {
 
 ##############################################################################
 #
-# Call curveGaugeLiquiditysCurrent operation
+# Call curveGaugeLiquiditiesCurrent operation
 #
 ##############################################################################
-call_curveGaugeLiquiditysCurrent() {
+call_curveGaugeLiquiditiesCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -7632,7 +7632,7 @@ call_curveGaugeLiquiditysCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/gaugeLiquiditys/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/gaugeLiquidities/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -8304,10 +8304,10 @@ call_curveGetGaugeDepositsHistorical() {
 
 ##############################################################################
 #
-# Call curveGetGaugeLiquiditysHistorical operation
+# Call curveGetGaugeLiquiditiesHistorical operation
 #
 ##############################################################################
-call_curveGetGaugeLiquiditysHistorical() {
+call_curveGetGaugeLiquiditiesHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -8316,7 +8316,7 @@ call_curveGetGaugeLiquiditysHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id user)
     local path
 
-    if ! path=$(build_request_path "/dapps/curve/gaugeLiquiditys/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/curve/gaugeLiquidities/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -9528,10 +9528,10 @@ call_curveWeeklyVolumesCurrent() {
 
 ##############################################################################
 #
-# Call dexBatchsCurrent operation
+# Call dexBatchesCurrent operation
 #
 ##############################################################################
-call_dexBatchsCurrent() {
+call_dexBatchesCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -9540,7 +9540,7 @@ call_dexBatchsCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/dex/batchs/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/dex/batches/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -9600,10 +9600,10 @@ call_dexDepositsCurrent() {
 
 ##############################################################################
 #
-# Call dexGetBatchsHistorical operation
+# Call dexGetBatchesHistorical operation
 #
 ##############################################################################
-call_dexGetBatchsHistorical() {
+call_dexGetBatchesHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -9612,7 +9612,7 @@ call_dexGetBatchsHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id)
     local path
 
-    if ! path=$(build_request_path "/dapps/dex/batchs/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/dex/batches/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -9780,10 +9780,10 @@ call_dexGetSolutionsHistorical() {
 
 ##############################################################################
 #
-# Call dexGetStatssHistorical operation
+# Call dexGetStatsHistorical operation
 #
 ##############################################################################
-call_dexGetStatssHistorical() {
+call_dexGetStatsHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -9792,7 +9792,7 @@ call_dexGetStatssHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id)
     local path
 
-    if ! path=$(build_request_path "/dapps/dex/statss/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/dex/stats/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -10104,10 +10104,10 @@ call_dexSolutionsCurrent() {
 
 ##############################################################################
 #
-# Call dexStatssCurrent operation
+# Call dexStatsCurrent operation
 #
 ##############################################################################
-call_dexStatssCurrent() {
+call_dexStatsCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -10116,7 +10116,7 @@ call_dexStatssCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/dex/statss/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/dex/stats/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -10392,10 +10392,10 @@ call_sushiswapBurnsCurrent() {
 
 ##############################################################################
 #
-# Call sushiswapDayDatasCurrent operation
+# Call sushiswapDayDataCurrent operation
 #
 ##############################################################################
-call_sushiswapDayDatasCurrent() {
+call_sushiswapDayDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -10404,7 +10404,7 @@ call_sushiswapDayDatasCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/sushiswap/dayDatas/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/sushiswap/dayData/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -10428,10 +10428,10 @@ call_sushiswapDayDatasCurrent() {
 
 ##############################################################################
 #
-# Call sushiswapFactorysCurrent operation
+# Call sushiswapFactoriesCurrent operation
 #
 ##############################################################################
-call_sushiswapFactorysCurrent() {
+call_sushiswapFactoriesCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -10440,7 +10440,7 @@ call_sushiswapFactorysCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/sushiswap/factorys/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/sushiswap/factories/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -10536,10 +10536,10 @@ call_sushiswapGetBurnsHistorical() {
 
 ##############################################################################
 #
-# Call sushiswapGetDayDatasHistorical operation
+# Call sushiswapGetDayDataHistorical operation
 #
 ##############################################################################
-call_sushiswapGetDayDatasHistorical() {
+call_sushiswapGetDayDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -10548,7 +10548,7 @@ call_sushiswapGetDayDatasHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id)
     local path
 
-    if ! path=$(build_request_path "/dapps/sushiswap/dayDatas/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/sushiswap/dayData/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -10572,10 +10572,10 @@ call_sushiswapGetDayDatasHistorical() {
 
 ##############################################################################
 #
-# Call sushiswapGetFactorysHistorical operation
+# Call sushiswapGetFactoriesHistorical operation
 #
 ##############################################################################
-call_sushiswapGetFactorysHistorical() {
+call_sushiswapGetFactoriesHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -10584,7 +10584,7 @@ call_sushiswapGetFactorysHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id)
     local path
 
-    if ! path=$(build_request_path "/dapps/sushiswap/factorys/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/sushiswap/factories/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -10608,10 +10608,10 @@ call_sushiswapGetFactorysHistorical() {
 
 ##############################################################################
 #
-# Call sushiswapGetHourDatasHistorical operation
+# Call sushiswapGetHourDataHistorical operation
 #
 ##############################################################################
-call_sushiswapGetHourDatasHistorical() {
+call_sushiswapGetHourDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -10620,7 +10620,7 @@ call_sushiswapGetHourDatasHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id)
     local path
 
-    if ! path=$(build_request_path "/dapps/sushiswap/hourDatas/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/sushiswap/hourData/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -10752,10 +10752,10 @@ call_sushiswapGetMintsHistorical() {
 
 ##############################################################################
 #
-# Call sushiswapGetPairDayDatasHistorical operation
+# Call sushiswapGetPairDayDataHistorical operation
 #
 ##############################################################################
-call_sushiswapGetPairDayDatasHistorical() {
+call_sushiswapGetPairDayDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -10764,7 +10764,7 @@ call_sushiswapGetPairDayDatasHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id pair token_0 token_1)
     local path
 
-    if ! path=$(build_request_path "/dapps/sushiswap/pairDayDatas/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/sushiswap/pairDayData/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -10788,10 +10788,10 @@ call_sushiswapGetPairDayDatasHistorical() {
 
 ##############################################################################
 #
-# Call sushiswapGetPairHourDatasHistorical operation
+# Call sushiswapGetPairHourDataHistorical operation
 #
 ##############################################################################
-call_sushiswapGetPairHourDatasHistorical() {
+call_sushiswapGetPairHourDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -10800,7 +10800,7 @@ call_sushiswapGetPairHourDatasHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id pair)
     local path
 
-    if ! path=$(build_request_path "/dapps/sushiswap/pairHourDatas/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/sushiswap/pairHourData/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -10896,10 +10896,10 @@ call_sushiswapGetSwapsHistorical() {
 
 ##############################################################################
 #
-# Call sushiswapGetTokenDayDatasHistorical operation
+# Call sushiswapGetTokenDayDataHistorical operation
 #
 ##############################################################################
-call_sushiswapGetTokenDayDatasHistorical() {
+call_sushiswapGetTokenDayDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -10908,7 +10908,7 @@ call_sushiswapGetTokenDayDatasHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id)
     local path
 
-    if ! path=$(build_request_path "/dapps/sushiswap/tokenDayDatas/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/sushiswap/tokenDayData/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -11040,10 +11040,10 @@ call_sushiswapGetUsersHistorical() {
 
 ##############################################################################
 #
-# Call sushiswapHourDatasCurrent operation
+# Call sushiswapHourDataCurrent operation
 #
 ##############################################################################
-call_sushiswapHourDatasCurrent() {
+call_sushiswapHourDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -11052,7 +11052,7 @@ call_sushiswapHourDatasCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/sushiswap/hourDatas/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/sushiswap/hourData/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -11184,10 +11184,10 @@ call_sushiswapMintsCurrent() {
 
 ##############################################################################
 #
-# Call sushiswapPairDayDatasCurrent operation
+# Call sushiswapPairDayDataCurrent operation
 #
 ##############################################################################
-call_sushiswapPairDayDatasCurrent() {
+call_sushiswapPairDayDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -11196,7 +11196,7 @@ call_sushiswapPairDayDatasCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/sushiswap/pairDayDatas/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/sushiswap/pairDayData/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -11220,10 +11220,10 @@ call_sushiswapPairDayDatasCurrent() {
 
 ##############################################################################
 #
-# Call sushiswapPairHourDatasCurrent operation
+# Call sushiswapPairHourDataCurrent operation
 #
 ##############################################################################
-call_sushiswapPairHourDatasCurrent() {
+call_sushiswapPairHourDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -11232,7 +11232,7 @@ call_sushiswapPairHourDatasCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/sushiswap/pairHourDatas/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/sushiswap/pairHourData/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -11328,10 +11328,10 @@ call_sushiswapSwapsCurrent() {
 
 ##############################################################################
 #
-# Call sushiswapTokenDayDatasCurrent operation
+# Call sushiswapTokenDayDataCurrent operation
 #
 ##############################################################################
-call_sushiswapTokenDayDatasCurrent() {
+call_sushiswapTokenDayDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -11340,7 +11340,7 @@ call_sushiswapTokenDayDatasCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/sushiswap/tokenDayDatas/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/sushiswap/tokenDayData/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -11724,10 +11724,10 @@ call_uniswapV2GetMintsHistorical() {
 
 ##############################################################################
 #
-# Call uniswapV2GetPairDayDatasHistorical operation
+# Call uniswapV2GetPairDayDataHistorical operation
 #
 ##############################################################################
-call_uniswapV2GetPairDayDatasHistorical() {
+call_uniswapV2GetPairDayDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -11736,7 +11736,7 @@ call_uniswapV2GetPairDayDatasHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id token_0 token_1)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv2/pairDayDatas/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv2/pairDayData/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -11760,10 +11760,10 @@ call_uniswapV2GetPairDayDatasHistorical() {
 
 ##############################################################################
 #
-# Call uniswapV2GetPairHourDatasHistorical operation
+# Call uniswapV2GetPairHourDataHistorical operation
 #
 ##############################################################################
-call_uniswapV2GetPairHourDatasHistorical() {
+call_uniswapV2GetPairHourDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -11772,7 +11772,7 @@ call_uniswapV2GetPairHourDatasHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id pair)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv2/pairHourDatas/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv2/pairHourData/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -11868,10 +11868,10 @@ call_uniswapV2GetSwapsHistorical() {
 
 ##############################################################################
 #
-# Call uniswapV2GetTokenDayDatasHistorical operation
+# Call uniswapV2GetTokenDayDataHistorical operation
 #
 ##############################################################################
-call_uniswapV2GetTokenDayDatasHistorical() {
+call_uniswapV2GetTokenDayDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -11880,7 +11880,7 @@ call_uniswapV2GetTokenDayDatasHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv2/tokenDayDatas/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv2/tokenDayData/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -11976,10 +11976,10 @@ call_uniswapV2GetTransactionsHistorical() {
 
 ##############################################################################
 #
-# Call uniswapV2GetUniswapDayDatasHistorical operation
+# Call uniswapV2GetUniswapDayDataHistorical operation
 #
 ##############################################################################
-call_uniswapV2GetUniswapDayDatasHistorical() {
+call_uniswapV2GetUniswapDayDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -11988,7 +11988,7 @@ call_uniswapV2GetUniswapDayDatasHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv2/uniswapDayDatas/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv2/uniswapDayData/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -12012,10 +12012,10 @@ call_uniswapV2GetUniswapDayDatasHistorical() {
 
 ##############################################################################
 #
-# Call uniswapV2GetUniswapFactorysHistorical operation
+# Call uniswapV2GetUniswapFactoriesHistorical operation
 #
 ##############################################################################
-call_uniswapV2GetUniswapFactorysHistorical() {
+call_uniswapV2GetUniswapFactoriesHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -12024,7 +12024,7 @@ call_uniswapV2GetUniswapFactorysHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv2/uniswapFactorys/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv2/uniswapFactories/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -12192,10 +12192,10 @@ call_uniswapV2MintsCurrent() {
 
 ##############################################################################
 #
-# Call uniswapV2PairDayDatasCurrent operation
+# Call uniswapV2PairDayDataCurrent operation
 #
 ##############################################################################
-call_uniswapV2PairDayDatasCurrent() {
+call_uniswapV2PairDayDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -12204,7 +12204,7 @@ call_uniswapV2PairDayDatasCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv2/pairDayDatas/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv2/pairDayData/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -12228,10 +12228,10 @@ call_uniswapV2PairDayDatasCurrent() {
 
 ##############################################################################
 #
-# Call uniswapV2PairHourDatasCurrent operation
+# Call uniswapV2PairHourDataCurrent operation
 #
 ##############################################################################
-call_uniswapV2PairHourDatasCurrent() {
+call_uniswapV2PairHourDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -12240,7 +12240,7 @@ call_uniswapV2PairHourDatasCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv2/pairHourDatas/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv2/pairHourData/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -12336,10 +12336,10 @@ call_uniswapV2SwapsCurrent() {
 
 ##############################################################################
 #
-# Call uniswapV2TokenDayDatasCurrent operation
+# Call uniswapV2TokenDayDataCurrent operation
 #
 ##############################################################################
-call_uniswapV2TokenDayDatasCurrent() {
+call_uniswapV2TokenDayDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -12348,7 +12348,7 @@ call_uniswapV2TokenDayDatasCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv2/tokenDayDatas/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv2/tokenDayData/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -12444,10 +12444,10 @@ call_uniswapV2TransactionsCurrent() {
 
 ##############################################################################
 #
-# Call uniswapV2UniswapDayDatasCurrent operation
+# Call uniswapV2UniswapDayDataCurrent operation
 #
 ##############################################################################
-call_uniswapV2UniswapDayDatasCurrent() {
+call_uniswapV2UniswapDayDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -12456,7 +12456,7 @@ call_uniswapV2UniswapDayDatasCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv2/uniswapDayDatas/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv2/uniswapDayData/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -12480,10 +12480,10 @@ call_uniswapV2UniswapDayDatasCurrent() {
 
 ##############################################################################
 #
-# Call uniswapV2UniswapFactorysCurrent operation
+# Call uniswapV2UniswapFactoriesCurrent operation
 #
 ##############################################################################
-call_uniswapV2UniswapFactorysCurrent() {
+call_uniswapV2UniswapFactoriesCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -12492,7 +12492,7 @@ call_uniswapV2UniswapFactorysCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv2/uniswapFactorys/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv2/uniswapFactories/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -12624,10 +12624,10 @@ call_uniswapV3BurnsCurrent() {
 
 ##############################################################################
 #
-# Call uniswapV3FactorysCurrent operation
+# Call uniswapV3FactoriesCurrent operation
 #
 ##############################################################################
-call_uniswapV3FactorysCurrent() {
+call_uniswapV3FactoriesCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -12636,7 +12636,7 @@ call_uniswapV3FactorysCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv3/factorys/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv3/factories/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -12732,10 +12732,10 @@ call_uniswapV3GetBurnsHistorical() {
 
 ##############################################################################
 #
-# Call uniswapV3GetFactorysHistorical operation
+# Call uniswapV3GetFactoriesHistorical operation
 #
 ##############################################################################
-call_uniswapV3GetFactorysHistorical() {
+call_uniswapV3GetFactoriesHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -12744,7 +12744,7 @@ call_uniswapV3GetFactorysHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv3/factorys/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv3/factories/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -12804,10 +12804,10 @@ call_uniswapV3GetMintsHistorical() {
 
 ##############################################################################
 #
-# Call uniswapV3GetPoolDayDatasHistorical operation
+# Call uniswapV3GetPoolDayDataHistorical operation
 #
 ##############################################################################
-call_uniswapV3GetPoolDayDatasHistorical() {
+call_uniswapV3GetPoolDayDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -12816,7 +12816,7 @@ call_uniswapV3GetPoolDayDatasHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id pool)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv3/poolDayDatas/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv3/poolDayData/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -12840,10 +12840,10 @@ call_uniswapV3GetPoolDayDatasHistorical() {
 
 ##############################################################################
 #
-# Call uniswapV3GetPoolHourDatasHistorical operation
+# Call uniswapV3GetPoolHourDataHistorical operation
 #
 ##############################################################################
-call_uniswapV3GetPoolHourDatasHistorical() {
+call_uniswapV3GetPoolHourDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -12852,7 +12852,7 @@ call_uniswapV3GetPoolHourDatasHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id pool)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv3/poolHourDatas/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv3/poolHourData/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -13020,10 +13020,10 @@ call_uniswapV3GetSwapsHistorical() {
 
 ##############################################################################
 #
-# Call uniswapV3GetTickDayDatasHistorical operation
+# Call uniswapV3GetTickDayDataHistorical operation
 #
 ##############################################################################
-call_uniswapV3GetTickDayDatasHistorical() {
+call_uniswapV3GetTickDayDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -13032,7 +13032,7 @@ call_uniswapV3GetTickDayDatasHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id pool)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv3/tickDayDatas/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv3/tickDayData/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -13092,10 +13092,10 @@ call_uniswapV3GetTicksHistorical() {
 
 ##############################################################################
 #
-# Call uniswapV3GetTokenHourDatasHistorical operation
+# Call uniswapV3GetTokenHourDataHistorical operation
 #
 ##############################################################################
-call_uniswapV3GetTokenHourDatasHistorical() {
+call_uniswapV3GetTokenHourDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -13104,7 +13104,7 @@ call_uniswapV3GetTokenHourDatasHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv3/tokenHourDatas/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv3/tokenHourData/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -13128,10 +13128,10 @@ call_uniswapV3GetTokenHourDatasHistorical() {
 
 ##############################################################################
 #
-# Call uniswapV3GetTokenV3DayDatasHistorical operation
+# Call uniswapV3GetTokenV3DayDataHistorical operation
 #
 ##############################################################################
-call_uniswapV3GetTokenV3DayDatasHistorical() {
+call_uniswapV3GetTokenV3DayDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -13140,7 +13140,7 @@ call_uniswapV3GetTokenV3DayDatasHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv3/tokenV3DayDatas/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv3/tokenV3DayData/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -13236,10 +13236,10 @@ call_uniswapV3GetTransactionsHistorical() {
 
 ##############################################################################
 #
-# Call uniswapV3GetUniswapDayDatasHistorical operation
+# Call uniswapV3GetUniswapDayDataHistorical operation
 #
 ##############################################################################
-call_uniswapV3GetUniswapDayDatasHistorical() {
+call_uniswapV3GetUniswapDayDataHistorical() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -13248,7 +13248,7 @@ call_uniswapV3GetUniswapDayDatasHistorical() {
     local query_parameter_names=(startBlock endBlock startDate endDate id)
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv3/uniswapDayDatas/historical" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv3/uniswapDayData/historical" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -13308,10 +13308,10 @@ call_uniswapV3MintsCurrent() {
 
 ##############################################################################
 #
-# Call uniswapV3PoolDayDatasCurrent operation
+# Call uniswapV3PoolDayDataCurrent operation
 #
 ##############################################################################
-call_uniswapV3PoolDayDatasCurrent() {
+call_uniswapV3PoolDayDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -13320,7 +13320,7 @@ call_uniswapV3PoolDayDatasCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv3/poolDayDatas/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv3/poolDayData/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -13344,10 +13344,10 @@ call_uniswapV3PoolDayDatasCurrent() {
 
 ##############################################################################
 #
-# Call uniswapV3PoolHourDatasCurrent operation
+# Call uniswapV3PoolHourDataCurrent operation
 #
 ##############################################################################
-call_uniswapV3PoolHourDatasCurrent() {
+call_uniswapV3PoolHourDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -13356,7 +13356,7 @@ call_uniswapV3PoolHourDatasCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv3/poolHourDatas/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv3/poolHourData/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -13524,10 +13524,10 @@ call_uniswapV3SwapsCurrent() {
 
 ##############################################################################
 #
-# Call uniswapV3TickDayDatasCurrent operation
+# Call uniswapV3TickDayDataCurrent operation
 #
 ##############################################################################
-call_uniswapV3TickDayDatasCurrent() {
+call_uniswapV3TickDayDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -13536,7 +13536,7 @@ call_uniswapV3TickDayDatasCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv3/tickDayDatas/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv3/tickDayData/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -13596,10 +13596,10 @@ call_uniswapV3TicksCurrent() {
 
 ##############################################################################
 #
-# Call uniswapV3TokenHourDatasCurrent operation
+# Call uniswapV3TokenHourDataCurrent operation
 #
 ##############################################################################
-call_uniswapV3TokenHourDatasCurrent() {
+call_uniswapV3TokenHourDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -13608,7 +13608,7 @@ call_uniswapV3TokenHourDatasCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv3/tokenHourDatas/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv3/tokenHourData/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -13632,10 +13632,10 @@ call_uniswapV3TokenHourDatasCurrent() {
 
 ##############################################################################
 #
-# Call uniswapV3TokenV3DayDatasCurrent operation
+# Call uniswapV3TokenV3DayDataCurrent operation
 #
 ##############################################################################
-call_uniswapV3TokenV3DayDatasCurrent() {
+call_uniswapV3TokenV3DayDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -13644,7 +13644,7 @@ call_uniswapV3TokenV3DayDatasCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv3/tokenV3DayDatas/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv3/tokenV3DayData/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -13740,10 +13740,10 @@ call_uniswapV3TransactionsCurrent() {
 
 ##############################################################################
 #
-# Call uniswapV3UniswapDayDatasCurrent operation
+# Call uniswapV3UniswapDayDataCurrent operation
 #
 ##############################################################################
-call_uniswapV3UniswapDayDatasCurrent() {
+call_uniswapV3UniswapDayDataCurrent() {
     # ignore error about 'path_parameter_names' being unused; passed by reference
     # shellcheck disable=SC2034
     local path_parameter_names=()
@@ -13752,7 +13752,7 @@ call_uniswapV3UniswapDayDatasCurrent() {
     local query_parameter_names=()
     local path
 
-    if ! path=$(build_request_path "/dapps/uniswapv3/uniswapDayDatas/current" path_parameter_names query_parameter_names); then
+    if ! path=$(build_request_path "/dapps/uniswapv3/uniswapDayData/current" path_parameter_names query_parameter_names); then
         ERROR_MSG=$path
         exit 1
     fi
@@ -13934,8 +13934,8 @@ case $key in
     curveGaugeDepositsCurrent)
     operation="curveGaugeDepositsCurrent"
     ;;
-    curveGaugeLiquiditysCurrent)
-    operation="curveGaugeLiquiditysCurrent"
+    curveGaugeLiquiditiesCurrent)
+    operation="curveGaugeLiquiditiesCurrent"
     ;;
     curveGaugeTotalWeightsCurrent)
     operation="curveGaugeTotalWeightsCurrent"
@@ -13991,8 +13991,8 @@ case $key in
     curveGetGaugeDepositsHistorical)
     operation="curveGetGaugeDepositsHistorical"
     ;;
-    curveGetGaugeLiquiditysHistorical)
-    operation="curveGetGaugeLiquiditysHistorical"
+    curveGetGaugeLiquiditiesHistorical)
+    operation="curveGetGaugeLiquiditiesHistorical"
     ;;
     curveGetGaugeTotalWeightsHistorical)
     operation="curveGetGaugeTotalWeightsHistorical"
@@ -14093,14 +14093,14 @@ case $key in
     curveWeeklyVolumesCurrent)
     operation="curveWeeklyVolumesCurrent"
     ;;
-    dexBatchsCurrent)
-    operation="dexBatchsCurrent"
+    dexBatchesCurrent)
+    operation="dexBatchesCurrent"
     ;;
     dexDepositsCurrent)
     operation="dexDepositsCurrent"
     ;;
-    dexGetBatchsHistorical)
-    operation="dexGetBatchsHistorical"
+    dexGetBatchesHistorical)
+    operation="dexGetBatchesHistorical"
     ;;
     dexGetDepositsHistorical)
     operation="dexGetDepositsHistorical"
@@ -14114,8 +14114,8 @@ case $key in
     dexGetSolutionsHistorical)
     operation="dexGetSolutionsHistorical"
     ;;
-    dexGetStatssHistorical)
-    operation="dexGetStatssHistorical"
+    dexGetStatsHistorical)
+    operation="dexGetStatsHistorical"
     ;;
     dexGetTokensHistorical)
     operation="dexGetTokensHistorical"
@@ -14141,8 +14141,8 @@ case $key in
     dexSolutionsCurrent)
     operation="dexSolutionsCurrent"
     ;;
-    dexStatssCurrent)
-    operation="dexStatssCurrent"
+    dexStatsCurrent)
+    operation="dexStatsCurrent"
     ;;
     dexTokensCurrent)
     operation="dexTokensCurrent"
@@ -14165,11 +14165,11 @@ case $key in
     sushiswapBurnsCurrent)
     operation="sushiswapBurnsCurrent"
     ;;
-    sushiswapDayDatasCurrent)
-    operation="sushiswapDayDatasCurrent"
+    sushiswapDayDataCurrent)
+    operation="sushiswapDayDataCurrent"
     ;;
-    sushiswapFactorysCurrent)
-    operation="sushiswapFactorysCurrent"
+    sushiswapFactoriesCurrent)
+    operation="sushiswapFactoriesCurrent"
     ;;
     sushiswapGetBundlesHistorical)
     operation="sushiswapGetBundlesHistorical"
@@ -14177,14 +14177,14 @@ case $key in
     sushiswapGetBurnsHistorical)
     operation="sushiswapGetBurnsHistorical"
     ;;
-    sushiswapGetDayDatasHistorical)
-    operation="sushiswapGetDayDatasHistorical"
+    sushiswapGetDayDataHistorical)
+    operation="sushiswapGetDayDataHistorical"
     ;;
-    sushiswapGetFactorysHistorical)
-    operation="sushiswapGetFactorysHistorical"
+    sushiswapGetFactoriesHistorical)
+    operation="sushiswapGetFactoriesHistorical"
     ;;
-    sushiswapGetHourDatasHistorical)
-    operation="sushiswapGetHourDatasHistorical"
+    sushiswapGetHourDataHistorical)
+    operation="sushiswapGetHourDataHistorical"
     ;;
     sushiswapGetLiquidityPositionSnapshotsHistorical)
     operation="sushiswapGetLiquidityPositionSnapshotsHistorical"
@@ -14195,11 +14195,11 @@ case $key in
     sushiswapGetMintsHistorical)
     operation="sushiswapGetMintsHistorical"
     ;;
-    sushiswapGetPairDayDatasHistorical)
-    operation="sushiswapGetPairDayDatasHistorical"
+    sushiswapGetPairDayDataHistorical)
+    operation="sushiswapGetPairDayDataHistorical"
     ;;
-    sushiswapGetPairHourDatasHistorical)
-    operation="sushiswapGetPairHourDatasHistorical"
+    sushiswapGetPairHourDataHistorical)
+    operation="sushiswapGetPairHourDataHistorical"
     ;;
     sushiswapGetPairsHistorical)
     operation="sushiswapGetPairsHistorical"
@@ -14207,8 +14207,8 @@ case $key in
     sushiswapGetSwapsHistorical)
     operation="sushiswapGetSwapsHistorical"
     ;;
-    sushiswapGetTokenDayDatasHistorical)
-    operation="sushiswapGetTokenDayDatasHistorical"
+    sushiswapGetTokenDayDataHistorical)
+    operation="sushiswapGetTokenDayDataHistorical"
     ;;
     sushiswapGetTokensHistorical)
     operation="sushiswapGetTokensHistorical"
@@ -14219,8 +14219,8 @@ case $key in
     sushiswapGetUsersHistorical)
     operation="sushiswapGetUsersHistorical"
     ;;
-    sushiswapHourDatasCurrent)
-    operation="sushiswapHourDatasCurrent"
+    sushiswapHourDataCurrent)
+    operation="sushiswapHourDataCurrent"
     ;;
     sushiswapLiquidityPositionSnapshotsCurrent)
     operation="sushiswapLiquidityPositionSnapshotsCurrent"
@@ -14231,11 +14231,11 @@ case $key in
     sushiswapMintsCurrent)
     operation="sushiswapMintsCurrent"
     ;;
-    sushiswapPairDayDatasCurrent)
-    operation="sushiswapPairDayDatasCurrent"
+    sushiswapPairDayDataCurrent)
+    operation="sushiswapPairDayDataCurrent"
     ;;
-    sushiswapPairHourDatasCurrent)
-    operation="sushiswapPairHourDatasCurrent"
+    sushiswapPairHourDataCurrent)
+    operation="sushiswapPairHourDataCurrent"
     ;;
     sushiswapPairsCurrent)
     operation="sushiswapPairsCurrent"
@@ -14243,8 +14243,8 @@ case $key in
     sushiswapSwapsCurrent)
     operation="sushiswapSwapsCurrent"
     ;;
-    sushiswapTokenDayDatasCurrent)
-    operation="sushiswapTokenDayDatasCurrent"
+    sushiswapTokenDayDataCurrent)
+    operation="sushiswapTokenDayDataCurrent"
     ;;
     sushiswapTokensCurrent)
     operation="sushiswapTokensCurrent"
@@ -14276,11 +14276,11 @@ case $key in
     uniswapV2GetMintsHistorical)
     operation="uniswapV2GetMintsHistorical"
     ;;
-    uniswapV2GetPairDayDatasHistorical)
-    operation="uniswapV2GetPairDayDatasHistorical"
+    uniswapV2GetPairDayDataHistorical)
+    operation="uniswapV2GetPairDayDataHistorical"
     ;;
-    uniswapV2GetPairHourDatasHistorical)
-    operation="uniswapV2GetPairHourDatasHistorical"
+    uniswapV2GetPairHourDataHistorical)
+    operation="uniswapV2GetPairHourDataHistorical"
     ;;
     uniswapV2GetPairsHistorical)
     operation="uniswapV2GetPairsHistorical"
@@ -14288,8 +14288,8 @@ case $key in
     uniswapV2GetSwapsHistorical)
     operation="uniswapV2GetSwapsHistorical"
     ;;
-    uniswapV2GetTokenDayDatasHistorical)
-    operation="uniswapV2GetTokenDayDatasHistorical"
+    uniswapV2GetTokenDayDataHistorical)
+    operation="uniswapV2GetTokenDayDataHistorical"
     ;;
     uniswapV2GetTokensHistorical)
     operation="uniswapV2GetTokensHistorical"
@@ -14297,11 +14297,11 @@ case $key in
     uniswapV2GetTransactionsHistorical)
     operation="uniswapV2GetTransactionsHistorical"
     ;;
-    uniswapV2GetUniswapDayDatasHistorical)
-    operation="uniswapV2GetUniswapDayDatasHistorical"
+    uniswapV2GetUniswapDayDataHistorical)
+    operation="uniswapV2GetUniswapDayDataHistorical"
     ;;
-    uniswapV2GetUniswapFactorysHistorical)
-    operation="uniswapV2GetUniswapFactorysHistorical"
+    uniswapV2GetUniswapFactoriesHistorical)
+    operation="uniswapV2GetUniswapFactoriesHistorical"
     ;;
     uniswapV2GetUsersHistorical)
     operation="uniswapV2GetUsersHistorical"
@@ -14315,11 +14315,11 @@ case $key in
     uniswapV2MintsCurrent)
     operation="uniswapV2MintsCurrent"
     ;;
-    uniswapV2PairDayDatasCurrent)
-    operation="uniswapV2PairDayDatasCurrent"
+    uniswapV2PairDayDataCurrent)
+    operation="uniswapV2PairDayDataCurrent"
     ;;
-    uniswapV2PairHourDatasCurrent)
-    operation="uniswapV2PairHourDatasCurrent"
+    uniswapV2PairHourDataCurrent)
+    operation="uniswapV2PairHourDataCurrent"
     ;;
     uniswapV2PairsCurrent)
     operation="uniswapV2PairsCurrent"
@@ -14327,8 +14327,8 @@ case $key in
     uniswapV2SwapsCurrent)
     operation="uniswapV2SwapsCurrent"
     ;;
-    uniswapV2TokenDayDatasCurrent)
-    operation="uniswapV2TokenDayDatasCurrent"
+    uniswapV2TokenDayDataCurrent)
+    operation="uniswapV2TokenDayDataCurrent"
     ;;
     uniswapV2TokensCurrent)
     operation="uniswapV2TokensCurrent"
@@ -14336,11 +14336,11 @@ case $key in
     uniswapV2TransactionsCurrent)
     operation="uniswapV2TransactionsCurrent"
     ;;
-    uniswapV2UniswapDayDatasCurrent)
-    operation="uniswapV2UniswapDayDatasCurrent"
+    uniswapV2UniswapDayDataCurrent)
+    operation="uniswapV2UniswapDayDataCurrent"
     ;;
-    uniswapV2UniswapFactorysCurrent)
-    operation="uniswapV2UniswapFactorysCurrent"
+    uniswapV2UniswapFactoriesCurrent)
+    operation="uniswapV2UniswapFactoriesCurrent"
     ;;
     uniswapV2UsersCurrent)
     operation="uniswapV2UsersCurrent"
@@ -14351,8 +14351,8 @@ case $key in
     uniswapV3BurnsCurrent)
     operation="uniswapV3BurnsCurrent"
     ;;
-    uniswapV3FactorysCurrent)
-    operation="uniswapV3FactorysCurrent"
+    uniswapV3FactoriesCurrent)
+    operation="uniswapV3FactoriesCurrent"
     ;;
     uniswapV3GetBundlesHistorical)
     operation="uniswapV3GetBundlesHistorical"
@@ -14360,17 +14360,17 @@ case $key in
     uniswapV3GetBurnsHistorical)
     operation="uniswapV3GetBurnsHistorical"
     ;;
-    uniswapV3GetFactorysHistorical)
-    operation="uniswapV3GetFactorysHistorical"
+    uniswapV3GetFactoriesHistorical)
+    operation="uniswapV3GetFactoriesHistorical"
     ;;
     uniswapV3GetMintsHistorical)
     operation="uniswapV3GetMintsHistorical"
     ;;
-    uniswapV3GetPoolDayDatasHistorical)
-    operation="uniswapV3GetPoolDayDatasHistorical"
+    uniswapV3GetPoolDayDataHistorical)
+    operation="uniswapV3GetPoolDayDataHistorical"
     ;;
-    uniswapV3GetPoolHourDatasHistorical)
-    operation="uniswapV3GetPoolHourDatasHistorical"
+    uniswapV3GetPoolHourDataHistorical)
+    operation="uniswapV3GetPoolHourDataHistorical"
     ;;
     uniswapV3GetPoolsHistorical)
     operation="uniswapV3GetPoolsHistorical"
@@ -14384,17 +14384,17 @@ case $key in
     uniswapV3GetSwapsHistorical)
     operation="uniswapV3GetSwapsHistorical"
     ;;
-    uniswapV3GetTickDayDatasHistorical)
-    operation="uniswapV3GetTickDayDatasHistorical"
+    uniswapV3GetTickDayDataHistorical)
+    operation="uniswapV3GetTickDayDataHistorical"
     ;;
     uniswapV3GetTicksHistorical)
     operation="uniswapV3GetTicksHistorical"
     ;;
-    uniswapV3GetTokenHourDatasHistorical)
-    operation="uniswapV3GetTokenHourDatasHistorical"
+    uniswapV3GetTokenHourDataHistorical)
+    operation="uniswapV3GetTokenHourDataHistorical"
     ;;
-    uniswapV3GetTokenV3DayDatasHistorical)
-    operation="uniswapV3GetTokenV3DayDatasHistorical"
+    uniswapV3GetTokenV3DayDataHistorical)
+    operation="uniswapV3GetTokenV3DayDataHistorical"
     ;;
     uniswapV3GetTokensHistorical)
     operation="uniswapV3GetTokensHistorical"
@@ -14402,17 +14402,17 @@ case $key in
     uniswapV3GetTransactionsHistorical)
     operation="uniswapV3GetTransactionsHistorical"
     ;;
-    uniswapV3GetUniswapDayDatasHistorical)
-    operation="uniswapV3GetUniswapDayDatasHistorical"
+    uniswapV3GetUniswapDayDataHistorical)
+    operation="uniswapV3GetUniswapDayDataHistorical"
     ;;
     uniswapV3MintsCurrent)
     operation="uniswapV3MintsCurrent"
     ;;
-    uniswapV3PoolDayDatasCurrent)
-    operation="uniswapV3PoolDayDatasCurrent"
+    uniswapV3PoolDayDataCurrent)
+    operation="uniswapV3PoolDayDataCurrent"
     ;;
-    uniswapV3PoolHourDatasCurrent)
-    operation="uniswapV3PoolHourDatasCurrent"
+    uniswapV3PoolHourDataCurrent)
+    operation="uniswapV3PoolHourDataCurrent"
     ;;
     uniswapV3PoolsCurrent)
     operation="uniswapV3PoolsCurrent"
@@ -14426,17 +14426,17 @@ case $key in
     uniswapV3SwapsCurrent)
     operation="uniswapV3SwapsCurrent"
     ;;
-    uniswapV3TickDayDatasCurrent)
-    operation="uniswapV3TickDayDatasCurrent"
+    uniswapV3TickDayDataCurrent)
+    operation="uniswapV3TickDayDataCurrent"
     ;;
     uniswapV3TicksCurrent)
     operation="uniswapV3TicksCurrent"
     ;;
-    uniswapV3TokenHourDatasCurrent)
-    operation="uniswapV3TokenHourDatasCurrent"
+    uniswapV3TokenHourDataCurrent)
+    operation="uniswapV3TokenHourDataCurrent"
     ;;
-    uniswapV3TokenV3DayDatasCurrent)
-    operation="uniswapV3TokenV3DayDatasCurrent"
+    uniswapV3TokenV3DayDataCurrent)
+    operation="uniswapV3TokenV3DayDataCurrent"
     ;;
     uniswapV3TokensCurrent)
     operation="uniswapV3TokensCurrent"
@@ -14444,8 +14444,8 @@ case $key in
     uniswapV3TransactionsCurrent)
     operation="uniswapV3TransactionsCurrent"
     ;;
-    uniswapV3UniswapDayDatasCurrent)
-    operation="uniswapV3UniswapDayDatasCurrent"
+    uniswapV3UniswapDayDataCurrent)
+    operation="uniswapV3UniswapDayDataCurrent"
     ;;
     *==*)
     # Parse body arguments and convert them into top level
@@ -14587,8 +14587,8 @@ case $operation in
     curveGaugeDepositsCurrent)
     call_curveGaugeDepositsCurrent
     ;;
-    curveGaugeLiquiditysCurrent)
-    call_curveGaugeLiquiditysCurrent
+    curveGaugeLiquiditiesCurrent)
+    call_curveGaugeLiquiditiesCurrent
     ;;
     curveGaugeTotalWeightsCurrent)
     call_curveGaugeTotalWeightsCurrent
@@ -14644,8 +14644,8 @@ case $operation in
     curveGetGaugeDepositsHistorical)
     call_curveGetGaugeDepositsHistorical
     ;;
-    curveGetGaugeLiquiditysHistorical)
-    call_curveGetGaugeLiquiditysHistorical
+    curveGetGaugeLiquiditiesHistorical)
+    call_curveGetGaugeLiquiditiesHistorical
     ;;
     curveGetGaugeTotalWeightsHistorical)
     call_curveGetGaugeTotalWeightsHistorical
@@ -14746,14 +14746,14 @@ case $operation in
     curveWeeklyVolumesCurrent)
     call_curveWeeklyVolumesCurrent
     ;;
-    dexBatchsCurrent)
-    call_dexBatchsCurrent
+    dexBatchesCurrent)
+    call_dexBatchesCurrent
     ;;
     dexDepositsCurrent)
     call_dexDepositsCurrent
     ;;
-    dexGetBatchsHistorical)
-    call_dexGetBatchsHistorical
+    dexGetBatchesHistorical)
+    call_dexGetBatchesHistorical
     ;;
     dexGetDepositsHistorical)
     call_dexGetDepositsHistorical
@@ -14767,8 +14767,8 @@ case $operation in
     dexGetSolutionsHistorical)
     call_dexGetSolutionsHistorical
     ;;
-    dexGetStatssHistorical)
-    call_dexGetStatssHistorical
+    dexGetStatsHistorical)
+    call_dexGetStatsHistorical
     ;;
     dexGetTokensHistorical)
     call_dexGetTokensHistorical
@@ -14794,8 +14794,8 @@ case $operation in
     dexSolutionsCurrent)
     call_dexSolutionsCurrent
     ;;
-    dexStatssCurrent)
-    call_dexStatssCurrent
+    dexStatsCurrent)
+    call_dexStatsCurrent
     ;;
     dexTokensCurrent)
     call_dexTokensCurrent
@@ -14818,11 +14818,11 @@ case $operation in
     sushiswapBurnsCurrent)
     call_sushiswapBurnsCurrent
     ;;
-    sushiswapDayDatasCurrent)
-    call_sushiswapDayDatasCurrent
+    sushiswapDayDataCurrent)
+    call_sushiswapDayDataCurrent
     ;;
-    sushiswapFactorysCurrent)
-    call_sushiswapFactorysCurrent
+    sushiswapFactoriesCurrent)
+    call_sushiswapFactoriesCurrent
     ;;
     sushiswapGetBundlesHistorical)
     call_sushiswapGetBundlesHistorical
@@ -14830,14 +14830,14 @@ case $operation in
     sushiswapGetBurnsHistorical)
     call_sushiswapGetBurnsHistorical
     ;;
-    sushiswapGetDayDatasHistorical)
-    call_sushiswapGetDayDatasHistorical
+    sushiswapGetDayDataHistorical)
+    call_sushiswapGetDayDataHistorical
     ;;
-    sushiswapGetFactorysHistorical)
-    call_sushiswapGetFactorysHistorical
+    sushiswapGetFactoriesHistorical)
+    call_sushiswapGetFactoriesHistorical
     ;;
-    sushiswapGetHourDatasHistorical)
-    call_sushiswapGetHourDatasHistorical
+    sushiswapGetHourDataHistorical)
+    call_sushiswapGetHourDataHistorical
     ;;
     sushiswapGetLiquidityPositionSnapshotsHistorical)
     call_sushiswapGetLiquidityPositionSnapshotsHistorical
@@ -14848,11 +14848,11 @@ case $operation in
     sushiswapGetMintsHistorical)
     call_sushiswapGetMintsHistorical
     ;;
-    sushiswapGetPairDayDatasHistorical)
-    call_sushiswapGetPairDayDatasHistorical
+    sushiswapGetPairDayDataHistorical)
+    call_sushiswapGetPairDayDataHistorical
     ;;
-    sushiswapGetPairHourDatasHistorical)
-    call_sushiswapGetPairHourDatasHistorical
+    sushiswapGetPairHourDataHistorical)
+    call_sushiswapGetPairHourDataHistorical
     ;;
     sushiswapGetPairsHistorical)
     call_sushiswapGetPairsHistorical
@@ -14860,8 +14860,8 @@ case $operation in
     sushiswapGetSwapsHistorical)
     call_sushiswapGetSwapsHistorical
     ;;
-    sushiswapGetTokenDayDatasHistorical)
-    call_sushiswapGetTokenDayDatasHistorical
+    sushiswapGetTokenDayDataHistorical)
+    call_sushiswapGetTokenDayDataHistorical
     ;;
     sushiswapGetTokensHistorical)
     call_sushiswapGetTokensHistorical
@@ -14872,8 +14872,8 @@ case $operation in
     sushiswapGetUsersHistorical)
     call_sushiswapGetUsersHistorical
     ;;
-    sushiswapHourDatasCurrent)
-    call_sushiswapHourDatasCurrent
+    sushiswapHourDataCurrent)
+    call_sushiswapHourDataCurrent
     ;;
     sushiswapLiquidityPositionSnapshotsCurrent)
     call_sushiswapLiquidityPositionSnapshotsCurrent
@@ -14884,11 +14884,11 @@ case $operation in
     sushiswapMintsCurrent)
     call_sushiswapMintsCurrent
     ;;
-    sushiswapPairDayDatasCurrent)
-    call_sushiswapPairDayDatasCurrent
+    sushiswapPairDayDataCurrent)
+    call_sushiswapPairDayDataCurrent
     ;;
-    sushiswapPairHourDatasCurrent)
-    call_sushiswapPairHourDatasCurrent
+    sushiswapPairHourDataCurrent)
+    call_sushiswapPairHourDataCurrent
     ;;
     sushiswapPairsCurrent)
     call_sushiswapPairsCurrent
@@ -14896,8 +14896,8 @@ case $operation in
     sushiswapSwapsCurrent)
     call_sushiswapSwapsCurrent
     ;;
-    sushiswapTokenDayDatasCurrent)
-    call_sushiswapTokenDayDatasCurrent
+    sushiswapTokenDayDataCurrent)
+    call_sushiswapTokenDayDataCurrent
     ;;
     sushiswapTokensCurrent)
     call_sushiswapTokensCurrent
@@ -14929,11 +14929,11 @@ case $operation in
     uniswapV2GetMintsHistorical)
     call_uniswapV2GetMintsHistorical
     ;;
-    uniswapV2GetPairDayDatasHistorical)
-    call_uniswapV2GetPairDayDatasHistorical
+    uniswapV2GetPairDayDataHistorical)
+    call_uniswapV2GetPairDayDataHistorical
     ;;
-    uniswapV2GetPairHourDatasHistorical)
-    call_uniswapV2GetPairHourDatasHistorical
+    uniswapV2GetPairHourDataHistorical)
+    call_uniswapV2GetPairHourDataHistorical
     ;;
     uniswapV2GetPairsHistorical)
     call_uniswapV2GetPairsHistorical
@@ -14941,8 +14941,8 @@ case $operation in
     uniswapV2GetSwapsHistorical)
     call_uniswapV2GetSwapsHistorical
     ;;
-    uniswapV2GetTokenDayDatasHistorical)
-    call_uniswapV2GetTokenDayDatasHistorical
+    uniswapV2GetTokenDayDataHistorical)
+    call_uniswapV2GetTokenDayDataHistorical
     ;;
     uniswapV2GetTokensHistorical)
     call_uniswapV2GetTokensHistorical
@@ -14950,11 +14950,11 @@ case $operation in
     uniswapV2GetTransactionsHistorical)
     call_uniswapV2GetTransactionsHistorical
     ;;
-    uniswapV2GetUniswapDayDatasHistorical)
-    call_uniswapV2GetUniswapDayDatasHistorical
+    uniswapV2GetUniswapDayDataHistorical)
+    call_uniswapV2GetUniswapDayDataHistorical
     ;;
-    uniswapV2GetUniswapFactorysHistorical)
-    call_uniswapV2GetUniswapFactorysHistorical
+    uniswapV2GetUniswapFactoriesHistorical)
+    call_uniswapV2GetUniswapFactoriesHistorical
     ;;
     uniswapV2GetUsersHistorical)
     call_uniswapV2GetUsersHistorical
@@ -14968,11 +14968,11 @@ case $operation in
     uniswapV2MintsCurrent)
     call_uniswapV2MintsCurrent
     ;;
-    uniswapV2PairDayDatasCurrent)
-    call_uniswapV2PairDayDatasCurrent
+    uniswapV2PairDayDataCurrent)
+    call_uniswapV2PairDayDataCurrent
     ;;
-    uniswapV2PairHourDatasCurrent)
-    call_uniswapV2PairHourDatasCurrent
+    uniswapV2PairHourDataCurrent)
+    call_uniswapV2PairHourDataCurrent
     ;;
     uniswapV2PairsCurrent)
     call_uniswapV2PairsCurrent
@@ -14980,8 +14980,8 @@ case $operation in
     uniswapV2SwapsCurrent)
     call_uniswapV2SwapsCurrent
     ;;
-    uniswapV2TokenDayDatasCurrent)
-    call_uniswapV2TokenDayDatasCurrent
+    uniswapV2TokenDayDataCurrent)
+    call_uniswapV2TokenDayDataCurrent
     ;;
     uniswapV2TokensCurrent)
     call_uniswapV2TokensCurrent
@@ -14989,11 +14989,11 @@ case $operation in
     uniswapV2TransactionsCurrent)
     call_uniswapV2TransactionsCurrent
     ;;
-    uniswapV2UniswapDayDatasCurrent)
-    call_uniswapV2UniswapDayDatasCurrent
+    uniswapV2UniswapDayDataCurrent)
+    call_uniswapV2UniswapDayDataCurrent
     ;;
-    uniswapV2UniswapFactorysCurrent)
-    call_uniswapV2UniswapFactorysCurrent
+    uniswapV2UniswapFactoriesCurrent)
+    call_uniswapV2UniswapFactoriesCurrent
     ;;
     uniswapV2UsersCurrent)
     call_uniswapV2UsersCurrent
@@ -15004,8 +15004,8 @@ case $operation in
     uniswapV3BurnsCurrent)
     call_uniswapV3BurnsCurrent
     ;;
-    uniswapV3FactorysCurrent)
-    call_uniswapV3FactorysCurrent
+    uniswapV3FactoriesCurrent)
+    call_uniswapV3FactoriesCurrent
     ;;
     uniswapV3GetBundlesHistorical)
     call_uniswapV3GetBundlesHistorical
@@ -15013,17 +15013,17 @@ case $operation in
     uniswapV3GetBurnsHistorical)
     call_uniswapV3GetBurnsHistorical
     ;;
-    uniswapV3GetFactorysHistorical)
-    call_uniswapV3GetFactorysHistorical
+    uniswapV3GetFactoriesHistorical)
+    call_uniswapV3GetFactoriesHistorical
     ;;
     uniswapV3GetMintsHistorical)
     call_uniswapV3GetMintsHistorical
     ;;
-    uniswapV3GetPoolDayDatasHistorical)
-    call_uniswapV3GetPoolDayDatasHistorical
+    uniswapV3GetPoolDayDataHistorical)
+    call_uniswapV3GetPoolDayDataHistorical
     ;;
-    uniswapV3GetPoolHourDatasHistorical)
-    call_uniswapV3GetPoolHourDatasHistorical
+    uniswapV3GetPoolHourDataHistorical)
+    call_uniswapV3GetPoolHourDataHistorical
     ;;
     uniswapV3GetPoolsHistorical)
     call_uniswapV3GetPoolsHistorical
@@ -15037,17 +15037,17 @@ case $operation in
     uniswapV3GetSwapsHistorical)
     call_uniswapV3GetSwapsHistorical
     ;;
-    uniswapV3GetTickDayDatasHistorical)
-    call_uniswapV3GetTickDayDatasHistorical
+    uniswapV3GetTickDayDataHistorical)
+    call_uniswapV3GetTickDayDataHistorical
     ;;
     uniswapV3GetTicksHistorical)
     call_uniswapV3GetTicksHistorical
     ;;
-    uniswapV3GetTokenHourDatasHistorical)
-    call_uniswapV3GetTokenHourDatasHistorical
+    uniswapV3GetTokenHourDataHistorical)
+    call_uniswapV3GetTokenHourDataHistorical
     ;;
-    uniswapV3GetTokenV3DayDatasHistorical)
-    call_uniswapV3GetTokenV3DayDatasHistorical
+    uniswapV3GetTokenV3DayDataHistorical)
+    call_uniswapV3GetTokenV3DayDataHistorical
     ;;
     uniswapV3GetTokensHistorical)
     call_uniswapV3GetTokensHistorical
@@ -15055,17 +15055,17 @@ case $operation in
     uniswapV3GetTransactionsHistorical)
     call_uniswapV3GetTransactionsHistorical
     ;;
-    uniswapV3GetUniswapDayDatasHistorical)
-    call_uniswapV3GetUniswapDayDatasHistorical
+    uniswapV3GetUniswapDayDataHistorical)
+    call_uniswapV3GetUniswapDayDataHistorical
     ;;
     uniswapV3MintsCurrent)
     call_uniswapV3MintsCurrent
     ;;
-    uniswapV3PoolDayDatasCurrent)
-    call_uniswapV3PoolDayDatasCurrent
+    uniswapV3PoolDayDataCurrent)
+    call_uniswapV3PoolDayDataCurrent
     ;;
-    uniswapV3PoolHourDatasCurrent)
-    call_uniswapV3PoolHourDatasCurrent
+    uniswapV3PoolHourDataCurrent)
+    call_uniswapV3PoolHourDataCurrent
     ;;
     uniswapV3PoolsCurrent)
     call_uniswapV3PoolsCurrent
@@ -15079,17 +15079,17 @@ case $operation in
     uniswapV3SwapsCurrent)
     call_uniswapV3SwapsCurrent
     ;;
-    uniswapV3TickDayDatasCurrent)
-    call_uniswapV3TickDayDatasCurrent
+    uniswapV3TickDayDataCurrent)
+    call_uniswapV3TickDayDataCurrent
     ;;
     uniswapV3TicksCurrent)
     call_uniswapV3TicksCurrent
     ;;
-    uniswapV3TokenHourDatasCurrent)
-    call_uniswapV3TokenHourDatasCurrent
+    uniswapV3TokenHourDataCurrent)
+    call_uniswapV3TokenHourDataCurrent
     ;;
-    uniswapV3TokenV3DayDatasCurrent)
-    call_uniswapV3TokenV3DayDatasCurrent
+    uniswapV3TokenV3DayDataCurrent)
+    call_uniswapV3TokenV3DayDataCurrent
     ;;
     uniswapV3TokensCurrent)
     call_uniswapV3TokensCurrent
@@ -15097,8 +15097,8 @@ case $operation in
     uniswapV3TransactionsCurrent)
     call_uniswapV3TransactionsCurrent
     ;;
-    uniswapV3UniswapDayDatasCurrent)
-    call_uniswapV3UniswapDayDatasCurrent
+    uniswapV3UniswapDayDataCurrent)
+    call_uniswapV3UniswapDayDataCurrent
     ;;
     *)
     ERROR_MSG="ERROR: Unknown operation: $operation"

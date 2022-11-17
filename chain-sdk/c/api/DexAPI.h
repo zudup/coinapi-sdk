@@ -18,12 +18,12 @@
 #include "../model/dex_withdraw_request_dto.h"
 
 
-// Batchs (current)
+// Batches (current)
 //
-// Gets batchs.
+// Gets batches.
 //
 list_t*
-DexAPI_dexBatchsCurrent(apiClient_t *apiClient);
+DexAPI_dexBatchesCurrent(apiClient_t *apiClient);
 
 
 // Deposits (current)
@@ -34,12 +34,12 @@ list_t*
 DexAPI_dexDepositsCurrent(apiClient_t *apiClient);
 
 
-// Batchs (historical)
+// Batches (historical)
 //
-// Gets batchs.
+// Gets batches.
 //
 list_t*
-DexAPI_dexGetBatchsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
+DexAPI_dexGetBatchesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
 
 
 // Deposits (historical)
@@ -74,12 +74,12 @@ list_t*
 DexAPI_dexGetSolutionsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
 
 
-// Statss (historical)
+// Stats (historical)
 //
-// Gets statss.
+// Gets stats.
 //
 list_t*
-DexAPI_dexGetStatssHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
+DexAPI_dexGetStatsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
 
 
 // Tokens (historical)
@@ -146,12 +146,12 @@ list_t*
 DexAPI_dexSolutionsCurrent(apiClient_t *apiClient);
 
 
-// Statss (current)
+// Stats (current)
 //
-// Gets statss.
+// Gets stats.
 //
 list_t*
-DexAPI_dexStatssCurrent(apiClient_t *apiClient);
+DexAPI_dexStatsCurrent(apiClient_t *apiClient);
 
 
 // Tokens (current)

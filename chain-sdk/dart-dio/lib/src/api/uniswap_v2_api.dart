@@ -650,8 +650,8 @@ class UniswapV2Api {
     );
   }
 
-  /// PairDayDatas (historical)
-  /// Gets pairDayDatas.
+  /// PairDayData (historical)
+  /// Gets pairDayData.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -670,7 +670,7 @@ class UniswapV2Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2PairDayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2PairDayDataDTO>>> uniswapV2GetPairDayDatasHistorical({ 
+  Future<Response<BuiltList<UniswapV2PairDayDataDTO>>> uniswapV2GetPairDayDataHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -685,7 +685,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/pairDayDatas/historical';
+    final _path = r'/dapps/uniswapv2/pairDayData/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -747,8 +747,8 @@ class UniswapV2Api {
     );
   }
 
-  /// PairHourDatas (historical)
-  /// Gets pairHourDatas.
+  /// PairHourData (historical)
+  /// Gets pairHourData.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -766,7 +766,7 @@ class UniswapV2Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2PairHourDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2PairHourDataDTO>>> uniswapV2GetPairHourDatasHistorical({ 
+  Future<Response<BuiltList<UniswapV2PairHourDataDTO>>> uniswapV2GetPairHourDataHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -780,7 +780,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/pairHourDatas/historical';
+    final _path = r'/dapps/uniswapv2/pairHourData/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1032,8 +1032,8 @@ class UniswapV2Api {
     );
   }
 
-  /// TokenDayDatas (historical)
-  /// Gets tokenDayDatas.
+  /// TokenDayData (historical)
+  /// Gets tokenDayData.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1050,7 +1050,7 @@ class UniswapV2Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2TokenDayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2TokenDayDataDTO>>> uniswapV2GetTokenDayDatasHistorical({ 
+  Future<Response<BuiltList<UniswapV2TokenDayDataDTO>>> uniswapV2GetTokenDayDataHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -1063,7 +1063,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/tokenDayDatas/historical';
+    final _path = r'/dapps/uniswapv2/tokenDayData/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1311,8 +1311,8 @@ class UniswapV2Api {
     );
   }
 
-  /// UniswapDayDatas (historical)
-  /// Gets uniswapDayDatas.
+  /// UniswapDayData (historical)
+  /// Gets uniswapDayData.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1329,7 +1329,7 @@ class UniswapV2Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2UniswapDayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2UniswapDayDataDTO>>> uniswapV2GetUniswapDayDatasHistorical({ 
+  Future<Response<BuiltList<UniswapV2UniswapDayDataDTO>>> uniswapV2GetUniswapDayDataHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -1342,7 +1342,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/uniswapDayDatas/historical';
+    final _path = r'/dapps/uniswapv2/uniswapDayData/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1402,8 +1402,8 @@ class UniswapV2Api {
     );
   }
 
-  /// UniswapFactorys (historical)
-  /// Gets uniswapFactorys.
+  /// UniswapFactories (historical)
+  /// Gets uniswapFactories.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -1420,7 +1420,7 @@ class UniswapV2Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2UniswapFactoryDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2UniswapFactoryDTO>>> uniswapV2GetUniswapFactorysHistorical({ 
+  Future<Response<BuiltList<UniswapV2UniswapFactoryDTO>>> uniswapV2GetUniswapFactoriesHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -1433,7 +1433,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/uniswapFactorys/historical';
+    final _path = r'/dapps/uniswapv2/uniswapFactories/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1800,8 +1800,8 @@ class UniswapV2Api {
     );
   }
 
-  /// PairDayDatas (current)
-  /// Gets pairDayDatas.
+  /// PairDayData (current)
+  /// Gets pairDayData.
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -1813,7 +1813,7 @@ class UniswapV2Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2PairDayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2PairDayDataDTO>>> uniswapV2PairDayDatasCurrent({ 
+  Future<Response<BuiltList<UniswapV2PairDayDataDTO>>> uniswapV2PairDayDataCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1821,7 +1821,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/pairDayDatas/current';
+    final _path = r'/dapps/uniswapv2/pairDayData/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -1872,8 +1872,8 @@ class UniswapV2Api {
     );
   }
 
-  /// PairHourDatas (current)
-  /// Gets pairHourDatas.
+  /// PairHourData (current)
+  /// Gets pairHourData.
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -1885,7 +1885,7 @@ class UniswapV2Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2PairHourDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2PairHourDataDTO>>> uniswapV2PairHourDatasCurrent({ 
+  Future<Response<BuiltList<UniswapV2PairHourDataDTO>>> uniswapV2PairHourDataCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -1893,7 +1893,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/pairHourDatas/current';
+    final _path = r'/dapps/uniswapv2/pairHourData/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -2102,8 +2102,8 @@ class UniswapV2Api {
     );
   }
 
-  /// TokenDayDatas (current)
-  /// Gets tokenDayDatas.
+  /// TokenDayData (current)
+  /// Gets tokenDayData.
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -2115,7 +2115,7 @@ class UniswapV2Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2TokenDayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2TokenDayDataDTO>>> uniswapV2TokenDayDatasCurrent({ 
+  Future<Response<BuiltList<UniswapV2TokenDayDataDTO>>> uniswapV2TokenDayDataCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -2123,7 +2123,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/tokenDayDatas/current';
+    final _path = r'/dapps/uniswapv2/tokenDayData/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -2318,8 +2318,8 @@ class UniswapV2Api {
     );
   }
 
-  /// UniswapDayDatas (current)
-  /// Gets uniswapDayDatas.
+  /// UniswapDayData (current)
+  /// Gets uniswapDayData.
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -2331,7 +2331,7 @@ class UniswapV2Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2UniswapDayDataDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2UniswapDayDataDTO>>> uniswapV2UniswapDayDatasCurrent({ 
+  Future<Response<BuiltList<UniswapV2UniswapDayDataDTO>>> uniswapV2UniswapDayDataCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -2339,7 +2339,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/uniswapDayDatas/current';
+    final _path = r'/dapps/uniswapv2/uniswapDayData/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -2390,8 +2390,8 @@ class UniswapV2Api {
     );
   }
 
-  /// UniswapFactorys (current)
-  /// Gets uniswapFactorys.
+  /// UniswapFactories (current)
+  /// Gets uniswapFactories.
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -2403,7 +2403,7 @@ class UniswapV2Api {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<UniswapV2UniswapFactoryDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<UniswapV2UniswapFactoryDTO>>> uniswapV2UniswapFactorysCurrent({ 
+  Future<Response<BuiltList<UniswapV2UniswapFactoryDTO>>> uniswapV2UniswapFactoriesCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -2411,7 +2411,7 @@ class UniswapV2Api {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/uniswapv2/uniswapFactorys/current';
+    final _path = r'/dapps/uniswapv2/uniswapFactories/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{

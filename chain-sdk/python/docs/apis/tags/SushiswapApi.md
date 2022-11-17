@@ -7,33 +7,33 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**sushiswap_bundles__current**](#sushiswap_bundles__current) | **get** /dapps/sushiswap/bundles/current | Bundles (current)
 [**sushiswap_burns__current**](#sushiswap_burns__current) | **get** /dapps/sushiswap/burns/current | Burns (current)
-[**sushiswap_day_datas__current**](#sushiswap_day_datas__current) | **get** /dapps/sushiswap/dayDatas/current | DayDatas (current)
-[**sushiswap_factorys__current**](#sushiswap_factorys__current) | **get** /dapps/sushiswap/factorys/current | Factorys (current)
+[**sushiswap_day_data__current**](#sushiswap_day_data__current) | **get** /dapps/sushiswap/dayData/current | DayData (current)
+[**sushiswap_factories__current**](#sushiswap_factories__current) | **get** /dapps/sushiswap/factories/current | Factories (current)
 [**sushiswap_get_bundles__historical**](#sushiswap_get_bundles__historical) | **get** /dapps/sushiswap/bundles/historical | Bundles (historical)
 [**sushiswap_get_burns__historical**](#sushiswap_get_burns__historical) | **get** /dapps/sushiswap/burns/historical | Burns (historical)
-[**sushiswap_get_day_datas__historical**](#sushiswap_get_day_datas__historical) | **get** /dapps/sushiswap/dayDatas/historical | DayDatas (historical)
-[**sushiswap_get_factorys__historical**](#sushiswap_get_factorys__historical) | **get** /dapps/sushiswap/factorys/historical | Factorys (historical)
-[**sushiswap_get_hour_datas__historical**](#sushiswap_get_hour_datas__historical) | **get** /dapps/sushiswap/hourDatas/historical | HourDatas (historical)
+[**sushiswap_get_day_data__historical**](#sushiswap_get_day_data__historical) | **get** /dapps/sushiswap/dayData/historical | DayData (historical)
+[**sushiswap_get_factories__historical**](#sushiswap_get_factories__historical) | **get** /dapps/sushiswap/factories/historical | Factories (historical)
+[**sushiswap_get_hour_data__historical**](#sushiswap_get_hour_data__historical) | **get** /dapps/sushiswap/hourData/historical | HourData (historical)
 [**sushiswap_get_liquidity_position_snapshots__historical**](#sushiswap_get_liquidity_position_snapshots__historical) | **get** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**sushiswap_get_liquidity_positions__historical**](#sushiswap_get_liquidity_positions__historical) | **get** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical)
 [**sushiswap_get_mints__historical**](#sushiswap_get_mints__historical) | **get** /dapps/sushiswap/mints/historical | Mints (historical)
-[**sushiswap_get_pair_day_datas__historical**](#sushiswap_get_pair_day_datas__historical) | **get** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical)
-[**sushiswap_get_pair_hour_datas__historical**](#sushiswap_get_pair_hour_datas__historical) | **get** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical)
+[**sushiswap_get_pair_day_data__historical**](#sushiswap_get_pair_day_data__historical) | **get** /dapps/sushiswap/pairDayData/historical | PairDayData (historical)
+[**sushiswap_get_pair_hour_data__historical**](#sushiswap_get_pair_hour_data__historical) | **get** /dapps/sushiswap/pairHourData/historical | PairHourData (historical)
 [**sushiswap_get_pairs__historical**](#sushiswap_get_pairs__historical) | **get** /dapps/sushiswap/pairs/historical | Pairs (historical)
 [**sushiswap_get_swaps__historical**](#sushiswap_get_swaps__historical) | **get** /dapps/sushiswap/swaps/historical | Swaps (historical)
-[**sushiswap_get_token_day_datas__historical**](#sushiswap_get_token_day_datas__historical) | **get** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical)
+[**sushiswap_get_token_day_data__historical**](#sushiswap_get_token_day_data__historical) | **get** /dapps/sushiswap/tokenDayData/historical | TokenDayData (historical)
 [**sushiswap_get_tokens__historical**](#sushiswap_get_tokens__historical) | **get** /dapps/sushiswap/tokens/historical | Tokens (historical)
 [**sushiswap_get_transactions__historical**](#sushiswap_get_transactions__historical) | **get** /dapps/sushiswap/transactions/historical | Transactions (historical)
 [**sushiswap_get_users__historical**](#sushiswap_get_users__historical) | **get** /dapps/sushiswap/users/historical | Users (historical)
-[**sushiswap_hour_datas__current**](#sushiswap_hour_datas__current) | **get** /dapps/sushiswap/hourDatas/current | HourDatas (current)
+[**sushiswap_hour_data__current**](#sushiswap_hour_data__current) | **get** /dapps/sushiswap/hourData/current | HourData (current)
 [**sushiswap_liquidity_position_snapshots__current**](#sushiswap_liquidity_position_snapshots__current) | **get** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**sushiswap_liquidity_positions__current**](#sushiswap_liquidity_positions__current) | **get** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
 [**sushiswap_mints__current**](#sushiswap_mints__current) | **get** /dapps/sushiswap/mints/current | Mints (current)
-[**sushiswap_pair_day_datas__current**](#sushiswap_pair_day_datas__current) | **get** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current)
-[**sushiswap_pair_hour_datas__current**](#sushiswap_pair_hour_datas__current) | **get** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current)
+[**sushiswap_pair_day_data__current**](#sushiswap_pair_day_data__current) | **get** /dapps/sushiswap/pairDayData/current | PairDayData (current)
+[**sushiswap_pair_hour_data__current**](#sushiswap_pair_hour_data__current) | **get** /dapps/sushiswap/pairHourData/current | PairHourData (current)
 [**sushiswap_pairs__current**](#sushiswap_pairs__current) | **get** /dapps/sushiswap/pairs/current | Pairs (current)
 [**sushiswap_swaps__current**](#sushiswap_swaps__current) | **get** /dapps/sushiswap/swaps/current | Swaps (current)
-[**sushiswap_token_day_datas__current**](#sushiswap_token_day_datas__current) | **get** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current)
+[**sushiswap_token_day_data__current**](#sushiswap_token_day_data__current) | **get** /dapps/sushiswap/tokenDayData/current | TokenDayData (current)
 [**sushiswap_tokens__current**](#sushiswap_tokens__current) | **get** /dapps/sushiswap/tokens/current | Tokens (current)
 [**sushiswap_transactions__current**](#sushiswap_transactions__current) | **get** /dapps/sushiswap/transactions/current | Transactions (current)
 [**sushiswap_users__current**](#sushiswap_users__current) | **get** /dapps/sushiswap/users/current | Users (current)
@@ -224,13 +224,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **sushiswap_day_datas__current**
-<a name="sushiswap_day_datas__current"></a>
-> [SushiswapDayDataDTO] sushiswap_day_datas__current()
+# **sushiswap_day_data__current**
+<a name="sushiswap_day_data__current"></a>
+> [SushiswapDayDataDTO] sushiswap_day_data__current()
 
-DayDatas (current)
+DayData (current)
 
-Gets dayDatas.
+Gets dayData.
 
 ### Example
 
@@ -252,11 +252,11 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # DayDatas (current)
-        api_response = api_instance.sushiswap_day_datas__current()
+        # DayData (current)
+        api_response = api_instance.sushiswap_day_data__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling SushiswapApi->sushiswap_day_datas__current: %s\n" % e)
+        print("Exception when calling SushiswapApi->sushiswap_day_data__current: %s\n" % e)
 ```
 ### Parameters
 This endpoint does not need any parameter.
@@ -266,9 +266,9 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#sushiswap_day_datas__current.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#sushiswap_day_data__current.ApiResponseFor200) | successful operation
 
-#### sushiswap_day_datas__current.ApiResponseFor200
+#### sushiswap_day_data__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -317,13 +317,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **sushiswap_factorys__current**
-<a name="sushiswap_factorys__current"></a>
-> [SushiswapFactoryDTO] sushiswap_factorys__current()
+# **sushiswap_factories__current**
+<a name="sushiswap_factories__current"></a>
+> [SushiswapFactoryDTO] sushiswap_factories__current()
 
-Factorys (current)
+Factories (current)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 
@@ -345,11 +345,11 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # Factorys (current)
-        api_response = api_instance.sushiswap_factorys__current()
+        # Factories (current)
+        api_response = api_instance.sushiswap_factories__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling SushiswapApi->sushiswap_factorys__current: %s\n" % e)
+        print("Exception when calling SushiswapApi->sushiswap_factories__current: %s\n" % e)
 ```
 ### Parameters
 This endpoint does not need any parameter.
@@ -359,9 +359,9 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#sushiswap_factorys__current.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#sushiswap_factories__current.ApiResponseFor200) | successful operation
 
-#### sushiswap_factorys__current.ApiResponseFor200
+#### sushiswap_factories__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -731,13 +731,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **sushiswap_get_day_datas__historical**
-<a name="sushiswap_get_day_datas__historical"></a>
-> [SushiswapDayDataDTO] sushiswap_get_day_datas__historical()
+# **sushiswap_get_day_data__historical**
+<a name="sushiswap_get_day_data__historical"></a>
+> [SushiswapDayDataDTO] sushiswap_get_day_data__historical()
 
-DayDatas (historical)
+DayData (historical)
 
-Gets dayDatas.
+Gets dayData.
 
 ### Example
 
@@ -766,13 +766,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # DayDatas (historical)
-        api_response = api_instance.sushiswap_get_day_datas__historical(
+        # DayData (historical)
+        api_response = api_instance.sushiswap_get_day_data__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling SushiswapApi->sushiswap_get_day_datas__historical: %s\n" % e)
+        print("Exception when calling SushiswapApi->sushiswap_get_day_data__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -836,9 +836,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#sushiswap_get_day_datas__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#sushiswap_get_day_data__historical.ApiResponseFor200) | successful operation
 
-#### sushiswap_get_day_datas__historical.ApiResponseFor200
+#### sushiswap_get_day_data__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -887,13 +887,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **sushiswap_get_factorys__historical**
-<a name="sushiswap_get_factorys__historical"></a>
-> [SushiswapFactoryDTO] sushiswap_get_factorys__historical()
+# **sushiswap_get_factories__historical**
+<a name="sushiswap_get_factories__historical"></a>
+> [SushiswapFactoryDTO] sushiswap_get_factories__historical()
 
-Factorys (historical)
+Factories (historical)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 
@@ -922,13 +922,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # Factorys (historical)
-        api_response = api_instance.sushiswap_get_factorys__historical(
+        # Factories (historical)
+        api_response = api_instance.sushiswap_get_factories__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling SushiswapApi->sushiswap_get_factorys__historical: %s\n" % e)
+        print("Exception when calling SushiswapApi->sushiswap_get_factories__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -992,9 +992,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#sushiswap_get_factorys__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#sushiswap_get_factories__historical.ApiResponseFor200) | successful operation
 
-#### sushiswap_get_factorys__historical.ApiResponseFor200
+#### sushiswap_get_factories__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -1043,13 +1043,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **sushiswap_get_hour_datas__historical**
-<a name="sushiswap_get_hour_datas__historical"></a>
-> [SushiswapHourDataDTO] sushiswap_get_hour_datas__historical()
+# **sushiswap_get_hour_data__historical**
+<a name="sushiswap_get_hour_data__historical"></a>
+> [SushiswapHourDataDTO] sushiswap_get_hour_data__historical()
 
-HourDatas (historical)
+HourData (historical)
 
-Gets hourDatas.
+Gets hourData.
 
 ### Example
 
@@ -1078,13 +1078,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # HourDatas (historical)
-        api_response = api_instance.sushiswap_get_hour_datas__historical(
+        # HourData (historical)
+        api_response = api_instance.sushiswap_get_hour_data__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling SushiswapApi->sushiswap_get_hour_datas__historical: %s\n" % e)
+        print("Exception when calling SushiswapApi->sushiswap_get_hour_data__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -1148,9 +1148,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#sushiswap_get_hour_datas__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#sushiswap_get_hour_data__historical.ApiResponseFor200) | successful operation
 
-#### sushiswap_get_hour_datas__historical.ApiResponseFor200
+#### sushiswap_get_hour_data__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -1712,13 +1712,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **sushiswap_get_pair_day_datas__historical**
-<a name="sushiswap_get_pair_day_datas__historical"></a>
-> [SushiswapPairDayDataDTO] sushiswap_get_pair_day_datas__historical()
+# **sushiswap_get_pair_day_data__historical**
+<a name="sushiswap_get_pair_day_data__historical"></a>
+> [SushiswapPairDayDataDTO] sushiswap_get_pair_day_data__historical()
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 
@@ -1750,13 +1750,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'token_1': "token_1_example",
     }
     try:
-        # PairDayDatas (historical)
-        api_response = api_instance.sushiswap_get_pair_day_datas__historical(
+        # PairDayData (historical)
+        api_response = api_instance.sushiswap_get_pair_day_data__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling SushiswapApi->sushiswap_get_pair_day_datas__historical: %s\n" % e)
+        print("Exception when calling SushiswapApi->sushiswap_get_pair_day_data__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -1844,9 +1844,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#sushiswap_get_pair_day_datas__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#sushiswap_get_pair_day_data__historical.ApiResponseFor200) | successful operation
 
-#### sushiswap_get_pair_day_datas__historical.ApiResponseFor200
+#### sushiswap_get_pair_day_data__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -1895,13 +1895,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **sushiswap_get_pair_hour_datas__historical**
-<a name="sushiswap_get_pair_hour_datas__historical"></a>
-> [SushiswapPairHourDataDTO] sushiswap_get_pair_hour_datas__historical()
+# **sushiswap_get_pair_hour_data__historical**
+<a name="sushiswap_get_pair_hour_data__historical"></a>
+> [SushiswapPairHourDataDTO] sushiswap_get_pair_hour_data__historical()
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 
@@ -1931,13 +1931,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # PairHourDatas (historical)
-        api_response = api_instance.sushiswap_get_pair_hour_datas__historical(
+        # PairHourData (historical)
+        api_response = api_instance.sushiswap_get_pair_hour_data__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling SushiswapApi->sushiswap_get_pair_hour_datas__historical: %s\n" % e)
+        print("Exception when calling SushiswapApi->sushiswap_get_pair_hour_data__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -2009,9 +2009,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#sushiswap_get_pair_hour_datas__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#sushiswap_get_pair_hour_data__historical.ApiResponseFor200) | successful operation
 
-#### sushiswap_get_pair_hour_datas__historical.ApiResponseFor200
+#### sushiswap_get_pair_hour_data__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -2408,13 +2408,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **sushiswap_get_token_day_datas__historical**
-<a name="sushiswap_get_token_day_datas__historical"></a>
-> [SushiswapTokenDayDataDTO] sushiswap_get_token_day_datas__historical()
+# **sushiswap_get_token_day_data__historical**
+<a name="sushiswap_get_token_day_data__historical"></a>
+> [SushiswapTokenDayDataDTO] sushiswap_get_token_day_data__historical()
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 
@@ -2443,13 +2443,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # TokenDayDatas (historical)
-        api_response = api_instance.sushiswap_get_token_day_datas__historical(
+        # TokenDayData (historical)
+        api_response = api_instance.sushiswap_get_token_day_data__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling SushiswapApi->sushiswap_get_token_day_datas__historical: %s\n" % e)
+        print("Exception when calling SushiswapApi->sushiswap_get_token_day_data__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -2513,9 +2513,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#sushiswap_get_token_day_datas__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#sushiswap_get_token_day_data__historical.ApiResponseFor200) | successful operation
 
-#### sushiswap_get_token_day_datas__historical.ApiResponseFor200
+#### sushiswap_get_token_day_data__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -3050,13 +3050,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **sushiswap_hour_datas__current**
-<a name="sushiswap_hour_datas__current"></a>
-> [SushiswapHourDataDTO] sushiswap_hour_datas__current()
+# **sushiswap_hour_data__current**
+<a name="sushiswap_hour_data__current"></a>
+> [SushiswapHourDataDTO] sushiswap_hour_data__current()
 
-HourDatas (current)
+HourData (current)
 
-Gets hourDatas.
+Gets hourData.
 
 ### Example
 
@@ -3078,11 +3078,11 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # HourDatas (current)
-        api_response = api_instance.sushiswap_hour_datas__current()
+        # HourData (current)
+        api_response = api_instance.sushiswap_hour_data__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling SushiswapApi->sushiswap_hour_datas__current: %s\n" % e)
+        print("Exception when calling SushiswapApi->sushiswap_hour_data__current: %s\n" % e)
 ```
 ### Parameters
 This endpoint does not need any parameter.
@@ -3092,9 +3092,9 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#sushiswap_hour_datas__current.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#sushiswap_hour_data__current.ApiResponseFor200) | successful operation
 
-#### sushiswap_hour_datas__current.ApiResponseFor200
+#### sushiswap_hour_data__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -3422,13 +3422,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **sushiswap_pair_day_datas__current**
-<a name="sushiswap_pair_day_datas__current"></a>
-> [SushiswapPairDayDataDTO] sushiswap_pair_day_datas__current()
+# **sushiswap_pair_day_data__current**
+<a name="sushiswap_pair_day_data__current"></a>
+> [SushiswapPairDayDataDTO] sushiswap_pair_day_data__current()
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 
@@ -3450,11 +3450,11 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # PairDayDatas (current)
-        api_response = api_instance.sushiswap_pair_day_datas__current()
+        # PairDayData (current)
+        api_response = api_instance.sushiswap_pair_day_data__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling SushiswapApi->sushiswap_pair_day_datas__current: %s\n" % e)
+        print("Exception when calling SushiswapApi->sushiswap_pair_day_data__current: %s\n" % e)
 ```
 ### Parameters
 This endpoint does not need any parameter.
@@ -3464,9 +3464,9 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#sushiswap_pair_day_datas__current.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#sushiswap_pair_day_data__current.ApiResponseFor200) | successful operation
 
-#### sushiswap_pair_day_datas__current.ApiResponseFor200
+#### sushiswap_pair_day_data__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -3515,13 +3515,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **sushiswap_pair_hour_datas__current**
-<a name="sushiswap_pair_hour_datas__current"></a>
-> [SushiswapPairHourDataDTO] sushiswap_pair_hour_datas__current()
+# **sushiswap_pair_hour_data__current**
+<a name="sushiswap_pair_hour_data__current"></a>
+> [SushiswapPairHourDataDTO] sushiswap_pair_hour_data__current()
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 
@@ -3543,11 +3543,11 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # PairHourDatas (current)
-        api_response = api_instance.sushiswap_pair_hour_datas__current()
+        # PairHourData (current)
+        api_response = api_instance.sushiswap_pair_hour_data__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling SushiswapApi->sushiswap_pair_hour_datas__current: %s\n" % e)
+        print("Exception when calling SushiswapApi->sushiswap_pair_hour_data__current: %s\n" % e)
 ```
 ### Parameters
 This endpoint does not need any parameter.
@@ -3557,9 +3557,9 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#sushiswap_pair_hour_datas__current.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#sushiswap_pair_hour_data__current.ApiResponseFor200) | successful operation
 
-#### sushiswap_pair_hour_datas__current.ApiResponseFor200
+#### sushiswap_pair_hour_data__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -3848,13 +3848,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **sushiswap_token_day_datas__current**
-<a name="sushiswap_token_day_datas__current"></a>
-> [SushiswapTokenDayDataDTO] sushiswap_token_day_datas__current()
+# **sushiswap_token_day_data__current**
+<a name="sushiswap_token_day_data__current"></a>
+> [SushiswapTokenDayDataDTO] sushiswap_token_day_data__current()
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 
@@ -3876,11 +3876,11 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # TokenDayDatas (current)
-        api_response = api_instance.sushiswap_token_day_datas__current()
+        # TokenDayData (current)
+        api_response = api_instance.sushiswap_token_day_data__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling SushiswapApi->sushiswap_token_day_datas__current: %s\n" % e)
+        print("Exception when calling SushiswapApi->sushiswap_token_day_data__current: %s\n" % e)
 ```
 ### Parameters
 This endpoint does not need any parameter.
@@ -3890,9 +3890,9 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#sushiswap_token_day_datas__current.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#sushiswap_token_day_data__current.ApiResponseFor200) | successful operation
 
-#### sushiswap_token_day_datas__current.ApiResponseFor200
+#### sushiswap_token_day_data__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |

@@ -15,14 +15,14 @@
 
 
 module Api.Request.Dex exposing
-    ( dexBatchsCurrent
+    ( dexBatchesCurrent
     , dexDepositsCurrent
-    , dexGetBatchsHistorical
+    , dexGetBatchesHistorical
     , dexGetDepositsHistorical
     , dexGetOrdersHistorical
     , dexGetPricesHistorical
     , dexGetSolutionsHistorical
-    , dexGetStatssHistorical
+    , dexGetStatsHistorical
     , dexGetTokensHistorical
     , dexGetTradesHistorical
     , dexGetUsersHistorical
@@ -31,7 +31,7 @@ module Api.Request.Dex exposing
     , dexOrdersCurrent
     , dexPricesCurrent
     , dexSolutionsCurrent
-    , dexStatssCurrent
+    , dexStatsCurrent
     , dexTokensCurrent
     , dexTradesCurrent
     , dexUsersCurrent
@@ -49,13 +49,13 @@ import Json.Encode
 
 
 
-{-| Gets batchs.
+{-| Gets batches.
 -}
-dexBatchsCurrent : Api.Request (List Api.Data.DexBatchDTO)
-dexBatchsCurrent =
+dexBatchesCurrent : Api.Request (List Api.Data.DexBatchDTO)
+dexBatchesCurrent =
     Api.request
         "GET"
-        "/dapps/dex/batchs/current"
+        "/dapps/dex/batches/current"
         []
         []
         []
@@ -79,13 +79,13 @@ dexDepositsCurrent =
 
 
 
-{-| Gets batchs.
+{-| Gets batches.
 -}
-dexGetBatchsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.DexBatchDTO)
-dexGetBatchsHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
+dexGetBatchesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.DexBatchDTO)
+dexGetBatchesHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
     Api.request
         "GET"
-        "/dapps/dex/batchs/historical"
+        "/dapps/dex/batches/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
         []
@@ -154,13 +154,13 @@ dexGetSolutionsHistorical startBlock_query endBlock_query startDate_query endDat
 
 
 
-{-| Gets statss.
+{-| Gets stats.
 -}
-dexGetStatssHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.DexStatsDTO)
-dexGetStatssHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
+dexGetStatsHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.DexStatsDTO)
+dexGetStatsHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
     Api.request
         "GET"
-        "/dapps/dex/statss/historical"
+        "/dapps/dex/stats/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
         []
@@ -289,13 +289,13 @@ dexSolutionsCurrent =
 
 
 
-{-| Gets statss.
+{-| Gets stats.
 -}
-dexStatssCurrent : Api.Request (List Api.Data.DexStatsDTO)
-dexStatssCurrent =
+dexStatsCurrent : Api.Request (List Api.Data.DexStatsDTO)
+dexStatsCurrent =
     Api.request
         "GET"
-        "/dapps/dex/statss/current"
+        "/dapps/dex/stats/current"
         []
         []
         []

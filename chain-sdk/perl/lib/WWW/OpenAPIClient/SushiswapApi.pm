@@ -147,26 +147,26 @@ sub sushiswap_burns__current {
 }
 
 #
-# sushiswap_day_datas__current
+# sushiswap_day_data__current
 #
-# DayDatas (current)
+# DayData (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'sushiswap_day_datas__current' } = {
-        summary => 'DayDatas (current)',
+    __PACKAGE__->method_documentation->{ 'sushiswap_day_data__current' } = {
+        summary => 'DayData (current)',
         params => $params,
         returns => 'ARRAY[SushiswapDayDataDTO]',
         };
 }
 # @return ARRAY[SushiswapDayDataDTO]
 #
-sub sushiswap_day_datas__current {
+sub sushiswap_day_data__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/dayDatas/current';
+    my $_resource_path = '/dapps/sushiswap/dayData/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -196,26 +196,26 @@ sub sushiswap_day_datas__current {
 }
 
 #
-# sushiswap_factorys__current
+# sushiswap_factories__current
 #
-# Factorys (current)
+# Factories (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'sushiswap_factorys__current' } = {
-        summary => 'Factorys (current)',
+    __PACKAGE__->method_documentation->{ 'sushiswap_factories__current' } = {
+        summary => 'Factories (current)',
         params => $params,
         returns => 'ARRAY[SushiswapFactoryDTO]',
         };
 }
 # @return ARRAY[SushiswapFactoryDTO]
 #
-sub sushiswap_factorys__current {
+sub sushiswap_factories__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/factorys/current';
+    my $_resource_path = '/dapps/sushiswap/factories/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -464,9 +464,9 @@ sub sushiswap_get_burns__historical {
 }
 
 #
-# sushiswap_get_day_datas__historical
+# sushiswap_get_day_data__historical
 #
-# DayDatas (historical)
+# DayData (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -501,19 +501,19 @@ sub sushiswap_get_burns__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'sushiswap_get_day_datas__historical' } = {
-        summary => 'DayDatas (historical)',
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_day_data__historical' } = {
+        summary => 'DayData (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapDayDataDTO]',
         };
 }
 # @return ARRAY[SushiswapDayDataDTO]
 #
-sub sushiswap_get_day_datas__historical {
+sub sushiswap_get_day_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/dayDatas/historical';
+    my $_resource_path = '/dapps/sushiswap/dayData/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -568,9 +568,9 @@ sub sushiswap_get_day_datas__historical {
 }
 
 #
-# sushiswap_get_factorys__historical
+# sushiswap_get_factories__historical
 #
-# Factorys (historical)
+# Factories (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -605,19 +605,19 @@ sub sushiswap_get_day_datas__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'sushiswap_get_factorys__historical' } = {
-        summary => 'Factorys (historical)',
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_factories__historical' } = {
+        summary => 'Factories (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapFactoryDTO]',
         };
 }
 # @return ARRAY[SushiswapFactoryDTO]
 #
-sub sushiswap_get_factorys__historical {
+sub sushiswap_get_factories__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/factorys/historical';
+    my $_resource_path = '/dapps/sushiswap/factories/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -672,9 +672,9 @@ sub sushiswap_get_factorys__historical {
 }
 
 #
-# sushiswap_get_hour_datas__historical
+# sushiswap_get_hour_data__historical
 #
-# HourDatas (historical)
+# HourData (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -709,19 +709,19 @@ sub sushiswap_get_factorys__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'sushiswap_get_hour_datas__historical' } = {
-        summary => 'HourDatas (historical)',
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_hour_data__historical' } = {
+        summary => 'HourData (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapHourDataDTO]',
         };
 }
 # @return ARRAY[SushiswapHourDataDTO]
 #
-sub sushiswap_get_hour_datas__historical {
+sub sushiswap_get_hour_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/hourDatas/historical';
+    my $_resource_path = '/dapps/sushiswap/hourData/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1143,9 +1143,9 @@ sub sushiswap_get_mints__historical {
 }
 
 #
-# sushiswap_get_pair_day_datas__historical
+# sushiswap_get_pair_day_data__historical
 #
-# PairDayDatas (historical)
+# PairDayData (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1198,19 +1198,19 @@ sub sushiswap_get_mints__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'sushiswap_get_pair_day_datas__historical' } = {
-        summary => 'PairDayDatas (historical)',
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_pair_day_data__historical' } = {
+        summary => 'PairDayData (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapPairDayDataDTO]',
         };
 }
 # @return ARRAY[SushiswapPairDayDataDTO]
 #
-sub sushiswap_get_pair_day_datas__historical {
+sub sushiswap_get_pair_day_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/pairDayDatas/historical';
+    my $_resource_path = '/dapps/sushiswap/pairDayData/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1280,9 +1280,9 @@ sub sushiswap_get_pair_day_datas__historical {
 }
 
 #
-# sushiswap_get_pair_hour_datas__historical
+# sushiswap_get_pair_hour_data__historical
 #
-# PairHourDatas (historical)
+# PairHourData (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1323,19 +1323,19 @@ sub sushiswap_get_pair_day_datas__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'sushiswap_get_pair_hour_datas__historical' } = {
-        summary => 'PairHourDatas (historical)',
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_pair_hour_data__historical' } = {
+        summary => 'PairHourData (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapPairHourDataDTO]',
         };
 }
 # @return ARRAY[SushiswapPairHourDataDTO]
 #
-sub sushiswap_get_pair_hour_datas__historical {
+sub sushiswap_get_pair_hour_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/pairHourDatas/historical';
+    my $_resource_path = '/dapps/sushiswap/pairHourData/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1647,9 +1647,9 @@ sub sushiswap_get_swaps__historical {
 }
 
 #
-# sushiswap_get_token_day_datas__historical
+# sushiswap_get_token_day_data__historical
 #
-# TokenDayDatas (historical)
+# TokenDayData (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1684,19 +1684,19 @@ sub sushiswap_get_swaps__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'sushiswap_get_token_day_datas__historical' } = {
-        summary => 'TokenDayDatas (historical)',
+    __PACKAGE__->method_documentation->{ 'sushiswap_get_token_day_data__historical' } = {
+        summary => 'TokenDayData (historical)',
         params => $params,
         returns => 'ARRAY[SushiswapTokenDayDataDTO]',
         };
 }
 # @return ARRAY[SushiswapTokenDayDataDTO]
 #
-sub sushiswap_get_token_day_datas__historical {
+sub sushiswap_get_token_day_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/tokenDayDatas/historical';
+    my $_resource_path = '/dapps/sushiswap/tokenDayData/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2085,26 +2085,26 @@ sub sushiswap_get_users__historical {
 }
 
 #
-# sushiswap_hour_datas__current
+# sushiswap_hour_data__current
 #
-# HourDatas (current)
+# HourData (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'sushiswap_hour_datas__current' } = {
-        summary => 'HourDatas (current)',
+    __PACKAGE__->method_documentation->{ 'sushiswap_hour_data__current' } = {
+        summary => 'HourData (current)',
         params => $params,
         returns => 'ARRAY[SushiswapHourDataDTO]',
         };
 }
 # @return ARRAY[SushiswapHourDataDTO]
 #
-sub sushiswap_hour_datas__current {
+sub sushiswap_hour_data__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/hourDatas/current';
+    my $_resource_path = '/dapps/sushiswap/hourData/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2281,26 +2281,26 @@ sub sushiswap_mints__current {
 }
 
 #
-# sushiswap_pair_day_datas__current
+# sushiswap_pair_day_data__current
 #
-# PairDayDatas (current)
+# PairDayData (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'sushiswap_pair_day_datas__current' } = {
-        summary => 'PairDayDatas (current)',
+    __PACKAGE__->method_documentation->{ 'sushiswap_pair_day_data__current' } = {
+        summary => 'PairDayData (current)',
         params => $params,
         returns => 'ARRAY[SushiswapPairDayDataDTO]',
         };
 }
 # @return ARRAY[SushiswapPairDayDataDTO]
 #
-sub sushiswap_pair_day_datas__current {
+sub sushiswap_pair_day_data__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/pairDayDatas/current';
+    my $_resource_path = '/dapps/sushiswap/pairDayData/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2330,26 +2330,26 @@ sub sushiswap_pair_day_datas__current {
 }
 
 #
-# sushiswap_pair_hour_datas__current
+# sushiswap_pair_hour_data__current
 #
-# PairHourDatas (current)
+# PairHourData (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'sushiswap_pair_hour_datas__current' } = {
-        summary => 'PairHourDatas (current)',
+    __PACKAGE__->method_documentation->{ 'sushiswap_pair_hour_data__current' } = {
+        summary => 'PairHourData (current)',
         params => $params,
         returns => 'ARRAY[SushiswapPairHourDataDTO]',
         };
 }
 # @return ARRAY[SushiswapPairHourDataDTO]
 #
-sub sushiswap_pair_hour_datas__current {
+sub sushiswap_pair_hour_data__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/pairHourDatas/current';
+    my $_resource_path = '/dapps/sushiswap/pairHourData/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2499,26 +2499,26 @@ sub sushiswap_swaps__current {
 }
 
 #
-# sushiswap_token_day_datas__current
+# sushiswap_token_day_data__current
 #
-# TokenDayDatas (current)
+# TokenDayData (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'sushiswap_token_day_datas__current' } = {
-        summary => 'TokenDayDatas (current)',
+    __PACKAGE__->method_documentation->{ 'sushiswap_token_day_data__current' } = {
+        summary => 'TokenDayData (current)',
         params => $params,
         returns => 'ARRAY[SushiswapTokenDayDataDTO]',
         };
 }
 # @return ARRAY[SushiswapTokenDayDataDTO]
 #
-sub sushiswap_token_day_datas__current {
+sub sushiswap_token_day_data__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/sushiswap/tokenDayDatas/current';
+    my $_resource_path = '/dapps/sushiswap/tokenDayData/current';
 
     my $_method = 'GET';
     my $query_params = {};

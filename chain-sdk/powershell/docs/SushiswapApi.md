@@ -6,33 +6,33 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**Invoke-SushiswapBundlesCurrent**](SushiswapApi.md#Invoke-SushiswapBundlesCurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
 [**Invoke-SushiswapBurnsCurrent**](SushiswapApi.md#Invoke-SushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
-[**Invoke-SushiswapDayDatasCurrent**](SushiswapApi.md#Invoke-SushiswapDayDatasCurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
-[**Invoke-SushiswapFactorysCurrent**](SushiswapApi.md#Invoke-SushiswapFactorysCurrent) | **GET** /dapps/sushiswap/factorys/current | Factorys (current)
+[**Invoke-SushiswapDayDataCurrent**](SushiswapApi.md#Invoke-SushiswapDayDataCurrent) | **GET** /dapps/sushiswap/dayData/current | DayData (current)
+[**Invoke-SushiswapFactoriesCurrent**](SushiswapApi.md#Invoke-SushiswapFactoriesCurrent) | **GET** /dapps/sushiswap/factories/current | Factories (current)
 [**Invoke-SushiswapGetBundlesHistorical**](SushiswapApi.md#Invoke-SushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical)
 [**Invoke-SushiswapGetBurnsHistorical**](SushiswapApi.md#Invoke-SushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical)
-[**Invoke-SushiswapGetDayDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical)
-[**Invoke-SushiswapGetFactorysHistorical**](SushiswapApi.md#Invoke-SushiswapGetFactorysHistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical)
-[**Invoke-SushiswapGetHourDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical)
+[**Invoke-SushiswapGetDayDataHistorical**](SushiswapApi.md#Invoke-SushiswapGetDayDataHistorical) | **GET** /dapps/sushiswap/dayData/historical | DayData (historical)
+[**Invoke-SushiswapGetFactoriesHistorical**](SushiswapApi.md#Invoke-SushiswapGetFactoriesHistorical) | **GET** /dapps/sushiswap/factories/historical | Factories (historical)
+[**Invoke-SushiswapGetHourDataHistorical**](SushiswapApi.md#Invoke-SushiswapGetHourDataHistorical) | **GET** /dapps/sushiswap/hourData/historical | HourData (historical)
 [**Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#Invoke-SushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**Invoke-SushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#Invoke-SushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical)
 [**Invoke-SushiswapGetMintsHistorical**](SushiswapApi.md#Invoke-SushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical)
-[**Invoke-SushiswapGetPairDayDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical)
-[**Invoke-SushiswapGetPairHourDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical)
+[**Invoke-SushiswapGetPairDayDataHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairDayDataHistorical) | **GET** /dapps/sushiswap/pairDayData/historical | PairDayData (historical)
+[**Invoke-SushiswapGetPairHourDataHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairHourDataHistorical) | **GET** /dapps/sushiswap/pairHourData/historical | PairHourData (historical)
 [**Invoke-SushiswapGetPairsHistorical**](SushiswapApi.md#Invoke-SushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical)
 [**Invoke-SushiswapGetSwapsHistorical**](SushiswapApi.md#Invoke-SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical)
-[**Invoke-SushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#Invoke-SushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical)
+[**Invoke-SushiswapGetTokenDayDataHistorical**](SushiswapApi.md#Invoke-SushiswapGetTokenDayDataHistorical) | **GET** /dapps/sushiswap/tokenDayData/historical | TokenDayData (historical)
 [**Invoke-SushiswapGetTokensHistorical**](SushiswapApi.md#Invoke-SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical)
 [**Invoke-SushiswapGetTransactionsHistorical**](SushiswapApi.md#Invoke-SushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical)
 [**Invoke-SushiswapGetUsersHistorical**](SushiswapApi.md#Invoke-SushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical)
-[**Invoke-SushiswapHourDatasCurrent**](SushiswapApi.md#Invoke-SushiswapHourDatasCurrent) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current)
+[**Invoke-SushiswapHourDataCurrent**](SushiswapApi.md#Invoke-SushiswapHourDataCurrent) | **GET** /dapps/sushiswap/hourData/current | HourData (current)
 [**Invoke-SushiswapLiquidityPositionSnapshotsCurrent**](SushiswapApi.md#Invoke-SushiswapLiquidityPositionSnapshotsCurrent) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**Invoke-SushiswapLiquidityPositionsCurrent**](SushiswapApi.md#Invoke-SushiswapLiquidityPositionsCurrent) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
 [**Invoke-SushiswapMintsCurrent**](SushiswapApi.md#Invoke-SushiswapMintsCurrent) | **GET** /dapps/sushiswap/mints/current | Mints (current)
-[**Invoke-SushiswapPairDayDatasCurrent**](SushiswapApi.md#Invoke-SushiswapPairDayDatasCurrent) | **GET** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current)
-[**Invoke-SushiswapPairHourDatasCurrent**](SushiswapApi.md#Invoke-SushiswapPairHourDatasCurrent) | **GET** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current)
+[**Invoke-SushiswapPairDayDataCurrent**](SushiswapApi.md#Invoke-SushiswapPairDayDataCurrent) | **GET** /dapps/sushiswap/pairDayData/current | PairDayData (current)
+[**Invoke-SushiswapPairHourDataCurrent**](SushiswapApi.md#Invoke-SushiswapPairHourDataCurrent) | **GET** /dapps/sushiswap/pairHourData/current | PairHourData (current)
 [**Invoke-SushiswapPairsCurrent**](SushiswapApi.md#Invoke-SushiswapPairsCurrent) | **GET** /dapps/sushiswap/pairs/current | Pairs (current)
 [**Invoke-SushiswapSwapsCurrent**](SushiswapApi.md#Invoke-SushiswapSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current)
-[**Invoke-SushiswapTokenDayDatasCurrent**](SushiswapApi.md#Invoke-SushiswapTokenDayDatasCurrent) | **GET** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current)
+[**Invoke-SushiswapTokenDayDataCurrent**](SushiswapApi.md#Invoke-SushiswapTokenDayDataCurrent) | **GET** /dapps/sushiswap/tokenDayData/current | TokenDayData (current)
 [**Invoke-SushiswapTokensCurrent**](SushiswapApi.md#Invoke-SushiswapTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current)
 [**Invoke-SushiswapTransactionsCurrent**](SushiswapApi.md#Invoke-SushiswapTransactionsCurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
 [**Invoke-SushiswapUsersCurrent**](SushiswapApi.md#Invoke-SushiswapUsersCurrent) | **GET** /dapps/sushiswap/users/current | Users (current)
@@ -114,22 +114,22 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapDayDatasCurrent"></a>
-# **Invoke-SushiswapDayDatasCurrent**
-> SushiswapDayDataDTO[] Invoke-SushiswapDayDatasCurrent<br>
+<a name="Invoke-SushiswapDayDataCurrent"></a>
+# **Invoke-SushiswapDayDataCurrent**
+> SushiswapDayDataDTO[] Invoke-SushiswapDayDataCurrent<br>
 
-DayDatas (current)
+DayData (current)
 
-Gets dayDatas.
+Gets dayData.
 
 ### Example
 ```powershell
 
-# DayDatas (current)
+# DayData (current)
 try {
-    $Result = Invoke-SushiswapDayDatasCurrent
+    $Result = Invoke-SushiswapDayDataCurrent
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-SushiswapDayDatasCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-SushiswapDayDataCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -152,22 +152,22 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapFactorysCurrent"></a>
-# **Invoke-SushiswapFactorysCurrent**
-> SushiswapFactoryDTO[] Invoke-SushiswapFactorysCurrent<br>
+<a name="Invoke-SushiswapFactoriesCurrent"></a>
+# **Invoke-SushiswapFactoriesCurrent**
+> SushiswapFactoryDTO[] Invoke-SushiswapFactoriesCurrent<br>
 
-Factorys (current)
+Factories (current)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 ```powershell
 
-# Factorys (current)
+# Factories (current)
 try {
-    $Result = Invoke-SushiswapFactorysCurrent
+    $Result = Invoke-SushiswapFactoriesCurrent
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-SushiswapFactorysCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-SushiswapFactoriesCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -303,18 +303,18 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetDayDatasHistorical"></a>
-# **Invoke-SushiswapGetDayDatasHistorical**
-> SushiswapDayDataDTO[] Invoke-SushiswapGetDayDatasHistorical<br>
+<a name="Invoke-SushiswapGetDayDataHistorical"></a>
+# **Invoke-SushiswapGetDayDataHistorical**
+> SushiswapDayDataDTO[] Invoke-SushiswapGetDayDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-DayDatas (historical)
+DayData (historical)
 
-Gets dayDatas.
+Gets dayData.
 
 ### Example
 ```powershell
@@ -324,11 +324,11 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Unix timestamp for start of day / 86400 giving a unique day index. (optional)
 
-# DayDatas (historical)
+# DayData (historical)
 try {
-    $Result = Invoke-SushiswapGetDayDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
+    $Result = Invoke-SushiswapGetDayDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-SushiswapGetDayDatasHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-SushiswapGetDayDataHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -358,18 +358,18 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetFactorysHistorical"></a>
-# **Invoke-SushiswapGetFactorysHistorical**
-> SushiswapFactoryDTO[] Invoke-SushiswapGetFactorysHistorical<br>
+<a name="Invoke-SushiswapGetFactoriesHistorical"></a>
+# **Invoke-SushiswapGetFactoriesHistorical**
+> SushiswapFactoryDTO[] Invoke-SushiswapGetFactoriesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-Factorys (historical)
+Factories (historical)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 ```powershell
@@ -379,11 +379,11 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Factory address. (optional)
 
-# Factorys (historical)
+# Factories (historical)
 try {
-    $Result = Invoke-SushiswapGetFactorysHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
+    $Result = Invoke-SushiswapGetFactoriesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-SushiswapGetFactorysHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-SushiswapGetFactoriesHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -413,18 +413,18 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetHourDatasHistorical"></a>
-# **Invoke-SushiswapGetHourDatasHistorical**
-> SushiswapHourDataDTO[] Invoke-SushiswapGetHourDatasHistorical<br>
+<a name="Invoke-SushiswapGetHourDataHistorical"></a>
+# **Invoke-SushiswapGetHourDataHistorical**
+> SushiswapHourDataDTO[] Invoke-SushiswapGetHourDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-HourDatas (historical)
+HourData (historical)
 
-Gets hourDatas.
+Gets hourData.
 
 ### Example
 ```powershell
@@ -434,11 +434,11 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Start of hour timestamp. (optional)
 
-# HourDatas (historical)
+# HourData (historical)
 try {
-    $Result = Invoke-SushiswapGetHourDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
+    $Result = Invoke-SushiswapGetHourDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-SushiswapGetHourDatasHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-SushiswapGetHourDataHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -648,9 +648,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetPairDayDatasHistorical"></a>
-# **Invoke-SushiswapGetPairDayDatasHistorical**
-> SushiswapPairDayDataDTO[] Invoke-SushiswapGetPairDayDatasHistorical<br>
+<a name="Invoke-SushiswapGetPairDayDataHistorical"></a>
+# **Invoke-SushiswapGetPairDayDataHistorical**
+> SushiswapPairDayDataDTO[] Invoke-SushiswapGetPairDayDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
@@ -660,9 +660,9 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Token0] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Token1] <String><br>
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 ```powershell
@@ -675,11 +675,11 @@ $Pair = "MyPair" # String |  (optional)
 $Token0 = "MyToken0" # String |  (optional)
 $Token1 = "MyToken1" # String |  (optional)
 
-# PairDayDatas (historical)
+# PairDayData (historical)
 try {
-    $Result = Invoke-SushiswapGetPairDayDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pair $Pair -Token0 $Token0 -Token1 $Token1
+    $Result = Invoke-SushiswapGetPairDayDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pair $Pair -Token0 $Token0 -Token1 $Token1
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-SushiswapGetPairDayDatasHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-SushiswapGetPairDayDataHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -712,9 +712,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetPairHourDatasHistorical"></a>
-# **Invoke-SushiswapGetPairHourDatasHistorical**
-> SushiswapPairHourDataDTO[] Invoke-SushiswapGetPairHourDatasHistorical<br>
+<a name="Invoke-SushiswapGetPairHourDataHistorical"></a>
+# **Invoke-SushiswapGetPairHourDataHistorical**
+> SushiswapPairHourDataDTO[] Invoke-SushiswapGetPairHourDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
@@ -722,9 +722,9 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pair] <String><br>
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 ```powershell
@@ -735,11 +735,11 @@ $EndDate = (Get-Date) # System.DateTime |  (optional)
 $Id = "MyId" # String |  (optional)
 $Pair = "MyPair" # String |  (optional)
 
-# PairHourDatas (historical)
+# PairHourData (historical)
 try {
-    $Result = Invoke-SushiswapGetPairHourDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pair $Pair
+    $Result = Invoke-SushiswapGetPairHourDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pair $Pair
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-SushiswapGetPairHourDatasHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-SushiswapGetPairHourDataHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -892,18 +892,18 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapGetTokenDayDatasHistorical"></a>
-# **Invoke-SushiswapGetTokenDayDatasHistorical**
-> SushiswapTokenDayDataDTO[] Invoke-SushiswapGetTokenDayDatasHistorical<br>
+<a name="Invoke-SushiswapGetTokenDayDataHistorical"></a>
+# **Invoke-SushiswapGetTokenDayDataHistorical**
+> SushiswapTokenDayDataDTO[] Invoke-SushiswapGetTokenDayDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 ```powershell
@@ -913,11 +913,11 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Identifier, day start timestamp in unix / 86400. (optional)
 
-# TokenDayDatas (historical)
+# TokenDayData (historical)
 try {
-    $Result = Invoke-SushiswapGetTokenDayDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
+    $Result = Invoke-SushiswapGetTokenDayDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-SushiswapGetTokenDayDatasHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-SushiswapGetTokenDayDataHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1118,22 +1118,22 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapHourDatasCurrent"></a>
-# **Invoke-SushiswapHourDatasCurrent**
-> SushiswapHourDataDTO[] Invoke-SushiswapHourDatasCurrent<br>
+<a name="Invoke-SushiswapHourDataCurrent"></a>
+# **Invoke-SushiswapHourDataCurrent**
+> SushiswapHourDataDTO[] Invoke-SushiswapHourDataCurrent<br>
 
-HourDatas (current)
+HourData (current)
 
-Gets hourDatas.
+Gets hourData.
 
 ### Example
 ```powershell
 
-# HourDatas (current)
+# HourData (current)
 try {
-    $Result = Invoke-SushiswapHourDatasCurrent
+    $Result = Invoke-SushiswapHourDataCurrent
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-SushiswapHourDatasCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-SushiswapHourDataCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1270,22 +1270,22 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapPairDayDatasCurrent"></a>
-# **Invoke-SushiswapPairDayDatasCurrent**
-> SushiswapPairDayDataDTO[] Invoke-SushiswapPairDayDatasCurrent<br>
+<a name="Invoke-SushiswapPairDayDataCurrent"></a>
+# **Invoke-SushiswapPairDayDataCurrent**
+> SushiswapPairDayDataDTO[] Invoke-SushiswapPairDayDataCurrent<br>
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 ```powershell
 
-# PairDayDatas (current)
+# PairDayData (current)
 try {
-    $Result = Invoke-SushiswapPairDayDatasCurrent
+    $Result = Invoke-SushiswapPairDayDataCurrent
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-SushiswapPairDayDatasCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-SushiswapPairDayDataCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1308,22 +1308,22 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapPairHourDatasCurrent"></a>
-# **Invoke-SushiswapPairHourDatasCurrent**
-> SushiswapPairHourDataDTO[] Invoke-SushiswapPairHourDatasCurrent<br>
+<a name="Invoke-SushiswapPairHourDataCurrent"></a>
+# **Invoke-SushiswapPairHourDataCurrent**
+> SushiswapPairHourDataDTO[] Invoke-SushiswapPairHourDataCurrent<br>
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 ```powershell
 
-# PairHourDatas (current)
+# PairHourData (current)
 try {
-    $Result = Invoke-SushiswapPairHourDatasCurrent
+    $Result = Invoke-SushiswapPairHourDataCurrent
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-SushiswapPairHourDatasCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-SushiswapPairHourDataCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1432,22 +1432,22 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-SushiswapTokenDayDatasCurrent"></a>
-# **Invoke-SushiswapTokenDayDatasCurrent**
-> SushiswapTokenDayDataDTO[] Invoke-SushiswapTokenDayDatasCurrent<br>
+<a name="Invoke-SushiswapTokenDayDataCurrent"></a>
+# **Invoke-SushiswapTokenDayDataCurrent**
+> SushiswapTokenDayDataDTO[] Invoke-SushiswapTokenDayDataCurrent<br>
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 ```powershell
 
-# TokenDayDatas (current)
+# TokenDayData (current)
 try {
-    $Result = Invoke-SushiswapTokenDayDatasCurrent
+    $Result = Invoke-SushiswapTokenDayDataCurrent
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-SushiswapTokenDayDatasCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-SushiswapTokenDayDataCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```

@@ -151,7 +151,7 @@ export interface CurveGetGaugeDepositsHistoricalRequest {
     id?: string;
 }
 
-export interface CurveGetGaugeLiquiditysHistoricalRequest {
+export interface CurveGetGaugeLiquiditiesHistoricalRequest {
     startBlock?: number;
     endBlock?: number;
     startDate?: string;
@@ -498,14 +498,14 @@ export class CurveApi extends BaseAPI {
     };
 
     /**
-     * Gets gaugeLiquiditys.
-     * GaugeLiquiditys (current)
+     * Gets gaugeLiquidities.
+     * GaugeLiquidities (current)
      */
-    curveGaugeLiquiditysCurrent(): Observable<Array<CurveGaugeLiquidityDTO>>
-    curveGaugeLiquiditysCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeLiquidityDTO>>>
-    curveGaugeLiquiditysCurrent(opts?: OperationOpts): Observable<Array<CurveGaugeLiquidityDTO> | AjaxResponse<Array<CurveGaugeLiquidityDTO>>> {
+    curveGaugeLiquiditiesCurrent(): Observable<Array<CurveGaugeLiquidityDTO>>
+    curveGaugeLiquiditiesCurrent(opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeLiquidityDTO>>>
+    curveGaugeLiquiditiesCurrent(opts?: OperationOpts): Observable<Array<CurveGaugeLiquidityDTO> | AjaxResponse<Array<CurveGaugeLiquidityDTO>>> {
         return this.request<Array<CurveGaugeLiquidityDTO>>({
-            url: '/dapps/curve/gaugeLiquiditys/current',
+            url: '/dapps/curve/gaugeLiquidities/current',
             method: 'GET',
         }, opts?.responseOpts);
     };
@@ -864,12 +864,12 @@ export class CurveApi extends BaseAPI {
     };
 
     /**
-     * Gets gaugeLiquiditys.
-     * GaugeLiquiditys (historical)
+     * Gets gaugeLiquidities.
+     * GaugeLiquidities (historical)
      */
-    curveGetGaugeLiquiditysHistorical({ startBlock, endBlock, startDate, endDate, id, user }: CurveGetGaugeLiquiditysHistoricalRequest): Observable<Array<CurveGaugeLiquidityDTO>>
-    curveGetGaugeLiquiditysHistorical({ startBlock, endBlock, startDate, endDate, id, user }: CurveGetGaugeLiquiditysHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeLiquidityDTO>>>
-    curveGetGaugeLiquiditysHistorical({ startBlock, endBlock, startDate, endDate, id, user }: CurveGetGaugeLiquiditysHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveGaugeLiquidityDTO> | AjaxResponse<Array<CurveGaugeLiquidityDTO>>> {
+    curveGetGaugeLiquiditiesHistorical({ startBlock, endBlock, startDate, endDate, id, user }: CurveGetGaugeLiquiditiesHistoricalRequest): Observable<Array<CurveGaugeLiquidityDTO>>
+    curveGetGaugeLiquiditiesHistorical({ startBlock, endBlock, startDate, endDate, id, user }: CurveGetGaugeLiquiditiesHistoricalRequest, opts?: OperationOpts): Observable<AjaxResponse<Array<CurveGaugeLiquidityDTO>>>
+    curveGetGaugeLiquiditiesHistorical({ startBlock, endBlock, startDate, endDate, id, user }: CurveGetGaugeLiquiditiesHistoricalRequest, opts?: OperationOpts): Observable<Array<CurveGaugeLiquidityDTO> | AjaxResponse<Array<CurveGaugeLiquidityDTO>>> {
 
         const query: HttpQuery = {};
 
@@ -881,7 +881,7 @@ export class CurveApi extends BaseAPI {
         if (user != null) { query['user'] = user; }
 
         return this.request<Array<CurveGaugeLiquidityDTO>>({
-            url: '/dapps/curve/gaugeLiquiditys/historical',
+            url: '/dapps/curve/gaugeLiquidities/historical',
             method: 'GET',
             query,
         }, opts?.responseOpts);

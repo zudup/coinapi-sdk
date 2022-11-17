@@ -649,25 +649,25 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GaugeLiquiditys (current)
-    # Gets gaugeLiquiditys.
+    # GaugeLiquidities (current)
+    # Gets gaugeLiquidities.
     # @param [Hash] opts the optional parameters
     # @return [Array<CurveGaugeLiquidityDTO>]
-    def curve_gauge_liquiditys__current(opts = {})
-      data, _status_code, _headers = curve_gauge_liquiditys__current_with_http_info(opts)
+    def curve_gauge_liquidities__current(opts = {})
+      data, _status_code, _headers = curve_gauge_liquidities__current_with_http_info(opts)
       data
     end
 
-    # GaugeLiquiditys (current)
-    # Gets gaugeLiquiditys.
+    # GaugeLiquidities (current)
+    # Gets gaugeLiquidities.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<CurveGaugeLiquidityDTO>, Integer, Hash)>] Array<CurveGaugeLiquidityDTO> data, response status code and response headers
-    def curve_gauge_liquiditys__current_with_http_info(opts = {})
+    def curve_gauge_liquidities__current_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CurveApi.curve_gauge_liquiditys__current ...'
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_gauge_liquidities__current ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/gaugeLiquiditys/current'
+      local_var_path = '/dapps/curve/gaugeLiquidities/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -690,7 +690,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"CurveApi.curve_gauge_liquiditys__current",
+        :operation => :"CurveApi.curve_gauge_liquidities__current",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -701,7 +701,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CurveApi#curve_gauge_liquiditys__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CurveApi#curve_gauge_liquidities__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1924,8 +1924,8 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # GaugeLiquiditys (historical)
-    # Gets gaugeLiquiditys.
+    # GaugeLiquidities (historical)
+    # Gets gaugeLiquidities.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1934,13 +1934,13 @@ module OpenapiClient
     # @option opts [String] :id 
     # @option opts [String] :user 
     # @return [Array<CurveGaugeLiquidityDTO>]
-    def curve_get_gauge_liquiditys__historical(opts = {})
-      data, _status_code, _headers = curve_get_gauge_liquiditys__historical_with_http_info(opts)
+    def curve_get_gauge_liquidities__historical(opts = {})
+      data, _status_code, _headers = curve_get_gauge_liquidities__historical_with_http_info(opts)
       data
     end
 
-    # GaugeLiquiditys (historical)
-    # Gets gaugeLiquiditys.
+    # GaugeLiquidities (historical)
+    # Gets gaugeLiquidities.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1949,12 +1949,12 @@ module OpenapiClient
     # @option opts [String] :id 
     # @option opts [String] :user 
     # @return [Array<(Array<CurveGaugeLiquidityDTO>, Integer, Hash)>] Array<CurveGaugeLiquidityDTO> data, response status code and response headers
-    def curve_get_gauge_liquiditys__historical_with_http_info(opts = {})
+    def curve_get_gauge_liquidities__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_gauge_liquiditys__historical ...'
+        @api_client.config.logger.debug 'Calling API: CurveApi.curve_get_gauge_liquidities__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/curve/gaugeLiquiditys/historical'
+      local_var_path = '/dapps/curve/gaugeLiquidities/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1983,7 +1983,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"CurveApi.curve_get_gauge_liquiditys__historical",
+        :operation => :"CurveApi.curve_get_gauge_liquidities__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1994,7 +1994,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: CurveApi#curve_get_gauge_liquiditys__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: CurveApi#curve_get_gauge_liquidities__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

@@ -157,16 +157,16 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_curve_gauge_liquiditys_current
-            -- GaugeLiquiditys (current)
+    test_curve_gauge_liquidities_current
+            -- GaugeLiquidities (current)
             --
-            -- Gets gaugeLiquiditys.
+            -- Gets gaugeLiquidities.
         local
             l_response: LIST [CURVE_GAUGE_LIQUIDITY_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.curve_gauge_liquiditys_current
+            -- l_response := api.curve_gauge_liquidities_current
             assert ("not_implemented", False)
         end
 
@@ -468,10 +468,10 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_curve_get_gauge_liquiditys_historical
-            -- GaugeLiquiditys (historical)
+    test_curve_get_gauge_liquidities_historical
+            -- GaugeLiquidities (historical)
             --
-            -- Gets gaugeLiquiditys.
+            -- Gets gaugeLiquidities.
         local
             l_response: LIST [CURVE_GAUGE_LIQUIDITY_DTO]
             l_start_block: INTEGER_64
@@ -483,7 +483,7 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.curve_get_gauge_liquiditys_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_user)
+            -- l_response := api.curve_get_gauge_liquidities_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_user)
             assert ("not_implemented", False)
         end
 

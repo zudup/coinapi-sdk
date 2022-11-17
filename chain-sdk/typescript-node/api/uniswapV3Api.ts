@@ -227,11 +227,11 @@ export class UniswapV3Api {
         });
     }
     /**
-     * Gets factorys.
-     * @summary Factorys (current)
+     * Gets factories.
+     * @summary Factories (current)
      */
-    public async uniswapV3FactorysCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3FactoryDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv3/factorys/current';
+    public async uniswapV3FactoriesCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3FactoryDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv3/factories/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -478,16 +478,16 @@ export class UniswapV3Api {
         });
     }
     /**
-     * Gets factorys.
-     * @summary Factorys (historical)
+     * Gets factories.
+     * @summary Factories (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Factory address.
      */
-    public async uniswapV3GetFactorysHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3FactoryDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv3/factorys/historical';
+    public async uniswapV3GetFactoriesHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3FactoryDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv3/factories/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -667,8 +667,8 @@ export class UniswapV3Api {
         });
     }
     /**
-     * Gets poolDayDatas.
-     * @summary PoolDayDatas (historical)
+     * Gets poolDayData.
+     * @summary PoolDayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -676,8 +676,8 @@ export class UniswapV3Api {
      * @param id 
      * @param pool 
      */
-    public async uniswapV3GetPoolDayDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PoolDayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv3/poolDayDatas/historical';
+    public async uniswapV3GetPoolDayDataHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PoolDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv3/poolDayData/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -759,8 +759,8 @@ export class UniswapV3Api {
         });
     }
     /**
-     * Gets poolHourDatas.
-     * @summary PoolHourDatas (historical)
+     * Gets poolHourData.
+     * @summary PoolHourData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -768,8 +768,8 @@ export class UniswapV3Api {
      * @param id 
      * @param pool 
      */
-    public async uniswapV3GetPoolHourDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PoolHourDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv3/poolHourDatas/historical';
+    public async uniswapV3GetPoolHourDataHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PoolHourDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv3/poolHourData/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1244,8 +1244,8 @@ export class UniswapV3Api {
         });
     }
     /**
-     * Gets tickDayDatas.
-     * @summary TickDayDatas (historical)
+     * Gets tickDayData.
+     * @summary TickDayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1253,8 +1253,8 @@ export class UniswapV3Api {
      * @param id 
      * @param pool 
      */
-    public async uniswapV3GetTickDayDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TickDayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv3/tickDayDatas/historical';
+    public async uniswapV3GetTickDayDataHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TickDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv3/tickDayData/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1428,16 +1428,16 @@ export class UniswapV3Api {
         });
     }
     /**
-     * Gets tokenHourDatas.
-     * @summary TokenHourDatas (historical)
+     * Gets tokenHourData.
+     * @summary TokenHourData (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Token address concatendated with date.
      */
-    public async uniswapV3GetTokenHourDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TokenHourDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv3/tokenHourDatas/historical';
+    public async uniswapV3GetTokenHourDataHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TokenHourDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv3/tokenHourData/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1515,16 +1515,16 @@ export class UniswapV3Api {
         });
     }
     /**
-     * Gets tokenV3DayDatas.
-     * @summary TokenV3DayDatas (historical)
+     * Gets tokenV3DayData.
+     * @summary TokenV3DayData (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Token address concatendated with date.
      */
-    public async uniswapV3GetTokenV3DayDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TokenV3DayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv3/tokenV3DayDatas/historical';
+    public async uniswapV3GetTokenV3DayDataHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TokenV3DayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv3/tokenV3DayData/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1786,16 +1786,16 @@ export class UniswapV3Api {
         });
     }
     /**
-     * Gets uniswapDayDatas.
-     * @summary UniswapDayDatas (historical)
+     * Gets uniswapDayData.
+     * @summary UniswapDayData (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Timestamp rounded to current day by dividing by 86400.
      */
-    public async uniswapV3GetUniswapDayDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3UniswapDayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv3/uniswapDayDatas/historical';
+    public async uniswapV3GetUniswapDayDataHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3UniswapDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv3/uniswapDayData/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1935,11 +1935,11 @@ export class UniswapV3Api {
         });
     }
     /**
-     * Gets poolDayDatas.
-     * @summary PoolDayDatas (current)
+     * Gets poolDayData.
+     * @summary PoolDayData (current)
      */
-    public async uniswapV3PoolDayDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PoolDayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv3/poolDayDatas/current';
+    public async uniswapV3PoolDayDataCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PoolDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv3/poolDayData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1997,11 +1997,11 @@ export class UniswapV3Api {
         });
     }
     /**
-     * Gets poolHourDatas.
-     * @summary PoolHourDatas (current)
+     * Gets poolHourData.
+     * @summary PoolHourData (current)
      */
-    public async uniswapV3PoolHourDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PoolHourDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv3/poolHourDatas/current';
+    public async uniswapV3PoolHourDataCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3PoolHourDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv3/poolHourData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -2317,11 +2317,11 @@ export class UniswapV3Api {
         });
     }
     /**
-     * Gets tickDayDatas.
-     * @summary TickDayDatas (current)
+     * Gets tickDayData.
+     * @summary TickDayData (current)
      */
-    public async uniswapV3TickDayDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TickDayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv3/tickDayDatas/current';
+    public async uniswapV3TickDayDataCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TickDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv3/tickDayData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -2441,11 +2441,11 @@ export class UniswapV3Api {
         });
     }
     /**
-     * Gets tokenHourDatas.
-     * @summary TokenHourDatas (current)
+     * Gets tokenHourData.
+     * @summary TokenHourData (current)
      */
-    public async uniswapV3TokenHourDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TokenHourDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv3/tokenHourDatas/current';
+    public async uniswapV3TokenHourDataCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TokenHourDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv3/tokenHourData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -2503,11 +2503,11 @@ export class UniswapV3Api {
         });
     }
     /**
-     * Gets tokenV3DayDatas.
-     * @summary TokenV3DayDatas (current)
+     * Gets tokenV3DayData.
+     * @summary TokenV3DayData (current)
      */
-    public async uniswapV3TokenV3DayDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TokenV3DayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv3/tokenV3DayDatas/current';
+    public async uniswapV3TokenV3DayDataCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3TokenV3DayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv3/tokenV3DayData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -2689,11 +2689,11 @@ export class UniswapV3Api {
         });
     }
     /**
-     * Gets uniswapDayDatas.
-     * @summary UniswapDayDatas (current)
+     * Gets uniswapDayData.
+     * @summary UniswapDayData (current)
      */
-    public async uniswapV3UniswapDayDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3UniswapDayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv3/uniswapDayDatas/current';
+    public async uniswapV3UniswapDayDataCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV3UniswapDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv3/uniswapDayData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];

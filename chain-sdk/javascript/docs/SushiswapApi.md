@@ -6,33 +6,33 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**sushiswapBundlesCurrent**](SushiswapApi.md#sushiswapBundlesCurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
 [**sushiswapBurnsCurrent**](SushiswapApi.md#sushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
-[**sushiswapDayDatasCurrent**](SushiswapApi.md#sushiswapDayDatasCurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
-[**sushiswapFactorysCurrent**](SushiswapApi.md#sushiswapFactorysCurrent) | **GET** /dapps/sushiswap/factorys/current | Factorys (current)
+[**sushiswapDayDataCurrent**](SushiswapApi.md#sushiswapDayDataCurrent) | **GET** /dapps/sushiswap/dayData/current | DayData (current)
+[**sushiswapFactoriesCurrent**](SushiswapApi.md#sushiswapFactoriesCurrent) | **GET** /dapps/sushiswap/factories/current | Factories (current)
 [**sushiswapGetBundlesHistorical**](SushiswapApi.md#sushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical)
 [**sushiswapGetBurnsHistorical**](SushiswapApi.md#sushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical)
-[**sushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical)
-[**sushiswapGetFactorysHistorical**](SushiswapApi.md#sushiswapGetFactorysHistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical)
-[**sushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical)
+[**sushiswapGetDayDataHistorical**](SushiswapApi.md#sushiswapGetDayDataHistorical) | **GET** /dapps/sushiswap/dayData/historical | DayData (historical)
+[**sushiswapGetFactoriesHistorical**](SushiswapApi.md#sushiswapGetFactoriesHistorical) | **GET** /dapps/sushiswap/factories/historical | Factories (historical)
+[**sushiswapGetHourDataHistorical**](SushiswapApi.md#sushiswapGetHourDataHistorical) | **GET** /dapps/sushiswap/hourData/historical | HourData (historical)
 [**sushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**sushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical)
 [**sushiswapGetMintsHistorical**](SushiswapApi.md#sushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical)
-[**sushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical)
-[**sushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical)
+[**sushiswapGetPairDayDataHistorical**](SushiswapApi.md#sushiswapGetPairDayDataHistorical) | **GET** /dapps/sushiswap/pairDayData/historical | PairDayData (historical)
+[**sushiswapGetPairHourDataHistorical**](SushiswapApi.md#sushiswapGetPairHourDataHistorical) | **GET** /dapps/sushiswap/pairHourData/historical | PairHourData (historical)
 [**sushiswapGetPairsHistorical**](SushiswapApi.md#sushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical)
 [**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical)
-[**sushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical)
+[**sushiswapGetTokenDayDataHistorical**](SushiswapApi.md#sushiswapGetTokenDayDataHistorical) | **GET** /dapps/sushiswap/tokenDayData/historical | TokenDayData (historical)
 [**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical)
 [**sushiswapGetTransactionsHistorical**](SushiswapApi.md#sushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical)
 [**sushiswapGetUsersHistorical**](SushiswapApi.md#sushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical)
-[**sushiswapHourDatasCurrent**](SushiswapApi.md#sushiswapHourDatasCurrent) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current)
+[**sushiswapHourDataCurrent**](SushiswapApi.md#sushiswapHourDataCurrent) | **GET** /dapps/sushiswap/hourData/current | HourData (current)
 [**sushiswapLiquidityPositionSnapshotsCurrent**](SushiswapApi.md#sushiswapLiquidityPositionSnapshotsCurrent) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**sushiswapLiquidityPositionsCurrent**](SushiswapApi.md#sushiswapLiquidityPositionsCurrent) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
 [**sushiswapMintsCurrent**](SushiswapApi.md#sushiswapMintsCurrent) | **GET** /dapps/sushiswap/mints/current | Mints (current)
-[**sushiswapPairDayDatasCurrent**](SushiswapApi.md#sushiswapPairDayDatasCurrent) | **GET** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current)
-[**sushiswapPairHourDatasCurrent**](SushiswapApi.md#sushiswapPairHourDatasCurrent) | **GET** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current)
+[**sushiswapPairDayDataCurrent**](SushiswapApi.md#sushiswapPairDayDataCurrent) | **GET** /dapps/sushiswap/pairDayData/current | PairDayData (current)
+[**sushiswapPairHourDataCurrent**](SushiswapApi.md#sushiswapPairHourDataCurrent) | **GET** /dapps/sushiswap/pairHourData/current | PairHourData (current)
 [**sushiswapPairsCurrent**](SushiswapApi.md#sushiswapPairsCurrent) | **GET** /dapps/sushiswap/pairs/current | Pairs (current)
 [**sushiswapSwapsCurrent**](SushiswapApi.md#sushiswapSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current)
-[**sushiswapTokenDayDatasCurrent**](SushiswapApi.md#sushiswapTokenDayDatasCurrent) | **GET** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current)
+[**sushiswapTokenDayDataCurrent**](SushiswapApi.md#sushiswapTokenDayDataCurrent) | **GET** /dapps/sushiswap/tokenDayData/current | TokenDayData (current)
 [**sushiswapTokensCurrent**](SushiswapApi.md#sushiswapTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current)
 [**sushiswapTransactionsCurrent**](SushiswapApi.md#sushiswapTransactionsCurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
 [**sushiswapUsersCurrent**](SushiswapApi.md#sushiswapUsersCurrent) | **GET** /dapps/sushiswap/users/current | Users (current)
@@ -121,13 +121,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapDayDatasCurrent
+## sushiswapDayDataCurrent
 
-> [SushiswapDayDataDTO] sushiswapDayDatasCurrent()
+> [SushiswapDayDataDTO] sushiswapDayDataCurrent()
 
-DayDatas (current)
+DayData (current)
 
-Gets dayDatas.
+Gets dayData.
 
 ### Example
 
@@ -135,7 +135,7 @@ Gets dayDatas.
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.SushiswapApi();
-apiInstance.sushiswapDayDatasCurrent((error, data, response) => {
+apiInstance.sushiswapDayDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -162,13 +162,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapFactorysCurrent
+## sushiswapFactoriesCurrent
 
-> [SushiswapFactoryDTO] sushiswapFactorysCurrent()
+> [SushiswapFactoryDTO] sushiswapFactoriesCurrent()
 
-Factorys (current)
+Factories (current)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 
@@ -176,7 +176,7 @@ Gets factorys.
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.SushiswapApi();
-apiInstance.sushiswapFactorysCurrent((error, data, response) => {
+apiInstance.sushiswapFactoriesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -315,13 +315,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapGetDayDatasHistorical
+## sushiswapGetDayDataHistorical
 
-> [SushiswapDayDataDTO] sushiswapGetDayDatasHistorical(opts)
+> [SushiswapDayDataDTO] sushiswapGetDayDataHistorical(opts)
 
-DayDatas (historical)
+DayData (historical)
 
-Gets dayDatas.
+Gets dayData.
 
 ### Example
 
@@ -336,7 +336,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | Unix timestamp for start of day / 86400 giving a unique day index.
 };
-apiInstance.sushiswapGetDayDatasHistorical(opts, (error, data, response) => {
+apiInstance.sushiswapGetDayDataHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -370,13 +370,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapGetFactorysHistorical
+## sushiswapGetFactoriesHistorical
 
-> [SushiswapFactoryDTO] sushiswapGetFactorysHistorical(opts)
+> [SushiswapFactoryDTO] sushiswapGetFactoriesHistorical(opts)
 
-Factorys (historical)
+Factories (historical)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 
@@ -391,7 +391,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | Factory address.
 };
-apiInstance.sushiswapGetFactorysHistorical(opts, (error, data, response) => {
+apiInstance.sushiswapGetFactoriesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -425,13 +425,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapGetHourDatasHistorical
+## sushiswapGetHourDataHistorical
 
-> [SushiswapHourDataDTO] sushiswapGetHourDatasHistorical(opts)
+> [SushiswapHourDataDTO] sushiswapGetHourDataHistorical(opts)
 
-HourDatas (historical)
+HourData (historical)
 
-Gets hourDatas.
+Gets hourData.
 
 ### Example
 
@@ -446,7 +446,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | Start of hour timestamp.
 };
-apiInstance.sushiswapGetHourDatasHistorical(opts, (error, data, response) => {
+apiInstance.sushiswapGetHourDataHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -655,13 +655,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapGetPairDayDatasHistorical
+## sushiswapGetPairDayDataHistorical
 
-> [SushiswapPairDayDataDTO] sushiswapGetPairDayDatasHistorical(opts)
+> [SushiswapPairDayDataDTO] sushiswapGetPairDayDataHistorical(opts)
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 
@@ -679,7 +679,7 @@ let opts = {
   'token0': "token0_example", // String | 
   'token1': "token1_example" // String | 
 };
-apiInstance.sushiswapGetPairDayDatasHistorical(opts, (error, data, response) => {
+apiInstance.sushiswapGetPairDayDataHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -716,13 +716,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapGetPairHourDatasHistorical
+## sushiswapGetPairHourDataHistorical
 
-> [SushiswapPairHourDataDTO] sushiswapGetPairHourDatasHistorical(opts)
+> [SushiswapPairHourDataDTO] sushiswapGetPairHourDataHistorical(opts)
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 
@@ -738,7 +738,7 @@ let opts = {
   'id': "id_example", // String | 
   'pair': "pair_example" // String | 
 };
-apiInstance.sushiswapGetPairHourDatasHistorical(opts, (error, data, response) => {
+apiInstance.sushiswapGetPairHourDataHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -891,13 +891,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapGetTokenDayDatasHistorical
+## sushiswapGetTokenDayDataHistorical
 
-> [SushiswapTokenDayDataDTO] sushiswapGetTokenDayDatasHistorical(opts)
+> [SushiswapTokenDayDataDTO] sushiswapGetTokenDayDataHistorical(opts)
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 
@@ -912,7 +912,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | Identifier, day start timestamp in unix / 86400.
 };
-apiInstance.sushiswapGetTokenDayDatasHistorical(opts, (error, data, response) => {
+apiInstance.sushiswapGetTokenDayDataHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1115,13 +1115,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapHourDatasCurrent
+## sushiswapHourDataCurrent
 
-> [SushiswapHourDataDTO] sushiswapHourDatasCurrent()
+> [SushiswapHourDataDTO] sushiswapHourDataCurrent()
 
-HourDatas (current)
+HourData (current)
 
-Gets hourDatas.
+Gets hourData.
 
 ### Example
 
@@ -1129,7 +1129,7 @@ Gets hourDatas.
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.SushiswapApi();
-apiInstance.sushiswapHourDatasCurrent((error, data, response) => {
+apiInstance.sushiswapHourDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1279,13 +1279,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapPairDayDatasCurrent
+## sushiswapPairDayDataCurrent
 
-> [SushiswapPairDayDataDTO] sushiswapPairDayDatasCurrent()
+> [SushiswapPairDayDataDTO] sushiswapPairDayDataCurrent()
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 
@@ -1293,7 +1293,7 @@ Gets pairDayDatas.
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.SushiswapApi();
-apiInstance.sushiswapPairDayDatasCurrent((error, data, response) => {
+apiInstance.sushiswapPairDayDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1320,13 +1320,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapPairHourDatasCurrent
+## sushiswapPairHourDataCurrent
 
-> [SushiswapPairHourDataDTO] sushiswapPairHourDatasCurrent()
+> [SushiswapPairHourDataDTO] sushiswapPairHourDataCurrent()
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 
@@ -1334,7 +1334,7 @@ Gets pairHourDatas.
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.SushiswapApi();
-apiInstance.sushiswapPairHourDatasCurrent((error, data, response) => {
+apiInstance.sushiswapPairHourDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1455,13 +1455,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapTokenDayDatasCurrent
+## sushiswapTokenDayDataCurrent
 
-> [SushiswapTokenDayDataDTO] sushiswapTokenDayDatasCurrent()
+> [SushiswapTokenDayDataDTO] sushiswapTokenDayDataCurrent()
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 
@@ -1469,7 +1469,7 @@ Gets tokenDayDatas.
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.SushiswapApi();
-apiInstance.sushiswapTokenDayDatasCurrent((error, data, response) => {
+apiInstance.sushiswapTokenDayDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
   } else {

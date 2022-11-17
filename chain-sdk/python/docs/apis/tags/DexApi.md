@@ -5,14 +5,14 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dex_batchs__current**](#dex_batchs__current) | **get** /dapps/dex/batchs/current | Batchs (current)
+[**dex_batches__current**](#dex_batches__current) | **get** /dapps/dex/batches/current | Batches (current)
 [**dex_deposits__current**](#dex_deposits__current) | **get** /dapps/dex/deposits/current | Deposits (current)
-[**dex_get_batchs__historical**](#dex_get_batchs__historical) | **get** /dapps/dex/batchs/historical | Batchs (historical)
+[**dex_get_batches__historical**](#dex_get_batches__historical) | **get** /dapps/dex/batches/historical | Batches (historical)
 [**dex_get_deposits__historical**](#dex_get_deposits__historical) | **get** /dapps/dex/deposits/historical | Deposits (historical)
 [**dex_get_orders__historical**](#dex_get_orders__historical) | **get** /dapps/dex/orders/historical | Orders (historical)
 [**dex_get_prices__historical**](#dex_get_prices__historical) | **get** /dapps/dex/prices/historical | Prices (historical)
 [**dex_get_solutions__historical**](#dex_get_solutions__historical) | **get** /dapps/dex/solutions/historical | Solutions (historical)
-[**dex_get_statss__historical**](#dex_get_statss__historical) | **get** /dapps/dex/statss/historical | Statss (historical)
+[**dex_get_stats__historical**](#dex_get_stats__historical) | **get** /dapps/dex/stats/historical | Stats (historical)
 [**dex_get_tokens__historical**](#dex_get_tokens__historical) | **get** /dapps/dex/tokens/historical | Tokens (historical)
 [**dex_get_trades__historical**](#dex_get_trades__historical) | **get** /dapps/dex/trades/historical | Trades (historical)
 [**dex_get_users__historical**](#dex_get_users__historical) | **get** /dapps/dex/users/historical | Users (historical)
@@ -21,20 +21,20 @@ Method | HTTP request | Description
 [**dex_orders__current**](#dex_orders__current) | **get** /dapps/dex/orders/current | Orders (current)
 [**dex_prices__current**](#dex_prices__current) | **get** /dapps/dex/prices/current | Prices (current)
 [**dex_solutions__current**](#dex_solutions__current) | **get** /dapps/dex/solutions/current | Solutions (current)
-[**dex_statss__current**](#dex_statss__current) | **get** /dapps/dex/statss/current | Statss (current)
+[**dex_stats__current**](#dex_stats__current) | **get** /dapps/dex/stats/current | Stats (current)
 [**dex_tokens__current**](#dex_tokens__current) | **get** /dapps/dex/tokens/current | Tokens (current)
 [**dex_trades__current**](#dex_trades__current) | **get** /dapps/dex/trades/current | Trades (current)
 [**dex_users__current**](#dex_users__current) | **get** /dapps/dex/users/current | Users (current)
 [**dex_withdraw_requests__current**](#dex_withdraw_requests__current) | **get** /dapps/dex/withdrawRequests/current | WithdrawRequests (current)
 [**dex_withdraws__current**](#dex_withdraws__current) | **get** /dapps/dex/withdraws/current | Withdraws (current)
 
-# **dex_batchs__current**
-<a name="dex_batchs__current"></a>
-> [DexBatchDTO] dex_batchs__current()
+# **dex_batches__current**
+<a name="dex_batches__current"></a>
+> [DexBatchDTO] dex_batches__current()
 
-Batchs (current)
+Batches (current)
 
-Gets batchs.
+Gets batches.
 
 ### Example
 
@@ -56,11 +56,11 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # Batchs (current)
-        api_response = api_instance.dex_batchs__current()
+        # Batches (current)
+        api_response = api_instance.dex_batches__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling DexApi->dex_batchs__current: %s\n" % e)
+        print("Exception when calling DexApi->dex_batches__current: %s\n" % e)
 ```
 ### Parameters
 This endpoint does not need any parameter.
@@ -70,9 +70,9 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#dex_batchs__current.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#dex_batches__current.ApiResponseFor200) | successful operation
 
-#### dex_batchs__current.ApiResponseFor200
+#### dex_batches__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -214,13 +214,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **dex_get_batchs__historical**
-<a name="dex_get_batchs__historical"></a>
-> [DexBatchDTO] dex_get_batchs__historical()
+# **dex_get_batches__historical**
+<a name="dex_get_batches__historical"></a>
+> [DexBatchDTO] dex_get_batches__historical()
 
-Batchs (historical)
+Batches (historical)
 
-Gets batchs.
+Gets batches.
 
 ### Example
 
@@ -249,13 +249,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # Batchs (historical)
-        api_response = api_instance.dex_get_batchs__historical(
+        # Batches (historical)
+        api_response = api_instance.dex_get_batches__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling DexApi->dex_get_batchs__historical: %s\n" % e)
+        print("Exception when calling DexApi->dex_get_batches__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -319,9 +319,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#dex_get_batchs__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#dex_get_batches__historical.ApiResponseFor200) | successful operation
 
-#### dex_get_batchs__historical.ApiResponseFor200
+#### dex_get_batches__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -1021,13 +1021,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **dex_get_statss__historical**
-<a name="dex_get_statss__historical"></a>
-> [DexStatsDTO] dex_get_statss__historical()
+# **dex_get_stats__historical**
+<a name="dex_get_stats__historical"></a>
+> [DexStatsDTO] dex_get_stats__historical()
 
-Statss (historical)
+Stats (historical)
 
-Gets statss.
+Gets stats.
 
 ### Example
 
@@ -1056,13 +1056,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # Statss (historical)
-        api_response = api_instance.dex_get_statss__historical(
+        # Stats (historical)
+        api_response = api_instance.dex_get_stats__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling DexApi->dex_get_statss__historical: %s\n" % e)
+        print("Exception when calling DexApi->dex_get_stats__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -1126,9 +1126,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#dex_get_statss__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#dex_get_stats__historical.ApiResponseFor200) | successful operation
 
-#### dex_get_statss__historical.ApiResponseFor200
+#### dex_get_stats__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -2299,13 +2299,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **dex_statss__current**
-<a name="dex_statss__current"></a>
-> [DexStatsDTO] dex_statss__current()
+# **dex_stats__current**
+<a name="dex_stats__current"></a>
+> [DexStatsDTO] dex_stats__current()
 
-Statss (current)
+Stats (current)
 
-Gets statss.
+Gets stats.
 
 ### Example
 
@@ -2327,11 +2327,11 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # Statss (current)
-        api_response = api_instance.dex_statss__current()
+        # Stats (current)
+        api_response = api_instance.dex_stats__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling DexApi->dex_statss__current: %s\n" % e)
+        print("Exception when calling DexApi->dex_stats__current: %s\n" % e)
 ```
 ### Parameters
 This endpoint does not need any parameter.
@@ -2341,9 +2341,9 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#dex_statss__current.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#dex_stats__current.ApiResponseFor200) | successful operation
 
-#### dex_statss__current.ApiResponseFor200
+#### dex_stats__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |

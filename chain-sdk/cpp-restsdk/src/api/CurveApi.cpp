@@ -1448,12 +1448,12 @@ pplx::task<std::vector<std::shared_ptr<Curve_GaugeDepositDTO>>> CurveApi::curve_
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> CurveApi::curve_GaugeLiquiditys__current() const
+pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> CurveApi::curve_GaugeLiquidities__current() const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugeLiquiditys/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugeLiquidities/current");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1484,7 +1484,7 @@ pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> CurveApi::curv
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GaugeLiquiditys__current does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GaugeLiquidities__current does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1511,7 +1511,7 @@ pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> CurveApi::curv
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GaugeLiquiditys__current does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GaugeLiquidities__current does not consume any supported media type"));
     }
 
 
@@ -1531,7 +1531,7 @@ pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> CurveApi::curv
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling curve_GaugeLiquiditys__current: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GaugeLiquidities__current: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1542,7 +1542,7 @@ pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> CurveApi::curv
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling curve_GaugeLiquiditys__current: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GaugeLiquidities__current: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1570,7 +1570,7 @@ pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> CurveApi::curv
         else
         {
             throw ApiException(500
-                , utility::conversions::to_string_t("error calling curve_GaugeLiquiditys__current: unsupported response type"));
+                , utility::conversions::to_string_t("error calling curve_GaugeLiquidities__current: unsupported response type"));
         }
 
         return localVarResult;
@@ -4136,12 +4136,12 @@ pplx::task<std::vector<std::shared_ptr<Curve_GaugeDepositDTO>>> CurveApi::curve_
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> CurveApi::curve_GetGaugeLiquiditys__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> id, boost::optional<utility::string_t> user) const
+pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> CurveApi::curve_GetGaugeLiquidities__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> id, boost::optional<utility::string_t> user) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugeLiquiditys/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/curve/gaugeLiquidities/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -4172,7 +4172,7 @@ pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> CurveApi::curv
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetGaugeLiquiditys__historical does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("CurveApi->curve_GetGaugeLiquidities__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -4223,7 +4223,7 @@ pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> CurveApi::curv
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetGaugeLiquiditys__historical does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("CurveApi->curve_GetGaugeLiquidities__historical does not consume any supported media type"));
     }
 
 
@@ -4243,7 +4243,7 @@ pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> CurveApi::curv
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling curve_GetGaugeLiquiditys__historical: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling curve_GetGaugeLiquidities__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -4254,7 +4254,7 @@ pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> CurveApi::curv
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling curve_GetGaugeLiquiditys__historical: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling curve_GetGaugeLiquidities__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -4282,7 +4282,7 @@ pplx::task<std::vector<std::shared_ptr<Curve_GaugeLiquidityDTO>>> CurveApi::curv
         else
         {
             throw ApiException(500
-                , utility::conversions::to_string_t("error calling curve_GetGaugeLiquiditys__historical: unsupported response type"));
+                , utility::conversions::to_string_t("error calling curve_GetGaugeLiquidities__historical: unsupported response type"));
         }
 
         return localVarResult;

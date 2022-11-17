@@ -6,33 +6,33 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**sushiswapBundlesCurrent**](SushiswapApi.md#sushiswapBundlesCurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
 [**sushiswapBurnsCurrent**](SushiswapApi.md#sushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
-[**sushiswapDayDatasCurrent**](SushiswapApi.md#sushiswapDayDatasCurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
-[**sushiswapFactorysCurrent**](SushiswapApi.md#sushiswapFactorysCurrent) | **GET** /dapps/sushiswap/factorys/current | Factorys (current)
+[**sushiswapDayDataCurrent**](SushiswapApi.md#sushiswapDayDataCurrent) | **GET** /dapps/sushiswap/dayData/current | DayData (current)
+[**sushiswapFactoriesCurrent**](SushiswapApi.md#sushiswapFactoriesCurrent) | **GET** /dapps/sushiswap/factories/current | Factories (current)
 [**sushiswapGetBundlesHistorical**](SushiswapApi.md#sushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical)
 [**sushiswapGetBurnsHistorical**](SushiswapApi.md#sushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical)
-[**sushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical)
-[**sushiswapGetFactorysHistorical**](SushiswapApi.md#sushiswapGetFactorysHistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical)
-[**sushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical)
+[**sushiswapGetDayDataHistorical**](SushiswapApi.md#sushiswapGetDayDataHistorical) | **GET** /dapps/sushiswap/dayData/historical | DayData (historical)
+[**sushiswapGetFactoriesHistorical**](SushiswapApi.md#sushiswapGetFactoriesHistorical) | **GET** /dapps/sushiswap/factories/historical | Factories (historical)
+[**sushiswapGetHourDataHistorical**](SushiswapApi.md#sushiswapGetHourDataHistorical) | **GET** /dapps/sushiswap/hourData/historical | HourData (historical)
 [**sushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**sushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical)
 [**sushiswapGetMintsHistorical**](SushiswapApi.md#sushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical)
-[**sushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical)
-[**sushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical)
+[**sushiswapGetPairDayDataHistorical**](SushiswapApi.md#sushiswapGetPairDayDataHistorical) | **GET** /dapps/sushiswap/pairDayData/historical | PairDayData (historical)
+[**sushiswapGetPairHourDataHistorical**](SushiswapApi.md#sushiswapGetPairHourDataHistorical) | **GET** /dapps/sushiswap/pairHourData/historical | PairHourData (historical)
 [**sushiswapGetPairsHistorical**](SushiswapApi.md#sushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical)
 [**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical)
-[**sushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical)
+[**sushiswapGetTokenDayDataHistorical**](SushiswapApi.md#sushiswapGetTokenDayDataHistorical) | **GET** /dapps/sushiswap/tokenDayData/historical | TokenDayData (historical)
 [**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical)
 [**sushiswapGetTransactionsHistorical**](SushiswapApi.md#sushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical)
 [**sushiswapGetUsersHistorical**](SushiswapApi.md#sushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical)
-[**sushiswapHourDatasCurrent**](SushiswapApi.md#sushiswapHourDatasCurrent) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current)
+[**sushiswapHourDataCurrent**](SushiswapApi.md#sushiswapHourDataCurrent) | **GET** /dapps/sushiswap/hourData/current | HourData (current)
 [**sushiswapLiquidityPositionSnapshotsCurrent**](SushiswapApi.md#sushiswapLiquidityPositionSnapshotsCurrent) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**sushiswapLiquidityPositionsCurrent**](SushiswapApi.md#sushiswapLiquidityPositionsCurrent) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
 [**sushiswapMintsCurrent**](SushiswapApi.md#sushiswapMintsCurrent) | **GET** /dapps/sushiswap/mints/current | Mints (current)
-[**sushiswapPairDayDatasCurrent**](SushiswapApi.md#sushiswapPairDayDatasCurrent) | **GET** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current)
-[**sushiswapPairHourDatasCurrent**](SushiswapApi.md#sushiswapPairHourDatasCurrent) | **GET** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current)
+[**sushiswapPairDayDataCurrent**](SushiswapApi.md#sushiswapPairDayDataCurrent) | **GET** /dapps/sushiswap/pairDayData/current | PairDayData (current)
+[**sushiswapPairHourDataCurrent**](SushiswapApi.md#sushiswapPairHourDataCurrent) | **GET** /dapps/sushiswap/pairHourData/current | PairHourData (current)
 [**sushiswapPairsCurrent**](SushiswapApi.md#sushiswapPairsCurrent) | **GET** /dapps/sushiswap/pairs/current | Pairs (current)
 [**sushiswapSwapsCurrent**](SushiswapApi.md#sushiswapSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current)
-[**sushiswapTokenDayDatasCurrent**](SushiswapApi.md#sushiswapTokenDayDatasCurrent) | **GET** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current)
+[**sushiswapTokenDayDataCurrent**](SushiswapApi.md#sushiswapTokenDayDataCurrent) | **GET** /dapps/sushiswap/tokenDayData/current | TokenDayData (current)
 [**sushiswapTokensCurrent**](SushiswapApi.md#sushiswapTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current)
 [**sushiswapTransactionsCurrent**](SushiswapApi.md#sushiswapTransactionsCurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
 [**sushiswapUsersCurrent**](SushiswapApi.md#sushiswapUsersCurrent) | **GET** /dapps/sushiswap/users/current | Users (current)
@@ -123,13 +123,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapDayDatasCurrent
+## sushiswapDayDataCurrent
 
-> List&lt;SushiswapDayDataDTO&gt; sushiswapDayDatasCurrent()
+> List&lt;SushiswapDayDataDTO&gt; sushiswapDayDataCurrent()
 
-DayDatas (current)
+DayData (current)
 
-Gets dayDatas.
+Gets dayData.
 
 ### Example
 
@@ -139,10 +139,10 @@ Gets dayDatas.
 
 SushiswapApi apiInstance = new SushiswapApi();
 try {
-    List<SushiswapDayDataDTO> result = apiInstance.sushiswapDayDatasCurrent();
+    List<SushiswapDayDataDTO> result = apiInstance.sushiswapDayDataCurrent();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#sushiswapDayDatasCurrent");
+    System.err.println("Exception when calling SushiswapApi#sushiswapDayDataCurrent");
     e.printStackTrace();
 }
 ```
@@ -165,13 +165,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapFactorysCurrent
+## sushiswapFactoriesCurrent
 
-> List&lt;SushiswapFactoryDTO&gt; sushiswapFactorysCurrent()
+> List&lt;SushiswapFactoryDTO&gt; sushiswapFactoriesCurrent()
 
-Factorys (current)
+Factories (current)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 
@@ -181,10 +181,10 @@ Gets factorys.
 
 SushiswapApi apiInstance = new SushiswapApi();
 try {
-    List<SushiswapFactoryDTO> result = apiInstance.sushiswapFactorysCurrent();
+    List<SushiswapFactoryDTO> result = apiInstance.sushiswapFactoriesCurrent();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#sushiswapFactorysCurrent");
+    System.err.println("Exception when calling SushiswapApi#sushiswapFactoriesCurrent");
     e.printStackTrace();
 }
 ```
@@ -317,13 +317,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapGetDayDatasHistorical
+## sushiswapGetDayDataHistorical
 
-> List&lt;SushiswapDayDataDTO&gt; sushiswapGetDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+> List&lt;SushiswapDayDataDTO&gt; sushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
-DayDatas (historical)
+DayData (historical)
 
-Gets dayDatas.
+Gets dayData.
 
 ### Example
 
@@ -338,10 +338,10 @@ Date startDate = null; // Date | The start date of timeframe. If endDate is not 
 Date endDate = null; // Date | The end date of timeframe.
 String id = null; // String | Unix timestamp for start of day / 86400 giving a unique day index.
 try {
-    List<SushiswapDayDataDTO> result = apiInstance.sushiswapGetDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+    List<SushiswapDayDataDTO> result = apiInstance.sushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate, id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#sushiswapGetDayDatasHistorical");
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetDayDataHistorical");
     e.printStackTrace();
 }
 ```
@@ -371,13 +371,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapGetFactorysHistorical
+## sushiswapGetFactoriesHistorical
 
-> List&lt;SushiswapFactoryDTO&gt; sushiswapGetFactorysHistorical(startBlock, endBlock, startDate, endDate, id)
+> List&lt;SushiswapFactoryDTO&gt; sushiswapGetFactoriesHistorical(startBlock, endBlock, startDate, endDate, id)
 
-Factorys (historical)
+Factories (historical)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 
@@ -392,10 +392,10 @@ Date startDate = null; // Date | The start date of timeframe. If endDate is not 
 Date endDate = null; // Date | The end date of timeframe.
 String id = null; // String | Factory address.
 try {
-    List<SushiswapFactoryDTO> result = apiInstance.sushiswapGetFactorysHistorical(startBlock, endBlock, startDate, endDate, id);
+    List<SushiswapFactoryDTO> result = apiInstance.sushiswapGetFactoriesHistorical(startBlock, endBlock, startDate, endDate, id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#sushiswapGetFactorysHistorical");
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetFactoriesHistorical");
     e.printStackTrace();
 }
 ```
@@ -425,13 +425,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapGetHourDatasHistorical
+## sushiswapGetHourDataHistorical
 
-> List&lt;SushiswapHourDataDTO&gt; sushiswapGetHourDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+> List&lt;SushiswapHourDataDTO&gt; sushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
-HourDatas (historical)
+HourData (historical)
 
-Gets hourDatas.
+Gets hourData.
 
 ### Example
 
@@ -446,10 +446,10 @@ Date startDate = null; // Date | The start date of timeframe. If endDate is not 
 Date endDate = null; // Date | The end date of timeframe.
 String id = null; // String | Start of hour timestamp.
 try {
-    List<SushiswapHourDataDTO> result = apiInstance.sushiswapGetHourDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+    List<SushiswapHourDataDTO> result = apiInstance.sushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate, id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#sushiswapGetHourDatasHistorical");
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetHourDataHistorical");
     e.printStackTrace();
 }
 ```
@@ -651,13 +651,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapGetPairDayDatasHistorical
+## sushiswapGetPairDayDataHistorical
 
-> List&lt;SushiswapPairDayDataDTO&gt; sushiswapGetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1)
+> List&lt;SushiswapPairDayDataDTO&gt; sushiswapGetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1)
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 
@@ -675,10 +675,10 @@ String pair = null; // String |
 String token0 = null; // String | 
 String token1 = null; // String | 
 try {
-    List<SushiswapPairDayDataDTO> result = apiInstance.sushiswapGetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1);
+    List<SushiswapPairDayDataDTO> result = apiInstance.sushiswapGetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#sushiswapGetPairDayDatasHistorical");
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetPairDayDataHistorical");
     e.printStackTrace();
 }
 ```
@@ -711,13 +711,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapGetPairHourDatasHistorical
+## sushiswapGetPairHourDataHistorical
 
-> List&lt;SushiswapPairHourDataDTO&gt; sushiswapGetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair)
+> List&lt;SushiswapPairHourDataDTO&gt; sushiswapGetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 
@@ -733,10 +733,10 @@ Date endDate = null; // Date |
 String id = null; // String | 
 String pair = null; // String | 
 try {
-    List<SushiswapPairHourDataDTO> result = apiInstance.sushiswapGetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+    List<SushiswapPairHourDataDTO> result = apiInstance.sushiswapGetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#sushiswapGetPairHourDatasHistorical");
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetPairHourDataHistorical");
     e.printStackTrace();
 }
 ```
@@ -883,13 +883,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapGetTokenDayDatasHistorical
+## sushiswapGetTokenDayDataHistorical
 
-> List&lt;SushiswapTokenDayDataDTO&gt; sushiswapGetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+> List&lt;SushiswapTokenDayDataDTO&gt; sushiswapGetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 
@@ -904,10 +904,10 @@ Date startDate = null; // Date | The start date of timeframe. If endDate is not 
 Date endDate = null; // Date | The end date of timeframe.
 String id = null; // String | Identifier, day start timestamp in unix / 86400.
 try {
-    List<SushiswapTokenDayDataDTO> result = apiInstance.sushiswapGetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+    List<SushiswapTokenDayDataDTO> result = apiInstance.sushiswapGetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#sushiswapGetTokenDayDatasHistorical");
+    System.err.println("Exception when calling SushiswapApi#sushiswapGetTokenDayDataHistorical");
     e.printStackTrace();
 }
 ```
@@ -1103,13 +1103,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapHourDatasCurrent
+## sushiswapHourDataCurrent
 
-> List&lt;SushiswapHourDataDTO&gt; sushiswapHourDatasCurrent()
+> List&lt;SushiswapHourDataDTO&gt; sushiswapHourDataCurrent()
 
-HourDatas (current)
+HourData (current)
 
-Gets hourDatas.
+Gets hourData.
 
 ### Example
 
@@ -1119,10 +1119,10 @@ Gets hourDatas.
 
 SushiswapApi apiInstance = new SushiswapApi();
 try {
-    List<SushiswapHourDataDTO> result = apiInstance.sushiswapHourDatasCurrent();
+    List<SushiswapHourDataDTO> result = apiInstance.sushiswapHourDataCurrent();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#sushiswapHourDatasCurrent");
+    System.err.println("Exception when calling SushiswapApi#sushiswapHourDataCurrent");
     e.printStackTrace();
 }
 ```
@@ -1271,13 +1271,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapPairDayDatasCurrent
+## sushiswapPairDayDataCurrent
 
-> List&lt;SushiswapPairDayDataDTO&gt; sushiswapPairDayDatasCurrent()
+> List&lt;SushiswapPairDayDataDTO&gt; sushiswapPairDayDataCurrent()
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 
@@ -1287,10 +1287,10 @@ Gets pairDayDatas.
 
 SushiswapApi apiInstance = new SushiswapApi();
 try {
-    List<SushiswapPairDayDataDTO> result = apiInstance.sushiswapPairDayDatasCurrent();
+    List<SushiswapPairDayDataDTO> result = apiInstance.sushiswapPairDayDataCurrent();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#sushiswapPairDayDatasCurrent");
+    System.err.println("Exception when calling SushiswapApi#sushiswapPairDayDataCurrent");
     e.printStackTrace();
 }
 ```
@@ -1313,13 +1313,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapPairHourDatasCurrent
+## sushiswapPairHourDataCurrent
 
-> List&lt;SushiswapPairHourDataDTO&gt; sushiswapPairHourDatasCurrent()
+> List&lt;SushiswapPairHourDataDTO&gt; sushiswapPairHourDataCurrent()
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 
@@ -1329,10 +1329,10 @@ Gets pairHourDatas.
 
 SushiswapApi apiInstance = new SushiswapApi();
 try {
-    List<SushiswapPairHourDataDTO> result = apiInstance.sushiswapPairHourDatasCurrent();
+    List<SushiswapPairHourDataDTO> result = apiInstance.sushiswapPairHourDataCurrent();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#sushiswapPairHourDatasCurrent");
+    System.err.println("Exception when calling SushiswapApi#sushiswapPairHourDataCurrent");
     e.printStackTrace();
 }
 ```
@@ -1447,13 +1447,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswapTokenDayDatasCurrent
+## sushiswapTokenDayDataCurrent
 
-> List&lt;SushiswapTokenDayDataDTO&gt; sushiswapTokenDayDatasCurrent()
+> List&lt;SushiswapTokenDayDataDTO&gt; sushiswapTokenDayDataCurrent()
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 
@@ -1463,10 +1463,10 @@ Gets tokenDayDatas.
 
 SushiswapApi apiInstance = new SushiswapApi();
 try {
-    List<SushiswapTokenDayDataDTO> result = apiInstance.sushiswapTokenDayDatasCurrent();
+    List<SushiswapTokenDayDataDTO> result = apiInstance.sushiswapTokenDayDataCurrent();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling SushiswapApi#sushiswapTokenDayDatasCurrent");
+    System.err.println("Exception when calling SushiswapApi#sushiswapTokenDayDataCurrent");
     e.printStackTrace();
 }
 ```

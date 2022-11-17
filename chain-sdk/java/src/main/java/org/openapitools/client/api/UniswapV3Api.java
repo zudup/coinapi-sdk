@@ -321,7 +321,7 @@ public class UniswapV3Api {
         return localVarCall;
     }
     /**
-     * Build call for uniswapV3FactorysCurrent
+     * Build call for uniswapV3FactoriesCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -331,7 +331,7 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3FactorysCurrentCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uniswapV3FactoriesCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -348,7 +348,7 @@ public class UniswapV3Api {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswapv3/factorys/current";
+        String localVarPath = "/dapps/uniswapv3/factories/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -378,14 +378,14 @@ public class UniswapV3Api {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uniswapV3FactorysCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return uniswapV3FactorysCurrentCall(_callback);
+    private okhttp3.Call uniswapV3FactoriesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uniswapV3FactoriesCurrentCall(_callback);
 
     }
 
     /**
-     * Factorys (current)
-     * Gets factorys.
+     * Factories (current)
+     * Gets factories.
      * @return List&lt;UniswapV3FactoryDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -394,14 +394,14 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<UniswapV3FactoryDTO> uniswapV3FactorysCurrent() throws ApiException {
-        ApiResponse<List<UniswapV3FactoryDTO>> localVarResp = uniswapV3FactorysCurrentWithHttpInfo();
+    public List<UniswapV3FactoryDTO> uniswapV3FactoriesCurrent() throws ApiException {
+        ApiResponse<List<UniswapV3FactoryDTO>> localVarResp = uniswapV3FactoriesCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
-     * Factorys (current)
-     * Gets factorys.
+     * Factories (current)
+     * Gets factories.
      * @return ApiResponse&lt;List&lt;UniswapV3FactoryDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -410,15 +410,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UniswapV3FactoryDTO>> uniswapV3FactorysCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = uniswapV3FactorysCurrentValidateBeforeCall(null);
+    public ApiResponse<List<UniswapV3FactoryDTO>> uniswapV3FactoriesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uniswapV3FactoriesCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<UniswapV3FactoryDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Factorys (current) (asynchronously)
-     * Gets factorys.
+     * Factories (current) (asynchronously)
+     * Gets factories.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -428,9 +428,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3FactorysCurrentAsync(final ApiCallback<List<UniswapV3FactoryDTO>> _callback) throws ApiException {
+    public okhttp3.Call uniswapV3FactoriesCurrentAsync(final ApiCallback<List<UniswapV3FactoryDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = uniswapV3FactorysCurrentValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = uniswapV3FactoriesCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<UniswapV3FactoryDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -770,7 +770,7 @@ public class UniswapV3Api {
         return localVarCall;
     }
     /**
-     * Build call for uniswapV3GetFactorysHistorical
+     * Build call for uniswapV3GetFactoriesHistorical
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -785,7 +785,7 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3GetFactorysHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uniswapV3GetFactoriesHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -802,7 +802,7 @@ public class UniswapV3Api {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswapv3/factorys/historical";
+        String localVarPath = "/dapps/uniswapv3/factories/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -852,14 +852,14 @@ public class UniswapV3Api {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uniswapV3GetFactorysHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
-        return uniswapV3GetFactorysHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
+    private okhttp3.Call uniswapV3GetFactoriesHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+        return uniswapV3GetFactoriesHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
 
     }
 
     /**
-     * Factorys (historical)
-     * Gets factorys.
+     * Factories (historical)
+     * Gets factories.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -873,14 +873,14 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<UniswapV3FactoryDTO> uniswapV3GetFactorysHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        ApiResponse<List<UniswapV3FactoryDTO>> localVarResp = uniswapV3GetFactorysHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+    public List<UniswapV3FactoryDTO> uniswapV3GetFactoriesHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        ApiResponse<List<UniswapV3FactoryDTO>> localVarResp = uniswapV3GetFactoriesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
         return localVarResp.getData();
     }
 
     /**
-     * Factorys (historical)
-     * Gets factorys.
+     * Factories (historical)
+     * Gets factories.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -894,15 +894,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UniswapV3FactoryDTO>> uniswapV3GetFactorysHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        okhttp3.Call localVarCall = uniswapV3GetFactorysHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
+    public ApiResponse<List<UniswapV3FactoryDTO>> uniswapV3GetFactoriesHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        okhttp3.Call localVarCall = uniswapV3GetFactoriesHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
         Type localVarReturnType = new TypeToken<List<UniswapV3FactoryDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Factorys (historical) (asynchronously)
-     * Gets factorys.
+     * Factories (historical) (asynchronously)
+     * Gets factories.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -917,9 +917,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3GetFactorysHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<UniswapV3FactoryDTO>> _callback) throws ApiException {
+    public okhttp3.Call uniswapV3GetFactoriesHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<UniswapV3FactoryDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = uniswapV3GetFactorysHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
+        okhttp3.Call localVarCall = uniswapV3GetFactoriesHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
         Type localVarReturnType = new TypeToken<List<UniswapV3FactoryDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -1104,7 +1104,7 @@ public class UniswapV3Api {
         return localVarCall;
     }
     /**
-     * Build call for uniswapV3GetPoolDayDatasHistorical
+     * Build call for uniswapV3GetPoolDayDataHistorical
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1120,7 +1120,7 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3GetPoolDayDatasHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uniswapV3GetPoolDayDataHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1137,7 +1137,7 @@ public class UniswapV3Api {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswapv3/poolDayDatas/historical";
+        String localVarPath = "/dapps/uniswapv3/poolDayData/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1191,14 +1191,14 @@ public class UniswapV3Api {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uniswapV3GetPoolDayDatasHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback _callback) throws ApiException {
-        return uniswapV3GetPoolDayDatasHistoricalCall(startBlock, endBlock, startDate, endDate, id, pool, _callback);
+    private okhttp3.Call uniswapV3GetPoolDayDataHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback _callback) throws ApiException {
+        return uniswapV3GetPoolDayDataHistoricalCall(startBlock, endBlock, startDate, endDate, id, pool, _callback);
 
     }
 
     /**
-     * PoolDayDatas (historical)
-     * Gets poolDayDatas.
+     * PoolDayData (historical)
+     * Gets poolDayData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1213,14 +1213,14 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<UniswapV3PoolDayDataDTO> uniswapV3GetPoolDayDatasHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool) throws ApiException {
-        ApiResponse<List<UniswapV3PoolDayDataDTO>> localVarResp = uniswapV3GetPoolDayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
+    public List<UniswapV3PoolDayDataDTO> uniswapV3GetPoolDayDataHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool) throws ApiException {
+        ApiResponse<List<UniswapV3PoolDayDataDTO>> localVarResp = uniswapV3GetPoolDayDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
         return localVarResp.getData();
     }
 
     /**
-     * PoolDayDatas (historical)
-     * Gets poolDayDatas.
+     * PoolDayData (historical)
+     * Gets poolDayData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1235,15 +1235,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UniswapV3PoolDayDataDTO>> uniswapV3GetPoolDayDatasHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool) throws ApiException {
-        okhttp3.Call localVarCall = uniswapV3GetPoolDayDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pool, null);
+    public ApiResponse<List<UniswapV3PoolDayDataDTO>> uniswapV3GetPoolDayDataHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool) throws ApiException {
+        okhttp3.Call localVarCall = uniswapV3GetPoolDayDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pool, null);
         Type localVarReturnType = new TypeToken<List<UniswapV3PoolDayDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * PoolDayDatas (historical) (asynchronously)
-     * Gets poolDayDatas.
+     * PoolDayData (historical) (asynchronously)
+     * Gets poolDayData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1259,15 +1259,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3GetPoolDayDatasHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback<List<UniswapV3PoolDayDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call uniswapV3GetPoolDayDataHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback<List<UniswapV3PoolDayDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = uniswapV3GetPoolDayDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pool, _callback);
+        okhttp3.Call localVarCall = uniswapV3GetPoolDayDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pool, _callback);
         Type localVarReturnType = new TypeToken<List<UniswapV3PoolDayDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for uniswapV3GetPoolHourDatasHistorical
+     * Build call for uniswapV3GetPoolHourDataHistorical
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1283,7 +1283,7 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3GetPoolHourDatasHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uniswapV3GetPoolHourDataHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1300,7 +1300,7 @@ public class UniswapV3Api {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswapv3/poolHourDatas/historical";
+        String localVarPath = "/dapps/uniswapv3/poolHourData/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1354,14 +1354,14 @@ public class UniswapV3Api {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uniswapV3GetPoolHourDatasHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback _callback) throws ApiException {
-        return uniswapV3GetPoolHourDatasHistoricalCall(startBlock, endBlock, startDate, endDate, id, pool, _callback);
+    private okhttp3.Call uniswapV3GetPoolHourDataHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback _callback) throws ApiException {
+        return uniswapV3GetPoolHourDataHistoricalCall(startBlock, endBlock, startDate, endDate, id, pool, _callback);
 
     }
 
     /**
-     * PoolHourDatas (historical)
-     * Gets poolHourDatas.
+     * PoolHourData (historical)
+     * Gets poolHourData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1376,14 +1376,14 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<UniswapV3PoolHourDataDTO> uniswapV3GetPoolHourDatasHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool) throws ApiException {
-        ApiResponse<List<UniswapV3PoolHourDataDTO>> localVarResp = uniswapV3GetPoolHourDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
+    public List<UniswapV3PoolHourDataDTO> uniswapV3GetPoolHourDataHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool) throws ApiException {
+        ApiResponse<List<UniswapV3PoolHourDataDTO>> localVarResp = uniswapV3GetPoolHourDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
         return localVarResp.getData();
     }
 
     /**
-     * PoolHourDatas (historical)
-     * Gets poolHourDatas.
+     * PoolHourData (historical)
+     * Gets poolHourData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1398,15 +1398,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UniswapV3PoolHourDataDTO>> uniswapV3GetPoolHourDatasHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool) throws ApiException {
-        okhttp3.Call localVarCall = uniswapV3GetPoolHourDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pool, null);
+    public ApiResponse<List<UniswapV3PoolHourDataDTO>> uniswapV3GetPoolHourDataHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool) throws ApiException {
+        okhttp3.Call localVarCall = uniswapV3GetPoolHourDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pool, null);
         Type localVarReturnType = new TypeToken<List<UniswapV3PoolHourDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * PoolHourDatas (historical) (asynchronously)
-     * Gets poolHourDatas.
+     * PoolHourData (historical) (asynchronously)
+     * Gets poolHourData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1422,9 +1422,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3GetPoolHourDatasHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback<List<UniswapV3PoolHourDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call uniswapV3GetPoolHourDataHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback<List<UniswapV3PoolHourDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = uniswapV3GetPoolHourDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pool, _callback);
+        okhttp3.Call localVarCall = uniswapV3GetPoolHourDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pool, _callback);
         Type localVarReturnType = new TypeToken<List<UniswapV3PoolHourDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -2122,7 +2122,7 @@ public class UniswapV3Api {
         return localVarCall;
     }
     /**
-     * Build call for uniswapV3GetTickDayDatasHistorical
+     * Build call for uniswapV3GetTickDayDataHistorical
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2138,7 +2138,7 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3GetTickDayDatasHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uniswapV3GetTickDayDataHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2155,7 +2155,7 @@ public class UniswapV3Api {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswapv3/tickDayDatas/historical";
+        String localVarPath = "/dapps/uniswapv3/tickDayData/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2209,14 +2209,14 @@ public class UniswapV3Api {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uniswapV3GetTickDayDatasHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback _callback) throws ApiException {
-        return uniswapV3GetTickDayDatasHistoricalCall(startBlock, endBlock, startDate, endDate, id, pool, _callback);
+    private okhttp3.Call uniswapV3GetTickDayDataHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback _callback) throws ApiException {
+        return uniswapV3GetTickDayDataHistoricalCall(startBlock, endBlock, startDate, endDate, id, pool, _callback);
 
     }
 
     /**
-     * TickDayDatas (historical)
-     * Gets tickDayDatas.
+     * TickDayData (historical)
+     * Gets tickDayData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2231,14 +2231,14 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<UniswapV3TickDayDataDTO> uniswapV3GetTickDayDatasHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool) throws ApiException {
-        ApiResponse<List<UniswapV3TickDayDataDTO>> localVarResp = uniswapV3GetTickDayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
+    public List<UniswapV3TickDayDataDTO> uniswapV3GetTickDayDataHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool) throws ApiException {
+        ApiResponse<List<UniswapV3TickDayDataDTO>> localVarResp = uniswapV3GetTickDayDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
         return localVarResp.getData();
     }
 
     /**
-     * TickDayDatas (historical)
-     * Gets tickDayDatas.
+     * TickDayData (historical)
+     * Gets tickDayData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2253,15 +2253,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UniswapV3TickDayDataDTO>> uniswapV3GetTickDayDatasHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool) throws ApiException {
-        okhttp3.Call localVarCall = uniswapV3GetTickDayDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pool, null);
+    public ApiResponse<List<UniswapV3TickDayDataDTO>> uniswapV3GetTickDayDataHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool) throws ApiException {
+        okhttp3.Call localVarCall = uniswapV3GetTickDayDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pool, null);
         Type localVarReturnType = new TypeToken<List<UniswapV3TickDayDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * TickDayDatas (historical) (asynchronously)
-     * Gets tickDayDatas.
+     * TickDayData (historical) (asynchronously)
+     * Gets tickDayData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2277,9 +2277,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3GetTickDayDatasHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback<List<UniswapV3TickDayDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call uniswapV3GetTickDayDataHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pool, final ApiCallback<List<UniswapV3TickDayDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = uniswapV3GetTickDayDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pool, _callback);
+        okhttp3.Call localVarCall = uniswapV3GetTickDayDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pool, _callback);
         Type localVarReturnType = new TypeToken<List<UniswapV3TickDayDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -2448,7 +2448,7 @@ public class UniswapV3Api {
         return localVarCall;
     }
     /**
-     * Build call for uniswapV3GetTokenHourDatasHistorical
+     * Build call for uniswapV3GetTokenHourDataHistorical
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2463,7 +2463,7 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3GetTokenHourDatasHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uniswapV3GetTokenHourDataHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2480,7 +2480,7 @@ public class UniswapV3Api {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswapv3/tokenHourDatas/historical";
+        String localVarPath = "/dapps/uniswapv3/tokenHourData/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2530,14 +2530,14 @@ public class UniswapV3Api {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uniswapV3GetTokenHourDatasHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
-        return uniswapV3GetTokenHourDatasHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
+    private okhttp3.Call uniswapV3GetTokenHourDataHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+        return uniswapV3GetTokenHourDataHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
 
     }
 
     /**
-     * TokenHourDatas (historical)
-     * Gets tokenHourDatas.
+     * TokenHourData (historical)
+     * Gets tokenHourData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2551,14 +2551,14 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<UniswapV3TokenHourDataDTO> uniswapV3GetTokenHourDatasHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        ApiResponse<List<UniswapV3TokenHourDataDTO>> localVarResp = uniswapV3GetTokenHourDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+    public List<UniswapV3TokenHourDataDTO> uniswapV3GetTokenHourDataHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        ApiResponse<List<UniswapV3TokenHourDataDTO>> localVarResp = uniswapV3GetTokenHourDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
         return localVarResp.getData();
     }
 
     /**
-     * TokenHourDatas (historical)
-     * Gets tokenHourDatas.
+     * TokenHourData (historical)
+     * Gets tokenHourData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2572,15 +2572,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UniswapV3TokenHourDataDTO>> uniswapV3GetTokenHourDatasHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        okhttp3.Call localVarCall = uniswapV3GetTokenHourDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
+    public ApiResponse<List<UniswapV3TokenHourDataDTO>> uniswapV3GetTokenHourDataHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        okhttp3.Call localVarCall = uniswapV3GetTokenHourDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
         Type localVarReturnType = new TypeToken<List<UniswapV3TokenHourDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * TokenHourDatas (historical) (asynchronously)
-     * Gets tokenHourDatas.
+     * TokenHourData (historical) (asynchronously)
+     * Gets tokenHourData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2595,15 +2595,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3GetTokenHourDatasHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<UniswapV3TokenHourDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call uniswapV3GetTokenHourDataHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<UniswapV3TokenHourDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = uniswapV3GetTokenHourDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
+        okhttp3.Call localVarCall = uniswapV3GetTokenHourDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
         Type localVarReturnType = new TypeToken<List<UniswapV3TokenHourDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for uniswapV3GetTokenV3DayDatasHistorical
+     * Build call for uniswapV3GetTokenV3DayDataHistorical
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2618,7 +2618,7 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3GetTokenV3DayDatasHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uniswapV3GetTokenV3DayDataHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2635,7 +2635,7 @@ public class UniswapV3Api {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswapv3/tokenV3DayDatas/historical";
+        String localVarPath = "/dapps/uniswapv3/tokenV3DayData/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2685,14 +2685,14 @@ public class UniswapV3Api {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uniswapV3GetTokenV3DayDatasHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
-        return uniswapV3GetTokenV3DayDatasHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
+    private okhttp3.Call uniswapV3GetTokenV3DayDataHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+        return uniswapV3GetTokenV3DayDataHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
 
     }
 
     /**
-     * TokenV3DayDatas (historical)
-     * Gets tokenV3DayDatas.
+     * TokenV3DayData (historical)
+     * Gets tokenV3DayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2706,14 +2706,14 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<UniswapV3TokenV3DayDataDTO> uniswapV3GetTokenV3DayDatasHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        ApiResponse<List<UniswapV3TokenV3DayDataDTO>> localVarResp = uniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+    public List<UniswapV3TokenV3DayDataDTO> uniswapV3GetTokenV3DayDataHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        ApiResponse<List<UniswapV3TokenV3DayDataDTO>> localVarResp = uniswapV3GetTokenV3DayDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
         return localVarResp.getData();
     }
 
     /**
-     * TokenV3DayDatas (historical)
-     * Gets tokenV3DayDatas.
+     * TokenV3DayData (historical)
+     * Gets tokenV3DayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2727,15 +2727,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UniswapV3TokenV3DayDataDTO>> uniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        okhttp3.Call localVarCall = uniswapV3GetTokenV3DayDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
+    public ApiResponse<List<UniswapV3TokenV3DayDataDTO>> uniswapV3GetTokenV3DayDataHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        okhttp3.Call localVarCall = uniswapV3GetTokenV3DayDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
         Type localVarReturnType = new TypeToken<List<UniswapV3TokenV3DayDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * TokenV3DayDatas (historical) (asynchronously)
-     * Gets tokenV3DayDatas.
+     * TokenV3DayData (historical) (asynchronously)
+     * Gets tokenV3DayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2750,9 +2750,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3GetTokenV3DayDatasHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<UniswapV3TokenV3DayDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call uniswapV3GetTokenV3DayDataHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<UniswapV3TokenV3DayDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = uniswapV3GetTokenV3DayDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
+        okhttp3.Call localVarCall = uniswapV3GetTokenV3DayDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
         Type localVarReturnType = new TypeToken<List<UniswapV3TokenV3DayDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -3084,7 +3084,7 @@ public class UniswapV3Api {
         return localVarCall;
     }
     /**
-     * Build call for uniswapV3GetUniswapDayDatasHistorical
+     * Build call for uniswapV3GetUniswapDayDataHistorical
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3099,7 +3099,7 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3GetUniswapDayDatasHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uniswapV3GetUniswapDayDataHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3116,7 +3116,7 @@ public class UniswapV3Api {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswapv3/uniswapDayDatas/historical";
+        String localVarPath = "/dapps/uniswapv3/uniswapDayData/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3166,14 +3166,14 @@ public class UniswapV3Api {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uniswapV3GetUniswapDayDatasHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
-        return uniswapV3GetUniswapDayDatasHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
+    private okhttp3.Call uniswapV3GetUniswapDayDataHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+        return uniswapV3GetUniswapDayDataHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
 
     }
 
     /**
-     * UniswapDayDatas (historical)
-     * Gets uniswapDayDatas.
+     * UniswapDayData (historical)
+     * Gets uniswapDayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3187,14 +3187,14 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<UniswapV3UniswapDayDataDTO> uniswapV3GetUniswapDayDatasHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        ApiResponse<List<UniswapV3UniswapDayDataDTO>> localVarResp = uniswapV3GetUniswapDayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+    public List<UniswapV3UniswapDayDataDTO> uniswapV3GetUniswapDayDataHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        ApiResponse<List<UniswapV3UniswapDayDataDTO>> localVarResp = uniswapV3GetUniswapDayDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
         return localVarResp.getData();
     }
 
     /**
-     * UniswapDayDatas (historical)
-     * Gets uniswapDayDatas.
+     * UniswapDayData (historical)
+     * Gets uniswapDayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3208,15 +3208,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UniswapV3UniswapDayDataDTO>> uniswapV3GetUniswapDayDatasHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        okhttp3.Call localVarCall = uniswapV3GetUniswapDayDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
+    public ApiResponse<List<UniswapV3UniswapDayDataDTO>> uniswapV3GetUniswapDayDataHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        okhttp3.Call localVarCall = uniswapV3GetUniswapDayDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
         Type localVarReturnType = new TypeToken<List<UniswapV3UniswapDayDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * UniswapDayDatas (historical) (asynchronously)
-     * Gets uniswapDayDatas.
+     * UniswapDayData (historical) (asynchronously)
+     * Gets uniswapDayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -3231,9 +3231,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3GetUniswapDayDatasHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<UniswapV3UniswapDayDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call uniswapV3GetUniswapDayDataHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<UniswapV3UniswapDayDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = uniswapV3GetUniswapDayDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
+        okhttp3.Call localVarCall = uniswapV3GetUniswapDayDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
         Type localVarReturnType = new TypeToken<List<UniswapV3UniswapDayDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -3354,7 +3354,7 @@ public class UniswapV3Api {
         return localVarCall;
     }
     /**
-     * Build call for uniswapV3PoolDayDatasCurrent
+     * Build call for uniswapV3PoolDayDataCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -3364,7 +3364,7 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3PoolDayDatasCurrentCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uniswapV3PoolDayDataCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3381,7 +3381,7 @@ public class UniswapV3Api {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswapv3/poolDayDatas/current";
+        String localVarPath = "/dapps/uniswapv3/poolDayData/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3411,14 +3411,14 @@ public class UniswapV3Api {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uniswapV3PoolDayDatasCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return uniswapV3PoolDayDatasCurrentCall(_callback);
+    private okhttp3.Call uniswapV3PoolDayDataCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uniswapV3PoolDayDataCurrentCall(_callback);
 
     }
 
     /**
-     * PoolDayDatas (current)
-     * Gets poolDayDatas.
+     * PoolDayData (current)
+     * Gets poolDayData.
      * @return List&lt;UniswapV3PoolDayDataDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3427,14 +3427,14 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<UniswapV3PoolDayDataDTO> uniswapV3PoolDayDatasCurrent() throws ApiException {
-        ApiResponse<List<UniswapV3PoolDayDataDTO>> localVarResp = uniswapV3PoolDayDatasCurrentWithHttpInfo();
+    public List<UniswapV3PoolDayDataDTO> uniswapV3PoolDayDataCurrent() throws ApiException {
+        ApiResponse<List<UniswapV3PoolDayDataDTO>> localVarResp = uniswapV3PoolDayDataCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
-     * PoolDayDatas (current)
-     * Gets poolDayDatas.
+     * PoolDayData (current)
+     * Gets poolDayData.
      * @return ApiResponse&lt;List&lt;UniswapV3PoolDayDataDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3443,15 +3443,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UniswapV3PoolDayDataDTO>> uniswapV3PoolDayDatasCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = uniswapV3PoolDayDatasCurrentValidateBeforeCall(null);
+    public ApiResponse<List<UniswapV3PoolDayDataDTO>> uniswapV3PoolDayDataCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uniswapV3PoolDayDataCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<UniswapV3PoolDayDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * PoolDayDatas (current) (asynchronously)
-     * Gets poolDayDatas.
+     * PoolDayData (current) (asynchronously)
+     * Gets poolDayData.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3461,15 +3461,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3PoolDayDatasCurrentAsync(final ApiCallback<List<UniswapV3PoolDayDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call uniswapV3PoolDayDataCurrentAsync(final ApiCallback<List<UniswapV3PoolDayDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = uniswapV3PoolDayDatasCurrentValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = uniswapV3PoolDayDataCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<UniswapV3PoolDayDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for uniswapV3PoolHourDatasCurrent
+     * Build call for uniswapV3PoolHourDataCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -3479,7 +3479,7 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3PoolHourDatasCurrentCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uniswapV3PoolHourDataCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3496,7 +3496,7 @@ public class UniswapV3Api {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswapv3/poolHourDatas/current";
+        String localVarPath = "/dapps/uniswapv3/poolHourData/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3526,14 +3526,14 @@ public class UniswapV3Api {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uniswapV3PoolHourDatasCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return uniswapV3PoolHourDatasCurrentCall(_callback);
+    private okhttp3.Call uniswapV3PoolHourDataCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uniswapV3PoolHourDataCurrentCall(_callback);
 
     }
 
     /**
-     * PoolHourDatas (current)
-     * Gets poolHourDatas.
+     * PoolHourData (current)
+     * Gets poolHourData.
      * @return List&lt;UniswapV3PoolHourDataDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3542,14 +3542,14 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<UniswapV3PoolHourDataDTO> uniswapV3PoolHourDatasCurrent() throws ApiException {
-        ApiResponse<List<UniswapV3PoolHourDataDTO>> localVarResp = uniswapV3PoolHourDatasCurrentWithHttpInfo();
+    public List<UniswapV3PoolHourDataDTO> uniswapV3PoolHourDataCurrent() throws ApiException {
+        ApiResponse<List<UniswapV3PoolHourDataDTO>> localVarResp = uniswapV3PoolHourDataCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
-     * PoolHourDatas (current)
-     * Gets poolHourDatas.
+     * PoolHourData (current)
+     * Gets poolHourData.
      * @return ApiResponse&lt;List&lt;UniswapV3PoolHourDataDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3558,15 +3558,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UniswapV3PoolHourDataDTO>> uniswapV3PoolHourDatasCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = uniswapV3PoolHourDatasCurrentValidateBeforeCall(null);
+    public ApiResponse<List<UniswapV3PoolHourDataDTO>> uniswapV3PoolHourDataCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uniswapV3PoolHourDataCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<UniswapV3PoolHourDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * PoolHourDatas (current) (asynchronously)
-     * Gets poolHourDatas.
+     * PoolHourData (current) (asynchronously)
+     * Gets poolHourData.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3576,9 +3576,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3PoolHourDatasCurrentAsync(final ApiCallback<List<UniswapV3PoolHourDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call uniswapV3PoolHourDataCurrentAsync(final ApiCallback<List<UniswapV3PoolHourDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = uniswapV3PoolHourDatasCurrentValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = uniswapV3PoolHourDataCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<UniswapV3PoolHourDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -4060,7 +4060,7 @@ public class UniswapV3Api {
         return localVarCall;
     }
     /**
-     * Build call for uniswapV3TickDayDatasCurrent
+     * Build call for uniswapV3TickDayDataCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -4070,7 +4070,7 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3TickDayDatasCurrentCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uniswapV3TickDayDataCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -4087,7 +4087,7 @@ public class UniswapV3Api {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswapv3/tickDayDatas/current";
+        String localVarPath = "/dapps/uniswapv3/tickDayData/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4117,14 +4117,14 @@ public class UniswapV3Api {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uniswapV3TickDayDatasCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return uniswapV3TickDayDatasCurrentCall(_callback);
+    private okhttp3.Call uniswapV3TickDayDataCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uniswapV3TickDayDataCurrentCall(_callback);
 
     }
 
     /**
-     * TickDayDatas (current)
-     * Gets tickDayDatas.
+     * TickDayData (current)
+     * Gets tickDayData.
      * @return List&lt;UniswapV3TickDayDataDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -4133,14 +4133,14 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<UniswapV3TickDayDataDTO> uniswapV3TickDayDatasCurrent() throws ApiException {
-        ApiResponse<List<UniswapV3TickDayDataDTO>> localVarResp = uniswapV3TickDayDatasCurrentWithHttpInfo();
+    public List<UniswapV3TickDayDataDTO> uniswapV3TickDayDataCurrent() throws ApiException {
+        ApiResponse<List<UniswapV3TickDayDataDTO>> localVarResp = uniswapV3TickDayDataCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
-     * TickDayDatas (current)
-     * Gets tickDayDatas.
+     * TickDayData (current)
+     * Gets tickDayData.
      * @return ApiResponse&lt;List&lt;UniswapV3TickDayDataDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -4149,15 +4149,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UniswapV3TickDayDataDTO>> uniswapV3TickDayDatasCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = uniswapV3TickDayDatasCurrentValidateBeforeCall(null);
+    public ApiResponse<List<UniswapV3TickDayDataDTO>> uniswapV3TickDayDataCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uniswapV3TickDayDataCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<UniswapV3TickDayDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * TickDayDatas (current) (asynchronously)
-     * Gets tickDayDatas.
+     * TickDayData (current) (asynchronously)
+     * Gets tickDayData.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -4167,9 +4167,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3TickDayDatasCurrentAsync(final ApiCallback<List<UniswapV3TickDayDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call uniswapV3TickDayDataCurrentAsync(final ApiCallback<List<UniswapV3TickDayDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = uniswapV3TickDayDatasCurrentValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = uniswapV3TickDayDataCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<UniswapV3TickDayDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -4290,7 +4290,7 @@ public class UniswapV3Api {
         return localVarCall;
     }
     /**
-     * Build call for uniswapV3TokenHourDatasCurrent
+     * Build call for uniswapV3TokenHourDataCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -4300,7 +4300,7 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3TokenHourDatasCurrentCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uniswapV3TokenHourDataCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -4317,7 +4317,7 @@ public class UniswapV3Api {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswapv3/tokenHourDatas/current";
+        String localVarPath = "/dapps/uniswapv3/tokenHourData/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4347,14 +4347,14 @@ public class UniswapV3Api {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uniswapV3TokenHourDatasCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return uniswapV3TokenHourDatasCurrentCall(_callback);
+    private okhttp3.Call uniswapV3TokenHourDataCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uniswapV3TokenHourDataCurrentCall(_callback);
 
     }
 
     /**
-     * TokenHourDatas (current)
-     * Gets tokenHourDatas.
+     * TokenHourData (current)
+     * Gets tokenHourData.
      * @return List&lt;UniswapV3TokenHourDataDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -4363,14 +4363,14 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<UniswapV3TokenHourDataDTO> uniswapV3TokenHourDatasCurrent() throws ApiException {
-        ApiResponse<List<UniswapV3TokenHourDataDTO>> localVarResp = uniswapV3TokenHourDatasCurrentWithHttpInfo();
+    public List<UniswapV3TokenHourDataDTO> uniswapV3TokenHourDataCurrent() throws ApiException {
+        ApiResponse<List<UniswapV3TokenHourDataDTO>> localVarResp = uniswapV3TokenHourDataCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
-     * TokenHourDatas (current)
-     * Gets tokenHourDatas.
+     * TokenHourData (current)
+     * Gets tokenHourData.
      * @return ApiResponse&lt;List&lt;UniswapV3TokenHourDataDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -4379,15 +4379,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UniswapV3TokenHourDataDTO>> uniswapV3TokenHourDatasCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = uniswapV3TokenHourDatasCurrentValidateBeforeCall(null);
+    public ApiResponse<List<UniswapV3TokenHourDataDTO>> uniswapV3TokenHourDataCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uniswapV3TokenHourDataCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<UniswapV3TokenHourDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * TokenHourDatas (current) (asynchronously)
-     * Gets tokenHourDatas.
+     * TokenHourData (current) (asynchronously)
+     * Gets tokenHourData.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -4397,15 +4397,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3TokenHourDatasCurrentAsync(final ApiCallback<List<UniswapV3TokenHourDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call uniswapV3TokenHourDataCurrentAsync(final ApiCallback<List<UniswapV3TokenHourDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = uniswapV3TokenHourDatasCurrentValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = uniswapV3TokenHourDataCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<UniswapV3TokenHourDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for uniswapV3TokenV3DayDatasCurrent
+     * Build call for uniswapV3TokenV3DayDataCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -4415,7 +4415,7 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3TokenV3DayDatasCurrentCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uniswapV3TokenV3DayDataCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -4432,7 +4432,7 @@ public class UniswapV3Api {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswapv3/tokenV3DayDatas/current";
+        String localVarPath = "/dapps/uniswapv3/tokenV3DayData/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4462,14 +4462,14 @@ public class UniswapV3Api {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uniswapV3TokenV3DayDatasCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return uniswapV3TokenV3DayDatasCurrentCall(_callback);
+    private okhttp3.Call uniswapV3TokenV3DayDataCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uniswapV3TokenV3DayDataCurrentCall(_callback);
 
     }
 
     /**
-     * TokenV3DayDatas (current)
-     * Gets tokenV3DayDatas.
+     * TokenV3DayData (current)
+     * Gets tokenV3DayData.
      * @return List&lt;UniswapV3TokenV3DayDataDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -4478,14 +4478,14 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<UniswapV3TokenV3DayDataDTO> uniswapV3TokenV3DayDatasCurrent() throws ApiException {
-        ApiResponse<List<UniswapV3TokenV3DayDataDTO>> localVarResp = uniswapV3TokenV3DayDatasCurrentWithHttpInfo();
+    public List<UniswapV3TokenV3DayDataDTO> uniswapV3TokenV3DayDataCurrent() throws ApiException {
+        ApiResponse<List<UniswapV3TokenV3DayDataDTO>> localVarResp = uniswapV3TokenV3DayDataCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
-     * TokenV3DayDatas (current)
-     * Gets tokenV3DayDatas.
+     * TokenV3DayData (current)
+     * Gets tokenV3DayData.
      * @return ApiResponse&lt;List&lt;UniswapV3TokenV3DayDataDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -4494,15 +4494,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UniswapV3TokenV3DayDataDTO>> uniswapV3TokenV3DayDatasCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = uniswapV3TokenV3DayDatasCurrentValidateBeforeCall(null);
+    public ApiResponse<List<UniswapV3TokenV3DayDataDTO>> uniswapV3TokenV3DayDataCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uniswapV3TokenV3DayDataCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<UniswapV3TokenV3DayDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * TokenV3DayDatas (current) (asynchronously)
-     * Gets tokenV3DayDatas.
+     * TokenV3DayData (current) (asynchronously)
+     * Gets tokenV3DayData.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -4512,9 +4512,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3TokenV3DayDatasCurrentAsync(final ApiCallback<List<UniswapV3TokenV3DayDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call uniswapV3TokenV3DayDataCurrentAsync(final ApiCallback<List<UniswapV3TokenV3DayDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = uniswapV3TokenV3DayDatasCurrentValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = uniswapV3TokenV3DayDataCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<UniswapV3TokenV3DayDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -4750,7 +4750,7 @@ public class UniswapV3Api {
         return localVarCall;
     }
     /**
-     * Build call for uniswapV3UniswapDayDatasCurrent
+     * Build call for uniswapV3UniswapDayDataCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -4760,7 +4760,7 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3UniswapDayDatasCurrentCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call uniswapV3UniswapDayDataCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -4777,7 +4777,7 @@ public class UniswapV3Api {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/uniswapv3/uniswapDayDatas/current";
+        String localVarPath = "/dapps/uniswapv3/uniswapDayData/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4807,14 +4807,14 @@ public class UniswapV3Api {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call uniswapV3UniswapDayDatasCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return uniswapV3UniswapDayDatasCurrentCall(_callback);
+    private okhttp3.Call uniswapV3UniswapDayDataCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return uniswapV3UniswapDayDataCurrentCall(_callback);
 
     }
 
     /**
-     * UniswapDayDatas (current)
-     * Gets uniswapDayDatas.
+     * UniswapDayData (current)
+     * Gets uniswapDayData.
      * @return List&lt;UniswapV3UniswapDayDataDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -4823,14 +4823,14 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<UniswapV3UniswapDayDataDTO> uniswapV3UniswapDayDatasCurrent() throws ApiException {
-        ApiResponse<List<UniswapV3UniswapDayDataDTO>> localVarResp = uniswapV3UniswapDayDatasCurrentWithHttpInfo();
+    public List<UniswapV3UniswapDayDataDTO> uniswapV3UniswapDayDataCurrent() throws ApiException {
+        ApiResponse<List<UniswapV3UniswapDayDataDTO>> localVarResp = uniswapV3UniswapDayDataCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
-     * UniswapDayDatas (current)
-     * Gets uniswapDayDatas.
+     * UniswapDayData (current)
+     * Gets uniswapDayData.
      * @return ApiResponse&lt;List&lt;UniswapV3UniswapDayDataDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -4839,15 +4839,15 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<UniswapV3UniswapDayDataDTO>> uniswapV3UniswapDayDatasCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = uniswapV3UniswapDayDatasCurrentValidateBeforeCall(null);
+    public ApiResponse<List<UniswapV3UniswapDayDataDTO>> uniswapV3UniswapDayDataCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = uniswapV3UniswapDayDataCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<UniswapV3UniswapDayDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * UniswapDayDatas (current) (asynchronously)
-     * Gets uniswapDayDatas.
+     * UniswapDayData (current) (asynchronously)
+     * Gets uniswapDayData.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -4857,9 +4857,9 @@ public class UniswapV3Api {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call uniswapV3UniswapDayDatasCurrentAsync(final ApiCallback<List<UniswapV3UniswapDayDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call uniswapV3UniswapDayDataCurrentAsync(final ApiCallback<List<UniswapV3UniswapDayDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = uniswapV3UniswapDayDatasCurrentValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = uniswapV3UniswapDayDataCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<UniswapV3UniswapDayDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

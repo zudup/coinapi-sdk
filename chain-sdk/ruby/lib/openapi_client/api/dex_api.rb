@@ -19,25 +19,25 @@ module OpenapiClient
     def initialize(api_client = ApiClient.default)
       @api_client = api_client
     end
-    # Batchs (current)
-    # Gets batchs.
+    # Batches (current)
+    # Gets batches.
     # @param [Hash] opts the optional parameters
     # @return [Array<DexBatchDTO>]
-    def dex_batchs__current(opts = {})
-      data, _status_code, _headers = dex_batchs__current_with_http_info(opts)
+    def dex_batches__current(opts = {})
+      data, _status_code, _headers = dex_batches__current_with_http_info(opts)
       data
     end
 
-    # Batchs (current)
-    # Gets batchs.
+    # Batches (current)
+    # Gets batches.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<DexBatchDTO>, Integer, Hash)>] Array<DexBatchDTO> data, response status code and response headers
-    def dex_batchs__current_with_http_info(opts = {})
+    def dex_batches__current_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dex_batchs__current ...'
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_batches__current ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/batchs/current'
+      local_var_path = '/dapps/dex/batches/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -60,7 +60,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"DexApi.dex_batchs__current",
+        :operation => :"DexApi.dex_batches__current",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -71,7 +71,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dex_batchs__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DexApi#dex_batches__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -133,8 +133,8 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Batchs (historical)
-    # Gets batchs.
+    # Batches (historical)
+    # Gets batches.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -142,13 +142,13 @@ module OpenapiClient
     # @option opts [Time] :end_date The end date of timeframe.
     # @option opts [String] :id Identifier.
     # @return [Array<DexBatchDTO>]
-    def dex_get_batchs__historical(opts = {})
-      data, _status_code, _headers = dex_get_batchs__historical_with_http_info(opts)
+    def dex_get_batches__historical(opts = {})
+      data, _status_code, _headers = dex_get_batches__historical_with_http_info(opts)
       data
     end
 
-    # Batchs (historical)
-    # Gets batchs.
+    # Batches (historical)
+    # Gets batches.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -156,12 +156,12 @@ module OpenapiClient
     # @option opts [Time] :end_date The end date of timeframe.
     # @option opts [String] :id Identifier.
     # @return [Array<(Array<DexBatchDTO>, Integer, Hash)>] Array<DexBatchDTO> data, response status code and response headers
-    def dex_get_batchs__historical_with_http_info(opts = {})
+    def dex_get_batches__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_batchs__historical ...'
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_batches__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/batchs/historical'
+      local_var_path = '/dapps/dex/batches/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -189,7 +189,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"DexApi.dex_get_batchs__historical",
+        :operation => :"DexApi.dex_get_batches__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -200,7 +200,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dex_get_batchs__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DexApi#dex_get_batches__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -502,8 +502,8 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Statss (historical)
-    # Gets statss.
+    # Stats (historical)
+    # Gets stats.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -511,13 +511,13 @@ module OpenapiClient
     # @option opts [Time] :end_date The end date of timeframe.
     # @option opts [String] :id 
     # @return [Array<DexStatsDTO>]
-    def dex_get_statss__historical(opts = {})
-      data, _status_code, _headers = dex_get_statss__historical_with_http_info(opts)
+    def dex_get_stats__historical(opts = {})
+      data, _status_code, _headers = dex_get_stats__historical_with_http_info(opts)
       data
     end
 
-    # Statss (historical)
-    # Gets statss.
+    # Stats (historical)
+    # Gets stats.
     # @param [Hash] opts the optional parameters
     # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -525,12 +525,12 @@ module OpenapiClient
     # @option opts [Time] :end_date The end date of timeframe.
     # @option opts [String] :id 
     # @return [Array<(Array<DexStatsDTO>, Integer, Hash)>] Array<DexStatsDTO> data, response status code and response headers
-    def dex_get_statss__historical_with_http_info(opts = {})
+    def dex_get_stats__historical_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_statss__historical ...'
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_get_stats__historical ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/statss/historical'
+      local_var_path = '/dapps/dex/stats/historical'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -558,7 +558,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"DexApi.dex_get_statss__historical",
+        :operation => :"DexApi.dex_get_stats__historical",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -569,7 +569,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dex_get_statss__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DexApi#dex_get_stats__historical\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -1126,25 +1126,25 @@ module OpenapiClient
       return data, status_code, headers
     end
 
-    # Statss (current)
-    # Gets statss.
+    # Stats (current)
+    # Gets stats.
     # @param [Hash] opts the optional parameters
     # @return [Array<DexStatsDTO>]
-    def dex_statss__current(opts = {})
-      data, _status_code, _headers = dex_statss__current_with_http_info(opts)
+    def dex_stats__current(opts = {})
+      data, _status_code, _headers = dex_stats__current_with_http_info(opts)
       data
     end
 
-    # Statss (current)
-    # Gets statss.
+    # Stats (current)
+    # Gets stats.
     # @param [Hash] opts the optional parameters
     # @return [Array<(Array<DexStatsDTO>, Integer, Hash)>] Array<DexStatsDTO> data, response status code and response headers
-    def dex_statss__current_with_http_info(opts = {})
+    def dex_stats__current_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: DexApi.dex_statss__current ...'
+        @api_client.config.logger.debug 'Calling API: DexApi.dex_stats__current ...'
       end
       # resource path
-      local_var_path = '/dapps/dex/statss/current'
+      local_var_path = '/dapps/dex/stats/current'
 
       # query parameters
       query_params = opts[:query_params] || {}
@@ -1167,7 +1167,7 @@ module OpenapiClient
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"DexApi.dex_statss__current",
+        :operation => :"DexApi.dex_stats__current",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -1178,7 +1178,7 @@ module OpenapiClient
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: DexApi#dex_statss__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: DexApi#dex_stats__current\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

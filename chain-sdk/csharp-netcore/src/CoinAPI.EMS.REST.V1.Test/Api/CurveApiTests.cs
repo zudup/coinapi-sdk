@@ -178,13 +178,13 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test CurveGaugeLiquiditysCurrent
+        /// Test CurveGaugeLiquiditiesCurrent
         /// </summary>
         [Fact]
-        public void CurveGaugeLiquiditysCurrentTest()
+        public void CurveGaugeLiquiditiesCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.CurveGaugeLiquiditysCurrent();
+            //var response = instance.CurveGaugeLiquiditiesCurrent();
             //Assert.IsType<List<CurveGaugeLiquidityDTO>>(response);
         }
 
@@ -451,10 +451,10 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
         }
 
         /// <summary>
-        /// Test CurveGetGaugeLiquiditysHistorical
+        /// Test CurveGetGaugeLiquiditiesHistorical
         /// </summary>
         [Fact]
-        public void CurveGetGaugeLiquiditysHistoricalTest()
+        public void CurveGetGaugeLiquiditiesHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -463,7 +463,7 @@ namespace CoinAPI.EMS.REST.V1.Test.Api
             //DateTime? endDate = null;
             //string id = null;
             //string user = null;
-            //var response = instance.CurveGetGaugeLiquiditysHistorical(startBlock, endBlock, startDate, endDate, id, user);
+            //var response = instance.CurveGetGaugeLiquiditiesHistorical(startBlock, endBlock, startDate, endDate, id, user);
             //Assert.IsType<List<CurveGaugeLiquidityDTO>>(response);
         }
 

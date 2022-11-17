@@ -6,33 +6,33 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**SushiswapBundlesCurrent**](SushiswapApi.md#SushiswapBundlesCurrent) | **Get** /dapps/sushiswap/bundles/current | Bundles (current)
 [**SushiswapBurnsCurrent**](SushiswapApi.md#SushiswapBurnsCurrent) | **Get** /dapps/sushiswap/burns/current | Burns (current)
-[**SushiswapDayDatasCurrent**](SushiswapApi.md#SushiswapDayDatasCurrent) | **Get** /dapps/sushiswap/dayDatas/current | DayDatas (current)
-[**SushiswapFactorysCurrent**](SushiswapApi.md#SushiswapFactorysCurrent) | **Get** /dapps/sushiswap/factorys/current | Factorys (current)
+[**SushiswapDayDataCurrent**](SushiswapApi.md#SushiswapDayDataCurrent) | **Get** /dapps/sushiswap/dayData/current | DayData (current)
+[**SushiswapFactoriesCurrent**](SushiswapApi.md#SushiswapFactoriesCurrent) | **Get** /dapps/sushiswap/factories/current | Factories (current)
 [**SushiswapGetBundlesHistorical**](SushiswapApi.md#SushiswapGetBundlesHistorical) | **Get** /dapps/sushiswap/bundles/historical | Bundles (historical)
 [**SushiswapGetBurnsHistorical**](SushiswapApi.md#SushiswapGetBurnsHistorical) | **Get** /dapps/sushiswap/burns/historical | Burns (historical)
-[**SushiswapGetDayDatasHistorical**](SushiswapApi.md#SushiswapGetDayDatasHistorical) | **Get** /dapps/sushiswap/dayDatas/historical | DayDatas (historical)
-[**SushiswapGetFactorysHistorical**](SushiswapApi.md#SushiswapGetFactorysHistorical) | **Get** /dapps/sushiswap/factorys/historical | Factorys (historical)
-[**SushiswapGetHourDatasHistorical**](SushiswapApi.md#SushiswapGetHourDatasHistorical) | **Get** /dapps/sushiswap/hourDatas/historical | HourDatas (historical)
+[**SushiswapGetDayDataHistorical**](SushiswapApi.md#SushiswapGetDayDataHistorical) | **Get** /dapps/sushiswap/dayData/historical | DayData (historical)
+[**SushiswapGetFactoriesHistorical**](SushiswapApi.md#SushiswapGetFactoriesHistorical) | **Get** /dapps/sushiswap/factories/historical | Factories (historical)
+[**SushiswapGetHourDataHistorical**](SushiswapApi.md#SushiswapGetHourDataHistorical) | **Get** /dapps/sushiswap/hourData/historical | HourData (historical)
 [**SushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#SushiswapGetLiquidityPositionSnapshotsHistorical) | **Get** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**SushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#SushiswapGetLiquidityPositionsHistorical) | **Get** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical)
 [**SushiswapGetMintsHistorical**](SushiswapApi.md#SushiswapGetMintsHistorical) | **Get** /dapps/sushiswap/mints/historical | Mints (historical)
-[**SushiswapGetPairDayDatasHistorical**](SushiswapApi.md#SushiswapGetPairDayDatasHistorical) | **Get** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical)
-[**SushiswapGetPairHourDatasHistorical**](SushiswapApi.md#SushiswapGetPairHourDatasHistorical) | **Get** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical)
+[**SushiswapGetPairDayDataHistorical**](SushiswapApi.md#SushiswapGetPairDayDataHistorical) | **Get** /dapps/sushiswap/pairDayData/historical | PairDayData (historical)
+[**SushiswapGetPairHourDataHistorical**](SushiswapApi.md#SushiswapGetPairHourDataHistorical) | **Get** /dapps/sushiswap/pairHourData/historical | PairHourData (historical)
 [**SushiswapGetPairsHistorical**](SushiswapApi.md#SushiswapGetPairsHistorical) | **Get** /dapps/sushiswap/pairs/historical | Pairs (historical)
 [**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **Get** /dapps/sushiswap/swaps/historical | Swaps (historical)
-[**SushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#SushiswapGetTokenDayDatasHistorical) | **Get** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical)
+[**SushiswapGetTokenDayDataHistorical**](SushiswapApi.md#SushiswapGetTokenDayDataHistorical) | **Get** /dapps/sushiswap/tokenDayData/historical | TokenDayData (historical)
 [**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **Get** /dapps/sushiswap/tokens/historical | Tokens (historical)
 [**SushiswapGetTransactionsHistorical**](SushiswapApi.md#SushiswapGetTransactionsHistorical) | **Get** /dapps/sushiswap/transactions/historical | Transactions (historical)
 [**SushiswapGetUsersHistorical**](SushiswapApi.md#SushiswapGetUsersHistorical) | **Get** /dapps/sushiswap/users/historical | Users (historical)
-[**SushiswapHourDatasCurrent**](SushiswapApi.md#SushiswapHourDatasCurrent) | **Get** /dapps/sushiswap/hourDatas/current | HourDatas (current)
+[**SushiswapHourDataCurrent**](SushiswapApi.md#SushiswapHourDataCurrent) | **Get** /dapps/sushiswap/hourData/current | HourData (current)
 [**SushiswapLiquidityPositionSnapshotsCurrent**](SushiswapApi.md#SushiswapLiquidityPositionSnapshotsCurrent) | **Get** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**SushiswapLiquidityPositionsCurrent**](SushiswapApi.md#SushiswapLiquidityPositionsCurrent) | **Get** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
 [**SushiswapMintsCurrent**](SushiswapApi.md#SushiswapMintsCurrent) | **Get** /dapps/sushiswap/mints/current | Mints (current)
-[**SushiswapPairDayDatasCurrent**](SushiswapApi.md#SushiswapPairDayDatasCurrent) | **Get** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current)
-[**SushiswapPairHourDatasCurrent**](SushiswapApi.md#SushiswapPairHourDatasCurrent) | **Get** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current)
+[**SushiswapPairDayDataCurrent**](SushiswapApi.md#SushiswapPairDayDataCurrent) | **Get** /dapps/sushiswap/pairDayData/current | PairDayData (current)
+[**SushiswapPairHourDataCurrent**](SushiswapApi.md#SushiswapPairHourDataCurrent) | **Get** /dapps/sushiswap/pairHourData/current | PairHourData (current)
 [**SushiswapPairsCurrent**](SushiswapApi.md#SushiswapPairsCurrent) | **Get** /dapps/sushiswap/pairs/current | Pairs (current)
 [**SushiswapSwapsCurrent**](SushiswapApi.md#SushiswapSwapsCurrent) | **Get** /dapps/sushiswap/swaps/current | Swaps (current)
-[**SushiswapTokenDayDatasCurrent**](SushiswapApi.md#SushiswapTokenDayDatasCurrent) | **Get** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current)
+[**SushiswapTokenDayDataCurrent**](SushiswapApi.md#SushiswapTokenDayDataCurrent) | **Get** /dapps/sushiswap/tokenDayData/current | TokenDayData (current)
 [**SushiswapTokensCurrent**](SushiswapApi.md#SushiswapTokensCurrent) | **Get** /dapps/sushiswap/tokens/current | Tokens (current)
 [**SushiswapTransactionsCurrent**](SushiswapApi.md#SushiswapTransactionsCurrent) | **Get** /dapps/sushiswap/transactions/current | Transactions (current)
 [**SushiswapUsersCurrent**](SushiswapApi.md#SushiswapUsersCurrent) | **Get** /dapps/sushiswap/users/current | Users (current)
@@ -161,11 +161,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapDayDatasCurrent
+## SushiswapDayDataCurrent
 
-> []SushiswapDayDataDTO SushiswapDayDatasCurrent(ctx).Execute()
+> []SushiswapDayDataDTO SushiswapDayDataCurrent(ctx).Execute()
 
-DayDatas (current)
+DayData (current)
 
 
 
@@ -185,13 +185,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.SushiswapDayDatasCurrent(context.Background()).Execute()
+    resp, r, err := apiClient.SushiswapApi.SushiswapDayDataCurrent(context.Background()).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapDayDatasCurrent``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapDayDataCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SushiswapDayDatasCurrent`: []SushiswapDayDataDTO
-    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapDayDatasCurrent`: %v\n", resp)
+    // response from `SushiswapDayDataCurrent`: []SushiswapDayDataDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapDayDataCurrent`: %v\n", resp)
 }
 ```
 
@@ -201,7 +201,7 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSushiswapDayDatasCurrentRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSushiswapDayDataCurrentRequest struct via the builder pattern
 
 
 ### Return type
@@ -222,11 +222,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapFactorysCurrent
+## SushiswapFactoriesCurrent
 
-> []SushiswapFactoryDTO SushiswapFactorysCurrent(ctx).Execute()
+> []SushiswapFactoryDTO SushiswapFactoriesCurrent(ctx).Execute()
 
-Factorys (current)
+Factories (current)
 
 
 
@@ -246,13 +246,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.SushiswapFactorysCurrent(context.Background()).Execute()
+    resp, r, err := apiClient.SushiswapApi.SushiswapFactoriesCurrent(context.Background()).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapFactorysCurrent``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapFactoriesCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SushiswapFactorysCurrent`: []SushiswapFactoryDTO
-    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapFactorysCurrent`: %v\n", resp)
+    // response from `SushiswapFactoriesCurrent`: []SushiswapFactoryDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapFactoriesCurrent`: %v\n", resp)
 }
 ```
 
@@ -262,7 +262,7 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSushiswapFactorysCurrentRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSushiswapFactoriesCurrentRequest struct via the builder pattern
 
 
 ### Return type
@@ -435,11 +435,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapGetDayDatasHistorical
+## SushiswapGetDayDataHistorical
 
-> []SushiswapDayDataDTO SushiswapGetDayDatasHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
+> []SushiswapDayDataDTO SushiswapGetDayDataHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
 
-DayDatas (historical)
+DayData (historical)
 
 
 
@@ -465,13 +465,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.SushiswapGetDayDatasHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
+    resp, r, err := apiClient.SushiswapApi.SushiswapGetDayDataHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetDayDatasHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetDayDataHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SushiswapGetDayDatasHistorical`: []SushiswapDayDataDTO
-    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetDayDatasHistorical`: %v\n", resp)
+    // response from `SushiswapGetDayDataHistorical`: []SushiswapDayDataDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetDayDataHistorical`: %v\n", resp)
 }
 ```
 
@@ -481,7 +481,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSushiswapGetDayDatasHistoricalRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSushiswapGetDayDataHistoricalRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -510,11 +510,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapGetFactorysHistorical
+## SushiswapGetFactoriesHistorical
 
-> []SushiswapFactoryDTO SushiswapGetFactorysHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
+> []SushiswapFactoryDTO SushiswapGetFactoriesHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
 
-Factorys (historical)
+Factories (historical)
 
 
 
@@ -540,13 +540,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.SushiswapGetFactorysHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
+    resp, r, err := apiClient.SushiswapApi.SushiswapGetFactoriesHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetFactorysHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetFactoriesHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SushiswapGetFactorysHistorical`: []SushiswapFactoryDTO
-    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetFactorysHistorical`: %v\n", resp)
+    // response from `SushiswapGetFactoriesHistorical`: []SushiswapFactoryDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetFactoriesHistorical`: %v\n", resp)
 }
 ```
 
@@ -556,7 +556,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSushiswapGetFactorysHistoricalRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSushiswapGetFactoriesHistoricalRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -585,11 +585,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapGetHourDatasHistorical
+## SushiswapGetHourDataHistorical
 
-> []SushiswapHourDataDTO SushiswapGetHourDatasHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
+> []SushiswapHourDataDTO SushiswapGetHourDataHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
 
-HourDatas (historical)
+HourData (historical)
 
 
 
@@ -615,13 +615,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.SushiswapGetHourDatasHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
+    resp, r, err := apiClient.SushiswapApi.SushiswapGetHourDataHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetHourDatasHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetHourDataHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SushiswapGetHourDatasHistorical`: []SushiswapHourDataDTO
-    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetHourDatasHistorical`: %v\n", resp)
+    // response from `SushiswapGetHourDataHistorical`: []SushiswapHourDataDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetHourDataHistorical`: %v\n", resp)
 }
 ```
 
@@ -631,7 +631,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSushiswapGetHourDatasHistoricalRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSushiswapGetHourDataHistoricalRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -895,11 +895,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapGetPairDayDatasHistorical
+## SushiswapGetPairDayDataHistorical
 
-> []SushiswapPairDayDataDTO SushiswapGetPairDayDatasHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Pair(pair).Token0(token0).Token1(token1).Execute()
+> []SushiswapPairDayDataDTO SushiswapGetPairDayDataHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Pair(pair).Token0(token0).Token1(token1).Execute()
 
-PairDayDatas (historical)
+PairDayData (historical)
 
 
 
@@ -928,13 +928,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.SushiswapGetPairDayDatasHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Pair(pair).Token0(token0).Token1(token1).Execute()
+    resp, r, err := apiClient.SushiswapApi.SushiswapGetPairDayDataHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Pair(pair).Token0(token0).Token1(token1).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetPairDayDatasHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetPairDayDataHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SushiswapGetPairDayDatasHistorical`: []SushiswapPairDayDataDTO
-    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetPairDayDatasHistorical`: %v\n", resp)
+    // response from `SushiswapGetPairDayDataHistorical`: []SushiswapPairDayDataDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetPairDayDataHistorical`: %v\n", resp)
 }
 ```
 
@@ -944,7 +944,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSushiswapGetPairDayDatasHistoricalRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSushiswapGetPairDayDataHistoricalRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -976,11 +976,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapGetPairHourDatasHistorical
+## SushiswapGetPairHourDataHistorical
 
-> []SushiswapPairHourDataDTO SushiswapGetPairHourDatasHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Pair(pair).Execute()
+> []SushiswapPairHourDataDTO SushiswapGetPairHourDataHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Pair(pair).Execute()
 
-PairHourDatas (historical)
+PairHourData (historical)
 
 
 
@@ -1007,13 +1007,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.SushiswapGetPairHourDatasHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Pair(pair).Execute()
+    resp, r, err := apiClient.SushiswapApi.SushiswapGetPairHourDataHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Pair(pair).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetPairHourDatasHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetPairHourDataHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SushiswapGetPairHourDatasHistorical`: []SushiswapPairHourDataDTO
-    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetPairHourDatasHistorical`: %v\n", resp)
+    // response from `SushiswapGetPairHourDataHistorical`: []SushiswapPairHourDataDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetPairHourDataHistorical`: %v\n", resp)
 }
 ```
 
@@ -1023,7 +1023,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSushiswapGetPairHourDatasHistoricalRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSushiswapGetPairHourDataHistoricalRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -1211,11 +1211,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapGetTokenDayDatasHistorical
+## SushiswapGetTokenDayDataHistorical
 
-> []SushiswapTokenDayDataDTO SushiswapGetTokenDayDatasHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
+> []SushiswapTokenDayDataDTO SushiswapGetTokenDayDataHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
 
 
@@ -1241,13 +1241,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.SushiswapGetTokenDayDatasHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
+    resp, r, err := apiClient.SushiswapApi.SushiswapGetTokenDayDataHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetTokenDayDatasHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapGetTokenDayDataHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SushiswapGetTokenDayDatasHistorical`: []SushiswapTokenDayDataDTO
-    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetTokenDayDatasHistorical`: %v\n", resp)
+    // response from `SushiswapGetTokenDayDataHistorical`: []SushiswapTokenDayDataDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapGetTokenDayDataHistorical`: %v\n", resp)
 }
 ```
 
@@ -1257,7 +1257,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSushiswapGetTokenDayDatasHistoricalRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSushiswapGetTokenDayDataHistoricalRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -1515,11 +1515,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapHourDatasCurrent
+## SushiswapHourDataCurrent
 
-> []SushiswapHourDataDTO SushiswapHourDatasCurrent(ctx).Execute()
+> []SushiswapHourDataDTO SushiswapHourDataCurrent(ctx).Execute()
 
-HourDatas (current)
+HourData (current)
 
 
 
@@ -1539,13 +1539,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.SushiswapHourDatasCurrent(context.Background()).Execute()
+    resp, r, err := apiClient.SushiswapApi.SushiswapHourDataCurrent(context.Background()).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapHourDatasCurrent``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapHourDataCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SushiswapHourDatasCurrent`: []SushiswapHourDataDTO
-    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapHourDatasCurrent`: %v\n", resp)
+    // response from `SushiswapHourDataCurrent`: []SushiswapHourDataDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapHourDataCurrent`: %v\n", resp)
 }
 ```
 
@@ -1555,7 +1555,7 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSushiswapHourDatasCurrentRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSushiswapHourDataCurrentRequest struct via the builder pattern
 
 
 ### Return type
@@ -1759,11 +1759,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapPairDayDatasCurrent
+## SushiswapPairDayDataCurrent
 
-> []SushiswapPairDayDataDTO SushiswapPairDayDatasCurrent(ctx).Execute()
+> []SushiswapPairDayDataDTO SushiswapPairDayDataCurrent(ctx).Execute()
 
-PairDayDatas (current)
+PairDayData (current)
 
 
 
@@ -1783,13 +1783,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.SushiswapPairDayDatasCurrent(context.Background()).Execute()
+    resp, r, err := apiClient.SushiswapApi.SushiswapPairDayDataCurrent(context.Background()).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapPairDayDatasCurrent``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapPairDayDataCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SushiswapPairDayDatasCurrent`: []SushiswapPairDayDataDTO
-    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapPairDayDatasCurrent`: %v\n", resp)
+    // response from `SushiswapPairDayDataCurrent`: []SushiswapPairDayDataDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapPairDayDataCurrent`: %v\n", resp)
 }
 ```
 
@@ -1799,7 +1799,7 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSushiswapPairDayDatasCurrentRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSushiswapPairDayDataCurrentRequest struct via the builder pattern
 
 
 ### Return type
@@ -1820,11 +1820,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapPairHourDatasCurrent
+## SushiswapPairHourDataCurrent
 
-> []SushiswapPairHourDataDTO SushiswapPairHourDatasCurrent(ctx).Execute()
+> []SushiswapPairHourDataDTO SushiswapPairHourDataCurrent(ctx).Execute()
 
-PairHourDatas (current)
+PairHourData (current)
 
 
 
@@ -1844,13 +1844,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.SushiswapPairHourDatasCurrent(context.Background()).Execute()
+    resp, r, err := apiClient.SushiswapApi.SushiswapPairHourDataCurrent(context.Background()).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapPairHourDatasCurrent``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapPairHourDataCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SushiswapPairHourDatasCurrent`: []SushiswapPairHourDataDTO
-    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapPairHourDatasCurrent`: %v\n", resp)
+    // response from `SushiswapPairHourDataCurrent`: []SushiswapPairHourDataDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapPairHourDataCurrent`: %v\n", resp)
 }
 ```
 
@@ -1860,7 +1860,7 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSushiswapPairHourDatasCurrentRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSushiswapPairHourDataCurrentRequest struct via the builder pattern
 
 
 ### Return type
@@ -2013,11 +2013,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## SushiswapTokenDayDatasCurrent
+## SushiswapTokenDayDataCurrent
 
-> []SushiswapTokenDayDataDTO SushiswapTokenDayDatasCurrent(ctx).Execute()
+> []SushiswapTokenDayDataDTO SushiswapTokenDayDataCurrent(ctx).Execute()
 
-TokenDayDatas (current)
+TokenDayData (current)
 
 
 
@@ -2037,13 +2037,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.SushiswapApi.SushiswapTokenDayDatasCurrent(context.Background()).Execute()
+    resp, r, err := apiClient.SushiswapApi.SushiswapTokenDayDataCurrent(context.Background()).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapTokenDayDatasCurrent``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `SushiswapApi.SushiswapTokenDayDataCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `SushiswapTokenDayDatasCurrent`: []SushiswapTokenDayDataDTO
-    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapTokenDayDatasCurrent`: %v\n", resp)
+    // response from `SushiswapTokenDayDataCurrent`: []SushiswapTokenDayDataDTO
+    fmt.Fprintf(os.Stdout, "Response from `SushiswapApi.SushiswapTokenDayDataCurrent`: %v\n", resp)
 }
 ```
 
@@ -2053,7 +2053,7 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiSushiswapTokenDayDatasCurrentRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiSushiswapTokenDayDataCurrentRequest struct via the builder pattern
 
 
 ### Return type

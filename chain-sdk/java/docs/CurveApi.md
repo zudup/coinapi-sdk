@@ -15,7 +15,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**curveExchangesCurrent**](CurveApi.md#curveExchangesCurrent) | **GET** /dapps/curve/exchanges/current | Exchanges (current) |
 | [**curveFeeChangeLogsCurrent**](CurveApi.md#curveFeeChangeLogsCurrent) | **GET** /dapps/curve/feeChangeLogs/current | FeeChangeLogs (current) |
 | [**curveGaugeDepositsCurrent**](CurveApi.md#curveGaugeDepositsCurrent) | **GET** /dapps/curve/gaugeDeposits/current | GaugeDeposits (current) |
-| [**curveGaugeLiquiditysCurrent**](CurveApi.md#curveGaugeLiquiditysCurrent) | **GET** /dapps/curve/gaugeLiquiditys/current | GaugeLiquiditys (current) |
+| [**curveGaugeLiquiditiesCurrent**](CurveApi.md#curveGaugeLiquiditiesCurrent) | **GET** /dapps/curve/gaugeLiquidities/current | GaugeLiquidities (current) |
 | [**curveGaugeTotalWeightsCurrent**](CurveApi.md#curveGaugeTotalWeightsCurrent) | **GET** /dapps/curve/gaugeTotalWeights/current | GaugeTotalWeights (current) |
 | [**curveGaugeTypeWeightsCurrent**](CurveApi.md#curveGaugeTypeWeightsCurrent) | **GET** /dapps/curve/gaugeTypeWeights/current | GaugeTypeWeights (current) |
 | [**curveGaugeTypesCurrent**](CurveApi.md#curveGaugeTypesCurrent) | **GET** /dapps/curve/gaugeTypes/current | GaugeTypes (current) |
@@ -34,7 +34,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**curveGetExchangesHistorical**](CurveApi.md#curveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical) |
 | [**curveGetFeeChangeLogsHistorical**](CurveApi.md#curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical) |
 | [**curveGetGaugeDepositsHistorical**](CurveApi.md#curveGetGaugeDepositsHistorical) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical) |
-| [**curveGetGaugeLiquiditysHistorical**](CurveApi.md#curveGetGaugeLiquiditysHistorical) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical) |
+| [**curveGetGaugeLiquiditiesHistorical**](CurveApi.md#curveGetGaugeLiquiditiesHistorical) | **GET** /dapps/curve/gaugeLiquidities/historical | GaugeLiquidities (historical) |
 | [**curveGetGaugeTotalWeightsHistorical**](CurveApi.md#curveGetGaugeTotalWeightsHistorical) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical) |
 | [**curveGetGaugeTypeWeightsHistorical**](CurveApi.md#curveGetGaugeTypeWeightsHistorical) | **GET** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical) |
 | [**curveGetGaugeTypesHistorical**](CurveApi.md#curveGetGaugeTypesHistorical) | **GET** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical) |
@@ -712,13 +712,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGaugeLiquiditysCurrent"></a>
-# **curveGaugeLiquiditysCurrent**
-> List&lt;CurveGaugeLiquidityDTO&gt; curveGaugeLiquiditysCurrent()
+<a name="curveGaugeLiquiditiesCurrent"></a>
+# **curveGaugeLiquiditiesCurrent**
+> List&lt;CurveGaugeLiquidityDTO&gt; curveGaugeLiquiditiesCurrent()
 
-GaugeLiquiditys (current)
+GaugeLiquidities (current)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 ```java
@@ -736,10 +736,10 @@ public class Example {
 
     CurveApi apiInstance = new CurveApi(defaultClient);
     try {
-      List<CurveGaugeLiquidityDTO> result = apiInstance.curveGaugeLiquiditysCurrent();
+      List<CurveGaugeLiquidityDTO> result = apiInstance.curveGaugeLiquiditiesCurrent();
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling CurveApi#curveGaugeLiquiditysCurrent");
+      System.err.println("Exception when calling CurveApi#curveGaugeLiquiditiesCurrent");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1964,13 +1964,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="curveGetGaugeLiquiditysHistorical"></a>
-# **curveGetGaugeLiquiditysHistorical**
-> List&lt;CurveGaugeLiquidityDTO&gt; curveGetGaugeLiquiditysHistorical(startBlock, endBlock, startDate, endDate, id, user)
+<a name="curveGetGaugeLiquiditiesHistorical"></a>
+# **curveGetGaugeLiquiditiesHistorical**
+> List&lt;CurveGaugeLiquidityDTO&gt; curveGetGaugeLiquiditiesHistorical(startBlock, endBlock, startDate, endDate, id, user)
 
-GaugeLiquiditys (historical)
+GaugeLiquidities (historical)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 ```java
@@ -1994,10 +1994,10 @@ public class Example {
     String id = "id_example"; // String | 
     String user = "user_example"; // String | 
     try {
-      List<CurveGaugeLiquidityDTO> result = apiInstance.curveGetGaugeLiquiditysHistorical(startBlock, endBlock, startDate, endDate, id, user);
+      List<CurveGaugeLiquidityDTO> result = apiInstance.curveGetGaugeLiquiditiesHistorical(startBlock, endBlock, startDate, endDate, id, user);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling CurveApi#curveGetGaugeLiquiditysHistorical");
+      System.err.println("Exception when calling CurveApi#curveGetGaugeLiquiditiesHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

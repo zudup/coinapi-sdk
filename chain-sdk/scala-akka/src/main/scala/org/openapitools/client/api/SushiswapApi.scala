@@ -62,24 +62,24 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
-   * Gets dayDatas.
+   * Gets dayData.
    * 
    * Expected answers:
    *   code 200 : Seq[DayDataDTO] (successful operation)
    */
-  def sushiswapDayDatasCurrent(): ApiRequest[Seq[DayDataDTO]] =
-    ApiRequest[Seq[DayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/dayDatas/current", "application/json")
+  def sushiswapDayDataCurrent(): ApiRequest[Seq[DayDataDTO]] =
+    ApiRequest[Seq[DayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/dayData/current", "application/json")
       .withSuccessResponse[Seq[DayDataDTO]](200)
       
 
   /**
-   * Gets factorys.
+   * Gets factories.
    * 
    * Expected answers:
    *   code 200 : Seq[FactoryDTO] (successful operation)
    */
-  def sushiswapFactorysCurrent(): ApiRequest[Seq[FactoryDTO]] =
-    ApiRequest[Seq[FactoryDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/factorys/current", "application/json")
+  def sushiswapFactoriesCurrent(): ApiRequest[Seq[FactoryDTO]] =
+    ApiRequest[Seq[FactoryDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/factories/current", "application/json")
       .withSuccessResponse[Seq[FactoryDTO]](200)
       
 
@@ -130,7 +130,7 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
-   * Gets dayDatas.
+   * Gets dayData.
    * 
    * Expected answers:
    *   code 200 : Seq[DayDataDTO] (successful operation)
@@ -141,8 +141,8 @@ class SushiswapApi(baseUrl: String) {
    * @param endDate The end date of timeframe.
    * @param id Unix timestamp for start of day / 86400 giving a unique day index.
    */
-  def sushiswapGetDayDatasHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[DayDataDTO]] =
-    ApiRequest[Seq[DayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/dayDatas/historical", "application/json")
+  def sushiswapGetDayDataHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[DayDataDTO]] =
+    ApiRequest[Seq[DayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/dayData/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -152,7 +152,7 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
-   * Gets factorys.
+   * Gets factories.
    * 
    * Expected answers:
    *   code 200 : Seq[FactoryDTO] (successful operation)
@@ -163,8 +163,8 @@ class SushiswapApi(baseUrl: String) {
    * @param endDate The end date of timeframe.
    * @param id Factory address.
    */
-  def sushiswapGetFactorysHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[FactoryDTO]] =
-    ApiRequest[Seq[FactoryDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/factorys/historical", "application/json")
+  def sushiswapGetFactoriesHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[FactoryDTO]] =
+    ApiRequest[Seq[FactoryDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/factories/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -174,7 +174,7 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
-   * Gets hourDatas.
+   * Gets hourData.
    * 
    * Expected answers:
    *   code 200 : Seq[HourDataDTO] (successful operation)
@@ -185,8 +185,8 @@ class SushiswapApi(baseUrl: String) {
    * @param endDate The end date of timeframe.
    * @param id Start of hour timestamp.
    */
-  def sushiswapGetHourDatasHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[HourDataDTO]] =
-    ApiRequest[Seq[HourDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/hourDatas/historical", "application/json")
+  def sushiswapGetHourDataHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[HourDataDTO]] =
+    ApiRequest[Seq[HourDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/hourData/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -272,7 +272,7 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
-   * Gets pairDayDatas.
+   * Gets pairDayData.
    * 
    * Expected answers:
    *   code 200 : Seq[PairDayDataDTO] (successful operation)
@@ -286,8 +286,8 @@ class SushiswapApi(baseUrl: String) {
    * @param token0 
    * @param token1 
    */
-  def sushiswapGetPairDayDatasHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pair: Option[String] = None, token0: Option[String] = None, token1: Option[String] = None): ApiRequest[Seq[PairDayDataDTO]] =
-    ApiRequest[Seq[PairDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/pairDayDatas/historical", "application/json")
+  def sushiswapGetPairDayDataHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pair: Option[String] = None, token0: Option[String] = None, token1: Option[String] = None): ApiRequest[Seq[PairDayDataDTO]] =
+    ApiRequest[Seq[PairDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/pairDayData/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -300,7 +300,7 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
-   * Gets pairHourDatas.
+   * Gets pairHourData.
    * 
    * Expected answers:
    *   code 200 : Seq[PairHourDataDTO] (successful operation)
@@ -312,8 +312,8 @@ class SushiswapApi(baseUrl: String) {
    * @param id 
    * @param pair 
    */
-  def sushiswapGetPairHourDatasHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pair: Option[String] = None): ApiRequest[Seq[PairHourDataDTO]] =
-    ApiRequest[Seq[PairHourDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/pairHourDatas/historical", "application/json")
+  def sushiswapGetPairHourDataHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pair: Option[String] = None): ApiRequest[Seq[PairHourDataDTO]] =
+    ApiRequest[Seq[PairHourDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/pairHourData/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -376,7 +376,7 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
-   * Gets tokenDayDatas.
+   * Gets tokenDayData.
    * 
    * Expected answers:
    *   code 200 : Seq[TokenDayDataDTO] (successful operation)
@@ -387,8 +387,8 @@ class SushiswapApi(baseUrl: String) {
    * @param endDate The end date of timeframe.
    * @param id Identifier, day start timestamp in unix / 86400.
    */
-  def sushiswapGetTokenDayDatasHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[TokenDayDataDTO]] =
-    ApiRequest[Seq[TokenDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/tokenDayDatas/historical", "application/json")
+  def sushiswapGetTokenDayDataHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[TokenDayDataDTO]] =
+    ApiRequest[Seq[TokenDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/tokenDayData/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -468,13 +468,13 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
-   * Gets hourDatas.
+   * Gets hourData.
    * 
    * Expected answers:
    *   code 200 : Seq[HourDataDTO] (successful operation)
    */
-  def sushiswapHourDatasCurrent(): ApiRequest[Seq[HourDataDTO]] =
-    ApiRequest[Seq[HourDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/hourDatas/current", "application/json")
+  def sushiswapHourDataCurrent(): ApiRequest[Seq[HourDataDTO]] =
+    ApiRequest[Seq[HourDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/hourData/current", "application/json")
       .withSuccessResponse[Seq[HourDataDTO]](200)
       
 
@@ -512,24 +512,24 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
-   * Gets pairDayDatas.
+   * Gets pairDayData.
    * 
    * Expected answers:
    *   code 200 : Seq[PairDayDataDTO] (successful operation)
    */
-  def sushiswapPairDayDatasCurrent(): ApiRequest[Seq[PairDayDataDTO]] =
-    ApiRequest[Seq[PairDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/pairDayDatas/current", "application/json")
+  def sushiswapPairDayDataCurrent(): ApiRequest[Seq[PairDayDataDTO]] =
+    ApiRequest[Seq[PairDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/pairDayData/current", "application/json")
       .withSuccessResponse[Seq[PairDayDataDTO]](200)
       
 
   /**
-   * Gets pairHourDatas.
+   * Gets pairHourData.
    * 
    * Expected answers:
    *   code 200 : Seq[PairHourDataDTO] (successful operation)
    */
-  def sushiswapPairHourDatasCurrent(): ApiRequest[Seq[PairHourDataDTO]] =
-    ApiRequest[Seq[PairHourDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/pairHourDatas/current", "application/json")
+  def sushiswapPairHourDataCurrent(): ApiRequest[Seq[PairHourDataDTO]] =
+    ApiRequest[Seq[PairHourDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/pairHourData/current", "application/json")
       .withSuccessResponse[Seq[PairHourDataDTO]](200)
       
 
@@ -562,13 +562,13 @@ class SushiswapApi(baseUrl: String) {
       
 
   /**
-   * Gets tokenDayDatas.
+   * Gets tokenDayData.
    * 
    * Expected answers:
    *   code 200 : Seq[TokenDayDataDTO] (successful operation)
    */
-  def sushiswapTokenDayDatasCurrent(): ApiRequest[Seq[TokenDayDataDTO]] =
-    ApiRequest[Seq[TokenDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/tokenDayDatas/current", "application/json")
+  def sushiswapTokenDayDataCurrent(): ApiRequest[Seq[TokenDayDataDTO]] =
+    ApiRequest[Seq[TokenDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/sushiswap/tokenDayData/current", "application/json")
       .withSuccessResponse[Seq[TokenDayDataDTO]](200)
       
 

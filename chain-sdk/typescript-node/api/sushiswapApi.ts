@@ -226,11 +226,11 @@ export class SushiswapApi {
         });
     }
     /**
-     * Gets dayDatas.
-     * @summary DayDatas (current)
+     * Gets dayData.
+     * @summary DayData (current)
      */
-    public async sushiswapDayDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapDayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/sushiswap/dayDatas/current';
+    public async sushiswapDayDataCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/sushiswap/dayData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -288,11 +288,11 @@ export class SushiswapApi {
         });
     }
     /**
-     * Gets factorys.
-     * @summary Factorys (current)
+     * Gets factories.
+     * @summary Factories (current)
      */
-    public async sushiswapFactorysCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapFactoryDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/sushiswap/factorys/current';
+    public async sushiswapFactoriesCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapFactoryDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/sushiswap/factories/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -529,16 +529,16 @@ export class SushiswapApi {
         });
     }
     /**
-     * Gets dayDatas.
-     * @summary DayDatas (historical)
+     * Gets dayData.
+     * @summary DayData (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Unix timestamp for start of day / 86400 giving a unique day index.
      */
-    public async sushiswapGetDayDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapDayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/sushiswap/dayDatas/historical';
+    public async sushiswapGetDayDataHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/sushiswap/dayData/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -616,16 +616,16 @@ export class SushiswapApi {
         });
     }
     /**
-     * Gets factorys.
-     * @summary Factorys (historical)
+     * Gets factories.
+     * @summary Factories (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Factory address.
      */
-    public async sushiswapGetFactorysHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapFactoryDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/sushiswap/factorys/historical';
+    public async sushiswapGetFactoriesHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapFactoryDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/sushiswap/factories/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -703,16 +703,16 @@ export class SushiswapApi {
         });
     }
     /**
-     * Gets hourDatas.
-     * @summary HourDatas (historical)
+     * Gets hourData.
+     * @summary HourData (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Start of hour timestamp.
      */
-    public async sushiswapGetHourDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapHourDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/sushiswap/hourDatas/historical';
+    public async sushiswapGetHourDataHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapHourDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/sushiswap/hourData/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1076,8 +1076,8 @@ export class SushiswapApi {
         });
     }
     /**
-     * Gets pairDayDatas.
-     * @summary PairDayDatas (historical)
+     * Gets pairDayData.
+     * @summary PairDayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1087,8 +1087,8 @@ export class SushiswapApi {
      * @param token0 
      * @param token1 
      */
-    public async sushiswapGetPairDayDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, token0?: string, token1?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapPairDayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/sushiswap/pairDayDatas/historical';
+    public async sushiswapGetPairDayDataHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, token0?: string, token1?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapPairDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/sushiswap/pairDayData/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1178,8 +1178,8 @@ export class SushiswapApi {
         });
     }
     /**
-     * Gets pairHourDatas.
-     * @summary PairHourDatas (historical)
+     * Gets pairHourData.
+     * @summary PairHourData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1187,8 +1187,8 @@ export class SushiswapApi {
      * @param id 
      * @param pair 
      */
-    public async sushiswapGetPairHourDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapPairHourDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/sushiswap/pairHourDatas/historical';
+    public async sushiswapGetPairHourDataHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapPairHourDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/sushiswap/pairHourData/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1464,16 +1464,16 @@ export class SushiswapApi {
         });
     }
     /**
-     * Gets tokenDayDatas.
-     * @summary TokenDayDatas (historical)
+     * Gets tokenDayData.
+     * @summary TokenDayData (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Identifier, day start timestamp in unix / 86400.
      */
-    public async sushiswapGetTokenDayDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapTokenDayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/sushiswap/tokenDayDatas/historical';
+    public async sushiswapGetTokenDayDataHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapTokenDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/sushiswap/tokenDayData/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1822,11 +1822,11 @@ export class SushiswapApi {
         });
     }
     /**
-     * Gets hourDatas.
-     * @summary HourDatas (current)
+     * Gets hourData.
+     * @summary HourData (current)
      */
-    public async sushiswapHourDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapHourDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/sushiswap/hourDatas/current';
+    public async sushiswapHourDataCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapHourDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/sushiswap/hourData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -2070,11 +2070,11 @@ export class SushiswapApi {
         });
     }
     /**
-     * Gets pairDayDatas.
-     * @summary PairDayDatas (current)
+     * Gets pairDayData.
+     * @summary PairDayData (current)
      */
-    public async sushiswapPairDayDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapPairDayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/sushiswap/pairDayDatas/current';
+    public async sushiswapPairDayDataCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapPairDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/sushiswap/pairDayData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -2132,11 +2132,11 @@ export class SushiswapApi {
         });
     }
     /**
-     * Gets pairHourDatas.
-     * @summary PairHourDatas (current)
+     * Gets pairHourData.
+     * @summary PairHourData (current)
      */
-    public async sushiswapPairHourDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapPairHourDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/sushiswap/pairHourDatas/current';
+    public async sushiswapPairHourDataCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapPairHourDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/sushiswap/pairHourData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -2328,11 +2328,11 @@ export class SushiswapApi {
         });
     }
     /**
-     * Gets tokenDayDatas.
-     * @summary TokenDayDatas (current)
+     * Gets tokenDayData.
+     * @summary TokenDayData (current)
      */
-    public async sushiswapTokenDayDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapTokenDayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/sushiswap/tokenDayDatas/current';
+    public async sushiswapTokenDayDataCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<SushiswapTokenDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/sushiswap/tokenDayData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];

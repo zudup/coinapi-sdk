@@ -68,17 +68,17 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * DayDatas (current)
-     * Gets dayDatas.
+     * DayData (current)
+     * Gets dayData.
      * @return List<OASSushiswapDayDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASSushiswapDayDataDTO> sushiswapDayDatasCurrent() {
+    public List<OASSushiswapDayDataDTO> sushiswapDayDataCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapDayDataDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/dayDatas/current', '',
+            'GET', '/dapps/sushiswap/dayData/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -89,17 +89,17 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * Factorys (current)
-     * Gets factorys.
+     * Factories (current)
+     * Gets factories.
      * @return List<OASSushiswapFactoryDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASSushiswapFactoryDTO> sushiswapFactorysCurrent() {
+    public List<OASSushiswapFactoryDTO> sushiswapFactoriesCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapFactoryDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/factorys/current', '',
+            'GET', '/dapps/sushiswap/factories/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -180,8 +180,8 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * DayDatas (historical)
-     * Gets dayDatas.
+     * DayData (historical)
+     * Gets dayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -190,7 +190,7 @@ public class OASSushiswapApi {
      * @return List<OASSushiswapDayDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASSushiswapDayDataDTO> sushiswapGetDayDatasHistorical(Map<String, Object> params) {
+    public List<OASSushiswapDayDataDTO> sushiswapGetDayDataHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -203,7 +203,7 @@ public class OASSushiswapApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapDayDataDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/dayDatas/historical', '',
+            'GET', '/dapps/sushiswap/dayData/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -214,8 +214,8 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * Factorys (historical)
-     * Gets factorys.
+     * Factories (historical)
+     * Gets factories.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -224,7 +224,7 @@ public class OASSushiswapApi {
      * @return List<OASSushiswapFactoryDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASSushiswapFactoryDTO> sushiswapGetFactorysHistorical(Map<String, Object> params) {
+    public List<OASSushiswapFactoryDTO> sushiswapGetFactoriesHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -237,7 +237,7 @@ public class OASSushiswapApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapFactoryDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/factorys/historical', '',
+            'GET', '/dapps/sushiswap/factories/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -248,8 +248,8 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * HourDatas (historical)
-     * Gets hourDatas.
+     * HourData (historical)
+     * Gets hourData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -258,7 +258,7 @@ public class OASSushiswapApi {
      * @return List<OASSushiswapHourDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASSushiswapHourDataDTO> sushiswapGetHourDatasHistorical(Map<String, Object> params) {
+    public List<OASSushiswapHourDataDTO> sushiswapGetHourDataHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -271,7 +271,7 @@ public class OASSushiswapApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapHourDataDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/hourDatas/historical', '',
+            'GET', '/dapps/sushiswap/hourData/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -394,8 +394,8 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * PairDayDatas (historical)
-     * Gets pairDayDatas.
+     * PairDayData (historical)
+     * Gets pairDayData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -407,7 +407,7 @@ public class OASSushiswapApi {
      * @return List<OASSushiswapPairDayDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASSushiswapPairDayDataDTO> sushiswapGetPairDayDatasHistorical(Map<String, Object> params) {
+    public List<OASSushiswapPairDayDataDTO> sushiswapGetPairDayDataHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -423,7 +423,7 @@ public class OASSushiswapApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapPairDayDataDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/pairDayDatas/historical', '',
+            'GET', '/dapps/sushiswap/pairDayData/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -434,8 +434,8 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * PairHourDatas (historical)
-     * Gets pairHourDatas.
+     * PairHourData (historical)
+     * Gets pairHourData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -445,7 +445,7 @@ public class OASSushiswapApi {
      * @return List<OASSushiswapPairHourDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASSushiswapPairHourDataDTO> sushiswapGetPairHourDatasHistorical(Map<String, Object> params) {
+    public List<OASSushiswapPairHourDataDTO> sushiswapGetPairHourDataHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -459,7 +459,7 @@ public class OASSushiswapApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapPairHourDataDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/pairHourDatas/historical', '',
+            'GET', '/dapps/sushiswap/pairHourData/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -546,8 +546,8 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * TokenDayDatas (historical)
-     * Gets tokenDayDatas.
+     * TokenDayData (historical)
+     * Gets tokenDayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -556,7 +556,7 @@ public class OASSushiswapApi {
      * @return List<OASSushiswapTokenDayDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASSushiswapTokenDayDataDTO> sushiswapGetTokenDayDatasHistorical(Map<String, Object> params) {
+    public List<OASSushiswapTokenDayDataDTO> sushiswapGetTokenDayDataHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -569,7 +569,7 @@ public class OASSushiswapApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapTokenDayDataDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/tokenDayDatas/historical', '',
+            'GET', '/dapps/sushiswap/tokenDayData/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -686,17 +686,17 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * HourDatas (current)
-     * Gets hourDatas.
+     * HourData (current)
+     * Gets hourData.
      * @return List<OASSushiswapHourDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASSushiswapHourDataDTO> sushiswapHourDatasCurrent() {
+    public List<OASSushiswapHourDataDTO> sushiswapHourDataCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapHourDataDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/hourDatas/current', '',
+            'GET', '/dapps/sushiswap/hourData/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -770,17 +770,17 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * PairDayDatas (current)
-     * Gets pairDayDatas.
+     * PairDayData (current)
+     * Gets pairDayData.
      * @return List<OASSushiswapPairDayDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASSushiswapPairDayDataDTO> sushiswapPairDayDatasCurrent() {
+    public List<OASSushiswapPairDayDataDTO> sushiswapPairDayDataCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapPairDayDataDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/pairDayDatas/current', '',
+            'GET', '/dapps/sushiswap/pairDayData/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -791,17 +791,17 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * PairHourDatas (current)
-     * Gets pairHourDatas.
+     * PairHourData (current)
+     * Gets pairHourData.
      * @return List<OASSushiswapPairHourDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASSushiswapPairHourDataDTO> sushiswapPairHourDatasCurrent() {
+    public List<OASSushiswapPairHourDataDTO> sushiswapPairHourDataCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapPairHourDataDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/pairHourDatas/current', '',
+            'GET', '/dapps/sushiswap/pairHourData/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -864,17 +864,17 @@ public class OASSushiswapApi {
         );
     }
     /**
-     * TokenDayDatas (current)
-     * Gets tokenDayDatas.
+     * TokenDayData (current)
+     * Gets tokenDayData.
      * @return List<OASSushiswapTokenDayDataDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASSushiswapTokenDayDataDTO> sushiswapTokenDayDatasCurrent() {
+    public List<OASSushiswapTokenDayDataDTO> sushiswapTokenDayDataCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASSushiswapTokenDayDataDTO>) client.invoke(
-            'GET', '/dapps/sushiswap/tokenDayDatas/current', '',
+            'GET', '/dapps/sushiswap/tokenDayData/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),

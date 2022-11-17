@@ -64,24 +64,24 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<UniswapV3BurnDTO></returns>
         ApiResponse<List<UniswapV3BurnDTO>> UniswapV3BurnsCurrentWithHttpInfo ();
         /// <summary>
-        /// Factorys (current)
+        /// Factories (current)
         /// </summary>
         /// <remarks>
-        /// Gets factorys.
+        /// Gets factories.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List<UniswapV3FactoryDTO></returns>
-        List<UniswapV3FactoryDTO> UniswapV3FactorysCurrent ();
+        List<UniswapV3FactoryDTO> UniswapV3FactoriesCurrent ();
 
         /// <summary>
-        /// Factorys (current)
+        /// Factories (current)
         /// </summary>
         /// <remarks>
-        /// Gets factorys.
+        /// Gets factories.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<UniswapV3FactoryDTO></returns>
-        ApiResponse<List<UniswapV3FactoryDTO>> UniswapV3FactorysCurrentWithHttpInfo ();
+        ApiResponse<List<UniswapV3FactoryDTO>> UniswapV3FactoriesCurrentWithHttpInfo ();
         /// <summary>
         /// Bundles (historical)
         /// </summary>
@@ -147,10 +147,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<UniswapV3BurnDTO></returns>
         ApiResponse<List<UniswapV3BurnDTO>> UniswapV3GetBurnsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), string token0 = default(string), string token1 = default(string));
         /// <summary>
-        /// Factorys (historical)
+        /// Factories (historical)
         /// </summary>
         /// <remarks>
-        /// Gets factorys.
+        /// Gets factories.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -159,13 +159,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Factory address. (optional)</param>
         /// <returns>List<UniswapV3FactoryDTO></returns>
-        List<UniswapV3FactoryDTO> UniswapV3GetFactorysHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        List<UniswapV3FactoryDTO> UniswapV3GetFactoriesHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
 
         /// <summary>
-        /// Factorys (historical)
+        /// Factories (historical)
         /// </summary>
         /// <remarks>
-        /// Gets factorys.
+        /// Gets factories.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -174,7 +174,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Factory address. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3FactoryDTO></returns>
-        ApiResponse<List<UniswapV3FactoryDTO>> UniswapV3GetFactorysHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        ApiResponse<List<UniswapV3FactoryDTO>> UniswapV3GetFactoriesHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
         /// <summary>
         /// Mints (historical)
         /// </summary>
@@ -211,10 +211,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<UniswapV3MintDTO></returns>
         ApiResponse<List<UniswapV3MintDTO>> UniswapV3GetMintsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), string token0 = default(string), string token1 = default(string));
         /// <summary>
-        /// PoolDayDatas (historical)
+        /// PoolDayData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets poolDayDatas.
+        /// Gets poolDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -224,13 +224,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="pool"> (optional)</param>
         /// <returns>List<UniswapV3PoolDayDataDTO></returns>
-        List<UniswapV3PoolDayDataDTO> UniswapV3GetPoolDayDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
+        List<UniswapV3PoolDayDataDTO> UniswapV3GetPoolDayDataHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
 
         /// <summary>
-        /// PoolDayDatas (historical)
+        /// PoolDayData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets poolDayDatas.
+        /// Gets poolDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -240,12 +240,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="pool"> (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3PoolDayDataDTO></returns>
-        ApiResponse<List<UniswapV3PoolDayDataDTO>> UniswapV3GetPoolDayDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
+        ApiResponse<List<UniswapV3PoolDayDataDTO>> UniswapV3GetPoolDayDataHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
         /// <summary>
-        /// PoolHourDatas (historical)
+        /// PoolHourData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets poolHourDatas.
+        /// Gets poolHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -255,13 +255,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="pool"> (optional)</param>
         /// <returns>List<UniswapV3PoolHourDataDTO></returns>
-        List<UniswapV3PoolHourDataDTO> UniswapV3GetPoolHourDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
+        List<UniswapV3PoolHourDataDTO> UniswapV3GetPoolHourDataHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
 
         /// <summary>
-        /// PoolHourDatas (historical)
+        /// PoolHourData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets poolHourDatas.
+        /// Gets poolHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -271,7 +271,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="pool"> (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3PoolHourDataDTO></returns>
-        ApiResponse<List<UniswapV3PoolHourDataDTO>> UniswapV3GetPoolHourDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
+        ApiResponse<List<UniswapV3PoolHourDataDTO>> UniswapV3GetPoolHourDataHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
         /// <summary>
         /// Pools (historical)
         /// </summary>
@@ -407,10 +407,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<UniswapV3SwapDTO></returns>
         ApiResponse<List<UniswapV3SwapDTO>> UniswapV3GetSwapsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), string token0 = default(string), string token1 = default(string));
         /// <summary>
-        /// TickDayDatas (historical)
+        /// TickDayData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets tickDayDatas.
+        /// Gets tickDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -420,13 +420,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="pool"> (optional)</param>
         /// <returns>List<UniswapV3TickDayDataDTO></returns>
-        List<UniswapV3TickDayDataDTO> UniswapV3GetTickDayDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
+        List<UniswapV3TickDayDataDTO> UniswapV3GetTickDayDataHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
 
         /// <summary>
-        /// TickDayDatas (historical)
+        /// TickDayData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets tickDayDatas.
+        /// Gets tickDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -436,7 +436,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="pool"> (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3TickDayDataDTO></returns>
-        ApiResponse<List<UniswapV3TickDayDataDTO>> UniswapV3GetTickDayDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
+        ApiResponse<List<UniswapV3TickDayDataDTO>> UniswapV3GetTickDayDataHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
         /// <summary>
         /// Ticks (historical)
         /// </summary>
@@ -469,10 +469,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<UniswapV3TickDTO></returns>
         ApiResponse<List<UniswapV3TickDTO>> UniswapV3GetTicksHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string));
         /// <summary>
-        /// TokenHourDatas (historical)
+        /// TokenHourData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets tokenHourDatas.
+        /// Gets tokenHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -481,13 +481,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Token address concatendated with date. (optional)</param>
         /// <returns>List<UniswapV3TokenHourDataDTO></returns>
-        List<UniswapV3TokenHourDataDTO> UniswapV3GetTokenHourDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        List<UniswapV3TokenHourDataDTO> UniswapV3GetTokenHourDataHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
 
         /// <summary>
-        /// TokenHourDatas (historical)
+        /// TokenHourData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets tokenHourDatas.
+        /// Gets tokenHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -496,12 +496,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Token address concatendated with date. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3TokenHourDataDTO></returns>
-        ApiResponse<List<UniswapV3TokenHourDataDTO>> UniswapV3GetTokenHourDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        ApiResponse<List<UniswapV3TokenHourDataDTO>> UniswapV3GetTokenHourDataHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
         /// <summary>
-        /// TokenV3DayDatas (historical)
+        /// TokenV3DayData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets tokenV3DayDatas.
+        /// Gets tokenV3DayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -510,13 +510,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Token address concatendated with date. (optional)</param>
         /// <returns>List<UniswapV3TokenV3DayDataDTO></returns>
-        List<UniswapV3TokenV3DayDataDTO> UniswapV3GetTokenV3DayDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        List<UniswapV3TokenV3DayDataDTO> UniswapV3GetTokenV3DayDataHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
 
         /// <summary>
-        /// TokenV3DayDatas (historical)
+        /// TokenV3DayData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets tokenV3DayDatas.
+        /// Gets tokenV3DayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -525,7 +525,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Token address concatendated with date. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3TokenV3DayDataDTO></returns>
-        ApiResponse<List<UniswapV3TokenV3DayDataDTO>> UniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        ApiResponse<List<UniswapV3TokenV3DayDataDTO>> UniswapV3GetTokenV3DayDataHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
         /// <summary>
         /// Tokens (historical)
         /// </summary>
@@ -589,10 +589,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<UniswapV3TransactionDTO></returns>
         ApiResponse<List<UniswapV3TransactionDTO>> UniswapV3GetTransactionsHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
         /// <summary>
-        /// UniswapDayDatas (historical)
+        /// UniswapDayData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets uniswapDayDatas.
+        /// Gets uniswapDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -601,13 +601,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Timestamp rounded to current day by dividing by 86400. (optional)</param>
         /// <returns>List<UniswapV3UniswapDayDataDTO></returns>
-        List<UniswapV3UniswapDayDataDTO> UniswapV3GetUniswapDayDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        List<UniswapV3UniswapDayDataDTO> UniswapV3GetUniswapDayDataHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
 
         /// <summary>
-        /// UniswapDayDatas (historical)
+        /// UniswapDayData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets uniswapDayDatas.
+        /// Gets uniswapDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -616,7 +616,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Timestamp rounded to current day by dividing by 86400. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3UniswapDayDataDTO></returns>
-        ApiResponse<List<UniswapV3UniswapDayDataDTO>> UniswapV3GetUniswapDayDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
+        ApiResponse<List<UniswapV3UniswapDayDataDTO>> UniswapV3GetUniswapDayDataHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string));
         /// <summary>
         /// Mints (current)
         /// </summary>
@@ -637,43 +637,43 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<UniswapV3MintDTO></returns>
         ApiResponse<List<UniswapV3MintDTO>> UniswapV3MintsCurrentWithHttpInfo ();
         /// <summary>
-        /// PoolDayDatas (current)
+        /// PoolDayData (current)
         /// </summary>
         /// <remarks>
-        /// Gets poolDayDatas.
+        /// Gets poolDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List<UniswapV3PoolDayDataDTO></returns>
-        List<UniswapV3PoolDayDataDTO> UniswapV3PoolDayDatasCurrent ();
+        List<UniswapV3PoolDayDataDTO> UniswapV3PoolDayDataCurrent ();
 
         /// <summary>
-        /// PoolDayDatas (current)
+        /// PoolDayData (current)
         /// </summary>
         /// <remarks>
-        /// Gets poolDayDatas.
+        /// Gets poolDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<UniswapV3PoolDayDataDTO></returns>
-        ApiResponse<List<UniswapV3PoolDayDataDTO>> UniswapV3PoolDayDatasCurrentWithHttpInfo ();
+        ApiResponse<List<UniswapV3PoolDayDataDTO>> UniswapV3PoolDayDataCurrentWithHttpInfo ();
         /// <summary>
-        /// PoolHourDatas (current)
+        /// PoolHourData (current)
         /// </summary>
         /// <remarks>
-        /// Gets poolHourDatas.
+        /// Gets poolHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List<UniswapV3PoolHourDataDTO></returns>
-        List<UniswapV3PoolHourDataDTO> UniswapV3PoolHourDatasCurrent ();
+        List<UniswapV3PoolHourDataDTO> UniswapV3PoolHourDataCurrent ();
 
         /// <summary>
-        /// PoolHourDatas (current)
+        /// PoolHourData (current)
         /// </summary>
         /// <remarks>
-        /// Gets poolHourDatas.
+        /// Gets poolHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<UniswapV3PoolHourDataDTO></returns>
-        ApiResponse<List<UniswapV3PoolHourDataDTO>> UniswapV3PoolHourDatasCurrentWithHttpInfo ();
+        ApiResponse<List<UniswapV3PoolHourDataDTO>> UniswapV3PoolHourDataCurrentWithHttpInfo ();
         /// <summary>
         /// Pools (current)
         /// </summary>
@@ -755,24 +755,24 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<UniswapV3SwapDTO></returns>
         ApiResponse<List<UniswapV3SwapDTO>> UniswapV3SwapsCurrentWithHttpInfo (string pool = default(string));
         /// <summary>
-        /// TickDayDatas (current)
+        /// TickDayData (current)
         /// </summary>
         /// <remarks>
-        /// Gets tickDayDatas.
+        /// Gets tickDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List<UniswapV3TickDayDataDTO></returns>
-        List<UniswapV3TickDayDataDTO> UniswapV3TickDayDatasCurrent ();
+        List<UniswapV3TickDayDataDTO> UniswapV3TickDayDataCurrent ();
 
         /// <summary>
-        /// TickDayDatas (current)
+        /// TickDayData (current)
         /// </summary>
         /// <remarks>
-        /// Gets tickDayDatas.
+        /// Gets tickDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<UniswapV3TickDayDataDTO></returns>
-        ApiResponse<List<UniswapV3TickDayDataDTO>> UniswapV3TickDayDatasCurrentWithHttpInfo ();
+        ApiResponse<List<UniswapV3TickDayDataDTO>> UniswapV3TickDayDataCurrentWithHttpInfo ();
         /// <summary>
         /// Ticks (current)
         /// </summary>
@@ -793,43 +793,43 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<UniswapV3TickDTO></returns>
         ApiResponse<List<UniswapV3TickDTO>> UniswapV3TicksCurrentWithHttpInfo ();
         /// <summary>
-        /// TokenHourDatas (current)
+        /// TokenHourData (current)
         /// </summary>
         /// <remarks>
-        /// Gets tokenHourDatas.
+        /// Gets tokenHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List<UniswapV3TokenHourDataDTO></returns>
-        List<UniswapV3TokenHourDataDTO> UniswapV3TokenHourDatasCurrent ();
+        List<UniswapV3TokenHourDataDTO> UniswapV3TokenHourDataCurrent ();
 
         /// <summary>
-        /// TokenHourDatas (current)
+        /// TokenHourData (current)
         /// </summary>
         /// <remarks>
-        /// Gets tokenHourDatas.
+        /// Gets tokenHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<UniswapV3TokenHourDataDTO></returns>
-        ApiResponse<List<UniswapV3TokenHourDataDTO>> UniswapV3TokenHourDatasCurrentWithHttpInfo ();
+        ApiResponse<List<UniswapV3TokenHourDataDTO>> UniswapV3TokenHourDataCurrentWithHttpInfo ();
         /// <summary>
-        /// TokenV3DayDatas (current)
+        /// TokenV3DayData (current)
         /// </summary>
         /// <remarks>
-        /// Gets tokenV3DayDatas.
+        /// Gets tokenV3DayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List<UniswapV3TokenV3DayDataDTO></returns>
-        List<UniswapV3TokenV3DayDataDTO> UniswapV3TokenV3DayDatasCurrent ();
+        List<UniswapV3TokenV3DayDataDTO> UniswapV3TokenV3DayDataCurrent ();
 
         /// <summary>
-        /// TokenV3DayDatas (current)
+        /// TokenV3DayData (current)
         /// </summary>
         /// <remarks>
-        /// Gets tokenV3DayDatas.
+        /// Gets tokenV3DayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<UniswapV3TokenV3DayDataDTO></returns>
-        ApiResponse<List<UniswapV3TokenV3DayDataDTO>> UniswapV3TokenV3DayDatasCurrentWithHttpInfo ();
+        ApiResponse<List<UniswapV3TokenV3DayDataDTO>> UniswapV3TokenV3DayDataCurrentWithHttpInfo ();
         /// <summary>
         /// Tokens (current)
         /// </summary>
@@ -869,24 +869,24 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List<UniswapV3TransactionDTO></returns>
         ApiResponse<List<UniswapV3TransactionDTO>> UniswapV3TransactionsCurrentWithHttpInfo ();
         /// <summary>
-        /// UniswapDayDatas (current)
+        /// UniswapDayData (current)
         /// </summary>
         /// <remarks>
-        /// Gets uniswapDayDatas.
+        /// Gets uniswapDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List<UniswapV3UniswapDayDataDTO></returns>
-        List<UniswapV3UniswapDayDataDTO> UniswapV3UniswapDayDatasCurrent ();
+        List<UniswapV3UniswapDayDataDTO> UniswapV3UniswapDayDataCurrent ();
 
         /// <summary>
-        /// UniswapDayDatas (current)
+        /// UniswapDayData (current)
         /// </summary>
         /// <remarks>
-        /// Gets uniswapDayDatas.
+        /// Gets uniswapDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<UniswapV3UniswapDayDataDTO></returns>
-        ApiResponse<List<UniswapV3UniswapDayDataDTO>> UniswapV3UniswapDayDatasCurrentWithHttpInfo ();
+        ApiResponse<List<UniswapV3UniswapDayDataDTO>> UniswapV3UniswapDayDataCurrentWithHttpInfo ();
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -932,26 +932,26 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;UniswapV3BurnDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UniswapV3BurnDTO>>> UniswapV3BurnsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// Factorys (current)
+        /// Factories (current)
         /// </summary>
         /// <remarks>
-        /// Gets factorys.
+        /// Gets factories.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3FactoryDTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV3FactoryDTO>> UniswapV3FactorysCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<UniswapV3FactoryDTO>> UniswapV3FactoriesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Factorys (current)
+        /// Factories (current)
         /// </summary>
         /// <remarks>
-        /// Gets factorys.
+        /// Gets factories.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3FactoryDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3FactoryDTO>>> UniswapV3FactorysCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3FactoryDTO>>> UniswapV3FactoriesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Bundles (historical)
         /// </summary>
@@ -1021,10 +1021,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;UniswapV3BurnDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UniswapV3BurnDTO>>> UniswapV3GetBurnsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// Factorys (historical)
+        /// Factories (historical)
         /// </summary>
         /// <remarks>
-        /// Gets factorys.
+        /// Gets factories.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1034,13 +1034,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Factory address. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3FactoryDTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV3FactoryDTO>> UniswapV3GetFactorysHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<UniswapV3FactoryDTO>> UniswapV3GetFactoriesHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// Factorys (historical)
+        /// Factories (historical)
         /// </summary>
         /// <remarks>
-        /// Gets factorys.
+        /// Gets factories.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1050,7 +1050,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Factory address. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3FactoryDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3FactoryDTO>>> UniswapV3GetFactorysHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3FactoryDTO>>> UniswapV3GetFactoriesHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Mints (historical)
         /// </summary>
@@ -1089,10 +1089,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;UniswapV3MintDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UniswapV3MintDTO>>> UniswapV3GetMintsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// PoolDayDatas (historical)
+        /// PoolDayData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets poolDayDatas.
+        /// Gets poolDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -1103,13 +1103,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="pool"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3PoolDayDataDTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV3PoolDayDataDTO>> UniswapV3GetPoolDayDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<UniswapV3PoolDayDataDTO>> UniswapV3GetPoolDayDataHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// PoolDayDatas (historical)
+        /// PoolDayData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets poolDayDatas.
+        /// Gets poolDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -1120,12 +1120,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="pool"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3PoolDayDataDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolDayDataDTO>>> UniswapV3GetPoolDayDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolDayDataDTO>>> UniswapV3GetPoolDayDataHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// PoolHourDatas (historical)
+        /// PoolHourData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets poolHourDatas.
+        /// Gets poolHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -1136,13 +1136,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="pool"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3PoolHourDataDTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV3PoolHourDataDTO>> UniswapV3GetPoolHourDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<UniswapV3PoolHourDataDTO>> UniswapV3GetPoolHourDataHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// PoolHourDatas (historical)
+        /// PoolHourData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets poolHourDatas.
+        /// Gets poolHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -1153,7 +1153,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="pool"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3PoolHourDataDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolHourDataDTO>>> UniswapV3GetPoolHourDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolHourDataDTO>>> UniswapV3GetPoolHourDataHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Pools (historical)
         /// </summary>
@@ -1297,10 +1297,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;UniswapV3SwapDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UniswapV3SwapDTO>>> UniswapV3GetSwapsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), string token0 = default(string), string token1 = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// TickDayDatas (historical)
+        /// TickDayData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets tickDayDatas.
+        /// Gets tickDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -1311,13 +1311,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="pool"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3TickDayDataDTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV3TickDayDataDTO>> UniswapV3GetTickDayDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<UniswapV3TickDayDataDTO>> UniswapV3GetTickDayDataHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// TickDayDatas (historical)
+        /// TickDayData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets tickDayDatas.
+        /// Gets tickDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -1328,7 +1328,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="pool"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TickDayDataDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TickDayDataDTO>>> UniswapV3GetTickDayDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TickDayDataDTO>>> UniswapV3GetTickDayDataHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Ticks (historical)
         /// </summary>
@@ -1363,10 +1363,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TickDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TickDTO>>> UniswapV3GetTicksHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// TokenHourDatas (historical)
+        /// TokenHourData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets tokenHourDatas.
+        /// Gets tokenHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1376,13 +1376,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Token address concatendated with date. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3TokenHourDataDTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV3TokenHourDataDTO>> UniswapV3GetTokenHourDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<UniswapV3TokenHourDataDTO>> UniswapV3GetTokenHourDataHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// TokenHourDatas (historical)
+        /// TokenHourData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets tokenHourDatas.
+        /// Gets tokenHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1392,12 +1392,12 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Token address concatendated with date. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TokenHourDataDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenHourDataDTO>>> UniswapV3GetTokenHourDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenHourDataDTO>>> UniswapV3GetTokenHourDataHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// TokenV3DayDatas (historical)
+        /// TokenV3DayData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets tokenV3DayDatas.
+        /// Gets tokenV3DayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1407,13 +1407,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Token address concatendated with date. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3TokenV3DayDataDTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV3TokenV3DayDataDTO>> UniswapV3GetTokenV3DayDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<UniswapV3TokenV3DayDataDTO>> UniswapV3GetTokenV3DayDataHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// TokenV3DayDatas (historical)
+        /// TokenV3DayData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets tokenV3DayDatas.
+        /// Gets tokenV3DayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1423,7 +1423,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Token address concatendated with date. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TokenV3DayDataDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenV3DayDataDTO>>> UniswapV3GetTokenV3DayDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenV3DayDataDTO>>> UniswapV3GetTokenV3DayDataHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Tokens (historical)
         /// </summary>
@@ -1491,10 +1491,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TransactionDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TransactionDTO>>> UniswapV3GetTransactionsHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// UniswapDayDatas (historical)
+        /// UniswapDayData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets uniswapDayDatas.
+        /// Gets uniswapDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1504,13 +1504,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Timestamp rounded to current day by dividing by 86400. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3UniswapDayDataDTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV3UniswapDayDataDTO>> UniswapV3GetUniswapDayDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<UniswapV3UniswapDayDataDTO>> UniswapV3GetUniswapDayDataHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// UniswapDayDatas (historical)
+        /// UniswapDayData (historical)
         /// </summary>
         /// <remarks>
-        /// Gets uniswapDayDatas.
+        /// Gets uniswapDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -1520,7 +1520,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Timestamp rounded to current day by dividing by 86400. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3UniswapDayDataDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3UniswapDayDataDTO>>> UniswapV3GetUniswapDayDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3UniswapDayDataDTO>>> UniswapV3GetUniswapDayDataHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Mints (current)
         /// </summary>
@@ -1543,47 +1543,47 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;UniswapV3MintDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UniswapV3MintDTO>>> UniswapV3MintsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// PoolDayDatas (current)
+        /// PoolDayData (current)
         /// </summary>
         /// <remarks>
-        /// Gets poolDayDatas.
+        /// Gets poolDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3PoolDayDataDTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV3PoolDayDataDTO>> UniswapV3PoolDayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<UniswapV3PoolDayDataDTO>> UniswapV3PoolDayDataCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// PoolDayDatas (current)
+        /// PoolDayData (current)
         /// </summary>
         /// <remarks>
-        /// Gets poolDayDatas.
+        /// Gets poolDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3PoolDayDataDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolDayDataDTO>>> UniswapV3PoolDayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolDayDataDTO>>> UniswapV3PoolDayDataCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// PoolHourDatas (current)
+        /// PoolHourData (current)
         /// </summary>
         /// <remarks>
-        /// Gets poolHourDatas.
+        /// Gets poolHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3PoolHourDataDTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV3PoolHourDataDTO>> UniswapV3PoolHourDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<UniswapV3PoolHourDataDTO>> UniswapV3PoolHourDataCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// PoolHourDatas (current)
+        /// PoolHourData (current)
         /// </summary>
         /// <remarks>
-        /// Gets poolHourDatas.
+        /// Gets poolHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3PoolHourDataDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolHourDataDTO>>> UniswapV3PoolHourDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolHourDataDTO>>> UniswapV3PoolHourDataCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Pools (current)
         /// </summary>
@@ -1673,26 +1673,26 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;UniswapV3SwapDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UniswapV3SwapDTO>>> UniswapV3SwapsCurrentWithHttpInfoAsync (string pool = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// TickDayDatas (current)
+        /// TickDayData (current)
         /// </summary>
         /// <remarks>
-        /// Gets tickDayDatas.
+        /// Gets tickDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3TickDayDataDTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV3TickDayDataDTO>> UniswapV3TickDayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<UniswapV3TickDayDataDTO>> UniswapV3TickDayDataCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// TickDayDatas (current)
+        /// TickDayData (current)
         /// </summary>
         /// <remarks>
-        /// Gets tickDayDatas.
+        /// Gets tickDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TickDayDataDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TickDayDataDTO>>> UniswapV3TickDayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TickDayDataDTO>>> UniswapV3TickDayDataCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Ticks (current)
         /// </summary>
@@ -1715,47 +1715,47 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TickDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TickDTO>>> UniswapV3TicksCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// TokenHourDatas (current)
+        /// TokenHourData (current)
         /// </summary>
         /// <remarks>
-        /// Gets tokenHourDatas.
+        /// Gets tokenHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3TokenHourDataDTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV3TokenHourDataDTO>> UniswapV3TokenHourDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<UniswapV3TokenHourDataDTO>> UniswapV3TokenHourDataCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// TokenHourDatas (current)
+        /// TokenHourData (current)
         /// </summary>
         /// <remarks>
-        /// Gets tokenHourDatas.
+        /// Gets tokenHourData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TokenHourDataDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenHourDataDTO>>> UniswapV3TokenHourDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenHourDataDTO>>> UniswapV3TokenHourDataCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// TokenV3DayDatas (current)
+        /// TokenV3DayData (current)
         /// </summary>
         /// <remarks>
-        /// Gets tokenV3DayDatas.
+        /// Gets tokenV3DayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3TokenV3DayDataDTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV3TokenV3DayDataDTO>> UniswapV3TokenV3DayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<UniswapV3TokenV3DayDataDTO>> UniswapV3TokenV3DayDataCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// TokenV3DayDatas (current)
+        /// TokenV3DayData (current)
         /// </summary>
         /// <remarks>
-        /// Gets tokenV3DayDatas.
+        /// Gets tokenV3DayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TokenV3DayDataDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenV3DayDataDTO>>> UniswapV3TokenV3DayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenV3DayDataDTO>>> UniswapV3TokenV3DayDataCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Tokens (current)
         /// </summary>
@@ -1799,26 +1799,26 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TransactionDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TransactionDTO>>> UniswapV3TransactionsCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
-        /// UniswapDayDatas (current)
+        /// UniswapDayData (current)
         /// </summary>
         /// <remarks>
-        /// Gets uniswapDayDatas.
+        /// Gets uniswapDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3UniswapDayDataDTO></returns>
-        System.Threading.Tasks.Task<List<UniswapV3UniswapDayDataDTO>> UniswapV3UniswapDayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<List<UniswapV3UniswapDayDataDTO>> UniswapV3UniswapDayDataCurrentAsync (CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
-        /// UniswapDayDatas (current)
+        /// UniswapDayData (current)
         /// </summary>
         /// <remarks>
-        /// Gets uniswapDayDatas.
+        /// Gets uniswapDayData.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3UniswapDayDataDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3UniswapDayDataDTO>>> UniswapV3UniswapDayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<UniswapV3UniswapDayDataDTO>>> UniswapV3UniswapDayDataCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -2185,25 +2185,25 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Factorys (current) Gets factorys.
+        /// Factories (current) Gets factories.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List<UniswapV3FactoryDTO></returns>
-        public List<UniswapV3FactoryDTO> UniswapV3FactorysCurrent ()
+        public List<UniswapV3FactoryDTO> UniswapV3FactoriesCurrent ()
         {
-             ApiResponse<List<UniswapV3FactoryDTO>> localVarResponse = UniswapV3FactorysCurrentWithHttpInfo();
+             ApiResponse<List<UniswapV3FactoryDTO>> localVarResponse = UniswapV3FactoriesCurrentWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Factorys (current) Gets factorys.
+        /// Factories (current) Gets factories.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<UniswapV3FactoryDTO></returns>
-        public ApiResponse<List<UniswapV3FactoryDTO>> UniswapV3FactorysCurrentWithHttpInfo ()
+        public ApiResponse<List<UniswapV3FactoryDTO>> UniswapV3FactoriesCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswapv3/factorys/current";
+            var localVarPath = "/dapps/uniswapv3/factories/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2237,7 +2237,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3FactorysCurrent", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3FactoriesCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2247,28 +2247,28 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Factorys (current) Gets factorys.
+        /// Factories (current) Gets factories.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3FactoryDTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV3FactoryDTO>> UniswapV3FactorysCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<UniswapV3FactoryDTO>> UniswapV3FactoriesCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV3FactoryDTO>> localVarResponse = await UniswapV3FactorysCurrentWithHttpInfoAsync(cancellationToken);
+             ApiResponse<List<UniswapV3FactoryDTO>> localVarResponse = await UniswapV3FactoriesCurrentWithHttpInfoAsync(cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Factorys (current) Gets factorys.
+        /// Factories (current) Gets factories.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3FactoryDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3FactoryDTO>>> UniswapV3FactorysCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3FactoryDTO>>> UniswapV3FactoriesCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv3/factorys/current";
+            var localVarPath = "/dapps/uniswapv3/factories/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2302,7 +2302,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3FactorysCurrent", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3FactoriesCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2644,7 +2644,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Factorys (historical) Gets factorys.
+        /// Factories (historical) Gets factories.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2653,14 +2653,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Factory address. (optional)</param>
         /// <returns>List<UniswapV3FactoryDTO></returns>
-        public List<UniswapV3FactoryDTO> UniswapV3GetFactorysHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        public List<UniswapV3FactoryDTO> UniswapV3GetFactoriesHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
-             ApiResponse<List<UniswapV3FactoryDTO>> localVarResponse = UniswapV3GetFactorysHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+             ApiResponse<List<UniswapV3FactoryDTO>> localVarResponse = UniswapV3GetFactoriesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Factorys (historical) Gets factorys.
+        /// Factories (historical) Gets factories.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2669,10 +2669,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Factory address. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3FactoryDTO></returns>
-        public ApiResponse<List<UniswapV3FactoryDTO>> UniswapV3GetFactorysHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        public ApiResponse<List<UniswapV3FactoryDTO>> UniswapV3GetFactoriesHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv3/factorys/historical";
+            var localVarPath = "/dapps/uniswapv3/factories/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2711,7 +2711,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3GetFactorysHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3GetFactoriesHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2721,7 +2721,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// Factorys (historical) Gets factorys.
+        /// Factories (historical) Gets factories.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2731,15 +2731,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Factory address. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3FactoryDTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV3FactoryDTO>> UniswapV3GetFactorysHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<UniswapV3FactoryDTO>> UniswapV3GetFactoriesHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV3FactoryDTO>> localVarResponse = await UniswapV3GetFactorysHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
+             ApiResponse<List<UniswapV3FactoryDTO>> localVarResponse = await UniswapV3GetFactoriesHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Factorys (historical) Gets factorys.
+        /// Factories (historical) Gets factories.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2749,10 +2749,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Factory address. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3FactoryDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3FactoryDTO>>> UniswapV3GetFactorysHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3FactoryDTO>>> UniswapV3GetFactoriesHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv3/factorys/historical";
+            var localVarPath = "/dapps/uniswapv3/factories/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2791,7 +2791,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3GetFactorysHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3GetFactoriesHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -2976,7 +2976,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PoolDayDatas (historical) Gets poolDayDatas.
+        /// PoolDayData (historical) Gets poolDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -2986,14 +2986,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="pool"> (optional)</param>
         /// <returns>List<UniswapV3PoolDayDataDTO></returns>
-        public List<UniswapV3PoolDayDataDTO> UniswapV3GetPoolDayDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
+        public List<UniswapV3PoolDayDataDTO> UniswapV3GetPoolDayDataHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
-             ApiResponse<List<UniswapV3PoolDayDataDTO>> localVarResponse = UniswapV3GetPoolDayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
+             ApiResponse<List<UniswapV3PoolDayDataDTO>> localVarResponse = UniswapV3GetPoolDayDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// PoolDayDatas (historical) Gets poolDayDatas.
+        /// PoolDayData (historical) Gets poolDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3003,10 +3003,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="pool"> (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3PoolDayDataDTO></returns>
-        public ApiResponse<List<UniswapV3PoolDayDataDTO>> UniswapV3GetPoolDayDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
+        public ApiResponse<List<UniswapV3PoolDayDataDTO>> UniswapV3GetPoolDayDataHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv3/poolDayDatas/historical";
+            var localVarPath = "/dapps/uniswapv3/poolDayData/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3046,7 +3046,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3GetPoolDayDatasHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3GetPoolDayDataHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3056,7 +3056,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PoolDayDatas (historical) Gets poolDayDatas.
+        /// PoolDayData (historical) Gets poolDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3067,15 +3067,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="pool"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3PoolDayDataDTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV3PoolDayDataDTO>> UniswapV3GetPoolDayDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<UniswapV3PoolDayDataDTO>> UniswapV3GetPoolDayDataHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV3PoolDayDataDTO>> localVarResponse = await UniswapV3GetPoolDayDatasHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, pool, cancellationToken);
+             ApiResponse<List<UniswapV3PoolDayDataDTO>> localVarResponse = await UniswapV3GetPoolDayDataHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, pool, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// PoolDayDatas (historical) Gets poolDayDatas.
+        /// PoolDayData (historical) Gets poolDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3086,10 +3086,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="pool"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3PoolDayDataDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolDayDataDTO>>> UniswapV3GetPoolDayDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolDayDataDTO>>> UniswapV3GetPoolDayDataHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv3/poolDayDatas/historical";
+            var localVarPath = "/dapps/uniswapv3/poolDayData/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3129,7 +3129,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3GetPoolDayDatasHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3GetPoolDayDataHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3139,7 +3139,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PoolHourDatas (historical) Gets poolHourDatas.
+        /// PoolHourData (historical) Gets poolHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3149,14 +3149,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="pool"> (optional)</param>
         /// <returns>List<UniswapV3PoolHourDataDTO></returns>
-        public List<UniswapV3PoolHourDataDTO> UniswapV3GetPoolHourDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
+        public List<UniswapV3PoolHourDataDTO> UniswapV3GetPoolHourDataHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
-             ApiResponse<List<UniswapV3PoolHourDataDTO>> localVarResponse = UniswapV3GetPoolHourDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
+             ApiResponse<List<UniswapV3PoolHourDataDTO>> localVarResponse = UniswapV3GetPoolHourDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// PoolHourDatas (historical) Gets poolHourDatas.
+        /// PoolHourData (historical) Gets poolHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3166,10 +3166,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="pool"> (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3PoolHourDataDTO></returns>
-        public ApiResponse<List<UniswapV3PoolHourDataDTO>> UniswapV3GetPoolHourDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
+        public ApiResponse<List<UniswapV3PoolHourDataDTO>> UniswapV3GetPoolHourDataHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv3/poolHourDatas/historical";
+            var localVarPath = "/dapps/uniswapv3/poolHourData/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3209,7 +3209,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3GetPoolHourDatasHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3GetPoolHourDataHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3219,7 +3219,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PoolHourDatas (historical) Gets poolHourDatas.
+        /// PoolHourData (historical) Gets poolHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3230,15 +3230,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="pool"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3PoolHourDataDTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV3PoolHourDataDTO>> UniswapV3GetPoolHourDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<UniswapV3PoolHourDataDTO>> UniswapV3GetPoolHourDataHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV3PoolHourDataDTO>> localVarResponse = await UniswapV3GetPoolHourDatasHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, pool, cancellationToken);
+             ApiResponse<List<UniswapV3PoolHourDataDTO>> localVarResponse = await UniswapV3GetPoolHourDataHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, pool, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// PoolHourDatas (historical) Gets poolHourDatas.
+        /// PoolHourData (historical) Gets poolHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3249,10 +3249,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="pool"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3PoolHourDataDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolHourDataDTO>>> UniswapV3GetPoolHourDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolHourDataDTO>>> UniswapV3GetPoolHourDataHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv3/poolHourDatas/historical";
+            var localVarPath = "/dapps/uniswapv3/poolHourData/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -3292,7 +3292,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3GetPoolHourDatasHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3GetPoolHourDataHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -3984,7 +3984,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TickDayDatas (historical) Gets tickDayDatas.
+        /// TickDayData (historical) Gets tickDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -3994,14 +3994,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="pool"> (optional)</param>
         /// <returns>List<UniswapV3TickDayDataDTO></returns>
-        public List<UniswapV3TickDayDataDTO> UniswapV3GetTickDayDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
+        public List<UniswapV3TickDayDataDTO> UniswapV3GetTickDayDataHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
-             ApiResponse<List<UniswapV3TickDayDataDTO>> localVarResponse = UniswapV3GetTickDayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
+             ApiResponse<List<UniswapV3TickDayDataDTO>> localVarResponse = UniswapV3GetTickDayDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pool);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// TickDayDatas (historical) Gets tickDayDatas.
+        /// TickDayData (historical) Gets tickDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4011,10 +4011,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id"> (optional)</param>
         /// <param name="pool"> (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3TickDayDataDTO></returns>
-        public ApiResponse<List<UniswapV3TickDayDataDTO>> UniswapV3GetTickDayDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
+        public ApiResponse<List<UniswapV3TickDayDataDTO>> UniswapV3GetTickDayDataHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv3/tickDayDatas/historical";
+            var localVarPath = "/dapps/uniswapv3/tickDayData/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4054,7 +4054,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3GetTickDayDatasHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3GetTickDayDataHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -4064,7 +4064,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TickDayDatas (historical) Gets tickDayDatas.
+        /// TickDayData (historical) Gets tickDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4075,15 +4075,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="pool"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3TickDayDataDTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV3TickDayDataDTO>> UniswapV3GetTickDayDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<UniswapV3TickDayDataDTO>> UniswapV3GetTickDayDataHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV3TickDayDataDTO>> localVarResponse = await UniswapV3GetTickDayDatasHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, pool, cancellationToken);
+             ApiResponse<List<UniswapV3TickDayDataDTO>> localVarResponse = await UniswapV3GetTickDayDataHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, pool, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// TickDayDatas (historical) Gets tickDayDatas.
+        /// TickDayData (historical) Gets tickDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock"> (optional)</param>
@@ -4094,10 +4094,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="pool"> (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TickDayDataDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TickDayDataDTO>>> UniswapV3GetTickDayDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TickDayDataDTO>>> UniswapV3GetTickDayDataHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string pool = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv3/tickDayDatas/historical";
+            var localVarPath = "/dapps/uniswapv3/tickDayData/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4137,7 +4137,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3GetTickDayDatasHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3GetTickDayDataHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -4310,7 +4310,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TokenHourDatas (historical) Gets tokenHourDatas.
+        /// TokenHourData (historical) Gets tokenHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4319,14 +4319,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Token address concatendated with date. (optional)</param>
         /// <returns>List<UniswapV3TokenHourDataDTO></returns>
-        public List<UniswapV3TokenHourDataDTO> UniswapV3GetTokenHourDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        public List<UniswapV3TokenHourDataDTO> UniswapV3GetTokenHourDataHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
-             ApiResponse<List<UniswapV3TokenHourDataDTO>> localVarResponse = UniswapV3GetTokenHourDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+             ApiResponse<List<UniswapV3TokenHourDataDTO>> localVarResponse = UniswapV3GetTokenHourDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// TokenHourDatas (historical) Gets tokenHourDatas.
+        /// TokenHourData (historical) Gets tokenHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4335,10 +4335,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Token address concatendated with date. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3TokenHourDataDTO></returns>
-        public ApiResponse<List<UniswapV3TokenHourDataDTO>> UniswapV3GetTokenHourDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        public ApiResponse<List<UniswapV3TokenHourDataDTO>> UniswapV3GetTokenHourDataHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv3/tokenHourDatas/historical";
+            var localVarPath = "/dapps/uniswapv3/tokenHourData/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4377,7 +4377,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3GetTokenHourDatasHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3GetTokenHourDataHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -4387,7 +4387,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TokenHourDatas (historical) Gets tokenHourDatas.
+        /// TokenHourData (historical) Gets tokenHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4397,15 +4397,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Token address concatendated with date. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3TokenHourDataDTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV3TokenHourDataDTO>> UniswapV3GetTokenHourDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<UniswapV3TokenHourDataDTO>> UniswapV3GetTokenHourDataHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV3TokenHourDataDTO>> localVarResponse = await UniswapV3GetTokenHourDatasHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
+             ApiResponse<List<UniswapV3TokenHourDataDTO>> localVarResponse = await UniswapV3GetTokenHourDataHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// TokenHourDatas (historical) Gets tokenHourDatas.
+        /// TokenHourData (historical) Gets tokenHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4415,10 +4415,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Token address concatendated with date. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TokenHourDataDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenHourDataDTO>>> UniswapV3GetTokenHourDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenHourDataDTO>>> UniswapV3GetTokenHourDataHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv3/tokenHourDatas/historical";
+            var localVarPath = "/dapps/uniswapv3/tokenHourData/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4457,7 +4457,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3GetTokenHourDatasHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3GetTokenHourDataHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -4467,7 +4467,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TokenV3DayDatas (historical) Gets tokenV3DayDatas.
+        /// TokenV3DayData (historical) Gets tokenV3DayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4476,14 +4476,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Token address concatendated with date. (optional)</param>
         /// <returns>List<UniswapV3TokenV3DayDataDTO></returns>
-        public List<UniswapV3TokenV3DayDataDTO> UniswapV3GetTokenV3DayDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        public List<UniswapV3TokenV3DayDataDTO> UniswapV3GetTokenV3DayDataHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
-             ApiResponse<List<UniswapV3TokenV3DayDataDTO>> localVarResponse = UniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+             ApiResponse<List<UniswapV3TokenV3DayDataDTO>> localVarResponse = UniswapV3GetTokenV3DayDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// TokenV3DayDatas (historical) Gets tokenV3DayDatas.
+        /// TokenV3DayData (historical) Gets tokenV3DayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4492,10 +4492,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Token address concatendated with date. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3TokenV3DayDataDTO></returns>
-        public ApiResponse<List<UniswapV3TokenV3DayDataDTO>> UniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        public ApiResponse<List<UniswapV3TokenV3DayDataDTO>> UniswapV3GetTokenV3DayDataHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv3/tokenV3DayDatas/historical";
+            var localVarPath = "/dapps/uniswapv3/tokenV3DayData/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4534,7 +4534,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3GetTokenV3DayDatasHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3GetTokenV3DayDataHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -4544,7 +4544,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TokenV3DayDatas (historical) Gets tokenV3DayDatas.
+        /// TokenV3DayData (historical) Gets tokenV3DayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4554,15 +4554,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Token address concatendated with date. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3TokenV3DayDataDTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV3TokenV3DayDataDTO>> UniswapV3GetTokenV3DayDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<UniswapV3TokenV3DayDataDTO>> UniswapV3GetTokenV3DayDataHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV3TokenV3DayDataDTO>> localVarResponse = await UniswapV3GetTokenV3DayDatasHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
+             ApiResponse<List<UniswapV3TokenV3DayDataDTO>> localVarResponse = await UniswapV3GetTokenV3DayDataHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// TokenV3DayDatas (historical) Gets tokenV3DayDatas.
+        /// TokenV3DayData (historical) Gets tokenV3DayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4572,10 +4572,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Token address concatendated with date. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TokenV3DayDataDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenV3DayDataDTO>>> UniswapV3GetTokenV3DayDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenV3DayDataDTO>>> UniswapV3GetTokenV3DayDataHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv3/tokenV3DayDatas/historical";
+            var localVarPath = "/dapps/uniswapv3/tokenV3DayData/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -4614,7 +4614,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3GetTokenV3DayDatasHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3GetTokenV3DayDataHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -4950,7 +4950,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// UniswapDayDatas (historical) Gets uniswapDayDatas.
+        /// UniswapDayData (historical) Gets uniswapDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4959,14 +4959,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Timestamp rounded to current day by dividing by 86400. (optional)</param>
         /// <returns>List<UniswapV3UniswapDayDataDTO></returns>
-        public List<UniswapV3UniswapDayDataDTO> UniswapV3GetUniswapDayDatasHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        public List<UniswapV3UniswapDayDataDTO> UniswapV3GetUniswapDayDataHistorical (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
-             ApiResponse<List<UniswapV3UniswapDayDataDTO>> localVarResponse = UniswapV3GetUniswapDayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+             ApiResponse<List<UniswapV3UniswapDayDataDTO>> localVarResponse = UniswapV3GetUniswapDayDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// UniswapDayDatas (historical) Gets uniswapDayDatas.
+        /// UniswapDayData (historical) Gets uniswapDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -4975,10 +4975,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="endDate">The end date of timeframe. (optional)</param>
         /// <param name="id">Timestamp rounded to current day by dividing by 86400. (optional)</param>
         /// <returns>ApiResponse of List<UniswapV3UniswapDayDataDTO></returns>
-        public ApiResponse<List<UniswapV3UniswapDayDataDTO>> UniswapV3GetUniswapDayDatasHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
+        public ApiResponse<List<UniswapV3UniswapDayDataDTO>> UniswapV3GetUniswapDayDataHistoricalWithHttpInfo (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string))
         {
 
-            var localVarPath = "/dapps/uniswapv3/uniswapDayDatas/historical";
+            var localVarPath = "/dapps/uniswapv3/uniswapDayData/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -5017,7 +5017,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3GetUniswapDayDatasHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3GetUniswapDayDataHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -5027,7 +5027,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// UniswapDayDatas (historical) Gets uniswapDayDatas.
+        /// UniswapDayData (historical) Gets uniswapDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -5037,15 +5037,15 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Timestamp rounded to current day by dividing by 86400. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3UniswapDayDataDTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV3UniswapDayDataDTO>> UniswapV3GetUniswapDayDatasHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<UniswapV3UniswapDayDataDTO>> UniswapV3GetUniswapDayDataHistoricalAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV3UniswapDayDataDTO>> localVarResponse = await UniswapV3GetUniswapDayDatasHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
+             ApiResponse<List<UniswapV3UniswapDayDataDTO>> localVarResponse = await UniswapV3GetUniswapDayDataHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// UniswapDayDatas (historical) Gets uniswapDayDatas.
+        /// UniswapDayData (historical) Gets uniswapDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -5055,10 +5055,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="id">Timestamp rounded to current day by dividing by 86400. (optional)</param>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3UniswapDayDataDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3UniswapDayDataDTO>>> UniswapV3GetUniswapDayDatasHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3UniswapDayDataDTO>>> UniswapV3GetUniswapDayDataHistoricalWithHttpInfoAsync (long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv3/uniswapDayDatas/historical";
+            var localVarPath = "/dapps/uniswapv3/uniswapDayData/historical";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -5097,7 +5097,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3GetUniswapDayDatasHistorical", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3GetUniswapDayDataHistorical", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -5234,25 +5234,25 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PoolDayDatas (current) Gets poolDayDatas.
+        /// PoolDayData (current) Gets poolDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List<UniswapV3PoolDayDataDTO></returns>
-        public List<UniswapV3PoolDayDataDTO> UniswapV3PoolDayDatasCurrent ()
+        public List<UniswapV3PoolDayDataDTO> UniswapV3PoolDayDataCurrent ()
         {
-             ApiResponse<List<UniswapV3PoolDayDataDTO>> localVarResponse = UniswapV3PoolDayDatasCurrentWithHttpInfo();
+             ApiResponse<List<UniswapV3PoolDayDataDTO>> localVarResponse = UniswapV3PoolDayDataCurrentWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// PoolDayDatas (current) Gets poolDayDatas.
+        /// PoolDayData (current) Gets poolDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<UniswapV3PoolDayDataDTO></returns>
-        public ApiResponse<List<UniswapV3PoolDayDataDTO>> UniswapV3PoolDayDatasCurrentWithHttpInfo ()
+        public ApiResponse<List<UniswapV3PoolDayDataDTO>> UniswapV3PoolDayDataCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswapv3/poolDayDatas/current";
+            var localVarPath = "/dapps/uniswapv3/poolDayData/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -5286,7 +5286,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3PoolDayDatasCurrent", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3PoolDayDataCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -5296,28 +5296,28 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PoolDayDatas (current) Gets poolDayDatas.
+        /// PoolDayData (current) Gets poolDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3PoolDayDataDTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV3PoolDayDataDTO>> UniswapV3PoolDayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<UniswapV3PoolDayDataDTO>> UniswapV3PoolDayDataCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV3PoolDayDataDTO>> localVarResponse = await UniswapV3PoolDayDatasCurrentWithHttpInfoAsync(cancellationToken);
+             ApiResponse<List<UniswapV3PoolDayDataDTO>> localVarResponse = await UniswapV3PoolDayDataCurrentWithHttpInfoAsync(cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// PoolDayDatas (current) Gets poolDayDatas.
+        /// PoolDayData (current) Gets poolDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3PoolDayDataDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolDayDataDTO>>> UniswapV3PoolDayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolDayDataDTO>>> UniswapV3PoolDayDataCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv3/poolDayDatas/current";
+            var localVarPath = "/dapps/uniswapv3/poolDayData/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -5351,7 +5351,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3PoolDayDatasCurrent", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3PoolDayDataCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -5361,25 +5361,25 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PoolHourDatas (current) Gets poolHourDatas.
+        /// PoolHourData (current) Gets poolHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List<UniswapV3PoolHourDataDTO></returns>
-        public List<UniswapV3PoolHourDataDTO> UniswapV3PoolHourDatasCurrent ()
+        public List<UniswapV3PoolHourDataDTO> UniswapV3PoolHourDataCurrent ()
         {
-             ApiResponse<List<UniswapV3PoolHourDataDTO>> localVarResponse = UniswapV3PoolHourDatasCurrentWithHttpInfo();
+             ApiResponse<List<UniswapV3PoolHourDataDTO>> localVarResponse = UniswapV3PoolHourDataCurrentWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// PoolHourDatas (current) Gets poolHourDatas.
+        /// PoolHourData (current) Gets poolHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<UniswapV3PoolHourDataDTO></returns>
-        public ApiResponse<List<UniswapV3PoolHourDataDTO>> UniswapV3PoolHourDatasCurrentWithHttpInfo ()
+        public ApiResponse<List<UniswapV3PoolHourDataDTO>> UniswapV3PoolHourDataCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswapv3/poolHourDatas/current";
+            var localVarPath = "/dapps/uniswapv3/poolHourData/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -5413,7 +5413,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3PoolHourDatasCurrent", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3PoolHourDataCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -5423,28 +5423,28 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// PoolHourDatas (current) Gets poolHourDatas.
+        /// PoolHourData (current) Gets poolHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3PoolHourDataDTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV3PoolHourDataDTO>> UniswapV3PoolHourDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<UniswapV3PoolHourDataDTO>> UniswapV3PoolHourDataCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV3PoolHourDataDTO>> localVarResponse = await UniswapV3PoolHourDatasCurrentWithHttpInfoAsync(cancellationToken);
+             ApiResponse<List<UniswapV3PoolHourDataDTO>> localVarResponse = await UniswapV3PoolHourDataCurrentWithHttpInfoAsync(cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// PoolHourDatas (current) Gets poolHourDatas.
+        /// PoolHourData (current) Gets poolHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3PoolHourDataDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolHourDataDTO>>> UniswapV3PoolHourDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3PoolHourDataDTO>>> UniswapV3PoolHourDataCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv3/poolHourDatas/current";
+            var localVarPath = "/dapps/uniswapv3/poolHourData/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -5478,7 +5478,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3PoolHourDatasCurrent", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3PoolHourDataCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -6008,25 +6008,25 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TickDayDatas (current) Gets tickDayDatas.
+        /// TickDayData (current) Gets tickDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List<UniswapV3TickDayDataDTO></returns>
-        public List<UniswapV3TickDayDataDTO> UniswapV3TickDayDatasCurrent ()
+        public List<UniswapV3TickDayDataDTO> UniswapV3TickDayDataCurrent ()
         {
-             ApiResponse<List<UniswapV3TickDayDataDTO>> localVarResponse = UniswapV3TickDayDatasCurrentWithHttpInfo();
+             ApiResponse<List<UniswapV3TickDayDataDTO>> localVarResponse = UniswapV3TickDayDataCurrentWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// TickDayDatas (current) Gets tickDayDatas.
+        /// TickDayData (current) Gets tickDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<UniswapV3TickDayDataDTO></returns>
-        public ApiResponse<List<UniswapV3TickDayDataDTO>> UniswapV3TickDayDatasCurrentWithHttpInfo ()
+        public ApiResponse<List<UniswapV3TickDayDataDTO>> UniswapV3TickDayDataCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswapv3/tickDayDatas/current";
+            var localVarPath = "/dapps/uniswapv3/tickDayData/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -6060,7 +6060,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3TickDayDatasCurrent", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3TickDayDataCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -6070,28 +6070,28 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TickDayDatas (current) Gets tickDayDatas.
+        /// TickDayData (current) Gets tickDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3TickDayDataDTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV3TickDayDataDTO>> UniswapV3TickDayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<UniswapV3TickDayDataDTO>> UniswapV3TickDayDataCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV3TickDayDataDTO>> localVarResponse = await UniswapV3TickDayDatasCurrentWithHttpInfoAsync(cancellationToken);
+             ApiResponse<List<UniswapV3TickDayDataDTO>> localVarResponse = await UniswapV3TickDayDataCurrentWithHttpInfoAsync(cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// TickDayDatas (current) Gets tickDayDatas.
+        /// TickDayData (current) Gets tickDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TickDayDataDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TickDayDataDTO>>> UniswapV3TickDayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TickDayDataDTO>>> UniswapV3TickDayDataCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv3/tickDayDatas/current";
+            var localVarPath = "/dapps/uniswapv3/tickDayData/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -6125,7 +6125,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3TickDayDatasCurrent", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3TickDayDataCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -6262,25 +6262,25 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TokenHourDatas (current) Gets tokenHourDatas.
+        /// TokenHourData (current) Gets tokenHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List<UniswapV3TokenHourDataDTO></returns>
-        public List<UniswapV3TokenHourDataDTO> UniswapV3TokenHourDatasCurrent ()
+        public List<UniswapV3TokenHourDataDTO> UniswapV3TokenHourDataCurrent ()
         {
-             ApiResponse<List<UniswapV3TokenHourDataDTO>> localVarResponse = UniswapV3TokenHourDatasCurrentWithHttpInfo();
+             ApiResponse<List<UniswapV3TokenHourDataDTO>> localVarResponse = UniswapV3TokenHourDataCurrentWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// TokenHourDatas (current) Gets tokenHourDatas.
+        /// TokenHourData (current) Gets tokenHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<UniswapV3TokenHourDataDTO></returns>
-        public ApiResponse<List<UniswapV3TokenHourDataDTO>> UniswapV3TokenHourDatasCurrentWithHttpInfo ()
+        public ApiResponse<List<UniswapV3TokenHourDataDTO>> UniswapV3TokenHourDataCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswapv3/tokenHourDatas/current";
+            var localVarPath = "/dapps/uniswapv3/tokenHourData/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -6314,7 +6314,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3TokenHourDatasCurrent", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3TokenHourDataCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -6324,28 +6324,28 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TokenHourDatas (current) Gets tokenHourDatas.
+        /// TokenHourData (current) Gets tokenHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3TokenHourDataDTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV3TokenHourDataDTO>> UniswapV3TokenHourDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<UniswapV3TokenHourDataDTO>> UniswapV3TokenHourDataCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV3TokenHourDataDTO>> localVarResponse = await UniswapV3TokenHourDatasCurrentWithHttpInfoAsync(cancellationToken);
+             ApiResponse<List<UniswapV3TokenHourDataDTO>> localVarResponse = await UniswapV3TokenHourDataCurrentWithHttpInfoAsync(cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// TokenHourDatas (current) Gets tokenHourDatas.
+        /// TokenHourData (current) Gets tokenHourData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TokenHourDataDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenHourDataDTO>>> UniswapV3TokenHourDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenHourDataDTO>>> UniswapV3TokenHourDataCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv3/tokenHourDatas/current";
+            var localVarPath = "/dapps/uniswapv3/tokenHourData/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -6379,7 +6379,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3TokenHourDatasCurrent", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3TokenHourDataCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -6389,25 +6389,25 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TokenV3DayDatas (current) Gets tokenV3DayDatas.
+        /// TokenV3DayData (current) Gets tokenV3DayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List<UniswapV3TokenV3DayDataDTO></returns>
-        public List<UniswapV3TokenV3DayDataDTO> UniswapV3TokenV3DayDatasCurrent ()
+        public List<UniswapV3TokenV3DayDataDTO> UniswapV3TokenV3DayDataCurrent ()
         {
-             ApiResponse<List<UniswapV3TokenV3DayDataDTO>> localVarResponse = UniswapV3TokenV3DayDatasCurrentWithHttpInfo();
+             ApiResponse<List<UniswapV3TokenV3DayDataDTO>> localVarResponse = UniswapV3TokenV3DayDataCurrentWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// TokenV3DayDatas (current) Gets tokenV3DayDatas.
+        /// TokenV3DayData (current) Gets tokenV3DayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<UniswapV3TokenV3DayDataDTO></returns>
-        public ApiResponse<List<UniswapV3TokenV3DayDataDTO>> UniswapV3TokenV3DayDatasCurrentWithHttpInfo ()
+        public ApiResponse<List<UniswapV3TokenV3DayDataDTO>> UniswapV3TokenV3DayDataCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswapv3/tokenV3DayDatas/current";
+            var localVarPath = "/dapps/uniswapv3/tokenV3DayData/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -6441,7 +6441,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3TokenV3DayDatasCurrent", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3TokenV3DayDataCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -6451,28 +6451,28 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// TokenV3DayDatas (current) Gets tokenV3DayDatas.
+        /// TokenV3DayData (current) Gets tokenV3DayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3TokenV3DayDataDTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV3TokenV3DayDataDTO>> UniswapV3TokenV3DayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<UniswapV3TokenV3DayDataDTO>> UniswapV3TokenV3DayDataCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV3TokenV3DayDataDTO>> localVarResponse = await UniswapV3TokenV3DayDatasCurrentWithHttpInfoAsync(cancellationToken);
+             ApiResponse<List<UniswapV3TokenV3DayDataDTO>> localVarResponse = await UniswapV3TokenV3DayDataCurrentWithHttpInfoAsync(cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// TokenV3DayDatas (current) Gets tokenV3DayDatas.
+        /// TokenV3DayData (current) Gets tokenV3DayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3TokenV3DayDataDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenV3DayDataDTO>>> UniswapV3TokenV3DayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3TokenV3DayDataDTO>>> UniswapV3TokenV3DayDataCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv3/tokenV3DayDatas/current";
+            var localVarPath = "/dapps/uniswapv3/tokenV3DayData/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -6506,7 +6506,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3TokenV3DayDatasCurrent", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3TokenV3DayDataCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -6770,25 +6770,25 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// UniswapDayDatas (current) Gets uniswapDayDatas.
+        /// UniswapDayData (current) Gets uniswapDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>List<UniswapV3UniswapDayDataDTO></returns>
-        public List<UniswapV3UniswapDayDataDTO> UniswapV3UniswapDayDatasCurrent ()
+        public List<UniswapV3UniswapDayDataDTO> UniswapV3UniswapDayDataCurrent ()
         {
-             ApiResponse<List<UniswapV3UniswapDayDataDTO>> localVarResponse = UniswapV3UniswapDayDatasCurrentWithHttpInfo();
+             ApiResponse<List<UniswapV3UniswapDayDataDTO>> localVarResponse = UniswapV3UniswapDayDataCurrentWithHttpInfo();
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// UniswapDayDatas (current) Gets uniswapDayDatas.
+        /// UniswapDayData (current) Gets uniswapDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of List<UniswapV3UniswapDayDataDTO></returns>
-        public ApiResponse<List<UniswapV3UniswapDayDataDTO>> UniswapV3UniswapDayDatasCurrentWithHttpInfo ()
+        public ApiResponse<List<UniswapV3UniswapDayDataDTO>> UniswapV3UniswapDayDataCurrentWithHttpInfo ()
         {
 
-            var localVarPath = "/dapps/uniswapv3/uniswapDayDatas/current";
+            var localVarPath = "/dapps/uniswapv3/uniswapDayData/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -6822,7 +6822,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3UniswapDayDatasCurrent", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3UniswapDayDataCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -6832,28 +6832,28 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// UniswapDayDatas (current) Gets uniswapDayDatas.
+        /// UniswapDayData (current) Gets uniswapDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of List<UniswapV3UniswapDayDataDTO></returns>
-        public async System.Threading.Tasks.Task<List<UniswapV3UniswapDayDataDTO>> UniswapV3UniswapDayDatasCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<List<UniswapV3UniswapDayDataDTO>> UniswapV3UniswapDayDataCurrentAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<List<UniswapV3UniswapDayDataDTO>> localVarResponse = await UniswapV3UniswapDayDatasCurrentWithHttpInfoAsync(cancellationToken);
+             ApiResponse<List<UniswapV3UniswapDayDataDTO>> localVarResponse = await UniswapV3UniswapDayDataCurrentWithHttpInfoAsync(cancellationToken);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// UniswapDayDatas (current) Gets uniswapDayDatas.
+        /// UniswapDayData (current) Gets uniswapDayData.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (List&lt;UniswapV3UniswapDayDataDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3UniswapDayDataDTO>>> UniswapV3UniswapDayDatasCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
+        public async System.Threading.Tasks.Task<ApiResponse<List<UniswapV3UniswapDayDataDTO>>> UniswapV3UniswapDayDataCurrentWithHttpInfoAsync (CancellationToken cancellationToken = default(CancellationToken))
         {
 
-            var localVarPath = "/dapps/uniswapv3/uniswapDayDatas/current";
+            var localVarPath = "/dapps/uniswapv3/uniswapDayData/current";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -6887,7 +6887,7 @@ namespace CoinAPI.EMS.REST.V1.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("UniswapV3UniswapDayDatasCurrent", localVarResponse);
+                Exception exception = ExceptionFactory("UniswapV3UniswapDayDataCurrent", localVarResponse);
                 if (exception != null) throw exception;
             }
 

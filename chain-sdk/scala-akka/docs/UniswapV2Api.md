@@ -18,24 +18,24 @@ Method | HTTP request | Description
 [**uniswapV2GetLiquidityPositionsHistoricalWithHttpInfo**](UniswapV2Api.md#uniswapV2GetLiquidityPositionsHistoricalWithHttpInfo) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical)
 [**uniswapV2GetMintsHistorical**](UniswapV2Api.md#uniswapV2GetMintsHistorical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical)
 [**uniswapV2GetMintsHistoricalWithHttpInfo**](UniswapV2Api.md#uniswapV2GetMintsHistoricalWithHttpInfo) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical)
-[**uniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetPairDayDatasHistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical)
-[**uniswapV2GetPairDayDatasHistoricalWithHttpInfo**](UniswapV2Api.md#uniswapV2GetPairDayDatasHistoricalWithHttpInfo) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical)
-[**uniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#uniswapV2GetPairHourDatasHistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical)
-[**uniswapV2GetPairHourDatasHistoricalWithHttpInfo**](UniswapV2Api.md#uniswapV2GetPairHourDatasHistoricalWithHttpInfo) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical)
+[**uniswapV2GetPairDayDataHistorical**](UniswapV2Api.md#uniswapV2GetPairDayDataHistorical) | **GET** /dapps/uniswapv2/pairDayData/historical | PairDayData (historical)
+[**uniswapV2GetPairDayDataHistoricalWithHttpInfo**](UniswapV2Api.md#uniswapV2GetPairDayDataHistoricalWithHttpInfo) | **GET** /dapps/uniswapv2/pairDayData/historical | PairDayData (historical)
+[**uniswapV2GetPairHourDataHistorical**](UniswapV2Api.md#uniswapV2GetPairHourDataHistorical) | **GET** /dapps/uniswapv2/pairHourData/historical | PairHourData (historical)
+[**uniswapV2GetPairHourDataHistoricalWithHttpInfo**](UniswapV2Api.md#uniswapV2GetPairHourDataHistoricalWithHttpInfo) | **GET** /dapps/uniswapv2/pairHourData/historical | PairHourData (historical)
 [**uniswapV2GetPairsHistorical**](UniswapV2Api.md#uniswapV2GetPairsHistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical)
 [**uniswapV2GetPairsHistoricalWithHttpInfo**](UniswapV2Api.md#uniswapV2GetPairsHistoricalWithHttpInfo) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical)
 [**uniswapV2GetSwapsHistorical**](UniswapV2Api.md#uniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical)
 [**uniswapV2GetSwapsHistoricalWithHttpInfo**](UniswapV2Api.md#uniswapV2GetSwapsHistoricalWithHttpInfo) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical)
-[**uniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetTokenDayDatasHistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical)
-[**uniswapV2GetTokenDayDatasHistoricalWithHttpInfo**](UniswapV2Api.md#uniswapV2GetTokenDayDatasHistoricalWithHttpInfo) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical)
+[**uniswapV2GetTokenDayDataHistorical**](UniswapV2Api.md#uniswapV2GetTokenDayDataHistorical) | **GET** /dapps/uniswapv2/tokenDayData/historical | TokenDayData (historical)
+[**uniswapV2GetTokenDayDataHistoricalWithHttpInfo**](UniswapV2Api.md#uniswapV2GetTokenDayDataHistoricalWithHttpInfo) | **GET** /dapps/uniswapv2/tokenDayData/historical | TokenDayData (historical)
 [**uniswapV2GetTokensHistorical**](UniswapV2Api.md#uniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical)
 [**uniswapV2GetTokensHistoricalWithHttpInfo**](UniswapV2Api.md#uniswapV2GetTokensHistoricalWithHttpInfo) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical)
 [**uniswapV2GetTransactionsHistorical**](UniswapV2Api.md#uniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical)
 [**uniswapV2GetTransactionsHistoricalWithHttpInfo**](UniswapV2Api.md#uniswapV2GetTransactionsHistoricalWithHttpInfo) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical)
-[**uniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical)
-[**uniswapV2GetUniswapDayDatasHistoricalWithHttpInfo**](UniswapV2Api.md#uniswapV2GetUniswapDayDatasHistoricalWithHttpInfo) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical)
-[**uniswapV2GetUniswapFactorysHistorical**](UniswapV2Api.md#uniswapV2GetUniswapFactorysHistorical) | **GET** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical)
-[**uniswapV2GetUniswapFactorysHistoricalWithHttpInfo**](UniswapV2Api.md#uniswapV2GetUniswapFactorysHistoricalWithHttpInfo) | **GET** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical)
+[**uniswapV2GetUniswapDayDataHistorical**](UniswapV2Api.md#uniswapV2GetUniswapDayDataHistorical) | **GET** /dapps/uniswapv2/uniswapDayData/historical | UniswapDayData (historical)
+[**uniswapV2GetUniswapDayDataHistoricalWithHttpInfo**](UniswapV2Api.md#uniswapV2GetUniswapDayDataHistoricalWithHttpInfo) | **GET** /dapps/uniswapv2/uniswapDayData/historical | UniswapDayData (historical)
+[**uniswapV2GetUniswapFactoriesHistorical**](UniswapV2Api.md#uniswapV2GetUniswapFactoriesHistorical) | **GET** /dapps/uniswapv2/uniswapFactories/historical | UniswapFactories (historical)
+[**uniswapV2GetUniswapFactoriesHistoricalWithHttpInfo**](UniswapV2Api.md#uniswapV2GetUniswapFactoriesHistoricalWithHttpInfo) | **GET** /dapps/uniswapv2/uniswapFactories/historical | UniswapFactories (historical)
 [**uniswapV2GetUsersHistorical**](UniswapV2Api.md#uniswapV2GetUsersHistorical) | **GET** /dapps/uniswapv2/users/historical | Users (historical)
 [**uniswapV2GetUsersHistoricalWithHttpInfo**](UniswapV2Api.md#uniswapV2GetUsersHistoricalWithHttpInfo) | **GET** /dapps/uniswapv2/users/historical | Users (historical)
 [**uniswapV2LiquidityPositionSnapshotsCurrent**](UniswapV2Api.md#uniswapV2LiquidityPositionSnapshotsCurrent) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
@@ -44,24 +44,24 @@ Method | HTTP request | Description
 [**uniswapV2LiquidityPositionsCurrentWithHttpInfo**](UniswapV2Api.md#uniswapV2LiquidityPositionsCurrentWithHttpInfo) | **GET** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
 [**uniswapV2MintsCurrent**](UniswapV2Api.md#uniswapV2MintsCurrent) | **GET** /dapps/uniswapv2/mints/current | Mints (current)
 [**uniswapV2MintsCurrentWithHttpInfo**](UniswapV2Api.md#uniswapV2MintsCurrentWithHttpInfo) | **GET** /dapps/uniswapv2/mints/current | Mints (current)
-[**uniswapV2PairDayDatasCurrent**](UniswapV2Api.md#uniswapV2PairDayDatasCurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
-[**uniswapV2PairDayDatasCurrentWithHttpInfo**](UniswapV2Api.md#uniswapV2PairDayDatasCurrentWithHttpInfo) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
-[**uniswapV2PairHourDatasCurrent**](UniswapV2Api.md#uniswapV2PairHourDatasCurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
-[**uniswapV2PairHourDatasCurrentWithHttpInfo**](UniswapV2Api.md#uniswapV2PairHourDatasCurrentWithHttpInfo) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
+[**uniswapV2PairDayDataCurrent**](UniswapV2Api.md#uniswapV2PairDayDataCurrent) | **GET** /dapps/uniswapv2/pairDayData/current | PairDayData (current)
+[**uniswapV2PairDayDataCurrentWithHttpInfo**](UniswapV2Api.md#uniswapV2PairDayDataCurrentWithHttpInfo) | **GET** /dapps/uniswapv2/pairDayData/current | PairDayData (current)
+[**uniswapV2PairHourDataCurrent**](UniswapV2Api.md#uniswapV2PairHourDataCurrent) | **GET** /dapps/uniswapv2/pairHourData/current | PairHourData (current)
+[**uniswapV2PairHourDataCurrentWithHttpInfo**](UniswapV2Api.md#uniswapV2PairHourDataCurrentWithHttpInfo) | **GET** /dapps/uniswapv2/pairHourData/current | PairHourData (current)
 [**uniswapV2PairsCurrent**](UniswapV2Api.md#uniswapV2PairsCurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
 [**uniswapV2PairsCurrentWithHttpInfo**](UniswapV2Api.md#uniswapV2PairsCurrentWithHttpInfo) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
 [**uniswapV2SwapsCurrent**](UniswapV2Api.md#uniswapV2SwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current)
 [**uniswapV2SwapsCurrentWithHttpInfo**](UniswapV2Api.md#uniswapV2SwapsCurrentWithHttpInfo) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current)
-[**uniswapV2TokenDayDatasCurrent**](UniswapV2Api.md#uniswapV2TokenDayDatasCurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
-[**uniswapV2TokenDayDatasCurrentWithHttpInfo**](UniswapV2Api.md#uniswapV2TokenDayDatasCurrentWithHttpInfo) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**uniswapV2TokenDayDataCurrent**](UniswapV2Api.md#uniswapV2TokenDayDataCurrent) | **GET** /dapps/uniswapv2/tokenDayData/current | TokenDayData (current)
+[**uniswapV2TokenDayDataCurrentWithHttpInfo**](UniswapV2Api.md#uniswapV2TokenDayDataCurrentWithHttpInfo) | **GET** /dapps/uniswapv2/tokenDayData/current | TokenDayData (current)
 [**uniswapV2TokensCurrent**](UniswapV2Api.md#uniswapV2TokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**uniswapV2TokensCurrentWithHttpInfo**](UniswapV2Api.md#uniswapV2TokensCurrentWithHttpInfo) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**uniswapV2TransactionsCurrent**](UniswapV2Api.md#uniswapV2TransactionsCurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
 [**uniswapV2TransactionsCurrentWithHttpInfo**](UniswapV2Api.md#uniswapV2TransactionsCurrentWithHttpInfo) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
-[**uniswapV2UniswapDayDatasCurrent**](UniswapV2Api.md#uniswapV2UniswapDayDatasCurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
-[**uniswapV2UniswapDayDatasCurrentWithHttpInfo**](UniswapV2Api.md#uniswapV2UniswapDayDatasCurrentWithHttpInfo) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
-[**uniswapV2UniswapFactorysCurrent**](UniswapV2Api.md#uniswapV2UniswapFactorysCurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
-[**uniswapV2UniswapFactorysCurrentWithHttpInfo**](UniswapV2Api.md#uniswapV2UniswapFactorysCurrentWithHttpInfo) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
+[**uniswapV2UniswapDayDataCurrent**](UniswapV2Api.md#uniswapV2UniswapDayDataCurrent) | **GET** /dapps/uniswapv2/uniswapDayData/current | UniswapDayData (current)
+[**uniswapV2UniswapDayDataCurrentWithHttpInfo**](UniswapV2Api.md#uniswapV2UniswapDayDataCurrentWithHttpInfo) | **GET** /dapps/uniswapv2/uniswapDayData/current | UniswapDayData (current)
+[**uniswapV2UniswapFactoriesCurrent**](UniswapV2Api.md#uniswapV2UniswapFactoriesCurrent) | **GET** /dapps/uniswapv2/uniswapFactories/current | UniswapFactories (current)
+[**uniswapV2UniswapFactoriesCurrentWithHttpInfo**](UniswapV2Api.md#uniswapV2UniswapFactoriesCurrentWithHttpInfo) | **GET** /dapps/uniswapv2/uniswapFactories/current | UniswapFactories (current)
 [**uniswapV2UsersCurrent**](UniswapV2Api.md#uniswapV2UsersCurrent) | **GET** /dapps/uniswapv2/users/current | Users (current)
 [**uniswapV2UsersCurrentWithHttpInfo**](UniswapV2Api.md#uniswapV2UsersCurrentWithHttpInfo) | **GET** /dapps/uniswapv2/users/current | Users (current)
 
@@ -700,13 +700,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV2GetPairDayDatasHistorical
+## uniswapV2GetPairDayDataHistorical
 
-> uniswapV2GetPairDayDatasHistorical(uniswapV2GetPairDayDatasHistoricalRequest): ApiRequest[Seq[PairDayDataDTO]]
+> uniswapV2GetPairDayDataHistorical(uniswapV2GetPairDayDataHistoricalRequest): ApiRequest[Seq[PairDayDataDTO]]
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 
@@ -743,7 +743,7 @@ object Example extends App {
 
     val token1: String = token1_example // String | Reference to token1.
     
-    val request = apiInstance.uniswapV2GetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
+    val request = apiInstance.uniswapV2GetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -753,14 +753,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetPairDayDatasHistorical")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetPairDayDataHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetPairDayDatasHistorical")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetPairDayDataHistorical")
             exception.printStackTrace();
     }
 }
@@ -799,13 +799,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV2GetPairHourDatasHistorical
+## uniswapV2GetPairHourDataHistorical
 
-> uniswapV2GetPairHourDatasHistorical(uniswapV2GetPairHourDatasHistoricalRequest): ApiRequest[Seq[PairHourDataDTO]]
+> uniswapV2GetPairHourDataHistorical(uniswapV2GetPairHourDataHistoricalRequest): ApiRequest[Seq[PairHourDataDTO]]
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 
@@ -840,7 +840,7 @@ object Example extends App {
 
     val pair: String = pair_example // String | Address for pair contract.
     
-    val request = apiInstance.uniswapV2GetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair)
+    val request = apiInstance.uniswapV2GetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -850,14 +850,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetPairHourDatasHistorical")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetPairHourDataHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetPairHourDatasHistorical")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetPairHourDataHistorical")
             exception.printStackTrace();
     }
 }
@@ -1090,13 +1090,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV2GetTokenDayDatasHistorical
+## uniswapV2GetTokenDayDataHistorical
 
-> uniswapV2GetTokenDayDatasHistorical(uniswapV2GetTokenDayDatasHistoricalRequest): ApiRequest[Seq[TokenDayDataDTO]]
+> uniswapV2GetTokenDayDataHistorical(uniswapV2GetTokenDayDataHistoricalRequest): ApiRequest[Seq[TokenDayDataDTO]]
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 
@@ -1129,7 +1129,7 @@ object Example extends App {
 
     val id: String = id_example // String | Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
     
-    val request = apiInstance.uniswapV2GetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+    val request = apiInstance.uniswapV2GetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1139,14 +1139,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetTokenDayDatasHistorical")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetTokenDayDataHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetTokenDayDatasHistorical")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetTokenDayDataHistorical")
             exception.printStackTrace();
     }
 }
@@ -1375,13 +1375,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV2GetUniswapDayDatasHistorical
+## uniswapV2GetUniswapDayDataHistorical
 
-> uniswapV2GetUniswapDayDatasHistorical(uniswapV2GetUniswapDayDatasHistoricalRequest): ApiRequest[Seq[UniswapDayDataDTO]]
+> uniswapV2GetUniswapDayDataHistorical(uniswapV2GetUniswapDayDataHistoricalRequest): ApiRequest[Seq[UniswapDayDataDTO]]
 
-UniswapDayDatas (historical)
+UniswapDayData (historical)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 
@@ -1414,7 +1414,7 @@ object Example extends App {
 
     val id: String = id_example // String | Unix timestamp for start of day / 86400 giving a unique day index.
     
-    val request = apiInstance.uniswapV2GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+    val request = apiInstance.uniswapV2GetUniswapDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1424,14 +1424,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetUniswapDayDatasHistorical")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetUniswapDayDataHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetUniswapDayDatasHistorical")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetUniswapDayDataHistorical")
             exception.printStackTrace();
     }
 }
@@ -1468,13 +1468,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV2GetUniswapFactorysHistorical
+## uniswapV2GetUniswapFactoriesHistorical
 
-> uniswapV2GetUniswapFactorysHistorical(uniswapV2GetUniswapFactorysHistoricalRequest): ApiRequest[Seq[UniswapFactoryDTO]]
+> uniswapV2GetUniswapFactoriesHistorical(uniswapV2GetUniswapFactoriesHistoricalRequest): ApiRequest[Seq[UniswapFactoryDTO]]
 
-UniswapFactorys (historical)
+UniswapFactories (historical)
 
-Gets uniswapFactorys.
+Gets uniswapFactories.
 
 ### Example
 
@@ -1507,7 +1507,7 @@ object Example extends App {
 
     val id: String = id_example // String | Factory address.
     
-    val request = apiInstance.uniswapV2GetUniswapFactorysHistorical(startBlock, endBlock, startDate, endDate, id)
+    val request = apiInstance.uniswapV2GetUniswapFactoriesHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1517,14 +1517,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetUniswapFactorysHistorical")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetUniswapFactoriesHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetUniswapFactorysHistorical")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2GetUniswapFactoriesHistorical")
             exception.printStackTrace();
     }
 }
@@ -1879,13 +1879,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV2PairDayDatasCurrent
+## uniswapV2PairDayDataCurrent
 
-> uniswapV2PairDayDatasCurrent(): ApiRequest[Seq[PairDayDataDTO]]
+> uniswapV2PairDayDataCurrent(): ApiRequest[Seq[PairDayDataDTO]]
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 
@@ -1907,7 +1907,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV2Api("https://onchain.coinapi.io")    
-    val request = apiInstance.uniswapV2PairDayDatasCurrent()
+    val request = apiInstance.uniswapV2PairDayDataCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1917,14 +1917,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2PairDayDatasCurrent")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2PairDayDataCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2PairDayDatasCurrent")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2PairDayDataCurrent")
             exception.printStackTrace();
     }
 }
@@ -1954,13 +1954,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV2PairHourDatasCurrent
+## uniswapV2PairHourDataCurrent
 
-> uniswapV2PairHourDatasCurrent(): ApiRequest[Seq[PairHourDataDTO]]
+> uniswapV2PairHourDataCurrent(): ApiRequest[Seq[PairHourDataDTO]]
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 
@@ -1982,7 +1982,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV2Api("https://onchain.coinapi.io")    
-    val request = apiInstance.uniswapV2PairHourDatasCurrent()
+    val request = apiInstance.uniswapV2PairHourDataCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1992,14 +1992,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2PairHourDatasCurrent")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2PairHourDataCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2PairHourDatasCurrent")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2PairHourDataCurrent")
             exception.printStackTrace();
     }
 }
@@ -2189,13 +2189,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV2TokenDayDatasCurrent
+## uniswapV2TokenDayDataCurrent
 
-> uniswapV2TokenDayDatasCurrent(): ApiRequest[Seq[TokenDayDataDTO]]
+> uniswapV2TokenDayDataCurrent(): ApiRequest[Seq[TokenDayDataDTO]]
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 
@@ -2217,7 +2217,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV2Api("https://onchain.coinapi.io")    
-    val request = apiInstance.uniswapV2TokenDayDatasCurrent()
+    val request = apiInstance.uniswapV2TokenDayDataCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -2227,14 +2227,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2TokenDayDatasCurrent")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2TokenDayDataCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2TokenDayDatasCurrent")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2TokenDayDataCurrent")
             exception.printStackTrace();
     }
 }
@@ -2414,13 +2414,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV2UniswapDayDatasCurrent
+## uniswapV2UniswapDayDataCurrent
 
-> uniswapV2UniswapDayDatasCurrent(): ApiRequest[Seq[UniswapDayDataDTO]]
+> uniswapV2UniswapDayDataCurrent(): ApiRequest[Seq[UniswapDayDataDTO]]
 
-UniswapDayDatas (current)
+UniswapDayData (current)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 
@@ -2442,7 +2442,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV2Api("https://onchain.coinapi.io")    
-    val request = apiInstance.uniswapV2UniswapDayDatasCurrent()
+    val request = apiInstance.uniswapV2UniswapDayDataCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -2452,14 +2452,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2UniswapDayDatasCurrent")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2UniswapDayDataCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2UniswapDayDatasCurrent")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2UniswapDayDataCurrent")
             exception.printStackTrace();
     }
 }
@@ -2489,13 +2489,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV2UniswapFactorysCurrent
+## uniswapV2UniswapFactoriesCurrent
 
-> uniswapV2UniswapFactorysCurrent(): ApiRequest[Seq[UniswapFactoryDTO]]
+> uniswapV2UniswapFactoriesCurrent(): ApiRequest[Seq[UniswapFactoryDTO]]
 
-UniswapFactorys (current)
+UniswapFactories (current)
 
-Gets uniswapFactorys.
+Gets uniswapFactories.
 
 ### Example
 
@@ -2517,7 +2517,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV2Api("https://onchain.coinapi.io")    
-    val request = apiInstance.uniswapV2UniswapFactorysCurrent()
+    val request = apiInstance.uniswapV2UniswapFactoriesCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -2527,14 +2527,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2UniswapFactorysCurrent")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2UniswapFactoriesCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV2Api#uniswapV2UniswapFactorysCurrent")
+            System.err.println("Exception when calling UniswapV2Api#uniswapV2UniswapFactoriesCurrent")
             exception.printStackTrace();
     }
 }

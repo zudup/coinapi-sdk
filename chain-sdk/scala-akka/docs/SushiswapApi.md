@@ -8,60 +8,60 @@ Method | HTTP request | Description
 [**sushiswapBundlesCurrentWithHttpInfo**](SushiswapApi.md#sushiswapBundlesCurrentWithHttpInfo) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
 [**sushiswapBurnsCurrent**](SushiswapApi.md#sushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
 [**sushiswapBurnsCurrentWithHttpInfo**](SushiswapApi.md#sushiswapBurnsCurrentWithHttpInfo) | **GET** /dapps/sushiswap/burns/current | Burns (current)
-[**sushiswapDayDatasCurrent**](SushiswapApi.md#sushiswapDayDatasCurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
-[**sushiswapDayDatasCurrentWithHttpInfo**](SushiswapApi.md#sushiswapDayDatasCurrentWithHttpInfo) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
-[**sushiswapFactorysCurrent**](SushiswapApi.md#sushiswapFactorysCurrent) | **GET** /dapps/sushiswap/factorys/current | Factorys (current)
-[**sushiswapFactorysCurrentWithHttpInfo**](SushiswapApi.md#sushiswapFactorysCurrentWithHttpInfo) | **GET** /dapps/sushiswap/factorys/current | Factorys (current)
+[**sushiswapDayDataCurrent**](SushiswapApi.md#sushiswapDayDataCurrent) | **GET** /dapps/sushiswap/dayData/current | DayData (current)
+[**sushiswapDayDataCurrentWithHttpInfo**](SushiswapApi.md#sushiswapDayDataCurrentWithHttpInfo) | **GET** /dapps/sushiswap/dayData/current | DayData (current)
+[**sushiswapFactoriesCurrent**](SushiswapApi.md#sushiswapFactoriesCurrent) | **GET** /dapps/sushiswap/factories/current | Factories (current)
+[**sushiswapFactoriesCurrentWithHttpInfo**](SushiswapApi.md#sushiswapFactoriesCurrentWithHttpInfo) | **GET** /dapps/sushiswap/factories/current | Factories (current)
 [**sushiswapGetBundlesHistorical**](SushiswapApi.md#sushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical)
 [**sushiswapGetBundlesHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetBundlesHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical)
 [**sushiswapGetBurnsHistorical**](SushiswapApi.md#sushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical)
 [**sushiswapGetBurnsHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetBurnsHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/burns/historical | Burns (historical)
-[**sushiswapGetDayDatasHistorical**](SushiswapApi.md#sushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical)
-[**sushiswapGetDayDatasHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetDayDatasHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical)
-[**sushiswapGetFactorysHistorical**](SushiswapApi.md#sushiswapGetFactorysHistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical)
-[**sushiswapGetFactorysHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetFactorysHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical)
-[**sushiswapGetHourDatasHistorical**](SushiswapApi.md#sushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical)
-[**sushiswapGetHourDatasHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetHourDatasHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical)
+[**sushiswapGetDayDataHistorical**](SushiswapApi.md#sushiswapGetDayDataHistorical) | **GET** /dapps/sushiswap/dayData/historical | DayData (historical)
+[**sushiswapGetDayDataHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetDayDataHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/dayData/historical | DayData (historical)
+[**sushiswapGetFactoriesHistorical**](SushiswapApi.md#sushiswapGetFactoriesHistorical) | **GET** /dapps/sushiswap/factories/historical | Factories (historical)
+[**sushiswapGetFactoriesHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetFactoriesHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/factories/historical | Factories (historical)
+[**sushiswapGetHourDataHistorical**](SushiswapApi.md#sushiswapGetHourDataHistorical) | **GET** /dapps/sushiswap/hourData/historical | HourData (historical)
+[**sushiswapGetHourDataHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetHourDataHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/hourData/historical | HourData (historical)
 [**sushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**sushiswapGetLiquidityPositionSnapshotsHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetLiquidityPositionSnapshotsHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**sushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#sushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical)
 [**sushiswapGetLiquidityPositionsHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetLiquidityPositionsHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical)
 [**sushiswapGetMintsHistorical**](SushiswapApi.md#sushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical)
 [**sushiswapGetMintsHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetMintsHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/mints/historical | Mints (historical)
-[**sushiswapGetPairDayDatasHistorical**](SushiswapApi.md#sushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical)
-[**sushiswapGetPairDayDatasHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetPairDayDatasHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical)
-[**sushiswapGetPairHourDatasHistorical**](SushiswapApi.md#sushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical)
-[**sushiswapGetPairHourDatasHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetPairHourDatasHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical)
+[**sushiswapGetPairDayDataHistorical**](SushiswapApi.md#sushiswapGetPairDayDataHistorical) | **GET** /dapps/sushiswap/pairDayData/historical | PairDayData (historical)
+[**sushiswapGetPairDayDataHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetPairDayDataHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/pairDayData/historical | PairDayData (historical)
+[**sushiswapGetPairHourDataHistorical**](SushiswapApi.md#sushiswapGetPairHourDataHistorical) | **GET** /dapps/sushiswap/pairHourData/historical | PairHourData (historical)
+[**sushiswapGetPairHourDataHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetPairHourDataHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/pairHourData/historical | PairHourData (historical)
 [**sushiswapGetPairsHistorical**](SushiswapApi.md#sushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical)
 [**sushiswapGetPairsHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetPairsHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical)
 [**sushiswapGetSwapsHistorical**](SushiswapApi.md#sushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical)
 [**sushiswapGetSwapsHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetSwapsHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical)
-[**sushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#sushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical)
-[**sushiswapGetTokenDayDatasHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetTokenDayDatasHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical)
+[**sushiswapGetTokenDayDataHistorical**](SushiswapApi.md#sushiswapGetTokenDayDataHistorical) | **GET** /dapps/sushiswap/tokenDayData/historical | TokenDayData (historical)
+[**sushiswapGetTokenDayDataHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetTokenDayDataHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/tokenDayData/historical | TokenDayData (historical)
 [**sushiswapGetTokensHistorical**](SushiswapApi.md#sushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical)
 [**sushiswapGetTokensHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetTokensHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical)
 [**sushiswapGetTransactionsHistorical**](SushiswapApi.md#sushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical)
 [**sushiswapGetTransactionsHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetTransactionsHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical)
 [**sushiswapGetUsersHistorical**](SushiswapApi.md#sushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical)
 [**sushiswapGetUsersHistoricalWithHttpInfo**](SushiswapApi.md#sushiswapGetUsersHistoricalWithHttpInfo) | **GET** /dapps/sushiswap/users/historical | Users (historical)
-[**sushiswapHourDatasCurrent**](SushiswapApi.md#sushiswapHourDatasCurrent) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current)
-[**sushiswapHourDatasCurrentWithHttpInfo**](SushiswapApi.md#sushiswapHourDatasCurrentWithHttpInfo) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current)
+[**sushiswapHourDataCurrent**](SushiswapApi.md#sushiswapHourDataCurrent) | **GET** /dapps/sushiswap/hourData/current | HourData (current)
+[**sushiswapHourDataCurrentWithHttpInfo**](SushiswapApi.md#sushiswapHourDataCurrentWithHttpInfo) | **GET** /dapps/sushiswap/hourData/current | HourData (current)
 [**sushiswapLiquidityPositionSnapshotsCurrent**](SushiswapApi.md#sushiswapLiquidityPositionSnapshotsCurrent) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**sushiswapLiquidityPositionSnapshotsCurrentWithHttpInfo**](SushiswapApi.md#sushiswapLiquidityPositionSnapshotsCurrentWithHttpInfo) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**sushiswapLiquidityPositionsCurrent**](SushiswapApi.md#sushiswapLiquidityPositionsCurrent) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
 [**sushiswapLiquidityPositionsCurrentWithHttpInfo**](SushiswapApi.md#sushiswapLiquidityPositionsCurrentWithHttpInfo) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
 [**sushiswapMintsCurrent**](SushiswapApi.md#sushiswapMintsCurrent) | **GET** /dapps/sushiswap/mints/current | Mints (current)
 [**sushiswapMintsCurrentWithHttpInfo**](SushiswapApi.md#sushiswapMintsCurrentWithHttpInfo) | **GET** /dapps/sushiswap/mints/current | Mints (current)
-[**sushiswapPairDayDatasCurrent**](SushiswapApi.md#sushiswapPairDayDatasCurrent) | **GET** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current)
-[**sushiswapPairDayDatasCurrentWithHttpInfo**](SushiswapApi.md#sushiswapPairDayDatasCurrentWithHttpInfo) | **GET** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current)
-[**sushiswapPairHourDatasCurrent**](SushiswapApi.md#sushiswapPairHourDatasCurrent) | **GET** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current)
-[**sushiswapPairHourDatasCurrentWithHttpInfo**](SushiswapApi.md#sushiswapPairHourDatasCurrentWithHttpInfo) | **GET** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current)
+[**sushiswapPairDayDataCurrent**](SushiswapApi.md#sushiswapPairDayDataCurrent) | **GET** /dapps/sushiswap/pairDayData/current | PairDayData (current)
+[**sushiswapPairDayDataCurrentWithHttpInfo**](SushiswapApi.md#sushiswapPairDayDataCurrentWithHttpInfo) | **GET** /dapps/sushiswap/pairDayData/current | PairDayData (current)
+[**sushiswapPairHourDataCurrent**](SushiswapApi.md#sushiswapPairHourDataCurrent) | **GET** /dapps/sushiswap/pairHourData/current | PairHourData (current)
+[**sushiswapPairHourDataCurrentWithHttpInfo**](SushiswapApi.md#sushiswapPairHourDataCurrentWithHttpInfo) | **GET** /dapps/sushiswap/pairHourData/current | PairHourData (current)
 [**sushiswapPairsCurrent**](SushiswapApi.md#sushiswapPairsCurrent) | **GET** /dapps/sushiswap/pairs/current | Pairs (current)
 [**sushiswapPairsCurrentWithHttpInfo**](SushiswapApi.md#sushiswapPairsCurrentWithHttpInfo) | **GET** /dapps/sushiswap/pairs/current | Pairs (current)
 [**sushiswapSwapsCurrent**](SushiswapApi.md#sushiswapSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current)
 [**sushiswapSwapsCurrentWithHttpInfo**](SushiswapApi.md#sushiswapSwapsCurrentWithHttpInfo) | **GET** /dapps/sushiswap/swaps/current | Swaps (current)
-[**sushiswapTokenDayDatasCurrent**](SushiswapApi.md#sushiswapTokenDayDatasCurrent) | **GET** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current)
-[**sushiswapTokenDayDatasCurrentWithHttpInfo**](SushiswapApi.md#sushiswapTokenDayDatasCurrentWithHttpInfo) | **GET** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current)
+[**sushiswapTokenDayDataCurrent**](SushiswapApi.md#sushiswapTokenDayDataCurrent) | **GET** /dapps/sushiswap/tokenDayData/current | TokenDayData (current)
+[**sushiswapTokenDayDataCurrentWithHttpInfo**](SushiswapApi.md#sushiswapTokenDayDataCurrentWithHttpInfo) | **GET** /dapps/sushiswap/tokenDayData/current | TokenDayData (current)
 [**sushiswapTokensCurrent**](SushiswapApi.md#sushiswapTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current)
 [**sushiswapTokensCurrentWithHttpInfo**](SushiswapApi.md#sushiswapTokensCurrentWithHttpInfo) | **GET** /dapps/sushiswap/tokens/current | Tokens (current)
 [**sushiswapTransactionsCurrent**](SushiswapApi.md#sushiswapTransactionsCurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
@@ -221,13 +221,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## sushiswapDayDatasCurrent
+## sushiswapDayDataCurrent
 
-> sushiswapDayDatasCurrent(): ApiRequest[Seq[DayDataDTO]]
+> sushiswapDayDataCurrent(): ApiRequest[Seq[DayDataDTO]]
 
-DayDatas (current)
+DayData (current)
 
-Gets dayDatas.
+Gets dayData.
 
 ### Example
 
@@ -249,7 +249,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = SushiswapApi("https://onchain.coinapi.io")    
-    val request = apiInstance.sushiswapDayDatasCurrent()
+    val request = apiInstance.sushiswapDayDataCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -259,14 +259,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#sushiswapDayDatasCurrent")
+            System.err.println("Exception when calling SushiswapApi#sushiswapDayDataCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#sushiswapDayDatasCurrent")
+            System.err.println("Exception when calling SushiswapApi#sushiswapDayDataCurrent")
             exception.printStackTrace();
     }
 }
@@ -296,13 +296,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## sushiswapFactorysCurrent
+## sushiswapFactoriesCurrent
 
-> sushiswapFactorysCurrent(): ApiRequest[Seq[FactoryDTO]]
+> sushiswapFactoriesCurrent(): ApiRequest[Seq[FactoryDTO]]
 
-Factorys (current)
+Factories (current)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 
@@ -324,7 +324,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = SushiswapApi("https://onchain.coinapi.io")    
-    val request = apiInstance.sushiswapFactorysCurrent()
+    val request = apiInstance.sushiswapFactoriesCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -334,14 +334,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#sushiswapFactorysCurrent")
+            System.err.println("Exception when calling SushiswapApi#sushiswapFactoriesCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#sushiswapFactorysCurrent")
+            System.err.println("Exception when calling SushiswapApi#sushiswapFactoriesCurrent")
             exception.printStackTrace();
     }
 }
@@ -560,13 +560,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## sushiswapGetDayDatasHistorical
+## sushiswapGetDayDataHistorical
 
-> sushiswapGetDayDatasHistorical(sushiswapGetDayDatasHistoricalRequest): ApiRequest[Seq[DayDataDTO]]
+> sushiswapGetDayDataHistorical(sushiswapGetDayDataHistoricalRequest): ApiRequest[Seq[DayDataDTO]]
 
-DayDatas (historical)
+DayData (historical)
 
-Gets dayDatas.
+Gets dayData.
 
 ### Example
 
@@ -599,7 +599,7 @@ object Example extends App {
 
     val id: String = id_example // String | Unix timestamp for start of day / 86400 giving a unique day index.
     
-    val request = apiInstance.sushiswapGetDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+    val request = apiInstance.sushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -609,14 +609,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#sushiswapGetDayDatasHistorical")
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetDayDataHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#sushiswapGetDayDatasHistorical")
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetDayDataHistorical")
             exception.printStackTrace();
     }
 }
@@ -653,13 +653,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## sushiswapGetFactorysHistorical
+## sushiswapGetFactoriesHistorical
 
-> sushiswapGetFactorysHistorical(sushiswapGetFactorysHistoricalRequest): ApiRequest[Seq[FactoryDTO]]
+> sushiswapGetFactoriesHistorical(sushiswapGetFactoriesHistoricalRequest): ApiRequest[Seq[FactoryDTO]]
 
-Factorys (historical)
+Factories (historical)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 
@@ -692,7 +692,7 @@ object Example extends App {
 
     val id: String = id_example // String | Factory address.
     
-    val request = apiInstance.sushiswapGetFactorysHistorical(startBlock, endBlock, startDate, endDate, id)
+    val request = apiInstance.sushiswapGetFactoriesHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -702,14 +702,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#sushiswapGetFactorysHistorical")
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetFactoriesHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#sushiswapGetFactorysHistorical")
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetFactoriesHistorical")
             exception.printStackTrace();
     }
 }
@@ -746,13 +746,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## sushiswapGetHourDatasHistorical
+## sushiswapGetHourDataHistorical
 
-> sushiswapGetHourDatasHistorical(sushiswapGetHourDatasHistoricalRequest): ApiRequest[Seq[HourDataDTO]]
+> sushiswapGetHourDataHistorical(sushiswapGetHourDataHistoricalRequest): ApiRequest[Seq[HourDataDTO]]
 
-HourDatas (historical)
+HourData (historical)
 
-Gets hourDatas.
+Gets hourData.
 
 ### Example
 
@@ -785,7 +785,7 @@ object Example extends App {
 
     val id: String = id_example // String | Start of hour timestamp.
     
-    val request = apiInstance.sushiswapGetHourDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+    val request = apiInstance.sushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -795,14 +795,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#sushiswapGetHourDatasHistorical")
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetHourDataHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#sushiswapGetHourDatasHistorical")
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetHourDataHistorical")
             exception.printStackTrace();
     }
 }
@@ -1133,13 +1133,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## sushiswapGetPairDayDatasHistorical
+## sushiswapGetPairDayDataHistorical
 
-> sushiswapGetPairDayDatasHistorical(sushiswapGetPairDayDatasHistoricalRequest): ApiRequest[Seq[PairDayDataDTO]]
+> sushiswapGetPairDayDataHistorical(sushiswapGetPairDayDataHistoricalRequest): ApiRequest[Seq[PairDayDataDTO]]
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 
@@ -1178,7 +1178,7 @@ object Example extends App {
 
     val token1: String = token1_example // String | 
     
-    val request = apiInstance.sushiswapGetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1)
+    val request = apiInstance.sushiswapGetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1188,14 +1188,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#sushiswapGetPairDayDatasHistorical")
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetPairDayDataHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#sushiswapGetPairDayDatasHistorical")
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetPairDayDataHistorical")
             exception.printStackTrace();
     }
 }
@@ -1235,13 +1235,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## sushiswapGetPairHourDatasHistorical
+## sushiswapGetPairHourDataHistorical
 
-> sushiswapGetPairHourDatasHistorical(sushiswapGetPairHourDatasHistoricalRequest): ApiRequest[Seq[PairHourDataDTO]]
+> sushiswapGetPairHourDataHistorical(sushiswapGetPairHourDataHistoricalRequest): ApiRequest[Seq[PairHourDataDTO]]
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 
@@ -1276,7 +1276,7 @@ object Example extends App {
 
     val pair: String = pair_example // String | 
     
-    val request = apiInstance.sushiswapGetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair)
+    val request = apiInstance.sushiswapGetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1286,14 +1286,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#sushiswapGetPairHourDatasHistorical")
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetPairHourDataHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#sushiswapGetPairHourDatasHistorical")
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetPairHourDataHistorical")
             exception.printStackTrace();
     }
 }
@@ -1529,13 +1529,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## sushiswapGetTokenDayDatasHistorical
+## sushiswapGetTokenDayDataHistorical
 
-> sushiswapGetTokenDayDatasHistorical(sushiswapGetTokenDayDatasHistoricalRequest): ApiRequest[Seq[TokenDayDataDTO]]
+> sushiswapGetTokenDayDataHistorical(sushiswapGetTokenDayDataHistoricalRequest): ApiRequest[Seq[TokenDayDataDTO]]
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 
@@ -1568,7 +1568,7 @@ object Example extends App {
 
     val id: String = id_example // String | Identifier, day start timestamp in unix / 86400.
     
-    val request = apiInstance.sushiswapGetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+    val request = apiInstance.sushiswapGetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1578,14 +1578,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#sushiswapGetTokenDayDatasHistorical")
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetTokenDayDataHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#sushiswapGetTokenDayDatasHistorical")
+            System.err.println("Exception when calling SushiswapApi#sushiswapGetTokenDayDataHistorical")
             exception.printStackTrace();
     }
 }
@@ -1907,13 +1907,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## sushiswapHourDatasCurrent
+## sushiswapHourDataCurrent
 
-> sushiswapHourDatasCurrent(): ApiRequest[Seq[HourDataDTO]]
+> sushiswapHourDataCurrent(): ApiRequest[Seq[HourDataDTO]]
 
-HourDatas (current)
+HourData (current)
 
-Gets hourDatas.
+Gets hourData.
 
 ### Example
 
@@ -1935,7 +1935,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = SushiswapApi("https://onchain.coinapi.io")    
-    val request = apiInstance.sushiswapHourDatasCurrent()
+    val request = apiInstance.sushiswapHourDataCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1945,14 +1945,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#sushiswapHourDatasCurrent")
+            System.err.println("Exception when calling SushiswapApi#sushiswapHourDataCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#sushiswapHourDatasCurrent")
+            System.err.println("Exception when calling SushiswapApi#sushiswapHourDataCurrent")
             exception.printStackTrace();
     }
 }
@@ -2207,13 +2207,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## sushiswapPairDayDatasCurrent
+## sushiswapPairDayDataCurrent
 
-> sushiswapPairDayDatasCurrent(): ApiRequest[Seq[PairDayDataDTO]]
+> sushiswapPairDayDataCurrent(): ApiRequest[Seq[PairDayDataDTO]]
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 
@@ -2235,7 +2235,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = SushiswapApi("https://onchain.coinapi.io")    
-    val request = apiInstance.sushiswapPairDayDatasCurrent()
+    val request = apiInstance.sushiswapPairDayDataCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -2245,14 +2245,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#sushiswapPairDayDatasCurrent")
+            System.err.println("Exception when calling SushiswapApi#sushiswapPairDayDataCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#sushiswapPairDayDatasCurrent")
+            System.err.println("Exception when calling SushiswapApi#sushiswapPairDayDataCurrent")
             exception.printStackTrace();
     }
 }
@@ -2282,13 +2282,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## sushiswapPairHourDatasCurrent
+## sushiswapPairHourDataCurrent
 
-> sushiswapPairHourDatasCurrent(): ApiRequest[Seq[PairHourDataDTO]]
+> sushiswapPairHourDataCurrent(): ApiRequest[Seq[PairHourDataDTO]]
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 
@@ -2310,7 +2310,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = SushiswapApi("https://onchain.coinapi.io")    
-    val request = apiInstance.sushiswapPairHourDatasCurrent()
+    val request = apiInstance.sushiswapPairHourDataCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -2320,14 +2320,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#sushiswapPairHourDatasCurrent")
+            System.err.println("Exception when calling SushiswapApi#sushiswapPairHourDataCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#sushiswapPairHourDatasCurrent")
+            System.err.println("Exception when calling SushiswapApi#sushiswapPairHourDataCurrent")
             exception.printStackTrace();
     }
 }
@@ -2517,13 +2517,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## sushiswapTokenDayDatasCurrent
+## sushiswapTokenDayDataCurrent
 
-> sushiswapTokenDayDatasCurrent(): ApiRequest[Seq[TokenDayDataDTO]]
+> sushiswapTokenDayDataCurrent(): ApiRequest[Seq[TokenDayDataDTO]]
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 
@@ -2545,7 +2545,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = SushiswapApi("https://onchain.coinapi.io")    
-    val request = apiInstance.sushiswapTokenDayDatasCurrent()
+    val request = apiInstance.sushiswapTokenDayDataCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -2555,14 +2555,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling SushiswapApi#sushiswapTokenDayDatasCurrent")
+            System.err.println("Exception when calling SushiswapApi#sushiswapTokenDayDataCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling SushiswapApi#sushiswapTokenDayDatasCurrent")
+            System.err.println("Exception when calling SushiswapApi#sushiswapTokenDayDataCurrent")
             exception.printStackTrace();
     }
 }

@@ -64,8 +64,8 @@ class UniswapV3Api {
 
     }
 
-    def uniswapV3FactorysCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/factorys/current"
+    def uniswapV3FactoriesCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/factories/current"
 
         // params
         def queryParams = [:]
@@ -163,8 +163,8 @@ class UniswapV3Api {
 
     }
 
-    def uniswapV3GetFactorysHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/factorys/historical"
+    def uniswapV3GetFactoriesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/factories/historical"
 
         // params
         def queryParams = [:]
@@ -242,8 +242,8 @@ class UniswapV3Api {
 
     }
 
-    def uniswapV3GetPoolDayDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/poolDayDatas/historical"
+    def uniswapV3GetPoolDayDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/poolDayData/historical"
 
         // params
         def queryParams = [:]
@@ -280,8 +280,8 @@ class UniswapV3Api {
 
     }
 
-    def uniswapV3GetPoolHourDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/poolHourDatas/historical"
+    def uniswapV3GetPoolHourDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/poolHourData/historical"
 
         // params
         def queryParams = [:]
@@ -485,8 +485,8 @@ class UniswapV3Api {
 
     }
 
-    def uniswapV3GetTickDayDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/tickDayDatas/historical"
+    def uniswapV3GetTickDayDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/tickDayData/historical"
 
         // params
         def queryParams = [:]
@@ -561,8 +561,8 @@ class UniswapV3Api {
 
     }
 
-    def uniswapV3GetTokenHourDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/tokenHourDatas/historical"
+    def uniswapV3GetTokenHourDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/tokenHourData/historical"
 
         // params
         def queryParams = [:]
@@ -596,8 +596,8 @@ class UniswapV3Api {
 
     }
 
-    def uniswapV3GetTokenV3DayDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/tokenV3DayDatas/historical"
+    def uniswapV3GetTokenV3DayDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/tokenV3DayData/historical"
 
         // params
         def queryParams = [:]
@@ -707,8 +707,8 @@ class UniswapV3Api {
 
     }
 
-    def uniswapV3GetUniswapDayDatasHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/uniswapDayDatas/historical"
+    def uniswapV3GetUniswapDayDataHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/uniswapDayData/historical"
 
         // params
         def queryParams = [:]
@@ -762,8 +762,8 @@ class UniswapV3Api {
 
     }
 
-    def uniswapV3PoolDayDatasCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/poolDayDatas/current"
+    def uniswapV3PoolDayDataCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/poolDayData/current"
 
         // params
         def queryParams = [:]
@@ -782,8 +782,8 @@ class UniswapV3Api {
 
     }
 
-    def uniswapV3PoolHourDatasCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/poolHourDatas/current"
+    def uniswapV3PoolHourDataCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/poolHourData/current"
 
         // params
         def queryParams = [:]
@@ -888,8 +888,8 @@ class UniswapV3Api {
 
     }
 
-    def uniswapV3TickDayDatasCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/tickDayDatas/current"
+    def uniswapV3TickDayDataCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/tickDayData/current"
 
         // params
         def queryParams = [:]
@@ -928,8 +928,8 @@ class UniswapV3Api {
 
     }
 
-    def uniswapV3TokenHourDatasCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/tokenHourDatas/current"
+    def uniswapV3TokenHourDataCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/tokenHourData/current"
 
         // params
         def queryParams = [:]
@@ -948,8 +948,8 @@ class UniswapV3Api {
 
     }
 
-    def uniswapV3TokenV3DayDatasCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/tokenV3DayDatas/current"
+    def uniswapV3TokenV3DayDataCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/tokenV3DayData/current"
 
         // params
         def queryParams = [:]
@@ -1008,8 +1008,8 @@ class UniswapV3Api {
 
     }
 
-    def uniswapV3UniswapDayDatasCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/uniswapv3/uniswapDayDatas/current"
+    def uniswapV3UniswapDayDataCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/uniswapv3/uniswapDayData/current"
 
         // params
         def queryParams = [:]

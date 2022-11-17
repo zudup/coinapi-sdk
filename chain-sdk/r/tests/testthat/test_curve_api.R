@@ -127,11 +127,11 @@ test_that("CurveGaugeDepositsCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("CurveGaugeLiquiditysCurrent", {
-  # tests for CurveGaugeLiquiditysCurrent
+test_that("CurveGaugeLiquiditiesCurrent", {
+  # tests for CurveGaugeLiquiditiesCurrent
   # base path: https://onchain.coinapi.io
-  # GaugeLiquiditys (current)
-  # Gets gaugeLiquiditys.
+  # GaugeLiquidities (current)
+  # Gets gaugeLiquidities.
   # @return [array[CurveGaugeLiquidityDTO]]
 
   # uncomment below to test the operation
@@ -400,11 +400,11 @@ test_that("CurveGetGaugeDepositsHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("CurveGetGaugeLiquiditysHistorical", {
-  # tests for CurveGetGaugeLiquiditysHistorical
+test_that("CurveGetGaugeLiquiditiesHistorical", {
+  # tests for CurveGetGaugeLiquiditiesHistorical
   # base path: https://onchain.coinapi.io
-  # GaugeLiquiditys (historical)
-  # Gets gaugeLiquiditys.
+  # GaugeLiquidities (historical)
+  # Gets gaugeLiquidities.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
   # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)

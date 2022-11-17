@@ -444,9 +444,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Gauge_Deposits__current;
 
-   --  GaugeLiquiditys (current)
-   --  Gets gaugeLiquiditys.
-   procedure Curve_Gauge_Liquiditys__current
+   --  GaugeLiquidities (current)
+   --  Gets gaugeLiquidities.
+   procedure Curve_Gauge_Liquidities__current
       (Client : in out Client_Type;
        Result : out .Models.CurveGaugeLiquidityDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -456,10 +456,10 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/curve/gaugeLiquiditys/current");
+      URI.Set_Path ("/dapps/curve/gaugeLiquidities/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Curve_Gauge_Liquiditys__current;
+   end Curve_Gauge_Liquidities__current;
 
    --  GaugeTotalWeights (current)
    --  Gets gaugeTotalWeights.
@@ -917,9 +917,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Get_Gauge_Deposits__historical;
 
-   --  GaugeLiquiditys (historical)
-   --  Gets gaugeLiquiditys.
-   procedure Curve_Get_Gauge_Liquiditys__historical
+   --  GaugeLiquidities (historical)
+   --  Gets gaugeLiquidities.
+   procedure Curve_Get_Gauge_Liquidities__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -943,10 +943,10 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
       URI.Add_Param ("user", User);
-      URI.Set_Path ("/dapps/curve/gaugeLiquiditys/historical");
+      URI.Set_Path ("/dapps/curve/gaugeLiquidities/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Curve_Get_Gauge_Liquiditys__historical;
+   end Curve_Get_Gauge_Liquidities__historical;
 
    --  GaugeTotalWeights (historical)
    --  Gets gaugeTotalWeights.
@@ -1789,9 +1789,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Curve_Weekly_Volumes__current;
 
-   --  Batchs (current)
-   --  Gets batchs.
-   procedure Dex_Batchs__current
+   --  Batches (current)
+   --  Gets batches.
+   procedure Dex_Batches__current
       (Client : in out Client_Type;
        Result : out .Models.DexBatchDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -1801,10 +1801,10 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/dex/batchs/current");
+      URI.Set_Path ("/dapps/dex/batches/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Dex_Batchs__current;
+   end Dex_Batches__current;
 
    --  Deposits (current)
    --  Gets deposits.
@@ -1823,9 +1823,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Dex_Deposits__current;
 
-   --  Batchs (historical)
-   --  Gets batchs.
-   procedure Dex_Get_Batchs__historical
+   --  Batches (historical)
+   --  Gets batches.
+   procedure Dex_Get_Batches__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -1847,10 +1847,10 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
-      URI.Set_Path ("/dapps/dex/batchs/historical");
+      URI.Set_Path ("/dapps/dex/batches/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Dex_Get_Batchs__historical;
+   end Dex_Get_Batches__historical;
 
    --  Deposits (historical)
    --  Gets deposits.
@@ -1974,9 +1974,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Dex_Get_Solutions__historical;
 
-   --  Statss (historical)
-   --  Gets statss.
-   procedure Dex_Get_Statss__historical
+   --  Stats (historical)
+   --  Gets stats.
+   procedure Dex_Get_Stats__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -1998,10 +1998,10 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
-      URI.Set_Path ("/dapps/dex/statss/historical");
+      URI.Set_Path ("/dapps/dex/stats/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Dex_Get_Statss__historical;
+   end Dex_Get_Stats__historical;
 
    --  Tokens (historical)
    --  Gets tokens.
@@ -2213,9 +2213,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Dex_Solutions__current;
 
-   --  Statss (current)
-   --  Gets statss.
-   procedure Dex_Statss__current
+   --  Stats (current)
+   --  Gets stats.
+   procedure Dex_Stats__current
       (Client : in out Client_Type;
        Result : out .Models.DexStatsDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -2225,10 +2225,10 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/dex/statss/current");
+      URI.Set_Path ("/dapps/dex/stats/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Dex_Statss__current;
+   end Dex_Stats__current;
 
    --  Tokens (current)
    --  Gets tokens.
@@ -2349,9 +2349,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Burns__current;
 
-   --  DayDatas (current)
-   --  Gets dayDatas.
-   procedure Sushiswap_Day_Datas__current
+   --  DayData (current)
+   --  Gets dayData.
+   procedure Sushiswap_Day_Data__current
       (Client : in out Client_Type;
        Result : out .Models.SushiswapDayDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -2361,14 +2361,14 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/sushiswap/dayDatas/current");
+      URI.Set_Path ("/dapps/sushiswap/dayData/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Day_Datas__current;
+   end Sushiswap_Day_Data__current;
 
-   --  Factorys (current)
-   --  Gets factorys.
-   procedure Sushiswap_Factorys__current
+   --  Factories (current)
+   --  Gets factories.
+   procedure Sushiswap_Factories__current
       (Client : in out Client_Type;
        Result : out .Models.SushiswapFactoryDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -2378,10 +2378,10 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/sushiswap/factorys/current");
+      URI.Set_Path ("/dapps/sushiswap/factories/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Factorys__current;
+   end Sushiswap_Factories__current;
 
    --  Bundles (historical)
    --  Gets bundles.
@@ -2443,9 +2443,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Burns__historical;
 
-   --  DayDatas (historical)
-   --  Gets dayDatas.
-   procedure Sushiswap_Get_Day_Datas__historical
+   --  DayData (historical)
+   --  Gets dayData.
+   procedure Sushiswap_Get_Day_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -2467,14 +2467,14 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
-      URI.Set_Path ("/dapps/sushiswap/dayDatas/historical");
+      URI.Set_Path ("/dapps/sushiswap/dayData/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Get_Day_Datas__historical;
+   end Sushiswap_Get_Day_Data__historical;
 
-   --  Factorys (historical)
-   --  Gets factorys.
-   procedure Sushiswap_Get_Factorys__historical
+   --  Factories (historical)
+   --  Gets factories.
+   procedure Sushiswap_Get_Factories__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -2496,14 +2496,14 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
-      URI.Set_Path ("/dapps/sushiswap/factorys/historical");
+      URI.Set_Path ("/dapps/sushiswap/factories/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Get_Factorys__historical;
+   end Sushiswap_Get_Factories__historical;
 
-   --  HourDatas (historical)
-   --  Gets hourDatas.
-   procedure Sushiswap_Get_Hour_Datas__historical
+   --  HourData (historical)
+   --  Gets hourData.
+   procedure Sushiswap_Get_Hour_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -2525,10 +2525,10 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
-      URI.Set_Path ("/dapps/sushiswap/hourDatas/historical");
+      URI.Set_Path ("/dapps/sushiswap/hourData/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Get_Hour_Datas__historical;
+   end Sushiswap_Get_Hour_Data__historical;
 
    --  LiquidityPositionSnapshots (historical)
    --  Gets liquidityPositionSnapshots.
@@ -2627,9 +2627,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Mints__historical;
 
-   --  PairDayDatas (historical)
-   --  Gets pairDayDatas.
-   procedure Sushiswap_Get_Pair_Day_Datas__historical
+   --  PairDayData (historical)
+   --  Gets pairDayData.
+   procedure Sushiswap_Get_Pair_Day_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -2657,14 +2657,14 @@ package body .Clients is
       URI.Add_Param ("pair", Pair);
       URI.Add_Param ("token_0", Token_0);
       URI.Add_Param ("token_1", Token_1);
-      URI.Set_Path ("/dapps/sushiswap/pairDayDatas/historical");
+      URI.Set_Path ("/dapps/sushiswap/pairDayData/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Get_Pair_Day_Datas__historical;
+   end Sushiswap_Get_Pair_Day_Data__historical;
 
-   --  PairHourDatas (historical)
-   --  Gets pairHourDatas.
-   procedure Sushiswap_Get_Pair_Hour_Datas__historical
+   --  PairHourData (historical)
+   --  Gets pairHourData.
+   procedure Sushiswap_Get_Pair_Hour_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -2688,10 +2688,10 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
       URI.Add_Param ("pair", Pair);
-      URI.Set_Path ("/dapps/sushiswap/pairHourDatas/historical");
+      URI.Set_Path ("/dapps/sushiswap/pairHourData/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Get_Pair_Hour_Datas__historical;
+   end Sushiswap_Get_Pair_Hour_Data__historical;
 
    --  Pairs (historical)
    --  Gets pairs.
@@ -2759,9 +2759,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Swaps__historical;
 
-   --  TokenDayDatas (historical)
-   --  Gets tokenDayDatas.
-   procedure Sushiswap_Get_Token_Day_Datas__historical
+   --  TokenDayData (historical)
+   --  Gets tokenDayData.
+   procedure Sushiswap_Get_Token_Day_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -2783,10 +2783,10 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
-      URI.Set_Path ("/dapps/sushiswap/tokenDayDatas/historical");
+      URI.Set_Path ("/dapps/sushiswap/tokenDayData/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Get_Token_Day_Datas__historical;
+   end Sushiswap_Get_Token_Day_Data__historical;
 
    --  Tokens (historical)
    --  Gets tokens.
@@ -2879,9 +2879,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Get_Users__historical;
 
-   --  HourDatas (current)
-   --  Gets hourDatas.
-   procedure Sushiswap_Hour_Datas__current
+   --  HourData (current)
+   --  Gets hourData.
+   procedure Sushiswap_Hour_Data__current
       (Client : in out Client_Type;
        Result : out .Models.SushiswapHourDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -2891,10 +2891,10 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/sushiswap/hourDatas/current");
+      URI.Set_Path ("/dapps/sushiswap/hourData/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Hour_Datas__current;
+   end Sushiswap_Hour_Data__current;
 
    --  LiquidityPositionSnapshots (current)
    --  Gets liquidityPositionSnapshots.
@@ -2947,9 +2947,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Mints__current;
 
-   --  PairDayDatas (current)
-   --  Gets pairDayDatas.
-   procedure Sushiswap_Pair_Day_Datas__current
+   --  PairDayData (current)
+   --  Gets pairDayData.
+   procedure Sushiswap_Pair_Day_Data__current
       (Client : in out Client_Type;
        Result : out .Models.SushiswapPairDayDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -2959,14 +2959,14 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/sushiswap/pairDayDatas/current");
+      URI.Set_Path ("/dapps/sushiswap/pairDayData/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Pair_Day_Datas__current;
+   end Sushiswap_Pair_Day_Data__current;
 
-   --  PairHourDatas (current)
-   --  Gets pairHourDatas.
-   procedure Sushiswap_Pair_Hour_Datas__current
+   --  PairHourData (current)
+   --  Gets pairHourData.
+   procedure Sushiswap_Pair_Hour_Data__current
       (Client : in out Client_Type;
        Result : out .Models.SushiswapPairHourDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -2976,10 +2976,10 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/sushiswap/pairHourDatas/current");
+      URI.Set_Path ("/dapps/sushiswap/pairHourData/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Pair_Hour_Datas__current;
+   end Sushiswap_Pair_Hour_Data__current;
 
    --  Pairs (current)
    --  Gets pairs.
@@ -3019,9 +3019,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Sushiswap_Swaps__current;
 
-   --  TokenDayDatas (current)
-   --  Gets tokenDayDatas.
-   procedure Sushiswap_Token_Day_Datas__current
+   --  TokenDayData (current)
+   --  Gets tokenDayData.
+   procedure Sushiswap_Token_Day_Data__current
       (Client : in out Client_Type;
        Result : out .Models.SushiswapTokenDayDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -3031,10 +3031,10 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/sushiswap/tokenDayDatas/current");
+      URI.Set_Path ("/dapps/sushiswap/tokenDayData/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Sushiswap_Token_Day_Datas__current;
+   end Sushiswap_Token_Day_Data__current;
 
    --  Tokens (current)
    --  Gets tokens.
@@ -3278,9 +3278,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Mints__historical;
 
-   --  PairDayDatas (historical)
-   --  Gets pairDayDatas.
-   procedure Uniswap_V2_Get_Pair_Day_Datas__historical
+   --  PairDayData (historical)
+   --  Gets pairDayData.
+   procedure Uniswap_V2_Get_Pair_Day_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -3306,14 +3306,14 @@ package body .Clients is
       URI.Add_Param ("id", Id);
       URI.Add_Param ("token_0", Token_0);
       URI.Add_Param ("token_1", Token_1);
-      URI.Set_Path ("/dapps/uniswapv2/pairDayDatas/historical");
+      URI.Set_Path ("/dapps/uniswapv2/pairDayData/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V2_Get_Pair_Day_Datas__historical;
+   end Uniswap_V2_Get_Pair_Day_Data__historical;
 
-   --  PairHourDatas (historical)
-   --  Gets pairHourDatas.
-   procedure Uniswap_V2_Get_Pair_Hour_Datas__historical
+   --  PairHourData (historical)
+   --  Gets pairHourData.
+   procedure Uniswap_V2_Get_Pair_Hour_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -3337,10 +3337,10 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
       URI.Add_Param ("pair", Pair);
-      URI.Set_Path ("/dapps/uniswapv2/pairHourDatas/historical");
+      URI.Set_Path ("/dapps/uniswapv2/pairHourData/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V2_Get_Pair_Hour_Datas__historical;
+   end Uniswap_V2_Get_Pair_Hour_Data__historical;
 
    --  Pairs (historical)
    --  Gets pairs.
@@ -3406,9 +3406,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Swaps__historical;
 
-   --  TokenDayDatas (historical)
-   --  Gets tokenDayDatas.
-   procedure Uniswap_V2_Get_Token_Day_Datas__historical
+   --  TokenDayData (historical)
+   --  Gets tokenDayData.
+   procedure Uniswap_V2_Get_Token_Day_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -3430,10 +3430,10 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
-      URI.Set_Path ("/dapps/uniswapv2/tokenDayDatas/historical");
+      URI.Set_Path ("/dapps/uniswapv2/tokenDayData/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V2_Get_Token_Day_Datas__historical;
+   end Uniswap_V2_Get_Token_Day_Data__historical;
 
    --  Tokens (historical)
    --  Gets tokens.
@@ -3497,9 +3497,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Get_Transactions__historical;
 
-   --  UniswapDayDatas (historical)
-   --  Gets uniswapDayDatas.
-   procedure Uniswap_V2_Get_Uniswap_Day_Datas__historical
+   --  UniswapDayData (historical)
+   --  Gets uniswapDayData.
+   procedure Uniswap_V2_Get_Uniswap_Day_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -3521,14 +3521,14 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
-      URI.Set_Path ("/dapps/uniswapv2/uniswapDayDatas/historical");
+      URI.Set_Path ("/dapps/uniswapv2/uniswapDayData/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V2_Get_Uniswap_Day_Datas__historical;
+   end Uniswap_V2_Get_Uniswap_Day_Data__historical;
 
-   --  UniswapFactorys (historical)
-   --  Gets uniswapFactorys.
-   procedure Uniswap_V2_Get_Uniswap_Factorys__historical
+   --  UniswapFactories (historical)
+   --  Gets uniswapFactories.
+   procedure Uniswap_V2_Get_Uniswap_Factories__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -3550,10 +3550,10 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
-      URI.Set_Path ("/dapps/uniswapv2/uniswapFactorys/historical");
+      URI.Set_Path ("/dapps/uniswapv2/uniswapFactories/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V2_Get_Uniswap_Factorys__historical;
+   end Uniswap_V2_Get_Uniswap_Factories__historical;
 
    --  Users (historical)
    --  Gets users.
@@ -3635,9 +3635,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Mints__current;
 
-   --  PairDayDatas (current)
-   --  Gets pairDayDatas.
-   procedure Uniswap_V2_Pair_Day_Datas__current
+   --  PairDayData (current)
+   --  Gets pairDayData.
+   procedure Uniswap_V2_Pair_Day_Data__current
       (Client : in out Client_Type;
        Result : out .Models.UniswapV2PairDayDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -3647,14 +3647,14 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/uniswapv2/pairDayDatas/current");
+      URI.Set_Path ("/dapps/uniswapv2/pairDayData/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V2_Pair_Day_Datas__current;
+   end Uniswap_V2_Pair_Day_Data__current;
 
-   --  PairHourDatas (current)
-   --  Gets pairHourDatas.
-   procedure Uniswap_V2_Pair_Hour_Datas__current
+   --  PairHourData (current)
+   --  Gets pairHourData.
+   procedure Uniswap_V2_Pair_Hour_Data__current
       (Client : in out Client_Type;
        Result : out .Models.UniswapV2PairHourDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -3664,10 +3664,10 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/uniswapv2/pairHourDatas/current");
+      URI.Set_Path ("/dapps/uniswapv2/pairHourData/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V2_Pair_Hour_Datas__current;
+   end Uniswap_V2_Pair_Hour_Data__current;
 
    --  Pairs (current)
    --  Gets pairs.
@@ -3707,9 +3707,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Swaps__current;
 
-   --  TokenDayDatas (current)
-   --  Gets tokenDayDatas.
-   procedure Uniswap_V2_Token_Day_Datas__current
+   --  TokenDayData (current)
+   --  Gets tokenDayData.
+   procedure Uniswap_V2_Token_Day_Data__current
       (Client : in out Client_Type;
        Result : out .Models.UniswapV2TokenDayDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -3719,10 +3719,10 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/uniswapv2/tokenDayDatas/current");
+      URI.Set_Path ("/dapps/uniswapv2/tokenDayData/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V2_Token_Day_Datas__current;
+   end Uniswap_V2_Token_Day_Data__current;
 
    --  Tokens (current)
    --  Gets tokens.
@@ -3758,9 +3758,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V2_Transactions__current;
 
-   --  UniswapDayDatas (current)
-   --  Gets uniswapDayDatas.
-   procedure Uniswap_V2_Uniswap_Day_Datas__current
+   --  UniswapDayData (current)
+   --  Gets uniswapDayData.
+   procedure Uniswap_V2_Uniswap_Day_Data__current
       (Client : in out Client_Type;
        Result : out .Models.UniswapV2UniswapDayDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -3770,14 +3770,14 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/uniswapv2/uniswapDayDatas/current");
+      URI.Set_Path ("/dapps/uniswapv2/uniswapDayData/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V2_Uniswap_Day_Datas__current;
+   end Uniswap_V2_Uniswap_Day_Data__current;
 
-   --  UniswapFactorys (current)
-   --  Gets uniswapFactorys.
-   procedure Uniswap_V2_Uniswap_Factorys__current
+   --  UniswapFactories (current)
+   --  Gets uniswapFactories.
+   procedure Uniswap_V2_Uniswap_Factories__current
       (Client : in out Client_Type;
        Result : out .Models.UniswapV2UniswapFactoryDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -3787,10 +3787,10 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/uniswapv2/uniswapFactorys/current");
+      URI.Set_Path ("/dapps/uniswapv2/uniswapFactories/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V2_Uniswap_Factorys__current;
+   end Uniswap_V2_Uniswap_Factories__current;
 
    --  Users (current)
    --  Gets users.
@@ -3843,9 +3843,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Burns__current;
 
-   --  Factorys (current)
-   --  Gets factorys.
-   procedure Uniswap_V3_Factorys__current
+   --  Factories (current)
+   --  Gets factories.
+   procedure Uniswap_V3_Factories__current
       (Client : in out Client_Type;
        Result : out .Models.UniswapV3FactoryDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -3855,10 +3855,10 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/uniswapv3/factorys/current");
+      URI.Set_Path ("/dapps/uniswapv3/factories/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V3_Factorys__current;
+   end Uniswap_V3_Factories__current;
 
    --  Bundles (historical)
    --  Gets bundles.
@@ -3924,9 +3924,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Burns__historical;
 
-   --  Factorys (historical)
-   --  Gets factorys.
-   procedure Uniswap_V3_Get_Factorys__historical
+   --  Factories (historical)
+   --  Gets factories.
+   procedure Uniswap_V3_Get_Factories__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -3948,10 +3948,10 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
-      URI.Set_Path ("/dapps/uniswapv3/factorys/historical");
+      URI.Set_Path ("/dapps/uniswapv3/factories/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V3_Get_Factorys__historical;
+   end Uniswap_V3_Get_Factories__historical;
 
    --  Mints (historical)
    --  Gets mints.
@@ -3988,9 +3988,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Mints__historical;
 
-   --  PoolDayDatas (historical)
-   --  Gets poolDayDatas.
-   procedure Uniswap_V3_Get_Pool_Day_Datas__historical
+   --  PoolDayData (historical)
+   --  Gets poolDayData.
+   procedure Uniswap_V3_Get_Pool_Day_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -4014,14 +4014,14 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
       URI.Add_Param ("pool", Pool);
-      URI.Set_Path ("/dapps/uniswapv3/poolDayDatas/historical");
+      URI.Set_Path ("/dapps/uniswapv3/poolDayData/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V3_Get_Pool_Day_Datas__historical;
+   end Uniswap_V3_Get_Pool_Day_Data__historical;
 
-   --  PoolHourDatas (historical)
-   --  Gets poolHourDatas.
-   procedure Uniswap_V3_Get_Pool_Hour_Datas__historical
+   --  PoolHourData (historical)
+   --  Gets poolHourData.
+   procedure Uniswap_V3_Get_Pool_Hour_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -4045,10 +4045,10 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
       URI.Add_Param ("pool", Pool);
-      URI.Set_Path ("/dapps/uniswapv3/poolHourDatas/historical");
+      URI.Set_Path ("/dapps/uniswapv3/poolHourData/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V3_Get_Pool_Hour_Datas__historical;
+   end Uniswap_V3_Get_Pool_Hour_Data__historical;
 
    --  Pools (historical)
    --  Gets pools.
@@ -4184,9 +4184,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Swaps__historical;
 
-   --  TickDayDatas (historical)
-   --  Gets tickDayDatas.
-   procedure Uniswap_V3_Get_Tick_Day_Datas__historical
+   --  TickDayData (historical)
+   --  Gets tickDayData.
+   procedure Uniswap_V3_Get_Tick_Day_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -4210,10 +4210,10 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
       URI.Add_Param ("pool", Pool);
-      URI.Set_Path ("/dapps/uniswapv3/tickDayDatas/historical");
+      URI.Set_Path ("/dapps/uniswapv3/tickDayData/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V3_Get_Tick_Day_Datas__historical;
+   end Uniswap_V3_Get_Tick_Day_Data__historical;
 
    --  Ticks (historical)
    --  Gets ticks.
@@ -4246,9 +4246,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Ticks__historical;
 
-   --  TokenHourDatas (historical)
-   --  Gets tokenHourDatas.
-   procedure Uniswap_V3_Get_Token_Hour_Datas__historical
+   --  TokenHourData (historical)
+   --  Gets tokenHourData.
+   procedure Uniswap_V3_Get_Token_Hour_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -4270,14 +4270,14 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
-      URI.Set_Path ("/dapps/uniswapv3/tokenHourDatas/historical");
+      URI.Set_Path ("/dapps/uniswapv3/tokenHourData/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V3_Get_Token_Hour_Datas__historical;
+   end Uniswap_V3_Get_Token_Hour_Data__historical;
 
-   --  TokenV3DayDatas (historical)
-   --  Gets tokenV3DayDatas.
-   procedure Uniswap_V3_Get_Token_V3Day_Datas__historical
+   --  TokenV3DayData (historical)
+   --  Gets tokenV3DayData.
+   procedure Uniswap_V3_Get_Token_V3Day_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -4299,10 +4299,10 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
-      URI.Set_Path ("/dapps/uniswapv3/tokenV3DayDatas/historical");
+      URI.Set_Path ("/dapps/uniswapv3/tokenV3DayData/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V3_Get_Token_V3Day_Datas__historical;
+   end Uniswap_V3_Get_Token_V3Day_Data__historical;
 
    --  Tokens (historical)
    --  Gets tokens.
@@ -4366,9 +4366,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Get_Transactions__historical;
 
-   --  UniswapDayDatas (historical)
-   --  Gets uniswapDayDatas.
-   procedure Uniswap_V3_Get_Uniswap_Day_Datas__historical
+   --  UniswapDayData (historical)
+   --  Gets uniswapDayData.
+   procedure Uniswap_V3_Get_Uniswap_Day_Data__historical
       (Client : in out Client_Type;
        Start_Block : in Swagger.Nullable_Long;
        End_Block : in Swagger.Nullable_Long;
@@ -4390,10 +4390,10 @@ package body .Clients is
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("endDate", End_Date);
       URI.Add_Param ("id", Id);
-      URI.Set_Path ("/dapps/uniswapv3/uniswapDayDatas/historical");
+      URI.Set_Path ("/dapps/uniswapv3/uniswapDayData/historical");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V3_Get_Uniswap_Day_Datas__historical;
+   end Uniswap_V3_Get_Uniswap_Day_Data__historical;
 
    --  Mints (current)
    --  Gets mints.
@@ -4412,9 +4412,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Mints__current;
 
-   --  PoolDayDatas (current)
-   --  Gets poolDayDatas.
-   procedure Uniswap_V3_Pool_Day_Datas__current
+   --  PoolDayData (current)
+   --  Gets poolDayData.
+   procedure Uniswap_V3_Pool_Day_Data__current
       (Client : in out Client_Type;
        Result : out .Models.UniswapV3PoolDayDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -4424,14 +4424,14 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/uniswapv3/poolDayDatas/current");
+      URI.Set_Path ("/dapps/uniswapv3/poolDayData/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V3_Pool_Day_Datas__current;
+   end Uniswap_V3_Pool_Day_Data__current;
 
-   --  PoolHourDatas (current)
-   --  Gets poolHourDatas.
-   procedure Uniswap_V3_Pool_Hour_Datas__current
+   --  PoolHourData (current)
+   --  Gets poolHourData.
+   procedure Uniswap_V3_Pool_Hour_Data__current
       (Client : in out Client_Type;
        Result : out .Models.UniswapV3PoolHourDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -4441,10 +4441,10 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/uniswapv3/poolHourDatas/current");
+      URI.Set_Path ("/dapps/uniswapv3/poolHourData/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V3_Pool_Hour_Datas__current;
+   end Uniswap_V3_Pool_Hour_Data__current;
 
    --  Pools (current)
    --  Gets pools.
@@ -4518,9 +4518,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Swaps__current;
 
-   --  TickDayDatas (current)
-   --  Gets tickDayDatas.
-   procedure Uniswap_V3_Tick_Day_Datas__current
+   --  TickDayData (current)
+   --  Gets tickDayData.
+   procedure Uniswap_V3_Tick_Day_Data__current
       (Client : in out Client_Type;
        Result : out .Models.UniswapV3TickDayDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -4530,10 +4530,10 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/uniswapv3/tickDayDatas/current");
+      URI.Set_Path ("/dapps/uniswapv3/tickDayData/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V3_Tick_Day_Datas__current;
+   end Uniswap_V3_Tick_Day_Data__current;
 
    --  Ticks (current)
    --  Gets ticks.
@@ -4552,9 +4552,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Ticks__current;
 
-   --  TokenHourDatas (current)
-   --  Gets tokenHourDatas.
-   procedure Uniswap_V3_Token_Hour_Datas__current
+   --  TokenHourData (current)
+   --  Gets tokenHourData.
+   procedure Uniswap_V3_Token_Hour_Data__current
       (Client : in out Client_Type;
        Result : out .Models.UniswapV3TokenHourDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -4564,14 +4564,14 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/uniswapv3/tokenHourDatas/current");
+      URI.Set_Path ("/dapps/uniswapv3/tokenHourData/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V3_Token_Hour_Datas__current;
+   end Uniswap_V3_Token_Hour_Data__current;
 
-   --  TokenV3DayDatas (current)
-   --  Gets tokenV3DayDatas.
-   procedure Uniswap_V3_Token_V3Day_Datas__current
+   --  TokenV3DayData (current)
+   --  Gets tokenV3DayData.
+   procedure Uniswap_V3_Token_V3Day_Data__current
       (Client : in out Client_Type;
        Result : out .Models.UniswapV3TokenV3DayDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -4581,10 +4581,10 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/uniswapv3/tokenV3DayDatas/current");
+      URI.Set_Path ("/dapps/uniswapv3/tokenV3DayData/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V3_Token_V3Day_Datas__current;
+   end Uniswap_V3_Token_V3Day_Data__current;
 
    --  Tokens (current)
    --  Gets tokens.
@@ -4620,9 +4620,9 @@ package body .Clients is
       .Models.Deserialize (Reply, "", Result);
    end Uniswap_V3_Transactions__current;
 
-   --  UniswapDayDatas (current)
-   --  Gets uniswapDayDatas.
-   procedure Uniswap_V3_Uniswap_Day_Datas__current
+   --  UniswapDayData (current)
+   --  Gets uniswapDayData.
+   procedure Uniswap_V3_Uniswap_Day_Data__current
       (Client : in out Client_Type;
        Result : out .Models.UniswapV3UniswapDayDataDTO_Type_Vectors.Vector) is
       URI   : Swagger.Clients.URI_Type;
@@ -4632,8 +4632,8 @@ package body .Clients is
                           Swagger.Clients.APPLICATION_JSON,
                           Swagger.Clients.TEXT_JSON));
 
-      URI.Set_Path ("/dapps/uniswapv3/uniswapDayDatas/current");
+      URI.Set_Path ("/dapps/uniswapv3/uniswapDayData/current");
       Client.Call (Swagger.Clients.GET, URI, Reply);
       .Models.Deserialize (Reply, "", Result);
-   end Uniswap_V3_Uniswap_Day_Datas__current;
+   end Uniswap_V3_Uniswap_Day_Data__current;
 end .Clients;

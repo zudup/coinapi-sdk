@@ -159,7 +159,7 @@ function Invoke-SushiswapBurnsCurrent {
 <#
 .SYNOPSIS
 
-DayDatas (current)
+DayData (current)
 
 .DESCRIPTION
 
@@ -177,7 +177,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 SushiswapDayDataDTO[]
 #>
-function Invoke-SushiswapDayDatasCurrent {
+function Invoke-SushiswapDayDataCurrent {
     [CmdletBinding()]
     Param (
         [String]
@@ -188,7 +188,7 @@ function Invoke-SushiswapDayDatasCurrent {
     )
 
     Process {
-        'Calling method: Invoke-SushiswapDayDatasCurrent' | Write-Debug
+        'Calling method: Invoke-SushiswapDayDataCurrent' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -209,7 +209,7 @@ function Invoke-SushiswapDayDatasCurrent {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/sushiswap/dayDatas/current'
+        $LocalVarUri = '/dapps/sushiswap/dayData/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -234,7 +234,7 @@ function Invoke-SushiswapDayDatasCurrent {
 <#
 .SYNOPSIS
 
-Factorys (current)
+Factories (current)
 
 .DESCRIPTION
 
@@ -252,7 +252,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 SushiswapFactoryDTO[]
 #>
-function Invoke-SushiswapFactorysCurrent {
+function Invoke-SushiswapFactoriesCurrent {
     [CmdletBinding()]
     Param (
         [String]
@@ -263,7 +263,7 @@ function Invoke-SushiswapFactorysCurrent {
     )
 
     Process {
-        'Calling method: Invoke-SushiswapFactorysCurrent' | Write-Debug
+        'Calling method: Invoke-SushiswapFactoriesCurrent' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -284,7 +284,7 @@ function Invoke-SushiswapFactorysCurrent {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/sushiswap/factorys/current'
+        $LocalVarUri = '/dapps/sushiswap/factories/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -569,7 +569,7 @@ function Invoke-SushiswapGetBurnsHistorical {
 <#
 .SYNOPSIS
 
-DayDatas (historical)
+DayData (historical)
 
 .DESCRIPTION
 
@@ -602,7 +602,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 SushiswapDayDataDTO[]
 #>
-function Invoke-SushiswapGetDayDatasHistorical {
+function Invoke-SushiswapGetDayDataHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -628,7 +628,7 @@ function Invoke-SushiswapGetDayDatasHistorical {
     )
 
     Process {
-        'Calling method: Invoke-SushiswapGetDayDatasHistorical' | Write-Debug
+        'Calling method: Invoke-SushiswapGetDayDataHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -649,7 +649,7 @@ function Invoke-SushiswapGetDayDatasHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/sushiswap/dayDatas/historical'
+        $LocalVarUri = '/dapps/sushiswap/dayData/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -694,7 +694,7 @@ function Invoke-SushiswapGetDayDatasHistorical {
 <#
 .SYNOPSIS
 
-Factorys (historical)
+Factories (historical)
 
 .DESCRIPTION
 
@@ -727,7 +727,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 SushiswapFactoryDTO[]
 #>
-function Invoke-SushiswapGetFactorysHistorical {
+function Invoke-SushiswapGetFactoriesHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -753,7 +753,7 @@ function Invoke-SushiswapGetFactorysHistorical {
     )
 
     Process {
-        'Calling method: Invoke-SushiswapGetFactorysHistorical' | Write-Debug
+        'Calling method: Invoke-SushiswapGetFactoriesHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -774,7 +774,7 @@ function Invoke-SushiswapGetFactorysHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/sushiswap/factorys/historical'
+        $LocalVarUri = '/dapps/sushiswap/factories/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -819,7 +819,7 @@ function Invoke-SushiswapGetFactorysHistorical {
 <#
 .SYNOPSIS
 
-HourDatas (historical)
+HourData (historical)
 
 .DESCRIPTION
 
@@ -852,7 +852,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 SushiswapHourDataDTO[]
 #>
-function Invoke-SushiswapGetHourDatasHistorical {
+function Invoke-SushiswapGetHourDataHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -878,7 +878,7 @@ function Invoke-SushiswapGetHourDatasHistorical {
     )
 
     Process {
-        'Calling method: Invoke-SushiswapGetHourDatasHistorical' | Write-Debug
+        'Calling method: Invoke-SushiswapGetHourDataHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -899,7 +899,7 @@ function Invoke-SushiswapGetHourDatasHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/sushiswap/hourDatas/historical'
+        $LocalVarUri = '/dapps/sushiswap/hourData/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1369,7 +1369,7 @@ function Invoke-SushiswapGetMintsHistorical {
 <#
 .SYNOPSIS
 
-PairDayDatas (historical)
+PairDayData (historical)
 
 .DESCRIPTION
 
@@ -1411,7 +1411,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 SushiswapPairDayDataDTO[]
 #>
-function Invoke-SushiswapGetPairDayDatasHistorical {
+function Invoke-SushiswapGetPairDayDataHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -1446,7 +1446,7 @@ function Invoke-SushiswapGetPairDayDatasHistorical {
     )
 
     Process {
-        'Calling method: Invoke-SushiswapGetPairDayDatasHistorical' | Write-Debug
+        'Calling method: Invoke-SushiswapGetPairDayDataHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -1467,7 +1467,7 @@ function Invoke-SushiswapGetPairDayDatasHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/sushiswap/pairDayDatas/historical'
+        $LocalVarUri = '/dapps/sushiswap/pairDayData/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1524,7 +1524,7 @@ function Invoke-SushiswapGetPairDayDatasHistorical {
 <#
 .SYNOPSIS
 
-PairHourDatas (historical)
+PairHourData (historical)
 
 .DESCRIPTION
 
@@ -1560,7 +1560,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 SushiswapPairHourDataDTO[]
 #>
-function Invoke-SushiswapGetPairHourDatasHistorical {
+function Invoke-SushiswapGetPairHourDataHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -1589,7 +1589,7 @@ function Invoke-SushiswapGetPairHourDatasHistorical {
     )
 
     Process {
-        'Calling method: Invoke-SushiswapGetPairHourDatasHistorical' | Write-Debug
+        'Calling method: Invoke-SushiswapGetPairHourDataHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -1610,7 +1610,7 @@ function Invoke-SushiswapGetPairHourDatasHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/sushiswap/pairHourDatas/historical'
+        $LocalVarUri = '/dapps/sushiswap/pairHourData/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1949,7 +1949,7 @@ function Invoke-SushiswapGetSwapsHistorical {
 <#
 .SYNOPSIS
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
 .DESCRIPTION
 
@@ -1982,7 +1982,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 SushiswapTokenDayDataDTO[]
 #>
-function Invoke-SushiswapGetTokenDayDatasHistorical {
+function Invoke-SushiswapGetTokenDayDataHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -2008,7 +2008,7 @@ function Invoke-SushiswapGetTokenDayDatasHistorical {
     )
 
     Process {
-        'Calling method: Invoke-SushiswapGetTokenDayDatasHistorical' | Write-Debug
+        'Calling method: Invoke-SushiswapGetTokenDayDataHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -2029,7 +2029,7 @@ function Invoke-SushiswapGetTokenDayDatasHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/sushiswap/tokenDayDatas/historical'
+        $LocalVarUri = '/dapps/sushiswap/tokenDayData/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -2469,7 +2469,7 @@ function Invoke-SushiswapGetUsersHistorical {
 <#
 .SYNOPSIS
 
-HourDatas (current)
+HourData (current)
 
 .DESCRIPTION
 
@@ -2487,7 +2487,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 SushiswapHourDataDTO[]
 #>
-function Invoke-SushiswapHourDatasCurrent {
+function Invoke-SushiswapHourDataCurrent {
     [CmdletBinding()]
     Param (
         [String]
@@ -2498,7 +2498,7 @@ function Invoke-SushiswapHourDatasCurrent {
     )
 
     Process {
-        'Calling method: Invoke-SushiswapHourDatasCurrent' | Write-Debug
+        'Calling method: Invoke-SushiswapHourDataCurrent' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -2519,7 +2519,7 @@ function Invoke-SushiswapHourDatasCurrent {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/sushiswap/hourDatas/current'
+        $LocalVarUri = '/dapps/sushiswap/hourData/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -2769,7 +2769,7 @@ function Invoke-SushiswapMintsCurrent {
 <#
 .SYNOPSIS
 
-PairDayDatas (current)
+PairDayData (current)
 
 .DESCRIPTION
 
@@ -2787,7 +2787,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 SushiswapPairDayDataDTO[]
 #>
-function Invoke-SushiswapPairDayDatasCurrent {
+function Invoke-SushiswapPairDayDataCurrent {
     [CmdletBinding()]
     Param (
         [String]
@@ -2798,7 +2798,7 @@ function Invoke-SushiswapPairDayDatasCurrent {
     )
 
     Process {
-        'Calling method: Invoke-SushiswapPairDayDatasCurrent' | Write-Debug
+        'Calling method: Invoke-SushiswapPairDayDataCurrent' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -2819,7 +2819,7 @@ function Invoke-SushiswapPairDayDatasCurrent {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/sushiswap/pairDayDatas/current'
+        $LocalVarUri = '/dapps/sushiswap/pairDayData/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -2844,7 +2844,7 @@ function Invoke-SushiswapPairDayDatasCurrent {
 <#
 .SYNOPSIS
 
-PairHourDatas (current)
+PairHourData (current)
 
 .DESCRIPTION
 
@@ -2862,7 +2862,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 SushiswapPairHourDataDTO[]
 #>
-function Invoke-SushiswapPairHourDatasCurrent {
+function Invoke-SushiswapPairHourDataCurrent {
     [CmdletBinding()]
     Param (
         [String]
@@ -2873,7 +2873,7 @@ function Invoke-SushiswapPairHourDatasCurrent {
     )
 
     Process {
-        'Calling method: Invoke-SushiswapPairHourDatasCurrent' | Write-Debug
+        'Calling method: Invoke-SushiswapPairHourDataCurrent' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -2894,7 +2894,7 @@ function Invoke-SushiswapPairHourDatasCurrent {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/sushiswap/pairHourDatas/current'
+        $LocalVarUri = '/dapps/sushiswap/pairHourData/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -3089,7 +3089,7 @@ function Invoke-SushiswapSwapsCurrent {
 <#
 .SYNOPSIS
 
-TokenDayDatas (current)
+TokenDayData (current)
 
 .DESCRIPTION
 
@@ -3107,7 +3107,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 SushiswapTokenDayDataDTO[]
 #>
-function Invoke-SushiswapTokenDayDatasCurrent {
+function Invoke-SushiswapTokenDayDataCurrent {
     [CmdletBinding()]
     Param (
         [String]
@@ -3118,7 +3118,7 @@ function Invoke-SushiswapTokenDayDatasCurrent {
     )
 
     Process {
-        'Calling method: Invoke-SushiswapTokenDayDatasCurrent' | Write-Debug
+        'Calling method: Invoke-SushiswapTokenDayDataCurrent' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -3139,7 +3139,7 @@ function Invoke-SushiswapTokenDayDatasCurrent {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/sushiswap/tokenDayDatas/current'
+        $LocalVarUri = '/dapps/sushiswap/tokenDayData/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `

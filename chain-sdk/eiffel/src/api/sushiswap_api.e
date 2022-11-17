@@ -90,9 +90,9 @@ feature -- API Access
 			end
 		end
 
-	sushiswap_day_datas_current : detachable LIST [SUSHISWAP_DAY_DATA_DTO]
-			-- DayDatas (current)
-			-- Gets dayDatas.
+	sushiswap_day_data_current : detachable LIST [SUSHISWAP_DAY_DATA_DTO]
+			-- DayData (current)
+			-- Gets dayData.
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_DAY_DATA_DTO]
@@ -105,7 +105,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/dayDatas/current"
+			l_path := "/dapps/sushiswap/dayData/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
@@ -123,9 +123,9 @@ feature -- API Access
 			end
 		end
 
-	sushiswap_factorys_current : detachable LIST [SUSHISWAP_FACTORY_DTO]
-			-- Factorys (current)
-			-- Gets factorys.
+	sushiswap_factories_current : detachable LIST [SUSHISWAP_FACTORY_DTO]
+			-- Factories (current)
+			-- Gets factories.
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_FACTORY_DTO]
@@ -138,7 +138,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/factorys/current"
+			l_path := "/dapps/sushiswap/factories/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
@@ -255,9 +255,9 @@ feature -- API Access
 			end
 		end
 
-	sushiswap_get_day_datas_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [SUSHISWAP_DAY_DATA_DTO]
-			-- DayDatas (historical)
-			-- Gets dayDatas.
+	sushiswap_get_day_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [SUSHISWAP_DAY_DATA_DTO]
+			-- DayData (historical)
+			-- Gets dayData.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
@@ -280,7 +280,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/dayDatas/historical"
+			l_path := "/dapps/sushiswap/dayData/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -303,9 +303,9 @@ feature -- API Access
 			end
 		end
 
-	sushiswap_get_factorys_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [SUSHISWAP_FACTORY_DTO]
-			-- Factorys (historical)
-			-- Gets factorys.
+	sushiswap_get_factories_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [SUSHISWAP_FACTORY_DTO]
+			-- Factories (historical)
+			-- Gets factories.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
@@ -328,7 +328,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/factorys/historical"
+			l_path := "/dapps/sushiswap/factories/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -351,9 +351,9 @@ feature -- API Access
 			end
 		end
 
-	sushiswap_get_hour_datas_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [SUSHISWAP_HOUR_DATA_DTO]
-			-- HourDatas (historical)
-			-- Gets hourDatas.
+	sushiswap_get_hour_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [SUSHISWAP_HOUR_DATA_DTO]
+			-- HourData (historical)
+			-- Gets hourData.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
@@ -376,7 +376,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/hourDatas/historical"
+			l_path := "/dapps/sushiswap/hourData/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -558,9 +558,9 @@ feature -- API Access
 			end
 		end
 
-	sushiswap_get_pair_day_datas_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pair: STRING_32; token_0: STRING_32; token_1: STRING_32): detachable LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
-			-- PairDayDatas (historical)
-			-- Gets pairDayDatas.
+	sushiswap_get_pair_day_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pair: STRING_32; token_0: STRING_32; token_1: STRING_32): detachable LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
+			-- PairDayData (historical)
+			-- Gets pairDayData.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -589,7 +589,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/pairDayDatas/historical"
+			l_path := "/dapps/sushiswap/pairDayData/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -615,9 +615,9 @@ feature -- API Access
 			end
 		end
 
-	sushiswap_get_pair_hour_datas_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pair: STRING_32): detachable LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
-			-- PairHourDatas (historical)
-			-- Gets pairHourDatas.
+	sushiswap_get_pair_hour_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pair: STRING_32): detachable LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
+			-- PairHourData (historical)
+			-- Gets pairHourData.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -642,7 +642,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/pairHourDatas/historical"
+			l_path := "/dapps/sushiswap/pairHourData/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -774,9 +774,9 @@ feature -- API Access
 			end
 		end
 
-	sushiswap_get_token_day_datas_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]
-			-- TokenDayDatas (historical)
-			-- Gets tokenDayDatas.
+	sushiswap_get_token_day_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]
+			-- TokenDayData (historical)
+			-- Gets tokenDayData.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
@@ -799,7 +799,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/tokenDayDatas/historical"
+			l_path := "/dapps/sushiswap/tokenDayData/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -972,9 +972,9 @@ feature -- API Access
 			end
 		end
 
-	sushiswap_hour_datas_current : detachable LIST [SUSHISWAP_HOUR_DATA_DTO]
-			-- HourDatas (current)
-			-- Gets hourDatas.
+	sushiswap_hour_data_current : detachable LIST [SUSHISWAP_HOUR_DATA_DTO]
+			-- HourData (current)
+			-- Gets hourData.
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_HOUR_DATA_DTO]
@@ -987,7 +987,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/hourDatas/current"
+			l_path := "/dapps/sushiswap/hourData/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
@@ -1104,9 +1104,9 @@ feature -- API Access
 			end
 		end
 
-	sushiswap_pair_day_datas_current : detachable LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
-			-- PairDayDatas (current)
-			-- Gets pairDayDatas.
+	sushiswap_pair_day_data_current : detachable LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
+			-- PairDayData (current)
+			-- Gets pairDayData.
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
@@ -1119,7 +1119,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/pairDayDatas/current"
+			l_path := "/dapps/sushiswap/pairDayData/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
@@ -1137,9 +1137,9 @@ feature -- API Access
 			end
 		end
 
-	sushiswap_pair_hour_datas_current : detachable LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
-			-- PairHourDatas (current)
-			-- Gets pairHourDatas.
+	sushiswap_pair_hour_data_current : detachable LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
+			-- PairHourData (current)
+			-- Gets pairHourData.
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
@@ -1152,7 +1152,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/pairHourDatas/current"
+			l_path := "/dapps/sushiswap/pairHourData/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
@@ -1242,9 +1242,9 @@ feature -- API Access
 			end
 		end
 
-	sushiswap_token_day_datas_current : detachable LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]
-			-- TokenDayDatas (current)
-			-- Gets tokenDayDatas.
+	sushiswap_token_day_data_current : detachable LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]
+			-- TokenDayData (current)
+			-- Gets tokenDayData.
 			-- 
 			-- 
 			-- Result LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]
@@ -1257,7 +1257,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/sushiswap/tokenDayDatas/current"
+			l_path := "/dapps/sushiswap/tokenDayData/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then

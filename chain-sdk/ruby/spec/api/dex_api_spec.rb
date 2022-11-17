@@ -32,12 +32,12 @@ describe 'DexApi' do
     end
   end
 
-  # unit tests for dex_batchs__current
-  # Batchs (current)
-  # Gets batchs.
+  # unit tests for dex_batches__current
+  # Batches (current)
+  # Gets batches.
   # @param [Hash] opts the optional parameters
   # @return [Array<DexBatchDTO>]
-  describe 'dex_batchs__current test' do
+  describe 'dex_batches__current test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -54,9 +54,9 @@ describe 'DexApi' do
     end
   end
 
-  # unit tests for dex_get_batchs__historical
-  # Batchs (historical)
-  # Gets batchs.
+  # unit tests for dex_get_batches__historical
+  # Batches (historical)
+  # Gets batches.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -64,7 +64,7 @@ describe 'DexApi' do
   # @option opts [Time] :end_date The end date of timeframe.
   # @option opts [String] :id Identifier.
   # @return [Array<DexBatchDTO>]
-  describe 'dex_get_batchs__historical test' do
+  describe 'dex_get_batches__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -137,9 +137,9 @@ describe 'DexApi' do
     end
   end
 
-  # unit tests for dex_get_statss__historical
-  # Statss (historical)
-  # Gets statss.
+  # unit tests for dex_get_stats__historical
+  # Stats (historical)
+  # Gets stats.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
   # @option opts [Integer] :end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -147,7 +147,7 @@ describe 'DexApi' do
   # @option opts [Time] :end_date The end date of timeframe.
   # @option opts [String] :id 
   # @return [Array<DexStatsDTO>]
-  describe 'dex_get_statss__historical test' do
+  describe 'dex_get_stats__historical test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end
@@ -273,12 +273,12 @@ describe 'DexApi' do
     end
   end
 
-  # unit tests for dex_statss__current
-  # Statss (current)
-  # Gets statss.
+  # unit tests for dex_stats__current
+  # Stats (current)
+  # Gets stats.
   # @param [Hash] opts the optional parameters
   # @return [Array<DexStatsDTO>]
-  describe 'dex_statss__current test' do
+  describe 'dex_stats__current test' do
     it 'should work' do
       # assertion here. ref: https://www.relishapp.com/rspec/rspec-expectations/docs/built-in-matchers
     end

@@ -805,11 +805,11 @@ export class CurveApi {
         });
     }
     /**
-     * Gets gaugeLiquiditys.
-     * @summary GaugeLiquiditys (current)
+     * Gets gaugeLiquidities.
+     * @summary GaugeLiquidities (current)
      */
-    public async curveGaugeLiquiditysCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CurveGaugeLiquidityDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/curve/gaugeLiquiditys/current';
+    public async curveGaugeLiquiditiesCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CurveGaugeLiquidityDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/curve/gaugeLiquidities/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -2303,8 +2303,8 @@ export class CurveApi {
         });
     }
     /**
-     * Gets gaugeLiquiditys.
-     * @summary GaugeLiquiditys (historical)
+     * Gets gaugeLiquidities.
+     * @summary GaugeLiquidities (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -2312,8 +2312,8 @@ export class CurveApi {
      * @param id 
      * @param user 
      */
-    public async curveGetGaugeLiquiditysHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CurveGaugeLiquidityDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/curve/gaugeLiquiditys/historical';
+    public async curveGetGaugeLiquiditiesHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<CurveGaugeLiquidityDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/curve/gaugeLiquidities/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];

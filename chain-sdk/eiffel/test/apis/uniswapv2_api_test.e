@@ -135,10 +135,10 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_pair_day_datas_historical
-            -- PairDayDatas (historical)
+    test_uniswap_v2_get_pair_day_data_historical
+            -- PairDayData (historical)
             --
-            -- Gets pairDayDatas.
+            -- Gets pairDayData.
         local
             l_response: LIST [UNISWAP_V2_PAIR_DAY_DATA_DTO]
             l_start_block: INTEGER_64
@@ -151,14 +151,14 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_pair_day_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_token_0, l_token_1)
+            -- l_response := api.uniswap_v2_get_pair_day_data_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_token_0, l_token_1)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_pair_hour_datas_historical
-            -- PairHourDatas (historical)
+    test_uniswap_v2_get_pair_hour_data_historical
+            -- PairHourData (historical)
             --
-            -- Gets pairHourDatas.
+            -- Gets pairHourData.
         local
             l_response: LIST [UNISWAP_V2_PAIR_HOUR_DATA_DTO]
             l_start_block: INTEGER_64
@@ -170,7 +170,7 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_pair_hour_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pair)
+            -- l_response := api.uniswap_v2_get_pair_hour_data_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pair)
             assert ("not_implemented", False)
         end
 
@@ -213,10 +213,10 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_token_day_datas_historical
-            -- TokenDayDatas (historical)
+    test_uniswap_v2_get_token_day_data_historical
+            -- TokenDayData (historical)
             --
-            -- Gets tokenDayDatas.
+            -- Gets tokenDayData.
         local
             l_response: LIST [UNISWAP_V2_TOKEN_DAY_DATA_DTO]
             l_start_block: INTEGER_64
@@ -227,7 +227,7 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_token_day_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            -- l_response := api.uniswap_v2_get_token_day_data_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
             assert ("not_implemented", False)
         end
 
@@ -269,10 +269,10 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_uniswap_day_datas_historical
-            -- UniswapDayDatas (historical)
+    test_uniswap_v2_get_uniswap_day_data_historical
+            -- UniswapDayData (historical)
             --
-            -- Gets uniswapDayDatas.
+            -- Gets uniswapDayData.
         local
             l_response: LIST [UNISWAP_V2_UNISWAP_DAY_DATA_DTO]
             l_start_block: INTEGER_64
@@ -283,14 +283,14 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_uniswap_day_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            -- l_response := api.uniswap_v2_get_uniswap_day_data_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_get_uniswap_factorys_historical
-            -- UniswapFactorys (historical)
+    test_uniswap_v2_get_uniswap_factories_historical
+            -- UniswapFactories (historical)
             --
-            -- Gets uniswapFactorys.
+            -- Gets uniswapFactories.
         local
             l_response: LIST [UNISWAP_V2_UNISWAP_FACTORY_DTO]
             l_start_block: INTEGER_64
@@ -301,7 +301,7 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_get_uniswap_factorys_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            -- l_response := api.uniswap_v2_get_uniswap_factories_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
             assert ("not_implemented", False)
         end
 
@@ -362,29 +362,29 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_pair_day_datas_current
-            -- PairDayDatas (current)
+    test_uniswap_v2_pair_day_data_current
+            -- PairDayData (current)
             --
-            -- Gets pairDayDatas.
+            -- Gets pairDayData.
         local
             l_response: LIST [UNISWAP_V2_PAIR_DAY_DATA_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_pair_day_datas_current
+            -- l_response := api.uniswap_v2_pair_day_data_current
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_pair_hour_datas_current
-            -- PairHourDatas (current)
+    test_uniswap_v2_pair_hour_data_current
+            -- PairHourData (current)
             --
-            -- Gets pairHourDatas.
+            -- Gets pairHourData.
         local
             l_response: LIST [UNISWAP_V2_PAIR_HOUR_DATA_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_pair_hour_datas_current
+            -- l_response := api.uniswap_v2_pair_hour_data_current
             assert ("not_implemented", False)
         end
 
@@ -416,16 +416,16 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_token_day_datas_current
-            -- TokenDayDatas (current)
+    test_uniswap_v2_token_day_data_current
+            -- TokenDayData (current)
             --
-            -- Gets tokenDayDatas.
+            -- Gets tokenDayData.
         local
             l_response: LIST [UNISWAP_V2_TOKEN_DAY_DATA_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_token_day_datas_current
+            -- l_response := api.uniswap_v2_token_day_data_current
             assert ("not_implemented", False)
         end
 
@@ -455,29 +455,29 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_uniswap_day_datas_current
-            -- UniswapDayDatas (current)
+    test_uniswap_v2_uniswap_day_data_current
+            -- UniswapDayData (current)
             --
-            -- Gets uniswapDayDatas.
+            -- Gets uniswapDayData.
         local
             l_response: LIST [UNISWAP_V2_UNISWAP_DAY_DATA_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_uniswap_day_datas_current
+            -- l_response := api.uniswap_v2_uniswap_day_data_current
             assert ("not_implemented", False)
         end
 
-    test_uniswap_v2_uniswap_factorys_current
-            -- UniswapFactorys (current)
+    test_uniswap_v2_uniswap_factories_current
+            -- UniswapFactories (current)
             --
-            -- Gets uniswapFactorys.
+            -- Gets uniswapFactories.
         local
             l_response: LIST [UNISWAP_V2_UNISWAP_FACTORY_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.uniswap_v2_uniswap_factorys_current
+            -- l_response := api.uniswap_v2_uniswap_factories_current
             assert ("not_implemented", False)
         end
 

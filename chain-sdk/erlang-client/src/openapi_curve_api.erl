@@ -11,7 +11,7 @@
          curve_exchanges_(current)/1, curve_exchanges_(current)/2,
          curve_fee_change_logs_(current)/1, curve_fee_change_logs_(current)/2,
          curve_gauge_deposits_(current)/1, curve_gauge_deposits_(current)/2,
-         curve_gauge_liquiditys_(current)/1, curve_gauge_liquiditys_(current)/2,
+         curve_gauge_liquidities_(current)/1, curve_gauge_liquidities_(current)/2,
          curve_gauge_total_weights_(current)/1, curve_gauge_total_weights_(current)/2,
          curve_gauge_type_weights_(current)/1, curve_gauge_type_weights_(current)/2,
          curve_gauge_types_(current)/1, curve_gauge_types_(current)/2,
@@ -30,7 +30,7 @@
          curve_get_exchanges_(historical)/1, curve_get_exchanges_(historical)/2,
          curve_get_fee_change_logs_(historical)/1, curve_get_fee_change_logs_(historical)/2,
          curve_get_gauge_deposits_(historical)/1, curve_get_gauge_deposits_(historical)/2,
-         curve_get_gauge_liquiditys_(historical)/1, curve_get_gauge_liquiditys_(historical)/2,
+         curve_get_gauge_liquidities_(historical)/1, curve_get_gauge_liquidities_(historical)/2,
          curve_get_gauge_total_weights_(historical)/1, curve_get_gauge_total_weights_(historical)/2,
          curve_get_gauge_type_weights_(historical)/1, curve_get_gauge_type_weights_(historical)/2,
          curve_get_gauge_types_(historical)/1, curve_get_gauge_types_(historical)/2,
@@ -298,19 +298,19 @@ curve_gauge_deposits_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GaugeLiquiditys (current)
-%% Gets gaugeLiquiditys.
--spec curve_gauge_liquiditys_(current)(ctx:ctx()) -> {ok, [openapi_curve_gauge_liquidity_dto:openapi_curve_gauge_liquidity_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-curve_gauge_liquiditys_(current)(Ctx) ->
-    curve_gauge_liquiditys_(current)(Ctx, #{}).
+%% @doc GaugeLiquidities (current)
+%% Gets gaugeLiquidities.
+-spec curve_gauge_liquidities_(current)(ctx:ctx()) -> {ok, [openapi_curve_gauge_liquidity_dto:openapi_curve_gauge_liquidity_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+curve_gauge_liquidities_(current)(Ctx) ->
+    curve_gauge_liquidities_(current)(Ctx, #{}).
 
--spec curve_gauge_liquiditys_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_curve_gauge_liquidity_dto:openapi_curve_gauge_liquidity_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-curve_gauge_liquiditys_(current)(Ctx, Optional) ->
+-spec curve_gauge_liquidities_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_curve_gauge_liquidity_dto:openapi_curve_gauge_liquidity_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+curve_gauge_liquidities_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/curve/gaugeLiquiditys/current">>],
+    Path = [<<"/dapps/curve/gaugeLiquidities/current">>],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -697,19 +697,19 @@ curve_get_gauge_deposits_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc GaugeLiquiditys (historical)
-%% Gets gaugeLiquiditys.
--spec curve_get_gauge_liquiditys_(historical)(ctx:ctx()) -> {ok, [openapi_curve_gauge_liquidity_dto:openapi_curve_gauge_liquidity_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-curve_get_gauge_liquiditys_(historical)(Ctx) ->
-    curve_get_gauge_liquiditys_(historical)(Ctx, #{}).
+%% @doc GaugeLiquidities (historical)
+%% Gets gaugeLiquidities.
+-spec curve_get_gauge_liquidities_(historical)(ctx:ctx()) -> {ok, [openapi_curve_gauge_liquidity_dto:openapi_curve_gauge_liquidity_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+curve_get_gauge_liquidities_(historical)(Ctx) ->
+    curve_get_gauge_liquidities_(historical)(Ctx, #{}).
 
--spec curve_get_gauge_liquiditys_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_curve_gauge_liquidity_dto:openapi_curve_gauge_liquidity_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-curve_get_gauge_liquiditys_(historical)(Ctx, Optional) ->
+-spec curve_get_gauge_liquidities_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_curve_gauge_liquidity_dto:openapi_curve_gauge_liquidity_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+curve_get_gauge_liquidities_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/curve/gaugeLiquiditys/historical">>],
+    Path = [<<"/dapps/curve/gaugeLiquidities/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id', 'user'], _OptionalParams),
     Headers = [],
     Body1 = [],

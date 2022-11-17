@@ -15,7 +15,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**CurveExchangesCurrent**](CurveApi.md#curveexchangescurrent) | **GET** /dapps/curve/exchanges/current | Exchanges (current) |
 | [**CurveFeeChangeLogsCurrent**](CurveApi.md#curvefeechangelogscurrent) | **GET** /dapps/curve/feeChangeLogs/current | FeeChangeLogs (current) |
 | [**CurveGaugeDepositsCurrent**](CurveApi.md#curvegaugedepositscurrent) | **GET** /dapps/curve/gaugeDeposits/current | GaugeDeposits (current) |
-| [**CurveGaugeLiquiditysCurrent**](CurveApi.md#curvegaugeliquidityscurrent) | **GET** /dapps/curve/gaugeLiquiditys/current | GaugeLiquiditys (current) |
+| [**CurveGaugeLiquiditiesCurrent**](CurveApi.md#curvegaugeliquiditiescurrent) | **GET** /dapps/curve/gaugeLiquidities/current | GaugeLiquidities (current) |
 | [**CurveGaugeTotalWeightsCurrent**](CurveApi.md#curvegaugetotalweightscurrent) | **GET** /dapps/curve/gaugeTotalWeights/current | GaugeTotalWeights (current) |
 | [**CurveGaugeTypeWeightsCurrent**](CurveApi.md#curvegaugetypeweightscurrent) | **GET** /dapps/curve/gaugeTypeWeights/current | GaugeTypeWeights (current) |
 | [**CurveGaugeTypesCurrent**](CurveApi.md#curvegaugetypescurrent) | **GET** /dapps/curve/gaugeTypes/current | GaugeTypes (current) |
@@ -34,7 +34,7 @@ All URIs are relative to *https://onchain.coinapi.io*
 | [**CurveGetExchangesHistorical**](CurveApi.md#curvegetexchangeshistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical) |
 | [**CurveGetFeeChangeLogsHistorical**](CurveApi.md#curvegetfeechangelogshistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical) |
 | [**CurveGetGaugeDepositsHistorical**](CurveApi.md#curvegetgaugedepositshistorical) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical) |
-| [**CurveGetGaugeLiquiditysHistorical**](CurveApi.md#curvegetgaugeliquidityshistorical) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical) |
+| [**CurveGetGaugeLiquiditiesHistorical**](CurveApi.md#curvegetgaugeliquiditieshistorical) | **GET** /dapps/curve/gaugeLiquidities/historical | GaugeLiquidities (historical) |
 | [**CurveGetGaugeTotalWeightsHistorical**](CurveApi.md#curvegetgaugetotalweightshistorical) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical) |
 | [**CurveGetGaugeTypeWeightsHistorical**](CurveApi.md#curvegetgaugetypeweightshistorical) | **GET** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical) |
 | [**CurveGetGaugeTypesHistorical**](CurveApi.md#curvegetgaugetypeshistorical) | **GET** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical) |
@@ -1020,13 +1020,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegaugeliquidityscurrent"></a>
-# **CurveGaugeLiquiditysCurrent**
-> List&lt;CurveGaugeLiquidityDTO&gt; CurveGaugeLiquiditysCurrent ()
+<a name="curvegaugeliquiditiescurrent"></a>
+# **CurveGaugeLiquiditiesCurrent**
+> List&lt;CurveGaugeLiquidityDTO&gt; CurveGaugeLiquiditiesCurrent ()
 
-GaugeLiquiditys (current)
+GaugeLiquidities (current)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 ```csharp
@@ -1038,7 +1038,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class CurveGaugeLiquiditysCurrentExample
+    public class CurveGaugeLiquiditiesCurrentExample
     {
         public static void Main()
         {
@@ -1048,13 +1048,13 @@ namespace Example
 
             try
             {
-                // GaugeLiquiditys (current)
-                List<CurveGaugeLiquidityDTO> result = apiInstance.CurveGaugeLiquiditysCurrent();
+                // GaugeLiquidities (current)
+                List<CurveGaugeLiquidityDTO> result = apiInstance.CurveGaugeLiquiditiesCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.CurveGaugeLiquiditysCurrent: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGaugeLiquiditiesCurrent: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1063,21 +1063,21 @@ namespace Example
 }
 ```
 
-#### Using the CurveGaugeLiquiditysCurrentWithHttpInfo variant
+#### Using the CurveGaugeLiquiditiesCurrentWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // GaugeLiquiditys (current)
-    ApiResponse<List<CurveGaugeLiquidityDTO>> response = apiInstance.CurveGaugeLiquiditysCurrentWithHttpInfo();
+    // GaugeLiquidities (current)
+    ApiResponse<List<CurveGaugeLiquidityDTO>> response = apiInstance.CurveGaugeLiquiditiesCurrentWithHttpInfo();
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.CurveGaugeLiquiditysCurrentWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGaugeLiquiditiesCurrentWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }
@@ -2815,13 +2815,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="curvegetgaugeliquidityshistorical"></a>
-# **CurveGetGaugeLiquiditysHistorical**
-> List&lt;CurveGaugeLiquidityDTO&gt; CurveGetGaugeLiquiditysHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null)
+<a name="curvegetgaugeliquiditieshistorical"></a>
+# **CurveGetGaugeLiquiditiesHistorical**
+> List&lt;CurveGaugeLiquidityDTO&gt; CurveGetGaugeLiquiditiesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string user = null)
 
-GaugeLiquiditys (historical)
+GaugeLiquidities (historical)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 ```csharp
@@ -2833,7 +2833,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class CurveGetGaugeLiquiditysHistoricalExample
+    public class CurveGetGaugeLiquiditiesHistoricalExample
     {
         public static void Main()
         {
@@ -2849,13 +2849,13 @@ namespace Example
 
             try
             {
-                // GaugeLiquiditys (historical)
-                List<CurveGaugeLiquidityDTO> result = apiInstance.CurveGetGaugeLiquiditysHistorical(startBlock, endBlock, startDate, endDate, id, user);
+                // GaugeLiquidities (historical)
+                List<CurveGaugeLiquidityDTO> result = apiInstance.CurveGetGaugeLiquiditiesHistorical(startBlock, endBlock, startDate, endDate, id, user);
                 Debug.WriteLine(result);
             }
             catch (ApiException  e)
             {
-                Debug.Print("Exception when calling CurveApi.CurveGetGaugeLiquiditysHistorical: " + e.Message);
+                Debug.Print("Exception when calling CurveApi.CurveGetGaugeLiquiditiesHistorical: " + e.Message);
                 Debug.Print("Status Code: " + e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2864,21 +2864,21 @@ namespace Example
 }
 ```
 
-#### Using the CurveGetGaugeLiquiditysHistoricalWithHttpInfo variant
+#### Using the CurveGetGaugeLiquiditiesHistoricalWithHttpInfo variant
 This returns an ApiResponse object which contains the response data, status code and headers.
 
 ```csharp
 try
 {
-    // GaugeLiquiditys (historical)
-    ApiResponse<List<CurveGaugeLiquidityDTO>> response = apiInstance.CurveGetGaugeLiquiditysHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, user);
+    // GaugeLiquidities (historical)
+    ApiResponse<List<CurveGaugeLiquidityDTO>> response = apiInstance.CurveGetGaugeLiquiditiesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, user);
     Debug.Write("Status Code: " + response.StatusCode);
     Debug.Write("Response Headers: " + response.Headers);
     Debug.Write("Response Body: " + response.Data);
 }
 catch (ApiException e)
 {
-    Debug.Print("Exception when calling CurveApi.CurveGetGaugeLiquiditysHistoricalWithHttpInfo: " + e.Message);
+    Debug.Print("Exception when calling CurveApi.CurveGetGaugeLiquiditiesHistoricalWithHttpInfo: " + e.Message);
     Debug.Print("Status Code: " + e.ErrorCode);
     Debug.Print(e.StackTrace);
 }

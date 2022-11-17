@@ -24,25 +24,25 @@ import (
 // DexApiService DexApi service
 type DexApiService service
 
-type ApiDexBatchsCurrentRequest struct {
+type ApiDexBatchesCurrentRequest struct {
 	ctx context.Context
 	ApiService *DexApiService
 }
 
-func (r ApiDexBatchsCurrentRequest) Execute() ([]DexBatchDTO, *http.Response, error) {
-	return r.ApiService.DexBatchsCurrentExecute(r)
+func (r ApiDexBatchesCurrentRequest) Execute() ([]DexBatchDTO, *http.Response, error) {
+	return r.ApiService.DexBatchesCurrentExecute(r)
 }
 
 /*
-DexBatchsCurrent Batchs (current)
+DexBatchesCurrent Batches (current)
 
-Gets batchs.
+Gets batches.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDexBatchsCurrentRequest
+ @return ApiDexBatchesCurrentRequest
 */
-func (a *DexApiService) DexBatchsCurrent(ctx context.Context) ApiDexBatchsCurrentRequest {
-	return ApiDexBatchsCurrentRequest{
+func (a *DexApiService) DexBatchesCurrent(ctx context.Context) ApiDexBatchesCurrentRequest {
+	return ApiDexBatchesCurrentRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -50,7 +50,7 @@ func (a *DexApiService) DexBatchsCurrent(ctx context.Context) ApiDexBatchsCurren
 
 // Execute executes the request
 //  @return []DexBatchDTO
-func (a *DexApiService) DexBatchsCurrentExecute(r ApiDexBatchsCurrentRequest) ([]DexBatchDTO, *http.Response, error) {
+func (a *DexApiService) DexBatchesCurrentExecute(r ApiDexBatchesCurrentRequest) ([]DexBatchDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -58,12 +58,12 @@ func (a *DexApiService) DexBatchsCurrentExecute(r ApiDexBatchsCurrentRequest) ([
 		localVarReturnValue  []DexBatchDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexBatchsCurrent")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexBatchesCurrent")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/dex/batchs/current"
+	localVarPath := localBasePath + "/dapps/dex/batches/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -222,7 +222,7 @@ func (a *DexApiService) DexDepositsCurrentExecute(r ApiDexDepositsCurrentRequest
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDexGetBatchsHistoricalRequest struct {
+type ApiDexGetBatchesHistoricalRequest struct {
 	ctx context.Context
 	ApiService *DexApiService
 	startBlock *int64
@@ -233,49 +233,49 @@ type ApiDexGetBatchsHistoricalRequest struct {
 }
 
 // The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-func (r ApiDexGetBatchsHistoricalRequest) StartBlock(startBlock int64) ApiDexGetBatchsHistoricalRequest {
+func (r ApiDexGetBatchesHistoricalRequest) StartBlock(startBlock int64) ApiDexGetBatchesHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
 // The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-func (r ApiDexGetBatchsHistoricalRequest) EndBlock(endBlock int64) ApiDexGetBatchsHistoricalRequest {
+func (r ApiDexGetBatchesHistoricalRequest) EndBlock(endBlock int64) ApiDexGetBatchesHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
 // The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-func (r ApiDexGetBatchsHistoricalRequest) StartDate(startDate time.Time) ApiDexGetBatchsHistoricalRequest {
+func (r ApiDexGetBatchesHistoricalRequest) StartDate(startDate time.Time) ApiDexGetBatchesHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
 // The end date of timeframe.
-func (r ApiDexGetBatchsHistoricalRequest) EndDate(endDate time.Time) ApiDexGetBatchsHistoricalRequest {
+func (r ApiDexGetBatchesHistoricalRequest) EndDate(endDate time.Time) ApiDexGetBatchesHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
 // Identifier.
-func (r ApiDexGetBatchsHistoricalRequest) Id(id string) ApiDexGetBatchsHistoricalRequest {
+func (r ApiDexGetBatchesHistoricalRequest) Id(id string) ApiDexGetBatchesHistoricalRequest {
 	r.id = &id
 	return r
 }
 
-func (r ApiDexGetBatchsHistoricalRequest) Execute() ([]DexBatchDTO, *http.Response, error) {
-	return r.ApiService.DexGetBatchsHistoricalExecute(r)
+func (r ApiDexGetBatchesHistoricalRequest) Execute() ([]DexBatchDTO, *http.Response, error) {
+	return r.ApiService.DexGetBatchesHistoricalExecute(r)
 }
 
 /*
-DexGetBatchsHistorical Batchs (historical)
+DexGetBatchesHistorical Batches (historical)
 
-Gets batchs.
+Gets batches.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDexGetBatchsHistoricalRequest
+ @return ApiDexGetBatchesHistoricalRequest
 */
-func (a *DexApiService) DexGetBatchsHistorical(ctx context.Context) ApiDexGetBatchsHistoricalRequest {
-	return ApiDexGetBatchsHistoricalRequest{
+func (a *DexApiService) DexGetBatchesHistorical(ctx context.Context) ApiDexGetBatchesHistoricalRequest {
+	return ApiDexGetBatchesHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -283,7 +283,7 @@ func (a *DexApiService) DexGetBatchsHistorical(ctx context.Context) ApiDexGetBat
 
 // Execute executes the request
 //  @return []DexBatchDTO
-func (a *DexApiService) DexGetBatchsHistoricalExecute(r ApiDexGetBatchsHistoricalRequest) ([]DexBatchDTO, *http.Response, error) {
+func (a *DexApiService) DexGetBatchesHistoricalExecute(r ApiDexGetBatchesHistoricalRequest) ([]DexBatchDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -291,12 +291,12 @@ func (a *DexApiService) DexGetBatchsHistoricalExecute(r ApiDexGetBatchsHistorica
 		localVarReturnValue  []DexBatchDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexGetBatchsHistorical")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexGetBatchesHistorical")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/dex/batchs/historical"
+	localVarPath := localBasePath + "/dapps/dex/batches/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -979,7 +979,7 @@ func (a *DexApiService) DexGetSolutionsHistoricalExecute(r ApiDexGetSolutionsHis
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDexGetStatssHistoricalRequest struct {
+type ApiDexGetStatsHistoricalRequest struct {
 	ctx context.Context
 	ApiService *DexApiService
 	startBlock *int64
@@ -990,49 +990,49 @@ type ApiDexGetStatssHistoricalRequest struct {
 }
 
 // The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-func (r ApiDexGetStatssHistoricalRequest) StartBlock(startBlock int64) ApiDexGetStatssHistoricalRequest {
+func (r ApiDexGetStatsHistoricalRequest) StartBlock(startBlock int64) ApiDexGetStatsHistoricalRequest {
 	r.startBlock = &startBlock
 	return r
 }
 
 // The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-func (r ApiDexGetStatssHistoricalRequest) EndBlock(endBlock int64) ApiDexGetStatssHistoricalRequest {
+func (r ApiDexGetStatsHistoricalRequest) EndBlock(endBlock int64) ApiDexGetStatsHistoricalRequest {
 	r.endBlock = &endBlock
 	return r
 }
 
 // The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-func (r ApiDexGetStatssHistoricalRequest) StartDate(startDate time.Time) ApiDexGetStatssHistoricalRequest {
+func (r ApiDexGetStatsHistoricalRequest) StartDate(startDate time.Time) ApiDexGetStatsHistoricalRequest {
 	r.startDate = &startDate
 	return r
 }
 
 // The end date of timeframe.
-func (r ApiDexGetStatssHistoricalRequest) EndDate(endDate time.Time) ApiDexGetStatssHistoricalRequest {
+func (r ApiDexGetStatsHistoricalRequest) EndDate(endDate time.Time) ApiDexGetStatsHistoricalRequest {
 	r.endDate = &endDate
 	return r
 }
 
 // 
-func (r ApiDexGetStatssHistoricalRequest) Id(id string) ApiDexGetStatssHistoricalRequest {
+func (r ApiDexGetStatsHistoricalRequest) Id(id string) ApiDexGetStatsHistoricalRequest {
 	r.id = &id
 	return r
 }
 
-func (r ApiDexGetStatssHistoricalRequest) Execute() ([]DexStatsDTO, *http.Response, error) {
-	return r.ApiService.DexGetStatssHistoricalExecute(r)
+func (r ApiDexGetStatsHistoricalRequest) Execute() ([]DexStatsDTO, *http.Response, error) {
+	return r.ApiService.DexGetStatsHistoricalExecute(r)
 }
 
 /*
-DexGetStatssHistorical Statss (historical)
+DexGetStatsHistorical Stats (historical)
 
-Gets statss.
+Gets stats.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDexGetStatssHistoricalRequest
+ @return ApiDexGetStatsHistoricalRequest
 */
-func (a *DexApiService) DexGetStatssHistorical(ctx context.Context) ApiDexGetStatssHistoricalRequest {
-	return ApiDexGetStatssHistoricalRequest{
+func (a *DexApiService) DexGetStatsHistorical(ctx context.Context) ApiDexGetStatsHistoricalRequest {
+	return ApiDexGetStatsHistoricalRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -1040,7 +1040,7 @@ func (a *DexApiService) DexGetStatssHistorical(ctx context.Context) ApiDexGetSta
 
 // Execute executes the request
 //  @return []DexStatsDTO
-func (a *DexApiService) DexGetStatssHistoricalExecute(r ApiDexGetStatssHistoricalRequest) ([]DexStatsDTO, *http.Response, error) {
+func (a *DexApiService) DexGetStatsHistoricalExecute(r ApiDexGetStatsHistoricalRequest) ([]DexStatsDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -1048,12 +1048,12 @@ func (a *DexApiService) DexGetStatssHistoricalExecute(r ApiDexGetStatssHistorica
 		localVarReturnValue  []DexStatsDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexGetStatssHistorical")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexGetStatsHistorical")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/dex/statss/historical"
+	localVarPath := localBasePath + "/dapps/dex/stats/historical"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
@@ -2228,25 +2228,25 @@ func (a *DexApiService) DexSolutionsCurrentExecute(r ApiDexSolutionsCurrentReque
 	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
-type ApiDexStatssCurrentRequest struct {
+type ApiDexStatsCurrentRequest struct {
 	ctx context.Context
 	ApiService *DexApiService
 }
 
-func (r ApiDexStatssCurrentRequest) Execute() ([]DexStatsDTO, *http.Response, error) {
-	return r.ApiService.DexStatssCurrentExecute(r)
+func (r ApiDexStatsCurrentRequest) Execute() ([]DexStatsDTO, *http.Response, error) {
+	return r.ApiService.DexStatsCurrentExecute(r)
 }
 
 /*
-DexStatssCurrent Statss (current)
+DexStatsCurrent Stats (current)
 
-Gets statss.
+Gets stats.
 
  @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
- @return ApiDexStatssCurrentRequest
+ @return ApiDexStatsCurrentRequest
 */
-func (a *DexApiService) DexStatssCurrent(ctx context.Context) ApiDexStatssCurrentRequest {
-	return ApiDexStatssCurrentRequest{
+func (a *DexApiService) DexStatsCurrent(ctx context.Context) ApiDexStatsCurrentRequest {
+	return ApiDexStatsCurrentRequest{
 		ApiService: a,
 		ctx: ctx,
 	}
@@ -2254,7 +2254,7 @@ func (a *DexApiService) DexStatssCurrent(ctx context.Context) ApiDexStatssCurren
 
 // Execute executes the request
 //  @return []DexStatsDTO
-func (a *DexApiService) DexStatssCurrentExecute(r ApiDexStatssCurrentRequest) ([]DexStatsDTO, *http.Response, error) {
+func (a *DexApiService) DexStatsCurrentExecute(r ApiDexStatsCurrentRequest) ([]DexStatsDTO, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
@@ -2262,12 +2262,12 @@ func (a *DexApiService) DexStatssCurrentExecute(r ApiDexStatssCurrentRequest) ([
 		localVarReturnValue  []DexStatsDTO
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexStatssCurrent")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "DexApiService.DexStatsCurrent")
 	if err != nil {
 		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
-	localVarPath := localBasePath + "/dapps/dex/statss/current"
+	localVarPath := localBasePath + "/dapps/dex/stats/current"
 
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}

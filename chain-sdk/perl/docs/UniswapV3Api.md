@@ -11,38 +11,38 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**uniswap_v3_bundles__current**](UniswapV3Api.md#uniswap_v3_bundles__current) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
 [**uniswap_v3_burns__current**](UniswapV3Api.md#uniswap_v3_burns__current) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
-[**uniswap_v3_factorys__current**](UniswapV3Api.md#uniswap_v3_factorys__current) | **GET** /dapps/uniswapv3/factorys/current | Factorys (current)
+[**uniswap_v3_factories__current**](UniswapV3Api.md#uniswap_v3_factories__current) | **GET** /dapps/uniswapv3/factories/current | Factories (current)
 [**uniswap_v3_get_bundles__historical**](UniswapV3Api.md#uniswap_v3_get_bundles__historical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical)
 [**uniswap_v3_get_burns__historical**](UniswapV3Api.md#uniswap_v3_get_burns__historical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical)
-[**uniswap_v3_get_factorys__historical**](UniswapV3Api.md#uniswap_v3_get_factorys__historical) | **GET** /dapps/uniswapv3/factorys/historical | Factorys (historical)
+[**uniswap_v3_get_factories__historical**](UniswapV3Api.md#uniswap_v3_get_factories__historical) | **GET** /dapps/uniswapv3/factories/historical | Factories (historical)
 [**uniswap_v3_get_mints__historical**](UniswapV3Api.md#uniswap_v3_get_mints__historical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical)
-[**uniswap_v3_get_pool_day_datas__historical**](UniswapV3Api.md#uniswap_v3_get_pool_day_datas__historical) | **GET** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical)
-[**uniswap_v3_get_pool_hour_datas__historical**](UniswapV3Api.md#uniswap_v3_get_pool_hour_datas__historical) | **GET** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical)
+[**uniswap_v3_get_pool_day_data__historical**](UniswapV3Api.md#uniswap_v3_get_pool_day_data__historical) | **GET** /dapps/uniswapv3/poolDayData/historical | PoolDayData (historical)
+[**uniswap_v3_get_pool_hour_data__historical**](UniswapV3Api.md#uniswap_v3_get_pool_hour_data__historical) | **GET** /dapps/uniswapv3/poolHourData/historical | PoolHourData (historical)
 [**uniswap_v3_get_pools__historical**](UniswapV3Api.md#uniswap_v3_get_pools__historical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical)
 [**uniswap_v3_get_position_snapshots__historical**](UniswapV3Api.md#uniswap_v3_get_position_snapshots__historical) | **GET** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical)
 [**uniswap_v3_get_positions__historical**](UniswapV3Api.md#uniswap_v3_get_positions__historical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical)
 [**uniswap_v3_get_swaps__historical**](UniswapV3Api.md#uniswap_v3_get_swaps__historical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical)
-[**uniswap_v3_get_tick_day_datas__historical**](UniswapV3Api.md#uniswap_v3_get_tick_day_datas__historical) | **GET** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical)
+[**uniswap_v3_get_tick_day_data__historical**](UniswapV3Api.md#uniswap_v3_get_tick_day_data__historical) | **GET** /dapps/uniswapv3/tickDayData/historical | TickDayData (historical)
 [**uniswap_v3_get_ticks__historical**](UniswapV3Api.md#uniswap_v3_get_ticks__historical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical)
-[**uniswap_v3_get_token_hour_datas__historical**](UniswapV3Api.md#uniswap_v3_get_token_hour_datas__historical) | **GET** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical)
-[**uniswap_v3_get_token_v3_day_datas__historical**](UniswapV3Api.md#uniswap_v3_get_token_v3_day_datas__historical) | **GET** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical)
+[**uniswap_v3_get_token_hour_data__historical**](UniswapV3Api.md#uniswap_v3_get_token_hour_data__historical) | **GET** /dapps/uniswapv3/tokenHourData/historical | TokenHourData (historical)
+[**uniswap_v3_get_token_v3_day_data__historical**](UniswapV3Api.md#uniswap_v3_get_token_v3_day_data__historical) | **GET** /dapps/uniswapv3/tokenV3DayData/historical | TokenV3DayData (historical)
 [**uniswap_v3_get_tokens__historical**](UniswapV3Api.md#uniswap_v3_get_tokens__historical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical)
 [**uniswap_v3_get_transactions__historical**](UniswapV3Api.md#uniswap_v3_get_transactions__historical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical)
-[**uniswap_v3_get_uniswap_day_datas__historical**](UniswapV3Api.md#uniswap_v3_get_uniswap_day_datas__historical) | **GET** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical)
+[**uniswap_v3_get_uniswap_day_data__historical**](UniswapV3Api.md#uniswap_v3_get_uniswap_day_data__historical) | **GET** /dapps/uniswapv3/uniswapDayData/historical | UniswapDayData (historical)
 [**uniswap_v3_mints__current**](UniswapV3Api.md#uniswap_v3_mints__current) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
-[**uniswap_v3_pool_day_datas__current**](UniswapV3Api.md#uniswap_v3_pool_day_datas__current) | **GET** /dapps/uniswapv3/poolDayDatas/current | PoolDayDatas (current)
-[**uniswap_v3_pool_hour_datas__current**](UniswapV3Api.md#uniswap_v3_pool_hour_datas__current) | **GET** /dapps/uniswapv3/poolHourDatas/current | PoolHourDatas (current)
+[**uniswap_v3_pool_day_data__current**](UniswapV3Api.md#uniswap_v3_pool_day_data__current) | **GET** /dapps/uniswapv3/poolDayData/current | PoolDayData (current)
+[**uniswap_v3_pool_hour_data__current**](UniswapV3Api.md#uniswap_v3_pool_hour_data__current) | **GET** /dapps/uniswapv3/poolHourData/current | PoolHourData (current)
 [**uniswap_v3_pools__current**](UniswapV3Api.md#uniswap_v3_pools__current) | **GET** /dapps/uniswapv3/pools/current | Pools (current)
 [**uniswap_v3_position_snapshots__current**](UniswapV3Api.md#uniswap_v3_position_snapshots__current) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionSnapshots (current)
 [**uniswap_v3_positions__current**](UniswapV3Api.md#uniswap_v3_positions__current) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
 [**uniswap_v3_swaps__current**](UniswapV3Api.md#uniswap_v3_swaps__current) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current)
-[**uniswap_v3_tick_day_datas__current**](UniswapV3Api.md#uniswap_v3_tick_day_datas__current) | **GET** /dapps/uniswapv3/tickDayDatas/current | TickDayDatas (current)
+[**uniswap_v3_tick_day_data__current**](UniswapV3Api.md#uniswap_v3_tick_day_data__current) | **GET** /dapps/uniswapv3/tickDayData/current | TickDayData (current)
 [**uniswap_v3_ticks__current**](UniswapV3Api.md#uniswap_v3_ticks__current) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
-[**uniswap_v3_token_hour_datas__current**](UniswapV3Api.md#uniswap_v3_token_hour_datas__current) | **GET** /dapps/uniswapv3/tokenHourDatas/current | TokenHourDatas (current)
-[**uniswap_v3_token_v3_day_datas__current**](UniswapV3Api.md#uniswap_v3_token_v3_day_datas__current) | **GET** /dapps/uniswapv3/tokenV3DayDatas/current | TokenV3DayDatas (current)
+[**uniswap_v3_token_hour_data__current**](UniswapV3Api.md#uniswap_v3_token_hour_data__current) | **GET** /dapps/uniswapv3/tokenHourData/current | TokenHourData (current)
+[**uniswap_v3_token_v3_day_data__current**](UniswapV3Api.md#uniswap_v3_token_v3_day_data__current) | **GET** /dapps/uniswapv3/tokenV3DayData/current | TokenV3DayData (current)
 [**uniswap_v3_tokens__current**](UniswapV3Api.md#uniswap_v3_tokens__current) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current)
 [**uniswap_v3_transactions__current**](UniswapV3Api.md#uniswap_v3_transactions__current) | **GET** /dapps/uniswapv3/transactions/current | Transactions (current)
-[**uniswap_v3_uniswap_day_datas__current**](UniswapV3Api.md#uniswap_v3_uniswap_day_datas__current) | **GET** /dapps/uniswapv3/uniswapDayDatas/current | UniswapDayDatas (current)
+[**uniswap_v3_uniswap_day_data__current**](UniswapV3Api.md#uniswap_v3_uniswap_day_data__current) | **GET** /dapps/uniswapv3/uniswapDayData/current | UniswapDayData (current)
 
 
 # **uniswap_v3_bundles__current**
@@ -129,12 +129,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v3_factorys__current**
-> ARRAY[UniswapV3FactoryDTO] uniswap_v3_factorys__current()
+# **uniswap_v3_factories__current**
+> ARRAY[UniswapV3FactoryDTO] uniswap_v3_factories__current()
 
-Factorys (current)
+Factories (current)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 ```perl
@@ -145,11 +145,11 @@ my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 
 
 eval {
-    my $result = $api_instance->uniswap_v3_factorys__current();
+    my $result = $api_instance->uniswap_v3_factories__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->uniswap_v3_factorys__current: $@\n";
+    warn "Exception when calling UniswapV3Api->uniswap_v3_factories__current: $@\n";
 }
 ```
 
@@ -285,12 +285,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v3_get_factorys__historical**
-> ARRAY[UniswapV3FactoryDTO] uniswap_v3_get_factorys__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
+# **uniswap_v3_get_factories__historical**
+> ARRAY[UniswapV3FactoryDTO] uniswap_v3_get_factories__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
 
-Factorys (historical)
+Factories (historical)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 ```perl
@@ -306,11 +306,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | Th
 my $id = "id_example"; # string | Factory address.
 
 eval {
-    my $result = $api_instance->uniswap_v3_get_factorys__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
+    my $result = $api_instance->uniswap_v3_get_factories__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->uniswap_v3_get_factorys__historical: $@\n";
+    warn "Exception when calling UniswapV3Api->uniswap_v3_get_factories__historical: $@\n";
 }
 ```
 
@@ -399,12 +399,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v3_get_pool_day_datas__historical**
-> ARRAY[UniswapV3PoolDayDataDTO] uniswap_v3_get_pool_day_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pool => $pool)
+# **uniswap_v3_get_pool_day_data__historical**
+> ARRAY[UniswapV3PoolDayDataDTO] uniswap_v3_get_pool_day_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pool => $pool)
 
-PoolDayDatas (historical)
+PoolDayData (historical)
 
-Gets poolDayDatas.
+Gets poolDayData.
 
 ### Example
 ```perl
@@ -421,11 +421,11 @@ my $id = "id_example"; # string |
 my $pool = "pool_example"; # string | 
 
 eval {
-    my $result = $api_instance->uniswap_v3_get_pool_day_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pool => $pool);
+    my $result = $api_instance->uniswap_v3_get_pool_day_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pool => $pool);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->uniswap_v3_get_pool_day_datas__historical: $@\n";
+    warn "Exception when calling UniswapV3Api->uniswap_v3_get_pool_day_data__historical: $@\n";
 }
 ```
 
@@ -455,12 +455,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v3_get_pool_hour_datas__historical**
-> ARRAY[UniswapV3PoolHourDataDTO] uniswap_v3_get_pool_hour_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pool => $pool)
+# **uniswap_v3_get_pool_hour_data__historical**
+> ARRAY[UniswapV3PoolHourDataDTO] uniswap_v3_get_pool_hour_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pool => $pool)
 
-PoolHourDatas (historical)
+PoolHourData (historical)
 
-Gets poolHourDatas.
+Gets poolHourData.
 
 ### Example
 ```perl
@@ -477,11 +477,11 @@ my $id = "id_example"; # string |
 my $pool = "pool_example"; # string | 
 
 eval {
-    my $result = $api_instance->uniswap_v3_get_pool_hour_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pool => $pool);
+    my $result = $api_instance->uniswap_v3_get_pool_hour_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pool => $pool);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->uniswap_v3_get_pool_hour_datas__historical: $@\n";
+    warn "Exception when calling UniswapV3Api->uniswap_v3_get_pool_hour_data__historical: $@\n";
 }
 ```
 
@@ -745,12 +745,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v3_get_tick_day_datas__historical**
-> ARRAY[UniswapV3TickDayDataDTO] uniswap_v3_get_tick_day_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pool => $pool)
+# **uniswap_v3_get_tick_day_data__historical**
+> ARRAY[UniswapV3TickDayDataDTO] uniswap_v3_get_tick_day_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pool => $pool)
 
-TickDayDatas (historical)
+TickDayData (historical)
 
-Gets tickDayDatas.
+Gets tickDayData.
 
 ### Example
 ```perl
@@ -767,11 +767,11 @@ my $id = "id_example"; # string |
 my $pool = "pool_example"; # string | 
 
 eval {
-    my $result = $api_instance->uniswap_v3_get_tick_day_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pool => $pool);
+    my $result = $api_instance->uniswap_v3_get_tick_day_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pool => $pool);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->uniswap_v3_get_tick_day_datas__historical: $@\n";
+    warn "Exception when calling UniswapV3Api->uniswap_v3_get_tick_day_data__historical: $@\n";
 }
 ```
 
@@ -857,12 +857,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v3_get_token_hour_datas__historical**
-> ARRAY[UniswapV3TokenHourDataDTO] uniswap_v3_get_token_hour_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
+# **uniswap_v3_get_token_hour_data__historical**
+> ARRAY[UniswapV3TokenHourDataDTO] uniswap_v3_get_token_hour_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
 
-TokenHourDatas (historical)
+TokenHourData (historical)
 
-Gets tokenHourDatas.
+Gets tokenHourData.
 
 ### Example
 ```perl
@@ -878,11 +878,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | Th
 my $id = "id_example"; # string | Token address concatendated with date.
 
 eval {
-    my $result = $api_instance->uniswap_v3_get_token_hour_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
+    my $result = $api_instance->uniswap_v3_get_token_hour_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->uniswap_v3_get_token_hour_datas__historical: $@\n";
+    warn "Exception when calling UniswapV3Api->uniswap_v3_get_token_hour_data__historical: $@\n";
 }
 ```
 
@@ -911,12 +911,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v3_get_token_v3_day_datas__historical**
-> ARRAY[UniswapV3TokenV3DayDataDTO] uniswap_v3_get_token_v3_day_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
+# **uniswap_v3_get_token_v3_day_data__historical**
+> ARRAY[UniswapV3TokenV3DayDataDTO] uniswap_v3_get_token_v3_day_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
 
-TokenV3DayDatas (historical)
+TokenV3DayData (historical)
 
-Gets tokenV3DayDatas.
+Gets tokenV3DayData.
 
 ### Example
 ```perl
@@ -932,11 +932,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | Th
 my $id = "id_example"; # string | Token address concatendated with date.
 
 eval {
-    my $result = $api_instance->uniswap_v3_get_token_v3_day_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
+    my $result = $api_instance->uniswap_v3_get_token_v3_day_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->uniswap_v3_get_token_v3_day_datas__historical: $@\n";
+    warn "Exception when calling UniswapV3Api->uniswap_v3_get_token_v3_day_data__historical: $@\n";
 }
 ```
 
@@ -1077,12 +1077,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v3_get_uniswap_day_datas__historical**
-> ARRAY[UniswapV3UniswapDayDataDTO] uniswap_v3_get_uniswap_day_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
+# **uniswap_v3_get_uniswap_day_data__historical**
+> ARRAY[UniswapV3UniswapDayDataDTO] uniswap_v3_get_uniswap_day_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
 
-UniswapDayDatas (historical)
+UniswapDayData (historical)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 ```perl
@@ -1098,11 +1098,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | Th
 my $id = "id_example"; # string | Timestamp rounded to current day by dividing by 86400.
 
 eval {
-    my $result = $api_instance->uniswap_v3_get_uniswap_day_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
+    my $result = $api_instance->uniswap_v3_get_uniswap_day_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->uniswap_v3_get_uniswap_day_datas__historical: $@\n";
+    warn "Exception when calling UniswapV3Api->uniswap_v3_get_uniswap_day_data__historical: $@\n";
 }
 ```
 
@@ -1173,12 +1173,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v3_pool_day_datas__current**
-> ARRAY[UniswapV3PoolDayDataDTO] uniswap_v3_pool_day_datas__current()
+# **uniswap_v3_pool_day_data__current**
+> ARRAY[UniswapV3PoolDayDataDTO] uniswap_v3_pool_day_data__current()
 
-PoolDayDatas (current)
+PoolDayData (current)
 
-Gets poolDayDatas.
+Gets poolDayData.
 
 ### Example
 ```perl
@@ -1189,11 +1189,11 @@ my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 
 
 eval {
-    my $result = $api_instance->uniswap_v3_pool_day_datas__current();
+    my $result = $api_instance->uniswap_v3_pool_day_data__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->uniswap_v3_pool_day_datas__current: $@\n";
+    warn "Exception when calling UniswapV3Api->uniswap_v3_pool_day_data__current: $@\n";
 }
 ```
 
@@ -1215,12 +1215,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v3_pool_hour_datas__current**
-> ARRAY[UniswapV3PoolHourDataDTO] uniswap_v3_pool_hour_datas__current()
+# **uniswap_v3_pool_hour_data__current**
+> ARRAY[UniswapV3PoolHourDataDTO] uniswap_v3_pool_hour_data__current()
 
-PoolHourDatas (current)
+PoolHourData (current)
 
-Gets poolHourDatas.
+Gets poolHourData.
 
 ### Example
 ```perl
@@ -1231,11 +1231,11 @@ my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 
 
 eval {
-    my $result = $api_instance->uniswap_v3_pool_hour_datas__current();
+    my $result = $api_instance->uniswap_v3_pool_hour_data__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->uniswap_v3_pool_hour_datas__current: $@\n";
+    warn "Exception when calling UniswapV3Api->uniswap_v3_pool_hour_data__current: $@\n";
 }
 ```
 
@@ -1433,12 +1433,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v3_tick_day_datas__current**
-> ARRAY[UniswapV3TickDayDataDTO] uniswap_v3_tick_day_datas__current()
+# **uniswap_v3_tick_day_data__current**
+> ARRAY[UniswapV3TickDayDataDTO] uniswap_v3_tick_day_data__current()
 
-TickDayDatas (current)
+TickDayData (current)
 
-Gets tickDayDatas.
+Gets tickDayData.
 
 ### Example
 ```perl
@@ -1449,11 +1449,11 @@ my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 
 
 eval {
-    my $result = $api_instance->uniswap_v3_tick_day_datas__current();
+    my $result = $api_instance->uniswap_v3_tick_day_data__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->uniswap_v3_tick_day_datas__current: $@\n";
+    warn "Exception when calling UniswapV3Api->uniswap_v3_tick_day_data__current: $@\n";
 }
 ```
 
@@ -1517,12 +1517,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v3_token_hour_datas__current**
-> ARRAY[UniswapV3TokenHourDataDTO] uniswap_v3_token_hour_datas__current()
+# **uniswap_v3_token_hour_data__current**
+> ARRAY[UniswapV3TokenHourDataDTO] uniswap_v3_token_hour_data__current()
 
-TokenHourDatas (current)
+TokenHourData (current)
 
-Gets tokenHourDatas.
+Gets tokenHourData.
 
 ### Example
 ```perl
@@ -1533,11 +1533,11 @@ my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 
 
 eval {
-    my $result = $api_instance->uniswap_v3_token_hour_datas__current();
+    my $result = $api_instance->uniswap_v3_token_hour_data__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->uniswap_v3_token_hour_datas__current: $@\n";
+    warn "Exception when calling UniswapV3Api->uniswap_v3_token_hour_data__current: $@\n";
 }
 ```
 
@@ -1559,12 +1559,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v3_token_v3_day_datas__current**
-> ARRAY[UniswapV3TokenV3DayDataDTO] uniswap_v3_token_v3_day_datas__current()
+# **uniswap_v3_token_v3_day_data__current**
+> ARRAY[UniswapV3TokenV3DayDataDTO] uniswap_v3_token_v3_day_data__current()
 
-TokenV3DayDatas (current)
+TokenV3DayData (current)
 
-Gets tokenV3DayDatas.
+Gets tokenV3DayData.
 
 ### Example
 ```perl
@@ -1575,11 +1575,11 @@ my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 
 
 eval {
-    my $result = $api_instance->uniswap_v3_token_v3_day_datas__current();
+    my $result = $api_instance->uniswap_v3_token_v3_day_data__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->uniswap_v3_token_v3_day_datas__current: $@\n";
+    warn "Exception when calling UniswapV3Api->uniswap_v3_token_v3_day_data__current: $@\n";
 }
 ```
 
@@ -1685,12 +1685,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v3_uniswap_day_datas__current**
-> ARRAY[UniswapV3UniswapDayDataDTO] uniswap_v3_uniswap_day_datas__current()
+# **uniswap_v3_uniswap_day_data__current**
+> ARRAY[UniswapV3UniswapDayDataDTO] uniswap_v3_uniswap_day_data__current()
 
-UniswapDayDatas (current)
+UniswapDayData (current)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 ```perl
@@ -1701,11 +1701,11 @@ my $api_instance = WWW::OpenAPIClient::UniswapV3Api->new(
 
 
 eval {
-    my $result = $api_instance->uniswap_v3_uniswap_day_datas__current();
+    my $result = $api_instance->uniswap_v3_uniswap_day_data__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV3Api->uniswap_v3_uniswap_day_datas__current: $@\n";
+    warn "Exception when calling UniswapV3Api->uniswap_v3_uniswap_day_data__current: $@\n";
 }
 ```
 

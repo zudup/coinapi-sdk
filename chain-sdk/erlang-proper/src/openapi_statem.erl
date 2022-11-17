@@ -78,13 +78,13 @@ uniswap_v3_burns_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_factorys_(current)
+%% uniswap_v3_factories_(current)
 %%==============================================================================
 
-uniswap_v3_factorys_(current)() ->
-  openapi_api:uniswap_v3_factorys_(current)().
+uniswap_v3_factories_(current)() ->
+  openapi_api:uniswap_v3_factories_(current)().
 
-uniswap_v3_factorys_(current)_args(_S) ->
+uniswap_v3_factories_(current)_args(_S) ->
   [].
 
 %%==============================================================================
@@ -108,13 +108,13 @@ uniswap_v3_get_burns_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_get_factorys_(historical)
+%% uniswap_v3_get_factories_(historical)
 %%==============================================================================
 
-uniswap_v3_get_factorys_(historical)() ->
-  openapi_api:uniswap_v3_get_factorys_(historical)().
+uniswap_v3_get_factories_(historical)() ->
+  openapi_api:uniswap_v3_get_factories_(historical)().
 
-uniswap_v3_get_factorys_(historical)_args(_S) ->
+uniswap_v3_get_factories_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
@@ -128,23 +128,23 @@ uniswap_v3_get_mints_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_get_pool_day_datas_(historical)
+%% uniswap_v3_get_pool_day_data_(historical)
 %%==============================================================================
 
-uniswap_v3_get_pool_day_datas_(historical)() ->
-  openapi_api:uniswap_v3_get_pool_day_datas_(historical)().
+uniswap_v3_get_pool_day_data_(historical)() ->
+  openapi_api:uniswap_v3_get_pool_day_data_(historical)().
 
-uniswap_v3_get_pool_day_datas_(historical)_args(_S) ->
+uniswap_v3_get_pool_day_data_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_get_pool_hour_datas_(historical)
+%% uniswap_v3_get_pool_hour_data_(historical)
 %%==============================================================================
 
-uniswap_v3_get_pool_hour_datas_(historical)() ->
-  openapi_api:uniswap_v3_get_pool_hour_datas_(historical)().
+uniswap_v3_get_pool_hour_data_(historical)() ->
+  openapi_api:uniswap_v3_get_pool_hour_data_(historical)().
 
-uniswap_v3_get_pool_hour_datas_(historical)_args(_S) ->
+uniswap_v3_get_pool_hour_data_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
@@ -188,13 +188,13 @@ uniswap_v3_get_swaps_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_get_tick_day_datas_(historical)
+%% uniswap_v3_get_tick_day_data_(historical)
 %%==============================================================================
 
-uniswap_v3_get_tick_day_datas_(historical)() ->
-  openapi_api:uniswap_v3_get_tick_day_datas_(historical)().
+uniswap_v3_get_tick_day_data_(historical)() ->
+  openapi_api:uniswap_v3_get_tick_day_data_(historical)().
 
-uniswap_v3_get_tick_day_datas_(historical)_args(_S) ->
+uniswap_v3_get_tick_day_data_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
@@ -208,23 +208,23 @@ uniswap_v3_get_ticks_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_get_token_hour_datas_(historical)
+%% uniswap_v3_get_token_hour_data_(historical)
 %%==============================================================================
 
-uniswap_v3_get_token_hour_datas_(historical)() ->
-  openapi_api:uniswap_v3_get_token_hour_datas_(historical)().
+uniswap_v3_get_token_hour_data_(historical)() ->
+  openapi_api:uniswap_v3_get_token_hour_data_(historical)().
 
-uniswap_v3_get_token_hour_datas_(historical)_args(_S) ->
+uniswap_v3_get_token_hour_data_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_get_token_v3_day_datas_(historical)
+%% uniswap_v3_get_token_v3_day_data_(historical)
 %%==============================================================================
 
-uniswap_v3_get_token_v3_day_datas_(historical)() ->
-  openapi_api:uniswap_v3_get_token_v3_day_datas_(historical)().
+uniswap_v3_get_token_v3_day_data_(historical)() ->
+  openapi_api:uniswap_v3_get_token_v3_day_data_(historical)().
 
-uniswap_v3_get_token_v3_day_datas_(historical)_args(_S) ->
+uniswap_v3_get_token_v3_day_data_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
@@ -248,13 +248,13 @@ uniswap_v3_get_transactions_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_get_uniswap_day_datas_(historical)
+%% uniswap_v3_get_uniswap_day_data_(historical)
 %%==============================================================================
 
-uniswap_v3_get_uniswap_day_datas_(historical)() ->
-  openapi_api:uniswap_v3_get_uniswap_day_datas_(historical)().
+uniswap_v3_get_uniswap_day_data_(historical)() ->
+  openapi_api:uniswap_v3_get_uniswap_day_data_(historical)().
 
-uniswap_v3_get_uniswap_day_datas_(historical)_args(_S) ->
+uniswap_v3_get_uniswap_day_data_(historical)_args(_S) ->
   [].
 
 %%==============================================================================
@@ -268,23 +268,23 @@ uniswap_v3_mints_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_pool_day_datas_(current)
+%% uniswap_v3_pool_day_data_(current)
 %%==============================================================================
 
-uniswap_v3_pool_day_datas_(current)() ->
-  openapi_api:uniswap_v3_pool_day_datas_(current)().
+uniswap_v3_pool_day_data_(current)() ->
+  openapi_api:uniswap_v3_pool_day_data_(current)().
 
-uniswap_v3_pool_day_datas_(current)_args(_S) ->
+uniswap_v3_pool_day_data_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_pool_hour_datas_(current)
+%% uniswap_v3_pool_hour_data_(current)
 %%==============================================================================
 
-uniswap_v3_pool_hour_datas_(current)() ->
-  openapi_api:uniswap_v3_pool_hour_datas_(current)().
+uniswap_v3_pool_hour_data_(current)() ->
+  openapi_api:uniswap_v3_pool_hour_data_(current)().
 
-uniswap_v3_pool_hour_datas_(current)_args(_S) ->
+uniswap_v3_pool_hour_data_(current)_args(_S) ->
   [].
 
 %%==============================================================================
@@ -328,13 +328,13 @@ uniswap_v3_swaps_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_tick_day_datas_(current)
+%% uniswap_v3_tick_day_data_(current)
 %%==============================================================================
 
-uniswap_v3_tick_day_datas_(current)() ->
-  openapi_api:uniswap_v3_tick_day_datas_(current)().
+uniswap_v3_tick_day_data_(current)() ->
+  openapi_api:uniswap_v3_tick_day_data_(current)().
 
-uniswap_v3_tick_day_datas_(current)_args(_S) ->
+uniswap_v3_tick_day_data_(current)_args(_S) ->
   [].
 
 %%==============================================================================
@@ -348,23 +348,23 @@ uniswap_v3_ticks_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_token_hour_datas_(current)
+%% uniswap_v3_token_hour_data_(current)
 %%==============================================================================
 
-uniswap_v3_token_hour_datas_(current)() ->
-  openapi_api:uniswap_v3_token_hour_datas_(current)().
+uniswap_v3_token_hour_data_(current)() ->
+  openapi_api:uniswap_v3_token_hour_data_(current)().
 
-uniswap_v3_token_hour_datas_(current)_args(_S) ->
+uniswap_v3_token_hour_data_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_token_v3_day_datas_(current)
+%% uniswap_v3_token_v3_day_data_(current)
 %%==============================================================================
 
-uniswap_v3_token_v3_day_datas_(current)() ->
-  openapi_api:uniswap_v3_token_v3_day_datas_(current)().
+uniswap_v3_token_v3_day_data_(current)() ->
+  openapi_api:uniswap_v3_token_v3_day_data_(current)().
 
-uniswap_v3_token_v3_day_datas_(current)_args(_S) ->
+uniswap_v3_token_v3_day_data_(current)_args(_S) ->
   [].
 
 %%==============================================================================
@@ -388,12 +388,12 @@ uniswap_v3_transactions_(current)_args(_S) ->
   [].
 
 %%==============================================================================
-%% uniswap_v3_uniswap_day_datas_(current)
+%% uniswap_v3_uniswap_day_data_(current)
 %%==============================================================================
 
-uniswap_v3_uniswap_day_datas_(current)() ->
-  openapi_api:uniswap_v3_uniswap_day_datas_(current)().
+uniswap_v3_uniswap_day_data_(current)() ->
+  openapi_api:uniswap_v3_uniswap_day_data_(current)().
 
-uniswap_v3_uniswap_day_datas_(current)_args(_S) ->
+uniswap_v3_uniswap_day_data_(current)_args(_S) ->
   [].
 

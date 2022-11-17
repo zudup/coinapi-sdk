@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**CurveExchangesCurrent**](CurveApi.md#CurveExchangesCurrent) | **GET** /dapps/curve/exchanges/current | Exchanges (current)
 [**CurveFeeChangeLogsCurrent**](CurveApi.md#CurveFeeChangeLogsCurrent) | **GET** /dapps/curve/feeChangeLogs/current | FeeChangeLogs (current)
 [**CurveGaugeDepositsCurrent**](CurveApi.md#CurveGaugeDepositsCurrent) | **GET** /dapps/curve/gaugeDeposits/current | GaugeDeposits (current)
-[**CurveGaugeLiquiditysCurrent**](CurveApi.md#CurveGaugeLiquiditysCurrent) | **GET** /dapps/curve/gaugeLiquiditys/current | GaugeLiquiditys (current)
+[**CurveGaugeLiquiditiesCurrent**](CurveApi.md#CurveGaugeLiquiditiesCurrent) | **GET** /dapps/curve/gaugeLiquidities/current | GaugeLiquidities (current)
 [**CurveGaugeTotalWeightsCurrent**](CurveApi.md#CurveGaugeTotalWeightsCurrent) | **GET** /dapps/curve/gaugeTotalWeights/current | GaugeTotalWeights (current)
 [**CurveGaugeTypeWeightsCurrent**](CurveApi.md#CurveGaugeTypeWeightsCurrent) | **GET** /dapps/curve/gaugeTypeWeights/current | GaugeTypeWeights (current)
 [**CurveGaugeTypesCurrent**](CurveApi.md#CurveGaugeTypesCurrent) | **GET** /dapps/curve/gaugeTypes/current | GaugeTypes (current)
@@ -34,7 +34,7 @@ Method | HTTP request | Description
 [**CurveGetExchangesHistorical**](CurveApi.md#CurveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical)
 [**CurveGetFeeChangeLogsHistorical**](CurveApi.md#CurveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical)
 [**CurveGetGaugeDepositsHistorical**](CurveApi.md#CurveGetGaugeDepositsHistorical) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical)
-[**CurveGetGaugeLiquiditysHistorical**](CurveApi.md#CurveGetGaugeLiquiditysHistorical) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical)
+[**CurveGetGaugeLiquiditiesHistorical**](CurveApi.md#CurveGetGaugeLiquiditiesHistorical) | **GET** /dapps/curve/gaugeLiquidities/historical | GaugeLiquidities (historical)
 [**CurveGetGaugeTotalWeightsHistorical**](CurveApi.md#CurveGetGaugeTotalWeightsHistorical) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical)
 [**CurveGetGaugeTypeWeightsHistorical**](CurveApi.md#CurveGetGaugeTypeWeightsHistorical) | **GET** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical)
 [**CurveGetGaugeTypesHistorical**](CurveApi.md#CurveGetGaugeTypesHistorical) | **GET** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical)
@@ -537,24 +537,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **CurveGaugeLiquiditysCurrent**
-> array[CurveGaugeLiquidityDTO] CurveGaugeLiquiditysCurrent()
+# **CurveGaugeLiquiditiesCurrent**
+> array[CurveGaugeLiquidityDTO] CurveGaugeLiquiditiesCurrent()
 
-GaugeLiquiditys (current)
+GaugeLiquidities (current)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 ```R
 library(openapi)
 
-# GaugeLiquiditys (current)
+# GaugeLiquidities (current)
 #
 
 api_instance <- CurveApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$CurveGaugeLiquiditysCurrent(data_file = "result.txt")
-result <- api_instance$CurveGaugeLiquiditysCurrent()
+# result <- api_instance$CurveGaugeLiquiditiesCurrent(data_file = "result.txt")
+result <- api_instance$CurveGaugeLiquiditiesCurrent()
 dput(result)
 ```
 
@@ -1496,18 +1496,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **CurveGetGaugeLiquiditysHistorical**
-> array[CurveGaugeLiquidityDTO] CurveGetGaugeLiquiditysHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, user = var.user)
+# **CurveGetGaugeLiquiditiesHistorical**
+> array[CurveGaugeLiquidityDTO] CurveGetGaugeLiquiditiesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, user = var.user)
 
-GaugeLiquiditys (historical)
+GaugeLiquidities (historical)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 ```R
 library(openapi)
 
-# GaugeLiquiditys (historical)
+# GaugeLiquidities (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -1519,8 +1519,8 @@ var_user <- "user_example" # character |  (Optional)
 
 api_instance <- CurveApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$CurveGetGaugeLiquiditysHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, user = var_userdata_file = "result.txt")
-result <- api_instance$CurveGetGaugeLiquiditysHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, user = var_user)
+# result <- api_instance$CurveGetGaugeLiquiditiesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, user = var_userdata_file = "result.txt")
+result <- api_instance$CurveGetGaugeLiquiditiesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, user = var_user)
 dput(result)
 ```
 

@@ -421,14 +421,14 @@ API.Client.CurveApi.prototype.curveGaugeDepositsCurrent = function(opt_extraHttp
 }
 
 /**
- * GaugeLiquiditys (current)
- * Gets gaugeLiquiditys.
+ * GaugeLiquidities (current)
+ * Gets gaugeLiquidities.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Curve.GaugeLiquidityDTO>>}
  */
-API.Client.CurveApi.prototype.curveGaugeLiquiditysCurrent = function(opt_extraHttpRequestParams) {
+API.Client.CurveApi.prototype.curveGaugeLiquiditiesCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/gaugeLiquiditys/current';
+  var path = this.basePath_ + '/dapps/curve/gaugeLiquidities/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1330,8 +1330,8 @@ API.Client.CurveApi.prototype.curveGetGaugeDepositsHistorical = function(opt_sta
 }
 
 /**
- * GaugeLiquiditys (historical)
- * Gets gaugeLiquiditys.
+ * GaugeLiquidities (historical)
+ * Gets gaugeLiquidities.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1341,9 +1341,9 @@ API.Client.CurveApi.prototype.curveGetGaugeDepositsHistorical = function(opt_sta
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Curve.GaugeLiquidityDTO>>}
  */
-API.Client.CurveApi.prototype.curveGetGaugeLiquiditysHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_user, opt_extraHttpRequestParams) {
+API.Client.CurveApi.prototype.curveGetGaugeLiquiditiesHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_user, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/curve/gaugeLiquiditys/historical';
+  var path = this.basePath_ + '/dapps/curve/gaugeLiquidities/historical';
 
   /** @type {!Object} */
   var queryParameters = {};

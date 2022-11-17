@@ -1,13 +1,13 @@
 -module(openapi_dex_api).
 
--export([dex_batchs_(current)/1, dex_batchs_(current)/2,
+-export([dex_batches_(current)/1, dex_batches_(current)/2,
          dex_deposits_(current)/1, dex_deposits_(current)/2,
-         dex_get_batchs_(historical)/1, dex_get_batchs_(historical)/2,
+         dex_get_batches_(historical)/1, dex_get_batches_(historical)/2,
          dex_get_deposits_(historical)/1, dex_get_deposits_(historical)/2,
          dex_get_orders_(historical)/1, dex_get_orders_(historical)/2,
          dex_get_prices_(historical)/1, dex_get_prices_(historical)/2,
          dex_get_solutions_(historical)/1, dex_get_solutions_(historical)/2,
-         dex_get_statss_(historical)/1, dex_get_statss_(historical)/2,
+         dex_get_stats_(historical)/1, dex_get_stats_(historical)/2,
          dex_get_tokens_(historical)/1, dex_get_tokens_(historical)/2,
          dex_get_trades_(historical)/1, dex_get_trades_(historical)/2,
          dex_get_users_(historical)/1, dex_get_users_(historical)/2,
@@ -16,7 +16,7 @@
          dex_orders_(current)/1, dex_orders_(current)/2,
          dex_prices_(current)/1, dex_prices_(current)/2,
          dex_solutions_(current)/1, dex_solutions_(current)/2,
-         dex_statss_(current)/1, dex_statss_(current)/2,
+         dex_stats_(current)/1, dex_stats_(current)/2,
          dex_tokens_(current)/1, dex_tokens_(current)/2,
          dex_trades_(current)/1, dex_trades_(current)/2,
          dex_users_(current)/1, dex_users_(current)/2,
@@ -25,19 +25,19 @@
 
 -define(BASE_URL, <<"">>).
 
-%% @doc Batchs (current)
-%% Gets batchs.
--spec dex_batchs_(current)(ctx:ctx()) -> {ok, [openapi_dex_batch_dto:openapi_dex_batch_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dex_batchs_(current)(Ctx) ->
-    dex_batchs_(current)(Ctx, #{}).
+%% @doc Batches (current)
+%% Gets batches.
+-spec dex_batches_(current)(ctx:ctx()) -> {ok, [openapi_dex_batch_dto:openapi_dex_batch_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+dex_batches_(current)(Ctx) ->
+    dex_batches_(current)(Ctx, #{}).
 
--spec dex_batchs_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_dex_batch_dto:openapi_dex_batch_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dex_batchs_(current)(Ctx, Optional) ->
+-spec dex_batches_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_dex_batch_dto:openapi_dex_batch_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+dex_batches_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/dex/batchs/current">>],
+    Path = [<<"/dapps/dex/batches/current">>],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -67,19 +67,19 @@ dex_deposits_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Batchs (historical)
-%% Gets batchs.
--spec dex_get_batchs_(historical)(ctx:ctx()) -> {ok, [openapi_dex_batch_dto:openapi_dex_batch_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dex_get_batchs_(historical)(Ctx) ->
-    dex_get_batchs_(historical)(Ctx, #{}).
+%% @doc Batches (historical)
+%% Gets batches.
+-spec dex_get_batches_(historical)(ctx:ctx()) -> {ok, [openapi_dex_batch_dto:openapi_dex_batch_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+dex_get_batches_(historical)(Ctx) ->
+    dex_get_batches_(historical)(Ctx, #{}).
 
--spec dex_get_batchs_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_dex_batch_dto:openapi_dex_batch_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dex_get_batchs_(historical)(Ctx, Optional) ->
+-spec dex_get_batches_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_dex_batch_dto:openapi_dex_batch_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+dex_get_batches_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/dex/batchs/historical">>],
+    Path = [<<"/dapps/dex/batches/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -172,19 +172,19 @@ dex_get_solutions_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Statss (historical)
-%% Gets statss.
--spec dex_get_statss_(historical)(ctx:ctx()) -> {ok, [openapi_dex_stats_dto:openapi_dex_stats_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dex_get_statss_(historical)(Ctx) ->
-    dex_get_statss_(historical)(Ctx, #{}).
+%% @doc Stats (historical)
+%% Gets stats.
+-spec dex_get_stats_(historical)(ctx:ctx()) -> {ok, [openapi_dex_stats_dto:openapi_dex_stats_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+dex_get_stats_(historical)(Ctx) ->
+    dex_get_stats_(historical)(Ctx, #{}).
 
--spec dex_get_statss_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_dex_stats_dto:openapi_dex_stats_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dex_get_statss_(historical)(Ctx, Optional) ->
+-spec dex_get_stats_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_dex_stats_dto:openapi_dex_stats_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+dex_get_stats_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/dex/statss/historical">>],
+    Path = [<<"/dapps/dex/stats/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -361,19 +361,19 @@ dex_solutions_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Statss (current)
-%% Gets statss.
--spec dex_statss_(current)(ctx:ctx()) -> {ok, [openapi_dex_stats_dto:openapi_dex_stats_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dex_statss_(current)(Ctx) ->
-    dex_statss_(current)(Ctx, #{}).
+%% @doc Stats (current)
+%% Gets stats.
+-spec dex_stats_(current)(ctx:ctx()) -> {ok, [openapi_dex_stats_dto:openapi_dex_stats_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+dex_stats_(current)(Ctx) ->
+    dex_stats_(current)(Ctx, #{}).
 
--spec dex_statss_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_dex_stats_dto:openapi_dex_stats_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-dex_statss_(current)(Ctx, Optional) ->
+-spec dex_stats_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_dex_stats_dto:openapi_dex_stats_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+dex_stats_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/dex/statss/current">>],
+    Path = [<<"/dapps/dex/stats/current">>],
     QS = [],
     Headers = [],
     Body1 = [],

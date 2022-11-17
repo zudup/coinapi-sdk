@@ -17,12 +17,12 @@ void main() {
   // final instance = DexApi();
 
   group('tests for DexApi', () {
-    // Batchs (current)
+    // Batches (current)
     //
-    // Gets batchs.
+    // Gets batches.
     //
-    //Future<List<DexBatchDTO>> dexBatchsCurrent() async
-    test('test dexBatchsCurrent', () async {
+    //Future<List<DexBatchDTO>> dexBatchesCurrent() async
+    test('test dexBatchesCurrent', () async {
       // TODO
     });
 
@@ -35,12 +35,12 @@ void main() {
       // TODO
     });
 
-    // Batchs (historical)
+    // Batches (historical)
     //
-    // Gets batchs.
+    // Gets batches.
     //
-    //Future<List<DexBatchDTO>> dexGetBatchsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
-    test('test dexGetBatchsHistorical', () async {
+    //Future<List<DexBatchDTO>> dexGetBatchesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
+    test('test dexGetBatchesHistorical', () async {
       // TODO
     });
 
@@ -80,12 +80,12 @@ void main() {
       // TODO
     });
 
-    // Statss (historical)
+    // Stats (historical)
     //
-    // Gets statss.
+    // Gets stats.
     //
-    //Future<List<DexStatsDTO>> dexGetStatssHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
-    test('test dexGetStatssHistorical', () async {
+    //Future<List<DexStatsDTO>> dexGetStatsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
+    test('test dexGetStatsHistorical', () async {
       // TODO
     });
 
@@ -161,12 +161,12 @@ void main() {
       // TODO
     });
 
-    // Statss (current)
+    // Stats (current)
     //
-    // Gets statss.
+    // Gets stats.
     //
-    //Future<List<DexStatsDTO>> dexStatssCurrent() async
-    test('test dexStatssCurrent', () async {
+    //Future<List<DexStatsDTO>> dexStatsCurrent() async
+    test('test dexStatsCurrent', () async {
       // TODO
     });
 

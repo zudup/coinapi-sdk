@@ -169,14 +169,14 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * PairDayDatas (historical)
+     * PairDayData (historical)
      *
-     * Gets pairDayDatas.
+     * Gets pairDayData.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV2GetPairDayDatasHistoricalTest() throws ApiException {
+    public void uniswapV2GetPairDayDataHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
@@ -184,26 +184,26 @@ public class UniswapV2ApiTest {
         String id = null;
         String token0 = null;
         String token1 = null;
-        List<UniswapV2PairDayDataDTO> response = api.uniswapV2GetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
+        List<UniswapV2PairDayDataDTO> response = api.uniswapV2GetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
         // TODO: test validations
     }
 
     /**
-     * PairHourDatas (historical)
+     * PairHourData (historical)
      *
-     * Gets pairHourDatas.
+     * Gets pairHourData.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV2GetPairHourDatasHistoricalTest() throws ApiException {
+    public void uniswapV2GetPairHourDataHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String id = null;
         String pair = null;
-        List<UniswapV2PairHourDataDTO> response = api.uniswapV2GetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+        List<UniswapV2PairHourDataDTO> response = api.uniswapV2GetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair);
         // TODO: test validations
     }
 
@@ -247,20 +247,20 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * TokenDayDatas (historical)
+     * TokenDayData (historical)
      *
-     * Gets tokenDayDatas.
+     * Gets tokenDayData.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV2GetTokenDayDatasHistoricalTest() throws ApiException {
+    public void uniswapV2GetTokenDayDataHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String id = null;
-        List<UniswapV2TokenDayDataDTO> response = api.uniswapV2GetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+        List<UniswapV2TokenDayDataDTO> response = api.uniswapV2GetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id);
         // TODO: test validations
     }
 
@@ -303,38 +303,38 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * UniswapDayDatas (historical)
+     * UniswapDayData (historical)
      *
-     * Gets uniswapDayDatas.
+     * Gets uniswapDayData.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV2GetUniswapDayDatasHistoricalTest() throws ApiException {
+    public void uniswapV2GetUniswapDayDataHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String id = null;
-        List<UniswapV2UniswapDayDataDTO> response = api.uniswapV2GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+        List<UniswapV2UniswapDayDataDTO> response = api.uniswapV2GetUniswapDayDataHistorical(startBlock, endBlock, startDate, endDate, id);
         // TODO: test validations
     }
 
     /**
-     * UniswapFactorys (historical)
+     * UniswapFactories (historical)
      *
-     * Gets uniswapFactorys.
+     * Gets uniswapFactories.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV2GetUniswapFactorysHistoricalTest() throws ApiException {
+    public void uniswapV2GetUniswapFactoriesHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String id = null;
-        List<UniswapV2UniswapFactoryDTO> response = api.uniswapV2GetUniswapFactorysHistorical(startBlock, endBlock, startDate, endDate, id);
+        List<UniswapV2UniswapFactoryDTO> response = api.uniswapV2GetUniswapFactoriesHistorical(startBlock, endBlock, startDate, endDate, id);
         // TODO: test validations
     }
 
@@ -396,28 +396,28 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * PairDayDatas (current)
+     * PairDayData (current)
      *
-     * Gets pairDayDatas.
+     * Gets pairDayData.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV2PairDayDatasCurrentTest() throws ApiException {
-        List<UniswapV2PairDayDataDTO> response = api.uniswapV2PairDayDatasCurrent();
+    public void uniswapV2PairDayDataCurrentTest() throws ApiException {
+        List<UniswapV2PairDayDataDTO> response = api.uniswapV2PairDayDataCurrent();
         // TODO: test validations
     }
 
     /**
-     * PairHourDatas (current)
+     * PairHourData (current)
      *
-     * Gets pairHourDatas.
+     * Gets pairHourData.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV2PairHourDatasCurrentTest() throws ApiException {
-        List<UniswapV2PairHourDataDTO> response = api.uniswapV2PairHourDatasCurrent();
+    public void uniswapV2PairHourDataCurrentTest() throws ApiException {
+        List<UniswapV2PairHourDataDTO> response = api.uniswapV2PairHourDataCurrent();
         // TODO: test validations
     }
 
@@ -450,15 +450,15 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * TokenDayDatas (current)
+     * TokenDayData (current)
      *
-     * Gets tokenDayDatas.
+     * Gets tokenDayData.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV2TokenDayDatasCurrentTest() throws ApiException {
-        List<UniswapV2TokenDayDataDTO> response = api.uniswapV2TokenDayDatasCurrent();
+    public void uniswapV2TokenDayDataCurrentTest() throws ApiException {
+        List<UniswapV2TokenDayDataDTO> response = api.uniswapV2TokenDayDataCurrent();
         // TODO: test validations
     }
 
@@ -489,28 +489,28 @@ public class UniswapV2ApiTest {
     }
 
     /**
-     * UniswapDayDatas (current)
+     * UniswapDayData (current)
      *
-     * Gets uniswapDayDatas.
+     * Gets uniswapDayData.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV2UniswapDayDatasCurrentTest() throws ApiException {
-        List<UniswapV2UniswapDayDataDTO> response = api.uniswapV2UniswapDayDatasCurrent();
+    public void uniswapV2UniswapDayDataCurrentTest() throws ApiException {
+        List<UniswapV2UniswapDayDataDTO> response = api.uniswapV2UniswapDayDataCurrent();
         // TODO: test validations
     }
 
     /**
-     * UniswapFactorys (current)
+     * UniswapFactories (current)
      *
-     * Gets uniswapFactorys.
+     * Gets uniswapFactories.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void uniswapV2UniswapFactorysCurrentTest() throws ApiException {
-        List<UniswapV2UniswapFactoryDTO> response = api.uniswapV2UniswapFactorysCurrent();
+    public void uniswapV2UniswapFactoriesCurrentTest() throws ApiException {
+        List<UniswapV2UniswapFactoryDTO> response = api.uniswapV2UniswapFactoriesCurrent();
         // TODO: test validations
     }
 

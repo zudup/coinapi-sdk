@@ -163,14 +163,14 @@ export class SushiswapApi {
     }
 
     /**
-     * Gets dayDatas.
-     * @summary DayDatas (current)
+     * Gets dayData.
+     * @summary DayData (current)
      */
-    public sushiswapDayDatasCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public sushiswapDayDataCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.SushiswapDayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/sushiswap/dayDatas/current';
+        let localVarPath = this.basePath + '/dapps/sushiswap/dayData/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -221,14 +221,14 @@ export class SushiswapApi {
     }
 
     /**
-     * Gets factorys.
-     * @summary Factorys (current)
+     * Gets factories.
+     * @summary Factories (current)
      */
-    public sushiswapFactorysCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public sushiswapFactoriesCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.SushiswapFactoryDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/sushiswap/factorys/current';
+        let localVarPath = this.basePath + '/dapps/sushiswap/factories/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -439,19 +439,19 @@ export class SushiswapApi {
     }
 
     /**
-     * Gets dayDatas.
-     * @summary DayDatas (historical)
+     * Gets dayData.
+     * @summary DayData (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Unix timestamp for start of day / 86400 giving a unique day index.
      */
-    public sushiswapGetDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public sushiswapGetDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.SushiswapDayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/sushiswap/dayDatas/historical';
+        let localVarPath = this.basePath + '/dapps/sushiswap/dayData/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -517,19 +517,19 @@ export class SushiswapApi {
     }
 
     /**
-     * Gets factorys.
-     * @summary Factorys (historical)
+     * Gets factories.
+     * @summary Factories (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Factory address.
      */
-    public sushiswapGetFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public sushiswapGetFactoriesHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.SushiswapFactoryDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/sushiswap/factorys/historical';
+        let localVarPath = this.basePath + '/dapps/sushiswap/factories/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -595,19 +595,19 @@ export class SushiswapApi {
     }
 
     /**
-     * Gets hourDatas.
-     * @summary HourDatas (historical)
+     * Gets hourData.
+     * @summary HourData (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Start of hour timestamp.
      */
-    public sushiswapGetHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public sushiswapGetHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.SushiswapHourDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/sushiswap/hourDatas/historical';
+        let localVarPath = this.basePath + '/dapps/sushiswap/hourData/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -927,8 +927,8 @@ export class SushiswapApi {
     }
 
     /**
-     * Gets pairDayDatas.
-     * @summary PairDayDatas (historical)
+     * Gets pairDayData.
+     * @summary PairDayData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -938,11 +938,11 @@ export class SushiswapApi {
      * @param token0 
      * @param token1 
      */
-    public sushiswapGetPairDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, token0?: string, token1?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public sushiswapGetPairDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, token0?: string, token1?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.SushiswapPairDayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/sushiswap/pairDayDatas/historical';
+        let localVarPath = this.basePath + '/dapps/sushiswap/pairDayData/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1017,8 +1017,8 @@ export class SushiswapApi {
     }
 
     /**
-     * Gets pairHourDatas.
-     * @summary PairHourDatas (historical)
+     * Gets pairHourData.
+     * @summary PairHourData (historical)
      * @param startBlock 
      * @param endBlock 
      * @param startDate 
@@ -1026,11 +1026,11 @@ export class SushiswapApi {
      * @param id 
      * @param pair 
      */
-    public sushiswapGetPairHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public sushiswapGetPairHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, pair?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.SushiswapPairHourDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/sushiswap/pairHourDatas/historical';
+        let localVarPath = this.basePath + '/dapps/sushiswap/pairHourData/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1271,19 +1271,19 @@ export class SushiswapApi {
     }
 
     /**
-     * Gets tokenDayDatas.
-     * @summary TokenDayDatas (historical)
+     * Gets tokenDayData.
+     * @summary TokenDayData (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Identifier, day start timestamp in unix / 86400.
      */
-    public sushiswapGetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public sushiswapGetTokenDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.SushiswapTokenDayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/sushiswap/tokenDayDatas/historical';
+        let localVarPath = this.basePath + '/dapps/sushiswap/tokenDayData/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1591,14 +1591,14 @@ export class SushiswapApi {
     }
 
     /**
-     * Gets hourDatas.
-     * @summary HourDatas (current)
+     * Gets hourData.
+     * @summary HourData (current)
      */
-    public sushiswapHourDatasCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public sushiswapHourDataCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.SushiswapHourDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/sushiswap/hourDatas/current';
+        let localVarPath = this.basePath + '/dapps/sushiswap/hourData/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1823,14 +1823,14 @@ export class SushiswapApi {
     }
 
     /**
-     * Gets pairDayDatas.
-     * @summary PairDayDatas (current)
+     * Gets pairDayData.
+     * @summary PairDayData (current)
      */
-    public sushiswapPairDayDatasCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public sushiswapPairDayDataCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.SushiswapPairDayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/sushiswap/pairDayDatas/current';
+        let localVarPath = this.basePath + '/dapps/sushiswap/pairDayData/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -1881,14 +1881,14 @@ export class SushiswapApi {
     }
 
     /**
-     * Gets pairHourDatas.
-     * @summary PairHourDatas (current)
+     * Gets pairHourData.
+     * @summary PairHourData (current)
      */
-    public sushiswapPairHourDatasCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public sushiswapPairHourDataCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.SushiswapPairHourDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/sushiswap/pairHourDatas/current';
+        let localVarPath = this.basePath + '/dapps/sushiswap/pairHourData/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -2063,14 +2063,14 @@ export class SushiswapApi {
     }
 
     /**
-     * Gets tokenDayDatas.
-     * @summary TokenDayDatas (current)
+     * Gets tokenDayData.
+     * @summary TokenDayData (current)
      */
-    public sushiswapTokenDayDatasCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public sushiswapTokenDayDataCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.SushiswapTokenDayDataDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/sushiswap/tokenDayDatas/current';
+        let localVarPath = this.basePath + '/dapps/sushiswap/tokenDayData/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};

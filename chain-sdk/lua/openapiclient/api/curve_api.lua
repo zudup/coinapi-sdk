@@ -614,12 +614,12 @@ function curve_api:curve_gauge_deposits__current()
 	end
 end
 
-function curve_api:curve_gauge_liquiditys__current()
+function curve_api:curve_gauge_liquidities__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/gaugeLiquiditys/current",
+		path = string.format("%s/dapps/curve/gaugeLiquidities/current",
 			self.basePath);
 	})
 
@@ -1545,12 +1545,12 @@ function curve_api:curve_get_gauge_deposits__historical(start_block, end_block, 
 	end
 end
 
-function curve_api:curve_get_gauge_liquiditys__historical(start_block, end_block, start_date, end_date, id, user)
+function curve_api:curve_get_gauge_liquidities__historical(start_block, end_block, start_date, end_date, id, user)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/curve/gaugeLiquiditys/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&user=%s",
+		path = string.format("%s/dapps/curve/gaugeLiquidities/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&user=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(user));
 	})
 

@@ -1201,12 +1201,12 @@ end:
 
 }
 
-// PairDayDatas (historical)
+// PairDayData (historical)
 //
-// Gets pairDayDatas.
+// Gets pairDayData.
 //
 list_t*
-UniswapV2API_uniswapV2GetPairDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * token_0 , char * token_1 )
+UniswapV2API_uniswapV2GetPairDayDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * token_0 , char * token_1 )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -1216,9 +1216,9 @@ UniswapV2API_uniswapV2GetPairDayDatasHistorical(apiClient_t *apiClient, long sta
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv2/pairDayDatas/historical")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv2/pairDayData/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/pairDayDatas/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/pairDayData/historical");
 
 
 
@@ -1428,12 +1428,12 @@ end:
 
 }
 
-// PairHourDatas (historical)
+// PairHourData (historical)
 //
-// Gets pairHourDatas.
+// Gets pairHourData.
 //
 list_t*
-UniswapV2API_uniswapV2GetPairHourDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pair )
+UniswapV2API_uniswapV2GetPairHourDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pair )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -1443,9 +1443,9 @@ UniswapV2API_uniswapV2GetPairHourDatasHistorical(apiClient_t *apiClient, long st
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv2/pairHourDatas/historical")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv2/pairHourData/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/pairHourDatas/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/pairHourData/historical");
 
 
 
@@ -2061,12 +2061,12 @@ end:
 
 }
 
-// TokenDayDatas (historical)
+// TokenDayData (historical)
 //
-// Gets tokenDayDatas.
+// Gets tokenDayData.
 //
 list_t*
-UniswapV2API_uniswapV2GetTokenDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
+UniswapV2API_uniswapV2GetTokenDayDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -2076,9 +2076,9 @@ UniswapV2API_uniswapV2GetTokenDayDatasHistorical(apiClient_t *apiClient, long st
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv2/tokenDayDatas/historical")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv2/tokenDayData/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/tokenDayDatas/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/tokenDayData/historical");
 
 
 
@@ -2646,12 +2646,12 @@ end:
 
 }
 
-// UniswapDayDatas (historical)
+// UniswapDayData (historical)
 //
-// Gets uniswapDayDatas.
+// Gets uniswapDayData.
 //
 list_t*
-UniswapV2API_uniswapV2GetUniswapDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
+UniswapV2API_uniswapV2GetUniswapDayDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -2661,9 +2661,9 @@ UniswapV2API_uniswapV2GetUniswapDayDatasHistorical(apiClient_t *apiClient, long 
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv2/uniswapDayDatas/historical")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv2/uniswapDayData/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/uniswapDayDatas/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/uniswapDayData/historical");
 
 
 
@@ -2825,12 +2825,12 @@ end:
 
 }
 
-// UniswapFactorys (historical)
+// UniswapFactories (historical)
 //
-// Gets uniswapFactorys.
+// Gets uniswapFactories.
 //
 list_t*
-UniswapV2API_uniswapV2GetUniswapFactorysHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
+UniswapV2API_uniswapV2GetUniswapFactoriesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -2840,9 +2840,9 @@ UniswapV2API_uniswapV2GetUniswapFactorysHistorical(apiClient_t *apiClient, long 
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv2/uniswapFactorys/historical")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv2/uniswapFactories/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/uniswapFactorys/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/uniswapFactories/historical");
 
 
 
@@ -3408,12 +3408,12 @@ end:
 
 }
 
-// PairDayDatas (current)
+// PairDayData (current)
 //
-// Gets pairDayDatas.
+// Gets pairDayData.
 //
 list_t*
-UniswapV2API_uniswapV2PairDayDatasCurrent(apiClient_t *apiClient)
+UniswapV2API_uniswapV2PairDayDataCurrent(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -3423,9 +3423,9 @@ UniswapV2API_uniswapV2PairDayDatasCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv2/pairDayDatas/current")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv2/pairDayData/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/pairDayDatas/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/pairDayData/current");
 
 
 
@@ -3483,12 +3483,12 @@ end:
 
 }
 
-// PairHourDatas (current)
+// PairHourData (current)
 //
-// Gets pairHourDatas.
+// Gets pairHourData.
 //
 list_t*
-UniswapV2API_uniswapV2PairHourDatasCurrent(apiClient_t *apiClient)
+UniswapV2API_uniswapV2PairHourDataCurrent(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -3498,9 +3498,9 @@ UniswapV2API_uniswapV2PairHourDatasCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv2/pairHourDatas/current")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv2/pairHourData/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/pairHourDatas/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/pairHourData/current");
 
 
 
@@ -3756,12 +3756,12 @@ end:
 
 }
 
-// TokenDayDatas (current)
+// TokenDayData (current)
 //
-// Gets tokenDayDatas.
+// Gets tokenDayData.
 //
 list_t*
-UniswapV2API_uniswapV2TokenDayDatasCurrent(apiClient_t *apiClient)
+UniswapV2API_uniswapV2TokenDayDataCurrent(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -3771,9 +3771,9 @@ UniswapV2API_uniswapV2TokenDayDatasCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv2/tokenDayDatas/current")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv2/tokenDayData/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/tokenDayDatas/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/tokenDayData/current");
 
 
 
@@ -3981,12 +3981,12 @@ end:
 
 }
 
-// UniswapDayDatas (current)
+// UniswapDayData (current)
 //
-// Gets uniswapDayDatas.
+// Gets uniswapDayData.
 //
 list_t*
-UniswapV2API_uniswapV2UniswapDayDatasCurrent(apiClient_t *apiClient)
+UniswapV2API_uniswapV2UniswapDayDataCurrent(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -3996,9 +3996,9 @@ UniswapV2API_uniswapV2UniswapDayDatasCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv2/uniswapDayDatas/current")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv2/uniswapDayData/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/uniswapDayDatas/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/uniswapDayData/current");
 
 
 
@@ -4056,12 +4056,12 @@ end:
 
 }
 
-// UniswapFactorys (current)
+// UniswapFactories (current)
 //
-// Gets uniswapFactorys.
+// Gets uniswapFactories.
 //
 list_t*
-UniswapV2API_uniswapV2UniswapFactorysCurrent(apiClient_t *apiClient)
+UniswapV2API_uniswapV2UniswapFactoriesCurrent(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -4071,9 +4071,9 @@ UniswapV2API_uniswapV2UniswapFactorysCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/uniswapv2/uniswapFactorys/current")+1;
+    long sizeOfPath = strlen("/dapps/uniswapv2/uniswapFactories/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/uniswapFactorys/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/uniswapv2/uniswapFactories/current");
 
 
 

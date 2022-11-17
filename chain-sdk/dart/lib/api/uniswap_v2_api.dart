@@ -663,9 +663,9 @@ class UniswapV2Api {
     return null;
   }
 
-  /// PairDayDatas (historical)
+  /// PairDayData (historical)
   ///
-  /// Gets pairDayDatas.
+  /// Gets pairDayData.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -691,9 +691,9 @@ class UniswapV2Api {
   ///
   /// * [String] token1:
   ///   Reference to token1.
-  Future<Response> uniswapV2GetPairDayDatasHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? token0, String? token1, }) async {
+  Future<Response> uniswapV2GetPairDayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? token0, String? token1, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv2/pairDayDatas/historical';
+    final path = r'/dapps/uniswapv2/pairDayData/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -738,9 +738,9 @@ class UniswapV2Api {
     );
   }
 
-  /// PairDayDatas (historical)
+  /// PairDayData (historical)
   ///
-  /// Gets pairDayDatas.
+  /// Gets pairDayData.
   ///
   /// Parameters:
   ///
@@ -764,8 +764,8 @@ class UniswapV2Api {
   ///
   /// * [String] token1:
   ///   Reference to token1.
-  Future<List<UniswapV2PairDayDataDTO>?> uniswapV2GetPairDayDatasHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? token0, String? token1, }) async {
-    final response = await uniswapV2GetPairDayDatasHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, token0: token0, token1: token1, );
+  Future<List<UniswapV2PairDayDataDTO>?> uniswapV2GetPairDayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? token0, String? token1, }) async {
+    final response = await uniswapV2GetPairDayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, token0: token0, token1: token1, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -782,9 +782,9 @@ class UniswapV2Api {
     return null;
   }
 
-  /// PairHourDatas (historical)
+  /// PairHourData (historical)
   ///
-  /// Gets pairHourDatas.
+  /// Gets pairHourData.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -807,9 +807,9 @@ class UniswapV2Api {
   ///
   /// * [String] pair:
   ///   Address for pair contract.
-  Future<Response> uniswapV2GetPairHourDatasHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, }) async {
+  Future<Response> uniswapV2GetPairHourDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv2/pairHourDatas/historical';
+    final path = r'/dapps/uniswapv2/pairHourData/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -851,9 +851,9 @@ class UniswapV2Api {
     );
   }
 
-  /// PairHourDatas (historical)
+  /// PairHourData (historical)
   ///
-  /// Gets pairHourDatas.
+  /// Gets pairHourData.
   ///
   /// Parameters:
   ///
@@ -874,8 +874,8 @@ class UniswapV2Api {
   ///
   /// * [String] pair:
   ///   Address for pair contract.
-  Future<List<UniswapV2PairHourDataDTO>?> uniswapV2GetPairHourDatasHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, }) async {
-    final response = await uniswapV2GetPairHourDatasHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pair: pair, );
+  Future<List<UniswapV2PairHourDataDTO>?> uniswapV2GetPairHourDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, String? pair, }) async {
+    final response = await uniswapV2GetPairHourDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, pair: pair, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1121,9 +1121,9 @@ class UniswapV2Api {
     return null;
   }
 
-  /// TokenDayDatas (historical)
+  /// TokenDayData (historical)
   ///
-  /// Gets tokenDayDatas.
+  /// Gets tokenDayData.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1143,9 +1143,9 @@ class UniswapV2Api {
   ///
   /// * [String] id:
   ///   Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
-  Future<Response> uniswapV2GetTokenDayDatasHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+  Future<Response> uniswapV2GetTokenDayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv2/tokenDayDatas/historical';
+    final path = r'/dapps/uniswapv2/tokenDayData/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1184,9 +1184,9 @@ class UniswapV2Api {
     );
   }
 
-  /// TokenDayDatas (historical)
+  /// TokenDayData (historical)
   ///
-  /// Gets tokenDayDatas.
+  /// Gets tokenDayData.
   ///
   /// Parameters:
   ///
@@ -1204,8 +1204,8 @@ class UniswapV2Api {
   ///
   /// * [String] id:
   ///   Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
-  Future<List<UniswapV2TokenDayDataDTO>?> uniswapV2GetTokenDayDatasHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
-    final response = await uniswapV2GetTokenDayDatasHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+  Future<List<UniswapV2TokenDayDataDTO>?> uniswapV2GetTokenDayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await uniswapV2GetTokenDayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1442,9 +1442,9 @@ class UniswapV2Api {
     return null;
   }
 
-  /// UniswapDayDatas (historical)
+  /// UniswapDayData (historical)
   ///
-  /// Gets uniswapDayDatas.
+  /// Gets uniswapDayData.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1464,9 +1464,9 @@ class UniswapV2Api {
   ///
   /// * [String] id:
   ///   Unix timestamp for start of day / 86400 giving a unique day index.
-  Future<Response> uniswapV2GetUniswapDayDatasHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+  Future<Response> uniswapV2GetUniswapDayDataHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv2/uniswapDayDatas/historical';
+    final path = r'/dapps/uniswapv2/uniswapDayData/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1505,9 +1505,9 @@ class UniswapV2Api {
     );
   }
 
-  /// UniswapDayDatas (historical)
+  /// UniswapDayData (historical)
   ///
-  /// Gets uniswapDayDatas.
+  /// Gets uniswapDayData.
   ///
   /// Parameters:
   ///
@@ -1525,8 +1525,8 @@ class UniswapV2Api {
   ///
   /// * [String] id:
   ///   Unix timestamp for start of day / 86400 giving a unique day index.
-  Future<List<UniswapV2UniswapDayDataDTO>?> uniswapV2GetUniswapDayDatasHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
-    final response = await uniswapV2GetUniswapDayDatasHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+  Future<List<UniswapV2UniswapDayDataDTO>?> uniswapV2GetUniswapDayDataHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await uniswapV2GetUniswapDayDataHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1543,9 +1543,9 @@ class UniswapV2Api {
     return null;
   }
 
-  /// UniswapFactorys (historical)
+  /// UniswapFactories (historical)
   ///
-  /// Gets uniswapFactorys.
+  /// Gets uniswapFactories.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -1565,9 +1565,9 @@ class UniswapV2Api {
   ///
   /// * [String] id:
   ///   Factory address.
-  Future<Response> uniswapV2GetUniswapFactorysHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+  Future<Response> uniswapV2GetUniswapFactoriesHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv2/uniswapFactorys/historical';
+    final path = r'/dapps/uniswapv2/uniswapFactories/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1606,9 +1606,9 @@ class UniswapV2Api {
     );
   }
 
-  /// UniswapFactorys (historical)
+  /// UniswapFactories (historical)
   ///
-  /// Gets uniswapFactorys.
+  /// Gets uniswapFactories.
   ///
   /// Parameters:
   ///
@@ -1626,8 +1626,8 @@ class UniswapV2Api {
   ///
   /// * [String] id:
   ///   Factory address.
-  Future<List<UniswapV2UniswapFactoryDTO>?> uniswapV2GetUniswapFactorysHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
-    final response = await uniswapV2GetUniswapFactorysHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+  Future<List<UniswapV2UniswapFactoryDTO>?> uniswapV2GetUniswapFactoriesHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await uniswapV2GetUniswapFactoriesHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1898,14 +1898,14 @@ class UniswapV2Api {
     return null;
   }
 
-  /// PairDayDatas (current)
+  /// PairDayData (current)
   ///
-  /// Gets pairDayDatas.
+  /// Gets pairDayData.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> uniswapV2PairDayDatasCurrentWithHttpInfo() async {
+  Future<Response> uniswapV2PairDayDataCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv2/pairDayDatas/current';
+    final path = r'/dapps/uniswapv2/pairDayData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1928,11 +1928,11 @@ class UniswapV2Api {
     );
   }
 
-  /// PairDayDatas (current)
+  /// PairDayData (current)
   ///
-  /// Gets pairDayDatas.
-  Future<List<UniswapV2PairDayDataDTO>?> uniswapV2PairDayDatasCurrent() async {
-    final response = await uniswapV2PairDayDatasCurrentWithHttpInfo();
+  /// Gets pairDayData.
+  Future<List<UniswapV2PairDayDataDTO>?> uniswapV2PairDayDataCurrent() async {
+    final response = await uniswapV2PairDayDataCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1949,14 +1949,14 @@ class UniswapV2Api {
     return null;
   }
 
-  /// PairHourDatas (current)
+  /// PairHourData (current)
   ///
-  /// Gets pairHourDatas.
+  /// Gets pairHourData.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> uniswapV2PairHourDatasCurrentWithHttpInfo() async {
+  Future<Response> uniswapV2PairHourDataCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv2/pairHourDatas/current';
+    final path = r'/dapps/uniswapv2/pairHourData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1979,11 +1979,11 @@ class UniswapV2Api {
     );
   }
 
-  /// PairHourDatas (current)
+  /// PairHourData (current)
   ///
-  /// Gets pairHourDatas.
-  Future<List<UniswapV2PairHourDataDTO>?> uniswapV2PairHourDatasCurrent() async {
-    final response = await uniswapV2PairHourDatasCurrentWithHttpInfo();
+  /// Gets pairHourData.
+  Future<List<UniswapV2PairHourDataDTO>?> uniswapV2PairHourDataCurrent() async {
+    final response = await uniswapV2PairHourDataCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2130,14 +2130,14 @@ class UniswapV2Api {
     return null;
   }
 
-  /// TokenDayDatas (current)
+  /// TokenDayData (current)
   ///
-  /// Gets tokenDayDatas.
+  /// Gets tokenDayData.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> uniswapV2TokenDayDatasCurrentWithHttpInfo() async {
+  Future<Response> uniswapV2TokenDayDataCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv2/tokenDayDatas/current';
+    final path = r'/dapps/uniswapv2/tokenDayData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -2160,11 +2160,11 @@ class UniswapV2Api {
     );
   }
 
-  /// TokenDayDatas (current)
+  /// TokenDayData (current)
   ///
-  /// Gets tokenDayDatas.
-  Future<List<UniswapV2TokenDayDataDTO>?> uniswapV2TokenDayDatasCurrent() async {
-    final response = await uniswapV2TokenDayDatasCurrentWithHttpInfo();
+  /// Gets tokenDayData.
+  Future<List<UniswapV2TokenDayDataDTO>?> uniswapV2TokenDayDataCurrent() async {
+    final response = await uniswapV2TokenDayDataCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2283,14 +2283,14 @@ class UniswapV2Api {
     return null;
   }
 
-  /// UniswapDayDatas (current)
+  /// UniswapDayData (current)
   ///
-  /// Gets uniswapDayDatas.
+  /// Gets uniswapDayData.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> uniswapV2UniswapDayDatasCurrentWithHttpInfo() async {
+  Future<Response> uniswapV2UniswapDayDataCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv2/uniswapDayDatas/current';
+    final path = r'/dapps/uniswapv2/uniswapDayData/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -2313,11 +2313,11 @@ class UniswapV2Api {
     );
   }
 
-  /// UniswapDayDatas (current)
+  /// UniswapDayData (current)
   ///
-  /// Gets uniswapDayDatas.
-  Future<List<UniswapV2UniswapDayDataDTO>?> uniswapV2UniswapDayDatasCurrent() async {
-    final response = await uniswapV2UniswapDayDatasCurrentWithHttpInfo();
+  /// Gets uniswapDayData.
+  Future<List<UniswapV2UniswapDayDataDTO>?> uniswapV2UniswapDayDataCurrent() async {
+    final response = await uniswapV2UniswapDayDataCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -2334,14 +2334,14 @@ class UniswapV2Api {
     return null;
   }
 
-  /// UniswapFactorys (current)
+  /// UniswapFactories (current)
   ///
-  /// Gets uniswapFactorys.
+  /// Gets uniswapFactories.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> uniswapV2UniswapFactorysCurrentWithHttpInfo() async {
+  Future<Response> uniswapV2UniswapFactoriesCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/uniswapv2/uniswapFactorys/current';
+    final path = r'/dapps/uniswapv2/uniswapFactories/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -2364,11 +2364,11 @@ class UniswapV2Api {
     );
   }
 
-  /// UniswapFactorys (current)
+  /// UniswapFactories (current)
   ///
-  /// Gets uniswapFactorys.
-  Future<List<UniswapV2UniswapFactoryDTO>?> uniswapV2UniswapFactorysCurrent() async {
-    final response = await uniswapV2UniswapFactorysCurrentWithHttpInfo();
+  /// Gets uniswapFactories.
+  Future<List<UniswapV2UniswapFactoryDTO>?> uniswapV2UniswapFactoriesCurrent() async {
+    final response = await uniswapV2UniswapFactoriesCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

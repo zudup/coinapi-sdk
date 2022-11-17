@@ -40,12 +40,12 @@ list_t*
 UniswapV3API_uniswapV3BurnsCurrent(apiClient_t *apiClient);
 
 
-// Factorys (current)
+// Factories (current)
 //
-// Gets factorys.
+// Gets factories.
 //
 list_t*
-UniswapV3API_uniswapV3FactorysCurrent(apiClient_t *apiClient);
+UniswapV3API_uniswapV3FactoriesCurrent(apiClient_t *apiClient);
 
 
 // Bundles (historical)
@@ -64,12 +64,12 @@ list_t*
 UniswapV3API_uniswapV3GetBurnsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool , char * token_0 , char * token_1 );
 
 
-// Factorys (historical)
+// Factories (historical)
 //
-// Gets factorys.
+// Gets factories.
 //
 list_t*
-UniswapV3API_uniswapV3GetFactorysHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
+UniswapV3API_uniswapV3GetFactoriesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
 
 
 // Mints (historical)
@@ -80,20 +80,20 @@ list_t*
 UniswapV3API_uniswapV3GetMintsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool , char * token_0 , char * token_1 );
 
 
-// PoolDayDatas (historical)
+// PoolDayData (historical)
 //
-// Gets poolDayDatas.
-//
-list_t*
-UniswapV3API_uniswapV3GetPoolDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool );
-
-
-// PoolHourDatas (historical)
-//
-// Gets poolHourDatas.
+// Gets poolDayData.
 //
 list_t*
-UniswapV3API_uniswapV3GetPoolHourDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool );
+UniswapV3API_uniswapV3GetPoolDayDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool );
+
+
+// PoolHourData (historical)
+//
+// Gets poolHourData.
+//
+list_t*
+UniswapV3API_uniswapV3GetPoolHourDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool );
 
 
 // Pools (historical)
@@ -128,12 +128,12 @@ list_t*
 UniswapV3API_uniswapV3GetSwapsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool , char * token_0 , char * token_1 );
 
 
-// TickDayDatas (historical)
+// TickDayData (historical)
 //
-// Gets tickDayDatas.
+// Gets tickDayData.
 //
 list_t*
-UniswapV3API_uniswapV3GetTickDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool );
+UniswapV3API_uniswapV3GetTickDayDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool );
 
 
 // Ticks (historical)
@@ -144,20 +144,20 @@ list_t*
 UniswapV3API_uniswapV3GetTicksHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pool );
 
 
-// TokenHourDatas (historical)
+// TokenHourData (historical)
 //
-// Gets tokenHourDatas.
-//
-list_t*
-UniswapV3API_uniswapV3GetTokenHourDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
-
-
-// TokenV3DayDatas (historical)
-//
-// Gets tokenV3DayDatas.
+// Gets tokenHourData.
 //
 list_t*
-UniswapV3API_uniswapV3GetTokenV3DayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
+UniswapV3API_uniswapV3GetTokenHourDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
+
+
+// TokenV3DayData (historical)
+//
+// Gets tokenV3DayData.
+//
+list_t*
+UniswapV3API_uniswapV3GetTokenV3DayDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
 
 
 // Tokens (historical)
@@ -176,12 +176,12 @@ list_t*
 UniswapV3API_uniswapV3GetTransactionsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
 
 
-// UniswapDayDatas (historical)
+// UniswapDayData (historical)
 //
-// Gets uniswapDayDatas.
+// Gets uniswapDayData.
 //
 list_t*
-UniswapV3API_uniswapV3GetUniswapDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
+UniswapV3API_uniswapV3GetUniswapDayDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
 
 
 // Mints (current)
@@ -192,20 +192,20 @@ list_t*
 UniswapV3API_uniswapV3MintsCurrent(apiClient_t *apiClient);
 
 
-// PoolDayDatas (current)
+// PoolDayData (current)
 //
-// Gets poolDayDatas.
-//
-list_t*
-UniswapV3API_uniswapV3PoolDayDatasCurrent(apiClient_t *apiClient);
-
-
-// PoolHourDatas (current)
-//
-// Gets poolHourDatas.
+// Gets poolDayData.
 //
 list_t*
-UniswapV3API_uniswapV3PoolHourDatasCurrent(apiClient_t *apiClient);
+UniswapV3API_uniswapV3PoolDayDataCurrent(apiClient_t *apiClient);
+
+
+// PoolHourData (current)
+//
+// Gets poolHourData.
+//
+list_t*
+UniswapV3API_uniswapV3PoolHourDataCurrent(apiClient_t *apiClient);
 
 
 // Pools (current)
@@ -240,12 +240,12 @@ list_t*
 UniswapV3API_uniswapV3SwapsCurrent(apiClient_t *apiClient, char * pool );
 
 
-// TickDayDatas (current)
+// TickDayData (current)
 //
-// Gets tickDayDatas.
+// Gets tickDayData.
 //
 list_t*
-UniswapV3API_uniswapV3TickDayDatasCurrent(apiClient_t *apiClient);
+UniswapV3API_uniswapV3TickDayDataCurrent(apiClient_t *apiClient);
 
 
 // Ticks (current)
@@ -256,20 +256,20 @@ list_t*
 UniswapV3API_uniswapV3TicksCurrent(apiClient_t *apiClient);
 
 
-// TokenHourDatas (current)
+// TokenHourData (current)
 //
-// Gets tokenHourDatas.
-//
-list_t*
-UniswapV3API_uniswapV3TokenHourDatasCurrent(apiClient_t *apiClient);
-
-
-// TokenV3DayDatas (current)
-//
-// Gets tokenV3DayDatas.
+// Gets tokenHourData.
 //
 list_t*
-UniswapV3API_uniswapV3TokenV3DayDatasCurrent(apiClient_t *apiClient);
+UniswapV3API_uniswapV3TokenHourDataCurrent(apiClient_t *apiClient);
+
+
+// TokenV3DayData (current)
+//
+// Gets tokenV3DayData.
+//
+list_t*
+UniswapV3API_uniswapV3TokenV3DayDataCurrent(apiClient_t *apiClient);
 
 
 // Tokens (current)
@@ -288,11 +288,11 @@ list_t*
 UniswapV3API_uniswapV3TransactionsCurrent(apiClient_t *apiClient);
 
 
-// UniswapDayDatas (current)
+// UniswapDayData (current)
 //
-// Gets uniswapDayDatas.
+// Gets uniswapDayData.
 //
 list_t*
-UniswapV3API_uniswapV3UniswapDayDatasCurrent(apiClient_t *apiClient);
+UniswapV3API_uniswapV3UniswapDayDataCurrent(apiClient_t *apiClient);
 
 

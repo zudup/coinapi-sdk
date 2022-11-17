@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**CurveAPI_curveExchangesCurrent**](CurveAPI.md#CurveAPI_curveExchangesCurrent) | **GET** /dapps/curve/exchanges/current | Exchanges (current)
 [**CurveAPI_curveFeeChangeLogsCurrent**](CurveAPI.md#CurveAPI_curveFeeChangeLogsCurrent) | **GET** /dapps/curve/feeChangeLogs/current | FeeChangeLogs (current)
 [**CurveAPI_curveGaugeDepositsCurrent**](CurveAPI.md#CurveAPI_curveGaugeDepositsCurrent) | **GET** /dapps/curve/gaugeDeposits/current | GaugeDeposits (current)
-[**CurveAPI_curveGaugeLiquiditysCurrent**](CurveAPI.md#CurveAPI_curveGaugeLiquiditysCurrent) | **GET** /dapps/curve/gaugeLiquiditys/current | GaugeLiquiditys (current)
+[**CurveAPI_curveGaugeLiquiditiesCurrent**](CurveAPI.md#CurveAPI_curveGaugeLiquiditiesCurrent) | **GET** /dapps/curve/gaugeLiquidities/current | GaugeLiquidities (current)
 [**CurveAPI_curveGaugeTotalWeightsCurrent**](CurveAPI.md#CurveAPI_curveGaugeTotalWeightsCurrent) | **GET** /dapps/curve/gaugeTotalWeights/current | GaugeTotalWeights (current)
 [**CurveAPI_curveGaugeTypeWeightsCurrent**](CurveAPI.md#CurveAPI_curveGaugeTypeWeightsCurrent) | **GET** /dapps/curve/gaugeTypeWeights/current | GaugeTypeWeights (current)
 [**CurveAPI_curveGaugeTypesCurrent**](CurveAPI.md#CurveAPI_curveGaugeTypesCurrent) | **GET** /dapps/curve/gaugeTypes/current | GaugeTypes (current)
@@ -34,7 +34,7 @@ Method | HTTP request | Description
 [**CurveAPI_curveGetExchangesHistorical**](CurveAPI.md#CurveAPI_curveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical)
 [**CurveAPI_curveGetFeeChangeLogsHistorical**](CurveAPI.md#CurveAPI_curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical)
 [**CurveAPI_curveGetGaugeDepositsHistorical**](CurveAPI.md#CurveAPI_curveGetGaugeDepositsHistorical) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical)
-[**CurveAPI_curveGetGaugeLiquiditysHistorical**](CurveAPI.md#CurveAPI_curveGetGaugeLiquiditysHistorical) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical)
+[**CurveAPI_curveGetGaugeLiquiditiesHistorical**](CurveAPI.md#CurveAPI_curveGetGaugeLiquiditiesHistorical) | **GET** /dapps/curve/gaugeLiquidities/historical | GaugeLiquidities (historical)
 [**CurveAPI_curveGetGaugeTotalWeightsHistorical**](CurveAPI.md#CurveAPI_curveGetGaugeTotalWeightsHistorical) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical)
 [**CurveAPI_curveGetGaugeTypeWeightsHistorical**](CurveAPI.md#CurveAPI_curveGetGaugeTypeWeightsHistorical) | **GET** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical)
 [**CurveAPI_curveGetGaugeTypesHistorical**](CurveAPI.md#CurveAPI_curveGetGaugeTypesHistorical) | **GET** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical)
@@ -401,13 +401,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **CurveAPI_curveGaugeLiquiditysCurrent**
+# **CurveAPI_curveGaugeLiquiditiesCurrent**
 ```c
-// GaugeLiquiditys (current)
+// GaugeLiquidities (current)
 //
-// Gets gaugeLiquiditys.
+// Gets gaugeLiquidities.
 //
-list_t* CurveAPI_curveGaugeLiquiditysCurrent(apiClient_t *apiClient);
+list_t* CurveAPI_curveGaugeLiquiditiesCurrent(apiClient_t *apiClient);
 ```
 
 ### Parameters
@@ -1035,13 +1035,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **CurveAPI_curveGetGaugeLiquiditysHistorical**
+# **CurveAPI_curveGetGaugeLiquiditiesHistorical**
 ```c
-// GaugeLiquiditys (historical)
+// GaugeLiquidities (historical)
 //
-// Gets gaugeLiquiditys.
+// Gets gaugeLiquidities.
 //
-list_t* CurveAPI_curveGetGaugeLiquiditysHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * id, char * user);
+list_t* CurveAPI_curveGetGaugeLiquiditiesHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * id, char * user);
 ```
 
 ### Parameters

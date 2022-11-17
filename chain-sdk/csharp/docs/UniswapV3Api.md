@@ -6,38 +6,38 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**UniswapV3BundlesCurrent**](UniswapV3Api.md#uniswapv3bundlescurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
 [**UniswapV3BurnsCurrent**](UniswapV3Api.md#uniswapv3burnscurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
-[**UniswapV3FactorysCurrent**](UniswapV3Api.md#uniswapv3factoryscurrent) | **GET** /dapps/uniswapv3/factorys/current | Factorys (current)
+[**UniswapV3FactoriesCurrent**](UniswapV3Api.md#uniswapv3factoriescurrent) | **GET** /dapps/uniswapv3/factories/current | Factories (current)
 [**UniswapV3GetBundlesHistorical**](UniswapV3Api.md#uniswapv3getbundleshistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical)
 [**UniswapV3GetBurnsHistorical**](UniswapV3Api.md#uniswapv3getburnshistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical)
-[**UniswapV3GetFactorysHistorical**](UniswapV3Api.md#uniswapv3getfactoryshistorical) | **GET** /dapps/uniswapv3/factorys/historical | Factorys (historical)
+[**UniswapV3GetFactoriesHistorical**](UniswapV3Api.md#uniswapv3getfactorieshistorical) | **GET** /dapps/uniswapv3/factories/historical | Factories (historical)
 [**UniswapV3GetMintsHistorical**](UniswapV3Api.md#uniswapv3getmintshistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical)
-[**UniswapV3GetPoolDayDatasHistorical**](UniswapV3Api.md#uniswapv3getpooldaydatashistorical) | **GET** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical)
-[**UniswapV3GetPoolHourDatasHistorical**](UniswapV3Api.md#uniswapv3getpoolhourdatashistorical) | **GET** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical)
+[**UniswapV3GetPoolDayDataHistorical**](UniswapV3Api.md#uniswapv3getpooldaydatahistorical) | **GET** /dapps/uniswapv3/poolDayData/historical | PoolDayData (historical)
+[**UniswapV3GetPoolHourDataHistorical**](UniswapV3Api.md#uniswapv3getpoolhourdatahistorical) | **GET** /dapps/uniswapv3/poolHourData/historical | PoolHourData (historical)
 [**UniswapV3GetPoolsHistorical**](UniswapV3Api.md#uniswapv3getpoolshistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical)
 [**UniswapV3GetPositionSnapshotsHistorical**](UniswapV3Api.md#uniswapv3getpositionsnapshotshistorical) | **GET** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical)
 [**UniswapV3GetPositionsHistorical**](UniswapV3Api.md#uniswapv3getpositionshistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical)
 [**UniswapV3GetSwapsHistorical**](UniswapV3Api.md#uniswapv3getswapshistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical)
-[**UniswapV3GetTickDayDatasHistorical**](UniswapV3Api.md#uniswapv3gettickdaydatashistorical) | **GET** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical)
+[**UniswapV3GetTickDayDataHistorical**](UniswapV3Api.md#uniswapv3gettickdaydatahistorical) | **GET** /dapps/uniswapv3/tickDayData/historical | TickDayData (historical)
 [**UniswapV3GetTicksHistorical**](UniswapV3Api.md#uniswapv3gettickshistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical)
-[**UniswapV3GetTokenHourDatasHistorical**](UniswapV3Api.md#uniswapv3gettokenhourdatashistorical) | **GET** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical)
-[**UniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#uniswapv3gettokenv3daydatashistorical) | **GET** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical)
+[**UniswapV3GetTokenHourDataHistorical**](UniswapV3Api.md#uniswapv3gettokenhourdatahistorical) | **GET** /dapps/uniswapv3/tokenHourData/historical | TokenHourData (historical)
+[**UniswapV3GetTokenV3DayDataHistorical**](UniswapV3Api.md#uniswapv3gettokenv3daydatahistorical) | **GET** /dapps/uniswapv3/tokenV3DayData/historical | TokenV3DayData (historical)
 [**UniswapV3GetTokensHistorical**](UniswapV3Api.md#uniswapv3gettokenshistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical)
 [**UniswapV3GetTransactionsHistorical**](UniswapV3Api.md#uniswapv3gettransactionshistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical)
-[**UniswapV3GetUniswapDayDatasHistorical**](UniswapV3Api.md#uniswapv3getuniswapdaydatashistorical) | **GET** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical)
+[**UniswapV3GetUniswapDayDataHistorical**](UniswapV3Api.md#uniswapv3getuniswapdaydatahistorical) | **GET** /dapps/uniswapv3/uniswapDayData/historical | UniswapDayData (historical)
 [**UniswapV3MintsCurrent**](UniswapV3Api.md#uniswapv3mintscurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
-[**UniswapV3PoolDayDatasCurrent**](UniswapV3Api.md#uniswapv3pooldaydatascurrent) | **GET** /dapps/uniswapv3/poolDayDatas/current | PoolDayDatas (current)
-[**UniswapV3PoolHourDatasCurrent**](UniswapV3Api.md#uniswapv3poolhourdatascurrent) | **GET** /dapps/uniswapv3/poolHourDatas/current | PoolHourDatas (current)
+[**UniswapV3PoolDayDataCurrent**](UniswapV3Api.md#uniswapv3pooldaydatacurrent) | **GET** /dapps/uniswapv3/poolDayData/current | PoolDayData (current)
+[**UniswapV3PoolHourDataCurrent**](UniswapV3Api.md#uniswapv3poolhourdatacurrent) | **GET** /dapps/uniswapv3/poolHourData/current | PoolHourData (current)
 [**UniswapV3PoolsCurrent**](UniswapV3Api.md#uniswapv3poolscurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current)
 [**UniswapV3PositionSnapshotsCurrent**](UniswapV3Api.md#uniswapv3positionsnapshotscurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionSnapshots (current)
 [**UniswapV3PositionsCurrent**](UniswapV3Api.md#uniswapv3positionscurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
 [**UniswapV3SwapsCurrent**](UniswapV3Api.md#uniswapv3swapscurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current)
-[**UniswapV3TickDayDatasCurrent**](UniswapV3Api.md#uniswapv3tickdaydatascurrent) | **GET** /dapps/uniswapv3/tickDayDatas/current | TickDayDatas (current)
+[**UniswapV3TickDayDataCurrent**](UniswapV3Api.md#uniswapv3tickdaydatacurrent) | **GET** /dapps/uniswapv3/tickDayData/current | TickDayData (current)
 [**UniswapV3TicksCurrent**](UniswapV3Api.md#uniswapv3tickscurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
-[**UniswapV3TokenHourDatasCurrent**](UniswapV3Api.md#uniswapv3tokenhourdatascurrent) | **GET** /dapps/uniswapv3/tokenHourDatas/current | TokenHourDatas (current)
-[**UniswapV3TokenV3DayDatasCurrent**](UniswapV3Api.md#uniswapv3tokenv3daydatascurrent) | **GET** /dapps/uniswapv3/tokenV3DayDatas/current | TokenV3DayDatas (current)
+[**UniswapV3TokenHourDataCurrent**](UniswapV3Api.md#uniswapv3tokenhourdatacurrent) | **GET** /dapps/uniswapv3/tokenHourData/current | TokenHourData (current)
+[**UniswapV3TokenV3DayDataCurrent**](UniswapV3Api.md#uniswapv3tokenv3daydatacurrent) | **GET** /dapps/uniswapv3/tokenV3DayData/current | TokenV3DayData (current)
 [**UniswapV3TokensCurrent**](UniswapV3Api.md#uniswapv3tokenscurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current)
 [**UniswapV3TransactionsCurrent**](UniswapV3Api.md#uniswapv3transactionscurrent) | **GET** /dapps/uniswapv3/transactions/current | Transactions (current)
-[**UniswapV3UniswapDayDatasCurrent**](UniswapV3Api.md#uniswapv3uniswapdaydatascurrent) | **GET** /dapps/uniswapv3/uniswapDayDatas/current | UniswapDayDatas (current)
+[**UniswapV3UniswapDayDataCurrent**](UniswapV3Api.md#uniswapv3uniswapdaydatacurrent) | **GET** /dapps/uniswapv3/uniswapDayData/current | UniswapDayData (current)
 
 
 
@@ -185,13 +185,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV3FactorysCurrent
+## UniswapV3FactoriesCurrent
 
-> List&lt;UniswapV3FactoryDTO&gt; UniswapV3FactorysCurrent ()
+> List&lt;UniswapV3FactoryDTO&gt; UniswapV3FactoriesCurrent ()
 
-Factorys (current)
+Factories (current)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 
@@ -204,7 +204,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3FactorysCurrentExample
+    public class UniswapV3FactoriesCurrentExample
     {
         public static void Main()
         {
@@ -213,13 +213,13 @@ namespace Example
 
             try
             {
-                // Factorys (current)
-                List<UniswapV3FactoryDTO> result = apiInstance.UniswapV3FactorysCurrent();
+                // Factories (current)
+                List<UniswapV3FactoryDTO> result = apiInstance.UniswapV3FactoriesCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3FactorysCurrent: " + e.Message );
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3FactoriesCurrent: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -431,13 +431,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV3GetFactorysHistorical
+## UniswapV3GetFactoriesHistorical
 
-> List&lt;UniswapV3FactoryDTO&gt; UniswapV3GetFactorysHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+> List&lt;UniswapV3FactoryDTO&gt; UniswapV3GetFactoriesHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-Factorys (historical)
+Factories (historical)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 
@@ -450,7 +450,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetFactorysHistoricalExample
+    public class UniswapV3GetFactoriesHistoricalExample
     {
         public static void Main()
         {
@@ -464,13 +464,13 @@ namespace Example
 
             try
             {
-                // Factorys (historical)
-                List<UniswapV3FactoryDTO> result = apiInstance.UniswapV3GetFactorysHistorical(startBlock, endBlock, startDate, endDate, id);
+                // Factories (historical)
+                List<UniswapV3FactoryDTO> result = apiInstance.UniswapV3GetFactoriesHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetFactorysHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetFactoriesHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -605,13 +605,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV3GetPoolDayDatasHistorical
+## UniswapV3GetPoolDayDataHistorical
 
-> List&lt;UniswapV3PoolDayDataDTO&gt; UniswapV3GetPoolDayDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
+> List&lt;UniswapV3PoolDayDataDTO&gt; UniswapV3GetPoolDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-PoolDayDatas (historical)
+PoolDayData (historical)
 
-Gets poolDayDatas.
+Gets poolDayData.
 
 ### Example
 
@@ -624,7 +624,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetPoolDayDatasHistoricalExample
+    public class UniswapV3GetPoolDayDataHistoricalExample
     {
         public static void Main()
         {
@@ -639,13 +639,13 @@ namespace Example
 
             try
             {
-                // PoolDayDatas (historical)
-                List<UniswapV3PoolDayDataDTO> result = apiInstance.UniswapV3GetPoolDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+                // PoolDayData (historical)
+                List<UniswapV3PoolDayDataDTO> result = apiInstance.UniswapV3GetPoolDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolDayDatasHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolDayDataHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -691,13 +691,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV3GetPoolHourDatasHistorical
+## UniswapV3GetPoolHourDataHistorical
 
-> List&lt;UniswapV3PoolHourDataDTO&gt; UniswapV3GetPoolHourDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
+> List&lt;UniswapV3PoolHourDataDTO&gt; UniswapV3GetPoolHourDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-PoolHourDatas (historical)
+PoolHourData (historical)
 
-Gets poolHourDatas.
+Gets poolHourData.
 
 ### Example
 
@@ -710,7 +710,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetPoolHourDatasHistoricalExample
+    public class UniswapV3GetPoolHourDataHistoricalExample
     {
         public static void Main()
         {
@@ -725,13 +725,13 @@ namespace Example
 
             try
             {
-                // PoolHourDatas (historical)
-                List<UniswapV3PoolHourDataDTO> result = apiInstance.UniswapV3GetPoolHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+                // PoolHourData (historical)
+                List<UniswapV3PoolHourDataDTO> result = apiInstance.UniswapV3GetPoolHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolHourDatasHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetPoolHourDataHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1131,13 +1131,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV3GetTickDayDatasHistorical
+## UniswapV3GetTickDayDataHistorical
 
-> List&lt;UniswapV3TickDayDataDTO&gt; UniswapV3GetTickDayDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
+> List&lt;UniswapV3TickDayDataDTO&gt; UniswapV3GetTickDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null, string pool = null)
 
-TickDayDatas (historical)
+TickDayData (historical)
 
-Gets tickDayDatas.
+Gets tickDayData.
 
 ### Example
 
@@ -1150,7 +1150,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetTickDayDatasHistoricalExample
+    public class UniswapV3GetTickDayDataHistoricalExample
     {
         public static void Main()
         {
@@ -1165,13 +1165,13 @@ namespace Example
 
             try
             {
-                // TickDayDatas (historical)
-                List<UniswapV3TickDayDataDTO> result = apiInstance.UniswapV3GetTickDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+                // TickDayData (historical)
+                List<UniswapV3TickDayDataDTO> result = apiInstance.UniswapV3GetTickDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTickDayDatasHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTickDayDataHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1303,13 +1303,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV3GetTokenHourDatasHistorical
+## UniswapV3GetTokenHourDataHistorical
 
-> List&lt;UniswapV3TokenHourDataDTO&gt; UniswapV3GetTokenHourDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+> List&lt;UniswapV3TokenHourDataDTO&gt; UniswapV3GetTokenHourDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-TokenHourDatas (historical)
+TokenHourData (historical)
 
-Gets tokenHourDatas.
+Gets tokenHourData.
 
 ### Example
 
@@ -1322,7 +1322,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetTokenHourDatasHistoricalExample
+    public class UniswapV3GetTokenHourDataHistoricalExample
     {
         public static void Main()
         {
@@ -1336,13 +1336,13 @@ namespace Example
 
             try
             {
-                // TokenHourDatas (historical)
-                List<UniswapV3TokenHourDataDTO> result = apiInstance.UniswapV3GetTokenHourDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+                // TokenHourData (historical)
+                List<UniswapV3TokenHourDataDTO> result = apiInstance.UniswapV3GetTokenHourDataHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTokenHourDatasHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTokenHourDataHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1387,13 +1387,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV3GetTokenV3DayDatasHistorical
+## UniswapV3GetTokenV3DayDataHistorical
 
-> List&lt;UniswapV3TokenV3DayDataDTO&gt; UniswapV3GetTokenV3DayDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+> List&lt;UniswapV3TokenV3DayDataDTO&gt; UniswapV3GetTokenV3DayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-TokenV3DayDatas (historical)
+TokenV3DayData (historical)
 
-Gets tokenV3DayDatas.
+Gets tokenV3DayData.
 
 ### Example
 
@@ -1406,7 +1406,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetTokenV3DayDatasHistoricalExample
+    public class UniswapV3GetTokenV3DayDataHistoricalExample
     {
         public static void Main()
         {
@@ -1420,13 +1420,13 @@ namespace Example
 
             try
             {
-                // TokenV3DayDatas (historical)
-                List<UniswapV3TokenV3DayDataDTO> result = apiInstance.UniswapV3GetTokenV3DayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+                // TokenV3DayData (historical)
+                List<UniswapV3TokenV3DayDataDTO> result = apiInstance.UniswapV3GetTokenV3DayDataHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTokenV3DayDatasHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetTokenV3DayDataHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1643,13 +1643,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV3GetUniswapDayDatasHistorical
+## UniswapV3GetUniswapDayDataHistorical
 
-> List&lt;UniswapV3UniswapDayDataDTO&gt; UniswapV3GetUniswapDayDatasHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
+> List&lt;UniswapV3UniswapDayDataDTO&gt; UniswapV3GetUniswapDayDataHistorical (long? startBlock = null, long? endBlock = null, DateTime? startDate = null, DateTime? endDate = null, string id = null)
 
-UniswapDayDatas (historical)
+UniswapDayData (historical)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 
@@ -1662,7 +1662,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3GetUniswapDayDatasHistoricalExample
+    public class UniswapV3GetUniswapDayDataHistoricalExample
     {
         public static void Main()
         {
@@ -1676,13 +1676,13 @@ namespace Example
 
             try
             {
-                // UniswapDayDatas (historical)
-                List<UniswapV3UniswapDayDataDTO> result = apiInstance.UniswapV3GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+                // UniswapDayData (historical)
+                List<UniswapV3UniswapDayDataDTO> result = apiInstance.UniswapV3GetUniswapDayDataHistorical(startBlock, endBlock, startDate, endDate, id);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetUniswapDayDatasHistorical: " + e.Message );
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3GetUniswapDayDataHistorical: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1799,13 +1799,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV3PoolDayDatasCurrent
+## UniswapV3PoolDayDataCurrent
 
-> List&lt;UniswapV3PoolDayDataDTO&gt; UniswapV3PoolDayDatasCurrent ()
+> List&lt;UniswapV3PoolDayDataDTO&gt; UniswapV3PoolDayDataCurrent ()
 
-PoolDayDatas (current)
+PoolDayData (current)
 
-Gets poolDayDatas.
+Gets poolDayData.
 
 ### Example
 
@@ -1818,7 +1818,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3PoolDayDatasCurrentExample
+    public class UniswapV3PoolDayDataCurrentExample
     {
         public static void Main()
         {
@@ -1827,13 +1827,13 @@ namespace Example
 
             try
             {
-                // PoolDayDatas (current)
-                List<UniswapV3PoolDayDataDTO> result = apiInstance.UniswapV3PoolDayDatasCurrent();
+                // PoolDayData (current)
+                List<UniswapV3PoolDayDataDTO> result = apiInstance.UniswapV3PoolDayDataCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3PoolDayDatasCurrent: " + e.Message );
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3PoolDayDataCurrent: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -1871,13 +1871,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV3PoolHourDatasCurrent
+## UniswapV3PoolHourDataCurrent
 
-> List&lt;UniswapV3PoolHourDataDTO&gt; UniswapV3PoolHourDatasCurrent ()
+> List&lt;UniswapV3PoolHourDataDTO&gt; UniswapV3PoolHourDataCurrent ()
 
-PoolHourDatas (current)
+PoolHourData (current)
 
-Gets poolHourDatas.
+Gets poolHourData.
 
 ### Example
 
@@ -1890,7 +1890,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3PoolHourDatasCurrentExample
+    public class UniswapV3PoolHourDataCurrentExample
     {
         public static void Main()
         {
@@ -1899,13 +1899,13 @@ namespace Example
 
             try
             {
-                // PoolHourDatas (current)
-                List<UniswapV3PoolHourDataDTO> result = apiInstance.UniswapV3PoolHourDatasCurrent();
+                // PoolHourData (current)
+                List<UniswapV3PoolHourDataDTO> result = apiInstance.UniswapV3PoolHourDataCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3PoolHourDatasCurrent: " + e.Message );
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3PoolHourDataCurrent: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2239,13 +2239,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV3TickDayDatasCurrent
+## UniswapV3TickDayDataCurrent
 
-> List&lt;UniswapV3TickDayDataDTO&gt; UniswapV3TickDayDatasCurrent ()
+> List&lt;UniswapV3TickDayDataDTO&gt; UniswapV3TickDayDataCurrent ()
 
-TickDayDatas (current)
+TickDayData (current)
 
-Gets tickDayDatas.
+Gets tickDayData.
 
 ### Example
 
@@ -2258,7 +2258,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3TickDayDatasCurrentExample
+    public class UniswapV3TickDayDataCurrentExample
     {
         public static void Main()
         {
@@ -2267,13 +2267,13 @@ namespace Example
 
             try
             {
-                // TickDayDatas (current)
-                List<UniswapV3TickDayDataDTO> result = apiInstance.UniswapV3TickDayDatasCurrent();
+                // TickDayData (current)
+                List<UniswapV3TickDayDataDTO> result = apiInstance.UniswapV3TickDayDataCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3TickDayDatasCurrent: " + e.Message );
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3TickDayDataCurrent: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2383,13 +2383,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV3TokenHourDatasCurrent
+## UniswapV3TokenHourDataCurrent
 
-> List&lt;UniswapV3TokenHourDataDTO&gt; UniswapV3TokenHourDatasCurrent ()
+> List&lt;UniswapV3TokenHourDataDTO&gt; UniswapV3TokenHourDataCurrent ()
 
-TokenHourDatas (current)
+TokenHourData (current)
 
-Gets tokenHourDatas.
+Gets tokenHourData.
 
 ### Example
 
@@ -2402,7 +2402,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3TokenHourDatasCurrentExample
+    public class UniswapV3TokenHourDataCurrentExample
     {
         public static void Main()
         {
@@ -2411,13 +2411,13 @@ namespace Example
 
             try
             {
-                // TokenHourDatas (current)
-                List<UniswapV3TokenHourDataDTO> result = apiInstance.UniswapV3TokenHourDatasCurrent();
+                // TokenHourData (current)
+                List<UniswapV3TokenHourDataDTO> result = apiInstance.UniswapV3TokenHourDataCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3TokenHourDatasCurrent: " + e.Message );
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3TokenHourDataCurrent: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2455,13 +2455,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV3TokenV3DayDatasCurrent
+## UniswapV3TokenV3DayDataCurrent
 
-> List&lt;UniswapV3TokenV3DayDataDTO&gt; UniswapV3TokenV3DayDatasCurrent ()
+> List&lt;UniswapV3TokenV3DayDataDTO&gt; UniswapV3TokenV3DayDataCurrent ()
 
-TokenV3DayDatas (current)
+TokenV3DayData (current)
 
-Gets tokenV3DayDatas.
+Gets tokenV3DayData.
 
 ### Example
 
@@ -2474,7 +2474,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3TokenV3DayDatasCurrentExample
+    public class UniswapV3TokenV3DayDataCurrentExample
     {
         public static void Main()
         {
@@ -2483,13 +2483,13 @@ namespace Example
 
             try
             {
-                // TokenV3DayDatas (current)
-                List<UniswapV3TokenV3DayDataDTO> result = apiInstance.UniswapV3TokenV3DayDatasCurrent();
+                // TokenV3DayData (current)
+                List<UniswapV3TokenV3DayDataDTO> result = apiInstance.UniswapV3TokenV3DayDataCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3TokenV3DayDatasCurrent: " + e.Message );
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3TokenV3DayDataCurrent: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }
@@ -2671,13 +2671,13 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## UniswapV3UniswapDayDatasCurrent
+## UniswapV3UniswapDayDataCurrent
 
-> List&lt;UniswapV3UniswapDayDataDTO&gt; UniswapV3UniswapDayDatasCurrent ()
+> List&lt;UniswapV3UniswapDayDataDTO&gt; UniswapV3UniswapDayDataCurrent ()
 
-UniswapDayDatas (current)
+UniswapDayData (current)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 
@@ -2690,7 +2690,7 @@ using CoinAPI.EMS.REST.V1.Model;
 
 namespace Example
 {
-    public class UniswapV3UniswapDayDatasCurrentExample
+    public class UniswapV3UniswapDayDataCurrentExample
     {
         public static void Main()
         {
@@ -2699,13 +2699,13 @@ namespace Example
 
             try
             {
-                // UniswapDayDatas (current)
-                List<UniswapV3UniswapDayDataDTO> result = apiInstance.UniswapV3UniswapDayDatasCurrent();
+                // UniswapDayData (current)
+                List<UniswapV3UniswapDayDataDTO> result = apiInstance.UniswapV3UniswapDayDataCurrent();
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
             {
-                Debug.Print("Exception when calling UniswapV3Api.UniswapV3UniswapDayDatasCurrent: " + e.Message );
+                Debug.Print("Exception when calling UniswapV3Api.UniswapV3UniswapDayDataCurrent: " + e.Message );
                 Debug.Print("Status Code: "+ e.ErrorCode);
                 Debug.Print(e.StackTrace);
             }

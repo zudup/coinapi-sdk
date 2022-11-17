@@ -2,33 +2,33 @@
 
 -export([sushiswap_bundles_(current)/1, sushiswap_bundles_(current)/2,
          sushiswap_burns_(current)/1, sushiswap_burns_(current)/2,
-         sushiswap_day_datas_(current)/1, sushiswap_day_datas_(current)/2,
-         sushiswap_factorys_(current)/1, sushiswap_factorys_(current)/2,
+         sushiswap_day_data_(current)/1, sushiswap_day_data_(current)/2,
+         sushiswap_factories_(current)/1, sushiswap_factories_(current)/2,
          sushiswap_get_bundles_(historical)/1, sushiswap_get_bundles_(historical)/2,
          sushiswap_get_burns_(historical)/1, sushiswap_get_burns_(historical)/2,
-         sushiswap_get_day_datas_(historical)/1, sushiswap_get_day_datas_(historical)/2,
-         sushiswap_get_factorys_(historical)/1, sushiswap_get_factorys_(historical)/2,
-         sushiswap_get_hour_datas_(historical)/1, sushiswap_get_hour_datas_(historical)/2,
+         sushiswap_get_day_data_(historical)/1, sushiswap_get_day_data_(historical)/2,
+         sushiswap_get_factories_(historical)/1, sushiswap_get_factories_(historical)/2,
+         sushiswap_get_hour_data_(historical)/1, sushiswap_get_hour_data_(historical)/2,
          sushiswap_get_liquidity_position_snapshots_(historical)/1, sushiswap_get_liquidity_position_snapshots_(historical)/2,
          sushiswap_get_liquidity_positions_(historical)/1, sushiswap_get_liquidity_positions_(historical)/2,
          sushiswap_get_mints_(historical)/1, sushiswap_get_mints_(historical)/2,
-         sushiswap_get_pair_day_datas_(historical)/1, sushiswap_get_pair_day_datas_(historical)/2,
-         sushiswap_get_pair_hour_datas_(historical)/1, sushiswap_get_pair_hour_datas_(historical)/2,
+         sushiswap_get_pair_day_data_(historical)/1, sushiswap_get_pair_day_data_(historical)/2,
+         sushiswap_get_pair_hour_data_(historical)/1, sushiswap_get_pair_hour_data_(historical)/2,
          sushiswap_get_pairs_(historical)/1, sushiswap_get_pairs_(historical)/2,
          sushiswap_get_swaps_(historical)/1, sushiswap_get_swaps_(historical)/2,
-         sushiswap_get_token_day_datas_(historical)/1, sushiswap_get_token_day_datas_(historical)/2,
+         sushiswap_get_token_day_data_(historical)/1, sushiswap_get_token_day_data_(historical)/2,
          sushiswap_get_tokens_(historical)/1, sushiswap_get_tokens_(historical)/2,
          sushiswap_get_transactions_(historical)/1, sushiswap_get_transactions_(historical)/2,
          sushiswap_get_users_(historical)/1, sushiswap_get_users_(historical)/2,
-         sushiswap_hour_datas_(current)/1, sushiswap_hour_datas_(current)/2,
+         sushiswap_hour_data_(current)/1, sushiswap_hour_data_(current)/2,
          sushiswap_liquidity_position_snapshots_(current)/1, sushiswap_liquidity_position_snapshots_(current)/2,
          sushiswap_liquidity_positions_(current)/1, sushiswap_liquidity_positions_(current)/2,
          sushiswap_mints_(current)/1, sushiswap_mints_(current)/2,
-         sushiswap_pair_day_datas_(current)/1, sushiswap_pair_day_datas_(current)/2,
-         sushiswap_pair_hour_datas_(current)/1, sushiswap_pair_hour_datas_(current)/2,
+         sushiswap_pair_day_data_(current)/1, sushiswap_pair_day_data_(current)/2,
+         sushiswap_pair_hour_data_(current)/1, sushiswap_pair_hour_data_(current)/2,
          sushiswap_pairs_(current)/1, sushiswap_pairs_(current)/2,
          sushiswap_swaps_(current)/1, sushiswap_swaps_(current)/2,
-         sushiswap_token_day_datas_(current)/1, sushiswap_token_day_datas_(current)/2,
+         sushiswap_token_day_data_(current)/1, sushiswap_token_day_data_(current)/2,
          sushiswap_tokens_(current)/1, sushiswap_tokens_(current)/2,
          sushiswap_transactions_(current)/1, sushiswap_transactions_(current)/2,
          sushiswap_users_(current)/1, sushiswap_users_(current)/2]).
@@ -77,19 +77,19 @@ sushiswap_burns_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc DayDatas (current)
-%% Gets dayDatas.
--spec sushiswap_day_datas_(current)(ctx:ctx()) -> {ok, [openapi_sushiswap_day_data_dto:openapi_sushiswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_day_datas_(current)(Ctx) ->
-    sushiswap_day_datas_(current)(Ctx, #{}).
+%% @doc DayData (current)
+%% Gets dayData.
+-spec sushiswap_day_data_(current)(ctx:ctx()) -> {ok, [openapi_sushiswap_day_data_dto:openapi_sushiswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_day_data_(current)(Ctx) ->
+    sushiswap_day_data_(current)(Ctx, #{}).
 
--spec sushiswap_day_datas_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_day_data_dto:openapi_sushiswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_day_datas_(current)(Ctx, Optional) ->
+-spec sushiswap_day_data_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_day_data_dto:openapi_sushiswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_day_data_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/sushiswap/dayDatas/current">>],
+    Path = [<<"/dapps/sushiswap/dayData/current">>],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -98,19 +98,19 @@ sushiswap_day_datas_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Factorys (current)
-%% Gets factorys.
--spec sushiswap_factorys_(current)(ctx:ctx()) -> {ok, [openapi_sushiswap_factory_dto:openapi_sushiswap_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_factorys_(current)(Ctx) ->
-    sushiswap_factorys_(current)(Ctx, #{}).
+%% @doc Factories (current)
+%% Gets factories.
+-spec sushiswap_factories_(current)(ctx:ctx()) -> {ok, [openapi_sushiswap_factory_dto:openapi_sushiswap_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_factories_(current)(Ctx) ->
+    sushiswap_factories_(current)(Ctx, #{}).
 
--spec sushiswap_factorys_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_factory_dto:openapi_sushiswap_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_factorys_(current)(Ctx, Optional) ->
+-spec sushiswap_factories_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_factory_dto:openapi_sushiswap_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_factories_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/sushiswap/factorys/current">>],
+    Path = [<<"/dapps/sushiswap/factories/current">>],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -161,19 +161,19 @@ sushiswap_get_burns_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc DayDatas (historical)
-%% Gets dayDatas.
--spec sushiswap_get_day_datas_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_day_data_dto:openapi_sushiswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_get_day_datas_(historical)(Ctx) ->
-    sushiswap_get_day_datas_(historical)(Ctx, #{}).
+%% @doc DayData (historical)
+%% Gets dayData.
+-spec sushiswap_get_day_data_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_day_data_dto:openapi_sushiswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_get_day_data_(historical)(Ctx) ->
+    sushiswap_get_day_data_(historical)(Ctx, #{}).
 
--spec sushiswap_get_day_datas_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_day_data_dto:openapi_sushiswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_get_day_datas_(historical)(Ctx, Optional) ->
+-spec sushiswap_get_day_data_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_day_data_dto:openapi_sushiswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_get_day_data_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/sushiswap/dayDatas/historical">>],
+    Path = [<<"/dapps/sushiswap/dayData/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -182,19 +182,19 @@ sushiswap_get_day_datas_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc Factorys (historical)
-%% Gets factorys.
--spec sushiswap_get_factorys_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_factory_dto:openapi_sushiswap_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_get_factorys_(historical)(Ctx) ->
-    sushiswap_get_factorys_(historical)(Ctx, #{}).
+%% @doc Factories (historical)
+%% Gets factories.
+-spec sushiswap_get_factories_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_factory_dto:openapi_sushiswap_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_get_factories_(historical)(Ctx) ->
+    sushiswap_get_factories_(historical)(Ctx, #{}).
 
--spec sushiswap_get_factorys_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_factory_dto:openapi_sushiswap_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_get_factorys_(historical)(Ctx, Optional) ->
+-spec sushiswap_get_factories_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_factory_dto:openapi_sushiswap_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_get_factories_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/sushiswap/factorys/historical">>],
+    Path = [<<"/dapps/sushiswap/factories/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -203,19 +203,19 @@ sushiswap_get_factorys_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc HourDatas (historical)
-%% Gets hourDatas.
--spec sushiswap_get_hour_datas_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_hour_data_dto:openapi_sushiswap_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_get_hour_datas_(historical)(Ctx) ->
-    sushiswap_get_hour_datas_(historical)(Ctx, #{}).
+%% @doc HourData (historical)
+%% Gets hourData.
+-spec sushiswap_get_hour_data_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_hour_data_dto:openapi_sushiswap_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_get_hour_data_(historical)(Ctx) ->
+    sushiswap_get_hour_data_(historical)(Ctx, #{}).
 
--spec sushiswap_get_hour_datas_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_hour_data_dto:openapi_sushiswap_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_get_hour_datas_(historical)(Ctx, Optional) ->
+-spec sushiswap_get_hour_data_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_hour_data_dto:openapi_sushiswap_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_get_hour_data_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/sushiswap/hourDatas/historical">>],
+    Path = [<<"/dapps/sushiswap/hourData/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -287,19 +287,19 @@ sushiswap_get_mints_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc PairDayDatas (historical)
-%% Gets pairDayDatas.
--spec sushiswap_get_pair_day_datas_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_pair_day_data_dto:openapi_sushiswap_pair_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_get_pair_day_datas_(historical)(Ctx) ->
-    sushiswap_get_pair_day_datas_(historical)(Ctx, #{}).
+%% @doc PairDayData (historical)
+%% Gets pairDayData.
+-spec sushiswap_get_pair_day_data_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_pair_day_data_dto:openapi_sushiswap_pair_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_get_pair_day_data_(historical)(Ctx) ->
+    sushiswap_get_pair_day_data_(historical)(Ctx, #{}).
 
--spec sushiswap_get_pair_day_datas_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_pair_day_data_dto:openapi_sushiswap_pair_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_get_pair_day_datas_(historical)(Ctx, Optional) ->
+-spec sushiswap_get_pair_day_data_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_pair_day_data_dto:openapi_sushiswap_pair_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_get_pair_day_data_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/sushiswap/pairDayDatas/historical">>],
+    Path = [<<"/dapps/sushiswap/pairDayData/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id', 'pair', 'token_0', 'token_1'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -308,19 +308,19 @@ sushiswap_get_pair_day_datas_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc PairHourDatas (historical)
-%% Gets pairHourDatas.
--spec sushiswap_get_pair_hour_datas_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_pair_hour_data_dto:openapi_sushiswap_pair_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_get_pair_hour_datas_(historical)(Ctx) ->
-    sushiswap_get_pair_hour_datas_(historical)(Ctx, #{}).
+%% @doc PairHourData (historical)
+%% Gets pairHourData.
+-spec sushiswap_get_pair_hour_data_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_pair_hour_data_dto:openapi_sushiswap_pair_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_get_pair_hour_data_(historical)(Ctx) ->
+    sushiswap_get_pair_hour_data_(historical)(Ctx, #{}).
 
--spec sushiswap_get_pair_hour_datas_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_pair_hour_data_dto:openapi_sushiswap_pair_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_get_pair_hour_datas_(historical)(Ctx, Optional) ->
+-spec sushiswap_get_pair_hour_data_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_pair_hour_data_dto:openapi_sushiswap_pair_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_get_pair_hour_data_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/sushiswap/pairHourDatas/historical">>],
+    Path = [<<"/dapps/sushiswap/pairHourData/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id', 'pair'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -371,19 +371,19 @@ sushiswap_get_swaps_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc TokenDayDatas (historical)
-%% Gets tokenDayDatas.
--spec sushiswap_get_token_day_datas_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_token_day_data_dto:openapi_sushiswap_token_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_get_token_day_datas_(historical)(Ctx) ->
-    sushiswap_get_token_day_datas_(historical)(Ctx, #{}).
+%% @doc TokenDayData (historical)
+%% Gets tokenDayData.
+-spec sushiswap_get_token_day_data_(historical)(ctx:ctx()) -> {ok, [openapi_sushiswap_token_day_data_dto:openapi_sushiswap_token_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_get_token_day_data_(historical)(Ctx) ->
+    sushiswap_get_token_day_data_(historical)(Ctx, #{}).
 
--spec sushiswap_get_token_day_datas_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_token_day_data_dto:openapi_sushiswap_token_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_get_token_day_datas_(historical)(Ctx, Optional) ->
+-spec sushiswap_get_token_day_data_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_token_day_data_dto:openapi_sushiswap_token_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_get_token_day_data_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/sushiswap/tokenDayDatas/historical">>],
+    Path = [<<"/dapps/sushiswap/tokenDayData/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -455,19 +455,19 @@ sushiswap_get_users_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc HourDatas (current)
-%% Gets hourDatas.
--spec sushiswap_hour_datas_(current)(ctx:ctx()) -> {ok, [openapi_sushiswap_hour_data_dto:openapi_sushiswap_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_hour_datas_(current)(Ctx) ->
-    sushiswap_hour_datas_(current)(Ctx, #{}).
+%% @doc HourData (current)
+%% Gets hourData.
+-spec sushiswap_hour_data_(current)(ctx:ctx()) -> {ok, [openapi_sushiswap_hour_data_dto:openapi_sushiswap_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_hour_data_(current)(Ctx) ->
+    sushiswap_hour_data_(current)(Ctx, #{}).
 
--spec sushiswap_hour_datas_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_hour_data_dto:openapi_sushiswap_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_hour_datas_(current)(Ctx, Optional) ->
+-spec sushiswap_hour_data_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_hour_data_dto:openapi_sushiswap_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_hour_data_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/sushiswap/hourDatas/current">>],
+    Path = [<<"/dapps/sushiswap/hourData/current">>],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -539,19 +539,19 @@ sushiswap_mints_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc PairDayDatas (current)
-%% Gets pairDayDatas.
--spec sushiswap_pair_day_datas_(current)(ctx:ctx()) -> {ok, [openapi_sushiswap_pair_day_data_dto:openapi_sushiswap_pair_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_pair_day_datas_(current)(Ctx) ->
-    sushiswap_pair_day_datas_(current)(Ctx, #{}).
+%% @doc PairDayData (current)
+%% Gets pairDayData.
+-spec sushiswap_pair_day_data_(current)(ctx:ctx()) -> {ok, [openapi_sushiswap_pair_day_data_dto:openapi_sushiswap_pair_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_pair_day_data_(current)(Ctx) ->
+    sushiswap_pair_day_data_(current)(Ctx, #{}).
 
--spec sushiswap_pair_day_datas_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_pair_day_data_dto:openapi_sushiswap_pair_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_pair_day_datas_(current)(Ctx, Optional) ->
+-spec sushiswap_pair_day_data_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_pair_day_data_dto:openapi_sushiswap_pair_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_pair_day_data_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/sushiswap/pairDayDatas/current">>],
+    Path = [<<"/dapps/sushiswap/pairDayData/current">>],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -560,19 +560,19 @@ sushiswap_pair_day_datas_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc PairHourDatas (current)
-%% Gets pairHourDatas.
--spec sushiswap_pair_hour_datas_(current)(ctx:ctx()) -> {ok, [openapi_sushiswap_pair_hour_data_dto:openapi_sushiswap_pair_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_pair_hour_datas_(current)(Ctx) ->
-    sushiswap_pair_hour_datas_(current)(Ctx, #{}).
+%% @doc PairHourData (current)
+%% Gets pairHourData.
+-spec sushiswap_pair_hour_data_(current)(ctx:ctx()) -> {ok, [openapi_sushiswap_pair_hour_data_dto:openapi_sushiswap_pair_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_pair_hour_data_(current)(Ctx) ->
+    sushiswap_pair_hour_data_(current)(Ctx, #{}).
 
--spec sushiswap_pair_hour_datas_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_pair_hour_data_dto:openapi_sushiswap_pair_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_pair_hour_datas_(current)(Ctx, Optional) ->
+-spec sushiswap_pair_hour_data_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_pair_hour_data_dto:openapi_sushiswap_pair_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_pair_hour_data_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/sushiswap/pairHourDatas/current">>],
+    Path = [<<"/dapps/sushiswap/pairHourData/current">>],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -623,19 +623,19 @@ sushiswap_swaps_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc TokenDayDatas (current)
-%% Gets tokenDayDatas.
--spec sushiswap_token_day_datas_(current)(ctx:ctx()) -> {ok, [openapi_sushiswap_token_day_data_dto:openapi_sushiswap_token_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_token_day_datas_(current)(Ctx) ->
-    sushiswap_token_day_datas_(current)(Ctx, #{}).
+%% @doc TokenDayData (current)
+%% Gets tokenDayData.
+-spec sushiswap_token_day_data_(current)(ctx:ctx()) -> {ok, [openapi_sushiswap_token_day_data_dto:openapi_sushiswap_token_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_token_day_data_(current)(Ctx) ->
+    sushiswap_token_day_data_(current)(Ctx, #{}).
 
--spec sushiswap_token_day_datas_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_token_day_data_dto:openapi_sushiswap_token_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-sushiswap_token_day_datas_(current)(Ctx, Optional) ->
+-spec sushiswap_token_day_data_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_sushiswap_token_day_data_dto:openapi_sushiswap_token_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+sushiswap_token_day_data_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/sushiswap/tokenDayDatas/current">>],
+    Path = [<<"/dapps/sushiswap/tokenDayData/current">>],
     QS = [],
     Headers = [],
     Body1 = [],

@@ -208,15 +208,15 @@ public class CurveApiTest {
     }
 
     /**
-     * GaugeLiquiditys (current)
+     * GaugeLiquidities (current)
      *
-     * Gets gaugeLiquiditys.
+     * Gets gaugeLiquidities.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void curveGaugeLiquiditysCurrentTest() throws ApiException {
-        List<CurveGaugeLiquidityDTO> response = api.curveGaugeLiquiditysCurrent();
+    public void curveGaugeLiquiditiesCurrentTest() throws ApiException {
+        List<CurveGaugeLiquidityDTO> response = api.curveGaugeLiquiditiesCurrent();
         // TODO: test validations
     }
 
@@ -519,21 +519,21 @@ public class CurveApiTest {
     }
 
     /**
-     * GaugeLiquiditys (historical)
+     * GaugeLiquidities (historical)
      *
-     * Gets gaugeLiquiditys.
+     * Gets gaugeLiquidities.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void curveGetGaugeLiquiditysHistoricalTest() throws ApiException {
+    public void curveGetGaugeLiquiditiesHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String id = null;
         String user = null;
-        List<CurveGaugeLiquidityDTO> response = api.curveGetGaugeLiquiditysHistorical(startBlock, endBlock, startDate, endDate, id, user);
+        List<CurveGaugeLiquidityDTO> response = api.curveGetGaugeLiquiditiesHistorical(startBlock, endBlock, startDate, endDate, id, user);
         // TODO: test validations
     }
 

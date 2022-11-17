@@ -261,26 +261,26 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveGaugeDepositDTO&gt;</returns>
         ApiResponse<List<CurveGaugeDepositDTO>> CurveGaugeDepositsCurrentWithHttpInfo(int operationIndex = 0);
         /// <summary>
-        /// GaugeLiquiditys (current)
+        /// GaugeLiquidities (current)
         /// </summary>
         /// <remarks>
-        /// Gets gaugeLiquiditys.
+        /// Gets gaugeLiquidities.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;CurveGaugeLiquidityDTO&gt;</returns>
-        List<CurveGaugeLiquidityDTO> CurveGaugeLiquiditysCurrent(int operationIndex = 0);
+        List<CurveGaugeLiquidityDTO> CurveGaugeLiquiditiesCurrent(int operationIndex = 0);
 
         /// <summary>
-        /// GaugeLiquiditys (current)
+        /// GaugeLiquidities (current)
         /// </summary>
         /// <remarks>
-        /// Gets gaugeLiquiditys.
+        /// Gets gaugeLiquidities.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;CurveGaugeLiquidityDTO&gt;</returns>
-        ApiResponse<List<CurveGaugeLiquidityDTO>> CurveGaugeLiquiditysCurrentWithHttpInfo(int operationIndex = 0);
+        ApiResponse<List<CurveGaugeLiquidityDTO>> CurveGaugeLiquiditiesCurrentWithHttpInfo(int operationIndex = 0);
         /// <summary>
         /// GaugeTotalWeights (current)
         /// </summary>
@@ -788,10 +788,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>ApiResponse of List&lt;CurveGaugeDepositDTO&gt;</returns>
         ApiResponse<List<CurveGaugeDepositDTO>> CurveGetGaugeDepositsHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), int operationIndex = 0);
         /// <summary>
-        /// GaugeLiquiditys (historical)
+        /// GaugeLiquidities (historical)
         /// </summary>
         /// <remarks>
-        /// Gets gaugeLiquiditys.
+        /// Gets gaugeLiquidities.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -802,13 +802,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="user"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;CurveGaugeLiquidityDTO&gt;</returns>
-        List<CurveGaugeLiquidityDTO> CurveGetGaugeLiquiditysHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), int operationIndex = 0);
+        List<CurveGaugeLiquidityDTO> CurveGetGaugeLiquiditiesHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), int operationIndex = 0);
 
         /// <summary>
-        /// GaugeLiquiditys (historical)
+        /// GaugeLiquidities (historical)
         /// </summary>
         /// <remarks>
-        /// Gets gaugeLiquiditys.
+        /// Gets gaugeLiquidities.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -819,7 +819,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="user"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;CurveGaugeLiquidityDTO&gt;</returns>
-        ApiResponse<List<CurveGaugeLiquidityDTO>> CurveGetGaugeLiquiditysHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), int operationIndex = 0);
+        ApiResponse<List<CurveGaugeLiquidityDTO>> CurveGetGaugeLiquiditiesHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), int operationIndex = 0);
         /// <summary>
         /// GaugeTotalWeights (historical)
         /// </summary>
@@ -2018,28 +2018,28 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveGaugeDepositDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeDepositDTO>>> CurveGaugeDepositsCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GaugeLiquiditys (current)
+        /// GaugeLiquidities (current)
         /// </summary>
         /// <remarks>
-        /// Gets gaugeLiquiditys.
+        /// Gets gaugeLiquidities.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;CurveGaugeLiquidityDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<CurveGaugeLiquidityDTO>> CurveGaugeLiquiditysCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<CurveGaugeLiquidityDTO>> CurveGaugeLiquiditiesCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GaugeLiquiditys (current)
+        /// GaugeLiquidities (current)
         /// </summary>
         /// <remarks>
-        /// Gets gaugeLiquiditys.
+        /// Gets gaugeLiquidities.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;CurveGaugeLiquidityDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeLiquidityDTO>>> CurveGaugeLiquiditysCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeLiquidityDTO>>> CurveGaugeLiquiditiesCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// GaugeTotalWeights (current)
         /// </summary>
@@ -2583,10 +2583,10 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <returns>Task of ApiResponse (List&lt;CurveGaugeDepositDTO&gt;)</returns>
         System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeDepositDTO>>> CurveGetGaugeDepositsHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
-        /// GaugeLiquiditys (historical)
+        /// GaugeLiquidities (historical)
         /// </summary>
         /// <remarks>
-        /// Gets gaugeLiquiditys.
+        /// Gets gaugeLiquidities.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2598,13 +2598,13 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;CurveGaugeLiquidityDTO&gt;</returns>
-        System.Threading.Tasks.Task<List<CurveGaugeLiquidityDTO>> CurveGetGaugeLiquiditysHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<List<CurveGaugeLiquidityDTO>> CurveGetGaugeLiquiditiesHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
 
         /// <summary>
-        /// GaugeLiquiditys (historical)
+        /// GaugeLiquidities (historical)
         /// </summary>
         /// <remarks>
-        /// Gets gaugeLiquiditys.
+        /// Gets gaugeLiquidities.
         /// </remarks>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -2616,7 +2616,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;CurveGaugeLiquidityDTO&gt;)</returns>
-        System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeLiquidityDTO>>> CurveGetGaugeLiquiditysHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
+        System.Threading.Tasks.Task<ApiResponse<List<CurveGaugeLiquidityDTO>>> CurveGetGaugeLiquiditiesHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken));
         /// <summary>
         /// GaugeTotalWeights (historical)
         /// </summary>
@@ -5179,24 +5179,24 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeLiquiditys (current) Gets gaugeLiquiditys.
+        /// GaugeLiquidities (current) Gets gaugeLiquidities.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;CurveGaugeLiquidityDTO&gt;</returns>
-        public List<CurveGaugeLiquidityDTO> CurveGaugeLiquiditysCurrent(int operationIndex = 0)
+        public List<CurveGaugeLiquidityDTO> CurveGaugeLiquiditiesCurrent(int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CurveGaugeLiquidityDTO>> localVarResponse = CurveGaugeLiquiditysCurrentWithHttpInfo();
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CurveGaugeLiquidityDTO>> localVarResponse = CurveGaugeLiquiditiesCurrentWithHttpInfo();
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// GaugeLiquiditys (current) Gets gaugeLiquiditys.
+        /// GaugeLiquidities (current) Gets gaugeLiquidities.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;CurveGaugeLiquidityDTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CurveGaugeLiquidityDTO>> CurveGaugeLiquiditysCurrentWithHttpInfo(int operationIndex = 0)
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CurveGaugeLiquidityDTO>> CurveGaugeLiquiditiesCurrentWithHttpInfo(int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -5223,15 +5223,15 @@ namespace CoinAPI.EMS.REST.V1.Api
             }
 
 
-            localVarRequestOptions.Operation = "CurveApi.CurveGaugeLiquiditysCurrent";
+            localVarRequestOptions.Operation = "CurveApi.CurveGaugeLiquiditiesCurrent";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<CurveGaugeLiquidityDTO>>("/dapps/curve/gaugeLiquiditys/current", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<CurveGaugeLiquidityDTO>>("/dapps/curve/gaugeLiquidities/current", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CurveGaugeLiquiditysCurrent", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CurveGaugeLiquiditiesCurrent", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -5242,26 +5242,26 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeLiquiditys (current) Gets gaugeLiquiditys.
+        /// GaugeLiquidities (current) Gets gaugeLiquidities.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;CurveGaugeLiquidityDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<CurveGaugeLiquidityDTO>> CurveGaugeLiquiditysCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<CurveGaugeLiquidityDTO>> CurveGaugeLiquiditiesCurrentAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CurveGaugeLiquidityDTO>> localVarResponse = await CurveGaugeLiquiditysCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CurveGaugeLiquidityDTO>> localVarResponse = await CurveGaugeLiquiditiesCurrentWithHttpInfoAsync(operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// GaugeLiquiditys (current) Gets gaugeLiquiditys.
+        /// GaugeLiquidities (current) Gets gaugeLiquidities.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;CurveGaugeLiquidityDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CurveGaugeLiquidityDTO>>> CurveGaugeLiquiditysCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CurveGaugeLiquidityDTO>>> CurveGaugeLiquiditiesCurrentWithHttpInfoAsync(int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -5289,16 +5289,16 @@ namespace CoinAPI.EMS.REST.V1.Api
             }
 
 
-            localVarRequestOptions.Operation = "CurveApi.CurveGaugeLiquiditysCurrent";
+            localVarRequestOptions.Operation = "CurveApi.CurveGaugeLiquiditiesCurrent";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CurveGaugeLiquidityDTO>>("/dapps/curve/gaugeLiquiditys/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CurveGaugeLiquidityDTO>>("/dapps/curve/gaugeLiquidities/current", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CurveGaugeLiquiditysCurrent", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CurveGaugeLiquiditiesCurrent", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -8417,7 +8417,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeLiquiditys (historical) Gets gaugeLiquiditys.
+        /// GaugeLiquidities (historical) Gets gaugeLiquidities.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -8428,14 +8428,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="user"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>List&lt;CurveGaugeLiquidityDTO&gt;</returns>
-        public List<CurveGaugeLiquidityDTO> CurveGetGaugeLiquiditysHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), int operationIndex = 0)
+        public List<CurveGaugeLiquidityDTO> CurveGetGaugeLiquiditiesHistorical(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), int operationIndex = 0)
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CurveGaugeLiquidityDTO>> localVarResponse = CurveGetGaugeLiquiditysHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, user);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CurveGaugeLiquidityDTO>> localVarResponse = CurveGetGaugeLiquiditiesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, user);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// GaugeLiquiditys (historical) Gets gaugeLiquiditys.
+        /// GaugeLiquidities (historical) Gets gaugeLiquidities.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -8446,7 +8446,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="user"> (optional)</param>
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <returns>ApiResponse of List&lt;CurveGaugeLiquidityDTO&gt;</returns>
-        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CurveGaugeLiquidityDTO>> CurveGetGaugeLiquiditysHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), int operationIndex = 0)
+        public CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CurveGaugeLiquidityDTO>> CurveGetGaugeLiquiditiesHistoricalWithHttpInfo(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), int operationIndex = 0)
         {
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
 
@@ -8497,15 +8497,15 @@ namespace CoinAPI.EMS.REST.V1.Api
                 localVarRequestOptions.QueryParameters.Add(CoinAPI.EMS.REST.V1.Client.ClientUtils.ParameterToMultiMap("", "user", user));
             }
 
-            localVarRequestOptions.Operation = "CurveApi.CurveGetGaugeLiquiditysHistorical";
+            localVarRequestOptions.Operation = "CurveApi.CurveGetGaugeLiquiditiesHistorical";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = this.Client.Get<List<CurveGaugeLiquidityDTO>>("/dapps/curve/gaugeLiquiditys/historical", localVarRequestOptions, this.Configuration);
+            var localVarResponse = this.Client.Get<List<CurveGaugeLiquidityDTO>>("/dapps/curve/gaugeLiquidities/historical", localVarRequestOptions, this.Configuration);
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CurveGetGaugeLiquiditysHistorical", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CurveGetGaugeLiquiditiesHistorical", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;
@@ -8516,7 +8516,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         }
 
         /// <summary>
-        /// GaugeLiquiditys (historical) Gets gaugeLiquiditys.
+        /// GaugeLiquidities (historical) Gets gaugeLiquidities.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -8528,14 +8528,14 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of List&lt;CurveGaugeLiquidityDTO&gt;</returns>
-        public async System.Threading.Tasks.Task<List<CurveGaugeLiquidityDTO>> CurveGetGaugeLiquiditysHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<List<CurveGaugeLiquidityDTO>> CurveGetGaugeLiquiditiesHistoricalAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
-            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CurveGaugeLiquidityDTO>> localVarResponse = await CurveGetGaugeLiquiditysHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, user, operationIndex, cancellationToken).ConfigureAwait(false);
+            CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CurveGaugeLiquidityDTO>> localVarResponse = await CurveGetGaugeLiquiditiesHistoricalWithHttpInfoAsync(startBlock, endBlock, startDate, endDate, id, user, operationIndex, cancellationToken).ConfigureAwait(false);
             return localVarResponse.Data;
         }
 
         /// <summary>
-        /// GaugeLiquiditys (historical) Gets gaugeLiquiditys.
+        /// GaugeLiquidities (historical) Gets gaugeLiquidities.
         /// </summary>
         /// <exception cref="CoinAPI.EMS.REST.V1.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)</param>
@@ -8547,7 +8547,7 @@ namespace CoinAPI.EMS.REST.V1.Api
         /// <param name="operationIndex">Index associated with the operation.</param>
         /// <param name="cancellationToken">Cancellation Token to cancel the request.</param>
         /// <returns>Task of ApiResponse (List&lt;CurveGaugeLiquidityDTO&gt;)</returns>
-        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CurveGaugeLiquidityDTO>>> CurveGetGaugeLiquiditysHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
+        public async System.Threading.Tasks.Task<CoinAPI.EMS.REST.V1.Client.ApiResponse<List<CurveGaugeLiquidityDTO>>> CurveGetGaugeLiquiditiesHistoricalWithHttpInfoAsync(long? startBlock = default(long?), long? endBlock = default(long?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string id = default(string), string user = default(string), int operationIndex = 0, System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken))
         {
 
             CoinAPI.EMS.REST.V1.Client.RequestOptions localVarRequestOptions = new CoinAPI.EMS.REST.V1.Client.RequestOptions();
@@ -8599,16 +8599,16 @@ namespace CoinAPI.EMS.REST.V1.Api
                 localVarRequestOptions.QueryParameters.Add(CoinAPI.EMS.REST.V1.Client.ClientUtils.ParameterToMultiMap("", "user", user));
             }
 
-            localVarRequestOptions.Operation = "CurveApi.CurveGetGaugeLiquiditysHistorical";
+            localVarRequestOptions.Operation = "CurveApi.CurveGetGaugeLiquiditiesHistorical";
             localVarRequestOptions.OperationIndex = operationIndex;
 
 
             // make the HTTP request
-            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CurveGaugeLiquidityDTO>>("/dapps/curve/gaugeLiquiditys/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
+            var localVarResponse = await this.AsynchronousClient.GetAsync<List<CurveGaugeLiquidityDTO>>("/dapps/curve/gaugeLiquidities/historical", localVarRequestOptions, this.Configuration, cancellationToken).ConfigureAwait(false);
 
             if (this.ExceptionFactory != null)
             {
-                Exception _exception = this.ExceptionFactory("CurveGetGaugeLiquiditysHistorical", localVarResponse);
+                Exception _exception = this.ExceptionFactory("CurveGetGaugeLiquiditiesHistorical", localVarResponse);
                 if (_exception != null)
                 {
                     throw _exception;

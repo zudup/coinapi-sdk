@@ -1367,15 +1367,15 @@ public class CurveApi {
     }
   }
   /**
-  * GaugeLiquiditys (current)
-  * Gets gaugeLiquiditys.
+  * GaugeLiquidities (current)
+  * Gets gaugeLiquidities.
    * @return List<CurveGaugeLiquidityDTO>
   */
-  public List<CurveGaugeLiquidityDTO> curveGaugeLiquiditysCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<CurveGaugeLiquidityDTO> curveGaugeLiquiditiesCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/gaugeLiquiditys/current";
+    String path = "/dapps/curve/gaugeLiquidities/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1423,16 +1423,16 @@ public class CurveApi {
   }
 
       /**
-   * GaugeLiquiditys (current)
-   * Gets gaugeLiquiditys.
+   * GaugeLiquidities (current)
+   * Gets gaugeLiquidities.
 
   */
-  public void curveGaugeLiquiditysCurrent (final Response.Listener<List<CurveGaugeLiquidityDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void curveGaugeLiquiditiesCurrent (final Response.Listener<List<CurveGaugeLiquidityDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/curve/gaugeLiquiditys/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/gaugeLiquidities/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3763,8 +3763,8 @@ public class CurveApi {
     }
   }
   /**
-  * GaugeLiquiditys (historical)
-  * Gets gaugeLiquiditys.
+  * GaugeLiquidities (historical)
+  * Gets gaugeLiquidities.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -3773,11 +3773,11 @@ public class CurveApi {
    * @param user 
    * @return List<CurveGaugeLiquidityDTO>
   */
-  public List<CurveGaugeLiquidityDTO> curveGetGaugeLiquiditysHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<CurveGaugeLiquidityDTO> curveGetGaugeLiquiditiesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/curve/gaugeLiquiditys/historical";
+    String path = "/dapps/curve/gaugeLiquidities/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3831,16 +3831,16 @@ public class CurveApi {
   }
 
       /**
-   * GaugeLiquiditys (historical)
-   * Gets gaugeLiquiditys.
+   * GaugeLiquidities (historical)
+   * Gets gaugeLiquidities.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id    * @param user 
   */
-  public void curveGetGaugeLiquiditysHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, final Response.Listener<List<CurveGaugeLiquidityDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void curveGetGaugeLiquiditiesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, final Response.Listener<List<CurveGaugeLiquidityDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/curve/gaugeLiquiditys/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/curve/gaugeLiquidities/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

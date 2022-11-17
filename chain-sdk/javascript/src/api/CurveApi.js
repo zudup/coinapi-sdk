@@ -477,20 +477,20 @@ export default class CurveApi {
     }
 
     /**
-     * Callback function to receive the result of the curveGaugeLiquiditysCurrent operation.
-     * @callback module:api/CurveApi~curveGaugeLiquiditysCurrentCallback
+     * Callback function to receive the result of the curveGaugeLiquiditiesCurrent operation.
+     * @callback module:api/CurveApi~curveGaugeLiquiditiesCurrentCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/CurveGaugeLiquidityDTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * GaugeLiquiditys (current)
-     * Gets gaugeLiquiditys.
-     * @param {module:api/CurveApi~curveGaugeLiquiditysCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * GaugeLiquidities (current)
+     * Gets gaugeLiquidities.
+     * @param {module:api/CurveApi~curveGaugeLiquiditiesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveGaugeLiquidityDTO>}
      */
-    curveGaugeLiquiditysCurrent(callback) {
+    curveGaugeLiquiditiesCurrent(callback) {
       let postBody = null;
 
       let pathParams = {
@@ -507,7 +507,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveGaugeLiquidityDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/gaugeLiquiditys/current', 'GET',
+        '/dapps/curve/gaugeLiquidities/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -1330,16 +1330,16 @@ export default class CurveApi {
     }
 
     /**
-     * Callback function to receive the result of the curveGetGaugeLiquiditysHistorical operation.
-     * @callback module:api/CurveApi~curveGetGaugeLiquiditysHistoricalCallback
+     * Callback function to receive the result of the curveGetGaugeLiquiditiesHistorical operation.
+     * @callback module:api/CurveApi~curveGetGaugeLiquiditiesHistoricalCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/CurveGaugeLiquidityDTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * GaugeLiquiditys (historical)
-     * Gets gaugeLiquiditys.
+     * GaugeLiquidities (historical)
+     * Gets gaugeLiquidities.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -1347,10 +1347,10 @@ export default class CurveApi {
      * @param {Date} opts.endDate The end date of timeframe.
      * @param {String} opts.id 
      * @param {String} opts.user 
-     * @param {module:api/CurveApi~curveGetGaugeLiquiditysHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/CurveApi~curveGetGaugeLiquiditiesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/CurveGaugeLiquidityDTO>}
      */
-    curveGetGaugeLiquiditysHistorical(opts, callback) {
+    curveGetGaugeLiquiditiesHistorical(opts, callback) {
       opts = opts || {};
       let postBody = null;
 
@@ -1374,7 +1374,7 @@ export default class CurveApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [CurveGaugeLiquidityDTO];
       return this.apiClient.callApi(
-        '/dapps/curve/gaugeLiquiditys/historical', 'GET',
+        '/dapps/curve/gaugeLiquidities/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

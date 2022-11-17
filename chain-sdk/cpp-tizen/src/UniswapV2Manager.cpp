@@ -1231,7 +1231,7 @@ bool UniswapV2Manager::uniswapV2GetMints (historical)Sync(char * accessToken,
 	handler, userData, false);
 }
 
-static bool uniswapV2GetPairDayDatas (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool uniswapV2GetPairDayData (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<UniswapV2.PairDayDataDTO>, Error, void* )
@@ -1278,7 +1278,7 @@ static bool uniswapV2GetPairDayDatas (historical)Processor(MemoryStruct_s p_chun
 			}
 }
 
-static bool uniswapV2GetPairDayDatas (historical)Helper(char * accessToken,
+static bool uniswapV2GetPairDayData (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string token0, std::string token1, 
 	void(* handler)(std::list<UniswapV2.PairDayDataDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -1349,7 +1349,7 @@ static bool uniswapV2GetPairDayDatas (historical)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswapv2/pairDayDatas/historical");
+	string url("/dapps/uniswapv2/pairDayData/historical");
 	int pos;
 
 
@@ -1368,7 +1368,7 @@ static bool uniswapV2GetPairDayDatas (historical)Helper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = uniswapV2GetPairDayDatas (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = uniswapV2GetPairDayData (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -1386,7 +1386,7 @@ static bool uniswapV2GetPairDayDatas (historical)Helper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2GetPairDayDatas (historical)Processor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2GetPairDayData (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -1398,27 +1398,27 @@ static bool uniswapV2GetPairDayDatas (historical)Helper(char * accessToken,
 
 
 
-bool UniswapV2Manager::uniswapV2GetPairDayDatas (historical)Async(char * accessToken,
+bool UniswapV2Manager::uniswapV2GetPairDayData (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string token0, std::string token1, 
 	void(* handler)(std::list<UniswapV2.PairDayDataDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2GetPairDayDatas (historical)Helper(accessToken,
+	return uniswapV2GetPairDayData (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, id, token0, token1, 
 	handler, userData, true);
 }
 
-bool UniswapV2Manager::uniswapV2GetPairDayDatas (historical)Sync(char * accessToken,
+bool UniswapV2Manager::uniswapV2GetPairDayData (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string token0, std::string token1, 
 	void(* handler)(std::list<UniswapV2.PairDayDataDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2GetPairDayDatas (historical)Helper(accessToken,
+	return uniswapV2GetPairDayData (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, id, token0, token1, 
 	handler, userData, false);
 }
 
-static bool uniswapV2GetPairHourDatas (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool uniswapV2GetPairHourData (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<UniswapV2.PairHourDataDTO>, Error, void* )
@@ -1465,7 +1465,7 @@ static bool uniswapV2GetPairHourDatas (historical)Processor(MemoryStruct_s p_chu
 			}
 }
 
-static bool uniswapV2GetPairHourDatas (historical)Helper(char * accessToken,
+static bool uniswapV2GetPairHourData (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string pair, 
 	void(* handler)(std::list<UniswapV2.PairHourDataDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -1529,7 +1529,7 @@ static bool uniswapV2GetPairHourDatas (historical)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswapv2/pairHourDatas/historical");
+	string url("/dapps/uniswapv2/pairHourData/historical");
 	int pos;
 
 
@@ -1548,7 +1548,7 @@ static bool uniswapV2GetPairHourDatas (historical)Helper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = uniswapV2GetPairHourDatas (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = uniswapV2GetPairHourData (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -1566,7 +1566,7 @@ static bool uniswapV2GetPairHourDatas (historical)Helper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2GetPairHourDatas (historical)Processor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2GetPairHourData (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -1578,22 +1578,22 @@ static bool uniswapV2GetPairHourDatas (historical)Helper(char * accessToken,
 
 
 
-bool UniswapV2Manager::uniswapV2GetPairHourDatas (historical)Async(char * accessToken,
+bool UniswapV2Manager::uniswapV2GetPairHourData (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string pair, 
 	void(* handler)(std::list<UniswapV2.PairHourDataDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2GetPairHourDatas (historical)Helper(accessToken,
+	return uniswapV2GetPairHourData (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, id, pair, 
 	handler, userData, true);
 }
 
-bool UniswapV2Manager::uniswapV2GetPairHourDatas (historical)Sync(char * accessToken,
+bool UniswapV2Manager::uniswapV2GetPairHourData (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, std::string pair, 
 	void(* handler)(std::list<UniswapV2.PairHourDataDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2GetPairHourDatas (historical)Helper(accessToken,
+	return uniswapV2GetPairHourData (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, id, pair, 
 	handler, userData, false);
 }
@@ -1965,7 +1965,7 @@ bool UniswapV2Manager::uniswapV2GetSwaps (historical)Sync(char * accessToken,
 	handler, userData, false);
 }
 
-static bool uniswapV2GetTokenDayDatas (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool uniswapV2GetTokenDayData (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<UniswapV2.TokenDayDataDTO>, Error, void* )
@@ -2012,7 +2012,7 @@ static bool uniswapV2GetTokenDayDatas (historical)Processor(MemoryStruct_s p_chu
 			}
 }
 
-static bool uniswapV2GetTokenDayDatas (historical)Helper(char * accessToken,
+static bool uniswapV2GetTokenDayData (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<UniswapV2.TokenDayDataDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -2069,7 +2069,7 @@ static bool uniswapV2GetTokenDayDatas (historical)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswapv2/tokenDayDatas/historical");
+	string url("/dapps/uniswapv2/tokenDayData/historical");
 	int pos;
 
 
@@ -2088,7 +2088,7 @@ static bool uniswapV2GetTokenDayDatas (historical)Helper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = uniswapV2GetTokenDayDatas (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = uniswapV2GetTokenDayData (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -2106,7 +2106,7 @@ static bool uniswapV2GetTokenDayDatas (historical)Helper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2GetTokenDayDatas (historical)Processor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2GetTokenDayData (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -2118,22 +2118,22 @@ static bool uniswapV2GetTokenDayDatas (historical)Helper(char * accessToken,
 
 
 
-bool UniswapV2Manager::uniswapV2GetTokenDayDatas (historical)Async(char * accessToken,
+bool UniswapV2Manager::uniswapV2GetTokenDayData (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<UniswapV2.TokenDayDataDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2GetTokenDayDatas (historical)Helper(accessToken,
+	return uniswapV2GetTokenDayData (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, id, 
 	handler, userData, true);
 }
 
-bool UniswapV2Manager::uniswapV2GetTokenDayDatas (historical)Sync(char * accessToken,
+bool UniswapV2Manager::uniswapV2GetTokenDayData (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<UniswapV2.TokenDayDataDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2GetTokenDayDatas (historical)Helper(accessToken,
+	return uniswapV2GetTokenDayData (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, id, 
 	handler, userData, false);
 }
@@ -2498,7 +2498,7 @@ bool UniswapV2Manager::uniswapV2GetTransactions (historical)Sync(char * accessTo
 	handler, userData, false);
 }
 
-static bool uniswapV2GetUniswapDayDatas (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool uniswapV2GetUniswapDayData (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<UniswapV2.UniswapDayDataDTO>, Error, void* )
@@ -2545,7 +2545,7 @@ static bool uniswapV2GetUniswapDayDatas (historical)Processor(MemoryStruct_s p_c
 			}
 }
 
-static bool uniswapV2GetUniswapDayDatas (historical)Helper(char * accessToken,
+static bool uniswapV2GetUniswapDayData (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<UniswapV2.UniswapDayDataDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -2602,7 +2602,7 @@ static bool uniswapV2GetUniswapDayDatas (historical)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswapv2/uniswapDayDatas/historical");
+	string url("/dapps/uniswapv2/uniswapDayData/historical");
 	int pos;
 
 
@@ -2621,7 +2621,7 @@ static bool uniswapV2GetUniswapDayDatas (historical)Helper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = uniswapV2GetUniswapDayDatas (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = uniswapV2GetUniswapDayData (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -2639,7 +2639,7 @@ static bool uniswapV2GetUniswapDayDatas (historical)Helper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2GetUniswapDayDatas (historical)Processor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2GetUniswapDayData (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -2651,27 +2651,27 @@ static bool uniswapV2GetUniswapDayDatas (historical)Helper(char * accessToken,
 
 
 
-bool UniswapV2Manager::uniswapV2GetUniswapDayDatas (historical)Async(char * accessToken,
+bool UniswapV2Manager::uniswapV2GetUniswapDayData (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<UniswapV2.UniswapDayDataDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2GetUniswapDayDatas (historical)Helper(accessToken,
+	return uniswapV2GetUniswapDayData (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, id, 
 	handler, userData, true);
 }
 
-bool UniswapV2Manager::uniswapV2GetUniswapDayDatas (historical)Sync(char * accessToken,
+bool UniswapV2Manager::uniswapV2GetUniswapDayData (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<UniswapV2.UniswapDayDataDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2GetUniswapDayDatas (historical)Helper(accessToken,
+	return uniswapV2GetUniswapDayData (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, id, 
 	handler, userData, false);
 }
 
-static bool uniswapV2GetUniswapFactorys (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool uniswapV2GetUniswapFactories (historical)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<UniswapV2.UniswapFactoryDTO>, Error, void* )
@@ -2718,7 +2718,7 @@ static bool uniswapV2GetUniswapFactorys (historical)Processor(MemoryStruct_s p_c
 			}
 }
 
-static bool uniswapV2GetUniswapFactorys (historical)Helper(char * accessToken,
+static bool uniswapV2GetUniswapFactories (historical)Helper(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<UniswapV2.UniswapFactoryDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -2775,7 +2775,7 @@ static bool uniswapV2GetUniswapFactorys (historical)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswapv2/uniswapFactorys/historical");
+	string url("/dapps/uniswapv2/uniswapFactories/historical");
 	int pos;
 
 
@@ -2794,7 +2794,7 @@ static bool uniswapV2GetUniswapFactorys (historical)Helper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = uniswapV2GetUniswapFactorys (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = uniswapV2GetUniswapFactories (historical)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -2812,7 +2812,7 @@ static bool uniswapV2GetUniswapFactorys (historical)Helper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2GetUniswapFactorys (historical)Processor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2GetUniswapFactories (historical)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -2824,22 +2824,22 @@ static bool uniswapV2GetUniswapFactorys (historical)Helper(char * accessToken,
 
 
 
-bool UniswapV2Manager::uniswapV2GetUniswapFactorys (historical)Async(char * accessToken,
+bool UniswapV2Manager::uniswapV2GetUniswapFactories (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<UniswapV2.UniswapFactoryDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2GetUniswapFactorys (historical)Helper(accessToken,
+	return uniswapV2GetUniswapFactories (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, id, 
 	handler, userData, true);
 }
 
-bool UniswapV2Manager::uniswapV2GetUniswapFactorys (historical)Sync(char * accessToken,
+bool UniswapV2Manager::uniswapV2GetUniswapFactories (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<UniswapV2.UniswapFactoryDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2GetUniswapFactorys (historical)Helper(accessToken,
+	return uniswapV2GetUniswapFactories (historical)Helper(accessToken,
 	startBlock, endBlock, startDate, endDate, id, 
 	handler, userData, false);
 }
@@ -3431,7 +3431,7 @@ bool UniswapV2Manager::uniswapV2Mints (current)Sync(char * accessToken,
 	handler, userData, false);
 }
 
-static bool uniswapV2PairDayDatas (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool uniswapV2PairDayData (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<UniswapV2.PairDayDataDTO>, Error, void* )
@@ -3478,7 +3478,7 @@ static bool uniswapV2PairDayDatas (current)Processor(MemoryStruct_s p_chunk, lon
 			}
 }
 
-static bool uniswapV2PairDayDatas (current)Helper(char * accessToken,
+static bool uniswapV2PairDayData (current)Helper(char * accessToken,
 	
 	void(* handler)(std::list<UniswapV2.PairDayDataDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -3500,7 +3500,7 @@ static bool uniswapV2PairDayDatas (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswapv2/pairDayDatas/current");
+	string url("/dapps/uniswapv2/pairDayData/current");
 	int pos;
 
 
@@ -3519,7 +3519,7 @@ static bool uniswapV2PairDayDatas (current)Helper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = uniswapV2PairDayDatas (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = uniswapV2PairDayData (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -3537,7 +3537,7 @@ static bool uniswapV2PairDayDatas (current)Helper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2PairDayDatas (current)Processor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2PairDayData (current)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -3549,27 +3549,27 @@ static bool uniswapV2PairDayDatas (current)Helper(char * accessToken,
 
 
 
-bool UniswapV2Manager::uniswapV2PairDayDatas (current)Async(char * accessToken,
+bool UniswapV2Manager::uniswapV2PairDayData (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<UniswapV2.PairDayDataDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2PairDayDatas (current)Helper(accessToken,
+	return uniswapV2PairDayData (current)Helper(accessToken,
 	
 	handler, userData, true);
 }
 
-bool UniswapV2Manager::uniswapV2PairDayDatas (current)Sync(char * accessToken,
+bool UniswapV2Manager::uniswapV2PairDayData (current)Sync(char * accessToken,
 	
 	void(* handler)(std::list<UniswapV2.PairDayDataDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2PairDayDatas (current)Helper(accessToken,
+	return uniswapV2PairDayData (current)Helper(accessToken,
 	
 	handler, userData, false);
 }
 
-static bool uniswapV2PairHourDatas (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool uniswapV2PairHourData (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<UniswapV2.PairHourDataDTO>, Error, void* )
@@ -3616,7 +3616,7 @@ static bool uniswapV2PairHourDatas (current)Processor(MemoryStruct_s p_chunk, lo
 			}
 }
 
-static bool uniswapV2PairHourDatas (current)Helper(char * accessToken,
+static bool uniswapV2PairHourData (current)Helper(char * accessToken,
 	
 	void(* handler)(std::list<UniswapV2.PairHourDataDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -3638,7 +3638,7 @@ static bool uniswapV2PairHourDatas (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswapv2/pairHourDatas/current");
+	string url("/dapps/uniswapv2/pairHourData/current");
 	int pos;
 
 
@@ -3657,7 +3657,7 @@ static bool uniswapV2PairHourDatas (current)Helper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = uniswapV2PairHourDatas (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = uniswapV2PairHourData (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -3675,7 +3675,7 @@ static bool uniswapV2PairHourDatas (current)Helper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2PairHourDatas (current)Processor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2PairHourData (current)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -3687,22 +3687,22 @@ static bool uniswapV2PairHourDatas (current)Helper(char * accessToken,
 
 
 
-bool UniswapV2Manager::uniswapV2PairHourDatas (current)Async(char * accessToken,
+bool UniswapV2Manager::uniswapV2PairHourData (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<UniswapV2.PairHourDataDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2PairHourDatas (current)Helper(accessToken,
+	return uniswapV2PairHourData (current)Helper(accessToken,
 	
 	handler, userData, true);
 }
 
-bool UniswapV2Manager::uniswapV2PairHourDatas (current)Sync(char * accessToken,
+bool UniswapV2Manager::uniswapV2PairHourData (current)Sync(char * accessToken,
 	
 	void(* handler)(std::list<UniswapV2.PairHourDataDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2PairHourDatas (current)Helper(accessToken,
+	return uniswapV2PairHourData (current)Helper(accessToken,
 	
 	handler, userData, false);
 }
@@ -3997,7 +3997,7 @@ bool UniswapV2Manager::uniswapV2Swaps (current)Sync(char * accessToken,
 	handler, userData, false);
 }
 
-static bool uniswapV2TokenDayDatas (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool uniswapV2TokenDayData (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<UniswapV2.TokenDayDataDTO>, Error, void* )
@@ -4044,7 +4044,7 @@ static bool uniswapV2TokenDayDatas (current)Processor(MemoryStruct_s p_chunk, lo
 			}
 }
 
-static bool uniswapV2TokenDayDatas (current)Helper(char * accessToken,
+static bool uniswapV2TokenDayData (current)Helper(char * accessToken,
 	
 	void(* handler)(std::list<UniswapV2.TokenDayDataDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -4066,7 +4066,7 @@ static bool uniswapV2TokenDayDatas (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswapv2/tokenDayDatas/current");
+	string url("/dapps/uniswapv2/tokenDayData/current");
 	int pos;
 
 
@@ -4085,7 +4085,7 @@ static bool uniswapV2TokenDayDatas (current)Helper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = uniswapV2TokenDayDatas (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = uniswapV2TokenDayData (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -4103,7 +4103,7 @@ static bool uniswapV2TokenDayDatas (current)Helper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2TokenDayDatas (current)Processor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2TokenDayData (current)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -4115,22 +4115,22 @@ static bool uniswapV2TokenDayDatas (current)Helper(char * accessToken,
 
 
 
-bool UniswapV2Manager::uniswapV2TokenDayDatas (current)Async(char * accessToken,
+bool UniswapV2Manager::uniswapV2TokenDayData (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<UniswapV2.TokenDayDataDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2TokenDayDatas (current)Helper(accessToken,
+	return uniswapV2TokenDayData (current)Helper(accessToken,
 	
 	handler, userData, true);
 }
 
-bool UniswapV2Manager::uniswapV2TokenDayDatas (current)Sync(char * accessToken,
+bool UniswapV2Manager::uniswapV2TokenDayData (current)Sync(char * accessToken,
 	
 	void(* handler)(std::list<UniswapV2.TokenDayDataDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2TokenDayDatas (current)Helper(accessToken,
+	return uniswapV2TokenDayData (current)Helper(accessToken,
 	
 	handler, userData, false);
 }
@@ -4411,7 +4411,7 @@ bool UniswapV2Manager::uniswapV2Transactions (current)Sync(char * accessToken,
 	handler, userData, false);
 }
 
-static bool uniswapV2UniswapDayDatas (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool uniswapV2UniswapDayData (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<UniswapV2.UniswapDayDataDTO>, Error, void* )
@@ -4458,7 +4458,7 @@ static bool uniswapV2UniswapDayDatas (current)Processor(MemoryStruct_s p_chunk, 
 			}
 }
 
-static bool uniswapV2UniswapDayDatas (current)Helper(char * accessToken,
+static bool uniswapV2UniswapDayData (current)Helper(char * accessToken,
 	
 	void(* handler)(std::list<UniswapV2.UniswapDayDataDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -4480,7 +4480,7 @@ static bool uniswapV2UniswapDayDatas (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswapv2/uniswapDayDatas/current");
+	string url("/dapps/uniswapv2/uniswapDayData/current");
 	int pos;
 
 
@@ -4499,7 +4499,7 @@ static bool uniswapV2UniswapDayDatas (current)Helper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = uniswapV2UniswapDayDatas (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = uniswapV2UniswapDayData (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -4517,7 +4517,7 @@ static bool uniswapV2UniswapDayDatas (current)Helper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2UniswapDayDatas (current)Processor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2UniswapDayData (current)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -4529,27 +4529,27 @@ static bool uniswapV2UniswapDayDatas (current)Helper(char * accessToken,
 
 
 
-bool UniswapV2Manager::uniswapV2UniswapDayDatas (current)Async(char * accessToken,
+bool UniswapV2Manager::uniswapV2UniswapDayData (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<UniswapV2.UniswapDayDataDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2UniswapDayDatas (current)Helper(accessToken,
+	return uniswapV2UniswapDayData (current)Helper(accessToken,
 	
 	handler, userData, true);
 }
 
-bool UniswapV2Manager::uniswapV2UniswapDayDatas (current)Sync(char * accessToken,
+bool UniswapV2Manager::uniswapV2UniswapDayData (current)Sync(char * accessToken,
 	
 	void(* handler)(std::list<UniswapV2.UniswapDayDataDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2UniswapDayDatas (current)Helper(accessToken,
+	return uniswapV2UniswapDayData (current)Helper(accessToken,
 	
 	handler, userData, false);
 }
 
-static bool uniswapV2UniswapFactorys (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
+static bool uniswapV2UniswapFactories (current)Processor(MemoryStruct_s p_chunk, long code, char* errormsg, void* userData,
 	void(* voidHandler)())
 {
 	void(* handler)(std::list<UniswapV2.UniswapFactoryDTO>, Error, void* )
@@ -4596,7 +4596,7 @@ static bool uniswapV2UniswapFactorys (current)Processor(MemoryStruct_s p_chunk, 
 			}
 }
 
-static bool uniswapV2UniswapFactorys (current)Helper(char * accessToken,
+static bool uniswapV2UniswapFactories (current)Helper(char * accessToken,
 	
 	void(* handler)(std::list<UniswapV2.UniswapFactoryDTO>, Error, void* )
 	, void* userData, bool isAsync)
@@ -4618,7 +4618,7 @@ static bool uniswapV2UniswapFactorys (current)Helper(char * accessToken,
 	JsonNode* node;
 	JsonArray* json_array;
 
-	string url("/dapps/uniswapv2/uniswapFactorys/current");
+	string url("/dapps/uniswapv2/uniswapFactories/current");
 	int pos;
 
 
@@ -4637,7 +4637,7 @@ static bool uniswapV2UniswapFactorys (current)Helper(char * accessToken,
 	if(!isAsync){
 		NetClient::easycurl(UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
 			mBody, headerList, p_chunk, &code, errormsg);
-		bool retval = uniswapV2UniswapFactorys (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
+		bool retval = uniswapV2UniswapFactories (current)Processor(*p_chunk, code, errormsg, userData,reinterpret_cast<void(*)()>(handler));
 
 		curl_slist_free_all(headerList);
 		if (p_chunk) {
@@ -4655,7 +4655,7 @@ static bool uniswapV2UniswapFactorys (current)Helper(char * accessToken,
 		RequestInfo *requestInfo = NULL;
 
 		requestInfo = new(nothrow) RequestInfo (UniswapV2Manager::getBasePath(), url, myhttpmethod, queryParams,
-			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2UniswapFactorys (current)Processor);;
+			mBody, headerList, p_chunk, &code, errormsg, userData, reinterpret_cast<void(*)()>(handler), uniswapV2UniswapFactories (current)Processor);;
 		if(requestInfo == NULL)
 			return false;
 
@@ -4667,22 +4667,22 @@ static bool uniswapV2UniswapFactorys (current)Helper(char * accessToken,
 
 
 
-bool UniswapV2Manager::uniswapV2UniswapFactorys (current)Async(char * accessToken,
+bool UniswapV2Manager::uniswapV2UniswapFactories (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<UniswapV2.UniswapFactoryDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2UniswapFactorys (current)Helper(accessToken,
+	return uniswapV2UniswapFactories (current)Helper(accessToken,
 	
 	handler, userData, true);
 }
 
-bool UniswapV2Manager::uniswapV2UniswapFactorys (current)Sync(char * accessToken,
+bool UniswapV2Manager::uniswapV2UniswapFactories (current)Sync(char * accessToken,
 	
 	void(* handler)(std::list<UniswapV2.UniswapFactoryDTO>, Error, void* )
 	, void* userData)
 {
-	return uniswapV2UniswapFactorys (current)Helper(accessToken,
+	return uniswapV2UniswapFactories (current)Helper(accessToken,
 	
 	handler, userData, false);
 }

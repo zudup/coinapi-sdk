@@ -690,8 +690,8 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets pairDayDatas.
-     * @summary PairDayDatas (historical)
+     * Gets pairDayData.
+     * @summary PairDayData (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -700,8 +700,8 @@ export class UniswapV2Api {
      * @param token0 Reference to token0.
      * @param token1 Reference to token1.
      */
-    public async uniswapV2GetPairDayDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairDayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/pairDayDatas/historical';
+    public async uniswapV2GetPairDayDataHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/pairDayData/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -787,8 +787,8 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets pairHourDatas.
-     * @summary PairHourDatas (historical)
+     * Gets pairHourData.
+     * @summary PairHourData (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -796,8 +796,8 @@ export class UniswapV2Api {
      * @param id 
      * @param pair Address for pair contract.
      */
-    public async uniswapV2GetPairHourDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairHourDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/pairHourDatas/historical';
+    public async uniswapV2GetPairHourDataHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairHourDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/pairHourData/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1068,16 +1068,16 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets tokenDayDatas.
-     * @summary TokenDayDatas (historical)
+     * Gets tokenDayData.
+     * @summary TokenDayData (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
      */
-    public async uniswapV2GetTokenDayDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenDayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/tokenDayDatas/historical';
+    public async uniswapV2GetTokenDayDataHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/tokenDayData/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1339,16 +1339,16 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets uniswapDayDatas.
-     * @summary UniswapDayDatas (historical)
+     * Gets uniswapDayData.
+     * @summary UniswapDayData (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Unix timestamp for start of day / 86400 giving a unique day index.
      */
-    public async uniswapV2GetUniswapDayDatasHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapDayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/uniswapDayDatas/historical';
+    public async uniswapV2GetUniswapDayDataHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/uniswapDayData/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1426,16 +1426,16 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets uniswapFactorys.
-     * @summary UniswapFactorys (historical)
+     * Gets uniswapFactories.
+     * @summary UniswapFactories (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Factory address.
      */
-    public async uniswapV2GetUniswapFactorysHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapFactoryDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/uniswapFactorys/historical';
+    public async uniswapV2GetUniswapFactoriesHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapFactoryDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/uniswapFactories/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1786,11 +1786,11 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets pairDayDatas.
-     * @summary PairDayDatas (current)
+     * Gets pairDayData.
+     * @summary PairDayData (current)
      */
-    public async uniswapV2PairDayDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairDayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/pairDayDatas/current';
+    public async uniswapV2PairDayDataCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/pairDayData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1848,11 +1848,11 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets pairHourDatas.
-     * @summary PairHourDatas (current)
+     * Gets pairHourData.
+     * @summary PairHourData (current)
      */
-    public async uniswapV2PairHourDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairHourDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/pairHourDatas/current';
+    public async uniswapV2PairHourDataCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2PairHourDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/pairHourData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -2044,11 +2044,11 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets tokenDayDatas.
-     * @summary TokenDayDatas (current)
+     * Gets tokenDayData.
+     * @summary TokenDayData (current)
      */
-    public async uniswapV2TokenDayDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenDayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/tokenDayDatas/current';
+    public async uniswapV2TokenDayDataCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2TokenDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/tokenDayData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -2230,11 +2230,11 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets uniswapDayDatas.
-     * @summary UniswapDayDatas (current)
+     * Gets uniswapDayData.
+     * @summary UniswapDayData (current)
      */
-    public async uniswapV2UniswapDayDatasCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapDayDataDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/uniswapDayDatas/current';
+    public async uniswapV2UniswapDayDataCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapDayDataDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/uniswapDayData/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -2292,11 +2292,11 @@ export class UniswapV2Api {
         });
     }
     /**
-     * Gets uniswapFactorys.
-     * @summary UniswapFactorys (current)
+     * Gets uniswapFactories.
+     * @summary UniswapFactories (current)
      */
-    public async uniswapV2UniswapFactorysCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapFactoryDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/uniswapv2/uniswapFactorys/current';
+    public async uniswapV2UniswapFactoriesCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<UniswapV2UniswapFactoryDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/uniswapv2/uniswapFactories/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];

@@ -822,8 +822,8 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeLiquiditys (current)
-     * Gets gaugeLiquiditys.
+     * GaugeLiquidities (current)
+     * Gets gaugeLiquidities.
      * @return kotlin.collections.List<CurveGaugeLiquidityDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -833,8 +833,8 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun curveGaugeLiquiditysCurrent() : kotlin.collections.List<CurveGaugeLiquidityDTO> {
-        val localVarResponse = curveGaugeLiquiditysCurrentWithHttpInfo()
+    fun curveGaugeLiquiditiesCurrent() : kotlin.collections.List<CurveGaugeLiquidityDTO> {
+        val localVarResponse = curveGaugeLiquiditiesCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveGaugeLiquidityDTO>
@@ -852,16 +852,16 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeLiquiditys (current)
-     * Gets gaugeLiquiditys.
+     * GaugeLiquidities (current)
+     * Gets gaugeLiquidities.
      * @return ApiResponse<kotlin.collections.List<CurveGaugeLiquidityDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun curveGaugeLiquiditysCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveGaugeLiquidityDTO>?> {
-        val localVariableConfig = curveGaugeLiquiditysCurrentRequestConfig()
+    fun curveGaugeLiquiditiesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<CurveGaugeLiquidityDTO>?> {
+        val localVariableConfig = curveGaugeLiquiditiesCurrentRequestConfig()
 
         return request<Unit, kotlin.collections.List<CurveGaugeLiquidityDTO>>(
             localVariableConfig
@@ -869,11 +869,11 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * To obtain the request config of the operation curveGaugeLiquiditysCurrent
+     * To obtain the request config of the operation curveGaugeLiquiditiesCurrent
      *
      * @return RequestConfig
      */
-    fun curveGaugeLiquiditysCurrentRequestConfig() : RequestConfig<Unit> {
+    fun curveGaugeLiquiditiesCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -881,7 +881,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/gaugeLiquiditys/current",
+            path = "/dapps/curve/gaugeLiquidities/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -2501,8 +2501,8 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeLiquiditys (historical)
-     * Gets gaugeLiquiditys.
+     * GaugeLiquidities (historical)
+     * Gets gaugeLiquidities.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2518,8 +2518,8 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun curveGetGaugeLiquiditysHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null, user: kotlin.String? = null) : kotlin.collections.List<CurveGaugeLiquidityDTO> {
-        val localVarResponse = curveGetGaugeLiquiditysHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, user = user)
+    fun curveGetGaugeLiquiditiesHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null, user: kotlin.String? = null) : kotlin.collections.List<CurveGaugeLiquidityDTO> {
+        val localVarResponse = curveGetGaugeLiquiditiesHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, user = user)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<CurveGaugeLiquidityDTO>
@@ -2537,8 +2537,8 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * GaugeLiquiditys (historical)
-     * Gets gaugeLiquiditys.
+     * GaugeLiquidities (historical)
+     * Gets gaugeLiquidities.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2551,8 +2551,8 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun curveGetGaugeLiquiditysHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, user: kotlin.String?) : ApiResponse<kotlin.collections.List<CurveGaugeLiquidityDTO>?> {
-        val localVariableConfig = curveGetGaugeLiquiditysHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, user = user)
+    fun curveGetGaugeLiquiditiesHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, user: kotlin.String?) : ApiResponse<kotlin.collections.List<CurveGaugeLiquidityDTO>?> {
+        val localVariableConfig = curveGetGaugeLiquiditiesHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, user = user)
 
         return request<Unit, kotlin.collections.List<CurveGaugeLiquidityDTO>>(
             localVariableConfig
@@ -2560,7 +2560,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
     }
 
     /**
-     * To obtain the request config of the operation curveGetGaugeLiquiditysHistorical
+     * To obtain the request config of the operation curveGetGaugeLiquiditiesHistorical
      *
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2570,7 +2570,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
      * @param user  (optional)
      * @return RequestConfig
      */
-    fun curveGetGaugeLiquiditysHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, user: kotlin.String?) : RequestConfig<Unit> {
+    fun curveGetGaugeLiquiditiesHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, user: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -2598,7 +2598,7 @@ class CurveApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient =
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/curve/gaugeLiquiditys/historical",
+            path = "/dapps/curve/gaugeLiquidities/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

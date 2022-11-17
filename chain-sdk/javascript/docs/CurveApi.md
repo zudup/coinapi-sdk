@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**curveExchangesCurrent**](CurveApi.md#curveExchangesCurrent) | **GET** /dapps/curve/exchanges/current | Exchanges (current)
 [**curveFeeChangeLogsCurrent**](CurveApi.md#curveFeeChangeLogsCurrent) | **GET** /dapps/curve/feeChangeLogs/current | FeeChangeLogs (current)
 [**curveGaugeDepositsCurrent**](CurveApi.md#curveGaugeDepositsCurrent) | **GET** /dapps/curve/gaugeDeposits/current | GaugeDeposits (current)
-[**curveGaugeLiquiditysCurrent**](CurveApi.md#curveGaugeLiquiditysCurrent) | **GET** /dapps/curve/gaugeLiquiditys/current | GaugeLiquiditys (current)
+[**curveGaugeLiquiditiesCurrent**](CurveApi.md#curveGaugeLiquiditiesCurrent) | **GET** /dapps/curve/gaugeLiquidities/current | GaugeLiquidities (current)
 [**curveGaugeTotalWeightsCurrent**](CurveApi.md#curveGaugeTotalWeightsCurrent) | **GET** /dapps/curve/gaugeTotalWeights/current | GaugeTotalWeights (current)
 [**curveGaugeTypeWeightsCurrent**](CurveApi.md#curveGaugeTypeWeightsCurrent) | **GET** /dapps/curve/gaugeTypeWeights/current | GaugeTypeWeights (current)
 [**curveGaugeTypesCurrent**](CurveApi.md#curveGaugeTypesCurrent) | **GET** /dapps/curve/gaugeTypes/current | GaugeTypes (current)
@@ -34,7 +34,7 @@ Method | HTTP request | Description
 [**curveGetExchangesHistorical**](CurveApi.md#curveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical)
 [**curveGetFeeChangeLogsHistorical**](CurveApi.md#curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical)
 [**curveGetGaugeDepositsHistorical**](CurveApi.md#curveGetGaugeDepositsHistorical) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical)
-[**curveGetGaugeLiquiditysHistorical**](CurveApi.md#curveGetGaugeLiquiditysHistorical) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical)
+[**curveGetGaugeLiquiditiesHistorical**](CurveApi.md#curveGetGaugeLiquiditiesHistorical) | **GET** /dapps/curve/gaugeLiquidities/historical | GaugeLiquidities (historical)
 [**curveGetGaugeTotalWeightsHistorical**](CurveApi.md#curveGetGaugeTotalWeightsHistorical) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical)
 [**curveGetGaugeTypeWeightsHistorical**](CurveApi.md#curveGetGaugeTypeWeightsHistorical) | **GET** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical)
 [**curveGetGaugeTypesHistorical**](CurveApi.md#curveGetGaugeTypesHistorical) | **GET** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical)
@@ -528,13 +528,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## curveGaugeLiquiditysCurrent
+## curveGaugeLiquiditiesCurrent
 
-> [CurveGaugeLiquidityDTO] curveGaugeLiquiditysCurrent()
+> [CurveGaugeLiquidityDTO] curveGaugeLiquiditiesCurrent()
 
-GaugeLiquiditys (current)
+GaugeLiquidities (current)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 
@@ -542,7 +542,7 @@ Gets gaugeLiquiditys.
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.CurveApi();
-apiInstance.curveGaugeLiquiditysCurrent((error, data, response) => {
+apiInstance.curveGaugeLiquiditiesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1479,13 +1479,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## curveGetGaugeLiquiditysHistorical
+## curveGetGaugeLiquiditiesHistorical
 
-> [CurveGaugeLiquidityDTO] curveGetGaugeLiquiditysHistorical(opts)
+> [CurveGaugeLiquidityDTO] curveGetGaugeLiquiditiesHistorical(opts)
 
-GaugeLiquiditys (historical)
+GaugeLiquidities (historical)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 
@@ -1501,7 +1501,7 @@ let opts = {
   'id': "id_example", // String | 
   'user': "user_example" // String | 
 };
-apiInstance.curveGetGaugeLiquiditysHistorical(opts, (error, data, response) => {
+apiInstance.curveGetGaugeLiquiditiesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {

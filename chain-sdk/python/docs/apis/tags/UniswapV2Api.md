@@ -12,28 +12,28 @@ Method | HTTP request | Description
 [**uniswap_v2_get_liquidity_position_snapshots__historical**](#uniswap_v2_get_liquidity_position_snapshots__historical) | **get** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**uniswap_v2_get_liquidity_positions__historical**](#uniswap_v2_get_liquidity_positions__historical) | **get** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical)
 [**uniswap_v2_get_mints__historical**](#uniswap_v2_get_mints__historical) | **get** /dapps/uniswapv2/mints/historical | Mints (historical)
-[**uniswap_v2_get_pair_day_datas__historical**](#uniswap_v2_get_pair_day_datas__historical) | **get** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical)
-[**uniswap_v2_get_pair_hour_datas__historical**](#uniswap_v2_get_pair_hour_datas__historical) | **get** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical)
+[**uniswap_v2_get_pair_day_data__historical**](#uniswap_v2_get_pair_day_data__historical) | **get** /dapps/uniswapv2/pairDayData/historical | PairDayData (historical)
+[**uniswap_v2_get_pair_hour_data__historical**](#uniswap_v2_get_pair_hour_data__historical) | **get** /dapps/uniswapv2/pairHourData/historical | PairHourData (historical)
 [**uniswap_v2_get_pairs__historical**](#uniswap_v2_get_pairs__historical) | **get** /dapps/uniswapv2/pairs/historical | Pairs (historical)
 [**uniswap_v2_get_swaps__historical**](#uniswap_v2_get_swaps__historical) | **get** /dapps/uniswapv2/swaps/historical | Swaps (historical)
-[**uniswap_v2_get_token_day_datas__historical**](#uniswap_v2_get_token_day_datas__historical) | **get** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical)
+[**uniswap_v2_get_token_day_data__historical**](#uniswap_v2_get_token_day_data__historical) | **get** /dapps/uniswapv2/tokenDayData/historical | TokenDayData (historical)
 [**uniswap_v2_get_tokens__historical**](#uniswap_v2_get_tokens__historical) | **get** /dapps/uniswapv2/tokens/historical | Tokens (historical)
 [**uniswap_v2_get_transactions__historical**](#uniswap_v2_get_transactions__historical) | **get** /dapps/uniswapv2/transactions/historical | Transactions (historical)
-[**uniswap_v2_get_uniswap_day_datas__historical**](#uniswap_v2_get_uniswap_day_datas__historical) | **get** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical)
-[**uniswap_v2_get_uniswap_factorys__historical**](#uniswap_v2_get_uniswap_factorys__historical) | **get** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical)
+[**uniswap_v2_get_uniswap_day_data__historical**](#uniswap_v2_get_uniswap_day_data__historical) | **get** /dapps/uniswapv2/uniswapDayData/historical | UniswapDayData (historical)
+[**uniswap_v2_get_uniswap_factories__historical**](#uniswap_v2_get_uniswap_factories__historical) | **get** /dapps/uniswapv2/uniswapFactories/historical | UniswapFactories (historical)
 [**uniswap_v2_get_users__historical**](#uniswap_v2_get_users__historical) | **get** /dapps/uniswapv2/users/historical | Users (historical)
 [**uniswap_v2_liquidity_position_snapshots__current**](#uniswap_v2_liquidity_position_snapshots__current) | **get** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**uniswap_v2_liquidity_positions__current**](#uniswap_v2_liquidity_positions__current) | **get** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
 [**uniswap_v2_mints__current**](#uniswap_v2_mints__current) | **get** /dapps/uniswapv2/mints/current | Mints (current)
-[**uniswap_v2_pair_day_datas__current**](#uniswap_v2_pair_day_datas__current) | **get** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
-[**uniswap_v2_pair_hour_datas__current**](#uniswap_v2_pair_hour_datas__current) | **get** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
+[**uniswap_v2_pair_day_data__current**](#uniswap_v2_pair_day_data__current) | **get** /dapps/uniswapv2/pairDayData/current | PairDayData (current)
+[**uniswap_v2_pair_hour_data__current**](#uniswap_v2_pair_hour_data__current) | **get** /dapps/uniswapv2/pairHourData/current | PairHourData (current)
 [**uniswap_v2_pairs__current**](#uniswap_v2_pairs__current) | **get** /dapps/uniswapv2/pairs/current | Pairs (current)
 [**uniswap_v2_swaps__current**](#uniswap_v2_swaps__current) | **get** /dapps/uniswapv2/swaps/current | Swaps (current)
-[**uniswap_v2_token_day_datas__current**](#uniswap_v2_token_day_datas__current) | **get** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**uniswap_v2_token_day_data__current**](#uniswap_v2_token_day_data__current) | **get** /dapps/uniswapv2/tokenDayData/current | TokenDayData (current)
 [**uniswap_v2_tokens__current**](#uniswap_v2_tokens__current) | **get** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**uniswap_v2_transactions__current**](#uniswap_v2_transactions__current) | **get** /dapps/uniswapv2/transactions/current | Transactions (current)
-[**uniswap_v2_uniswap_day_datas__current**](#uniswap_v2_uniswap_day_datas__current) | **get** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
-[**uniswap_v2_uniswap_factorys__current**](#uniswap_v2_uniswap_factorys__current) | **get** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
+[**uniswap_v2_uniswap_day_data__current**](#uniswap_v2_uniswap_day_data__current) | **get** /dapps/uniswapv2/uniswapDayData/current | UniswapDayData (current)
+[**uniswap_v2_uniswap_factories__current**](#uniswap_v2_uniswap_factories__current) | **get** /dapps/uniswapv2/uniswapFactories/current | UniswapFactories (current)
 [**uniswap_v2_users__current**](#uniswap_v2_users__current) | **get** /dapps/uniswapv2/users/current | Users (current)
 
 # **uniswap_v2_bundles__current**
@@ -1056,13 +1056,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_pair_day_datas__historical**
-<a name="uniswap_v2_get_pair_day_datas__historical"></a>
-> [UniswapV2PairDayDataDTO] uniswap_v2_get_pair_day_datas__historical()
+# **uniswap_v2_get_pair_day_data__historical**
+<a name="uniswap_v2_get_pair_day_data__historical"></a>
+> [UniswapV2PairDayDataDTO] uniswap_v2_get_pair_day_data__historical()
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 
@@ -1093,13 +1093,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'token_1': "token_1_example",
     }
     try:
-        # PairDayDatas (historical)
-        api_response = api_instance.uniswap_v2_get_pair_day_datas__historical(
+        # PairDayData (historical)
+        api_response = api_instance.uniswap_v2_get_pair_day_data__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_pair_day_datas__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_pair_day_data__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -1179,9 +1179,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_pair_day_datas__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_get_pair_day_data__historical.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_pair_day_datas__historical.ApiResponseFor200
+#### uniswap_v2_get_pair_day_data__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -1230,13 +1230,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_pair_hour_datas__historical**
-<a name="uniswap_v2_get_pair_hour_datas__historical"></a>
-> [UniswapV2PairHourDataDTO] uniswap_v2_get_pair_hour_datas__historical()
+# **uniswap_v2_get_pair_hour_data__historical**
+<a name="uniswap_v2_get_pair_hour_data__historical"></a>
+> [UniswapV2PairHourDataDTO] uniswap_v2_get_pair_hour_data__historical()
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 
@@ -1266,13 +1266,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'pair': "pair_example",
     }
     try:
-        # PairHourDatas (historical)
-        api_response = api_instance.uniswap_v2_get_pair_hour_datas__historical(
+        # PairHourData (historical)
+        api_response = api_instance.uniswap_v2_get_pair_hour_data__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_pair_hour_datas__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_pair_hour_data__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -1344,9 +1344,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_pair_hour_datas__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_get_pair_hour_data__historical.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_pair_hour_datas__historical.ApiResponseFor200
+#### uniswap_v2_get_pair_hour_data__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -1734,13 +1734,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_token_day_datas__historical**
-<a name="uniswap_v2_get_token_day_datas__historical"></a>
-> [UniswapV2TokenDayDataDTO] uniswap_v2_get_token_day_datas__historical()
+# **uniswap_v2_get_token_day_data__historical**
+<a name="uniswap_v2_get_token_day_data__historical"></a>
+> [UniswapV2TokenDayDataDTO] uniswap_v2_get_token_day_data__historical()
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 
@@ -1769,13 +1769,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # TokenDayDatas (historical)
-        api_response = api_instance.uniswap_v2_get_token_day_datas__historical(
+        # TokenDayData (historical)
+        api_response = api_instance.uniswap_v2_get_token_day_data__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_token_day_datas__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_token_day_data__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -1839,9 +1839,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_token_day_datas__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_get_token_day_data__historical.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_token_day_datas__historical.ApiResponseFor200
+#### uniswap_v2_get_token_day_data__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -2220,13 +2220,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_uniswap_day_datas__historical**
-<a name="uniswap_v2_get_uniswap_day_datas__historical"></a>
-> [UniswapV2UniswapDayDataDTO] uniswap_v2_get_uniswap_day_datas__historical()
+# **uniswap_v2_get_uniswap_day_data__historical**
+<a name="uniswap_v2_get_uniswap_day_data__historical"></a>
+> [UniswapV2UniswapDayDataDTO] uniswap_v2_get_uniswap_day_data__historical()
 
-UniswapDayDatas (historical)
+UniswapDayData (historical)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 
@@ -2255,13 +2255,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # UniswapDayDatas (historical)
-        api_response = api_instance.uniswap_v2_get_uniswap_day_datas__historical(
+        # UniswapDayData (historical)
+        api_response = api_instance.uniswap_v2_get_uniswap_day_data__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_uniswap_day_datas__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_uniswap_day_data__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -2325,9 +2325,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_uniswap_day_datas__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_get_uniswap_day_data__historical.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_uniswap_day_datas__historical.ApiResponseFor200
+#### uniswap_v2_get_uniswap_day_data__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -2376,13 +2376,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_get_uniswap_factorys__historical**
-<a name="uniswap_v2_get_uniswap_factorys__historical"></a>
-> [UniswapV2UniswapFactoryDTO] uniswap_v2_get_uniswap_factorys__historical()
+# **uniswap_v2_get_uniswap_factories__historical**
+<a name="uniswap_v2_get_uniswap_factories__historical"></a>
+> [UniswapV2UniswapFactoryDTO] uniswap_v2_get_uniswap_factories__historical()
 
-UniswapFactorys (historical)
+UniswapFactories (historical)
 
-Gets uniswapFactorys.
+Gets uniswapFactories.
 
 ### Example
 
@@ -2411,13 +2411,13 @@ with openapi_client.ApiClient(configuration) as api_client:
         'id': "id_example",
     }
     try:
-        # UniswapFactorys (historical)
-        api_response = api_instance.uniswap_v2_get_uniswap_factorys__historical(
+        # UniswapFactories (historical)
+        api_response = api_instance.uniswap_v2_get_uniswap_factories__historical(
             query_params=query_params,
         )
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_get_uniswap_factorys__historical: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_get_uniswap_factories__historical: %s\n" % e)
 ```
 ### Parameters
 
@@ -2481,9 +2481,9 @@ str,  | str,  |  |
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_get_uniswap_factorys__historical.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_get_uniswap_factories__historical.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_get_uniswap_factorys__historical.ApiResponseFor200
+#### uniswap_v2_get_uniswap_factories__historical.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -2967,13 +2967,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_pair_day_datas__current**
-<a name="uniswap_v2_pair_day_datas__current"></a>
-> [UniswapV2PairDayDataDTO] uniswap_v2_pair_day_datas__current()
+# **uniswap_v2_pair_day_data__current**
+<a name="uniswap_v2_pair_day_data__current"></a>
+> [UniswapV2PairDayDataDTO] uniswap_v2_pair_day_data__current()
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 
@@ -2995,11 +2995,11 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # PairDayDatas (current)
-        api_response = api_instance.uniswap_v2_pair_day_datas__current()
+        # PairDayData (current)
+        api_response = api_instance.uniswap_v2_pair_day_data__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_pair_day_datas__current: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_pair_day_data__current: %s\n" % e)
 ```
 ### Parameters
 This endpoint does not need any parameter.
@@ -3009,9 +3009,9 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_pair_day_datas__current.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_pair_day_data__current.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_pair_day_datas__current.ApiResponseFor200
+#### uniswap_v2_pair_day_data__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -3060,13 +3060,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_pair_hour_datas__current**
-<a name="uniswap_v2_pair_hour_datas__current"></a>
-> [UniswapV2PairHourDataDTO] uniswap_v2_pair_hour_datas__current()
+# **uniswap_v2_pair_hour_data__current**
+<a name="uniswap_v2_pair_hour_data__current"></a>
+> [UniswapV2PairHourDataDTO] uniswap_v2_pair_hour_data__current()
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 
@@ -3088,11 +3088,11 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # PairHourDatas (current)
-        api_response = api_instance.uniswap_v2_pair_hour_datas__current()
+        # PairHourData (current)
+        api_response = api_instance.uniswap_v2_pair_hour_data__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_pair_hour_datas__current: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_pair_hour_data__current: %s\n" % e)
 ```
 ### Parameters
 This endpoint does not need any parameter.
@@ -3102,9 +3102,9 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_pair_hour_datas__current.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_pair_hour_data__current.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_pair_hour_datas__current.ApiResponseFor200
+#### uniswap_v2_pair_hour_data__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -3393,13 +3393,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_token_day_datas__current**
-<a name="uniswap_v2_token_day_datas__current"></a>
-> [UniswapV2TokenDayDataDTO] uniswap_v2_token_day_datas__current()
+# **uniswap_v2_token_day_data__current**
+<a name="uniswap_v2_token_day_data__current"></a>
+> [UniswapV2TokenDayDataDTO] uniswap_v2_token_day_data__current()
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 
@@ -3421,11 +3421,11 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # TokenDayDatas (current)
-        api_response = api_instance.uniswap_v2_token_day_datas__current()
+        # TokenDayData (current)
+        api_response = api_instance.uniswap_v2_token_day_data__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_token_day_datas__current: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_token_day_data__current: %s\n" % e)
 ```
 ### Parameters
 This endpoint does not need any parameter.
@@ -3435,9 +3435,9 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_token_day_datas__current.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_token_day_data__current.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_token_day_datas__current.ApiResponseFor200
+#### uniswap_v2_token_day_data__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -3672,13 +3672,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_uniswap_day_datas__current**
-<a name="uniswap_v2_uniswap_day_datas__current"></a>
-> [UniswapV2UniswapDayDataDTO] uniswap_v2_uniswap_day_datas__current()
+# **uniswap_v2_uniswap_day_data__current**
+<a name="uniswap_v2_uniswap_day_data__current"></a>
+> [UniswapV2UniswapDayDataDTO] uniswap_v2_uniswap_day_data__current()
 
-UniswapDayDatas (current)
+UniswapDayData (current)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 
@@ -3700,11 +3700,11 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # UniswapDayDatas (current)
-        api_response = api_instance.uniswap_v2_uniswap_day_datas__current()
+        # UniswapDayData (current)
+        api_response = api_instance.uniswap_v2_uniswap_day_data__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_uniswap_day_datas__current: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_uniswap_day_data__current: %s\n" % e)
 ```
 ### Parameters
 This endpoint does not need any parameter.
@@ -3714,9 +3714,9 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_uniswap_day_datas__current.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_uniswap_day_data__current.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_uniswap_day_datas__current.ApiResponseFor200
+#### uniswap_v2_uniswap_day_data__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |
@@ -3765,13 +3765,13 @@ No authorization required
 
 [[Back to top]](#__pageTop) [[Back to API list]](../../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../../README.md#documentation-for-models) [[Back to README]](../../../README.md)
 
-# **uniswap_v2_uniswap_factorys__current**
-<a name="uniswap_v2_uniswap_factorys__current"></a>
-> [UniswapV2UniswapFactoryDTO] uniswap_v2_uniswap_factorys__current()
+# **uniswap_v2_uniswap_factories__current**
+<a name="uniswap_v2_uniswap_factories__current"></a>
+> [UniswapV2UniswapFactoryDTO] uniswap_v2_uniswap_factories__current()
 
-UniswapFactorys (current)
+UniswapFactories (current)
 
-Gets uniswapFactorys.
+Gets uniswapFactories.
 
 ### Example
 
@@ -3793,11 +3793,11 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     # example, this endpoint has no required or optional parameters
     try:
-        # UniswapFactorys (current)
-        api_response = api_instance.uniswap_v2_uniswap_factorys__current()
+        # UniswapFactories (current)
+        api_response = api_instance.uniswap_v2_uniswap_factories__current()
         pprint(api_response)
     except openapi_client.ApiException as e:
-        print("Exception when calling UniswapV2Api->uniswap_v2_uniswap_factorys__current: %s\n" % e)
+        print("Exception when calling UniswapV2Api->uniswap_v2_uniswap_factories__current: %s\n" % e)
 ```
 ### Parameters
 This endpoint does not need any parameter.
@@ -3807,9 +3807,9 @@ This endpoint does not need any parameter.
 Code | Class | Description
 ------------- | ------------- | -------------
 n/a | api_client.ApiResponseWithoutDeserialization | When skip_deserialization is True this response is returned
-200 | [ApiResponseFor200](#uniswap_v2_uniswap_factorys__current.ApiResponseFor200) | successful operation
+200 | [ApiResponseFor200](#uniswap_v2_uniswap_factories__current.ApiResponseFor200) | successful operation
 
-#### uniswap_v2_uniswap_factorys__current.ApiResponseFor200
+#### uniswap_v2_uniswap_factories__current.ApiResponseFor200
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 response | urllib3.HTTPResponse | Raw response |

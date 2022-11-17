@@ -158,10 +158,10 @@
         done();
       });
     });
-    describe('curveGaugeLiquiditysCurrent', function() {
-      it('should call curveGaugeLiquiditysCurrent successfully', function(done) {
-        //uncomment below and update the code to test curveGaugeLiquiditysCurrent
-        //instance.curveGaugeLiquiditysCurrent(function(error) {
+    describe('curveGaugeLiquiditiesCurrent', function() {
+      it('should call curveGaugeLiquiditiesCurrent successfully', function(done) {
+        //uncomment below and update the code to test curveGaugeLiquiditiesCurrent
+        //instance.curveGaugeLiquiditiesCurrent(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});
@@ -348,10 +348,10 @@
         done();
       });
     });
-    describe('curveGetGaugeLiquiditysHistorical', function() {
-      it('should call curveGetGaugeLiquiditysHistorical successfully', function(done) {
-        //uncomment below and update the code to test curveGetGaugeLiquiditysHistorical
-        //instance.curveGetGaugeLiquiditysHistorical(function(error) {
+    describe('curveGetGaugeLiquiditiesHistorical', function() {
+      it('should call curveGetGaugeLiquiditiesHistorical successfully', function(done) {
+        //uncomment below and update the code to test curveGetGaugeLiquiditiesHistorical
+        //instance.curveGetGaugeLiquiditiesHistorical(function(error) {
         //  if (error) throw error;
         //expect().to.be();
         //});

@@ -74,28 +74,28 @@ public class SushiswapApiTest {
     }
 
     /**
-     * DayDatas (current)
+     * DayData (current)
      *
-     * Gets dayDatas.
+     * Gets dayData.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void sushiswapDayDatasCurrentTest() throws ApiException {
-        List<SushiswapDayDataDTO> response = api.sushiswapDayDatasCurrent();
+    public void sushiswapDayDataCurrentTest() throws ApiException {
+        List<SushiswapDayDataDTO> response = api.sushiswapDayDataCurrent();
         // TODO: test validations
     }
 
     /**
-     * Factorys (current)
+     * Factories (current)
      *
-     * Gets factorys.
+     * Gets factories.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void sushiswapFactorysCurrentTest() throws ApiException {
-        List<SushiswapFactoryDTO> response = api.sushiswapFactorysCurrent();
+    public void sushiswapFactoriesCurrentTest() throws ApiException {
+        List<SushiswapFactoryDTO> response = api.sushiswapFactoriesCurrent();
         // TODO: test validations
     }
 
@@ -137,56 +137,56 @@ public class SushiswapApiTest {
     }
 
     /**
-     * DayDatas (historical)
+     * DayData (historical)
      *
-     * Gets dayDatas.
+     * Gets dayData.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void sushiswapGetDayDatasHistoricalTest() throws ApiException {
+    public void sushiswapGetDayDataHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String id = null;
-        List<SushiswapDayDataDTO> response = api.sushiswapGetDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+        List<SushiswapDayDataDTO> response = api.sushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate, id);
         // TODO: test validations
     }
 
     /**
-     * Factorys (historical)
+     * Factories (historical)
      *
-     * Gets factorys.
+     * Gets factories.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void sushiswapGetFactorysHistoricalTest() throws ApiException {
+    public void sushiswapGetFactoriesHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String id = null;
-        List<SushiswapFactoryDTO> response = api.sushiswapGetFactorysHistorical(startBlock, endBlock, startDate, endDate, id);
+        List<SushiswapFactoryDTO> response = api.sushiswapGetFactoriesHistorical(startBlock, endBlock, startDate, endDate, id);
         // TODO: test validations
     }
 
     /**
-     * HourDatas (historical)
+     * HourData (historical)
      *
-     * Gets hourDatas.
+     * Gets hourData.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void sushiswapGetHourDatasHistoricalTest() throws ApiException {
+    public void sushiswapGetHourDataHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String id = null;
-        List<SushiswapHourDataDTO> response = api.sushiswapGetHourDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+        List<SushiswapHourDataDTO> response = api.sushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate, id);
         // TODO: test validations
     }
 
@@ -250,14 +250,14 @@ public class SushiswapApiTest {
     }
 
     /**
-     * PairDayDatas (historical)
+     * PairDayData (historical)
      *
-     * Gets pairDayDatas.
+     * Gets pairDayData.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void sushiswapGetPairDayDatasHistoricalTest() throws ApiException {
+    public void sushiswapGetPairDayDataHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
@@ -266,26 +266,26 @@ public class SushiswapApiTest {
         String pair = null;
         String token0 = null;
         String token1 = null;
-        List<SushiswapPairDayDataDTO> response = api.sushiswapGetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1);
+        List<SushiswapPairDayDataDTO> response = api.sushiswapGetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1);
         // TODO: test validations
     }
 
     /**
-     * PairHourDatas (historical)
+     * PairHourData (historical)
      *
-     * Gets pairHourDatas.
+     * Gets pairHourData.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void sushiswapGetPairHourDatasHistoricalTest() throws ApiException {
+    public void sushiswapGetPairHourDataHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String id = null;
         String pair = null;
-        List<SushiswapPairHourDataDTO> response = api.sushiswapGetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+        List<SushiswapPairHourDataDTO> response = api.sushiswapGetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair);
         // TODO: test validations
     }
 
@@ -330,20 +330,20 @@ public class SushiswapApiTest {
     }
 
     /**
-     * TokenDayDatas (historical)
+     * TokenDayData (historical)
      *
-     * Gets tokenDayDatas.
+     * Gets tokenDayData.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void sushiswapGetTokenDayDatasHistoricalTest() throws ApiException {
+    public void sushiswapGetTokenDayDataHistoricalTest() throws ApiException {
         Long startBlock = null;
         Long endBlock = null;
         OffsetDateTime startDate = null;
         OffsetDateTime endDate = null;
         String id = null;
-        List<SushiswapTokenDayDataDTO> response = api.sushiswapGetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+        List<SushiswapTokenDayDataDTO> response = api.sushiswapGetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id);
         // TODO: test validations
     }
 
@@ -404,15 +404,15 @@ public class SushiswapApiTest {
     }
 
     /**
-     * HourDatas (current)
+     * HourData (current)
      *
-     * Gets hourDatas.
+     * Gets hourData.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void sushiswapHourDatasCurrentTest() throws ApiException {
-        List<SushiswapHourDataDTO> response = api.sushiswapHourDatasCurrent();
+    public void sushiswapHourDataCurrentTest() throws ApiException {
+        List<SushiswapHourDataDTO> response = api.sushiswapHourDataCurrent();
         // TODO: test validations
     }
 
@@ -456,28 +456,28 @@ public class SushiswapApiTest {
     }
 
     /**
-     * PairDayDatas (current)
+     * PairDayData (current)
      *
-     * Gets pairDayDatas.
+     * Gets pairDayData.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void sushiswapPairDayDatasCurrentTest() throws ApiException {
-        List<SushiswapPairDayDataDTO> response = api.sushiswapPairDayDatasCurrent();
+    public void sushiswapPairDayDataCurrentTest() throws ApiException {
+        List<SushiswapPairDayDataDTO> response = api.sushiswapPairDayDataCurrent();
         // TODO: test validations
     }
 
     /**
-     * PairHourDatas (current)
+     * PairHourData (current)
      *
-     * Gets pairHourDatas.
+     * Gets pairHourData.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void sushiswapPairHourDatasCurrentTest() throws ApiException {
-        List<SushiswapPairHourDataDTO> response = api.sushiswapPairHourDatasCurrent();
+    public void sushiswapPairHourDataCurrentTest() throws ApiException {
+        List<SushiswapPairHourDataDTO> response = api.sushiswapPairHourDataCurrent();
         // TODO: test validations
     }
 
@@ -510,15 +510,15 @@ public class SushiswapApiTest {
     }
 
     /**
-     * TokenDayDatas (current)
+     * TokenDayData (current)
      *
-     * Gets tokenDayDatas.
+     * Gets tokenDayData.
      *
      * @throws ApiException if the Api call fails
      */
     @Test
-    public void sushiswapTokenDayDatasCurrentTest() throws ApiException {
-        List<SushiswapTokenDayDataDTO> response = api.sushiswapTokenDayDatasCurrent();
+    public void sushiswapTokenDayDataCurrentTest() throws ApiException {
+        List<SushiswapTokenDayDataDTO> response = api.sushiswapTokenDayDataCurrent();
         // TODO: test validations
     }
 

@@ -172,10 +172,10 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test UniswapV2GetPairDayDatasHistorical
+        /// Test UniswapV2GetPairDayDataHistorical
         /// </summary>
         [Test]
-        public void UniswapV2GetPairDayDatasHistoricalTest()
+        public void UniswapV2GetPairDayDataHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -185,15 +185,15 @@ namespace CoinAPI.EMS.REST.V1.Test
             //string id = null;
             //string token0 = null;
             //string token1 = null;
-            //var response = instance.UniswapV2GetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
+            //var response = instance.UniswapV2GetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
             //Assert.IsInstanceOf(typeof(List<UniswapV2PairDayDataDTO>), response, "response is List<UniswapV2PairDayDataDTO>");
         }
         
         /// <summary>
-        /// Test UniswapV2GetPairHourDatasHistorical
+        /// Test UniswapV2GetPairHourDataHistorical
         /// </summary>
         [Test]
-        public void UniswapV2GetPairHourDatasHistoricalTest()
+        public void UniswapV2GetPairHourDataHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -202,7 +202,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? endDate = null;
             //string id = null;
             //string pair = null;
-            //var response = instance.UniswapV2GetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+            //var response = instance.UniswapV2GetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair);
             //Assert.IsInstanceOf(typeof(List<UniswapV2PairHourDataDTO>), response, "response is List<UniswapV2PairHourDataDTO>");
         }
         
@@ -242,10 +242,10 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test UniswapV2GetTokenDayDatasHistorical
+        /// Test UniswapV2GetTokenDayDataHistorical
         /// </summary>
         [Test]
-        public void UniswapV2GetTokenDayDatasHistoricalTest()
+        public void UniswapV2GetTokenDayDataHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -253,7 +253,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string id = null;
-            //var response = instance.UniswapV2GetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+            //var response = instance.UniswapV2GetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id);
             //Assert.IsInstanceOf(typeof(List<UniswapV2TokenDayDataDTO>), response, "response is List<UniswapV2TokenDayDataDTO>");
         }
         
@@ -292,10 +292,10 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test UniswapV2GetUniswapDayDatasHistorical
+        /// Test UniswapV2GetUniswapDayDataHistorical
         /// </summary>
         [Test]
-        public void UniswapV2GetUniswapDayDatasHistoricalTest()
+        public void UniswapV2GetUniswapDayDataHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -303,15 +303,15 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string id = null;
-            //var response = instance.UniswapV2GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+            //var response = instance.UniswapV2GetUniswapDayDataHistorical(startBlock, endBlock, startDate, endDate, id);
             //Assert.IsInstanceOf(typeof(List<UniswapV2UniswapDayDataDTO>), response, "response is List<UniswapV2UniswapDayDataDTO>");
         }
         
         /// <summary>
-        /// Test UniswapV2GetUniswapFactorysHistorical
+        /// Test UniswapV2GetUniswapFactoriesHistorical
         /// </summary>
         [Test]
-        public void UniswapV2GetUniswapFactorysHistoricalTest()
+        public void UniswapV2GetUniswapFactoriesHistoricalTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //long? startBlock = null;
@@ -319,7 +319,7 @@ namespace CoinAPI.EMS.REST.V1.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string id = null;
-            //var response = instance.UniswapV2GetUniswapFactorysHistorical(startBlock, endBlock, startDate, endDate, id);
+            //var response = instance.UniswapV2GetUniswapFactoriesHistorical(startBlock, endBlock, startDate, endDate, id);
             //Assert.IsInstanceOf(typeof(List<UniswapV2UniswapFactoryDTO>), response, "response is List<UniswapV2UniswapFactoryDTO>");
         }
         
@@ -373,24 +373,24 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test UniswapV2PairDayDatasCurrent
+        /// Test UniswapV2PairDayDataCurrent
         /// </summary>
         [Test]
-        public void UniswapV2PairDayDatasCurrentTest()
+        public void UniswapV2PairDayDataCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.UniswapV2PairDayDatasCurrent();
+            //var response = instance.UniswapV2PairDayDataCurrent();
             //Assert.IsInstanceOf(typeof(List<UniswapV2PairDayDataDTO>), response, "response is List<UniswapV2PairDayDataDTO>");
         }
         
         /// <summary>
-        /// Test UniswapV2PairHourDatasCurrent
+        /// Test UniswapV2PairHourDataCurrent
         /// </summary>
         [Test]
-        public void UniswapV2PairHourDatasCurrentTest()
+        public void UniswapV2PairHourDataCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.UniswapV2PairHourDatasCurrent();
+            //var response = instance.UniswapV2PairHourDataCurrent();
             //Assert.IsInstanceOf(typeof(List<UniswapV2PairHourDataDTO>), response, "response is List<UniswapV2PairHourDataDTO>");
         }
         
@@ -419,13 +419,13 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test UniswapV2TokenDayDatasCurrent
+        /// Test UniswapV2TokenDayDataCurrent
         /// </summary>
         [Test]
-        public void UniswapV2TokenDayDatasCurrentTest()
+        public void UniswapV2TokenDayDataCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.UniswapV2TokenDayDatasCurrent();
+            //var response = instance.UniswapV2TokenDayDataCurrent();
             //Assert.IsInstanceOf(typeof(List<UniswapV2TokenDayDataDTO>), response, "response is List<UniswapV2TokenDayDataDTO>");
         }
         
@@ -452,24 +452,24 @@ namespace CoinAPI.EMS.REST.V1.Test
         }
         
         /// <summary>
-        /// Test UniswapV2UniswapDayDatasCurrent
+        /// Test UniswapV2UniswapDayDataCurrent
         /// </summary>
         [Test]
-        public void UniswapV2UniswapDayDatasCurrentTest()
+        public void UniswapV2UniswapDayDataCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.UniswapV2UniswapDayDatasCurrent();
+            //var response = instance.UniswapV2UniswapDayDataCurrent();
             //Assert.IsInstanceOf(typeof(List<UniswapV2UniswapDayDataDTO>), response, "response is List<UniswapV2UniswapDayDataDTO>");
         }
         
         /// <summary>
-        /// Test UniswapV2UniswapFactorysCurrent
+        /// Test UniswapV2UniswapFactoriesCurrent
         /// </summary>
         [Test]
-        public void UniswapV2UniswapFactorysCurrentTest()
+        public void UniswapV2UniswapFactoriesCurrentTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //var response = instance.UniswapV2UniswapFactorysCurrent();
+            //var response = instance.UniswapV2UniswapFactoriesCurrent();
             //Assert.IsInstanceOf(typeof(List<UniswapV2UniswapFactoryDTO>), response, "response is List<UniswapV2UniswapFactoryDTO>");
         }
         

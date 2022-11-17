@@ -4,14 +4,14 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**Invoke-DexBatchsCurrent**](DexApi.md#Invoke-DexBatchsCurrent) | **GET** /dapps/dex/batchs/current | Batchs (current)
+[**Invoke-DexBatchesCurrent**](DexApi.md#Invoke-DexBatchesCurrent) | **GET** /dapps/dex/batches/current | Batches (current)
 [**Invoke-DexDepositsCurrent**](DexApi.md#Invoke-DexDepositsCurrent) | **GET** /dapps/dex/deposits/current | Deposits (current)
-[**Invoke-DexGetBatchsHistorical**](DexApi.md#Invoke-DexGetBatchsHistorical) | **GET** /dapps/dex/batchs/historical | Batchs (historical)
+[**Invoke-DexGetBatchesHistorical**](DexApi.md#Invoke-DexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | Batches (historical)
 [**Invoke-DexGetDepositsHistorical**](DexApi.md#Invoke-DexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical)
 [**Invoke-DexGetOrdersHistorical**](DexApi.md#Invoke-DexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | Orders (historical)
 [**Invoke-DexGetPricesHistorical**](DexApi.md#Invoke-DexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | Prices (historical)
 [**Invoke-DexGetSolutionsHistorical**](DexApi.md#Invoke-DexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | Solutions (historical)
-[**Invoke-DexGetStatssHistorical**](DexApi.md#Invoke-DexGetStatssHistorical) | **GET** /dapps/dex/statss/historical | Statss (historical)
+[**Invoke-DexGetStatsHistorical**](DexApi.md#Invoke-DexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | Stats (historical)
 [**Invoke-DexGetTokensHistorical**](DexApi.md#Invoke-DexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical)
 [**Invoke-DexGetTradesHistorical**](DexApi.md#Invoke-DexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | Trades (historical)
 [**Invoke-DexGetUsersHistorical**](DexApi.md#Invoke-DexGetUsersHistorical) | **GET** /dapps/dex/users/historical | Users (historical)
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 [**Invoke-DexOrdersCurrent**](DexApi.md#Invoke-DexOrdersCurrent) | **GET** /dapps/dex/orders/current | Orders (current)
 [**Invoke-DexPricesCurrent**](DexApi.md#Invoke-DexPricesCurrent) | **GET** /dapps/dex/prices/current | Prices (current)
 [**Invoke-DexSolutionsCurrent**](DexApi.md#Invoke-DexSolutionsCurrent) | **GET** /dapps/dex/solutions/current | Solutions (current)
-[**Invoke-DexStatssCurrent**](DexApi.md#Invoke-DexStatssCurrent) | **GET** /dapps/dex/statss/current | Statss (current)
+[**Invoke-DexStatsCurrent**](DexApi.md#Invoke-DexStatsCurrent) | **GET** /dapps/dex/stats/current | Stats (current)
 [**Invoke-DexTokensCurrent**](DexApi.md#Invoke-DexTokensCurrent) | **GET** /dapps/dex/tokens/current | Tokens (current)
 [**Invoke-DexTradesCurrent**](DexApi.md#Invoke-DexTradesCurrent) | **GET** /dapps/dex/trades/current | Trades (current)
 [**Invoke-DexUsersCurrent**](DexApi.md#Invoke-DexUsersCurrent) | **GET** /dapps/dex/users/current | Users (current)
@@ -28,22 +28,22 @@ Method | HTTP request | Description
 [**Invoke-DexWithdrawsCurrent**](DexApi.md#Invoke-DexWithdrawsCurrent) | **GET** /dapps/dex/withdraws/current | Withdraws (current)
 
 
-<a name="Invoke-DexBatchsCurrent"></a>
-# **Invoke-DexBatchsCurrent**
-> DexBatchDTO[] Invoke-DexBatchsCurrent<br>
+<a name="Invoke-DexBatchesCurrent"></a>
+# **Invoke-DexBatchesCurrent**
+> DexBatchDTO[] Invoke-DexBatchesCurrent<br>
 
-Batchs (current)
+Batches (current)
 
-Gets batchs.
+Gets batches.
 
 ### Example
 ```powershell
 
-# Batchs (current)
+# Batches (current)
 try {
-    $Result = Invoke-DexBatchsCurrent
+    $Result = Invoke-DexBatchesCurrent
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DexBatchsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-DexBatchesCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -104,18 +104,18 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexGetBatchsHistorical"></a>
-# **Invoke-DexGetBatchsHistorical**
-> DexBatchDTO[] Invoke-DexGetBatchsHistorical<br>
+<a name="Invoke-DexGetBatchesHistorical"></a>
+# **Invoke-DexGetBatchesHistorical**
+> DexBatchDTO[] Invoke-DexGetBatchesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-Batchs (historical)
+Batches (historical)
 
-Gets batchs.
+Gets batches.
 
 ### Example
 ```powershell
@@ -125,11 +125,11 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Identifier. (optional)
 
-# Batchs (historical)
+# Batches (historical)
 try {
-    $Result = Invoke-DexGetBatchsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
+    $Result = Invoke-DexGetBatchesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DexGetBatchsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-DexGetBatchesHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -388,18 +388,18 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexGetStatssHistorical"></a>
-# **Invoke-DexGetStatssHistorical**
-> DexStatsDTO[] Invoke-DexGetStatssHistorical<br>
+<a name="Invoke-DexGetStatsHistorical"></a>
+# **Invoke-DexGetStatsHistorical**
+> DexStatsDTO[] Invoke-DexGetStatsHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-Statss (historical)
+Stats (historical)
 
-Gets statss.
+Gets stats.
 
 ### Example
 ```powershell
@@ -409,11 +409,11 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String |  (optional)
 
-# Statss (historical)
+# Stats (historical)
 try {
-    $Result = Invoke-DexGetStatssHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
+    $Result = Invoke-DexGetStatsHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DexGetStatssHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-DexGetStatsHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -853,22 +853,22 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-DexStatssCurrent"></a>
-# **Invoke-DexStatssCurrent**
-> DexStatsDTO[] Invoke-DexStatssCurrent<br>
+<a name="Invoke-DexStatsCurrent"></a>
+# **Invoke-DexStatsCurrent**
+> DexStatsDTO[] Invoke-DexStatsCurrent<br>
 
-Statss (current)
+Stats (current)
 
-Gets statss.
+Gets stats.
 
 ### Example
 ```powershell
 
-# Statss (current)
+# Stats (current)
 try {
-    $Result = Invoke-DexStatssCurrent
+    $Result = Invoke-DexStatsCurrent
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-DexStatssCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-DexStatsCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```

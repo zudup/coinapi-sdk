@@ -6,38 +6,38 @@ All URIs are relative to *https://onchain.coinapi.io*
 |------------- | ------------- | -------------|
 | [**uniswapV3BundlesCurrent**](UniswapV3Api.md#uniswapV3BundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current) |
 | [**uniswapV3BurnsCurrent**](UniswapV3Api.md#uniswapV3BurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current) |
-| [**uniswapV3FactorysCurrent**](UniswapV3Api.md#uniswapV3FactorysCurrent) | **GET** /dapps/uniswapv3/factorys/current | Factorys (current) |
+| [**uniswapV3FactoriesCurrent**](UniswapV3Api.md#uniswapV3FactoriesCurrent) | **GET** /dapps/uniswapv3/factories/current | Factories (current) |
 | [**uniswapV3GetBundlesHistorical**](UniswapV3Api.md#uniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical) |
 | [**uniswapV3GetBurnsHistorical**](UniswapV3Api.md#uniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical) |
-| [**uniswapV3GetFactorysHistorical**](UniswapV3Api.md#uniswapV3GetFactorysHistorical) | **GET** /dapps/uniswapv3/factorys/historical | Factorys (historical) |
+| [**uniswapV3GetFactoriesHistorical**](UniswapV3Api.md#uniswapV3GetFactoriesHistorical) | **GET** /dapps/uniswapv3/factories/historical | Factories (historical) |
 | [**uniswapV3GetMintsHistorical**](UniswapV3Api.md#uniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical) |
-| [**uniswapV3GetPoolDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetPoolDayDatasHistorical) | **GET** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical) |
-| [**uniswapV3GetPoolHourDatasHistorical**](UniswapV3Api.md#uniswapV3GetPoolHourDatasHistorical) | **GET** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical) |
+| [**uniswapV3GetPoolDayDataHistorical**](UniswapV3Api.md#uniswapV3GetPoolDayDataHistorical) | **GET** /dapps/uniswapv3/poolDayData/historical | PoolDayData (historical) |
+| [**uniswapV3GetPoolHourDataHistorical**](UniswapV3Api.md#uniswapV3GetPoolHourDataHistorical) | **GET** /dapps/uniswapv3/poolHourData/historical | PoolHourData (historical) |
 | [**uniswapV3GetPoolsHistorical**](UniswapV3Api.md#uniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) |
 | [**uniswapV3GetPositionSnapshotsHistorical**](UniswapV3Api.md#uniswapV3GetPositionSnapshotsHistorical) | **GET** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical) |
 | [**uniswapV3GetPositionsHistorical**](UniswapV3Api.md#uniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical) |
 | [**uniswapV3GetSwapsHistorical**](UniswapV3Api.md#uniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) |
-| [**uniswapV3GetTickDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTickDayDatasHistorical) | **GET** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical) |
+| [**uniswapV3GetTickDayDataHistorical**](UniswapV3Api.md#uniswapV3GetTickDayDataHistorical) | **GET** /dapps/uniswapv3/tickDayData/historical | TickDayData (historical) |
 | [**uniswapV3GetTicksHistorical**](UniswapV3Api.md#uniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical) |
-| [**uniswapV3GetTokenHourDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenHourDatasHistorical) | **GET** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical) |
-| [**uniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3DayDatasHistorical) | **GET** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical) |
+| [**uniswapV3GetTokenHourDataHistorical**](UniswapV3Api.md#uniswapV3GetTokenHourDataHistorical) | **GET** /dapps/uniswapv3/tokenHourData/historical | TokenHourData (historical) |
+| [**uniswapV3GetTokenV3DayDataHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3DayDataHistorical) | **GET** /dapps/uniswapv3/tokenV3DayData/historical | TokenV3DayData (historical) |
 | [**uniswapV3GetTokensHistorical**](UniswapV3Api.md#uniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) |
 | [**uniswapV3GetTransactionsHistorical**](UniswapV3Api.md#uniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical) |
-| [**uniswapV3GetUniswapDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical) |
+| [**uniswapV3GetUniswapDayDataHistorical**](UniswapV3Api.md#uniswapV3GetUniswapDayDataHistorical) | **GET** /dapps/uniswapv3/uniswapDayData/historical | UniswapDayData (historical) |
 | [**uniswapV3MintsCurrent**](UniswapV3Api.md#uniswapV3MintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current) |
-| [**uniswapV3PoolDayDatasCurrent**](UniswapV3Api.md#uniswapV3PoolDayDatasCurrent) | **GET** /dapps/uniswapv3/poolDayDatas/current | PoolDayDatas (current) |
-| [**uniswapV3PoolHourDatasCurrent**](UniswapV3Api.md#uniswapV3PoolHourDatasCurrent) | **GET** /dapps/uniswapv3/poolHourDatas/current | PoolHourDatas (current) |
+| [**uniswapV3PoolDayDataCurrent**](UniswapV3Api.md#uniswapV3PoolDayDataCurrent) | **GET** /dapps/uniswapv3/poolDayData/current | PoolDayData (current) |
+| [**uniswapV3PoolHourDataCurrent**](UniswapV3Api.md#uniswapV3PoolHourDataCurrent) | **GET** /dapps/uniswapv3/poolHourData/current | PoolHourData (current) |
 | [**uniswapV3PoolsCurrent**](UniswapV3Api.md#uniswapV3PoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current) |
 | [**uniswapV3PositionSnapshotsCurrent**](UniswapV3Api.md#uniswapV3PositionSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionSnapshots (current) |
 | [**uniswapV3PositionsCurrent**](UniswapV3Api.md#uniswapV3PositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current) |
 | [**uniswapV3SwapsCurrent**](UniswapV3Api.md#uniswapV3SwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) |
-| [**uniswapV3TickDayDatasCurrent**](UniswapV3Api.md#uniswapV3TickDayDatasCurrent) | **GET** /dapps/uniswapv3/tickDayDatas/current | TickDayDatas (current) |
+| [**uniswapV3TickDayDataCurrent**](UniswapV3Api.md#uniswapV3TickDayDataCurrent) | **GET** /dapps/uniswapv3/tickDayData/current | TickDayData (current) |
 | [**uniswapV3TicksCurrent**](UniswapV3Api.md#uniswapV3TicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current) |
-| [**uniswapV3TokenHourDatasCurrent**](UniswapV3Api.md#uniswapV3TokenHourDatasCurrent) | **GET** /dapps/uniswapv3/tokenHourDatas/current | TokenHourDatas (current) |
-| [**uniswapV3TokenV3DayDatasCurrent**](UniswapV3Api.md#uniswapV3TokenV3DayDatasCurrent) | **GET** /dapps/uniswapv3/tokenV3DayDatas/current | TokenV3DayDatas (current) |
+| [**uniswapV3TokenHourDataCurrent**](UniswapV3Api.md#uniswapV3TokenHourDataCurrent) | **GET** /dapps/uniswapv3/tokenHourData/current | TokenHourData (current) |
+| [**uniswapV3TokenV3DayDataCurrent**](UniswapV3Api.md#uniswapV3TokenV3DayDataCurrent) | **GET** /dapps/uniswapv3/tokenV3DayData/current | TokenV3DayData (current) |
 | [**uniswapV3TokensCurrent**](UniswapV3Api.md#uniswapV3TokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) |
 | [**uniswapV3TransactionsCurrent**](UniswapV3Api.md#uniswapV3TransactionsCurrent) | **GET** /dapps/uniswapv3/transactions/current | Transactions (current) |
-| [**uniswapV3UniswapDayDatasCurrent**](UniswapV3Api.md#uniswapV3UniswapDayDatasCurrent) | **GET** /dapps/uniswapv3/uniswapDayDatas/current | UniswapDayDatas (current) |
+| [**uniswapV3UniswapDayDataCurrent**](UniswapV3Api.md#uniswapV3UniswapDayDataCurrent) | **GET** /dapps/uniswapv3/uniswapDayData/current | UniswapDayData (current) |
 
 
 <a name="uniswapV3BundlesCurrent"></a>
@@ -156,13 +156,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3FactorysCurrent"></a>
-# **uniswapV3FactorysCurrent**
-> List&lt;UniswapV3FactoryDTO&gt; uniswapV3FactorysCurrent()
+<a name="uniswapV3FactoriesCurrent"></a>
+# **uniswapV3FactoriesCurrent**
+> List&lt;UniswapV3FactoryDTO&gt; uniswapV3FactoriesCurrent()
 
-Factorys (current)
+Factories (current)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 ```java
@@ -180,10 +180,10 @@ public class Example {
 
     UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
     try {
-      List<UniswapV3FactoryDTO> result = apiInstance.uniswapV3FactorysCurrent();
+      List<UniswapV3FactoryDTO> result = apiInstance.uniswapV3FactoriesCurrent();
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3FactorysCurrent");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3FactoriesCurrent");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -360,13 +360,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetFactorysHistorical"></a>
-# **uniswapV3GetFactorysHistorical**
-> List&lt;UniswapV3FactoryDTO&gt; uniswapV3GetFactorysHistorical(startBlock, endBlock, startDate, endDate, id)
+<a name="uniswapV3GetFactoriesHistorical"></a>
+# **uniswapV3GetFactoriesHistorical**
+> List&lt;UniswapV3FactoryDTO&gt; uniswapV3GetFactoriesHistorical(startBlock, endBlock, startDate, endDate, id)
 
-Factorys (historical)
+Factories (historical)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 ```java
@@ -389,10 +389,10 @@ public class Example {
     OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
     String id = "id_example"; // String | Factory address.
     try {
-      List<UniswapV3FactoryDTO> result = apiInstance.uniswapV3GetFactorysHistorical(startBlock, endBlock, startDate, endDate, id);
+      List<UniswapV3FactoryDTO> result = apiInstance.uniswapV3GetFactoriesHistorical(startBlock, endBlock, startDate, endDate, id);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetFactorysHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetFactoriesHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -506,13 +506,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetPoolDayDatasHistorical"></a>
-# **uniswapV3GetPoolDayDatasHistorical**
-> List&lt;UniswapV3PoolDayDataDTO&gt; uniswapV3GetPoolDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+<a name="uniswapV3GetPoolDayDataHistorical"></a>
+# **uniswapV3GetPoolDayDataHistorical**
+> List&lt;UniswapV3PoolDayDataDTO&gt; uniswapV3GetPoolDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
-PoolDayDatas (historical)
+PoolDayData (historical)
 
-Gets poolDayDatas.
+Gets poolDayData.
 
 ### Example
 ```java
@@ -536,10 +536,10 @@ public class Example {
     String id = "id_example"; // String | 
     String pool = "pool_example"; // String | 
     try {
-      List<UniswapV3PoolDayDataDTO> result = apiInstance.uniswapV3GetPoolDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+      List<UniswapV3PoolDayDataDTO> result = apiInstance.uniswapV3GetPoolDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolDayDatasHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolDayDataHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -578,13 +578,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetPoolHourDatasHistorical"></a>
-# **uniswapV3GetPoolHourDatasHistorical**
-> List&lt;UniswapV3PoolHourDataDTO&gt; uniswapV3GetPoolHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+<a name="uniswapV3GetPoolHourDataHistorical"></a>
+# **uniswapV3GetPoolHourDataHistorical**
+> List&lt;UniswapV3PoolHourDataDTO&gt; uniswapV3GetPoolHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
-PoolHourDatas (historical)
+PoolHourData (historical)
 
-Gets poolHourDatas.
+Gets poolHourData.
 
 ### Example
 ```java
@@ -608,10 +608,10 @@ public class Example {
     String id = "id_example"; // String | 
     String pool = "pool_example"; // String | 
     try {
-      List<UniswapV3PoolHourDataDTO> result = apiInstance.uniswapV3GetPoolHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+      List<UniswapV3PoolHourDataDTO> result = apiInstance.uniswapV3GetPoolHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pool);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolHourDatasHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolHourDataHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -948,13 +948,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetTickDayDatasHistorical"></a>
-# **uniswapV3GetTickDayDatasHistorical**
-> List&lt;UniswapV3TickDayDataDTO&gt; uniswapV3GetTickDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+<a name="uniswapV3GetTickDayDataHistorical"></a>
+# **uniswapV3GetTickDayDataHistorical**
+> List&lt;UniswapV3TickDayDataDTO&gt; uniswapV3GetTickDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool)
 
-TickDayDatas (historical)
+TickDayData (historical)
 
-Gets tickDayDatas.
+Gets tickDayData.
 
 ### Example
 ```java
@@ -978,10 +978,10 @@ public class Example {
     String id = "id_example"; // String | 
     String pool = "pool_example"; // String | 
     try {
-      List<UniswapV3TickDayDataDTO> result = apiInstance.uniswapV3GetTickDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool);
+      List<UniswapV3TickDayDataDTO> result = apiInstance.uniswapV3GetTickDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTickDayDatasHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTickDayDataHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1092,13 +1092,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetTokenHourDatasHistorical"></a>
-# **uniswapV3GetTokenHourDatasHistorical**
-> List&lt;UniswapV3TokenHourDataDTO&gt; uniswapV3GetTokenHourDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+<a name="uniswapV3GetTokenHourDataHistorical"></a>
+# **uniswapV3GetTokenHourDataHistorical**
+> List&lt;UniswapV3TokenHourDataDTO&gt; uniswapV3GetTokenHourDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
-TokenHourDatas (historical)
+TokenHourData (historical)
 
-Gets tokenHourDatas.
+Gets tokenHourData.
 
 ### Example
 ```java
@@ -1121,10 +1121,10 @@ public class Example {
     OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
     String id = "id_example"; // String | Token address concatendated with date.
     try {
-      List<UniswapV3TokenHourDataDTO> result = apiInstance.uniswapV3GetTokenHourDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+      List<UniswapV3TokenHourDataDTO> result = apiInstance.uniswapV3GetTokenHourDataHistorical(startBlock, endBlock, startDate, endDate, id);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenHourDatasHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenHourDataHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1162,13 +1162,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetTokenV3DayDatasHistorical"></a>
-# **uniswapV3GetTokenV3DayDatasHistorical**
-> List&lt;UniswapV3TokenV3DayDataDTO&gt; uniswapV3GetTokenV3DayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+<a name="uniswapV3GetTokenV3DayDataHistorical"></a>
+# **uniswapV3GetTokenV3DayDataHistorical**
+> List&lt;UniswapV3TokenV3DayDataDTO&gt; uniswapV3GetTokenV3DayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
-TokenV3DayDatas (historical)
+TokenV3DayData (historical)
 
-Gets tokenV3DayDatas.
+Gets tokenV3DayData.
 
 ### Example
 ```java
@@ -1191,10 +1191,10 @@ public class Example {
     OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
     String id = "id_example"; // String | Token address concatendated with date.
     try {
-      List<UniswapV3TokenV3DayDataDTO> result = apiInstance.uniswapV3GetTokenV3DayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+      List<UniswapV3TokenV3DayDataDTO> result = apiInstance.uniswapV3GetTokenV3DayDataHistorical(startBlock, endBlock, startDate, endDate, id);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenV3DayDatasHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenV3DayDataHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1376,13 +1376,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3GetUniswapDayDatasHistorical"></a>
-# **uniswapV3GetUniswapDayDatasHistorical**
-> List&lt;UniswapV3UniswapDayDataDTO&gt; uniswapV3GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+<a name="uniswapV3GetUniswapDayDataHistorical"></a>
+# **uniswapV3GetUniswapDayDataHistorical**
+> List&lt;UniswapV3UniswapDayDataDTO&gt; uniswapV3GetUniswapDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
-UniswapDayDatas (historical)
+UniswapDayData (historical)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 ```java
@@ -1405,10 +1405,10 @@ public class Example {
     OffsetDateTime endDate = OffsetDateTime.now(); // OffsetDateTime | The end date of timeframe.
     String id = "id_example"; // String | Timestamp rounded to current day by dividing by 86400.
     try {
-      List<UniswapV3UniswapDayDataDTO> result = apiInstance.uniswapV3GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+      List<UniswapV3UniswapDayDataDTO> result = apiInstance.uniswapV3GetUniswapDayDataHistorical(startBlock, endBlock, startDate, endDate, id);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetUniswapDayDatasHistorical");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3GetUniswapDayDataHistorical");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1504,13 +1504,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3PoolDayDatasCurrent"></a>
-# **uniswapV3PoolDayDatasCurrent**
-> List&lt;UniswapV3PoolDayDataDTO&gt; uniswapV3PoolDayDatasCurrent()
+<a name="uniswapV3PoolDayDataCurrent"></a>
+# **uniswapV3PoolDayDataCurrent**
+> List&lt;UniswapV3PoolDayDataDTO&gt; uniswapV3PoolDayDataCurrent()
 
-PoolDayDatas (current)
+PoolDayData (current)
 
-Gets poolDayDatas.
+Gets poolDayData.
 
 ### Example
 ```java
@@ -1528,10 +1528,10 @@ public class Example {
 
     UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
     try {
-      List<UniswapV3PoolDayDataDTO> result = apiInstance.uniswapV3PoolDayDatasCurrent();
+      List<UniswapV3PoolDayDataDTO> result = apiInstance.uniswapV3PoolDayDataCurrent();
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolDayDatasCurrent");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolDayDataCurrent");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1562,13 +1562,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3PoolHourDatasCurrent"></a>
-# **uniswapV3PoolHourDatasCurrent**
-> List&lt;UniswapV3PoolHourDataDTO&gt; uniswapV3PoolHourDatasCurrent()
+<a name="uniswapV3PoolHourDataCurrent"></a>
+# **uniswapV3PoolHourDataCurrent**
+> List&lt;UniswapV3PoolHourDataDTO&gt; uniswapV3PoolHourDataCurrent()
 
-PoolHourDatas (current)
+PoolHourData (current)
 
-Gets poolHourDatas.
+Gets poolHourData.
 
 ### Example
 ```java
@@ -1586,10 +1586,10 @@ public class Example {
 
     UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
     try {
-      List<UniswapV3PoolHourDataDTO> result = apiInstance.uniswapV3PoolHourDatasCurrent();
+      List<UniswapV3PoolHourDataDTO> result = apiInstance.uniswapV3PoolHourDataCurrent();
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolHourDatasCurrent");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolHourDataCurrent");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1860,13 +1860,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3TickDayDatasCurrent"></a>
-# **uniswapV3TickDayDatasCurrent**
-> List&lt;UniswapV3TickDayDataDTO&gt; uniswapV3TickDayDatasCurrent()
+<a name="uniswapV3TickDayDataCurrent"></a>
+# **uniswapV3TickDayDataCurrent**
+> List&lt;UniswapV3TickDayDataDTO&gt; uniswapV3TickDayDataCurrent()
 
-TickDayDatas (current)
+TickDayData (current)
 
-Gets tickDayDatas.
+Gets tickDayData.
 
 ### Example
 ```java
@@ -1884,10 +1884,10 @@ public class Example {
 
     UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
     try {
-      List<UniswapV3TickDayDataDTO> result = apiInstance.uniswapV3TickDayDatasCurrent();
+      List<UniswapV3TickDayDataDTO> result = apiInstance.uniswapV3TickDayDataCurrent();
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3TickDayDatasCurrent");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3TickDayDataCurrent");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -1976,13 +1976,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3TokenHourDatasCurrent"></a>
-# **uniswapV3TokenHourDatasCurrent**
-> List&lt;UniswapV3TokenHourDataDTO&gt; uniswapV3TokenHourDatasCurrent()
+<a name="uniswapV3TokenHourDataCurrent"></a>
+# **uniswapV3TokenHourDataCurrent**
+> List&lt;UniswapV3TokenHourDataDTO&gt; uniswapV3TokenHourDataCurrent()
 
-TokenHourDatas (current)
+TokenHourData (current)
 
-Gets tokenHourDatas.
+Gets tokenHourData.
 
 ### Example
 ```java
@@ -2000,10 +2000,10 @@ public class Example {
 
     UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
     try {
-      List<UniswapV3TokenHourDataDTO> result = apiInstance.uniswapV3TokenHourDatasCurrent();
+      List<UniswapV3TokenHourDataDTO> result = apiInstance.uniswapV3TokenHourDataCurrent();
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3TokenHourDatasCurrent");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3TokenHourDataCurrent");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -2034,13 +2034,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3TokenV3DayDatasCurrent"></a>
-# **uniswapV3TokenV3DayDatasCurrent**
-> List&lt;UniswapV3TokenV3DayDataDTO&gt; uniswapV3TokenV3DayDatasCurrent()
+<a name="uniswapV3TokenV3DayDataCurrent"></a>
+# **uniswapV3TokenV3DayDataCurrent**
+> List&lt;UniswapV3TokenV3DayDataDTO&gt; uniswapV3TokenV3DayDataCurrent()
 
-TokenV3DayDatas (current)
+TokenV3DayData (current)
 
-Gets tokenV3DayDatas.
+Gets tokenV3DayData.
 
 ### Example
 ```java
@@ -2058,10 +2058,10 @@ public class Example {
 
     UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
     try {
-      List<UniswapV3TokenV3DayDataDTO> result = apiInstance.uniswapV3TokenV3DayDatasCurrent();
+      List<UniswapV3TokenV3DayDataDTO> result = apiInstance.uniswapV3TokenV3DayDataCurrent();
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3TokenV3DayDatasCurrent");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3TokenV3DayDataCurrent");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -2208,13 +2208,13 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-<a name="uniswapV3UniswapDayDatasCurrent"></a>
-# **uniswapV3UniswapDayDatasCurrent**
-> List&lt;UniswapV3UniswapDayDataDTO&gt; uniswapV3UniswapDayDatasCurrent()
+<a name="uniswapV3UniswapDayDataCurrent"></a>
+# **uniswapV3UniswapDayDataCurrent**
+> List&lt;UniswapV3UniswapDayDataDTO&gt; uniswapV3UniswapDayDataCurrent()
 
-UniswapDayDatas (current)
+UniswapDayData (current)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 ```java
@@ -2232,10 +2232,10 @@ public class Example {
 
     UniswapV3Api apiInstance = new UniswapV3Api(defaultClient);
     try {
-      List<UniswapV3UniswapDayDataDTO> result = apiInstance.uniswapV3UniswapDayDatasCurrent();
+      List<UniswapV3UniswapDayDataDTO> result = apiInstance.uniswapV3UniswapDayDataCurrent();
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling UniswapV3Api#uniswapV3UniswapDayDatasCurrent");
+      System.err.println("Exception when calling UniswapV3Api#uniswapV3UniswapDayDataCurrent");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());

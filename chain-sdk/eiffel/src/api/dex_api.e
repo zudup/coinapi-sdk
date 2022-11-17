@@ -24,9 +24,9 @@ inherit
 feature -- API Access
 
 
-	dex_batchs_current : detachable LIST [DEX_BATCH_DTO]
-			-- Batchs (current)
-			-- Gets batchs.
+	dex_batches_current : detachable LIST [DEX_BATCH_DTO]
+			-- Batches (current)
+			-- Gets batches.
 			-- 
 			-- 
 			-- Result LIST [DEX_BATCH_DTO]
@@ -39,7 +39,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/dex/batchs/current"
+			l_path := "/dapps/dex/batches/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
@@ -90,9 +90,9 @@ feature -- API Access
 			end
 		end
 
-	dex_get_batchs_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [DEX_BATCH_DTO]
-			-- Batchs (historical)
-			-- Gets batchs.
+	dex_get_batches_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [DEX_BATCH_DTO]
+			-- Batches (historical)
+			-- Gets batches.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
@@ -115,7 +115,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/dex/batchs/historical"
+			l_path := "/dapps/dex/batches/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -339,9 +339,9 @@ feature -- API Access
 			end
 		end
 
-	dex_get_statss_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [DEX_STATS_DTO]
-			-- Statss (historical)
-			-- Gets statss.
+	dex_get_stats_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [DEX_STATS_DTO]
+			-- Stats (historical)
+			-- Gets stats.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
@@ -364,7 +364,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/dex/statss/historical"
+			l_path := "/dapps/dex/stats/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -747,9 +747,9 @@ feature -- API Access
 			end
 		end
 
-	dex_statss_current : detachable LIST [DEX_STATS_DTO]
-			-- Statss (current)
-			-- Gets statss.
+	dex_stats_current : detachable LIST [DEX_STATS_DTO]
+			-- Stats (current)
+			-- Gets stats.
 			-- 
 			-- 
 			-- Result LIST [DEX_STATS_DTO]
@@ -762,7 +762,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/dex/statss/current"
+			l_path := "/dapps/dex/stats/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then

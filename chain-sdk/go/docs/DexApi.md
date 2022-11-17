@@ -4,14 +4,14 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DexBatchsCurrent**](DexApi.md#DexBatchsCurrent) | **Get** /dapps/dex/batchs/current | Batchs (current)
+[**DexBatchesCurrent**](DexApi.md#DexBatchesCurrent) | **Get** /dapps/dex/batches/current | Batches (current)
 [**DexDepositsCurrent**](DexApi.md#DexDepositsCurrent) | **Get** /dapps/dex/deposits/current | Deposits (current)
-[**DexGetBatchsHistorical**](DexApi.md#DexGetBatchsHistorical) | **Get** /dapps/dex/batchs/historical | Batchs (historical)
+[**DexGetBatchesHistorical**](DexApi.md#DexGetBatchesHistorical) | **Get** /dapps/dex/batches/historical | Batches (historical)
 [**DexGetDepositsHistorical**](DexApi.md#DexGetDepositsHistorical) | **Get** /dapps/dex/deposits/historical | Deposits (historical)
 [**DexGetOrdersHistorical**](DexApi.md#DexGetOrdersHistorical) | **Get** /dapps/dex/orders/historical | Orders (historical)
 [**DexGetPricesHistorical**](DexApi.md#DexGetPricesHistorical) | **Get** /dapps/dex/prices/historical | Prices (historical)
 [**DexGetSolutionsHistorical**](DexApi.md#DexGetSolutionsHistorical) | **Get** /dapps/dex/solutions/historical | Solutions (historical)
-[**DexGetStatssHistorical**](DexApi.md#DexGetStatssHistorical) | **Get** /dapps/dex/statss/historical | Statss (historical)
+[**DexGetStatsHistorical**](DexApi.md#DexGetStatsHistorical) | **Get** /dapps/dex/stats/historical | Stats (historical)
 [**DexGetTokensHistorical**](DexApi.md#DexGetTokensHistorical) | **Get** /dapps/dex/tokens/historical | Tokens (historical)
 [**DexGetTradesHistorical**](DexApi.md#DexGetTradesHistorical) | **Get** /dapps/dex/trades/historical | Trades (historical)
 [**DexGetUsersHistorical**](DexApi.md#DexGetUsersHistorical) | **Get** /dapps/dex/users/historical | Users (historical)
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 [**DexOrdersCurrent**](DexApi.md#DexOrdersCurrent) | **Get** /dapps/dex/orders/current | Orders (current)
 [**DexPricesCurrent**](DexApi.md#DexPricesCurrent) | **Get** /dapps/dex/prices/current | Prices (current)
 [**DexSolutionsCurrent**](DexApi.md#DexSolutionsCurrent) | **Get** /dapps/dex/solutions/current | Solutions (current)
-[**DexStatssCurrent**](DexApi.md#DexStatssCurrent) | **Get** /dapps/dex/statss/current | Statss (current)
+[**DexStatsCurrent**](DexApi.md#DexStatsCurrent) | **Get** /dapps/dex/stats/current | Stats (current)
 [**DexTokensCurrent**](DexApi.md#DexTokensCurrent) | **Get** /dapps/dex/tokens/current | Tokens (current)
 [**DexTradesCurrent**](DexApi.md#DexTradesCurrent) | **Get** /dapps/dex/trades/current | Trades (current)
 [**DexUsersCurrent**](DexApi.md#DexUsersCurrent) | **Get** /dapps/dex/users/current | Users (current)
@@ -29,11 +29,11 @@ Method | HTTP request | Description
 
 
 
-## DexBatchsCurrent
+## DexBatchesCurrent
 
-> []DexBatchDTO DexBatchsCurrent(ctx).Execute()
+> []DexBatchDTO DexBatchesCurrent(ctx).Execute()
 
-Batchs (current)
+Batches (current)
 
 
 
@@ -53,13 +53,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DexApi.DexBatchsCurrent(context.Background()).Execute()
+    resp, r, err := apiClient.DexApi.DexBatchesCurrent(context.Background()).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexBatchsCurrent``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexBatchesCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DexBatchsCurrent`: []DexBatchDTO
-    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexBatchsCurrent`: %v\n", resp)
+    // response from `DexBatchesCurrent`: []DexBatchDTO
+    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexBatchesCurrent`: %v\n", resp)
 }
 ```
 
@@ -69,7 +69,7 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiDexBatchsCurrentRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDexBatchesCurrentRequest struct via the builder pattern
 
 
 ### Return type
@@ -151,11 +151,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DexGetBatchsHistorical
+## DexGetBatchesHistorical
 
-> []DexBatchDTO DexGetBatchsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
+> []DexBatchDTO DexGetBatchesHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
 
-Batchs (historical)
+Batches (historical)
 
 
 
@@ -181,13 +181,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DexApi.DexGetBatchsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
+    resp, r, err := apiClient.DexApi.DexGetBatchesHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexGetBatchsHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexGetBatchesHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DexGetBatchsHistorical`: []DexBatchDTO
-    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexGetBatchsHistorical`: %v\n", resp)
+    // response from `DexGetBatchesHistorical`: []DexBatchDTO
+    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexGetBatchesHistorical`: %v\n", resp)
 }
 ```
 
@@ -197,7 +197,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiDexGetBatchsHistoricalRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDexGetBatchesHistoricalRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -532,11 +532,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DexGetStatssHistorical
+## DexGetStatsHistorical
 
-> []DexStatsDTO DexGetStatssHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
+> []DexStatsDTO DexGetStatsHistorical(ctx).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
 
-Statss (historical)
+Stats (historical)
 
 
 
@@ -562,13 +562,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DexApi.DexGetStatssHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
+    resp, r, err := apiClient.DexApi.DexGetStatsHistorical(context.Background()).StartBlock(startBlock).EndBlock(endBlock).StartDate(startDate).EndDate(endDate).Id(id).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexGetStatssHistorical``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexGetStatsHistorical``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DexGetStatssHistorical`: []DexStatsDTO
-    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexGetStatssHistorical`: %v\n", resp)
+    // response from `DexGetStatsHistorical`: []DexStatsDTO
+    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexGetStatsHistorical`: %v\n", resp)
 }
 ```
 
@@ -578,7 +578,7 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiDexGetStatssHistoricalRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDexGetStatsHistoricalRequest struct via the builder pattern
 
 
 Name | Type | Description  | Notes
@@ -1179,11 +1179,11 @@ No authorization required
 [[Back to README]](../README.md)
 
 
-## DexStatssCurrent
+## DexStatsCurrent
 
-> []DexStatsDTO DexStatssCurrent(ctx).Execute()
+> []DexStatsDTO DexStatsCurrent(ctx).Execute()
 
-Statss (current)
+Stats (current)
 
 
 
@@ -1203,13 +1203,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DexApi.DexStatssCurrent(context.Background()).Execute()
+    resp, r, err := apiClient.DexApi.DexStatsCurrent(context.Background()).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexStatssCurrent``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `DexApi.DexStatsCurrent``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DexStatssCurrent`: []DexStatsDTO
-    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexStatssCurrent`: %v\n", resp)
+    // response from `DexStatsCurrent`: []DexStatsDTO
+    fmt.Fprintf(os.Stdout, "Response from `DexApi.DexStatsCurrent`: %v\n", resp)
 }
 ```
 
@@ -1219,7 +1219,7 @@ This endpoint does not need any parameter.
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiDexStatssCurrentRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiDexStatsCurrentRequest struct via the builder pattern
 
 
 ### Return type

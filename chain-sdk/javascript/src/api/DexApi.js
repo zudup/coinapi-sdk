@@ -45,20 +45,20 @@ export default class DexApi {
 
 
     /**
-     * Callback function to receive the result of the dexBatchsCurrent operation.
-     * @callback module:api/DexApi~dexBatchsCurrentCallback
+     * Callback function to receive the result of the dexBatchesCurrent operation.
+     * @callback module:api/DexApi~dexBatchesCurrentCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/DexBatchDTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Batchs (current)
-     * Gets batchs.
-     * @param {module:api/DexApi~dexBatchsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * Batches (current)
+     * Gets batches.
+     * @param {module:api/DexApi~dexBatchesCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/DexBatchDTO>}
      */
-    dexBatchsCurrent(callback) {
+    dexBatchesCurrent(callback) {
       let postBody = null;
 
       let pathParams = {
@@ -75,7 +75,7 @@ export default class DexApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [DexBatchDTO];
       return this.apiClient.callApi(
-        '/dapps/dex/batchs/current', 'GET',
+        '/dapps/dex/batches/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -119,26 +119,26 @@ export default class DexApi {
     }
 
     /**
-     * Callback function to receive the result of the dexGetBatchsHistorical operation.
-     * @callback module:api/DexApi~dexGetBatchsHistoricalCallback
+     * Callback function to receive the result of the dexGetBatchesHistorical operation.
+     * @callback module:api/DexApi~dexGetBatchesHistoricalCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/DexBatchDTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Batchs (historical)
-     * Gets batchs.
+     * Batches (historical)
+     * Gets batches.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param {Date} opts.endDate The end date of timeframe.
      * @param {String} opts.id Identifier.
-     * @param {module:api/DexApi~dexGetBatchsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DexApi~dexGetBatchesHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/DexBatchDTO>}
      */
-    dexGetBatchsHistorical(opts, callback) {
+    dexGetBatchesHistorical(opts, callback) {
       opts = opts || {};
       let postBody = null;
 
@@ -161,7 +161,7 @@ export default class DexApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [DexBatchDTO];
       return this.apiClient.callApi(
-        '/dapps/dex/batchs/historical', 'GET',
+        '/dapps/dex/batches/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -370,26 +370,26 @@ export default class DexApi {
     }
 
     /**
-     * Callback function to receive the result of the dexGetStatssHistorical operation.
-     * @callback module:api/DexApi~dexGetStatssHistoricalCallback
+     * Callback function to receive the result of the dexGetStatsHistorical operation.
+     * @callback module:api/DexApi~dexGetStatsHistoricalCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/DexStatsDTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Statss (historical)
-     * Gets statss.
+     * Stats (historical)
+     * Gets stats.
      * @param {Object} opts Optional parameters
      * @param {Number} opts.startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param {Number} opts.endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param {Date} opts.startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param {Date} opts.endDate The end date of timeframe.
      * @param {String} opts.id 
-     * @param {module:api/DexApi~dexGetStatssHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
+     * @param {module:api/DexApi~dexGetStatsHistoricalCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/DexStatsDTO>}
      */
-    dexGetStatssHistorical(opts, callback) {
+    dexGetStatsHistorical(opts, callback) {
       opts = opts || {};
       let postBody = null;
 
@@ -412,7 +412,7 @@ export default class DexApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [DexStatsDTO];
       return this.apiClient.callApi(
-        '/dapps/dex/statss/historical', 'GET',
+        '/dapps/dex/stats/historical', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );
@@ -789,20 +789,20 @@ export default class DexApi {
     }
 
     /**
-     * Callback function to receive the result of the dexStatssCurrent operation.
-     * @callback module:api/DexApi~dexStatssCurrentCallback
+     * Callback function to receive the result of the dexStatsCurrent operation.
+     * @callback module:api/DexApi~dexStatsCurrentCallback
      * @param {String} error Error message, if any.
      * @param {Array.<module:model/DexStatsDTO>} data The data returned by the service call.
      * @param {String} response The complete HTTP response.
      */
 
     /**
-     * Statss (current)
-     * Gets statss.
-     * @param {module:api/DexApi~dexStatssCurrentCallback} callback The callback function, accepting three arguments: error, data, response
+     * Stats (current)
+     * Gets stats.
+     * @param {module:api/DexApi~dexStatsCurrentCallback} callback The callback function, accepting three arguments: error, data, response
      * data is of type: {@link Array.<module:model/DexStatsDTO>}
      */
-    dexStatssCurrent(callback) {
+    dexStatsCurrent(callback) {
       let postBody = null;
 
       let pathParams = {
@@ -819,7 +819,7 @@ export default class DexApi {
       let accepts = ['text/plain', 'application/json', 'text/json'];
       let returnType = [DexStatsDTO];
       return this.apiClient.callApi(
-        '/dapps/dex/statss/current', 'GET',
+        '/dapps/dex/stats/current', 'GET',
         pathParams, queryParams, headerParams, formParams, postBody,
         authNames, contentTypes, accepts, returnType, null, callback
       );

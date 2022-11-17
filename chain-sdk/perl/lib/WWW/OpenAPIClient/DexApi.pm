@@ -49,26 +49,26 @@ sub new {
 
 
 #
-# dex_batchs__current
+# dex_batches__current
 #
-# Batchs (current)
+# Batches (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'dex_batchs__current' } = {
-        summary => 'Batchs (current)',
+    __PACKAGE__->method_documentation->{ 'dex_batches__current' } = {
+        summary => 'Batches (current)',
         params => $params,
         returns => 'ARRAY[DexBatchDTO]',
         };
 }
 # @return ARRAY[DexBatchDTO]
 #
-sub dex_batchs__current {
+sub dex_batches__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/batchs/current';
+    my $_resource_path = '/dapps/dex/batches/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -147,9 +147,9 @@ sub dex_deposits__current {
 }
 
 #
-# dex_get_batchs__historical
+# dex_get_batches__historical
 #
-# Batchs (historical)
+# Batches (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -184,19 +184,19 @@ sub dex_deposits__current {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'dex_get_batchs__historical' } = {
-        summary => 'Batchs (historical)',
+    __PACKAGE__->method_documentation->{ 'dex_get_batches__historical' } = {
+        summary => 'Batches (historical)',
         params => $params,
         returns => 'ARRAY[DexBatchDTO]',
         };
 }
 # @return ARRAY[DexBatchDTO]
 #
-sub dex_get_batchs__historical {
+sub dex_get_batches__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/batchs/historical';
+    my $_resource_path = '/dapps/dex/batches/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -700,9 +700,9 @@ sub dex_get_solutions__historical {
 }
 
 #
-# dex_get_statss__historical
+# dex_get_stats__historical
 #
-# Statss (historical)
+# Stats (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -737,19 +737,19 @@ sub dex_get_solutions__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'dex_get_statss__historical' } = {
-        summary => 'Statss (historical)',
+    __PACKAGE__->method_documentation->{ 'dex_get_stats__historical' } = {
+        summary => 'Stats (historical)',
         params => $params,
         returns => 'ARRAY[DexStatsDTO]',
         };
 }
 # @return ARRAY[DexStatsDTO]
 #
-sub dex_get_statss__historical {
+sub dex_get_stats__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/statss/historical';
+    my $_resource_path = '/dapps/dex/stats/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1548,26 +1548,26 @@ sub dex_solutions__current {
 }
 
 #
-# dex_statss__current
+# dex_stats__current
 #
-# Statss (current)
+# Stats (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'dex_statss__current' } = {
-        summary => 'Statss (current)',
+    __PACKAGE__->method_documentation->{ 'dex_stats__current' } = {
+        summary => 'Stats (current)',
         params => $params,
         returns => 'ARRAY[DexStatsDTO]',
         };
 }
 # @return ARRAY[DexStatsDTO]
 #
-sub dex_statss__current {
+sub dex_stats__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/dex/statss/current';
+    my $_resource_path = '/dapps/dex/stats/current';
 
     my $_method = 'GET';
     my $query_params = {};

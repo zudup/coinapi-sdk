@@ -320,7 +320,7 @@ public class SushiswapApi {
         return localVarCall;
     }
     /**
-     * Build call for sushiswapDayDatasCurrent
+     * Build call for sushiswapDayDataCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -330,7 +330,7 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapDayDatasCurrentCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call sushiswapDayDataCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -347,7 +347,7 @@ public class SushiswapApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/sushiswap/dayDatas/current";
+        String localVarPath = "/dapps/sushiswap/dayData/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -377,14 +377,14 @@ public class SushiswapApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call sushiswapDayDatasCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return sushiswapDayDatasCurrentCall(_callback);
+    private okhttp3.Call sushiswapDayDataCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return sushiswapDayDataCurrentCall(_callback);
 
     }
 
     /**
-     * DayDatas (current)
-     * Gets dayDatas.
+     * DayData (current)
+     * Gets dayData.
      * @return List&lt;SushiswapDayDataDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -393,14 +393,14 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<SushiswapDayDataDTO> sushiswapDayDatasCurrent() throws ApiException {
-        ApiResponse<List<SushiswapDayDataDTO>> localVarResp = sushiswapDayDatasCurrentWithHttpInfo();
+    public List<SushiswapDayDataDTO> sushiswapDayDataCurrent() throws ApiException {
+        ApiResponse<List<SushiswapDayDataDTO>> localVarResp = sushiswapDayDataCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
-     * DayDatas (current)
-     * Gets dayDatas.
+     * DayData (current)
+     * Gets dayData.
      * @return ApiResponse&lt;List&lt;SushiswapDayDataDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -409,15 +409,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SushiswapDayDataDTO>> sushiswapDayDatasCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = sushiswapDayDatasCurrentValidateBeforeCall(null);
+    public ApiResponse<List<SushiswapDayDataDTO>> sushiswapDayDataCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = sushiswapDayDataCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<SushiswapDayDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * DayDatas (current) (asynchronously)
-     * Gets dayDatas.
+     * DayData (current) (asynchronously)
+     * Gets dayData.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -427,15 +427,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapDayDatasCurrentAsync(final ApiCallback<List<SushiswapDayDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call sushiswapDayDataCurrentAsync(final ApiCallback<List<SushiswapDayDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = sushiswapDayDatasCurrentValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = sushiswapDayDataCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<SushiswapDayDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for sushiswapFactorysCurrent
+     * Build call for sushiswapFactoriesCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -445,7 +445,7 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapFactorysCurrentCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call sushiswapFactoriesCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -462,7 +462,7 @@ public class SushiswapApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/sushiswap/factorys/current";
+        String localVarPath = "/dapps/sushiswap/factories/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -492,14 +492,14 @@ public class SushiswapApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call sushiswapFactorysCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return sushiswapFactorysCurrentCall(_callback);
+    private okhttp3.Call sushiswapFactoriesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return sushiswapFactoriesCurrentCall(_callback);
 
     }
 
     /**
-     * Factorys (current)
-     * Gets factorys.
+     * Factories (current)
+     * Gets factories.
      * @return List&lt;SushiswapFactoryDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -508,14 +508,14 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<SushiswapFactoryDTO> sushiswapFactorysCurrent() throws ApiException {
-        ApiResponse<List<SushiswapFactoryDTO>> localVarResp = sushiswapFactorysCurrentWithHttpInfo();
+    public List<SushiswapFactoryDTO> sushiswapFactoriesCurrent() throws ApiException {
+        ApiResponse<List<SushiswapFactoryDTO>> localVarResp = sushiswapFactoriesCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
-     * Factorys (current)
-     * Gets factorys.
+     * Factories (current)
+     * Gets factories.
      * @return ApiResponse&lt;List&lt;SushiswapFactoryDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -524,15 +524,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SushiswapFactoryDTO>> sushiswapFactorysCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = sushiswapFactorysCurrentValidateBeforeCall(null);
+    public ApiResponse<List<SushiswapFactoryDTO>> sushiswapFactoriesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = sushiswapFactoriesCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<SushiswapFactoryDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Factorys (current) (asynchronously)
-     * Gets factorys.
+     * Factories (current) (asynchronously)
+     * Gets factories.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -542,9 +542,9 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapFactorysCurrentAsync(final ApiCallback<List<SushiswapFactoryDTO>> _callback) throws ApiException {
+    public okhttp3.Call sushiswapFactoriesCurrentAsync(final ApiCallback<List<SushiswapFactoryDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = sushiswapFactorysCurrentValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = sushiswapFactoriesCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<SushiswapFactoryDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -868,7 +868,7 @@ public class SushiswapApi {
         return localVarCall;
     }
     /**
-     * Build call for sushiswapGetDayDatasHistorical
+     * Build call for sushiswapGetDayDataHistorical
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -883,7 +883,7 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapGetDayDatasHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call sushiswapGetDayDataHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -900,7 +900,7 @@ public class SushiswapApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/sushiswap/dayDatas/historical";
+        String localVarPath = "/dapps/sushiswap/dayData/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -950,14 +950,14 @@ public class SushiswapApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call sushiswapGetDayDatasHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
-        return sushiswapGetDayDatasHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
+    private okhttp3.Call sushiswapGetDayDataHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+        return sushiswapGetDayDataHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
 
     }
 
     /**
-     * DayDatas (historical)
-     * Gets dayDatas.
+     * DayData (historical)
+     * Gets dayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -971,14 +971,14 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<SushiswapDayDataDTO> sushiswapGetDayDatasHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        ApiResponse<List<SushiswapDayDataDTO>> localVarResp = sushiswapGetDayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+    public List<SushiswapDayDataDTO> sushiswapGetDayDataHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        ApiResponse<List<SushiswapDayDataDTO>> localVarResp = sushiswapGetDayDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
         return localVarResp.getData();
     }
 
     /**
-     * DayDatas (historical)
-     * Gets dayDatas.
+     * DayData (historical)
+     * Gets dayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -992,15 +992,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SushiswapDayDataDTO>> sushiswapGetDayDatasHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        okhttp3.Call localVarCall = sushiswapGetDayDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
+    public ApiResponse<List<SushiswapDayDataDTO>> sushiswapGetDayDataHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        okhttp3.Call localVarCall = sushiswapGetDayDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
         Type localVarReturnType = new TypeToken<List<SushiswapDayDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * DayDatas (historical) (asynchronously)
-     * Gets dayDatas.
+     * DayData (historical) (asynchronously)
+     * Gets dayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1015,15 +1015,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapGetDayDatasHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<SushiswapDayDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call sushiswapGetDayDataHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<SushiswapDayDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = sushiswapGetDayDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
+        okhttp3.Call localVarCall = sushiswapGetDayDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
         Type localVarReturnType = new TypeToken<List<SushiswapDayDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for sushiswapGetFactorysHistorical
+     * Build call for sushiswapGetFactoriesHistorical
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1038,7 +1038,7 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapGetFactorysHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call sushiswapGetFactoriesHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1055,7 +1055,7 @@ public class SushiswapApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/sushiswap/factorys/historical";
+        String localVarPath = "/dapps/sushiswap/factories/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1105,14 +1105,14 @@ public class SushiswapApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call sushiswapGetFactorysHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
-        return sushiswapGetFactorysHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
+    private okhttp3.Call sushiswapGetFactoriesHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+        return sushiswapGetFactoriesHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
 
     }
 
     /**
-     * Factorys (historical)
-     * Gets factorys.
+     * Factories (historical)
+     * Gets factories.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1126,14 +1126,14 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<SushiswapFactoryDTO> sushiswapGetFactorysHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        ApiResponse<List<SushiswapFactoryDTO>> localVarResp = sushiswapGetFactorysHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+    public List<SushiswapFactoryDTO> sushiswapGetFactoriesHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        ApiResponse<List<SushiswapFactoryDTO>> localVarResp = sushiswapGetFactoriesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
         return localVarResp.getData();
     }
 
     /**
-     * Factorys (historical)
-     * Gets factorys.
+     * Factories (historical)
+     * Gets factories.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1147,15 +1147,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SushiswapFactoryDTO>> sushiswapGetFactorysHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        okhttp3.Call localVarCall = sushiswapGetFactorysHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
+    public ApiResponse<List<SushiswapFactoryDTO>> sushiswapGetFactoriesHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        okhttp3.Call localVarCall = sushiswapGetFactoriesHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
         Type localVarReturnType = new TypeToken<List<SushiswapFactoryDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Factorys (historical) (asynchronously)
-     * Gets factorys.
+     * Factories (historical) (asynchronously)
+     * Gets factories.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1170,15 +1170,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapGetFactorysHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<SushiswapFactoryDTO>> _callback) throws ApiException {
+    public okhttp3.Call sushiswapGetFactoriesHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<SushiswapFactoryDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = sushiswapGetFactorysHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
+        okhttp3.Call localVarCall = sushiswapGetFactoriesHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
         Type localVarReturnType = new TypeToken<List<SushiswapFactoryDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for sushiswapGetHourDatasHistorical
+     * Build call for sushiswapGetHourDataHistorical
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1193,7 +1193,7 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapGetHourDatasHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call sushiswapGetHourDataHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1210,7 +1210,7 @@ public class SushiswapApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/sushiswap/hourDatas/historical";
+        String localVarPath = "/dapps/sushiswap/hourData/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1260,14 +1260,14 @@ public class SushiswapApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call sushiswapGetHourDatasHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
-        return sushiswapGetHourDatasHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
+    private okhttp3.Call sushiswapGetHourDataHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+        return sushiswapGetHourDataHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
 
     }
 
     /**
-     * HourDatas (historical)
-     * Gets hourDatas.
+     * HourData (historical)
+     * Gets hourData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1281,14 +1281,14 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<SushiswapHourDataDTO> sushiswapGetHourDatasHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        ApiResponse<List<SushiswapHourDataDTO>> localVarResp = sushiswapGetHourDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+    public List<SushiswapHourDataDTO> sushiswapGetHourDataHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        ApiResponse<List<SushiswapHourDataDTO>> localVarResp = sushiswapGetHourDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
         return localVarResp.getData();
     }
 
     /**
-     * HourDatas (historical)
-     * Gets hourDatas.
+     * HourData (historical)
+     * Gets hourData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1302,15 +1302,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SushiswapHourDataDTO>> sushiswapGetHourDatasHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        okhttp3.Call localVarCall = sushiswapGetHourDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
+    public ApiResponse<List<SushiswapHourDataDTO>> sushiswapGetHourDataHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        okhttp3.Call localVarCall = sushiswapGetHourDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
         Type localVarReturnType = new TypeToken<List<SushiswapHourDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * HourDatas (historical) (asynchronously)
-     * Gets hourDatas.
+     * HourData (historical) (asynchronously)
+     * Gets hourData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1325,9 +1325,9 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapGetHourDatasHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<SushiswapHourDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call sushiswapGetHourDataHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<SushiswapHourDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = sushiswapGetHourDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
+        okhttp3.Call localVarCall = sushiswapGetHourDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
         Type localVarReturnType = new TypeToken<List<SushiswapHourDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -1838,7 +1838,7 @@ public class SushiswapApi {
         return localVarCall;
     }
     /**
-     * Build call for sushiswapGetPairDayDatasHistorical
+     * Build call for sushiswapGetPairDayDataHistorical
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1856,7 +1856,7 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapGetPairDayDatasHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair, String token0, String token1, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call sushiswapGetPairDayDataHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair, String token0, String token1, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1873,7 +1873,7 @@ public class SushiswapApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/sushiswap/pairDayDatas/historical";
+        String localVarPath = "/dapps/sushiswap/pairDayData/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1935,14 +1935,14 @@ public class SushiswapApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call sushiswapGetPairDayDatasHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair, String token0, String token1, final ApiCallback _callback) throws ApiException {
-        return sushiswapGetPairDayDatasHistoricalCall(startBlock, endBlock, startDate, endDate, id, pair, token0, token1, _callback);
+    private okhttp3.Call sushiswapGetPairDayDataHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair, String token0, String token1, final ApiCallback _callback) throws ApiException {
+        return sushiswapGetPairDayDataHistoricalCall(startBlock, endBlock, startDate, endDate, id, pair, token0, token1, _callback);
 
     }
 
     /**
-     * PairDayDatas (historical)
-     * Gets pairDayDatas.
+     * PairDayData (historical)
+     * Gets pairDayData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1959,14 +1959,14 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<SushiswapPairDayDataDTO> sushiswapGetPairDayDatasHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair, String token0, String token1) throws ApiException {
-        ApiResponse<List<SushiswapPairDayDataDTO>> localVarResp = sushiswapGetPairDayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pair, token0, token1);
+    public List<SushiswapPairDayDataDTO> sushiswapGetPairDayDataHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair, String token0, String token1) throws ApiException {
+        ApiResponse<List<SushiswapPairDayDataDTO>> localVarResp = sushiswapGetPairDayDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pair, token0, token1);
         return localVarResp.getData();
     }
 
     /**
-     * PairDayDatas (historical)
-     * Gets pairDayDatas.
+     * PairDayData (historical)
+     * Gets pairDayData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -1983,15 +1983,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SushiswapPairDayDataDTO>> sushiswapGetPairDayDatasHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair, String token0, String token1) throws ApiException {
-        okhttp3.Call localVarCall = sushiswapGetPairDayDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pair, token0, token1, null);
+    public ApiResponse<List<SushiswapPairDayDataDTO>> sushiswapGetPairDayDataHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair, String token0, String token1) throws ApiException {
+        okhttp3.Call localVarCall = sushiswapGetPairDayDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pair, token0, token1, null);
         Type localVarReturnType = new TypeToken<List<SushiswapPairDayDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * PairDayDatas (historical) (asynchronously)
-     * Gets pairDayDatas.
+     * PairDayData (historical) (asynchronously)
+     * Gets pairDayData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2009,15 +2009,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapGetPairDayDatasHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair, String token0, String token1, final ApiCallback<List<SushiswapPairDayDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call sushiswapGetPairDayDataHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair, String token0, String token1, final ApiCallback<List<SushiswapPairDayDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = sushiswapGetPairDayDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pair, token0, token1, _callback);
+        okhttp3.Call localVarCall = sushiswapGetPairDayDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pair, token0, token1, _callback);
         Type localVarReturnType = new TypeToken<List<SushiswapPairDayDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for sushiswapGetPairHourDatasHistorical
+     * Build call for sushiswapGetPairHourDataHistorical
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2033,7 +2033,7 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapGetPairHourDatasHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call sushiswapGetPairHourDataHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2050,7 +2050,7 @@ public class SushiswapApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/sushiswap/pairHourDatas/historical";
+        String localVarPath = "/dapps/sushiswap/pairHourData/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2104,14 +2104,14 @@ public class SushiswapApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call sushiswapGetPairHourDatasHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair, final ApiCallback _callback) throws ApiException {
-        return sushiswapGetPairHourDatasHistoricalCall(startBlock, endBlock, startDate, endDate, id, pair, _callback);
+    private okhttp3.Call sushiswapGetPairHourDataHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair, final ApiCallback _callback) throws ApiException {
+        return sushiswapGetPairHourDataHistoricalCall(startBlock, endBlock, startDate, endDate, id, pair, _callback);
 
     }
 
     /**
-     * PairHourDatas (historical)
-     * Gets pairHourDatas.
+     * PairHourData (historical)
+     * Gets pairHourData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2126,14 +2126,14 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<SushiswapPairHourDataDTO> sushiswapGetPairHourDatasHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair) throws ApiException {
-        ApiResponse<List<SushiswapPairHourDataDTO>> localVarResp = sushiswapGetPairHourDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pair);
+    public List<SushiswapPairHourDataDTO> sushiswapGetPairHourDataHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair) throws ApiException {
+        ApiResponse<List<SushiswapPairHourDataDTO>> localVarResp = sushiswapGetPairHourDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, pair);
         return localVarResp.getData();
     }
 
     /**
-     * PairHourDatas (historical)
-     * Gets pairHourDatas.
+     * PairHourData (historical)
+     * Gets pairHourData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2148,15 +2148,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SushiswapPairHourDataDTO>> sushiswapGetPairHourDatasHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair) throws ApiException {
-        okhttp3.Call localVarCall = sushiswapGetPairHourDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pair, null);
+    public ApiResponse<List<SushiswapPairHourDataDTO>> sushiswapGetPairHourDataHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair) throws ApiException {
+        okhttp3.Call localVarCall = sushiswapGetPairHourDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pair, null);
         Type localVarReturnType = new TypeToken<List<SushiswapPairHourDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * PairHourDatas (historical) (asynchronously)
-     * Gets pairHourDatas.
+     * PairHourData (historical) (asynchronously)
+     * Gets pairHourData.
      * @param startBlock  (optional)
      * @param endBlock  (optional)
      * @param startDate  (optional)
@@ -2172,9 +2172,9 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapGetPairHourDatasHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair, final ApiCallback<List<SushiswapPairHourDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call sushiswapGetPairHourDataHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String pair, final ApiCallback<List<SushiswapPairHourDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = sushiswapGetPairHourDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pair, _callback);
+        okhttp3.Call localVarCall = sushiswapGetPairHourDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, pair, _callback);
         Type localVarReturnType = new TypeToken<List<SushiswapPairHourDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -2522,7 +2522,7 @@ public class SushiswapApi {
         return localVarCall;
     }
     /**
-     * Build call for sushiswapGetTokenDayDatasHistorical
+     * Build call for sushiswapGetTokenDayDataHistorical
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2537,7 +2537,7 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapGetTokenDayDatasHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call sushiswapGetTokenDayDataHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2554,7 +2554,7 @@ public class SushiswapApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/sushiswap/tokenDayDatas/historical";
+        String localVarPath = "/dapps/sushiswap/tokenDayData/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2604,14 +2604,14 @@ public class SushiswapApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call sushiswapGetTokenDayDatasHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
-        return sushiswapGetTokenDayDatasHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
+    private okhttp3.Call sushiswapGetTokenDayDataHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+        return sushiswapGetTokenDayDataHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
 
     }
 
     /**
-     * TokenDayDatas (historical)
-     * Gets tokenDayDatas.
+     * TokenDayData (historical)
+     * Gets tokenDayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2625,14 +2625,14 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<SushiswapTokenDayDataDTO> sushiswapGetTokenDayDatasHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        ApiResponse<List<SushiswapTokenDayDataDTO>> localVarResp = sushiswapGetTokenDayDatasHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+    public List<SushiswapTokenDayDataDTO> sushiswapGetTokenDayDataHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        ApiResponse<List<SushiswapTokenDayDataDTO>> localVarResp = sushiswapGetTokenDayDataHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
         return localVarResp.getData();
     }
 
     /**
-     * TokenDayDatas (historical)
-     * Gets tokenDayDatas.
+     * TokenDayData (historical)
+     * Gets tokenDayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2646,15 +2646,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SushiswapTokenDayDataDTO>> sushiswapGetTokenDayDatasHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        okhttp3.Call localVarCall = sushiswapGetTokenDayDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
+    public ApiResponse<List<SushiswapTokenDayDataDTO>> sushiswapGetTokenDayDataHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        okhttp3.Call localVarCall = sushiswapGetTokenDayDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
         Type localVarReturnType = new TypeToken<List<SushiswapTokenDayDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * TokenDayDatas (historical) (asynchronously)
-     * Gets tokenDayDatas.
+     * TokenDayData (historical) (asynchronously)
+     * Gets tokenDayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -2669,9 +2669,9 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapGetTokenDayDatasHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<SushiswapTokenDayDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call sushiswapGetTokenDayDataHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<SushiswapTokenDayDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = sushiswapGetTokenDayDatasHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
+        okhttp3.Call localVarCall = sushiswapGetTokenDayDataHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
         Type localVarReturnType = new TypeToken<List<SushiswapTokenDayDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -3158,7 +3158,7 @@ public class SushiswapApi {
         return localVarCall;
     }
     /**
-     * Build call for sushiswapHourDatasCurrent
+     * Build call for sushiswapHourDataCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -3168,7 +3168,7 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapHourDatasCurrentCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call sushiswapHourDataCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3185,7 +3185,7 @@ public class SushiswapApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/sushiswap/hourDatas/current";
+        String localVarPath = "/dapps/sushiswap/hourData/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3215,14 +3215,14 @@ public class SushiswapApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call sushiswapHourDatasCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return sushiswapHourDatasCurrentCall(_callback);
+    private okhttp3.Call sushiswapHourDataCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return sushiswapHourDataCurrentCall(_callback);
 
     }
 
     /**
-     * HourDatas (current)
-     * Gets hourDatas.
+     * HourData (current)
+     * Gets hourData.
      * @return List&lt;SushiswapHourDataDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3231,14 +3231,14 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<SushiswapHourDataDTO> sushiswapHourDatasCurrent() throws ApiException {
-        ApiResponse<List<SushiswapHourDataDTO>> localVarResp = sushiswapHourDatasCurrentWithHttpInfo();
+    public List<SushiswapHourDataDTO> sushiswapHourDataCurrent() throws ApiException {
+        ApiResponse<List<SushiswapHourDataDTO>> localVarResp = sushiswapHourDataCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
-     * HourDatas (current)
-     * Gets hourDatas.
+     * HourData (current)
+     * Gets hourData.
      * @return ApiResponse&lt;List&lt;SushiswapHourDataDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3247,15 +3247,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SushiswapHourDataDTO>> sushiswapHourDatasCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = sushiswapHourDatasCurrentValidateBeforeCall(null);
+    public ApiResponse<List<SushiswapHourDataDTO>> sushiswapHourDataCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = sushiswapHourDataCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<SushiswapHourDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * HourDatas (current) (asynchronously)
-     * Gets hourDatas.
+     * HourData (current) (asynchronously)
+     * Gets hourData.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3265,9 +3265,9 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapHourDatasCurrentAsync(final ApiCallback<List<SushiswapHourDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call sushiswapHourDataCurrentAsync(final ApiCallback<List<SushiswapHourDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = sushiswapHourDatasCurrentValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = sushiswapHourDataCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<SushiswapHourDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -3618,7 +3618,7 @@ public class SushiswapApi {
         return localVarCall;
     }
     /**
-     * Build call for sushiswapPairDayDatasCurrent
+     * Build call for sushiswapPairDayDataCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -3628,7 +3628,7 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapPairDayDatasCurrentCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call sushiswapPairDayDataCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3645,7 +3645,7 @@ public class SushiswapApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/sushiswap/pairDayDatas/current";
+        String localVarPath = "/dapps/sushiswap/pairDayData/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3675,14 +3675,14 @@ public class SushiswapApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call sushiswapPairDayDatasCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return sushiswapPairDayDatasCurrentCall(_callback);
+    private okhttp3.Call sushiswapPairDayDataCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return sushiswapPairDayDataCurrentCall(_callback);
 
     }
 
     /**
-     * PairDayDatas (current)
-     * Gets pairDayDatas.
+     * PairDayData (current)
+     * Gets pairDayData.
      * @return List&lt;SushiswapPairDayDataDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3691,14 +3691,14 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<SushiswapPairDayDataDTO> sushiswapPairDayDatasCurrent() throws ApiException {
-        ApiResponse<List<SushiswapPairDayDataDTO>> localVarResp = sushiswapPairDayDatasCurrentWithHttpInfo();
+    public List<SushiswapPairDayDataDTO> sushiswapPairDayDataCurrent() throws ApiException {
+        ApiResponse<List<SushiswapPairDayDataDTO>> localVarResp = sushiswapPairDayDataCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
-     * PairDayDatas (current)
-     * Gets pairDayDatas.
+     * PairDayData (current)
+     * Gets pairDayData.
      * @return ApiResponse&lt;List&lt;SushiswapPairDayDataDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3707,15 +3707,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SushiswapPairDayDataDTO>> sushiswapPairDayDatasCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = sushiswapPairDayDatasCurrentValidateBeforeCall(null);
+    public ApiResponse<List<SushiswapPairDayDataDTO>> sushiswapPairDayDataCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = sushiswapPairDayDataCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<SushiswapPairDayDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * PairDayDatas (current) (asynchronously)
-     * Gets pairDayDatas.
+     * PairDayData (current) (asynchronously)
+     * Gets pairDayData.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3725,15 +3725,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapPairDayDatasCurrentAsync(final ApiCallback<List<SushiswapPairDayDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call sushiswapPairDayDataCurrentAsync(final ApiCallback<List<SushiswapPairDayDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = sushiswapPairDayDatasCurrentValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = sushiswapPairDayDataCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<SushiswapPairDayDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
     }
     /**
-     * Build call for sushiswapPairHourDatasCurrent
+     * Build call for sushiswapPairHourDataCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -3743,7 +3743,7 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapPairHourDatasCurrentCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call sushiswapPairHourDataCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -3760,7 +3760,7 @@ public class SushiswapApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/sushiswap/pairHourDatas/current";
+        String localVarPath = "/dapps/sushiswap/pairHourData/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -3790,14 +3790,14 @@ public class SushiswapApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call sushiswapPairHourDatasCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return sushiswapPairHourDatasCurrentCall(_callback);
+    private okhttp3.Call sushiswapPairHourDataCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return sushiswapPairHourDataCurrentCall(_callback);
 
     }
 
     /**
-     * PairHourDatas (current)
-     * Gets pairHourDatas.
+     * PairHourData (current)
+     * Gets pairHourData.
      * @return List&lt;SushiswapPairHourDataDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3806,14 +3806,14 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<SushiswapPairHourDataDTO> sushiswapPairHourDatasCurrent() throws ApiException {
-        ApiResponse<List<SushiswapPairHourDataDTO>> localVarResp = sushiswapPairHourDatasCurrentWithHttpInfo();
+    public List<SushiswapPairHourDataDTO> sushiswapPairHourDataCurrent() throws ApiException {
+        ApiResponse<List<SushiswapPairHourDataDTO>> localVarResp = sushiswapPairHourDataCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
-     * PairHourDatas (current)
-     * Gets pairHourDatas.
+     * PairHourData (current)
+     * Gets pairHourData.
      * @return ApiResponse&lt;List&lt;SushiswapPairHourDataDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -3822,15 +3822,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SushiswapPairHourDataDTO>> sushiswapPairHourDatasCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = sushiswapPairHourDatasCurrentValidateBeforeCall(null);
+    public ApiResponse<List<SushiswapPairHourDataDTO>> sushiswapPairHourDataCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = sushiswapPairHourDataCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<SushiswapPairHourDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * PairHourDatas (current) (asynchronously)
-     * Gets pairHourDatas.
+     * PairHourData (current) (asynchronously)
+     * Gets pairHourData.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -3840,9 +3840,9 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapPairHourDatasCurrentAsync(final ApiCallback<List<SushiswapPairHourDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call sushiswapPairHourDataCurrentAsync(final ApiCallback<List<SushiswapPairHourDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = sushiswapPairHourDatasCurrentValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = sushiswapPairHourDataCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<SushiswapPairHourDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -4094,7 +4094,7 @@ public class SushiswapApi {
         return localVarCall;
     }
     /**
-     * Build call for sushiswapTokenDayDatasCurrent
+     * Build call for sushiswapTokenDayDataCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -4104,7 +4104,7 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapTokenDayDatasCurrentCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call sushiswapTokenDayDataCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -4121,7 +4121,7 @@ public class SushiswapApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/sushiswap/tokenDayDatas/current";
+        String localVarPath = "/dapps/sushiswap/tokenDayData/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4151,14 +4151,14 @@ public class SushiswapApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call sushiswapTokenDayDatasCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return sushiswapTokenDayDatasCurrentCall(_callback);
+    private okhttp3.Call sushiswapTokenDayDataCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return sushiswapTokenDayDataCurrentCall(_callback);
 
     }
 
     /**
-     * TokenDayDatas (current)
-     * Gets tokenDayDatas.
+     * TokenDayData (current)
+     * Gets tokenDayData.
      * @return List&lt;SushiswapTokenDayDataDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -4167,14 +4167,14 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<SushiswapTokenDayDataDTO> sushiswapTokenDayDatasCurrent() throws ApiException {
-        ApiResponse<List<SushiswapTokenDayDataDTO>> localVarResp = sushiswapTokenDayDatasCurrentWithHttpInfo();
+    public List<SushiswapTokenDayDataDTO> sushiswapTokenDayDataCurrent() throws ApiException {
+        ApiResponse<List<SushiswapTokenDayDataDTO>> localVarResp = sushiswapTokenDayDataCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
-     * TokenDayDatas (current)
-     * Gets tokenDayDatas.
+     * TokenDayData (current)
+     * Gets tokenDayData.
      * @return ApiResponse&lt;List&lt;SushiswapTokenDayDataDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -4183,15 +4183,15 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<SushiswapTokenDayDataDTO>> sushiswapTokenDayDatasCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = sushiswapTokenDayDatasCurrentValidateBeforeCall(null);
+    public ApiResponse<List<SushiswapTokenDayDataDTO>> sushiswapTokenDayDataCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = sushiswapTokenDayDataCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<SushiswapTokenDayDataDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * TokenDayDatas (current) (asynchronously)
-     * Gets tokenDayDatas.
+     * TokenDayData (current) (asynchronously)
+     * Gets tokenDayData.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -4201,9 +4201,9 @@ public class SushiswapApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call sushiswapTokenDayDatasCurrentAsync(final ApiCallback<List<SushiswapTokenDayDataDTO>> _callback) throws ApiException {
+    public okhttp3.Call sushiswapTokenDayDataCurrentAsync(final ApiCallback<List<SushiswapTokenDayDataDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = sushiswapTokenDayDatasCurrentValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = sushiswapTokenDayDataCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<SushiswapTokenDayDataDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

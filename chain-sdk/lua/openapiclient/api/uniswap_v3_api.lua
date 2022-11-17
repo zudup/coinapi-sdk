@@ -158,12 +158,12 @@ function uniswap_v3_api:uniswap_v3_burns__current()
 	end
 end
 
-function uniswap_v3_api:uniswap_v3_factorys__current()
+function uniswap_v3_api:uniswap_v3_factories__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv3/factorys/current",
+		path = string.format("%s/dapps/uniswapv3/factories/current",
 			self.basePath);
 	})
 
@@ -305,12 +305,12 @@ function uniswap_v3_api:uniswap_v3_get_burns__historical(start_block, end_block,
 	end
 end
 
-function uniswap_v3_api:uniswap_v3_get_factorys__historical(start_block, end_block, start_date, end_date, id)
+function uniswap_v3_api:uniswap_v3_get_factories__historical(start_block, end_block, start_date, end_date, id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv3/factorys/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/uniswapv3/factories/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -403,12 +403,12 @@ function uniswap_v3_api:uniswap_v3_get_mints__historical(start_block, end_block,
 	end
 end
 
-function uniswap_v3_api:uniswap_v3_get_pool_day_datas__historical(start_block, end_block, start_date, end_date, id, pool)
+function uniswap_v3_api:uniswap_v3_get_pool_day_data__historical(start_block, end_block, start_date, end_date, id, pool)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv3/poolDayDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pool=%s",
+		path = string.format("%s/dapps/uniswapv3/poolDayData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pool=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(pool));
 	})
 
@@ -452,12 +452,12 @@ function uniswap_v3_api:uniswap_v3_get_pool_day_datas__historical(start_block, e
 	end
 end
 
-function uniswap_v3_api:uniswap_v3_get_pool_hour_datas__historical(start_block, end_block, start_date, end_date, id, pool)
+function uniswap_v3_api:uniswap_v3_get_pool_hour_data__historical(start_block, end_block, start_date, end_date, id, pool)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv3/poolHourDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pool=%s",
+		path = string.format("%s/dapps/uniswapv3/poolHourData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pool=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(pool));
 	})
 
@@ -697,12 +697,12 @@ function uniswap_v3_api:uniswap_v3_get_swaps__historical(start_block, end_block,
 	end
 end
 
-function uniswap_v3_api:uniswap_v3_get_tick_day_datas__historical(start_block, end_block, start_date, end_date, id, pool)
+function uniswap_v3_api:uniswap_v3_get_tick_day_data__historical(start_block, end_block, start_date, end_date, id, pool)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv3/tickDayDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pool=%s",
+		path = string.format("%s/dapps/uniswapv3/tickDayData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s&pool=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id), http_util.encodeURIComponent(pool));
 	})
 
@@ -795,12 +795,12 @@ function uniswap_v3_api:uniswap_v3_get_ticks__historical(start_block, end_block,
 	end
 end
 
-function uniswap_v3_api:uniswap_v3_get_token_hour_datas__historical(start_block, end_block, start_date, end_date, id)
+function uniswap_v3_api:uniswap_v3_get_token_hour_data__historical(start_block, end_block, start_date, end_date, id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv3/tokenHourDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/uniswapv3/tokenHourData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -844,12 +844,12 @@ function uniswap_v3_api:uniswap_v3_get_token_hour_datas__historical(start_block,
 	end
 end
 
-function uniswap_v3_api:uniswap_v3_get_token_v3_day_datas__historical(start_block, end_block, start_date, end_date, id)
+function uniswap_v3_api:uniswap_v3_get_token_v3_day_data__historical(start_block, end_block, start_date, end_date, id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv3/tokenV3DayDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/uniswapv3/tokenV3DayData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -991,12 +991,12 @@ function uniswap_v3_api:uniswap_v3_get_transactions__historical(start_block, end
 	end
 end
 
-function uniswap_v3_api:uniswap_v3_get_uniswap_day_datas__historical(start_block, end_block, start_date, end_date, id)
+function uniswap_v3_api:uniswap_v3_get_uniswap_day_data__historical(start_block, end_block, start_date, end_date, id)
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv3/uniswapDayDatas/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
+		path = string.format("%s/dapps/uniswapv3/uniswapDayData/historical?startBlock=%s&endBlock=%s&startDate=%s&endDate=%s&id=%s",
 			self.basePath, http_util.encodeURIComponent(start_block), http_util.encodeURIComponent(end_block), http_util.encodeURIComponent(start_date), http_util.encodeURIComponent(end_date), http_util.encodeURIComponent(id));
 	})
 
@@ -1089,12 +1089,12 @@ function uniswap_v3_api:uniswap_v3_mints__current()
 	end
 end
 
-function uniswap_v3_api:uniswap_v3_pool_day_datas__current()
+function uniswap_v3_api:uniswap_v3_pool_day_data__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv3/poolDayDatas/current",
+		path = string.format("%s/dapps/uniswapv3/poolDayData/current",
 			self.basePath);
 	})
 
@@ -1138,12 +1138,12 @@ function uniswap_v3_api:uniswap_v3_pool_day_datas__current()
 	end
 end
 
-function uniswap_v3_api:uniswap_v3_pool_hour_datas__current()
+function uniswap_v3_api:uniswap_v3_pool_hour_data__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv3/poolHourDatas/current",
+		path = string.format("%s/dapps/uniswapv3/poolHourData/current",
 			self.basePath);
 	})
 
@@ -1383,12 +1383,12 @@ function uniswap_v3_api:uniswap_v3_swaps__current(pool)
 	end
 end
 
-function uniswap_v3_api:uniswap_v3_tick_day_datas__current()
+function uniswap_v3_api:uniswap_v3_tick_day_data__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv3/tickDayDatas/current",
+		path = string.format("%s/dapps/uniswapv3/tickDayData/current",
 			self.basePath);
 	})
 
@@ -1481,12 +1481,12 @@ function uniswap_v3_api:uniswap_v3_ticks__current()
 	end
 end
 
-function uniswap_v3_api:uniswap_v3_token_hour_datas__current()
+function uniswap_v3_api:uniswap_v3_token_hour_data__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv3/tokenHourDatas/current",
+		path = string.format("%s/dapps/uniswapv3/tokenHourData/current",
 			self.basePath);
 	})
 
@@ -1530,12 +1530,12 @@ function uniswap_v3_api:uniswap_v3_token_hour_datas__current()
 	end
 end
 
-function uniswap_v3_api:uniswap_v3_token_v3_day_datas__current()
+function uniswap_v3_api:uniswap_v3_token_v3_day_data__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv3/tokenV3DayDatas/current",
+		path = string.format("%s/dapps/uniswapv3/tokenV3DayData/current",
 			self.basePath);
 	})
 
@@ -1677,12 +1677,12 @@ function uniswap_v3_api:uniswap_v3_transactions__current()
 	end
 end
 
-function uniswap_v3_api:uniswap_v3_uniswap_day_datas__current()
+function uniswap_v3_api:uniswap_v3_uniswap_day_data__current()
 	local req = http_request.new_from_uri({
 		scheme = self.default_scheme;
 		host = self.host;
 		port = self.port;
-		path = string.format("%s/dapps/uniswapv3/uniswapDayDatas/current",
+		path = string.format("%s/dapps/uniswapv3/uniswapDayData/current",
 			self.basePath);
 	})
 

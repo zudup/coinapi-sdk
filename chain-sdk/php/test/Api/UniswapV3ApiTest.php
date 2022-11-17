@@ -97,12 +97,12 @@ class UniswapV3ApiTest extends TestCase
     }
 
     /**
-     * Test case for uniswapV3FactorysCurrent
+     * Test case for uniswapV3FactoriesCurrent
      *
-     * Factorys (current).
+     * Factories (current).
      *
      */
-    public function testUniswapV3FactorysCurrent()
+    public function testUniswapV3FactoriesCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -133,12 +133,12 @@ class UniswapV3ApiTest extends TestCase
     }
 
     /**
-     * Test case for uniswapV3GetFactorysHistorical
+     * Test case for uniswapV3GetFactoriesHistorical
      *
-     * Factorys (historical).
+     * Factories (historical).
      *
      */
-    public function testUniswapV3GetFactorysHistorical()
+    public function testUniswapV3GetFactoriesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -157,24 +157,24 @@ class UniswapV3ApiTest extends TestCase
     }
 
     /**
-     * Test case for uniswapV3GetPoolDayDatasHistorical
+     * Test case for uniswapV3GetPoolDayDataHistorical
      *
-     * PoolDayDatas (historical).
+     * PoolDayData (historical).
      *
      */
-    public function testUniswapV3GetPoolDayDatasHistorical()
+    public function testUniswapV3GetPoolDayDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for uniswapV3GetPoolHourDatasHistorical
+     * Test case for uniswapV3GetPoolHourDataHistorical
      *
-     * PoolHourDatas (historical).
+     * PoolHourData (historical).
      *
      */
-    public function testUniswapV3GetPoolHourDatasHistorical()
+    public function testUniswapV3GetPoolHourDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -229,12 +229,12 @@ class UniswapV3ApiTest extends TestCase
     }
 
     /**
-     * Test case for uniswapV3GetTickDayDatasHistorical
+     * Test case for uniswapV3GetTickDayDataHistorical
      *
-     * TickDayDatas (historical).
+     * TickDayData (historical).
      *
      */
-    public function testUniswapV3GetTickDayDatasHistorical()
+    public function testUniswapV3GetTickDayDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -253,24 +253,24 @@ class UniswapV3ApiTest extends TestCase
     }
 
     /**
-     * Test case for uniswapV3GetTokenHourDatasHistorical
+     * Test case for uniswapV3GetTokenHourDataHistorical
      *
-     * TokenHourDatas (historical).
+     * TokenHourData (historical).
      *
      */
-    public function testUniswapV3GetTokenHourDatasHistorical()
+    public function testUniswapV3GetTokenHourDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for uniswapV3GetTokenV3DayDatasHistorical
+     * Test case for uniswapV3GetTokenV3DayDataHistorical
      *
-     * TokenV3DayDatas (historical).
+     * TokenV3DayData (historical).
      *
      */
-    public function testUniswapV3GetTokenV3DayDatasHistorical()
+    public function testUniswapV3GetTokenV3DayDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -301,12 +301,12 @@ class UniswapV3ApiTest extends TestCase
     }
 
     /**
-     * Test case for uniswapV3GetUniswapDayDatasHistorical
+     * Test case for uniswapV3GetUniswapDayDataHistorical
      *
-     * UniswapDayDatas (historical).
+     * UniswapDayData (historical).
      *
      */
-    public function testUniswapV3GetUniswapDayDatasHistorical()
+    public function testUniswapV3GetUniswapDayDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -325,24 +325,24 @@ class UniswapV3ApiTest extends TestCase
     }
 
     /**
-     * Test case for uniswapV3PoolDayDatasCurrent
+     * Test case for uniswapV3PoolDayDataCurrent
      *
-     * PoolDayDatas (current).
+     * PoolDayData (current).
      *
      */
-    public function testUniswapV3PoolDayDatasCurrent()
+    public function testUniswapV3PoolDayDataCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for uniswapV3PoolHourDatasCurrent
+     * Test case for uniswapV3PoolHourDataCurrent
      *
-     * PoolHourDatas (current).
+     * PoolHourData (current).
      *
      */
-    public function testUniswapV3PoolHourDatasCurrent()
+    public function testUniswapV3PoolHourDataCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -397,12 +397,12 @@ class UniswapV3ApiTest extends TestCase
     }
 
     /**
-     * Test case for uniswapV3TickDayDatasCurrent
+     * Test case for uniswapV3TickDayDataCurrent
      *
-     * TickDayDatas (current).
+     * TickDayData (current).
      *
      */
-    public function testUniswapV3TickDayDatasCurrent()
+    public function testUniswapV3TickDayDataCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -421,24 +421,24 @@ class UniswapV3ApiTest extends TestCase
     }
 
     /**
-     * Test case for uniswapV3TokenHourDatasCurrent
+     * Test case for uniswapV3TokenHourDataCurrent
      *
-     * TokenHourDatas (current).
+     * TokenHourData (current).
      *
      */
-    public function testUniswapV3TokenHourDatasCurrent()
+    public function testUniswapV3TokenHourDataCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for uniswapV3TokenV3DayDatasCurrent
+     * Test case for uniswapV3TokenV3DayDataCurrent
      *
-     * TokenV3DayDatas (current).
+     * TokenV3DayData (current).
      *
      */
-    public function testUniswapV3TokenV3DayDatasCurrent()
+    public function testUniswapV3TokenV3DayDataCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -469,12 +469,12 @@ class UniswapV3ApiTest extends TestCase
     }
 
     /**
-     * Test case for uniswapV3UniswapDayDatasCurrent
+     * Test case for uniswapV3UniswapDayDataCurrent
      *
-     * UniswapDayDatas (current).
+     * UniswapDayData (current).
      *
      */
-    public function testUniswapV3UniswapDayDatasCurrent()
+    public function testUniswapV3UniswapDayDataCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

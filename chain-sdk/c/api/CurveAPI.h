@@ -127,12 +127,12 @@ list_t*
 CurveAPI_curveGaugeDepositsCurrent(apiClient_t *apiClient);
 
 
-// GaugeLiquiditys (current)
+// GaugeLiquidities (current)
 //
-// Gets gaugeLiquiditys.
+// Gets gaugeLiquidities.
 //
 list_t*
-CurveAPI_curveGaugeLiquiditysCurrent(apiClient_t *apiClient);
+CurveAPI_curveGaugeLiquiditiesCurrent(apiClient_t *apiClient);
 
 
 // GaugeTotalWeights (current)
@@ -279,12 +279,12 @@ list_t*
 CurveAPI_curveGetGaugeDepositsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id );
 
 
-// GaugeLiquiditys (historical)
+// GaugeLiquidities (historical)
 //
-// Gets gaugeLiquiditys.
+// Gets gaugeLiquidities.
 //
 list_t*
-CurveAPI_curveGetGaugeLiquiditysHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * user );
+CurveAPI_curveGetGaugeLiquiditiesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * user );
 
 
 // GaugeTotalWeights (historical)

@@ -262,17 +262,17 @@ public class OASCurveApi {
         );
     }
     /**
-     * GaugeLiquiditys (current)
-     * Gets gaugeLiquiditys.
+     * GaugeLiquidities (current)
+     * Gets gaugeLiquidities.
      * @return List<OASCurveGaugeLiquidityDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASCurveGaugeLiquidityDTO> curveGaugeLiquiditysCurrent() {
+    public List<OASCurveGaugeLiquidityDTO> curveGaugeLiquiditiesCurrent() {
         List<OAS.Param> query = new List<OAS.Param>();
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASCurveGaugeLiquidityDTO>) client.invoke(
-            'GET', '/dapps/curve/gaugeLiquiditys/current', '',
+            'GET', '/dapps/curve/gaugeLiquidities/current', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),
@@ -822,8 +822,8 @@ public class OASCurveApi {
         );
     }
     /**
-     * GaugeLiquiditys (historical)
-     * Gets gaugeLiquiditys.
+     * GaugeLiquidities (historical)
+     * Gets gaugeLiquidities.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -833,7 +833,7 @@ public class OASCurveApi {
      * @return List<OASCurveGaugeLiquidityDTO>
      * @throws OAS.ApiException if fails to make API call
      */
-    public List<OASCurveGaugeLiquidityDTO> curveGetGaugeLiquiditysHistorical(Map<String, Object> params) {
+    public List<OASCurveGaugeLiquidityDTO> curveGetGaugeLiquiditiesHistorical(Map<String, Object> params) {
         List<OAS.Param> query = new List<OAS.Param>();
 
         // cast query params to verify their expected type
@@ -847,7 +847,7 @@ public class OASCurveApi {
         List<OAS.Param> form = new List<OAS.Param>();
 
         return (List<OASCurveGaugeLiquidityDTO>) client.invoke(
-            'GET', '/dapps/curve/gaugeLiquiditys/historical', '',
+            'GET', '/dapps/curve/gaugeLiquidities/historical', '',
             query, form,
             new Map<String, Object>(),
             new Map<String, Object>(),

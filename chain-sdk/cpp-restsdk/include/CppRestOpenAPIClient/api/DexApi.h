@@ -55,12 +55,12 @@ public:
     virtual ~DexApi();
 
     /// <summary>
-    /// Batchs (current)
+    /// Batches (current)
     /// </summary>
     /// <remarks>
-    /// Gets batchs.
+    /// Gets batches.
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<Dex_BatchDTO>>> dex_Batchs__current(
+    pplx::task<std::vector<std::shared_ptr<Dex_BatchDTO>>> dex_Batches__current(
     ) const;
     /// <summary>
     /// Deposits (current)
@@ -71,17 +71,17 @@ public:
     pplx::task<std::vector<std::shared_ptr<Dex_DepositDTO>>> dex_Deposits__current(
     ) const;
     /// <summary>
-    /// Batchs (historical)
+    /// Batches (historical)
     /// </summary>
     /// <remarks>
-    /// Gets batchs.
+    /// Gets batches.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
     /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
     /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
     /// <param name="id">Identifier. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Dex_BatchDTO>>> dex_GetBatchs__historical(
+    pplx::task<std::vector<std::shared_ptr<Dex_BatchDTO>>> dex_GetBatches__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -167,17 +167,17 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// Statss (historical)
+    /// Stats (historical)
     /// </summary>
     /// <remarks>
-    /// Gets statss.
+    /// Gets stats.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
     /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
     /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
     /// <param name="id"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Dex_StatsDTO>>> dex_GetStatss__historical(
+    pplx::task<std::vector<std::shared_ptr<Dex_StatsDTO>>> dex_GetStats__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -313,12 +313,12 @@ public:
     pplx::task<std::vector<std::shared_ptr<Dex_SolutionDTO>>> dex_Solutions__current(
     ) const;
     /// <summary>
-    /// Statss (current)
+    /// Stats (current)
     /// </summary>
     /// <remarks>
-    /// Gets statss.
+    /// Gets stats.
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<Dex_StatsDTO>>> dex_Statss__current(
+    pplx::task<std::vector<std::shared_ptr<Dex_StatsDTO>>> dex_Stats__current(
     ) const;
     /// <summary>
     /// Tokens (current)

@@ -304,15 +304,15 @@ public class SushiswapApi {
     }
   }
   /**
-  * DayDatas (current)
-  * Gets dayDatas.
+  * DayData (current)
+  * Gets dayData.
    * @return List<SushiswapDayDataDTO>
   */
-  public List<SushiswapDayDataDTO> sushiswapDayDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SushiswapDayDataDTO> sushiswapDayDataCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/dayDatas/current";
+    String path = "/dapps/sushiswap/dayData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -360,16 +360,16 @@ public class SushiswapApi {
   }
 
       /**
-   * DayDatas (current)
-   * Gets dayDatas.
+   * DayData (current)
+   * Gets dayData.
 
   */
-  public void sushiswapDayDatasCurrent (final Response.Listener<List<SushiswapDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void sushiswapDayDataCurrent (final Response.Listener<List<SushiswapDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/dayDatas/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/dayData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -420,15 +420,15 @@ public class SushiswapApi {
     }
   }
   /**
-  * Factorys (current)
-  * Gets factorys.
+  * Factories (current)
+  * Gets factories.
    * @return List<SushiswapFactoryDTO>
   */
-  public List<SushiswapFactoryDTO> sushiswapFactorysCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SushiswapFactoryDTO> sushiswapFactoriesCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/factorys/current";
+    String path = "/dapps/sushiswap/factories/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -476,16 +476,16 @@ public class SushiswapApi {
   }
 
       /**
-   * Factorys (current)
-   * Gets factorys.
+   * Factories (current)
+   * Gets factories.
 
   */
-  public void sushiswapFactorysCurrent (final Response.Listener<List<SushiswapFactoryDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void sushiswapFactoriesCurrent (final Response.Listener<List<SushiswapFactoryDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/factorys/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/factories/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -801,8 +801,8 @@ public class SushiswapApi {
     }
   }
   /**
-  * DayDatas (historical)
-  * Gets dayDatas.
+  * DayData (historical)
+  * Gets dayData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -810,11 +810,11 @@ public class SushiswapApi {
    * @param id Unix timestamp for start of day / 86400 giving a unique day index.
    * @return List<SushiswapDayDataDTO>
   */
-  public List<SushiswapDayDataDTO> sushiswapGetDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SushiswapDayDataDTO> sushiswapGetDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/dayDatas/historical";
+    String path = "/dapps/sushiswap/dayData/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -867,16 +867,16 @@ public class SushiswapApi {
   }
 
       /**
-   * DayDatas (historical)
-   * Gets dayDatas.
+   * DayData (historical)
+   * Gets dayData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Unix timestamp for start of day / 86400 giving a unique day index.
   */
-  public void sushiswapGetDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<SushiswapDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void sushiswapGetDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<SushiswapDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/dayDatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/dayData/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -932,8 +932,8 @@ public class SushiswapApi {
     }
   }
   /**
-  * Factorys (historical)
-  * Gets factorys.
+  * Factories (historical)
+  * Gets factories.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -941,11 +941,11 @@ public class SushiswapApi {
    * @param id Factory address.
    * @return List<SushiswapFactoryDTO>
   */
-  public List<SushiswapFactoryDTO> sushiswapGetFactorysHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SushiswapFactoryDTO> sushiswapGetFactoriesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/factorys/historical";
+    String path = "/dapps/sushiswap/factories/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -998,16 +998,16 @@ public class SushiswapApi {
   }
 
       /**
-   * Factorys (historical)
-   * Gets factorys.
+   * Factories (historical)
+   * Gets factories.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Factory address.
   */
-  public void sushiswapGetFactorysHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<SushiswapFactoryDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void sushiswapGetFactoriesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<SushiswapFactoryDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/factorys/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/factories/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1063,8 +1063,8 @@ public class SushiswapApi {
     }
   }
   /**
-  * HourDatas (historical)
-  * Gets hourDatas.
+  * HourData (historical)
+  * Gets hourData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -1072,11 +1072,11 @@ public class SushiswapApi {
    * @param id Start of hour timestamp.
    * @return List<SushiswapHourDataDTO>
   */
-  public List<SushiswapHourDataDTO> sushiswapGetHourDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SushiswapHourDataDTO> sushiswapGetHourDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/hourDatas/historical";
+    String path = "/dapps/sushiswap/hourData/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1129,16 +1129,16 @@ public class SushiswapApi {
   }
 
       /**
-   * HourDatas (historical)
-   * Gets hourDatas.
+   * HourData (historical)
+   * Gets hourData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Start of hour timestamp.
   */
-  public void sushiswapGetHourDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<SushiswapHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void sushiswapGetHourDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<SushiswapHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/hourDatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/hourData/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1602,8 +1602,8 @@ public class SushiswapApi {
     }
   }
   /**
-  * PairDayDatas (historical)
-  * Gets pairDayDatas.
+  * PairDayData (historical)
+  * Gets pairDayData.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
@@ -1614,11 +1614,11 @@ public class SushiswapApi {
    * @param token1 
    * @return List<SushiswapPairDayDataDTO>
   */
-  public List<SushiswapPairDayDataDTO> sushiswapGetPairDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, String token0, String token1) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SushiswapPairDayDataDTO> sushiswapGetPairDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, String token0, String token1) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/pairDayDatas/historical";
+    String path = "/dapps/sushiswap/pairDayData/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1674,16 +1674,16 @@ public class SushiswapApi {
   }
 
       /**
-   * PairDayDatas (historical)
-   * Gets pairDayDatas.
+   * PairDayData (historical)
+   * Gets pairDayData.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pair    * @param token0    * @param token1 
   */
-  public void sushiswapGetPairDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, String token0, String token1, final Response.Listener<List<SushiswapPairDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void sushiswapGetPairDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, String token0, String token1, final Response.Listener<List<SushiswapPairDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/pairDayDatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/pairDayData/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1742,8 +1742,8 @@ public class SushiswapApi {
     }
   }
   /**
-  * PairHourDatas (historical)
-  * Gets pairHourDatas.
+  * PairHourData (historical)
+  * Gets pairHourData.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
@@ -1752,11 +1752,11 @@ public class SushiswapApi {
    * @param pair 
    * @return List<SushiswapPairHourDataDTO>
   */
-  public List<SushiswapPairHourDataDTO> sushiswapGetPairHourDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SushiswapPairHourDataDTO> sushiswapGetPairHourDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/pairHourDatas/historical";
+    String path = "/dapps/sushiswap/pairHourData/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1810,16 +1810,16 @@ public class SushiswapApi {
   }
 
       /**
-   * PairHourDatas (historical)
-   * Gets pairHourDatas.
+   * PairHourData (historical)
+   * Gets pairHourData.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pair 
   */
-  public void sushiswapGetPairHourDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, final Response.Listener<List<SushiswapPairHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void sushiswapGetPairHourDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pair, final Response.Listener<List<SushiswapPairHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/pairHourDatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/pairHourData/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2150,8 +2150,8 @@ public class SushiswapApi {
     }
   }
   /**
-  * TokenDayDatas (historical)
-  * Gets tokenDayDatas.
+  * TokenDayData (historical)
+  * Gets tokenDayData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -2159,11 +2159,11 @@ public class SushiswapApi {
    * @param id Identifier, day start timestamp in unix / 86400.
    * @return List<SushiswapTokenDayDataDTO>
   */
-  public List<SushiswapTokenDayDataDTO> sushiswapGetTokenDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SushiswapTokenDayDataDTO> sushiswapGetTokenDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/tokenDayDatas/historical";
+    String path = "/dapps/sushiswap/tokenDayData/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2216,16 +2216,16 @@ public class SushiswapApi {
   }
 
       /**
-   * TokenDayDatas (historical)
-   * Gets tokenDayDatas.
+   * TokenDayData (historical)
+   * Gets tokenDayData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier, day start timestamp in unix / 86400.
   */
-  public void sushiswapGetTokenDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<SushiswapTokenDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void sushiswapGetTokenDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<SushiswapTokenDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/tokenDayDatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/tokenDayData/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2680,15 +2680,15 @@ public class SushiswapApi {
     }
   }
   /**
-  * HourDatas (current)
-  * Gets hourDatas.
+  * HourData (current)
+  * Gets hourData.
    * @return List<SushiswapHourDataDTO>
   */
-  public List<SushiswapHourDataDTO> sushiswapHourDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SushiswapHourDataDTO> sushiswapHourDataCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/hourDatas/current";
+    String path = "/dapps/sushiswap/hourData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2736,16 +2736,16 @@ public class SushiswapApi {
   }
 
       /**
-   * HourDatas (current)
-   * Gets hourDatas.
+   * HourData (current)
+   * Gets hourData.
 
   */
-  public void sushiswapHourDatasCurrent (final Response.Listener<List<SushiswapHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void sushiswapHourDataCurrent (final Response.Listener<List<SushiswapHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/hourDatas/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/hourData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3144,15 +3144,15 @@ public class SushiswapApi {
     }
   }
   /**
-  * PairDayDatas (current)
-  * Gets pairDayDatas.
+  * PairDayData (current)
+  * Gets pairDayData.
    * @return List<SushiswapPairDayDataDTO>
   */
-  public List<SushiswapPairDayDataDTO> sushiswapPairDayDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SushiswapPairDayDataDTO> sushiswapPairDayDataCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/pairDayDatas/current";
+    String path = "/dapps/sushiswap/pairDayData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3200,16 +3200,16 @@ public class SushiswapApi {
   }
 
       /**
-   * PairDayDatas (current)
-   * Gets pairDayDatas.
+   * PairDayData (current)
+   * Gets pairDayData.
 
   */
-  public void sushiswapPairDayDatasCurrent (final Response.Listener<List<SushiswapPairDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void sushiswapPairDayDataCurrent (final Response.Listener<List<SushiswapPairDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/pairDayDatas/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/pairDayData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3260,15 +3260,15 @@ public class SushiswapApi {
     }
   }
   /**
-  * PairHourDatas (current)
-  * Gets pairHourDatas.
+  * PairHourData (current)
+  * Gets pairHourData.
    * @return List<SushiswapPairHourDataDTO>
   */
-  public List<SushiswapPairHourDataDTO> sushiswapPairHourDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SushiswapPairHourDataDTO> sushiswapPairHourDataCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/pairHourDatas/current";
+    String path = "/dapps/sushiswap/pairHourData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3316,16 +3316,16 @@ public class SushiswapApi {
   }
 
       /**
-   * PairHourDatas (current)
-   * Gets pairHourDatas.
+   * PairHourData (current)
+   * Gets pairHourData.
 
   */
-  public void sushiswapPairHourDatasCurrent (final Response.Listener<List<SushiswapPairHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void sushiswapPairHourDataCurrent (final Response.Listener<List<SushiswapPairHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/pairHourDatas/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/pairHourData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3614,15 +3614,15 @@ public class SushiswapApi {
     }
   }
   /**
-  * TokenDayDatas (current)
-  * Gets tokenDayDatas.
+  * TokenDayData (current)
+  * Gets tokenDayData.
    * @return List<SushiswapTokenDayDataDTO>
   */
-  public List<SushiswapTokenDayDataDTO> sushiswapTokenDayDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<SushiswapTokenDayDataDTO> sushiswapTokenDayDataCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/sushiswap/tokenDayDatas/current";
+    String path = "/dapps/sushiswap/tokenDayData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3670,16 +3670,16 @@ public class SushiswapApi {
   }
 
       /**
-   * TokenDayDatas (current)
-   * Gets tokenDayDatas.
+   * TokenDayData (current)
+   * Gets tokenDayData.
 
   */
-  public void sushiswapTokenDayDatasCurrent (final Response.Listener<List<SushiswapTokenDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void sushiswapTokenDayDataCurrent (final Response.Listener<List<SushiswapTokenDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/sushiswap/tokenDayDatas/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/sushiswap/tokenDayData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

@@ -11,28 +11,28 @@ Method | HTTP request | Description
 [**Invoke-UniswapV2GetLiquidityPositionSnapshotsHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**Invoke-UniswapV2GetLiquidityPositionsHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetLiquidityPositionsHistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical)
 [**Invoke-UniswapV2GetMintsHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetMintsHistorical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical)
-[**Invoke-UniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetPairDayDatasHistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical)
-[**Invoke-UniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetPairHourDatasHistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical)
+[**Invoke-UniswapV2GetPairDayDataHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetPairDayDataHistorical) | **GET** /dapps/uniswapv2/pairDayData/historical | PairDayData (historical)
+[**Invoke-UniswapV2GetPairHourDataHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetPairHourDataHistorical) | **GET** /dapps/uniswapv2/pairHourData/historical | PairHourData (historical)
 [**Invoke-UniswapV2GetPairsHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetPairsHistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical)
 [**Invoke-UniswapV2GetSwapsHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical)
-[**Invoke-UniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetTokenDayDatasHistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical)
+[**Invoke-UniswapV2GetTokenDayDataHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetTokenDayDataHistorical) | **GET** /dapps/uniswapv2/tokenDayData/historical | TokenDayData (historical)
 [**Invoke-UniswapV2GetTokensHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical)
 [**Invoke-UniswapV2GetTransactionsHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical)
-[**Invoke-UniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical)
-[**Invoke-UniswapV2GetUniswapFactorysHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetUniswapFactorysHistorical) | **GET** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical)
+[**Invoke-UniswapV2GetUniswapDayDataHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetUniswapDayDataHistorical) | **GET** /dapps/uniswapv2/uniswapDayData/historical | UniswapDayData (historical)
+[**Invoke-UniswapV2GetUniswapFactoriesHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetUniswapFactoriesHistorical) | **GET** /dapps/uniswapv2/uniswapFactories/historical | UniswapFactories (historical)
 [**Invoke-UniswapV2GetUsersHistorical**](UniswapV2Api.md#Invoke-UniswapV2GetUsersHistorical) | **GET** /dapps/uniswapv2/users/historical | Users (historical)
 [**Invoke-UniswapV2LiquidityPositionSnapshotsCurrent**](UniswapV2Api.md#Invoke-UniswapV2LiquidityPositionSnapshotsCurrent) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**Invoke-UniswapV2LiquidityPositionsCurrent**](UniswapV2Api.md#Invoke-UniswapV2LiquidityPositionsCurrent) | **GET** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
 [**Invoke-UniswapV2MintsCurrent**](UniswapV2Api.md#Invoke-UniswapV2MintsCurrent) | **GET** /dapps/uniswapv2/mints/current | Mints (current)
-[**Invoke-UniswapV2PairDayDatasCurrent**](UniswapV2Api.md#Invoke-UniswapV2PairDayDatasCurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
-[**Invoke-UniswapV2PairHourDatasCurrent**](UniswapV2Api.md#Invoke-UniswapV2PairHourDatasCurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
+[**Invoke-UniswapV2PairDayDataCurrent**](UniswapV2Api.md#Invoke-UniswapV2PairDayDataCurrent) | **GET** /dapps/uniswapv2/pairDayData/current | PairDayData (current)
+[**Invoke-UniswapV2PairHourDataCurrent**](UniswapV2Api.md#Invoke-UniswapV2PairHourDataCurrent) | **GET** /dapps/uniswapv2/pairHourData/current | PairHourData (current)
 [**Invoke-UniswapV2PairsCurrent**](UniswapV2Api.md#Invoke-UniswapV2PairsCurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
 [**Invoke-UniswapV2SwapsCurrent**](UniswapV2Api.md#Invoke-UniswapV2SwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current)
-[**Invoke-UniswapV2TokenDayDatasCurrent**](UniswapV2Api.md#Invoke-UniswapV2TokenDayDatasCurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**Invoke-UniswapV2TokenDayDataCurrent**](UniswapV2Api.md#Invoke-UniswapV2TokenDayDataCurrent) | **GET** /dapps/uniswapv2/tokenDayData/current | TokenDayData (current)
 [**Invoke-UniswapV2TokensCurrent**](UniswapV2Api.md#Invoke-UniswapV2TokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**Invoke-UniswapV2TransactionsCurrent**](UniswapV2Api.md#Invoke-UniswapV2TransactionsCurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
-[**Invoke-UniswapV2UniswapDayDatasCurrent**](UniswapV2Api.md#Invoke-UniswapV2UniswapDayDatasCurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
-[**Invoke-UniswapV2UniswapFactorysCurrent**](UniswapV2Api.md#Invoke-UniswapV2UniswapFactorysCurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
+[**Invoke-UniswapV2UniswapDayDataCurrent**](UniswapV2Api.md#Invoke-UniswapV2UniswapDayDataCurrent) | **GET** /dapps/uniswapv2/uniswapDayData/current | UniswapDayData (current)
+[**Invoke-UniswapV2UniswapFactoriesCurrent**](UniswapV2Api.md#Invoke-UniswapV2UniswapFactoriesCurrent) | **GET** /dapps/uniswapv2/uniswapFactories/current | UniswapFactories (current)
 [**Invoke-UniswapV2UsersCurrent**](UniswapV2Api.md#Invoke-UniswapV2UsersCurrent) | **GET** /dapps/uniswapv2/users/current | Users (current)
 
 
@@ -405,9 +405,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetPairDayDatasHistorical"></a>
-# **Invoke-UniswapV2GetPairDayDatasHistorical**
-> UniswapV2PairDayDataDTO[] Invoke-UniswapV2GetPairDayDatasHistorical<br>
+<a name="Invoke-UniswapV2GetPairDayDataHistorical"></a>
+# **Invoke-UniswapV2GetPairDayDataHistorical**
+> UniswapV2PairDayDataDTO[] Invoke-UniswapV2GetPairDayDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
@@ -416,9 +416,9 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Token0] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Token1] <String><br>
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 ```powershell
@@ -430,11 +430,11 @@ $Id = "MyId" # String |  (optional)
 $Token0 = "MyToken0" # String | Reference to token0. (optional)
 $Token1 = "MyToken1" # String | Reference to token1. (optional)
 
-# PairDayDatas (historical)
+# PairDayData (historical)
 try {
-    $Result = Invoke-UniswapV2GetPairDayDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Token0 $Token0 -Token1 $Token1
+    $Result = Invoke-UniswapV2GetPairDayDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Token0 $Token0 -Token1 $Token1
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-UniswapV2GetPairDayDatasHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV2GetPairDayDataHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -466,9 +466,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetPairHourDatasHistorical"></a>
-# **Invoke-UniswapV2GetPairHourDatasHistorical**
-> UniswapV2PairHourDataDTO[] Invoke-UniswapV2GetPairHourDatasHistorical<br>
+<a name="Invoke-UniswapV2GetPairHourDataHistorical"></a>
+# **Invoke-UniswapV2GetPairHourDataHistorical**
+> UniswapV2PairHourDataDTO[] Invoke-UniswapV2GetPairHourDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
@@ -476,9 +476,9 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Pair] <String><br>
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 ```powershell
@@ -489,11 +489,11 @@ $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String |  (optional)
 $Pair = "MyPair" # String | Address for pair contract. (optional)
 
-# PairHourDatas (historical)
+# PairHourData (historical)
 try {
-    $Result = Invoke-UniswapV2GetPairHourDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pair $Pair
+    $Result = Invoke-UniswapV2GetPairHourDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -Pair $Pair
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-UniswapV2GetPairHourDatasHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV2GetPairHourDataHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -643,18 +643,18 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetTokenDayDatasHistorical"></a>
-# **Invoke-UniswapV2GetTokenDayDatasHistorical**
-> UniswapV2TokenDayDataDTO[] Invoke-UniswapV2GetTokenDayDatasHistorical<br>
+<a name="Invoke-UniswapV2GetTokenDayDataHistorical"></a>
+# **Invoke-UniswapV2GetTokenDayDataHistorical**
+> UniswapV2TokenDayDataDTO[] Invoke-UniswapV2GetTokenDayDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 ```powershell
@@ -664,11 +664,11 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)
 
-# TokenDayDatas (historical)
+# TokenDayData (historical)
 try {
-    $Result = Invoke-UniswapV2GetTokenDayDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
+    $Result = Invoke-UniswapV2GetTokenDayDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-UniswapV2GetTokenDayDatasHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV2GetTokenDayDataHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -814,18 +814,18 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetUniswapDayDatasHistorical"></a>
-# **Invoke-UniswapV2GetUniswapDayDatasHistorical**
-> UniswapV2UniswapDayDataDTO[] Invoke-UniswapV2GetUniswapDayDatasHistorical<br>
+<a name="Invoke-UniswapV2GetUniswapDayDataHistorical"></a>
+# **Invoke-UniswapV2GetUniswapDayDataHistorical**
+> UniswapV2UniswapDayDataDTO[] Invoke-UniswapV2GetUniswapDayDataHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-UniswapDayDatas (historical)
+UniswapDayData (historical)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 ```powershell
@@ -835,11 +835,11 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Unix timestamp for start of day / 86400 giving a unique day index. (optional)
 
-# UniswapDayDatas (historical)
+# UniswapDayData (historical)
 try {
-    $Result = Invoke-UniswapV2GetUniswapDayDatasHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
+    $Result = Invoke-UniswapV2GetUniswapDayDataHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-UniswapV2GetUniswapDayDatasHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV2GetUniswapDayDataHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -869,18 +869,18 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2GetUniswapFactorysHistorical"></a>
-# **Invoke-UniswapV2GetUniswapFactorysHistorical**
-> UniswapV2UniswapFactoryDTO[] Invoke-UniswapV2GetUniswapFactorysHistorical<br>
+<a name="Invoke-UniswapV2GetUniswapFactoriesHistorical"></a>
+# **Invoke-UniswapV2GetUniswapFactoriesHistorical**
+> UniswapV2UniswapFactoryDTO[] Invoke-UniswapV2GetUniswapFactoriesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndDate] <System.Nullable[System.DateTime]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 
-UniswapFactorys (historical)
+UniswapFactories (historical)
 
-Gets uniswapFactorys.
+Gets uniswapFactories.
 
 ### Example
 ```powershell
@@ -890,11 +890,11 @@ $StartDate = (Get-Date) # System.DateTime | The start date of timeframe. If endD
 $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String | Factory address. (optional)
 
-# UniswapFactorys (historical)
+# UniswapFactories (historical)
 try {
-    $Result = Invoke-UniswapV2GetUniswapFactorysHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
+    $Result = Invoke-UniswapV2GetUniswapFactoriesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-UniswapV2GetUniswapFactorysHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV2GetUniswapFactoriesHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1093,22 +1093,22 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2PairDayDatasCurrent"></a>
-# **Invoke-UniswapV2PairDayDatasCurrent**
-> UniswapV2PairDayDataDTO[] Invoke-UniswapV2PairDayDatasCurrent<br>
+<a name="Invoke-UniswapV2PairDayDataCurrent"></a>
+# **Invoke-UniswapV2PairDayDataCurrent**
+> UniswapV2PairDayDataDTO[] Invoke-UniswapV2PairDayDataCurrent<br>
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 ```powershell
 
-# PairDayDatas (current)
+# PairDayData (current)
 try {
-    $Result = Invoke-UniswapV2PairDayDatasCurrent
+    $Result = Invoke-UniswapV2PairDayDataCurrent
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-UniswapV2PairDayDatasCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV2PairDayDataCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1131,22 +1131,22 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2PairHourDatasCurrent"></a>
-# **Invoke-UniswapV2PairHourDatasCurrent**
-> UniswapV2PairHourDataDTO[] Invoke-UniswapV2PairHourDatasCurrent<br>
+<a name="Invoke-UniswapV2PairHourDataCurrent"></a>
+# **Invoke-UniswapV2PairHourDataCurrent**
+> UniswapV2PairHourDataDTO[] Invoke-UniswapV2PairHourDataCurrent<br>
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 ```powershell
 
-# PairHourDatas (current)
+# PairHourData (current)
 try {
-    $Result = Invoke-UniswapV2PairHourDatasCurrent
+    $Result = Invoke-UniswapV2PairHourDataCurrent
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-UniswapV2PairHourDatasCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV2PairHourDataCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1255,22 +1255,22 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2TokenDayDatasCurrent"></a>
-# **Invoke-UniswapV2TokenDayDatasCurrent**
-> UniswapV2TokenDayDataDTO[] Invoke-UniswapV2TokenDayDatasCurrent<br>
+<a name="Invoke-UniswapV2TokenDayDataCurrent"></a>
+# **Invoke-UniswapV2TokenDayDataCurrent**
+> UniswapV2TokenDayDataDTO[] Invoke-UniswapV2TokenDayDataCurrent<br>
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 ```powershell
 
-# TokenDayDatas (current)
+# TokenDayData (current)
 try {
-    $Result = Invoke-UniswapV2TokenDayDatasCurrent
+    $Result = Invoke-UniswapV2TokenDayDataCurrent
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-UniswapV2TokenDayDatasCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV2TokenDayDataCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1369,22 +1369,22 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2UniswapDayDatasCurrent"></a>
-# **Invoke-UniswapV2UniswapDayDatasCurrent**
-> UniswapV2UniswapDayDataDTO[] Invoke-UniswapV2UniswapDayDatasCurrent<br>
+<a name="Invoke-UniswapV2UniswapDayDataCurrent"></a>
+# **Invoke-UniswapV2UniswapDayDataCurrent**
+> UniswapV2UniswapDayDataDTO[] Invoke-UniswapV2UniswapDayDataCurrent<br>
 
-UniswapDayDatas (current)
+UniswapDayData (current)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 ```powershell
 
-# UniswapDayDatas (current)
+# UniswapDayData (current)
 try {
-    $Result = Invoke-UniswapV2UniswapDayDatasCurrent
+    $Result = Invoke-UniswapV2UniswapDayDataCurrent
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-UniswapV2UniswapDayDatasCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV2UniswapDayDataCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1407,22 +1407,22 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-UniswapV2UniswapFactorysCurrent"></a>
-# **Invoke-UniswapV2UniswapFactorysCurrent**
-> UniswapV2UniswapFactoryDTO[] Invoke-UniswapV2UniswapFactorysCurrent<br>
+<a name="Invoke-UniswapV2UniswapFactoriesCurrent"></a>
+# **Invoke-UniswapV2UniswapFactoriesCurrent**
+> UniswapV2UniswapFactoryDTO[] Invoke-UniswapV2UniswapFactoriesCurrent<br>
 
-UniswapFactorys (current)
+UniswapFactories (current)
 
-Gets uniswapFactorys.
+Gets uniswapFactories.
 
 ### Example
 ```powershell
 
-# UniswapFactorys (current)
+# UniswapFactories (current)
 try {
-    $Result = Invoke-UniswapV2UniswapFactorysCurrent
+    $Result = Invoke-UniswapV2UniswapFactoriesCurrent
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-UniswapV2UniswapFactorysCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-UniswapV2UniswapFactoriesCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```

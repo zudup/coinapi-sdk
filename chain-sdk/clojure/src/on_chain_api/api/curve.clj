@@ -360,11 +360,11 @@
        res)))
 
 
-(defn-spec curve-gauge-liquiditys-current-with-http-info any?
-  "GaugeLiquiditys (current)
-  Gets gaugeLiquiditys."
+(defn-spec curve-gauge-liquidities-current-with-http-info any?
+  "GaugeLiquidities (current)
+  Gets gaugeLiquidities."
   []
-  (call-api "/dapps/curve/gaugeLiquiditys/current" :get
+  (call-api "/dapps/curve/gaugeLiquidities/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -373,11 +373,11 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec curve-gauge-liquiditys-current (s/coll-of curve/gauge-liquidity-dto-spec)
-  "GaugeLiquiditys (current)
-  Gets gaugeLiquiditys."
+(defn-spec curve-gauge-liquidities-current (s/coll-of curve/gauge-liquidity-dto-spec)
+  "GaugeLiquidities (current)
+  Gets gaugeLiquidities."
   []
-  (let [res (:data (curve-gauge-liquiditys-current-with-http-info))]
+  (let [res (:data (curve-gauge-liquidities-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of curve/gauge-liquidity-dto-spec) res st/string-transformer)
        res)))
@@ -819,12 +819,12 @@
         res))))
 
 
-(defn-spec curve-get-gauge-liquiditys-historical-with-http-info any?
-  "GaugeLiquiditys (historical)
-  Gets gaugeLiquiditys."
-  ([] (curve-get-gauge-liquiditys-historical-with-http-info nil))
+(defn-spec curve-get-gauge-liquidities-historical-with-http-info any?
+  "GaugeLiquidities (historical)
+  Gets gaugeLiquidities."
+  ([] (curve-get-gauge-liquidities-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id user]} (s/map-of keyword? any?)]
-   (call-api "/dapps/curve/gaugeLiquiditys/historical" :get
+   (call-api "/dapps/curve/gaugeLiquidities/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id "user" user }
@@ -833,12 +833,12 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec curve-get-gauge-liquiditys-historical (s/coll-of curve/gauge-liquidity-dto-spec)
-  "GaugeLiquiditys (historical)
-  Gets gaugeLiquiditys."
-  ([] (curve-get-gauge-liquiditys-historical nil))
+(defn-spec curve-get-gauge-liquidities-historical (s/coll-of curve/gauge-liquidity-dto-spec)
+  "GaugeLiquidities (historical)
+  Gets gaugeLiquidities."
+  ([] (curve-get-gauge-liquidities-historical nil))
   ([optional-params any?]
-   (let [res (:data (curve-get-gauge-liquiditys-historical-with-http-info optional-params))]
+   (let [res (:data (curve-get-gauge-liquidities-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of curve/gauge-liquidity-dto-spec) res st/string-transformer)
         res))))

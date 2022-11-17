@@ -11,28 +11,28 @@ Method | HTTP request | Description
 [**UniswapV2GetLiquidityPositionSnapshotsHistorical**](UniswapV2Api.md#UniswapV2GetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**UniswapV2GetLiquidityPositionsHistorical**](UniswapV2Api.md#UniswapV2GetLiquidityPositionsHistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical)
 [**UniswapV2GetMintsHistorical**](UniswapV2Api.md#UniswapV2GetMintsHistorical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical)
-[**UniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetPairDayDatasHistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical)
-[**UniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#UniswapV2GetPairHourDatasHistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical)
+[**UniswapV2GetPairDayDataHistorical**](UniswapV2Api.md#UniswapV2GetPairDayDataHistorical) | **GET** /dapps/uniswapv2/pairDayData/historical | PairDayData (historical)
+[**UniswapV2GetPairHourDataHistorical**](UniswapV2Api.md#UniswapV2GetPairHourDataHistorical) | **GET** /dapps/uniswapv2/pairHourData/historical | PairHourData (historical)
 [**UniswapV2GetPairsHistorical**](UniswapV2Api.md#UniswapV2GetPairsHistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical)
 [**UniswapV2GetSwapsHistorical**](UniswapV2Api.md#UniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical)
-[**UniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetTokenDayDatasHistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical)
+[**UniswapV2GetTokenDayDataHistorical**](UniswapV2Api.md#UniswapV2GetTokenDayDataHistorical) | **GET** /dapps/uniswapv2/tokenDayData/historical | TokenDayData (historical)
 [**UniswapV2GetTokensHistorical**](UniswapV2Api.md#UniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical)
 [**UniswapV2GetTransactionsHistorical**](UniswapV2Api.md#UniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical)
-[**UniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#UniswapV2GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical)
-[**UniswapV2GetUniswapFactorysHistorical**](UniswapV2Api.md#UniswapV2GetUniswapFactorysHistorical) | **GET** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical)
+[**UniswapV2GetUniswapDayDataHistorical**](UniswapV2Api.md#UniswapV2GetUniswapDayDataHistorical) | **GET** /dapps/uniswapv2/uniswapDayData/historical | UniswapDayData (historical)
+[**UniswapV2GetUniswapFactoriesHistorical**](UniswapV2Api.md#UniswapV2GetUniswapFactoriesHistorical) | **GET** /dapps/uniswapv2/uniswapFactories/historical | UniswapFactories (historical)
 [**UniswapV2GetUsersHistorical**](UniswapV2Api.md#UniswapV2GetUsersHistorical) | **GET** /dapps/uniswapv2/users/historical | Users (historical)
 [**UniswapV2LiquidityPositionSnapshotsCurrent**](UniswapV2Api.md#UniswapV2LiquidityPositionSnapshotsCurrent) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**UniswapV2LiquidityPositionsCurrent**](UniswapV2Api.md#UniswapV2LiquidityPositionsCurrent) | **GET** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
 [**UniswapV2MintsCurrent**](UniswapV2Api.md#UniswapV2MintsCurrent) | **GET** /dapps/uniswapv2/mints/current | Mints (current)
-[**UniswapV2PairDayDatasCurrent**](UniswapV2Api.md#UniswapV2PairDayDatasCurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
-[**UniswapV2PairHourDatasCurrent**](UniswapV2Api.md#UniswapV2PairHourDatasCurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
+[**UniswapV2PairDayDataCurrent**](UniswapV2Api.md#UniswapV2PairDayDataCurrent) | **GET** /dapps/uniswapv2/pairDayData/current | PairDayData (current)
+[**UniswapV2PairHourDataCurrent**](UniswapV2Api.md#UniswapV2PairHourDataCurrent) | **GET** /dapps/uniswapv2/pairHourData/current | PairHourData (current)
 [**UniswapV2PairsCurrent**](UniswapV2Api.md#UniswapV2PairsCurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
 [**UniswapV2SwapsCurrent**](UniswapV2Api.md#UniswapV2SwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current)
-[**UniswapV2TokenDayDatasCurrent**](UniswapV2Api.md#UniswapV2TokenDayDatasCurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**UniswapV2TokenDayDataCurrent**](UniswapV2Api.md#UniswapV2TokenDayDataCurrent) | **GET** /dapps/uniswapv2/tokenDayData/current | TokenDayData (current)
 [**UniswapV2TokensCurrent**](UniswapV2Api.md#UniswapV2TokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**UniswapV2TransactionsCurrent**](UniswapV2Api.md#UniswapV2TransactionsCurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
-[**UniswapV2UniswapDayDatasCurrent**](UniswapV2Api.md#UniswapV2UniswapDayDatasCurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
-[**UniswapV2UniswapFactorysCurrent**](UniswapV2Api.md#UniswapV2UniswapFactorysCurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
+[**UniswapV2UniswapDayDataCurrent**](UniswapV2Api.md#UniswapV2UniswapDayDataCurrent) | **GET** /dapps/uniswapv2/uniswapDayData/current | UniswapDayData (current)
+[**UniswapV2UniswapFactoriesCurrent**](UniswapV2Api.md#UniswapV2UniswapFactoriesCurrent) | **GET** /dapps/uniswapv2/uniswapFactories/current | UniswapFactories (current)
 [**UniswapV2UsersCurrent**](UniswapV2Api.md#UniswapV2UsersCurrent) | **GET** /dapps/uniswapv2/users/current | Users (current)
 
 
@@ -407,18 +407,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV2GetPairDayDatasHistorical**
-> array[UniswapV2PairDayDataDTO] UniswapV2GetPairDayDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, token_0 = var.token_0, token_1 = var.token_1)
+# **UniswapV2GetPairDayDataHistorical**
+> array[UniswapV2PairDayDataDTO] UniswapV2GetPairDayDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, token_0 = var.token_0, token_1 = var.token_1)
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 ```R
 library(openapi)
 
-# PairDayDatas (historical)
+# PairDayData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -431,8 +431,8 @@ var_token_1 <- "token_1_example" # character | Reference to token1. (Optional)
 
 api_instance <- UniswapV2Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV2GetPairDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, token_0 = var_token_0, token_1 = var_token_1data_file = "result.txt")
-result <- api_instance$UniswapV2GetPairDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, token_0 = var_token_0, token_1 = var_token_1)
+# result <- api_instance$UniswapV2GetPairDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, token_0 = var_token_0, token_1 = var_token_1data_file = "result.txt")
+result <- api_instance$UniswapV2GetPairDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, token_0 = var_token_0, token_1 = var_token_1)
 dput(result)
 ```
 
@@ -466,18 +466,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV2GetPairHourDatasHistorical**
-> array[UniswapV2PairHourDataDTO] UniswapV2GetPairHourDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pair = var.pair)
+# **UniswapV2GetPairHourDataHistorical**
+> array[UniswapV2PairHourDataDTO] UniswapV2GetPairHourDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pair = var.pair)
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 ```R
 library(openapi)
 
-# PairHourDatas (historical)
+# PairHourData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -489,8 +489,8 @@ var_pair <- "pair_example" # character | Address for pair contract. (Optional)
 
 api_instance <- UniswapV2Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV2GetPairHourDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pair = var_pairdata_file = "result.txt")
-result <- api_instance$UniswapV2GetPairHourDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pair = var_pair)
+# result <- api_instance$UniswapV2GetPairHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pair = var_pairdata_file = "result.txt")
+result <- api_instance$UniswapV2GetPairHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pair = var_pair)
 dput(result)
 ```
 
@@ -639,18 +639,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV2GetTokenDayDatasHistorical**
-> array[UniswapV2TokenDayDataDTO] UniswapV2GetTokenDayDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
+# **UniswapV2GetTokenDayDataHistorical**
+> array[UniswapV2TokenDayDataDTO] UniswapV2GetTokenDayDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 ```R
 library(openapi)
 
-# TokenDayDatas (historical)
+# TokenDayData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -661,8 +661,8 @@ var_id <- "id_example" # character | Token address and day id (day start timesta
 
 api_instance <- UniswapV2Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV2GetTokenDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
-result <- api_instance$UniswapV2GetTokenDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
+# result <- api_instance$UniswapV2GetTokenDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
+result <- api_instance$UniswapV2GetTokenDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
 dput(result)
 ```
 
@@ -808,18 +808,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV2GetUniswapDayDatasHistorical**
-> array[UniswapV2UniswapDayDataDTO] UniswapV2GetUniswapDayDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
+# **UniswapV2GetUniswapDayDataHistorical**
+> array[UniswapV2UniswapDayDataDTO] UniswapV2GetUniswapDayDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-UniswapDayDatas (historical)
+UniswapDayData (historical)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 ```R
 library(openapi)
 
-# UniswapDayDatas (historical)
+# UniswapDayData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -830,8 +830,8 @@ var_id <- "id_example" # character | Unix timestamp for start of day / 86400 giv
 
 api_instance <- UniswapV2Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV2GetUniswapDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
-result <- api_instance$UniswapV2GetUniswapDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
+# result <- api_instance$UniswapV2GetUniswapDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
+result <- api_instance$UniswapV2GetUniswapDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
 dput(result)
 ```
 
@@ -863,18 +863,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV2GetUniswapFactorysHistorical**
-> array[UniswapV2UniswapFactoryDTO] UniswapV2GetUniswapFactorysHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
+# **UniswapV2GetUniswapFactoriesHistorical**
+> array[UniswapV2UniswapFactoryDTO] UniswapV2GetUniswapFactoriesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-UniswapFactorys (historical)
+UniswapFactories (historical)
 
-Gets uniswapFactorys.
+Gets uniswapFactories.
 
 ### Example
 ```R
 library(openapi)
 
-# UniswapFactorys (historical)
+# UniswapFactories (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -885,8 +885,8 @@ var_id <- "id_example" # character | Factory address. (Optional)
 
 api_instance <- UniswapV2Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV2GetUniswapFactorysHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
-result <- api_instance$UniswapV2GetUniswapFactorysHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
+# result <- api_instance$UniswapV2GetUniswapFactoriesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
+result <- api_instance$UniswapV2GetUniswapFactoriesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
 dput(result)
 ```
 
@@ -1099,24 +1099,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV2PairDayDatasCurrent**
-> array[UniswapV2PairDayDataDTO] UniswapV2PairDayDatasCurrent()
+# **UniswapV2PairDayDataCurrent**
+> array[UniswapV2PairDayDataDTO] UniswapV2PairDayDataCurrent()
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 ```R
 library(openapi)
 
-# PairDayDatas (current)
+# PairDayData (current)
 #
 
 api_instance <- UniswapV2Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV2PairDayDatasCurrent(data_file = "result.txt")
-result <- api_instance$UniswapV2PairDayDatasCurrent()
+# result <- api_instance$UniswapV2PairDayDataCurrent(data_file = "result.txt")
+result <- api_instance$UniswapV2PairDayDataCurrent()
 dput(result)
 ```
 
@@ -1141,24 +1141,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV2PairHourDatasCurrent**
-> array[UniswapV2PairHourDataDTO] UniswapV2PairHourDatasCurrent()
+# **UniswapV2PairHourDataCurrent**
+> array[UniswapV2PairHourDataDTO] UniswapV2PairHourDataCurrent()
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 ```R
 library(openapi)
 
-# PairHourDatas (current)
+# PairHourData (current)
 #
 
 api_instance <- UniswapV2Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV2PairHourDatasCurrent(data_file = "result.txt")
-result <- api_instance$UniswapV2PairHourDatasCurrent()
+# result <- api_instance$UniswapV2PairHourDataCurrent(data_file = "result.txt")
+result <- api_instance$UniswapV2PairHourDataCurrent()
 dput(result)
 ```
 
@@ -1277,24 +1277,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV2TokenDayDatasCurrent**
-> array[UniswapV2TokenDayDataDTO] UniswapV2TokenDayDatasCurrent()
+# **UniswapV2TokenDayDataCurrent**
+> array[UniswapV2TokenDayDataDTO] UniswapV2TokenDayDataCurrent()
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 ```R
 library(openapi)
 
-# TokenDayDatas (current)
+# TokenDayData (current)
 #
 
 api_instance <- UniswapV2Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV2TokenDayDatasCurrent(data_file = "result.txt")
-result <- api_instance$UniswapV2TokenDayDatasCurrent()
+# result <- api_instance$UniswapV2TokenDayDataCurrent(data_file = "result.txt")
+result <- api_instance$UniswapV2TokenDayDataCurrent()
 dput(result)
 ```
 
@@ -1403,24 +1403,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV2UniswapDayDatasCurrent**
-> array[UniswapV2UniswapDayDataDTO] UniswapV2UniswapDayDatasCurrent()
+# **UniswapV2UniswapDayDataCurrent**
+> array[UniswapV2UniswapDayDataDTO] UniswapV2UniswapDayDataCurrent()
 
-UniswapDayDatas (current)
+UniswapDayData (current)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 ```R
 library(openapi)
 
-# UniswapDayDatas (current)
+# UniswapDayData (current)
 #
 
 api_instance <- UniswapV2Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV2UniswapDayDatasCurrent(data_file = "result.txt")
-result <- api_instance$UniswapV2UniswapDayDatasCurrent()
+# result <- api_instance$UniswapV2UniswapDayDataCurrent(data_file = "result.txt")
+result <- api_instance$UniswapV2UniswapDayDataCurrent()
 dput(result)
 ```
 
@@ -1445,24 +1445,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **UniswapV2UniswapFactorysCurrent**
-> array[UniswapV2UniswapFactoryDTO] UniswapV2UniswapFactorysCurrent()
+# **UniswapV2UniswapFactoriesCurrent**
+> array[UniswapV2UniswapFactoryDTO] UniswapV2UniswapFactoriesCurrent()
 
-UniswapFactorys (current)
+UniswapFactories (current)
 
-Gets uniswapFactorys.
+Gets uniswapFactories.
 
 ### Example
 ```R
 library(openapi)
 
-# UniswapFactorys (current)
+# UniswapFactories (current)
 #
 
 api_instance <- UniswapV2Api$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$UniswapV2UniswapFactorysCurrent(data_file = "result.txt")
-result <- api_instance$UniswapV2UniswapFactorysCurrent()
+# result <- api_instance$UniswapV2UniswapFactoriesCurrent(data_file = "result.txt")
+result <- api_instance$UniswapV2UniswapFactoriesCurrent()
 dput(result)
 ```
 

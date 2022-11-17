@@ -97,10 +97,10 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_gauge_deposits__current_result = $api->curve_gauge_deposits__current();
 
 #
-# curve_gauge_liquiditys__current test
+# curve_gauge_liquidities__current test
 #
 # uncomment below and update the test
-#my $curve_gauge_liquiditys__current_result = $api->curve_gauge_liquiditys__current();
+#my $curve_gauge_liquidities__current_result = $api->curve_gauge_liquidities__current();
 
 #
 # curve_gauge_total_weights__current test
@@ -275,16 +275,16 @@ isa_ok($api, 'WWW::OpenAPIClient::CurveApi');
 #my $curve_get_gauge_deposits__historical_result = $api->curve_get_gauge_deposits__historical(start_block => $curve_get_gauge_deposits__historical_start_block, end_block => $curve_get_gauge_deposits__historical_end_block, start_date => $curve_get_gauge_deposits__historical_start_date, end_date => $curve_get_gauge_deposits__historical_end_date, id => $curve_get_gauge_deposits__historical_id);
 
 #
-# curve_get_gauge_liquiditys__historical test
+# curve_get_gauge_liquidities__historical test
 #
 # uncomment below and update the test
-#my $curve_get_gauge_liquiditys__historical_start_block = undef; # replace NULL with a proper value
-#my $curve_get_gauge_liquiditys__historical_end_block = undef; # replace NULL with a proper value
-#my $curve_get_gauge_liquiditys__historical_start_date = undef; # replace NULL with a proper value
-#my $curve_get_gauge_liquiditys__historical_end_date = undef; # replace NULL with a proper value
-#my $curve_get_gauge_liquiditys__historical_id = undef; # replace NULL with a proper value
-#my $curve_get_gauge_liquiditys__historical_user = undef; # replace NULL with a proper value
-#my $curve_get_gauge_liquiditys__historical_result = $api->curve_get_gauge_liquiditys__historical(start_block => $curve_get_gauge_liquiditys__historical_start_block, end_block => $curve_get_gauge_liquiditys__historical_end_block, start_date => $curve_get_gauge_liquiditys__historical_start_date, end_date => $curve_get_gauge_liquiditys__historical_end_date, id => $curve_get_gauge_liquiditys__historical_id, user => $curve_get_gauge_liquiditys__historical_user);
+#my $curve_get_gauge_liquidities__historical_start_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_liquidities__historical_end_block = undef; # replace NULL with a proper value
+#my $curve_get_gauge_liquidities__historical_start_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_liquidities__historical_end_date = undef; # replace NULL with a proper value
+#my $curve_get_gauge_liquidities__historical_id = undef; # replace NULL with a proper value
+#my $curve_get_gauge_liquidities__historical_user = undef; # replace NULL with a proper value
+#my $curve_get_gauge_liquidities__historical_result = $api->curve_get_gauge_liquidities__historical(start_block => $curve_get_gauge_liquidities__historical_start_block, end_block => $curve_get_gauge_liquidities__historical_end_block, start_date => $curve_get_gauge_liquidities__historical_start_date, end_date => $curve_get_gauge_liquidities__historical_end_date, id => $curve_get_gauge_liquidities__historical_id, user => $curve_get_gauge_liquidities__historical_user);
 
 #
 # curve_get_gauge_total_weights__historical test

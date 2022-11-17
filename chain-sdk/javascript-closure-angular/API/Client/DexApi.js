@@ -54,14 +54,14 @@ API.Client.DexApi = function($http, $httpParamSerializer, $injector) {
 API.Client.DexApi.$inject = ['$http', '$httpParamSerializer', '$injector'];
 
 /**
- * Batchs (current)
- * Gets batchs.
+ * Batches (current)
+ * Gets batches.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Dex.BatchDTO>>}
  */
-API.Client.DexApi.prototype.dexBatchsCurrent = function(opt_extraHttpRequestParams) {
+API.Client.DexApi.prototype.dexBatchesCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/dex/batchs/current';
+  var path = this.basePath_ + '/dapps/dex/batches/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -116,8 +116,8 @@ API.Client.DexApi.prototype.dexDepositsCurrent = function(opt_extraHttpRequestPa
 }
 
 /**
- * Batchs (historical)
- * Gets batchs.
+ * Batches (historical)
+ * Gets batches.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -126,9 +126,9 @@ API.Client.DexApi.prototype.dexDepositsCurrent = function(opt_extraHttpRequestPa
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Dex.BatchDTO>>}
  */
-API.Client.DexApi.prototype.dexGetBatchsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
+API.Client.DexApi.prototype.dexGetBatchesHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/dex/batchs/historical';
+  var path = this.basePath_ + '/dapps/dex/batches/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -411,8 +411,8 @@ API.Client.DexApi.prototype.dexGetSolutionsHistorical = function(opt_startBlock,
 }
 
 /**
- * Statss (historical)
- * Gets statss.
+ * Stats (historical)
+ * Gets stats.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -421,9 +421,9 @@ API.Client.DexApi.prototype.dexGetSolutionsHistorical = function(opt_startBlock,
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Dex.StatsDTO>>}
  */
-API.Client.DexApi.prototype.dexGetStatssHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
+API.Client.DexApi.prototype.dexGetStatsHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/dex/statss/historical';
+  var path = this.basePath_ + '/dapps/dex/stats/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -875,14 +875,14 @@ API.Client.DexApi.prototype.dexSolutionsCurrent = function(opt_extraHttpRequestP
 }
 
 /**
- * Statss (current)
- * Gets statss.
+ * Stats (current)
+ * Gets stats.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.Dex.StatsDTO>>}
  */
-API.Client.DexApi.prototype.dexStatssCurrent = function(opt_extraHttpRequestParams) {
+API.Client.DexApi.prototype.dexStatsCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/dex/statss/current';
+  var path = this.basePath_ + '/dapps/dex/stats/current';
 
   /** @type {!Object} */
   var queryParameters = {};

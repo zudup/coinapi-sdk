@@ -97,11 +97,11 @@ export class DexApi {
     }
 
     /**
-     * Gets batchs.
-     * @summary Batchs (current)
+     * Gets batches.
+     * @summary Batches (current)
      */
-    public async dexBatchsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<DexBatchDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/dex/batchs/current';
+    public async dexBatchesCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<DexBatchDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/dex/batches/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -221,16 +221,16 @@ export class DexApi {
         });
     }
     /**
-     * Gets batchs.
-     * @summary Batchs (historical)
+     * Gets batches.
+     * @summary Batches (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id Identifier.
      */
-    public async dexGetBatchsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<DexBatchDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/dex/batchs/historical';
+    public async dexGetBatchesHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<DexBatchDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/dex/batches/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -671,16 +671,16 @@ export class DexApi {
         });
     }
     /**
-     * Gets statss.
-     * @summary Statss (historical)
+     * Gets stats.
+     * @summary Stats (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
      * @param endDate The end date of timeframe.
      * @param id 
      */
-    public async dexGetStatssHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<DexStatsDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/dex/statss/historical';
+    public async dexGetStatsHistorical (startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<DexStatsDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/dex/stats/historical';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];
@@ -1414,11 +1414,11 @@ export class DexApi {
         });
     }
     /**
-     * Gets statss.
-     * @summary Statss (current)
+     * Gets stats.
+     * @summary Stats (current)
      */
-    public async dexStatssCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<DexStatsDTO>;  }> {
-        const localVarPath = this.basePath + '/dapps/dex/statss/current';
+    public async dexStatsCurrent (options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Array<DexStatsDTO>;  }> {
+        const localVarPath = this.basePath + '/dapps/dex/stats/current';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
         const produces = ['text/plain', 'application/json', 'text/json'];

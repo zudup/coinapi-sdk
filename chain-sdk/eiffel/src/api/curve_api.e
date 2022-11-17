@@ -390,9 +390,9 @@ feature -- API Access
 			end
 		end
 
-	curve_gauge_liquiditys_current : detachable LIST [CURVE_GAUGE_LIQUIDITY_DTO]
-			-- GaugeLiquiditys (current)
-			-- Gets gaugeLiquiditys.
+	curve_gauge_liquidities_current : detachable LIST [CURVE_GAUGE_LIQUIDITY_DTO]
+			-- GaugeLiquidities (current)
+			-- Gets gaugeLiquidities.
 			-- 
 			-- 
 			-- Result LIST [CURVE_GAUGE_LIQUIDITY_DTO]
@@ -405,7 +405,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/gaugeLiquiditys/current"
+			l_path := "/dapps/curve/gaugeLiquidities/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
@@ -1209,9 +1209,9 @@ feature -- API Access
 			end
 		end
 
-	curve_get_gauge_liquiditys_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; user: STRING_32): detachable LIST [CURVE_GAUGE_LIQUIDITY_DTO]
-			-- GaugeLiquiditys (historical)
-			-- Gets gaugeLiquiditys.
+	curve_get_gauge_liquidities_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; user: STRING_32): detachable LIST [CURVE_GAUGE_LIQUIDITY_DTO]
+			-- GaugeLiquidities (historical)
+			-- Gets gaugeLiquidities.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
@@ -1236,7 +1236,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/curve/gaugeLiquiditys/historical"
+			l_path := "/dapps/curve/gaugeLiquidities/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));

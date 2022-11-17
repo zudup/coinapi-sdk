@@ -9,7 +9,7 @@
 <#
 .SYNOPSIS
 
-Batchs (current)
+Batches (current)
 
 .DESCRIPTION
 
@@ -27,7 +27,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 DexBatchDTO[]
 #>
-function Invoke-DexBatchsCurrent {
+function Invoke-DexBatchesCurrent {
     [CmdletBinding()]
     Param (
         [String]
@@ -38,7 +38,7 @@ function Invoke-DexBatchsCurrent {
     )
 
     Process {
-        'Calling method: Invoke-DexBatchsCurrent' | Write-Debug
+        'Calling method: Invoke-DexBatchesCurrent' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -59,7 +59,7 @@ function Invoke-DexBatchsCurrent {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/dex/batchs/current'
+        $LocalVarUri = '/dapps/dex/batches/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -159,7 +159,7 @@ function Invoke-DexDepositsCurrent {
 <#
 .SYNOPSIS
 
-Batchs (historical)
+Batches (historical)
 
 .DESCRIPTION
 
@@ -192,7 +192,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 DexBatchDTO[]
 #>
-function Invoke-DexGetBatchsHistorical {
+function Invoke-DexGetBatchesHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -218,7 +218,7 @@ function Invoke-DexGetBatchsHistorical {
     )
 
     Process {
-        'Calling method: Invoke-DexGetBatchsHistorical' | Write-Debug
+        'Calling method: Invoke-DexGetBatchesHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -239,7 +239,7 @@ function Invoke-DexGetBatchsHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/dex/batchs/historical'
+        $LocalVarUri = '/dapps/dex/batches/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -814,7 +814,7 @@ function Invoke-DexGetSolutionsHistorical {
 <#
 .SYNOPSIS
 
-Statss (historical)
+Stats (historical)
 
 .DESCRIPTION
 
@@ -847,7 +847,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 DexStatsDTO[]
 #>
-function Invoke-DexGetStatssHistorical {
+function Invoke-DexGetStatsHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -873,7 +873,7 @@ function Invoke-DexGetStatssHistorical {
     )
 
     Process {
-        'Calling method: Invoke-DexGetStatssHistorical' | Write-Debug
+        'Calling method: Invoke-DexGetStatsHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -894,7 +894,7 @@ function Invoke-DexGetStatssHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/dex/statss/historical'
+        $LocalVarUri = '/dapps/dex/stats/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock
@@ -1859,7 +1859,7 @@ function Invoke-DexSolutionsCurrent {
 <#
 .SYNOPSIS
 
-Statss (current)
+Stats (current)
 
 .DESCRIPTION
 
@@ -1877,7 +1877,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 DexStatsDTO[]
 #>
-function Invoke-DexStatssCurrent {
+function Invoke-DexStatsCurrent {
     [CmdletBinding()]
     Param (
         [String]
@@ -1888,7 +1888,7 @@ function Invoke-DexStatssCurrent {
     )
 
     Process {
-        'Calling method: Invoke-DexStatssCurrent' | Write-Debug
+        'Calling method: Invoke-DexStatsCurrent' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -1909,7 +1909,7 @@ function Invoke-DexStatssCurrent {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/dex/statss/current'
+        $LocalVarUri = '/dapps/dex/stats/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `

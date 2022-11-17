@@ -97,24 +97,24 @@ class SushiswapApiTest extends TestCase
     }
 
     /**
-     * Test case for sushiswapDayDatasCurrent
+     * Test case for sushiswapDayDataCurrent
      *
-     * DayDatas (current).
+     * DayData (current).
      *
      */
-    public function testSushiswapDayDatasCurrent()
+    public function testSushiswapDayDataCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for sushiswapFactorysCurrent
+     * Test case for sushiswapFactoriesCurrent
      *
-     * Factorys (current).
+     * Factories (current).
      *
      */
-    public function testSushiswapFactorysCurrent()
+    public function testSushiswapFactoriesCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -145,36 +145,36 @@ class SushiswapApiTest extends TestCase
     }
 
     /**
-     * Test case for sushiswapGetDayDatasHistorical
+     * Test case for sushiswapGetDayDataHistorical
      *
-     * DayDatas (historical).
+     * DayData (historical).
      *
      */
-    public function testSushiswapGetDayDatasHistorical()
+    public function testSushiswapGetDayDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for sushiswapGetFactorysHistorical
+     * Test case for sushiswapGetFactoriesHistorical
      *
-     * Factorys (historical).
+     * Factories (historical).
      *
      */
-    public function testSushiswapGetFactorysHistorical()
+    public function testSushiswapGetFactoriesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for sushiswapGetHourDatasHistorical
+     * Test case for sushiswapGetHourDataHistorical
      *
-     * HourDatas (historical).
+     * HourData (historical).
      *
      */
-    public function testSushiswapGetHourDatasHistorical()
+    public function testSushiswapGetHourDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -217,24 +217,24 @@ class SushiswapApiTest extends TestCase
     }
 
     /**
-     * Test case for sushiswapGetPairDayDatasHistorical
+     * Test case for sushiswapGetPairDayDataHistorical
      *
-     * PairDayDatas (historical).
+     * PairDayData (historical).
      *
      */
-    public function testSushiswapGetPairDayDatasHistorical()
+    public function testSushiswapGetPairDayDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for sushiswapGetPairHourDatasHistorical
+     * Test case for sushiswapGetPairHourDataHistorical
      *
-     * PairHourDatas (historical).
+     * PairHourData (historical).
      *
      */
-    public function testSushiswapGetPairHourDatasHistorical()
+    public function testSushiswapGetPairHourDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -265,12 +265,12 @@ class SushiswapApiTest extends TestCase
     }
 
     /**
-     * Test case for sushiswapGetTokenDayDatasHistorical
+     * Test case for sushiswapGetTokenDayDataHistorical
      *
-     * TokenDayDatas (historical).
+     * TokenDayData (historical).
      *
      */
-    public function testSushiswapGetTokenDayDatasHistorical()
+    public function testSushiswapGetTokenDayDataHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -313,12 +313,12 @@ class SushiswapApiTest extends TestCase
     }
 
     /**
-     * Test case for sushiswapHourDatasCurrent
+     * Test case for sushiswapHourDataCurrent
      *
-     * HourDatas (current).
+     * HourData (current).
      *
      */
-    public function testSushiswapHourDatasCurrent()
+    public function testSushiswapHourDataCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -361,24 +361,24 @@ class SushiswapApiTest extends TestCase
     }
 
     /**
-     * Test case for sushiswapPairDayDatasCurrent
+     * Test case for sushiswapPairDayDataCurrent
      *
-     * PairDayDatas (current).
+     * PairDayData (current).
      *
      */
-    public function testSushiswapPairDayDatasCurrent()
+    public function testSushiswapPairDayDataCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
     }
 
     /**
-     * Test case for sushiswapPairHourDatasCurrent
+     * Test case for sushiswapPairHourDataCurrent
      *
-     * PairHourDatas (current).
+     * PairHourData (current).
      *
      */
-    public function testSushiswapPairHourDatasCurrent()
+    public function testSushiswapPairHourDataCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -409,12 +409,12 @@ class SushiswapApiTest extends TestCase
     }
 
     /**
-     * Test case for sushiswapTokenDayDatasCurrent
+     * Test case for sushiswapTokenDayDataCurrent
      *
-     * TokenDayDatas (current).
+     * TokenDayData (current).
      *
      */
-    public function testSushiswapTokenDayDatasCurrent()
+    public function testSushiswapTokenDayDataCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

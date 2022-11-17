@@ -262,8 +262,8 @@ class CurveApi {
 
     }
 
-    def curveGaugeLiquiditysCurrent ( Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/gaugeLiquiditys/current"
+    def curveGaugeLiquiditiesCurrent ( Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/gaugeLiquidities/current"
 
         // params
         def queryParams = [:]
@@ -834,8 +834,8 @@ class CurveApi {
 
     }
 
-    def curveGetGaugeLiquiditysHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, Closure onSuccess, Closure onFailure)  {
-        String resourcePath = "/dapps/curve/gaugeLiquiditys/historical"
+    def curveGetGaugeLiquiditiesHistorical ( Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String user, Closure onSuccess, Closure onFailure)  {
+        String resourcePath = "/dapps/curve/gaugeLiquidities/historical"
 
         // params
         def queryParams = [:]

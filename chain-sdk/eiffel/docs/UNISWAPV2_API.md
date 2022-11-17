@@ -11,28 +11,28 @@ Feature | HTTP request | Description
 [**uniswap_v2_get_liquidity_position_snapshots_historical**](UNISWAPV2_API.md#uniswap_v2_get_liquidity_position_snapshots_historical) | **Get** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**uniswap_v2_get_liquidity_positions_historical**](UNISWAPV2_API.md#uniswap_v2_get_liquidity_positions_historical) | **Get** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical)
 [**uniswap_v2_get_mints_historical**](UNISWAPV2_API.md#uniswap_v2_get_mints_historical) | **Get** /dapps/uniswapv2/mints/historical | Mints (historical)
-[**uniswap_v2_get_pair_day_datas_historical**](UNISWAPV2_API.md#uniswap_v2_get_pair_day_datas_historical) | **Get** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical)
-[**uniswap_v2_get_pair_hour_datas_historical**](UNISWAPV2_API.md#uniswap_v2_get_pair_hour_datas_historical) | **Get** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical)
+[**uniswap_v2_get_pair_day_data_historical**](UNISWAPV2_API.md#uniswap_v2_get_pair_day_data_historical) | **Get** /dapps/uniswapv2/pairDayData/historical | PairDayData (historical)
+[**uniswap_v2_get_pair_hour_data_historical**](UNISWAPV2_API.md#uniswap_v2_get_pair_hour_data_historical) | **Get** /dapps/uniswapv2/pairHourData/historical | PairHourData (historical)
 [**uniswap_v2_get_pairs_historical**](UNISWAPV2_API.md#uniswap_v2_get_pairs_historical) | **Get** /dapps/uniswapv2/pairs/historical | Pairs (historical)
 [**uniswap_v2_get_swaps_historical**](UNISWAPV2_API.md#uniswap_v2_get_swaps_historical) | **Get** /dapps/uniswapv2/swaps/historical | Swaps (historical)
-[**uniswap_v2_get_token_day_datas_historical**](UNISWAPV2_API.md#uniswap_v2_get_token_day_datas_historical) | **Get** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical)
+[**uniswap_v2_get_token_day_data_historical**](UNISWAPV2_API.md#uniswap_v2_get_token_day_data_historical) | **Get** /dapps/uniswapv2/tokenDayData/historical | TokenDayData (historical)
 [**uniswap_v2_get_tokens_historical**](UNISWAPV2_API.md#uniswap_v2_get_tokens_historical) | **Get** /dapps/uniswapv2/tokens/historical | Tokens (historical)
 [**uniswap_v2_get_transactions_historical**](UNISWAPV2_API.md#uniswap_v2_get_transactions_historical) | **Get** /dapps/uniswapv2/transactions/historical | Transactions (historical)
-[**uniswap_v2_get_uniswap_day_datas_historical**](UNISWAPV2_API.md#uniswap_v2_get_uniswap_day_datas_historical) | **Get** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical)
-[**uniswap_v2_get_uniswap_factorys_historical**](UNISWAPV2_API.md#uniswap_v2_get_uniswap_factorys_historical) | **Get** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical)
+[**uniswap_v2_get_uniswap_day_data_historical**](UNISWAPV2_API.md#uniswap_v2_get_uniswap_day_data_historical) | **Get** /dapps/uniswapv2/uniswapDayData/historical | UniswapDayData (historical)
+[**uniswap_v2_get_uniswap_factories_historical**](UNISWAPV2_API.md#uniswap_v2_get_uniswap_factories_historical) | **Get** /dapps/uniswapv2/uniswapFactories/historical | UniswapFactories (historical)
 [**uniswap_v2_get_users_historical**](UNISWAPV2_API.md#uniswap_v2_get_users_historical) | **Get** /dapps/uniswapv2/users/historical | Users (historical)
 [**uniswap_v2_liquidity_position_snapshots_current**](UNISWAPV2_API.md#uniswap_v2_liquidity_position_snapshots_current) | **Get** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**uniswap_v2_liquidity_positions_current**](UNISWAPV2_API.md#uniswap_v2_liquidity_positions_current) | **Get** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
 [**uniswap_v2_mints_current**](UNISWAPV2_API.md#uniswap_v2_mints_current) | **Get** /dapps/uniswapv2/mints/current | Mints (current)
-[**uniswap_v2_pair_day_datas_current**](UNISWAPV2_API.md#uniswap_v2_pair_day_datas_current) | **Get** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
-[**uniswap_v2_pair_hour_datas_current**](UNISWAPV2_API.md#uniswap_v2_pair_hour_datas_current) | **Get** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
+[**uniswap_v2_pair_day_data_current**](UNISWAPV2_API.md#uniswap_v2_pair_day_data_current) | **Get** /dapps/uniswapv2/pairDayData/current | PairDayData (current)
+[**uniswap_v2_pair_hour_data_current**](UNISWAPV2_API.md#uniswap_v2_pair_hour_data_current) | **Get** /dapps/uniswapv2/pairHourData/current | PairHourData (current)
 [**uniswap_v2_pairs_current**](UNISWAPV2_API.md#uniswap_v2_pairs_current) | **Get** /dapps/uniswapv2/pairs/current | Pairs (current)
 [**uniswap_v2_swaps_current**](UNISWAPV2_API.md#uniswap_v2_swaps_current) | **Get** /dapps/uniswapv2/swaps/current | Swaps (current)
-[**uniswap_v2_token_day_datas_current**](UNISWAPV2_API.md#uniswap_v2_token_day_datas_current) | **Get** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**uniswap_v2_token_day_data_current**](UNISWAPV2_API.md#uniswap_v2_token_day_data_current) | **Get** /dapps/uniswapv2/tokenDayData/current | TokenDayData (current)
 [**uniswap_v2_tokens_current**](UNISWAPV2_API.md#uniswap_v2_tokens_current) | **Get** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**uniswap_v2_transactions_current**](UNISWAPV2_API.md#uniswap_v2_transactions_current) | **Get** /dapps/uniswapv2/transactions/current | Transactions (current)
-[**uniswap_v2_uniswap_day_datas_current**](UNISWAPV2_API.md#uniswap_v2_uniswap_day_datas_current) | **Get** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
-[**uniswap_v2_uniswap_factorys_current**](UNISWAPV2_API.md#uniswap_v2_uniswap_factorys_current) | **Get** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
+[**uniswap_v2_uniswap_day_data_current**](UNISWAPV2_API.md#uniswap_v2_uniswap_day_data_current) | **Get** /dapps/uniswapv2/uniswapDayData/current | UniswapDayData (current)
+[**uniswap_v2_uniswap_factories_current**](UNISWAPV2_API.md#uniswap_v2_uniswap_factories_current) | **Get** /dapps/uniswapv2/uniswapFactories/current | UniswapFactories (current)
 [**uniswap_v2_users_current**](UNISWAPV2_API.md#uniswap_v2_users_current) | **Get** /dapps/uniswapv2/users/current | Users (current)
 
 
@@ -266,13 +266,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_pair_day_datas_historical**
-> uniswap_v2_get_pair_day_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; token_0:  detachable STRING_32 ; token_1:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_PAIR_DAY_DATA_DTO]
+# **uniswap_v2_get_pair_day_data_historical**
+> uniswap_v2_get_pair_day_data_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; token_0:  detachable STRING_32 ; token_1:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_PAIR_DAY_DATA_DTO]
 
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 
 ### Parameters
@@ -302,13 +302,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_pair_hour_datas_historical**
-> uniswap_v2_get_pair_hour_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pair:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_PAIR_HOUR_DATA_DTO]
+# **uniswap_v2_get_pair_hour_data_historical**
+> uniswap_v2_get_pair_hour_data_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pair:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_PAIR_HOUR_DATA_DTO]
 
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 
 ### Parameters
@@ -408,13 +408,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_token_day_datas_historical**
-> uniswap_v2_get_token_day_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_TOKEN_DAY_DATA_DTO]
+# **uniswap_v2_get_token_day_data_historical**
+> uniswap_v2_get_token_day_data_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_TOKEN_DAY_DATA_DTO]
 
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 
 ### Parameters
@@ -512,13 +512,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_uniswap_day_datas_historical**
-> uniswap_v2_get_uniswap_day_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_UNISWAP_DAY_DATA_DTO]
+# **uniswap_v2_get_uniswap_day_data_historical**
+> uniswap_v2_get_uniswap_day_data_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_UNISWAP_DAY_DATA_DTO]
 
 
-UniswapDayDatas (historical)
+UniswapDayData (historical)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 
 ### Parameters
@@ -546,13 +546,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_uniswap_factorys_historical**
-> uniswap_v2_get_uniswap_factorys_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_UNISWAP_FACTORY_DTO]
+# **uniswap_v2_get_uniswap_factories_historical**
+> uniswap_v2_get_uniswap_factories_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [UNISWAP_V2_UNISWAP_FACTORY_DTO]
 
 
-UniswapFactorys (historical)
+UniswapFactories (historical)
 
-Gets uniswapFactorys.
+Gets uniswapFactories.
 
 
 ### Parameters
@@ -695,13 +695,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_pair_day_datas_current**
-> uniswap_v2_pair_day_datas_current : detachable LIST [UNISWAP_V2_PAIR_DAY_DATA_DTO]
+# **uniswap_v2_pair_day_data_current**
+> uniswap_v2_pair_day_data_current : detachable LIST [UNISWAP_V2_PAIR_DAY_DATA_DTO]
 
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 
 ### Parameters
@@ -722,13 +722,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_pair_hour_datas_current**
-> uniswap_v2_pair_hour_datas_current : detachable LIST [UNISWAP_V2_PAIR_HOUR_DATA_DTO]
+# **uniswap_v2_pair_hour_data_current**
+> uniswap_v2_pair_hour_data_current : detachable LIST [UNISWAP_V2_PAIR_HOUR_DATA_DTO]
 
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 
 ### Parameters
@@ -809,13 +809,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_token_day_datas_current**
-> uniswap_v2_token_day_datas_current : detachable LIST [UNISWAP_V2_TOKEN_DAY_DATA_DTO]
+# **uniswap_v2_token_day_data_current**
+> uniswap_v2_token_day_data_current : detachable LIST [UNISWAP_V2_TOKEN_DAY_DATA_DTO]
 
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 
 ### Parameters
@@ -890,13 +890,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_uniswap_day_datas_current**
-> uniswap_v2_uniswap_day_datas_current : detachable LIST [UNISWAP_V2_UNISWAP_DAY_DATA_DTO]
+# **uniswap_v2_uniswap_day_data_current**
+> uniswap_v2_uniswap_day_data_current : detachable LIST [UNISWAP_V2_UNISWAP_DAY_DATA_DTO]
 
 
-UniswapDayDatas (current)
+UniswapDayData (current)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 
 ### Parameters
@@ -917,13 +917,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_uniswap_factorys_current**
-> uniswap_v2_uniswap_factorys_current : detachable LIST [UNISWAP_V2_UNISWAP_FACTORY_DTO]
+# **uniswap_v2_uniswap_factories_current**
+> uniswap_v2_uniswap_factories_current : detachable LIST [UNISWAP_V2_UNISWAP_FACTORY_DTO]
 
 
-UniswapFactorys (current)
+UniswapFactories (current)
 
-Gets uniswapFactorys.
+Gets uniswapFactories.
 
 
 ### Parameters

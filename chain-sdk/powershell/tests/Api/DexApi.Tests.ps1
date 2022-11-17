@@ -7,9 +7,9 @@
 #
 
 Describe -tag 'PSOpenAPITools' -name 'DexApi' {
-    Context 'Invoke-DexBatchsCurrent' {
-        It 'Test Invoke-DexBatchsCurrent' {
-            #$TestResult = Invoke-DexBatchsCurrent
+    Context 'Invoke-DexBatchesCurrent' {
+        It 'Test Invoke-DexBatchesCurrent' {
+            #$TestResult = Invoke-DexBatchesCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -23,9 +23,9 @@ Describe -tag 'PSOpenAPITools' -name 'DexApi' {
         }
     }
 
-    Context 'Invoke-DexGetBatchsHistorical' {
-        It 'Test Invoke-DexGetBatchsHistorical' {
-            #$TestResult = Invoke-DexGetBatchsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE"
+    Context 'Invoke-DexGetBatchesHistorical' {
+        It 'Test Invoke-DexGetBatchesHistorical' {
+            #$TestResult = Invoke-DexGetBatchesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -63,9 +63,9 @@ Describe -tag 'PSOpenAPITools' -name 'DexApi' {
         }
     }
 
-    Context 'Invoke-DexGetStatssHistorical' {
-        It 'Test Invoke-DexGetStatssHistorical' {
-            #$TestResult = Invoke-DexGetStatssHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE"
+    Context 'Invoke-DexGetStatsHistorical' {
+        It 'Test Invoke-DexGetStatsHistorical' {
+            #$TestResult = Invoke-DexGetStatsHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -135,9 +135,9 @@ Describe -tag 'PSOpenAPITools' -name 'DexApi' {
         }
     }
 
-    Context 'Invoke-DexStatssCurrent' {
-        It 'Test Invoke-DexStatssCurrent' {
-            #$TestResult = Invoke-DexStatssCurrent
+    Context 'Invoke-DexStatsCurrent' {
+        It 'Test Invoke-DexStatsCurrent' {
+            #$TestResult = Invoke-DexStatsCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

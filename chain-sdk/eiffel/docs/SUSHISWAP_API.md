@@ -6,33 +6,33 @@ Feature | HTTP request | Description
 ------------- | ------------- | -------------
 [**sushiswap_bundles_current**](SUSHISWAP_API.md#sushiswap_bundles_current) | **Get** /dapps/sushiswap/bundles/current | Bundles (current)
 [**sushiswap_burns_current**](SUSHISWAP_API.md#sushiswap_burns_current) | **Get** /dapps/sushiswap/burns/current | Burns (current)
-[**sushiswap_day_datas_current**](SUSHISWAP_API.md#sushiswap_day_datas_current) | **Get** /dapps/sushiswap/dayDatas/current | DayDatas (current)
-[**sushiswap_factorys_current**](SUSHISWAP_API.md#sushiswap_factorys_current) | **Get** /dapps/sushiswap/factorys/current | Factorys (current)
+[**sushiswap_day_data_current**](SUSHISWAP_API.md#sushiswap_day_data_current) | **Get** /dapps/sushiswap/dayData/current | DayData (current)
+[**sushiswap_factories_current**](SUSHISWAP_API.md#sushiswap_factories_current) | **Get** /dapps/sushiswap/factories/current | Factories (current)
 [**sushiswap_get_bundles_historical**](SUSHISWAP_API.md#sushiswap_get_bundles_historical) | **Get** /dapps/sushiswap/bundles/historical | Bundles (historical)
 [**sushiswap_get_burns_historical**](SUSHISWAP_API.md#sushiswap_get_burns_historical) | **Get** /dapps/sushiswap/burns/historical | Burns (historical)
-[**sushiswap_get_day_datas_historical**](SUSHISWAP_API.md#sushiswap_get_day_datas_historical) | **Get** /dapps/sushiswap/dayDatas/historical | DayDatas (historical)
-[**sushiswap_get_factorys_historical**](SUSHISWAP_API.md#sushiswap_get_factorys_historical) | **Get** /dapps/sushiswap/factorys/historical | Factorys (historical)
-[**sushiswap_get_hour_datas_historical**](SUSHISWAP_API.md#sushiswap_get_hour_datas_historical) | **Get** /dapps/sushiswap/hourDatas/historical | HourDatas (historical)
+[**sushiswap_get_day_data_historical**](SUSHISWAP_API.md#sushiswap_get_day_data_historical) | **Get** /dapps/sushiswap/dayData/historical | DayData (historical)
+[**sushiswap_get_factories_historical**](SUSHISWAP_API.md#sushiswap_get_factories_historical) | **Get** /dapps/sushiswap/factories/historical | Factories (historical)
+[**sushiswap_get_hour_data_historical**](SUSHISWAP_API.md#sushiswap_get_hour_data_historical) | **Get** /dapps/sushiswap/hourData/historical | HourData (historical)
 [**sushiswap_get_liquidity_position_snapshots_historical**](SUSHISWAP_API.md#sushiswap_get_liquidity_position_snapshots_historical) | **Get** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**sushiswap_get_liquidity_positions_historical**](SUSHISWAP_API.md#sushiswap_get_liquidity_positions_historical) | **Get** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical)
 [**sushiswap_get_mints_historical**](SUSHISWAP_API.md#sushiswap_get_mints_historical) | **Get** /dapps/sushiswap/mints/historical | Mints (historical)
-[**sushiswap_get_pair_day_datas_historical**](SUSHISWAP_API.md#sushiswap_get_pair_day_datas_historical) | **Get** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical)
-[**sushiswap_get_pair_hour_datas_historical**](SUSHISWAP_API.md#sushiswap_get_pair_hour_datas_historical) | **Get** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical)
+[**sushiswap_get_pair_day_data_historical**](SUSHISWAP_API.md#sushiswap_get_pair_day_data_historical) | **Get** /dapps/sushiswap/pairDayData/historical | PairDayData (historical)
+[**sushiswap_get_pair_hour_data_historical**](SUSHISWAP_API.md#sushiswap_get_pair_hour_data_historical) | **Get** /dapps/sushiswap/pairHourData/historical | PairHourData (historical)
 [**sushiswap_get_pairs_historical**](SUSHISWAP_API.md#sushiswap_get_pairs_historical) | **Get** /dapps/sushiswap/pairs/historical | Pairs (historical)
 [**sushiswap_get_swaps_historical**](SUSHISWAP_API.md#sushiswap_get_swaps_historical) | **Get** /dapps/sushiswap/swaps/historical | Swaps (historical)
-[**sushiswap_get_token_day_datas_historical**](SUSHISWAP_API.md#sushiswap_get_token_day_datas_historical) | **Get** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical)
+[**sushiswap_get_token_day_data_historical**](SUSHISWAP_API.md#sushiswap_get_token_day_data_historical) | **Get** /dapps/sushiswap/tokenDayData/historical | TokenDayData (historical)
 [**sushiswap_get_tokens_historical**](SUSHISWAP_API.md#sushiswap_get_tokens_historical) | **Get** /dapps/sushiswap/tokens/historical | Tokens (historical)
 [**sushiswap_get_transactions_historical**](SUSHISWAP_API.md#sushiswap_get_transactions_historical) | **Get** /dapps/sushiswap/transactions/historical | Transactions (historical)
 [**sushiswap_get_users_historical**](SUSHISWAP_API.md#sushiswap_get_users_historical) | **Get** /dapps/sushiswap/users/historical | Users (historical)
-[**sushiswap_hour_datas_current**](SUSHISWAP_API.md#sushiswap_hour_datas_current) | **Get** /dapps/sushiswap/hourDatas/current | HourDatas (current)
+[**sushiswap_hour_data_current**](SUSHISWAP_API.md#sushiswap_hour_data_current) | **Get** /dapps/sushiswap/hourData/current | HourData (current)
 [**sushiswap_liquidity_position_snapshots_current**](SUSHISWAP_API.md#sushiswap_liquidity_position_snapshots_current) | **Get** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**sushiswap_liquidity_positions_current**](SUSHISWAP_API.md#sushiswap_liquidity_positions_current) | **Get** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
 [**sushiswap_mints_current**](SUSHISWAP_API.md#sushiswap_mints_current) | **Get** /dapps/sushiswap/mints/current | Mints (current)
-[**sushiswap_pair_day_datas_current**](SUSHISWAP_API.md#sushiswap_pair_day_datas_current) | **Get** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current)
-[**sushiswap_pair_hour_datas_current**](SUSHISWAP_API.md#sushiswap_pair_hour_datas_current) | **Get** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current)
+[**sushiswap_pair_day_data_current**](SUSHISWAP_API.md#sushiswap_pair_day_data_current) | **Get** /dapps/sushiswap/pairDayData/current | PairDayData (current)
+[**sushiswap_pair_hour_data_current**](SUSHISWAP_API.md#sushiswap_pair_hour_data_current) | **Get** /dapps/sushiswap/pairHourData/current | PairHourData (current)
 [**sushiswap_pairs_current**](SUSHISWAP_API.md#sushiswap_pairs_current) | **Get** /dapps/sushiswap/pairs/current | Pairs (current)
 [**sushiswap_swaps_current**](SUSHISWAP_API.md#sushiswap_swaps_current) | **Get** /dapps/sushiswap/swaps/current | Swaps (current)
-[**sushiswap_token_day_datas_current**](SUSHISWAP_API.md#sushiswap_token_day_datas_current) | **Get** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current)
+[**sushiswap_token_day_data_current**](SUSHISWAP_API.md#sushiswap_token_day_data_current) | **Get** /dapps/sushiswap/tokenDayData/current | TokenDayData (current)
 [**sushiswap_tokens_current**](SUSHISWAP_API.md#sushiswap_tokens_current) | **Get** /dapps/sushiswap/tokens/current | Tokens (current)
 [**sushiswap_transactions_current**](SUSHISWAP_API.md#sushiswap_transactions_current) | **Get** /dapps/sushiswap/transactions/current | Transactions (current)
 [**sushiswap_users_current**](SUSHISWAP_API.md#sushiswap_users_current) | **Get** /dapps/sushiswap/users/current | Users (current)
@@ -92,13 +92,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_day_datas_current**
-> sushiswap_day_datas_current : detachable LIST [SUSHISWAP_DAY_DATA_DTO]
+# **sushiswap_day_data_current**
+> sushiswap_day_data_current : detachable LIST [SUSHISWAP_DAY_DATA_DTO]
 
 
-DayDatas (current)
+DayData (current)
 
-Gets dayDatas.
+Gets dayData.
 
 
 ### Parameters
@@ -119,13 +119,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_factorys_current**
-> sushiswap_factorys_current : detachable LIST [SUSHISWAP_FACTORY_DTO]
+# **sushiswap_factories_current**
+> sushiswap_factories_current : detachable LIST [SUSHISWAP_FACTORY_DTO]
 
 
-Factorys (current)
+Factories (current)
 
-Gets factorys.
+Gets factories.
 
 
 ### Parameters
@@ -215,13 +215,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_day_datas_historical**
-> sushiswap_get_day_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_DAY_DATA_DTO]
+# **sushiswap_get_day_data_historical**
+> sushiswap_get_day_data_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_DAY_DATA_DTO]
 
 
-DayDatas (historical)
+DayData (historical)
 
-Gets dayDatas.
+Gets dayData.
 
 
 ### Parameters
@@ -249,13 +249,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_factorys_historical**
-> sushiswap_get_factorys_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_FACTORY_DTO]
+# **sushiswap_get_factories_historical**
+> sushiswap_get_factories_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_FACTORY_DTO]
 
 
-Factorys (historical)
+Factories (historical)
 
-Gets factorys.
+Gets factories.
 
 
 ### Parameters
@@ -283,13 +283,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_hour_datas_historical**
-> sushiswap_get_hour_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_HOUR_DATA_DTO]
+# **sushiswap_get_hour_data_historical**
+> sushiswap_get_hour_data_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_HOUR_DATA_DTO]
 
 
-HourDatas (historical)
+HourData (historical)
 
-Gets hourDatas.
+Gets hourData.
 
 
 ### Parameters
@@ -424,13 +424,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_pair_day_datas_historical**
-> sushiswap_get_pair_day_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pair:  detachable STRING_32 ; token_0:  detachable STRING_32 ; token_1:  detachable STRING_32 ): detachable LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
+# **sushiswap_get_pair_day_data_historical**
+> sushiswap_get_pair_day_data_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pair:  detachable STRING_32 ; token_0:  detachable STRING_32 ; token_1:  detachable STRING_32 ): detachable LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
 
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 
 ### Parameters
@@ -461,13 +461,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_pair_hour_datas_historical**
-> sushiswap_get_pair_hour_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pair:  detachable STRING_32 ): detachable LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
+# **sushiswap_get_pair_hour_data_historical**
+> sushiswap_get_pair_hour_data_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; pair:  detachable STRING_32 ): detachable LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
 
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 
 ### Parameters
@@ -568,13 +568,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_get_token_day_datas_historical**
-> sushiswap_get_token_day_datas_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]
+# **sushiswap_get_token_day_data_historical**
+> sushiswap_get_token_day_data_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ): detachable LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]
 
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 
 ### Parameters
@@ -706,13 +706,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_hour_datas_current**
-> sushiswap_hour_datas_current : detachable LIST [SUSHISWAP_HOUR_DATA_DTO]
+# **sushiswap_hour_data_current**
+> sushiswap_hour_data_current : detachable LIST [SUSHISWAP_HOUR_DATA_DTO]
 
 
-HourDatas (current)
+HourData (current)
 
-Gets hourDatas.
+Gets hourData.
 
 
 ### Parameters
@@ -814,13 +814,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_pair_day_datas_current**
-> sushiswap_pair_day_datas_current : detachable LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
+# **sushiswap_pair_day_data_current**
+> sushiswap_pair_day_data_current : detachable LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
 
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 
 ### Parameters
@@ -841,13 +841,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_pair_hour_datas_current**
-> sushiswap_pair_hour_datas_current : detachable LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
+# **sushiswap_pair_hour_data_current**
+> sushiswap_pair_hour_data_current : detachable LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
 
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 
 ### Parameters
@@ -928,13 +928,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **sushiswap_token_day_datas_current**
-> sushiswap_token_day_datas_current : detachable LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]
+# **sushiswap_token_day_data_current**
+> sushiswap_token_day_data_current : detachable LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]
 
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 
 ### Parameters

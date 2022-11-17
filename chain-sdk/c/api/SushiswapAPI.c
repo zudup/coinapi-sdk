@@ -162,12 +162,12 @@ end:
 
 }
 
-// DayDatas (current)
+// DayData (current)
 //
-// Gets dayDatas.
+// Gets dayData.
 //
 list_t*
-SushiswapAPI_sushiswapDayDatasCurrent(apiClient_t *apiClient)
+SushiswapAPI_sushiswapDayDataCurrent(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -177,9 +177,9 @@ SushiswapAPI_sushiswapDayDatasCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/dayDatas/current")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/dayData/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/dayDatas/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/dayData/current");
 
 
 
@@ -237,12 +237,12 @@ end:
 
 }
 
-// Factorys (current)
+// Factories (current)
 //
-// Gets factorys.
+// Gets factories.
 //
 list_t*
-SushiswapAPI_sushiswapFactorysCurrent(apiClient_t *apiClient)
+SushiswapAPI_sushiswapFactoriesCurrent(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -252,9 +252,9 @@ SushiswapAPI_sushiswapFactorysCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/factorys/current")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/factories/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/factorys/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/factories/current");
 
 
 
@@ -694,12 +694,12 @@ end:
 
 }
 
-// DayDatas (historical)
+// DayData (historical)
 //
-// Gets dayDatas.
+// Gets dayData.
 //
 list_t*
-SushiswapAPI_sushiswapGetDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
+SushiswapAPI_sushiswapGetDayDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -709,9 +709,9 @@ SushiswapAPI_sushiswapGetDayDatasHistorical(apiClient_t *apiClient, long startBl
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/dayDatas/historical")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/dayData/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/dayDatas/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/dayData/historical");
 
 
 
@@ -873,12 +873,12 @@ end:
 
 }
 
-// Factorys (historical)
+// Factories (historical)
 //
-// Gets factorys.
+// Gets factories.
 //
 list_t*
-SushiswapAPI_sushiswapGetFactorysHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
+SushiswapAPI_sushiswapGetFactoriesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -888,9 +888,9 @@ SushiswapAPI_sushiswapGetFactorysHistorical(apiClient_t *apiClient, long startBl
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/factorys/historical")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/factories/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/factorys/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/factories/historical");
 
 
 
@@ -1052,12 +1052,12 @@ end:
 
 }
 
-// HourDatas (historical)
+// HourData (historical)
 //
-// Gets hourDatas.
+// Gets hourData.
 //
 list_t*
-SushiswapAPI_sushiswapGetHourDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
+SushiswapAPI_sushiswapGetHourDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -1067,9 +1067,9 @@ SushiswapAPI_sushiswapGetHourDatasHistorical(apiClient_t *apiClient, long startB
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/hourDatas/historical")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/hourData/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/hourDatas/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/hourData/historical");
 
 
 
@@ -1888,12 +1888,12 @@ end:
 
 }
 
-// PairDayDatas (historical)
+// PairDayData (historical)
 //
-// Gets pairDayDatas.
+// Gets pairDayData.
 //
 list_t*
-SushiswapAPI_sushiswapGetPairDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pair , char * token_0 , char * token_1 )
+SushiswapAPI_sushiswapGetPairDayDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pair , char * token_0 , char * token_1 )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -1903,9 +1903,9 @@ SushiswapAPI_sushiswapGetPairDayDatasHistorical(apiClient_t *apiClient, long sta
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/pairDayDatas/historical")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/pairDayData/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/pairDayDatas/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/pairDayData/historical");
 
 
 
@@ -2139,12 +2139,12 @@ end:
 
 }
 
-// PairHourDatas (historical)
+// PairHourData (historical)
 //
-// Gets pairHourDatas.
+// Gets pairHourData.
 //
 list_t*
-SushiswapAPI_sushiswapGetPairHourDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pair )
+SushiswapAPI_sushiswapGetPairHourDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * pair )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -2154,9 +2154,9 @@ SushiswapAPI_sushiswapGetPairHourDatasHistorical(apiClient_t *apiClient, long st
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/pairHourDatas/historical")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/pairHourData/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/pairHourDatas/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/pairHourData/historical");
 
 
 
@@ -2796,12 +2796,12 @@ end:
 
 }
 
-// TokenDayDatas (historical)
+// TokenDayData (historical)
 //
-// Gets tokenDayDatas.
+// Gets tokenDayData.
 //
 list_t*
-SushiswapAPI_sushiswapGetTokenDayDatasHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
+SushiswapAPI_sushiswapGetTokenDayDataHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -2811,9 +2811,9 @@ SushiswapAPI_sushiswapGetTokenDayDatasHistorical(apiClient_t *apiClient, long st
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/tokenDayDatas/historical")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/tokenDayData/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/tokenDayDatas/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/tokenDayData/historical");
 
 
 
@@ -3560,12 +3560,12 @@ end:
 
 }
 
-// HourDatas (current)
+// HourData (current)
 //
-// Gets hourDatas.
+// Gets hourData.
 //
 list_t*
-SushiswapAPI_sushiswapHourDatasCurrent(apiClient_t *apiClient)
+SushiswapAPI_sushiswapHourDataCurrent(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -3575,9 +3575,9 @@ SushiswapAPI_sushiswapHourDatasCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/hourDatas/current")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/hourData/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/hourDatas/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/hourData/current");
 
 
 
@@ -3860,12 +3860,12 @@ end:
 
 }
 
-// PairDayDatas (current)
+// PairDayData (current)
 //
-// Gets pairDayDatas.
+// Gets pairDayData.
 //
 list_t*
-SushiswapAPI_sushiswapPairDayDatasCurrent(apiClient_t *apiClient)
+SushiswapAPI_sushiswapPairDayDataCurrent(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -3875,9 +3875,9 @@ SushiswapAPI_sushiswapPairDayDatasCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/pairDayDatas/current")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/pairDayData/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/pairDayDatas/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/pairDayData/current");
 
 
 
@@ -3935,12 +3935,12 @@ end:
 
 }
 
-// PairHourDatas (current)
+// PairHourData (current)
 //
-// Gets pairHourDatas.
+// Gets pairHourData.
 //
 list_t*
-SushiswapAPI_sushiswapPairHourDatasCurrent(apiClient_t *apiClient)
+SushiswapAPI_sushiswapPairHourDataCurrent(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -3950,9 +3950,9 @@ SushiswapAPI_sushiswapPairHourDatasCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/pairHourDatas/current")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/pairHourData/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/pairHourDatas/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/pairHourData/current");
 
 
 
@@ -4208,12 +4208,12 @@ end:
 
 }
 
-// TokenDayDatas (current)
+// TokenDayData (current)
 //
-// Gets tokenDayDatas.
+// Gets tokenDayData.
 //
 list_t*
-SushiswapAPI_sushiswapTokenDayDatasCurrent(apiClient_t *apiClient)
+SushiswapAPI_sushiswapTokenDayDataCurrent(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -4223,9 +4223,9 @@ SushiswapAPI_sushiswapTokenDayDatasCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/sushiswap/tokenDayDatas/current")+1;
+    long sizeOfPath = strlen("/dapps/sushiswap/tokenDayData/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/tokenDayDatas/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/sushiswap/tokenDayData/current");
 
 
 

@@ -292,12 +292,12 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_BurnDTO>>> SushiswapApi::sushis
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> SushiswapApi::sushiswap_DayDatas__current() const
+pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> SushiswapApi::sushiswap_DayData__current() const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/dayDatas/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/dayData/current");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -328,7 +328,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> SushiswapApi::sus
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_DayDatas__current does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_DayData__current does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -355,7 +355,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> SushiswapApi::sus
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_DayDatas__current does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_DayData__current does not consume any supported media type"));
     }
 
 
@@ -375,7 +375,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> SushiswapApi::sus
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling sushiswap_DayDatas__current: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling sushiswap_DayData__current: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -386,7 +386,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> SushiswapApi::sus
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling sushiswap_DayDatas__current: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling sushiswap_DayData__current: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -414,18 +414,18 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> SushiswapApi::sus
         else
         {
             throw ApiException(500
-                , utility::conversions::to_string_t("error calling sushiswap_DayDatas__current: unsupported response type"));
+                , utility::conversions::to_string_t("error calling sushiswap_DayData__current: unsupported response type"));
         }
 
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> SushiswapApi::sushiswap_Factorys__current() const
+pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> SushiswapApi::sushiswap_Factories__current() const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/factorys/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/factories/current");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -456,7 +456,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> SushiswapApi::sus
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_Factorys__current does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_Factories__current does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -483,7 +483,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> SushiswapApi::sus
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_Factorys__current does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_Factories__current does not consume any supported media type"));
     }
 
 
@@ -503,7 +503,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> SushiswapApi::sus
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling sushiswap_Factorys__current: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling sushiswap_Factories__current: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -514,7 +514,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> SushiswapApi::sus
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling sushiswap_Factorys__current: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling sushiswap_Factories__current: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -542,7 +542,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> SushiswapApi::sus
         else
         {
             throw ApiException(500
-                , utility::conversions::to_string_t("error calling sushiswap_Factorys__current: unsupported response type"));
+                , utility::conversions::to_string_t("error calling sushiswap_Factories__current: unsupported response type"));
         }
 
         return localVarResult;
@@ -848,12 +848,12 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_BurnDTO>>> SushiswapApi::sushis
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> SushiswapApi::sushiswap_GetDayDatas__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> id) const
+pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> SushiswapApi::sushiswap_GetDayData__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> id) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/dayDatas/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/dayData/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -884,7 +884,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> SushiswapApi::sus
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetDayDatas__historical does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetDayData__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -931,7 +931,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> SushiswapApi::sus
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetDayDatas__historical does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetDayData__historical does not consume any supported media type"));
     }
 
 
@@ -951,7 +951,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> SushiswapApi::sus
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling sushiswap_GetDayDatas__historical: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling sushiswap_GetDayData__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -962,7 +962,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> SushiswapApi::sus
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling sushiswap_GetDayDatas__historical: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling sushiswap_GetDayData__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -990,18 +990,18 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> SushiswapApi::sus
         else
         {
             throw ApiException(500
-                , utility::conversions::to_string_t("error calling sushiswap_GetDayDatas__historical: unsupported response type"));
+                , utility::conversions::to_string_t("error calling sushiswap_GetDayData__historical: unsupported response type"));
         }
 
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> SushiswapApi::sushiswap_GetFactorys__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> id) const
+pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> SushiswapApi::sushiswap_GetFactories__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> id) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/factorys/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/factories/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1032,7 +1032,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> SushiswapApi::sus
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetFactorys__historical does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetFactories__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1079,7 +1079,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> SushiswapApi::sus
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetFactorys__historical does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetFactories__historical does not consume any supported media type"));
     }
 
 
@@ -1099,7 +1099,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> SushiswapApi::sus
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling sushiswap_GetFactorys__historical: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling sushiswap_GetFactories__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1110,7 +1110,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> SushiswapApi::sus
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling sushiswap_GetFactorys__historical: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling sushiswap_GetFactories__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1138,18 +1138,18 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> SushiswapApi::sus
         else
         {
             throw ApiException(500
-                , utility::conversions::to_string_t("error calling sushiswap_GetFactorys__historical: unsupported response type"));
+                , utility::conversions::to_string_t("error calling sushiswap_GetFactories__historical: unsupported response type"));
         }
 
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> SushiswapApi::sushiswap_GetHourDatas__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> id) const
+pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> SushiswapApi::sushiswap_GetHourData__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> id) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/hourDatas/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/hourData/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1180,7 +1180,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> SushiswapApi::su
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetHourDatas__historical does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetHourData__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1227,7 +1227,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> SushiswapApi::su
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetHourDatas__historical does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetHourData__historical does not consume any supported media type"));
     }
 
 
@@ -1247,7 +1247,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> SushiswapApi::su
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling sushiswap_GetHourDatas__historical: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling sushiswap_GetHourData__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1258,7 +1258,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> SushiswapApi::su
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling sushiswap_GetHourDatas__historical: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling sushiswap_GetHourData__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1286,7 +1286,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> SushiswapApi::su
         else
         {
             throw ApiException(500
-                , utility::conversions::to_string_t("error calling sushiswap_GetHourDatas__historical: unsupported response type"));
+                , utility::conversions::to_string_t("error calling sushiswap_GetHourData__historical: unsupported response type"));
         }
 
         return localVarResult;
@@ -1756,12 +1756,12 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_MintDTO>>> SushiswapApi::sushis
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> SushiswapApi::sushiswap_GetPairDayDatas__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> id, boost::optional<utility::string_t> pair, boost::optional<utility::string_t> token0, boost::optional<utility::string_t> token1) const
+pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> SushiswapApi::sushiswap_GetPairDayData__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> id, boost::optional<utility::string_t> pair, boost::optional<utility::string_t> token0, boost::optional<utility::string_t> token1) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/pairDayDatas/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/pairDayData/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1792,7 +1792,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> SushiswapApi:
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetPairDayDatas__historical does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetPairDayData__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -1851,7 +1851,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> SushiswapApi:
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetPairDayDatas__historical does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetPairDayData__historical does not consume any supported media type"));
     }
 
 
@@ -1871,7 +1871,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> SushiswapApi:
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling sushiswap_GetPairDayDatas__historical: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling sushiswap_GetPairDayData__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -1882,7 +1882,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> SushiswapApi:
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling sushiswap_GetPairDayDatas__historical: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling sushiswap_GetPairDayData__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -1910,18 +1910,18 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> SushiswapApi:
         else
         {
             throw ApiException(500
-                , utility::conversions::to_string_t("error calling sushiswap_GetPairDayDatas__historical: unsupported response type"));
+                , utility::conversions::to_string_t("error calling sushiswap_GetPairDayData__historical: unsupported response type"));
         }
 
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> SushiswapApi::sushiswap_GetPairHourDatas__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> id, boost::optional<utility::string_t> pair) const
+pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> SushiswapApi::sushiswap_GetPairHourData__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> id, boost::optional<utility::string_t> pair) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/pairHourDatas/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/pairHourData/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -1952,7 +1952,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> SushiswapApi
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetPairHourDatas__historical does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetPairHourData__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -2003,7 +2003,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> SushiswapApi
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetPairHourDatas__historical does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetPairHourData__historical does not consume any supported media type"));
     }
 
 
@@ -2023,7 +2023,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> SushiswapApi
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling sushiswap_GetPairHourDatas__historical: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling sushiswap_GetPairHourData__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -2034,7 +2034,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> SushiswapApi
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling sushiswap_GetPairHourDatas__historical: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling sushiswap_GetPairHourData__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -2062,7 +2062,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> SushiswapApi
         else
         {
             throw ApiException(500
-                , utility::conversions::to_string_t("error calling sushiswap_GetPairHourDatas__historical: unsupported response type"));
+                , utility::conversions::to_string_t("error calling sushiswap_GetPairHourData__historical: unsupported response type"));
         }
 
         return localVarResult;
@@ -2380,12 +2380,12 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_SwapDTO>>> SushiswapApi::sushis
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> SushiswapApi::sushiswap_GetTokenDayDatas__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> id) const
+pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> SushiswapApi::sushiswap_GetTokenDayData__historical(boost::optional<int64_t> startBlock, boost::optional<int64_t> endBlock, boost::optional<utility::datetime> startDate, boost::optional<utility::datetime> endDate, boost::optional<utility::string_t> id) const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/tokenDayDatas/historical");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/tokenDayData/historical");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -2416,7 +2416,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> SushiswapApi
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetTokenDayDatas__historical does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetTokenDayData__historical does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -2463,7 +2463,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> SushiswapApi
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetTokenDayDatas__historical does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_GetTokenDayData__historical does not consume any supported media type"));
     }
 
 
@@ -2483,7 +2483,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> SushiswapApi
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling sushiswap_GetTokenDayDatas__historical: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling sushiswap_GetTokenDayData__historical: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -2494,7 +2494,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> SushiswapApi
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling sushiswap_GetTokenDayDatas__historical: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling sushiswap_GetTokenDayData__historical: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -2522,7 +2522,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> SushiswapApi
         else
         {
             throw ApiException(500
-                , utility::conversions::to_string_t("error calling sushiswap_GetTokenDayDatas__historical: unsupported response type"));
+                , utility::conversions::to_string_t("error calling sushiswap_GetTokenDayData__historical: unsupported response type"));
         }
 
         return localVarResult;
@@ -2980,12 +2980,12 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_UserDTO>>> SushiswapApi::sushis
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> SushiswapApi::sushiswap_HourDatas__current() const
+pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> SushiswapApi::sushiswap_HourData__current() const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/hourDatas/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/hourData/current");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -3016,7 +3016,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> SushiswapApi::su
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_HourDatas__current does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_HourData__current does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -3043,7 +3043,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> SushiswapApi::su
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_HourDatas__current does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_HourData__current does not consume any supported media type"));
     }
 
 
@@ -3063,7 +3063,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> SushiswapApi::su
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling sushiswap_HourDatas__current: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling sushiswap_HourData__current: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -3074,7 +3074,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> SushiswapApi::su
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling sushiswap_HourDatas__current: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling sushiswap_HourData__current: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -3102,7 +3102,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> SushiswapApi::su
         else
         {
             throw ApiException(500
-                , utility::conversions::to_string_t("error calling sushiswap_HourDatas__current: unsupported response type"));
+                , utility::conversions::to_string_t("error calling sushiswap_HourData__current: unsupported response type"));
         }
 
         return localVarResult;
@@ -3492,12 +3492,12 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_MintDTO>>> SushiswapApi::sushis
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> SushiswapApi::sushiswap_PairDayDatas__current() const
+pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> SushiswapApi::sushiswap_PairDayData__current() const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/pairDayDatas/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/pairDayData/current");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -3528,7 +3528,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> SushiswapApi:
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_PairDayDatas__current does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_PairDayData__current does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -3555,7 +3555,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> SushiswapApi:
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_PairDayDatas__current does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_PairDayData__current does not consume any supported media type"));
     }
 
 
@@ -3575,7 +3575,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> SushiswapApi:
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling sushiswap_PairDayDatas__current: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling sushiswap_PairDayData__current: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -3586,7 +3586,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> SushiswapApi:
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling sushiswap_PairDayDatas__current: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling sushiswap_PairDayData__current: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -3614,18 +3614,18 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> SushiswapApi:
         else
         {
             throw ApiException(500
-                , utility::conversions::to_string_t("error calling sushiswap_PairDayDatas__current: unsupported response type"));
+                , utility::conversions::to_string_t("error calling sushiswap_PairDayData__current: unsupported response type"));
         }
 
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> SushiswapApi::sushiswap_PairHourDatas__current() const
+pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> SushiswapApi::sushiswap_PairHourData__current() const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/pairHourDatas/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/pairHourData/current");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -3656,7 +3656,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> SushiswapApi
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_PairHourDatas__current does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_PairHourData__current does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -3683,7 +3683,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> SushiswapApi
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_PairHourDatas__current does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_PairHourData__current does not consume any supported media type"));
     }
 
 
@@ -3703,7 +3703,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> SushiswapApi
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling sushiswap_PairHourDatas__current: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling sushiswap_PairHourData__current: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -3714,7 +3714,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> SushiswapApi
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling sushiswap_PairHourDatas__current: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling sushiswap_PairHourData__current: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -3742,7 +3742,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> SushiswapApi
         else
         {
             throw ApiException(500
-                , utility::conversions::to_string_t("error calling sushiswap_PairHourDatas__current: unsupported response type"));
+                , utility::conversions::to_string_t("error calling sushiswap_PairHourData__current: unsupported response type"));
         }
 
         return localVarResult;
@@ -4012,12 +4012,12 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_SwapDTO>>> SushiswapApi::sushis
         return localVarResult;
     });
 }
-pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> SushiswapApi::sushiswap_TokenDayDatas__current() const
+pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> SushiswapApi::sushiswap_TokenDayData__current() const
 {
 
 
     std::shared_ptr<const ApiConfiguration> localVarApiConfiguration( m_ApiClient->getConfiguration() );
-    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/tokenDayDatas/current");
+    utility::string_t localVarPath = utility::conversions::to_string_t("/dapps/sushiswap/tokenDayData/current");
     
     std::map<utility::string_t, utility::string_t> localVarQueryParams;
     std::map<utility::string_t, utility::string_t> localVarHeaderParams( localVarApiConfiguration->getDefaultHeaders() );
@@ -4048,7 +4048,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> SushiswapApi
     }
     else
     {
-        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_TokenDayDatas__current does not produce any supported media type"));
+        throw ApiException(400, utility::conversions::to_string_t("SushiswapApi->sushiswap_TokenDayData__current does not produce any supported media type"));
     }
 
     localVarHeaderParams[utility::conversions::to_string_t("Accept")] = localVarResponseHttpContentType;
@@ -4075,7 +4075,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> SushiswapApi
     }
     else
     {
-        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_TokenDayDatas__current does not consume any supported media type"));
+        throw ApiException(415, utility::conversions::to_string_t("SushiswapApi->sushiswap_TokenDayData__current does not consume any supported media type"));
     }
 
 
@@ -4095,7 +4095,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> SushiswapApi
         if (localVarResponse.status_code() >= 400)
         {
             throw ApiException(localVarResponse.status_code()
-                , utility::conversions::to_string_t("error calling sushiswap_TokenDayDatas__current: ") + localVarResponse.reason_phrase()
+                , utility::conversions::to_string_t("error calling sushiswap_TokenDayData__current: ") + localVarResponse.reason_phrase()
                 , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
         }
 
@@ -4106,7 +4106,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> SushiswapApi
             if( localVarContentType.find(localVarResponseHttpContentType) == std::string::npos )
             {
                 throw ApiException(500
-                    , utility::conversions::to_string_t("error calling sushiswap_TokenDayDatas__current: unexpected response type: ") + localVarContentType
+                    , utility::conversions::to_string_t("error calling sushiswap_TokenDayData__current: unexpected response type: ") + localVarContentType
                     , std::make_shared<std::stringstream>(localVarResponse.extract_utf8string(true).get()));
             }
         }
@@ -4134,7 +4134,7 @@ pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> SushiswapApi
         else
         {
             throw ApiException(500
-                , utility::conversions::to_string_t("error calling sushiswap_TokenDayDatas__current: unsupported response type"));
+                , utility::conversions::to_string_t("error calling sushiswap_TokenDayData__current: unsupported response type"));
         }
 
         return localVarResult;

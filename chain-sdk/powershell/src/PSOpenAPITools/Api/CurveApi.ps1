@@ -844,7 +844,7 @@ function Invoke-CurveGaugeDepositsCurrent {
 <#
 .SYNOPSIS
 
-GaugeLiquiditys (current)
+GaugeLiquidities (current)
 
 .DESCRIPTION
 
@@ -862,7 +862,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 CurveGaugeLiquidityDTO[]
 #>
-function Invoke-CurveGaugeLiquiditysCurrent {
+function Invoke-CurveGaugeLiquiditiesCurrent {
     [CmdletBinding()]
     Param (
         [String]
@@ -873,7 +873,7 @@ function Invoke-CurveGaugeLiquiditysCurrent {
     )
 
     Process {
-        'Calling method: Invoke-CurveGaugeLiquiditysCurrent' | Write-Debug
+        'Calling method: Invoke-CurveGaugeLiquiditiesCurrent' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -894,7 +894,7 @@ function Invoke-CurveGaugeLiquiditysCurrent {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/gaugeLiquiditys/current'
+        $LocalVarUri = '/dapps/curve/gaugeLiquidities/current'
 
         $LocalVarResult = Invoke-ApiClient -Method 'GET' `
                                 -Uri $LocalVarUri `
@@ -2909,7 +2909,7 @@ function Invoke-CurveGetGaugeDepositsHistorical {
 <#
 .SYNOPSIS
 
-GaugeLiquiditys (historical)
+GaugeLiquidities (historical)
 
 .DESCRIPTION
 
@@ -2945,7 +2945,7 @@ A switch when turned on will return a hash table of Response, StatusCode and Hea
 
 CurveGaugeLiquidityDTO[]
 #>
-function Invoke-CurveGetGaugeLiquiditysHistorical {
+function Invoke-CurveGetGaugeLiquiditiesHistorical {
     [CmdletBinding()]
     Param (
         [Parameter(Position = 0, ValueFromPipeline = $true, ValueFromPipelineByPropertyName = $true, Mandatory = $false)]
@@ -2974,7 +2974,7 @@ function Invoke-CurveGetGaugeLiquiditysHistorical {
     )
 
     Process {
-        'Calling method: Invoke-CurveGetGaugeLiquiditysHistorical' | Write-Debug
+        'Calling method: Invoke-CurveGetGaugeLiquiditiesHistorical' | Write-Debug
         $PSBoundParameters | Out-DebugParameter | Write-Debug
 
         $LocalVarAccepts = @()
@@ -2995,7 +2995,7 @@ function Invoke-CurveGetGaugeLiquiditysHistorical {
             $LocalVarAccepts = @($ReturnType)
         }
 
-        $LocalVarUri = '/dapps/curve/gaugeLiquiditys/historical'
+        $LocalVarUri = '/dapps/curve/gaugeLiquidities/historical'
 
         if ($StartBlock) {
             $LocalVarQueryParameters['startBlock'] = $StartBlock

@@ -689,14 +689,14 @@ export class CurveApi {
     }
 
     /**
-     * Gets gaugeLiquiditys.
-     * @summary GaugeLiquiditys (current)
+     * Gets gaugeLiquidities.
+     * @summary GaugeLiquidities (current)
      */
-    public curveGaugeLiquiditysCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public curveGaugeLiquiditiesCurrent(extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.CurveGaugeLiquidityDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/gaugeLiquiditys/current';
+        let localVarPath = this.basePath + '/dapps/curve/gaugeLiquidities/current';
 
         let queryParameters: any = {};
         let headerParams: any = {};
@@ -2047,8 +2047,8 @@ export class CurveApi {
     }
 
     /**
-     * Gets gaugeLiquiditys.
-     * @summary GaugeLiquiditys (historical)
+     * Gets gaugeLiquidities.
+     * @summary GaugeLiquidities (historical)
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -2056,11 +2056,11 @@ export class CurveApi {
      * @param id 
      * @param user 
      */
-    public curveGetGaugeLiquiditysHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
+    public curveGetGaugeLiquiditiesHistorical(startBlock?: number, endBlock?: number, startDate?: string, endDate?: string, id?: string, user?: string, extraJQueryAjaxSettings?: JQueryAjaxSettings): JQuery.Promise<
     { response: JQueryXHR; body: Array<models.CurveGaugeLiquidityDTO>;  },
     { response: JQueryXHR; errorThrown: string }
     > {
-        let localVarPath = this.basePath + '/dapps/curve/gaugeLiquiditys/historical';
+        let localVarPath = this.basePath + '/dapps/curve/gaugeLiquidities/historical';
 
         let queryParameters: any = {};
         let headerParams: any = {};

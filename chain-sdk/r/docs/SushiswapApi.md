@@ -6,33 +6,33 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**SushiswapBundlesCurrent**](SushiswapApi.md#SushiswapBundlesCurrent) | **GET** /dapps/sushiswap/bundles/current | Bundles (current)
 [**SushiswapBurnsCurrent**](SushiswapApi.md#SushiswapBurnsCurrent) | **GET** /dapps/sushiswap/burns/current | Burns (current)
-[**SushiswapDayDatasCurrent**](SushiswapApi.md#SushiswapDayDatasCurrent) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current)
-[**SushiswapFactorysCurrent**](SushiswapApi.md#SushiswapFactorysCurrent) | **GET** /dapps/sushiswap/factorys/current | Factorys (current)
+[**SushiswapDayDataCurrent**](SushiswapApi.md#SushiswapDayDataCurrent) | **GET** /dapps/sushiswap/dayData/current | DayData (current)
+[**SushiswapFactoriesCurrent**](SushiswapApi.md#SushiswapFactoriesCurrent) | **GET** /dapps/sushiswap/factories/current | Factories (current)
 [**SushiswapGetBundlesHistorical**](SushiswapApi.md#SushiswapGetBundlesHistorical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical)
 [**SushiswapGetBurnsHistorical**](SushiswapApi.md#SushiswapGetBurnsHistorical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical)
-[**SushiswapGetDayDatasHistorical**](SushiswapApi.md#SushiswapGetDayDatasHistorical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical)
-[**SushiswapGetFactorysHistorical**](SushiswapApi.md#SushiswapGetFactorysHistorical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical)
-[**SushiswapGetHourDatasHistorical**](SushiswapApi.md#SushiswapGetHourDatasHistorical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical)
+[**SushiswapGetDayDataHistorical**](SushiswapApi.md#SushiswapGetDayDataHistorical) | **GET** /dapps/sushiswap/dayData/historical | DayData (historical)
+[**SushiswapGetFactoriesHistorical**](SushiswapApi.md#SushiswapGetFactoriesHistorical) | **GET** /dapps/sushiswap/factories/historical | Factories (historical)
+[**SushiswapGetHourDataHistorical**](SushiswapApi.md#SushiswapGetHourDataHistorical) | **GET** /dapps/sushiswap/hourData/historical | HourData (historical)
 [**SushiswapGetLiquidityPositionSnapshotsHistorical**](SushiswapApi.md#SushiswapGetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**SushiswapGetLiquidityPositionsHistorical**](SushiswapApi.md#SushiswapGetLiquidityPositionsHistorical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical)
 [**SushiswapGetMintsHistorical**](SushiswapApi.md#SushiswapGetMintsHistorical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical)
-[**SushiswapGetPairDayDatasHistorical**](SushiswapApi.md#SushiswapGetPairDayDatasHistorical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical)
-[**SushiswapGetPairHourDatasHistorical**](SushiswapApi.md#SushiswapGetPairHourDatasHistorical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical)
+[**SushiswapGetPairDayDataHistorical**](SushiswapApi.md#SushiswapGetPairDayDataHistorical) | **GET** /dapps/sushiswap/pairDayData/historical | PairDayData (historical)
+[**SushiswapGetPairHourDataHistorical**](SushiswapApi.md#SushiswapGetPairHourDataHistorical) | **GET** /dapps/sushiswap/pairHourData/historical | PairHourData (historical)
 [**SushiswapGetPairsHistorical**](SushiswapApi.md#SushiswapGetPairsHistorical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical)
 [**SushiswapGetSwapsHistorical**](SushiswapApi.md#SushiswapGetSwapsHistorical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical)
-[**SushiswapGetTokenDayDatasHistorical**](SushiswapApi.md#SushiswapGetTokenDayDatasHistorical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical)
+[**SushiswapGetTokenDayDataHistorical**](SushiswapApi.md#SushiswapGetTokenDayDataHistorical) | **GET** /dapps/sushiswap/tokenDayData/historical | TokenDayData (historical)
 [**SushiswapGetTokensHistorical**](SushiswapApi.md#SushiswapGetTokensHistorical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical)
 [**SushiswapGetTransactionsHistorical**](SushiswapApi.md#SushiswapGetTransactionsHistorical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical)
 [**SushiswapGetUsersHistorical**](SushiswapApi.md#SushiswapGetUsersHistorical) | **GET** /dapps/sushiswap/users/historical | Users (historical)
-[**SushiswapHourDatasCurrent**](SushiswapApi.md#SushiswapHourDatasCurrent) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current)
+[**SushiswapHourDataCurrent**](SushiswapApi.md#SushiswapHourDataCurrent) | **GET** /dapps/sushiswap/hourData/current | HourData (current)
 [**SushiswapLiquidityPositionSnapshotsCurrent**](SushiswapApi.md#SushiswapLiquidityPositionSnapshotsCurrent) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**SushiswapLiquidityPositionsCurrent**](SushiswapApi.md#SushiswapLiquidityPositionsCurrent) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current)
 [**SushiswapMintsCurrent**](SushiswapApi.md#SushiswapMintsCurrent) | **GET** /dapps/sushiswap/mints/current | Mints (current)
-[**SushiswapPairDayDatasCurrent**](SushiswapApi.md#SushiswapPairDayDatasCurrent) | **GET** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current)
-[**SushiswapPairHourDatasCurrent**](SushiswapApi.md#SushiswapPairHourDatasCurrent) | **GET** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current)
+[**SushiswapPairDayDataCurrent**](SushiswapApi.md#SushiswapPairDayDataCurrent) | **GET** /dapps/sushiswap/pairDayData/current | PairDayData (current)
+[**SushiswapPairHourDataCurrent**](SushiswapApi.md#SushiswapPairHourDataCurrent) | **GET** /dapps/sushiswap/pairHourData/current | PairHourData (current)
 [**SushiswapPairsCurrent**](SushiswapApi.md#SushiswapPairsCurrent) | **GET** /dapps/sushiswap/pairs/current | Pairs (current)
 [**SushiswapSwapsCurrent**](SushiswapApi.md#SushiswapSwapsCurrent) | **GET** /dapps/sushiswap/swaps/current | Swaps (current)
-[**SushiswapTokenDayDatasCurrent**](SushiswapApi.md#SushiswapTokenDayDatasCurrent) | **GET** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current)
+[**SushiswapTokenDayDataCurrent**](SushiswapApi.md#SushiswapTokenDayDataCurrent) | **GET** /dapps/sushiswap/tokenDayData/current | TokenDayData (current)
 [**SushiswapTokensCurrent**](SushiswapApi.md#SushiswapTokensCurrent) | **GET** /dapps/sushiswap/tokens/current | Tokens (current)
 [**SushiswapTransactionsCurrent**](SushiswapApi.md#SushiswapTransactionsCurrent) | **GET** /dapps/sushiswap/transactions/current | Transactions (current)
 [**SushiswapUsersCurrent**](SushiswapApi.md#SushiswapUsersCurrent) | **GET** /dapps/sushiswap/users/current | Users (current)
@@ -122,24 +122,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **SushiswapDayDatasCurrent**
-> array[SushiswapDayDataDTO] SushiswapDayDatasCurrent()
+# **SushiswapDayDataCurrent**
+> array[SushiswapDayDataDTO] SushiswapDayDataCurrent()
 
-DayDatas (current)
+DayData (current)
 
-Gets dayDatas.
+Gets dayData.
 
 ### Example
 ```R
 library(openapi)
 
-# DayDatas (current)
+# DayData (current)
 #
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$SushiswapDayDatasCurrent(data_file = "result.txt")
-result <- api_instance$SushiswapDayDatasCurrent()
+# result <- api_instance$SushiswapDayDataCurrent(data_file = "result.txt")
+result <- api_instance$SushiswapDayDataCurrent()
 dput(result)
 ```
 
@@ -164,24 +164,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **SushiswapFactorysCurrent**
-> array[SushiswapFactoryDTO] SushiswapFactorysCurrent()
+# **SushiswapFactoriesCurrent**
+> array[SushiswapFactoryDTO] SushiswapFactoriesCurrent()
 
-Factorys (current)
+Factories (current)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 ```R
 library(openapi)
 
-# Factorys (current)
+# Factories (current)
 #
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$SushiswapFactorysCurrent(data_file = "result.txt")
-result <- api_instance$SushiswapFactorysCurrent()
+# result <- api_instance$SushiswapFactoriesCurrent(data_file = "result.txt")
+result <- api_instance$SushiswapFactoriesCurrent()
 dput(result)
 ```
 
@@ -318,18 +318,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **SushiswapGetDayDatasHistorical**
-> array[SushiswapDayDataDTO] SushiswapGetDayDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
+# **SushiswapGetDayDataHistorical**
+> array[SushiswapDayDataDTO] SushiswapGetDayDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-DayDatas (historical)
+DayData (historical)
 
-Gets dayDatas.
+Gets dayData.
 
 ### Example
 ```R
 library(openapi)
 
-# DayDatas (historical)
+# DayData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -340,8 +340,8 @@ var_id <- "id_example" # character | Unix timestamp for start of day / 86400 giv
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$SushiswapGetDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
-result <- api_instance$SushiswapGetDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
+# result <- api_instance$SushiswapGetDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
 dput(result)
 ```
 
@@ -373,18 +373,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **SushiswapGetFactorysHistorical**
-> array[SushiswapFactoryDTO] SushiswapGetFactorysHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
+# **SushiswapGetFactoriesHistorical**
+> array[SushiswapFactoryDTO] SushiswapGetFactoriesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-Factorys (historical)
+Factories (historical)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 ```R
 library(openapi)
 
-# Factorys (historical)
+# Factories (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -395,8 +395,8 @@ var_id <- "id_example" # character | Factory address. (Optional)
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$SushiswapGetFactorysHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
-result <- api_instance$SushiswapGetFactorysHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
+# result <- api_instance$SushiswapGetFactoriesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetFactoriesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
 dput(result)
 ```
 
@@ -428,18 +428,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **SushiswapGetHourDatasHistorical**
-> array[SushiswapHourDataDTO] SushiswapGetHourDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
+# **SushiswapGetHourDataHistorical**
+> array[SushiswapHourDataDTO] SushiswapGetHourDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-HourDatas (historical)
+HourData (historical)
 
-Gets hourDatas.
+Gets hourData.
 
 ### Example
 ```R
 library(openapi)
 
-# HourDatas (historical)
+# HourData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -450,8 +450,8 @@ var_id <- "id_example" # character | Start of hour timestamp. (Optional)
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$SushiswapGetHourDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
-result <- api_instance$SushiswapGetHourDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
+# result <- api_instance$SushiswapGetHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
 dput(result)
 ```
 
@@ -658,18 +658,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **SushiswapGetPairDayDatasHistorical**
-> array[SushiswapPairDayDataDTO] SushiswapGetPairDayDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pair = var.pair, token_0 = var.token_0, token_1 = var.token_1)
+# **SushiswapGetPairDayDataHistorical**
+> array[SushiswapPairDayDataDTO] SushiswapGetPairDayDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pair = var.pair, token_0 = var.token_0, token_1 = var.token_1)
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 ```R
 library(openapi)
 
-# PairDayDatas (historical)
+# PairDayData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -683,8 +683,8 @@ var_token_1 <- "token_1_example" # character |  (Optional)
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$SushiswapGetPairDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pair = var_pair, token_0 = var_token_0, token_1 = var_token_1data_file = "result.txt")
-result <- api_instance$SushiswapGetPairDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pair = var_pair, token_0 = var_token_0, token_1 = var_token_1)
+# result <- api_instance$SushiswapGetPairDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pair = var_pair, token_0 = var_token_0, token_1 = var_token_1data_file = "result.txt")
+result <- api_instance$SushiswapGetPairDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pair = var_pair, token_0 = var_token_0, token_1 = var_token_1)
 dput(result)
 ```
 
@@ -719,18 +719,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **SushiswapGetPairHourDatasHistorical**
-> array[SushiswapPairHourDataDTO] SushiswapGetPairHourDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pair = var.pair)
+# **SushiswapGetPairHourDataHistorical**
+> array[SushiswapPairHourDataDTO] SushiswapGetPairHourDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id, pair = var.pair)
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 ```R
 library(openapi)
 
-# PairHourDatas (historical)
+# PairHourData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer |  (Optional)
@@ -742,8 +742,8 @@ var_pair <- "pair_example" # character |  (Optional)
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$SushiswapGetPairHourDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pair = var_pairdata_file = "result.txt")
-result <- api_instance$SushiswapGetPairHourDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pair = var_pair)
+# result <- api_instance$SushiswapGetPairHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pair = var_pairdata_file = "result.txt")
+result <- api_instance$SushiswapGetPairHourDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, pair = var_pair)
 dput(result)
 ```
 
@@ -894,18 +894,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **SushiswapGetTokenDayDatasHistorical**
-> array[SushiswapTokenDayDataDTO] SushiswapGetTokenDayDatasHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
+# **SushiswapGetTokenDayDataHistorical**
+> array[SushiswapTokenDayDataDTO] SushiswapGetTokenDayDataHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 ```R
 library(openapi)
 
-# TokenDayDatas (historical)
+# TokenDayData (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -916,8 +916,8 @@ var_id <- "id_example" # character | Identifier, day start timestamp in unix / 8
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$SushiswapGetTokenDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
-result <- api_instance$SushiswapGetTokenDayDatasHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
+# result <- api_instance$SushiswapGetTokenDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
+result <- api_instance$SushiswapGetTokenDayDataHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
 dput(result)
 ```
 
@@ -1118,24 +1118,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **SushiswapHourDatasCurrent**
-> array[SushiswapHourDataDTO] SushiswapHourDatasCurrent()
+# **SushiswapHourDataCurrent**
+> array[SushiswapHourDataDTO] SushiswapHourDataCurrent()
 
-HourDatas (current)
+HourData (current)
 
-Gets hourDatas.
+Gets hourData.
 
 ### Example
 ```R
 library(openapi)
 
-# HourDatas (current)
+# HourData (current)
 #
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$SushiswapHourDatasCurrent(data_file = "result.txt")
-result <- api_instance$SushiswapHourDatasCurrent()
+# result <- api_instance$SushiswapHourDataCurrent(data_file = "result.txt")
+result <- api_instance$SushiswapHourDataCurrent()
 dput(result)
 ```
 
@@ -1286,24 +1286,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **SushiswapPairDayDatasCurrent**
-> array[SushiswapPairDayDataDTO] SushiswapPairDayDatasCurrent()
+# **SushiswapPairDayDataCurrent**
+> array[SushiswapPairDayDataDTO] SushiswapPairDayDataCurrent()
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 ```R
 library(openapi)
 
-# PairDayDatas (current)
+# PairDayData (current)
 #
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$SushiswapPairDayDatasCurrent(data_file = "result.txt")
-result <- api_instance$SushiswapPairDayDatasCurrent()
+# result <- api_instance$SushiswapPairDayDataCurrent(data_file = "result.txt")
+result <- api_instance$SushiswapPairDayDataCurrent()
 dput(result)
 ```
 
@@ -1328,24 +1328,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **SushiswapPairHourDatasCurrent**
-> array[SushiswapPairHourDataDTO] SushiswapPairHourDatasCurrent()
+# **SushiswapPairHourDataCurrent**
+> array[SushiswapPairHourDataDTO] SushiswapPairHourDataCurrent()
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 ```R
 library(openapi)
 
-# PairHourDatas (current)
+# PairHourData (current)
 #
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$SushiswapPairHourDatasCurrent(data_file = "result.txt")
-result <- api_instance$SushiswapPairHourDatasCurrent()
+# result <- api_instance$SushiswapPairHourDataCurrent(data_file = "result.txt")
+result <- api_instance$SushiswapPairHourDataCurrent()
 dput(result)
 ```
 
@@ -1464,24 +1464,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **SushiswapTokenDayDatasCurrent**
-> array[SushiswapTokenDayDataDTO] SushiswapTokenDayDatasCurrent()
+# **SushiswapTokenDayDataCurrent**
+> array[SushiswapTokenDayDataDTO] SushiswapTokenDayDataCurrent()
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 ```R
 library(openapi)
 
-# TokenDayDatas (current)
+# TokenDayData (current)
 #
 
 api_instance <- SushiswapApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$SushiswapTokenDayDatasCurrent(data_file = "result.txt")
-result <- api_instance$SushiswapTokenDayDatasCurrent()
+# result <- api_instance$SushiswapTokenDayDataCurrent(data_file = "result.txt")
+result <- api_instance$SushiswapTokenDayDataCurrent()
 dput(result)
 ```
 

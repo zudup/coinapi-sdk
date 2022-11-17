@@ -12,12 +12,12 @@
 }while(0)
 
 
-// Batchs (current)
+// Batches (current)
 //
-// Gets batchs.
+// Gets batches.
 //
 list_t*
-DexAPI_dexBatchsCurrent(apiClient_t *apiClient)
+DexAPI_dexBatchesCurrent(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -27,9 +27,9 @@ DexAPI_dexBatchsCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/dex/batchs/current")+1;
+    long sizeOfPath = strlen("/dapps/dex/batches/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/dex/batchs/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/dex/batches/current");
 
 
 
@@ -162,12 +162,12 @@ end:
 
 }
 
-// Batchs (historical)
+// Batches (historical)
 //
-// Gets batchs.
+// Gets batches.
 //
 list_t*
-DexAPI_dexGetBatchsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
+DexAPI_dexGetBatchesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -177,9 +177,9 @@ DexAPI_dexGetBatchsHistorical(apiClient_t *apiClient, long startBlock , long end
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/dex/batchs/historical")+1;
+    long sizeOfPath = strlen("/dapps/dex/batches/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/dex/batchs/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/dex/batches/historical");
 
 
 
@@ -1129,12 +1129,12 @@ end:
 
 }
 
-// Statss (historical)
+// Stats (historical)
 //
-// Gets statss.
+// Gets stats.
 //
 list_t*
-DexAPI_dexGetStatssHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
+DexAPI_dexGetStatsHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -1144,9 +1144,9 @@ DexAPI_dexGetStatssHistorical(apiClient_t *apiClient, long startBlock , long end
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/dex/statss/historical")+1;
+    long sizeOfPath = strlen("/dapps/dex/stats/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/dex/statss/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/dex/stats/historical");
 
 
 
@@ -2596,12 +2596,12 @@ end:
 
 }
 
-// Statss (current)
+// Stats (current)
 //
-// Gets statss.
+// Gets stats.
 //
 list_t*
-DexAPI_dexStatssCurrent(apiClient_t *apiClient)
+DexAPI_dexStatsCurrent(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -2611,9 +2611,9 @@ DexAPI_dexStatssCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/dex/statss/current")+1;
+    long sizeOfPath = strlen("/dapps/dex/stats/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/dex/statss/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/dex/stats/current");
 
 
 

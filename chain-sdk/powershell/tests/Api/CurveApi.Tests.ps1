@@ -95,9 +95,9 @@ Describe -tag 'PSOpenAPITools' -name 'CurveApi' {
         }
     }
 
-    Context 'Invoke-CurveGaugeLiquiditysCurrent' {
-        It 'Test Invoke-CurveGaugeLiquiditysCurrent' {
-            #$TestResult = Invoke-CurveGaugeLiquiditysCurrent
+    Context 'Invoke-CurveGaugeLiquiditiesCurrent' {
+        It 'Test Invoke-CurveGaugeLiquiditiesCurrent' {
+            #$TestResult = Invoke-CurveGaugeLiquiditiesCurrent
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }
@@ -247,9 +247,9 @@ Describe -tag 'PSOpenAPITools' -name 'CurveApi' {
         }
     }
 
-    Context 'Invoke-CurveGetGaugeLiquiditysHistorical' {
-        It 'Test Invoke-CurveGetGaugeLiquiditysHistorical' {
-            #$TestResult = Invoke-CurveGetGaugeLiquiditysHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE" -User "TEST_VALUE"
+    Context 'Invoke-CurveGetGaugeLiquiditiesHistorical' {
+        It 'Test Invoke-CurveGetGaugeLiquiditiesHistorical' {
+            #$TestResult = Invoke-CurveGetGaugeLiquiditiesHistorical -StartBlock "TEST_VALUE" -EndBlock "TEST_VALUE" -StartDate "TEST_VALUE" -EndDate "TEST_VALUE" -Id "TEST_VALUE" -User "TEST_VALUE"
             #$TestResult | Should -BeOfType TODO
             #$TestResult.property | Should -Be 0
         }

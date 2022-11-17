@@ -205,12 +205,12 @@ class CurveApiTest extends TestCase
     }
 
     /**
-     * Test case for curveGaugeLiquiditysCurrent
+     * Test case for curveGaugeLiquiditiesCurrent
      *
-     * GaugeLiquiditys (current).
+     * GaugeLiquidities (current).
      *
      */
-    public function testCurveGaugeLiquiditysCurrent()
+    public function testCurveGaugeLiquiditiesCurrent()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');
@@ -433,12 +433,12 @@ class CurveApiTest extends TestCase
     }
 
     /**
-     * Test case for curveGetGaugeLiquiditysHistorical
+     * Test case for curveGetGaugeLiquiditiesHistorical
      *
-     * GaugeLiquiditys (historical).
+     * GaugeLiquidities (historical).
      *
      */
-    public function testCurveGetGaugeLiquiditysHistorical()
+    public function testCurveGetGaugeLiquiditiesHistorical()
     {
         // TODO: implement
         $this->markTestIncomplete('Not implemented');

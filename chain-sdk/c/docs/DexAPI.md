@@ -4,14 +4,14 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DexAPI_dexBatchsCurrent**](DexAPI.md#DexAPI_dexBatchsCurrent) | **GET** /dapps/dex/batchs/current | Batchs (current)
+[**DexAPI_dexBatchesCurrent**](DexAPI.md#DexAPI_dexBatchesCurrent) | **GET** /dapps/dex/batches/current | Batches (current)
 [**DexAPI_dexDepositsCurrent**](DexAPI.md#DexAPI_dexDepositsCurrent) | **GET** /dapps/dex/deposits/current | Deposits (current)
-[**DexAPI_dexGetBatchsHistorical**](DexAPI.md#DexAPI_dexGetBatchsHistorical) | **GET** /dapps/dex/batchs/historical | Batchs (historical)
+[**DexAPI_dexGetBatchesHistorical**](DexAPI.md#DexAPI_dexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | Batches (historical)
 [**DexAPI_dexGetDepositsHistorical**](DexAPI.md#DexAPI_dexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical)
 [**DexAPI_dexGetOrdersHistorical**](DexAPI.md#DexAPI_dexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | Orders (historical)
 [**DexAPI_dexGetPricesHistorical**](DexAPI.md#DexAPI_dexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | Prices (historical)
 [**DexAPI_dexGetSolutionsHistorical**](DexAPI.md#DexAPI_dexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | Solutions (historical)
-[**DexAPI_dexGetStatssHistorical**](DexAPI.md#DexAPI_dexGetStatssHistorical) | **GET** /dapps/dex/statss/historical | Statss (historical)
+[**DexAPI_dexGetStatsHistorical**](DexAPI.md#DexAPI_dexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | Stats (historical)
 [**DexAPI_dexGetTokensHistorical**](DexAPI.md#DexAPI_dexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical)
 [**DexAPI_dexGetTradesHistorical**](DexAPI.md#DexAPI_dexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | Trades (historical)
 [**DexAPI_dexGetUsersHistorical**](DexAPI.md#DexAPI_dexGetUsersHistorical) | **GET** /dapps/dex/users/historical | Users (historical)
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 [**DexAPI_dexOrdersCurrent**](DexAPI.md#DexAPI_dexOrdersCurrent) | **GET** /dapps/dex/orders/current | Orders (current)
 [**DexAPI_dexPricesCurrent**](DexAPI.md#DexAPI_dexPricesCurrent) | **GET** /dapps/dex/prices/current | Prices (current)
 [**DexAPI_dexSolutionsCurrent**](DexAPI.md#DexAPI_dexSolutionsCurrent) | **GET** /dapps/dex/solutions/current | Solutions (current)
-[**DexAPI_dexStatssCurrent**](DexAPI.md#DexAPI_dexStatssCurrent) | **GET** /dapps/dex/statss/current | Statss (current)
+[**DexAPI_dexStatsCurrent**](DexAPI.md#DexAPI_dexStatsCurrent) | **GET** /dapps/dex/stats/current | Stats (current)
 [**DexAPI_dexTokensCurrent**](DexAPI.md#DexAPI_dexTokensCurrent) | **GET** /dapps/dex/tokens/current | Tokens (current)
 [**DexAPI_dexTradesCurrent**](DexAPI.md#DexAPI_dexTradesCurrent) | **GET** /dapps/dex/trades/current | Trades (current)
 [**DexAPI_dexUsersCurrent**](DexAPI.md#DexAPI_dexUsersCurrent) | **GET** /dapps/dex/users/current | Users (current)
@@ -28,13 +28,13 @@ Method | HTTP request | Description
 [**DexAPI_dexWithdrawsCurrent**](DexAPI.md#DexAPI_dexWithdrawsCurrent) | **GET** /dapps/dex/withdraws/current | Withdraws (current)
 
 
-# **DexAPI_dexBatchsCurrent**
+# **DexAPI_dexBatchesCurrent**
 ```c
-// Batchs (current)
+// Batches (current)
 //
-// Gets batchs.
+// Gets batches.
 //
-list_t* DexAPI_dexBatchsCurrent(apiClient_t *apiClient);
+list_t* DexAPI_dexBatchesCurrent(apiClient_t *apiClient);
 ```
 
 ### Parameters
@@ -88,13 +88,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **DexAPI_dexGetBatchsHistorical**
+# **DexAPI_dexGetBatchesHistorical**
 ```c
-// Batchs (historical)
+// Batches (historical)
 //
-// Gets batchs.
+// Gets batches.
 //
-list_t* DexAPI_dexGetBatchsHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * id);
+list_t* DexAPI_dexGetBatchesHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * id);
 ```
 
 ### Parameters
@@ -266,13 +266,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **DexAPI_dexGetStatssHistorical**
+# **DexAPI_dexGetStatsHistorical**
 ```c
-// Statss (historical)
+// Stats (historical)
 //
-// Gets statss.
+// Gets stats.
 //
-list_t* DexAPI_dexGetStatssHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * id);
+list_t* DexAPI_dexGetStatsHistorical(apiClient_t *apiClient, long startBlock, long endBlock, char startDate, char endDate, char * id);
 ```
 
 ### Parameters
@@ -573,13 +573,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **DexAPI_dexStatssCurrent**
+# **DexAPI_dexStatsCurrent**
 ```c
-// Statss (current)
+// Stats (current)
 //
-// Gets statss.
+// Gets stats.
 //
-list_t* DexAPI_dexStatssCurrent(apiClient_t *apiClient);
+list_t* DexAPI_dexStatsCurrent(apiClient_t *apiClient);
 ```
 
 ### Parameters

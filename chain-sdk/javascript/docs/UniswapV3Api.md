@@ -6,38 +6,38 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**uniswapV3BundlesCurrent**](UniswapV3Api.md#uniswapV3BundlesCurrent) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
 [**uniswapV3BurnsCurrent**](UniswapV3Api.md#uniswapV3BurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
-[**uniswapV3FactorysCurrent**](UniswapV3Api.md#uniswapV3FactorysCurrent) | **GET** /dapps/uniswapv3/factorys/current | Factorys (current)
+[**uniswapV3FactoriesCurrent**](UniswapV3Api.md#uniswapV3FactoriesCurrent) | **GET** /dapps/uniswapv3/factories/current | Factories (current)
 [**uniswapV3GetBundlesHistorical**](UniswapV3Api.md#uniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical)
 [**uniswapV3GetBurnsHistorical**](UniswapV3Api.md#uniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical)
-[**uniswapV3GetFactorysHistorical**](UniswapV3Api.md#uniswapV3GetFactorysHistorical) | **GET** /dapps/uniswapv3/factorys/historical | Factorys (historical)
+[**uniswapV3GetFactoriesHistorical**](UniswapV3Api.md#uniswapV3GetFactoriesHistorical) | **GET** /dapps/uniswapv3/factories/historical | Factories (historical)
 [**uniswapV3GetMintsHistorical**](UniswapV3Api.md#uniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical)
-[**uniswapV3GetPoolDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetPoolDayDatasHistorical) | **GET** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical)
-[**uniswapV3GetPoolHourDatasHistorical**](UniswapV3Api.md#uniswapV3GetPoolHourDatasHistorical) | **GET** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical)
+[**uniswapV3GetPoolDayDataHistorical**](UniswapV3Api.md#uniswapV3GetPoolDayDataHistorical) | **GET** /dapps/uniswapv3/poolDayData/historical | PoolDayData (historical)
+[**uniswapV3GetPoolHourDataHistorical**](UniswapV3Api.md#uniswapV3GetPoolHourDataHistorical) | **GET** /dapps/uniswapv3/poolHourData/historical | PoolHourData (historical)
 [**uniswapV3GetPoolsHistorical**](UniswapV3Api.md#uniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical)
 [**uniswapV3GetPositionSnapshotsHistorical**](UniswapV3Api.md#uniswapV3GetPositionSnapshotsHistorical) | **GET** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical)
 [**uniswapV3GetPositionsHistorical**](UniswapV3Api.md#uniswapV3GetPositionsHistorical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical)
 [**uniswapV3GetSwapsHistorical**](UniswapV3Api.md#uniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical)
-[**uniswapV3GetTickDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTickDayDatasHistorical) | **GET** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical)
+[**uniswapV3GetTickDayDataHistorical**](UniswapV3Api.md#uniswapV3GetTickDayDataHistorical) | **GET** /dapps/uniswapv3/tickDayData/historical | TickDayData (historical)
 [**uniswapV3GetTicksHistorical**](UniswapV3Api.md#uniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical)
-[**uniswapV3GetTokenHourDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenHourDatasHistorical) | **GET** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical)
-[**uniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3DayDatasHistorical) | **GET** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical)
+[**uniswapV3GetTokenHourDataHistorical**](UniswapV3Api.md#uniswapV3GetTokenHourDataHistorical) | **GET** /dapps/uniswapv3/tokenHourData/historical | TokenHourData (historical)
+[**uniswapV3GetTokenV3DayDataHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3DayDataHistorical) | **GET** /dapps/uniswapv3/tokenV3DayData/historical | TokenV3DayData (historical)
 [**uniswapV3GetTokensHistorical**](UniswapV3Api.md#uniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical)
 [**uniswapV3GetTransactionsHistorical**](UniswapV3Api.md#uniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical)
-[**uniswapV3GetUniswapDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical)
+[**uniswapV3GetUniswapDayDataHistorical**](UniswapV3Api.md#uniswapV3GetUniswapDayDataHistorical) | **GET** /dapps/uniswapv3/uniswapDayData/historical | UniswapDayData (historical)
 [**uniswapV3MintsCurrent**](UniswapV3Api.md#uniswapV3MintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
-[**uniswapV3PoolDayDatasCurrent**](UniswapV3Api.md#uniswapV3PoolDayDatasCurrent) | **GET** /dapps/uniswapv3/poolDayDatas/current | PoolDayDatas (current)
-[**uniswapV3PoolHourDatasCurrent**](UniswapV3Api.md#uniswapV3PoolHourDatasCurrent) | **GET** /dapps/uniswapv3/poolHourDatas/current | PoolHourDatas (current)
+[**uniswapV3PoolDayDataCurrent**](UniswapV3Api.md#uniswapV3PoolDayDataCurrent) | **GET** /dapps/uniswapv3/poolDayData/current | PoolDayData (current)
+[**uniswapV3PoolHourDataCurrent**](UniswapV3Api.md#uniswapV3PoolHourDataCurrent) | **GET** /dapps/uniswapv3/poolHourData/current | PoolHourData (current)
 [**uniswapV3PoolsCurrent**](UniswapV3Api.md#uniswapV3PoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current)
 [**uniswapV3PositionSnapshotsCurrent**](UniswapV3Api.md#uniswapV3PositionSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionSnapshots (current)
 [**uniswapV3PositionsCurrent**](UniswapV3Api.md#uniswapV3PositionsCurrent) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
 [**uniswapV3SwapsCurrent**](UniswapV3Api.md#uniswapV3SwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current)
-[**uniswapV3TickDayDatasCurrent**](UniswapV3Api.md#uniswapV3TickDayDatasCurrent) | **GET** /dapps/uniswapv3/tickDayDatas/current | TickDayDatas (current)
+[**uniswapV3TickDayDataCurrent**](UniswapV3Api.md#uniswapV3TickDayDataCurrent) | **GET** /dapps/uniswapv3/tickDayData/current | TickDayData (current)
 [**uniswapV3TicksCurrent**](UniswapV3Api.md#uniswapV3TicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
-[**uniswapV3TokenHourDatasCurrent**](UniswapV3Api.md#uniswapV3TokenHourDatasCurrent) | **GET** /dapps/uniswapv3/tokenHourDatas/current | TokenHourDatas (current)
-[**uniswapV3TokenV3DayDatasCurrent**](UniswapV3Api.md#uniswapV3TokenV3DayDatasCurrent) | **GET** /dapps/uniswapv3/tokenV3DayDatas/current | TokenV3DayDatas (current)
+[**uniswapV3TokenHourDataCurrent**](UniswapV3Api.md#uniswapV3TokenHourDataCurrent) | **GET** /dapps/uniswapv3/tokenHourData/current | TokenHourData (current)
+[**uniswapV3TokenV3DayDataCurrent**](UniswapV3Api.md#uniswapV3TokenV3DayDataCurrent) | **GET** /dapps/uniswapv3/tokenV3DayData/current | TokenV3DayData (current)
 [**uniswapV3TokensCurrent**](UniswapV3Api.md#uniswapV3TokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current)
 [**uniswapV3TransactionsCurrent**](UniswapV3Api.md#uniswapV3TransactionsCurrent) | **GET** /dapps/uniswapv3/transactions/current | Transactions (current)
-[**uniswapV3UniswapDayDatasCurrent**](UniswapV3Api.md#uniswapV3UniswapDayDatasCurrent) | **GET** /dapps/uniswapv3/uniswapDayDatas/current | UniswapDayDatas (current)
+[**uniswapV3UniswapDayDataCurrent**](UniswapV3Api.md#uniswapV3UniswapDayDataCurrent) | **GET** /dapps/uniswapv3/uniswapDayData/current | UniswapDayData (current)
 
 
 
@@ -123,13 +123,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3FactorysCurrent
+## uniswapV3FactoriesCurrent
 
-> [UniswapV3FactoryDTO] uniswapV3FactorysCurrent()
+> [UniswapV3FactoryDTO] uniswapV3FactoriesCurrent()
 
-Factorys (current)
+Factories (current)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 
@@ -137,7 +137,7 @@ Gets factorys.
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-apiInstance.uniswapV3FactorysCurrent((error, data, response) => {
+apiInstance.uniswapV3FactoriesCurrent((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -280,13 +280,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetFactorysHistorical
+## uniswapV3GetFactoriesHistorical
 
-> [UniswapV3FactoryDTO] uniswapV3GetFactorysHistorical(opts)
+> [UniswapV3FactoryDTO] uniswapV3GetFactoriesHistorical(opts)
 
-Factorys (historical)
+Factories (historical)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 
@@ -301,7 +301,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | Factory address.
 };
-apiInstance.uniswapV3GetFactorysHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetFactoriesHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -396,13 +396,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetPoolDayDatasHistorical
+## uniswapV3GetPoolDayDataHistorical
 
-> [UniswapV3PoolDayDataDTO] uniswapV3GetPoolDayDatasHistorical(opts)
+> [UniswapV3PoolDayDataDTO] uniswapV3GetPoolDayDataHistorical(opts)
 
-PoolDayDatas (historical)
+PoolDayData (historical)
 
-Gets poolDayDatas.
+Gets poolDayData.
 
 ### Example
 
@@ -418,7 +418,7 @@ let opts = {
   'id': "id_example", // String | 
   'pool': "pool_example" // String | 
 };
-apiInstance.uniswapV3GetPoolDayDatasHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetPoolDayDataHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -453,13 +453,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetPoolHourDatasHistorical
+## uniswapV3GetPoolHourDataHistorical
 
-> [UniswapV3PoolHourDataDTO] uniswapV3GetPoolHourDatasHistorical(opts)
+> [UniswapV3PoolHourDataDTO] uniswapV3GetPoolHourDataHistorical(opts)
 
-PoolHourDatas (historical)
+PoolHourData (historical)
 
-Gets poolHourDatas.
+Gets poolHourData.
 
 ### Example
 
@@ -475,7 +475,7 @@ let opts = {
   'id': "id_example", // String | 
   'pool': "pool_example" // String | 
 };
-apiInstance.uniswapV3GetPoolHourDatasHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetPoolHourDataHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -748,13 +748,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetTickDayDatasHistorical
+## uniswapV3GetTickDayDataHistorical
 
-> [UniswapV3TickDayDataDTO] uniswapV3GetTickDayDatasHistorical(opts)
+> [UniswapV3TickDayDataDTO] uniswapV3GetTickDayDataHistorical(opts)
 
-TickDayDatas (historical)
+TickDayData (historical)
 
-Gets tickDayDatas.
+Gets tickDayData.
 
 ### Example
 
@@ -770,7 +770,7 @@ let opts = {
   'id': "id_example", // String | 
   'pool': "pool_example" // String | 
 };
-apiInstance.uniswapV3GetTickDayDatasHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetTickDayDataHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -862,13 +862,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetTokenHourDatasHistorical
+## uniswapV3GetTokenHourDataHistorical
 
-> [UniswapV3TokenHourDataDTO] uniswapV3GetTokenHourDatasHistorical(opts)
+> [UniswapV3TokenHourDataDTO] uniswapV3GetTokenHourDataHistorical(opts)
 
-TokenHourDatas (historical)
+TokenHourData (historical)
 
-Gets tokenHourDatas.
+Gets tokenHourData.
 
 ### Example
 
@@ -883,7 +883,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | Token address concatendated with date.
 };
-apiInstance.uniswapV3GetTokenHourDatasHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetTokenHourDataHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -917,13 +917,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetTokenV3DayDatasHistorical
+## uniswapV3GetTokenV3DayDataHistorical
 
-> [UniswapV3TokenV3DayDataDTO] uniswapV3GetTokenV3DayDatasHistorical(opts)
+> [UniswapV3TokenV3DayDataDTO] uniswapV3GetTokenV3DayDataHistorical(opts)
 
-TokenV3DayDatas (historical)
+TokenV3DayData (historical)
 
-Gets tokenV3DayDatas.
+Gets tokenV3DayData.
 
 ### Example
 
@@ -938,7 +938,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | Token address concatendated with date.
 };
-apiInstance.uniswapV3GetTokenV3DayDatasHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetTokenV3DayDataHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1086,13 +1086,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3GetUniswapDayDatasHistorical
+## uniswapV3GetUniswapDayDataHistorical
 
-> [UniswapV3UniswapDayDataDTO] uniswapV3GetUniswapDayDatasHistorical(opts)
+> [UniswapV3UniswapDayDataDTO] uniswapV3GetUniswapDayDataHistorical(opts)
 
-UniswapDayDatas (historical)
+UniswapDayData (historical)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 
@@ -1107,7 +1107,7 @@ let opts = {
   'endDate': new Date("2013-10-20T19:20:30+01:00"), // Date | The end date of timeframe.
   'id': "id_example" // String | Timestamp rounded to current day by dividing by 86400.
 };
-apiInstance.uniswapV3GetUniswapDayDatasHistorical(opts, (error, data, response) => {
+apiInstance.uniswapV3GetUniswapDayDataHistorical(opts, (error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1182,13 +1182,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3PoolDayDatasCurrent
+## uniswapV3PoolDayDataCurrent
 
-> [UniswapV3PoolDayDataDTO] uniswapV3PoolDayDatasCurrent()
+> [UniswapV3PoolDayDataDTO] uniswapV3PoolDayDataCurrent()
 
-PoolDayDatas (current)
+PoolDayData (current)
 
-Gets poolDayDatas.
+Gets poolDayData.
 
 ### Example
 
@@ -1196,7 +1196,7 @@ Gets poolDayDatas.
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-apiInstance.uniswapV3PoolDayDatasCurrent((error, data, response) => {
+apiInstance.uniswapV3PoolDayDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1223,13 +1223,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3PoolHourDatasCurrent
+## uniswapV3PoolHourDataCurrent
 
-> [UniswapV3PoolHourDataDTO] uniswapV3PoolHourDatasCurrent()
+> [UniswapV3PoolHourDataDTO] uniswapV3PoolHourDataCurrent()
 
-PoolHourDatas (current)
+PoolHourData (current)
 
-Gets poolHourDatas.
+Gets poolHourData.
 
 ### Example
 
@@ -1237,7 +1237,7 @@ Gets poolHourDatas.
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-apiInstance.uniswapV3PoolHourDatasCurrent((error, data, response) => {
+apiInstance.uniswapV3PoolHourDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1440,13 +1440,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3TickDayDatasCurrent
+## uniswapV3TickDayDataCurrent
 
-> [UniswapV3TickDayDataDTO] uniswapV3TickDayDatasCurrent()
+> [UniswapV3TickDayDataDTO] uniswapV3TickDayDataCurrent()
 
-TickDayDatas (current)
+TickDayData (current)
 
-Gets tickDayDatas.
+Gets tickDayData.
 
 ### Example
 
@@ -1454,7 +1454,7 @@ Gets tickDayDatas.
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-apiInstance.uniswapV3TickDayDatasCurrent((error, data, response) => {
+apiInstance.uniswapV3TickDayDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1522,13 +1522,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3TokenHourDatasCurrent
+## uniswapV3TokenHourDataCurrent
 
-> [UniswapV3TokenHourDataDTO] uniswapV3TokenHourDatasCurrent()
+> [UniswapV3TokenHourDataDTO] uniswapV3TokenHourDataCurrent()
 
-TokenHourDatas (current)
+TokenHourData (current)
 
-Gets tokenHourDatas.
+Gets tokenHourData.
 
 ### Example
 
@@ -1536,7 +1536,7 @@ Gets tokenHourDatas.
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-apiInstance.uniswapV3TokenHourDatasCurrent((error, data, response) => {
+apiInstance.uniswapV3TokenHourDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1563,13 +1563,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3TokenV3DayDatasCurrent
+## uniswapV3TokenV3DayDataCurrent
 
-> [UniswapV3TokenV3DayDataDTO] uniswapV3TokenV3DayDatasCurrent()
+> [UniswapV3TokenV3DayDataDTO] uniswapV3TokenV3DayDataCurrent()
 
-TokenV3DayDatas (current)
+TokenV3DayData (current)
 
-Gets tokenV3DayDatas.
+Gets tokenV3DayData.
 
 ### Example
 
@@ -1577,7 +1577,7 @@ Gets tokenV3DayDatas.
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-apiInstance.uniswapV3TokenV3DayDatasCurrent((error, data, response) => {
+apiInstance.uniswapV3TokenV3DayDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
   } else {
@@ -1686,13 +1686,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV3UniswapDayDatasCurrent
+## uniswapV3UniswapDayDataCurrent
 
-> [UniswapV3UniswapDayDataDTO] uniswapV3UniswapDayDatasCurrent()
+> [UniswapV3UniswapDayDataDTO] uniswapV3UniswapDayDataCurrent()
 
-UniswapDayDatas (current)
+UniswapDayData (current)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 
@@ -1700,7 +1700,7 @@ Gets uniswapDayDatas.
 import OnChainApi from 'on_chain_api';
 
 let apiInstance = new OnChainApi.UniswapV3Api();
-apiInstance.uniswapV3UniswapDayDatasCurrent((error, data, response) => {
+apiInstance.uniswapV3UniswapDayDataCurrent((error, data, response) => {
   if (error) {
     console.error(error);
   } else {

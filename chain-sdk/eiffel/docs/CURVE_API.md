@@ -15,7 +15,7 @@ Feature | HTTP request | Description
 [**curve_exchanges_current**](CURVE_API.md#curve_exchanges_current) | **Get** /dapps/curve/exchanges/current | Exchanges (current)
 [**curve_fee_change_logs_current**](CURVE_API.md#curve_fee_change_logs_current) | **Get** /dapps/curve/feeChangeLogs/current | FeeChangeLogs (current)
 [**curve_gauge_deposits_current**](CURVE_API.md#curve_gauge_deposits_current) | **Get** /dapps/curve/gaugeDeposits/current | GaugeDeposits (current)
-[**curve_gauge_liquiditys_current**](CURVE_API.md#curve_gauge_liquiditys_current) | **Get** /dapps/curve/gaugeLiquiditys/current | GaugeLiquiditys (current)
+[**curve_gauge_liquidities_current**](CURVE_API.md#curve_gauge_liquidities_current) | **Get** /dapps/curve/gaugeLiquidities/current | GaugeLiquidities (current)
 [**curve_gauge_total_weights_current**](CURVE_API.md#curve_gauge_total_weights_current) | **Get** /dapps/curve/gaugeTotalWeights/current | GaugeTotalWeights (current)
 [**curve_gauge_type_weights_current**](CURVE_API.md#curve_gauge_type_weights_current) | **Get** /dapps/curve/gaugeTypeWeights/current | GaugeTypeWeights (current)
 [**curve_gauge_types_current**](CURVE_API.md#curve_gauge_types_current) | **Get** /dapps/curve/gaugeTypes/current | GaugeTypes (current)
@@ -34,7 +34,7 @@ Feature | HTTP request | Description
 [**curve_get_exchanges_historical**](CURVE_API.md#curve_get_exchanges_historical) | **Get** /dapps/curve/exchanges/historical | Exchanges (historical)
 [**curve_get_fee_change_logs_historical**](CURVE_API.md#curve_get_fee_change_logs_historical) | **Get** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical)
 [**curve_get_gauge_deposits_historical**](CURVE_API.md#curve_get_gauge_deposits_historical) | **Get** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical)
-[**curve_get_gauge_liquiditys_historical**](CURVE_API.md#curve_get_gauge_liquiditys_historical) | **Get** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical)
+[**curve_get_gauge_liquidities_historical**](CURVE_API.md#curve_get_gauge_liquidities_historical) | **Get** /dapps/curve/gaugeLiquidities/historical | GaugeLiquidities (historical)
 [**curve_get_gauge_total_weights_historical**](CURVE_API.md#curve_get_gauge_total_weights_historical) | **Get** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical)
 [**curve_get_gauge_type_weights_historical**](CURVE_API.md#curve_get_gauge_type_weights_historical) | **Get** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical)
 [**curve_get_gauge_types_historical**](CURVE_API.md#curve_get_gauge_types_historical) | **Get** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical)
@@ -370,13 +370,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **curve_gauge_liquiditys_current**
-> curve_gauge_liquiditys_current : detachable LIST [CURVE_GAUGE_LIQUIDITY_DTO]
+# **curve_gauge_liquidities_current**
+> curve_gauge_liquidities_current : detachable LIST [CURVE_GAUGE_LIQUIDITY_DTO]
 
 
-GaugeLiquiditys (current)
+GaugeLiquidities (current)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 
 ### Parameters
@@ -969,13 +969,13 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **curve_get_gauge_liquiditys_historical**
-> curve_get_gauge_liquiditys_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; user:  detachable STRING_32 ): detachable LIST [CURVE_GAUGE_LIQUIDITY_DTO]
+# **curve_get_gauge_liquidities_historical**
+> curve_get_gauge_liquidities_historical (start_block:  detachable INTEGER_64 ; end_block:  detachable INTEGER_64 ; start_date:  detachable DATE_TIME ; end_date:  detachable DATE_TIME ; id:  detachable STRING_32 ; user:  detachable STRING_32 ): detachable LIST [CURVE_GAUGE_LIQUIDITY_DTO]
 
 
-GaugeLiquiditys (historical)
+GaugeLiquidities (historical)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 
 ### Parameters

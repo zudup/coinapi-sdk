@@ -92,8 +92,8 @@ describe("curve_api", function()
     end)
   end)
 
-  -- unit tests for curve_gauge_liquiditys__current
-  describe("curve_gauge_liquiditys__current test", function()
+  -- unit tests for curve_gauge_liquidities__current
+  describe("curve_gauge_liquidities__current test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)
@@ -225,8 +225,8 @@ describe("curve_api", function()
     end)
   end)
 
-  -- unit tests for curve_get_gauge_liquiditys__historical
-  describe("curve_get_gauge_liquiditys__historical test", function()
+  -- unit tests for curve_get_gauge_liquidities__historical
+  describe("curve_get_gauge_liquidities__historical test", function()
     it("should work", function()
       -- TODO assertion here: http://olivinelabs.com/busted/#asserts
     end)

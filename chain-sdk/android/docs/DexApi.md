@@ -4,14 +4,14 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dexBatchsCurrent**](DexApi.md#dexBatchsCurrent) | **GET** /dapps/dex/batchs/current | Batchs (current)
+[**dexBatchesCurrent**](DexApi.md#dexBatchesCurrent) | **GET** /dapps/dex/batches/current | Batches (current)
 [**dexDepositsCurrent**](DexApi.md#dexDepositsCurrent) | **GET** /dapps/dex/deposits/current | Deposits (current)
-[**dexGetBatchsHistorical**](DexApi.md#dexGetBatchsHistorical) | **GET** /dapps/dex/batchs/historical | Batchs (historical)
+[**dexGetBatchesHistorical**](DexApi.md#dexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | Batches (historical)
 [**dexGetDepositsHistorical**](DexApi.md#dexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical)
 [**dexGetOrdersHistorical**](DexApi.md#dexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | Orders (historical)
 [**dexGetPricesHistorical**](DexApi.md#dexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | Prices (historical)
 [**dexGetSolutionsHistorical**](DexApi.md#dexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | Solutions (historical)
-[**dexGetStatssHistorical**](DexApi.md#dexGetStatssHistorical) | **GET** /dapps/dex/statss/historical | Statss (historical)
+[**dexGetStatsHistorical**](DexApi.md#dexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | Stats (historical)
 [**dexGetTokensHistorical**](DexApi.md#dexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical)
 [**dexGetTradesHistorical**](DexApi.md#dexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | Trades (historical)
 [**dexGetUsersHistorical**](DexApi.md#dexGetUsersHistorical) | **GET** /dapps/dex/users/historical | Users (historical)
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 [**dexOrdersCurrent**](DexApi.md#dexOrdersCurrent) | **GET** /dapps/dex/orders/current | Orders (current)
 [**dexPricesCurrent**](DexApi.md#dexPricesCurrent) | **GET** /dapps/dex/prices/current | Prices (current)
 [**dexSolutionsCurrent**](DexApi.md#dexSolutionsCurrent) | **GET** /dapps/dex/solutions/current | Solutions (current)
-[**dexStatssCurrent**](DexApi.md#dexStatssCurrent) | **GET** /dapps/dex/statss/current | Statss (current)
+[**dexStatsCurrent**](DexApi.md#dexStatsCurrent) | **GET** /dapps/dex/stats/current | Stats (current)
 [**dexTokensCurrent**](DexApi.md#dexTokensCurrent) | **GET** /dapps/dex/tokens/current | Tokens (current)
 [**dexTradesCurrent**](DexApi.md#dexTradesCurrent) | **GET** /dapps/dex/trades/current | Trades (current)
 [**dexUsersCurrent**](DexApi.md#dexUsersCurrent) | **GET** /dapps/dex/users/current | Users (current)
@@ -29,13 +29,13 @@ Method | HTTP request | Description
 
 
 
-## dexBatchsCurrent
+## dexBatchesCurrent
 
-> List&lt;DexBatchDTO&gt; dexBatchsCurrent()
+> List&lt;DexBatchDTO&gt; dexBatchesCurrent()
 
-Batchs (current)
+Batches (current)
 
-Gets batchs.
+Gets batches.
 
 ### Example
 
@@ -45,10 +45,10 @@ Gets batchs.
 
 DexApi apiInstance = new DexApi();
 try {
-    List<DexBatchDTO> result = apiInstance.dexBatchsCurrent();
+    List<DexBatchDTO> result = apiInstance.dexBatchesCurrent();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DexApi#dexBatchsCurrent");
+    System.err.println("Exception when calling DexApi#dexBatchesCurrent");
     e.printStackTrace();
 }
 ```
@@ -113,13 +113,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## dexGetBatchsHistorical
+## dexGetBatchesHistorical
 
-> List&lt;DexBatchDTO&gt; dexGetBatchsHistorical(startBlock, endBlock, startDate, endDate, id)
+> List&lt;DexBatchDTO&gt; dexGetBatchesHistorical(startBlock, endBlock, startDate, endDate, id)
 
-Batchs (historical)
+Batches (historical)
 
-Gets batchs.
+Gets batches.
 
 ### Example
 
@@ -134,10 +134,10 @@ Date startDate = null; // Date | The start date of timeframe. If endDate is not 
 Date endDate = null; // Date | The end date of timeframe.
 String id = null; // String | Identifier.
 try {
-    List<DexBatchDTO> result = apiInstance.dexGetBatchsHistorical(startBlock, endBlock, startDate, endDate, id);
+    List<DexBatchDTO> result = apiInstance.dexGetBatchesHistorical(startBlock, endBlock, startDate, endDate, id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DexApi#dexGetBatchsHistorical");
+    System.err.println("Exception when calling DexApi#dexGetBatchesHistorical");
     e.printStackTrace();
 }
 ```
@@ -389,13 +389,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## dexGetStatssHistorical
+## dexGetStatsHistorical
 
-> List&lt;DexStatsDTO&gt; dexGetStatssHistorical(startBlock, endBlock, startDate, endDate, id)
+> List&lt;DexStatsDTO&gt; dexGetStatsHistorical(startBlock, endBlock, startDate, endDate, id)
 
-Statss (historical)
+Stats (historical)
 
-Gets statss.
+Gets stats.
 
 ### Example
 
@@ -410,10 +410,10 @@ Date startDate = null; // Date | The start date of timeframe. If endDate is not 
 Date endDate = null; // Date | The end date of timeframe.
 String id = null; // String | 
 try {
-    List<DexStatsDTO> result = apiInstance.dexGetStatssHistorical(startBlock, endBlock, startDate, endDate, id);
+    List<DexStatsDTO> result = apiInstance.dexGetStatsHistorical(startBlock, endBlock, startDate, endDate, id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DexApi#dexGetStatssHistorical");
+    System.err.println("Exception when calling DexApi#dexGetStatsHistorical");
     e.printStackTrace();
 }
 ```
@@ -853,13 +853,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## dexStatssCurrent
+## dexStatsCurrent
 
-> List&lt;DexStatsDTO&gt; dexStatssCurrent()
+> List&lt;DexStatsDTO&gt; dexStatsCurrent()
 
-Statss (current)
+Stats (current)
 
-Gets statss.
+Gets stats.
 
 ### Example
 
@@ -869,10 +869,10 @@ Gets statss.
 
 DexApi apiInstance = new DexApi();
 try {
-    List<DexStatsDTO> result = apiInstance.dexStatssCurrent();
+    List<DexStatsDTO> result = apiInstance.dexStatsCurrent();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling DexApi#dexStatssCurrent");
+    System.err.println("Exception when calling DexApi#dexStatsCurrent");
     e.printStackTrace();
 }
 ```

@@ -104,27 +104,27 @@ instance Produces UniswapV3BurnsCurrent MimeTextJson
 instance Produces UniswapV3BurnsCurrent MimePlainText
 
 
--- *** uniswapV3FactorysCurrent
+-- *** uniswapV3FactoriesCurrent
 
--- | @GET \/dapps\/uniswapv3\/factorys\/current@
+-- | @GET \/dapps\/uniswapv3\/factories\/current@
 -- 
--- Factorys (current)
+-- Factories (current)
 -- 
--- Gets factorys.
+-- Gets factories.
 -- 
-uniswapV3FactorysCurrent
+uniswapV3FactoriesCurrent
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest UniswapV3FactorysCurrent MimeNoContent [UniswapV3FactoryDTO] accept
-uniswapV3FactorysCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswapv3/factorys/current"]
+  -> OnChainRequest UniswapV3FactoriesCurrent MimeNoContent [UniswapV3FactoryDTO] accept
+uniswapV3FactoriesCurrent  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/factories/current"]
 
-data UniswapV3FactorysCurrent  
+data UniswapV3FactoriesCurrent  
 -- | @application/json@
-instance Produces UniswapV3FactorysCurrent MimeJSON
+instance Produces UniswapV3FactoriesCurrent MimeJSON
 -- | @text/json@
-instance Produces UniswapV3FactorysCurrent MimeTextJson
+instance Produces UniswapV3FactoriesCurrent MimeTextJson
 -- | @text/plain@
-instance Produces UniswapV3FactorysCurrent MimePlainText
+instance Produces UniswapV3FactoriesCurrent MimePlainText
 
 
 -- *** uniswapV3GetBundlesHistorical
@@ -238,52 +238,52 @@ instance Produces UniswapV3GetBurnsHistorical MimeTextJson
 instance Produces UniswapV3GetBurnsHistorical MimePlainText
 
 
--- *** uniswapV3GetFactorysHistorical
+-- *** uniswapV3GetFactoriesHistorical
 
--- | @GET \/dapps\/uniswapv3\/factorys\/historical@
+-- | @GET \/dapps\/uniswapv3\/factories\/historical@
 -- 
--- Factorys (historical)
+-- Factories (historical)
 -- 
--- Gets factorys.
+-- Gets factories.
 -- 
-uniswapV3GetFactorysHistorical
+uniswapV3GetFactoriesHistorical
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest UniswapV3GetFactorysHistorical MimeNoContent [UniswapV3FactoryDTO] accept
-uniswapV3GetFactorysHistorical  _ =
-  _mkRequest "GET" ["/dapps/uniswapv3/factorys/historical"]
+  -> OnChainRequest UniswapV3GetFactoriesHistorical MimeNoContent [UniswapV3FactoryDTO] accept
+uniswapV3GetFactoriesHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/factories/historical"]
 
-data UniswapV3GetFactorysHistorical  
+data UniswapV3GetFactoriesHistorical  
 
 -- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-instance HasOptionalParam UniswapV3GetFactorysHistorical StartBlock where
+instance HasOptionalParam UniswapV3GetFactoriesHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
 
 -- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-instance HasOptionalParam UniswapV3GetFactorysHistorical EndBlock where
+instance HasOptionalParam UniswapV3GetFactoriesHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
 
 -- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-instance HasOptionalParam UniswapV3GetFactorysHistorical StartDate where
+instance HasOptionalParam UniswapV3GetFactoriesHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
 
 -- | /Optional Param/ "endDate" - The end date of timeframe.
-instance HasOptionalParam UniswapV3GetFactorysHistorical EndDate where
+instance HasOptionalParam UniswapV3GetFactoriesHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
 
 -- | /Optional Param/ "id" - Factory address.
-instance HasOptionalParam UniswapV3GetFactorysHistorical Id where
+instance HasOptionalParam UniswapV3GetFactoriesHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
 -- | @application/json@
-instance Produces UniswapV3GetFactorysHistorical MimeJSON
+instance Produces UniswapV3GetFactoriesHistorical MimeJSON
 -- | @text/json@
-instance Produces UniswapV3GetFactorysHistorical MimeTextJson
+instance Produces UniswapV3GetFactoriesHistorical MimeTextJson
 -- | @text/plain@
-instance Produces UniswapV3GetFactorysHistorical MimePlainText
+instance Produces UniswapV3GetFactoriesHistorical MimePlainText
 
 
 -- *** uniswapV3GetMintsHistorical
@@ -349,86 +349,86 @@ instance Produces UniswapV3GetMintsHistorical MimeTextJson
 instance Produces UniswapV3GetMintsHistorical MimePlainText
 
 
--- *** uniswapV3GetPoolDayDatasHistorical
+-- *** uniswapV3GetPoolDayDataHistorical
 
--- | @GET \/dapps\/uniswapv3\/poolDayDatas\/historical@
+-- | @GET \/dapps\/uniswapv3\/poolDayData\/historical@
 -- 
--- PoolDayDatas (historical)
+-- PoolDayData (historical)
 -- 
--- Gets poolDayDatas.
+-- Gets poolDayData.
 -- 
-uniswapV3GetPoolDayDatasHistorical
+uniswapV3GetPoolDayDataHistorical
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest UniswapV3GetPoolDayDatasHistorical MimeNoContent [UniswapV3PoolDayDataDTO] accept
-uniswapV3GetPoolDayDatasHistorical  _ =
-  _mkRequest "GET" ["/dapps/uniswapv3/poolDayDatas/historical"]
+  -> OnChainRequest UniswapV3GetPoolDayDataHistorical MimeNoContent [UniswapV3PoolDayDataDTO] accept
+uniswapV3GetPoolDayDataHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/poolDayData/historical"]
 
-data UniswapV3GetPoolDayDatasHistorical  
-instance HasOptionalParam UniswapV3GetPoolDayDatasHistorical StartBlock where
+data UniswapV3GetPoolDayDataHistorical  
+instance HasOptionalParam UniswapV3GetPoolDayDataHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam UniswapV3GetPoolDayDatasHistorical EndBlock where
+instance HasOptionalParam UniswapV3GetPoolDayDataHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam UniswapV3GetPoolDayDatasHistorical StartDate where
+instance HasOptionalParam UniswapV3GetPoolDayDataHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam UniswapV3GetPoolDayDatasHistorical EndDate where
+instance HasOptionalParam UniswapV3GetPoolDayDataHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam UniswapV3GetPoolDayDatasHistorical Id where
+instance HasOptionalParam UniswapV3GetPoolDayDataHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
-instance HasOptionalParam UniswapV3GetPoolDayDatasHistorical Pool where
+instance HasOptionalParam UniswapV3GetPoolDayDataHistorical Pool where
   applyOptionalParam req (Pool xs) =
     req `addQuery` toQuery ("pool", Just xs)
 -- | @application/json@
-instance Produces UniswapV3GetPoolDayDatasHistorical MimeJSON
+instance Produces UniswapV3GetPoolDayDataHistorical MimeJSON
 -- | @text/json@
-instance Produces UniswapV3GetPoolDayDatasHistorical MimeTextJson
+instance Produces UniswapV3GetPoolDayDataHistorical MimeTextJson
 -- | @text/plain@
-instance Produces UniswapV3GetPoolDayDatasHistorical MimePlainText
+instance Produces UniswapV3GetPoolDayDataHistorical MimePlainText
 
 
--- *** uniswapV3GetPoolHourDatasHistorical
+-- *** uniswapV3GetPoolHourDataHistorical
 
--- | @GET \/dapps\/uniswapv3\/poolHourDatas\/historical@
+-- | @GET \/dapps\/uniswapv3\/poolHourData\/historical@
 -- 
--- PoolHourDatas (historical)
+-- PoolHourData (historical)
 -- 
--- Gets poolHourDatas.
+-- Gets poolHourData.
 -- 
-uniswapV3GetPoolHourDatasHistorical
+uniswapV3GetPoolHourDataHistorical
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest UniswapV3GetPoolHourDatasHistorical MimeNoContent [UniswapV3PoolHourDataDTO] accept
-uniswapV3GetPoolHourDatasHistorical  _ =
-  _mkRequest "GET" ["/dapps/uniswapv3/poolHourDatas/historical"]
+  -> OnChainRequest UniswapV3GetPoolHourDataHistorical MimeNoContent [UniswapV3PoolHourDataDTO] accept
+uniswapV3GetPoolHourDataHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/poolHourData/historical"]
 
-data UniswapV3GetPoolHourDatasHistorical  
-instance HasOptionalParam UniswapV3GetPoolHourDatasHistorical StartBlock where
+data UniswapV3GetPoolHourDataHistorical  
+instance HasOptionalParam UniswapV3GetPoolHourDataHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam UniswapV3GetPoolHourDatasHistorical EndBlock where
+instance HasOptionalParam UniswapV3GetPoolHourDataHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam UniswapV3GetPoolHourDatasHistorical StartDate where
+instance HasOptionalParam UniswapV3GetPoolHourDataHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam UniswapV3GetPoolHourDatasHistorical EndDate where
+instance HasOptionalParam UniswapV3GetPoolHourDataHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam UniswapV3GetPoolHourDatasHistorical Id where
+instance HasOptionalParam UniswapV3GetPoolHourDataHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
-instance HasOptionalParam UniswapV3GetPoolHourDatasHistorical Pool where
+instance HasOptionalParam UniswapV3GetPoolHourDataHistorical Pool where
   applyOptionalParam req (Pool xs) =
     req `addQuery` toQuery ("pool", Just xs)
 -- | @application/json@
-instance Produces UniswapV3GetPoolHourDatasHistorical MimeJSON
+instance Produces UniswapV3GetPoolHourDataHistorical MimeJSON
 -- | @text/json@
-instance Produces UniswapV3GetPoolHourDatasHistorical MimeTextJson
+instance Produces UniswapV3GetPoolHourDataHistorical MimeTextJson
 -- | @text/plain@
-instance Produces UniswapV3GetPoolHourDatasHistorical MimePlainText
+instance Produces UniswapV3GetPoolHourDataHistorical MimePlainText
 
 
 -- *** uniswapV3GetPoolsHistorical
@@ -656,45 +656,45 @@ instance Produces UniswapV3GetSwapsHistorical MimeTextJson
 instance Produces UniswapV3GetSwapsHistorical MimePlainText
 
 
--- *** uniswapV3GetTickDayDatasHistorical
+-- *** uniswapV3GetTickDayDataHistorical
 
--- | @GET \/dapps\/uniswapv3\/tickDayDatas\/historical@
+-- | @GET \/dapps\/uniswapv3\/tickDayData\/historical@
 -- 
--- TickDayDatas (historical)
+-- TickDayData (historical)
 -- 
--- Gets tickDayDatas.
+-- Gets tickDayData.
 -- 
-uniswapV3GetTickDayDatasHistorical
+uniswapV3GetTickDayDataHistorical
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest UniswapV3GetTickDayDatasHistorical MimeNoContent [UniswapV3TickDayDataDTO] accept
-uniswapV3GetTickDayDatasHistorical  _ =
-  _mkRequest "GET" ["/dapps/uniswapv3/tickDayDatas/historical"]
+  -> OnChainRequest UniswapV3GetTickDayDataHistorical MimeNoContent [UniswapV3TickDayDataDTO] accept
+uniswapV3GetTickDayDataHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/tickDayData/historical"]
 
-data UniswapV3GetTickDayDatasHistorical  
-instance HasOptionalParam UniswapV3GetTickDayDatasHistorical StartBlock where
+data UniswapV3GetTickDayDataHistorical  
+instance HasOptionalParam UniswapV3GetTickDayDataHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
-instance HasOptionalParam UniswapV3GetTickDayDatasHistorical EndBlock where
+instance HasOptionalParam UniswapV3GetTickDayDataHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
-instance HasOptionalParam UniswapV3GetTickDayDatasHistorical StartDate where
+instance HasOptionalParam UniswapV3GetTickDayDataHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
-instance HasOptionalParam UniswapV3GetTickDayDatasHistorical EndDate where
+instance HasOptionalParam UniswapV3GetTickDayDataHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
-instance HasOptionalParam UniswapV3GetTickDayDatasHistorical Id where
+instance HasOptionalParam UniswapV3GetTickDayDataHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
-instance HasOptionalParam UniswapV3GetTickDayDatasHistorical Pool where
+instance HasOptionalParam UniswapV3GetTickDayDataHistorical Pool where
   applyOptionalParam req (Pool xs) =
     req `addQuery` toQuery ("pool", Just xs)
 -- | @application/json@
-instance Produces UniswapV3GetTickDayDatasHistorical MimeJSON
+instance Produces UniswapV3GetTickDayDataHistorical MimeJSON
 -- | @text/json@
-instance Produces UniswapV3GetTickDayDatasHistorical MimeTextJson
+instance Produces UniswapV3GetTickDayDataHistorical MimeTextJson
 -- | @text/plain@
-instance Produces UniswapV3GetTickDayDatasHistorical MimePlainText
+instance Produces UniswapV3GetTickDayDataHistorical MimePlainText
 
 
 -- *** uniswapV3GetTicksHistorical
@@ -738,100 +738,100 @@ instance Produces UniswapV3GetTicksHistorical MimeTextJson
 instance Produces UniswapV3GetTicksHistorical MimePlainText
 
 
--- *** uniswapV3GetTokenHourDatasHistorical
+-- *** uniswapV3GetTokenHourDataHistorical
 
--- | @GET \/dapps\/uniswapv3\/tokenHourDatas\/historical@
+-- | @GET \/dapps\/uniswapv3\/tokenHourData\/historical@
 -- 
--- TokenHourDatas (historical)
+-- TokenHourData (historical)
 -- 
--- Gets tokenHourDatas.
+-- Gets tokenHourData.
 -- 
-uniswapV3GetTokenHourDatasHistorical
+uniswapV3GetTokenHourDataHistorical
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest UniswapV3GetTokenHourDatasHistorical MimeNoContent [UniswapV3TokenHourDataDTO] accept
-uniswapV3GetTokenHourDatasHistorical  _ =
-  _mkRequest "GET" ["/dapps/uniswapv3/tokenHourDatas/historical"]
+  -> OnChainRequest UniswapV3GetTokenHourDataHistorical MimeNoContent [UniswapV3TokenHourDataDTO] accept
+uniswapV3GetTokenHourDataHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/tokenHourData/historical"]
 
-data UniswapV3GetTokenHourDatasHistorical  
+data UniswapV3GetTokenHourDataHistorical  
 
 -- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-instance HasOptionalParam UniswapV3GetTokenHourDatasHistorical StartBlock where
+instance HasOptionalParam UniswapV3GetTokenHourDataHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
 
 -- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-instance HasOptionalParam UniswapV3GetTokenHourDatasHistorical EndBlock where
+instance HasOptionalParam UniswapV3GetTokenHourDataHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
 
 -- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-instance HasOptionalParam UniswapV3GetTokenHourDatasHistorical StartDate where
+instance HasOptionalParam UniswapV3GetTokenHourDataHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
 
 -- | /Optional Param/ "endDate" - The end date of timeframe.
-instance HasOptionalParam UniswapV3GetTokenHourDatasHistorical EndDate where
+instance HasOptionalParam UniswapV3GetTokenHourDataHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
 
 -- | /Optional Param/ "id" - Token address concatendated with date.
-instance HasOptionalParam UniswapV3GetTokenHourDatasHistorical Id where
+instance HasOptionalParam UniswapV3GetTokenHourDataHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
 -- | @application/json@
-instance Produces UniswapV3GetTokenHourDatasHistorical MimeJSON
+instance Produces UniswapV3GetTokenHourDataHistorical MimeJSON
 -- | @text/json@
-instance Produces UniswapV3GetTokenHourDatasHistorical MimeTextJson
+instance Produces UniswapV3GetTokenHourDataHistorical MimeTextJson
 -- | @text/plain@
-instance Produces UniswapV3GetTokenHourDatasHistorical MimePlainText
+instance Produces UniswapV3GetTokenHourDataHistorical MimePlainText
 
 
--- *** uniswapV3GetTokenV3DayDatasHistorical
+-- *** uniswapV3GetTokenV3DayDataHistorical
 
--- | @GET \/dapps\/uniswapv3\/tokenV3DayDatas\/historical@
+-- | @GET \/dapps\/uniswapv3\/tokenV3DayData\/historical@
 -- 
--- TokenV3DayDatas (historical)
+-- TokenV3DayData (historical)
 -- 
--- Gets tokenV3DayDatas.
+-- Gets tokenV3DayData.
 -- 
-uniswapV3GetTokenV3DayDatasHistorical
+uniswapV3GetTokenV3DayDataHistorical
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest UniswapV3GetTokenV3DayDatasHistorical MimeNoContent [UniswapV3TokenV3DayDataDTO] accept
-uniswapV3GetTokenV3DayDatasHistorical  _ =
-  _mkRequest "GET" ["/dapps/uniswapv3/tokenV3DayDatas/historical"]
+  -> OnChainRequest UniswapV3GetTokenV3DayDataHistorical MimeNoContent [UniswapV3TokenV3DayDataDTO] accept
+uniswapV3GetTokenV3DayDataHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/tokenV3DayData/historical"]
 
-data UniswapV3GetTokenV3DayDatasHistorical  
+data UniswapV3GetTokenV3DayDataHistorical  
 
 -- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-instance HasOptionalParam UniswapV3GetTokenV3DayDatasHistorical StartBlock where
+instance HasOptionalParam UniswapV3GetTokenV3DayDataHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
 
 -- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-instance HasOptionalParam UniswapV3GetTokenV3DayDatasHistorical EndBlock where
+instance HasOptionalParam UniswapV3GetTokenV3DayDataHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
 
 -- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-instance HasOptionalParam UniswapV3GetTokenV3DayDatasHistorical StartDate where
+instance HasOptionalParam UniswapV3GetTokenV3DayDataHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
 
 -- | /Optional Param/ "endDate" - The end date of timeframe.
-instance HasOptionalParam UniswapV3GetTokenV3DayDatasHistorical EndDate where
+instance HasOptionalParam UniswapV3GetTokenV3DayDataHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
 
 -- | /Optional Param/ "id" - Token address concatendated with date.
-instance HasOptionalParam UniswapV3GetTokenV3DayDatasHistorical Id where
+instance HasOptionalParam UniswapV3GetTokenV3DayDataHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
 -- | @application/json@
-instance Produces UniswapV3GetTokenV3DayDatasHistorical MimeJSON
+instance Produces UniswapV3GetTokenV3DayDataHistorical MimeJSON
 -- | @text/json@
-instance Produces UniswapV3GetTokenV3DayDatasHistorical MimeTextJson
+instance Produces UniswapV3GetTokenV3DayDataHistorical MimeTextJson
 -- | @text/plain@
-instance Produces UniswapV3GetTokenV3DayDatasHistorical MimePlainText
+instance Produces UniswapV3GetTokenV3DayDataHistorical MimePlainText
 
 
 -- *** uniswapV3GetTokensHistorical
@@ -940,52 +940,52 @@ instance Produces UniswapV3GetTransactionsHistorical MimeTextJson
 instance Produces UniswapV3GetTransactionsHistorical MimePlainText
 
 
--- *** uniswapV3GetUniswapDayDatasHistorical
+-- *** uniswapV3GetUniswapDayDataHistorical
 
--- | @GET \/dapps\/uniswapv3\/uniswapDayDatas\/historical@
+-- | @GET \/dapps\/uniswapv3\/uniswapDayData\/historical@
 -- 
--- UniswapDayDatas (historical)
+-- UniswapDayData (historical)
 -- 
--- Gets uniswapDayDatas.
+-- Gets uniswapDayData.
 -- 
-uniswapV3GetUniswapDayDatasHistorical
+uniswapV3GetUniswapDayDataHistorical
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest UniswapV3GetUniswapDayDatasHistorical MimeNoContent [UniswapV3UniswapDayDataDTO] accept
-uniswapV3GetUniswapDayDatasHistorical  _ =
-  _mkRequest "GET" ["/dapps/uniswapv3/uniswapDayDatas/historical"]
+  -> OnChainRequest UniswapV3GetUniswapDayDataHistorical MimeNoContent [UniswapV3UniswapDayDataDTO] accept
+uniswapV3GetUniswapDayDataHistorical  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/uniswapDayData/historical"]
 
-data UniswapV3GetUniswapDayDatasHistorical  
+data UniswapV3GetUniswapDayDataHistorical  
 
 -- | /Optional Param/ "startBlock" - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
-instance HasOptionalParam UniswapV3GetUniswapDayDatasHistorical StartBlock where
+instance HasOptionalParam UniswapV3GetUniswapDayDataHistorical StartBlock where
   applyOptionalParam req (StartBlock xs) =
     req `addQuery` toQuery ("startBlock", Just xs)
 
 -- | /Optional Param/ "endBlock" - The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
-instance HasOptionalParam UniswapV3GetUniswapDayDatasHistorical EndBlock where
+instance HasOptionalParam UniswapV3GetUniswapDayDataHistorical EndBlock where
   applyOptionalParam req (EndBlock xs) =
     req `addQuery` toQuery ("endBlock", Just xs)
 
 -- | /Optional Param/ "startDate" - The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
-instance HasOptionalParam UniswapV3GetUniswapDayDatasHistorical StartDate where
+instance HasOptionalParam UniswapV3GetUniswapDayDataHistorical StartDate where
   applyOptionalParam req (StartDate xs) =
     req `addQuery` toQuery ("startDate", Just xs)
 
 -- | /Optional Param/ "endDate" - The end date of timeframe.
-instance HasOptionalParam UniswapV3GetUniswapDayDatasHistorical EndDate where
+instance HasOptionalParam UniswapV3GetUniswapDayDataHistorical EndDate where
   applyOptionalParam req (EndDate xs) =
     req `addQuery` toQuery ("endDate", Just xs)
 
 -- | /Optional Param/ "id" - Timestamp rounded to current day by dividing by 86400.
-instance HasOptionalParam UniswapV3GetUniswapDayDatasHistorical Id where
+instance HasOptionalParam UniswapV3GetUniswapDayDataHistorical Id where
   applyOptionalParam req (Id xs) =
     req `addQuery` toQuery ("id", Just xs)
 -- | @application/json@
-instance Produces UniswapV3GetUniswapDayDatasHistorical MimeJSON
+instance Produces UniswapV3GetUniswapDayDataHistorical MimeJSON
 -- | @text/json@
-instance Produces UniswapV3GetUniswapDayDatasHistorical MimeTextJson
+instance Produces UniswapV3GetUniswapDayDataHistorical MimeTextJson
 -- | @text/plain@
-instance Produces UniswapV3GetUniswapDayDatasHistorical MimePlainText
+instance Produces UniswapV3GetUniswapDayDataHistorical MimePlainText
 
 
 -- *** uniswapV3MintsCurrent
@@ -1011,50 +1011,50 @@ instance Produces UniswapV3MintsCurrent MimeTextJson
 instance Produces UniswapV3MintsCurrent MimePlainText
 
 
--- *** uniswapV3PoolDayDatasCurrent
+-- *** uniswapV3PoolDayDataCurrent
 
--- | @GET \/dapps\/uniswapv3\/poolDayDatas\/current@
+-- | @GET \/dapps\/uniswapv3\/poolDayData\/current@
 -- 
--- PoolDayDatas (current)
+-- PoolDayData (current)
 -- 
--- Gets poolDayDatas.
+-- Gets poolDayData.
 -- 
-uniswapV3PoolDayDatasCurrent
+uniswapV3PoolDayDataCurrent
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest UniswapV3PoolDayDatasCurrent MimeNoContent [UniswapV3PoolDayDataDTO] accept
-uniswapV3PoolDayDatasCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswapv3/poolDayDatas/current"]
+  -> OnChainRequest UniswapV3PoolDayDataCurrent MimeNoContent [UniswapV3PoolDayDataDTO] accept
+uniswapV3PoolDayDataCurrent  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/poolDayData/current"]
 
-data UniswapV3PoolDayDatasCurrent  
+data UniswapV3PoolDayDataCurrent  
 -- | @application/json@
-instance Produces UniswapV3PoolDayDatasCurrent MimeJSON
+instance Produces UniswapV3PoolDayDataCurrent MimeJSON
 -- | @text/json@
-instance Produces UniswapV3PoolDayDatasCurrent MimeTextJson
+instance Produces UniswapV3PoolDayDataCurrent MimeTextJson
 -- | @text/plain@
-instance Produces UniswapV3PoolDayDatasCurrent MimePlainText
+instance Produces UniswapV3PoolDayDataCurrent MimePlainText
 
 
--- *** uniswapV3PoolHourDatasCurrent
+-- *** uniswapV3PoolHourDataCurrent
 
--- | @GET \/dapps\/uniswapv3\/poolHourDatas\/current@
+-- | @GET \/dapps\/uniswapv3\/poolHourData\/current@
 -- 
--- PoolHourDatas (current)
+-- PoolHourData (current)
 -- 
--- Gets poolHourDatas.
+-- Gets poolHourData.
 -- 
-uniswapV3PoolHourDatasCurrent
+uniswapV3PoolHourDataCurrent
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest UniswapV3PoolHourDatasCurrent MimeNoContent [UniswapV3PoolHourDataDTO] accept
-uniswapV3PoolHourDatasCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswapv3/poolHourDatas/current"]
+  -> OnChainRequest UniswapV3PoolHourDataCurrent MimeNoContent [UniswapV3PoolHourDataDTO] accept
+uniswapV3PoolHourDataCurrent  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/poolHourData/current"]
 
-data UniswapV3PoolHourDatasCurrent  
+data UniswapV3PoolHourDataCurrent  
 -- | @application/json@
-instance Produces UniswapV3PoolHourDatasCurrent MimeJSON
+instance Produces UniswapV3PoolHourDataCurrent MimeJSON
 -- | @text/json@
-instance Produces UniswapV3PoolHourDatasCurrent MimeTextJson
+instance Produces UniswapV3PoolHourDataCurrent MimeTextJson
 -- | @text/plain@
-instance Produces UniswapV3PoolHourDatasCurrent MimePlainText
+instance Produces UniswapV3PoolHourDataCurrent MimePlainText
 
 
 -- *** uniswapV3PoolsCurrent
@@ -1159,27 +1159,27 @@ instance Produces UniswapV3SwapsCurrent MimeTextJson
 instance Produces UniswapV3SwapsCurrent MimePlainText
 
 
--- *** uniswapV3TickDayDatasCurrent
+-- *** uniswapV3TickDayDataCurrent
 
--- | @GET \/dapps\/uniswapv3\/tickDayDatas\/current@
+-- | @GET \/dapps\/uniswapv3\/tickDayData\/current@
 -- 
--- TickDayDatas (current)
+-- TickDayData (current)
 -- 
--- Gets tickDayDatas.
+-- Gets tickDayData.
 -- 
-uniswapV3TickDayDatasCurrent
+uniswapV3TickDayDataCurrent
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest UniswapV3TickDayDatasCurrent MimeNoContent [UniswapV3TickDayDataDTO] accept
-uniswapV3TickDayDatasCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswapv3/tickDayDatas/current"]
+  -> OnChainRequest UniswapV3TickDayDataCurrent MimeNoContent [UniswapV3TickDayDataDTO] accept
+uniswapV3TickDayDataCurrent  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/tickDayData/current"]
 
-data UniswapV3TickDayDatasCurrent  
+data UniswapV3TickDayDataCurrent  
 -- | @application/json@
-instance Produces UniswapV3TickDayDatasCurrent MimeJSON
+instance Produces UniswapV3TickDayDataCurrent MimeJSON
 -- | @text/json@
-instance Produces UniswapV3TickDayDatasCurrent MimeTextJson
+instance Produces UniswapV3TickDayDataCurrent MimeTextJson
 -- | @text/plain@
-instance Produces UniswapV3TickDayDatasCurrent MimePlainText
+instance Produces UniswapV3TickDayDataCurrent MimePlainText
 
 
 -- *** uniswapV3TicksCurrent
@@ -1205,50 +1205,50 @@ instance Produces UniswapV3TicksCurrent MimeTextJson
 instance Produces UniswapV3TicksCurrent MimePlainText
 
 
--- *** uniswapV3TokenHourDatasCurrent
+-- *** uniswapV3TokenHourDataCurrent
 
--- | @GET \/dapps\/uniswapv3\/tokenHourDatas\/current@
+-- | @GET \/dapps\/uniswapv3\/tokenHourData\/current@
 -- 
--- TokenHourDatas (current)
+-- TokenHourData (current)
 -- 
--- Gets tokenHourDatas.
+-- Gets tokenHourData.
 -- 
-uniswapV3TokenHourDatasCurrent
+uniswapV3TokenHourDataCurrent
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest UniswapV3TokenHourDatasCurrent MimeNoContent [UniswapV3TokenHourDataDTO] accept
-uniswapV3TokenHourDatasCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswapv3/tokenHourDatas/current"]
+  -> OnChainRequest UniswapV3TokenHourDataCurrent MimeNoContent [UniswapV3TokenHourDataDTO] accept
+uniswapV3TokenHourDataCurrent  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/tokenHourData/current"]
 
-data UniswapV3TokenHourDatasCurrent  
+data UniswapV3TokenHourDataCurrent  
 -- | @application/json@
-instance Produces UniswapV3TokenHourDatasCurrent MimeJSON
+instance Produces UniswapV3TokenHourDataCurrent MimeJSON
 -- | @text/json@
-instance Produces UniswapV3TokenHourDatasCurrent MimeTextJson
+instance Produces UniswapV3TokenHourDataCurrent MimeTextJson
 -- | @text/plain@
-instance Produces UniswapV3TokenHourDatasCurrent MimePlainText
+instance Produces UniswapV3TokenHourDataCurrent MimePlainText
 
 
--- *** uniswapV3TokenV3DayDatasCurrent
+-- *** uniswapV3TokenV3DayDataCurrent
 
--- | @GET \/dapps\/uniswapv3\/tokenV3DayDatas\/current@
+-- | @GET \/dapps\/uniswapv3\/tokenV3DayData\/current@
 -- 
--- TokenV3DayDatas (current)
+-- TokenV3DayData (current)
 -- 
--- Gets tokenV3DayDatas.
+-- Gets tokenV3DayData.
 -- 
-uniswapV3TokenV3DayDatasCurrent
+uniswapV3TokenV3DayDataCurrent
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest UniswapV3TokenV3DayDatasCurrent MimeNoContent [UniswapV3TokenV3DayDataDTO] accept
-uniswapV3TokenV3DayDatasCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswapv3/tokenV3DayDatas/current"]
+  -> OnChainRequest UniswapV3TokenV3DayDataCurrent MimeNoContent [UniswapV3TokenV3DayDataDTO] accept
+uniswapV3TokenV3DayDataCurrent  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/tokenV3DayData/current"]
 
-data UniswapV3TokenV3DayDatasCurrent  
+data UniswapV3TokenV3DayDataCurrent  
 -- | @application/json@
-instance Produces UniswapV3TokenV3DayDatasCurrent MimeJSON
+instance Produces UniswapV3TokenV3DayDataCurrent MimeJSON
 -- | @text/json@
-instance Produces UniswapV3TokenV3DayDatasCurrent MimeTextJson
+instance Produces UniswapV3TokenV3DayDataCurrent MimeTextJson
 -- | @text/plain@
-instance Produces UniswapV3TokenV3DayDatasCurrent MimePlainText
+instance Produces UniswapV3TokenV3DayDataCurrent MimePlainText
 
 
 -- *** uniswapV3TokensCurrent
@@ -1297,25 +1297,25 @@ instance Produces UniswapV3TransactionsCurrent MimeTextJson
 instance Produces UniswapV3TransactionsCurrent MimePlainText
 
 
--- *** uniswapV3UniswapDayDatasCurrent
+-- *** uniswapV3UniswapDayDataCurrent
 
--- | @GET \/dapps\/uniswapv3\/uniswapDayDatas\/current@
+-- | @GET \/dapps\/uniswapv3\/uniswapDayData\/current@
 -- 
--- UniswapDayDatas (current)
+-- UniswapDayData (current)
 -- 
--- Gets uniswapDayDatas.
+-- Gets uniswapDayData.
 -- 
-uniswapV3UniswapDayDatasCurrent
+uniswapV3UniswapDayDataCurrent
   :: Accept accept -- ^ request accept ('MimeType')
-  -> OnChainRequest UniswapV3UniswapDayDatasCurrent MimeNoContent [UniswapV3UniswapDayDataDTO] accept
-uniswapV3UniswapDayDatasCurrent  _ =
-  _mkRequest "GET" ["/dapps/uniswapv3/uniswapDayDatas/current"]
+  -> OnChainRequest UniswapV3UniswapDayDataCurrent MimeNoContent [UniswapV3UniswapDayDataDTO] accept
+uniswapV3UniswapDayDataCurrent  _ =
+  _mkRequest "GET" ["/dapps/uniswapv3/uniswapDayData/current"]
 
-data UniswapV3UniswapDayDatasCurrent  
+data UniswapV3UniswapDayDataCurrent  
 -- | @application/json@
-instance Produces UniswapV3UniswapDayDatasCurrent MimeJSON
+instance Produces UniswapV3UniswapDayDataCurrent MimeJSON
 -- | @text/json@
-instance Produces UniswapV3UniswapDayDatasCurrent MimeTextJson
+instance Produces UniswapV3UniswapDayDataCurrent MimeTextJson
 -- | @text/plain@
-instance Produces UniswapV3UniswapDayDatasCurrent MimePlainText
+instance Produces UniswapV3UniswapDayDataCurrent MimePlainText
 

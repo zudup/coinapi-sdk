@@ -7,12 +7,12 @@ void main() {
   final instance = Openapi().getDexApi();
 
   group(DexApi, () {
-    // Batchs (current)
+    // Batches (current)
     //
-    // Gets batchs.
+    // Gets batches.
     //
-    //Future<BuiltList<DexBatchDTO>> dexBatchsCurrent() async
-    test('test dexBatchsCurrent', () async {
+    //Future<BuiltList<DexBatchDTO>> dexBatchesCurrent() async
+    test('test dexBatchesCurrent', () async {
       // TODO
     });
 
@@ -25,12 +25,12 @@ void main() {
       // TODO
     });
 
-    // Batchs (historical)
+    // Batches (historical)
     //
-    // Gets batchs.
+    // Gets batches.
     //
-    //Future<BuiltList<DexBatchDTO>> dexGetBatchsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
-    test('test dexGetBatchsHistorical', () async {
+    //Future<BuiltList<DexBatchDTO>> dexGetBatchesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
+    test('test dexGetBatchesHistorical', () async {
       // TODO
     });
 
@@ -70,12 +70,12 @@ void main() {
       // TODO
     });
 
-    // Statss (historical)
+    // Stats (historical)
     //
-    // Gets statss.
+    // Gets stats.
     //
-    //Future<BuiltList<DexStatsDTO>> dexGetStatssHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
-    test('test dexGetStatssHistorical', () async {
+    //Future<BuiltList<DexStatsDTO>> dexGetStatsHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
+    test('test dexGetStatsHistorical', () async {
       // TODO
     });
 
@@ -151,12 +151,12 @@ void main() {
       // TODO
     });
 
-    // Statss (current)
+    // Stats (current)
     //
-    // Gets statss.
+    // Gets stats.
     //
-    //Future<BuiltList<DexStatsDTO>> dexStatssCurrent() async
-    test('test dexStatssCurrent', () async {
+    //Future<BuiltList<DexStatsDTO>> dexStatsCurrent() async
+    test('test dexStatsCurrent', () async {
       // TODO
     });
 

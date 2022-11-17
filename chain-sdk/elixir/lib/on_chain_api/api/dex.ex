@@ -10,8 +10,8 @@ defmodule OnChainAPI.Api.Dex do
   import OnChainAPI.RequestBuilder
 
   @doc """
-  Batchs (current)
-  Gets batchs.
+  Batches (current)
+  Gets batches.
 
   ### Parameters
 
@@ -23,12 +23,12 @@ defmodule OnChainAPI.Api.Dex do
   - `{:ok, [%DexBatchDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dex_batchs__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexBatchDto.t)} | {:error, Tesla.Env.t}
-  def dex_batchs__current(connection, _opts \\ []) do
+  @spec dex_batches__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexBatchDto.t)} | {:error, Tesla.Env.t}
+  def dex_batches__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/dex/batchs/current")
+      |> url("/dapps/dex/batches/current")
       |> Enum.into([])
 
     connection
@@ -68,8 +68,8 @@ defmodule OnChainAPI.Api.Dex do
   end
 
   @doc """
-  Batchs (historical)
-  Gets batchs.
+  Batches (historical)
+  Gets batches.
 
   ### Parameters
 
@@ -86,8 +86,8 @@ defmodule OnChainAPI.Api.Dex do
   - `{:ok, [%DexBatchDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dex_get_batchs__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexBatchDto.t)} | {:error, Tesla.Env.t}
-  def dex_get_batchs__historical(connection, opts \\ []) do
+  @spec dex_get_batches__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexBatchDto.t)} | {:error, Tesla.Env.t}
+  def dex_get_batches__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -99,7 +99,7 @@ defmodule OnChainAPI.Api.Dex do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/dex/batchs/historical")
+      |> url("/dapps/dex/batches/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -289,8 +289,8 @@ defmodule OnChainAPI.Api.Dex do
   end
 
   @doc """
-  Statss (historical)
-  Gets statss.
+  Stats (historical)
+  Gets stats.
 
   ### Parameters
 
@@ -307,8 +307,8 @@ defmodule OnChainAPI.Api.Dex do
   - `{:ok, [%DexStatsDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dex_get_statss__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexStatsDto.t)} | {:error, Tesla.Env.t}
-  def dex_get_statss__historical(connection, opts \\ []) do
+  @spec dex_get_stats__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexStatsDto.t)} | {:error, Tesla.Env.t}
+  def dex_get_stats__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -320,7 +320,7 @@ defmodule OnChainAPI.Api.Dex do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/dex/statss/historical")
+      |> url("/dapps/dex/stats/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -648,8 +648,8 @@ defmodule OnChainAPI.Api.Dex do
   end
 
   @doc """
-  Statss (current)
-  Gets statss.
+  Stats (current)
+  Gets stats.
 
   ### Parameters
 
@@ -661,12 +661,12 @@ defmodule OnChainAPI.Api.Dex do
   - `{:ok, [%DexStatsDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec dex_statss__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexStatsDto.t)} | {:error, Tesla.Env.t}
-  def dex_statss__current(connection, _opts \\ []) do
+  @spec dex_stats__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.DexStatsDto.t)} | {:error, Tesla.Env.t}
+  def dex_stats__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/dex/statss/current")
+      |> url("/dapps/dex/stats/current")
       |> Enum.into([])
 
     connection

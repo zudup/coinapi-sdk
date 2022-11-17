@@ -72,13 +72,13 @@ class DexApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'dexBatchsCurrent' => [
+        'dexBatchesCurrent' => [
             'application/json',
         ],
         'dexDepositsCurrent' => [
             'application/json',
         ],
-        'dexGetBatchsHistorical' => [
+        'dexGetBatchesHistorical' => [
             'application/json',
         ],
         'dexGetDepositsHistorical' => [
@@ -93,7 +93,7 @@ class DexApi
         'dexGetSolutionsHistorical' => [
             'application/json',
         ],
-        'dexGetStatssHistorical' => [
+        'dexGetStatsHistorical' => [
             'application/json',
         ],
         'dexGetTokensHistorical' => [
@@ -120,7 +120,7 @@ class DexApi
         'dexSolutionsCurrent' => [
             'application/json',
         ],
-        'dexStatssCurrent' => [
+        'dexStatsCurrent' => [
             'application/json',
         ],
         'dexTokensCurrent' => [
@@ -187,36 +187,36 @@ class DexApi
     }
 
     /**
-     * Operation dexBatchsCurrent
+     * Operation dexBatchesCurrent
      *
-     * Batchs (current)
+     * Batches (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexBatchsCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexBatchesCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\DexBatchDTO[]
      */
-    public function dexBatchsCurrent(string $contentType = self::contentTypes['dexBatchsCurrent'][0])
+    public function dexBatchesCurrent(string $contentType = self::contentTypes['dexBatchesCurrent'][0])
     {
-        list($response) = $this->dexBatchsCurrentWithHttpInfo($contentType);
+        list($response) = $this->dexBatchesCurrentWithHttpInfo($contentType);
         return $response;
     }
 
     /**
-     * Operation dexBatchsCurrentWithHttpInfo
+     * Operation dexBatchesCurrentWithHttpInfo
      *
-     * Batchs (current)
+     * Batches (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexBatchsCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexBatchesCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\DexBatchDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dexBatchsCurrentWithHttpInfo(string $contentType = self::contentTypes['dexBatchsCurrent'][0])
+    public function dexBatchesCurrentWithHttpInfo(string $contentType = self::contentTypes['dexBatchesCurrent'][0])
     {
-        $request = $this->dexBatchsCurrentRequest($contentType);
+        $request = $this->dexBatchesCurrentRequest($contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -303,18 +303,18 @@ class DexApi
     }
 
     /**
-     * Operation dexBatchsCurrentAsync
+     * Operation dexBatchesCurrentAsync
      *
-     * Batchs (current)
+     * Batches (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexBatchsCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexBatchesCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dexBatchsCurrentAsync(string $contentType = self::contentTypes['dexBatchsCurrent'][0])
+    public function dexBatchesCurrentAsync(string $contentType = self::contentTypes['dexBatchesCurrent'][0])
     {
-        return $this->dexBatchsCurrentAsyncWithHttpInfo($contentType)
+        return $this->dexBatchesCurrentAsyncWithHttpInfo($contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -323,19 +323,19 @@ class DexApi
     }
 
     /**
-     * Operation dexBatchsCurrentAsyncWithHttpInfo
+     * Operation dexBatchesCurrentAsyncWithHttpInfo
      *
-     * Batchs (current)
+     * Batches (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexBatchsCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexBatchesCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dexBatchsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['dexBatchsCurrent'][0])
+    public function dexBatchesCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['dexBatchesCurrent'][0])
     {
         $returnType = '\OpenAPI\Client\Model\DexBatchDTO[]';
-        $request = $this->dexBatchsCurrentRequest($contentType);
+        $request = $this->dexBatchesCurrentRequest($contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -374,18 +374,18 @@ class DexApi
     }
 
     /**
-     * Create request for operation 'dexBatchsCurrent'
+     * Create request for operation 'dexBatchesCurrent'
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexBatchsCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexBatchesCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dexBatchsCurrentRequest(string $contentType = self::contentTypes['dexBatchsCurrent'][0])
+    public function dexBatchesCurrentRequest(string $contentType = self::contentTypes['dexBatchesCurrent'][0])
     {
 
 
-        $resourcePath = '/dapps/dex/batchs/current';
+        $resourcePath = '/dapps/dex/batches/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -713,46 +713,46 @@ class DexApi
     }
 
     /**
-     * Operation dexGetBatchsHistorical
+     * Operation dexGetBatchesHistorical
      *
-     * Batchs (historical)
+     * Batches (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Identifier. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetBatchsHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetBatchesHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\DexBatchDTO[]
      */
-    public function dexGetBatchsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetBatchsHistorical'][0])
+    public function dexGetBatchesHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetBatchesHistorical'][0])
     {
-        list($response) = $this->dexGetBatchsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        list($response) = $this->dexGetBatchesHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType);
         return $response;
     }
 
     /**
-     * Operation dexGetBatchsHistoricalWithHttpInfo
+     * Operation dexGetBatchesHistoricalWithHttpInfo
      *
-     * Batchs (historical)
+     * Batches (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Identifier. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetBatchsHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetBatchesHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\DexBatchDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dexGetBatchsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetBatchsHistorical'][0])
+    public function dexGetBatchesHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetBatchesHistorical'][0])
     {
-        $request = $this->dexGetBatchsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        $request = $this->dexGetBatchesHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -839,23 +839,23 @@ class DexApi
     }
 
     /**
-     * Operation dexGetBatchsHistoricalAsync
+     * Operation dexGetBatchesHistoricalAsync
      *
-     * Batchs (historical)
+     * Batches (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Identifier. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetBatchsHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetBatchesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dexGetBatchsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetBatchsHistorical'][0])
+    public function dexGetBatchesHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetBatchesHistorical'][0])
     {
-        return $this->dexGetBatchsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType)
+        return $this->dexGetBatchesHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -864,24 +864,24 @@ class DexApi
     }
 
     /**
-     * Operation dexGetBatchsHistoricalAsyncWithHttpInfo
+     * Operation dexGetBatchesHistoricalAsyncWithHttpInfo
      *
-     * Batchs (historical)
+     * Batches (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Identifier. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetBatchsHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetBatchesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dexGetBatchsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetBatchsHistorical'][0])
+    public function dexGetBatchesHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetBatchesHistorical'][0])
     {
         $returnType = '\OpenAPI\Client\Model\DexBatchDTO[]';
-        $request = $this->dexGetBatchsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        $request = $this->dexGetBatchesHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -920,19 +920,19 @@ class DexApi
     }
 
     /**
-     * Create request for operation 'dexGetBatchsHistorical'
+     * Create request for operation 'dexGetBatchesHistorical'
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Identifier. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetBatchsHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetBatchesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dexGetBatchsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetBatchsHistorical'][0])
+    public function dexGetBatchesHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetBatchesHistorical'][0])
     {
 
 
@@ -941,7 +941,7 @@ class DexApi
 
 
 
-        $resourcePath = '/dapps/dex/batchs/historical';
+        $resourcePath = '/dapps/dex/batches/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2448,46 +2448,46 @@ class DexApi
     }
 
     /**
-     * Operation dexGetStatssHistorical
+     * Operation dexGetStatsHistorical
      *
-     * Statss (historical)
+     * Stats (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id  (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetStatssHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetStatsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\DexStatsDTO[]
      */
-    public function dexGetStatssHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetStatssHistorical'][0])
+    public function dexGetStatsHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetStatsHistorical'][0])
     {
-        list($response) = $this->dexGetStatssHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        list($response) = $this->dexGetStatsHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType);
         return $response;
     }
 
     /**
-     * Operation dexGetStatssHistoricalWithHttpInfo
+     * Operation dexGetStatsHistoricalWithHttpInfo
      *
-     * Statss (historical)
+     * Stats (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id  (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetStatssHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetStatsHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\DexStatsDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dexGetStatssHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetStatssHistorical'][0])
+    public function dexGetStatsHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetStatsHistorical'][0])
     {
-        $request = $this->dexGetStatssHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        $request = $this->dexGetStatsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2574,23 +2574,23 @@ class DexApi
     }
 
     /**
-     * Operation dexGetStatssHistoricalAsync
+     * Operation dexGetStatsHistoricalAsync
      *
-     * Statss (historical)
+     * Stats (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id  (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetStatssHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetStatsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dexGetStatssHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetStatssHistorical'][0])
+    public function dexGetStatsHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetStatsHistorical'][0])
     {
-        return $this->dexGetStatssHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType)
+        return $this->dexGetStatsHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2599,24 +2599,24 @@ class DexApi
     }
 
     /**
-     * Operation dexGetStatssHistoricalAsyncWithHttpInfo
+     * Operation dexGetStatsHistoricalAsyncWithHttpInfo
      *
-     * Statss (historical)
+     * Stats (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id  (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetStatssHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetStatsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dexGetStatssHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetStatssHistorical'][0])
+    public function dexGetStatsHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetStatsHistorical'][0])
     {
         $returnType = '\OpenAPI\Client\Model\DexStatsDTO[]';
-        $request = $this->dexGetStatssHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        $request = $this->dexGetStatsHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2655,19 +2655,19 @@ class DexApi
     }
 
     /**
-     * Create request for operation 'dexGetStatssHistorical'
+     * Create request for operation 'dexGetStatsHistorical'
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id  (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetStatssHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexGetStatsHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dexGetStatssHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetStatssHistorical'][0])
+    public function dexGetStatsHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['dexGetStatsHistorical'][0])
     {
 
 
@@ -2676,7 +2676,7 @@ class DexApi
 
 
 
-        $resourcePath = '/dapps/dex/statss/historical';
+        $resourcePath = '/dapps/dex/stats/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5370,36 +5370,36 @@ class DexApi
     }
 
     /**
-     * Operation dexStatssCurrent
+     * Operation dexStatsCurrent
      *
-     * Statss (current)
+     * Stats (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexStatssCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexStatsCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\DexStatsDTO[]
      */
-    public function dexStatssCurrent(string $contentType = self::contentTypes['dexStatssCurrent'][0])
+    public function dexStatsCurrent(string $contentType = self::contentTypes['dexStatsCurrent'][0])
     {
-        list($response) = $this->dexStatssCurrentWithHttpInfo($contentType);
+        list($response) = $this->dexStatsCurrentWithHttpInfo($contentType);
         return $response;
     }
 
     /**
-     * Operation dexStatssCurrentWithHttpInfo
+     * Operation dexStatsCurrentWithHttpInfo
      *
-     * Statss (current)
+     * Stats (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexStatssCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexStatsCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\DexStatsDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function dexStatssCurrentWithHttpInfo(string $contentType = self::contentTypes['dexStatssCurrent'][0])
+    public function dexStatsCurrentWithHttpInfo(string $contentType = self::contentTypes['dexStatsCurrent'][0])
     {
-        $request = $this->dexStatssCurrentRequest($contentType);
+        $request = $this->dexStatsCurrentRequest($contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5486,18 +5486,18 @@ class DexApi
     }
 
     /**
-     * Operation dexStatssCurrentAsync
+     * Operation dexStatsCurrentAsync
      *
-     * Statss (current)
+     * Stats (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexStatssCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexStatsCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dexStatssCurrentAsync(string $contentType = self::contentTypes['dexStatssCurrent'][0])
+    public function dexStatsCurrentAsync(string $contentType = self::contentTypes['dexStatsCurrent'][0])
     {
-        return $this->dexStatssCurrentAsyncWithHttpInfo($contentType)
+        return $this->dexStatsCurrentAsyncWithHttpInfo($contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5506,19 +5506,19 @@ class DexApi
     }
 
     /**
-     * Operation dexStatssCurrentAsyncWithHttpInfo
+     * Operation dexStatsCurrentAsyncWithHttpInfo
      *
-     * Statss (current)
+     * Stats (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexStatssCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexStatsCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function dexStatssCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['dexStatssCurrent'][0])
+    public function dexStatsCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['dexStatsCurrent'][0])
     {
         $returnType = '\OpenAPI\Client\Model\DexStatsDTO[]';
-        $request = $this->dexStatssCurrentRequest($contentType);
+        $request = $this->dexStatsCurrentRequest($contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5557,18 +5557,18 @@ class DexApi
     }
 
     /**
-     * Create request for operation 'dexStatssCurrent'
+     * Create request for operation 'dexStatsCurrent'
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexStatssCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['dexStatsCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function dexStatssCurrentRequest(string $contentType = self::contentTypes['dexStatssCurrent'][0])
+    public function dexStatsCurrentRequest(string $contentType = self::contentTypes['dexStatsCurrent'][0])
     {
 
 
-        $resourcePath = '/dapps/dex/statss/current';
+        $resourcePath = '/dapps/dex/stats/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

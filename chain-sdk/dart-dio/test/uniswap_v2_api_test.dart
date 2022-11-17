@@ -70,21 +70,21 @@ void main() {
       // TODO
     });
 
-    // PairDayDatas (historical)
+    // PairDayData (historical)
     //
-    // Gets pairDayDatas.
+    // Gets pairDayData.
     //
-    //Future<BuiltList<UniswapV2PairDayDataDTO>> uniswapV2GetPairDayDatasHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id, String token0, String token1 }) async
-    test('test uniswapV2GetPairDayDatasHistorical', () async {
+    //Future<BuiltList<UniswapV2PairDayDataDTO>> uniswapV2GetPairDayDataHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id, String token0, String token1 }) async
+    test('test uniswapV2GetPairDayDataHistorical', () async {
       // TODO
     });
 
-    // PairHourDatas (historical)
+    // PairHourData (historical)
     //
-    // Gets pairHourDatas.
+    // Gets pairHourData.
     //
-    //Future<BuiltList<UniswapV2PairHourDataDTO>> uniswapV2GetPairHourDatasHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id, String pair }) async
-    test('test uniswapV2GetPairHourDatasHistorical', () async {
+    //Future<BuiltList<UniswapV2PairHourDataDTO>> uniswapV2GetPairHourDataHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id, String pair }) async
+    test('test uniswapV2GetPairHourDataHistorical', () async {
       // TODO
     });
 
@@ -106,12 +106,12 @@ void main() {
       // TODO
     });
 
-    // TokenDayDatas (historical)
+    // TokenDayData (historical)
     //
-    // Gets tokenDayDatas.
+    // Gets tokenDayData.
     //
-    //Future<BuiltList<UniswapV2TokenDayDataDTO>> uniswapV2GetTokenDayDatasHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
-    test('test uniswapV2GetTokenDayDatasHistorical', () async {
+    //Future<BuiltList<UniswapV2TokenDayDataDTO>> uniswapV2GetTokenDayDataHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
+    test('test uniswapV2GetTokenDayDataHistorical', () async {
       // TODO
     });
 
@@ -133,21 +133,21 @@ void main() {
       // TODO
     });
 
-    // UniswapDayDatas (historical)
+    // UniswapDayData (historical)
     //
-    // Gets uniswapDayDatas.
+    // Gets uniswapDayData.
     //
-    //Future<BuiltList<UniswapV2UniswapDayDataDTO>> uniswapV2GetUniswapDayDatasHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
-    test('test uniswapV2GetUniswapDayDatasHistorical', () async {
+    //Future<BuiltList<UniswapV2UniswapDayDataDTO>> uniswapV2GetUniswapDayDataHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
+    test('test uniswapV2GetUniswapDayDataHistorical', () async {
       // TODO
     });
 
-    // UniswapFactorys (historical)
+    // UniswapFactories (historical)
     //
-    // Gets uniswapFactorys.
+    // Gets uniswapFactories.
     //
-    //Future<BuiltList<UniswapV2UniswapFactoryDTO>> uniswapV2GetUniswapFactorysHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
-    test('test uniswapV2GetUniswapFactorysHistorical', () async {
+    //Future<BuiltList<UniswapV2UniswapFactoryDTO>> uniswapV2GetUniswapFactoriesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id }) async
+    test('test uniswapV2GetUniswapFactoriesHistorical', () async {
       // TODO
     });
 
@@ -187,21 +187,21 @@ void main() {
       // TODO
     });
 
-    // PairDayDatas (current)
+    // PairDayData (current)
     //
-    // Gets pairDayDatas.
+    // Gets pairDayData.
     //
-    //Future<BuiltList<UniswapV2PairDayDataDTO>> uniswapV2PairDayDatasCurrent() async
-    test('test uniswapV2PairDayDatasCurrent', () async {
+    //Future<BuiltList<UniswapV2PairDayDataDTO>> uniswapV2PairDayDataCurrent() async
+    test('test uniswapV2PairDayDataCurrent', () async {
       // TODO
     });
 
-    // PairHourDatas (current)
+    // PairHourData (current)
     //
-    // Gets pairHourDatas.
+    // Gets pairHourData.
     //
-    //Future<BuiltList<UniswapV2PairHourDataDTO>> uniswapV2PairHourDatasCurrent() async
-    test('test uniswapV2PairHourDatasCurrent', () async {
+    //Future<BuiltList<UniswapV2PairHourDataDTO>> uniswapV2PairHourDataCurrent() async
+    test('test uniswapV2PairHourDataCurrent', () async {
       // TODO
     });
 
@@ -223,12 +223,12 @@ void main() {
       // TODO
     });
 
-    // TokenDayDatas (current)
+    // TokenDayData (current)
     //
-    // Gets tokenDayDatas.
+    // Gets tokenDayData.
     //
-    //Future<BuiltList<UniswapV2TokenDayDataDTO>> uniswapV2TokenDayDatasCurrent() async
-    test('test uniswapV2TokenDayDatasCurrent', () async {
+    //Future<BuiltList<UniswapV2TokenDayDataDTO>> uniswapV2TokenDayDataCurrent() async
+    test('test uniswapV2TokenDayDataCurrent', () async {
       // TODO
     });
 
@@ -250,21 +250,21 @@ void main() {
       // TODO
     });
 
-    // UniswapDayDatas (current)
+    // UniswapDayData (current)
     //
-    // Gets uniswapDayDatas.
+    // Gets uniswapDayData.
     //
-    //Future<BuiltList<UniswapV2UniswapDayDataDTO>> uniswapV2UniswapDayDatasCurrent() async
-    test('test uniswapV2UniswapDayDatasCurrent', () async {
+    //Future<BuiltList<UniswapV2UniswapDayDataDTO>> uniswapV2UniswapDayDataCurrent() async
+    test('test uniswapV2UniswapDayDataCurrent', () async {
       // TODO
     });
 
-    // UniswapFactorys (current)
+    // UniswapFactories (current)
     //
-    // Gets uniswapFactorys.
+    // Gets uniswapFactories.
     //
-    //Future<BuiltList<UniswapV2UniswapFactoryDTO>> uniswapV2UniswapFactorysCurrent() async
-    test('test uniswapV2UniswapFactorysCurrent', () async {
+    //Future<BuiltList<UniswapV2UniswapFactoryDTO>> uniswapV2UniswapFactoriesCurrent() async
+    test('test uniswapV2UniswapFactoriesCurrent', () async {
       // TODO
     });
 

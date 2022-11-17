@@ -151,11 +151,11 @@
        res)))
 
 
-(defn-spec sushiswap-day-datas-current-with-http-info any?
-  "DayDatas (current)
-  Gets dayDatas."
+(defn-spec sushiswap-day-data-current-with-http-info any?
+  "DayData (current)
+  Gets dayData."
   []
-  (call-api "/dapps/sushiswap/dayDatas/current" :get
+  (call-api "/dapps/sushiswap/dayData/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -164,21 +164,21 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec sushiswap-day-datas-current (s/coll-of sushiswap/day-data-dto-spec)
-  "DayDatas (current)
-  Gets dayDatas."
+(defn-spec sushiswap-day-data-current (s/coll-of sushiswap/day-data-dto-spec)
+  "DayData (current)
+  Gets dayData."
   []
-  (let [res (:data (sushiswap-day-datas-current-with-http-info))]
+  (let [res (:data (sushiswap-day-data-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of sushiswap/day-data-dto-spec) res st/string-transformer)
        res)))
 
 
-(defn-spec sushiswap-factorys-current-with-http-info any?
-  "Factorys (current)
-  Gets factorys."
+(defn-spec sushiswap-factories-current-with-http-info any?
+  "Factories (current)
+  Gets factories."
   []
-  (call-api "/dapps/sushiswap/factorys/current" :get
+  (call-api "/dapps/sushiswap/factories/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -187,11 +187,11 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec sushiswap-factorys-current (s/coll-of sushiswap/factory-dto-spec)
-  "Factorys (current)
-  Gets factorys."
+(defn-spec sushiswap-factories-current (s/coll-of sushiswap/factory-dto-spec)
+  "Factories (current)
+  Gets factories."
   []
-  (let [res (:data (sushiswap-factorys-current-with-http-info))]
+  (let [res (:data (sushiswap-factories-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of sushiswap/factory-dto-spec) res st/string-transformer)
        res)))
@@ -247,12 +247,12 @@
         res))))
 
 
-(defn-spec sushiswap-get-day-datas-historical-with-http-info any?
-  "DayDatas (historical)
-  Gets dayDatas."
-  ([] (sushiswap-get-day-datas-historical-with-http-info nil))
+(defn-spec sushiswap-get-day-data-historical-with-http-info any?
+  "DayData (historical)
+  Gets dayData."
+  ([] (sushiswap-get-day-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/dayDatas/historical" :get
+   (call-api "/dapps/sushiswap/dayData/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
@@ -261,23 +261,23 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec sushiswap-get-day-datas-historical (s/coll-of sushiswap/day-data-dto-spec)
-  "DayDatas (historical)
-  Gets dayDatas."
-  ([] (sushiswap-get-day-datas-historical nil))
+(defn-spec sushiswap-get-day-data-historical (s/coll-of sushiswap/day-data-dto-spec)
+  "DayData (historical)
+  Gets dayData."
+  ([] (sushiswap-get-day-data-historical nil))
   ([optional-params any?]
-   (let [res (:data (sushiswap-get-day-datas-historical-with-http-info optional-params))]
+   (let [res (:data (sushiswap-get-day-data-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of sushiswap/day-data-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec sushiswap-get-factorys-historical-with-http-info any?
-  "Factorys (historical)
-  Gets factorys."
-  ([] (sushiswap-get-factorys-historical-with-http-info nil))
+(defn-spec sushiswap-get-factories-historical-with-http-info any?
+  "Factories (historical)
+  Gets factories."
+  ([] (sushiswap-get-factories-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/factorys/historical" :get
+   (call-api "/dapps/sushiswap/factories/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
@@ -286,23 +286,23 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec sushiswap-get-factorys-historical (s/coll-of sushiswap/factory-dto-spec)
-  "Factorys (historical)
-  Gets factorys."
-  ([] (sushiswap-get-factorys-historical nil))
+(defn-spec sushiswap-get-factories-historical (s/coll-of sushiswap/factory-dto-spec)
+  "Factories (historical)
+  Gets factories."
+  ([] (sushiswap-get-factories-historical nil))
   ([optional-params any?]
-   (let [res (:data (sushiswap-get-factorys-historical-with-http-info optional-params))]
+   (let [res (:data (sushiswap-get-factories-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of sushiswap/factory-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec sushiswap-get-hour-datas-historical-with-http-info any?
-  "HourDatas (historical)
-  Gets hourDatas."
-  ([] (sushiswap-get-hour-datas-historical-with-http-info nil))
+(defn-spec sushiswap-get-hour-data-historical-with-http-info any?
+  "HourData (historical)
+  Gets hourData."
+  ([] (sushiswap-get-hour-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/hourDatas/historical" :get
+   (call-api "/dapps/sushiswap/hourData/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
@@ -311,12 +311,12 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec sushiswap-get-hour-datas-historical (s/coll-of sushiswap/hour-data-dto-spec)
-  "HourDatas (historical)
-  Gets hourDatas."
-  ([] (sushiswap-get-hour-datas-historical nil))
+(defn-spec sushiswap-get-hour-data-historical (s/coll-of sushiswap/hour-data-dto-spec)
+  "HourData (historical)
+  Gets hourData."
+  ([] (sushiswap-get-hour-data-historical nil))
   ([optional-params any?]
-   (let [res (:data (sushiswap-get-hour-datas-historical-with-http-info optional-params))]
+   (let [res (:data (sushiswap-get-hour-data-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of sushiswap/hour-data-dto-spec) res st/string-transformer)
         res))))
@@ -397,12 +397,12 @@
         res))))
 
 
-(defn-spec sushiswap-get-pair-day-datas-historical-with-http-info any?
-  "PairDayDatas (historical)
-  Gets pairDayDatas."
-  ([] (sushiswap-get-pair-day-datas-historical-with-http-info nil))
+(defn-spec sushiswap-get-pair-day-data-historical-with-http-info any?
+  "PairDayData (historical)
+  Gets pairDayData."
+  ([] (sushiswap-get-pair-day-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pair token_0 token_1]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/pairDayDatas/historical" :get
+   (call-api "/dapps/sushiswap/pairDayData/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id "pair" pair "token_0" token_0 "token_1" token_1 }
@@ -411,23 +411,23 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec sushiswap-get-pair-day-datas-historical (s/coll-of sushiswap/pair-day-data-dto-spec)
-  "PairDayDatas (historical)
-  Gets pairDayDatas."
-  ([] (sushiswap-get-pair-day-datas-historical nil))
+(defn-spec sushiswap-get-pair-day-data-historical (s/coll-of sushiswap/pair-day-data-dto-spec)
+  "PairDayData (historical)
+  Gets pairDayData."
+  ([] (sushiswap-get-pair-day-data-historical nil))
   ([optional-params any?]
-   (let [res (:data (sushiswap-get-pair-day-datas-historical-with-http-info optional-params))]
+   (let [res (:data (sushiswap-get-pair-day-data-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of sushiswap/pair-day-data-dto-spec) res st/string-transformer)
         res))))
 
 
-(defn-spec sushiswap-get-pair-hour-datas-historical-with-http-info any?
-  "PairHourDatas (historical)
-  Gets pairHourDatas."
-  ([] (sushiswap-get-pair-hour-datas-historical-with-http-info nil))
+(defn-spec sushiswap-get-pair-hour-data-historical-with-http-info any?
+  "PairHourData (historical)
+  Gets pairHourData."
+  ([] (sushiswap-get-pair-hour-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id pair]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/pairHourDatas/historical" :get
+   (call-api "/dapps/sushiswap/pairHourData/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id "pair" pair }
@@ -436,12 +436,12 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec sushiswap-get-pair-hour-datas-historical (s/coll-of sushiswap/pair-hour-data-dto-spec)
-  "PairHourDatas (historical)
-  Gets pairHourDatas."
-  ([] (sushiswap-get-pair-hour-datas-historical nil))
+(defn-spec sushiswap-get-pair-hour-data-historical (s/coll-of sushiswap/pair-hour-data-dto-spec)
+  "PairHourData (historical)
+  Gets pairHourData."
+  ([] (sushiswap-get-pair-hour-data-historical nil))
   ([optional-params any?]
-   (let [res (:data (sushiswap-get-pair-hour-datas-historical-with-http-info optional-params))]
+   (let [res (:data (sushiswap-get-pair-hour-data-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of sushiswap/pair-hour-data-dto-spec) res st/string-transformer)
         res))))
@@ -497,12 +497,12 @@
         res))))
 
 
-(defn-spec sushiswap-get-token-day-datas-historical-with-http-info any?
-  "TokenDayDatas (historical)
-  Gets tokenDayDatas."
-  ([] (sushiswap-get-token-day-datas-historical-with-http-info nil))
+(defn-spec sushiswap-get-token-day-data-historical-with-http-info any?
+  "TokenDayData (historical)
+  Gets tokenDayData."
+  ([] (sushiswap-get-token-day-data-historical-with-http-info nil))
   ([{:keys [startBlock endBlock startDate endDate id]} (s/map-of keyword? any?)]
-   (call-api "/dapps/sushiswap/tokenDayDatas/historical" :get
+   (call-api "/dapps/sushiswap/tokenDayData/historical" :get
              {:path-params   {}
               :header-params {}
               :query-params  {"startBlock" startBlock "endBlock" endBlock "startDate" startDate "endDate" endDate "id" id }
@@ -511,12 +511,12 @@
               :accepts       ["text/plain" "application/json" "text/json"]
               :auth-names    []})))
 
-(defn-spec sushiswap-get-token-day-datas-historical (s/coll-of sushiswap/token-day-data-dto-spec)
-  "TokenDayDatas (historical)
-  Gets tokenDayDatas."
-  ([] (sushiswap-get-token-day-datas-historical nil))
+(defn-spec sushiswap-get-token-day-data-historical (s/coll-of sushiswap/token-day-data-dto-spec)
+  "TokenDayData (historical)
+  Gets tokenDayData."
+  ([] (sushiswap-get-token-day-data-historical nil))
   ([optional-params any?]
-   (let [res (:data (sushiswap-get-token-day-datas-historical-with-http-info optional-params))]
+   (let [res (:data (sushiswap-get-token-day-data-historical-with-http-info optional-params))]
      (if (:decode-models *api-context*)
         (st/decode (s/coll-of sushiswap/token-day-data-dto-spec) res st/string-transformer)
         res))))
@@ -597,11 +597,11 @@
         res))))
 
 
-(defn-spec sushiswap-hour-datas-current-with-http-info any?
-  "HourDatas (current)
-  Gets hourDatas."
+(defn-spec sushiswap-hour-data-current-with-http-info any?
+  "HourData (current)
+  Gets hourData."
   []
-  (call-api "/dapps/sushiswap/hourDatas/current" :get
+  (call-api "/dapps/sushiswap/hourData/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -610,11 +610,11 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec sushiswap-hour-datas-current (s/coll-of sushiswap/hour-data-dto-spec)
-  "HourDatas (current)
-  Gets hourDatas."
+(defn-spec sushiswap-hour-data-current (s/coll-of sushiswap/hour-data-dto-spec)
+  "HourData (current)
+  Gets hourData."
   []
-  (let [res (:data (sushiswap-hour-datas-current-with-http-info))]
+  (let [res (:data (sushiswap-hour-data-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of sushiswap/hour-data-dto-spec) res st/string-transformer)
        res)))
@@ -689,11 +689,11 @@
        res)))
 
 
-(defn-spec sushiswap-pair-day-datas-current-with-http-info any?
-  "PairDayDatas (current)
-  Gets pairDayDatas."
+(defn-spec sushiswap-pair-day-data-current-with-http-info any?
+  "PairDayData (current)
+  Gets pairDayData."
   []
-  (call-api "/dapps/sushiswap/pairDayDatas/current" :get
+  (call-api "/dapps/sushiswap/pairDayData/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -702,21 +702,21 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec sushiswap-pair-day-datas-current (s/coll-of sushiswap/pair-day-data-dto-spec)
-  "PairDayDatas (current)
-  Gets pairDayDatas."
+(defn-spec sushiswap-pair-day-data-current (s/coll-of sushiswap/pair-day-data-dto-spec)
+  "PairDayData (current)
+  Gets pairDayData."
   []
-  (let [res (:data (sushiswap-pair-day-datas-current-with-http-info))]
+  (let [res (:data (sushiswap-pair-day-data-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of sushiswap/pair-day-data-dto-spec) res st/string-transformer)
        res)))
 
 
-(defn-spec sushiswap-pair-hour-datas-current-with-http-info any?
-  "PairHourDatas (current)
-  Gets pairHourDatas."
+(defn-spec sushiswap-pair-hour-data-current-with-http-info any?
+  "PairHourData (current)
+  Gets pairHourData."
   []
-  (call-api "/dapps/sushiswap/pairHourDatas/current" :get
+  (call-api "/dapps/sushiswap/pairHourData/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -725,11 +725,11 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec sushiswap-pair-hour-datas-current (s/coll-of sushiswap/pair-hour-data-dto-spec)
-  "PairHourDatas (current)
-  Gets pairHourDatas."
+(defn-spec sushiswap-pair-hour-data-current (s/coll-of sushiswap/pair-hour-data-dto-spec)
+  "PairHourData (current)
+  Gets pairHourData."
   []
-  (let [res (:data (sushiswap-pair-hour-datas-current-with-http-info))]
+  (let [res (:data (sushiswap-pair-hour-data-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of sushiswap/pair-hour-data-dto-spec) res st/string-transformer)
        res)))
@@ -785,11 +785,11 @@
         res))))
 
 
-(defn-spec sushiswap-token-day-datas-current-with-http-info any?
-  "TokenDayDatas (current)
-  Gets tokenDayDatas."
+(defn-spec sushiswap-token-day-data-current-with-http-info any?
+  "TokenDayData (current)
+  Gets tokenDayData."
   []
-  (call-api "/dapps/sushiswap/tokenDayDatas/current" :get
+  (call-api "/dapps/sushiswap/tokenDayData/current" :get
             {:path-params   {}
              :header-params {}
              :query-params  {}
@@ -798,11 +798,11 @@
              :accepts       ["text/plain" "application/json" "text/json"]
              :auth-names    []}))
 
-(defn-spec sushiswap-token-day-datas-current (s/coll-of sushiswap/token-day-data-dto-spec)
-  "TokenDayDatas (current)
-  Gets tokenDayDatas."
+(defn-spec sushiswap-token-day-data-current (s/coll-of sushiswap/token-day-data-dto-spec)
+  "TokenDayData (current)
+  Gets tokenDayData."
   []
-  (let [res (:data (sushiswap-token-day-datas-current-with-http-info))]
+  (let [res (:data (sushiswap-token-day-data-current-with-http-info))]
     (if (:decode-models *api-context*)
        (st/decode (s/coll-of sushiswap/token-day-data-dto-spec) res st/string-transformer)
        res)))

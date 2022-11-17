@@ -8,20 +8,20 @@ Method | HTTP request | Description
 [**uniswapV3BundlesCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3BundlesCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current)
 [**uniswapV3BurnsCurrent**](UniswapV3Api.md#uniswapV3BurnsCurrent) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
 [**uniswapV3BurnsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3BurnsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/burns/current | Burns (current)
-[**uniswapV3FactorysCurrent**](UniswapV3Api.md#uniswapV3FactorysCurrent) | **GET** /dapps/uniswapv3/factorys/current | Factorys (current)
-[**uniswapV3FactorysCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3FactorysCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/factorys/current | Factorys (current)
+[**uniswapV3FactoriesCurrent**](UniswapV3Api.md#uniswapV3FactoriesCurrent) | **GET** /dapps/uniswapv3/factories/current | Factories (current)
+[**uniswapV3FactoriesCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3FactoriesCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/factories/current | Factories (current)
 [**uniswapV3GetBundlesHistorical**](UniswapV3Api.md#uniswapV3GetBundlesHistorical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical)
 [**uniswapV3GetBundlesHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetBundlesHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical)
 [**uniswapV3GetBurnsHistorical**](UniswapV3Api.md#uniswapV3GetBurnsHistorical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical)
 [**uniswapV3GetBurnsHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetBurnsHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical)
-[**uniswapV3GetFactorysHistorical**](UniswapV3Api.md#uniswapV3GetFactorysHistorical) | **GET** /dapps/uniswapv3/factorys/historical | Factorys (historical)
-[**uniswapV3GetFactorysHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetFactorysHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/factorys/historical | Factorys (historical)
+[**uniswapV3GetFactoriesHistorical**](UniswapV3Api.md#uniswapV3GetFactoriesHistorical) | **GET** /dapps/uniswapv3/factories/historical | Factories (historical)
+[**uniswapV3GetFactoriesHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetFactoriesHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/factories/historical | Factories (historical)
 [**uniswapV3GetMintsHistorical**](UniswapV3Api.md#uniswapV3GetMintsHistorical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical)
 [**uniswapV3GetMintsHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetMintsHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical)
-[**uniswapV3GetPoolDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetPoolDayDatasHistorical) | **GET** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical)
-[**uniswapV3GetPoolDayDatasHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPoolDayDatasHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical)
-[**uniswapV3GetPoolHourDatasHistorical**](UniswapV3Api.md#uniswapV3GetPoolHourDatasHistorical) | **GET** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical)
-[**uniswapV3GetPoolHourDatasHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPoolHourDatasHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical)
+[**uniswapV3GetPoolDayDataHistorical**](UniswapV3Api.md#uniswapV3GetPoolDayDataHistorical) | **GET** /dapps/uniswapv3/poolDayData/historical | PoolDayData (historical)
+[**uniswapV3GetPoolDayDataHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPoolDayDataHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/poolDayData/historical | PoolDayData (historical)
+[**uniswapV3GetPoolHourDataHistorical**](UniswapV3Api.md#uniswapV3GetPoolHourDataHistorical) | **GET** /dapps/uniswapv3/poolHourData/historical | PoolHourData (historical)
+[**uniswapV3GetPoolHourDataHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPoolHourDataHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/poolHourData/historical | PoolHourData (historical)
 [**uniswapV3GetPoolsHistorical**](UniswapV3Api.md#uniswapV3GetPoolsHistorical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical)
 [**uniswapV3GetPoolsHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPoolsHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical)
 [**uniswapV3GetPositionSnapshotsHistorical**](UniswapV3Api.md#uniswapV3GetPositionSnapshotsHistorical) | **GET** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical)
@@ -30,26 +30,26 @@ Method | HTTP request | Description
 [**uniswapV3GetPositionsHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetPositionsHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical)
 [**uniswapV3GetSwapsHistorical**](UniswapV3Api.md#uniswapV3GetSwapsHistorical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical)
 [**uniswapV3GetSwapsHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetSwapsHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical)
-[**uniswapV3GetTickDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTickDayDatasHistorical) | **GET** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical)
-[**uniswapV3GetTickDayDatasHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTickDayDatasHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical)
+[**uniswapV3GetTickDayDataHistorical**](UniswapV3Api.md#uniswapV3GetTickDayDataHistorical) | **GET** /dapps/uniswapv3/tickDayData/historical | TickDayData (historical)
+[**uniswapV3GetTickDayDataHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTickDayDataHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/tickDayData/historical | TickDayData (historical)
 [**uniswapV3GetTicksHistorical**](UniswapV3Api.md#uniswapV3GetTicksHistorical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical)
 [**uniswapV3GetTicksHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTicksHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical)
-[**uniswapV3GetTokenHourDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenHourDatasHistorical) | **GET** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical)
-[**uniswapV3GetTokenHourDatasHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTokenHourDatasHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical)
-[**uniswapV3GetTokenV3DayDatasHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3DayDatasHistorical) | **GET** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical)
-[**uniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical)
+[**uniswapV3GetTokenHourDataHistorical**](UniswapV3Api.md#uniswapV3GetTokenHourDataHistorical) | **GET** /dapps/uniswapv3/tokenHourData/historical | TokenHourData (historical)
+[**uniswapV3GetTokenHourDataHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTokenHourDataHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/tokenHourData/historical | TokenHourData (historical)
+[**uniswapV3GetTokenV3DayDataHistorical**](UniswapV3Api.md#uniswapV3GetTokenV3DayDataHistorical) | **GET** /dapps/uniswapv3/tokenV3DayData/historical | TokenV3DayData (historical)
+[**uniswapV3GetTokenV3DayDataHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTokenV3DayDataHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/tokenV3DayData/historical | TokenV3DayData (historical)
 [**uniswapV3GetTokensHistorical**](UniswapV3Api.md#uniswapV3GetTokensHistorical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical)
 [**uniswapV3GetTokensHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTokensHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical)
 [**uniswapV3GetTransactionsHistorical**](UniswapV3Api.md#uniswapV3GetTransactionsHistorical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical)
 [**uniswapV3GetTransactionsHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetTransactionsHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical)
-[**uniswapV3GetUniswapDayDatasHistorical**](UniswapV3Api.md#uniswapV3GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical)
-[**uniswapV3GetUniswapDayDatasHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetUniswapDayDatasHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical)
+[**uniswapV3GetUniswapDayDataHistorical**](UniswapV3Api.md#uniswapV3GetUniswapDayDataHistorical) | **GET** /dapps/uniswapv3/uniswapDayData/historical | UniswapDayData (historical)
+[**uniswapV3GetUniswapDayDataHistoricalWithHttpInfo**](UniswapV3Api.md#uniswapV3GetUniswapDayDataHistoricalWithHttpInfo) | **GET** /dapps/uniswapv3/uniswapDayData/historical | UniswapDayData (historical)
 [**uniswapV3MintsCurrent**](UniswapV3Api.md#uniswapV3MintsCurrent) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
 [**uniswapV3MintsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3MintsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/mints/current | Mints (current)
-[**uniswapV3PoolDayDatasCurrent**](UniswapV3Api.md#uniswapV3PoolDayDatasCurrent) | **GET** /dapps/uniswapv3/poolDayDatas/current | PoolDayDatas (current)
-[**uniswapV3PoolDayDatasCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3PoolDayDatasCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/poolDayDatas/current | PoolDayDatas (current)
-[**uniswapV3PoolHourDatasCurrent**](UniswapV3Api.md#uniswapV3PoolHourDatasCurrent) | **GET** /dapps/uniswapv3/poolHourDatas/current | PoolHourDatas (current)
-[**uniswapV3PoolHourDatasCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3PoolHourDatasCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/poolHourDatas/current | PoolHourDatas (current)
+[**uniswapV3PoolDayDataCurrent**](UniswapV3Api.md#uniswapV3PoolDayDataCurrent) | **GET** /dapps/uniswapv3/poolDayData/current | PoolDayData (current)
+[**uniswapV3PoolDayDataCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3PoolDayDataCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/poolDayData/current | PoolDayData (current)
+[**uniswapV3PoolHourDataCurrent**](UniswapV3Api.md#uniswapV3PoolHourDataCurrent) | **GET** /dapps/uniswapv3/poolHourData/current | PoolHourData (current)
+[**uniswapV3PoolHourDataCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3PoolHourDataCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/poolHourData/current | PoolHourData (current)
 [**uniswapV3PoolsCurrent**](UniswapV3Api.md#uniswapV3PoolsCurrent) | **GET** /dapps/uniswapv3/pools/current | Pools (current)
 [**uniswapV3PoolsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3PoolsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/pools/current | Pools (current)
 [**uniswapV3PositionSnapshotsCurrent**](UniswapV3Api.md#uniswapV3PositionSnapshotsCurrent) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionSnapshots (current)
@@ -58,20 +58,20 @@ Method | HTTP request | Description
 [**uniswapV3PositionsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3PositionsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/positions/current | Positions (current)
 [**uniswapV3SwapsCurrent**](UniswapV3Api.md#uniswapV3SwapsCurrent) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current)
 [**uniswapV3SwapsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3SwapsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current)
-[**uniswapV3TickDayDatasCurrent**](UniswapV3Api.md#uniswapV3TickDayDatasCurrent) | **GET** /dapps/uniswapv3/tickDayDatas/current | TickDayDatas (current)
-[**uniswapV3TickDayDatasCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3TickDayDatasCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/tickDayDatas/current | TickDayDatas (current)
+[**uniswapV3TickDayDataCurrent**](UniswapV3Api.md#uniswapV3TickDayDataCurrent) | **GET** /dapps/uniswapv3/tickDayData/current | TickDayData (current)
+[**uniswapV3TickDayDataCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3TickDayDataCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/tickDayData/current | TickDayData (current)
 [**uniswapV3TicksCurrent**](UniswapV3Api.md#uniswapV3TicksCurrent) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
 [**uniswapV3TicksCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3TicksCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current)
-[**uniswapV3TokenHourDatasCurrent**](UniswapV3Api.md#uniswapV3TokenHourDatasCurrent) | **GET** /dapps/uniswapv3/tokenHourDatas/current | TokenHourDatas (current)
-[**uniswapV3TokenHourDatasCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3TokenHourDatasCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/tokenHourDatas/current | TokenHourDatas (current)
-[**uniswapV3TokenV3DayDatasCurrent**](UniswapV3Api.md#uniswapV3TokenV3DayDatasCurrent) | **GET** /dapps/uniswapv3/tokenV3DayDatas/current | TokenV3DayDatas (current)
-[**uniswapV3TokenV3DayDatasCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3TokenV3DayDatasCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/tokenV3DayDatas/current | TokenV3DayDatas (current)
+[**uniswapV3TokenHourDataCurrent**](UniswapV3Api.md#uniswapV3TokenHourDataCurrent) | **GET** /dapps/uniswapv3/tokenHourData/current | TokenHourData (current)
+[**uniswapV3TokenHourDataCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3TokenHourDataCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/tokenHourData/current | TokenHourData (current)
+[**uniswapV3TokenV3DayDataCurrent**](UniswapV3Api.md#uniswapV3TokenV3DayDataCurrent) | **GET** /dapps/uniswapv3/tokenV3DayData/current | TokenV3DayData (current)
+[**uniswapV3TokenV3DayDataCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3TokenV3DayDataCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/tokenV3DayData/current | TokenV3DayData (current)
 [**uniswapV3TokensCurrent**](UniswapV3Api.md#uniswapV3TokensCurrent) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current)
 [**uniswapV3TokensCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3TokensCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current)
 [**uniswapV3TransactionsCurrent**](UniswapV3Api.md#uniswapV3TransactionsCurrent) | **GET** /dapps/uniswapv3/transactions/current | Transactions (current)
 [**uniswapV3TransactionsCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3TransactionsCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/transactions/current | Transactions (current)
-[**uniswapV3UniswapDayDatasCurrent**](UniswapV3Api.md#uniswapV3UniswapDayDatasCurrent) | **GET** /dapps/uniswapv3/uniswapDayDatas/current | UniswapDayDatas (current)
-[**uniswapV3UniswapDayDatasCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3UniswapDayDatasCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/uniswapDayDatas/current | UniswapDayDatas (current)
+[**uniswapV3UniswapDayDataCurrent**](UniswapV3Api.md#uniswapV3UniswapDayDataCurrent) | **GET** /dapps/uniswapv3/uniswapDayData/current | UniswapDayData (current)
+[**uniswapV3UniswapDayDataCurrentWithHttpInfo**](UniswapV3Api.md#uniswapV3UniswapDayDataCurrentWithHttpInfo) | **GET** /dapps/uniswapv3/uniswapDayData/current | UniswapDayData (current)
 
 
 
@@ -225,13 +225,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3FactorysCurrent
+## uniswapV3FactoriesCurrent
 
-> uniswapV3FactorysCurrent(): ApiRequest[Seq[FactoryDTO]]
+> uniswapV3FactoriesCurrent(): ApiRequest[Seq[FactoryDTO]]
 
-Factorys (current)
+Factories (current)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 
@@ -253,7 +253,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
-    val request = apiInstance.uniswapV3FactorysCurrent()
+    val request = apiInstance.uniswapV3FactoriesCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -263,14 +263,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3FactorysCurrent")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3FactoriesCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3FactorysCurrent")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3FactoriesCurrent")
             exception.printStackTrace();
     }
 }
@@ -495,13 +495,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetFactorysHistorical
+## uniswapV3GetFactoriesHistorical
 
-> uniswapV3GetFactorysHistorical(uniswapV3GetFactorysHistoricalRequest): ApiRequest[Seq[FactoryDTO]]
+> uniswapV3GetFactoriesHistorical(uniswapV3GetFactoriesHistoricalRequest): ApiRequest[Seq[FactoryDTO]]
 
-Factorys (historical)
+Factories (historical)
 
-Gets factorys.
+Gets factories.
 
 ### Example
 
@@ -534,7 +534,7 @@ object Example extends App {
 
     val id: String = id_example // String | Factory address.
     
-    val request = apiInstance.uniswapV3GetFactorysHistorical(startBlock, endBlock, startDate, endDate, id)
+    val request = apiInstance.uniswapV3GetFactoriesHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -544,14 +544,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetFactorysHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetFactoriesHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetFactorysHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetFactoriesHistorical")
             exception.printStackTrace();
     }
 }
@@ -690,13 +690,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetPoolDayDatasHistorical
+## uniswapV3GetPoolDayDataHistorical
 
-> uniswapV3GetPoolDayDatasHistorical(uniswapV3GetPoolDayDatasHistoricalRequest): ApiRequest[Seq[PoolDayDataDTO]]
+> uniswapV3GetPoolDayDataHistorical(uniswapV3GetPoolDayDataHistoricalRequest): ApiRequest[Seq[PoolDayDataDTO]]
 
-PoolDayDatas (historical)
+PoolDayData (historical)
 
-Gets poolDayDatas.
+Gets poolDayData.
 
 ### Example
 
@@ -731,7 +731,7 @@ object Example extends App {
 
     val pool: String = pool_example // String | 
     
-    val request = apiInstance.uniswapV3GetPoolDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+    val request = apiInstance.uniswapV3GetPoolDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -741,14 +741,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolDayDatasHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolDayDataHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolDayDatasHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolDayDataHistorical")
             exception.printStackTrace();
     }
 }
@@ -786,13 +786,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetPoolHourDatasHistorical
+## uniswapV3GetPoolHourDataHistorical
 
-> uniswapV3GetPoolHourDatasHistorical(uniswapV3GetPoolHourDatasHistoricalRequest): ApiRequest[Seq[PoolHourDataDTO]]
+> uniswapV3GetPoolHourDataHistorical(uniswapV3GetPoolHourDataHistoricalRequest): ApiRequest[Seq[PoolHourDataDTO]]
 
-PoolHourDatas (historical)
+PoolHourData (historical)
 
-Gets poolHourDatas.
+Gets poolHourData.
 
 ### Example
 
@@ -827,7 +827,7 @@ object Example extends App {
 
     val pool: String = pool_example // String | 
     
-    val request = apiInstance.uniswapV3GetPoolHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+    val request = apiInstance.uniswapV3GetPoolHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pool)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -837,14 +837,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolHourDatasHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolHourDataHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolHourDatasHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetPoolHourDataHistorical")
             exception.printStackTrace();
     }
 }
@@ -1281,13 +1281,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetTickDayDatasHistorical
+## uniswapV3GetTickDayDataHistorical
 
-> uniswapV3GetTickDayDatasHistorical(uniswapV3GetTickDayDatasHistoricalRequest): ApiRequest[Seq[TickDayDataDTO]]
+> uniswapV3GetTickDayDataHistorical(uniswapV3GetTickDayDataHistoricalRequest): ApiRequest[Seq[TickDayDataDTO]]
 
-TickDayDatas (historical)
+TickDayData (historical)
 
-Gets tickDayDatas.
+Gets tickDayData.
 
 ### Example
 
@@ -1322,7 +1322,7 @@ object Example extends App {
 
     val pool: String = pool_example // String | 
     
-    val request = apiInstance.uniswapV3GetTickDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool)
+    val request = apiInstance.uniswapV3GetTickDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1332,14 +1332,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTickDayDatasHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTickDayDataHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTickDayDatasHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTickDayDataHistorical")
             exception.printStackTrace();
     }
 }
@@ -1473,13 +1473,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetTokenHourDatasHistorical
+## uniswapV3GetTokenHourDataHistorical
 
-> uniswapV3GetTokenHourDatasHistorical(uniswapV3GetTokenHourDatasHistoricalRequest): ApiRequest[Seq[TokenHourDataDTO]]
+> uniswapV3GetTokenHourDataHistorical(uniswapV3GetTokenHourDataHistoricalRequest): ApiRequest[Seq[TokenHourDataDTO]]
 
-TokenHourDatas (historical)
+TokenHourData (historical)
 
-Gets tokenHourDatas.
+Gets tokenHourData.
 
 ### Example
 
@@ -1512,7 +1512,7 @@ object Example extends App {
 
     val id: String = id_example // String | Token address concatendated with date.
     
-    val request = apiInstance.uniswapV3GetTokenHourDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+    val request = apiInstance.uniswapV3GetTokenHourDataHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1522,14 +1522,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenHourDatasHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenHourDataHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenHourDatasHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenHourDataHistorical")
             exception.printStackTrace();
     }
 }
@@ -1566,13 +1566,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetTokenV3DayDatasHistorical
+## uniswapV3GetTokenV3DayDataHistorical
 
-> uniswapV3GetTokenV3DayDatasHistorical(uniswapV3GetTokenV3DayDatasHistoricalRequest): ApiRequest[Seq[TokenV3DayDataDTO]]
+> uniswapV3GetTokenV3DayDataHistorical(uniswapV3GetTokenV3DayDataHistoricalRequest): ApiRequest[Seq[TokenV3DayDataDTO]]
 
-TokenV3DayDatas (historical)
+TokenV3DayData (historical)
 
-Gets tokenV3DayDatas.
+Gets tokenV3DayData.
 
 ### Example
 
@@ -1605,7 +1605,7 @@ object Example extends App {
 
     val id: String = id_example // String | Token address concatendated with date.
     
-    val request = apiInstance.uniswapV3GetTokenV3DayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+    val request = apiInstance.uniswapV3GetTokenV3DayDataHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1615,14 +1615,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenV3DayDatasHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenV3DayDataHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenV3DayDatasHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetTokenV3DayDataHistorical")
             exception.printStackTrace();
     }
 }
@@ -1851,13 +1851,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3GetUniswapDayDatasHistorical
+## uniswapV3GetUniswapDayDataHistorical
 
-> uniswapV3GetUniswapDayDatasHistorical(uniswapV3GetUniswapDayDatasHistoricalRequest): ApiRequest[Seq[UniswapDayDataDTO]]
+> uniswapV3GetUniswapDayDataHistorical(uniswapV3GetUniswapDayDataHistoricalRequest): ApiRequest[Seq[UniswapDayDataDTO]]
 
-UniswapDayDatas (historical)
+UniswapDayData (historical)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 
@@ -1890,7 +1890,7 @@ object Example extends App {
 
     val id: String = id_example // String | Timestamp rounded to current day by dividing by 86400.
     
-    val request = apiInstance.uniswapV3GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+    val request = apiInstance.uniswapV3GetUniswapDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1900,14 +1900,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetUniswapDayDatasHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetUniswapDayDataHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetUniswapDayDatasHistorical")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3GetUniswapDayDataHistorical")
             exception.printStackTrace();
     }
 }
@@ -2019,13 +2019,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3PoolDayDatasCurrent
+## uniswapV3PoolDayDataCurrent
 
-> uniswapV3PoolDayDatasCurrent(): ApiRequest[Seq[PoolDayDataDTO]]
+> uniswapV3PoolDayDataCurrent(): ApiRequest[Seq[PoolDayDataDTO]]
 
-PoolDayDatas (current)
+PoolDayData (current)
 
-Gets poolDayDatas.
+Gets poolDayData.
 
 ### Example
 
@@ -2047,7 +2047,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
-    val request = apiInstance.uniswapV3PoolDayDatasCurrent()
+    val request = apiInstance.uniswapV3PoolDayDataCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -2057,14 +2057,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolDayDatasCurrent")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolDayDataCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolDayDatasCurrent")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolDayDataCurrent")
             exception.printStackTrace();
     }
 }
@@ -2094,13 +2094,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3PoolHourDatasCurrent
+## uniswapV3PoolHourDataCurrent
 
-> uniswapV3PoolHourDatasCurrent(): ApiRequest[Seq[PoolHourDataDTO]]
+> uniswapV3PoolHourDataCurrent(): ApiRequest[Seq[PoolHourDataDTO]]
 
-PoolHourDatas (current)
+PoolHourData (current)
 
-Gets poolHourDatas.
+Gets poolHourData.
 
 ### Example
 
@@ -2122,7 +2122,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
-    val request = apiInstance.uniswapV3PoolHourDatasCurrent()
+    val request = apiInstance.uniswapV3PoolHourDataCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -2132,14 +2132,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolHourDatasCurrent")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolHourDataCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolHourDatasCurrent")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3PoolHourDataCurrent")
             exception.printStackTrace();
     }
 }
@@ -2479,13 +2479,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3TickDayDatasCurrent
+## uniswapV3TickDayDataCurrent
 
-> uniswapV3TickDayDatasCurrent(): ApiRequest[Seq[TickDayDataDTO]]
+> uniswapV3TickDayDataCurrent(): ApiRequest[Seq[TickDayDataDTO]]
 
-TickDayDatas (current)
+TickDayData (current)
 
-Gets tickDayDatas.
+Gets tickDayData.
 
 ### Example
 
@@ -2507,7 +2507,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
-    val request = apiInstance.uniswapV3TickDayDatasCurrent()
+    val request = apiInstance.uniswapV3TickDayDataCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -2517,14 +2517,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3TickDayDatasCurrent")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3TickDayDataCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3TickDayDatasCurrent")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3TickDayDataCurrent")
             exception.printStackTrace();
     }
 }
@@ -2629,13 +2629,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3TokenHourDatasCurrent
+## uniswapV3TokenHourDataCurrent
 
-> uniswapV3TokenHourDatasCurrent(): ApiRequest[Seq[TokenHourDataDTO]]
+> uniswapV3TokenHourDataCurrent(): ApiRequest[Seq[TokenHourDataDTO]]
 
-TokenHourDatas (current)
+TokenHourData (current)
 
-Gets tokenHourDatas.
+Gets tokenHourData.
 
 ### Example
 
@@ -2657,7 +2657,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
-    val request = apiInstance.uniswapV3TokenHourDatasCurrent()
+    val request = apiInstance.uniswapV3TokenHourDataCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -2667,14 +2667,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3TokenHourDatasCurrent")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3TokenHourDataCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3TokenHourDatasCurrent")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3TokenHourDataCurrent")
             exception.printStackTrace();
     }
 }
@@ -2704,13 +2704,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3TokenV3DayDatasCurrent
+## uniswapV3TokenV3DayDataCurrent
 
-> uniswapV3TokenV3DayDatasCurrent(): ApiRequest[Seq[TokenV3DayDataDTO]]
+> uniswapV3TokenV3DayDataCurrent(): ApiRequest[Seq[TokenV3DayDataDTO]]
 
-TokenV3DayDatas (current)
+TokenV3DayData (current)
 
-Gets tokenV3DayDatas.
+Gets tokenV3DayData.
 
 ### Example
 
@@ -2732,7 +2732,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
-    val request = apiInstance.uniswapV3TokenV3DayDatasCurrent()
+    val request = apiInstance.uniswapV3TokenV3DayDataCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -2742,14 +2742,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3TokenV3DayDatasCurrent")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3TokenV3DayDataCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3TokenV3DayDatasCurrent")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3TokenV3DayDataCurrent")
             exception.printStackTrace();
     }
 }
@@ -2929,13 +2929,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## uniswapV3UniswapDayDatasCurrent
+## uniswapV3UniswapDayDataCurrent
 
-> uniswapV3UniswapDayDatasCurrent(): ApiRequest[Seq[UniswapDayDataDTO]]
+> uniswapV3UniswapDayDataCurrent(): ApiRequest[Seq[UniswapDayDataDTO]]
 
-UniswapDayDatas (current)
+UniswapDayData (current)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 
@@ -2957,7 +2957,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = UniswapV3Api("https://onchain.coinapi.io")    
-    val request = apiInstance.uniswapV3UniswapDayDatasCurrent()
+    val request = apiInstance.uniswapV3UniswapDayDataCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -2967,14 +2967,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3UniswapDayDatasCurrent")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3UniswapDayDataCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling UniswapV3Api#uniswapV3UniswapDayDatasCurrent")
+            System.err.println("Exception when calling UniswapV3Api#uniswapV3UniswapDayDataCurrent")
             exception.printStackTrace();
     }
 }

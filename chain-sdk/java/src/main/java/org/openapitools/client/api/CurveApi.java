@@ -1379,7 +1379,7 @@ public class CurveApi {
         return localVarCall;
     }
     /**
-     * Build call for curveGaugeLiquiditysCurrent
+     * Build call for curveGaugeLiquiditiesCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -1389,7 +1389,7 @@ public class CurveApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call curveGaugeLiquiditysCurrentCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call curveGaugeLiquiditiesCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1406,7 +1406,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/gaugeLiquiditys/current";
+        String localVarPath = "/dapps/curve/gaugeLiquidities/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1436,14 +1436,14 @@ public class CurveApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call curveGaugeLiquiditysCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return curveGaugeLiquiditysCurrentCall(_callback);
+    private okhttp3.Call curveGaugeLiquiditiesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return curveGaugeLiquiditiesCurrentCall(_callback);
 
     }
 
     /**
-     * GaugeLiquiditys (current)
-     * Gets gaugeLiquiditys.
+     * GaugeLiquidities (current)
+     * Gets gaugeLiquidities.
      * @return List&lt;CurveGaugeLiquidityDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1452,14 +1452,14 @@ public class CurveApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<CurveGaugeLiquidityDTO> curveGaugeLiquiditysCurrent() throws ApiException {
-        ApiResponse<List<CurveGaugeLiquidityDTO>> localVarResp = curveGaugeLiquiditysCurrentWithHttpInfo();
+    public List<CurveGaugeLiquidityDTO> curveGaugeLiquiditiesCurrent() throws ApiException {
+        ApiResponse<List<CurveGaugeLiquidityDTO>> localVarResp = curveGaugeLiquiditiesCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
-     * GaugeLiquiditys (current)
-     * Gets gaugeLiquiditys.
+     * GaugeLiquidities (current)
+     * Gets gaugeLiquidities.
      * @return ApiResponse&lt;List&lt;CurveGaugeLiquidityDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -1468,15 +1468,15 @@ public class CurveApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<CurveGaugeLiquidityDTO>> curveGaugeLiquiditysCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = curveGaugeLiquiditysCurrentValidateBeforeCall(null);
+    public ApiResponse<List<CurveGaugeLiquidityDTO>> curveGaugeLiquiditiesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = curveGaugeLiquiditiesCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<CurveGaugeLiquidityDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * GaugeLiquiditys (current) (asynchronously)
-     * Gets gaugeLiquiditys.
+     * GaugeLiquidities (current) (asynchronously)
+     * Gets gaugeLiquidities.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -1486,9 +1486,9 @@ public class CurveApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call curveGaugeLiquiditysCurrentAsync(final ApiCallback<List<CurveGaugeLiquidityDTO>> _callback) throws ApiException {
+    public okhttp3.Call curveGaugeLiquiditiesCurrentAsync(final ApiCallback<List<CurveGaugeLiquidityDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = curveGaugeLiquiditysCurrentValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = curveGaugeLiquiditiesCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<CurveGaugeLiquidityDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -4076,7 +4076,7 @@ public class CurveApi {
         return localVarCall;
     }
     /**
-     * Build call for curveGetGaugeLiquiditysHistorical
+     * Build call for curveGetGaugeLiquiditiesHistorical
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -4092,7 +4092,7 @@ public class CurveApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call curveGetGaugeLiquiditysHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String user, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call curveGetGaugeLiquiditiesHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String user, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -4109,7 +4109,7 @@ public class CurveApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/curve/gaugeLiquiditys/historical";
+        String localVarPath = "/dapps/curve/gaugeLiquidities/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -4163,14 +4163,14 @@ public class CurveApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call curveGetGaugeLiquiditysHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String user, final ApiCallback _callback) throws ApiException {
-        return curveGetGaugeLiquiditysHistoricalCall(startBlock, endBlock, startDate, endDate, id, user, _callback);
+    private okhttp3.Call curveGetGaugeLiquiditiesHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String user, final ApiCallback _callback) throws ApiException {
+        return curveGetGaugeLiquiditiesHistoricalCall(startBlock, endBlock, startDate, endDate, id, user, _callback);
 
     }
 
     /**
-     * GaugeLiquiditys (historical)
-     * Gets gaugeLiquiditys.
+     * GaugeLiquidities (historical)
+     * Gets gaugeLiquidities.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -4185,14 +4185,14 @@ public class CurveApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<CurveGaugeLiquidityDTO> curveGetGaugeLiquiditysHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String user) throws ApiException {
-        ApiResponse<List<CurveGaugeLiquidityDTO>> localVarResp = curveGetGaugeLiquiditysHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, user);
+    public List<CurveGaugeLiquidityDTO> curveGetGaugeLiquiditiesHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String user) throws ApiException {
+        ApiResponse<List<CurveGaugeLiquidityDTO>> localVarResp = curveGetGaugeLiquiditiesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id, user);
         return localVarResp.getData();
     }
 
     /**
-     * GaugeLiquiditys (historical)
-     * Gets gaugeLiquiditys.
+     * GaugeLiquidities (historical)
+     * Gets gaugeLiquidities.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -4207,15 +4207,15 @@ public class CurveApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<CurveGaugeLiquidityDTO>> curveGetGaugeLiquiditysHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String user) throws ApiException {
-        okhttp3.Call localVarCall = curveGetGaugeLiquiditysHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, user, null);
+    public ApiResponse<List<CurveGaugeLiquidityDTO>> curveGetGaugeLiquiditiesHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String user) throws ApiException {
+        okhttp3.Call localVarCall = curveGetGaugeLiquiditiesHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, user, null);
         Type localVarReturnType = new TypeToken<List<CurveGaugeLiquidityDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * GaugeLiquiditys (historical) (asynchronously)
-     * Gets gaugeLiquiditys.
+     * GaugeLiquidities (historical) (asynchronously)
+     * Gets gaugeLiquidities.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -4231,9 +4231,9 @@ public class CurveApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call curveGetGaugeLiquiditysHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String user, final ApiCallback<List<CurveGaugeLiquidityDTO>> _callback) throws ApiException {
+    public okhttp3.Call curveGetGaugeLiquiditiesHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, String user, final ApiCallback<List<CurveGaugeLiquidityDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = curveGetGaugeLiquiditysHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, user, _callback);
+        okhttp3.Call localVarCall = curveGetGaugeLiquiditiesHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, user, _callback);
         Type localVarReturnType = new TypeToken<List<CurveGaugeLiquidityDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

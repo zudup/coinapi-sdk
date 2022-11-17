@@ -85,7 +85,7 @@ public class DexApi {
     }
 
     /**
-     * Build call for dexBatchsCurrent
+     * Build call for dexBatchesCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -95,7 +95,7 @@ public class DexApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dexBatchsCurrentCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call dexBatchesCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -112,7 +112,7 @@ public class DexApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/dex/batchs/current";
+        String localVarPath = "/dapps/dex/batches/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -142,14 +142,14 @@ public class DexApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call dexBatchsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return dexBatchsCurrentCall(_callback);
+    private okhttp3.Call dexBatchesCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return dexBatchesCurrentCall(_callback);
 
     }
 
     /**
-     * Batchs (current)
-     * Gets batchs.
+     * Batches (current)
+     * Gets batches.
      * @return List&lt;DexBatchDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -158,14 +158,14 @@ public class DexApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<DexBatchDTO> dexBatchsCurrent() throws ApiException {
-        ApiResponse<List<DexBatchDTO>> localVarResp = dexBatchsCurrentWithHttpInfo();
+    public List<DexBatchDTO> dexBatchesCurrent() throws ApiException {
+        ApiResponse<List<DexBatchDTO>> localVarResp = dexBatchesCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
-     * Batchs (current)
-     * Gets batchs.
+     * Batches (current)
+     * Gets batches.
      * @return ApiResponse&lt;List&lt;DexBatchDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -174,15 +174,15 @@ public class DexApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<DexBatchDTO>> dexBatchsCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = dexBatchsCurrentValidateBeforeCall(null);
+    public ApiResponse<List<DexBatchDTO>> dexBatchesCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = dexBatchesCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<DexBatchDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Batchs (current) (asynchronously)
-     * Gets batchs.
+     * Batches (current) (asynchronously)
+     * Gets batches.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -192,9 +192,9 @@ public class DexApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dexBatchsCurrentAsync(final ApiCallback<List<DexBatchDTO>> _callback) throws ApiException {
+    public okhttp3.Call dexBatchesCurrentAsync(final ApiCallback<List<DexBatchDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = dexBatchsCurrentValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = dexBatchesCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<DexBatchDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -315,7 +315,7 @@ public class DexApi {
         return localVarCall;
     }
     /**
-     * Build call for dexGetBatchsHistorical
+     * Build call for dexGetBatchesHistorical
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -330,7 +330,7 @@ public class DexApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dexGetBatchsHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call dexGetBatchesHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -347,7 +347,7 @@ public class DexApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/dex/batchs/historical";
+        String localVarPath = "/dapps/dex/batches/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -397,14 +397,14 @@ public class DexApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call dexGetBatchsHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
-        return dexGetBatchsHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
+    private okhttp3.Call dexGetBatchesHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+        return dexGetBatchesHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
 
     }
 
     /**
-     * Batchs (historical)
-     * Gets batchs.
+     * Batches (historical)
+     * Gets batches.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -418,14 +418,14 @@ public class DexApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<DexBatchDTO> dexGetBatchsHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        ApiResponse<List<DexBatchDTO>> localVarResp = dexGetBatchsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+    public List<DexBatchDTO> dexGetBatchesHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        ApiResponse<List<DexBatchDTO>> localVarResp = dexGetBatchesHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
         return localVarResp.getData();
     }
 
     /**
-     * Batchs (historical)
-     * Gets batchs.
+     * Batches (historical)
+     * Gets batches.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -439,15 +439,15 @@ public class DexApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<DexBatchDTO>> dexGetBatchsHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        okhttp3.Call localVarCall = dexGetBatchsHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
+    public ApiResponse<List<DexBatchDTO>> dexGetBatchesHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        okhttp3.Call localVarCall = dexGetBatchesHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
         Type localVarReturnType = new TypeToken<List<DexBatchDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Batchs (historical) (asynchronously)
-     * Gets batchs.
+     * Batches (historical) (asynchronously)
+     * Gets batches.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -462,9 +462,9 @@ public class DexApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dexGetBatchsHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<DexBatchDTO>> _callback) throws ApiException {
+    public okhttp3.Call dexGetBatchesHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<DexBatchDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = dexGetBatchsHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
+        okhttp3.Call localVarCall = dexGetBatchesHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
         Type localVarReturnType = new TypeToken<List<DexBatchDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -1114,7 +1114,7 @@ public class DexApi {
         return localVarCall;
     }
     /**
-     * Build call for dexGetStatssHistorical
+     * Build call for dexGetStatsHistorical
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1129,7 +1129,7 @@ public class DexApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dexGetStatssHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call dexGetStatsHistoricalCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -1146,7 +1146,7 @@ public class DexApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/dex/statss/historical";
+        String localVarPath = "/dapps/dex/stats/historical";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -1196,14 +1196,14 @@ public class DexApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call dexGetStatssHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
-        return dexGetStatssHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
+    private okhttp3.Call dexGetStatsHistoricalValidateBeforeCall(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback _callback) throws ApiException {
+        return dexGetStatsHistoricalCall(startBlock, endBlock, startDate, endDate, id, _callback);
 
     }
 
     /**
-     * Statss (historical)
-     * Gets statss.
+     * Stats (historical)
+     * Gets stats.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1217,14 +1217,14 @@ public class DexApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<DexStatsDTO> dexGetStatssHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        ApiResponse<List<DexStatsDTO>> localVarResp = dexGetStatssHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
+    public List<DexStatsDTO> dexGetStatsHistorical(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        ApiResponse<List<DexStatsDTO>> localVarResp = dexGetStatsHistoricalWithHttpInfo(startBlock, endBlock, startDate, endDate, id);
         return localVarResp.getData();
     }
 
     /**
-     * Statss (historical)
-     * Gets statss.
+     * Stats (historical)
+     * Gets stats.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1238,15 +1238,15 @@ public class DexApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<DexStatsDTO>> dexGetStatssHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
-        okhttp3.Call localVarCall = dexGetStatssHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
+    public ApiResponse<List<DexStatsDTO>> dexGetStatsHistoricalWithHttpInfo(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id) throws ApiException {
+        okhttp3.Call localVarCall = dexGetStatsHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, null);
         Type localVarReturnType = new TypeToken<List<DexStatsDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Statss (historical) (asynchronously)
-     * Gets statss.
+     * Stats (historical) (asynchronously)
+     * Gets stats.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1261,9 +1261,9 @@ public class DexApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dexGetStatssHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<DexStatsDTO>> _callback) throws ApiException {
+    public okhttp3.Call dexGetStatsHistoricalAsync(Long startBlock, Long endBlock, OffsetDateTime startDate, OffsetDateTime endDate, String id, final ApiCallback<List<DexStatsDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = dexGetStatssHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
+        okhttp3.Call localVarCall = dexGetStatsHistoricalValidateBeforeCall(startBlock, endBlock, startDate, endDate, id, _callback);
         Type localVarReturnType = new TypeToken<List<DexStatsDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;
@@ -2445,7 +2445,7 @@ public class DexApi {
         return localVarCall;
     }
     /**
-     * Build call for dexStatssCurrent
+     * Build call for dexStatsCurrent
      * @param _callback Callback for upload/download progress
      * @return Call to execute
      * @throws ApiException If fail to serialize the request body object
@@ -2455,7 +2455,7 @@ public class DexApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dexStatssCurrentCall(final ApiCallback _callback) throws ApiException {
+    public okhttp3.Call dexStatsCurrentCall(final ApiCallback _callback) throws ApiException {
         String basePath = null;
         // Operation Servers
         String[] localBasePaths = new String[] {  };
@@ -2472,7 +2472,7 @@ public class DexApi {
         Object localVarPostBody = null;
 
         // create path and map variables
-        String localVarPath = "/dapps/dex/statss/current";
+        String localVarPath = "/dapps/dex/stats/current";
 
         List<Pair> localVarQueryParams = new ArrayList<Pair>();
         List<Pair> localVarCollectionQueryParams = new ArrayList<Pair>();
@@ -2502,14 +2502,14 @@ public class DexApi {
     }
 
     @SuppressWarnings("rawtypes")
-    private okhttp3.Call dexStatssCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
-        return dexStatssCurrentCall(_callback);
+    private okhttp3.Call dexStatsCurrentValidateBeforeCall(final ApiCallback _callback) throws ApiException {
+        return dexStatsCurrentCall(_callback);
 
     }
 
     /**
-     * Statss (current)
-     * Gets statss.
+     * Stats (current)
+     * Gets stats.
      * @return List&lt;DexStatsDTO&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2518,14 +2518,14 @@ public class DexApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public List<DexStatsDTO> dexStatssCurrent() throws ApiException {
-        ApiResponse<List<DexStatsDTO>> localVarResp = dexStatssCurrentWithHttpInfo();
+    public List<DexStatsDTO> dexStatsCurrent() throws ApiException {
+        ApiResponse<List<DexStatsDTO>> localVarResp = dexStatsCurrentWithHttpInfo();
         return localVarResp.getData();
     }
 
     /**
-     * Statss (current)
-     * Gets statss.
+     * Stats (current)
+     * Gets stats.
      * @return ApiResponse&lt;List&lt;DexStatsDTO&gt;&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
      * @http.response.details
@@ -2534,15 +2534,15 @@ public class DexApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public ApiResponse<List<DexStatsDTO>> dexStatssCurrentWithHttpInfo() throws ApiException {
-        okhttp3.Call localVarCall = dexStatssCurrentValidateBeforeCall(null);
+    public ApiResponse<List<DexStatsDTO>> dexStatsCurrentWithHttpInfo() throws ApiException {
+        okhttp3.Call localVarCall = dexStatsCurrentValidateBeforeCall(null);
         Type localVarReturnType = new TypeToken<List<DexStatsDTO>>(){}.getType();
         return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
-     * Statss (current) (asynchronously)
-     * Gets statss.
+     * Stats (current) (asynchronously)
+     * Gets stats.
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
      * @throws ApiException If fail to process the API call, e.g. serializing the request body object
@@ -2552,9 +2552,9 @@ public class DexApi {
         <tr><td> 200 </td><td> successful operation </td><td>  -  </td></tr>
      </table>
      */
-    public okhttp3.Call dexStatssCurrentAsync(final ApiCallback<List<DexStatsDTO>> _callback) throws ApiException {
+    public okhttp3.Call dexStatsCurrentAsync(final ApiCallback<List<DexStatsDTO>> _callback) throws ApiException {
 
-        okhttp3.Call localVarCall = dexStatssCurrentValidateBeforeCall(_callback);
+        okhttp3.Call localVarCall = dexStatsCurrentValidateBeforeCall(_callback);
         Type localVarReturnType = new TypeToken<List<DexStatsDTO>>(){}.getType();
         localVarApiClient.executeAsync(localVarCall, localVarReturnType, _callback);
         return localVarCall;

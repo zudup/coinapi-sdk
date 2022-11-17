@@ -67,15 +67,15 @@ public class DexApi {
   }
 
   /**
-  * Batchs (current)
-  * Gets batchs.
+  * Batches (current)
+  * Gets batches.
    * @return List<DexBatchDTO>
   */
-  public List<DexBatchDTO> dexBatchsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<DexBatchDTO> dexBatchesCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/dex/batchs/current";
+    String path = "/dapps/dex/batches/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -123,16 +123,16 @@ public class DexApi {
   }
 
       /**
-   * Batchs (current)
-   * Gets batchs.
+   * Batches (current)
+   * Gets batches.
 
   */
-  public void dexBatchsCurrent (final Response.Listener<List<DexBatchDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dexBatchesCurrent (final Response.Listener<List<DexBatchDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/dex/batchs/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/dex/batches/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -299,8 +299,8 @@ public class DexApi {
     }
   }
   /**
-  * Batchs (historical)
-  * Gets batchs.
+  * Batches (historical)
+  * Gets batches.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -308,11 +308,11 @@ public class DexApi {
    * @param id Identifier.
    * @return List<DexBatchDTO>
   */
-  public List<DexBatchDTO> dexGetBatchsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<DexBatchDTO> dexGetBatchesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/dex/batchs/historical";
+    String path = "/dapps/dex/batches/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -365,16 +365,16 @@ public class DexApi {
   }
 
       /**
-   * Batchs (historical)
-   * Gets batchs.
+   * Batches (historical)
+   * Gets batches.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Identifier.
   */
-  public void dexGetBatchsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<DexBatchDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dexGetBatchesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<DexBatchDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/dex/batchs/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/dex/batches/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -963,8 +963,8 @@ public class DexApi {
     }
   }
   /**
-  * Statss (historical)
-  * Gets statss.
+  * Stats (historical)
+  * Gets stats.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -972,11 +972,11 @@ public class DexApi {
    * @param id 
    * @return List<DexStatsDTO>
   */
-  public List<DexStatsDTO> dexGetStatssHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<DexStatsDTO> dexGetStatsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/dex/statss/historical";
+    String path = "/dapps/dex/stats/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1029,16 +1029,16 @@ public class DexApi {
   }
 
       /**
-   * Statss (historical)
-   * Gets statss.
+   * Stats (historical)
+   * Gets stats.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id 
   */
-  public void dexGetStatssHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<DexStatsDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dexGetStatsHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<DexStatsDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/dex/statss/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/dex/stats/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2118,15 +2118,15 @@ public class DexApi {
     }
   }
   /**
-  * Statss (current)
-  * Gets statss.
+  * Stats (current)
+  * Gets stats.
    * @return List<DexStatsDTO>
   */
-  public List<DexStatsDTO> dexStatssCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<DexStatsDTO> dexStatsCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/dex/statss/current";
+    String path = "/dapps/dex/stats/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2174,16 +2174,16 @@ public class DexApi {
   }
 
       /**
-   * Statss (current)
-   * Gets statss.
+   * Stats (current)
+   * Gets stats.
 
   */
-  public void dexStatssCurrent (final Response.Listener<List<DexStatsDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void dexStatsCurrent (final Response.Listener<List<DexStatsDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/dex/statss/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/dex/stats/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

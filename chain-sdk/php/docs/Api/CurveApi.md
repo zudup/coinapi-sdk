@@ -15,7 +15,7 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 | [**curveExchangesCurrent()**](CurveApi.md#curveExchangesCurrent) | **GET** /dapps/curve/exchanges/current | Exchanges (current) |
 | [**curveFeeChangeLogsCurrent()**](CurveApi.md#curveFeeChangeLogsCurrent) | **GET** /dapps/curve/feeChangeLogs/current | FeeChangeLogs (current) |
 | [**curveGaugeDepositsCurrent()**](CurveApi.md#curveGaugeDepositsCurrent) | **GET** /dapps/curve/gaugeDeposits/current | GaugeDeposits (current) |
-| [**curveGaugeLiquiditysCurrent()**](CurveApi.md#curveGaugeLiquiditysCurrent) | **GET** /dapps/curve/gaugeLiquiditys/current | GaugeLiquiditys (current) |
+| [**curveGaugeLiquiditiesCurrent()**](CurveApi.md#curveGaugeLiquiditiesCurrent) | **GET** /dapps/curve/gaugeLiquidities/current | GaugeLiquidities (current) |
 | [**curveGaugeTotalWeightsCurrent()**](CurveApi.md#curveGaugeTotalWeightsCurrent) | **GET** /dapps/curve/gaugeTotalWeights/current | GaugeTotalWeights (current) |
 | [**curveGaugeTypeWeightsCurrent()**](CurveApi.md#curveGaugeTypeWeightsCurrent) | **GET** /dapps/curve/gaugeTypeWeights/current | GaugeTypeWeights (current) |
 | [**curveGaugeTypesCurrent()**](CurveApi.md#curveGaugeTypesCurrent) | **GET** /dapps/curve/gaugeTypes/current | GaugeTypes (current) |
@@ -34,7 +34,7 @@ All URIs are relative to https://onchain.coinapi.io, except if the operation def
 | [**curveGetExchangesHistorical()**](CurveApi.md#curveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical) |
 | [**curveGetFeeChangeLogsHistorical()**](CurveApi.md#curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical) |
 | [**curveGetGaugeDepositsHistorical()**](CurveApi.md#curveGetGaugeDepositsHistorical) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical) |
-| [**curveGetGaugeLiquiditysHistorical()**](CurveApi.md#curveGetGaugeLiquiditysHistorical) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical) |
+| [**curveGetGaugeLiquiditiesHistorical()**](CurveApi.md#curveGetGaugeLiquiditiesHistorical) | **GET** /dapps/curve/gaugeLiquidities/historical | GaugeLiquidities (historical) |
 | [**curveGetGaugeTotalWeightsHistorical()**](CurveApi.md#curveGetGaugeTotalWeightsHistorical) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical) |
 | [**curveGetGaugeTypeWeightsHistorical()**](CurveApi.md#curveGetGaugeTypeWeightsHistorical) | **GET** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical) |
 | [**curveGetGaugeTypesHistorical()**](CurveApi.md#curveGetGaugeTypesHistorical) | **GET** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical) |
@@ -656,15 +656,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `curveGaugeLiquiditysCurrent()`
+## `curveGaugeLiquiditiesCurrent()`
 
 ```php
-curveGaugeLiquiditysCurrent(): \OpenAPI\Client\Model\CurveGaugeLiquidityDTO[]
+curveGaugeLiquiditiesCurrent(): \OpenAPI\Client\Model\CurveGaugeLiquidityDTO[]
 ```
 
-GaugeLiquiditys (current)
+GaugeLiquidities (current)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 
@@ -681,10 +681,10 @@ $apiInstance = new OpenAPI\Client\Api\CurveApi(
 );
 
 try {
-    $result = $apiInstance->curveGaugeLiquiditysCurrent();
+    $result = $apiInstance->curveGaugeLiquiditiesCurrent();
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->curveGaugeLiquiditysCurrent: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGaugeLiquiditiesCurrent: ', $e->getMessage(), PHP_EOL;
 }
 ```
 
@@ -1802,15 +1802,15 @@ No authorization required
 [[Back to Model list]](../../README.md#models)
 [[Back to README]](../../README.md)
 
-## `curveGetGaugeLiquiditysHistorical()`
+## `curveGetGaugeLiquiditiesHistorical()`
 
 ```php
-curveGetGaugeLiquiditysHistorical($start_block, $end_block, $start_date, $end_date, $id, $user): \OpenAPI\Client\Model\CurveGaugeLiquidityDTO[]
+curveGetGaugeLiquiditiesHistorical($start_block, $end_block, $start_date, $end_date, $id, $user): \OpenAPI\Client\Model\CurveGaugeLiquidityDTO[]
 ```
 
-GaugeLiquiditys (historical)
+GaugeLiquidities (historical)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 
@@ -1833,10 +1833,10 @@ $id = 'id_example'; // string |
 $user = 'user_example'; // string | 
 
 try {
-    $result = $apiInstance->curveGetGaugeLiquiditysHistorical($start_block, $end_block, $start_date, $end_date, $id, $user);
+    $result = $apiInstance->curveGetGaugeLiquiditiesHistorical($start_block, $end_block, $start_date, $end_date, $id, $user);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling CurveApi->curveGetGaugeLiquiditysHistorical: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling CurveApi->curveGetGaugeLiquiditiesHistorical: ', $e->getMessage(), PHP_EOL;
 }
 ```
 

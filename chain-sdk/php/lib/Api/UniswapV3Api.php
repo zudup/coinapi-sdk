@@ -78,7 +78,7 @@ class UniswapV3Api
         'uniswapV3BurnsCurrent' => [
             'application/json',
         ],
-        'uniswapV3FactorysCurrent' => [
+        'uniswapV3FactoriesCurrent' => [
             'application/json',
         ],
         'uniswapV3GetBundlesHistorical' => [
@@ -87,16 +87,16 @@ class UniswapV3Api
         'uniswapV3GetBurnsHistorical' => [
             'application/json',
         ],
-        'uniswapV3GetFactorysHistorical' => [
+        'uniswapV3GetFactoriesHistorical' => [
             'application/json',
         ],
         'uniswapV3GetMintsHistorical' => [
             'application/json',
         ],
-        'uniswapV3GetPoolDayDatasHistorical' => [
+        'uniswapV3GetPoolDayDataHistorical' => [
             'application/json',
         ],
-        'uniswapV3GetPoolHourDatasHistorical' => [
+        'uniswapV3GetPoolHourDataHistorical' => [
             'application/json',
         ],
         'uniswapV3GetPoolsHistorical' => [
@@ -111,16 +111,16 @@ class UniswapV3Api
         'uniswapV3GetSwapsHistorical' => [
             'application/json',
         ],
-        'uniswapV3GetTickDayDatasHistorical' => [
+        'uniswapV3GetTickDayDataHistorical' => [
             'application/json',
         ],
         'uniswapV3GetTicksHistorical' => [
             'application/json',
         ],
-        'uniswapV3GetTokenHourDatasHistorical' => [
+        'uniswapV3GetTokenHourDataHistorical' => [
             'application/json',
         ],
-        'uniswapV3GetTokenV3DayDatasHistorical' => [
+        'uniswapV3GetTokenV3DayDataHistorical' => [
             'application/json',
         ],
         'uniswapV3GetTokensHistorical' => [
@@ -129,16 +129,16 @@ class UniswapV3Api
         'uniswapV3GetTransactionsHistorical' => [
             'application/json',
         ],
-        'uniswapV3GetUniswapDayDatasHistorical' => [
+        'uniswapV3GetUniswapDayDataHistorical' => [
             'application/json',
         ],
         'uniswapV3MintsCurrent' => [
             'application/json',
         ],
-        'uniswapV3PoolDayDatasCurrent' => [
+        'uniswapV3PoolDayDataCurrent' => [
             'application/json',
         ],
-        'uniswapV3PoolHourDatasCurrent' => [
+        'uniswapV3PoolHourDataCurrent' => [
             'application/json',
         ],
         'uniswapV3PoolsCurrent' => [
@@ -153,16 +153,16 @@ class UniswapV3Api
         'uniswapV3SwapsCurrent' => [
             'application/json',
         ],
-        'uniswapV3TickDayDatasCurrent' => [
+        'uniswapV3TickDayDataCurrent' => [
             'application/json',
         ],
         'uniswapV3TicksCurrent' => [
             'application/json',
         ],
-        'uniswapV3TokenHourDatasCurrent' => [
+        'uniswapV3TokenHourDataCurrent' => [
             'application/json',
         ],
-        'uniswapV3TokenV3DayDatasCurrent' => [
+        'uniswapV3TokenV3DayDataCurrent' => [
             'application/json',
         ],
         'uniswapV3TokensCurrent' => [
@@ -171,7 +171,7 @@ class UniswapV3Api
         'uniswapV3TransactionsCurrent' => [
             'application/json',
         ],
-        'uniswapV3UniswapDayDatasCurrent' => [
+        'uniswapV3UniswapDayDataCurrent' => [
             'application/json',
         ],
     ];
@@ -749,36 +749,36 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3FactorysCurrent
+     * Operation uniswapV3FactoriesCurrent
      *
-     * Factorys (current)
+     * Factories (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3FactorysCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3FactoriesCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UniswapV3FactoryDTO[]
      */
-    public function uniswapV3FactorysCurrent(string $contentType = self::contentTypes['uniswapV3FactorysCurrent'][0])
+    public function uniswapV3FactoriesCurrent(string $contentType = self::contentTypes['uniswapV3FactoriesCurrent'][0])
     {
-        list($response) = $this->uniswapV3FactorysCurrentWithHttpInfo($contentType);
+        list($response) = $this->uniswapV3FactoriesCurrentWithHttpInfo($contentType);
         return $response;
     }
 
     /**
-     * Operation uniswapV3FactorysCurrentWithHttpInfo
+     * Operation uniswapV3FactoriesCurrentWithHttpInfo
      *
-     * Factorys (current)
+     * Factories (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3FactorysCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3FactoriesCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UniswapV3FactoryDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function uniswapV3FactorysCurrentWithHttpInfo(string $contentType = self::contentTypes['uniswapV3FactorysCurrent'][0])
+    public function uniswapV3FactoriesCurrentWithHttpInfo(string $contentType = self::contentTypes['uniswapV3FactoriesCurrent'][0])
     {
-        $request = $this->uniswapV3FactorysCurrentRequest($contentType);
+        $request = $this->uniswapV3FactoriesCurrentRequest($contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -865,18 +865,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3FactorysCurrentAsync
+     * Operation uniswapV3FactoriesCurrentAsync
      *
-     * Factorys (current)
+     * Factories (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3FactorysCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3FactoriesCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3FactorysCurrentAsync(string $contentType = self::contentTypes['uniswapV3FactorysCurrent'][0])
+    public function uniswapV3FactoriesCurrentAsync(string $contentType = self::contentTypes['uniswapV3FactoriesCurrent'][0])
     {
-        return $this->uniswapV3FactorysCurrentAsyncWithHttpInfo($contentType)
+        return $this->uniswapV3FactoriesCurrentAsyncWithHttpInfo($contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -885,19 +885,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3FactorysCurrentAsyncWithHttpInfo
+     * Operation uniswapV3FactoriesCurrentAsyncWithHttpInfo
      *
-     * Factorys (current)
+     * Factories (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3FactorysCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3FactoriesCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3FactorysCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['uniswapV3FactorysCurrent'][0])
+    public function uniswapV3FactoriesCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['uniswapV3FactoriesCurrent'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UniswapV3FactoryDTO[]';
-        $request = $this->uniswapV3FactorysCurrentRequest($contentType);
+        $request = $this->uniswapV3FactoriesCurrentRequest($contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -936,18 +936,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'uniswapV3FactorysCurrent'
+     * Create request for operation 'uniswapV3FactoriesCurrent'
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3FactorysCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3FactoriesCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uniswapV3FactorysCurrentRequest(string $contentType = self::contentTypes['uniswapV3FactorysCurrent'][0])
+    public function uniswapV3FactoriesCurrentRequest(string $contentType = self::contentTypes['uniswapV3FactoriesCurrent'][0])
     {
 
 
-        $resourcePath = '/dapps/uniswapv3/factorys/current';
+        $resourcePath = '/dapps/uniswapv3/factories/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1733,46 +1733,46 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetFactorysHistorical
+     * Operation uniswapV3GetFactoriesHistorical
      *
-     * Factorys (historical)
+     * Factories (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Factory address. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactorysHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactoriesHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UniswapV3FactoryDTO[]
      */
-    public function uniswapV3GetFactorysHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetFactorysHistorical'][0])
+    public function uniswapV3GetFactoriesHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetFactoriesHistorical'][0])
     {
-        list($response) = $this->uniswapV3GetFactorysHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        list($response) = $this->uniswapV3GetFactoriesHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType);
         return $response;
     }
 
     /**
-     * Operation uniswapV3GetFactorysHistoricalWithHttpInfo
+     * Operation uniswapV3GetFactoriesHistoricalWithHttpInfo
      *
-     * Factorys (historical)
+     * Factories (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Factory address. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactorysHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactoriesHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UniswapV3FactoryDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function uniswapV3GetFactorysHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetFactorysHistorical'][0])
+    public function uniswapV3GetFactoriesHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetFactoriesHistorical'][0])
     {
-        $request = $this->uniswapV3GetFactorysHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        $request = $this->uniswapV3GetFactoriesHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1859,23 +1859,23 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetFactorysHistoricalAsync
+     * Operation uniswapV3GetFactoriesHistoricalAsync
      *
-     * Factorys (historical)
+     * Factories (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Factory address. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactorysHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactoriesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3GetFactorysHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetFactorysHistorical'][0])
+    public function uniswapV3GetFactoriesHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetFactoriesHistorical'][0])
     {
-        return $this->uniswapV3GetFactorysHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType)
+        return $this->uniswapV3GetFactoriesHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1884,24 +1884,24 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetFactorysHistoricalAsyncWithHttpInfo
+     * Operation uniswapV3GetFactoriesHistoricalAsyncWithHttpInfo
      *
-     * Factorys (historical)
+     * Factories (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Factory address. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactorysHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactoriesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3GetFactorysHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetFactorysHistorical'][0])
+    public function uniswapV3GetFactoriesHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetFactoriesHistorical'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UniswapV3FactoryDTO[]';
-        $request = $this->uniswapV3GetFactorysHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        $request = $this->uniswapV3GetFactoriesHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1940,19 +1940,19 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'uniswapV3GetFactorysHistorical'
+     * Create request for operation 'uniswapV3GetFactoriesHistorical'
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Factory address. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactorysHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetFactoriesHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uniswapV3GetFactorysHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetFactorysHistorical'][0])
+    public function uniswapV3GetFactoriesHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetFactoriesHistorical'][0])
     {
 
 
@@ -1961,7 +1961,7 @@ class UniswapV3Api
 
 
 
-        $resourcePath = '/dapps/uniswapv3/factorys/historical';
+        $resourcePath = '/dapps/uniswapv3/factories/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2454,9 +2454,9 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetPoolDayDatasHistorical
+     * Operation uniswapV3GetPoolDayDataHistorical
      *
-     * PoolDayDatas (historical)
+     * PoolDayData (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -2464,22 +2464,22 @@ class UniswapV3Api
      * @param  \DateTime $end_date end_date (optional)
      * @param  string $id id (optional)
      * @param  string $pool pool (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolDayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UniswapV3PoolDayDataDTO[]
      */
-    public function uniswapV3GetPoolDayDatasHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolDayDatasHistorical'][0])
+    public function uniswapV3GetPoolDayDataHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolDayDataHistorical'][0])
     {
-        list($response) = $this->uniswapV3GetPoolDayDatasHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType);
+        list($response) = $this->uniswapV3GetPoolDayDataHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType);
         return $response;
     }
 
     /**
-     * Operation uniswapV3GetPoolDayDatasHistoricalWithHttpInfo
+     * Operation uniswapV3GetPoolDayDataHistoricalWithHttpInfo
      *
-     * PoolDayDatas (historical)
+     * PoolDayData (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -2487,15 +2487,15 @@ class UniswapV3Api
      * @param  \DateTime $end_date (optional)
      * @param  string $id (optional)
      * @param  string $pool (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolDayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UniswapV3PoolDayDataDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function uniswapV3GetPoolDayDatasHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolDayDatasHistorical'][0])
+    public function uniswapV3GetPoolDayDataHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolDayDataHistorical'][0])
     {
-        $request = $this->uniswapV3GetPoolDayDatasHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType);
+        $request = $this->uniswapV3GetPoolDayDataHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2582,9 +2582,9 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetPoolDayDatasHistoricalAsync
+     * Operation uniswapV3GetPoolDayDataHistoricalAsync
      *
-     * PoolDayDatas (historical)
+     * PoolDayData (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -2592,14 +2592,14 @@ class UniswapV3Api
      * @param  \DateTime $end_date (optional)
      * @param  string $id (optional)
      * @param  string $pool (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolDayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3GetPoolDayDatasHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolDayDatasHistorical'][0])
+    public function uniswapV3GetPoolDayDataHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolDayDataHistorical'][0])
     {
-        return $this->uniswapV3GetPoolDayDatasHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType)
+        return $this->uniswapV3GetPoolDayDataHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2608,9 +2608,9 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetPoolDayDatasHistoricalAsyncWithHttpInfo
+     * Operation uniswapV3GetPoolDayDataHistoricalAsyncWithHttpInfo
      *
-     * PoolDayDatas (historical)
+     * PoolDayData (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -2618,15 +2618,15 @@ class UniswapV3Api
      * @param  \DateTime $end_date (optional)
      * @param  string $id (optional)
      * @param  string $pool (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolDayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3GetPoolDayDatasHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolDayDatasHistorical'][0])
+    public function uniswapV3GetPoolDayDataHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolDayDataHistorical'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UniswapV3PoolDayDataDTO[]';
-        $request = $this->uniswapV3GetPoolDayDatasHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType);
+        $request = $this->uniswapV3GetPoolDayDataHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -2665,7 +2665,7 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'uniswapV3GetPoolDayDatasHistorical'
+     * Create request for operation 'uniswapV3GetPoolDayDataHistorical'
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -2673,12 +2673,12 @@ class UniswapV3Api
      * @param  \DateTime $end_date (optional)
      * @param  string $id (optional)
      * @param  string $pool (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolDayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uniswapV3GetPoolDayDatasHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolDayDatasHistorical'][0])
+    public function uniswapV3GetPoolDayDataHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolDayDataHistorical'][0])
     {
 
 
@@ -2688,7 +2688,7 @@ class UniswapV3Api
 
 
 
-        $resourcePath = '/dapps/uniswapv3/poolDayDatas/historical';
+        $resourcePath = '/dapps/uniswapv3/poolDayData/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -2807,9 +2807,9 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetPoolHourDatasHistorical
+     * Operation uniswapV3GetPoolHourDataHistorical
      *
-     * PoolHourDatas (historical)
+     * PoolHourData (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -2817,22 +2817,22 @@ class UniswapV3Api
      * @param  \DateTime $end_date end_date (optional)
      * @param  string $id id (optional)
      * @param  string $pool pool (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolHourDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UniswapV3PoolHourDataDTO[]
      */
-    public function uniswapV3GetPoolHourDatasHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolHourDatasHistorical'][0])
+    public function uniswapV3GetPoolHourDataHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolHourDataHistorical'][0])
     {
-        list($response) = $this->uniswapV3GetPoolHourDatasHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType);
+        list($response) = $this->uniswapV3GetPoolHourDataHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType);
         return $response;
     }
 
     /**
-     * Operation uniswapV3GetPoolHourDatasHistoricalWithHttpInfo
+     * Operation uniswapV3GetPoolHourDataHistoricalWithHttpInfo
      *
-     * PoolHourDatas (historical)
+     * PoolHourData (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -2840,15 +2840,15 @@ class UniswapV3Api
      * @param  \DateTime $end_date (optional)
      * @param  string $id (optional)
      * @param  string $pool (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolHourDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UniswapV3PoolHourDataDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function uniswapV3GetPoolHourDatasHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolHourDatasHistorical'][0])
+    public function uniswapV3GetPoolHourDataHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolHourDataHistorical'][0])
     {
-        $request = $this->uniswapV3GetPoolHourDatasHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType);
+        $request = $this->uniswapV3GetPoolHourDataHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -2935,9 +2935,9 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetPoolHourDatasHistoricalAsync
+     * Operation uniswapV3GetPoolHourDataHistoricalAsync
      *
-     * PoolHourDatas (historical)
+     * PoolHourData (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -2945,14 +2945,14 @@ class UniswapV3Api
      * @param  \DateTime $end_date (optional)
      * @param  string $id (optional)
      * @param  string $pool (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolHourDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3GetPoolHourDatasHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolHourDatasHistorical'][0])
+    public function uniswapV3GetPoolHourDataHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolHourDataHistorical'][0])
     {
-        return $this->uniswapV3GetPoolHourDatasHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType)
+        return $this->uniswapV3GetPoolHourDataHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -2961,9 +2961,9 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetPoolHourDatasHistoricalAsyncWithHttpInfo
+     * Operation uniswapV3GetPoolHourDataHistoricalAsyncWithHttpInfo
      *
-     * PoolHourDatas (historical)
+     * PoolHourData (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -2971,15 +2971,15 @@ class UniswapV3Api
      * @param  \DateTime $end_date (optional)
      * @param  string $id (optional)
      * @param  string $pool (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolHourDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3GetPoolHourDatasHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolHourDatasHistorical'][0])
+    public function uniswapV3GetPoolHourDataHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolHourDataHistorical'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UniswapV3PoolHourDataDTO[]';
-        $request = $this->uniswapV3GetPoolHourDatasHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType);
+        $request = $this->uniswapV3GetPoolHourDataHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -3018,7 +3018,7 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'uniswapV3GetPoolHourDatasHistorical'
+     * Create request for operation 'uniswapV3GetPoolHourDataHistorical'
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -3026,12 +3026,12 @@ class UniswapV3Api
      * @param  \DateTime $end_date (optional)
      * @param  string $id (optional)
      * @param  string $pool (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolHourDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetPoolHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uniswapV3GetPoolHourDatasHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolHourDatasHistorical'][0])
+    public function uniswapV3GetPoolHourDataHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetPoolHourDataHistorical'][0])
     {
 
 
@@ -3041,7 +3041,7 @@ class UniswapV3Api
 
 
 
-        $resourcePath = '/dapps/uniswapv3/poolHourDatas/historical';
+        $resourcePath = '/dapps/uniswapv3/poolHourData/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -4647,9 +4647,9 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetTickDayDatasHistorical
+     * Operation uniswapV3GetTickDayDataHistorical
      *
-     * TickDayDatas (historical)
+     * TickDayData (historical)
      *
      * @param  int $start_block start_block (optional)
      * @param  int $end_block end_block (optional)
@@ -4657,22 +4657,22 @@ class UniswapV3Api
      * @param  \DateTime $end_date end_date (optional)
      * @param  string $id id (optional)
      * @param  string $pool pool (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickDayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UniswapV3TickDayDataDTO[]
      */
-    public function uniswapV3GetTickDayDatasHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetTickDayDatasHistorical'][0])
+    public function uniswapV3GetTickDayDataHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetTickDayDataHistorical'][0])
     {
-        list($response) = $this->uniswapV3GetTickDayDatasHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType);
+        list($response) = $this->uniswapV3GetTickDayDataHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType);
         return $response;
     }
 
     /**
-     * Operation uniswapV3GetTickDayDatasHistoricalWithHttpInfo
+     * Operation uniswapV3GetTickDayDataHistoricalWithHttpInfo
      *
-     * TickDayDatas (historical)
+     * TickDayData (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4680,15 +4680,15 @@ class UniswapV3Api
      * @param  \DateTime $end_date (optional)
      * @param  string $id (optional)
      * @param  string $pool (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickDayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UniswapV3TickDayDataDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function uniswapV3GetTickDayDatasHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetTickDayDatasHistorical'][0])
+    public function uniswapV3GetTickDayDataHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetTickDayDataHistorical'][0])
     {
-        $request = $this->uniswapV3GetTickDayDatasHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType);
+        $request = $this->uniswapV3GetTickDayDataHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -4775,9 +4775,9 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetTickDayDatasHistoricalAsync
+     * Operation uniswapV3GetTickDayDataHistoricalAsync
      *
-     * TickDayDatas (historical)
+     * TickDayData (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4785,14 +4785,14 @@ class UniswapV3Api
      * @param  \DateTime $end_date (optional)
      * @param  string $id (optional)
      * @param  string $pool (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickDayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3GetTickDayDatasHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetTickDayDatasHistorical'][0])
+    public function uniswapV3GetTickDayDataHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetTickDayDataHistorical'][0])
     {
-        return $this->uniswapV3GetTickDayDatasHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType)
+        return $this->uniswapV3GetTickDayDataHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -4801,9 +4801,9 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetTickDayDatasHistoricalAsyncWithHttpInfo
+     * Operation uniswapV3GetTickDayDataHistoricalAsyncWithHttpInfo
      *
-     * TickDayDatas (historical)
+     * TickDayData (historical)
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4811,15 +4811,15 @@ class UniswapV3Api
      * @param  \DateTime $end_date (optional)
      * @param  string $id (optional)
      * @param  string $pool (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickDayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3GetTickDayDatasHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetTickDayDatasHistorical'][0])
+    public function uniswapV3GetTickDayDataHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetTickDayDataHistorical'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UniswapV3TickDayDataDTO[]';
-        $request = $this->uniswapV3GetTickDayDatasHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType);
+        $request = $this->uniswapV3GetTickDayDataHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $pool, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -4858,7 +4858,7 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'uniswapV3GetTickDayDatasHistorical'
+     * Create request for operation 'uniswapV3GetTickDayDataHistorical'
      *
      * @param  int $start_block (optional)
      * @param  int $end_block (optional)
@@ -4866,12 +4866,12 @@ class UniswapV3Api
      * @param  \DateTime $end_date (optional)
      * @param  string $id (optional)
      * @param  string $pool (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickDayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTickDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uniswapV3GetTickDayDatasHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetTickDayDatasHistorical'][0])
+    public function uniswapV3GetTickDayDataHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, $pool = null, string $contentType = self::contentTypes['uniswapV3GetTickDayDataHistorical'][0])
     {
 
 
@@ -4881,7 +4881,7 @@ class UniswapV3Api
 
 
 
-        $resourcePath = '/dapps/uniswapv3/tickDayDatas/historical';
+        $resourcePath = '/dapps/uniswapv3/tickDayData/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5353,46 +5353,46 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetTokenHourDatasHistorical
+     * Operation uniswapV3GetTokenHourDataHistorical
      *
-     * TokenHourDatas (historical)
+     * TokenHourData (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Token address concatendated with date. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenHourDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UniswapV3TokenHourDataDTO[]
      */
-    public function uniswapV3GetTokenHourDatasHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenHourDatasHistorical'][0])
+    public function uniswapV3GetTokenHourDataHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenHourDataHistorical'][0])
     {
-        list($response) = $this->uniswapV3GetTokenHourDatasHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        list($response) = $this->uniswapV3GetTokenHourDataHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType);
         return $response;
     }
 
     /**
-     * Operation uniswapV3GetTokenHourDatasHistoricalWithHttpInfo
+     * Operation uniswapV3GetTokenHourDataHistoricalWithHttpInfo
      *
-     * TokenHourDatas (historical)
+     * TokenHourData (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Token address concatendated with date. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenHourDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UniswapV3TokenHourDataDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function uniswapV3GetTokenHourDatasHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenHourDatasHistorical'][0])
+    public function uniswapV3GetTokenHourDataHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenHourDataHistorical'][0])
     {
-        $request = $this->uniswapV3GetTokenHourDatasHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        $request = $this->uniswapV3GetTokenHourDataHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5479,23 +5479,23 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetTokenHourDatasHistoricalAsync
+     * Operation uniswapV3GetTokenHourDataHistoricalAsync
      *
-     * TokenHourDatas (historical)
+     * TokenHourData (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Token address concatendated with date. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenHourDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3GetTokenHourDatasHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenHourDatasHistorical'][0])
+    public function uniswapV3GetTokenHourDataHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenHourDataHistorical'][0])
     {
-        return $this->uniswapV3GetTokenHourDatasHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType)
+        return $this->uniswapV3GetTokenHourDataHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5504,24 +5504,24 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetTokenHourDatasHistoricalAsyncWithHttpInfo
+     * Operation uniswapV3GetTokenHourDataHistoricalAsyncWithHttpInfo
      *
-     * TokenHourDatas (historical)
+     * TokenHourData (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Token address concatendated with date. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenHourDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3GetTokenHourDatasHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenHourDatasHistorical'][0])
+    public function uniswapV3GetTokenHourDataHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenHourDataHistorical'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UniswapV3TokenHourDataDTO[]';
-        $request = $this->uniswapV3GetTokenHourDatasHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        $request = $this->uniswapV3GetTokenHourDataHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5560,19 +5560,19 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'uniswapV3GetTokenHourDatasHistorical'
+     * Create request for operation 'uniswapV3GetTokenHourDataHistorical'
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Token address concatendated with date. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenHourDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenHourDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uniswapV3GetTokenHourDatasHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenHourDatasHistorical'][0])
+    public function uniswapV3GetTokenHourDataHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenHourDataHistorical'][0])
     {
 
 
@@ -5581,7 +5581,7 @@ class UniswapV3Api
 
 
 
-        $resourcePath = '/dapps/uniswapv3/tokenHourDatas/historical';
+        $resourcePath = '/dapps/uniswapv3/tokenHourData/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -5691,46 +5691,46 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetTokenV3DayDatasHistorical
+     * Operation uniswapV3GetTokenV3DayDataHistorical
      *
-     * TokenV3DayDatas (historical)
+     * TokenV3DayData (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Token address concatendated with date. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DayDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]
      */
-    public function uniswapV3GetTokenV3DayDatasHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DayDatasHistorical'][0])
+    public function uniswapV3GetTokenV3DayDataHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DayDataHistorical'][0])
     {
-        list($response) = $this->uniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        list($response) = $this->uniswapV3GetTokenV3DayDataHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType);
         return $response;
     }
 
     /**
-     * Operation uniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo
+     * Operation uniswapV3GetTokenV3DayDataHistoricalWithHttpInfo
      *
-     * TokenV3DayDatas (historical)
+     * TokenV3DayData (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Token address concatendated with date. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DayDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function uniswapV3GetTokenV3DayDatasHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DayDatasHistorical'][0])
+    public function uniswapV3GetTokenV3DayDataHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DayDataHistorical'][0])
     {
-        $request = $this->uniswapV3GetTokenV3DayDatasHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        $request = $this->uniswapV3GetTokenV3DayDataHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -5817,23 +5817,23 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetTokenV3DayDatasHistoricalAsync
+     * Operation uniswapV3GetTokenV3DayDataHistoricalAsync
      *
-     * TokenV3DayDatas (historical)
+     * TokenV3DayData (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Token address concatendated with date. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3GetTokenV3DayDatasHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DayDatasHistorical'][0])
+    public function uniswapV3GetTokenV3DayDataHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DayDataHistorical'][0])
     {
-        return $this->uniswapV3GetTokenV3DayDatasHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType)
+        return $this->uniswapV3GetTokenV3DayDataHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -5842,24 +5842,24 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetTokenV3DayDatasHistoricalAsyncWithHttpInfo
+     * Operation uniswapV3GetTokenV3DayDataHistoricalAsyncWithHttpInfo
      *
-     * TokenV3DayDatas (historical)
+     * TokenV3DayData (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Token address concatendated with date. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3GetTokenV3DayDatasHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DayDatasHistorical'][0])
+    public function uniswapV3GetTokenV3DayDataHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DayDataHistorical'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]';
-        $request = $this->uniswapV3GetTokenV3DayDatasHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        $request = $this->uniswapV3GetTokenV3DayDataHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -5898,19 +5898,19 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'uniswapV3GetTokenV3DayDatasHistorical'
+     * Create request for operation 'uniswapV3GetTokenV3DayDataHistorical'
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Token address concatendated with date. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetTokenV3DayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uniswapV3GetTokenV3DayDatasHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DayDatasHistorical'][0])
+    public function uniswapV3GetTokenV3DayDataHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetTokenV3DayDataHistorical'][0])
     {
 
 
@@ -5919,7 +5919,7 @@ class UniswapV3Api
 
 
 
-        $resourcePath = '/dapps/uniswapv3/tokenV3DayDatas/historical';
+        $resourcePath = '/dapps/uniswapv3/tokenV3DayData/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -6735,46 +6735,46 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetUniswapDayDatasHistorical
+     * Operation uniswapV3GetUniswapDayDataHistorical
      *
-     * UniswapDayDatas (historical)
+     * UniswapDayData (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Timestamp rounded to current day by dividing by 86400. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetUniswapDayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetUniswapDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UniswapV3UniswapDayDataDTO[]
      */
-    public function uniswapV3GetUniswapDayDatasHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetUniswapDayDatasHistorical'][0])
+    public function uniswapV3GetUniswapDayDataHistorical($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetUniswapDayDataHistorical'][0])
     {
-        list($response) = $this->uniswapV3GetUniswapDayDatasHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        list($response) = $this->uniswapV3GetUniswapDayDataHistoricalWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType);
         return $response;
     }
 
     /**
-     * Operation uniswapV3GetUniswapDayDatasHistoricalWithHttpInfo
+     * Operation uniswapV3GetUniswapDayDataHistoricalWithHttpInfo
      *
-     * UniswapDayDatas (historical)
+     * UniswapDayData (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Timestamp rounded to current day by dividing by 86400. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetUniswapDayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetUniswapDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UniswapV3UniswapDayDataDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function uniswapV3GetUniswapDayDatasHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetUniswapDayDatasHistorical'][0])
+    public function uniswapV3GetUniswapDayDataHistoricalWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetUniswapDayDataHistorical'][0])
     {
-        $request = $this->uniswapV3GetUniswapDayDatasHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        $request = $this->uniswapV3GetUniswapDayDataHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -6861,23 +6861,23 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetUniswapDayDatasHistoricalAsync
+     * Operation uniswapV3GetUniswapDayDataHistoricalAsync
      *
-     * UniswapDayDatas (historical)
+     * UniswapDayData (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Timestamp rounded to current day by dividing by 86400. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetUniswapDayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetUniswapDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3GetUniswapDayDatasHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetUniswapDayDatasHistorical'][0])
+    public function uniswapV3GetUniswapDayDataHistoricalAsync($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetUniswapDayDataHistorical'][0])
     {
-        return $this->uniswapV3GetUniswapDayDatasHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType)
+        return $this->uniswapV3GetUniswapDayDataHistoricalAsyncWithHttpInfo($start_block, $end_block, $start_date, $end_date, $id, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -6886,24 +6886,24 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3GetUniswapDayDatasHistoricalAsyncWithHttpInfo
+     * Operation uniswapV3GetUniswapDayDataHistoricalAsyncWithHttpInfo
      *
-     * UniswapDayDatas (historical)
+     * UniswapDayData (historical)
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Timestamp rounded to current day by dividing by 86400. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetUniswapDayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetUniswapDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3GetUniswapDayDatasHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetUniswapDayDatasHistorical'][0])
+    public function uniswapV3GetUniswapDayDataHistoricalAsyncWithHttpInfo($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetUniswapDayDataHistorical'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UniswapV3UniswapDayDataDTO[]';
-        $request = $this->uniswapV3GetUniswapDayDatasHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
+        $request = $this->uniswapV3GetUniswapDayDataHistoricalRequest($start_block, $end_block, $start_date, $end_date, $id, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -6942,19 +6942,19 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'uniswapV3GetUniswapDayDatasHistorical'
+     * Create request for operation 'uniswapV3GetUniswapDayDataHistorical'
      *
      * @param  int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param  int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param  \DateTime $start_date The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
      * @param  \DateTime $end_date The end date of timeframe. (optional)
      * @param  string $id Timestamp rounded to current day by dividing by 86400. (optional)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetUniswapDayDatasHistorical'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3GetUniswapDayDataHistorical'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uniswapV3GetUniswapDayDatasHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetUniswapDayDatasHistorical'][0])
+    public function uniswapV3GetUniswapDayDataHistoricalRequest($start_block = null, $end_block = null, $start_date = null, $end_date = null, $id = null, string $contentType = self::contentTypes['uniswapV3GetUniswapDayDataHistorical'][0])
     {
 
 
@@ -6963,7 +6963,7 @@ class UniswapV3Api
 
 
 
-        $resourcePath = '/dapps/uniswapv3/uniswapDayDatas/historical';
+        $resourcePath = '/dapps/uniswapv3/uniswapDayData/historical';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -7336,36 +7336,36 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3PoolDayDatasCurrent
+     * Operation uniswapV3PoolDayDataCurrent
      *
-     * PoolDayDatas (current)
+     * PoolDayData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolDayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolDayDataCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UniswapV3PoolDayDataDTO[]
      */
-    public function uniswapV3PoolDayDatasCurrent(string $contentType = self::contentTypes['uniswapV3PoolDayDatasCurrent'][0])
+    public function uniswapV3PoolDayDataCurrent(string $contentType = self::contentTypes['uniswapV3PoolDayDataCurrent'][0])
     {
-        list($response) = $this->uniswapV3PoolDayDatasCurrentWithHttpInfo($contentType);
+        list($response) = $this->uniswapV3PoolDayDataCurrentWithHttpInfo($contentType);
         return $response;
     }
 
     /**
-     * Operation uniswapV3PoolDayDatasCurrentWithHttpInfo
+     * Operation uniswapV3PoolDayDataCurrentWithHttpInfo
      *
-     * PoolDayDatas (current)
+     * PoolDayData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolDayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolDayDataCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UniswapV3PoolDayDataDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function uniswapV3PoolDayDatasCurrentWithHttpInfo(string $contentType = self::contentTypes['uniswapV3PoolDayDatasCurrent'][0])
+    public function uniswapV3PoolDayDataCurrentWithHttpInfo(string $contentType = self::contentTypes['uniswapV3PoolDayDataCurrent'][0])
     {
-        $request = $this->uniswapV3PoolDayDatasCurrentRequest($contentType);
+        $request = $this->uniswapV3PoolDayDataCurrentRequest($contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7452,18 +7452,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3PoolDayDatasCurrentAsync
+     * Operation uniswapV3PoolDayDataCurrentAsync
      *
-     * PoolDayDatas (current)
+     * PoolDayData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolDayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolDayDataCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3PoolDayDatasCurrentAsync(string $contentType = self::contentTypes['uniswapV3PoolDayDatasCurrent'][0])
+    public function uniswapV3PoolDayDataCurrentAsync(string $contentType = self::contentTypes['uniswapV3PoolDayDataCurrent'][0])
     {
-        return $this->uniswapV3PoolDayDatasCurrentAsyncWithHttpInfo($contentType)
+        return $this->uniswapV3PoolDayDataCurrentAsyncWithHttpInfo($contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -7472,19 +7472,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3PoolDayDatasCurrentAsyncWithHttpInfo
+     * Operation uniswapV3PoolDayDataCurrentAsyncWithHttpInfo
      *
-     * PoolDayDatas (current)
+     * PoolDayData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolDayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolDayDataCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3PoolDayDatasCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['uniswapV3PoolDayDatasCurrent'][0])
+    public function uniswapV3PoolDayDataCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['uniswapV3PoolDayDataCurrent'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UniswapV3PoolDayDataDTO[]';
-        $request = $this->uniswapV3PoolDayDatasCurrentRequest($contentType);
+        $request = $this->uniswapV3PoolDayDataCurrentRequest($contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -7523,18 +7523,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'uniswapV3PoolDayDatasCurrent'
+     * Create request for operation 'uniswapV3PoolDayDataCurrent'
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolDayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolDayDataCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uniswapV3PoolDayDatasCurrentRequest(string $contentType = self::contentTypes['uniswapV3PoolDayDatasCurrent'][0])
+    public function uniswapV3PoolDayDataCurrentRequest(string $contentType = self::contentTypes['uniswapV3PoolDayDataCurrent'][0])
     {
 
 
-        $resourcePath = '/dapps/uniswapv3/poolDayDatas/current';
+        $resourcePath = '/dapps/uniswapv3/poolDayData/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -7599,36 +7599,36 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3PoolHourDatasCurrent
+     * Operation uniswapV3PoolHourDataCurrent
      *
-     * PoolHourDatas (current)
+     * PoolHourData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolHourDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolHourDataCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UniswapV3PoolHourDataDTO[]
      */
-    public function uniswapV3PoolHourDatasCurrent(string $contentType = self::contentTypes['uniswapV3PoolHourDatasCurrent'][0])
+    public function uniswapV3PoolHourDataCurrent(string $contentType = self::contentTypes['uniswapV3PoolHourDataCurrent'][0])
     {
-        list($response) = $this->uniswapV3PoolHourDatasCurrentWithHttpInfo($contentType);
+        list($response) = $this->uniswapV3PoolHourDataCurrentWithHttpInfo($contentType);
         return $response;
     }
 
     /**
-     * Operation uniswapV3PoolHourDatasCurrentWithHttpInfo
+     * Operation uniswapV3PoolHourDataCurrentWithHttpInfo
      *
-     * PoolHourDatas (current)
+     * PoolHourData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolHourDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolHourDataCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UniswapV3PoolHourDataDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function uniswapV3PoolHourDatasCurrentWithHttpInfo(string $contentType = self::contentTypes['uniswapV3PoolHourDatasCurrent'][0])
+    public function uniswapV3PoolHourDataCurrentWithHttpInfo(string $contentType = self::contentTypes['uniswapV3PoolHourDataCurrent'][0])
     {
-        $request = $this->uniswapV3PoolHourDatasCurrentRequest($contentType);
+        $request = $this->uniswapV3PoolHourDataCurrentRequest($contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -7715,18 +7715,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3PoolHourDatasCurrentAsync
+     * Operation uniswapV3PoolHourDataCurrentAsync
      *
-     * PoolHourDatas (current)
+     * PoolHourData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolHourDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolHourDataCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3PoolHourDatasCurrentAsync(string $contentType = self::contentTypes['uniswapV3PoolHourDatasCurrent'][0])
+    public function uniswapV3PoolHourDataCurrentAsync(string $contentType = self::contentTypes['uniswapV3PoolHourDataCurrent'][0])
     {
-        return $this->uniswapV3PoolHourDatasCurrentAsyncWithHttpInfo($contentType)
+        return $this->uniswapV3PoolHourDataCurrentAsyncWithHttpInfo($contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -7735,19 +7735,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3PoolHourDatasCurrentAsyncWithHttpInfo
+     * Operation uniswapV3PoolHourDataCurrentAsyncWithHttpInfo
      *
-     * PoolHourDatas (current)
+     * PoolHourData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolHourDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolHourDataCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3PoolHourDatasCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['uniswapV3PoolHourDatasCurrent'][0])
+    public function uniswapV3PoolHourDataCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['uniswapV3PoolHourDataCurrent'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UniswapV3PoolHourDataDTO[]';
-        $request = $this->uniswapV3PoolHourDatasCurrentRequest($contentType);
+        $request = $this->uniswapV3PoolHourDataCurrentRequest($contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -7786,18 +7786,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'uniswapV3PoolHourDatasCurrent'
+     * Create request for operation 'uniswapV3PoolHourDataCurrent'
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolHourDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3PoolHourDataCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uniswapV3PoolHourDatasCurrentRequest(string $contentType = self::contentTypes['uniswapV3PoolHourDatasCurrent'][0])
+    public function uniswapV3PoolHourDataCurrentRequest(string $contentType = self::contentTypes['uniswapV3PoolHourDataCurrent'][0])
     {
 
 
-        $resourcePath = '/dapps/uniswapv3/poolHourDatas/current';
+        $resourcePath = '/dapps/uniswapv3/poolHourData/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -8944,36 +8944,36 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3TickDayDatasCurrent
+     * Operation uniswapV3TickDayDataCurrent
      *
-     * TickDayDatas (current)
+     * TickDayData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TickDayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TickDayDataCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UniswapV3TickDayDataDTO[]
      */
-    public function uniswapV3TickDayDatasCurrent(string $contentType = self::contentTypes['uniswapV3TickDayDatasCurrent'][0])
+    public function uniswapV3TickDayDataCurrent(string $contentType = self::contentTypes['uniswapV3TickDayDataCurrent'][0])
     {
-        list($response) = $this->uniswapV3TickDayDatasCurrentWithHttpInfo($contentType);
+        list($response) = $this->uniswapV3TickDayDataCurrentWithHttpInfo($contentType);
         return $response;
     }
 
     /**
-     * Operation uniswapV3TickDayDatasCurrentWithHttpInfo
+     * Operation uniswapV3TickDayDataCurrentWithHttpInfo
      *
-     * TickDayDatas (current)
+     * TickDayData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TickDayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TickDayDataCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UniswapV3TickDayDataDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function uniswapV3TickDayDatasCurrentWithHttpInfo(string $contentType = self::contentTypes['uniswapV3TickDayDatasCurrent'][0])
+    public function uniswapV3TickDayDataCurrentWithHttpInfo(string $contentType = self::contentTypes['uniswapV3TickDayDataCurrent'][0])
     {
-        $request = $this->uniswapV3TickDayDatasCurrentRequest($contentType);
+        $request = $this->uniswapV3TickDayDataCurrentRequest($contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9060,18 +9060,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3TickDayDatasCurrentAsync
+     * Operation uniswapV3TickDayDataCurrentAsync
      *
-     * TickDayDatas (current)
+     * TickDayData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TickDayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TickDayDataCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3TickDayDatasCurrentAsync(string $contentType = self::contentTypes['uniswapV3TickDayDatasCurrent'][0])
+    public function uniswapV3TickDayDataCurrentAsync(string $contentType = self::contentTypes['uniswapV3TickDayDataCurrent'][0])
     {
-        return $this->uniswapV3TickDayDatasCurrentAsyncWithHttpInfo($contentType)
+        return $this->uniswapV3TickDayDataCurrentAsyncWithHttpInfo($contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9080,19 +9080,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3TickDayDatasCurrentAsyncWithHttpInfo
+     * Operation uniswapV3TickDayDataCurrentAsyncWithHttpInfo
      *
-     * TickDayDatas (current)
+     * TickDayData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TickDayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TickDayDataCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3TickDayDatasCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['uniswapV3TickDayDatasCurrent'][0])
+    public function uniswapV3TickDayDataCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['uniswapV3TickDayDataCurrent'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UniswapV3TickDayDataDTO[]';
-        $request = $this->uniswapV3TickDayDatasCurrentRequest($contentType);
+        $request = $this->uniswapV3TickDayDataCurrentRequest($contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9131,18 +9131,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'uniswapV3TickDayDatasCurrent'
+     * Create request for operation 'uniswapV3TickDayDataCurrent'
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TickDayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TickDayDataCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uniswapV3TickDayDatasCurrentRequest(string $contentType = self::contentTypes['uniswapV3TickDayDatasCurrent'][0])
+    public function uniswapV3TickDayDataCurrentRequest(string $contentType = self::contentTypes['uniswapV3TickDayDataCurrent'][0])
     {
 
 
-        $resourcePath = '/dapps/uniswapv3/tickDayDatas/current';
+        $resourcePath = '/dapps/uniswapv3/tickDayData/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -9470,36 +9470,36 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3TokenHourDatasCurrent
+     * Operation uniswapV3TokenHourDataCurrent
      *
-     * TokenHourDatas (current)
+     * TokenHourData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenHourDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenHourDataCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UniswapV3TokenHourDataDTO[]
      */
-    public function uniswapV3TokenHourDatasCurrent(string $contentType = self::contentTypes['uniswapV3TokenHourDatasCurrent'][0])
+    public function uniswapV3TokenHourDataCurrent(string $contentType = self::contentTypes['uniswapV3TokenHourDataCurrent'][0])
     {
-        list($response) = $this->uniswapV3TokenHourDatasCurrentWithHttpInfo($contentType);
+        list($response) = $this->uniswapV3TokenHourDataCurrentWithHttpInfo($contentType);
         return $response;
     }
 
     /**
-     * Operation uniswapV3TokenHourDatasCurrentWithHttpInfo
+     * Operation uniswapV3TokenHourDataCurrentWithHttpInfo
      *
-     * TokenHourDatas (current)
+     * TokenHourData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenHourDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenHourDataCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UniswapV3TokenHourDataDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function uniswapV3TokenHourDatasCurrentWithHttpInfo(string $contentType = self::contentTypes['uniswapV3TokenHourDatasCurrent'][0])
+    public function uniswapV3TokenHourDataCurrentWithHttpInfo(string $contentType = self::contentTypes['uniswapV3TokenHourDataCurrent'][0])
     {
-        $request = $this->uniswapV3TokenHourDatasCurrentRequest($contentType);
+        $request = $this->uniswapV3TokenHourDataCurrentRequest($contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9586,18 +9586,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3TokenHourDatasCurrentAsync
+     * Operation uniswapV3TokenHourDataCurrentAsync
      *
-     * TokenHourDatas (current)
+     * TokenHourData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenHourDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenHourDataCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3TokenHourDatasCurrentAsync(string $contentType = self::contentTypes['uniswapV3TokenHourDatasCurrent'][0])
+    public function uniswapV3TokenHourDataCurrentAsync(string $contentType = self::contentTypes['uniswapV3TokenHourDataCurrent'][0])
     {
-        return $this->uniswapV3TokenHourDatasCurrentAsyncWithHttpInfo($contentType)
+        return $this->uniswapV3TokenHourDataCurrentAsyncWithHttpInfo($contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9606,19 +9606,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3TokenHourDatasCurrentAsyncWithHttpInfo
+     * Operation uniswapV3TokenHourDataCurrentAsyncWithHttpInfo
      *
-     * TokenHourDatas (current)
+     * TokenHourData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenHourDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenHourDataCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3TokenHourDatasCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['uniswapV3TokenHourDatasCurrent'][0])
+    public function uniswapV3TokenHourDataCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['uniswapV3TokenHourDataCurrent'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UniswapV3TokenHourDataDTO[]';
-        $request = $this->uniswapV3TokenHourDatasCurrentRequest($contentType);
+        $request = $this->uniswapV3TokenHourDataCurrentRequest($contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9657,18 +9657,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'uniswapV3TokenHourDatasCurrent'
+     * Create request for operation 'uniswapV3TokenHourDataCurrent'
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenHourDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenHourDataCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uniswapV3TokenHourDatasCurrentRequest(string $contentType = self::contentTypes['uniswapV3TokenHourDatasCurrent'][0])
+    public function uniswapV3TokenHourDataCurrentRequest(string $contentType = self::contentTypes['uniswapV3TokenHourDataCurrent'][0])
     {
 
 
-        $resourcePath = '/dapps/uniswapv3/tokenHourDatas/current';
+        $resourcePath = '/dapps/uniswapv3/tokenHourData/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -9733,36 +9733,36 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3TokenV3DayDatasCurrent
+     * Operation uniswapV3TokenV3DayDataCurrent
      *
-     * TokenV3DayDatas (current)
+     * TokenV3DayData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenV3DayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenV3DayDataCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]
      */
-    public function uniswapV3TokenV3DayDatasCurrent(string $contentType = self::contentTypes['uniswapV3TokenV3DayDatasCurrent'][0])
+    public function uniswapV3TokenV3DayDataCurrent(string $contentType = self::contentTypes['uniswapV3TokenV3DayDataCurrent'][0])
     {
-        list($response) = $this->uniswapV3TokenV3DayDatasCurrentWithHttpInfo($contentType);
+        list($response) = $this->uniswapV3TokenV3DayDataCurrentWithHttpInfo($contentType);
         return $response;
     }
 
     /**
-     * Operation uniswapV3TokenV3DayDatasCurrentWithHttpInfo
+     * Operation uniswapV3TokenV3DayDataCurrentWithHttpInfo
      *
-     * TokenV3DayDatas (current)
+     * TokenV3DayData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenV3DayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenV3DayDataCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function uniswapV3TokenV3DayDatasCurrentWithHttpInfo(string $contentType = self::contentTypes['uniswapV3TokenV3DayDatasCurrent'][0])
+    public function uniswapV3TokenV3DayDataCurrentWithHttpInfo(string $contentType = self::contentTypes['uniswapV3TokenV3DayDataCurrent'][0])
     {
-        $request = $this->uniswapV3TokenV3DayDatasCurrentRequest($contentType);
+        $request = $this->uniswapV3TokenV3DayDataCurrentRequest($contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -9849,18 +9849,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3TokenV3DayDatasCurrentAsync
+     * Operation uniswapV3TokenV3DayDataCurrentAsync
      *
-     * TokenV3DayDatas (current)
+     * TokenV3DayData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenV3DayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenV3DayDataCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3TokenV3DayDatasCurrentAsync(string $contentType = self::contentTypes['uniswapV3TokenV3DayDatasCurrent'][0])
+    public function uniswapV3TokenV3DayDataCurrentAsync(string $contentType = self::contentTypes['uniswapV3TokenV3DayDataCurrent'][0])
     {
-        return $this->uniswapV3TokenV3DayDatasCurrentAsyncWithHttpInfo($contentType)
+        return $this->uniswapV3TokenV3DayDataCurrentAsyncWithHttpInfo($contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -9869,19 +9869,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3TokenV3DayDatasCurrentAsyncWithHttpInfo
+     * Operation uniswapV3TokenV3DayDataCurrentAsyncWithHttpInfo
      *
-     * TokenV3DayDatas (current)
+     * TokenV3DayData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenV3DayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenV3DayDataCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3TokenV3DayDatasCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['uniswapV3TokenV3DayDatasCurrent'][0])
+    public function uniswapV3TokenV3DayDataCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['uniswapV3TokenV3DayDataCurrent'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UniswapV3TokenV3DayDataDTO[]';
-        $request = $this->uniswapV3TokenV3DayDatasCurrentRequest($contentType);
+        $request = $this->uniswapV3TokenV3DayDataCurrentRequest($contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -9920,18 +9920,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'uniswapV3TokenV3DayDatasCurrent'
+     * Create request for operation 'uniswapV3TokenV3DayDataCurrent'
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenV3DayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3TokenV3DayDataCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uniswapV3TokenV3DayDatasCurrentRequest(string $contentType = self::contentTypes['uniswapV3TokenV3DayDatasCurrent'][0])
+    public function uniswapV3TokenV3DayDataCurrentRequest(string $contentType = self::contentTypes['uniswapV3TokenV3DayDataCurrent'][0])
     {
 
 
-        $resourcePath = '/dapps/uniswapv3/tokenV3DayDatas/current';
+        $resourcePath = '/dapps/uniswapv3/tokenV3DayData/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -10522,36 +10522,36 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3UniswapDayDatasCurrent
+     * Operation uniswapV3UniswapDayDataCurrent
      *
-     * UniswapDayDatas (current)
+     * UniswapDayData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3UniswapDayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3UniswapDayDataCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \OpenAPI\Client\Model\UniswapV3UniswapDayDataDTO[]
      */
-    public function uniswapV3UniswapDayDatasCurrent(string $contentType = self::contentTypes['uniswapV3UniswapDayDatasCurrent'][0])
+    public function uniswapV3UniswapDayDataCurrent(string $contentType = self::contentTypes['uniswapV3UniswapDayDataCurrent'][0])
     {
-        list($response) = $this->uniswapV3UniswapDayDatasCurrentWithHttpInfo($contentType);
+        list($response) = $this->uniswapV3UniswapDayDataCurrentWithHttpInfo($contentType);
         return $response;
     }
 
     /**
-     * Operation uniswapV3UniswapDayDatasCurrentWithHttpInfo
+     * Operation uniswapV3UniswapDayDataCurrentWithHttpInfo
      *
-     * UniswapDayDatas (current)
+     * UniswapDayData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3UniswapDayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3UniswapDayDataCurrent'] to see the possible values for this operation
      *
      * @throws \OpenAPI\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \OpenAPI\Client\Model\UniswapV3UniswapDayDataDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function uniswapV3UniswapDayDatasCurrentWithHttpInfo(string $contentType = self::contentTypes['uniswapV3UniswapDayDatasCurrent'][0])
+    public function uniswapV3UniswapDayDataCurrentWithHttpInfo(string $contentType = self::contentTypes['uniswapV3UniswapDayDataCurrent'][0])
     {
-        $request = $this->uniswapV3UniswapDayDatasCurrentRequest($contentType);
+        $request = $this->uniswapV3UniswapDayDataCurrentRequest($contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -10638,18 +10638,18 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3UniswapDayDatasCurrentAsync
+     * Operation uniswapV3UniswapDayDataCurrentAsync
      *
-     * UniswapDayDatas (current)
+     * UniswapDayData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3UniswapDayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3UniswapDayDataCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3UniswapDayDatasCurrentAsync(string $contentType = self::contentTypes['uniswapV3UniswapDayDatasCurrent'][0])
+    public function uniswapV3UniswapDayDataCurrentAsync(string $contentType = self::contentTypes['uniswapV3UniswapDayDataCurrent'][0])
     {
-        return $this->uniswapV3UniswapDayDatasCurrentAsyncWithHttpInfo($contentType)
+        return $this->uniswapV3UniswapDayDataCurrentAsyncWithHttpInfo($contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -10658,19 +10658,19 @@ class UniswapV3Api
     }
 
     /**
-     * Operation uniswapV3UniswapDayDatasCurrentAsyncWithHttpInfo
+     * Operation uniswapV3UniswapDayDataCurrentAsyncWithHttpInfo
      *
-     * UniswapDayDatas (current)
+     * UniswapDayData (current)
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3UniswapDayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3UniswapDayDataCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function uniswapV3UniswapDayDatasCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['uniswapV3UniswapDayDatasCurrent'][0])
+    public function uniswapV3UniswapDayDataCurrentAsyncWithHttpInfo(string $contentType = self::contentTypes['uniswapV3UniswapDayDataCurrent'][0])
     {
         $returnType = '\OpenAPI\Client\Model\UniswapV3UniswapDayDataDTO[]';
-        $request = $this->uniswapV3UniswapDayDatasCurrentRequest($contentType);
+        $request = $this->uniswapV3UniswapDayDataCurrentRequest($contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -10709,18 +10709,18 @@ class UniswapV3Api
     }
 
     /**
-     * Create request for operation 'uniswapV3UniswapDayDatasCurrent'
+     * Create request for operation 'uniswapV3UniswapDayDataCurrent'
      *
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3UniswapDayDatasCurrent'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['uniswapV3UniswapDayDataCurrent'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function uniswapV3UniswapDayDatasCurrentRequest(string $contentType = self::contentTypes['uniswapV3UniswapDayDatasCurrent'][0])
+    public function uniswapV3UniswapDayDataCurrentRequest(string $contentType = self::contentTypes['uniswapV3UniswapDayDataCurrent'][0])
     {
 
 
-        $resourcePath = '/dapps/uniswapv3/uniswapDayDatas/current';
+        $resourcePath = '/dapps/uniswapv3/uniswapDayData/current';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

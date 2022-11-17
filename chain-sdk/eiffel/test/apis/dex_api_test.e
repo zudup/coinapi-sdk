@@ -13,16 +13,16 @@ inherit
 feature -- Test routines
 
 
-    test_dex_batchs_current
-            -- Batchs (current)
+    test_dex_batches_current
+            -- Batches (current)
             --
-            -- Gets batchs.
+            -- Gets batches.
         local
             l_response: LIST [DEX_BATCH_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.dex_batchs_current
+            -- l_response := api.dex_batches_current
             assert ("not_implemented", False)
         end
 
@@ -39,10 +39,10 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_dex_get_batchs_historical
-            -- Batchs (historical)
+    test_dex_get_batches_historical
+            -- Batches (historical)
             --
-            -- Gets batchs.
+            -- Gets batches.
         local
             l_response: LIST [DEX_BATCH_DTO]
             l_start_block: INTEGER_64
@@ -53,7 +53,7 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.dex_get_batchs_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            -- l_response := api.dex_get_batches_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
             assert ("not_implemented", False)
         end
 
@@ -132,10 +132,10 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_dex_get_statss_historical
-            -- Statss (historical)
+    test_dex_get_stats_historical
+            -- Stats (historical)
             --
-            -- Gets statss.
+            -- Gets stats.
         local
             l_response: LIST [DEX_STATS_DTO]
             l_start_block: INTEGER_64
@@ -146,7 +146,7 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.dex_get_statss_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            -- l_response := api.dex_get_stats_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
             assert ("not_implemented", False)
         end
 
@@ -286,16 +286,16 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_dex_statss_current
-            -- Statss (current)
+    test_dex_stats_current
+            -- Stats (current)
             --
-            -- Gets statss.
+            -- Gets stats.
         local
             l_response: LIST [DEX_STATS_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.dex_statss_current
+            -- l_response := api.dex_stats_current
             assert ("not_implemented", False)
         end
 

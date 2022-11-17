@@ -20,7 +20,7 @@ Method | HTTP request | Description
 [**curveExchangesCurrent**](CurveApi.md#curveexchangescurrent) | **GET** /dapps/curve/exchanges/current | Exchanges (current)
 [**curveFeeChangeLogsCurrent**](CurveApi.md#curvefeechangelogscurrent) | **GET** /dapps/curve/feeChangeLogs/current | FeeChangeLogs (current)
 [**curveGaugeDepositsCurrent**](CurveApi.md#curvegaugedepositscurrent) | **GET** /dapps/curve/gaugeDeposits/current | GaugeDeposits (current)
-[**curveGaugeLiquiditysCurrent**](CurveApi.md#curvegaugeliquidityscurrent) | **GET** /dapps/curve/gaugeLiquiditys/current | GaugeLiquiditys (current)
+[**curveGaugeLiquiditiesCurrent**](CurveApi.md#curvegaugeliquiditiescurrent) | **GET** /dapps/curve/gaugeLiquidities/current | GaugeLiquidities (current)
 [**curveGaugeTotalWeightsCurrent**](CurveApi.md#curvegaugetotalweightscurrent) | **GET** /dapps/curve/gaugeTotalWeights/current | GaugeTotalWeights (current)
 [**curveGaugeTypeWeightsCurrent**](CurveApi.md#curvegaugetypeweightscurrent) | **GET** /dapps/curve/gaugeTypeWeights/current | GaugeTypeWeights (current)
 [**curveGaugeTypesCurrent**](CurveApi.md#curvegaugetypescurrent) | **GET** /dapps/curve/gaugeTypes/current | GaugeTypes (current)
@@ -39,7 +39,7 @@ Method | HTTP request | Description
 [**curveGetExchangesHistorical**](CurveApi.md#curvegetexchangeshistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical)
 [**curveGetFeeChangeLogsHistorical**](CurveApi.md#curvegetfeechangelogshistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical)
 [**curveGetGaugeDepositsHistorical**](CurveApi.md#curvegetgaugedepositshistorical) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical)
-[**curveGetGaugeLiquiditysHistorical**](CurveApi.md#curvegetgaugeliquidityshistorical) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical)
+[**curveGetGaugeLiquiditiesHistorical**](CurveApi.md#curvegetgaugeliquiditieshistorical) | **GET** /dapps/curve/gaugeLiquidities/historical | GaugeLiquidities (historical)
 [**curveGetGaugeTotalWeightsHistorical**](CurveApi.md#curvegetgaugetotalweightshistorical) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical)
 [**curveGetGaugeTypeWeightsHistorical**](CurveApi.md#curvegetgaugetypeweightshistorical) | **GET** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical)
 [**curveGetGaugeTypesHistorical**](CurveApi.md#curvegetgaugetypeshistorical) | **GET** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical)
@@ -508,12 +508,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **curveGaugeLiquiditysCurrent**
-> BuiltList<CurveGaugeLiquidityDTO> curveGaugeLiquiditysCurrent()
+# **curveGaugeLiquiditiesCurrent**
+> BuiltList<CurveGaugeLiquidityDTO> curveGaugeLiquiditiesCurrent()
 
-GaugeLiquiditys (current)
+GaugeLiquidities (current)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 ```dart
@@ -522,10 +522,10 @@ import 'package:openapi/api.dart';
 final api = Openapi().getCurveApi();
 
 try {
-    final response = api.curveGaugeLiquiditysCurrent();
+    final response = api.curveGaugeLiquiditiesCurrent();
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling CurveApi->curveGaugeLiquiditysCurrent: $e\n');
+    print('Exception when calling CurveApi->curveGaugeLiquiditiesCurrent: $e\n');
 }
 ```
 
@@ -1399,12 +1399,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **curveGetGaugeLiquiditysHistorical**
-> BuiltList<CurveGaugeLiquidityDTO> curveGetGaugeLiquiditysHistorical(startBlock, endBlock, startDate, endDate, id, user)
+# **curveGetGaugeLiquiditiesHistorical**
+> BuiltList<CurveGaugeLiquidityDTO> curveGetGaugeLiquiditiesHistorical(startBlock, endBlock, startDate, endDate, id, user)
 
-GaugeLiquiditys (historical)
+GaugeLiquidities (historical)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 ```dart
@@ -1419,10 +1419,10 @@ final String id = id_example; // String |
 final String user = user_example; // String | 
 
 try {
-    final response = api.curveGetGaugeLiquiditysHistorical(startBlock, endBlock, startDate, endDate, id, user);
+    final response = api.curveGetGaugeLiquiditiesHistorical(startBlock, endBlock, startDate, endDate, id, user);
     print(response);
 } catch on DioError (e) {
-    print('Exception when calling CurveApi->curveGetGaugeLiquiditysHistorical: $e\n');
+    print('Exception when calling CurveApi->curveGetGaugeLiquiditiesHistorical: $e\n');
 }
 ```
 

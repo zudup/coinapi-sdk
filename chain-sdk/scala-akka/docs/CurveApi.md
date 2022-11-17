@@ -26,8 +26,8 @@ Method | HTTP request | Description
 [**curveFeeChangeLogsCurrentWithHttpInfo**](CurveApi.md#curveFeeChangeLogsCurrentWithHttpInfo) | **GET** /dapps/curve/feeChangeLogs/current | FeeChangeLogs (current)
 [**curveGaugeDepositsCurrent**](CurveApi.md#curveGaugeDepositsCurrent) | **GET** /dapps/curve/gaugeDeposits/current | GaugeDeposits (current)
 [**curveGaugeDepositsCurrentWithHttpInfo**](CurveApi.md#curveGaugeDepositsCurrentWithHttpInfo) | **GET** /dapps/curve/gaugeDeposits/current | GaugeDeposits (current)
-[**curveGaugeLiquiditysCurrent**](CurveApi.md#curveGaugeLiquiditysCurrent) | **GET** /dapps/curve/gaugeLiquiditys/current | GaugeLiquiditys (current)
-[**curveGaugeLiquiditysCurrentWithHttpInfo**](CurveApi.md#curveGaugeLiquiditysCurrentWithHttpInfo) | **GET** /dapps/curve/gaugeLiquiditys/current | GaugeLiquiditys (current)
+[**curveGaugeLiquiditiesCurrent**](CurveApi.md#curveGaugeLiquiditiesCurrent) | **GET** /dapps/curve/gaugeLiquidities/current | GaugeLiquidities (current)
+[**curveGaugeLiquiditiesCurrentWithHttpInfo**](CurveApi.md#curveGaugeLiquiditiesCurrentWithHttpInfo) | **GET** /dapps/curve/gaugeLiquidities/current | GaugeLiquidities (current)
 [**curveGaugeTotalWeightsCurrent**](CurveApi.md#curveGaugeTotalWeightsCurrent) | **GET** /dapps/curve/gaugeTotalWeights/current | GaugeTotalWeights (current)
 [**curveGaugeTotalWeightsCurrentWithHttpInfo**](CurveApi.md#curveGaugeTotalWeightsCurrentWithHttpInfo) | **GET** /dapps/curve/gaugeTotalWeights/current | GaugeTotalWeights (current)
 [**curveGaugeTypeWeightsCurrent**](CurveApi.md#curveGaugeTypeWeightsCurrent) | **GET** /dapps/curve/gaugeTypeWeights/current | GaugeTypeWeights (current)
@@ -64,8 +64,8 @@ Method | HTTP request | Description
 [**curveGetFeeChangeLogsHistoricalWithHttpInfo**](CurveApi.md#curveGetFeeChangeLogsHistoricalWithHttpInfo) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical)
 [**curveGetGaugeDepositsHistorical**](CurveApi.md#curveGetGaugeDepositsHistorical) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical)
 [**curveGetGaugeDepositsHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeDepositsHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical)
-[**curveGetGaugeLiquiditysHistorical**](CurveApi.md#curveGetGaugeLiquiditysHistorical) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical)
-[**curveGetGaugeLiquiditysHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeLiquiditysHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical)
+[**curveGetGaugeLiquiditiesHistorical**](CurveApi.md#curveGetGaugeLiquiditiesHistorical) | **GET** /dapps/curve/gaugeLiquidities/historical | GaugeLiquidities (historical)
+[**curveGetGaugeLiquiditiesHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeLiquiditiesHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugeLiquidities/historical | GaugeLiquidities (historical)
 [**curveGetGaugeTotalWeightsHistorical**](CurveApi.md#curveGetGaugeTotalWeightsHistorical) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical)
 [**curveGetGaugeTotalWeightsHistoricalWithHttpInfo**](CurveApi.md#curveGetGaugeTotalWeightsHistoricalWithHttpInfo) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical)
 [**curveGetGaugeTypeWeightsHistorical**](CurveApi.md#curveGetGaugeTypeWeightsHistorical) | **GET** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical)
@@ -965,13 +965,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## curveGaugeLiquiditysCurrent
+## curveGaugeLiquiditiesCurrent
 
-> curveGaugeLiquiditysCurrent(): ApiRequest[Seq[GaugeLiquidityDTO]]
+> curveGaugeLiquiditiesCurrent(): ApiRequest[Seq[GaugeLiquidityDTO]]
 
-GaugeLiquiditys (current)
+GaugeLiquidities (current)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 
@@ -993,7 +993,7 @@ object Example extends App {
 
     val apiInvoker = ApiInvoker()
     val apiInstance = CurveApi("https://onchain.coinapi.io")    
-    val request = apiInstance.curveGaugeLiquiditysCurrent()
+    val request = apiInstance.curveGaugeLiquiditiesCurrent()
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -1003,14 +1003,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#curveGaugeLiquiditysCurrent")
+            System.err.println("Exception when calling CurveApi#curveGaugeLiquiditiesCurrent")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#curveGaugeLiquiditysCurrent")
+            System.err.println("Exception when calling CurveApi#curveGaugeLiquiditiesCurrent")
             exception.printStackTrace();
     }
 }
@@ -2615,13 +2615,13 @@ No authorization required
 | **200** | successful operation |  -  |
 
 
-## curveGetGaugeLiquiditysHistorical
+## curveGetGaugeLiquiditiesHistorical
 
-> curveGetGaugeLiquiditysHistorical(curveGetGaugeLiquiditysHistoricalRequest): ApiRequest[Seq[GaugeLiquidityDTO]]
+> curveGetGaugeLiquiditiesHistorical(curveGetGaugeLiquiditiesHistoricalRequest): ApiRequest[Seq[GaugeLiquidityDTO]]
 
-GaugeLiquiditys (historical)
+GaugeLiquidities (historical)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 
@@ -2656,7 +2656,7 @@ object Example extends App {
 
     val user: String = user_example // String | 
     
-    val request = apiInstance.curveGetGaugeLiquiditysHistorical(startBlock, endBlock, startDate, endDate, id, user)
+    val request = apiInstance.curveGetGaugeLiquiditiesHistorical(startBlock, endBlock, startDate, endDate, id, user)
     val response = apiInvoker.execute(request)
 
     response.onComplete {
@@ -2666,14 +2666,14 @@ object Example extends App {
             System.out.println(s"Response body: $content")
         
         case Failure(error @ ApiError(code, message, responseContent, cause, headers)) =>
-            System.err.println("Exception when calling CurveApi#curveGetGaugeLiquiditysHistorical")
+            System.err.println("Exception when calling CurveApi#curveGetGaugeLiquiditiesHistorical")
             System.err.println(s"Status code: $code}")
             System.err.println(s"Reason: $responseContent")
             System.err.println(s"Response headers: ${headers.mkString(", ")}")
             error.printStackTrace();
 
         case Failure(exception) => 
-            System.err.println("Exception when calling CurveApi#curveGetGaugeLiquiditysHistorical")
+            System.err.println("Exception when calling CurveApi#curveGetGaugeLiquiditiesHistorical")
             exception.printStackTrace();
     }
 }

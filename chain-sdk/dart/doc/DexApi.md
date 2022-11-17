@@ -9,14 +9,14 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dexBatchsCurrent**](DexApi.md#dexbatchscurrent) | **GET** /dapps/dex/batchs/current | Batchs (current)
+[**dexBatchesCurrent**](DexApi.md#dexbatchescurrent) | **GET** /dapps/dex/batches/current | Batches (current)
 [**dexDepositsCurrent**](DexApi.md#dexdepositscurrent) | **GET** /dapps/dex/deposits/current | Deposits (current)
-[**dexGetBatchsHistorical**](DexApi.md#dexgetbatchshistorical) | **GET** /dapps/dex/batchs/historical | Batchs (historical)
+[**dexGetBatchesHistorical**](DexApi.md#dexgetbatcheshistorical) | **GET** /dapps/dex/batches/historical | Batches (historical)
 [**dexGetDepositsHistorical**](DexApi.md#dexgetdepositshistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical)
 [**dexGetOrdersHistorical**](DexApi.md#dexgetordershistorical) | **GET** /dapps/dex/orders/historical | Orders (historical)
 [**dexGetPricesHistorical**](DexApi.md#dexgetpriceshistorical) | **GET** /dapps/dex/prices/historical | Prices (historical)
 [**dexGetSolutionsHistorical**](DexApi.md#dexgetsolutionshistorical) | **GET** /dapps/dex/solutions/historical | Solutions (historical)
-[**dexGetStatssHistorical**](DexApi.md#dexgetstatsshistorical) | **GET** /dapps/dex/statss/historical | Statss (historical)
+[**dexGetStatsHistorical**](DexApi.md#dexgetstatshistorical) | **GET** /dapps/dex/stats/historical | Stats (historical)
 [**dexGetTokensHistorical**](DexApi.md#dexgettokenshistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical)
 [**dexGetTradesHistorical**](DexApi.md#dexgettradeshistorical) | **GET** /dapps/dex/trades/historical | Trades (historical)
 [**dexGetUsersHistorical**](DexApi.md#dexgetusershistorical) | **GET** /dapps/dex/users/historical | Users (historical)
@@ -25,7 +25,7 @@ Method | HTTP request | Description
 [**dexOrdersCurrent**](DexApi.md#dexorderscurrent) | **GET** /dapps/dex/orders/current | Orders (current)
 [**dexPricesCurrent**](DexApi.md#dexpricescurrent) | **GET** /dapps/dex/prices/current | Prices (current)
 [**dexSolutionsCurrent**](DexApi.md#dexsolutionscurrent) | **GET** /dapps/dex/solutions/current | Solutions (current)
-[**dexStatssCurrent**](DexApi.md#dexstatsscurrent) | **GET** /dapps/dex/statss/current | Statss (current)
+[**dexStatsCurrent**](DexApi.md#dexstatscurrent) | **GET** /dapps/dex/stats/current | Stats (current)
 [**dexTokensCurrent**](DexApi.md#dextokenscurrent) | **GET** /dapps/dex/tokens/current | Tokens (current)
 [**dexTradesCurrent**](DexApi.md#dextradescurrent) | **GET** /dapps/dex/trades/current | Trades (current)
 [**dexUsersCurrent**](DexApi.md#dexuserscurrent) | **GET** /dapps/dex/users/current | Users (current)
@@ -33,12 +33,12 @@ Method | HTTP request | Description
 [**dexWithdrawsCurrent**](DexApi.md#dexwithdrawscurrent) | **GET** /dapps/dex/withdraws/current | Withdraws (current)
 
 
-# **dexBatchsCurrent**
-> List<DexBatchDTO> dexBatchsCurrent()
+# **dexBatchesCurrent**
+> List<DexBatchDTO> dexBatchesCurrent()
 
-Batchs (current)
+Batches (current)
 
-Gets batchs.
+Gets batches.
 
 ### Example
 ```dart
@@ -47,10 +47,10 @@ import 'package:openapi/api.dart';
 final api_instance = DexApi();
 
 try {
-    final result = api_instance.dexBatchsCurrent();
+    final result = api_instance.dexBatchesCurrent();
     print(result);
 } catch (e) {
-    print('Exception when calling DexApi->dexBatchsCurrent: $e\n');
+    print('Exception when calling DexApi->dexBatchesCurrent: $e\n');
 }
 ```
 
@@ -111,12 +111,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dexGetBatchsHistorical**
-> List<DexBatchDTO> dexGetBatchsHistorical(startBlock, endBlock, startDate, endDate, id)
+# **dexGetBatchesHistorical**
+> List<DexBatchDTO> dexGetBatchesHistorical(startBlock, endBlock, startDate, endDate, id)
 
-Batchs (historical)
+Batches (historical)
 
-Gets batchs.
+Gets batches.
 
 ### Example
 ```dart
@@ -130,10 +130,10 @@ final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timefra
 final id = id_example; // String | Identifier.
 
 try {
-    final result = api_instance.dexGetBatchsHistorical(startBlock, endBlock, startDate, endDate, id);
+    final result = api_instance.dexGetBatchesHistorical(startBlock, endBlock, startDate, endDate, id);
     print(result);
 } catch (e) {
-    print('Exception when calling DexApi->dexGetBatchsHistorical: $e\n');
+    print('Exception when calling DexApi->dexGetBatchesHistorical: $e\n');
 }
 ```
 
@@ -372,12 +372,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dexGetStatssHistorical**
-> List<DexStatsDTO> dexGetStatssHistorical(startBlock, endBlock, startDate, endDate, id)
+# **dexGetStatsHistorical**
+> List<DexStatsDTO> dexGetStatsHistorical(startBlock, endBlock, startDate, endDate, id)
 
-Statss (historical)
+Stats (historical)
 
-Gets statss.
+Gets stats.
 
 ### Example
 ```dart
@@ -391,10 +391,10 @@ final endDate = 2013-10-20T19:20:30+01:00; // DateTime | The end date of timefra
 final id = id_example; // String | 
 
 try {
-    final result = api_instance.dexGetStatssHistorical(startBlock, endBlock, startDate, endDate, id);
+    final result = api_instance.dexGetStatsHistorical(startBlock, endBlock, startDate, endDate, id);
     print(result);
 } catch (e) {
-    print('Exception when calling DexApi->dexGetStatssHistorical: $e\n');
+    print('Exception when calling DexApi->dexGetStatsHistorical: $e\n');
 }
 ```
 
@@ -809,12 +809,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dexStatssCurrent**
-> List<DexStatsDTO> dexStatssCurrent()
+# **dexStatsCurrent**
+> List<DexStatsDTO> dexStatsCurrent()
 
-Statss (current)
+Stats (current)
 
-Gets statss.
+Gets stats.
 
 ### Example
 ```dart
@@ -823,10 +823,10 @@ import 'package:openapi/api.dart';
 final api_instance = DexApi();
 
 try {
-    final result = api_instance.dexStatssCurrent();
+    final result = api_instance.dexStatsCurrent();
     print(result);
 } catch (e) {
-    print('Exception when calling DexApi->dexStatssCurrent: $e\n');
+    print('Exception when calling DexApi->dexStatsCurrent: $e\n');
 }
 ```
 

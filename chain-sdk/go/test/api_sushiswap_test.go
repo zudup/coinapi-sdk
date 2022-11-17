@@ -46,11 +46,11 @@ func Test_openapi_SushiswapApiService(t *testing.T) {
 
     })
 
-    t.Run("Test SushiswapApiService SushiswapDayDatasCurrent", func(t *testing.T) {
+    t.Run("Test SushiswapApiService SushiswapDayDataCurrent", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.SushiswapApi.SushiswapDayDatasCurrent(context.Background()).Execute()
+        resp, httpRes, err := apiClient.SushiswapApi.SushiswapDayDataCurrent(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -58,11 +58,11 @@ func Test_openapi_SushiswapApiService(t *testing.T) {
 
     })
 
-    t.Run("Test SushiswapApiService SushiswapFactorysCurrent", func(t *testing.T) {
+    t.Run("Test SushiswapApiService SushiswapFactoriesCurrent", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.SushiswapApi.SushiswapFactorysCurrent(context.Background()).Execute()
+        resp, httpRes, err := apiClient.SushiswapApi.SushiswapFactoriesCurrent(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -94,11 +94,11 @@ func Test_openapi_SushiswapApiService(t *testing.T) {
 
     })
 
-    t.Run("Test SushiswapApiService SushiswapGetDayDatasHistorical", func(t *testing.T) {
+    t.Run("Test SushiswapApiService SushiswapGetDayDataHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.SushiswapApi.SushiswapGetDayDatasHistorical(context.Background()).Execute()
+        resp, httpRes, err := apiClient.SushiswapApi.SushiswapGetDayDataHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -106,11 +106,11 @@ func Test_openapi_SushiswapApiService(t *testing.T) {
 
     })
 
-    t.Run("Test SushiswapApiService SushiswapGetFactorysHistorical", func(t *testing.T) {
+    t.Run("Test SushiswapApiService SushiswapGetFactoriesHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.SushiswapApi.SushiswapGetFactorysHistorical(context.Background()).Execute()
+        resp, httpRes, err := apiClient.SushiswapApi.SushiswapGetFactoriesHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -118,11 +118,11 @@ func Test_openapi_SushiswapApiService(t *testing.T) {
 
     })
 
-    t.Run("Test SushiswapApiService SushiswapGetHourDatasHistorical", func(t *testing.T) {
+    t.Run("Test SushiswapApiService SushiswapGetHourDataHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.SushiswapApi.SushiswapGetHourDatasHistorical(context.Background()).Execute()
+        resp, httpRes, err := apiClient.SushiswapApi.SushiswapGetHourDataHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -166,11 +166,11 @@ func Test_openapi_SushiswapApiService(t *testing.T) {
 
     })
 
-    t.Run("Test SushiswapApiService SushiswapGetPairDayDatasHistorical", func(t *testing.T) {
+    t.Run("Test SushiswapApiService SushiswapGetPairDayDataHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.SushiswapApi.SushiswapGetPairDayDatasHistorical(context.Background()).Execute()
+        resp, httpRes, err := apiClient.SushiswapApi.SushiswapGetPairDayDataHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -178,11 +178,11 @@ func Test_openapi_SushiswapApiService(t *testing.T) {
 
     })
 
-    t.Run("Test SushiswapApiService SushiswapGetPairHourDatasHistorical", func(t *testing.T) {
+    t.Run("Test SushiswapApiService SushiswapGetPairHourDataHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.SushiswapApi.SushiswapGetPairHourDatasHistorical(context.Background()).Execute()
+        resp, httpRes, err := apiClient.SushiswapApi.SushiswapGetPairHourDataHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -214,11 +214,11 @@ func Test_openapi_SushiswapApiService(t *testing.T) {
 
     })
 
-    t.Run("Test SushiswapApiService SushiswapGetTokenDayDatasHistorical", func(t *testing.T) {
+    t.Run("Test SushiswapApiService SushiswapGetTokenDayDataHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.SushiswapApi.SushiswapGetTokenDayDatasHistorical(context.Background()).Execute()
+        resp, httpRes, err := apiClient.SushiswapApi.SushiswapGetTokenDayDataHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -262,11 +262,11 @@ func Test_openapi_SushiswapApiService(t *testing.T) {
 
     })
 
-    t.Run("Test SushiswapApiService SushiswapHourDatasCurrent", func(t *testing.T) {
+    t.Run("Test SushiswapApiService SushiswapHourDataCurrent", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.SushiswapApi.SushiswapHourDatasCurrent(context.Background()).Execute()
+        resp, httpRes, err := apiClient.SushiswapApi.SushiswapHourDataCurrent(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -310,11 +310,11 @@ func Test_openapi_SushiswapApiService(t *testing.T) {
 
     })
 
-    t.Run("Test SushiswapApiService SushiswapPairDayDatasCurrent", func(t *testing.T) {
+    t.Run("Test SushiswapApiService SushiswapPairDayDataCurrent", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.SushiswapApi.SushiswapPairDayDatasCurrent(context.Background()).Execute()
+        resp, httpRes, err := apiClient.SushiswapApi.SushiswapPairDayDataCurrent(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -322,11 +322,11 @@ func Test_openapi_SushiswapApiService(t *testing.T) {
 
     })
 
-    t.Run("Test SushiswapApiService SushiswapPairHourDatasCurrent", func(t *testing.T) {
+    t.Run("Test SushiswapApiService SushiswapPairHourDataCurrent", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.SushiswapApi.SushiswapPairHourDatasCurrent(context.Background()).Execute()
+        resp, httpRes, err := apiClient.SushiswapApi.SushiswapPairHourDataCurrent(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -358,11 +358,11 @@ func Test_openapi_SushiswapApiService(t *testing.T) {
 
     })
 
-    t.Run("Test SushiswapApiService SushiswapTokenDayDatasCurrent", func(t *testing.T) {
+    t.Run("Test SushiswapApiService SushiswapTokenDayDataCurrent", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.SushiswapApi.SushiswapTokenDayDatasCurrent(context.Background()).Execute()
+        resp, httpRes, err := apiClient.SushiswapApi.SushiswapTokenDayDataCurrent(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)

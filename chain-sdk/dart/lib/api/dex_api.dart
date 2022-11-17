@@ -16,14 +16,14 @@ class DexApi {
 
   final ApiClient apiClient;
 
-  /// Batchs (current)
+  /// Batches (current)
   ///
-  /// Gets batchs.
+  /// Gets batches.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> dexBatchsCurrentWithHttpInfo() async {
+  Future<Response> dexBatchesCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/dex/batchs/current';
+    final path = r'/dapps/dex/batches/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -46,11 +46,11 @@ class DexApi {
     );
   }
 
-  /// Batchs (current)
+  /// Batches (current)
   ///
-  /// Gets batchs.
-  Future<List<DexBatchDTO>?> dexBatchsCurrent() async {
-    final response = await dexBatchsCurrentWithHttpInfo();
+  /// Gets batches.
+  Future<List<DexBatchDTO>?> dexBatchesCurrent() async {
+    final response = await dexBatchesCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -118,9 +118,9 @@ class DexApi {
     return null;
   }
 
-  /// Batchs (historical)
+  /// Batches (historical)
   ///
-  /// Gets batchs.
+  /// Gets batches.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -140,9 +140,9 @@ class DexApi {
   ///
   /// * [String] id:
   ///   Identifier.
-  Future<Response> dexGetBatchsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+  Future<Response> dexGetBatchesHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/dex/batchs/historical';
+    final path = r'/dapps/dex/batches/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -181,9 +181,9 @@ class DexApi {
     );
   }
 
-  /// Batchs (historical)
+  /// Batches (historical)
   ///
-  /// Gets batchs.
+  /// Gets batches.
   ///
   /// Parameters:
   ///
@@ -201,8 +201,8 @@ class DexApi {
   ///
   /// * [String] id:
   ///   Identifier.
-  Future<List<DexBatchDTO>?> dexGetBatchsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
-    final response = await dexGetBatchsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+  Future<List<DexBatchDTO>?> dexGetBatchesHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await dexGetBatchesHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -614,9 +614,9 @@ class DexApi {
     return null;
   }
 
-  /// Statss (historical)
+  /// Stats (historical)
   ///
-  /// Gets statss.
+  /// Gets stats.
   ///
   /// Note: This method returns the HTTP [Response].
   ///
@@ -636,9 +636,9 @@ class DexApi {
   ///
   /// * [String] id:
   ///   
-  Future<Response> dexGetStatssHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+  Future<Response> dexGetStatsHistoricalWithHttpInfo({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/dex/statss/historical';
+    final path = r'/dapps/dex/stats/historical';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -677,9 +677,9 @@ class DexApi {
     );
   }
 
-  /// Statss (historical)
+  /// Stats (historical)
   ///
-  /// Gets statss.
+  /// Gets stats.
   ///
   /// Parameters:
   ///
@@ -697,8 +697,8 @@ class DexApi {
   ///
   /// * [String] id:
   ///   
-  Future<List<DexStatsDTO>?> dexGetStatssHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
-    final response = await dexGetStatssHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
+  Future<List<DexStatsDTO>?> dexGetStatsHistorical({ int? startBlock, int? endBlock, DateTime? startDate, DateTime? endDate, String? id, }) async {
+    final response = await dexGetStatsHistoricalWithHttpInfo( startBlock: startBlock, endBlock: endBlock, startDate: startDate, endDate: endDate, id: id, );
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }
@@ -1412,14 +1412,14 @@ class DexApi {
     return null;
   }
 
-  /// Statss (current)
+  /// Stats (current)
   ///
-  /// Gets statss.
+  /// Gets stats.
   ///
   /// Note: This method returns the HTTP [Response].
-  Future<Response> dexStatssCurrentWithHttpInfo() async {
+  Future<Response> dexStatsCurrentWithHttpInfo() async {
     // ignore: prefer_const_declarations
-    final path = r'/dapps/dex/statss/current';
+    final path = r'/dapps/dex/stats/current';
 
     // ignore: prefer_final_locals
     Object? postBody;
@@ -1442,11 +1442,11 @@ class DexApi {
     );
   }
 
-  /// Statss (current)
+  /// Stats (current)
   ///
-  /// Gets statss.
-  Future<List<DexStatsDTO>?> dexStatssCurrent() async {
-    final response = await dexStatssCurrentWithHttpInfo();
+  /// Gets stats.
+  Future<List<DexStatsDTO>?> dexStatsCurrent() async {
+    final response = await dexStatsCurrentWithHttpInfo();
     if (response.statusCode >= HttpStatus.badRequest) {
       throw ApiException(response.statusCode, await _decodeBodyBytes(response));
     }

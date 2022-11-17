@@ -90,9 +90,9 @@ feature -- API Access
 			end
 		end
 
-	uniswap_v3_factorys_current : detachable LIST [UNISWAP_V3_FACTORY_DTO]
-			-- Factorys (current)
-			-- Gets factorys.
+	uniswap_v3_factories_current : detachable LIST [UNISWAP_V3_FACTORY_DTO]
+			-- Factories (current)
+			-- Gets factories.
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_FACTORY_DTO]
@@ -105,7 +105,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswapv3/factorys/current"
+			l_path := "/dapps/uniswapv3/factories/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
@@ -228,9 +228,9 @@ feature -- API Access
 			end
 		end
 
-	uniswap_v3_get_factorys_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [UNISWAP_V3_FACTORY_DTO]
-			-- Factorys (historical)
-			-- Gets factorys.
+	uniswap_v3_get_factories_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [UNISWAP_V3_FACTORY_DTO]
+			-- Factories (historical)
+			-- Gets factories.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
@@ -253,7 +253,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswapv3/factorys/historical"
+			l_path := "/dapps/uniswapv3/factories/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -333,9 +333,9 @@ feature -- API Access
 			end
 		end
 
-	uniswap_v3_get_pool_day_datas_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [UNISWAP_V3_POOL_DAY_DATA_DTO]
-			-- PoolDayDatas (historical)
-			-- Gets poolDayDatas.
+	uniswap_v3_get_pool_day_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [UNISWAP_V3_POOL_DAY_DATA_DTO]
+			-- PoolDayData (historical)
+			-- Gets poolDayData.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -360,7 +360,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswapv3/poolDayDatas/historical"
+			l_path := "/dapps/uniswapv3/poolDayData/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -384,9 +384,9 @@ feature -- API Access
 			end
 		end
 
-	uniswap_v3_get_pool_hour_datas_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [UNISWAP_V3_POOL_HOUR_DATA_DTO]
-			-- PoolHourDatas (historical)
-			-- Gets poolHourDatas.
+	uniswap_v3_get_pool_hour_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [UNISWAP_V3_POOL_HOUR_DATA_DTO]
+			-- PoolHourData (historical)
+			-- Gets poolHourData.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -411,7 +411,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswapv3/poolHourDatas/historical"
+			l_path := "/dapps/uniswapv3/poolHourData/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -654,9 +654,9 @@ feature -- API Access
 			end
 		end
 
-	uniswap_v3_get_tick_day_datas_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [UNISWAP_V3_TICK_DAY_DATA_DTO]
-			-- TickDayDatas (historical)
-			-- Gets tickDayDatas.
+	uniswap_v3_get_tick_day_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32; pool: STRING_32): detachable LIST [UNISWAP_V3_TICK_DAY_DATA_DTO]
+			-- TickDayData (historical)
+			-- Gets tickDayData.
 			-- 
 			-- argument: start_block  (optional, default to null)
 			-- 
@@ -681,7 +681,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswapv3/tickDayDatas/historical"
+			l_path := "/dapps/uniswapv3/tickDayData/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -756,9 +756,9 @@ feature -- API Access
 			end
 		end
 
-	uniswap_v3_get_token_hour_datas_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [UNISWAP_V3_TOKEN_HOUR_DATA_DTO]
-			-- TokenHourDatas (historical)
-			-- Gets tokenHourDatas.
+	uniswap_v3_get_token_hour_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [UNISWAP_V3_TOKEN_HOUR_DATA_DTO]
+			-- TokenHourData (historical)
+			-- Gets tokenHourData.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
@@ -781,7 +781,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswapv3/tokenHourDatas/historical"
+			l_path := "/dapps/uniswapv3/tokenHourData/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -804,9 +804,9 @@ feature -- API Access
 			end
 		end
 
-	uniswap_v3_get_token_v3_day_datas_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO]
-			-- TokenV3DayDatas (historical)
-			-- Gets tokenV3DayDatas.
+	uniswap_v3_get_token_v3_day_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO]
+			-- TokenV3DayData (historical)
+			-- Gets tokenV3DayData.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
@@ -829,7 +829,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswapv3/tokenV3DayDatas/historical"
+			l_path := "/dapps/uniswapv3/tokenV3DayData/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -954,9 +954,9 @@ feature -- API Access
 			end
 		end
 
-	uniswap_v3_get_uniswap_day_datas_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [UNISWAP_V3_UNISWAP_DAY_DATA_DTO]
-			-- UniswapDayDatas (historical)
-			-- Gets uniswapDayDatas.
+	uniswap_v3_get_uniswap_day_data_historical (start_block: INTEGER_64; end_block: INTEGER_64; start_date: DATE_TIME; end_date: DATE_TIME; id: STRING_32): detachable LIST [UNISWAP_V3_UNISWAP_DAY_DATA_DTO]
+			-- UniswapDayData (historical)
+			-- Gets uniswapDayData.
 			-- 
 			-- argument: start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to null)
 			-- 
@@ -979,7 +979,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswapv3/uniswapDayDatas/historical"
+			l_path := "/dapps/uniswapv3/uniswapDayData/historical"
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startBlock", start_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "endBlock", end_block));
 			l_request.fill_query_params(api_client.parameter_to_tuple("", "startDate", start_date));
@@ -1035,9 +1035,9 @@ feature -- API Access
 			end
 		end
 
-	uniswap_v3_pool_day_datas_current : detachable LIST [UNISWAP_V3_POOL_DAY_DATA_DTO]
-			-- PoolDayDatas (current)
-			-- Gets poolDayDatas.
+	uniswap_v3_pool_day_data_current : detachable LIST [UNISWAP_V3_POOL_DAY_DATA_DTO]
+			-- PoolDayData (current)
+			-- Gets poolDayData.
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_POOL_DAY_DATA_DTO]
@@ -1050,7 +1050,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswapv3/poolDayDatas/current"
+			l_path := "/dapps/uniswapv3/poolDayData/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
@@ -1068,9 +1068,9 @@ feature -- API Access
 			end
 		end
 
-	uniswap_v3_pool_hour_datas_current : detachable LIST [UNISWAP_V3_POOL_HOUR_DATA_DTO]
-			-- PoolHourDatas (current)
-			-- Gets poolHourDatas.
+	uniswap_v3_pool_hour_data_current : detachable LIST [UNISWAP_V3_POOL_HOUR_DATA_DTO]
+			-- PoolHourData (current)
+			-- Gets poolHourData.
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_POOL_HOUR_DATA_DTO]
@@ -1083,7 +1083,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswapv3/poolHourDatas/current"
+			l_path := "/dapps/uniswapv3/poolHourData/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
@@ -1239,9 +1239,9 @@ feature -- API Access
 			end
 		end
 
-	uniswap_v3_tick_day_datas_current : detachable LIST [UNISWAP_V3_TICK_DAY_DATA_DTO]
-			-- TickDayDatas (current)
-			-- Gets tickDayDatas.
+	uniswap_v3_tick_day_data_current : detachable LIST [UNISWAP_V3_TICK_DAY_DATA_DTO]
+			-- TickDayData (current)
+			-- Gets tickDayData.
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_TICK_DAY_DATA_DTO]
@@ -1254,7 +1254,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswapv3/tickDayDatas/current"
+			l_path := "/dapps/uniswapv3/tickDayData/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
@@ -1305,9 +1305,9 @@ feature -- API Access
 			end
 		end
 
-	uniswap_v3_token_hour_datas_current : detachable LIST [UNISWAP_V3_TOKEN_HOUR_DATA_DTO]
-			-- TokenHourDatas (current)
-			-- Gets tokenHourDatas.
+	uniswap_v3_token_hour_data_current : detachable LIST [UNISWAP_V3_TOKEN_HOUR_DATA_DTO]
+			-- TokenHourData (current)
+			-- Gets tokenHourData.
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_TOKEN_HOUR_DATA_DTO]
@@ -1320,7 +1320,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswapv3/tokenHourDatas/current"
+			l_path := "/dapps/uniswapv3/tokenHourData/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
@@ -1338,9 +1338,9 @@ feature -- API Access
 			end
 		end
 
-	uniswap_v3_token_v3_day_datas_current : detachable LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO]
-			-- TokenV3DayDatas (current)
-			-- Gets tokenV3DayDatas.
+	uniswap_v3_token_v3_day_data_current : detachable LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO]
+			-- TokenV3DayData (current)
+			-- Gets tokenV3DayData.
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_TOKEN_V3_DAY_DATA_DTO]
@@ -1353,7 +1353,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswapv3/tokenV3DayDatas/current"
+			l_path := "/dapps/uniswapv3/tokenV3DayData/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then
@@ -1437,9 +1437,9 @@ feature -- API Access
 			end
 		end
 
-	uniswap_v3_uniswap_day_datas_current : detachable LIST [UNISWAP_V3_UNISWAP_DAY_DATA_DTO]
-			-- UniswapDayDatas (current)
-			-- Gets uniswapDayDatas.
+	uniswap_v3_uniswap_day_data_current : detachable LIST [UNISWAP_V3_UNISWAP_DAY_DATA_DTO]
+			-- UniswapDayData (current)
+			-- Gets uniswapDayData.
 			-- 
 			-- 
 			-- Result LIST [UNISWAP_V3_UNISWAP_DAY_DATA_DTO]
@@ -1452,7 +1452,7 @@ feature -- API Access
 			reset_error
 			create l_request
 			
-			l_path := "/dapps/uniswapv3/uniswapDayDatas/current"
+			l_path := "/dapps/uniswapv3/uniswapDayData/current"
 
 
 			if attached {STRING} api_client.select_header_accept ({ARRAY [STRING]}<<"text/plain", "application/json", "text/json">>)  as l_accept then

@@ -2,38 +2,38 @@
 
 -export([ uniswap_v3_bundles_(current)/0
         , uniswap_v3_burns_(current)/0
-        , uniswap_v3_factorys_(current)/0
+        , uniswap_v3_factories_(current)/0
         , uniswap_v3_get_bundles_(historical)/0
         , uniswap_v3_get_burns_(historical)/0
-        , uniswap_v3_get_factorys_(historical)/0
+        , uniswap_v3_get_factories_(historical)/0
         , uniswap_v3_get_mints_(historical)/0
-        , uniswap_v3_get_pool_day_datas_(historical)/0
-        , uniswap_v3_get_pool_hour_datas_(historical)/0
+        , uniswap_v3_get_pool_day_data_(historical)/0
+        , uniswap_v3_get_pool_hour_data_(historical)/0
         , uniswap_v3_get_pools_(historical)/0
         , uniswap_v3_get_position_snapshots_(historical)/0
         , uniswap_v3_get_positions_(historical)/0
         , uniswap_v3_get_swaps_(historical)/0
-        , uniswap_v3_get_tick_day_datas_(historical)/0
+        , uniswap_v3_get_tick_day_data_(historical)/0
         , uniswap_v3_get_ticks_(historical)/0
-        , uniswap_v3_get_token_hour_datas_(historical)/0
-        , uniswap_v3_get_token_v3_day_datas_(historical)/0
+        , uniswap_v3_get_token_hour_data_(historical)/0
+        , uniswap_v3_get_token_v3_day_data_(historical)/0
         , uniswap_v3_get_tokens_(historical)/0
         , uniswap_v3_get_transactions_(historical)/0
-        , uniswap_v3_get_uniswap_day_datas_(historical)/0
+        , uniswap_v3_get_uniswap_day_data_(historical)/0
         , uniswap_v3_mints_(current)/0
-        , uniswap_v3_pool_day_datas_(current)/0
-        , uniswap_v3_pool_hour_datas_(current)/0
+        , uniswap_v3_pool_day_data_(current)/0
+        , uniswap_v3_pool_hour_data_(current)/0
         , uniswap_v3_pools_(current)/0
         , uniswap_v3_position_snapshots_(current)/0
         , uniswap_v3_positions_(current)/0
         , uniswap_v3_swaps_(current)/0
-        , uniswap_v3_tick_day_datas_(current)/0
+        , uniswap_v3_tick_day_data_(current)/0
         , uniswap_v3_ticks_(current)/0
-        , uniswap_v3_token_hour_datas_(current)/0
-        , uniswap_v3_token_v3_day_datas_(current)/0
+        , uniswap_v3_token_hour_data_(current)/0
+        , uniswap_v3_token_v3_day_data_(current)/0
         , uniswap_v3_tokens_(current)/0
         , uniswap_v3_transactions_(current)/0
-        , uniswap_v3_uniswap_day_datas_(current)/0
+        , uniswap_v3_uniswap_day_data_(current)/0
         ]).
 
 -define(BASE_URL, "").
@@ -60,14 +60,14 @@ uniswap_v3_burns_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
-%% @doc Factorys (current)
-%% Gets factorys.
--spec uniswap_v3_factorys_(current)() ->
+%% @doc Factories (current)
+%% Gets factories.
+-spec uniswap_v3_factories_(current)() ->
   openapi_utils:response().
-uniswap_v3_factorys_(current)() ->
+uniswap_v3_factories_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswapv3/factorys/current"],
+  Path        = ["/dapps/uniswapv3/factories/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
@@ -95,14 +95,14 @@ uniswap_v3_get_burns_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc Factorys (historical)
-%% Gets factorys.
--spec uniswap_v3_get_factorys_(historical)() ->
+%% @doc Factories (historical)
+%% Gets factories.
+-spec uniswap_v3_get_factories_(historical)() ->
   openapi_utils:response().
-uniswap_v3_get_factorys_(historical)() ->
+uniswap_v3_get_factories_(historical)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswapv3/factorys/historical"],
+  Path        = ["/dapps/uniswapv3/factories/historical"],
   QueryString = [<<"startBlock=">>, StartBlock, <<"&">>, <<"endBlock=">>, EndBlock, <<"&">>, <<"startDate=">>, StartDate, <<"&">>, <<"endDate=">>, EndDate, <<"&">>, <<"id=">>, Id, <<"&">>],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
@@ -119,26 +119,26 @@ uniswap_v3_get_mints_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc PoolDayDatas (historical)
-%% Gets poolDayDatas.
--spec uniswap_v3_get_pool_day_datas_(historical)() ->
+%% @doc PoolDayData (historical)
+%% Gets poolDayData.
+-spec uniswap_v3_get_pool_day_data_(historical)() ->
   openapi_utils:response().
-uniswap_v3_get_pool_day_datas_(historical)() ->
+uniswap_v3_get_pool_day_data_(historical)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswapv3/poolDayDatas/historical"],
+  Path        = ["/dapps/uniswapv3/poolDayData/historical"],
   QueryString = [<<"startBlock=">>, StartBlock, <<"&">>, <<"endBlock=">>, EndBlock, <<"&">>, <<"startDate=">>, StartDate, <<"&">>, <<"endDate=">>, EndDate, <<"&">>, <<"id=">>, Id, <<"&">>, <<"pool=">>, Pool, <<"&">>],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc PoolHourDatas (historical)
-%% Gets poolHourDatas.
--spec uniswap_v3_get_pool_hour_datas_(historical)() ->
+%% @doc PoolHourData (historical)
+%% Gets poolHourData.
+-spec uniswap_v3_get_pool_hour_data_(historical)() ->
   openapi_utils:response().
-uniswap_v3_get_pool_hour_datas_(historical)() ->
+uniswap_v3_get_pool_hour_data_(historical)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswapv3/poolHourDatas/historical"],
+  Path        = ["/dapps/uniswapv3/poolHourData/historical"],
   QueryString = [<<"startBlock=">>, StartBlock, <<"&">>, <<"endBlock=">>, EndBlock, <<"&">>, <<"startDate=">>, StartDate, <<"&">>, <<"endDate=">>, EndDate, <<"&">>, <<"id=">>, Id, <<"&">>, <<"pool=">>, Pool, <<"&">>],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
@@ -191,14 +191,14 @@ uniswap_v3_get_swaps_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc TickDayDatas (historical)
-%% Gets tickDayDatas.
--spec uniswap_v3_get_tick_day_datas_(historical)() ->
+%% @doc TickDayData (historical)
+%% Gets tickDayData.
+-spec uniswap_v3_get_tick_day_data_(historical)() ->
   openapi_utils:response().
-uniswap_v3_get_tick_day_datas_(historical)() ->
+uniswap_v3_get_tick_day_data_(historical)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswapv3/tickDayDatas/historical"],
+  Path        = ["/dapps/uniswapv3/tickDayData/historical"],
   QueryString = [<<"startBlock=">>, StartBlock, <<"&">>, <<"endBlock=">>, EndBlock, <<"&">>, <<"startDate=">>, StartDate, <<"&">>, <<"endDate=">>, EndDate, <<"&">>, <<"id=">>, Id, <<"&">>, <<"pool=">>, Pool, <<"&">>],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
@@ -215,26 +215,26 @@ uniswap_v3_get_ticks_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc TokenHourDatas (historical)
-%% Gets tokenHourDatas.
--spec uniswap_v3_get_token_hour_datas_(historical)() ->
+%% @doc TokenHourData (historical)
+%% Gets tokenHourData.
+-spec uniswap_v3_get_token_hour_data_(historical)() ->
   openapi_utils:response().
-uniswap_v3_get_token_hour_datas_(historical)() ->
+uniswap_v3_get_token_hour_data_(historical)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswapv3/tokenHourDatas/historical"],
+  Path        = ["/dapps/uniswapv3/tokenHourData/historical"],
   QueryString = [<<"startBlock=">>, StartBlock, <<"&">>, <<"endBlock=">>, EndBlock, <<"&">>, <<"startDate=">>, StartDate, <<"&">>, <<"endDate=">>, EndDate, <<"&">>, <<"id=">>, Id, <<"&">>],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc TokenV3DayDatas (historical)
-%% Gets tokenV3DayDatas.
--spec uniswap_v3_get_token_v3_day_datas_(historical)() ->
+%% @doc TokenV3DayData (historical)
+%% Gets tokenV3DayData.
+-spec uniswap_v3_get_token_v3_day_data_(historical)() ->
   openapi_utils:response().
-uniswap_v3_get_token_v3_day_datas_(historical)() ->
+uniswap_v3_get_token_v3_day_data_(historical)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswapv3/tokenV3DayDatas/historical"],
+  Path        = ["/dapps/uniswapv3/tokenV3DayData/historical"],
   QueryString = [<<"startBlock=">>, StartBlock, <<"&">>, <<"endBlock=">>, EndBlock, <<"&">>, <<"startDate=">>, StartDate, <<"&">>, <<"endDate=">>, EndDate, <<"&">>, <<"id=">>, Id, <<"&">>],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
@@ -263,14 +263,14 @@ uniswap_v3_get_transactions_(historical)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc UniswapDayDatas (historical)
-%% Gets uniswapDayDatas.
--spec uniswap_v3_get_uniswap_day_datas_(historical)() ->
+%% @doc UniswapDayData (historical)
+%% Gets uniswapDayData.
+-spec uniswap_v3_get_uniswap_day_data_(historical)() ->
   openapi_utils:response().
-uniswap_v3_get_uniswap_day_datas_(historical)() ->
+uniswap_v3_get_uniswap_day_data_(historical)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswapv3/uniswapDayDatas/historical"],
+  Path        = ["/dapps/uniswapv3/uniswapDayData/historical"],
   QueryString = [<<"startBlock=">>, StartBlock, <<"&">>, <<"endBlock=">>, EndBlock, <<"&">>, <<"startDate=">>, StartDate, <<"&">>, <<"endDate=">>, EndDate, <<"&">>, <<"id=">>, Id, <<"&">>],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
@@ -286,25 +286,25 @@ uniswap_v3_mints_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
-%% @doc PoolDayDatas (current)
-%% Gets poolDayDatas.
--spec uniswap_v3_pool_day_datas_(current)() ->
+%% @doc PoolDayData (current)
+%% Gets poolDayData.
+-spec uniswap_v3_pool_day_data_(current)() ->
   openapi_utils:response().
-uniswap_v3_pool_day_datas_(current)() ->
+uniswap_v3_pool_day_data_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswapv3/poolDayDatas/current"],
+  Path        = ["/dapps/uniswapv3/poolDayData/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
-%% @doc PoolHourDatas (current)
-%% Gets poolHourDatas.
--spec uniswap_v3_pool_hour_datas_(current)() ->
+%% @doc PoolHourData (current)
+%% Gets poolHourData.
+-spec uniswap_v3_pool_hour_data_(current)() ->
   openapi_utils:response().
-uniswap_v3_pool_hour_datas_(current)() ->
+uniswap_v3_pool_hour_data_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswapv3/poolHourDatas/current"],
+  Path        = ["/dapps/uniswapv3/poolHourData/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
@@ -354,14 +354,14 @@ uniswap_v3_swaps_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path, <<"?">>, QueryString]).
 
-%% @doc TickDayDatas (current)
-%% Gets tickDayDatas.
--spec uniswap_v3_tick_day_datas_(current)() ->
+%% @doc TickDayData (current)
+%% Gets tickDayData.
+-spec uniswap_v3_tick_day_data_(current)() ->
   openapi_utils:response().
-uniswap_v3_tick_day_datas_(current)() ->
+uniswap_v3_tick_day_data_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswapv3/tickDayDatas/current"],
+  Path        = ["/dapps/uniswapv3/tickDayData/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
@@ -376,25 +376,25 @@ uniswap_v3_ticks_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
-%% @doc TokenHourDatas (current)
-%% Gets tokenHourDatas.
--spec uniswap_v3_token_hour_datas_(current)() ->
+%% @doc TokenHourData (current)
+%% Gets tokenHourData.
+-spec uniswap_v3_token_hour_data_(current)() ->
   openapi_utils:response().
-uniswap_v3_token_hour_datas_(current)() ->
+uniswap_v3_token_hour_data_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswapv3/tokenHourDatas/current"],
+  Path        = ["/dapps/uniswapv3/tokenHourData/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
-%% @doc TokenV3DayDatas (current)
-%% Gets tokenV3DayDatas.
--spec uniswap_v3_token_v3_day_datas_(current)() ->
+%% @doc TokenV3DayData (current)
+%% Gets tokenV3DayData.
+-spec uniswap_v3_token_v3_day_data_(current)() ->
   openapi_utils:response().
-uniswap_v3_token_v3_day_datas_(current)() ->
+uniswap_v3_token_v3_day_data_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswapv3/tokenV3DayDatas/current"],
+  Path        = ["/dapps/uniswapv3/tokenV3DayData/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
@@ -420,14 +420,14 @@ uniswap_v3_transactions_(current)() ->
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 
-%% @doc UniswapDayDatas (current)
-%% Gets uniswapDayDatas.
--spec uniswap_v3_uniswap_day_datas_(current)() ->
+%% @doc UniswapDayData (current)
+%% Gets uniswapDayData.
+-spec uniswap_v3_uniswap_day_data_(current)() ->
   openapi_utils:response().
-uniswap_v3_uniswap_day_datas_(current)() ->
+uniswap_v3_uniswap_day_data_(current)() ->
   Method      = get,
   Host        = application:get_env(openapi, host, "http://localhost:8080"),
-  Path        = ["/dapps/uniswapv3/uniswapDayDatas/current"],
+  Path        = ["/dapps/uniswapv3/uniswapDayData/current"],
 
   openapi_utils:request(Method, [Host, ?BASE_URL, Path]).
 

@@ -21,7 +21,7 @@ from openapi_client.paths.dapps_curve_daily_volumes_current.get import CurveDail
 from openapi_client.paths.dapps_curve_exchanges_current.get import CurveExchangesCurrent
 from openapi_client.paths.dapps_curve_fee_change_logs_current.get import CurveFeeChangeLogsCurrent
 from openapi_client.paths.dapps_curve_gauge_deposits_current.get import CurveGaugeDepositsCurrent
-from openapi_client.paths.dapps_curve_gauge_liquiditys_current.get import CurveGaugeLiquiditysCurrent
+from openapi_client.paths.dapps_curve_gauge_liquidities_current.get import CurveGaugeLiquiditiesCurrent
 from openapi_client.paths.dapps_curve_gauge_total_weights_current.get import CurveGaugeTotalWeightsCurrent
 from openapi_client.paths.dapps_curve_gauge_type_weights_current.get import CurveGaugeTypeWeightsCurrent
 from openapi_client.paths.dapps_curve_gauge_types_current.get import CurveGaugeTypesCurrent
@@ -40,7 +40,7 @@ from openapi_client.paths.dapps_curve_daily_volumes_historical.get import CurveG
 from openapi_client.paths.dapps_curve_exchanges_historical.get import CurveGetExchangesHistorical
 from openapi_client.paths.dapps_curve_fee_change_logs_historical.get import CurveGetFeeChangeLogsHistorical
 from openapi_client.paths.dapps_curve_gauge_deposits_historical.get import CurveGetGaugeDepositsHistorical
-from openapi_client.paths.dapps_curve_gauge_liquiditys_historical.get import CurveGetGaugeLiquiditysHistorical
+from openapi_client.paths.dapps_curve_gauge_liquidities_historical.get import CurveGetGaugeLiquiditiesHistorical
 from openapi_client.paths.dapps_curve_gauge_total_weights_historical.get import CurveGetGaugeTotalWeightsHistorical
 from openapi_client.paths.dapps_curve_gauge_type_weights_historical.get import CurveGetGaugeTypeWeightsHistorical
 from openapi_client.paths.dapps_curve_gauge_types_historical.get import CurveGetGaugeTypesHistorical
@@ -88,7 +88,7 @@ class CurveApi(
     CurveExchangesCurrent,
     CurveFeeChangeLogsCurrent,
     CurveGaugeDepositsCurrent,
-    CurveGaugeLiquiditysCurrent,
+    CurveGaugeLiquiditiesCurrent,
     CurveGaugeTotalWeightsCurrent,
     CurveGaugeTypeWeightsCurrent,
     CurveGaugeTypesCurrent,
@@ -107,7 +107,7 @@ class CurveApi(
     CurveGetExchangesHistorical,
     CurveGetFeeChangeLogsHistorical,
     CurveGetGaugeDepositsHistorical,
-    CurveGetGaugeLiquiditysHistorical,
+    CurveGetGaugeLiquiditiesHistorical,
     CurveGetGaugeTotalWeightsHistorical,
     CurveGetGaugeTypeWeightsHistorical,
     CurveGetGaugeTypesHistorical,

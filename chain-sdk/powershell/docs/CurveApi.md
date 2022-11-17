@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**Invoke-CurveExchangesCurrent**](CurveApi.md#Invoke-CurveExchangesCurrent) | **GET** /dapps/curve/exchanges/current | Exchanges (current)
 [**Invoke-CurveFeeChangeLogsCurrent**](CurveApi.md#Invoke-CurveFeeChangeLogsCurrent) | **GET** /dapps/curve/feeChangeLogs/current | FeeChangeLogs (current)
 [**Invoke-CurveGaugeDepositsCurrent**](CurveApi.md#Invoke-CurveGaugeDepositsCurrent) | **GET** /dapps/curve/gaugeDeposits/current | GaugeDeposits (current)
-[**Invoke-CurveGaugeLiquiditysCurrent**](CurveApi.md#Invoke-CurveGaugeLiquiditysCurrent) | **GET** /dapps/curve/gaugeLiquiditys/current | GaugeLiquiditys (current)
+[**Invoke-CurveGaugeLiquiditiesCurrent**](CurveApi.md#Invoke-CurveGaugeLiquiditiesCurrent) | **GET** /dapps/curve/gaugeLiquidities/current | GaugeLiquidities (current)
 [**Invoke-CurveGaugeTotalWeightsCurrent**](CurveApi.md#Invoke-CurveGaugeTotalWeightsCurrent) | **GET** /dapps/curve/gaugeTotalWeights/current | GaugeTotalWeights (current)
 [**Invoke-CurveGaugeTypeWeightsCurrent**](CurveApi.md#Invoke-CurveGaugeTypeWeightsCurrent) | **GET** /dapps/curve/gaugeTypeWeights/current | GaugeTypeWeights (current)
 [**Invoke-CurveGaugeTypesCurrent**](CurveApi.md#Invoke-CurveGaugeTypesCurrent) | **GET** /dapps/curve/gaugeTypes/current | GaugeTypes (current)
@@ -34,7 +34,7 @@ Method | HTTP request | Description
 [**Invoke-CurveGetExchangesHistorical**](CurveApi.md#Invoke-CurveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical)
 [**Invoke-CurveGetFeeChangeLogsHistorical**](CurveApi.md#Invoke-CurveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical)
 [**Invoke-CurveGetGaugeDepositsHistorical**](CurveApi.md#Invoke-CurveGetGaugeDepositsHistorical) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical)
-[**Invoke-CurveGetGaugeLiquiditysHistorical**](CurveApi.md#Invoke-CurveGetGaugeLiquiditysHistorical) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical)
+[**Invoke-CurveGetGaugeLiquiditiesHistorical**](CurveApi.md#Invoke-CurveGetGaugeLiquiditiesHistorical) | **GET** /dapps/curve/gaugeLiquidities/historical | GaugeLiquidities (historical)
 [**Invoke-CurveGetGaugeTotalWeightsHistorical**](CurveApi.md#Invoke-CurveGetGaugeTotalWeightsHistorical) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical)
 [**Invoke-CurveGetGaugeTypeWeightsHistorical**](CurveApi.md#Invoke-CurveGetGaugeTypeWeightsHistorical) | **GET** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical)
 [**Invoke-CurveGetGaugeTypesHistorical**](CurveApi.md#Invoke-CurveGetGaugeTypesHistorical) | **GET** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical)
@@ -493,22 +493,22 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGaugeLiquiditysCurrent"></a>
-# **Invoke-CurveGaugeLiquiditysCurrent**
-> CurveGaugeLiquidityDTO[] Invoke-CurveGaugeLiquiditysCurrent<br>
+<a name="Invoke-CurveGaugeLiquiditiesCurrent"></a>
+# **Invoke-CurveGaugeLiquiditiesCurrent**
+> CurveGaugeLiquidityDTO[] Invoke-CurveGaugeLiquiditiesCurrent<br>
 
-GaugeLiquiditys (current)
+GaugeLiquidities (current)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 ```powershell
 
-# GaugeLiquiditys (current)
+# GaugeLiquidities (current)
 try {
-    $Result = Invoke-CurveGaugeLiquiditysCurrent
+    $Result = Invoke-CurveGaugeLiquiditiesCurrent
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-CurveGaugeLiquiditysCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGaugeLiquiditiesCurrent: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```
@@ -1429,9 +1429,9 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-<a name="Invoke-CurveGetGaugeLiquiditysHistorical"></a>
-# **Invoke-CurveGetGaugeLiquiditysHistorical**
-> CurveGaugeLiquidityDTO[] Invoke-CurveGetGaugeLiquiditysHistorical<br>
+<a name="Invoke-CurveGetGaugeLiquiditiesHistorical"></a>
+# **Invoke-CurveGetGaugeLiquiditiesHistorical**
+> CurveGaugeLiquidityDTO[] Invoke-CurveGetGaugeLiquiditiesHistorical<br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-EndBlock] <System.Nullable[Int64]><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-StartDate] <System.Nullable[System.DateTime]><br>
@@ -1439,9 +1439,9 @@ No authorization required
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-Id] <String><br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[-User] <String><br>
 
-GaugeLiquiditys (historical)
+GaugeLiquidities (historical)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 ```powershell
@@ -1452,11 +1452,11 @@ $EndDate = (Get-Date) # System.DateTime | The end date of timeframe. (optional)
 $Id = "MyId" # String |  (optional)
 $User = "MyUser" # String |  (optional)
 
-# GaugeLiquiditys (historical)
+# GaugeLiquidities (historical)
 try {
-    $Result = Invoke-CurveGetGaugeLiquiditysHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -User $User
+    $Result = Invoke-CurveGetGaugeLiquiditiesHistorical -StartBlock $StartBlock -EndBlock $EndBlock -StartDate $StartDate -EndDate $EndDate -Id $Id -User $User
 } catch {
-    Write-Host ("Exception occurred when calling Invoke-CurveGetGaugeLiquiditysHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
+    Write-Host ("Exception occurred when calling Invoke-CurveGetGaugeLiquiditiesHistorical: {0}" -f ($_.ErrorDetails | ConvertFrom-Json))
     Write-Host ("Response headers: {0}" -f ($_.Exception.Response.Headers | ConvertTo-Json))
 }
 ```

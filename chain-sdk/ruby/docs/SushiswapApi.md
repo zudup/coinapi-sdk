@@ -6,33 +6,33 @@ All URIs are relative to *https://onchain.coinapi.io*
 | ------ | ------------ | ----------- |
 | [**sushiswap_bundles__current**](SushiswapApi.md#sushiswap_bundles__current) | **GET** /dapps/sushiswap/bundles/current | Bundles (current) |
 | [**sushiswap_burns__current**](SushiswapApi.md#sushiswap_burns__current) | **GET** /dapps/sushiswap/burns/current | Burns (current) |
-| [**sushiswap_day_datas__current**](SushiswapApi.md#sushiswap_day_datas__current) | **GET** /dapps/sushiswap/dayDatas/current | DayDatas (current) |
-| [**sushiswap_factorys__current**](SushiswapApi.md#sushiswap_factorys__current) | **GET** /dapps/sushiswap/factorys/current | Factorys (current) |
+| [**sushiswap_day_data__current**](SushiswapApi.md#sushiswap_day_data__current) | **GET** /dapps/sushiswap/dayData/current | DayData (current) |
+| [**sushiswap_factories__current**](SushiswapApi.md#sushiswap_factories__current) | **GET** /dapps/sushiswap/factories/current | Factories (current) |
 | [**sushiswap_get_bundles__historical**](SushiswapApi.md#sushiswap_get_bundles__historical) | **GET** /dapps/sushiswap/bundles/historical | Bundles (historical) |
 | [**sushiswap_get_burns__historical**](SushiswapApi.md#sushiswap_get_burns__historical) | **GET** /dapps/sushiswap/burns/historical | Burns (historical) |
-| [**sushiswap_get_day_datas__historical**](SushiswapApi.md#sushiswap_get_day_datas__historical) | **GET** /dapps/sushiswap/dayDatas/historical | DayDatas (historical) |
-| [**sushiswap_get_factorys__historical**](SushiswapApi.md#sushiswap_get_factorys__historical) | **GET** /dapps/sushiswap/factorys/historical | Factorys (historical) |
-| [**sushiswap_get_hour_datas__historical**](SushiswapApi.md#sushiswap_get_hour_datas__historical) | **GET** /dapps/sushiswap/hourDatas/historical | HourDatas (historical) |
+| [**sushiswap_get_day_data__historical**](SushiswapApi.md#sushiswap_get_day_data__historical) | **GET** /dapps/sushiswap/dayData/historical | DayData (historical) |
+| [**sushiswap_get_factories__historical**](SushiswapApi.md#sushiswap_get_factories__historical) | **GET** /dapps/sushiswap/factories/historical | Factories (historical) |
+| [**sushiswap_get_hour_data__historical**](SushiswapApi.md#sushiswap_get_hour_data__historical) | **GET** /dapps/sushiswap/hourData/historical | HourData (historical) |
 | [**sushiswap_get_liquidity_position_snapshots__historical**](SushiswapApi.md#sushiswap_get_liquidity_position_snapshots__historical) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical) |
 | [**sushiswap_get_liquidity_positions__historical**](SushiswapApi.md#sushiswap_get_liquidity_positions__historical) | **GET** /dapps/sushiswap/liquidityPositions/historical | LiquidityPositions (historical) |
 | [**sushiswap_get_mints__historical**](SushiswapApi.md#sushiswap_get_mints__historical) | **GET** /dapps/sushiswap/mints/historical | Mints (historical) |
-| [**sushiswap_get_pair_day_datas__historical**](SushiswapApi.md#sushiswap_get_pair_day_datas__historical) | **GET** /dapps/sushiswap/pairDayDatas/historical | PairDayDatas (historical) |
-| [**sushiswap_get_pair_hour_datas__historical**](SushiswapApi.md#sushiswap_get_pair_hour_datas__historical) | **GET** /dapps/sushiswap/pairHourDatas/historical | PairHourDatas (historical) |
+| [**sushiswap_get_pair_day_data__historical**](SushiswapApi.md#sushiswap_get_pair_day_data__historical) | **GET** /dapps/sushiswap/pairDayData/historical | PairDayData (historical) |
+| [**sushiswap_get_pair_hour_data__historical**](SushiswapApi.md#sushiswap_get_pair_hour_data__historical) | **GET** /dapps/sushiswap/pairHourData/historical | PairHourData (historical) |
 | [**sushiswap_get_pairs__historical**](SushiswapApi.md#sushiswap_get_pairs__historical) | **GET** /dapps/sushiswap/pairs/historical | Pairs (historical) |
 | [**sushiswap_get_swaps__historical**](SushiswapApi.md#sushiswap_get_swaps__historical) | **GET** /dapps/sushiswap/swaps/historical | Swaps (historical) |
-| [**sushiswap_get_token_day_datas__historical**](SushiswapApi.md#sushiswap_get_token_day_datas__historical) | **GET** /dapps/sushiswap/tokenDayDatas/historical | TokenDayDatas (historical) |
+| [**sushiswap_get_token_day_data__historical**](SushiswapApi.md#sushiswap_get_token_day_data__historical) | **GET** /dapps/sushiswap/tokenDayData/historical | TokenDayData (historical) |
 | [**sushiswap_get_tokens__historical**](SushiswapApi.md#sushiswap_get_tokens__historical) | **GET** /dapps/sushiswap/tokens/historical | Tokens (historical) |
 | [**sushiswap_get_transactions__historical**](SushiswapApi.md#sushiswap_get_transactions__historical) | **GET** /dapps/sushiswap/transactions/historical | Transactions (historical) |
 | [**sushiswap_get_users__historical**](SushiswapApi.md#sushiswap_get_users__historical) | **GET** /dapps/sushiswap/users/historical | Users (historical) |
-| [**sushiswap_hour_datas__current**](SushiswapApi.md#sushiswap_hour_datas__current) | **GET** /dapps/sushiswap/hourDatas/current | HourDatas (current) |
+| [**sushiswap_hour_data__current**](SushiswapApi.md#sushiswap_hour_data__current) | **GET** /dapps/sushiswap/hourData/current | HourData (current) |
 | [**sushiswap_liquidity_position_snapshots__current**](SushiswapApi.md#sushiswap_liquidity_position_snapshots__current) | **GET** /dapps/sushiswap/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current) |
 | [**sushiswap_liquidity_positions__current**](SushiswapApi.md#sushiswap_liquidity_positions__current) | **GET** /dapps/sushiswap/liquidityPositions/current | LiquidityPositions (current) |
 | [**sushiswap_mints__current**](SushiswapApi.md#sushiswap_mints__current) | **GET** /dapps/sushiswap/mints/current | Mints (current) |
-| [**sushiswap_pair_day_datas__current**](SushiswapApi.md#sushiswap_pair_day_datas__current) | **GET** /dapps/sushiswap/pairDayDatas/current | PairDayDatas (current) |
-| [**sushiswap_pair_hour_datas__current**](SushiswapApi.md#sushiswap_pair_hour_datas__current) | **GET** /dapps/sushiswap/pairHourDatas/current | PairHourDatas (current) |
+| [**sushiswap_pair_day_data__current**](SushiswapApi.md#sushiswap_pair_day_data__current) | **GET** /dapps/sushiswap/pairDayData/current | PairDayData (current) |
+| [**sushiswap_pair_hour_data__current**](SushiswapApi.md#sushiswap_pair_hour_data__current) | **GET** /dapps/sushiswap/pairHourData/current | PairHourData (current) |
 | [**sushiswap_pairs__current**](SushiswapApi.md#sushiswap_pairs__current) | **GET** /dapps/sushiswap/pairs/current | Pairs (current) |
 | [**sushiswap_swaps__current**](SushiswapApi.md#sushiswap_swaps__current) | **GET** /dapps/sushiswap/swaps/current | Swaps (current) |
-| [**sushiswap_token_day_datas__current**](SushiswapApi.md#sushiswap_token_day_datas__current) | **GET** /dapps/sushiswap/tokenDayDatas/current | TokenDayDatas (current) |
+| [**sushiswap_token_day_data__current**](SushiswapApi.md#sushiswap_token_day_data__current) | **GET** /dapps/sushiswap/tokenDayData/current | TokenDayData (current) |
 | [**sushiswap_tokens__current**](SushiswapApi.md#sushiswap_tokens__current) | **GET** /dapps/sushiswap/tokens/current | Tokens (current) |
 | [**sushiswap_transactions__current**](SushiswapApi.md#sushiswap_transactions__current) | **GET** /dapps/sushiswap/transactions/current | Transactions (current) |
 | [**sushiswap_users__current**](SushiswapApi.md#sushiswap_users__current) | **GET** /dapps/sushiswap/users/current | Users (current) |
@@ -160,13 +160,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswap_day_datas__current
+## sushiswap_day_data__current
 
-> <Array<SushiswapDayDataDTO>> sushiswap_day_datas__current
+> <Array<SushiswapDayDataDTO>> sushiswap_day_data__current
 
-DayDatas (current)
+DayData (current)
 
-Gets dayDatas.
+Gets dayData.
 
 ### Examples
 
@@ -177,29 +177,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::SushiswapApi.new
 
 begin
-  # DayDatas (current)
-  result = api_instance.sushiswap_day_datas__current
+  # DayData (current)
+  result = api_instance.sushiswap_day_data__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_day_datas__current: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_day_data__current: #{e}"
 end
 ```
 
-#### Using the sushiswap_day_datas__current_with_http_info variant
+#### Using the sushiswap_day_data__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SushiswapDayDataDTO>>, Integer, Hash)> sushiswap_day_datas__current_with_http_info
+> <Array(<Array<SushiswapDayDataDTO>>, Integer, Hash)> sushiswap_day_data__current_with_http_info
 
 ```ruby
 begin
-  # DayDatas (current)
-  data, status_code, headers = api_instance.sushiswap_day_datas__current_with_http_info
+  # DayData (current)
+  data, status_code, headers = api_instance.sushiswap_day_data__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SushiswapDayDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_day_datas__current_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_day_data__current_with_http_info: #{e}"
 end
 ```
 
@@ -221,13 +221,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswap_factorys__current
+## sushiswap_factories__current
 
-> <Array<SushiswapFactoryDTO>> sushiswap_factorys__current
+> <Array<SushiswapFactoryDTO>> sushiswap_factories__current
 
-Factorys (current)
+Factories (current)
 
-Gets factorys.
+Gets factories.
 
 ### Examples
 
@@ -238,29 +238,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::SushiswapApi.new
 
 begin
-  # Factorys (current)
-  result = api_instance.sushiswap_factorys__current
+  # Factories (current)
+  result = api_instance.sushiswap_factories__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_factorys__current: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_factories__current: #{e}"
 end
 ```
 
-#### Using the sushiswap_factorys__current_with_http_info variant
+#### Using the sushiswap_factories__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SushiswapFactoryDTO>>, Integer, Hash)> sushiswap_factorys__current_with_http_info
+> <Array(<Array<SushiswapFactoryDTO>>, Integer, Hash)> sushiswap_factories__current_with_http_info
 
 ```ruby
 begin
-  # Factorys (current)
-  data, status_code, headers = api_instance.sushiswap_factorys__current_with_http_info
+  # Factories (current)
+  data, status_code, headers = api_instance.sushiswap_factories__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SushiswapFactoryDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_factorys__current_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_factories__current_with_http_info: #{e}"
 end
 ```
 
@@ -432,13 +432,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswap_get_day_datas__historical
+## sushiswap_get_day_data__historical
 
-> <Array<SushiswapDayDataDTO>> sushiswap_get_day_datas__historical(opts)
+> <Array<SushiswapDayDataDTO>> sushiswap_get_day_data__historical(opts)
 
-DayDatas (historical)
+DayData (historical)
 
-Gets dayDatas.
+Gets dayData.
 
 ### Examples
 
@@ -456,29 +456,29 @@ opts = {
 }
 
 begin
-  # DayDatas (historical)
-  result = api_instance.sushiswap_get_day_datas__historical(opts)
+  # DayData (historical)
+  result = api_instance.sushiswap_get_day_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_day_datas__historical: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_day_data__historical: #{e}"
 end
 ```
 
-#### Using the sushiswap_get_day_datas__historical_with_http_info variant
+#### Using the sushiswap_get_day_data__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SushiswapDayDataDTO>>, Integer, Hash)> sushiswap_get_day_datas__historical_with_http_info(opts)
+> <Array(<Array<SushiswapDayDataDTO>>, Integer, Hash)> sushiswap_get_day_data__historical_with_http_info(opts)
 
 ```ruby
 begin
-  # DayDatas (historical)
-  data, status_code, headers = api_instance.sushiswap_get_day_datas__historical_with_http_info(opts)
+  # DayData (historical)
+  data, status_code, headers = api_instance.sushiswap_get_day_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SushiswapDayDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_day_datas__historical_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_day_data__historical_with_http_info: #{e}"
 end
 ```
 
@@ -506,13 +506,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswap_get_factorys__historical
+## sushiswap_get_factories__historical
 
-> <Array<SushiswapFactoryDTO>> sushiswap_get_factorys__historical(opts)
+> <Array<SushiswapFactoryDTO>> sushiswap_get_factories__historical(opts)
 
-Factorys (historical)
+Factories (historical)
 
-Gets factorys.
+Gets factories.
 
 ### Examples
 
@@ -530,29 +530,29 @@ opts = {
 }
 
 begin
-  # Factorys (historical)
-  result = api_instance.sushiswap_get_factorys__historical(opts)
+  # Factories (historical)
+  result = api_instance.sushiswap_get_factories__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_factorys__historical: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_factories__historical: #{e}"
 end
 ```
 
-#### Using the sushiswap_get_factorys__historical_with_http_info variant
+#### Using the sushiswap_get_factories__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SushiswapFactoryDTO>>, Integer, Hash)> sushiswap_get_factorys__historical_with_http_info(opts)
+> <Array(<Array<SushiswapFactoryDTO>>, Integer, Hash)> sushiswap_get_factories__historical_with_http_info(opts)
 
 ```ruby
 begin
-  # Factorys (historical)
-  data, status_code, headers = api_instance.sushiswap_get_factorys__historical_with_http_info(opts)
+  # Factories (historical)
+  data, status_code, headers = api_instance.sushiswap_get_factories__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SushiswapFactoryDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_factorys__historical_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_factories__historical_with_http_info: #{e}"
 end
 ```
 
@@ -580,13 +580,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswap_get_hour_datas__historical
+## sushiswap_get_hour_data__historical
 
-> <Array<SushiswapHourDataDTO>> sushiswap_get_hour_datas__historical(opts)
+> <Array<SushiswapHourDataDTO>> sushiswap_get_hour_data__historical(opts)
 
-HourDatas (historical)
+HourData (historical)
 
-Gets hourDatas.
+Gets hourData.
 
 ### Examples
 
@@ -604,29 +604,29 @@ opts = {
 }
 
 begin
-  # HourDatas (historical)
-  result = api_instance.sushiswap_get_hour_datas__historical(opts)
+  # HourData (historical)
+  result = api_instance.sushiswap_get_hour_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_hour_datas__historical: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_hour_data__historical: #{e}"
 end
 ```
 
-#### Using the sushiswap_get_hour_datas__historical_with_http_info variant
+#### Using the sushiswap_get_hour_data__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SushiswapHourDataDTO>>, Integer, Hash)> sushiswap_get_hour_datas__historical_with_http_info(opts)
+> <Array(<Array<SushiswapHourDataDTO>>, Integer, Hash)> sushiswap_get_hour_data__historical_with_http_info(opts)
 
 ```ruby
 begin
-  # HourDatas (historical)
-  data, status_code, headers = api_instance.sushiswap_get_hour_datas__historical_with_http_info(opts)
+  # HourData (historical)
+  data, status_code, headers = api_instance.sushiswap_get_hour_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SushiswapHourDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_hour_datas__historical_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_hour_data__historical_with_http_info: #{e}"
 end
 ```
 
@@ -886,13 +886,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswap_get_pair_day_datas__historical
+## sushiswap_get_pair_day_data__historical
 
-> <Array<SushiswapPairDayDataDTO>> sushiswap_get_pair_day_datas__historical(opts)
+> <Array<SushiswapPairDayDataDTO>> sushiswap_get_pair_day_data__historical(opts)
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Examples
 
@@ -913,29 +913,29 @@ opts = {
 }
 
 begin
-  # PairDayDatas (historical)
-  result = api_instance.sushiswap_get_pair_day_datas__historical(opts)
+  # PairDayData (historical)
+  result = api_instance.sushiswap_get_pair_day_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_pair_day_datas__historical: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_pair_day_data__historical: #{e}"
 end
 ```
 
-#### Using the sushiswap_get_pair_day_datas__historical_with_http_info variant
+#### Using the sushiswap_get_pair_day_data__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SushiswapPairDayDataDTO>>, Integer, Hash)> sushiswap_get_pair_day_datas__historical_with_http_info(opts)
+> <Array(<Array<SushiswapPairDayDataDTO>>, Integer, Hash)> sushiswap_get_pair_day_data__historical_with_http_info(opts)
 
 ```ruby
 begin
-  # PairDayDatas (historical)
-  data, status_code, headers = api_instance.sushiswap_get_pair_day_datas__historical_with_http_info(opts)
+  # PairDayData (historical)
+  data, status_code, headers = api_instance.sushiswap_get_pair_day_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SushiswapPairDayDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_pair_day_datas__historical_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_pair_day_data__historical_with_http_info: #{e}"
 end
 ```
 
@@ -966,13 +966,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswap_get_pair_hour_datas__historical
+## sushiswap_get_pair_hour_data__historical
 
-> <Array<SushiswapPairHourDataDTO>> sushiswap_get_pair_hour_datas__historical(opts)
+> <Array<SushiswapPairHourDataDTO>> sushiswap_get_pair_hour_data__historical(opts)
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Examples
 
@@ -991,29 +991,29 @@ opts = {
 }
 
 begin
-  # PairHourDatas (historical)
-  result = api_instance.sushiswap_get_pair_hour_datas__historical(opts)
+  # PairHourData (historical)
+  result = api_instance.sushiswap_get_pair_hour_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_pair_hour_datas__historical: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_pair_hour_data__historical: #{e}"
 end
 ```
 
-#### Using the sushiswap_get_pair_hour_datas__historical_with_http_info variant
+#### Using the sushiswap_get_pair_hour_data__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SushiswapPairHourDataDTO>>, Integer, Hash)> sushiswap_get_pair_hour_datas__historical_with_http_info(opts)
+> <Array(<Array<SushiswapPairHourDataDTO>>, Integer, Hash)> sushiswap_get_pair_hour_data__historical_with_http_info(opts)
 
 ```ruby
 begin
-  # PairHourDatas (historical)
-  data, status_code, headers = api_instance.sushiswap_get_pair_hour_datas__historical_with_http_info(opts)
+  # PairHourData (historical)
+  data, status_code, headers = api_instance.sushiswap_get_pair_hour_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SushiswapPairHourDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_pair_hour_datas__historical_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_pair_hour_data__historical_with_http_info: #{e}"
 end
 ```
 
@@ -1198,13 +1198,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswap_get_token_day_datas__historical
+## sushiswap_get_token_day_data__historical
 
-> <Array<SushiswapTokenDayDataDTO>> sushiswap_get_token_day_datas__historical(opts)
+> <Array<SushiswapTokenDayDataDTO>> sushiswap_get_token_day_data__historical(opts)
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Examples
 
@@ -1222,29 +1222,29 @@ opts = {
 }
 
 begin
-  # TokenDayDatas (historical)
-  result = api_instance.sushiswap_get_token_day_datas__historical(opts)
+  # TokenDayData (historical)
+  result = api_instance.sushiswap_get_token_day_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_token_day_datas__historical: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_token_day_data__historical: #{e}"
 end
 ```
 
-#### Using the sushiswap_get_token_day_datas__historical_with_http_info variant
+#### Using the sushiswap_get_token_day_data__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SushiswapTokenDayDataDTO>>, Integer, Hash)> sushiswap_get_token_day_datas__historical_with_http_info(opts)
+> <Array(<Array<SushiswapTokenDayDataDTO>>, Integer, Hash)> sushiswap_get_token_day_data__historical_with_http_info(opts)
 
 ```ruby
 begin
-  # TokenDayDatas (historical)
-  data, status_code, headers = api_instance.sushiswap_get_token_day_datas__historical_with_http_info(opts)
+  # TokenDayData (historical)
+  data, status_code, headers = api_instance.sushiswap_get_token_day_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SushiswapTokenDayDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_get_token_day_datas__historical_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_get_token_day_data__historical_with_http_info: #{e}"
 end
 ```
 
@@ -1498,13 +1498,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswap_hour_datas__current
+## sushiswap_hour_data__current
 
-> <Array<SushiswapHourDataDTO>> sushiswap_hour_datas__current
+> <Array<SushiswapHourDataDTO>> sushiswap_hour_data__current
 
-HourDatas (current)
+HourData (current)
 
-Gets hourDatas.
+Gets hourData.
 
 ### Examples
 
@@ -1515,29 +1515,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::SushiswapApi.new
 
 begin
-  # HourDatas (current)
-  result = api_instance.sushiswap_hour_datas__current
+  # HourData (current)
+  result = api_instance.sushiswap_hour_data__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_hour_datas__current: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_hour_data__current: #{e}"
 end
 ```
 
-#### Using the sushiswap_hour_datas__current_with_http_info variant
+#### Using the sushiswap_hour_data__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SushiswapHourDataDTO>>, Integer, Hash)> sushiswap_hour_datas__current_with_http_info
+> <Array(<Array<SushiswapHourDataDTO>>, Integer, Hash)> sushiswap_hour_data__current_with_http_info
 
 ```ruby
 begin
-  # HourDatas (current)
-  data, status_code, headers = api_instance.sushiswap_hour_datas__current_with_http_info
+  # HourData (current)
+  data, status_code, headers = api_instance.sushiswap_hour_data__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SushiswapHourDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_hour_datas__current_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_hour_data__current_with_http_info: #{e}"
 end
 ```
 
@@ -1742,13 +1742,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswap_pair_day_datas__current
+## sushiswap_pair_day_data__current
 
-> <Array<SushiswapPairDayDataDTO>> sushiswap_pair_day_datas__current
+> <Array<SushiswapPairDayDataDTO>> sushiswap_pair_day_data__current
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Examples
 
@@ -1759,29 +1759,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::SushiswapApi.new
 
 begin
-  # PairDayDatas (current)
-  result = api_instance.sushiswap_pair_day_datas__current
+  # PairDayData (current)
+  result = api_instance.sushiswap_pair_day_data__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_pair_day_datas__current: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_pair_day_data__current: #{e}"
 end
 ```
 
-#### Using the sushiswap_pair_day_datas__current_with_http_info variant
+#### Using the sushiswap_pair_day_data__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SushiswapPairDayDataDTO>>, Integer, Hash)> sushiswap_pair_day_datas__current_with_http_info
+> <Array(<Array<SushiswapPairDayDataDTO>>, Integer, Hash)> sushiswap_pair_day_data__current_with_http_info
 
 ```ruby
 begin
-  # PairDayDatas (current)
-  data, status_code, headers = api_instance.sushiswap_pair_day_datas__current_with_http_info
+  # PairDayData (current)
+  data, status_code, headers = api_instance.sushiswap_pair_day_data__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SushiswapPairDayDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_pair_day_datas__current_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_pair_day_data__current_with_http_info: #{e}"
 end
 ```
 
@@ -1803,13 +1803,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswap_pair_hour_datas__current
+## sushiswap_pair_hour_data__current
 
-> <Array<SushiswapPairHourDataDTO>> sushiswap_pair_hour_datas__current
+> <Array<SushiswapPairHourDataDTO>> sushiswap_pair_hour_data__current
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Examples
 
@@ -1820,29 +1820,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::SushiswapApi.new
 
 begin
-  # PairHourDatas (current)
-  result = api_instance.sushiswap_pair_hour_datas__current
+  # PairHourData (current)
+  result = api_instance.sushiswap_pair_hour_data__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_pair_hour_datas__current: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_pair_hour_data__current: #{e}"
 end
 ```
 
-#### Using the sushiswap_pair_hour_datas__current_with_http_info variant
+#### Using the sushiswap_pair_hour_data__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SushiswapPairHourDataDTO>>, Integer, Hash)> sushiswap_pair_hour_datas__current_with_http_info
+> <Array(<Array<SushiswapPairHourDataDTO>>, Integer, Hash)> sushiswap_pair_hour_data__current_with_http_info
 
 ```ruby
 begin
-  # PairHourDatas (current)
-  data, status_code, headers = api_instance.sushiswap_pair_hour_datas__current_with_http_info
+  # PairHourData (current)
+  data, status_code, headers = api_instance.sushiswap_pair_hour_data__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SushiswapPairHourDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_pair_hour_datas__current_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_pair_hour_data__current_with_http_info: #{e}"
 end
 ```
 
@@ -1996,13 +1996,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## sushiswap_token_day_datas__current
+## sushiswap_token_day_data__current
 
-> <Array<SushiswapTokenDayDataDTO>> sushiswap_token_day_datas__current
+> <Array<SushiswapTokenDayDataDTO>> sushiswap_token_day_data__current
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Examples
 
@@ -2013,29 +2013,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::SushiswapApi.new
 
 begin
-  # TokenDayDatas (current)
-  result = api_instance.sushiswap_token_day_datas__current
+  # TokenDayData (current)
+  result = api_instance.sushiswap_token_day_data__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_token_day_datas__current: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_token_day_data__current: #{e}"
 end
 ```
 
-#### Using the sushiswap_token_day_datas__current_with_http_info variant
+#### Using the sushiswap_token_day_data__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<SushiswapTokenDayDataDTO>>, Integer, Hash)> sushiswap_token_day_datas__current_with_http_info
+> <Array(<Array<SushiswapTokenDayDataDTO>>, Integer, Hash)> sushiswap_token_day_data__current_with_http_info
 
 ```ruby
 begin
-  # TokenDayDatas (current)
-  data, status_code, headers = api_instance.sushiswap_token_day_datas__current_with_http_info
+  # TokenDayData (current)
+  data, status_code, headers = api_instance.sushiswap_token_day_data__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<SushiswapTokenDayDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling SushiswapApi->sushiswap_token_day_datas__current_with_http_info: #{e}"
+  puts "Error when calling SushiswapApi->sushiswap_token_day_data__current_with_http_info: #{e}"
 end
 ```
 

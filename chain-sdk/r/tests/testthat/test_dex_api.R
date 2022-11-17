@@ -5,11 +5,11 @@ context("Test DexApi")
 
 api_instance <- DexApi$new()
 
-test_that("DexBatchsCurrent", {
-  # tests for DexBatchsCurrent
+test_that("DexBatchesCurrent", {
+  # tests for DexBatchesCurrent
   # base path: https://onchain.coinapi.io
-  # Batchs (current)
-  # Gets batchs.
+  # Batches (current)
+  # Gets batches.
   # @return [array[DexBatchDTO]]
 
   # uncomment below to test the operation
@@ -27,11 +27,11 @@ test_that("DexDepositsCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("DexGetBatchsHistorical", {
-  # tests for DexGetBatchsHistorical
+test_that("DexGetBatchesHistorical", {
+  # tests for DexGetBatchesHistorical
   # base path: https://onchain.coinapi.io
-  # Batchs (historical)
-  # Gets batchs.
+  # Batches (historical)
+  # Gets batches.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
   # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -110,11 +110,11 @@ test_that("DexGetSolutionsHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("DexGetStatssHistorical", {
-  # tests for DexGetStatssHistorical
+test_that("DexGetStatsHistorical", {
+  # tests for DexGetStatsHistorical
   # base path: https://onchain.coinapi.io
-  # Statss (historical)
-  # Gets statss.
+  # Stats (historical)
+  # Gets stats.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
   # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -246,11 +246,11 @@ test_that("DexSolutionsCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("DexStatssCurrent", {
-  # tests for DexStatssCurrent
+test_that("DexStatsCurrent", {
+  # tests for DexStatsCurrent
   # base path: https://onchain.coinapi.io
-  # Statss (current)
-  # Gets statss.
+  # Stats (current)
+  # Gets stats.
   # @return [array[DexStatsDTO]]
 
   # uncomment below to test the operation

@@ -11,28 +11,28 @@ Method | HTTP request | Description
 [**uniswapV2GetLiquidityPositionSnapshotsHistorical**](UniswapV2Api.md#uniswapV2GetLiquidityPositionSnapshotsHistorical) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**uniswapV2GetLiquidityPositionsHistorical**](UniswapV2Api.md#uniswapV2GetLiquidityPositionsHistorical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical)
 [**uniswapV2GetMintsHistorical**](UniswapV2Api.md#uniswapV2GetMintsHistorical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical)
-[**uniswapV2GetPairDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetPairDayDatasHistorical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical)
-[**uniswapV2GetPairHourDatasHistorical**](UniswapV2Api.md#uniswapV2GetPairHourDatasHistorical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical)
+[**uniswapV2GetPairDayDataHistorical**](UniswapV2Api.md#uniswapV2GetPairDayDataHistorical) | **GET** /dapps/uniswapv2/pairDayData/historical | PairDayData (historical)
+[**uniswapV2GetPairHourDataHistorical**](UniswapV2Api.md#uniswapV2GetPairHourDataHistorical) | **GET** /dapps/uniswapv2/pairHourData/historical | PairHourData (historical)
 [**uniswapV2GetPairsHistorical**](UniswapV2Api.md#uniswapV2GetPairsHistorical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical)
 [**uniswapV2GetSwapsHistorical**](UniswapV2Api.md#uniswapV2GetSwapsHistorical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical)
-[**uniswapV2GetTokenDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetTokenDayDatasHistorical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical)
+[**uniswapV2GetTokenDayDataHistorical**](UniswapV2Api.md#uniswapV2GetTokenDayDataHistorical) | **GET** /dapps/uniswapv2/tokenDayData/historical | TokenDayData (historical)
 [**uniswapV2GetTokensHistorical**](UniswapV2Api.md#uniswapV2GetTokensHistorical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical)
 [**uniswapV2GetTransactionsHistorical**](UniswapV2Api.md#uniswapV2GetTransactionsHistorical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical)
-[**uniswapV2GetUniswapDayDatasHistorical**](UniswapV2Api.md#uniswapV2GetUniswapDayDatasHistorical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical)
-[**uniswapV2GetUniswapFactorysHistorical**](UniswapV2Api.md#uniswapV2GetUniswapFactorysHistorical) | **GET** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical)
+[**uniswapV2GetUniswapDayDataHistorical**](UniswapV2Api.md#uniswapV2GetUniswapDayDataHistorical) | **GET** /dapps/uniswapv2/uniswapDayData/historical | UniswapDayData (historical)
+[**uniswapV2GetUniswapFactoriesHistorical**](UniswapV2Api.md#uniswapV2GetUniswapFactoriesHistorical) | **GET** /dapps/uniswapv2/uniswapFactories/historical | UniswapFactories (historical)
 [**uniswapV2GetUsersHistorical**](UniswapV2Api.md#uniswapV2GetUsersHistorical) | **GET** /dapps/uniswapv2/users/historical | Users (historical)
 [**uniswapV2LiquidityPositionSnapshotsCurrent**](UniswapV2Api.md#uniswapV2LiquidityPositionSnapshotsCurrent) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**uniswapV2LiquidityPositionsCurrent**](UniswapV2Api.md#uniswapV2LiquidityPositionsCurrent) | **GET** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
 [**uniswapV2MintsCurrent**](UniswapV2Api.md#uniswapV2MintsCurrent) | **GET** /dapps/uniswapv2/mints/current | Mints (current)
-[**uniswapV2PairDayDatasCurrent**](UniswapV2Api.md#uniswapV2PairDayDatasCurrent) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
-[**uniswapV2PairHourDatasCurrent**](UniswapV2Api.md#uniswapV2PairHourDatasCurrent) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
+[**uniswapV2PairDayDataCurrent**](UniswapV2Api.md#uniswapV2PairDayDataCurrent) | **GET** /dapps/uniswapv2/pairDayData/current | PairDayData (current)
+[**uniswapV2PairHourDataCurrent**](UniswapV2Api.md#uniswapV2PairHourDataCurrent) | **GET** /dapps/uniswapv2/pairHourData/current | PairHourData (current)
 [**uniswapV2PairsCurrent**](UniswapV2Api.md#uniswapV2PairsCurrent) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
 [**uniswapV2SwapsCurrent**](UniswapV2Api.md#uniswapV2SwapsCurrent) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current)
-[**uniswapV2TokenDayDatasCurrent**](UniswapV2Api.md#uniswapV2TokenDayDatasCurrent) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**uniswapV2TokenDayDataCurrent**](UniswapV2Api.md#uniswapV2TokenDayDataCurrent) | **GET** /dapps/uniswapv2/tokenDayData/current | TokenDayData (current)
 [**uniswapV2TokensCurrent**](UniswapV2Api.md#uniswapV2TokensCurrent) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**uniswapV2TransactionsCurrent**](UniswapV2Api.md#uniswapV2TransactionsCurrent) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
-[**uniswapV2UniswapDayDatasCurrent**](UniswapV2Api.md#uniswapV2UniswapDayDatasCurrent) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
-[**uniswapV2UniswapFactorysCurrent**](UniswapV2Api.md#uniswapV2UniswapFactorysCurrent) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
+[**uniswapV2UniswapDayDataCurrent**](UniswapV2Api.md#uniswapV2UniswapDayDataCurrent) | **GET** /dapps/uniswapv2/uniswapDayData/current | UniswapDayData (current)
+[**uniswapV2UniswapFactoriesCurrent**](UniswapV2Api.md#uniswapV2UniswapFactoriesCurrent) | **GET** /dapps/uniswapv2/uniswapFactories/current | UniswapFactories (current)
 [**uniswapV2UsersCurrent**](UniswapV2Api.md#uniswapV2UsersCurrent) | **GET** /dapps/uniswapv2/users/current | Users (current)
 
 
@@ -403,13 +403,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2GetPairDayDatasHistorical
+## uniswapV2GetPairDayDataHistorical
 
-> List&lt;UniswapV2PairDayDataDTO&gt; uniswapV2GetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
+> List&lt;UniswapV2PairDayDataDTO&gt; uniswapV2GetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1)
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 
@@ -426,10 +426,10 @@ String id = null; // String |
 String token0 = null; // String | Reference to token0.
 String token1 = null; // String | Reference to token1.
 try {
-    List<UniswapV2PairDayDataDTO> result = apiInstance.uniswapV2GetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
+    List<UniswapV2PairDayDataDTO> result = apiInstance.uniswapV2GetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling UniswapV2Api#uniswapV2GetPairDayDatasHistorical");
+    System.err.println("Exception when calling UniswapV2Api#uniswapV2GetPairDayDataHistorical");
     e.printStackTrace();
 }
 ```
@@ -461,13 +461,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2GetPairHourDatasHistorical
+## uniswapV2GetPairHourDataHistorical
 
-> List&lt;UniswapV2PairHourDataDTO&gt; uniswapV2GetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair)
+> List&lt;UniswapV2PairHourDataDTO&gt; uniswapV2GetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair)
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 
@@ -483,10 +483,10 @@ Date endDate = null; // Date | The end date of timeframe.
 String id = null; // String | 
 String pair = null; // String | Address for pair contract.
 try {
-    List<UniswapV2PairHourDataDTO> result = apiInstance.uniswapV2GetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair);
+    List<UniswapV2PairHourDataDTO> result = apiInstance.uniswapV2GetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling UniswapV2Api#uniswapV2GetPairHourDatasHistorical");
+    System.err.println("Exception when calling UniswapV2Api#uniswapV2GetPairHourDataHistorical");
     e.printStackTrace();
 }
 ```
@@ -631,13 +631,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2GetTokenDayDatasHistorical
+## uniswapV2GetTokenDayDataHistorical
 
-> List&lt;UniswapV2TokenDayDataDTO&gt; uniswapV2GetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+> List&lt;UniswapV2TokenDayDataDTO&gt; uniswapV2GetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 
@@ -652,10 +652,10 @@ Date startDate = null; // Date | The start date of timeframe. If endDate is not 
 Date endDate = null; // Date | The end date of timeframe.
 String id = null; // String | Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
 try {
-    List<UniswapV2TokenDayDataDTO> result = apiInstance.uniswapV2GetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+    List<UniswapV2TokenDayDataDTO> result = apiInstance.uniswapV2GetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling UniswapV2Api#uniswapV2GetTokenDayDatasHistorical");
+    System.err.println("Exception when calling UniswapV2Api#uniswapV2GetTokenDayDataHistorical");
     e.printStackTrace();
 }
 ```
@@ -797,13 +797,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2GetUniswapDayDatasHistorical
+## uniswapV2GetUniswapDayDataHistorical
 
-> List&lt;UniswapV2UniswapDayDataDTO&gt; uniswapV2GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id)
+> List&lt;UniswapV2UniswapDayDataDTO&gt; uniswapV2GetUniswapDayDataHistorical(startBlock, endBlock, startDate, endDate, id)
 
-UniswapDayDatas (historical)
+UniswapDayData (historical)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 
@@ -818,10 +818,10 @@ Date startDate = null; // Date | The start date of timeframe. If endDate is not 
 Date endDate = null; // Date | The end date of timeframe.
 String id = null; // String | Unix timestamp for start of day / 86400 giving a unique day index.
 try {
-    List<UniswapV2UniswapDayDataDTO> result = apiInstance.uniswapV2GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id);
+    List<UniswapV2UniswapDayDataDTO> result = apiInstance.uniswapV2GetUniswapDayDataHistorical(startBlock, endBlock, startDate, endDate, id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling UniswapV2Api#uniswapV2GetUniswapDayDatasHistorical");
+    System.err.println("Exception when calling UniswapV2Api#uniswapV2GetUniswapDayDataHistorical");
     e.printStackTrace();
 }
 ```
@@ -851,13 +851,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2GetUniswapFactorysHistorical
+## uniswapV2GetUniswapFactoriesHistorical
 
-> List&lt;UniswapV2UniswapFactoryDTO&gt; uniswapV2GetUniswapFactorysHistorical(startBlock, endBlock, startDate, endDate, id)
+> List&lt;UniswapV2UniswapFactoryDTO&gt; uniswapV2GetUniswapFactoriesHistorical(startBlock, endBlock, startDate, endDate, id)
 
-UniswapFactorys (historical)
+UniswapFactories (historical)
 
-Gets uniswapFactorys.
+Gets uniswapFactories.
 
 ### Example
 
@@ -872,10 +872,10 @@ Date startDate = null; // Date | The start date of timeframe. If endDate is not 
 Date endDate = null; // Date | The end date of timeframe.
 String id = null; // String | Factory address.
 try {
-    List<UniswapV2UniswapFactoryDTO> result = apiInstance.uniswapV2GetUniswapFactorysHistorical(startBlock, endBlock, startDate, endDate, id);
+    List<UniswapV2UniswapFactoryDTO> result = apiInstance.uniswapV2GetUniswapFactoriesHistorical(startBlock, endBlock, startDate, endDate, id);
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling UniswapV2Api#uniswapV2GetUniswapFactorysHistorical");
+    System.err.println("Exception when calling UniswapV2Api#uniswapV2GetUniswapFactoriesHistorical");
     e.printStackTrace();
 }
 ```
@@ -1085,13 +1085,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2PairDayDatasCurrent
+## uniswapV2PairDayDataCurrent
 
-> List&lt;UniswapV2PairDayDataDTO&gt; uniswapV2PairDayDatasCurrent()
+> List&lt;UniswapV2PairDayDataDTO&gt; uniswapV2PairDayDataCurrent()
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 
@@ -1101,10 +1101,10 @@ Gets pairDayDatas.
 
 UniswapV2Api apiInstance = new UniswapV2Api();
 try {
-    List<UniswapV2PairDayDataDTO> result = apiInstance.uniswapV2PairDayDatasCurrent();
+    List<UniswapV2PairDayDataDTO> result = apiInstance.uniswapV2PairDayDataCurrent();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling UniswapV2Api#uniswapV2PairDayDatasCurrent");
+    System.err.println("Exception when calling UniswapV2Api#uniswapV2PairDayDataCurrent");
     e.printStackTrace();
 }
 ```
@@ -1127,13 +1127,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2PairHourDatasCurrent
+## uniswapV2PairHourDataCurrent
 
-> List&lt;UniswapV2PairHourDataDTO&gt; uniswapV2PairHourDatasCurrent()
+> List&lt;UniswapV2PairHourDataDTO&gt; uniswapV2PairHourDataCurrent()
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 
@@ -1143,10 +1143,10 @@ Gets pairHourDatas.
 
 UniswapV2Api apiInstance = new UniswapV2Api();
 try {
-    List<UniswapV2PairHourDataDTO> result = apiInstance.uniswapV2PairHourDatasCurrent();
+    List<UniswapV2PairHourDataDTO> result = apiInstance.uniswapV2PairHourDataCurrent();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling UniswapV2Api#uniswapV2PairHourDatasCurrent");
+    System.err.println("Exception when calling UniswapV2Api#uniswapV2PairHourDataCurrent");
     e.printStackTrace();
 }
 ```
@@ -1261,13 +1261,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2TokenDayDatasCurrent
+## uniswapV2TokenDayDataCurrent
 
-> List&lt;UniswapV2TokenDayDataDTO&gt; uniswapV2TokenDayDatasCurrent()
+> List&lt;UniswapV2TokenDayDataDTO&gt; uniswapV2TokenDayDataCurrent()
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 
@@ -1277,10 +1277,10 @@ Gets tokenDayDatas.
 
 UniswapV2Api apiInstance = new UniswapV2Api();
 try {
-    List<UniswapV2TokenDayDataDTO> result = apiInstance.uniswapV2TokenDayDatasCurrent();
+    List<UniswapV2TokenDayDataDTO> result = apiInstance.uniswapV2TokenDayDataCurrent();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling UniswapV2Api#uniswapV2TokenDayDatasCurrent");
+    System.err.println("Exception when calling UniswapV2Api#uniswapV2TokenDayDataCurrent");
     e.printStackTrace();
 }
 ```
@@ -1387,13 +1387,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2UniswapDayDatasCurrent
+## uniswapV2UniswapDayDataCurrent
 
-> List&lt;UniswapV2UniswapDayDataDTO&gt; uniswapV2UniswapDayDatasCurrent()
+> List&lt;UniswapV2UniswapDayDataDTO&gt; uniswapV2UniswapDayDataCurrent()
 
-UniswapDayDatas (current)
+UniswapDayData (current)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 
@@ -1403,10 +1403,10 @@ Gets uniswapDayDatas.
 
 UniswapV2Api apiInstance = new UniswapV2Api();
 try {
-    List<UniswapV2UniswapDayDataDTO> result = apiInstance.uniswapV2UniswapDayDatasCurrent();
+    List<UniswapV2UniswapDayDataDTO> result = apiInstance.uniswapV2UniswapDayDataCurrent();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling UniswapV2Api#uniswapV2UniswapDayDatasCurrent");
+    System.err.println("Exception when calling UniswapV2Api#uniswapV2UniswapDayDataCurrent");
     e.printStackTrace();
 }
 ```
@@ -1429,13 +1429,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswapV2UniswapFactorysCurrent
+## uniswapV2UniswapFactoriesCurrent
 
-> List&lt;UniswapV2UniswapFactoryDTO&gt; uniswapV2UniswapFactorysCurrent()
+> List&lt;UniswapV2UniswapFactoryDTO&gt; uniswapV2UniswapFactoriesCurrent()
 
-UniswapFactorys (current)
+UniswapFactories (current)
 
-Gets uniswapFactorys.
+Gets uniswapFactories.
 
 ### Example
 
@@ -1445,10 +1445,10 @@ Gets uniswapFactorys.
 
 UniswapV2Api apiInstance = new UniswapV2Api();
 try {
-    List<UniswapV2UniswapFactoryDTO> result = apiInstance.uniswapV2UniswapFactorysCurrent();
+    List<UniswapV2UniswapFactoryDTO> result = apiInstance.uniswapV2UniswapFactoriesCurrent();
     System.out.println(result);
 } catch (ApiException e) {
-    System.err.println("Exception when calling UniswapV2Api#uniswapV2UniswapFactorysCurrent");
+    System.err.println("Exception when calling UniswapV2Api#uniswapV2UniswapFactoriesCurrent");
     e.printStackTrace();
 }
 ```

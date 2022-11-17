@@ -725,8 +725,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * PairDayDatas (historical)
-     * Gets pairDayDatas.
+     * PairDayData (historical)
+     * Gets pairDayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -743,8 +743,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun uniswapV2GetPairDayDatasHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null, token0: kotlin.String? = null, token1: kotlin.String? = null) : kotlin.collections.List<UniswapV2PairDayDataDTO> {
-        val localVarResponse = uniswapV2GetPairDayDatasHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, token0 = token0, token1 = token1)
+    fun uniswapV2GetPairDayDataHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null, token0: kotlin.String? = null, token1: kotlin.String? = null) : kotlin.collections.List<UniswapV2PairDayDataDTO> {
+        val localVarResponse = uniswapV2GetPairDayDataHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, token0 = token0, token1 = token1)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UniswapV2PairDayDataDTO>
@@ -762,8 +762,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * PairDayDatas (historical)
-     * Gets pairDayDatas.
+     * PairDayData (historical)
+     * Gets pairDayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -777,8 +777,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun uniswapV2GetPairDayDatasHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, token0: kotlin.String?, token1: kotlin.String?) : ApiResponse<kotlin.collections.List<UniswapV2PairDayDataDTO>?> {
-        val localVariableConfig = uniswapV2GetPairDayDatasHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, token0 = token0, token1 = token1)
+    fun uniswapV2GetPairDayDataHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, token0: kotlin.String?, token1: kotlin.String?) : ApiResponse<kotlin.collections.List<UniswapV2PairDayDataDTO>?> {
+        val localVariableConfig = uniswapV2GetPairDayDataHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, token0 = token0, token1 = token1)
 
         return request<Unit, kotlin.collections.List<UniswapV2PairDayDataDTO>>(
             localVariableConfig
@@ -786,7 +786,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation uniswapV2GetPairDayDatasHistorical
+     * To obtain the request config of the operation uniswapV2GetPairDayDataHistorical
      *
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -797,7 +797,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param token1 Reference to token1. (optional)
      * @return RequestConfig
      */
-    fun uniswapV2GetPairDayDatasHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, token0: kotlin.String?, token1: kotlin.String?) : RequestConfig<Unit> {
+    fun uniswapV2GetPairDayDataHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, token0: kotlin.String?, token1: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -828,7 +828,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswapv2/pairDayDatas/historical",
+            path = "/dapps/uniswapv2/pairDayData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -836,8 +836,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * PairHourDatas (historical)
-     * Gets pairHourDatas.
+     * PairHourData (historical)
+     * Gets pairHourData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -853,8 +853,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun uniswapV2GetPairHourDatasHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null, pair: kotlin.String? = null) : kotlin.collections.List<UniswapV2PairHourDataDTO> {
-        val localVarResponse = uniswapV2GetPairHourDatasHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, pair = pair)
+    fun uniswapV2GetPairHourDataHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null, pair: kotlin.String? = null) : kotlin.collections.List<UniswapV2PairHourDataDTO> {
+        val localVarResponse = uniswapV2GetPairHourDataHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, pair = pair)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UniswapV2PairHourDataDTO>
@@ -872,8 +872,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * PairHourDatas (historical)
-     * Gets pairHourDatas.
+     * PairHourData (historical)
+     * Gets pairHourData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -886,8 +886,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun uniswapV2GetPairHourDatasHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pair: kotlin.String?) : ApiResponse<kotlin.collections.List<UniswapV2PairHourDataDTO>?> {
-        val localVariableConfig = uniswapV2GetPairHourDatasHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, pair = pair)
+    fun uniswapV2GetPairHourDataHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pair: kotlin.String?) : ApiResponse<kotlin.collections.List<UniswapV2PairHourDataDTO>?> {
+        val localVariableConfig = uniswapV2GetPairHourDataHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id, pair = pair)
 
         return request<Unit, kotlin.collections.List<UniswapV2PairHourDataDTO>>(
             localVariableConfig
@@ -895,7 +895,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation uniswapV2GetPairHourDatasHistorical
+     * To obtain the request config of the operation uniswapV2GetPairHourDataHistorical
      *
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -905,7 +905,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param pair Address for pair contract. (optional)
      * @return RequestConfig
      */
-    fun uniswapV2GetPairHourDatasHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pair: kotlin.String?) : RequestConfig<Unit> {
+    fun uniswapV2GetPairHourDataHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?, pair: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -933,7 +933,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswapv2/pairHourDatas/historical",
+            path = "/dapps/uniswapv2/pairHourData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1157,8 +1157,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * TokenDayDatas (historical)
-     * Gets tokenDayDatas.
+     * TokenDayData (historical)
+     * Gets tokenDayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1173,8 +1173,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun uniswapV2GetTokenDayDatasHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null) : kotlin.collections.List<UniswapV2TokenDayDataDTO> {
-        val localVarResponse = uniswapV2GetTokenDayDatasHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
+    fun uniswapV2GetTokenDayDataHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null) : kotlin.collections.List<UniswapV2TokenDayDataDTO> {
+        val localVarResponse = uniswapV2GetTokenDayDataHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UniswapV2TokenDayDataDTO>
@@ -1192,8 +1192,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * TokenDayDatas (historical)
-     * Gets tokenDayDatas.
+     * TokenDayData (historical)
+     * Gets tokenDayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1205,8 +1205,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun uniswapV2GetTokenDayDatasHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : ApiResponse<kotlin.collections.List<UniswapV2TokenDayDataDTO>?> {
-        val localVariableConfig = uniswapV2GetTokenDayDatasHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
+    fun uniswapV2GetTokenDayDataHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : ApiResponse<kotlin.collections.List<UniswapV2TokenDayDataDTO>?> {
+        val localVariableConfig = uniswapV2GetTokenDayDataHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
 
         return request<Unit, kotlin.collections.List<UniswapV2TokenDayDataDTO>>(
             localVariableConfig
@@ -1214,7 +1214,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation uniswapV2GetTokenDayDatasHistorical
+     * To obtain the request config of the operation uniswapV2GetTokenDayDataHistorical
      *
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1223,7 +1223,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param id Token address and day id (day start timestamp in unix / 86400) concatenated with a dash. (optional)
      * @return RequestConfig
      */
-    fun uniswapV2GetTokenDayDatasHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
+    fun uniswapV2GetTokenDayDataHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -1248,7 +1248,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswapv2/tokenDayDatas/historical",
+            path = "/dapps/uniswapv2/tokenDayData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1466,8 +1466,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * UniswapDayDatas (historical)
-     * Gets uniswapDayDatas.
+     * UniswapDayData (historical)
+     * Gets uniswapDayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1482,8 +1482,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun uniswapV2GetUniswapDayDatasHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null) : kotlin.collections.List<UniswapV2UniswapDayDataDTO> {
-        val localVarResponse = uniswapV2GetUniswapDayDatasHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
+    fun uniswapV2GetUniswapDayDataHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null) : kotlin.collections.List<UniswapV2UniswapDayDataDTO> {
+        val localVarResponse = uniswapV2GetUniswapDayDataHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UniswapV2UniswapDayDataDTO>
@@ -1501,8 +1501,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * UniswapDayDatas (historical)
-     * Gets uniswapDayDatas.
+     * UniswapDayData (historical)
+     * Gets uniswapDayData.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1514,8 +1514,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun uniswapV2GetUniswapDayDatasHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : ApiResponse<kotlin.collections.List<UniswapV2UniswapDayDataDTO>?> {
-        val localVariableConfig = uniswapV2GetUniswapDayDatasHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
+    fun uniswapV2GetUniswapDayDataHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : ApiResponse<kotlin.collections.List<UniswapV2UniswapDayDataDTO>?> {
+        val localVariableConfig = uniswapV2GetUniswapDayDataHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
 
         return request<Unit, kotlin.collections.List<UniswapV2UniswapDayDataDTO>>(
             localVariableConfig
@@ -1523,7 +1523,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation uniswapV2GetUniswapDayDatasHistorical
+     * To obtain the request config of the operation uniswapV2GetUniswapDayDataHistorical
      *
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1532,7 +1532,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param id Unix timestamp for start of day / 86400 giving a unique day index. (optional)
      * @return RequestConfig
      */
-    fun uniswapV2GetUniswapDayDatasHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
+    fun uniswapV2GetUniswapDayDataHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -1557,7 +1557,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswapv2/uniswapDayDatas/historical",
+            path = "/dapps/uniswapv2/uniswapDayData/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1565,8 +1565,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * UniswapFactorys (historical)
-     * Gets uniswapFactorys.
+     * UniswapFactories (historical)
+     * Gets uniswapFactories.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1581,8 +1581,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun uniswapV2GetUniswapFactorysHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null) : kotlin.collections.List<UniswapV2UniswapFactoryDTO> {
-        val localVarResponse = uniswapV2GetUniswapFactorysHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
+    fun uniswapV2GetUniswapFactoriesHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null) : kotlin.collections.List<UniswapV2UniswapFactoryDTO> {
+        val localVarResponse = uniswapV2GetUniswapFactoriesHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UniswapV2UniswapFactoryDTO>
@@ -1600,8 +1600,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * UniswapFactorys (historical)
-     * Gets uniswapFactorys.
+     * UniswapFactories (historical)
+     * Gets uniswapFactories.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -1613,8 +1613,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun uniswapV2GetUniswapFactorysHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : ApiResponse<kotlin.collections.List<UniswapV2UniswapFactoryDTO>?> {
-        val localVariableConfig = uniswapV2GetUniswapFactorysHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
+    fun uniswapV2GetUniswapFactoriesHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : ApiResponse<kotlin.collections.List<UniswapV2UniswapFactoryDTO>?> {
+        val localVariableConfig = uniswapV2GetUniswapFactoriesHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
 
         return request<Unit, kotlin.collections.List<UniswapV2UniswapFactoryDTO>>(
             localVariableConfig
@@ -1622,7 +1622,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation uniswapV2GetUniswapFactorysHistorical
+     * To obtain the request config of the operation uniswapV2GetUniswapFactoriesHistorical
      *
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1631,7 +1631,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      * @param id Factory address. (optional)
      * @return RequestConfig
      */
-    fun uniswapV2GetUniswapFactorysHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
+    fun uniswapV2GetUniswapFactoriesHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -1656,7 +1656,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswapv2/uniswapFactorys/historical",
+            path = "/dapps/uniswapv2/uniswapFactories/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1964,8 +1964,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * PairDayDatas (current)
-     * Gets pairDayDatas.
+     * PairDayData (current)
+     * Gets pairDayData.
      * @return kotlin.collections.List<UniswapV2PairDayDataDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1975,8 +1975,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun uniswapV2PairDayDatasCurrent() : kotlin.collections.List<UniswapV2PairDayDataDTO> {
-        val localVarResponse = uniswapV2PairDayDatasCurrentWithHttpInfo()
+    fun uniswapV2PairDayDataCurrent() : kotlin.collections.List<UniswapV2PairDayDataDTO> {
+        val localVarResponse = uniswapV2PairDayDataCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UniswapV2PairDayDataDTO>
@@ -1994,16 +1994,16 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * PairDayDatas (current)
-     * Gets pairDayDatas.
+     * PairDayData (current)
+     * Gets pairDayData.
      * @return ApiResponse<kotlin.collections.List<UniswapV2PairDayDataDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun uniswapV2PairDayDatasCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UniswapV2PairDayDataDTO>?> {
-        val localVariableConfig = uniswapV2PairDayDatasCurrentRequestConfig()
+    fun uniswapV2PairDayDataCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UniswapV2PairDayDataDTO>?> {
+        val localVariableConfig = uniswapV2PairDayDataCurrentRequestConfig()
 
         return request<Unit, kotlin.collections.List<UniswapV2PairDayDataDTO>>(
             localVariableConfig
@@ -2011,11 +2011,11 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation uniswapV2PairDayDatasCurrent
+     * To obtain the request config of the operation uniswapV2PairDayDataCurrent
      *
      * @return RequestConfig
      */
-    fun uniswapV2PairDayDatasCurrentRequestConfig() : RequestConfig<Unit> {
+    fun uniswapV2PairDayDataCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -2023,7 +2023,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswapv2/pairDayDatas/current",
+            path = "/dapps/uniswapv2/pairDayData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -2031,8 +2031,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * PairHourDatas (current)
-     * Gets pairHourDatas.
+     * PairHourData (current)
+     * Gets pairHourData.
      * @return kotlin.collections.List<UniswapV2PairHourDataDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -2042,8 +2042,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun uniswapV2PairHourDatasCurrent() : kotlin.collections.List<UniswapV2PairHourDataDTO> {
-        val localVarResponse = uniswapV2PairHourDatasCurrentWithHttpInfo()
+    fun uniswapV2PairHourDataCurrent() : kotlin.collections.List<UniswapV2PairHourDataDTO> {
+        val localVarResponse = uniswapV2PairHourDataCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UniswapV2PairHourDataDTO>
@@ -2061,16 +2061,16 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * PairHourDatas (current)
-     * Gets pairHourDatas.
+     * PairHourData (current)
+     * Gets pairHourData.
      * @return ApiResponse<kotlin.collections.List<UniswapV2PairHourDataDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun uniswapV2PairHourDatasCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UniswapV2PairHourDataDTO>?> {
-        val localVariableConfig = uniswapV2PairHourDatasCurrentRequestConfig()
+    fun uniswapV2PairHourDataCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UniswapV2PairHourDataDTO>?> {
+        val localVariableConfig = uniswapV2PairHourDataCurrentRequestConfig()
 
         return request<Unit, kotlin.collections.List<UniswapV2PairHourDataDTO>>(
             localVariableConfig
@@ -2078,11 +2078,11 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation uniswapV2PairHourDatasCurrent
+     * To obtain the request config of the operation uniswapV2PairHourDataCurrent
      *
      * @return RequestConfig
      */
-    fun uniswapV2PairHourDatasCurrentRequestConfig() : RequestConfig<Unit> {
+    fun uniswapV2PairHourDataCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -2090,7 +2090,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswapv2/pairHourDatas/current",
+            path = "/dapps/uniswapv2/pairHourData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -2248,8 +2248,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * TokenDayDatas (current)
-     * Gets tokenDayDatas.
+     * TokenDayData (current)
+     * Gets tokenDayData.
      * @return kotlin.collections.List<UniswapV2TokenDayDataDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -2259,8 +2259,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun uniswapV2TokenDayDatasCurrent() : kotlin.collections.List<UniswapV2TokenDayDataDTO> {
-        val localVarResponse = uniswapV2TokenDayDatasCurrentWithHttpInfo()
+    fun uniswapV2TokenDayDataCurrent() : kotlin.collections.List<UniswapV2TokenDayDataDTO> {
+        val localVarResponse = uniswapV2TokenDayDataCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UniswapV2TokenDayDataDTO>
@@ -2278,16 +2278,16 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * TokenDayDatas (current)
-     * Gets tokenDayDatas.
+     * TokenDayData (current)
+     * Gets tokenDayData.
      * @return ApiResponse<kotlin.collections.List<UniswapV2TokenDayDataDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun uniswapV2TokenDayDatasCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UniswapV2TokenDayDataDTO>?> {
-        val localVariableConfig = uniswapV2TokenDayDatasCurrentRequestConfig()
+    fun uniswapV2TokenDayDataCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UniswapV2TokenDayDataDTO>?> {
+        val localVariableConfig = uniswapV2TokenDayDataCurrentRequestConfig()
 
         return request<Unit, kotlin.collections.List<UniswapV2TokenDayDataDTO>>(
             localVariableConfig
@@ -2295,11 +2295,11 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation uniswapV2TokenDayDatasCurrent
+     * To obtain the request config of the operation uniswapV2TokenDayDataCurrent
      *
      * @return RequestConfig
      */
-    fun uniswapV2TokenDayDatasCurrentRequestConfig() : RequestConfig<Unit> {
+    fun uniswapV2TokenDayDataCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -2307,7 +2307,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswapv2/tokenDayDatas/current",
+            path = "/dapps/uniswapv2/tokenDayData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -2449,8 +2449,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * UniswapDayDatas (current)
-     * Gets uniswapDayDatas.
+     * UniswapDayData (current)
+     * Gets uniswapDayData.
      * @return kotlin.collections.List<UniswapV2UniswapDayDataDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -2460,8 +2460,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun uniswapV2UniswapDayDatasCurrent() : kotlin.collections.List<UniswapV2UniswapDayDataDTO> {
-        val localVarResponse = uniswapV2UniswapDayDatasCurrentWithHttpInfo()
+    fun uniswapV2UniswapDayDataCurrent() : kotlin.collections.List<UniswapV2UniswapDayDataDTO> {
+        val localVarResponse = uniswapV2UniswapDayDataCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UniswapV2UniswapDayDataDTO>
@@ -2479,16 +2479,16 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * UniswapDayDatas (current)
-     * Gets uniswapDayDatas.
+     * UniswapDayData (current)
+     * Gets uniswapDayData.
      * @return ApiResponse<kotlin.collections.List<UniswapV2UniswapDayDataDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun uniswapV2UniswapDayDatasCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UniswapV2UniswapDayDataDTO>?> {
-        val localVariableConfig = uniswapV2UniswapDayDatasCurrentRequestConfig()
+    fun uniswapV2UniswapDayDataCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UniswapV2UniswapDayDataDTO>?> {
+        val localVariableConfig = uniswapV2UniswapDayDataCurrentRequestConfig()
 
         return request<Unit, kotlin.collections.List<UniswapV2UniswapDayDataDTO>>(
             localVariableConfig
@@ -2496,11 +2496,11 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation uniswapV2UniswapDayDatasCurrent
+     * To obtain the request config of the operation uniswapV2UniswapDayDataCurrent
      *
      * @return RequestConfig
      */
-    fun uniswapV2UniswapDayDatasCurrentRequestConfig() : RequestConfig<Unit> {
+    fun uniswapV2UniswapDayDataCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -2508,7 +2508,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswapv2/uniswapDayDatas/current",
+            path = "/dapps/uniswapv2/uniswapDayData/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -2516,8 +2516,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * UniswapFactorys (current)
-     * Gets uniswapFactorys.
+     * UniswapFactories (current)
+     * Gets uniswapFactories.
      * @return kotlin.collections.List<UniswapV2UniswapFactoryDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -2527,8 +2527,8 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun uniswapV2UniswapFactorysCurrent() : kotlin.collections.List<UniswapV2UniswapFactoryDTO> {
-        val localVarResponse = uniswapV2UniswapFactorysCurrentWithHttpInfo()
+    fun uniswapV2UniswapFactoriesCurrent() : kotlin.collections.List<UniswapV2UniswapFactoryDTO> {
+        val localVarResponse = uniswapV2UniswapFactoriesCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<UniswapV2UniswapFactoryDTO>
@@ -2546,16 +2546,16 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * UniswapFactorys (current)
-     * Gets uniswapFactorys.
+     * UniswapFactories (current)
+     * Gets uniswapFactories.
      * @return ApiResponse<kotlin.collections.List<UniswapV2UniswapFactoryDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun uniswapV2UniswapFactorysCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UniswapV2UniswapFactoryDTO>?> {
-        val localVariableConfig = uniswapV2UniswapFactorysCurrentRequestConfig()
+    fun uniswapV2UniswapFactoriesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<UniswapV2UniswapFactoryDTO>?> {
+        val localVariableConfig = uniswapV2UniswapFactoriesCurrentRequestConfig()
 
         return request<Unit, kotlin.collections.List<UniswapV2UniswapFactoryDTO>>(
             localVariableConfig
@@ -2563,11 +2563,11 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
     }
 
     /**
-     * To obtain the request config of the operation uniswapV2UniswapFactorysCurrent
+     * To obtain the request config of the operation uniswapV2UniswapFactoriesCurrent
      *
      * @return RequestConfig
      */
-    fun uniswapV2UniswapFactorysCurrentRequestConfig() : RequestConfig<Unit> {
+    fun uniswapV2UniswapFactoriesCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -2575,7 +2575,7 @@ class UniswapV2Api(basePath: kotlin.String = defaultBasePath, client: OkHttpClie
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/uniswapv2/uniswapFactorys/current",
+            path = "/dapps/uniswapv2/uniswapFactories/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

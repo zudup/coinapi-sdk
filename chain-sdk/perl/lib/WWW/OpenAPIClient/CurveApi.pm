@@ -599,26 +599,26 @@ sub curve_gauge_deposits__current {
 }
 
 #
-# curve_gauge_liquiditys__current
+# curve_gauge_liquidities__current
 #
-# GaugeLiquiditys (current)
+# GaugeLiquidities (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'curve_gauge_liquiditys__current' } = {
-        summary => 'GaugeLiquiditys (current)',
+    __PACKAGE__->method_documentation->{ 'curve_gauge_liquidities__current' } = {
+        summary => 'GaugeLiquidities (current)',
         params => $params,
         returns => 'ARRAY[CurveGaugeLiquidityDTO]',
         };
 }
 # @return ARRAY[CurveGaugeLiquidityDTO]
 #
-sub curve_gauge_liquiditys__current {
+sub curve_gauge_liquidities__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gaugeLiquiditys/current';
+    my $_resource_path = '/dapps/curve/gaugeLiquidities/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2234,9 +2234,9 @@ sub curve_get_gauge_deposits__historical {
 }
 
 #
-# curve_get_gauge_liquiditys__historical
+# curve_get_gauge_liquidities__historical
 #
-# GaugeLiquiditys (historical)
+# GaugeLiquidities (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2277,19 +2277,19 @@ sub curve_get_gauge_deposits__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'curve_get_gauge_liquiditys__historical' } = {
-        summary => 'GaugeLiquiditys (historical)',
+    __PACKAGE__->method_documentation->{ 'curve_get_gauge_liquidities__historical' } = {
+        summary => 'GaugeLiquidities (historical)',
         params => $params,
         returns => 'ARRAY[CurveGaugeLiquidityDTO]',
         };
 }
 # @return ARRAY[CurveGaugeLiquidityDTO]
 #
-sub curve_get_gauge_liquiditys__historical {
+sub curve_get_gauge_liquidities__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/curve/gaugeLiquiditys/historical';
+    my $_resource_path = '/dapps/curve/gaugeLiquidities/historical';
 
     my $_method = 'GET';
     my $query_params = {};

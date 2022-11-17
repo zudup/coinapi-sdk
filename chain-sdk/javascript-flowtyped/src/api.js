@@ -9808,12 +9808,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets gaugeLiquiditys.
-         * @summary GaugeLiquiditys (current)
+         * Gets gaugeLiquidities.
+         * @summary GaugeLiquidities (current)
          * @throws {RequiredError}
          */
-        curveGaugeLiquiditysCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gaugeLiquiditys/current`;
+        curveGaugeLiquiditiesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/gaugeLiquidities/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -10482,12 +10482,12 @@ export const CurveApiFetchParamCreator = function (configuration?: Configuration
             };
         },
         /**
-         * Gets gaugeLiquiditys.
-         * @summary GaugeLiquiditys (historical)
+         * Gets gaugeLiquidities.
+         * @summary GaugeLiquidities (historical)
          * @throws {RequiredError}
          */
-        curveGetGaugeLiquiditysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/curve/gaugeLiquiditys/historical`;
+        curveGetGaugeLiquiditiesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/curve/gaugeLiquidities/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -11759,7 +11759,7 @@ export type CurveApiType = {
 
     curveGaugeDepositsCurrent(options?: RequestOptions): Promise<Array<CurveGaugeDepositDTO>>,
 
-    curveGaugeLiquiditysCurrent(options?: RequestOptions): Promise<Array<CurveGaugeLiquidityDTO>>,
+    curveGaugeLiquiditiesCurrent(options?: RequestOptions): Promise<Array<CurveGaugeLiquidityDTO>>,
 
     curveGaugeTotalWeightsCurrent(options?: RequestOptions): Promise<Array<CurveGaugeTotalWeightDTO>>,
 
@@ -11797,7 +11797,7 @@ export type CurveApiType = {
 
     curveGetGaugeDepositsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<CurveGaugeDepositDTO>>,
 
-    curveGetGaugeLiquiditysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options?: RequestOptions): Promise<Array<CurveGaugeLiquidityDTO>>,
+    curveGetGaugeLiquiditiesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options?: RequestOptions): Promise<Array<CurveGaugeLiquidityDTO>>,
 
     curveGetGaugeTotalWeightsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<CurveGaugeTotalWeightDTO>>,
 
@@ -12039,12 +12039,12 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets gaugeLiquiditys.
-         * @summary GaugeLiquiditys (current)
+         * Gets gaugeLiquidities.
+         * @summary GaugeLiquidities (current)
          * @throws {RequiredError}
          */
-        curveGaugeLiquiditysCurrent(options?: RequestOptions = {}): Promise<Array<CurveGaugeLiquidityDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGaugeLiquiditysCurrent(options);
+        curveGaugeLiquiditiesCurrent(options?: RequestOptions = {}): Promise<Array<CurveGaugeLiquidityDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGaugeLiquiditiesCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -12324,12 +12324,12 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
             });
         },
         /**
-         * Gets gaugeLiquiditys.
-         * @summary GaugeLiquiditys (historical)
+         * Gets gaugeLiquidities.
+         * @summary GaugeLiquidities (historical)
          * @throws {RequiredError}
          */
-        curveGetGaugeLiquiditysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options?: RequestOptions = {}): Promise<Array<CurveGaugeLiquidityDTO>> {
-            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetGaugeLiquiditysHistorical(startBlock, endBlock, startDate, endDate, id, user, options);
+        curveGetGaugeLiquiditiesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options?: RequestOptions = {}): Promise<Array<CurveGaugeLiquidityDTO>> {
+            const localVarFetchArgs = CurveApiFetchParamCreator(configuration).curveGetGaugeLiquiditiesHistorical(startBlock, endBlock, startDate, endDate, id, user, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -12844,12 +12844,12 @@ export const CurveApi = function(configuration?: Configuration, fetch: FetchAPI 
 export const DexApiFetchParamCreator = function (configuration?: Configuration) {
     return {
         /**
-         * Gets batchs.
-         * @summary Batchs (current)
+         * Gets batches.
+         * @summary Batches (current)
          * @throws {RequiredError}
          */
-        dexBatchsCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/batchs/current`;
+        dexBatchesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/dex/batches/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -12888,12 +12888,12 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
             };
         },
         /**
-         * Gets batchs.
-         * @summary Batchs (historical)
+         * Gets batches.
+         * @summary Batches (historical)
          * @throws {RequiredError}
          */
-        dexGetBatchsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/batchs/historical`;
+        dexGetBatchesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/dex/batches/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13110,12 +13110,12 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
             };
         },
         /**
-         * Gets statss.
-         * @summary Statss (historical)
+         * Gets stats.
+         * @summary Stats (historical)
          * @throws {RequiredError}
          */
-        dexGetStatssHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/statss/historical`;
+        dexGetStatsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/dex/stats/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13456,12 +13456,12 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
             };
         },
         /**
-         * Gets statss.
-         * @summary Statss (current)
+         * Gets stats.
+         * @summary Stats (current)
          * @throws {RequiredError}
          */
-        dexStatssCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/dex/statss/current`;
+        dexStatsCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/dex/stats/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -13591,11 +13591,11 @@ export const DexApiFetchParamCreator = function (configuration?: Configuration) 
 };
 
 export type DexApiType = { 
-    dexBatchsCurrent(options?: RequestOptions): Promise<Array<DexBatchDTO>>,
+    dexBatchesCurrent(options?: RequestOptions): Promise<Array<DexBatchDTO>>,
 
     dexDepositsCurrent(options?: RequestOptions): Promise<Array<DexDepositDTO>>,
 
-    dexGetBatchsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<DexBatchDTO>>,
+    dexGetBatchesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<DexBatchDTO>>,
 
     dexGetDepositsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, options?: RequestOptions): Promise<Array<DexDepositDTO>>,
 
@@ -13605,7 +13605,7 @@ export type DexApiType = {
 
     dexGetSolutionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<DexSolutionDTO>>,
 
-    dexGetStatssHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<DexStatsDTO>>,
+    dexGetStatsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<DexStatsDTO>>,
 
     dexGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, address?: string, symbol?: string, name?: string, options?: RequestOptions): Promise<Array<DexTokenDTO>>,
 
@@ -13623,7 +13623,7 @@ export type DexApiType = {
 
     dexSolutionsCurrent(options?: RequestOptions): Promise<Array<DexSolutionDTO>>,
 
-    dexStatssCurrent(options?: RequestOptions): Promise<Array<DexStatsDTO>>,
+    dexStatsCurrent(options?: RequestOptions): Promise<Array<DexStatsDTO>>,
 
     dexTokensCurrent(options?: RequestOptions): Promise<Array<DexTokenDTO>>,
 
@@ -13644,12 +13644,12 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
     const basePath: string = (configuration && configuration.basePath) || BASE_PATH;
     return {
         /**
-         * Gets batchs.
-         * @summary Batchs (current)
+         * Gets batches.
+         * @summary Batches (current)
          * @throws {RequiredError}
          */
-        dexBatchsCurrent(options?: RequestOptions = {}): Promise<Array<DexBatchDTO>> {
-            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexBatchsCurrent(options);
+        dexBatchesCurrent(options?: RequestOptions = {}): Promise<Array<DexBatchDTO>> {
+            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexBatchesCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -13674,12 +13674,12 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
             });
         },
         /**
-         * Gets batchs.
-         * @summary Batchs (historical)
+         * Gets batches.
+         * @summary Batches (historical)
          * @throws {RequiredError}
          */
-        dexGetBatchsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<DexBatchDTO>> {
-            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetBatchsHistorical(startBlock, endBlock, startDate, endDate, id, options);
+        dexGetBatchesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<DexBatchDTO>> {
+            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetBatchesHistorical(startBlock, endBlock, startDate, endDate, id, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -13749,12 +13749,12 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
             });
         },
         /**
-         * Gets statss.
-         * @summary Statss (historical)
+         * Gets stats.
+         * @summary Stats (historical)
          * @throws {RequiredError}
          */
-        dexGetStatssHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<DexStatsDTO>> {
-            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetStatssHistorical(startBlock, endBlock, startDate, endDate, id, options);
+        dexGetStatsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<DexStatsDTO>> {
+            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexGetStatsHistorical(startBlock, endBlock, startDate, endDate, id, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -13884,12 +13884,12 @@ export const DexApi = function(configuration?: Configuration, fetch: FetchAPI = 
             });
         },
         /**
-         * Gets statss.
-         * @summary Statss (current)
+         * Gets stats.
+         * @summary Stats (current)
          * @throws {RequiredError}
          */
-        dexStatssCurrent(options?: RequestOptions = {}): Promise<Array<DexStatsDTO>> {
-            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexStatssCurrent(options);
+        dexStatsCurrent(options?: RequestOptions = {}): Promise<Array<DexStatsDTO>> {
+            const localVarFetchArgs = DexApiFetchParamCreator(configuration).dexStatsCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -14028,12 +14028,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets dayDatas.
-         * @summary DayDatas (current)
+         * Gets dayData.
+         * @summary DayData (current)
          * @throws {RequiredError}
          */
-        sushiswapDayDatasCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/dayDatas/current`;
+        sushiswapDayDataCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/dayData/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -14050,12 +14050,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets factorys.
-         * @summary Factorys (current)
+         * Gets factories.
+         * @summary Factories (current)
          * @throws {RequiredError}
          */
-        sushiswapFactorysCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/factorys/current`;
+        sushiswapFactoriesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/factories/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -14160,12 +14160,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets dayDatas.
-         * @summary DayDatas (historical)
+         * Gets dayData.
+         * @summary DayData (historical)
          * @throws {RequiredError}
          */
-        sushiswapGetDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/dayDatas/historical`;
+        sushiswapGetDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/dayData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -14202,12 +14202,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets factorys.
-         * @summary Factorys (historical)
+         * Gets factories.
+         * @summary Factories (historical)
          * @throws {RequiredError}
          */
-        sushiswapGetFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/factorys/historical`;
+        sushiswapGetFactoriesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/factories/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -14244,12 +14244,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets hourDatas.
-         * @summary HourDatas (historical)
+         * Gets hourData.
+         * @summary HourData (historical)
          * @throws {RequiredError}
          */
-        sushiswapGetHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/hourDatas/historical`;
+        sushiswapGetHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/hourData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -14432,12 +14432,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets pairDayDatas.
-         * @summary PairDayDatas (historical)
+         * Gets pairDayData.
+         * @summary PairDayData (historical)
          * @throws {RequiredError}
          */
-        sushiswapGetPairDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/pairDayDatas/historical`;
+        sushiswapGetPairDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/pairDayData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -14486,12 +14486,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets pairHourDatas.
-         * @summary PairHourDatas (historical)
+         * Gets pairHourData.
+         * @summary PairHourData (historical)
          * @throws {RequiredError}
          */
-        sushiswapGetPairHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/pairHourDatas/historical`;
+        sushiswapGetPairHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/pairHourData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -14632,12 +14632,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets tokenDayDatas.
-         * @summary TokenDayDatas (historical)
+         * Gets tokenDayData.
+         * @summary TokenDayData (historical)
          * @throws {RequiredError}
          */
-        sushiswapGetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/tokenDayDatas/historical`;
+        sushiswapGetTokenDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/tokenDayData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -14808,12 +14808,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets hourDatas.
-         * @summary HourDatas (current)
+         * Gets hourData.
+         * @summary HourData (current)
          * @throws {RequiredError}
          */
-        sushiswapHourDatasCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/hourDatas/current`;
+        sushiswapHourDataCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/hourData/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -14896,12 +14896,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets pairDayDatas.
-         * @summary PairDayDatas (current)
+         * Gets pairDayData.
+         * @summary PairDayData (current)
          * @throws {RequiredError}
          */
-        sushiswapPairDayDatasCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/pairDayDatas/current`;
+        sushiswapPairDayDataCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/pairDayData/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -14918,12 +14918,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets pairHourDatas.
-         * @summary PairHourDatas (current)
+         * Gets pairHourData.
+         * @summary PairHourData (current)
          * @throws {RequiredError}
          */
-        sushiswapPairHourDatasCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/pairHourDatas/current`;
+        sushiswapPairHourDataCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/pairHourData/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -14992,12 +14992,12 @@ export const SushiswapApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets tokenDayDatas.
-         * @summary TokenDayDatas (current)
+         * Gets tokenDayData.
+         * @summary TokenDayData (current)
          * @throws {RequiredError}
          */
-        sushiswapTokenDayDatasCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/sushiswap/tokenDayDatas/current`;
+        sushiswapTokenDayDataCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/sushiswap/tokenDayData/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -15087,19 +15087,19 @@ export type SushiswapApiType = {
 
     sushiswapBurnsCurrent(options?: RequestOptions): Promise<Array<SushiswapBurnDTO>>,
 
-    sushiswapDayDatasCurrent(options?: RequestOptions): Promise<Array<SushiswapDayDataDTO>>,
+    sushiswapDayDataCurrent(options?: RequestOptions): Promise<Array<SushiswapDayDataDTO>>,
 
-    sushiswapFactorysCurrent(options?: RequestOptions): Promise<Array<SushiswapFactoryDTO>>,
+    sushiswapFactoriesCurrent(options?: RequestOptions): Promise<Array<SushiswapFactoryDTO>>,
 
     sushiswapGetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<SushiswapBundleDTO>>,
 
     sushiswapGetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<SushiswapBurnDTO>>,
 
-    sushiswapGetDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<SushiswapDayDataDTO>>,
+    sushiswapGetDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<SushiswapDayDataDTO>>,
 
-    sushiswapGetFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<SushiswapFactoryDTO>>,
+    sushiswapGetFactoriesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<SushiswapFactoryDTO>>,
 
-    sushiswapGetHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<SushiswapHourDataDTO>>,
+    sushiswapGetHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<SushiswapHourDataDTO>>,
 
     sushiswapGetLiquidityPositionSnapshotsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, user?: string, pair?: string, options?: RequestOptions): Promise<Array<SushiswapLiquidityPositionSnapshotDTO>>,
 
@@ -15107,15 +15107,15 @@ export type SushiswapApiType = {
 
     sushiswapGetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<SushiswapMintDTO>>,
 
-    sushiswapGetPairDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<SushiswapPairDayDataDTO>>,
+    sushiswapGetPairDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<SushiswapPairDayDataDTO>>,
 
-    sushiswapGetPairHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<SushiswapPairHourDataDTO>>,
+    sushiswapGetPairHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<SushiswapPairHourDataDTO>>,
 
     sushiswapGetPairsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, name?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<SushiswapPairDTO>>,
 
     sushiswapGetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<SushiswapSwapDTO>>,
 
-    sushiswapGetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<SushiswapTokenDayDataDTO>>,
+    sushiswapGetTokenDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<SushiswapTokenDayDataDTO>>,
 
     sushiswapGetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options?: RequestOptions): Promise<Array<SushiswapTokenDTO>>,
 
@@ -15123,7 +15123,7 @@ export type SushiswapApiType = {
 
     sushiswapGetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<SushiswapUserDTO>>,
 
-    sushiswapHourDatasCurrent(options?: RequestOptions): Promise<Array<SushiswapHourDataDTO>>,
+    sushiswapHourDataCurrent(options?: RequestOptions): Promise<Array<SushiswapHourDataDTO>>,
 
     sushiswapLiquidityPositionSnapshotsCurrent(options?: RequestOptions): Promise<Array<SushiswapLiquidityPositionSnapshotDTO>>,
 
@@ -15131,15 +15131,15 @@ export type SushiswapApiType = {
 
     sushiswapMintsCurrent(options?: RequestOptions): Promise<Array<SushiswapMintDTO>>,
 
-    sushiswapPairDayDatasCurrent(options?: RequestOptions): Promise<Array<SushiswapPairDayDataDTO>>,
+    sushiswapPairDayDataCurrent(options?: RequestOptions): Promise<Array<SushiswapPairDayDataDTO>>,
 
-    sushiswapPairHourDatasCurrent(options?: RequestOptions): Promise<Array<SushiswapPairHourDataDTO>>,
+    sushiswapPairHourDataCurrent(options?: RequestOptions): Promise<Array<SushiswapPairHourDataDTO>>,
 
     sushiswapPairsCurrent(id?: string, options?: RequestOptions): Promise<Array<SushiswapPairDTO>>,
 
     sushiswapSwapsCurrent(pair?: string, options?: RequestOptions): Promise<Array<SushiswapSwapDTO>>,
 
-    sushiswapTokenDayDatasCurrent(options?: RequestOptions): Promise<Array<SushiswapTokenDayDataDTO>>,
+    sushiswapTokenDayDataCurrent(options?: RequestOptions): Promise<Array<SushiswapTokenDayDataDTO>>,
 
     sushiswapTokensCurrent(options?: RequestOptions): Promise<Array<SushiswapTokenDTO>>,
 
@@ -15186,12 +15186,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets dayDatas.
-         * @summary DayDatas (current)
+         * Gets dayData.
+         * @summary DayData (current)
          * @throws {RequiredError}
          */
-        sushiswapDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapDayDataDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapDayDatasCurrent(options);
+        sushiswapDayDataCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapDayDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapDayDataCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15201,12 +15201,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets factorys.
-         * @summary Factorys (current)
+         * Gets factories.
+         * @summary Factories (current)
          * @throws {RequiredError}
          */
-        sushiswapFactorysCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapFactoryDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapFactorysCurrent(options);
+        sushiswapFactoriesCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapFactoryDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapFactoriesCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15246,12 +15246,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets dayDatas.
-         * @summary DayDatas (historical)
+         * Gets dayData.
+         * @summary DayData (historical)
          * @throws {RequiredError}
          */
-        sushiswapGetDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<SushiswapDayDataDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, options);
+        sushiswapGetDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<SushiswapDayDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetDayDataHistorical(startBlock, endBlock, startDate, endDate, id, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15261,12 +15261,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets factorys.
-         * @summary Factorys (historical)
+         * Gets factories.
+         * @summary Factories (historical)
          * @throws {RequiredError}
          */
-        sushiswapGetFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<SushiswapFactoryDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetFactorysHistorical(startBlock, endBlock, startDate, endDate, id, options);
+        sushiswapGetFactoriesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<SushiswapFactoryDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetFactoriesHistorical(startBlock, endBlock, startDate, endDate, id, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15276,12 +15276,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets hourDatas.
-         * @summary HourDatas (historical)
+         * Gets hourData.
+         * @summary HourData (historical)
          * @throws {RequiredError}
          */
-        sushiswapGetHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<SushiswapHourDataDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, options);
+        sushiswapGetHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<SushiswapHourDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetHourDataHistorical(startBlock, endBlock, startDate, endDate, id, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15336,12 +15336,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets pairDayDatas.
-         * @summary PairDayDatas (historical)
+         * Gets pairDayData.
+         * @summary PairDayData (historical)
          * @throws {RequiredError}
          */
-        sushiswapGetPairDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairDayDataDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1, options);
+        sushiswapGetPairDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairDayDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pair, token0, token1, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15351,12 +15351,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets pairHourDatas.
-         * @summary PairHourDatas (historical)
+         * Gets pairHourData.
+         * @summary PairHourData (historical)
          * @throws {RequiredError}
          */
-        sushiswapGetPairHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairHourDataDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair, options);
+        sushiswapGetPairHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions = {}): Promise<Array<SushiswapPairHourDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15396,12 +15396,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets tokenDayDatas.
-         * @summary TokenDayDatas (historical)
+         * Gets tokenDayData.
+         * @summary TokenDayData (historical)
          * @throws {RequiredError}
          */
-        sushiswapGetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<SushiswapTokenDayDataDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, options);
+        sushiswapGetTokenDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<SushiswapTokenDayDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapGetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15456,12 +15456,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets hourDatas.
-         * @summary HourDatas (current)
+         * Gets hourData.
+         * @summary HourData (current)
          * @throws {RequiredError}
          */
-        sushiswapHourDatasCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapHourDataDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapHourDatasCurrent(options);
+        sushiswapHourDataCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapHourDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapHourDataCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15516,12 +15516,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets pairDayDatas.
-         * @summary PairDayDatas (current)
+         * Gets pairDayData.
+         * @summary PairDayData (current)
          * @throws {RequiredError}
          */
-        sushiswapPairDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapPairDayDataDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapPairDayDatasCurrent(options);
+        sushiswapPairDayDataCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapPairDayDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapPairDayDataCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15531,12 +15531,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets pairHourDatas.
-         * @summary PairHourDatas (current)
+         * Gets pairHourData.
+         * @summary PairHourData (current)
          * @throws {RequiredError}
          */
-        sushiswapPairHourDatasCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapPairHourDataDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapPairHourDatasCurrent(options);
+        sushiswapPairHourDataCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapPairHourDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapPairHourDataCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15576,12 +15576,12 @@ export const SushiswapApi = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets tokenDayDatas.
-         * @summary TokenDayDatas (current)
+         * Gets tokenDayData.
+         * @summary TokenDayData (current)
          * @throws {RequiredError}
          */
-        sushiswapTokenDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapTokenDayDataDTO>> {
-            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapTokenDayDatasCurrent(options);
+        sushiswapTokenDayDataCurrent(options?: RequestOptions = {}): Promise<Array<SushiswapTokenDayDataDTO>> {
+            const localVarFetchArgs = SushiswapApiFetchParamCreator(configuration).sushiswapTokenDayDataCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -15924,12 +15924,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets pairDayDatas.
-         * @summary PairDayDatas (historical)
+         * Gets pairDayData.
+         * @summary PairDayData (historical)
          * @throws {RequiredError}
          */
-        uniswapV2GetPairDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/pairDayDatas/historical`;
+        uniswapV2GetPairDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/pairDayData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -15974,12 +15974,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets pairHourDatas.
-         * @summary PairHourDatas (historical)
+         * Gets pairHourData.
+         * @summary PairHourData (historical)
          * @throws {RequiredError}
          */
-        uniswapV2GetPairHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/pairHourDatas/historical`;
+        uniswapV2GetPairHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/pairHourData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -16116,12 +16116,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets tokenDayDatas.
-         * @summary TokenDayDatas (historical)
+         * Gets tokenDayData.
+         * @summary TokenDayData (historical)
          * @throws {RequiredError}
          */
-        uniswapV2GetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/tokenDayDatas/historical`;
+        uniswapV2GetTokenDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/tokenDayData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -16250,12 +16250,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets uniswapDayDatas.
-         * @summary UniswapDayDatas (historical)
+         * Gets uniswapDayData.
+         * @summary UniswapDayData (historical)
          * @throws {RequiredError}
          */
-        uniswapV2GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/uniswapDayDatas/historical`;
+        uniswapV2GetUniswapDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/uniswapDayData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -16292,12 +16292,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets uniswapFactorys.
-         * @summary UniswapFactorys (historical)
+         * Gets uniswapFactories.
+         * @summary UniswapFactories (historical)
          * @throws {RequiredError}
          */
-        uniswapV2GetUniswapFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/uniswapFactorys/historical`;
+        uniswapV2GetUniswapFactoriesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/uniswapFactories/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -16442,12 +16442,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets pairDayDatas.
-         * @summary PairDayDatas (current)
+         * Gets pairDayData.
+         * @summary PairDayData (current)
          * @throws {RequiredError}
          */
-        uniswapV2PairDayDatasCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/pairDayDatas/current`;
+        uniswapV2PairDayDataCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/pairDayData/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -16464,12 +16464,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets pairHourDatas.
-         * @summary PairHourDatas (current)
+         * Gets pairHourData.
+         * @summary PairHourData (current)
          * @throws {RequiredError}
          */
-        uniswapV2PairHourDatasCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/pairHourDatas/current`;
+        uniswapV2PairHourDataCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/pairHourData/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -16538,12 +16538,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets tokenDayDatas.
-         * @summary TokenDayDatas (current)
+         * Gets tokenDayData.
+         * @summary TokenDayData (current)
          * @throws {RequiredError}
          */
-        uniswapV2TokenDayDatasCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/tokenDayDatas/current`;
+        uniswapV2TokenDayDataCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/tokenDayData/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -16604,12 +16604,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets uniswapDayDatas.
-         * @summary UniswapDayDatas (current)
+         * Gets uniswapDayData.
+         * @summary UniswapDayData (current)
          * @throws {RequiredError}
          */
-        uniswapV2UniswapDayDatasCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/uniswapDayDatas/current`;
+        uniswapV2UniswapDayDataCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/uniswapDayData/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -16626,12 +16626,12 @@ export const UniswapV2ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets uniswapFactorys.
-         * @summary UniswapFactorys (current)
+         * Gets uniswapFactories.
+         * @summary UniswapFactories (current)
          * @throws {RequiredError}
          */
-        uniswapV2UniswapFactorysCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv2/uniswapFactorys/current`;
+        uniswapV2UniswapFactoriesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv2/uniswapFactories/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -16687,23 +16687,23 @@ export type UniswapV2ApiType = {
 
     uniswapV2GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<UniswapV2MintDTO>>,
 
-    uniswapV2GetPairDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV2PairDayDataDTO>>,
+    uniswapV2GetPairDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV2PairDayDataDTO>>,
 
-    uniswapV2GetPairHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<UniswapV2PairHourDataDTO>>,
+    uniswapV2GetPairHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<UniswapV2PairHourDataDTO>>,
 
     uniswapV2GetPairsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV2PairDTO>>,
 
     uniswapV2GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions): Promise<Array<UniswapV2SwapDTO>>,
 
-    uniswapV2GetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2TokenDayDataDTO>>,
+    uniswapV2GetTokenDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2TokenDayDataDTO>>,
 
     uniswapV2GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options?: RequestOptions): Promise<Array<UniswapV2TokenDTO>>,
 
     uniswapV2GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2TransactionDTO>>,
 
-    uniswapV2GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2UniswapDayDataDTO>>,
+    uniswapV2GetUniswapDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2UniswapDayDataDTO>>,
 
-    uniswapV2GetUniswapFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2UniswapFactoryDTO>>,
+    uniswapV2GetUniswapFactoriesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2UniswapFactoryDTO>>,
 
     uniswapV2GetUsersHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV2UserDTO>>,
 
@@ -16713,23 +16713,23 @@ export type UniswapV2ApiType = {
 
     uniswapV2MintsCurrent(options?: RequestOptions): Promise<Array<UniswapV2MintDTO>>,
 
-    uniswapV2PairDayDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV2PairDayDataDTO>>,
+    uniswapV2PairDayDataCurrent(options?: RequestOptions): Promise<Array<UniswapV2PairDayDataDTO>>,
 
-    uniswapV2PairHourDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV2PairHourDataDTO>>,
+    uniswapV2PairHourDataCurrent(options?: RequestOptions): Promise<Array<UniswapV2PairHourDataDTO>>,
 
     uniswapV2PairsCurrent(id?: string, options?: RequestOptions): Promise<Array<UniswapV2PairDTO>>,
 
     uniswapV2SwapsCurrent(pair?: string, options?: RequestOptions): Promise<Array<UniswapV2SwapDTO>>,
 
-    uniswapV2TokenDayDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV2TokenDayDataDTO>>,
+    uniswapV2TokenDayDataCurrent(options?: RequestOptions): Promise<Array<UniswapV2TokenDayDataDTO>>,
 
     uniswapV2TokensCurrent(options?: RequestOptions): Promise<Array<UniswapV2TokenDTO>>,
 
     uniswapV2TransactionsCurrent(options?: RequestOptions): Promise<Array<UniswapV2TransactionDTO>>,
 
-    uniswapV2UniswapDayDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV2UniswapDayDataDTO>>,
+    uniswapV2UniswapDayDataCurrent(options?: RequestOptions): Promise<Array<UniswapV2UniswapDayDataDTO>>,
 
-    uniswapV2UniswapFactorysCurrent(options?: RequestOptions): Promise<Array<UniswapV2UniswapFactoryDTO>>,
+    uniswapV2UniswapFactoriesCurrent(options?: RequestOptions): Promise<Array<UniswapV2UniswapFactoryDTO>>,
 
     uniswapV2UsersCurrent(options?: RequestOptions): Promise<Array<UniswapV2UserDTO>>,
 }
@@ -16847,12 +16847,12 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets pairDayDatas.
-         * @summary PairDayDatas (historical)
+         * Gets pairDayData.
+         * @summary PairDayData (historical)
          * @throws {RequiredError}
          */
-        uniswapV2GetPairDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairDayDataDTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetPairDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1, options);
+        uniswapV2GetPairDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairDayDataDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetPairDayDataHistorical(startBlock, endBlock, startDate, endDate, id, token0, token1, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -16862,12 +16862,12 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets pairHourDatas.
-         * @summary PairHourDatas (historical)
+         * Gets pairHourData.
+         * @summary PairHourData (historical)
          * @throws {RequiredError}
          */
-        uniswapV2GetPairHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairHourDataDTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetPairHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pair, options);
+        uniswapV2GetPairHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pair?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2PairHourDataDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetPairHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pair, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -16907,12 +16907,12 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets tokenDayDatas.
-         * @summary TokenDayDatas (historical)
+         * Gets tokenDayData.
+         * @summary TokenDayData (historical)
          * @throws {RequiredError}
          */
-        uniswapV2GetTokenDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2TokenDayDataDTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetTokenDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, options);
+        uniswapV2GetTokenDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2TokenDayDataDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetTokenDayDataHistorical(startBlock, endBlock, startDate, endDate, id, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -16952,12 +16952,12 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets uniswapDayDatas.
-         * @summary UniswapDayDatas (historical)
+         * Gets uniswapDayData.
+         * @summary UniswapDayData (historical)
          * @throws {RequiredError}
          */
-        uniswapV2GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2UniswapDayDataDTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, options);
+        uniswapV2GetUniswapDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2UniswapDayDataDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetUniswapDayDataHistorical(startBlock, endBlock, startDate, endDate, id, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -16967,12 +16967,12 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets uniswapFactorys.
-         * @summary UniswapFactorys (historical)
+         * Gets uniswapFactories.
+         * @summary UniswapFactories (historical)
          * @throws {RequiredError}
          */
-        uniswapV2GetUniswapFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2UniswapFactoryDTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetUniswapFactorysHistorical(startBlock, endBlock, startDate, endDate, id, options);
+        uniswapV2GetUniswapFactoriesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV2UniswapFactoryDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2GetUniswapFactoriesHistorical(startBlock, endBlock, startDate, endDate, id, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -17042,12 +17042,12 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets pairDayDatas.
-         * @summary PairDayDatas (current)
+         * Gets pairDayData.
+         * @summary PairDayData (current)
          * @throws {RequiredError}
          */
-        uniswapV2PairDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2PairDayDataDTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2PairDayDatasCurrent(options);
+        uniswapV2PairDayDataCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2PairDayDataDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2PairDayDataCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -17057,12 +17057,12 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets pairHourDatas.
-         * @summary PairHourDatas (current)
+         * Gets pairHourData.
+         * @summary PairHourData (current)
          * @throws {RequiredError}
          */
-        uniswapV2PairHourDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2PairHourDataDTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2PairHourDatasCurrent(options);
+        uniswapV2PairHourDataCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2PairHourDataDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2PairHourDataCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -17102,12 +17102,12 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets tokenDayDatas.
-         * @summary TokenDayDatas (current)
+         * Gets tokenDayData.
+         * @summary TokenDayData (current)
          * @throws {RequiredError}
          */
-        uniswapV2TokenDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2TokenDayDataDTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2TokenDayDatasCurrent(options);
+        uniswapV2TokenDayDataCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2TokenDayDataDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2TokenDayDataCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -17147,12 +17147,12 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets uniswapDayDatas.
-         * @summary UniswapDayDatas (current)
+         * Gets uniswapDayData.
+         * @summary UniswapDayData (current)
          * @throws {RequiredError}
          */
-        uniswapV2UniswapDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2UniswapDayDataDTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2UniswapDayDatasCurrent(options);
+        uniswapV2UniswapDayDataCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2UniswapDayDataDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2UniswapDayDataCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -17162,12 +17162,12 @@ export const UniswapV2Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets uniswapFactorys.
-         * @summary UniswapFactorys (current)
+         * Gets uniswapFactories.
+         * @summary UniswapFactories (current)
          * @throws {RequiredError}
          */
-        uniswapV2UniswapFactorysCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2UniswapFactoryDTO>> {
-            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2UniswapFactorysCurrent(options);
+        uniswapV2UniswapFactoriesCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV2UniswapFactoryDTO>> {
+            const localVarFetchArgs = UniswapV2ApiFetchParamCreator(configuration).uniswapV2UniswapFactoriesCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -17246,12 +17246,12 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets factorys.
-         * @summary Factorys (current)
+         * Gets factories.
+         * @summary Factories (current)
          * @throws {RequiredError}
          */
-        uniswapV3FactorysCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/factorys/current`;
+        uniswapV3FactoriesCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/factories/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -17364,12 +17364,12 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets factorys.
-         * @summary Factorys (historical)
+         * Gets factories.
+         * @summary Factories (historical)
          * @throws {RequiredError}
          */
-        uniswapV3GetFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/factorys/historical`;
+        uniswapV3GetFactoriesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/factories/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -17460,12 +17460,12 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets poolDayDatas.
-         * @summary PoolDayDatas (historical)
+         * Gets poolDayData.
+         * @summary PoolDayData (historical)
          * @throws {RequiredError}
          */
-        uniswapV3GetPoolDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/poolDayDatas/historical`;
+        uniswapV3GetPoolDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/poolDayData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -17506,12 +17506,12 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets poolHourDatas.
-         * @summary PoolHourDatas (historical)
+         * Gets poolHourData.
+         * @summary PoolHourData (historical)
          * @throws {RequiredError}
          */
-        uniswapV3GetPoolHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/poolHourDatas/historical`;
+        uniswapV3GetPoolHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/poolHourData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -17756,12 +17756,12 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets tickDayDatas.
-         * @summary TickDayDatas (historical)
+         * Gets tickDayData.
+         * @summary TickDayData (historical)
          * @throws {RequiredError}
          */
-        uniswapV3GetTickDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/tickDayDatas/historical`;
+        uniswapV3GetTickDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/tickDayData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -17848,12 +17848,12 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets tokenHourDatas.
-         * @summary TokenHourDatas (historical)
+         * Gets tokenHourData.
+         * @summary TokenHourData (historical)
          * @throws {RequiredError}
          */
-        uniswapV3GetTokenHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/tokenHourDatas/historical`;
+        uniswapV3GetTokenHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/tokenHourData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -17890,12 +17890,12 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets tokenV3DayDatas.
-         * @summary TokenV3DayDatas (historical)
+         * Gets tokenV3DayData.
+         * @summary TokenV3DayData (historical)
          * @throws {RequiredError}
          */
-        uniswapV3GetTokenV3DayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/tokenV3DayDatas/historical`;
+        uniswapV3GetTokenV3DayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/tokenV3DayData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -18024,12 +18024,12 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets uniswapDayDatas.
-         * @summary UniswapDayDatas (historical)
+         * Gets uniswapDayData.
+         * @summary UniswapDayData (historical)
          * @throws {RequiredError}
          */
-        uniswapV3GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/uniswapDayDatas/historical`;
+        uniswapV3GetUniswapDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/uniswapDayData/historical`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -18088,12 +18088,12 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets poolDayDatas.
-         * @summary PoolDayDatas (current)
+         * Gets poolDayData.
+         * @summary PoolDayData (current)
          * @throws {RequiredError}
          */
-        uniswapV3PoolDayDatasCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/poolDayDatas/current`;
+        uniswapV3PoolDayDataCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/poolDayData/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -18110,12 +18110,12 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets poolHourDatas.
-         * @summary PoolHourDatas (current)
+         * Gets poolHourData.
+         * @summary PoolHourData (current)
          * @throws {RequiredError}
          */
-        uniswapV3PoolHourDatasCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/poolHourDatas/current`;
+        uniswapV3PoolHourDataCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/poolHourData/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -18228,12 +18228,12 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets tickDayDatas.
-         * @summary TickDayDatas (current)
+         * Gets tickDayData.
+         * @summary TickDayData (current)
          * @throws {RequiredError}
          */
-        uniswapV3TickDayDatasCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/tickDayDatas/current`;
+        uniswapV3TickDayDataCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/tickDayData/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -18272,12 +18272,12 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets tokenHourDatas.
-         * @summary TokenHourDatas (current)
+         * Gets tokenHourData.
+         * @summary TokenHourData (current)
          * @throws {RequiredError}
          */
-        uniswapV3TokenHourDatasCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/tokenHourDatas/current`;
+        uniswapV3TokenHourDataCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/tokenHourData/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -18294,12 +18294,12 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets tokenV3DayDatas.
-         * @summary TokenV3DayDatas (current)
+         * Gets tokenV3DayData.
+         * @summary TokenV3DayData (current)
          * @throws {RequiredError}
          */
-        uniswapV3TokenV3DayDatasCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/tokenV3DayDatas/current`;
+        uniswapV3TokenV3DayDataCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/tokenV3DayData/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -18360,12 +18360,12 @@ export const UniswapV3ApiFetchParamCreator = function (configuration?: Configura
             };
         },
         /**
-         * Gets uniswapDayDatas.
-         * @summary UniswapDayDatas (current)
+         * Gets uniswapDayData.
+         * @summary UniswapDayData (current)
          * @throws {RequiredError}
          */
-        uniswapV3UniswapDayDatasCurrent(options: RequestOptions): FetchArgs {
-            const localVarPath = `/dapps/uniswapv3/uniswapDayDatas/current`;
+        uniswapV3UniswapDayDataCurrent(options: RequestOptions): FetchArgs {
+            const localVarPath = `/dapps/uniswapv3/uniswapDayData/current`;
             const localVarUrlObj = url.parse(localVarPath, true);
             const localVarRequestOptions: RequestOptions = Object.assign({}, { method: 'GET' }, options);
             const localVarHeaderParameter = {};
@@ -18389,19 +18389,19 @@ export type UniswapV3ApiType = {
 
     uniswapV3BurnsCurrent(options?: RequestOptions): Promise<Array<UniswapV3BurnDTO>>,
 
-    uniswapV3FactorysCurrent(options?: RequestOptions): Promise<Array<UniswapV3FactoryDTO>>,
+    uniswapV3FactoriesCurrent(options?: RequestOptions): Promise<Array<UniswapV3FactoryDTO>>,
 
     uniswapV3GetBundlesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3BundleDTO>>,
 
     uniswapV3GetBurnsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV3BurnDTO>>,
 
-    uniswapV3GetFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3FactoryDTO>>,
+    uniswapV3GetFactoriesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3FactoryDTO>>,
 
     uniswapV3GetMintsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV3MintDTO>>,
 
-    uniswapV3GetPoolDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolDayDataDTO>>,
+    uniswapV3GetPoolDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolDayDataDTO>>,
 
-    uniswapV3GetPoolHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolHourDataDTO>>,
+    uniswapV3GetPoolHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolHourDataDTO>>,
 
     uniswapV3GetPoolsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolDTO>>,
 
@@ -18411,25 +18411,25 @@ export type UniswapV3ApiType = {
 
     uniswapV3GetSwapsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, token0?: string, token1?: string, options?: RequestOptions): Promise<Array<UniswapV3SwapDTO>>,
 
-    uniswapV3GetTickDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<UniswapV3TickDayDataDTO>>,
+    uniswapV3GetTickDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<UniswapV3TickDayDataDTO>>,
 
     uniswapV3GetTicksHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions): Promise<Array<UniswapV3TickDTO>>,
 
-    uniswapV3GetTokenHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenHourDataDTO>>,
+    uniswapV3GetTokenHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenHourDataDTO>>,
 
-    uniswapV3GetTokenV3DayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenV3DayDataDTO>>,
+    uniswapV3GetTokenV3DayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenV3DayDataDTO>>,
 
     uniswapV3GetTokensHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, symbol?: string, name?: string, options?: RequestOptions): Promise<Array<UniswapV3TokenDTO>>,
 
     uniswapV3GetTransactionsHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3TransactionDTO>>,
 
-    uniswapV3GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3UniswapDayDataDTO>>,
+    uniswapV3GetUniswapDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions): Promise<Array<UniswapV3UniswapDayDataDTO>>,
 
     uniswapV3MintsCurrent(options?: RequestOptions): Promise<Array<UniswapV3MintDTO>>,
 
-    uniswapV3PoolDayDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV3PoolDayDataDTO>>,
+    uniswapV3PoolDayDataCurrent(options?: RequestOptions): Promise<Array<UniswapV3PoolDayDataDTO>>,
 
-    uniswapV3PoolHourDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV3PoolHourDataDTO>>,
+    uniswapV3PoolHourDataCurrent(options?: RequestOptions): Promise<Array<UniswapV3PoolHourDataDTO>>,
 
     uniswapV3PoolsCurrent(id?: string, options?: RequestOptions): Promise<Array<UniswapV3PoolDTO>>,
 
@@ -18439,19 +18439,19 @@ export type UniswapV3ApiType = {
 
     uniswapV3SwapsCurrent(pool?: string, options?: RequestOptions): Promise<Array<UniswapV3SwapDTO>>,
 
-    uniswapV3TickDayDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV3TickDayDataDTO>>,
+    uniswapV3TickDayDataCurrent(options?: RequestOptions): Promise<Array<UniswapV3TickDayDataDTO>>,
 
     uniswapV3TicksCurrent(options?: RequestOptions): Promise<Array<UniswapV3TickDTO>>,
 
-    uniswapV3TokenHourDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV3TokenHourDataDTO>>,
+    uniswapV3TokenHourDataCurrent(options?: RequestOptions): Promise<Array<UniswapV3TokenHourDataDTO>>,
 
-    uniswapV3TokenV3DayDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV3TokenV3DayDataDTO>>,
+    uniswapV3TokenV3DayDataCurrent(options?: RequestOptions): Promise<Array<UniswapV3TokenV3DayDataDTO>>,
 
     uniswapV3TokensCurrent(options?: RequestOptions): Promise<Array<UniswapV3TokenDTO>>,
 
     uniswapV3TransactionsCurrent(options?: RequestOptions): Promise<Array<UniswapV3TransactionDTO>>,
 
-    uniswapV3UniswapDayDatasCurrent(options?: RequestOptions): Promise<Array<UniswapV3UniswapDayDataDTO>>,
+    uniswapV3UniswapDayDataCurrent(options?: RequestOptions): Promise<Array<UniswapV3UniswapDayDataDTO>>,
 }
 
 /**
@@ -18492,12 +18492,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets factorys.
-         * @summary Factorys (current)
+         * Gets factories.
+         * @summary Factories (current)
          * @throws {RequiredError}
          */
-        uniswapV3FactorysCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3FactoryDTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3FactorysCurrent(options);
+        uniswapV3FactoriesCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3FactoryDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3FactoriesCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -18537,12 +18537,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets factorys.
-         * @summary Factorys (historical)
+         * Gets factories.
+         * @summary Factories (historical)
          * @throws {RequiredError}
          */
-        uniswapV3GetFactorysHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3FactoryDTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetFactorysHistorical(startBlock, endBlock, startDate, endDate, id, options);
+        uniswapV3GetFactoriesHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3FactoryDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetFactoriesHistorical(startBlock, endBlock, startDate, endDate, id, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -18567,12 +18567,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets poolDayDatas.
-         * @summary PoolDayDatas (historical)
+         * Gets poolDayData.
+         * @summary PoolDayData (historical)
          * @throws {RequiredError}
          */
-        uniswapV3GetPoolDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolDayDataDTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPoolDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool, options);
+        uniswapV3GetPoolDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolDayDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPoolDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -18582,12 +18582,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets poolHourDatas.
-         * @summary PoolHourDatas (historical)
+         * Gets poolHourData.
+         * @summary PoolHourData (historical)
          * @throws {RequiredError}
          */
-        uniswapV3GetPoolHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolHourDataDTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPoolHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool, options);
+        uniswapV3GetPoolHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3PoolHourDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetPoolHourDataHistorical(startBlock, endBlock, startDate, endDate, id, pool, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -18657,12 +18657,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets tickDayDatas.
-         * @summary TickDayDatas (historical)
+         * Gets tickDayData.
+         * @summary TickDayData (historical)
          * @throws {RequiredError}
          */
-        uniswapV3GetTickDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TickDayDataDTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTickDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, pool, options);
+        uniswapV3GetTickDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, pool?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TickDayDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTickDayDataHistorical(startBlock, endBlock, startDate, endDate, id, pool, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -18687,12 +18687,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets tokenHourDatas.
-         * @summary TokenHourDatas (historical)
+         * Gets tokenHourData.
+         * @summary TokenHourData (historical)
          * @throws {RequiredError}
          */
-        uniswapV3GetTokenHourDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenHourDataDTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTokenHourDatasHistorical(startBlock, endBlock, startDate, endDate, id, options);
+        uniswapV3GetTokenHourDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenHourDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTokenHourDataHistorical(startBlock, endBlock, startDate, endDate, id, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -18702,12 +18702,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets tokenV3DayDatas.
-         * @summary TokenV3DayDatas (historical)
+         * Gets tokenV3DayData.
+         * @summary TokenV3DayData (historical)
          * @throws {RequiredError}
          */
-        uniswapV3GetTokenV3DayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenV3DayDataDTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTokenV3DayDatasHistorical(startBlock, endBlock, startDate, endDate, id, options);
+        uniswapV3GetTokenV3DayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3TokenV3DayDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetTokenV3DayDataHistorical(startBlock, endBlock, startDate, endDate, id, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -18747,12 +18747,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets uniswapDayDatas.
-         * @summary UniswapDayDatas (historical)
+         * Gets uniswapDayData.
+         * @summary UniswapDayData (historical)
          * @throws {RequiredError}
          */
-        uniswapV3GetUniswapDayDatasHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3UniswapDayDataDTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetUniswapDayDatasHistorical(startBlock, endBlock, startDate, endDate, id, options);
+        uniswapV3GetUniswapDayDataHistorical(startBlock?: number, endBlock?: number, startDate?: Date, endDate?: Date, id?: string, options?: RequestOptions = {}): Promise<Array<UniswapV3UniswapDayDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3GetUniswapDayDataHistorical(startBlock, endBlock, startDate, endDate, id, options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -18777,12 +18777,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets poolDayDatas.
-         * @summary PoolDayDatas (current)
+         * Gets poolDayData.
+         * @summary PoolDayData (current)
          * @throws {RequiredError}
          */
-        uniswapV3PoolDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3PoolDayDataDTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3PoolDayDatasCurrent(options);
+        uniswapV3PoolDayDataCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3PoolDayDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3PoolDayDataCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -18792,12 +18792,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets poolHourDatas.
-         * @summary PoolHourDatas (current)
+         * Gets poolHourData.
+         * @summary PoolHourData (current)
          * @throws {RequiredError}
          */
-        uniswapV3PoolHourDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3PoolHourDataDTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3PoolHourDatasCurrent(options);
+        uniswapV3PoolHourDataCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3PoolHourDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3PoolHourDataCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -18867,12 +18867,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets tickDayDatas.
-         * @summary TickDayDatas (current)
+         * Gets tickDayData.
+         * @summary TickDayData (current)
          * @throws {RequiredError}
          */
-        uniswapV3TickDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3TickDayDataDTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3TickDayDatasCurrent(options);
+        uniswapV3TickDayDataCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3TickDayDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3TickDayDataCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -18897,12 +18897,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets tokenHourDatas.
-         * @summary TokenHourDatas (current)
+         * Gets tokenHourData.
+         * @summary TokenHourData (current)
          * @throws {RequiredError}
          */
-        uniswapV3TokenHourDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3TokenHourDataDTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3TokenHourDatasCurrent(options);
+        uniswapV3TokenHourDataCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3TokenHourDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3TokenHourDataCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -18912,12 +18912,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets tokenV3DayDatas.
-         * @summary TokenV3DayDatas (current)
+         * Gets tokenV3DayData.
+         * @summary TokenV3DayData (current)
          * @throws {RequiredError}
          */
-        uniswapV3TokenV3DayDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3TokenV3DayDataDTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3TokenV3DayDatasCurrent(options);
+        uniswapV3TokenV3DayDataCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3TokenV3DayDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3TokenV3DayDataCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();
@@ -18957,12 +18957,12 @@ export const UniswapV3Api = function(configuration?: Configuration, fetch: Fetch
             });
         },
         /**
-         * Gets uniswapDayDatas.
-         * @summary UniswapDayDatas (current)
+         * Gets uniswapDayData.
+         * @summary UniswapDayData (current)
          * @throws {RequiredError}
          */
-        uniswapV3UniswapDayDatasCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3UniswapDayDataDTO>> {
-            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3UniswapDayDatasCurrent(options);
+        uniswapV3UniswapDayDataCurrent(options?: RequestOptions = {}): Promise<Array<UniswapV3UniswapDayDataDTO>> {
+            const localVarFetchArgs = UniswapV3ApiFetchParamCreator(configuration).uniswapV3UniswapDayDataCurrent(options);
             return fetch(basePath + localVarFetchArgs.url, localVarFetchArgs.options).then((response) => {
                 if (response.status >= 200 && response.status < 300) {
                     return response.json();

@@ -56,8 +56,8 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Batchs (current)
-     * Gets batchs.
+     * Batches (current)
+     * Gets batches.
      * @return kotlin.collections.List<DexBatchDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -67,8 +67,8 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun dexBatchsCurrent() : kotlin.collections.List<DexBatchDTO> {
-        val localVarResponse = dexBatchsCurrentWithHttpInfo()
+    fun dexBatchesCurrent() : kotlin.collections.List<DexBatchDTO> {
+        val localVarResponse = dexBatchesCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<DexBatchDTO>
@@ -86,16 +86,16 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Batchs (current)
-     * Gets batchs.
+     * Batches (current)
+     * Gets batches.
      * @return ApiResponse<kotlin.collections.List<DexBatchDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun dexBatchsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<DexBatchDTO>?> {
-        val localVariableConfig = dexBatchsCurrentRequestConfig()
+    fun dexBatchesCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<DexBatchDTO>?> {
+        val localVariableConfig = dexBatchesCurrentRequestConfig()
 
         return request<Unit, kotlin.collections.List<DexBatchDTO>>(
             localVariableConfig
@@ -103,11 +103,11 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * To obtain the request config of the operation dexBatchsCurrent
+     * To obtain the request config of the operation dexBatchesCurrent
      *
      * @return RequestConfig
      */
-    fun dexBatchsCurrentRequestConfig() : RequestConfig<Unit> {
+    fun dexBatchesCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -115,7 +115,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/dex/batchs/current",
+            path = "/dapps/dex/batches/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -190,8 +190,8 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Batchs (historical)
-     * Gets batchs.
+     * Batches (historical)
+     * Gets batches.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -206,8 +206,8 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun dexGetBatchsHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null) : kotlin.collections.List<DexBatchDTO> {
-        val localVarResponse = dexGetBatchsHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
+    fun dexGetBatchesHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null) : kotlin.collections.List<DexBatchDTO> {
+        val localVarResponse = dexGetBatchesHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<DexBatchDTO>
@@ -225,8 +225,8 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Batchs (historical)
-     * Gets batchs.
+     * Batches (historical)
+     * Gets batches.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -238,8 +238,8 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun dexGetBatchsHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : ApiResponse<kotlin.collections.List<DexBatchDTO>?> {
-        val localVariableConfig = dexGetBatchsHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
+    fun dexGetBatchesHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : ApiResponse<kotlin.collections.List<DexBatchDTO>?> {
+        val localVariableConfig = dexGetBatchesHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
 
         return request<Unit, kotlin.collections.List<DexBatchDTO>>(
             localVariableConfig
@@ -247,7 +247,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * To obtain the request config of the operation dexGetBatchsHistorical
+     * To obtain the request config of the operation dexGetBatchesHistorical
      *
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -256,7 +256,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
      * @param id Identifier. (optional)
      * @return RequestConfig
      */
-    fun dexGetBatchsHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
+    fun dexGetBatchesHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -281,7 +281,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/dex/batchs/historical",
+            path = "/dapps/dex/batches/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -703,8 +703,8 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Statss (historical)
-     * Gets statss.
+     * Stats (historical)
+     * Gets stats.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -719,8 +719,8 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun dexGetStatssHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null) : kotlin.collections.List<DexStatsDTO> {
-        val localVarResponse = dexGetStatssHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
+    fun dexGetStatsHistorical(startBlock: kotlin.Long? = null, endBlock: kotlin.Long? = null, startDate: java.time.OffsetDateTime? = null, endDate: java.time.OffsetDateTime? = null, id: kotlin.String? = null) : kotlin.collections.List<DexStatsDTO> {
+        val localVarResponse = dexGetStatsHistoricalWithHttpInfo(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<DexStatsDTO>
@@ -738,8 +738,8 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Statss (historical)
-     * Gets statss.
+     * Stats (historical)
+     * Gets stats.
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
      * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -751,8 +751,8 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun dexGetStatssHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : ApiResponse<kotlin.collections.List<DexStatsDTO>?> {
-        val localVariableConfig = dexGetStatssHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
+    fun dexGetStatsHistoricalWithHttpInfo(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : ApiResponse<kotlin.collections.List<DexStatsDTO>?> {
+        val localVariableConfig = dexGetStatsHistoricalRequestConfig(startBlock = startBlock, endBlock = endBlock, startDate = startDate, endDate = endDate, id = id)
 
         return request<Unit, kotlin.collections.List<DexStatsDTO>>(
             localVariableConfig
@@ -760,7 +760,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * To obtain the request config of the operation dexGetStatssHistorical
+     * To obtain the request config of the operation dexGetStatsHistorical
      *
      * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
      * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -769,7 +769,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
      * @param id  (optional)
      * @return RequestConfig
      */
-    fun dexGetStatssHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
+    fun dexGetStatsHistoricalRequestConfig(startBlock: kotlin.Long?, endBlock: kotlin.Long?, startDate: java.time.OffsetDateTime?, endDate: java.time.OffsetDateTime?, id: kotlin.String?) : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf<kotlin.String, kotlin.collections.List<kotlin.String>>()
             .apply {
@@ -794,7 +794,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/dex/statss/historical",
+            path = "/dapps/dex/stats/historical",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody
@@ -1540,8 +1540,8 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Statss (current)
-     * Gets statss.
+     * Stats (current)
+     * Gets stats.
      * @return kotlin.collections.List<DexStatsDTO>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
@@ -1551,8 +1551,8 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class, UnsupportedOperationException::class, ClientException::class, ServerException::class)
-    fun dexStatssCurrent() : kotlin.collections.List<DexStatsDTO> {
-        val localVarResponse = dexStatssCurrentWithHttpInfo()
+    fun dexStatsCurrent() : kotlin.collections.List<DexStatsDTO> {
+        val localVarResponse = dexStatsCurrentWithHttpInfo()
 
         return when (localVarResponse.responseType) {
             ResponseType.Success -> (localVarResponse as Success<*>).data as kotlin.collections.List<DexStatsDTO>
@@ -1570,16 +1570,16 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * Statss (current)
-     * Gets statss.
+     * Stats (current)
+     * Gets stats.
      * @return ApiResponse<kotlin.collections.List<DexStatsDTO>?>
      * @throws IllegalStateException If the request is not correctly configured
      * @throws IOException Rethrows the OkHttp execute method exception
      */
     @Suppress("UNCHECKED_CAST")
     @Throws(IllegalStateException::class, IOException::class)
-    fun dexStatssCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<DexStatsDTO>?> {
-        val localVariableConfig = dexStatssCurrentRequestConfig()
+    fun dexStatsCurrentWithHttpInfo() : ApiResponse<kotlin.collections.List<DexStatsDTO>?> {
+        val localVariableConfig = dexStatsCurrentRequestConfig()
 
         return request<Unit, kotlin.collections.List<DexStatsDTO>>(
             localVariableConfig
@@ -1587,11 +1587,11 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
     }
 
     /**
-     * To obtain the request config of the operation dexStatssCurrent
+     * To obtain the request config of the operation dexStatsCurrent
      *
      * @return RequestConfig
      */
-    fun dexStatssCurrentRequestConfig() : RequestConfig<Unit> {
+    fun dexStatsCurrentRequestConfig() : RequestConfig<Unit> {
         val localVariableBody = null
         val localVariableQuery: MultiValueMap = mutableMapOf()
         val localVariableHeaders: MutableMap<String, String> = mutableMapOf()
@@ -1599,7 +1599,7 @@ class DexApi(basePath: kotlin.String = defaultBasePath, client: OkHttpClient = A
 
         return RequestConfig(
             method = RequestMethod.GET,
-            path = "/dapps/dex/statss/current",
+            path = "/dapps/dex/stats/current",
             query = localVariableQuery,
             headers = localVariableHeaders,
             body = localVariableBody

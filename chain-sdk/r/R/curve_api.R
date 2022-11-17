@@ -191,8 +191,8 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGaugeLiquiditysCurrent } \emph{ GaugeLiquiditys (current) }
-#' Gets gaugeLiquiditys.
+#' \strong{ CurveGaugeLiquiditiesCurrent } \emph{ GaugeLiquidities (current) }
+#' Gets gaugeLiquidities.
 #'
 #' \itemize{
 #' \item \emph{ @returnType } list( \link{Curve.GaugeLiquidityDTO} ) \cr
@@ -559,8 +559,8 @@
 #' }
 #' }
 #'
-#' \strong{ CurveGetGaugeLiquiditysHistorical } \emph{ GaugeLiquiditys (historical) }
-#' Gets gaugeLiquiditys.
+#' \strong{ CurveGetGaugeLiquiditiesHistorical } \emph{ GaugeLiquidities (historical) }
+#' Gets gaugeLiquidities.
 #'
 #' \itemize{
 #' \item \emph{ @param } start_block integer
@@ -1378,16 +1378,16 @@
 #' dput(result)
 #'
 #'
-#' ####################  CurveGaugeLiquiditysCurrent  ####################
+#' ####################  CurveGaugeLiquiditiesCurrent  ####################
 #'
 #' library(openapi)
 #'
-#' #GaugeLiquiditys (current)
+#' #GaugeLiquidities (current)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$CurveGaugeLiquiditysCurrent(data_file = "result.txt")
-#' result <- api_instance$CurveGaugeLiquiditysCurrent()
+#' # result <- api_instance$CurveGaugeLiquiditiesCurrent(data_file = "result.txt")
+#' result <- api_instance$CurveGaugeLiquiditiesCurrent()
 #' dput(result)
 #'
 #'
@@ -1689,7 +1689,7 @@
 #' dput(result)
 #'
 #'
-#' ####################  CurveGetGaugeLiquiditysHistorical  ####################
+#' ####################  CurveGetGaugeLiquiditiesHistorical  ####################
 #'
 #' library(openapi)
 #' var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -1699,12 +1699,12 @@
 #' var_id <- "id_example" # character |  (Optional)
 #' var_user <- "user_example" # character |  (Optional)
 #'
-#' #GaugeLiquiditys (historical)
+#' #GaugeLiquidities (historical)
 #' api_instance <- CurveApi$new()
 #'
 #' # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-#' # result <- api_instance$CurveGetGaugeLiquiditysHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, user = var_userdata_file = "result.txt")
-#' result <- api_instance$CurveGetGaugeLiquiditysHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, user = var_user)
+#' # result <- api_instance$CurveGetGaugeLiquiditiesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, user = var_userdata_file = "result.txt")
+#' result <- api_instance$CurveGetGaugeLiquiditiesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id, user = var_user)
 #' dput(result)
 #'
 #'
@@ -3230,17 +3230,17 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GaugeLiquiditys (current)
+    #' GaugeLiquidities (current)
     #'
     #' @description
-    #' GaugeLiquiditys (current)
+    #' GaugeLiquidities (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return array[CurveGaugeLiquidityDTO]
     #' @export
-    CurveGaugeLiquiditysCurrent = function(data_file = NULL, ...) {
-      local_var_response <- self$CurveGaugeLiquiditysCurrentWithHttpInfo(data_file = data_file, ...)
+    CurveGaugeLiquiditiesCurrent = function(data_file = NULL, ...) {
+      local_var_response <- self$CurveGaugeLiquiditiesCurrentWithHttpInfo(data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -3251,16 +3251,16 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GaugeLiquiditys (current)
+    #' GaugeLiquidities (current)
     #'
     #' @description
-    #' GaugeLiquiditys (current)
+    #' GaugeLiquidities (current)
     #'
     #' @param data_file (optional) name of the data file to save the result
     #' @param ... Other optional arguments
     #' @return API response (array[CurveGaugeLiquidityDTO]) with additional information such as HTTP status code, headers
     #' @export
-    CurveGaugeLiquiditysCurrentWithHttpInfo = function(data_file = NULL, ...) {
+    CurveGaugeLiquiditiesCurrentWithHttpInfo = function(data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -3270,7 +3270,7 @@ CurveApi <- R6::R6Class(
       oauth_scopes <- NULL
       is_oauth <- FALSE
 
-      local_var_url_path <- "/dapps/curve/gaugeLiquiditys/current"
+      local_var_url_path <- "/dapps/curve/gaugeLiquidities/current"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")
@@ -5184,10 +5184,10 @@ CurveApi <- R6::R6Class(
         local_var_resp
       }
     },
-    #' GaugeLiquiditys (historical)
+    #' GaugeLiquidities (historical)
     #'
     #' @description
-    #' GaugeLiquiditys (historical)
+    #' GaugeLiquidities (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5199,8 +5199,8 @@ CurveApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return array[CurveGaugeLiquidityDTO]
     #' @export
-    CurveGetGaugeLiquiditysHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, user = NULL, data_file = NULL, ...) {
-      local_var_response <- self$CurveGetGaugeLiquiditysHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, id, user, data_file = data_file, ...)
+    CurveGetGaugeLiquiditiesHistorical = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, user = NULL, data_file = NULL, ...) {
+      local_var_response <- self$CurveGetGaugeLiquiditiesHistoricalWithHttpInfo(start_block, end_block, start_date, end_date, id, user, data_file = data_file, ...)
       if (local_var_response$status_code >= 200 && local_var_response$status_code <= 299) {
         local_var_response$content
       } else if (local_var_response$status_code >= 300 && local_var_response$status_code <= 399) {
@@ -5211,10 +5211,10 @@ CurveApi <- R6::R6Class(
         local_var_response
       }
     },
-    #' GaugeLiquiditys (historical)
+    #' GaugeLiquidities (historical)
     #'
     #' @description
-    #' GaugeLiquiditys (historical)
+    #' GaugeLiquidities (historical)
     #'
     #' @param start_block (optional) The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
     #' @param end_block (optional) The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
@@ -5226,7 +5226,7 @@ CurveApi <- R6::R6Class(
     #' @param ... Other optional arguments
     #' @return API response (array[CurveGaugeLiquidityDTO]) with additional information such as HTTP status code, headers
     #' @export
-    CurveGetGaugeLiquiditysHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, user = NULL, data_file = NULL, ...) {
+    CurveGetGaugeLiquiditiesHistoricalWithHttpInfo = function(start_block = NULL, end_block = NULL, start_date = NULL, end_date = NULL, id = NULL, user = NULL, data_file = NULL, ...) {
       args <- list(...)
       query_params <- list()
       header_params <- c()
@@ -5254,7 +5254,7 @@ CurveApi <- R6::R6Class(
 
       query_params[["user"]] <- `user`
 
-      local_var_url_path <- "/dapps/curve/gaugeLiquiditys/historical"
+      local_var_url_path <- "/dapps/curve/gaugeLiquidities/historical"
 
       # The Accept request HTTP header
       local_var_accepts <- list("text/plain", "application/json", "text/json")

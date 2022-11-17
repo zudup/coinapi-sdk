@@ -305,15 +305,15 @@ public class UniswapV3Api {
     }
   }
   /**
-  * Factorys (current)
-  * Gets factorys.
+  * Factories (current)
+  * Gets factories.
    * @return List<UniswapV3FactoryDTO>
   */
-  public List<UniswapV3FactoryDTO> uniswapV3FactorysCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3FactoryDTO> uniswapV3FactoriesCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/factorys/current";
+    String path = "/dapps/uniswapv3/factories/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -361,16 +361,16 @@ public class UniswapV3Api {
   }
 
       /**
-   * Factorys (current)
-   * Gets factorys.
+   * Factories (current)
+   * Gets factories.
 
   */
-  public void uniswapV3FactorysCurrent (final Response.Listener<List<UniswapV3FactoryDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV3FactoriesCurrent (final Response.Listener<List<UniswapV3FactoryDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/factorys/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv3/factories/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -692,8 +692,8 @@ public class UniswapV3Api {
     }
   }
   /**
-  * Factorys (historical)
-  * Gets factorys.
+  * Factories (historical)
+  * Gets factories.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -701,11 +701,11 @@ public class UniswapV3Api {
    * @param id Factory address.
    * @return List<UniswapV3FactoryDTO>
   */
-  public List<UniswapV3FactoryDTO> uniswapV3GetFactorysHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3FactoryDTO> uniswapV3GetFactoriesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/factorys/historical";
+    String path = "/dapps/uniswapv3/factories/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -758,16 +758,16 @@ public class UniswapV3Api {
   }
 
       /**
-   * Factorys (historical)
-   * Gets factorys.
+   * Factories (historical)
+   * Gets factories.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Factory address.
   */
-  public void uniswapV3GetFactorysHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<UniswapV3FactoryDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV3GetFactoriesHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<UniswapV3FactoryDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/factorys/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv3/factories/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -963,8 +963,8 @@ public class UniswapV3Api {
     }
   }
   /**
-  * PoolDayDatas (historical)
-  * Gets poolDayDatas.
+  * PoolDayData (historical)
+  * Gets poolDayData.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
@@ -973,11 +973,11 @@ public class UniswapV3Api {
    * @param pool 
    * @return List<UniswapV3PoolDayDataDTO>
   */
-  public List<UniswapV3PoolDayDataDTO> uniswapV3GetPoolDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3PoolDayDataDTO> uniswapV3GetPoolDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/poolDayDatas/historical";
+    String path = "/dapps/uniswapv3/poolDayData/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1031,16 +1031,16 @@ public class UniswapV3Api {
   }
 
       /**
-   * PoolDayDatas (historical)
-   * Gets poolDayDatas.
+   * PoolDayData (historical)
+   * Gets poolDayData.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pool 
   */
-  public void uniswapV3GetPoolDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<UniswapV3PoolDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV3GetPoolDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<UniswapV3PoolDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/poolDayDatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv3/poolDayData/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1097,8 +1097,8 @@ public class UniswapV3Api {
     }
   }
   /**
-  * PoolHourDatas (historical)
-  * Gets poolHourDatas.
+  * PoolHourData (historical)
+  * Gets poolHourData.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
@@ -1107,11 +1107,11 @@ public class UniswapV3Api {
    * @param pool 
    * @return List<UniswapV3PoolHourDataDTO>
   */
-  public List<UniswapV3PoolHourDataDTO> uniswapV3GetPoolHourDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3PoolHourDataDTO> uniswapV3GetPoolHourDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/poolHourDatas/historical";
+    String path = "/dapps/uniswapv3/poolHourData/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1165,16 +1165,16 @@ public class UniswapV3Api {
   }
 
       /**
-   * PoolHourDatas (historical)
-   * Gets poolHourDatas.
+   * PoolHourData (historical)
+   * Gets poolHourData.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pool 
   */
-  public void uniswapV3GetPoolHourDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<UniswapV3PoolHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV3GetPoolHourDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<UniswapV3PoolHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/poolHourDatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv3/poolHourData/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1782,8 +1782,8 @@ public class UniswapV3Api {
     }
   }
   /**
-  * TickDayDatas (historical)
-  * Gets tickDayDatas.
+  * TickDayData (historical)
+  * Gets tickDayData.
    * @param startBlock 
    * @param endBlock 
    * @param startDate 
@@ -1792,11 +1792,11 @@ public class UniswapV3Api {
    * @param pool 
    * @return List<UniswapV3TickDayDataDTO>
   */
-  public List<UniswapV3TickDayDataDTO> uniswapV3GetTickDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3TickDayDataDTO> uniswapV3GetTickDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/tickDayDatas/historical";
+    String path = "/dapps/uniswapv3/tickDayData/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -1850,16 +1850,16 @@ public class UniswapV3Api {
   }
 
       /**
-   * TickDayDatas (historical)
-   * Gets tickDayDatas.
+   * TickDayData (historical)
+   * Gets tickDayData.
    * @param startBlock    * @param endBlock    * @param startDate    * @param endDate    * @param id    * @param pool 
   */
-  public void uniswapV3GetTickDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<UniswapV3TickDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV3GetTickDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, String pool, final Response.Listener<List<UniswapV3TickDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/tickDayDatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv3/tickDayData/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2050,8 +2050,8 @@ public class UniswapV3Api {
     }
   }
   /**
-  * TokenHourDatas (historical)
-  * Gets tokenHourDatas.
+  * TokenHourData (historical)
+  * Gets tokenHourData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -2059,11 +2059,11 @@ public class UniswapV3Api {
    * @param id Token address concatendated with date.
    * @return List<UniswapV3TokenHourDataDTO>
   */
-  public List<UniswapV3TokenHourDataDTO> uniswapV3GetTokenHourDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3TokenHourDataDTO> uniswapV3GetTokenHourDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/tokenHourDatas/historical";
+    String path = "/dapps/uniswapv3/tokenHourData/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2116,16 +2116,16 @@ public class UniswapV3Api {
   }
 
       /**
-   * TokenHourDatas (historical)
-   * Gets tokenHourDatas.
+   * TokenHourData (historical)
+   * Gets tokenHourData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Token address concatendated with date.
   */
-  public void uniswapV3GetTokenHourDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<UniswapV3TokenHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV3GetTokenHourDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<UniswapV3TokenHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/tokenHourDatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv3/tokenHourData/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2181,8 +2181,8 @@ public class UniswapV3Api {
     }
   }
   /**
-  * TokenV3DayDatas (historical)
-  * Gets tokenV3DayDatas.
+  * TokenV3DayData (historical)
+  * Gets tokenV3DayData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -2190,11 +2190,11 @@ public class UniswapV3Api {
    * @param id Token address concatendated with date.
    * @return List<UniswapV3TokenV3DayDataDTO>
   */
-  public List<UniswapV3TokenV3DayDataDTO> uniswapV3GetTokenV3DayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3TokenV3DayDataDTO> uniswapV3GetTokenV3DayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/tokenV3DayDatas/historical";
+    String path = "/dapps/uniswapv3/tokenV3DayData/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2247,16 +2247,16 @@ public class UniswapV3Api {
   }
 
       /**
-   * TokenV3DayDatas (historical)
-   * Gets tokenV3DayDatas.
+   * TokenV3DayData (historical)
+   * Gets tokenV3DayData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Token address concatendated with date.
   */
-  public void uniswapV3GetTokenV3DayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<UniswapV3TokenV3DayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV3GetTokenV3DayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<UniswapV3TokenV3DayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/tokenV3DayDatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv3/tokenV3DayData/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2580,8 +2580,8 @@ public class UniswapV3Api {
     }
   }
   /**
-  * UniswapDayDatas (historical)
-  * Gets uniswapDayDatas.
+  * UniswapDayData (historical)
+  * Gets uniswapDayData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
    * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
    * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -2589,11 +2589,11 @@ public class UniswapV3Api {
    * @param id Timestamp rounded to current day by dividing by 86400.
    * @return List<UniswapV3UniswapDayDataDTO>
   */
-  public List<UniswapV3UniswapDayDataDTO> uniswapV3GetUniswapDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3UniswapDayDataDTO> uniswapV3GetUniswapDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id) throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/uniswapDayDatas/historical";
+    String path = "/dapps/uniswapv3/uniswapDayData/historical";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2646,16 +2646,16 @@ public class UniswapV3Api {
   }
 
       /**
-   * UniswapDayDatas (historical)
-   * Gets uniswapDayDatas.
+   * UniswapDayData (historical)
+   * Gets uniswapDayData.
    * @param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.   * @param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).   * @param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.   * @param endDate The end date of timeframe.   * @param id Timestamp rounded to current day by dividing by 86400.
   */
-  public void uniswapV3GetUniswapDayDatasHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<UniswapV3UniswapDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV3GetUniswapDayDataHistorical (Long startBlock, Long endBlock, Date startDate, Date endDate, String id, final Response.Listener<List<UniswapV3UniswapDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/uniswapDayDatas/historical".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv3/uniswapDayData/historical".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2827,15 +2827,15 @@ public class UniswapV3Api {
     }
   }
   /**
-  * PoolDayDatas (current)
-  * Gets poolDayDatas.
+  * PoolDayData (current)
+  * Gets poolDayData.
    * @return List<UniswapV3PoolDayDataDTO>
   */
-  public List<UniswapV3PoolDayDataDTO> uniswapV3PoolDayDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3PoolDayDataDTO> uniswapV3PoolDayDataCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/poolDayDatas/current";
+    String path = "/dapps/uniswapv3/poolDayData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2883,16 +2883,16 @@ public class UniswapV3Api {
   }
 
       /**
-   * PoolDayDatas (current)
-   * Gets poolDayDatas.
+   * PoolDayData (current)
+   * Gets poolDayData.
 
   */
-  public void uniswapV3PoolDayDatasCurrent (final Response.Listener<List<UniswapV3PoolDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV3PoolDayDataCurrent (final Response.Listener<List<UniswapV3PoolDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/poolDayDatas/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv3/poolDayData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2943,15 +2943,15 @@ public class UniswapV3Api {
     }
   }
   /**
-  * PoolHourDatas (current)
-  * Gets poolHourDatas.
+  * PoolHourData (current)
+  * Gets poolHourData.
    * @return List<UniswapV3PoolHourDataDTO>
   */
-  public List<UniswapV3PoolHourDataDTO> uniswapV3PoolHourDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3PoolHourDataDTO> uniswapV3PoolHourDataCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/poolHourDatas/current";
+    String path = "/dapps/uniswapv3/poolHourData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -2999,16 +2999,16 @@ public class UniswapV3Api {
   }
 
       /**
-   * PoolHourDatas (current)
-   * Gets poolHourDatas.
+   * PoolHourData (current)
+   * Gets poolHourData.
 
   */
-  public void uniswapV3PoolHourDatasCurrent (final Response.Listener<List<UniswapV3PoolHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV3PoolHourDataCurrent (final Response.Listener<List<UniswapV3PoolHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/poolHourDatas/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv3/poolHourData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3529,15 +3529,15 @@ public class UniswapV3Api {
     }
   }
   /**
-  * TickDayDatas (current)
-  * Gets tickDayDatas.
+  * TickDayData (current)
+  * Gets tickDayData.
    * @return List<UniswapV3TickDayDataDTO>
   */
-  public List<UniswapV3TickDayDataDTO> uniswapV3TickDayDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3TickDayDataDTO> uniswapV3TickDayDataCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/tickDayDatas/current";
+    String path = "/dapps/uniswapv3/tickDayData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3585,16 +3585,16 @@ public class UniswapV3Api {
   }
 
       /**
-   * TickDayDatas (current)
-   * Gets tickDayDatas.
+   * TickDayData (current)
+   * Gets tickDayData.
 
   */
-  public void uniswapV3TickDayDatasCurrent (final Response.Listener<List<UniswapV3TickDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV3TickDayDataCurrent (final Response.Listener<List<UniswapV3TickDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/tickDayDatas/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv3/tickDayData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3761,15 +3761,15 @@ public class UniswapV3Api {
     }
   }
   /**
-  * TokenHourDatas (current)
-  * Gets tokenHourDatas.
+  * TokenHourData (current)
+  * Gets tokenHourData.
    * @return List<UniswapV3TokenHourDataDTO>
   */
-  public List<UniswapV3TokenHourDataDTO> uniswapV3TokenHourDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3TokenHourDataDTO> uniswapV3TokenHourDataCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/tokenHourDatas/current";
+    String path = "/dapps/uniswapv3/tokenHourData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3817,16 +3817,16 @@ public class UniswapV3Api {
   }
 
       /**
-   * TokenHourDatas (current)
-   * Gets tokenHourDatas.
+   * TokenHourData (current)
+   * Gets tokenHourData.
 
   */
-  public void uniswapV3TokenHourDatasCurrent (final Response.Listener<List<UniswapV3TokenHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV3TokenHourDataCurrent (final Response.Listener<List<UniswapV3TokenHourDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/tokenHourDatas/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv3/tokenHourData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3877,15 +3877,15 @@ public class UniswapV3Api {
     }
   }
   /**
-  * TokenV3DayDatas (current)
-  * Gets tokenV3DayDatas.
+  * TokenV3DayData (current)
+  * Gets tokenV3DayData.
    * @return List<UniswapV3TokenV3DayDataDTO>
   */
-  public List<UniswapV3TokenV3DayDataDTO> uniswapV3TokenV3DayDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3TokenV3DayDataDTO> uniswapV3TokenV3DayDataCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/tokenV3DayDatas/current";
+    String path = "/dapps/uniswapv3/tokenV3DayData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -3933,16 +3933,16 @@ public class UniswapV3Api {
   }
 
       /**
-   * TokenV3DayDatas (current)
-   * Gets tokenV3DayDatas.
+   * TokenV3DayData (current)
+   * Gets tokenV3DayData.
 
   */
-  public void uniswapV3TokenV3DayDatasCurrent (final Response.Listener<List<UniswapV3TokenV3DayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV3TokenV3DayDataCurrent (final Response.Listener<List<UniswapV3TokenV3DayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/tokenV3DayDatas/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv3/tokenV3DayData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -4225,15 +4225,15 @@ public class UniswapV3Api {
     }
   }
   /**
-  * UniswapDayDatas (current)
-  * Gets uniswapDayDatas.
+  * UniswapDayData (current)
+  * Gets uniswapDayData.
    * @return List<UniswapV3UniswapDayDataDTO>
   */
-  public List<UniswapV3UniswapDayDataDTO> uniswapV3UniswapDayDatasCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
+  public List<UniswapV3UniswapDayDataDTO> uniswapV3UniswapDayDataCurrent () throws TimeoutException, ExecutionException, InterruptedException, ApiException {
     Object postBody = null;
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/uniswapDayDatas/current";
+    String path = "/dapps/uniswapv3/uniswapDayData/current";
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();
@@ -4281,16 +4281,16 @@ public class UniswapV3Api {
   }
 
       /**
-   * UniswapDayDatas (current)
-   * Gets uniswapDayDatas.
+   * UniswapDayData (current)
+   * Gets uniswapDayData.
 
   */
-  public void uniswapV3UniswapDayDatasCurrent (final Response.Listener<List<UniswapV3UniswapDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
+  public void uniswapV3UniswapDayDataCurrent (final Response.Listener<List<UniswapV3UniswapDayDataDTO>> responseListener, final Response.ErrorListener errorListener) {
     Object postBody = null;
 
 
     // create path and map variables
-    String path = "/dapps/uniswapv3/uniswapDayDatas/current".replaceAll("\\{format\\}","json");
+    String path = "/dapps/uniswapv3/uniswapDayData/current".replaceAll("\\{format\\}","json");
 
     // query params
     List<Pair> queryParams = new ArrayList<Pair>();

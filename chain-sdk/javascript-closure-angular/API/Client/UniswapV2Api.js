@@ -430,8 +430,8 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetMintsHistorical = function(opt_sta
 }
 
 /**
- * PairDayDatas (historical)
- * Gets pairDayDatas.
+ * PairDayData (historical)
+ * Gets pairDayData.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -442,9 +442,9 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetMintsHistorical = function(opt_sta
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2.PairDayDataDTO>>}
  */
-API.Client.UniswapV2Api.prototype.uniswapV2GetPairDayDatasHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_token0, opt_token1, opt_extraHttpRequestParams) {
+API.Client.UniswapV2Api.prototype.uniswapV2GetPairDayDataHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_token0, opt_token1, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswapv2/pairDayDatas/historical';
+  var path = this.basePath_ + '/dapps/uniswapv2/pairDayData/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -496,8 +496,8 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetPairDayDatasHistorical = function(
 }
 
 /**
- * PairHourDatas (historical)
- * Gets pairHourDatas.
+ * PairHourData (historical)
+ * Gets pairHourData.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -507,9 +507,9 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetPairDayDatasHistorical = function(
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2.PairHourDataDTO>>}
  */
-API.Client.UniswapV2Api.prototype.uniswapV2GetPairHourDatasHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_pair, opt_extraHttpRequestParams) {
+API.Client.UniswapV2Api.prototype.uniswapV2GetPairHourDataHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_pair, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswapv2/pairHourDatas/historical';
+  var path = this.basePath_ + '/dapps/uniswapv2/pairHourData/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -684,8 +684,8 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetSwapsHistorical = function(opt_sta
 }
 
 /**
- * TokenDayDatas (historical)
- * Gets tokenDayDatas.
+ * TokenDayData (historical)
+ * Gets tokenDayData.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -694,9 +694,9 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetSwapsHistorical = function(opt_sta
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2.TokenDayDataDTO>>}
  */
-API.Client.UniswapV2Api.prototype.uniswapV2GetTokenDayDatasHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
+API.Client.UniswapV2Api.prototype.uniswapV2GetTokenDayDataHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswapv2/tokenDayDatas/historical';
+  var path = this.basePath_ + '/dapps/uniswapv2/tokenDayData/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -862,8 +862,8 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetTransactionsHistorical = function(
 }
 
 /**
- * UniswapDayDatas (historical)
- * Gets uniswapDayDatas.
+ * UniswapDayData (historical)
+ * Gets uniswapDayData.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -872,9 +872,9 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetTransactionsHistorical = function(
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2.UniswapDayDataDTO>>}
  */
-API.Client.UniswapV2Api.prototype.uniswapV2GetUniswapDayDatasHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
+API.Client.UniswapV2Api.prototype.uniswapV2GetUniswapDayDataHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswapv2/uniswapDayDatas/historical';
+  var path = this.basePath_ + '/dapps/uniswapv2/uniswapDayData/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -918,8 +918,8 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetUniswapDayDatasHistorical = functi
 }
 
 /**
- * UniswapFactorys (historical)
- * Gets uniswapFactorys.
+ * UniswapFactories (historical)
+ * Gets uniswapFactories.
  * @param {!number=} opt_startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * @param {!number=} opt_endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * @param {!Date=} opt_startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -928,9 +928,9 @@ API.Client.UniswapV2Api.prototype.uniswapV2GetUniswapDayDatasHistorical = functi
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2.UniswapFactoryDTO>>}
  */
-API.Client.UniswapV2Api.prototype.uniswapV2GetUniswapFactorysHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
+API.Client.UniswapV2Api.prototype.uniswapV2GetUniswapFactoriesHistorical = function(opt_startBlock, opt_endBlock, opt_startDate, opt_endDate, opt_id, opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswapv2/uniswapFactorys/historical';
+  var path = this.basePath_ + '/dapps/uniswapv2/uniswapFactories/historical';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1123,14 +1123,14 @@ API.Client.UniswapV2Api.prototype.uniswapV2MintsCurrent = function(opt_extraHttp
 }
 
 /**
- * PairDayDatas (current)
- * Gets pairDayDatas.
+ * PairDayData (current)
+ * Gets pairDayData.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2.PairDayDataDTO>>}
  */
-API.Client.UniswapV2Api.prototype.uniswapV2PairDayDatasCurrent = function(opt_extraHttpRequestParams) {
+API.Client.UniswapV2Api.prototype.uniswapV2PairDayDataCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswapv2/pairDayDatas/current';
+  var path = this.basePath_ + '/dapps/uniswapv2/pairDayData/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1154,14 +1154,14 @@ API.Client.UniswapV2Api.prototype.uniswapV2PairDayDatasCurrent = function(opt_ex
 }
 
 /**
- * PairHourDatas (current)
- * Gets pairHourDatas.
+ * PairHourData (current)
+ * Gets pairHourData.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2.PairHourDataDTO>>}
  */
-API.Client.UniswapV2Api.prototype.uniswapV2PairHourDatasCurrent = function(opt_extraHttpRequestParams) {
+API.Client.UniswapV2Api.prototype.uniswapV2PairHourDataCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswapv2/pairHourDatas/current';
+  var path = this.basePath_ + '/dapps/uniswapv2/pairHourData/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1257,14 +1257,14 @@ API.Client.UniswapV2Api.prototype.uniswapV2SwapsCurrent = function(opt_pair, opt
 }
 
 /**
- * TokenDayDatas (current)
- * Gets tokenDayDatas.
+ * TokenDayData (current)
+ * Gets tokenDayData.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2.TokenDayDataDTO>>}
  */
-API.Client.UniswapV2Api.prototype.uniswapV2TokenDayDatasCurrent = function(opt_extraHttpRequestParams) {
+API.Client.UniswapV2Api.prototype.uniswapV2TokenDayDataCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswapv2/tokenDayDatas/current';
+  var path = this.basePath_ + '/dapps/uniswapv2/tokenDayData/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1350,14 +1350,14 @@ API.Client.UniswapV2Api.prototype.uniswapV2TransactionsCurrent = function(opt_ex
 }
 
 /**
- * UniswapDayDatas (current)
- * Gets uniswapDayDatas.
+ * UniswapDayData (current)
+ * Gets uniswapDayData.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2.UniswapDayDataDTO>>}
  */
-API.Client.UniswapV2Api.prototype.uniswapV2UniswapDayDatasCurrent = function(opt_extraHttpRequestParams) {
+API.Client.UniswapV2Api.prototype.uniswapV2UniswapDayDataCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswapv2/uniswapDayDatas/current';
+  var path = this.basePath_ + '/dapps/uniswapv2/uniswapDayData/current';
 
   /** @type {!Object} */
   var queryParameters = {};
@@ -1381,14 +1381,14 @@ API.Client.UniswapV2Api.prototype.uniswapV2UniswapDayDatasCurrent = function(opt
 }
 
 /**
- * UniswapFactorys (current)
- * Gets uniswapFactorys.
+ * UniswapFactories (current)
+ * Gets uniswapFactories.
  * @param {!angular.$http.Config=} opt_extraHttpRequestParams Extra HTTP parameters to send.
  * @return {!angular.$q.Promise<!Array<!API.Client.UniswapV2.UniswapFactoryDTO>>}
  */
-API.Client.UniswapV2Api.prototype.uniswapV2UniswapFactorysCurrent = function(opt_extraHttpRequestParams) {
+API.Client.UniswapV2Api.prototype.uniswapV2UniswapFactoriesCurrent = function(opt_extraHttpRequestParams) {
   /** @const {string} */
-  var path = this.basePath_ + '/dapps/uniswapv2/uniswapFactorys/current';
+  var path = this.basePath_ + '/dapps/uniswapv2/uniswapFactories/current';
 
   /** @type {!Object} */
   var queryParameters = {};

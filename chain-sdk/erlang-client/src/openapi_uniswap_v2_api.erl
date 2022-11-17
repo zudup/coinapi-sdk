@@ -7,28 +7,28 @@
          uniswap_v2_get_liquidity_position_snapshots_(historical)/1, uniswap_v2_get_liquidity_position_snapshots_(historical)/2,
          uniswap_v2_get_liquidity_positions_(historical)/1, uniswap_v2_get_liquidity_positions_(historical)/2,
          uniswap_v2_get_mints_(historical)/1, uniswap_v2_get_mints_(historical)/2,
-         uniswap_v2_get_pair_day_datas_(historical)/1, uniswap_v2_get_pair_day_datas_(historical)/2,
-         uniswap_v2_get_pair_hour_datas_(historical)/1, uniswap_v2_get_pair_hour_datas_(historical)/2,
+         uniswap_v2_get_pair_day_data_(historical)/1, uniswap_v2_get_pair_day_data_(historical)/2,
+         uniswap_v2_get_pair_hour_data_(historical)/1, uniswap_v2_get_pair_hour_data_(historical)/2,
          uniswap_v2_get_pairs_(historical)/1, uniswap_v2_get_pairs_(historical)/2,
          uniswap_v2_get_swaps_(historical)/1, uniswap_v2_get_swaps_(historical)/2,
-         uniswap_v2_get_token_day_datas_(historical)/1, uniswap_v2_get_token_day_datas_(historical)/2,
+         uniswap_v2_get_token_day_data_(historical)/1, uniswap_v2_get_token_day_data_(historical)/2,
          uniswap_v2_get_tokens_(historical)/1, uniswap_v2_get_tokens_(historical)/2,
          uniswap_v2_get_transactions_(historical)/1, uniswap_v2_get_transactions_(historical)/2,
-         uniswap_v2_get_uniswap_day_datas_(historical)/1, uniswap_v2_get_uniswap_day_datas_(historical)/2,
-         uniswap_v2_get_uniswap_factorys_(historical)/1, uniswap_v2_get_uniswap_factorys_(historical)/2,
+         uniswap_v2_get_uniswap_day_data_(historical)/1, uniswap_v2_get_uniswap_day_data_(historical)/2,
+         uniswap_v2_get_uniswap_factories_(historical)/1, uniswap_v2_get_uniswap_factories_(historical)/2,
          uniswap_v2_get_users_(historical)/1, uniswap_v2_get_users_(historical)/2,
          uniswap_v2_liquidity_position_snapshots_(current)/1, uniswap_v2_liquidity_position_snapshots_(current)/2,
          uniswap_v2_liquidity_positions_(current)/1, uniswap_v2_liquidity_positions_(current)/2,
          uniswap_v2_mints_(current)/1, uniswap_v2_mints_(current)/2,
-         uniswap_v2_pair_day_datas_(current)/1, uniswap_v2_pair_day_datas_(current)/2,
-         uniswap_v2_pair_hour_datas_(current)/1, uniswap_v2_pair_hour_datas_(current)/2,
+         uniswap_v2_pair_day_data_(current)/1, uniswap_v2_pair_day_data_(current)/2,
+         uniswap_v2_pair_hour_data_(current)/1, uniswap_v2_pair_hour_data_(current)/2,
          uniswap_v2_pairs_(current)/1, uniswap_v2_pairs_(current)/2,
          uniswap_v2_swaps_(current)/1, uniswap_v2_swaps_(current)/2,
-         uniswap_v2_token_day_datas_(current)/1, uniswap_v2_token_day_datas_(current)/2,
+         uniswap_v2_token_day_data_(current)/1, uniswap_v2_token_day_data_(current)/2,
          uniswap_v2_tokens_(current)/1, uniswap_v2_tokens_(current)/2,
          uniswap_v2_transactions_(current)/1, uniswap_v2_transactions_(current)/2,
-         uniswap_v2_uniswap_day_datas_(current)/1, uniswap_v2_uniswap_day_datas_(current)/2,
-         uniswap_v2_uniswap_factorys_(current)/1, uniswap_v2_uniswap_factorys_(current)/2,
+         uniswap_v2_uniswap_day_data_(current)/1, uniswap_v2_uniswap_day_data_(current)/2,
+         uniswap_v2_uniswap_factories_(current)/1, uniswap_v2_uniswap_factories_(current)/2,
          uniswap_v2_users_(current)/1, uniswap_v2_users_(current)/2]).
 
 -define(BASE_URL, <<"">>).
@@ -180,19 +180,19 @@ uniswap_v2_get_mints_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc PairDayDatas (historical)
-%% Gets pairDayDatas.
--spec uniswap_v2_get_pair_day_datas_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_pair_day_data_dto:openapi_uniswap_v2_pair_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_get_pair_day_datas_(historical)(Ctx) ->
-    uniswap_v2_get_pair_day_datas_(historical)(Ctx, #{}).
+%% @doc PairDayData (historical)
+%% Gets pairDayData.
+-spec uniswap_v2_get_pair_day_data_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_pair_day_data_dto:openapi_uniswap_v2_pair_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_pair_day_data_(historical)(Ctx) ->
+    uniswap_v2_get_pair_day_data_(historical)(Ctx, #{}).
 
--spec uniswap_v2_get_pair_day_datas_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_pair_day_data_dto:openapi_uniswap_v2_pair_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_get_pair_day_datas_(historical)(Ctx, Optional) ->
+-spec uniswap_v2_get_pair_day_data_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_pair_day_data_dto:openapi_uniswap_v2_pair_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_pair_day_data_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/uniswapv2/pairDayDatas/historical">>],
+    Path = [<<"/dapps/uniswapv2/pairDayData/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id', 'token_0', 'token_1'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -201,19 +201,19 @@ uniswap_v2_get_pair_day_datas_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc PairHourDatas (historical)
-%% Gets pairHourDatas.
--spec uniswap_v2_get_pair_hour_datas_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_pair_hour_data_dto:openapi_uniswap_v2_pair_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_get_pair_hour_datas_(historical)(Ctx) ->
-    uniswap_v2_get_pair_hour_datas_(historical)(Ctx, #{}).
+%% @doc PairHourData (historical)
+%% Gets pairHourData.
+-spec uniswap_v2_get_pair_hour_data_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_pair_hour_data_dto:openapi_uniswap_v2_pair_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_pair_hour_data_(historical)(Ctx) ->
+    uniswap_v2_get_pair_hour_data_(historical)(Ctx, #{}).
 
--spec uniswap_v2_get_pair_hour_datas_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_pair_hour_data_dto:openapi_uniswap_v2_pair_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_get_pair_hour_datas_(historical)(Ctx, Optional) ->
+-spec uniswap_v2_get_pair_hour_data_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_pair_hour_data_dto:openapi_uniswap_v2_pair_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_pair_hour_data_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/uniswapv2/pairHourDatas/historical">>],
+    Path = [<<"/dapps/uniswapv2/pairHourData/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id', 'pair'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -264,19 +264,19 @@ uniswap_v2_get_swaps_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc TokenDayDatas (historical)
-%% Gets tokenDayDatas.
--spec uniswap_v2_get_token_day_datas_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_token_day_data_dto:openapi_uniswap_v2_token_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_get_token_day_datas_(historical)(Ctx) ->
-    uniswap_v2_get_token_day_datas_(historical)(Ctx, #{}).
+%% @doc TokenDayData (historical)
+%% Gets tokenDayData.
+-spec uniswap_v2_get_token_day_data_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_token_day_data_dto:openapi_uniswap_v2_token_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_token_day_data_(historical)(Ctx) ->
+    uniswap_v2_get_token_day_data_(historical)(Ctx, #{}).
 
--spec uniswap_v2_get_token_day_datas_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_token_day_data_dto:openapi_uniswap_v2_token_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_get_token_day_datas_(historical)(Ctx, Optional) ->
+-spec uniswap_v2_get_token_day_data_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_token_day_data_dto:openapi_uniswap_v2_token_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_token_day_data_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/uniswapv2/tokenDayDatas/historical">>],
+    Path = [<<"/dapps/uniswapv2/tokenDayData/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -327,19 +327,19 @@ uniswap_v2_get_transactions_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc UniswapDayDatas (historical)
-%% Gets uniswapDayDatas.
--spec uniswap_v2_get_uniswap_day_datas_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_uniswap_day_data_dto:openapi_uniswap_v2_uniswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_get_uniswap_day_datas_(historical)(Ctx) ->
-    uniswap_v2_get_uniswap_day_datas_(historical)(Ctx, #{}).
+%% @doc UniswapDayData (historical)
+%% Gets uniswapDayData.
+-spec uniswap_v2_get_uniswap_day_data_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_uniswap_day_data_dto:openapi_uniswap_v2_uniswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_uniswap_day_data_(historical)(Ctx) ->
+    uniswap_v2_get_uniswap_day_data_(historical)(Ctx, #{}).
 
--spec uniswap_v2_get_uniswap_day_datas_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_uniswap_day_data_dto:openapi_uniswap_v2_uniswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_get_uniswap_day_datas_(historical)(Ctx, Optional) ->
+-spec uniswap_v2_get_uniswap_day_data_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_uniswap_day_data_dto:openapi_uniswap_v2_uniswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_uniswap_day_data_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/uniswapv2/uniswapDayDatas/historical">>],
+    Path = [<<"/dapps/uniswapv2/uniswapDayData/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -348,19 +348,19 @@ uniswap_v2_get_uniswap_day_datas_(historical)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc UniswapFactorys (historical)
-%% Gets uniswapFactorys.
--spec uniswap_v2_get_uniswap_factorys_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_uniswap_factory_dto:openapi_uniswap_v2_uniswap_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_get_uniswap_factorys_(historical)(Ctx) ->
-    uniswap_v2_get_uniswap_factorys_(historical)(Ctx, #{}).
+%% @doc UniswapFactories (historical)
+%% Gets uniswapFactories.
+-spec uniswap_v2_get_uniswap_factories_(historical)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_uniswap_factory_dto:openapi_uniswap_v2_uniswap_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_uniswap_factories_(historical)(Ctx) ->
+    uniswap_v2_get_uniswap_factories_(historical)(Ctx, #{}).
 
--spec uniswap_v2_get_uniswap_factorys_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_uniswap_factory_dto:openapi_uniswap_v2_uniswap_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_get_uniswap_factorys_(historical)(Ctx, Optional) ->
+-spec uniswap_v2_get_uniswap_factories_(historical)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_uniswap_factory_dto:openapi_uniswap_v2_uniswap_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_get_uniswap_factories_(historical)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/uniswapv2/uniswapFactorys/historical">>],
+    Path = [<<"/dapps/uniswapv2/uniswapFactories/historical">>],
     QS = lists:flatten([])++openapi_utils:optional_params(['startBlock', 'endBlock', 'startDate', 'endDate', 'id'], _OptionalParams),
     Headers = [],
     Body1 = [],
@@ -453,19 +453,19 @@ uniswap_v2_mints_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc PairDayDatas (current)
-%% Gets pairDayDatas.
--spec uniswap_v2_pair_day_datas_(current)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_pair_day_data_dto:openapi_uniswap_v2_pair_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_pair_day_datas_(current)(Ctx) ->
-    uniswap_v2_pair_day_datas_(current)(Ctx, #{}).
+%% @doc PairDayData (current)
+%% Gets pairDayData.
+-spec uniswap_v2_pair_day_data_(current)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_pair_day_data_dto:openapi_uniswap_v2_pair_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_pair_day_data_(current)(Ctx) ->
+    uniswap_v2_pair_day_data_(current)(Ctx, #{}).
 
--spec uniswap_v2_pair_day_datas_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_pair_day_data_dto:openapi_uniswap_v2_pair_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_pair_day_datas_(current)(Ctx, Optional) ->
+-spec uniswap_v2_pair_day_data_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_pair_day_data_dto:openapi_uniswap_v2_pair_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_pair_day_data_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/uniswapv2/pairDayDatas/current">>],
+    Path = [<<"/dapps/uniswapv2/pairDayData/current">>],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -474,19 +474,19 @@ uniswap_v2_pair_day_datas_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc PairHourDatas (current)
-%% Gets pairHourDatas.
--spec uniswap_v2_pair_hour_datas_(current)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_pair_hour_data_dto:openapi_uniswap_v2_pair_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_pair_hour_datas_(current)(Ctx) ->
-    uniswap_v2_pair_hour_datas_(current)(Ctx, #{}).
+%% @doc PairHourData (current)
+%% Gets pairHourData.
+-spec uniswap_v2_pair_hour_data_(current)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_pair_hour_data_dto:openapi_uniswap_v2_pair_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_pair_hour_data_(current)(Ctx) ->
+    uniswap_v2_pair_hour_data_(current)(Ctx, #{}).
 
--spec uniswap_v2_pair_hour_datas_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_pair_hour_data_dto:openapi_uniswap_v2_pair_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_pair_hour_datas_(current)(Ctx, Optional) ->
+-spec uniswap_v2_pair_hour_data_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_pair_hour_data_dto:openapi_uniswap_v2_pair_hour_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_pair_hour_data_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/uniswapv2/pairHourDatas/current">>],
+    Path = [<<"/dapps/uniswapv2/pairHourData/current">>],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -537,19 +537,19 @@ uniswap_v2_swaps_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc TokenDayDatas (current)
-%% Gets tokenDayDatas.
--spec uniswap_v2_token_day_datas_(current)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_token_day_data_dto:openapi_uniswap_v2_token_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_token_day_datas_(current)(Ctx) ->
-    uniswap_v2_token_day_datas_(current)(Ctx, #{}).
+%% @doc TokenDayData (current)
+%% Gets tokenDayData.
+-spec uniswap_v2_token_day_data_(current)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_token_day_data_dto:openapi_uniswap_v2_token_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_token_day_data_(current)(Ctx) ->
+    uniswap_v2_token_day_data_(current)(Ctx, #{}).
 
--spec uniswap_v2_token_day_datas_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_token_day_data_dto:openapi_uniswap_v2_token_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_token_day_datas_(current)(Ctx, Optional) ->
+-spec uniswap_v2_token_day_data_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_token_day_data_dto:openapi_uniswap_v2_token_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_token_day_data_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/uniswapv2/tokenDayDatas/current">>],
+    Path = [<<"/dapps/uniswapv2/tokenDayData/current">>],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -600,19 +600,19 @@ uniswap_v2_transactions_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc UniswapDayDatas (current)
-%% Gets uniswapDayDatas.
--spec uniswap_v2_uniswap_day_datas_(current)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_uniswap_day_data_dto:openapi_uniswap_v2_uniswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_uniswap_day_datas_(current)(Ctx) ->
-    uniswap_v2_uniswap_day_datas_(current)(Ctx, #{}).
+%% @doc UniswapDayData (current)
+%% Gets uniswapDayData.
+-spec uniswap_v2_uniswap_day_data_(current)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_uniswap_day_data_dto:openapi_uniswap_v2_uniswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_uniswap_day_data_(current)(Ctx) ->
+    uniswap_v2_uniswap_day_data_(current)(Ctx, #{}).
 
--spec uniswap_v2_uniswap_day_datas_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_uniswap_day_data_dto:openapi_uniswap_v2_uniswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_uniswap_day_datas_(current)(Ctx, Optional) ->
+-spec uniswap_v2_uniswap_day_data_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_uniswap_day_data_dto:openapi_uniswap_v2_uniswap_day_data_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_uniswap_day_data_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/uniswapv2/uniswapDayDatas/current">>],
+    Path = [<<"/dapps/uniswapv2/uniswapDayData/current">>],
     QS = [],
     Headers = [],
     Body1 = [],
@@ -621,19 +621,19 @@ uniswap_v2_uniswap_day_datas_(current)(Ctx, Optional) ->
 
     openapi_utils:request(Ctx, Method, [?BASE_URL, Path], QS, ContentTypeHeader++Headers, Body1, Opts, Cfg).
 
-%% @doc UniswapFactorys (current)
-%% Gets uniswapFactorys.
--spec uniswap_v2_uniswap_factorys_(current)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_uniswap_factory_dto:openapi_uniswap_v2_uniswap_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_uniswap_factorys_(current)(Ctx) ->
-    uniswap_v2_uniswap_factorys_(current)(Ctx, #{}).
+%% @doc UniswapFactories (current)
+%% Gets uniswapFactories.
+-spec uniswap_v2_uniswap_factories_(current)(ctx:ctx()) -> {ok, [openapi_uniswap_v2_uniswap_factory_dto:openapi_uniswap_v2_uniswap_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_uniswap_factories_(current)(Ctx) ->
+    uniswap_v2_uniswap_factories_(current)(Ctx, #{}).
 
--spec uniswap_v2_uniswap_factorys_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_uniswap_factory_dto:openapi_uniswap_v2_uniswap_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
-uniswap_v2_uniswap_factorys_(current)(Ctx, Optional) ->
+-spec uniswap_v2_uniswap_factories_(current)(ctx:ctx(), maps:map()) -> {ok, [openapi_uniswap_v2_uniswap_factory_dto:openapi_uniswap_v2_uniswap_factory_dto()], openapi_utils:response_info()} | {ok, hackney:client_ref()} | {error, term(), openapi_utils:response_info()}.
+uniswap_v2_uniswap_factories_(current)(Ctx, Optional) ->
     _OptionalParams = maps:get(params, Optional, #{}),
     Cfg = maps:get(cfg, Optional, application:get_env(kuberl, config, #{})),
 
     Method = get,
-    Path = [<<"/dapps/uniswapv2/uniswapFactorys/current">>],
+    Path = [<<"/dapps/uniswapv2/uniswapFactories/current">>],
     QS = [],
     Headers = [],
     Body1 = [],

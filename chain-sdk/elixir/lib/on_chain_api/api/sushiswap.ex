@@ -68,8 +68,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  DayDatas (current)
-  Gets dayDatas.
+  DayData (current)
+  Gets dayData.
 
   ### Parameters
 
@@ -81,12 +81,12 @@ defmodule OnChainAPI.Api.Sushiswap do
   - `{:ok, [%SushiswapDayDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec sushiswap_day_datas__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapDayDataDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_day_datas__current(connection, _opts \\ []) do
+  @spec sushiswap_day_data__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapDayDataDto.t)} | {:error, Tesla.Env.t}
+  def sushiswap_day_data__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/sushiswap/dayDatas/current")
+      |> url("/dapps/sushiswap/dayData/current")
       |> Enum.into([])
 
     connection
@@ -97,8 +97,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  Factorys (current)
-  Gets factorys.
+  Factories (current)
+  Gets factories.
 
   ### Parameters
 
@@ -110,12 +110,12 @@ defmodule OnChainAPI.Api.Sushiswap do
   - `{:ok, [%SushiswapFactoryDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec sushiswap_factorys__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapFactoryDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_factorys__current(connection, _opts \\ []) do
+  @spec sushiswap_factories__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapFactoryDto.t)} | {:error, Tesla.Env.t}
+  def sushiswap_factories__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/sushiswap/factorys/current")
+      |> url("/dapps/sushiswap/factories/current")
       |> Enum.into([])
 
     connection
@@ -214,8 +214,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  DayDatas (historical)
-  Gets dayDatas.
+  DayData (historical)
+  Gets dayData.
 
   ### Parameters
 
@@ -232,8 +232,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   - `{:ok, [%SushiswapDayDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec sushiswap_get_day_datas__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapDayDataDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_get_day_datas__historical(connection, opts \\ []) do
+  @spec sushiswap_get_day_data__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapDayDataDto.t)} | {:error, Tesla.Env.t}
+  def sushiswap_get_day_data__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -245,7 +245,7 @@ defmodule OnChainAPI.Api.Sushiswap do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/sushiswap/dayDatas/historical")
+      |> url("/dapps/sushiswap/dayData/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -257,8 +257,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  Factorys (historical)
-  Gets factorys.
+  Factories (historical)
+  Gets factories.
 
   ### Parameters
 
@@ -275,8 +275,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   - `{:ok, [%SushiswapFactoryDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec sushiswap_get_factorys__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapFactoryDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_get_factorys__historical(connection, opts \\ []) do
+  @spec sushiswap_get_factories__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapFactoryDto.t)} | {:error, Tesla.Env.t}
+  def sushiswap_get_factories__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -288,7 +288,7 @@ defmodule OnChainAPI.Api.Sushiswap do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/sushiswap/factorys/historical")
+      |> url("/dapps/sushiswap/factories/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -300,8 +300,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  HourDatas (historical)
-  Gets hourDatas.
+  HourData (historical)
+  Gets hourData.
 
   ### Parameters
 
@@ -318,8 +318,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   - `{:ok, [%SushiswapHourDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec sushiswap_get_hour_datas__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapHourDataDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_get_hour_datas__historical(connection, opts \\ []) do
+  @spec sushiswap_get_hour_data__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapHourDataDto.t)} | {:error, Tesla.Env.t}
+  def sushiswap_get_hour_data__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -331,7 +331,7 @@ defmodule OnChainAPI.Api.Sushiswap do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/sushiswap/hourDatas/historical")
+      |> url("/dapps/sushiswap/hourData/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -482,8 +482,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  PairDayDatas (historical)
-  Gets pairDayDatas.
+  PairDayData (historical)
+  Gets pairDayData.
 
   ### Parameters
 
@@ -503,8 +503,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   - `{:ok, [%SushiswapPairDayDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec sushiswap_get_pair_day_datas__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapPairDayDataDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_get_pair_day_datas__historical(connection, opts \\ []) do
+  @spec sushiswap_get_pair_day_data__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapPairDayDataDto.t)} | {:error, Tesla.Env.t}
+  def sushiswap_get_pair_day_data__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -519,7 +519,7 @@ defmodule OnChainAPI.Api.Sushiswap do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/sushiswap/pairDayDatas/historical")
+      |> url("/dapps/sushiswap/pairDayData/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -531,8 +531,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  PairHourDatas (historical)
-  Gets pairHourDatas.
+  PairHourData (historical)
+  Gets pairHourData.
 
   ### Parameters
 
@@ -550,8 +550,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   - `{:ok, [%SushiswapPairHourDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec sushiswap_get_pair_hour_datas__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapPairHourDataDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_get_pair_hour_datas__historical(connection, opts \\ []) do
+  @spec sushiswap_get_pair_hour_data__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapPairHourDataDto.t)} | {:error, Tesla.Env.t}
+  def sushiswap_get_pair_hour_data__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -564,7 +564,7 @@ defmodule OnChainAPI.Api.Sushiswap do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/sushiswap/pairHourDatas/historical")
+      |> url("/dapps/sushiswap/pairHourData/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -670,8 +670,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  TokenDayDatas (historical)
-  Gets tokenDayDatas.
+  TokenDayData (historical)
+  Gets tokenDayData.
 
   ### Parameters
 
@@ -688,8 +688,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   - `{:ok, [%SushiswapTokenDayDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec sushiswap_get_token_day_datas__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapTokenDayDataDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_get_token_day_datas__historical(connection, opts \\ []) do
+  @spec sushiswap_get_token_day_data__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapTokenDayDataDto.t)} | {:error, Tesla.Env.t}
+  def sushiswap_get_token_day_data__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -701,7 +701,7 @@ defmodule OnChainAPI.Api.Sushiswap do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/sushiswap/tokenDayDatas/historical")
+      |> url("/dapps/sushiswap/tokenDayData/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -846,8 +846,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  HourDatas (current)
-  Gets hourDatas.
+  HourData (current)
+  Gets hourData.
 
   ### Parameters
 
@@ -859,12 +859,12 @@ defmodule OnChainAPI.Api.Sushiswap do
   - `{:ok, [%SushiswapHourDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec sushiswap_hour_datas__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapHourDataDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_hour_datas__current(connection, _opts \\ []) do
+  @spec sushiswap_hour_data__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapHourDataDto.t)} | {:error, Tesla.Env.t}
+  def sushiswap_hour_data__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/sushiswap/hourDatas/current")
+      |> url("/dapps/sushiswap/hourData/current")
       |> Enum.into([])
 
     connection
@@ -962,8 +962,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  PairDayDatas (current)
-  Gets pairDayDatas.
+  PairDayData (current)
+  Gets pairDayData.
 
   ### Parameters
 
@@ -975,12 +975,12 @@ defmodule OnChainAPI.Api.Sushiswap do
   - `{:ok, [%SushiswapPairDayDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec sushiswap_pair_day_datas__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapPairDayDataDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_pair_day_datas__current(connection, _opts \\ []) do
+  @spec sushiswap_pair_day_data__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapPairDayDataDto.t)} | {:error, Tesla.Env.t}
+  def sushiswap_pair_day_data__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/sushiswap/pairDayDatas/current")
+      |> url("/dapps/sushiswap/pairDayData/current")
       |> Enum.into([])
 
     connection
@@ -991,8 +991,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  PairHourDatas (current)
-  Gets pairHourDatas.
+  PairHourData (current)
+  Gets pairHourData.
 
   ### Parameters
 
@@ -1004,12 +1004,12 @@ defmodule OnChainAPI.Api.Sushiswap do
   - `{:ok, [%SushiswapPairHourDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec sushiswap_pair_hour_datas__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapPairHourDataDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_pair_hour_datas__current(connection, _opts \\ []) do
+  @spec sushiswap_pair_hour_data__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapPairHourDataDto.t)} | {:error, Tesla.Env.t}
+  def sushiswap_pair_hour_data__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/sushiswap/pairHourDatas/current")
+      |> url("/dapps/sushiswap/pairHourData/current")
       |> Enum.into([])
 
     connection
@@ -1090,8 +1090,8 @@ defmodule OnChainAPI.Api.Sushiswap do
   end
 
   @doc """
-  TokenDayDatas (current)
-  Gets tokenDayDatas.
+  TokenDayData (current)
+  Gets tokenDayData.
 
   ### Parameters
 
@@ -1103,12 +1103,12 @@ defmodule OnChainAPI.Api.Sushiswap do
   - `{:ok, [%SushiswapTokenDayDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec sushiswap_token_day_datas__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapTokenDayDataDto.t)} | {:error, Tesla.Env.t}
-  def sushiswap_token_day_datas__current(connection, _opts \\ []) do
+  @spec sushiswap_token_day_data__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.SushiswapTokenDayDataDto.t)} | {:error, Tesla.Env.t}
+  def sushiswap_token_day_data__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/sushiswap/tokenDayDatas/current")
+      |> url("/dapps/sushiswap/tokenDayData/current")
       |> Enum.into([])
 
     connection

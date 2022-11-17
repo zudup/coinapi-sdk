@@ -42,16 +42,16 @@ isa_ok($api, 'WWW::OpenAPIClient::SushiswapApi');
 #my $sushiswap_burns__current_result = $api->sushiswap_burns__current();
 
 #
-# sushiswap_day_datas__current test
+# sushiswap_day_data__current test
 #
 # uncomment below and update the test
-#my $sushiswap_day_datas__current_result = $api->sushiswap_day_datas__current();
+#my $sushiswap_day_data__current_result = $api->sushiswap_day_data__current();
 
 #
-# sushiswap_factorys__current test
+# sushiswap_factories__current test
 #
 # uncomment below and update the test
-#my $sushiswap_factorys__current_result = $api->sushiswap_factorys__current();
+#my $sushiswap_factories__current_result = $api->sushiswap_factories__current();
 
 #
 # sushiswap_get_bundles__historical test
@@ -77,37 +77,37 @@ isa_ok($api, 'WWW::OpenAPIClient::SushiswapApi');
 #my $sushiswap_get_burns__historical_result = $api->sushiswap_get_burns__historical(start_block => $sushiswap_get_burns__historical_start_block, end_block => $sushiswap_get_burns__historical_end_block, start_date => $sushiswap_get_burns__historical_start_date, end_date => $sushiswap_get_burns__historical_end_date, id => $sushiswap_get_burns__historical_id, pair => $sushiswap_get_burns__historical_pair);
 
 #
-# sushiswap_get_day_datas__historical test
+# sushiswap_get_day_data__historical test
 #
 # uncomment below and update the test
-#my $sushiswap_get_day_datas__historical_start_block = undef; # replace NULL with a proper value
-#my $sushiswap_get_day_datas__historical_end_block = undef; # replace NULL with a proper value
-#my $sushiswap_get_day_datas__historical_start_date = undef; # replace NULL with a proper value
-#my $sushiswap_get_day_datas__historical_end_date = undef; # replace NULL with a proper value
-#my $sushiswap_get_day_datas__historical_id = undef; # replace NULL with a proper value
-#my $sushiswap_get_day_datas__historical_result = $api->sushiswap_get_day_datas__historical(start_block => $sushiswap_get_day_datas__historical_start_block, end_block => $sushiswap_get_day_datas__historical_end_block, start_date => $sushiswap_get_day_datas__historical_start_date, end_date => $sushiswap_get_day_datas__historical_end_date, id => $sushiswap_get_day_datas__historical_id);
+#my $sushiswap_get_day_data__historical_start_block = undef; # replace NULL with a proper value
+#my $sushiswap_get_day_data__historical_end_block = undef; # replace NULL with a proper value
+#my $sushiswap_get_day_data__historical_start_date = undef; # replace NULL with a proper value
+#my $sushiswap_get_day_data__historical_end_date = undef; # replace NULL with a proper value
+#my $sushiswap_get_day_data__historical_id = undef; # replace NULL with a proper value
+#my $sushiswap_get_day_data__historical_result = $api->sushiswap_get_day_data__historical(start_block => $sushiswap_get_day_data__historical_start_block, end_block => $sushiswap_get_day_data__historical_end_block, start_date => $sushiswap_get_day_data__historical_start_date, end_date => $sushiswap_get_day_data__historical_end_date, id => $sushiswap_get_day_data__historical_id);
 
 #
-# sushiswap_get_factorys__historical test
+# sushiswap_get_factories__historical test
 #
 # uncomment below and update the test
-#my $sushiswap_get_factorys__historical_start_block = undef; # replace NULL with a proper value
-#my $sushiswap_get_factorys__historical_end_block = undef; # replace NULL with a proper value
-#my $sushiswap_get_factorys__historical_start_date = undef; # replace NULL with a proper value
-#my $sushiswap_get_factorys__historical_end_date = undef; # replace NULL with a proper value
-#my $sushiswap_get_factorys__historical_id = undef; # replace NULL with a proper value
-#my $sushiswap_get_factorys__historical_result = $api->sushiswap_get_factorys__historical(start_block => $sushiswap_get_factorys__historical_start_block, end_block => $sushiswap_get_factorys__historical_end_block, start_date => $sushiswap_get_factorys__historical_start_date, end_date => $sushiswap_get_factorys__historical_end_date, id => $sushiswap_get_factorys__historical_id);
+#my $sushiswap_get_factories__historical_start_block = undef; # replace NULL with a proper value
+#my $sushiswap_get_factories__historical_end_block = undef; # replace NULL with a proper value
+#my $sushiswap_get_factories__historical_start_date = undef; # replace NULL with a proper value
+#my $sushiswap_get_factories__historical_end_date = undef; # replace NULL with a proper value
+#my $sushiswap_get_factories__historical_id = undef; # replace NULL with a proper value
+#my $sushiswap_get_factories__historical_result = $api->sushiswap_get_factories__historical(start_block => $sushiswap_get_factories__historical_start_block, end_block => $sushiswap_get_factories__historical_end_block, start_date => $sushiswap_get_factories__historical_start_date, end_date => $sushiswap_get_factories__historical_end_date, id => $sushiswap_get_factories__historical_id);
 
 #
-# sushiswap_get_hour_datas__historical test
+# sushiswap_get_hour_data__historical test
 #
 # uncomment below and update the test
-#my $sushiswap_get_hour_datas__historical_start_block = undef; # replace NULL with a proper value
-#my $sushiswap_get_hour_datas__historical_end_block = undef; # replace NULL with a proper value
-#my $sushiswap_get_hour_datas__historical_start_date = undef; # replace NULL with a proper value
-#my $sushiswap_get_hour_datas__historical_end_date = undef; # replace NULL with a proper value
-#my $sushiswap_get_hour_datas__historical_id = undef; # replace NULL with a proper value
-#my $sushiswap_get_hour_datas__historical_result = $api->sushiswap_get_hour_datas__historical(start_block => $sushiswap_get_hour_datas__historical_start_block, end_block => $sushiswap_get_hour_datas__historical_end_block, start_date => $sushiswap_get_hour_datas__historical_start_date, end_date => $sushiswap_get_hour_datas__historical_end_date, id => $sushiswap_get_hour_datas__historical_id);
+#my $sushiswap_get_hour_data__historical_start_block = undef; # replace NULL with a proper value
+#my $sushiswap_get_hour_data__historical_end_block = undef; # replace NULL with a proper value
+#my $sushiswap_get_hour_data__historical_start_date = undef; # replace NULL with a proper value
+#my $sushiswap_get_hour_data__historical_end_date = undef; # replace NULL with a proper value
+#my $sushiswap_get_hour_data__historical_id = undef; # replace NULL with a proper value
+#my $sushiswap_get_hour_data__historical_result = $api->sushiswap_get_hour_data__historical(start_block => $sushiswap_get_hour_data__historical_start_block, end_block => $sushiswap_get_hour_data__historical_end_block, start_date => $sushiswap_get_hour_data__historical_start_date, end_date => $sushiswap_get_hour_data__historical_end_date, id => $sushiswap_get_hour_data__historical_id);
 
 #
 # sushiswap_get_liquidity_position_snapshots__historical test
@@ -148,30 +148,30 @@ isa_ok($api, 'WWW::OpenAPIClient::SushiswapApi');
 #my $sushiswap_get_mints__historical_result = $api->sushiswap_get_mints__historical(start_block => $sushiswap_get_mints__historical_start_block, end_block => $sushiswap_get_mints__historical_end_block, start_date => $sushiswap_get_mints__historical_start_date, end_date => $sushiswap_get_mints__historical_end_date, id => $sushiswap_get_mints__historical_id, pair => $sushiswap_get_mints__historical_pair);
 
 #
-# sushiswap_get_pair_day_datas__historical test
+# sushiswap_get_pair_day_data__historical test
 #
 # uncomment below and update the test
-#my $sushiswap_get_pair_day_datas__historical_start_block = undef; # replace NULL with a proper value
-#my $sushiswap_get_pair_day_datas__historical_end_block = undef; # replace NULL with a proper value
-#my $sushiswap_get_pair_day_datas__historical_start_date = undef; # replace NULL with a proper value
-#my $sushiswap_get_pair_day_datas__historical_end_date = undef; # replace NULL with a proper value
-#my $sushiswap_get_pair_day_datas__historical_id = undef; # replace NULL with a proper value
-#my $sushiswap_get_pair_day_datas__historical_pair = undef; # replace NULL with a proper value
-#my $sushiswap_get_pair_day_datas__historical_token_0 = undef; # replace NULL with a proper value
-#my $sushiswap_get_pair_day_datas__historical_token_1 = undef; # replace NULL with a proper value
-#my $sushiswap_get_pair_day_datas__historical_result = $api->sushiswap_get_pair_day_datas__historical(start_block => $sushiswap_get_pair_day_datas__historical_start_block, end_block => $sushiswap_get_pair_day_datas__historical_end_block, start_date => $sushiswap_get_pair_day_datas__historical_start_date, end_date => $sushiswap_get_pair_day_datas__historical_end_date, id => $sushiswap_get_pair_day_datas__historical_id, pair => $sushiswap_get_pair_day_datas__historical_pair, token_0 => $sushiswap_get_pair_day_datas__historical_token_0, token_1 => $sushiswap_get_pair_day_datas__historical_token_1);
+#my $sushiswap_get_pair_day_data__historical_start_block = undef; # replace NULL with a proper value
+#my $sushiswap_get_pair_day_data__historical_end_block = undef; # replace NULL with a proper value
+#my $sushiswap_get_pair_day_data__historical_start_date = undef; # replace NULL with a proper value
+#my $sushiswap_get_pair_day_data__historical_end_date = undef; # replace NULL with a proper value
+#my $sushiswap_get_pair_day_data__historical_id = undef; # replace NULL with a proper value
+#my $sushiswap_get_pair_day_data__historical_pair = undef; # replace NULL with a proper value
+#my $sushiswap_get_pair_day_data__historical_token_0 = undef; # replace NULL with a proper value
+#my $sushiswap_get_pair_day_data__historical_token_1 = undef; # replace NULL with a proper value
+#my $sushiswap_get_pair_day_data__historical_result = $api->sushiswap_get_pair_day_data__historical(start_block => $sushiswap_get_pair_day_data__historical_start_block, end_block => $sushiswap_get_pair_day_data__historical_end_block, start_date => $sushiswap_get_pair_day_data__historical_start_date, end_date => $sushiswap_get_pair_day_data__historical_end_date, id => $sushiswap_get_pair_day_data__historical_id, pair => $sushiswap_get_pair_day_data__historical_pair, token_0 => $sushiswap_get_pair_day_data__historical_token_0, token_1 => $sushiswap_get_pair_day_data__historical_token_1);
 
 #
-# sushiswap_get_pair_hour_datas__historical test
+# sushiswap_get_pair_hour_data__historical test
 #
 # uncomment below and update the test
-#my $sushiswap_get_pair_hour_datas__historical_start_block = undef; # replace NULL with a proper value
-#my $sushiswap_get_pair_hour_datas__historical_end_block = undef; # replace NULL with a proper value
-#my $sushiswap_get_pair_hour_datas__historical_start_date = undef; # replace NULL with a proper value
-#my $sushiswap_get_pair_hour_datas__historical_end_date = undef; # replace NULL with a proper value
-#my $sushiswap_get_pair_hour_datas__historical_id = undef; # replace NULL with a proper value
-#my $sushiswap_get_pair_hour_datas__historical_pair = undef; # replace NULL with a proper value
-#my $sushiswap_get_pair_hour_datas__historical_result = $api->sushiswap_get_pair_hour_datas__historical(start_block => $sushiswap_get_pair_hour_datas__historical_start_block, end_block => $sushiswap_get_pair_hour_datas__historical_end_block, start_date => $sushiswap_get_pair_hour_datas__historical_start_date, end_date => $sushiswap_get_pair_hour_datas__historical_end_date, id => $sushiswap_get_pair_hour_datas__historical_id, pair => $sushiswap_get_pair_hour_datas__historical_pair);
+#my $sushiswap_get_pair_hour_data__historical_start_block = undef; # replace NULL with a proper value
+#my $sushiswap_get_pair_hour_data__historical_end_block = undef; # replace NULL with a proper value
+#my $sushiswap_get_pair_hour_data__historical_start_date = undef; # replace NULL with a proper value
+#my $sushiswap_get_pair_hour_data__historical_end_date = undef; # replace NULL with a proper value
+#my $sushiswap_get_pair_hour_data__historical_id = undef; # replace NULL with a proper value
+#my $sushiswap_get_pair_hour_data__historical_pair = undef; # replace NULL with a proper value
+#my $sushiswap_get_pair_hour_data__historical_result = $api->sushiswap_get_pair_hour_data__historical(start_block => $sushiswap_get_pair_hour_data__historical_start_block, end_block => $sushiswap_get_pair_hour_data__historical_end_block, start_date => $sushiswap_get_pair_hour_data__historical_start_date, end_date => $sushiswap_get_pair_hour_data__historical_end_date, id => $sushiswap_get_pair_hour_data__historical_id, pair => $sushiswap_get_pair_hour_data__historical_pair);
 
 #
 # sushiswap_get_pairs__historical test
@@ -200,15 +200,15 @@ isa_ok($api, 'WWW::OpenAPIClient::SushiswapApi');
 #my $sushiswap_get_swaps__historical_result = $api->sushiswap_get_swaps__historical(start_block => $sushiswap_get_swaps__historical_start_block, end_block => $sushiswap_get_swaps__historical_end_block, start_date => $sushiswap_get_swaps__historical_start_date, end_date => $sushiswap_get_swaps__historical_end_date, id => $sushiswap_get_swaps__historical_id, pair => $sushiswap_get_swaps__historical_pair);
 
 #
-# sushiswap_get_token_day_datas__historical test
+# sushiswap_get_token_day_data__historical test
 #
 # uncomment below and update the test
-#my $sushiswap_get_token_day_datas__historical_start_block = undef; # replace NULL with a proper value
-#my $sushiswap_get_token_day_datas__historical_end_block = undef; # replace NULL with a proper value
-#my $sushiswap_get_token_day_datas__historical_start_date = undef; # replace NULL with a proper value
-#my $sushiswap_get_token_day_datas__historical_end_date = undef; # replace NULL with a proper value
-#my $sushiswap_get_token_day_datas__historical_id = undef; # replace NULL with a proper value
-#my $sushiswap_get_token_day_datas__historical_result = $api->sushiswap_get_token_day_datas__historical(start_block => $sushiswap_get_token_day_datas__historical_start_block, end_block => $sushiswap_get_token_day_datas__historical_end_block, start_date => $sushiswap_get_token_day_datas__historical_start_date, end_date => $sushiswap_get_token_day_datas__historical_end_date, id => $sushiswap_get_token_day_datas__historical_id);
+#my $sushiswap_get_token_day_data__historical_start_block = undef; # replace NULL with a proper value
+#my $sushiswap_get_token_day_data__historical_end_block = undef; # replace NULL with a proper value
+#my $sushiswap_get_token_day_data__historical_start_date = undef; # replace NULL with a proper value
+#my $sushiswap_get_token_day_data__historical_end_date = undef; # replace NULL with a proper value
+#my $sushiswap_get_token_day_data__historical_id = undef; # replace NULL with a proper value
+#my $sushiswap_get_token_day_data__historical_result = $api->sushiswap_get_token_day_data__historical(start_block => $sushiswap_get_token_day_data__historical_start_block, end_block => $sushiswap_get_token_day_data__historical_end_block, start_date => $sushiswap_get_token_day_data__historical_start_date, end_date => $sushiswap_get_token_day_data__historical_end_date, id => $sushiswap_get_token_day_data__historical_id);
 
 #
 # sushiswap_get_tokens__historical test
@@ -246,10 +246,10 @@ isa_ok($api, 'WWW::OpenAPIClient::SushiswapApi');
 #my $sushiswap_get_users__historical_result = $api->sushiswap_get_users__historical(start_block => $sushiswap_get_users__historical_start_block, end_block => $sushiswap_get_users__historical_end_block, start_date => $sushiswap_get_users__historical_start_date, end_date => $sushiswap_get_users__historical_end_date, id => $sushiswap_get_users__historical_id);
 
 #
-# sushiswap_hour_datas__current test
+# sushiswap_hour_data__current test
 #
 # uncomment below and update the test
-#my $sushiswap_hour_datas__current_result = $api->sushiswap_hour_datas__current();
+#my $sushiswap_hour_data__current_result = $api->sushiswap_hour_data__current();
 
 #
 # sushiswap_liquidity_position_snapshots__current test
@@ -270,16 +270,16 @@ isa_ok($api, 'WWW::OpenAPIClient::SushiswapApi');
 #my $sushiswap_mints__current_result = $api->sushiswap_mints__current();
 
 #
-# sushiswap_pair_day_datas__current test
+# sushiswap_pair_day_data__current test
 #
 # uncomment below and update the test
-#my $sushiswap_pair_day_datas__current_result = $api->sushiswap_pair_day_datas__current();
+#my $sushiswap_pair_day_data__current_result = $api->sushiswap_pair_day_data__current();
 
 #
-# sushiswap_pair_hour_datas__current test
+# sushiswap_pair_hour_data__current test
 #
 # uncomment below and update the test
-#my $sushiswap_pair_hour_datas__current_result = $api->sushiswap_pair_hour_datas__current();
+#my $sushiswap_pair_hour_data__current_result = $api->sushiswap_pair_hour_data__current();
 
 #
 # sushiswap_pairs__current test
@@ -296,10 +296,10 @@ isa_ok($api, 'WWW::OpenAPIClient::SushiswapApi');
 #my $sushiswap_swaps__current_result = $api->sushiswap_swaps__current(pair => $sushiswap_swaps__current_pair);
 
 #
-# sushiswap_token_day_datas__current test
+# sushiswap_token_day_data__current test
 #
 # uncomment below and update the test
-#my $sushiswap_token_day_datas__current_result = $api->sushiswap_token_day_datas__current();
+#my $sushiswap_token_day_data__current_result = $api->sushiswap_token_day_data__current();
 
 #
 # sushiswap_tokens__current test

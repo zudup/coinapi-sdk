@@ -849,8 +849,8 @@ class CurveApi {
     );
   }
 
-  /// GaugeLiquiditys (current)
-  /// Gets gaugeLiquiditys.
+  /// GaugeLiquidities (current)
+  /// Gets gaugeLiquidities.
   ///
   /// Parameters:
   /// * [cancelToken] - A [CancelToken] that can be used to cancel the operation
@@ -862,7 +862,7 @@ class CurveApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<CurveGaugeLiquidityDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveGaugeLiquidityDTO>>> curveGaugeLiquiditysCurrent({ 
+  Future<Response<BuiltList<CurveGaugeLiquidityDTO>>> curveGaugeLiquiditiesCurrent({ 
     CancelToken? cancelToken,
     Map<String, dynamic>? headers,
     Map<String, dynamic>? extra,
@@ -870,7 +870,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/gaugeLiquiditys/current';
+    final _path = r'/dapps/curve/gaugeLiquidities/current';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{
@@ -2453,8 +2453,8 @@ class CurveApi {
     );
   }
 
-  /// GaugeLiquiditys (historical)
-  /// Gets gaugeLiquiditys.
+  /// GaugeLiquidities (historical)
+  /// Gets gaugeLiquidities.
   ///
   /// Parameters:
   /// * [startBlock] - The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
@@ -2472,7 +2472,7 @@ class CurveApi {
   ///
   /// Returns a [Future] containing a [Response] with a [BuiltList<CurveGaugeLiquidityDTO>] as data
   /// Throws [DioError] if API call or serialization fails
-  Future<Response<BuiltList<CurveGaugeLiquidityDTO>>> curveGetGaugeLiquiditysHistorical({ 
+  Future<Response<BuiltList<CurveGaugeLiquidityDTO>>> curveGetGaugeLiquiditiesHistorical({ 
     int? startBlock,
     int? endBlock,
     DateTime? startDate,
@@ -2486,7 +2486,7 @@ class CurveApi {
     ProgressCallback? onSendProgress,
     ProgressCallback? onReceiveProgress,
   }) async {
-    final _path = r'/dapps/curve/gaugeLiquiditys/historical';
+    final _path = r'/dapps/curve/gaugeLiquidities/historical';
     final _options = Options(
       method: r'GET',
       headers: <String, dynamic>{

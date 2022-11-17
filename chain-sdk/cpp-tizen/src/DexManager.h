@@ -34,26 +34,26 @@ public:
 	DexManager();
 	virtual ~DexManager();
 
-/*! \brief Batchs (current). *Synchronous*
+/*! \brief Batches (current). *Synchronous*
  *
- * Gets batchs.
+ * Gets batches.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dexBatchs (current)Sync(char * accessToken,
+bool dexBatches (current)Sync(char * accessToken,
 	
 	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Batchs (current). *Asynchronous*
+/*! \brief Batches (current). *Asynchronous*
  *
- * Gets batchs.
+ * Gets batches.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dexBatchs (current)Async(char * accessToken,
+bool dexBatches (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
 	, void* userData);
@@ -84,9 +84,9 @@ bool dexDeposits (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Batchs (historical). *Synchronous*
+/*! \brief Batches (historical). *Synchronous*
  *
- * Gets batchs.
+ * Gets batches.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -96,14 +96,14 @@ bool dexDeposits (current)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dexGetBatchs (historical)Sync(char * accessToken,
+bool dexGetBatches (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Batchs (historical). *Asynchronous*
+/*! \brief Batches (historical). *Asynchronous*
  *
- * Gets batchs.
+ * Gets batches.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -113,7 +113,7 @@ bool dexGetBatchs (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dexGetBatchs (historical)Async(char * accessToken,
+bool dexGetBatches (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<Dex.BatchDTO>, Error, void* )
 	, void* userData);
@@ -265,9 +265,9 @@ bool dexGetSolutions (historical)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Statss (historical). *Synchronous*
+/*! \brief Stats (historical). *Synchronous*
  *
- * Gets statss.
+ * Gets stats.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -277,14 +277,14 @@ bool dexGetSolutions (historical)Async(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dexGetStatss (historical)Sync(char * accessToken,
+bool dexGetStats (historical)Sync(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Statss (historical). *Asynchronous*
+/*! \brief Stats (historical). *Asynchronous*
  *
- * Gets statss.
+ * Gets stats.
  * \param startBlock The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock.
  * \param endBlock The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock).
  * \param startDate The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included.
@@ -294,7 +294,7 @@ bool dexGetStatss (historical)Sync(char * accessToken,
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dexGetStatss (historical)Async(char * accessToken,
+bool dexGetStats (historical)Async(char * accessToken,
 	long long startBlock, long long endBlock, std::string startDate, std::string endDate, std::string id, 
 	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
 	, void* userData);
@@ -564,26 +564,26 @@ bool dexSolutions (current)Async(char * accessToken,
 	, void* userData);
 
 
-/*! \brief Statss (current). *Synchronous*
+/*! \brief Stats (current). *Synchronous*
  *
- * Gets statss.
+ * Gets stats.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dexStatss (current)Sync(char * accessToken,
+bool dexStats (current)Sync(char * accessToken,
 	
 	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
 	, void* userData);
 
-/*! \brief Statss (current). *Asynchronous*
+/*! \brief Stats (current). *Asynchronous*
  *
- * Gets statss.
+ * Gets stats.
  * \param handler The callback function to be invoked on completion. *Required*
  * \param accessToken The Authorization token. *Required*
  * \param userData The user data to be passed to the callback function.
  */
-bool dexStatss (current)Async(char * accessToken,
+bool dexStats (current)Async(char * accessToken,
 	
 	void(* handler)(std::list<Dex.StatsDTO>, Error, void* )
 	, void* userData);

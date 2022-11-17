@@ -17,38 +17,38 @@
 module Api.Request.UniswapV3 exposing
     ( uniswapV3BundlesCurrent
     , uniswapV3BurnsCurrent
-    , uniswapV3FactorysCurrent
+    , uniswapV3FactoriesCurrent
     , uniswapV3GetBundlesHistorical
     , uniswapV3GetBurnsHistorical
-    , uniswapV3GetFactorysHistorical
+    , uniswapV3GetFactoriesHistorical
     , uniswapV3GetMintsHistorical
-    , uniswapV3GetPoolDayDatasHistorical
-    , uniswapV3GetPoolHourDatasHistorical
+    , uniswapV3GetPoolDayDataHistorical
+    , uniswapV3GetPoolHourDataHistorical
     , uniswapV3GetPoolsHistorical
     , uniswapV3GetPositionSnapshotsHistorical
     , uniswapV3GetPositionsHistorical
     , uniswapV3GetSwapsHistorical
-    , uniswapV3GetTickDayDatasHistorical
+    , uniswapV3GetTickDayDataHistorical
     , uniswapV3GetTicksHistorical
-    , uniswapV3GetTokenHourDatasHistorical
-    , uniswapV3GetTokenV3DayDatasHistorical
+    , uniswapV3GetTokenHourDataHistorical
+    , uniswapV3GetTokenV3DayDataHistorical
     , uniswapV3GetTokensHistorical
     , uniswapV3GetTransactionsHistorical
-    , uniswapV3GetUniswapDayDatasHistorical
+    , uniswapV3GetUniswapDayDataHistorical
     , uniswapV3MintsCurrent
-    , uniswapV3PoolDayDatasCurrent
-    , uniswapV3PoolHourDatasCurrent
+    , uniswapV3PoolDayDataCurrent
+    , uniswapV3PoolHourDataCurrent
     , uniswapV3PoolsCurrent
     , uniswapV3PositionSnapshotsCurrent
     , uniswapV3PositionsCurrent
     , uniswapV3SwapsCurrent
-    , uniswapV3TickDayDatasCurrent
+    , uniswapV3TickDayDataCurrent
     , uniswapV3TicksCurrent
-    , uniswapV3TokenHourDatasCurrent
-    , uniswapV3TokenV3DayDatasCurrent
+    , uniswapV3TokenHourDataCurrent
+    , uniswapV3TokenV3DayDataCurrent
     , uniswapV3TokensCurrent
     , uniswapV3TransactionsCurrent
-    , uniswapV3UniswapDayDatasCurrent
+    , uniswapV3UniswapDayDataCurrent
     )
 
 import Api
@@ -91,13 +91,13 @@ uniswapV3BurnsCurrent =
 
 
 
-{-| Gets factorys.
+{-| Gets factories.
 -}
-uniswapV3FactorysCurrent : Api.Request (List Api.Data.UniswapV3FactoryDTO)
-uniswapV3FactorysCurrent =
+uniswapV3FactoriesCurrent : Api.Request (List Api.Data.UniswapV3FactoryDTO)
+uniswapV3FactoriesCurrent =
     Api.request
         "GET"
-        "/dapps/uniswapv3/factorys/current"
+        "/dapps/uniswapv3/factories/current"
         []
         []
         []
@@ -136,13 +136,13 @@ uniswapV3GetBurnsHistorical startBlock_query endBlock_query startDate_query endD
 
 
 
-{-| Gets factorys.
+{-| Gets factories.
 -}
-uniswapV3GetFactorysHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3FactoryDTO)
-uniswapV3GetFactorysHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
+uniswapV3GetFactoriesHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3FactoryDTO)
+uniswapV3GetFactoriesHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/factorys/historical"
+        "/dapps/uniswapv3/factories/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
         []
@@ -166,13 +166,13 @@ uniswapV3GetMintsHistorical startBlock_query endBlock_query startDate_query endD
 
 
 
-{-| Gets poolDayDatas.
+{-| Gets poolDayData.
 -}
-uniswapV3GetPoolDayDatasHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3PoolDayDataDTO)
-uniswapV3GetPoolDayDatasHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query =
+uniswapV3GetPoolDayDataHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3PoolDayDataDTO)
+uniswapV3GetPoolDayDataHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/poolDayDatas/historical"
+        "/dapps/uniswapv3/poolDayData/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "pool", Maybe.map identity pool_query ) ]
         []
@@ -181,13 +181,13 @@ uniswapV3GetPoolDayDatasHistorical startBlock_query endBlock_query startDate_que
 
 
 
-{-| Gets poolHourDatas.
+{-| Gets poolHourData.
 -}
-uniswapV3GetPoolHourDatasHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3PoolHourDataDTO)
-uniswapV3GetPoolHourDatasHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query =
+uniswapV3GetPoolHourDataHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3PoolHourDataDTO)
+uniswapV3GetPoolHourDataHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/poolHourDatas/historical"
+        "/dapps/uniswapv3/poolHourData/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "pool", Maybe.map identity pool_query ) ]
         []
@@ -256,13 +256,13 @@ uniswapV3GetSwapsHistorical startBlock_query endBlock_query startDate_query endD
 
 
 
-{-| Gets tickDayDatas.
+{-| Gets tickDayData.
 -}
-uniswapV3GetTickDayDatasHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3TickDayDataDTO)
-uniswapV3GetTickDayDatasHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query =
+uniswapV3GetTickDayDataHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Maybe String -> Api.Request (List Api.Data.UniswapV3TickDayDataDTO)
+uniswapV3GetTickDayDataHistorical startBlock_query endBlock_query startDate_query endDate_query id_query pool_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/tickDayDatas/historical"
+        "/dapps/uniswapv3/tickDayData/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ), ( "pool", Maybe.map identity pool_query ) ]
         []
@@ -286,13 +286,13 @@ uniswapV3GetTicksHistorical startBlock_query endBlock_query startDate_query endD
 
 
 
-{-| Gets tokenHourDatas.
+{-| Gets tokenHourData.
 -}
-uniswapV3GetTokenHourDatasHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3TokenHourDataDTO)
-uniswapV3GetTokenHourDatasHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
+uniswapV3GetTokenHourDataHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3TokenHourDataDTO)
+uniswapV3GetTokenHourDataHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/tokenHourDatas/historical"
+        "/dapps/uniswapv3/tokenHourData/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
         []
@@ -301,13 +301,13 @@ uniswapV3GetTokenHourDatasHistorical startBlock_query endBlock_query startDate_q
 
 
 
-{-| Gets tokenV3DayDatas.
+{-| Gets tokenV3DayData.
 -}
-uniswapV3GetTokenV3DayDatasHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3TokenV3DayDataDTO)
-uniswapV3GetTokenV3DayDatasHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
+uniswapV3GetTokenV3DayDataHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3TokenV3DayDataDTO)
+uniswapV3GetTokenV3DayDataHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/tokenV3DayDatas/historical"
+        "/dapps/uniswapv3/tokenV3DayData/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
         []
@@ -346,13 +346,13 @@ uniswapV3GetTransactionsHistorical startBlock_query endBlock_query startDate_que
 
 
 
-{-| Gets uniswapDayDatas.
+{-| Gets uniswapDayData.
 -}
-uniswapV3GetUniswapDayDatasHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3UniswapDayDataDTO)
-uniswapV3GetUniswapDayDatasHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
+uniswapV3GetUniswapDayDataHistorical : Maybe Int -> Maybe Int -> Maybe Posix -> Maybe Posix -> Maybe String -> Api.Request (List Api.Data.UniswapV3UniswapDayDataDTO)
+uniswapV3GetUniswapDayDataHistorical startBlock_query endBlock_query startDate_query endDate_query id_query =
     Api.request
         "GET"
-        "/dapps/uniswapv3/uniswapDayDatas/historical"
+        "/dapps/uniswapv3/uniswapDayData/historical"
         []
         [ ( "startBlock", Maybe.map String.fromInt startBlock_query ), ( "endBlock", Maybe.map String.fromInt endBlock_query ), ( "startDate", Maybe.map Api.Time.dateTimeToString startDate_query ), ( "endDate", Maybe.map Api.Time.dateTimeToString endDate_query ), ( "id", Maybe.map identity id_query ) ]
         []
@@ -376,13 +376,13 @@ uniswapV3MintsCurrent =
 
 
 
-{-| Gets poolDayDatas.
+{-| Gets poolDayData.
 -}
-uniswapV3PoolDayDatasCurrent : Api.Request (List Api.Data.UniswapV3PoolDayDataDTO)
-uniswapV3PoolDayDatasCurrent =
+uniswapV3PoolDayDataCurrent : Api.Request (List Api.Data.UniswapV3PoolDayDataDTO)
+uniswapV3PoolDayDataCurrent =
     Api.request
         "GET"
-        "/dapps/uniswapv3/poolDayDatas/current"
+        "/dapps/uniswapv3/poolDayData/current"
         []
         []
         []
@@ -391,13 +391,13 @@ uniswapV3PoolDayDatasCurrent =
 
 
 
-{-| Gets poolHourDatas.
+{-| Gets poolHourData.
 -}
-uniswapV3PoolHourDatasCurrent : Api.Request (List Api.Data.UniswapV3PoolHourDataDTO)
-uniswapV3PoolHourDatasCurrent =
+uniswapV3PoolHourDataCurrent : Api.Request (List Api.Data.UniswapV3PoolHourDataDTO)
+uniswapV3PoolHourDataCurrent =
     Api.request
         "GET"
-        "/dapps/uniswapv3/poolHourDatas/current"
+        "/dapps/uniswapv3/poolHourData/current"
         []
         []
         []
@@ -466,13 +466,13 @@ uniswapV3SwapsCurrent pool_query =
 
 
 
-{-| Gets tickDayDatas.
+{-| Gets tickDayData.
 -}
-uniswapV3TickDayDatasCurrent : Api.Request (List Api.Data.UniswapV3TickDayDataDTO)
-uniswapV3TickDayDatasCurrent =
+uniswapV3TickDayDataCurrent : Api.Request (List Api.Data.UniswapV3TickDayDataDTO)
+uniswapV3TickDayDataCurrent =
     Api.request
         "GET"
-        "/dapps/uniswapv3/tickDayDatas/current"
+        "/dapps/uniswapv3/tickDayData/current"
         []
         []
         []
@@ -496,13 +496,13 @@ uniswapV3TicksCurrent =
 
 
 
-{-| Gets tokenHourDatas.
+{-| Gets tokenHourData.
 -}
-uniswapV3TokenHourDatasCurrent : Api.Request (List Api.Data.UniswapV3TokenHourDataDTO)
-uniswapV3TokenHourDatasCurrent =
+uniswapV3TokenHourDataCurrent : Api.Request (List Api.Data.UniswapV3TokenHourDataDTO)
+uniswapV3TokenHourDataCurrent =
     Api.request
         "GET"
-        "/dapps/uniswapv3/tokenHourDatas/current"
+        "/dapps/uniswapv3/tokenHourData/current"
         []
         []
         []
@@ -511,13 +511,13 @@ uniswapV3TokenHourDatasCurrent =
 
 
 
-{-| Gets tokenV3DayDatas.
+{-| Gets tokenV3DayData.
 -}
-uniswapV3TokenV3DayDatasCurrent : Api.Request (List Api.Data.UniswapV3TokenV3DayDataDTO)
-uniswapV3TokenV3DayDatasCurrent =
+uniswapV3TokenV3DayDataCurrent : Api.Request (List Api.Data.UniswapV3TokenV3DayDataDTO)
+uniswapV3TokenV3DayDataCurrent =
     Api.request
         "GET"
-        "/dapps/uniswapv3/tokenV3DayDatas/current"
+        "/dapps/uniswapv3/tokenV3DayData/current"
         []
         []
         []
@@ -556,13 +556,13 @@ uniswapV3TransactionsCurrent =
 
 
 
-{-| Gets uniswapDayDatas.
+{-| Gets uniswapDayData.
 -}
-uniswapV3UniswapDayDatasCurrent : Api.Request (List Api.Data.UniswapV3UniswapDayDataDTO)
-uniswapV3UniswapDayDatasCurrent =
+uniswapV3UniswapDayDataCurrent : Api.Request (List Api.Data.UniswapV3UniswapDayDataDTO)
+uniswapV3UniswapDayDataCurrent =
     Api.request
         "GET"
-        "/dapps/uniswapv3/uniswapDayDatas/current"
+        "/dapps/uniswapv3/uniswapDayData/current"
         []
         []
         []

@@ -6,38 +6,38 @@ All URIs are relative to *https://onchain.coinapi.io*
 | ------ | ------------ | ----------- |
 | [**uniswap_v3_bundles__current**](UniswapV3Api.md#uniswap_v3_bundles__current) | **GET** /dapps/uniswapv3/bundles/current | Bundles (current) |
 | [**uniswap_v3_burns__current**](UniswapV3Api.md#uniswap_v3_burns__current) | **GET** /dapps/uniswapv3/burns/current | Burns (current) |
-| [**uniswap_v3_factorys__current**](UniswapV3Api.md#uniswap_v3_factorys__current) | **GET** /dapps/uniswapv3/factorys/current | Factorys (current) |
+| [**uniswap_v3_factories__current**](UniswapV3Api.md#uniswap_v3_factories__current) | **GET** /dapps/uniswapv3/factories/current | Factories (current) |
 | [**uniswap_v3_get_bundles__historical**](UniswapV3Api.md#uniswap_v3_get_bundles__historical) | **GET** /dapps/uniswapv3/bundles/historical | Bundles (historical) |
 | [**uniswap_v3_get_burns__historical**](UniswapV3Api.md#uniswap_v3_get_burns__historical) | **GET** /dapps/uniswapv3/burns/historical | Burns (historical) |
-| [**uniswap_v3_get_factorys__historical**](UniswapV3Api.md#uniswap_v3_get_factorys__historical) | **GET** /dapps/uniswapv3/factorys/historical | Factorys (historical) |
+| [**uniswap_v3_get_factories__historical**](UniswapV3Api.md#uniswap_v3_get_factories__historical) | **GET** /dapps/uniswapv3/factories/historical | Factories (historical) |
 | [**uniswap_v3_get_mints__historical**](UniswapV3Api.md#uniswap_v3_get_mints__historical) | **GET** /dapps/uniswapv3/mints/historical | Mints (historical) |
-| [**uniswap_v3_get_pool_day_datas__historical**](UniswapV3Api.md#uniswap_v3_get_pool_day_datas__historical) | **GET** /dapps/uniswapv3/poolDayDatas/historical | PoolDayDatas (historical) |
-| [**uniswap_v3_get_pool_hour_datas__historical**](UniswapV3Api.md#uniswap_v3_get_pool_hour_datas__historical) | **GET** /dapps/uniswapv3/poolHourDatas/historical | PoolHourDatas (historical) |
+| [**uniswap_v3_get_pool_day_data__historical**](UniswapV3Api.md#uniswap_v3_get_pool_day_data__historical) | **GET** /dapps/uniswapv3/poolDayData/historical | PoolDayData (historical) |
+| [**uniswap_v3_get_pool_hour_data__historical**](UniswapV3Api.md#uniswap_v3_get_pool_hour_data__historical) | **GET** /dapps/uniswapv3/poolHourData/historical | PoolHourData (historical) |
 | [**uniswap_v3_get_pools__historical**](UniswapV3Api.md#uniswap_v3_get_pools__historical) | **GET** /dapps/uniswapv3/pools/historical | Pools (historical) |
 | [**uniswap_v3_get_position_snapshots__historical**](UniswapV3Api.md#uniswap_v3_get_position_snapshots__historical) | **GET** /dapps/uniswapv3/positionSnapshots/historical | PositionSnapshots (historical) |
 | [**uniswap_v3_get_positions__historical**](UniswapV3Api.md#uniswap_v3_get_positions__historical) | **GET** /dapps/uniswapv3/positions/historical | Positions (historical) |
 | [**uniswap_v3_get_swaps__historical**](UniswapV3Api.md#uniswap_v3_get_swaps__historical) | **GET** /dapps/uniswapv3/swaps/historical | Swaps (historical) |
-| [**uniswap_v3_get_tick_day_datas__historical**](UniswapV3Api.md#uniswap_v3_get_tick_day_datas__historical) | **GET** /dapps/uniswapv3/tickDayDatas/historical | TickDayDatas (historical) |
+| [**uniswap_v3_get_tick_day_data__historical**](UniswapV3Api.md#uniswap_v3_get_tick_day_data__historical) | **GET** /dapps/uniswapv3/tickDayData/historical | TickDayData (historical) |
 | [**uniswap_v3_get_ticks__historical**](UniswapV3Api.md#uniswap_v3_get_ticks__historical) | **GET** /dapps/uniswapv3/ticks/historical | Ticks (historical) |
-| [**uniswap_v3_get_token_hour_datas__historical**](UniswapV3Api.md#uniswap_v3_get_token_hour_datas__historical) | **GET** /dapps/uniswapv3/tokenHourDatas/historical | TokenHourDatas (historical) |
-| [**uniswap_v3_get_token_v3_day_datas__historical**](UniswapV3Api.md#uniswap_v3_get_token_v3_day_datas__historical) | **GET** /dapps/uniswapv3/tokenV3DayDatas/historical | TokenV3DayDatas (historical) |
+| [**uniswap_v3_get_token_hour_data__historical**](UniswapV3Api.md#uniswap_v3_get_token_hour_data__historical) | **GET** /dapps/uniswapv3/tokenHourData/historical | TokenHourData (historical) |
+| [**uniswap_v3_get_token_v3_day_data__historical**](UniswapV3Api.md#uniswap_v3_get_token_v3_day_data__historical) | **GET** /dapps/uniswapv3/tokenV3DayData/historical | TokenV3DayData (historical) |
 | [**uniswap_v3_get_tokens__historical**](UniswapV3Api.md#uniswap_v3_get_tokens__historical) | **GET** /dapps/uniswapv3/tokens/historical | Tokens (historical) |
 | [**uniswap_v3_get_transactions__historical**](UniswapV3Api.md#uniswap_v3_get_transactions__historical) | **GET** /dapps/uniswapv3/transactions/historical | Transactions (historical) |
-| [**uniswap_v3_get_uniswap_day_datas__historical**](UniswapV3Api.md#uniswap_v3_get_uniswap_day_datas__historical) | **GET** /dapps/uniswapv3/uniswapDayDatas/historical | UniswapDayDatas (historical) |
+| [**uniswap_v3_get_uniswap_day_data__historical**](UniswapV3Api.md#uniswap_v3_get_uniswap_day_data__historical) | **GET** /dapps/uniswapv3/uniswapDayData/historical | UniswapDayData (historical) |
 | [**uniswap_v3_mints__current**](UniswapV3Api.md#uniswap_v3_mints__current) | **GET** /dapps/uniswapv3/mints/current | Mints (current) |
-| [**uniswap_v3_pool_day_datas__current**](UniswapV3Api.md#uniswap_v3_pool_day_datas__current) | **GET** /dapps/uniswapv3/poolDayDatas/current | PoolDayDatas (current) |
-| [**uniswap_v3_pool_hour_datas__current**](UniswapV3Api.md#uniswap_v3_pool_hour_datas__current) | **GET** /dapps/uniswapv3/poolHourDatas/current | PoolHourDatas (current) |
+| [**uniswap_v3_pool_day_data__current**](UniswapV3Api.md#uniswap_v3_pool_day_data__current) | **GET** /dapps/uniswapv3/poolDayData/current | PoolDayData (current) |
+| [**uniswap_v3_pool_hour_data__current**](UniswapV3Api.md#uniswap_v3_pool_hour_data__current) | **GET** /dapps/uniswapv3/poolHourData/current | PoolHourData (current) |
 | [**uniswap_v3_pools__current**](UniswapV3Api.md#uniswap_v3_pools__current) | **GET** /dapps/uniswapv3/pools/current | Pools (current) |
 | [**uniswap_v3_position_snapshots__current**](UniswapV3Api.md#uniswap_v3_position_snapshots__current) | **GET** /dapps/uniswapv3/positionSnapshots/current | PositionSnapshots (current) |
 | [**uniswap_v3_positions__current**](UniswapV3Api.md#uniswap_v3_positions__current) | **GET** /dapps/uniswapv3/positions/current | Positions (current) |
 | [**uniswap_v3_swaps__current**](UniswapV3Api.md#uniswap_v3_swaps__current) | **GET** /dapps/uniswapv3/swaps/current | Swaps (current) |
-| [**uniswap_v3_tick_day_datas__current**](UniswapV3Api.md#uniswap_v3_tick_day_datas__current) | **GET** /dapps/uniswapv3/tickDayDatas/current | TickDayDatas (current) |
+| [**uniswap_v3_tick_day_data__current**](UniswapV3Api.md#uniswap_v3_tick_day_data__current) | **GET** /dapps/uniswapv3/tickDayData/current | TickDayData (current) |
 | [**uniswap_v3_ticks__current**](UniswapV3Api.md#uniswap_v3_ticks__current) | **GET** /dapps/uniswapv3/ticks/current | Ticks (current) |
-| [**uniswap_v3_token_hour_datas__current**](UniswapV3Api.md#uniswap_v3_token_hour_datas__current) | **GET** /dapps/uniswapv3/tokenHourDatas/current | TokenHourDatas (current) |
-| [**uniswap_v3_token_v3_day_datas__current**](UniswapV3Api.md#uniswap_v3_token_v3_day_datas__current) | **GET** /dapps/uniswapv3/tokenV3DayDatas/current | TokenV3DayDatas (current) |
+| [**uniswap_v3_token_hour_data__current**](UniswapV3Api.md#uniswap_v3_token_hour_data__current) | **GET** /dapps/uniswapv3/tokenHourData/current | TokenHourData (current) |
+| [**uniswap_v3_token_v3_day_data__current**](UniswapV3Api.md#uniswap_v3_token_v3_day_data__current) | **GET** /dapps/uniswapv3/tokenV3DayData/current | TokenV3DayData (current) |
 | [**uniswap_v3_tokens__current**](UniswapV3Api.md#uniswap_v3_tokens__current) | **GET** /dapps/uniswapv3/tokens/current | Tokens (current) |
 | [**uniswap_v3_transactions__current**](UniswapV3Api.md#uniswap_v3_transactions__current) | **GET** /dapps/uniswapv3/transactions/current | Transactions (current) |
-| [**uniswap_v3_uniswap_day_datas__current**](UniswapV3Api.md#uniswap_v3_uniswap_day_datas__current) | **GET** /dapps/uniswapv3/uniswapDayDatas/current | UniswapDayDatas (current) |
+| [**uniswap_v3_uniswap_day_data__current**](UniswapV3Api.md#uniswap_v3_uniswap_day_data__current) | **GET** /dapps/uniswapv3/uniswapDayData/current | UniswapDayData (current) |
 
 
 ## uniswap_v3_bundles__current
@@ -162,13 +162,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswap_v3_factorys__current
+## uniswap_v3_factories__current
 
-> <Array<UniswapV3FactoryDTO>> uniswap_v3_factorys__current
+> <Array<UniswapV3FactoryDTO>> uniswap_v3_factories__current
 
-Factorys (current)
+Factories (current)
 
-Gets factorys.
+Gets factories.
 
 ### Examples
 
@@ -179,29 +179,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::UniswapV3Api.new
 
 begin
-  # Factorys (current)
-  result = api_instance.uniswap_v3_factorys__current
+  # Factories (current)
+  result = api_instance.uniswap_v3_factories__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_factorys__current: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_factories__current: #{e}"
 end
 ```
 
-#### Using the uniswap_v3_factorys__current_with_http_info variant
+#### Using the uniswap_v3_factories__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UniswapV3FactoryDTO>>, Integer, Hash)> uniswap_v3_factorys__current_with_http_info
+> <Array(<Array<UniswapV3FactoryDTO>>, Integer, Hash)> uniswap_v3_factories__current_with_http_info
 
 ```ruby
 begin
-  # Factorys (current)
-  data, status_code, headers = api_instance.uniswap_v3_factorys__current_with_http_info
+  # Factories (current)
+  data, status_code, headers = api_instance.uniswap_v3_factories__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<UniswapV3FactoryDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_factorys__current_with_http_info: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_factories__current_with_http_info: #{e}"
 end
 ```
 
@@ -377,13 +377,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswap_v3_get_factorys__historical
+## uniswap_v3_get_factories__historical
 
-> <Array<UniswapV3FactoryDTO>> uniswap_v3_get_factorys__historical(opts)
+> <Array<UniswapV3FactoryDTO>> uniswap_v3_get_factories__historical(opts)
 
-Factorys (historical)
+Factories (historical)
 
-Gets factorys.
+Gets factories.
 
 ### Examples
 
@@ -401,29 +401,29 @@ opts = {
 }
 
 begin
-  # Factorys (historical)
-  result = api_instance.uniswap_v3_get_factorys__historical(opts)
+  # Factories (historical)
+  result = api_instance.uniswap_v3_get_factories__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_get_factorys__historical: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_get_factories__historical: #{e}"
 end
 ```
 
-#### Using the uniswap_v3_get_factorys__historical_with_http_info variant
+#### Using the uniswap_v3_get_factories__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UniswapV3FactoryDTO>>, Integer, Hash)> uniswap_v3_get_factorys__historical_with_http_info(opts)
+> <Array(<Array<UniswapV3FactoryDTO>>, Integer, Hash)> uniswap_v3_get_factories__historical_with_http_info(opts)
 
 ```ruby
 begin
-  # Factorys (historical)
-  data, status_code, headers = api_instance.uniswap_v3_get_factorys__historical_with_http_info(opts)
+  # Factories (historical)
+  data, status_code, headers = api_instance.uniswap_v3_get_factories__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<UniswapV3FactoryDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_get_factorys__historical_with_http_info: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_get_factories__historical_with_http_info: #{e}"
 end
 ```
 
@@ -531,13 +531,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswap_v3_get_pool_day_datas__historical
+## uniswap_v3_get_pool_day_data__historical
 
-> <Array<UniswapV3PoolDayDataDTO>> uniswap_v3_get_pool_day_datas__historical(opts)
+> <Array<UniswapV3PoolDayDataDTO>> uniswap_v3_get_pool_day_data__historical(opts)
 
-PoolDayDatas (historical)
+PoolDayData (historical)
 
-Gets poolDayDatas.
+Gets poolDayData.
 
 ### Examples
 
@@ -556,29 +556,29 @@ opts = {
 }
 
 begin
-  # PoolDayDatas (historical)
-  result = api_instance.uniswap_v3_get_pool_day_datas__historical(opts)
+  # PoolDayData (historical)
+  result = api_instance.uniswap_v3_get_pool_day_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_get_pool_day_datas__historical: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_get_pool_day_data__historical: #{e}"
 end
 ```
 
-#### Using the uniswap_v3_get_pool_day_datas__historical_with_http_info variant
+#### Using the uniswap_v3_get_pool_day_data__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UniswapV3PoolDayDataDTO>>, Integer, Hash)> uniswap_v3_get_pool_day_datas__historical_with_http_info(opts)
+> <Array(<Array<UniswapV3PoolDayDataDTO>>, Integer, Hash)> uniswap_v3_get_pool_day_data__historical_with_http_info(opts)
 
 ```ruby
 begin
-  # PoolDayDatas (historical)
-  data, status_code, headers = api_instance.uniswap_v3_get_pool_day_datas__historical_with_http_info(opts)
+  # PoolDayData (historical)
+  data, status_code, headers = api_instance.uniswap_v3_get_pool_day_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<UniswapV3PoolDayDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_get_pool_day_datas__historical_with_http_info: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_get_pool_day_data__historical_with_http_info: #{e}"
 end
 ```
 
@@ -607,13 +607,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswap_v3_get_pool_hour_datas__historical
+## uniswap_v3_get_pool_hour_data__historical
 
-> <Array<UniswapV3PoolHourDataDTO>> uniswap_v3_get_pool_hour_datas__historical(opts)
+> <Array<UniswapV3PoolHourDataDTO>> uniswap_v3_get_pool_hour_data__historical(opts)
 
-PoolHourDatas (historical)
+PoolHourData (historical)
 
-Gets poolHourDatas.
+Gets poolHourData.
 
 ### Examples
 
@@ -632,29 +632,29 @@ opts = {
 }
 
 begin
-  # PoolHourDatas (historical)
-  result = api_instance.uniswap_v3_get_pool_hour_datas__historical(opts)
+  # PoolHourData (historical)
+  result = api_instance.uniswap_v3_get_pool_hour_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_get_pool_hour_datas__historical: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_get_pool_hour_data__historical: #{e}"
 end
 ```
 
-#### Using the uniswap_v3_get_pool_hour_datas__historical_with_http_info variant
+#### Using the uniswap_v3_get_pool_hour_data__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UniswapV3PoolHourDataDTO>>, Integer, Hash)> uniswap_v3_get_pool_hour_datas__historical_with_http_info(opts)
+> <Array(<Array<UniswapV3PoolHourDataDTO>>, Integer, Hash)> uniswap_v3_get_pool_hour_data__historical_with_http_info(opts)
 
 ```ruby
 begin
-  # PoolHourDatas (historical)
-  data, status_code, headers = api_instance.uniswap_v3_get_pool_hour_datas__historical_with_http_info(opts)
+  # PoolHourData (historical)
+  data, status_code, headers = api_instance.uniswap_v3_get_pool_hour_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<UniswapV3PoolHourDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_get_pool_hour_datas__historical_with_http_info: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_get_pool_hour_data__historical_with_http_info: #{e}"
 end
 ```
 
@@ -997,13 +997,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswap_v3_get_tick_day_datas__historical
+## uniswap_v3_get_tick_day_data__historical
 
-> <Array<UniswapV3TickDayDataDTO>> uniswap_v3_get_tick_day_datas__historical(opts)
+> <Array<UniswapV3TickDayDataDTO>> uniswap_v3_get_tick_day_data__historical(opts)
 
-TickDayDatas (historical)
+TickDayData (historical)
 
-Gets tickDayDatas.
+Gets tickDayData.
 
 ### Examples
 
@@ -1022,29 +1022,29 @@ opts = {
 }
 
 begin
-  # TickDayDatas (historical)
-  result = api_instance.uniswap_v3_get_tick_day_datas__historical(opts)
+  # TickDayData (historical)
+  result = api_instance.uniswap_v3_get_tick_day_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_get_tick_day_datas__historical: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_get_tick_day_data__historical: #{e}"
 end
 ```
 
-#### Using the uniswap_v3_get_tick_day_datas__historical_with_http_info variant
+#### Using the uniswap_v3_get_tick_day_data__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UniswapV3TickDayDataDTO>>, Integer, Hash)> uniswap_v3_get_tick_day_datas__historical_with_http_info(opts)
+> <Array(<Array<UniswapV3TickDayDataDTO>>, Integer, Hash)> uniswap_v3_get_tick_day_data__historical_with_http_info(opts)
 
 ```ruby
 begin
-  # TickDayDatas (historical)
-  data, status_code, headers = api_instance.uniswap_v3_get_tick_day_datas__historical_with_http_info(opts)
+  # TickDayData (historical)
+  data, status_code, headers = api_instance.uniswap_v3_get_tick_day_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<UniswapV3TickDayDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_get_tick_day_datas__historical_with_http_info: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_get_tick_day_data__historical_with_http_info: #{e}"
 end
 ```
 
@@ -1149,13 +1149,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswap_v3_get_token_hour_datas__historical
+## uniswap_v3_get_token_hour_data__historical
 
-> <Array<UniswapV3TokenHourDataDTO>> uniswap_v3_get_token_hour_datas__historical(opts)
+> <Array<UniswapV3TokenHourDataDTO>> uniswap_v3_get_token_hour_data__historical(opts)
 
-TokenHourDatas (historical)
+TokenHourData (historical)
 
-Gets tokenHourDatas.
+Gets tokenHourData.
 
 ### Examples
 
@@ -1173,29 +1173,29 @@ opts = {
 }
 
 begin
-  # TokenHourDatas (historical)
-  result = api_instance.uniswap_v3_get_token_hour_datas__historical(opts)
+  # TokenHourData (historical)
+  result = api_instance.uniswap_v3_get_token_hour_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_get_token_hour_datas__historical: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_get_token_hour_data__historical: #{e}"
 end
 ```
 
-#### Using the uniswap_v3_get_token_hour_datas__historical_with_http_info variant
+#### Using the uniswap_v3_get_token_hour_data__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UniswapV3TokenHourDataDTO>>, Integer, Hash)> uniswap_v3_get_token_hour_datas__historical_with_http_info(opts)
+> <Array(<Array<UniswapV3TokenHourDataDTO>>, Integer, Hash)> uniswap_v3_get_token_hour_data__historical_with_http_info(opts)
 
 ```ruby
 begin
-  # TokenHourDatas (historical)
-  data, status_code, headers = api_instance.uniswap_v3_get_token_hour_datas__historical_with_http_info(opts)
+  # TokenHourData (historical)
+  data, status_code, headers = api_instance.uniswap_v3_get_token_hour_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<UniswapV3TokenHourDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_get_token_hour_datas__historical_with_http_info: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_get_token_hour_data__historical_with_http_info: #{e}"
 end
 ```
 
@@ -1223,13 +1223,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswap_v3_get_token_v3_day_datas__historical
+## uniswap_v3_get_token_v3_day_data__historical
 
-> <Array<UniswapV3TokenV3DayDataDTO>> uniswap_v3_get_token_v3_day_datas__historical(opts)
+> <Array<UniswapV3TokenV3DayDataDTO>> uniswap_v3_get_token_v3_day_data__historical(opts)
 
-TokenV3DayDatas (historical)
+TokenV3DayData (historical)
 
-Gets tokenV3DayDatas.
+Gets tokenV3DayData.
 
 ### Examples
 
@@ -1247,29 +1247,29 @@ opts = {
 }
 
 begin
-  # TokenV3DayDatas (historical)
-  result = api_instance.uniswap_v3_get_token_v3_day_datas__historical(opts)
+  # TokenV3DayData (historical)
+  result = api_instance.uniswap_v3_get_token_v3_day_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_get_token_v3_day_datas__historical: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_get_token_v3_day_data__historical: #{e}"
 end
 ```
 
-#### Using the uniswap_v3_get_token_v3_day_datas__historical_with_http_info variant
+#### Using the uniswap_v3_get_token_v3_day_data__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UniswapV3TokenV3DayDataDTO>>, Integer, Hash)> uniswap_v3_get_token_v3_day_datas__historical_with_http_info(opts)
+> <Array(<Array<UniswapV3TokenV3DayDataDTO>>, Integer, Hash)> uniswap_v3_get_token_v3_day_data__historical_with_http_info(opts)
 
 ```ruby
 begin
-  # TokenV3DayDatas (historical)
-  data, status_code, headers = api_instance.uniswap_v3_get_token_v3_day_datas__historical_with_http_info(opts)
+  # TokenV3DayData (historical)
+  data, status_code, headers = api_instance.uniswap_v3_get_token_v3_day_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<UniswapV3TokenV3DayDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_get_token_v3_day_datas__historical_with_http_info: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_get_token_v3_day_data__historical_with_http_info: #{e}"
 end
 ```
 
@@ -1449,13 +1449,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswap_v3_get_uniswap_day_datas__historical
+## uniswap_v3_get_uniswap_day_data__historical
 
-> <Array<UniswapV3UniswapDayDataDTO>> uniswap_v3_get_uniswap_day_datas__historical(opts)
+> <Array<UniswapV3UniswapDayDataDTO>> uniswap_v3_get_uniswap_day_data__historical(opts)
 
-UniswapDayDatas (historical)
+UniswapDayData (historical)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Examples
 
@@ -1473,29 +1473,29 @@ opts = {
 }
 
 begin
-  # UniswapDayDatas (historical)
-  result = api_instance.uniswap_v3_get_uniswap_day_datas__historical(opts)
+  # UniswapDayData (historical)
+  result = api_instance.uniswap_v3_get_uniswap_day_data__historical(opts)
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_get_uniswap_day_datas__historical: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_get_uniswap_day_data__historical: #{e}"
 end
 ```
 
-#### Using the uniswap_v3_get_uniswap_day_datas__historical_with_http_info variant
+#### Using the uniswap_v3_get_uniswap_day_data__historical_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UniswapV3UniswapDayDataDTO>>, Integer, Hash)> uniswap_v3_get_uniswap_day_datas__historical_with_http_info(opts)
+> <Array(<Array<UniswapV3UniswapDayDataDTO>>, Integer, Hash)> uniswap_v3_get_uniswap_day_data__historical_with_http_info(opts)
 
 ```ruby
 begin
-  # UniswapDayDatas (historical)
-  data, status_code, headers = api_instance.uniswap_v3_get_uniswap_day_datas__historical_with_http_info(opts)
+  # UniswapDayData (historical)
+  data, status_code, headers = api_instance.uniswap_v3_get_uniswap_day_data__historical_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<UniswapV3UniswapDayDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_get_uniswap_day_datas__historical_with_http_info: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_get_uniswap_day_data__historical_with_http_info: #{e}"
 end
 ```
 
@@ -1584,13 +1584,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswap_v3_pool_day_datas__current
+## uniswap_v3_pool_day_data__current
 
-> <Array<UniswapV3PoolDayDataDTO>> uniswap_v3_pool_day_datas__current
+> <Array<UniswapV3PoolDayDataDTO>> uniswap_v3_pool_day_data__current
 
-PoolDayDatas (current)
+PoolDayData (current)
 
-Gets poolDayDatas.
+Gets poolDayData.
 
 ### Examples
 
@@ -1601,29 +1601,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::UniswapV3Api.new
 
 begin
-  # PoolDayDatas (current)
-  result = api_instance.uniswap_v3_pool_day_datas__current
+  # PoolDayData (current)
+  result = api_instance.uniswap_v3_pool_day_data__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_pool_day_datas__current: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_pool_day_data__current: #{e}"
 end
 ```
 
-#### Using the uniswap_v3_pool_day_datas__current_with_http_info variant
+#### Using the uniswap_v3_pool_day_data__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UniswapV3PoolDayDataDTO>>, Integer, Hash)> uniswap_v3_pool_day_datas__current_with_http_info
+> <Array(<Array<UniswapV3PoolDayDataDTO>>, Integer, Hash)> uniswap_v3_pool_day_data__current_with_http_info
 
 ```ruby
 begin
-  # PoolDayDatas (current)
-  data, status_code, headers = api_instance.uniswap_v3_pool_day_datas__current_with_http_info
+  # PoolDayData (current)
+  data, status_code, headers = api_instance.uniswap_v3_pool_day_data__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<UniswapV3PoolDayDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_pool_day_datas__current_with_http_info: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_pool_day_data__current_with_http_info: #{e}"
 end
 ```
 
@@ -1645,13 +1645,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswap_v3_pool_hour_datas__current
+## uniswap_v3_pool_hour_data__current
 
-> <Array<UniswapV3PoolHourDataDTO>> uniswap_v3_pool_hour_datas__current
+> <Array<UniswapV3PoolHourDataDTO>> uniswap_v3_pool_hour_data__current
 
-PoolHourDatas (current)
+PoolHourData (current)
 
-Gets poolHourDatas.
+Gets poolHourData.
 
 ### Examples
 
@@ -1662,29 +1662,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::UniswapV3Api.new
 
 begin
-  # PoolHourDatas (current)
-  result = api_instance.uniswap_v3_pool_hour_datas__current
+  # PoolHourData (current)
+  result = api_instance.uniswap_v3_pool_hour_data__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_pool_hour_datas__current: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_pool_hour_data__current: #{e}"
 end
 ```
 
-#### Using the uniswap_v3_pool_hour_datas__current_with_http_info variant
+#### Using the uniswap_v3_pool_hour_data__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UniswapV3PoolHourDataDTO>>, Integer, Hash)> uniswap_v3_pool_hour_datas__current_with_http_info
+> <Array(<Array<UniswapV3PoolHourDataDTO>>, Integer, Hash)> uniswap_v3_pool_hour_data__current_with_http_info
 
 ```ruby
 begin
-  # PoolHourDatas (current)
-  data, status_code, headers = api_instance.uniswap_v3_pool_hour_datas__current_with_http_info
+  # PoolHourData (current)
+  data, status_code, headers = api_instance.uniswap_v3_pool_hour_data__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<UniswapV3PoolHourDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_pool_hour_datas__current_with_http_info: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_pool_hour_data__current_with_http_info: #{e}"
 end
 ```
 
@@ -1960,13 +1960,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswap_v3_tick_day_datas__current
+## uniswap_v3_tick_day_data__current
 
-> <Array<UniswapV3TickDayDataDTO>> uniswap_v3_tick_day_datas__current
+> <Array<UniswapV3TickDayDataDTO>> uniswap_v3_tick_day_data__current
 
-TickDayDatas (current)
+TickDayData (current)
 
-Gets tickDayDatas.
+Gets tickDayData.
 
 ### Examples
 
@@ -1977,29 +1977,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::UniswapV3Api.new
 
 begin
-  # TickDayDatas (current)
-  result = api_instance.uniswap_v3_tick_day_datas__current
+  # TickDayData (current)
+  result = api_instance.uniswap_v3_tick_day_data__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_tick_day_datas__current: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_tick_day_data__current: #{e}"
 end
 ```
 
-#### Using the uniswap_v3_tick_day_datas__current_with_http_info variant
+#### Using the uniswap_v3_tick_day_data__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UniswapV3TickDayDataDTO>>, Integer, Hash)> uniswap_v3_tick_day_datas__current_with_http_info
+> <Array(<Array<UniswapV3TickDayDataDTO>>, Integer, Hash)> uniswap_v3_tick_day_data__current_with_http_info
 
 ```ruby
 begin
-  # TickDayDatas (current)
-  data, status_code, headers = api_instance.uniswap_v3_tick_day_datas__current_with_http_info
+  # TickDayData (current)
+  data, status_code, headers = api_instance.uniswap_v3_tick_day_data__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<UniswapV3TickDayDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_tick_day_datas__current_with_http_info: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_tick_day_data__current_with_http_info: #{e}"
 end
 ```
 
@@ -2082,13 +2082,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswap_v3_token_hour_datas__current
+## uniswap_v3_token_hour_data__current
 
-> <Array<UniswapV3TokenHourDataDTO>> uniswap_v3_token_hour_datas__current
+> <Array<UniswapV3TokenHourDataDTO>> uniswap_v3_token_hour_data__current
 
-TokenHourDatas (current)
+TokenHourData (current)
 
-Gets tokenHourDatas.
+Gets tokenHourData.
 
 ### Examples
 
@@ -2099,29 +2099,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::UniswapV3Api.new
 
 begin
-  # TokenHourDatas (current)
-  result = api_instance.uniswap_v3_token_hour_datas__current
+  # TokenHourData (current)
+  result = api_instance.uniswap_v3_token_hour_data__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_token_hour_datas__current: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_token_hour_data__current: #{e}"
 end
 ```
 
-#### Using the uniswap_v3_token_hour_datas__current_with_http_info variant
+#### Using the uniswap_v3_token_hour_data__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UniswapV3TokenHourDataDTO>>, Integer, Hash)> uniswap_v3_token_hour_datas__current_with_http_info
+> <Array(<Array<UniswapV3TokenHourDataDTO>>, Integer, Hash)> uniswap_v3_token_hour_data__current_with_http_info
 
 ```ruby
 begin
-  # TokenHourDatas (current)
-  data, status_code, headers = api_instance.uniswap_v3_token_hour_datas__current_with_http_info
+  # TokenHourData (current)
+  data, status_code, headers = api_instance.uniswap_v3_token_hour_data__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<UniswapV3TokenHourDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_token_hour_datas__current_with_http_info: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_token_hour_data__current_with_http_info: #{e}"
 end
 ```
 
@@ -2143,13 +2143,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswap_v3_token_v3_day_datas__current
+## uniswap_v3_token_v3_day_data__current
 
-> <Array<UniswapV3TokenV3DayDataDTO>> uniswap_v3_token_v3_day_datas__current
+> <Array<UniswapV3TokenV3DayDataDTO>> uniswap_v3_token_v3_day_data__current
 
-TokenV3DayDatas (current)
+TokenV3DayData (current)
 
-Gets tokenV3DayDatas.
+Gets tokenV3DayData.
 
 ### Examples
 
@@ -2160,29 +2160,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::UniswapV3Api.new
 
 begin
-  # TokenV3DayDatas (current)
-  result = api_instance.uniswap_v3_token_v3_day_datas__current
+  # TokenV3DayData (current)
+  result = api_instance.uniswap_v3_token_v3_day_data__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_token_v3_day_datas__current: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_token_v3_day_data__current: #{e}"
 end
 ```
 
-#### Using the uniswap_v3_token_v3_day_datas__current_with_http_info variant
+#### Using the uniswap_v3_token_v3_day_data__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UniswapV3TokenV3DayDataDTO>>, Integer, Hash)> uniswap_v3_token_v3_day_datas__current_with_http_info
+> <Array(<Array<UniswapV3TokenV3DayDataDTO>>, Integer, Hash)> uniswap_v3_token_v3_day_data__current_with_http_info
 
 ```ruby
 begin
-  # TokenV3DayDatas (current)
-  data, status_code, headers = api_instance.uniswap_v3_token_v3_day_datas__current_with_http_info
+  # TokenV3DayData (current)
+  data, status_code, headers = api_instance.uniswap_v3_token_v3_day_data__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<UniswapV3TokenV3DayDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_token_v3_day_datas__current_with_http_info: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_token_v3_day_data__current_with_http_info: #{e}"
 end
 ```
 
@@ -2326,13 +2326,13 @@ No authorization required
 - **Accept**: text/plain, application/json, text/json
 
 
-## uniswap_v3_uniswap_day_datas__current
+## uniswap_v3_uniswap_day_data__current
 
-> <Array<UniswapV3UniswapDayDataDTO>> uniswap_v3_uniswap_day_datas__current
+> <Array<UniswapV3UniswapDayDataDTO>> uniswap_v3_uniswap_day_data__current
 
-UniswapDayDatas (current)
+UniswapDayData (current)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Examples
 
@@ -2343,29 +2343,29 @@ require 'openapi_client'
 api_instance = OpenapiClient::UniswapV3Api.new
 
 begin
-  # UniswapDayDatas (current)
-  result = api_instance.uniswap_v3_uniswap_day_datas__current
+  # UniswapDayData (current)
+  result = api_instance.uniswap_v3_uniswap_day_data__current
   p result
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_uniswap_day_datas__current: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_uniswap_day_data__current: #{e}"
 end
 ```
 
-#### Using the uniswap_v3_uniswap_day_datas__current_with_http_info variant
+#### Using the uniswap_v3_uniswap_day_data__current_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<Array<UniswapV3UniswapDayDataDTO>>, Integer, Hash)> uniswap_v3_uniswap_day_datas__current_with_http_info
+> <Array(<Array<UniswapV3UniswapDayDataDTO>>, Integer, Hash)> uniswap_v3_uniswap_day_data__current_with_http_info
 
 ```ruby
 begin
-  # UniswapDayDatas (current)
-  data, status_code, headers = api_instance.uniswap_v3_uniswap_day_datas__current_with_http_info
+  # UniswapDayData (current)
+  data, status_code, headers = api_instance.uniswap_v3_uniswap_day_data__current_with_http_info
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <Array<UniswapV3UniswapDayDataDTO>>
 rescue OpenapiClient::ApiError => e
-  puts "Error when calling UniswapV3Api->uniswap_v3_uniswap_day_datas__current_with_http_info: #{e}"
+  puts "Error when calling UniswapV3Api->uniswap_v3_uniswap_day_data__current_with_http_info: #{e}"
 end
 ```
 

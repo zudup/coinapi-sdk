@@ -861,12 +861,12 @@ end:
 
 }
 
-// GaugeLiquiditys (current)
+// GaugeLiquidities (current)
 //
-// Gets gaugeLiquiditys.
+// Gets gaugeLiquidities.
 //
 list_t*
-CurveAPI_curveGaugeLiquiditysCurrent(apiClient_t *apiClient)
+CurveAPI_curveGaugeLiquiditiesCurrent(apiClient_t *apiClient)
 {
     list_t    *localVarQueryParameters = NULL;
     list_t    *localVarHeaderParameters = NULL;
@@ -876,9 +876,9 @@ CurveAPI_curveGaugeLiquiditysCurrent(apiClient_t *apiClient)
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/gaugeLiquiditys/current")+1;
+    long sizeOfPath = strlen("/dapps/curve/gaugeLiquidities/current")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeLiquiditys/current");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeLiquidities/current");
 
 
 
@@ -3646,12 +3646,12 @@ end:
 
 }
 
-// GaugeLiquiditys (historical)
+// GaugeLiquidities (historical)
 //
-// Gets gaugeLiquiditys.
+// Gets gaugeLiquidities.
 //
 list_t*
-CurveAPI_curveGetGaugeLiquiditysHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * user )
+CurveAPI_curveGetGaugeLiquiditiesHistorical(apiClient_t *apiClient, long startBlock , long endBlock , char startDate , char endDate , char * id , char * user )
 {
     list_t    *localVarQueryParameters = list_createList();
     list_t    *localVarHeaderParameters = NULL;
@@ -3661,9 +3661,9 @@ CurveAPI_curveGetGaugeLiquiditysHistorical(apiClient_t *apiClient, long startBlo
     char      *localVarBodyParameters = NULL;
 
     // create the path
-    long sizeOfPath = strlen("/dapps/curve/gaugeLiquiditys/historical")+1;
+    long sizeOfPath = strlen("/dapps/curve/gaugeLiquidities/historical")+1;
     char *localVarPath = malloc(sizeOfPath);
-    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeLiquiditys/historical");
+    snprintf(localVarPath, sizeOfPath, "/dapps/curve/gaugeLiquidities/historical");
 
 
 

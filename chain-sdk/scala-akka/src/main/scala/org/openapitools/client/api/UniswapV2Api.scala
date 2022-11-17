@@ -183,7 +183,7 @@ class UniswapV2Api(baseUrl: String) {
       
 
   /**
-   * Gets pairDayDatas.
+   * Gets pairDayData.
    * 
    * Expected answers:
    *   code 200 : Seq[PairDayDataDTO] (successful operation)
@@ -196,8 +196,8 @@ class UniswapV2Api(baseUrl: String) {
    * @param token0 Reference to token0.
    * @param token1 Reference to token1.
    */
-  def uniswapV2GetPairDayDatasHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, token0: Option[String] = None, token1: Option[String] = None): ApiRequest[Seq[PairDayDataDTO]] =
-    ApiRequest[Seq[PairDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/pairDayDatas/historical", "application/json")
+  def uniswapV2GetPairDayDataHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, token0: Option[String] = None, token1: Option[String] = None): ApiRequest[Seq[PairDayDataDTO]] =
+    ApiRequest[Seq[PairDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/pairDayData/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -209,7 +209,7 @@ class UniswapV2Api(baseUrl: String) {
       
 
   /**
-   * Gets pairHourDatas.
+   * Gets pairHourData.
    * 
    * Expected answers:
    *   code 200 : Seq[PairHourDataDTO] (successful operation)
@@ -221,8 +221,8 @@ class UniswapV2Api(baseUrl: String) {
    * @param id 
    * @param pair Address for pair contract.
    */
-  def uniswapV2GetPairHourDatasHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pair: Option[String] = None): ApiRequest[Seq[PairHourDataDTO]] =
-    ApiRequest[Seq[PairHourDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/pairHourDatas/historical", "application/json")
+  def uniswapV2GetPairHourDataHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, pair: Option[String] = None): ApiRequest[Seq[PairHourDataDTO]] =
+    ApiRequest[Seq[PairHourDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/pairHourData/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -283,7 +283,7 @@ class UniswapV2Api(baseUrl: String) {
       
 
   /**
-   * Gets tokenDayDatas.
+   * Gets tokenDayData.
    * 
    * Expected answers:
    *   code 200 : Seq[TokenDayDataDTO] (successful operation)
@@ -294,8 +294,8 @@ class UniswapV2Api(baseUrl: String) {
    * @param endDate The end date of timeframe.
    * @param id Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
    */
-  def uniswapV2GetTokenDayDatasHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[TokenDayDataDTO]] =
-    ApiRequest[Seq[TokenDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/tokenDayDatas/historical", "application/json")
+  def uniswapV2GetTokenDayDataHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[TokenDayDataDTO]] =
+    ApiRequest[Seq[TokenDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/tokenDayData/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -353,7 +353,7 @@ class UniswapV2Api(baseUrl: String) {
       
 
   /**
-   * Gets uniswapDayDatas.
+   * Gets uniswapDayData.
    * 
    * Expected answers:
    *   code 200 : Seq[UniswapDayDataDTO] (successful operation)
@@ -364,8 +364,8 @@ class UniswapV2Api(baseUrl: String) {
    * @param endDate The end date of timeframe.
    * @param id Unix timestamp for start of day / 86400 giving a unique day index.
    */
-  def uniswapV2GetUniswapDayDatasHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[UniswapDayDataDTO]] =
-    ApiRequest[Seq[UniswapDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/uniswapDayDatas/historical", "application/json")
+  def uniswapV2GetUniswapDayDataHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[UniswapDayDataDTO]] =
+    ApiRequest[Seq[UniswapDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/uniswapDayData/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -375,7 +375,7 @@ class UniswapV2Api(baseUrl: String) {
       
 
   /**
-   * Gets uniswapFactorys.
+   * Gets uniswapFactories.
    * 
    * Expected answers:
    *   code 200 : Seq[UniswapFactoryDTO] (successful operation)
@@ -386,8 +386,8 @@ class UniswapV2Api(baseUrl: String) {
    * @param endDate The end date of timeframe.
    * @param id Factory address.
    */
-  def uniswapV2GetUniswapFactorysHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[UniswapFactoryDTO]] =
-    ApiRequest[Seq[UniswapFactoryDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/uniswapFactorys/historical", "application/json")
+  def uniswapV2GetUniswapFactoriesHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None): ApiRequest[Seq[UniswapFactoryDTO]] =
+    ApiRequest[Seq[UniswapFactoryDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/uniswapFactories/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)
@@ -452,24 +452,24 @@ class UniswapV2Api(baseUrl: String) {
       
 
   /**
-   * Gets pairDayDatas.
+   * Gets pairDayData.
    * 
    * Expected answers:
    *   code 200 : Seq[PairDayDataDTO] (successful operation)
    */
-  def uniswapV2PairDayDatasCurrent(): ApiRequest[Seq[PairDayDataDTO]] =
-    ApiRequest[Seq[PairDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/pairDayDatas/current", "application/json")
+  def uniswapV2PairDayDataCurrent(): ApiRequest[Seq[PairDayDataDTO]] =
+    ApiRequest[Seq[PairDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/pairDayData/current", "application/json")
       .withSuccessResponse[Seq[PairDayDataDTO]](200)
       
 
   /**
-   * Gets pairHourDatas.
+   * Gets pairHourData.
    * 
    * Expected answers:
    *   code 200 : Seq[PairHourDataDTO] (successful operation)
    */
-  def uniswapV2PairHourDatasCurrent(): ApiRequest[Seq[PairHourDataDTO]] =
-    ApiRequest[Seq[PairHourDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/pairHourDatas/current", "application/json")
+  def uniswapV2PairHourDataCurrent(): ApiRequest[Seq[PairHourDataDTO]] =
+    ApiRequest[Seq[PairHourDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/pairHourData/current", "application/json")
       .withSuccessResponse[Seq[PairHourDataDTO]](200)
       
 
@@ -502,13 +502,13 @@ class UniswapV2Api(baseUrl: String) {
       
 
   /**
-   * Gets tokenDayDatas.
+   * Gets tokenDayData.
    * 
    * Expected answers:
    *   code 200 : Seq[TokenDayDataDTO] (successful operation)
    */
-  def uniswapV2TokenDayDatasCurrent(): ApiRequest[Seq[TokenDayDataDTO]] =
-    ApiRequest[Seq[TokenDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/tokenDayDatas/current", "application/json")
+  def uniswapV2TokenDayDataCurrent(): ApiRequest[Seq[TokenDayDataDTO]] =
+    ApiRequest[Seq[TokenDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/tokenDayData/current", "application/json")
       .withSuccessResponse[Seq[TokenDayDataDTO]](200)
       
 
@@ -535,24 +535,24 @@ class UniswapV2Api(baseUrl: String) {
       
 
   /**
-   * Gets uniswapDayDatas.
+   * Gets uniswapDayData.
    * 
    * Expected answers:
    *   code 200 : Seq[UniswapDayDataDTO] (successful operation)
    */
-  def uniswapV2UniswapDayDatasCurrent(): ApiRequest[Seq[UniswapDayDataDTO]] =
-    ApiRequest[Seq[UniswapDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/uniswapDayDatas/current", "application/json")
+  def uniswapV2UniswapDayDataCurrent(): ApiRequest[Seq[UniswapDayDataDTO]] =
+    ApiRequest[Seq[UniswapDayDataDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/uniswapDayData/current", "application/json")
       .withSuccessResponse[Seq[UniswapDayDataDTO]](200)
       
 
   /**
-   * Gets uniswapFactorys.
+   * Gets uniswapFactories.
    * 
    * Expected answers:
    *   code 200 : Seq[UniswapFactoryDTO] (successful operation)
    */
-  def uniswapV2UniswapFactorysCurrent(): ApiRequest[Seq[UniswapFactoryDTO]] =
-    ApiRequest[Seq[UniswapFactoryDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/uniswapFactorys/current", "application/json")
+  def uniswapV2UniswapFactoriesCurrent(): ApiRequest[Seq[UniswapFactoryDTO]] =
+    ApiRequest[Seq[UniswapFactoryDTO]](ApiMethods.GET, baseUrl, "/dapps/uniswapv2/uniswapFactories/current", "application/json")
       .withSuccessResponse[Seq[UniswapFactoryDTO]](200)
       
 

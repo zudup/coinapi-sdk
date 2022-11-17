@@ -12,33 +12,33 @@
 
 from openapi_client.paths.dapps_sushiswap_bundles_current.get import SushiswapBundlesCurrent
 from openapi_client.paths.dapps_sushiswap_burns_current.get import SushiswapBurnsCurrent
-from openapi_client.paths.dapps_sushiswap_day_datas_current.get import SushiswapDayDatasCurrent
-from openapi_client.paths.dapps_sushiswap_factorys_current.get import SushiswapFactorysCurrent
+from openapi_client.paths.dapps_sushiswap_day_data_current.get import SushiswapDayDataCurrent
+from openapi_client.paths.dapps_sushiswap_factories_current.get import SushiswapFactoriesCurrent
 from openapi_client.paths.dapps_sushiswap_bundles_historical.get import SushiswapGetBundlesHistorical
 from openapi_client.paths.dapps_sushiswap_burns_historical.get import SushiswapGetBurnsHistorical
-from openapi_client.paths.dapps_sushiswap_day_datas_historical.get import SushiswapGetDayDatasHistorical
-from openapi_client.paths.dapps_sushiswap_factorys_historical.get import SushiswapGetFactorysHistorical
-from openapi_client.paths.dapps_sushiswap_hour_datas_historical.get import SushiswapGetHourDatasHistorical
+from openapi_client.paths.dapps_sushiswap_day_data_historical.get import SushiswapGetDayDataHistorical
+from openapi_client.paths.dapps_sushiswap_factories_historical.get import SushiswapGetFactoriesHistorical
+from openapi_client.paths.dapps_sushiswap_hour_data_historical.get import SushiswapGetHourDataHistorical
 from openapi_client.paths.dapps_sushiswap_liquidity_position_snapshots_historical.get import SushiswapGetLiquidityPositionSnapshotsHistorical
 from openapi_client.paths.dapps_sushiswap_liquidity_positions_historical.get import SushiswapGetLiquidityPositionsHistorical
 from openapi_client.paths.dapps_sushiswap_mints_historical.get import SushiswapGetMintsHistorical
-from openapi_client.paths.dapps_sushiswap_pair_day_datas_historical.get import SushiswapGetPairDayDatasHistorical
-from openapi_client.paths.dapps_sushiswap_pair_hour_datas_historical.get import SushiswapGetPairHourDatasHistorical
+from openapi_client.paths.dapps_sushiswap_pair_day_data_historical.get import SushiswapGetPairDayDataHistorical
+from openapi_client.paths.dapps_sushiswap_pair_hour_data_historical.get import SushiswapGetPairHourDataHistorical
 from openapi_client.paths.dapps_sushiswap_pairs_historical.get import SushiswapGetPairsHistorical
 from openapi_client.paths.dapps_sushiswap_swaps_historical.get import SushiswapGetSwapsHistorical
-from openapi_client.paths.dapps_sushiswap_token_day_datas_historical.get import SushiswapGetTokenDayDatasHistorical
+from openapi_client.paths.dapps_sushiswap_token_day_data_historical.get import SushiswapGetTokenDayDataHistorical
 from openapi_client.paths.dapps_sushiswap_tokens_historical.get import SushiswapGetTokensHistorical
 from openapi_client.paths.dapps_sushiswap_transactions_historical.get import SushiswapGetTransactionsHistorical
 from openapi_client.paths.dapps_sushiswap_users_historical.get import SushiswapGetUsersHistorical
-from openapi_client.paths.dapps_sushiswap_hour_datas_current.get import SushiswapHourDatasCurrent
+from openapi_client.paths.dapps_sushiswap_hour_data_current.get import SushiswapHourDataCurrent
 from openapi_client.paths.dapps_sushiswap_liquidity_position_snapshots_current.get import SushiswapLiquidityPositionSnapshotsCurrent
 from openapi_client.paths.dapps_sushiswap_liquidity_positions_current.get import SushiswapLiquidityPositionsCurrent
 from openapi_client.paths.dapps_sushiswap_mints_current.get import SushiswapMintsCurrent
-from openapi_client.paths.dapps_sushiswap_pair_day_datas_current.get import SushiswapPairDayDatasCurrent
-from openapi_client.paths.dapps_sushiswap_pair_hour_datas_current.get import SushiswapPairHourDatasCurrent
+from openapi_client.paths.dapps_sushiswap_pair_day_data_current.get import SushiswapPairDayDataCurrent
+from openapi_client.paths.dapps_sushiswap_pair_hour_data_current.get import SushiswapPairHourDataCurrent
 from openapi_client.paths.dapps_sushiswap_pairs_current.get import SushiswapPairsCurrent
 from openapi_client.paths.dapps_sushiswap_swaps_current.get import SushiswapSwapsCurrent
-from openapi_client.paths.dapps_sushiswap_token_day_datas_current.get import SushiswapTokenDayDatasCurrent
+from openapi_client.paths.dapps_sushiswap_token_day_data_current.get import SushiswapTokenDayDataCurrent
 from openapi_client.paths.dapps_sushiswap_tokens_current.get import SushiswapTokensCurrent
 from openapi_client.paths.dapps_sushiswap_transactions_current.get import SushiswapTransactionsCurrent
 from openapi_client.paths.dapps_sushiswap_users_current.get import SushiswapUsersCurrent
@@ -47,33 +47,33 @@ from openapi_client.paths.dapps_sushiswap_users_current.get import SushiswapUser
 class SushiswapApi(
     SushiswapBundlesCurrent,
     SushiswapBurnsCurrent,
-    SushiswapDayDatasCurrent,
-    SushiswapFactorysCurrent,
+    SushiswapDayDataCurrent,
+    SushiswapFactoriesCurrent,
     SushiswapGetBundlesHistorical,
     SushiswapGetBurnsHistorical,
-    SushiswapGetDayDatasHistorical,
-    SushiswapGetFactorysHistorical,
-    SushiswapGetHourDatasHistorical,
+    SushiswapGetDayDataHistorical,
+    SushiswapGetFactoriesHistorical,
+    SushiswapGetHourDataHistorical,
     SushiswapGetLiquidityPositionSnapshotsHistorical,
     SushiswapGetLiquidityPositionsHistorical,
     SushiswapGetMintsHistorical,
-    SushiswapGetPairDayDatasHistorical,
-    SushiswapGetPairHourDatasHistorical,
+    SushiswapGetPairDayDataHistorical,
+    SushiswapGetPairHourDataHistorical,
     SushiswapGetPairsHistorical,
     SushiswapGetSwapsHistorical,
-    SushiswapGetTokenDayDatasHistorical,
+    SushiswapGetTokenDayDataHistorical,
     SushiswapGetTokensHistorical,
     SushiswapGetTransactionsHistorical,
     SushiswapGetUsersHistorical,
-    SushiswapHourDatasCurrent,
+    SushiswapHourDataCurrent,
     SushiswapLiquidityPositionSnapshotsCurrent,
     SushiswapLiquidityPositionsCurrent,
     SushiswapMintsCurrent,
-    SushiswapPairDayDatasCurrent,
-    SushiswapPairHourDatasCurrent,
+    SushiswapPairDayDataCurrent,
+    SushiswapPairHourDataCurrent,
     SushiswapPairsCurrent,
     SushiswapSwapsCurrent,
-    SushiswapTokenDayDatasCurrent,
+    SushiswapTokenDayDataCurrent,
     SushiswapTokensCurrent,
     SushiswapTransactionsCurrent,
     SushiswapUsersCurrent,

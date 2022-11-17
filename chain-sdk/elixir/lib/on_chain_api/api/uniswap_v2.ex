@@ -295,8 +295,8 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  PairDayDatas (historical)
-  Gets pairDayDatas.
+  PairDayData (historical)
+  Gets pairDayData.
 
   ### Parameters
 
@@ -315,8 +315,8 @@ defmodule OnChainAPI.Api.UniswapV2 do
   - `{:ok, [%UniswapV2PairDayDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec uniswap_v2_get_pair_day_datas__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2PairDayDataDto.t)} | {:error, Tesla.Env.t}
-  def uniswap_v2_get_pair_day_datas__historical(connection, opts \\ []) do
+  @spec uniswap_v2_get_pair_day_data__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2PairDayDataDto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v2_get_pair_day_data__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -330,7 +330,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/uniswapv2/pairDayDatas/historical")
+      |> url("/dapps/uniswapv2/pairDayData/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -342,8 +342,8 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  PairHourDatas (historical)
-  Gets pairHourDatas.
+  PairHourData (historical)
+  Gets pairHourData.
 
   ### Parameters
 
@@ -361,8 +361,8 @@ defmodule OnChainAPI.Api.UniswapV2 do
   - `{:ok, [%UniswapV2PairHourDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec uniswap_v2_get_pair_hour_datas__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2PairHourDataDto.t)} | {:error, Tesla.Env.t}
-  def uniswap_v2_get_pair_hour_datas__historical(connection, opts \\ []) do
+  @spec uniswap_v2_get_pair_hour_data__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2PairHourDataDto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v2_get_pair_hour_data__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -375,7 +375,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/uniswapv2/pairHourDatas/historical")
+      |> url("/dapps/uniswapv2/pairHourData/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -479,8 +479,8 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  TokenDayDatas (historical)
-  Gets tokenDayDatas.
+  TokenDayData (historical)
+  Gets tokenDayData.
 
   ### Parameters
 
@@ -497,8 +497,8 @@ defmodule OnChainAPI.Api.UniswapV2 do
   - `{:ok, [%UniswapV2TokenDayDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec uniswap_v2_get_token_day_datas__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2TokenDayDataDto.t)} | {:error, Tesla.Env.t}
-  def uniswap_v2_get_token_day_datas__historical(connection, opts \\ []) do
+  @spec uniswap_v2_get_token_day_data__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2TokenDayDataDto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v2_get_token_day_data__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -510,7 +510,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/uniswapv2/tokenDayDatas/historical")
+      |> url("/dapps/uniswapv2/tokenDayData/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -612,8 +612,8 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  UniswapDayDatas (historical)
-  Gets uniswapDayDatas.
+  UniswapDayData (historical)
+  Gets uniswapDayData.
 
   ### Parameters
 
@@ -630,8 +630,8 @@ defmodule OnChainAPI.Api.UniswapV2 do
   - `{:ok, [%UniswapV2UniswapDayDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec uniswap_v2_get_uniswap_day_datas__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2UniswapDayDataDto.t)} | {:error, Tesla.Env.t}
-  def uniswap_v2_get_uniswap_day_datas__historical(connection, opts \\ []) do
+  @spec uniswap_v2_get_uniswap_day_data__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2UniswapDayDataDto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v2_get_uniswap_day_data__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -643,7 +643,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/uniswapv2/uniswapDayDatas/historical")
+      |> url("/dapps/uniswapv2/uniswapDayData/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -655,8 +655,8 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  UniswapFactorys (historical)
-  Gets uniswapFactorys.
+  UniswapFactories (historical)
+  Gets uniswapFactories.
 
   ### Parameters
 
@@ -673,8 +673,8 @@ defmodule OnChainAPI.Api.UniswapV2 do
   - `{:ok, [%UniswapV2UniswapFactoryDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec uniswap_v2_get_uniswap_factorys__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2UniswapFactoryDto.t)} | {:error, Tesla.Env.t}
-  def uniswap_v2_get_uniswap_factorys__historical(connection, opts \\ []) do
+  @spec uniswap_v2_get_uniswap_factories__historical(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2UniswapFactoryDto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v2_get_uniswap_factories__historical(connection, opts \\ []) do
     optional_params = %{
       :startBlock => :query,
       :endBlock => :query,
@@ -686,7 +686,7 @@ defmodule OnChainAPI.Api.UniswapV2 do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/uniswapv2/uniswapFactorys/historical")
+      |> url("/dapps/uniswapv2/uniswapFactories/historical")
       |> add_optional_params(optional_params, opts)
       |> Enum.into([])
 
@@ -828,8 +828,8 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  PairDayDatas (current)
-  Gets pairDayDatas.
+  PairDayData (current)
+  Gets pairDayData.
 
   ### Parameters
 
@@ -841,12 +841,12 @@ defmodule OnChainAPI.Api.UniswapV2 do
   - `{:ok, [%UniswapV2PairDayDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec uniswap_v2_pair_day_datas__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2PairDayDataDto.t)} | {:error, Tesla.Env.t}
-  def uniswap_v2_pair_day_datas__current(connection, _opts \\ []) do
+  @spec uniswap_v2_pair_day_data__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2PairDayDataDto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v2_pair_day_data__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/uniswapv2/pairDayDatas/current")
+      |> url("/dapps/uniswapv2/pairDayData/current")
       |> Enum.into([])
 
     connection
@@ -857,8 +857,8 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  PairHourDatas (current)
-  Gets pairHourDatas.
+  PairHourData (current)
+  Gets pairHourData.
 
   ### Parameters
 
@@ -870,12 +870,12 @@ defmodule OnChainAPI.Api.UniswapV2 do
   - `{:ok, [%UniswapV2PairHourDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec uniswap_v2_pair_hour_datas__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2PairHourDataDto.t)} | {:error, Tesla.Env.t}
-  def uniswap_v2_pair_hour_datas__current(connection, _opts \\ []) do
+  @spec uniswap_v2_pair_hour_data__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2PairHourDataDto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v2_pair_hour_data__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/uniswapv2/pairHourDatas/current")
+      |> url("/dapps/uniswapv2/pairHourData/current")
       |> Enum.into([])
 
     connection
@@ -956,8 +956,8 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  TokenDayDatas (current)
-  Gets tokenDayDatas.
+  TokenDayData (current)
+  Gets tokenDayData.
 
   ### Parameters
 
@@ -969,12 +969,12 @@ defmodule OnChainAPI.Api.UniswapV2 do
   - `{:ok, [%UniswapV2TokenDayDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec uniswap_v2_token_day_datas__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2TokenDayDataDto.t)} | {:error, Tesla.Env.t}
-  def uniswap_v2_token_day_datas__current(connection, _opts \\ []) do
+  @spec uniswap_v2_token_day_data__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2TokenDayDataDto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v2_token_day_data__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/uniswapv2/tokenDayDatas/current")
+      |> url("/dapps/uniswapv2/tokenDayData/current")
       |> Enum.into([])
 
     connection
@@ -1043,8 +1043,8 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  UniswapDayDatas (current)
-  Gets uniswapDayDatas.
+  UniswapDayData (current)
+  Gets uniswapDayData.
 
   ### Parameters
 
@@ -1056,12 +1056,12 @@ defmodule OnChainAPI.Api.UniswapV2 do
   - `{:ok, [%UniswapV2UniswapDayDataDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec uniswap_v2_uniswap_day_datas__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2UniswapDayDataDto.t)} | {:error, Tesla.Env.t}
-  def uniswap_v2_uniswap_day_datas__current(connection, _opts \\ []) do
+  @spec uniswap_v2_uniswap_day_data__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2UniswapDayDataDto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v2_uniswap_day_data__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/uniswapv2/uniswapDayDatas/current")
+      |> url("/dapps/uniswapv2/uniswapDayData/current")
       |> Enum.into([])
 
     connection
@@ -1072,8 +1072,8 @@ defmodule OnChainAPI.Api.UniswapV2 do
   end
 
   @doc """
-  UniswapFactorys (current)
-  Gets uniswapFactorys.
+  UniswapFactories (current)
+  Gets uniswapFactories.
 
   ### Parameters
 
@@ -1085,12 +1085,12 @@ defmodule OnChainAPI.Api.UniswapV2 do
   - `{:ok, [%UniswapV2UniswapFactoryDto{}, ...]}` on success
   - `{:error, Tesla.Env.t}` on failure
   """
-  @spec uniswap_v2_uniswap_factorys__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2UniswapFactoryDto.t)} | {:error, Tesla.Env.t}
-  def uniswap_v2_uniswap_factorys__current(connection, _opts \\ []) do
+  @spec uniswap_v2_uniswap_factories__current(Tesla.Env.client, keyword()) :: {:ok, list(OnChainAPI.Model.UniswapV2UniswapFactoryDto.t)} | {:error, Tesla.Env.t}
+  def uniswap_v2_uniswap_factories__current(connection, _opts \\ []) do
     request =
       %{}
       |> method(:get)
-      |> url("/dapps/uniswapv2/uniswapFactorys/current")
+      |> url("/dapps/uniswapv2/uniswapFactories/current")
       |> Enum.into([])
 
     connection

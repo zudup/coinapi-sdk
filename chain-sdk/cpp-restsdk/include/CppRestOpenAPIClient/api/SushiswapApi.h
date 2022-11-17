@@ -76,20 +76,20 @@ public:
     pplx::task<std::vector<std::shared_ptr<Sushiswap_BurnDTO>>> sushiswap_Burns__current(
     ) const;
     /// <summary>
-    /// DayDatas (current)
+    /// DayData (current)
     /// </summary>
     /// <remarks>
-    /// Gets dayDatas.
+    /// Gets dayData.
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> sushiswap_DayDatas__current(
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> sushiswap_DayData__current(
     ) const;
     /// <summary>
-    /// Factorys (current)
+    /// Factories (current)
     /// </summary>
     /// <remarks>
-    /// Gets factorys.
+    /// Gets factories.
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> sushiswap_Factorys__current(
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> sushiswap_Factories__current(
     ) const;
     /// <summary>
     /// Bundles (historical)
@@ -130,17 +130,17 @@ public:
         boost::optional<utility::string_t> pair
     ) const;
     /// <summary>
-    /// DayDatas (historical)
+    /// DayData (historical)
     /// </summary>
     /// <remarks>
-    /// Gets dayDatas.
+    /// Gets dayData.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
     /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
     /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
     /// <param name="id">Unix timestamp for start of day / 86400 giving a unique day index. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> sushiswap_GetDayDatas__historical(
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_DayDataDTO>>> sushiswap_GetDayData__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -148,17 +148,17 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// Factorys (historical)
+    /// Factories (historical)
     /// </summary>
     /// <remarks>
-    /// Gets factorys.
+    /// Gets factories.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
     /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
     /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
     /// <param name="id">Factory address. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> sushiswap_GetFactorys__historical(
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_FactoryDTO>>> sushiswap_GetFactories__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -166,17 +166,17 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// HourDatas (historical)
+    /// HourData (historical)
     /// </summary>
     /// <remarks>
-    /// Gets hourDatas.
+    /// Gets hourData.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
     /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
     /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
     /// <param name="id">Start of hour timestamp. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> sushiswap_GetHourDatas__historical(
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> sushiswap_GetHourData__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -248,10 +248,10 @@ public:
         boost::optional<utility::string_t> pair
     ) const;
     /// <summary>
-    /// PairDayDatas (historical)
+    /// PairDayData (historical)
     /// </summary>
     /// <remarks>
-    /// Gets pairDayDatas.
+    /// Gets pairDayData.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
@@ -261,7 +261,7 @@ public:
     /// <param name="pair"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="token0"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="token1"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> sushiswap_GetPairDayDatas__historical(
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> sushiswap_GetPairDayData__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -272,10 +272,10 @@ public:
         boost::optional<utility::string_t> token1
     ) const;
     /// <summary>
-    /// PairHourDatas (historical)
+    /// PairHourData (historical)
     /// </summary>
     /// <remarks>
-    /// Gets pairHourDatas.
+    /// Gets pairHourData.
     /// </remarks>
     /// <param name="startBlock"> (optional, default to 0L)</param>
     /// <param name="endBlock"> (optional, default to 0L)</param>
@@ -283,7 +283,7 @@ public:
     /// <param name="endDate"> (optional, default to utility::datetime())</param>
     /// <param name="id"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
     /// <param name="pair"> (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> sushiswap_GetPairHourDatas__historical(
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> sushiswap_GetPairHourData__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -336,17 +336,17 @@ public:
         boost::optional<utility::string_t> pair
     ) const;
     /// <summary>
-    /// TokenDayDatas (historical)
+    /// TokenDayData (historical)
     /// </summary>
     /// <remarks>
-    /// Gets tokenDayDatas.
+    /// Gets tokenDayData.
     /// </remarks>
     /// <param name="startBlock">The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional, default to 0L)</param>
     /// <param name="endBlock">The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional, default to 0L)</param>
     /// <param name="startDate">The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional, default to utility::datetime())</param>
     /// <param name="endDate">The end date of timeframe. (optional, default to utility::datetime())</param>
     /// <param name="id">Identifier, day start timestamp in unix / 86400. (optional, default to utility::conversions::to_string_t(&quot;&quot;))</param>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> sushiswap_GetTokenDayDatas__historical(
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> sushiswap_GetTokenDayData__historical(
         boost::optional<int64_t> startBlock,
         boost::optional<int64_t> endBlock,
         boost::optional<utility::datetime> startDate,
@@ -412,12 +412,12 @@ public:
         boost::optional<utility::string_t> id
     ) const;
     /// <summary>
-    /// HourDatas (current)
+    /// HourData (current)
     /// </summary>
     /// <remarks>
-    /// Gets hourDatas.
+    /// Gets hourData.
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> sushiswap_HourDatas__current(
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_HourDataDTO>>> sushiswap_HourData__current(
     ) const;
     /// <summary>
     /// LiquidityPositionSnapshots (current)
@@ -444,20 +444,20 @@ public:
     pplx::task<std::vector<std::shared_ptr<Sushiswap_MintDTO>>> sushiswap_Mints__current(
     ) const;
     /// <summary>
-    /// PairDayDatas (current)
+    /// PairDayData (current)
     /// </summary>
     /// <remarks>
-    /// Gets pairDayDatas.
+    /// Gets pairDayData.
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> sushiswap_PairDayDatas__current(
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairDayDataDTO>>> sushiswap_PairDayData__current(
     ) const;
     /// <summary>
-    /// PairHourDatas (current)
+    /// PairHourData (current)
     /// </summary>
     /// <remarks>
-    /// Gets pairHourDatas.
+    /// Gets pairHourData.
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> sushiswap_PairHourDatas__current(
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_PairHourDataDTO>>> sushiswap_PairHourData__current(
     ) const;
     /// <summary>
     /// Pairs (current)
@@ -480,12 +480,12 @@ public:
         boost::optional<utility::string_t> pair
     ) const;
     /// <summary>
-    /// TokenDayDatas (current)
+    /// TokenDayData (current)
     /// </summary>
     /// <remarks>
-    /// Gets tokenDayDatas.
+    /// Gets tokenDayData.
     /// </remarks>
-    pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> sushiswap_TokenDayDatas__current(
+    pplx::task<std::vector<std::shared_ptr<Sushiswap_TokenDayDataDTO>>> sushiswap_TokenDayData__current(
     ) const;
     /// <summary>
     /// Tokens (current)

@@ -316,7 +316,7 @@ case $state in
             "curveExchangesCurrent[Exchanges (current)]" \
             "curveFeeChangeLogsCurrent[FeeChangeLogs (current)]" \
             "curveGaugeDepositsCurrent[GaugeDeposits (current)]" \
-            "curveGaugeLiquiditysCurrent[GaugeLiquiditys (current)]" \
+            "curveGaugeLiquiditiesCurrent[GaugeLiquidities (current)]" \
             "curveGaugeTotalWeightsCurrent[GaugeTotalWeights (current)]" \
             "curveGaugeTypeWeightsCurrent[GaugeTypeWeights (current)]" \
             "curveGaugeTypesCurrent[GaugeTypes (current)]" \
@@ -335,7 +335,7 @@ case $state in
             "curveGetExchangesHistorical[Exchanges (historical)]" \
             "curveGetFeeChangeLogsHistorical[FeeChangeLogs (historical)]" \
             "curveGetGaugeDepositsHistorical[GaugeDeposits (historical)]" \
-            "curveGetGaugeLiquiditysHistorical[GaugeLiquiditys (historical)]" \
+            "curveGetGaugeLiquiditiesHistorical[GaugeLiquidities (historical)]" \
             "curveGetGaugeTotalWeightsHistorical[GaugeTotalWeights (historical)]" \
             "curveGetGaugeTypeWeightsHistorical[GaugeTypeWeights (historical)]" \
             "curveGetGaugeTypesHistorical[GaugeTypes (historical)]" \
@@ -368,14 +368,14 @@ case $state in
             "curveTransferOwnershipEventsCurrent[TransferOwnershipEvents (current)]" \
             "curveUnderlyingCoinsCurrent[UnderlyingCoins (current)]" \
             "curveVotingAppsCurrent[VotingApps (current)]" \
-            "curveWeeklyVolumesCurrent[WeeklyVolumes (current)]"             "dexBatchsCurrent[Batchs (current)]" \
+            "curveWeeklyVolumesCurrent[WeeklyVolumes (current)]"             "dexBatchesCurrent[Batches (current)]" \
             "dexDepositsCurrent[Deposits (current)]" \
-            "dexGetBatchsHistorical[Batchs (historical)]" \
+            "dexGetBatchesHistorical[Batches (historical)]" \
             "dexGetDepositsHistorical[Deposits (historical)]" \
             "dexGetOrdersHistorical[Orders (historical)]" \
             "dexGetPricesHistorical[Prices (historical)]" \
             "dexGetSolutionsHistorical[Solutions (historical)]" \
-            "dexGetStatssHistorical[Statss (historical)]" \
+            "dexGetStatsHistorical[Stats (historical)]" \
             "dexGetTokensHistorical[Tokens (historical)]" \
             "dexGetTradesHistorical[Trades (historical)]" \
             "dexGetUsersHistorical[Users (historical)]" \
@@ -384,40 +384,40 @@ case $state in
             "dexOrdersCurrent[Orders (current)]" \
             "dexPricesCurrent[Prices (current)]" \
             "dexSolutionsCurrent[Solutions (current)]" \
-            "dexStatssCurrent[Statss (current)]" \
+            "dexStatsCurrent[Stats (current)]" \
             "dexTokensCurrent[Tokens (current)]" \
             "dexTradesCurrent[Trades (current)]" \
             "dexUsersCurrent[Users (current)]" \
             "dexWithdrawRequestsCurrent[WithdrawRequests (current)]" \
             "dexWithdrawsCurrent[Withdraws (current)]"             "sushiswapBundlesCurrent[Bundles (current)]" \
             "sushiswapBurnsCurrent[Burns (current)]" \
-            "sushiswapDayDatasCurrent[DayDatas (current)]" \
-            "sushiswapFactorysCurrent[Factorys (current)]" \
+            "sushiswapDayDataCurrent[DayData (current)]" \
+            "sushiswapFactoriesCurrent[Factories (current)]" \
             "sushiswapGetBundlesHistorical[Bundles (historical)]" \
             "sushiswapGetBurnsHistorical[Burns (historical)]" \
-            "sushiswapGetDayDatasHistorical[DayDatas (historical)]" \
-            "sushiswapGetFactorysHistorical[Factorys (historical)]" \
-            "sushiswapGetHourDatasHistorical[HourDatas (historical)]" \
+            "sushiswapGetDayDataHistorical[DayData (historical)]" \
+            "sushiswapGetFactoriesHistorical[Factories (historical)]" \
+            "sushiswapGetHourDataHistorical[HourData (historical)]" \
             "sushiswapGetLiquidityPositionSnapshotsHistorical[LiquidityPositionSnapshots (historical)]" \
             "sushiswapGetLiquidityPositionsHistorical[LiquidityPositions (historical)]" \
             "sushiswapGetMintsHistorical[Mints (historical)]" \
-            "sushiswapGetPairDayDatasHistorical[PairDayDatas (historical)]" \
-            "sushiswapGetPairHourDatasHistorical[PairHourDatas (historical)]" \
+            "sushiswapGetPairDayDataHistorical[PairDayData (historical)]" \
+            "sushiswapGetPairHourDataHistorical[PairHourData (historical)]" \
             "sushiswapGetPairsHistorical[Pairs (historical)]" \
             "sushiswapGetSwapsHistorical[Swaps (historical)]" \
-            "sushiswapGetTokenDayDatasHistorical[TokenDayDatas (historical)]" \
+            "sushiswapGetTokenDayDataHistorical[TokenDayData (historical)]" \
             "sushiswapGetTokensHistorical[Tokens (historical)]" \
             "sushiswapGetTransactionsHistorical[Transactions (historical)]" \
             "sushiswapGetUsersHistorical[Users (historical)]" \
-            "sushiswapHourDatasCurrent[HourDatas (current)]" \
+            "sushiswapHourDataCurrent[HourData (current)]" \
             "sushiswapLiquidityPositionSnapshotsCurrent[LiquidityPositionSnapshots (current)]" \
             "sushiswapLiquidityPositionsCurrent[LiquidityPositions (current)]" \
             "sushiswapMintsCurrent[Mints (current)]" \
-            "sushiswapPairDayDatasCurrent[PairDayDatas (current)]" \
-            "sushiswapPairHourDatasCurrent[PairHourDatas (current)]" \
+            "sushiswapPairDayDataCurrent[PairDayData (current)]" \
+            "sushiswapPairHourDataCurrent[PairHourData (current)]" \
             "sushiswapPairsCurrent[Pairs (current)]" \
             "sushiswapSwapsCurrent[Swaps (current)]" \
-            "sushiswapTokenDayDatasCurrent[TokenDayDatas (current)]" \
+            "sushiswapTokenDayDataCurrent[TokenDayData (current)]" \
             "sushiswapTokensCurrent[Tokens (current)]" \
             "sushiswapTransactionsCurrent[Transactions (current)]" \
             "sushiswapUsersCurrent[Users (current)]"             "uniswapV2BundlesCurrent[Bundles (current)]" \
@@ -427,62 +427,62 @@ case $state in
             "uniswapV2GetLiquidityPositionSnapshotsHistorical[LiquidityPositionSnapshots (historical)]" \
             "uniswapV2GetLiquidityPositionsHistorical[LiquidityPositions (historical)]" \
             "uniswapV2GetMintsHistorical[Mints (historical)]" \
-            "uniswapV2GetPairDayDatasHistorical[PairDayDatas (historical)]" \
-            "uniswapV2GetPairHourDatasHistorical[PairHourDatas (historical)]" \
+            "uniswapV2GetPairDayDataHistorical[PairDayData (historical)]" \
+            "uniswapV2GetPairHourDataHistorical[PairHourData (historical)]" \
             "uniswapV2GetPairsHistorical[Pairs (historical)]" \
             "uniswapV2GetSwapsHistorical[Swaps (historical)]" \
-            "uniswapV2GetTokenDayDatasHistorical[TokenDayDatas (historical)]" \
+            "uniswapV2GetTokenDayDataHistorical[TokenDayData (historical)]" \
             "uniswapV2GetTokensHistorical[Tokens (historical)]" \
             "uniswapV2GetTransactionsHistorical[Transactions (historical)]" \
-            "uniswapV2GetUniswapDayDatasHistorical[UniswapDayDatas (historical)]" \
-            "uniswapV2GetUniswapFactorysHistorical[UniswapFactorys (historical)]" \
+            "uniswapV2GetUniswapDayDataHistorical[UniswapDayData (historical)]" \
+            "uniswapV2GetUniswapFactoriesHistorical[UniswapFactories (historical)]" \
             "uniswapV2GetUsersHistorical[Users (historical)]" \
             "uniswapV2LiquidityPositionSnapshotsCurrent[LiquidityPositionSnapshots (current)]" \
             "uniswapV2LiquidityPositionsCurrent[LiquidityPositions (current)]" \
             "uniswapV2MintsCurrent[Mints (current)]" \
-            "uniswapV2PairDayDatasCurrent[PairDayDatas (current)]" \
-            "uniswapV2PairHourDatasCurrent[PairHourDatas (current)]" \
+            "uniswapV2PairDayDataCurrent[PairDayData (current)]" \
+            "uniswapV2PairHourDataCurrent[PairHourData (current)]" \
             "uniswapV2PairsCurrent[Pairs (current)]" \
             "uniswapV2SwapsCurrent[Swaps (current)]" \
-            "uniswapV2TokenDayDatasCurrent[TokenDayDatas (current)]" \
+            "uniswapV2TokenDayDataCurrent[TokenDayData (current)]" \
             "uniswapV2TokensCurrent[Tokens (current)]" \
             "uniswapV2TransactionsCurrent[Transactions (current)]" \
-            "uniswapV2UniswapDayDatasCurrent[UniswapDayDatas (current)]" \
-            "uniswapV2UniswapFactorysCurrent[UniswapFactorys (current)]" \
+            "uniswapV2UniswapDayDataCurrent[UniswapDayData (current)]" \
+            "uniswapV2UniswapFactoriesCurrent[UniswapFactories (current)]" \
             "uniswapV2UsersCurrent[Users (current)]"             "uniswapV3BundlesCurrent[Bundles (current)]" \
             "uniswapV3BurnsCurrent[Burns (current)]" \
-            "uniswapV3FactorysCurrent[Factorys (current)]" \
+            "uniswapV3FactoriesCurrent[Factories (current)]" \
             "uniswapV3GetBundlesHistorical[Bundles (historical)]" \
             "uniswapV3GetBurnsHistorical[Burns (historical)]" \
-            "uniswapV3GetFactorysHistorical[Factorys (historical)]" \
+            "uniswapV3GetFactoriesHistorical[Factories (historical)]" \
             "uniswapV3GetMintsHistorical[Mints (historical)]" \
-            "uniswapV3GetPoolDayDatasHistorical[PoolDayDatas (historical)]" \
-            "uniswapV3GetPoolHourDatasHistorical[PoolHourDatas (historical)]" \
+            "uniswapV3GetPoolDayDataHistorical[PoolDayData (historical)]" \
+            "uniswapV3GetPoolHourDataHistorical[PoolHourData (historical)]" \
             "uniswapV3GetPoolsHistorical[Pools (historical)]" \
             "uniswapV3GetPositionSnapshotsHistorical[PositionSnapshots (historical)]" \
             "uniswapV3GetPositionsHistorical[Positions (historical)]" \
             "uniswapV3GetSwapsHistorical[Swaps (historical)]" \
-            "uniswapV3GetTickDayDatasHistorical[TickDayDatas (historical)]" \
+            "uniswapV3GetTickDayDataHistorical[TickDayData (historical)]" \
             "uniswapV3GetTicksHistorical[Ticks (historical)]" \
-            "uniswapV3GetTokenHourDatasHistorical[TokenHourDatas (historical)]" \
-            "uniswapV3GetTokenV3DayDatasHistorical[TokenV3DayDatas (historical)]" \
+            "uniswapV3GetTokenHourDataHistorical[TokenHourData (historical)]" \
+            "uniswapV3GetTokenV3DayDataHistorical[TokenV3DayData (historical)]" \
             "uniswapV3GetTokensHistorical[Tokens (historical)]" \
             "uniswapV3GetTransactionsHistorical[Transactions (historical)]" \
-            "uniswapV3GetUniswapDayDatasHistorical[UniswapDayDatas (historical)]" \
+            "uniswapV3GetUniswapDayDataHistorical[UniswapDayData (historical)]" \
             "uniswapV3MintsCurrent[Mints (current)]" \
-            "uniswapV3PoolDayDatasCurrent[PoolDayDatas (current)]" \
-            "uniswapV3PoolHourDatasCurrent[PoolHourDatas (current)]" \
+            "uniswapV3PoolDayDataCurrent[PoolDayData (current)]" \
+            "uniswapV3PoolHourDataCurrent[PoolHourData (current)]" \
             "uniswapV3PoolsCurrent[Pools (current)]" \
             "uniswapV3PositionSnapshotsCurrent[PositionSnapshots (current)]" \
             "uniswapV3PositionsCurrent[Positions (current)]" \
             "uniswapV3SwapsCurrent[Swaps (current)]" \
-            "uniswapV3TickDayDatasCurrent[TickDayDatas (current)]" \
+            "uniswapV3TickDayDataCurrent[TickDayData (current)]" \
             "uniswapV3TicksCurrent[Ticks (current)]" \
-            "uniswapV3TokenHourDatasCurrent[TokenHourDatas (current)]" \
-            "uniswapV3TokenV3DayDatasCurrent[TokenV3DayDatas (current)]" \
+            "uniswapV3TokenHourDataCurrent[TokenHourData (current)]" \
+            "uniswapV3TokenV3DayDataCurrent[TokenV3DayData (current)]" \
             "uniswapV3TokensCurrent[Tokens (current)]" \
             "uniswapV3TransactionsCurrent[Transactions (current)]" \
-            "uniswapV3UniswapDayDatasCurrent[UniswapDayDatas (current)]" \
+            "uniswapV3UniswapDayDataCurrent[UniswapDayData (current)]" \
 
     _arguments "(--help)--help[Print information about operation]"
 
@@ -648,7 +648,7 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      curveGaugeLiquiditysCurrent)
+      curveGaugeLiquiditiesCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -826,7 +826,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      curveGetGaugeLiquiditysHistorical)
+      curveGetGaugeLiquiditiesHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
@@ -1156,7 +1156,7 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dexBatchsCurrent)
+      dexBatchesCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -1168,7 +1168,7 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dexGetBatchsHistorical)
+      dexGetBatchesHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
@@ -1226,7 +1226,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dexGetStatssHistorical)
+      dexGetStatsHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
@@ -1317,7 +1317,7 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      dexStatssCurrent)
+      dexStatsCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -1365,13 +1365,13 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      sushiswapDayDatasCurrent)
+      sushiswapDayDataCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      sushiswapFactorysCurrent)
+      sushiswapFactoriesCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -1400,7 +1400,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      sushiswapGetDayDatasHistorical)
+      sushiswapGetDayDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
@@ -1411,7 +1411,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      sushiswapGetFactorysHistorical)
+      sushiswapGetFactoriesHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
@@ -1422,7 +1422,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      sushiswapGetHourDatasHistorical)
+      sushiswapGetHourDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
@@ -1471,7 +1471,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      sushiswapGetPairDayDatasHistorical)
+      sushiswapGetPairDayDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1485,7 +1485,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      sushiswapGetPairHourDatasHistorical)
+      sushiswapGetPairHourDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1523,7 +1523,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      sushiswapGetTokenDayDatasHistorical)
+      sushiswapGetTokenDayDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
@@ -1569,7 +1569,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      sushiswapHourDatasCurrent)
+      sushiswapHourDataCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -1593,13 +1593,13 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      sushiswapPairDayDatasCurrent)
+      sushiswapPairDayDataCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      sushiswapPairHourDatasCurrent)
+      sushiswapPairHourDataCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -1619,7 +1619,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      sushiswapTokenDayDatasCurrent)
+      sushiswapTokenDayDataCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -1716,7 +1716,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV2GetPairDayDatasHistorical)
+      uniswapV2GetPairDayDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
@@ -1729,7 +1729,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV2GetPairHourDatasHistorical)
+      uniswapV2GetPairHourDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
@@ -1766,7 +1766,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV2GetTokenDayDatasHistorical)
+      uniswapV2GetTokenDayDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
@@ -1801,7 +1801,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV2GetUniswapDayDatasHistorical)
+      uniswapV2GetUniswapDayDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
@@ -1812,7 +1812,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV2GetUniswapFactorysHistorical)
+      uniswapV2GetUniswapFactoriesHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
@@ -1852,13 +1852,13 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV2PairDayDatasCurrent)
+      uniswapV2PairDayDataCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV2PairHourDatasCurrent)
+      uniswapV2PairHourDataCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -1878,7 +1878,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV2TokenDayDatasCurrent)
+      uniswapV2TokenDayDataCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -1896,13 +1896,13 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV2UniswapDayDatasCurrent)
+      uniswapV2UniswapDayDataCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV2UniswapFactorysCurrent)
+      uniswapV2UniswapFactoriesCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -1926,7 +1926,7 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV3FactorysCurrent)
+      uniswapV3FactoriesCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -1957,7 +1957,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV3GetFactorysHistorical)
+      uniswapV3GetFactoriesHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
@@ -1982,7 +1982,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV3GetPoolDayDatasHistorical)
+      uniswapV3GetPoolDayDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -1994,7 +1994,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV3GetPoolHourDatasHistorical)
+      uniswapV3GetPoolHourDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -2059,7 +2059,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV3GetTickDayDatasHistorical)
+      uniswapV3GetTickDayDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] "
@@ -2083,7 +2083,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV3GetTokenHourDatasHistorical)
+      uniswapV3GetTokenHourDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
@@ -2094,7 +2094,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV3GetTokenV3DayDatasHistorical)
+      uniswapV3GetTokenV3DayDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
@@ -2129,7 +2129,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV3GetUniswapDayDatasHistorical)
+      uniswapV3GetUniswapDayDataHistorical)
         local -a _op_arguments
         _op_arguments=(
                     "startBlock=:[QUERY] The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock."
@@ -2146,13 +2146,13 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV3PoolDayDatasCurrent)
+      uniswapV3PoolDayDataCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV3PoolHourDatasCurrent)
+      uniswapV3PoolHourDataCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -2184,7 +2184,7 @@ case $state in
           )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV3TickDayDatasCurrent)
+      uniswapV3TickDayDataCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -2196,13 +2196,13 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV3TokenHourDatasCurrent)
+      uniswapV3TokenHourDataCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV3TokenV3DayDatasCurrent)
+      uniswapV3TokenV3DayDataCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )
@@ -2220,7 +2220,7 @@ case $state in
                               )
         _describe -t actions 'operations' _op_arguments -S '' && ret=0
         ;;
-      uniswapV3UniswapDayDatasCurrent)
+      uniswapV3UniswapDayDataCurrent)
         local -a _op_arguments
         _op_arguments=(
                               )

@@ -116,12 +116,12 @@ void main() {
       // TODO
     });
 
-    // GaugeLiquiditys (current)
+    // GaugeLiquidities (current)
     //
-    // Gets gaugeLiquiditys.
+    // Gets gaugeLiquidities.
     //
-    //Future<List<CurveGaugeLiquidityDTO>> curveGaugeLiquiditysCurrent() async
-    test('test curveGaugeLiquiditysCurrent', () async {
+    //Future<List<CurveGaugeLiquidityDTO>> curveGaugeLiquiditiesCurrent() async
+    test('test curveGaugeLiquiditiesCurrent', () async {
       // TODO
     });
 
@@ -287,12 +287,12 @@ void main() {
       // TODO
     });
 
-    // GaugeLiquiditys (historical)
+    // GaugeLiquidities (historical)
     //
-    // Gets gaugeLiquiditys.
+    // Gets gaugeLiquidities.
     //
-    //Future<List<CurveGaugeLiquidityDTO>> curveGetGaugeLiquiditysHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id, String user }) async
-    test('test curveGetGaugeLiquiditysHistorical', () async {
+    //Future<List<CurveGaugeLiquidityDTO>> curveGetGaugeLiquiditiesHistorical({ int startBlock, int endBlock, DateTime startDate, DateTime endDate, String id, String user }) async
+    test('test curveGetGaugeLiquiditiesHistorical', () async {
       // TODO
     });
 

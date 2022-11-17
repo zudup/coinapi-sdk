@@ -180,13 +180,13 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets gaugeLiquiditys.
+   * Gets gaugeLiquidities.
    * 
    * Expected answers:
    *   code 200 : Seq[GaugeLiquidityDTO] (successful operation)
    */
-  def curveGaugeLiquiditysCurrent(): ApiRequest[Seq[GaugeLiquidityDTO]] =
-    ApiRequest[Seq[GaugeLiquidityDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeLiquiditys/current", "application/json")
+  def curveGaugeLiquiditiesCurrent(): ApiRequest[Seq[GaugeLiquidityDTO]] =
+    ApiRequest[Seq[GaugeLiquidityDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeLiquidities/current", "application/json")
       .withSuccessResponse[Seq[GaugeLiquidityDTO]](200)
       
 
@@ -528,7 +528,7 @@ class CurveApi(baseUrl: String) {
       
 
   /**
-   * Gets gaugeLiquiditys.
+   * Gets gaugeLiquidities.
    * 
    * Expected answers:
    *   code 200 : Seq[GaugeLiquidityDTO] (successful operation)
@@ -540,8 +540,8 @@ class CurveApi(baseUrl: String) {
    * @param id 
    * @param user 
    */
-  def curveGetGaugeLiquiditysHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, user: Option[String] = None): ApiRequest[Seq[GaugeLiquidityDTO]] =
-    ApiRequest[Seq[GaugeLiquidityDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeLiquiditys/historical", "application/json")
+  def curveGetGaugeLiquiditiesHistorical(startBlock: Option[Long] = None, endBlock: Option[Long] = None, startDate: Option[OffsetDateTime] = None, endDate: Option[OffsetDateTime] = None, id: Option[String] = None, user: Option[String] = None): ApiRequest[Seq[GaugeLiquidityDTO]] =
+    ApiRequest[Seq[GaugeLiquidityDTO]](ApiMethods.GET, baseUrl, "/dapps/curve/gaugeLiquidities/historical", "application/json")
       .withQueryParam("startBlock", startBlock)
       .withQueryParam("endBlock", endBlock)
       .withQueryParam("startDate", startDate)

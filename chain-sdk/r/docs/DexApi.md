@@ -4,14 +4,14 @@ All URIs are relative to *https://onchain.coinapi.io*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**DexBatchsCurrent**](DexApi.md#DexBatchsCurrent) | **GET** /dapps/dex/batchs/current | Batchs (current)
+[**DexBatchesCurrent**](DexApi.md#DexBatchesCurrent) | **GET** /dapps/dex/batches/current | Batches (current)
 [**DexDepositsCurrent**](DexApi.md#DexDepositsCurrent) | **GET** /dapps/dex/deposits/current | Deposits (current)
-[**DexGetBatchsHistorical**](DexApi.md#DexGetBatchsHistorical) | **GET** /dapps/dex/batchs/historical | Batchs (historical)
+[**DexGetBatchesHistorical**](DexApi.md#DexGetBatchesHistorical) | **GET** /dapps/dex/batches/historical | Batches (historical)
 [**DexGetDepositsHistorical**](DexApi.md#DexGetDepositsHistorical) | **GET** /dapps/dex/deposits/historical | Deposits (historical)
 [**DexGetOrdersHistorical**](DexApi.md#DexGetOrdersHistorical) | **GET** /dapps/dex/orders/historical | Orders (historical)
 [**DexGetPricesHistorical**](DexApi.md#DexGetPricesHistorical) | **GET** /dapps/dex/prices/historical | Prices (historical)
 [**DexGetSolutionsHistorical**](DexApi.md#DexGetSolutionsHistorical) | **GET** /dapps/dex/solutions/historical | Solutions (historical)
-[**DexGetStatssHistorical**](DexApi.md#DexGetStatssHistorical) | **GET** /dapps/dex/statss/historical | Statss (historical)
+[**DexGetStatsHistorical**](DexApi.md#DexGetStatsHistorical) | **GET** /dapps/dex/stats/historical | Stats (historical)
 [**DexGetTokensHistorical**](DexApi.md#DexGetTokensHistorical) | **GET** /dapps/dex/tokens/historical | Tokens (historical)
 [**DexGetTradesHistorical**](DexApi.md#DexGetTradesHistorical) | **GET** /dapps/dex/trades/historical | Trades (historical)
 [**DexGetUsersHistorical**](DexApi.md#DexGetUsersHistorical) | **GET** /dapps/dex/users/historical | Users (historical)
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 [**DexOrdersCurrent**](DexApi.md#DexOrdersCurrent) | **GET** /dapps/dex/orders/current | Orders (current)
 [**DexPricesCurrent**](DexApi.md#DexPricesCurrent) | **GET** /dapps/dex/prices/current | Prices (current)
 [**DexSolutionsCurrent**](DexApi.md#DexSolutionsCurrent) | **GET** /dapps/dex/solutions/current | Solutions (current)
-[**DexStatssCurrent**](DexApi.md#DexStatssCurrent) | **GET** /dapps/dex/statss/current | Statss (current)
+[**DexStatsCurrent**](DexApi.md#DexStatsCurrent) | **GET** /dapps/dex/stats/current | Stats (current)
 [**DexTokensCurrent**](DexApi.md#DexTokensCurrent) | **GET** /dapps/dex/tokens/current | Tokens (current)
 [**DexTradesCurrent**](DexApi.md#DexTradesCurrent) | **GET** /dapps/dex/trades/current | Trades (current)
 [**DexUsersCurrent**](DexApi.md#DexUsersCurrent) | **GET** /dapps/dex/users/current | Users (current)
@@ -28,24 +28,24 @@ Method | HTTP request | Description
 [**DexWithdrawsCurrent**](DexApi.md#DexWithdrawsCurrent) | **GET** /dapps/dex/withdraws/current | Withdraws (current)
 
 
-# **DexBatchsCurrent**
-> array[DexBatchDTO] DexBatchsCurrent()
+# **DexBatchesCurrent**
+> array[DexBatchDTO] DexBatchesCurrent()
 
-Batchs (current)
+Batches (current)
 
-Gets batchs.
+Gets batches.
 
 ### Example
 ```R
 library(openapi)
 
-# Batchs (current)
+# Batches (current)
 #
 
 api_instance <- DexApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$DexBatchsCurrent(data_file = "result.txt")
-result <- api_instance$DexBatchsCurrent()
+# result <- api_instance$DexBatchesCurrent(data_file = "result.txt")
+result <- api_instance$DexBatchesCurrent()
 dput(result)
 ```
 
@@ -112,18 +112,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **DexGetBatchsHistorical**
-> array[DexBatchDTO] DexGetBatchsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
+# **DexGetBatchesHistorical**
+> array[DexBatchDTO] DexGetBatchesHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-Batchs (historical)
+Batches (historical)
 
-Gets batchs.
+Gets batches.
 
 ### Example
 ```R
 library(openapi)
 
-# Batchs (historical)
+# Batches (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -134,8 +134,8 @@ var_id <- "id_example" # character | Identifier. (Optional)
 
 api_instance <- DexApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$DexGetBatchsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
-result <- api_instance$DexGetBatchsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
+# result <- api_instance$DexGetBatchesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
+result <- api_instance$DexGetBatchesHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
 dput(result)
 ```
 
@@ -393,18 +393,18 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **DexGetStatssHistorical**
-> array[DexStatsDTO] DexGetStatssHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
+# **DexGetStatsHistorical**
+> array[DexStatsDTO] DexGetStatsHistorical(start_block = var.start_block, end_block = var.end_block, start_date = var.start_date, end_date = var.end_date, id = var.id)
 
-Statss (historical)
+Stats (historical)
 
-Gets statss.
+Gets stats.
 
 ### Example
 ```R
 library(openapi)
 
-# Statss (historical)
+# Stats (historical)
 #
 # prepare function argument(s)
 var_start_block <- 56 # integer | The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (Optional)
@@ -415,8 +415,8 @@ var_id <- "id_example" # character |  (Optional)
 
 api_instance <- DexApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$DexGetStatssHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
-result <- api_instance$DexGetStatssHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
+# result <- api_instance$DexGetStatsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_iddata_file = "result.txt")
+result <- api_instance$DexGetStatsHistorical(start_block = var_start_block, end_block = var_end_block, start_date = var_start_date, end_date = var_end_date, id = var_id)
 dput(result)
 ```
 
@@ -863,24 +863,24 @@ No authorization required
 |-------------|-------------|------------------|
 | **200** | successful operation |  -  |
 
-# **DexStatssCurrent**
-> array[DexStatsDTO] DexStatssCurrent()
+# **DexStatsCurrent**
+> array[DexStatsDTO] DexStatsCurrent()
 
-Statss (current)
+Stats (current)
 
-Gets statss.
+Gets stats.
 
 ### Example
 ```R
 library(openapi)
 
-# Statss (current)
+# Stats (current)
 #
 
 api_instance <- DexApi$new()
 # to save the result into a file, simply add the optional `data_file` parameter, e.g.
-# result <- api_instance$DexStatssCurrent(data_file = "result.txt")
-result <- api_instance$DexStatssCurrent()
+# result <- api_instance$DexStatsCurrent(data_file = "result.txt")
+result <- api_instance$DexStatsCurrent()
 dput(result)
 ```
 

@@ -27,11 +27,11 @@ test_that("UniswapV3BurnsCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV3FactorysCurrent", {
-  # tests for UniswapV3FactorysCurrent
+test_that("UniswapV3FactoriesCurrent", {
+  # tests for UniswapV3FactoriesCurrent
   # base path: https://onchain.coinapi.io
-  # Factorys (current)
-  # Gets factorys.
+  # Factories (current)
+  # Gets factories.
   # @return [array[UniswapV3FactoryDTO]]
 
   # uncomment below to test the operation
@@ -73,11 +73,11 @@ test_that("UniswapV3GetBurnsHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV3GetFactorysHistorical", {
-  # tests for UniswapV3GetFactorysHistorical
+test_that("UniswapV3GetFactoriesHistorical", {
+  # tests for UniswapV3GetFactoriesHistorical
   # base path: https://onchain.coinapi.io
-  # Factorys (historical)
-  # Gets factorys.
+  # Factories (historical)
+  # Gets factories.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
   # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -108,11 +108,11 @@ test_that("UniswapV3GetMintsHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV3GetPoolDayDatasHistorical", {
-  # tests for UniswapV3GetPoolDayDatasHistorical
+test_that("UniswapV3GetPoolDayDataHistorical", {
+  # tests for UniswapV3GetPoolDayDataHistorical
   # base path: https://onchain.coinapi.io
-  # PoolDayDatas (historical)
-  # Gets poolDayDatas.
+  # PoolDayData (historical)
+  # Gets poolDayData.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
@@ -125,11 +125,11 @@ test_that("UniswapV3GetPoolDayDatasHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV3GetPoolHourDatasHistorical", {
-  # tests for UniswapV3GetPoolHourDatasHistorical
+test_that("UniswapV3GetPoolHourDataHistorical", {
+  # tests for UniswapV3GetPoolHourDataHistorical
   # base path: https://onchain.coinapi.io
-  # PoolHourDatas (historical)
-  # Gets poolHourDatas.
+  # PoolHourData (historical)
+  # Gets poolHourData.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
@@ -215,11 +215,11 @@ test_that("UniswapV3GetSwapsHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV3GetTickDayDatasHistorical", {
-  # tests for UniswapV3GetTickDayDatasHistorical
+test_that("UniswapV3GetTickDayDataHistorical", {
+  # tests for UniswapV3GetTickDayDataHistorical
   # base path: https://onchain.coinapi.io
-  # TickDayDatas (historical)
-  # Gets tickDayDatas.
+  # TickDayData (historical)
+  # Gets tickDayData.
   # @param start_block integer  (optional)
   # @param end_block integer  (optional)
   # @param start_date character  (optional)
@@ -249,11 +249,11 @@ test_that("UniswapV3GetTicksHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV3GetTokenHourDatasHistorical", {
-  # tests for UniswapV3GetTokenHourDatasHistorical
+test_that("UniswapV3GetTokenHourDataHistorical", {
+  # tests for UniswapV3GetTokenHourDataHistorical
   # base path: https://onchain.coinapi.io
-  # TokenHourDatas (historical)
-  # Gets tokenHourDatas.
+  # TokenHourData (historical)
+  # Gets tokenHourData.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
   # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -265,11 +265,11 @@ test_that("UniswapV3GetTokenHourDatasHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV3GetTokenV3DayDatasHistorical", {
-  # tests for UniswapV3GetTokenV3DayDatasHistorical
+test_that("UniswapV3GetTokenV3DayDataHistorical", {
+  # tests for UniswapV3GetTokenV3DayDataHistorical
   # base path: https://onchain.coinapi.io
-  # TokenV3DayDatas (historical)
-  # Gets tokenV3DayDatas.
+  # TokenV3DayData (historical)
+  # Gets tokenV3DayData.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
   # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -315,11 +315,11 @@ test_that("UniswapV3GetTransactionsHistorical", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV3GetUniswapDayDatasHistorical", {
-  # tests for UniswapV3GetUniswapDayDatasHistorical
+test_that("UniswapV3GetUniswapDayDataHistorical", {
+  # tests for UniswapV3GetUniswapDayDataHistorical
   # base path: https://onchain.coinapi.io
-  # UniswapDayDatas (historical)
-  # Gets uniswapDayDatas.
+  # UniswapDayData (historical)
+  # Gets uniswapDayData.
   # @param start_block integer The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
   # @param end_block integer The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
   # @param start_date character The start date of timeframe. If endDate is not given, entities created FROM startDate TO startDate plus 24 hours will be included. (optional)
@@ -342,22 +342,22 @@ test_that("UniswapV3MintsCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV3PoolDayDatasCurrent", {
-  # tests for UniswapV3PoolDayDatasCurrent
+test_that("UniswapV3PoolDayDataCurrent", {
+  # tests for UniswapV3PoolDayDataCurrent
   # base path: https://onchain.coinapi.io
-  # PoolDayDatas (current)
-  # Gets poolDayDatas.
+  # PoolDayData (current)
+  # Gets poolDayData.
   # @return [array[UniswapV3PoolDayDataDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV3PoolHourDatasCurrent", {
-  # tests for UniswapV3PoolHourDatasCurrent
+test_that("UniswapV3PoolHourDataCurrent", {
+  # tests for UniswapV3PoolHourDataCurrent
   # base path: https://onchain.coinapi.io
-  # PoolHourDatas (current)
-  # Gets poolHourDatas.
+  # PoolHourData (current)
+  # Gets poolHourData.
   # @return [array[UniswapV3PoolHourDataDTO]]
 
   # uncomment below to test the operation
@@ -410,11 +410,11 @@ test_that("UniswapV3SwapsCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV3TickDayDatasCurrent", {
-  # tests for UniswapV3TickDayDatasCurrent
+test_that("UniswapV3TickDayDataCurrent", {
+  # tests for UniswapV3TickDayDataCurrent
   # base path: https://onchain.coinapi.io
-  # TickDayDatas (current)
-  # Gets tickDayDatas.
+  # TickDayData (current)
+  # Gets tickDayData.
   # @return [array[UniswapV3TickDayDataDTO]]
 
   # uncomment below to test the operation
@@ -432,22 +432,22 @@ test_that("UniswapV3TicksCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV3TokenHourDatasCurrent", {
-  # tests for UniswapV3TokenHourDatasCurrent
+test_that("UniswapV3TokenHourDataCurrent", {
+  # tests for UniswapV3TokenHourDataCurrent
   # base path: https://onchain.coinapi.io
-  # TokenHourDatas (current)
-  # Gets tokenHourDatas.
+  # TokenHourData (current)
+  # Gets tokenHourData.
   # @return [array[UniswapV3TokenHourDataDTO]]
 
   # uncomment below to test the operation
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV3TokenV3DayDatasCurrent", {
-  # tests for UniswapV3TokenV3DayDatasCurrent
+test_that("UniswapV3TokenV3DayDataCurrent", {
+  # tests for UniswapV3TokenV3DayDataCurrent
   # base path: https://onchain.coinapi.io
-  # TokenV3DayDatas (current)
-  # Gets tokenV3DayDatas.
+  # TokenV3DayData (current)
+  # Gets tokenV3DayData.
   # @return [array[UniswapV3TokenV3DayDataDTO]]
 
   # uncomment below to test the operation
@@ -476,11 +476,11 @@ test_that("UniswapV3TransactionsCurrent", {
   #expect_equal(result, "EXPECTED_RESULT")
 })
 
-test_that("UniswapV3UniswapDayDatasCurrent", {
-  # tests for UniswapV3UniswapDayDatasCurrent
+test_that("UniswapV3UniswapDayDataCurrent", {
+  # tests for UniswapV3UniswapDayDataCurrent
   # base path: https://onchain.coinapi.io
-  # UniswapDayDatas (current)
-  # Gets uniswapDayDatas.
+  # UniswapDayData (current)
+  # Gets uniswapDayData.
   # @return [array[UniswapV3UniswapDayDataDTO]]
 
   # uncomment below to test the operation

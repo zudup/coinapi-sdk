@@ -147,26 +147,26 @@ sub uniswap_v3_burns__current {
 }
 
 #
-# uniswap_v3_factorys__current
+# uniswap_v3_factories__current
 #
-# Factorys (current)
+# Factories (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v3_factorys__current' } = {
-        summary => 'Factorys (current)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_factories__current' } = {
+        summary => 'Factories (current)',
         params => $params,
         returns => 'ARRAY[UniswapV3FactoryDTO]',
         };
 }
 # @return ARRAY[UniswapV3FactoryDTO]
 #
-sub uniswap_v3_factorys__current {
+sub uniswap_v3_factories__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv3/factorys/current';
+    my $_resource_path = '/dapps/uniswapv3/factories/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -437,9 +437,9 @@ sub uniswap_v3_get_burns__historical {
 }
 
 #
-# uniswap_v3_get_factorys__historical
+# uniswap_v3_get_factories__historical
 #
-# Factorys (historical)
+# Factories (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -474,19 +474,19 @@ sub uniswap_v3_get_burns__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_factorys__historical' } = {
-        summary => 'Factorys (historical)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_factories__historical' } = {
+        summary => 'Factories (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV3FactoryDTO]',
         };
 }
 # @return ARRAY[UniswapV3FactoryDTO]
 #
-sub uniswap_v3_get_factorys__historical {
+sub uniswap_v3_get_factories__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv3/factorys/historical';
+    my $_resource_path = '/dapps/uniswapv3/factories/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -678,9 +678,9 @@ sub uniswap_v3_get_mints__historical {
 }
 
 #
-# uniswap_v3_get_pool_day_datas__historical
+# uniswap_v3_get_pool_day_data__historical
 #
-# PoolDayDatas (historical)
+# PoolDayData (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -721,19 +721,19 @@ sub uniswap_v3_get_mints__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_pool_day_datas__historical' } = {
-        summary => 'PoolDayDatas (historical)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_pool_day_data__historical' } = {
+        summary => 'PoolDayData (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV3PoolDayDataDTO]',
         };
 }
 # @return ARRAY[UniswapV3PoolDayDataDTO]
 #
-sub uniswap_v3_get_pool_day_datas__historical {
+sub uniswap_v3_get_pool_day_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv3/poolDayDatas/historical';
+    my $_resource_path = '/dapps/uniswapv3/poolDayData/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -793,9 +793,9 @@ sub uniswap_v3_get_pool_day_datas__historical {
 }
 
 #
-# uniswap_v3_get_pool_hour_datas__historical
+# uniswap_v3_get_pool_hour_data__historical
 #
-# PoolHourDatas (historical)
+# PoolHourData (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -836,19 +836,19 @@ sub uniswap_v3_get_pool_day_datas__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_pool_hour_datas__historical' } = {
-        summary => 'PoolHourDatas (historical)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_pool_hour_data__historical' } = {
+        summary => 'PoolHourData (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV3PoolHourDataDTO]',
         };
 }
 # @return ARRAY[UniswapV3PoolHourDataDTO]
 #
-sub uniswap_v3_get_pool_hour_datas__historical {
+sub uniswap_v3_get_pool_hour_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv3/poolHourDatas/historical';
+    my $_resource_path = '/dapps/uniswapv3/poolHourData/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1423,9 +1423,9 @@ sub uniswap_v3_get_swaps__historical {
 }
 
 #
-# uniswap_v3_get_tick_day_datas__historical
+# uniswap_v3_get_tick_day_data__historical
 #
-# TickDayDatas (historical)
+# TickDayData (historical)
 #
 # @param int $start_block  (optional)
 # @param int $end_block  (optional)
@@ -1466,19 +1466,19 @@ sub uniswap_v3_get_swaps__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_tick_day_datas__historical' } = {
-        summary => 'TickDayDatas (historical)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_tick_day_data__historical' } = {
+        summary => 'TickDayData (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV3TickDayDataDTO]',
         };
 }
 # @return ARRAY[UniswapV3TickDayDataDTO]
 #
-sub uniswap_v3_get_tick_day_datas__historical {
+sub uniswap_v3_get_tick_day_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv3/tickDayDatas/historical';
+    my $_resource_path = '/dapps/uniswapv3/tickDayData/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1653,9 +1653,9 @@ sub uniswap_v3_get_ticks__historical {
 }
 
 #
-# uniswap_v3_get_token_hour_datas__historical
+# uniswap_v3_get_token_hour_data__historical
 #
-# TokenHourDatas (historical)
+# TokenHourData (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1690,19 +1690,19 @@ sub uniswap_v3_get_ticks__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_token_hour_datas__historical' } = {
-        summary => 'TokenHourDatas (historical)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_token_hour_data__historical' } = {
+        summary => 'TokenHourData (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV3TokenHourDataDTO]',
         };
 }
 # @return ARRAY[UniswapV3TokenHourDataDTO]
 #
-sub uniswap_v3_get_token_hour_datas__historical {
+sub uniswap_v3_get_token_hour_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv3/tokenHourDatas/historical';
+    my $_resource_path = '/dapps/uniswapv3/tokenHourData/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -1757,9 +1757,9 @@ sub uniswap_v3_get_token_hour_datas__historical {
 }
 
 #
-# uniswap_v3_get_token_v3_day_datas__historical
+# uniswap_v3_get_token_v3_day_data__historical
 #
-# TokenV3DayDatas (historical)
+# TokenV3DayData (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -1794,19 +1794,19 @@ sub uniswap_v3_get_token_hour_datas__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_token_v3_day_datas__historical' } = {
-        summary => 'TokenV3DayDatas (historical)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_token_v3_day_data__historical' } = {
+        summary => 'TokenV3DayData (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV3TokenV3DayDataDTO]',
         };
 }
 # @return ARRAY[UniswapV3TokenV3DayDataDTO]
 #
-sub uniswap_v3_get_token_v3_day_datas__historical {
+sub uniswap_v3_get_token_v3_day_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv3/tokenV3DayDatas/historical';
+    my $_resource_path = '/dapps/uniswapv3/tokenV3DayData/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2091,9 +2091,9 @@ sub uniswap_v3_get_transactions__historical {
 }
 
 #
-# uniswap_v3_get_uniswap_day_datas__historical
+# uniswap_v3_get_uniswap_day_data__historical
 #
-# UniswapDayDatas (historical)
+# UniswapDayData (historical)
 #
 # @param int $start_block The start block. If endblock is not given, only those entities will be included that were exactly created in startBlock. (optional)
 # @param int $end_block The end block. Useful to filter data in range of blocks (FROM startBlock TO endBlock). (optional)
@@ -2128,19 +2128,19 @@ sub uniswap_v3_get_transactions__historical {
         required => '0',
     },
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_uniswap_day_datas__historical' } = {
-        summary => 'UniswapDayDatas (historical)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_get_uniswap_day_data__historical' } = {
+        summary => 'UniswapDayData (historical)',
         params => $params,
         returns => 'ARRAY[UniswapV3UniswapDayDataDTO]',
         };
 }
 # @return ARRAY[UniswapV3UniswapDayDataDTO]
 #
-sub uniswap_v3_get_uniswap_day_datas__historical {
+sub uniswap_v3_get_uniswap_day_data__historical {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv3/uniswapDayDatas/historical';
+    my $_resource_path = '/dapps/uniswapv3/uniswapDayData/historical';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2244,26 +2244,26 @@ sub uniswap_v3_mints__current {
 }
 
 #
-# uniswap_v3_pool_day_datas__current
+# uniswap_v3_pool_day_data__current
 #
-# PoolDayDatas (current)
+# PoolDayData (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v3_pool_day_datas__current' } = {
-        summary => 'PoolDayDatas (current)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_pool_day_data__current' } = {
+        summary => 'PoolDayData (current)',
         params => $params,
         returns => 'ARRAY[UniswapV3PoolDayDataDTO]',
         };
 }
 # @return ARRAY[UniswapV3PoolDayDataDTO]
 #
-sub uniswap_v3_pool_day_datas__current {
+sub uniswap_v3_pool_day_data__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv3/poolDayDatas/current';
+    my $_resource_path = '/dapps/uniswapv3/poolDayData/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2293,26 +2293,26 @@ sub uniswap_v3_pool_day_datas__current {
 }
 
 #
-# uniswap_v3_pool_hour_datas__current
+# uniswap_v3_pool_hour_data__current
 #
-# PoolHourDatas (current)
+# PoolHourData (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v3_pool_hour_datas__current' } = {
-        summary => 'PoolHourDatas (current)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_pool_hour_data__current' } = {
+        summary => 'PoolHourData (current)',
         params => $params,
         returns => 'ARRAY[UniswapV3PoolHourDataDTO]',
         };
 }
 # @return ARRAY[UniswapV3PoolHourDataDTO]
 #
-sub uniswap_v3_pool_hour_datas__current {
+sub uniswap_v3_pool_hour_data__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv3/poolHourDatas/current';
+    my $_resource_path = '/dapps/uniswapv3/poolHourData/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2560,26 +2560,26 @@ sub uniswap_v3_swaps__current {
 }
 
 #
-# uniswap_v3_tick_day_datas__current
+# uniswap_v3_tick_day_data__current
 #
-# TickDayDatas (current)
+# TickDayData (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v3_tick_day_datas__current' } = {
-        summary => 'TickDayDatas (current)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_tick_day_data__current' } = {
+        summary => 'TickDayData (current)',
         params => $params,
         returns => 'ARRAY[UniswapV3TickDayDataDTO]',
         };
 }
 # @return ARRAY[UniswapV3TickDayDataDTO]
 #
-sub uniswap_v3_tick_day_datas__current {
+sub uniswap_v3_tick_day_data__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv3/tickDayDatas/current';
+    my $_resource_path = '/dapps/uniswapv3/tickDayData/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2658,26 +2658,26 @@ sub uniswap_v3_ticks__current {
 }
 
 #
-# uniswap_v3_token_hour_datas__current
+# uniswap_v3_token_hour_data__current
 #
-# TokenHourDatas (current)
+# TokenHourData (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v3_token_hour_datas__current' } = {
-        summary => 'TokenHourDatas (current)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_token_hour_data__current' } = {
+        summary => 'TokenHourData (current)',
         params => $params,
         returns => 'ARRAY[UniswapV3TokenHourDataDTO]',
         };
 }
 # @return ARRAY[UniswapV3TokenHourDataDTO]
 #
-sub uniswap_v3_token_hour_datas__current {
+sub uniswap_v3_token_hour_data__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv3/tokenHourDatas/current';
+    my $_resource_path = '/dapps/uniswapv3/tokenHourData/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2707,26 +2707,26 @@ sub uniswap_v3_token_hour_datas__current {
 }
 
 #
-# uniswap_v3_token_v3_day_datas__current
+# uniswap_v3_token_v3_day_data__current
 #
-# TokenV3DayDatas (current)
+# TokenV3DayData (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v3_token_v3_day_datas__current' } = {
-        summary => 'TokenV3DayDatas (current)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_token_v3_day_data__current' } = {
+        summary => 'TokenV3DayData (current)',
         params => $params,
         returns => 'ARRAY[UniswapV3TokenV3DayDataDTO]',
         };
 }
 # @return ARRAY[UniswapV3TokenV3DayDataDTO]
 #
-sub uniswap_v3_token_v3_day_datas__current {
+sub uniswap_v3_token_v3_day_data__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv3/tokenV3DayDatas/current';
+    my $_resource_path = '/dapps/uniswapv3/tokenV3DayData/current';
 
     my $_method = 'GET';
     my $query_params = {};
@@ -2854,26 +2854,26 @@ sub uniswap_v3_transactions__current {
 }
 
 #
-# uniswap_v3_uniswap_day_datas__current
+# uniswap_v3_uniswap_day_data__current
 #
-# UniswapDayDatas (current)
+# UniswapDayData (current)
 #
 {
     my $params = {
     };
-    __PACKAGE__->method_documentation->{ 'uniswap_v3_uniswap_day_datas__current' } = {
-        summary => 'UniswapDayDatas (current)',
+    __PACKAGE__->method_documentation->{ 'uniswap_v3_uniswap_day_data__current' } = {
+        summary => 'UniswapDayData (current)',
         params => $params,
         returns => 'ARRAY[UniswapV3UniswapDayDataDTO]',
         };
 }
 # @return ARRAY[UniswapV3UniswapDayDataDTO]
 #
-sub uniswap_v3_uniswap_day_datas__current {
+sub uniswap_v3_uniswap_day_data__current {
     my ($self, %args) = @_;
 
     # parse inputs
-    my $_resource_path = '/dapps/uniswapv3/uniswapDayDatas/current';
+    my $_resource_path = '/dapps/uniswapv3/uniswapDayData/current';
 
     my $_method = 'GET';
     my $query_params = {};

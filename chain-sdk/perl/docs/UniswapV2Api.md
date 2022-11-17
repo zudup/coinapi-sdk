@@ -16,28 +16,28 @@ Method | HTTP request | Description
 [**uniswap_v2_get_liquidity_position_snapshots__historical**](UniswapV2Api.md#uniswap_v2_get_liquidity_position_snapshots__historical) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/historical | LiquidityPositionSnapshots (historical)
 [**uniswap_v2_get_liquidity_positions__historical**](UniswapV2Api.md#uniswap_v2_get_liquidity_positions__historical) | **GET** /dapps/uniswapv2/liquidityPositions/historical | LiquidityPositions (historical)
 [**uniswap_v2_get_mints__historical**](UniswapV2Api.md#uniswap_v2_get_mints__historical) | **GET** /dapps/uniswapv2/mints/historical | Mints (historical)
-[**uniswap_v2_get_pair_day_datas__historical**](UniswapV2Api.md#uniswap_v2_get_pair_day_datas__historical) | **GET** /dapps/uniswapv2/pairDayDatas/historical | PairDayDatas (historical)
-[**uniswap_v2_get_pair_hour_datas__historical**](UniswapV2Api.md#uniswap_v2_get_pair_hour_datas__historical) | **GET** /dapps/uniswapv2/pairHourDatas/historical | PairHourDatas (historical)
+[**uniswap_v2_get_pair_day_data__historical**](UniswapV2Api.md#uniswap_v2_get_pair_day_data__historical) | **GET** /dapps/uniswapv2/pairDayData/historical | PairDayData (historical)
+[**uniswap_v2_get_pair_hour_data__historical**](UniswapV2Api.md#uniswap_v2_get_pair_hour_data__historical) | **GET** /dapps/uniswapv2/pairHourData/historical | PairHourData (historical)
 [**uniswap_v2_get_pairs__historical**](UniswapV2Api.md#uniswap_v2_get_pairs__historical) | **GET** /dapps/uniswapv2/pairs/historical | Pairs (historical)
 [**uniswap_v2_get_swaps__historical**](UniswapV2Api.md#uniswap_v2_get_swaps__historical) | **GET** /dapps/uniswapv2/swaps/historical | Swaps (historical)
-[**uniswap_v2_get_token_day_datas__historical**](UniswapV2Api.md#uniswap_v2_get_token_day_datas__historical) | **GET** /dapps/uniswapv2/tokenDayDatas/historical | TokenDayDatas (historical)
+[**uniswap_v2_get_token_day_data__historical**](UniswapV2Api.md#uniswap_v2_get_token_day_data__historical) | **GET** /dapps/uniswapv2/tokenDayData/historical | TokenDayData (historical)
 [**uniswap_v2_get_tokens__historical**](UniswapV2Api.md#uniswap_v2_get_tokens__historical) | **GET** /dapps/uniswapv2/tokens/historical | Tokens (historical)
 [**uniswap_v2_get_transactions__historical**](UniswapV2Api.md#uniswap_v2_get_transactions__historical) | **GET** /dapps/uniswapv2/transactions/historical | Transactions (historical)
-[**uniswap_v2_get_uniswap_day_datas__historical**](UniswapV2Api.md#uniswap_v2_get_uniswap_day_datas__historical) | **GET** /dapps/uniswapv2/uniswapDayDatas/historical | UniswapDayDatas (historical)
-[**uniswap_v2_get_uniswap_factorys__historical**](UniswapV2Api.md#uniswap_v2_get_uniswap_factorys__historical) | **GET** /dapps/uniswapv2/uniswapFactorys/historical | UniswapFactorys (historical)
+[**uniswap_v2_get_uniswap_day_data__historical**](UniswapV2Api.md#uniswap_v2_get_uniswap_day_data__historical) | **GET** /dapps/uniswapv2/uniswapDayData/historical | UniswapDayData (historical)
+[**uniswap_v2_get_uniswap_factories__historical**](UniswapV2Api.md#uniswap_v2_get_uniswap_factories__historical) | **GET** /dapps/uniswapv2/uniswapFactories/historical | UniswapFactories (historical)
 [**uniswap_v2_get_users__historical**](UniswapV2Api.md#uniswap_v2_get_users__historical) | **GET** /dapps/uniswapv2/users/historical | Users (historical)
 [**uniswap_v2_liquidity_position_snapshots__current**](UniswapV2Api.md#uniswap_v2_liquidity_position_snapshots__current) | **GET** /dapps/uniswapv2/liquidityPositionSnapshots/current | LiquidityPositionSnapshots (current)
 [**uniswap_v2_liquidity_positions__current**](UniswapV2Api.md#uniswap_v2_liquidity_positions__current) | **GET** /dapps/uniswapv2/liquidityPositions/current | LiquidityPositions (current)
 [**uniswap_v2_mints__current**](UniswapV2Api.md#uniswap_v2_mints__current) | **GET** /dapps/uniswapv2/mints/current | Mints (current)
-[**uniswap_v2_pair_day_datas__current**](UniswapV2Api.md#uniswap_v2_pair_day_datas__current) | **GET** /dapps/uniswapv2/pairDayDatas/current | PairDayDatas (current)
-[**uniswap_v2_pair_hour_datas__current**](UniswapV2Api.md#uniswap_v2_pair_hour_datas__current) | **GET** /dapps/uniswapv2/pairHourDatas/current | PairHourDatas (current)
+[**uniswap_v2_pair_day_data__current**](UniswapV2Api.md#uniswap_v2_pair_day_data__current) | **GET** /dapps/uniswapv2/pairDayData/current | PairDayData (current)
+[**uniswap_v2_pair_hour_data__current**](UniswapV2Api.md#uniswap_v2_pair_hour_data__current) | **GET** /dapps/uniswapv2/pairHourData/current | PairHourData (current)
 [**uniswap_v2_pairs__current**](UniswapV2Api.md#uniswap_v2_pairs__current) | **GET** /dapps/uniswapv2/pairs/current | Pairs (current)
 [**uniswap_v2_swaps__current**](UniswapV2Api.md#uniswap_v2_swaps__current) | **GET** /dapps/uniswapv2/swaps/current | Swaps (current)
-[**uniswap_v2_token_day_datas__current**](UniswapV2Api.md#uniswap_v2_token_day_datas__current) | **GET** /dapps/uniswapv2/tokenDayDatas/current | TokenDayDatas (current)
+[**uniswap_v2_token_day_data__current**](UniswapV2Api.md#uniswap_v2_token_day_data__current) | **GET** /dapps/uniswapv2/tokenDayData/current | TokenDayData (current)
 [**uniswap_v2_tokens__current**](UniswapV2Api.md#uniswap_v2_tokens__current) | **GET** /dapps/uniswapv2/tokens/current | Tokens (current)
 [**uniswap_v2_transactions__current**](UniswapV2Api.md#uniswap_v2_transactions__current) | **GET** /dapps/uniswapv2/transactions/current | Transactions (current)
-[**uniswap_v2_uniswap_day_datas__current**](UniswapV2Api.md#uniswap_v2_uniswap_day_datas__current) | **GET** /dapps/uniswapv2/uniswapDayDatas/current | UniswapDayDatas (current)
-[**uniswap_v2_uniswap_factorys__current**](UniswapV2Api.md#uniswap_v2_uniswap_factorys__current) | **GET** /dapps/uniswapv2/uniswapFactorys/current | UniswapFactorys (current)
+[**uniswap_v2_uniswap_day_data__current**](UniswapV2Api.md#uniswap_v2_uniswap_day_data__current) | **GET** /dapps/uniswapv2/uniswapDayData/current | UniswapDayData (current)
+[**uniswap_v2_uniswap_factories__current**](UniswapV2Api.md#uniswap_v2_uniswap_factories__current) | **GET** /dapps/uniswapv2/uniswapFactories/current | UniswapFactories (current)
 [**uniswap_v2_users__current**](UniswapV2Api.md#uniswap_v2_users__current) | **GET** /dapps/uniswapv2/users/current | Users (current)
 
 
@@ -407,12 +407,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_pair_day_datas__historical**
-> ARRAY[UniswapV2PairDayDataDTO] uniswap_v2_get_pair_day_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, token_0 => $token_0, token_1 => $token_1)
+# **uniswap_v2_get_pair_day_data__historical**
+> ARRAY[UniswapV2PairDayDataDTO] uniswap_v2_get_pair_day_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, token_0 => $token_0, token_1 => $token_1)
 
-PairDayDatas (historical)
+PairDayData (historical)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 ```perl
@@ -430,11 +430,11 @@ my $token_0 = "token_0_example"; # string | Reference to token0.
 my $token_1 = "token_1_example"; # string | Reference to token1.
 
 eval {
-    my $result = $api_instance->uniswap_v2_get_pair_day_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, token_0 => $token_0, token_1 => $token_1);
+    my $result = $api_instance->uniswap_v2_get_pair_day_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, token_0 => $token_0, token_1 => $token_1);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV2Api->uniswap_v2_get_pair_day_datas__historical: $@\n";
+    warn "Exception when calling UniswapV2Api->uniswap_v2_get_pair_day_data__historical: $@\n";
 }
 ```
 
@@ -465,12 +465,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_pair_hour_datas__historical**
-> ARRAY[UniswapV2PairHourDataDTO] uniswap_v2_get_pair_hour_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pair => $pair)
+# **uniswap_v2_get_pair_hour_data__historical**
+> ARRAY[UniswapV2PairHourDataDTO] uniswap_v2_get_pair_hour_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pair => $pair)
 
-PairHourDatas (historical)
+PairHourData (historical)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 ```perl
@@ -487,11 +487,11 @@ my $id = "id_example"; # string |
 my $pair = "pair_example"; # string | Address for pair contract.
 
 eval {
-    my $result = $api_instance->uniswap_v2_get_pair_hour_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pair => $pair);
+    my $result = $api_instance->uniswap_v2_get_pair_hour_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id, pair => $pair);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV2Api->uniswap_v2_get_pair_hour_datas__historical: $@\n";
+    warn "Exception when calling UniswapV2Api->uniswap_v2_get_pair_hour_data__historical: $@\n";
 }
 ```
 
@@ -635,12 +635,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_token_day_datas__historical**
-> ARRAY[UniswapV2TokenDayDataDTO] uniswap_v2_get_token_day_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
+# **uniswap_v2_get_token_day_data__historical**
+> ARRAY[UniswapV2TokenDayDataDTO] uniswap_v2_get_token_day_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
 
-TokenDayDatas (historical)
+TokenDayData (historical)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 ```perl
@@ -656,11 +656,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | Th
 my $id = "id_example"; # string | Token address and day id (day start timestamp in unix / 86400) concatenated with a dash.
 
 eval {
-    my $result = $api_instance->uniswap_v2_get_token_day_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
+    my $result = $api_instance->uniswap_v2_get_token_day_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV2Api->uniswap_v2_get_token_day_datas__historical: $@\n";
+    warn "Exception when calling UniswapV2Api->uniswap_v2_get_token_day_data__historical: $@\n";
 }
 ```
 
@@ -801,12 +801,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_uniswap_day_datas__historical**
-> ARRAY[UniswapV2UniswapDayDataDTO] uniswap_v2_get_uniswap_day_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
+# **uniswap_v2_get_uniswap_day_data__historical**
+> ARRAY[UniswapV2UniswapDayDataDTO] uniswap_v2_get_uniswap_day_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
 
-UniswapDayDatas (historical)
+UniswapDayData (historical)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 ```perl
@@ -822,11 +822,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | Th
 my $id = "id_example"; # string | Unix timestamp for start of day / 86400 giving a unique day index.
 
 eval {
-    my $result = $api_instance->uniswap_v2_get_uniswap_day_datas__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
+    my $result = $api_instance->uniswap_v2_get_uniswap_day_data__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV2Api->uniswap_v2_get_uniswap_day_datas__historical: $@\n";
+    warn "Exception when calling UniswapV2Api->uniswap_v2_get_uniswap_day_data__historical: $@\n";
 }
 ```
 
@@ -855,12 +855,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_get_uniswap_factorys__historical**
-> ARRAY[UniswapV2UniswapFactoryDTO] uniswap_v2_get_uniswap_factorys__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
+# **uniswap_v2_get_uniswap_factories__historical**
+> ARRAY[UniswapV2UniswapFactoryDTO] uniswap_v2_get_uniswap_factories__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id)
 
-UniswapFactorys (historical)
+UniswapFactories (historical)
 
-Gets uniswapFactorys.
+Gets uniswapFactories.
 
 ### Example
 ```perl
@@ -876,11 +876,11 @@ my $end_date = DateTime->from_epoch(epoch => str2time('null')); # DATE_TIME | Th
 my $id = "id_example"; # string | Factory address.
 
 eval {
-    my $result = $api_instance->uniswap_v2_get_uniswap_factorys__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
+    my $result = $api_instance->uniswap_v2_get_uniswap_factories__historical(start_block => $start_block, end_block => $end_block, start_date => $start_date, end_date => $end_date, id => $id);
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV2Api->uniswap_v2_get_uniswap_factorys__historical: $@\n";
+    warn "Exception when calling UniswapV2Api->uniswap_v2_get_uniswap_factories__historical: $@\n";
 }
 ```
 
@@ -1089,12 +1089,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_pair_day_datas__current**
-> ARRAY[UniswapV2PairDayDataDTO] uniswap_v2_pair_day_datas__current()
+# **uniswap_v2_pair_day_data__current**
+> ARRAY[UniswapV2PairDayDataDTO] uniswap_v2_pair_day_data__current()
 
-PairDayDatas (current)
+PairDayData (current)
 
-Gets pairDayDatas.
+Gets pairDayData.
 
 ### Example
 ```perl
@@ -1105,11 +1105,11 @@ my $api_instance = WWW::OpenAPIClient::UniswapV2Api->new(
 
 
 eval {
-    my $result = $api_instance->uniswap_v2_pair_day_datas__current();
+    my $result = $api_instance->uniswap_v2_pair_day_data__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV2Api->uniswap_v2_pair_day_datas__current: $@\n";
+    warn "Exception when calling UniswapV2Api->uniswap_v2_pair_day_data__current: $@\n";
 }
 ```
 
@@ -1131,12 +1131,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_pair_hour_datas__current**
-> ARRAY[UniswapV2PairHourDataDTO] uniswap_v2_pair_hour_datas__current()
+# **uniswap_v2_pair_hour_data__current**
+> ARRAY[UniswapV2PairHourDataDTO] uniswap_v2_pair_hour_data__current()
 
-PairHourDatas (current)
+PairHourData (current)
 
-Gets pairHourDatas.
+Gets pairHourData.
 
 ### Example
 ```perl
@@ -1147,11 +1147,11 @@ my $api_instance = WWW::OpenAPIClient::UniswapV2Api->new(
 
 
 eval {
-    my $result = $api_instance->uniswap_v2_pair_hour_datas__current();
+    my $result = $api_instance->uniswap_v2_pair_hour_data__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV2Api->uniswap_v2_pair_hour_datas__current: $@\n";
+    warn "Exception when calling UniswapV2Api->uniswap_v2_pair_hour_data__current: $@\n";
 }
 ```
 
@@ -1265,12 +1265,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_token_day_datas__current**
-> ARRAY[UniswapV2TokenDayDataDTO] uniswap_v2_token_day_datas__current()
+# **uniswap_v2_token_day_data__current**
+> ARRAY[UniswapV2TokenDayDataDTO] uniswap_v2_token_day_data__current()
 
-TokenDayDatas (current)
+TokenDayData (current)
 
-Gets tokenDayDatas.
+Gets tokenDayData.
 
 ### Example
 ```perl
@@ -1281,11 +1281,11 @@ my $api_instance = WWW::OpenAPIClient::UniswapV2Api->new(
 
 
 eval {
-    my $result = $api_instance->uniswap_v2_token_day_datas__current();
+    my $result = $api_instance->uniswap_v2_token_day_data__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV2Api->uniswap_v2_token_day_datas__current: $@\n";
+    warn "Exception when calling UniswapV2Api->uniswap_v2_token_day_data__current: $@\n";
 }
 ```
 
@@ -1391,12 +1391,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_uniswap_day_datas__current**
-> ARRAY[UniswapV2UniswapDayDataDTO] uniswap_v2_uniswap_day_datas__current()
+# **uniswap_v2_uniswap_day_data__current**
+> ARRAY[UniswapV2UniswapDayDataDTO] uniswap_v2_uniswap_day_data__current()
 
-UniswapDayDatas (current)
+UniswapDayData (current)
 
-Gets uniswapDayDatas.
+Gets uniswapDayData.
 
 ### Example
 ```perl
@@ -1407,11 +1407,11 @@ my $api_instance = WWW::OpenAPIClient::UniswapV2Api->new(
 
 
 eval {
-    my $result = $api_instance->uniswap_v2_uniswap_day_datas__current();
+    my $result = $api_instance->uniswap_v2_uniswap_day_data__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV2Api->uniswap_v2_uniswap_day_datas__current: $@\n";
+    warn "Exception when calling UniswapV2Api->uniswap_v2_uniswap_day_data__current: $@\n";
 }
 ```
 
@@ -1433,12 +1433,12 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **uniswap_v2_uniswap_factorys__current**
-> ARRAY[UniswapV2UniswapFactoryDTO] uniswap_v2_uniswap_factorys__current()
+# **uniswap_v2_uniswap_factories__current**
+> ARRAY[UniswapV2UniswapFactoryDTO] uniswap_v2_uniswap_factories__current()
 
-UniswapFactorys (current)
+UniswapFactories (current)
 
-Gets uniswapFactorys.
+Gets uniswapFactories.
 
 ### Example
 ```perl
@@ -1449,11 +1449,11 @@ my $api_instance = WWW::OpenAPIClient::UniswapV2Api->new(
 
 
 eval {
-    my $result = $api_instance->uniswap_v2_uniswap_factorys__current();
+    my $result = $api_instance->uniswap_v2_uniswap_factories__current();
     print Dumper($result);
 };
 if ($@) {
-    warn "Exception when calling UniswapV2Api->uniswap_v2_uniswap_factorys__current: $@\n";
+    warn "Exception when calling UniswapV2Api->uniswap_v2_uniswap_factories__current: $@\n";
 }
 ```
 

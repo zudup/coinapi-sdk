@@ -15,7 +15,7 @@ Method | HTTP request | Description
 [**curveExchangesCurrent**](CurveApi.md#curveExchangesCurrent) | **GET** /dapps/curve/exchanges/current | Exchanges (current)
 [**curveFeeChangeLogsCurrent**](CurveApi.md#curveFeeChangeLogsCurrent) | **GET** /dapps/curve/feeChangeLogs/current | FeeChangeLogs (current)
 [**curveGaugeDepositsCurrent**](CurveApi.md#curveGaugeDepositsCurrent) | **GET** /dapps/curve/gaugeDeposits/current | GaugeDeposits (current)
-[**curveGaugeLiquiditysCurrent**](CurveApi.md#curveGaugeLiquiditysCurrent) | **GET** /dapps/curve/gaugeLiquiditys/current | GaugeLiquiditys (current)
+[**curveGaugeLiquiditiesCurrent**](CurveApi.md#curveGaugeLiquiditiesCurrent) | **GET** /dapps/curve/gaugeLiquidities/current | GaugeLiquidities (current)
 [**curveGaugeTotalWeightsCurrent**](CurveApi.md#curveGaugeTotalWeightsCurrent) | **GET** /dapps/curve/gaugeTotalWeights/current | GaugeTotalWeights (current)
 [**curveGaugeTypeWeightsCurrent**](CurveApi.md#curveGaugeTypeWeightsCurrent) | **GET** /dapps/curve/gaugeTypeWeights/current | GaugeTypeWeights (current)
 [**curveGaugeTypesCurrent**](CurveApi.md#curveGaugeTypesCurrent) | **GET** /dapps/curve/gaugeTypes/current | GaugeTypes (current)
@@ -34,7 +34,7 @@ Method | HTTP request | Description
 [**curveGetExchangesHistorical**](CurveApi.md#curveGetExchangesHistorical) | **GET** /dapps/curve/exchanges/historical | Exchanges (historical)
 [**curveGetFeeChangeLogsHistorical**](CurveApi.md#curveGetFeeChangeLogsHistorical) | **GET** /dapps/curve/feeChangeLogs/historical | FeeChangeLogs (historical)
 [**curveGetGaugeDepositsHistorical**](CurveApi.md#curveGetGaugeDepositsHistorical) | **GET** /dapps/curve/gaugeDeposits/historical | GaugeDeposits (historical)
-[**curveGetGaugeLiquiditysHistorical**](CurveApi.md#curveGetGaugeLiquiditysHistorical) | **GET** /dapps/curve/gaugeLiquiditys/historical | GaugeLiquiditys (historical)
+[**curveGetGaugeLiquiditiesHistorical**](CurveApi.md#curveGetGaugeLiquiditiesHistorical) | **GET** /dapps/curve/gaugeLiquidities/historical | GaugeLiquidities (historical)
 [**curveGetGaugeTotalWeightsHistorical**](CurveApi.md#curveGetGaugeTotalWeightsHistorical) | **GET** /dapps/curve/gaugeTotalWeights/historical | GaugeTotalWeights (historical)
 [**curveGetGaugeTypeWeightsHistorical**](CurveApi.md#curveGetGaugeTypeWeightsHistorical) | **GET** /dapps/curve/gaugeTypeWeights/historical | GaugeTypeWeights (historical)
 [**curveGetGaugeTypesHistorical**](CurveApi.md#curveGetGaugeTypesHistorical) | **GET** /dapps/curve/gaugeTypes/historical | GaugeTypes (historical)
@@ -547,13 +547,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGaugeLiquiditysCurrent"></a>
-# **curveGaugeLiquiditysCurrent**
-> kotlin.collections.List&lt;CurveGaugeLiquidityDTO&gt; curveGaugeLiquiditysCurrent()
+<a name="curveGaugeLiquiditiesCurrent"></a>
+# **curveGaugeLiquiditiesCurrent**
+> kotlin.collections.List&lt;CurveGaugeLiquidityDTO&gt; curveGaugeLiquiditiesCurrent()
 
-GaugeLiquiditys (current)
+GaugeLiquidities (current)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 ```kotlin
@@ -563,13 +563,13 @@ Gets gaugeLiquiditys.
 
 val apiInstance = CurveApi()
 try {
-    val result : kotlin.collections.List<CurveGaugeLiquidityDTO> = apiInstance.curveGaugeLiquiditysCurrent()
+    val result : kotlin.collections.List<CurveGaugeLiquidityDTO> = apiInstance.curveGaugeLiquiditiesCurrent()
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#curveGaugeLiquiditysCurrent")
+    println("4xx response calling CurveApi#curveGaugeLiquiditiesCurrent")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#curveGaugeLiquiditysCurrent")
+    println("5xx response calling CurveApi#curveGaugeLiquiditiesCurrent")
     e.printStackTrace()
 }
 ```
@@ -1514,13 +1514,13 @@ No authorization required
  - **Content-Type**: Not defined
  - **Accept**: application/json
 
-<a name="curveGetGaugeLiquiditysHistorical"></a>
-# **curveGetGaugeLiquiditysHistorical**
-> kotlin.collections.List&lt;CurveGaugeLiquidityDTO&gt; curveGetGaugeLiquiditysHistorical(startBlock, endBlock, startDate, endDate, id, user)
+<a name="curveGetGaugeLiquiditiesHistorical"></a>
+# **curveGetGaugeLiquiditiesHistorical**
+> kotlin.collections.List&lt;CurveGaugeLiquidityDTO&gt; curveGetGaugeLiquiditiesHistorical(startBlock, endBlock, startDate, endDate, id, user)
 
-GaugeLiquiditys (historical)
+GaugeLiquidities (historical)
 
-Gets gaugeLiquiditys.
+Gets gaugeLiquidities.
 
 ### Example
 ```kotlin
@@ -1536,13 +1536,13 @@ val endDate : java.time.OffsetDateTime = 2013-10-20T19:20:30+01:00 // java.time.
 val id : kotlin.String = id_example // kotlin.String | 
 val user : kotlin.String = user_example // kotlin.String | 
 try {
-    val result : kotlin.collections.List<CurveGaugeLiquidityDTO> = apiInstance.curveGetGaugeLiquiditysHistorical(startBlock, endBlock, startDate, endDate, id, user)
+    val result : kotlin.collections.List<CurveGaugeLiquidityDTO> = apiInstance.curveGetGaugeLiquiditiesHistorical(startBlock, endBlock, startDate, endDate, id, user)
     println(result)
 } catch (e: ClientException) {
-    println("4xx response calling CurveApi#curveGetGaugeLiquiditysHistorical")
+    println("4xx response calling CurveApi#curveGetGaugeLiquiditiesHistorical")
     e.printStackTrace()
 } catch (e: ServerException) {
-    println("5xx response calling CurveApi#curveGetGaugeLiquiditysHistorical")
+    println("5xx response calling CurveApi#curveGetGaugeLiquiditiesHistorical")
     e.printStackTrace()
 }
 ```

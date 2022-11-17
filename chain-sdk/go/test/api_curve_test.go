@@ -154,11 +154,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService CurveGaugeLiquiditysCurrent", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGaugeLiquiditiesCurrent", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.CurveGaugeLiquiditysCurrent(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGaugeLiquiditiesCurrent(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)
@@ -382,11 +382,11 @@ func Test_openapi_CurveApiService(t *testing.T) {
 
     })
 
-    t.Run("Test CurveApiService CurveGetGaugeLiquiditysHistorical", func(t *testing.T) {
+    t.Run("Test CurveApiService CurveGetGaugeLiquiditiesHistorical", func(t *testing.T) {
 
         t.Skip("skip test")  // remove to run test
 
-        resp, httpRes, err := apiClient.CurveApi.CurveGetGaugeLiquiditysHistorical(context.Background()).Execute()
+        resp, httpRes, err := apiClient.CurveApi.CurveGetGaugeLiquiditiesHistorical(context.Background()).Execute()
 
         require.Nil(t, err)
         require.NotNil(t, resp)

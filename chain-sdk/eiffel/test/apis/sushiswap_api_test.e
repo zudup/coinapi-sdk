@@ -39,29 +39,29 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_sushiswap_day_datas_current
-            -- DayDatas (current)
+    test_sushiswap_day_data_current
+            -- DayData (current)
             --
-            -- Gets dayDatas.
+            -- Gets dayData.
         local
             l_response: LIST [SUSHISWAP_DAY_DATA_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.sushiswap_day_datas_current
+            -- l_response := api.sushiswap_day_data_current
             assert ("not_implemented", False)
         end
 
-    test_sushiswap_factorys_current
-            -- Factorys (current)
+    test_sushiswap_factories_current
+            -- Factories (current)
             --
-            -- Gets factorys.
+            -- Gets factories.
         local
             l_response: LIST [SUSHISWAP_FACTORY_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.sushiswap_factorys_current
+            -- l_response := api.sushiswap_factories_current
             assert ("not_implemented", False)
         end
 
@@ -102,10 +102,10 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_sushiswap_get_day_datas_historical
-            -- DayDatas (historical)
+    test_sushiswap_get_day_data_historical
+            -- DayData (historical)
             --
-            -- Gets dayDatas.
+            -- Gets dayData.
         local
             l_response: LIST [SUSHISWAP_DAY_DATA_DTO]
             l_start_block: INTEGER_64
@@ -116,14 +116,14 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.sushiswap_get_day_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            -- l_response := api.sushiswap_get_day_data_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
             assert ("not_implemented", False)
         end
 
-    test_sushiswap_get_factorys_historical
-            -- Factorys (historical)
+    test_sushiswap_get_factories_historical
+            -- Factories (historical)
             --
-            -- Gets factorys.
+            -- Gets factories.
         local
             l_response: LIST [SUSHISWAP_FACTORY_DTO]
             l_start_block: INTEGER_64
@@ -134,14 +134,14 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.sushiswap_get_factorys_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            -- l_response := api.sushiswap_get_factories_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
             assert ("not_implemented", False)
         end
 
-    test_sushiswap_get_hour_datas_historical
-            -- HourDatas (historical)
+    test_sushiswap_get_hour_data_historical
+            -- HourData (historical)
             --
-            -- Gets hourDatas.
+            -- Gets hourData.
         local
             l_response: LIST [SUSHISWAP_HOUR_DATA_DTO]
             l_start_block: INTEGER_64
@@ -152,7 +152,7 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.sushiswap_get_hour_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            -- l_response := api.sushiswap_get_hour_data_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
             assert ("not_implemented", False)
         end
 
@@ -215,10 +215,10 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_sushiswap_get_pair_day_datas_historical
-            -- PairDayDatas (historical)
+    test_sushiswap_get_pair_day_data_historical
+            -- PairDayData (historical)
             --
-            -- Gets pairDayDatas.
+            -- Gets pairDayData.
         local
             l_response: LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
             l_start_block: INTEGER_64
@@ -232,14 +232,14 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.sushiswap_get_pair_day_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pair, l_token_0, l_token_1)
+            -- l_response := api.sushiswap_get_pair_day_data_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pair, l_token_0, l_token_1)
             assert ("not_implemented", False)
         end
 
-    test_sushiswap_get_pair_hour_datas_historical
-            -- PairHourDatas (historical)
+    test_sushiswap_get_pair_hour_data_historical
+            -- PairHourData (historical)
             --
-            -- Gets pairHourDatas.
+            -- Gets pairHourData.
         local
             l_response: LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
             l_start_block: INTEGER_64
@@ -251,7 +251,7 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.sushiswap_get_pair_hour_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pair)
+            -- l_response := api.sushiswap_get_pair_hour_data_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id, l_pair)
             assert ("not_implemented", False)
         end
 
@@ -295,10 +295,10 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_sushiswap_get_token_day_datas_historical
-            -- TokenDayDatas (historical)
+    test_sushiswap_get_token_day_data_historical
+            -- TokenDayData (historical)
             --
-            -- Gets tokenDayDatas.
+            -- Gets tokenDayData.
         local
             l_response: LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]
             l_start_block: INTEGER_64
@@ -309,7 +309,7 @@ feature -- Test routines
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.sushiswap_get_token_day_datas_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
+            -- l_response := api.sushiswap_get_token_day_data_historical(l_start_block, l_end_block, l_start_date, l_end_date, l_id)
             assert ("not_implemented", False)
         end
 
@@ -369,16 +369,16 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_sushiswap_hour_datas_current
-            -- HourDatas (current)
+    test_sushiswap_hour_data_current
+            -- HourData (current)
             --
-            -- Gets hourDatas.
+            -- Gets hourData.
         local
             l_response: LIST [SUSHISWAP_HOUR_DATA_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.sushiswap_hour_datas_current
+            -- l_response := api.sushiswap_hour_data_current
             assert ("not_implemented", False)
         end
 
@@ -421,29 +421,29 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_sushiswap_pair_day_datas_current
-            -- PairDayDatas (current)
+    test_sushiswap_pair_day_data_current
+            -- PairDayData (current)
             --
-            -- Gets pairDayDatas.
+            -- Gets pairDayData.
         local
             l_response: LIST [SUSHISWAP_PAIR_DAY_DATA_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.sushiswap_pair_day_datas_current
+            -- l_response := api.sushiswap_pair_day_data_current
             assert ("not_implemented", False)
         end
 
-    test_sushiswap_pair_hour_datas_current
-            -- PairHourDatas (current)
+    test_sushiswap_pair_hour_data_current
+            -- PairHourData (current)
             --
-            -- Gets pairHourDatas.
+            -- Gets pairHourData.
         local
             l_response: LIST [SUSHISWAP_PAIR_HOUR_DATA_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.sushiswap_pair_hour_datas_current
+            -- l_response := api.sushiswap_pair_hour_data_current
             assert ("not_implemented", False)
         end
 
@@ -475,16 +475,16 @@ feature -- Test routines
             assert ("not_implemented", False)
         end
 
-    test_sushiswap_token_day_datas_current
-            -- TokenDayDatas (current)
+    test_sushiswap_token_day_data_current
+            -- TokenDayData (current)
             --
-            -- Gets tokenDayDatas.
+            -- Gets tokenDayData.
         local
             l_response: LIST [SUSHISWAP_TOKEN_DAY_DATA_DTO]
         do
             -- TODO: Initialize required params.
 
-            -- l_response := api.sushiswap_token_day_datas_current
+            -- l_response := api.sushiswap_token_day_data_current
             assert ("not_implemented", False)
         end
 
